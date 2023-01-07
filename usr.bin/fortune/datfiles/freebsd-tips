@@ -485,7 +485,7 @@ and see what it is doing.
 		-- Lars Engels <lme@FreeBSD.org>
 %
 Do you want to know which version of FreeBSD you are running? Enter
-"uqc-version -ku" to display kernel and userland version.
+"nqc-version -ku" to display kernel and userland version.
 
 		-- Lars Engels <lme@FreeBSD.org>
 %

@@ -530,7 +530,7 @@ AC_DEFUN([ZFS_AC_DEFAULT_PACKAGE], [
 			VENDOR=debian ;
 		elif test -f /etc/alpine-release ; then
 			VENDOR=alpine ;
-		elif test -f /bin/uqc-version ; then
+		elif test -f /bin/nqc-version ; then
 			VENDOR=freebsd ;
 		elif test -f /etc/openEuler-release ; then
 			VENDOR=openeuler ;

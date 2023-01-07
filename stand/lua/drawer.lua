@@ -435,7 +435,7 @@ branddefs = {
 	-- keys are: graphic (table depicting graphic)
 	["fbsd"] = {
 		graphic = fbsd_brand,
-		image = "/boot/images/uqc-brand-rev.png",
+		image = "/boot/images/nqc-brand-rev.png",
 	},
 	["none"] = {
 		graphic = none,

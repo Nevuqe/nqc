@@ -65,7 +65,7 @@ for dist in $DISTRIBUTIONS; do
 		percentage=$(echo $percentage + 100/`echo $DISTRIBUTIONS | wc -w` | bc)
 	else
 		eval "status_$distname=-2"
-		case $(/bin/uqc-version -u) in
+		case $(/bin/nqc-version -u) in
 		*-ALPHA*|*-CURRENT|*-STABLE|*-PRERELEASE)
 			bsddialog --backtitle "$OSNAME Installer" --title "Error" \
 			    --msgbox "The checksum for $dist does not match. It may have become corrupted, or it may be from a newer version of $OSNAME. Please check for a newer snapshot." 0 0

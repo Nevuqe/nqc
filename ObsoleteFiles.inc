@@ -12770,8 +12770,8 @@ OLD_DIRS+=usr/share/xml/atf
 OLD_DIRS+=usr/share/xml
 OLD_DIRS+=usr/share/xsl/atf
 OLD_DIRS+=usr/share/xsl
-# 20131009: uqc-version moved from /libexec to /bin
-OLD_FILES+=libexec/uqc-version
+# 20131009: nqc-version moved from /libexec to /bin
+OLD_FILES+=libexec/nqc-version
 # 20131001: ar and ranlib from binutils not used
 OLD_FILES+=usr/bin/gnu-ar
 OLD_FILES+=usr/bin/gnu-ranlib

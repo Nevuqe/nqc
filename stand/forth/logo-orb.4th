@@ -40,7 +40,7 @@
 			>r 2dup			( x y x y )
 			>r 0 swap r>		( x y 0 x y )
 			dup 0 swap 15 +		( x y 0 x y 0 y+15 )
-			s" /boot/images/uqc-logo-rev.png"
+			s" /boot/images/nqc-logo-rev.png"
 			r> execute if 2drop exit then
 		else
 			drop

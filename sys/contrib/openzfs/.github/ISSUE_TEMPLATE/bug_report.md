@@ -34,7 +34,7 @@ zfs version
 
 Commands to find kernel version:
 uname -r		# Linux
-uqc-version -r	# FreeBSD
+nqc-version -r	# FreeBSD
 -->
 
 ### Describe the problem you're observing

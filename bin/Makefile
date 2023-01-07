@@ -15,7 +15,7 @@ SUBDIR= cat \
 	echo \
 	ed \
 	expr \
-	uqc-version \
+	nqc-version \
 	getfacl \
 	hostname \
 	kenv \

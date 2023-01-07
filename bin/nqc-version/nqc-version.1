@@ -26,10 +26,10 @@
 .\" $FreeBSD$
 .\"
 .Dd October 1, 2021
-.Dt UQC-VERSION 1
+.Dt NQC-VERSION 1
 .Os
 .Sh NAME
-.Nm uqc-version
+.Nm nqc-version
 .Nd print the version and patch level of the installed system
 .Sh SYNOPSIS
 .Nm
@@ -110,13 +110,13 @@ and the kernel.
 .Sh EXAMPLES
 To determine the version of the currently running userland:
 .Bd -literal -offset indent
-/bin/uqc-version -u
+/bin/nqc-version -u
 .Ed
 .Pp
 To inspect a system being repaired using a live CD:
 .Bd -literal -offset indent
 mount -rt ufs /dev/ada0p2 /mnt
-env ROOT=/mnt /mnt/bin/uqc-version -ku
+env ROOT=/mnt /mnt/bin/nqc-version -ku
 .Ed
 .Sh SEE ALSO
 .Xr uname 1 ,

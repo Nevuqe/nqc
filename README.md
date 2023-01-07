@@ -1,17 +1,15 @@
-What is UQC?
+What is NQC?
 =============
 
-UQC (Uquinix Core) is a kernel based on FreeBSD. UQC runs on numerous architectures for single and multi-processor configurations.
+NQC (Nevuqe Core) is a kernel based on FreeBSD. NQC runs on numerous architectures for single and multi-processor configurations.
 
-Documentation can be found on our developer site, [developer.uquinix.com](https://developer.uquinix.com)
+Documentation can be found on our developer site, [developer.nevuqe.com](https://developer.nevuqe.com)
 
-For any enquiries, contact uqc@uquinix.com.
+For any enquiries, contact hello@nevuqe.com.
 
-And for security-related enquiries, please encrypt your email using our [GPG key](https://developer.uquinix.com/keys/signing-key.asc) and contact security@uquinix.com.
+And for security-related enquiries, please encrypt your email using our [GPG key](https://developer.nevuqe.com/keys/signing-key.asc) and contact security@nevuqe.com.
 
-This repository is mirrored from [git.uquinix.com](https://git.uquinix.com/Uquinix/uqc/)
-
-UQC Source Tree
+NQC Source Tree
 ================
 | Directory | Description |
 | --------- | ----------- |

@@ -22,7 +22,7 @@ osrelease_start()
 	local _version _version_id
 
 	startmsg -n "Updating ${osrelease_file} "
-	_version=$(uqc-version -u)
+	_version=$(nqc-version -u)
 	_version_id=${_version%%[^0-9.]*}
 	t=$(mktemp -t os-release)
 	cat > "$t" <<-__EOF__

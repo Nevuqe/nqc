@@ -2,7 +2,7 @@
 
 .include <bsd.init.mk>
 
-FILES+=	uqc-brand-rev.png uqc-brand.png uqc-logo-rev.png
+FILES+=	nqc-brand-rev.png nqc-brand.png nqc-logo-rev.png
 
 FILESDIR=  /boot/images
 

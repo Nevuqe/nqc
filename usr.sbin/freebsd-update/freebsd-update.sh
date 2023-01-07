@@ -328,11 +328,11 @@ config_SourceRelease () {
 # Get the Jail's path and the version of its installed userland
 config_TargetJail () {
 	JAIL=$1
-	UNAME_r=$(uqc-version -j ${JAIL})
+	UNAME_r=$(nqc-version -j ${JAIL})
 	BASEDIR=$(jls -j ${JAIL} -h path | awk 'NR == 2 {print}')
 	if [ -z ${BASEDIR} ] || [ -z ${UNAME_r} ]; then
 		echo "The specified jail either doesn't exist or" \
-		      "does not have uqc-version."
+		      "does not have nqc-version."
 		exit 1
 	fi
 	export UNAME_r
@@ -916,7 +916,7 @@ install_create_be () {
 		esac
 		if [ ${CREATEBE} = yes ]; then
 			echo -n "Creating snapshot of existing boot environment... "
-			VERSION=`uqc-version -ku | sort -V | tail -n 1`
+			VERSION=`nqc-version -ku | sort -V | tail -n 1`
 			TIMESTAMP=`date +"%Y-%m-%d_%H%M%S"`
 			bectl create ${VERSION}_${TIMESTAMP}
 			if [ $? -eq 0 ]; then

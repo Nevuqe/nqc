@@ -1,18 +1,18 @@
 # $FreeBSD$
 
 PACKAGE=runtime
-SCRIPTS = uqc-version
-MAN = uqc-version.1
-CLEANFILES = uqc-version uqc-version.sh
+SCRIPTS = nqc-version
+MAN = nqc-version.1
+CLEANFILES = nqc-version nqc-version.sh
 NEWVERS = ${SRCTOP}/sys/conf/newvers.sh
 
-uqc-version.sh: ${.CURDIR}/uqc-version.sh.in ${NEWVERS}
+nqc-version.sh: ${.CURDIR}/nqc-version.sh.in ${NEWVERS}
 	eval $$(sh ${NEWVERS} -v); \
 	if ! sed -e "\
 			s/@@TYPE@@/$${TYPE}/g; \
 			s/@@REVISION@@/$${REVISION}/g; \
 			s/@@BRANCH@@/$${BRANCH}/g; \
-		" ${.CURDIR}/uqc-version.sh.in >${.TARGET} ; then \
+		" ${.CURDIR}/nqc-version.sh.in >${.TARGET} ; then \
 		rm -f ${.TARGET} ; \
 		exit 1 ; \
 	fi

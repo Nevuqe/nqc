@@ -19,7 +19,7 @@ DIRDEPS+= \
 	bin/echo \
 	bin/ed \
 	bin/expr \
-	bin/uqc-version \
+	bin/nqc-version \
 	bin/getfacl \
 	bin/hostname \
 	bin/kenv \

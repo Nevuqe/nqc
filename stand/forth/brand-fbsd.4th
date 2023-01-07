@@ -39,7 +39,7 @@
 			\ note, we use 0, 0 for image upper left as origin,
 			\ and 0, 7 for lower right to preserve aspect ratio
 			>r 0 1 1 0 7
-			s" /boot/images/uqc-brand-rev.png"
+			s" /boot/images/nqc-brand-rev.png"
 			r> execute if 2drop exit then
 		else
 			drop

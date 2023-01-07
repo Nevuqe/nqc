@@ -144,7 +144,7 @@ sysctl_register_fdt_oid(void *arg)
 		    FDT_COMPAT_LEN, "Compatible platforms");
 	if (fdt_fbsd_version[0] != '\0')
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),
-		    OID_AUTO, "uqc-version", CTLFLAG_RD, fdt_fbsd_version,
+		    OID_AUTO, "nqc-version", CTLFLAG_RD, fdt_fbsd_version,
 		    FDT_FBSDVER_LEN, "FreeBSD DTS branding version");
 	if (fdt_serial[0] != '\0')
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),

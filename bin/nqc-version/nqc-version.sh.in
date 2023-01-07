@@ -89,7 +89,7 @@ userland_version() {
 #
 jail_version() {
 	for i in $jail; do
-		jexec -- $i uqc-version
+		jexec -- $i nqc-version
 	done
 }
 
