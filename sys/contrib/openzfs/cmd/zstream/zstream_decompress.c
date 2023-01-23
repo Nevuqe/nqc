@@ -175,7 +175,10 @@ zstream_do_decompress(int argc, char *argv[])
 		{
 			ZIO_SET_CHECKSUM(&stream_cksum, 0, 0, 0, 0);
 
-			int sz = drr->drr_payloadlen;
+			uint32_t sz = drr->drr_payloadlen;
+
+			VERIFY3U(sz, <=, 1U << 28);
+
 			if (sz != 0) {
 				if (sz > bufsz) {
 					buf = realloc(buf, sz);
