@@ -123,7 +123,11 @@ dsl_prop_get_dd(dsl_dir_t *dd, const char *propname,
 		/* Check for a iuv value. */
 		err = zap_lookup(mos, dsl_dir_phys(dd)->dd_props_zapobj,
 		    iuvstr, intsz, numints, buf);
+<<<<<<< HEAD
 		if (dsl_prop_known_index(zfs_name_to_prop(propname),
+=======
+		if (err == 0 && dsl_prop_known_index(prop,
+>>>>>>> other/main
 		    *(uint64_t *)buf) != 1)
 			err = ENOENT;
 		if (err != ENOENT) {

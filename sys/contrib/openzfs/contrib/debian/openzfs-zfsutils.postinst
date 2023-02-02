@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 
+<<<<<<< HEAD
 # The hostname and hostid of the last system to access a ZFS pool are stored in
 # the ZFS pool itself. A pool is foreign if, during `zpool import`, the
 # current hostname and hostid are different than the stored values thereof.
@@ -16,6 +17,8 @@ if [ ! -f /etc/hostid ] || [ "$(stat -c %s /etc/hostid)" -lt 4 ] ; then
 	zgenhostid
 fi
 
+=======
+>>>>>>> other/main
 # When processed to here but zfs kernel module is not loaded, the subsequent
 # services would fail to start. In this case the installation process just
 # fails at the postinst stage. The user could do

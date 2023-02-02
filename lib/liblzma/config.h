@@ -24,8 +24,10 @@
 /* Define to 1 if you have the <byteswap.h> header file. */
 /* #undef HAVE_BYTESWAP_H */
 
+#ifndef WITHOUT_CAPSICUM
 /* Define to 1 if Capsicum is available. */
 #define HAVE_CAPSICUM 1
+#endif
 
 /* Define to 1 if the system has the type `CC_SHA256_CTX'. */
 /* #undef HAVE_CC_SHA256_CTX */
@@ -53,27 +55,28 @@
 /* Define to 1 if you have the `clock_gettime' function. */
 #define HAVE_CLOCK_GETTIME 1
 
+/* Define to 1 if `CLOCK_MONOTONIC' is declared in <time.h>. */
+#define HAVE_CLOCK_MONOTONIC 1
+
 /* Define to 1 if you have the <CommonCrypto/CommonDigest.h> header file. */
 /* #undef HAVE_COMMONCRYPTO_COMMONDIGEST_H */
+
+/* Define to 1 if you have the <cpuid.h> header file. */
+#define HAVE_CPUID_H 1
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
    */
 /* FreeBSD - disabled intentionally */
 /* #undef HAVE_DCGETTEXT */
 
-/* Define to 1 if you have the declaration of `CLOCK_MONOTONIC', and to 0 if
-   you don't. */
-#define HAVE_DECL_CLOCK_MONOTONIC 1
-
-/* Define to 1 if you have the declaration of `program_invocation_name', and
-   to 0 if you don't. */
-#define HAVE_DECL_PROGRAM_INVOCATION_NAME 0
-
 /* Define to 1 if any of HAVE_DECODER_foo have been defined. */
 #define HAVE_DECODERS 1
 
 /* Define to 1 if arm decoder is enabled. */
 #define HAVE_DECODER_ARM 1
+
+/* Define to 1 if arm64 decoder is enabled. */
+#define HAVE_DECODER_ARM64 1
 
 /* Define to 1 if armthumb decoder is enabled. */
 #define HAVE_DECODER_ARMTHUMB 1
@@ -108,6 +111,9 @@
 /* Define to 1 if arm encoder is enabled. */
 #define HAVE_ENCODER_ARM 1
 
+/* Define to 1 if arm64 encoder is enabled. */
+#define HAVE_ENCODER_ARM64 1
+
 /* Define to 1 if armthumb encoder is enabled. */
 #define HAVE_ENCODER_ARMTHUMB 1
 
@@ -134,6 +140,10 @@
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
+
+/* Define to 1 if __attribute__((__constructor__)) is supported for functions.
+   */
+#define HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR 1
 
 /* Define to 1 if you have the `futimens' function. */
 #define HAVE_FUTIMENS 1
@@ -169,6 +179,9 @@
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
 
+/* Define to 1 if .lz (lzip) decompression support is enabled. */
+#define HAVE_LZIP_DECODER 1
+
 /* Define to 1 if mbrtowc and mbstate_t are properly declared. */
 #define HAVE_MBRTOWC 1
 
@@ -193,8 +206,14 @@
 /* Define to 1 if getopt.h declares extern int optreset. */
 #define HAVE_OPTRESET 1
 
+/* Define to 1 if you have the `pledge' function. */
+/* #undef HAVE_PLEDGE */
+
 /* Define to 1 if you have the `posix_fadvise' function. */
 #define HAVE_POSIX_FADVISE 1
+
+/* Define to 1 if `program_invocation_name' is declared in <errno.h>. */
+/* #undef HAVE_PROGRAM_INVOCATION_NAME */
 
 /* Define to 1 if you have the `pthread_condattr_setclock' function. */
 #define HAVE_PTHREAD_CONDATTR_SETCLOCK 1
@@ -266,11 +285,13 @@
 /* Define to 1 if you have the <sys/byteorder.h> header file. */
 /* #undef HAVE_SYS_BYTEORDER_H */
 
+#ifndef WITHOUT_CAPSICUM
 /* Define to 1 if you have the <sys/capsicum.h> header file. */
 #define HAVE_SYS_CAPSICUM_H 1
+#endif
 
 /* Define to 1 if you have the <sys/endian.h> header file. */
-#define HAVE_SYS_ENDIAN_H 1
+/* #undef HAVE_SYS_ENDIAN_H */
 
 /* Define to 1 if you have the <sys/param.h> header file. */
 #define HAVE_SYS_PARAM_H 1
@@ -289,6 +310,12 @@
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
+
+/* Define to 1 if _mm_set_epi64x and _mm_clmulepi64_si128 are usable. See
+   configure.ac for details. */
+#if defined(__FreeBSD__) && defined(__amd64__)
+#define HAVE_USABLE_CLMUL 1
+#endif
 
 /* Define to 1 if you have the `utime' function. */
 /* #undef HAVE_UTIME */
@@ -352,7 +379,11 @@
 #define PACKAGE_NAME "XZ Utils"
 
 /* Define to the full name and version of this package. */
+<<<<<<< HEAD
 #define PACKAGE_STRING "XZ Utils 5.2.9"
+=======
+#define PACKAGE_STRING "XZ Utils 5.4.1"
+>>>>>>> other/main
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "xz"
@@ -361,7 +392,11 @@
 #define PACKAGE_URL "https://tukaani.org/xz/"
 
 /* Define to the version of this package. */
+<<<<<<< HEAD
 #define PACKAGE_VERSION "5.2.9"
+=======
+#define PACKAGE_VERSION "5.4.1"
+>>>>>>> other/main
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -395,8 +430,8 @@
    sysctl(). */
 /* #undef TUKLIB_CPUCORES_SYSCTL */
 
-/* Define to 1 if the system supports fast unaligned access to 16-bit and
-   32-bit integers. */
+/* Define to 1 if the system supports fast unaligned access to 16-bit, 32-bit,
+   and 64-bit integers. */
 /* FreeBSD - derive from __NO_STRICT_ALIGNMENT */
 /* #undef TUKLIB_FAST_UNALIGNED_ACCESS */
 
@@ -522,7 +557,11 @@
 
 
 /* Version number of package */
+<<<<<<< HEAD
 #define VERSION "5.2.9"
+=======
+#define VERSION "5.4.1"
+>>>>>>> other/main
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */

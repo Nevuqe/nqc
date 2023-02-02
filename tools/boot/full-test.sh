@@ -279,7 +279,11 @@ make_linuxboot_images()
 	zfs=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}.zfs
 	img=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}.img
 	img2=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}-zfs.img
+<<<<<<< HEAD
 	pool="linuxboot-testing"
+=======
+	pool="linuxboot"
+>>>>>>> other/main
 	mkdir -p ${IMAGES}/${ma_combo}
 	makefs -t msdos -o fat_type=32 -o sectors_per_cluster=1 \
 	       -o volume_label=EFISYS -s100m ${esp} ${src}
@@ -444,7 +448,10 @@ make_freebsd_images()
 	ufs=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.ufs
 	img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
 	mkdir -p ${IMAGES}/${ma_combo}
+<<<<<<< HEAD
 # XXX 4096 sector?
+=======
+>>>>>>> other/main
 	makefs -t msdos -o fat_type=32 -o sectors_per_cluster=1 \
 	       -o volume_label=EFISYS -s100m ${esp} ${src}
 	makefs -t ffs -B little -s 200m -o label=root ${ufs} ${dir} ${dir2}
@@ -454,6 +461,33 @@ make_freebsd_images()
 
     set -x
 
+<<<<<<< HEAD
+=======
+    # BIOS i386
+    a=i386:i386
+    m=${a%%:*}
+    ma=${a##*:}
+    ma_combo="${m}"
+    [ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
+    dir=${TREES}/${ma_combo}/freebsd
+    dir2=${TREES}/${ma_combo}/test-stand
+    ufs=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.ufs
+    img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
+    mkdir -p ${IMAGES}/${ma_combo}
+    mkdir -p ${dir2}/etc
+    cat > ${dir2}/etc/fstab <<EOF
+/dev/ufs/root	/		ufs	rw	1	1
+EOF
+    makefs -t ffs -B little -s 200m \
+	   -o label=root,version=2,bsize=32768,fsize=4096,density=16384 \
+	   ${ufs} ${dir} ${dir2}
+    mkimg -s gpt -b ${dir2}/boot/pmbr \
+	  -p freebsd-boot:=${dir2}/boot/gptboot \
+	  -p freebsd-ufs:=${ufs} \
+	  -o ${img}
+    rm -f ${src}/etc/fstab
+
+>>>>>>> other/main
     # PowerPC for 32-bit mac
     a=powerpc:powerpc
     m=${a%%:*}
@@ -557,6 +591,27 @@ ${qemu_bin}/qemu-system-ppc -m 1g -M mac99,via=pmu \\
         -monitor telnet::4444,server,nowait \\
         -serial stdio \$*
 EOF
+<<<<<<< HEAD
+=======
+
+    set -x
+    a=i386:i386
+    m=${a%%:*}
+    ma=${a##*:}
+    ma_combo="${m}"
+    [ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
+    img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
+    out=${SCRIPTS}/${ma_combo}/freebsd-test.sh
+    mkdir -p ${SCRIPTS}/${ma_combo}
+    cat > ${out} <<EOF
+${qemu_bin}/qemu-system-i386 -m 1g \\
+	-vga none -nographic \\
+	-drive file=${img},format=raw \\
+	-nographic \\
+        -monitor telnet::4444,server,nowait \\
+        -serial stdio \$*
+EOF
+>>>>>>> other/main
 }
 
 # The smallest FAT32 filesystem is 33292 KB

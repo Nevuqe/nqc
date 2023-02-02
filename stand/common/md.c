@@ -75,8 +75,11 @@ struct devsw md_dev = {
 	.dv_ioctl = noioctl,
 	.dv_print = md_print,
 	.dv_cleanup = nullsys,
+<<<<<<< HEAD
 	.dv_fmtdev = disk_fmtdev,
 	.dv_parsedev = disk_parsedev,
+=======
+>>>>>>> other/main
 };
 
 static int

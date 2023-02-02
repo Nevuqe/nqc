@@ -106,6 +106,7 @@ MODULE_PNP_INFO("U32:vendor;U32:device;V32:subvendor;V32:subdevice",	\
 
 #define	to_pci_dev(n)	container_of(n, struct pci_dev, dev)
 
+#define	PCI_STD_NUM_BARS	6
 #define	PCI_VENDOR_ID		PCIR_VENDOR
 #define	PCI_DEVICE_ID		PCIR_DEVICE
 #define	PCI_COMMAND		PCIR_COMMAND
@@ -170,6 +171,11 @@ MODULE_PNP_INFO("U32:vendor;U32:device;V32:subvendor;V32:subdevice",	\
 #define	PCI_MSI_ADDRESS_HI	PCIR_MSI_ADDR_HIGH
 #define	PCI_MSI_FLAGS		PCIR_MSI_CTRL
 #define	PCI_MSI_FLAGS_ENABLE	PCIM_MSICTRL_MSI_ENABLE
+<<<<<<< HEAD
+=======
+#define	PCI_MSIX_FLAGS		PCIR_MSIX_CTRL
+#define	PCI_MSIX_FLAGS_ENABLE	PCIM_MSIXCTRL_MSIX_ENABLE
+>>>>>>> other/main
 
 #define PCI_EXP_LNKCAP_CLKPM	0x00040000
 #define PCI_EXP_DEVSTA_TRPND	0x0020
@@ -323,6 +329,10 @@ struct pci_dev {
 	uint32_t		class;
 	uint8_t			revision;
 	uint8_t			msi_cap;
+<<<<<<< HEAD
+=======
+	uint8_t			msix_cap;
+>>>>>>> other/main
 	bool			managed;	/* devres "pcim_*(). */
 	bool			want_iomap_res;
 	bool			msi_enabled;
@@ -353,6 +363,7 @@ struct pcim_iomap_devres {
 int pci_request_region(struct pci_dev *pdev, int bar, const char *res_name);
 int pci_alloc_irq_vectors(struct pci_dev *pdev, int minv, int maxv,
     unsigned int flags);
+bool pci_device_is_present(struct pci_dev *pdev);
 
 /* Internal helper function(s). */
 struct pci_dev *lkpinew_pci_dev(device_t);
@@ -1672,4 +1683,14 @@ pci_is_enabled(struct pci_dev *pdev)
 	    PCIM_CMD_BUSMASTEREN) != 0);
 }
 
+<<<<<<< HEAD
+=======
+static inline int
+pci_wait_for_pending_transaction(struct pci_dev *pdev)
+{
+
+	return (0);
+}
+
+>>>>>>> other/main
 #endif	/* _LINUXKPI_LINUX_PCI_H_ */

@@ -53,6 +53,10 @@ struct seqcount_mutex {
 	seqc_t		seqc;
 };
 typedef struct seqcount_mutex seqcount_mutex_t;
+<<<<<<< HEAD
+=======
+typedef struct seqcount_mutex seqcount_ww_mutex_t;
+>>>>>>> other/main
 
 static inline void
 __seqcount_init(struct seqcount *seqcount, const char *name __unused,
@@ -68,6 +72,12 @@ seqcount_mutex_init(struct seqcount_mutex *seqcount, void *mutex __unused)
 	seqcount->seqc = 0;
 }
 
+<<<<<<< HEAD
+=======
+#define	seqcount_ww_mutex_init(seqcount, ww_mutex) \
+    seqcount_mutex_init((seqcount), (ww_mutex))
+
+>>>>>>> other/main
 #define	write_seqcount_begin(s)						\
     _Generic(*(s),							\
 	struct seqcount:	seqc_sleepable_write_begin,		\

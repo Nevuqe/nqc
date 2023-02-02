@@ -52,6 +52,15 @@
 #   xargs -n1 | sort | uniq -d;
 # done
 
+<<<<<<< HEAD
+=======
+# 20230124: rtalloc.9 removed
+OLD_FILES+=usr/share/man/man9/rtalloc.9.gz
+
+# 20230123: PCBGROUP.9 removed
+OLD_FILES+=usr/share/man/man9/PCBGROUP.9.gz
+
+>>>>>>> other/main
 # 20221214: TCPDEBUG removed
 OLD_FILES+=usr/include/netinet/tcp_debug.h
 

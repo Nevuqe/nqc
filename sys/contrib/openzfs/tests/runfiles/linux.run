@@ -87,7 +87,11 @@ tags = ['functional', 'devices']
 
 [tests/functional/events:Linux]
 tests = ['events_001_pos', 'events_002_pos', 'zed_rc_filter', 'zed_fd_spill',
+<<<<<<< HEAD
     'zed_cksum_reported']
+=======
+    'zed_cksum_reported', 'zed_cksum_config', 'zed_io_config']
+>>>>>>> other/main
 tags = ['functional', 'events']
 
 [tests/functional/fadvise:Linux]

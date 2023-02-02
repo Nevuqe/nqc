@@ -316,6 +316,7 @@ struct if_ratelimit_query_results {
 typedef void (if_ratelimit_query_t)(struct ifnet *,
     struct if_ratelimit_query_results *);
 typedef int (if_ratelimit_setup_t)(struct ifnet *, uint64_t, uint32_t);
+<<<<<<< HEAD
 
 /*
  * Structure defining a network interface.
@@ -475,6 +476,8 @@ struct ifnet {
 	int	if_ispare[4];		/* general use */
 };
 
+=======
+>>>>>>> other/main
 #define	IF_NODOM	255
 /*
  * Locks for address lists on the network interface.
@@ -784,7 +787,11 @@ void if_bpfmtap(if_t ifp, struct mbuf *m);
 void if_etherbpfmtap(if_t ifp, struct mbuf *m);
 void if_vlancap(if_t ifp);
 int if_transmit(if_t ifp, struct mbuf *m);
+<<<<<<< HEAD
 int if_init(if_t ifp);
+=======
+int if_init(if_t ifp, void *ctx);
+>>>>>>> other/main
 
 /*
  * Traversing through interface address lists.
@@ -812,6 +819,10 @@ void if_settransmitfn(if_t ifp, if_transmit_fn_t);
 void if_setqflushfn(if_t ifp, if_qflush_fn_t);
 void if_setgetcounterfn(if_t ifp, if_get_counter_t);
 void if_setsndtagallocfn(if_t ifp, if_snd_tag_alloc_t);
+<<<<<<< HEAD
+=======
+void if_setdebugnet_methods(struct ifnet *, struct debugnet_methods *);
+>>>>>>> other/main
 
 /* TSO */
 void if_hw_tsomax_common(if_t ifp, struct ifnet_hw_tsomax *);
@@ -834,6 +845,7 @@ int    ether_poll_deregister(if_t ifp);
 
 #endif /* _KERNEL */
 
+#include <net/if_private.h>	/* XXX: temporary until drivers converted. */
 #include <net/ifq.h>	/* XXXAO: temporary unconditional include */
 
 #endif /* !_NET_IF_VAR_H_ */

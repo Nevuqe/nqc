@@ -315,7 +315,11 @@
 /* #undef HAVE_FOLLOW_LINK_NAMEIDATA */
 
 /* Define if compiler supports -Wformat-overflow */
+<<<<<<< HEAD
 /* #undef HAVE_FORMAT_OVERFLOW  */
+=======
+/* #undef HAVE_FORMAT_OVERFLOW */
+>>>>>>> other/main
 
 /* fops->fsync() with range */
 /* #undef HAVE_FSYNC_RANGE */
@@ -352,6 +356,9 @@
 
 /* iops->get_acl() takes rcu */
 /* #undef HAVE_GET_ACL_RCU */
+
+/* has iops->get_inode_acl() */
+/* #undef HAVE_GET_INODE_ACL */
 
 /* iops->get_link() cookie */
 /* #undef HAVE_GET_LINK_COOKIE */
@@ -665,6 +672,9 @@
 /* iops->set_acl() takes 4 args */
 /* #undef HAVE_SET_ACL_USERNS */
 
+/* iops->set_acl() takes 4 args, arg2 is struct dentry * */
+/* #undef HAVE_SET_ACL_USERNS_DENTRY_ARG2 */
+
 /* set_cached_acl() is usable */
 /* #undef HAVE_SET_CACHED_ACL_USABLE */
 
@@ -753,6 +763,9 @@
 
 /* i_op->tmpfile() exists */
 /* #undef HAVE_TMPFILE */
+
+/* i_op->tmpfile() uses old dentry signature */
+/* #undef HAVE_TMPFILE_DENTRY */
 
 /* i_op->tmpfile() has userns */
 /* #undef HAVE_TMPFILE_USERNS */
@@ -976,7 +989,11 @@
 /* #undef ZFS_IS_GPL_COMPATIBLE */
 
 /* Define the project alias string. */
+<<<<<<< HEAD
 #define ZFS_META_ALIAS "zfs-2.1.99-FreeBSD_g59493b63c"
+=======
+#define ZFS_META_ALIAS "zfs-2.1.99-FreeBSD_g9cd71c860"
+>>>>>>> other/main
 
 /* Define the project author. */
 #define ZFS_META_AUTHOR "OpenZFS"
@@ -985,7 +1002,11 @@
 /* #undef ZFS_META_DATA */
 
 /* Define the maximum compatible kernel version. */
+<<<<<<< HEAD
 #define ZFS_META_KVER_MAX "6.0"
+=======
+#define ZFS_META_KVER_MAX "6.1"
+>>>>>>> other/main
 
 /* Define the minimum compatible kernel version. */
 #define ZFS_META_KVER_MIN "3.10"
@@ -1006,7 +1027,11 @@
 #define ZFS_META_NAME "zfs"
 
 /* Define the project release. */
+<<<<<<< HEAD
 #define ZFS_META_RELEASE "FreeBSD_g59493b63c"
+=======
+#define ZFS_META_RELEASE "FreeBSD_g9cd71c860"
+>>>>>>> other/main
 
 /* Define the project version. */
 #define ZFS_META_VERSION "2.1.99"
