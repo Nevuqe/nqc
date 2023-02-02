@@ -1,10 +1,10 @@
 NEVUQE OPEN SOURCE LICENSE
-Version 1.0 - November 9, 2022
+Version 1.0 - Febuary 2, 2023
 
 All code in this project is licensed under the following terms unless
 otherwise specified.
 
-Copyright 2022, Nevuqe Inc.
+Copyright 2023, Nevuqe Inc.
 
 Please read this License carefully before downloading this software.
 By downloading or using this software, you are agreeing to be bound by
