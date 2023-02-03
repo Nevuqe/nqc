@@ -270,33 +270,15 @@ stream_encoder_update(void *coder_ptr, const lzma_allocator *allocator,
 	}
 
 	// Free the options of the old chain.
-<<<<<<< HEAD
-	for (size_t i = 0; coder->filters[i].id != LZMA_VLI_UNKNOWN; ++i)
-		lzma_free(coder->filters[i].options, allocator);
-
-	// Copy the new filter chain in place.
-	size_t j = 0;
-	do {
-		coder->filters[j].id = temp[j].id;
-		coder->filters[j].options = temp[j].options;
-	} while (temp[j++].id != LZMA_VLI_UNKNOWN);
-=======
 	lzma_filters_free(coder->filters, allocator);
 
 	// Copy the new filter chain in place.
 	memcpy(coder->filters, temp, sizeof(temp));
->>>>>>> other/main
 
 	return LZMA_OK;
 
 error:
-<<<<<<< HEAD
-	for (size_t i = 0; temp[i].id != LZMA_VLI_UNKNOWN; ++i)
-		lzma_free(temp[i].options, allocator);
-
-=======
 	lzma_filters_free(temp, allocator);
->>>>>>> other/main
 	return ret;
 }
 

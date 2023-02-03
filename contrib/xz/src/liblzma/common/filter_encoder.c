@@ -63,8 +63,6 @@ static const lzma_filter_encoder encoders[] = {
 		.init = &lzma_lzma_encoder_init,
 		.memusage = &lzma_lzma_encoder_memusage,
 		.block_size = NULL, // Not needed for LZMA1
-<<<<<<< HEAD
-=======
 		.props_size_get = NULL,
 		.props_size_fixed = 5,
 		.props_encode = &lzma_lzma_props_encode,
@@ -74,7 +72,6 @@ static const lzma_filter_encoder encoders[] = {
 		.init = &lzma_lzma_encoder_init,
 		.memusage = &lzma_lzma_encoder_memusage,
 		.block_size = NULL, // Not needed for LZMA1
->>>>>>> other/main
 		.props_size_get = NULL,
 		.props_size_fixed = 5,
 		.props_encode = &lzma_lzma_props_encode,

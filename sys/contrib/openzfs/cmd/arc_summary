@@ -748,42 +748,7 @@ def section_archits(kstats_dict):
                 arc_stats['mru_ghost_hits']),
                ('Uncached:', arc_stats['uncached_hits']))
     for title, value in cl_todo:
-<<<<<<< HEAD
-        prt_i2(title, f_perc(value, arc_stats['hits']), f_hits(value))
-
-    # For some reason, anon_hits can turn negative, which is weird. Until we
-    # have figured out why this happens, we just hide the problem, following
-    # the behavior of the original arc_summary.
-    if anon_hits >= 0:
-        prt_i2('Anonymously used:',
-               f_perc(anon_hits, arc_stats['hits']), f_hits(anon_hits))
-
-    print()
-    print('Cache hits by data type:')
-    dt_todo = (('Demand data:', arc_stats['demand_data_hits']),
-               ('Prefetch data:', arc_stats['prefetch_data_hits']),
-               ('Demand metadata:', arc_stats['demand_metadata_hits']),
-               ('Prefetch metadata:',
-                arc_stats['prefetch_metadata_hits']))
-
-    for title, value in dt_todo:
-        prt_i2(title, f_perc(value, arc_stats['hits']), f_hits(value))
-
-    print()
-    print('Cache misses by data type:')
-    dm_todo = (('Demand data:', arc_stats['demand_data_misses']),
-               ('Prefetch data:',
-                arc_stats['prefetch_data_misses']),
-               ('Demand metadata:', arc_stats['demand_metadata_misses']),
-               ('Prefetch metadata:',
-                arc_stats['prefetch_metadata_misses']))
-
-    for title, value in dm_todo:
-        prt_i2(title, f_perc(value, arc_stats['misses']), f_hits(value))
-
-=======
         prt_i2(title, f_perc(value, all_accesses), f_hits(value))
->>>>>>> other/main
     print()
 
 

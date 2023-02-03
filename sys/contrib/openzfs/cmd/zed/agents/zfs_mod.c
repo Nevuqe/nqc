@@ -553,10 +553,7 @@ zfs_iter_vdev(zpool_handle_t *zhp, nvlist_t *nvl, void *data)
 	uint_t c, children;
 	nvlist_t **child;
 	uint64_t guid = 0;
-<<<<<<< HEAD
-=======
 	uint64_t isspare = 0;
->>>>>>> other/main
 
 	/*
 	 * First iterate over any children.

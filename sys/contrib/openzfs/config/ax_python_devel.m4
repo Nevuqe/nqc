@@ -160,12 +160,7 @@ If you have it installed, but it isn't the default Python
 interpreter in your system path, please pass the PYTHON_VERSION
 variable to configure. See ``configure --help'' for reference.
 ])
-<<<<<<< HEAD
-				PYTHON_VERSION=""
-			])
-=======
 			PYTHON_VERSION=""
->>>>>>> other/main
 		fi
 	fi
 

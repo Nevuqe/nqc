@@ -404,16 +404,11 @@ DEFINE_DEBUGFS_ATTRIBUTE(fops_u8_wo, NULL, debugfs_u8_set, "%u\n");
 void
 debugfs_create_u8(const char *name, umode_t mode, struct dentry *parent, uint8_t *value)
 {
-<<<<<<< HEAD
-=======
 
->>>>>>> other/main
 	debugfs_create_mode_unsafe(name, mode, parent, value, &fops_u8,
 	    &fops_u8_ro, &fops_u8_wo);
 }
 
-<<<<<<< HEAD
-=======
 DEFINE_DEBUGFS_ATTRIBUTE(fops_x8, debugfs_u8_get, debugfs_u8_set, "0x%016llx\n");
 DEFINE_DEBUGFS_ATTRIBUTE(fops_x8_ro, debugfs_u8_get, NULL, "0x%016llx\n");
 DEFINE_DEBUGFS_ATTRIBUTE(fops_x8_wo, NULL, debugfs_u8_set, "0x%016llx\n");
@@ -549,7 +544,6 @@ debugfs_create_x64(const char *name, umode_t mode, struct dentry *parent, uint64
 	    &fops_x64_ro, &fops_x64_wo);
 }
 
->>>>>>> other/main
 
 static int
 debugfs_ulong_get(void *data, uint64_t *value)
@@ -580,8 +574,6 @@ debugfs_create_ulong(const char *name, umode_t mode, struct dentry *parent, unsi
 }
 
 
-<<<<<<< HEAD
-=======
 static int
 debugfs_atomic_t_get(void *data, uint64_t *value)
 {
@@ -611,7 +603,6 @@ debugfs_create_atomic_t(const char *name, umode_t mode, struct dentry *parent, a
 }
 
 
->>>>>>> other/main
 static ssize_t
 fops_blob_read(struct file *filp, char __user *ubuf, size_t read_size, loff_t *ppos)
 {
@@ -629,10 +620,7 @@ fops_blob_read(struct file *filp, char __user *ubuf, size_t read_size, loff_t *p
 static int
 fops_blob_open(struct inode *inode, struct file *filp)
 {
-<<<<<<< HEAD
-=======
 
->>>>>>> other/main
 	return (simple_open(inode, filp));
 }
 

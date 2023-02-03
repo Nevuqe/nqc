@@ -126,6 +126,7 @@ SUBDIR=	alias \
 	rev \
 	revoke \
 	rpcinfo \
+	rs \
 	rup \
 	ruptime \
 	rusers \
@@ -211,11 +212,6 @@ SUBDIR.${MK_GAMES}+=	number
 SUBDIR.${MK_GAMES}+=	pom
 SUBDIR.${MK_GAMES}+=	primes
 SUBDIR.${MK_GAMES}+=	random
-<<<<<<< HEAD
-SUBDIR.${MK_CXX}+=	dtc
-SUBDIR.${MK_CXX}+=	rs
-=======
->>>>>>> other/main
 .if ${MK_GH_BC} == "yes"
 SUBDIR+=		gh-bc
 .else

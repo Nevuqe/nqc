@@ -315,11 +315,7 @@
 /* #undef HAVE_FOLLOW_LINK_NAMEIDATA */
 
 /* Define if compiler supports -Wformat-overflow */
-<<<<<<< HEAD
-/* #undef HAVE_FORMAT_OVERFLOW  */
-=======
 /* #undef HAVE_FORMAT_OVERFLOW */
->>>>>>> other/main
 
 /* fops->fsync() with range */
 /* #undef HAVE_FSYNC_RANGE */
@@ -989,11 +985,7 @@
 /* #undef ZFS_IS_GPL_COMPATIBLE */
 
 /* Define the project alias string. */
-<<<<<<< HEAD
-#define ZFS_META_ALIAS "zfs-2.1.99-FreeBSD_g59493b63c"
-=======
 #define ZFS_META_ALIAS "zfs-2.1.99-FreeBSD_g9cd71c860"
->>>>>>> other/main
 
 /* Define the project author. */
 #define ZFS_META_AUTHOR "OpenZFS"
@@ -1002,11 +994,7 @@
 /* #undef ZFS_META_DATA */
 
 /* Define the maximum compatible kernel version. */
-<<<<<<< HEAD
-#define ZFS_META_KVER_MAX "6.0"
-=======
 #define ZFS_META_KVER_MAX "6.1"
->>>>>>> other/main
 
 /* Define the minimum compatible kernel version. */
 #define ZFS_META_KVER_MIN "3.10"
@@ -1027,11 +1015,7 @@
 #define ZFS_META_NAME "zfs"
 
 /* Define the project release. */
-<<<<<<< HEAD
-#define ZFS_META_RELEASE "FreeBSD_g59493b63c"
-=======
 #define ZFS_META_RELEASE "FreeBSD_g9cd71c860"
->>>>>>> other/main
 
 /* Define the project version. */
 #define ZFS_META_VERSION "2.1.99"

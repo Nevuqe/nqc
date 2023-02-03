@@ -34,12 +34,7 @@
 
 .text
 
-<<<<<<< HEAD
-.p2align  6
-zfs_blake3_hash_many_sse41:
-=======
 ENTRY_ALIGN(zfs_blake3_hash_many_sse41, 64)
->>>>>>> other/main
         ENDBR
         push    r15
         push    r14
@@ -1798,14 +1793,9 @@ ENTRY_ALIGN(zfs_blake3_hash_many_sse41, 64)
         movups  xmmword ptr [rbx], xmm0
         movups  xmmword ptr [rbx+0x10], xmm1
         jmp     4b
-<<<<<<< HEAD
-.p2align 6
-zfs_blake3_compress_in_place_sse41:
-=======
 SET_SIZE(zfs_blake3_hash_many_sse41)
 
 ENTRY_ALIGN(zfs_blake3_compress_in_place_sse41, 64)
->>>>>>> other/main
         ENDBR
         movups  xmm0, xmmword ptr [rdi]
         movups  xmm1, xmmword ptr [rdi+0x10]
@@ -1903,14 +1893,9 @@ ENTRY_ALIGN(zfs_blake3_compress_in_place_sse41, 64)
         movups  xmmword ptr [rdi], xmm0
         movups  xmmword ptr [rdi+0x10], xmm1
         RET
-<<<<<<< HEAD
-.p2align 6
-zfs_blake3_compress_xof_sse41:
-=======
 SET_SIZE(zfs_blake3_compress_in_place_sse41)
 
 ENTRY_ALIGN(zfs_blake3_compress_xof_sse41, 64)
->>>>>>> other/main
         ENDBR
         movups  xmm0, xmmword ptr [rdi]
         movups  xmm1, xmmword ptr [rdi+0x10]

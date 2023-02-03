@@ -27,35 +27,6 @@
 #ifndef _IA32_SYS_ASM_LINKAGE_H
 #define	_IA32_SYS_ASM_LINKAGE_H
 
-<<<<<<< HEAD:sys/contrib/openzfs/module/icp/include/sys/ia32/asm_linkage.h
-#include <sys/stack.h>
-#include <sys/trap.h>
-
-#if defined(_KERNEL) && defined(__linux__)
-#include <linux/linkage.h>
-#endif
-
-#ifndef ENDBR
-#if defined(__ELF__) && defined(__CET__) && defined(__has_include)
-/* CSTYLED */
-#if __has_include(<cet.h>)
-
-#include <cet.h>
-
-#ifdef _CET_ENDBR
-#define	ENDBR	_CET_ENDBR
-#endif /* _CET_ENDBR */
-
-#endif /* <cet.h> */
-#endif /* __ELF__ && __CET__ && __has_include */
-#endif /* !ENDBR */
-
-#ifndef ENDBR
-#define	ENDBR
-#endif
-#ifndef RET
-=======
->>>>>>> other/main:sys/contrib/openzfs/include/os/freebsd/spl/sys/ia32/asm_linkage.h
 #define	RET	ret
 
 /* Tell compiler to call assembler like Unix */
@@ -154,7 +125,6 @@ extern "C" {
  * insert the calls to mcount for profiling. ENTRY_NP is identical, but
  * never calls mcount.
  */
-#undef ENTRY
 #define	ENTRY(x) \
 	.text; \
 	.balign	ASM_ENTRY_ALIGN; \

@@ -4635,15 +4635,9 @@ if_vlantrunkinuse(if_t ifp)
 }
 
 int
-<<<<<<< HEAD
-if_init(if_t ifp)
-{
-	(*((struct ifnet *)ifp)->if_init)((struct ifnet *)ifp);
-=======
 if_init(if_t ifp, void *ctx)
 {
 	(*((struct ifnet *)ifp)->if_init)(ctx);
->>>>>>> other/main
 	return (0);
 }
 

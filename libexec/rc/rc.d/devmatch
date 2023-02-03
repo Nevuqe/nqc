@@ -72,7 +72,7 @@ devmatch_start()
 		*"#${m}#"*) continue ;;
 		esac
 		kldstat -q -n ${m} || \
-		    (kldload -n ${m})
+		    (echo "Autoloading module: ${m}"; kldload -n ${m})
 	done
 	devctl thaw
 }

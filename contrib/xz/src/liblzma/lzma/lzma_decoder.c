@@ -1046,11 +1046,7 @@ lzma_decoder_init(lzma_lz_decoder *lz, const lzma_allocator *allocator,
 			lz, allocator, options, lz_options));
 
 	lzma_decoder_reset(lz->coder, options);
-<<<<<<< HEAD
-	lzma_decoder_uncompressed(lz->coder, LZMA_VLI_UNKNOWN, true);
-=======
 	lzma_decoder_uncompressed(lz->coder, uncomp_size, allow_eopm);
->>>>>>> other/main
 
 	return LZMA_OK;
 }

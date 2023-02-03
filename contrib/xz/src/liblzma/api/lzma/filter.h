@@ -122,8 +122,6 @@ extern LZMA_API(lzma_ret) lzma_filters_copy(
 		const lzma_filter *src, lzma_filter *dest,
 		const lzma_allocator *allocator)
 		lzma_nothrow lzma_attr_warn_unused_result;
-<<<<<<< HEAD
-=======
 
 
 /**
@@ -145,7 +143,6 @@ extern LZMA_API(lzma_ret) lzma_filters_copy(
 extern LZMA_API(void) lzma_filters_free(
 		lzma_filter *filters, const lzma_allocator *allocator)
 		lzma_nothrow;
->>>>>>> other/main
 
 
 /**

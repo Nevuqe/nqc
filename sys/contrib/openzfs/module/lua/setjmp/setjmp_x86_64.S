@@ -27,24 +27,6 @@
 #include <linux/linkage.h>
 #endif
 
-<<<<<<< HEAD
-#ifndef RET
-#define	RET	ret
-#endif
-
-#undef ENTRY
-#define	ENTRY(x) \
-	.text; \
-	.align	8; \
-	.globl	x; \
-	.type	x, @function; \
-x:
-
-#define	SET_SIZE(x) \
-	.size	x, [.-x]
-
-=======
->>>>>>> other/main
 /*
  * Setjmp and longjmp implement non-local gotos using state vectors
  * type label_t.

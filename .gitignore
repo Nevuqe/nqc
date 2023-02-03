@@ -27,6 +27,6 @@ compile_commands.events.json
 tags
 .clangd
 .ccls-cache
+
 .DS_Store
 .vscode
-build/

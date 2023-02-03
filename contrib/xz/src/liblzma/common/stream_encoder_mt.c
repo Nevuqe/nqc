@@ -1147,14 +1147,7 @@ stream_encoder_mt_init(lzma_next_coder *next, const lzma_allocator *allocator,
 	lzma_filters_free(coder->filters, allocator);
 	lzma_filters_free(coder->filters_cache, allocator);
 
-<<<<<<< HEAD
-	// Mark it as empty so that it is in a safe state in case
-	// lzma_filters_copy() fails.
-	coder->filters[0].id = LZMA_VLI_UNKNOWN;
-
-=======
 	// Copy the new filter chain.
->>>>>>> other/main
 	return_if_error(lzma_filters_copy(
 			filters, coder->filters, allocator));
 

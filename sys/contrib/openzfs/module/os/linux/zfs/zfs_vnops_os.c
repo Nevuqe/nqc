@@ -628,11 +628,7 @@ top:
 		 * Create a new file object and update the directory
 		 * to reference it.
 		 */
-<<<<<<< HEAD
-		if ((error = zfs_zaccess(dzp, ACE_ADD_FILE, 0, B_FALSE, cr,
-=======
 		if ((error = zfs_zaccess(dzp, ACE_ADD_FILE, 0, skip_acl, cr,
->>>>>>> other/main
 		    mnt_ns))) {
 			if (have_acl)
 				zfs_acl_ids_free(&acl_ids);

@@ -183,13 +183,6 @@ zstream_do_decompress(int argc, char *argv[])
 
 			VERIFY3U(sz, <=, 1U << 28);
 
-<<<<<<< HEAD
-			uint32_t sz = drr->drr_payloadlen;
-
-			VERIFY3U(sz, <=, 1U << 28);
-
-=======
->>>>>>> other/main
 			if (sz != 0) {
 				if (sz > bufsz) {
 					buf = realloc(buf, sz);

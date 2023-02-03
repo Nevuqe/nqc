@@ -1,13 +1,8 @@
 #
 #	List of PCI ID's
 #
-<<<<<<< HEAD
-#	Version: 2022.12.04
-#	Date:    2022-12-04 03:15:02
-=======
 #	Version: 2023.01.18
 #	Date:    2023-01-18 03:15:02
->>>>>>> other/main
 #
 #	Maintained by Albert Pool, Martin Mares, and other volunteers from
 #	the PCI ID Project at https://pci-ids.ucw.cz/.
@@ -3812,10 +3807,7 @@
 	731f  Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT]
 		1002 0b36  Reference RX 5700 XT
 		1458 2313  Radeon RX 5700 XT Gaming OC
-<<<<<<< HEAD
-=======
 		1458 231d  Radeon RX 5600 XT/REV 2.0 [Windforce 6GB OC]
->>>>>>> other/main
 		148c 2398  AXRX 5700 XT 8GBD6-3DHE/OC [PowerColor Red Devil Radeon RX 5700 XT]
 		1682 5701  RX 5700 XT RAW II
 		1849 5120  Radeon RX 5600 XT
@@ -3879,10 +3871,7 @@
 	743f  Navi 24 [Radeon RX 6400/6500 XT/6500M]
 		1da2 e457  PULSE AMD Radeon RX 6500 XT
 	744c  Navi 31 [Radeon RX 7900 XT/7900 XTX]
-<<<<<<< HEAD
-=======
 		1da2 e471  NITRO+ RX 7900 XTX Vapor-X
->>>>>>> other/main
 	7833  RS350 Host Bridge
 	7834  RS350 [Radeon 9100 PRO/XT IGP]
 	7835  RS350M [Mobility Radeon 9000 IGP]
@@ -5529,12 +5518,9 @@
 	9930  CyberBlade/XPm
 	9960  CyberBlade XP2
 1024  Beijing Dajia Internet Information Technology Co.
-<<<<<<< HEAD
-=======
 	0101  StreamLake 200 AI-VPU
 		1024 0201  SL200-NP
 		1024 0301  SL200-P
->>>>>>> other/main
 1025  Acer Incorporated [ALI]
 	1435  M1435
 	1445  M1445
@@ -12709,13 +12695,8 @@
 	2561  GA106M [GeForce RTX 3060 Laptop GPU]
 	2563  GA106M [GeForce RTX 3050 Ti Mobile / Max-Q]
 	2571  GA106 [RTX A2000 12GB]
-<<<<<<< HEAD
-	2582  GA107 [GeForce RTX 3050]
-	2583  GA107 [GeForce RTX 3050]
-=======
 	2582  GA107 [GeForce RTX 3050 8GB]
 	2583  GA107 [GeForce RTX 3050 4GB]
->>>>>>> other/main
 	25a0  GA107M [GeForce RTX 3050 Ti Mobile]
 	25a2  GA107M [GeForce RTX 3050 Mobile]
 	25a3  GA107
@@ -12744,10 +12725,7 @@
 	25f9  GA107 [RTX A1000 Embedded GPU ]
 	25fa  GA107 [RTX A2000 Embedded GPU]
 	25fb  GA107 [RTX A500 Embedded GPU]
-<<<<<<< HEAD
-=======
 	2681  AD102 [RTX TITAN Ada]
->>>>>>> other/main
 	2684  AD102 [GeForce RTX 4090]
 	26b1  AD102GL [L6000 / RTX 6000 Ada Generation]
 	26b5  AD102GL [L40]
@@ -14381,10 +14359,7 @@
 112a  Hermes Electronics Company, Ltd.
 # nee Linotype - Hell AG
 112b  Heidelberger Druckmaschinen AG
-<<<<<<< HEAD
-=======
 	0001  SCU5
->>>>>>> other/main
 112c  Zenith Data Systems
 112d  Ravicad
 112e  Infomedia Microelectronics Inc.
@@ -19223,11 +19198,7 @@
 	a804  NVMe SSD Controller SM961/PM961/SM963
 		144d a801  SM963 2.5" NVMe PCIe SSD
 	a808  NVMe SSD Controller SM981/PM981/PM983
-<<<<<<< HEAD
-		144d a801  SSD 970 EVO Plus
-=======
 		144d a801  SSD 970 EVO
->>>>>>> other/main
 		1d49 403b  Thinksystem U.2 PM983 NVMe SSD
 	a809  NVMe SSD Controller 980
 	a80a  NVMe SSD Controller PM9A1/PM9A3/980PRO
@@ -19759,10 +19730,7 @@
 		103c 22be  Ethernet 1Gb 4-port 331i Adapter
 		103c 3383  Ethernet 1Gb 4-port 331T Adapter
 		14e4 1904  4-port 1Gb Ethernet Adapter
-<<<<<<< HEAD
-=======
 		14e4 1909  Broadcom NetXtreme 5719 Quad Port Gigabit NIC
->>>>>>> other/main
 		193d 1025  NIC-ETH330T-LP-4P
 	1659  NetXtreme BCM5721 Gigabit Ethernet PCI Express
 		1014 02c6  eServer xSeries server mainboard
@@ -24284,10 +24252,7 @@
 	1504  PC400 NVMe SSD
 	1527  PC401 NVMe Solid State Drive 256GB
 	174a  Gold P31/PC711 NVMe Solid State Drive
-<<<<<<< HEAD
-=======
 	1959  Platinum P41 NVMe Solid State Drive 2TB
->>>>>>> other/main
 	2204  960GB TLC PCIe Gen3 x4 NVMe M.2 22110
 	243b  PE6110 NVMe Solid State Drive
 		1c5c 0100  PE6110 NVMe Solid State Drive
@@ -24339,11 +24304,7 @@
 		1c5f 4a31  NVMe SSD PBlaze5 926 3200G 2.5" U.2
 		1c5f 4a40  NVMe SSD PBlaze5 926 6400G AIC
 		1c5f 4a41  NVMe SSD PBlaze5 926 6400G 2.5" U.2
-<<<<<<< HEAD
-	003e  PBlaze6 6920
-=======
 	003e  PBlaze6 6920/6930
->>>>>>> other/main
 		1c5f 0a31  NVMe SSD PBlaze6 6920 3840GB 2.5" U.2
 		1c5f 0a41  NVMe SSD PBlaze6 6920 7680GB 2.5" U.2
 		1c5f 0b31  NVMe SSD PBlaze6 6930 3840GB 2.5" U.3
@@ -24413,15 +24374,9 @@
 		1cc4 a212  NVMe SSD UHXXXa series U.2 1600GB
 		1cc4 a213  NVMe SSD UHXXXa series U.2 3200GB
 		1cc4 a214  NVMe SSD UHXXXa series U.2 6400GB
-<<<<<<< HEAD
-		1cc4 e122  VNMe SSD UH711a series U.2 1920GB
-		1cc4 e123  VNMe SSD UH711a series U.2 3840GB
-		1cc4 e124  VNMe SSD UH711a series U.2 7680GB
-=======
 		1cc4 e122  NVMe SSD UH711a series U.2 1920G
 		1cc4 e123  NVMe SSD UH711a series U.2 3840GB
 		1cc4 e124  NVMe SSD UH711a series U.2 7680GB
->>>>>>> other/main
 	17ab  NVMe 256G SSD device
 	6303  AM630 PCIe 4.0 x4 NVMe SSD Controller
 1cc5  Embedded Intelligence, Inc.
@@ -24820,11 +24775,7 @@
 1dcf  Beijing Sinead Technology Co., Ltd.
 1dd3  Sage Microelectronics Corp.
 1dd4  Swissbit AG
-<<<<<<< HEAD
-1dd8  Pensando Systems
-=======
 1dd8  AMD Pensando Systems
->>>>>>> other/main
 	0002  DSC2 Elba Upstream Port
 		1dd8 5001  DSC2-200 50/100/200G 2-port 32G RAM 64G eMMC G2 Services Card
 		1dd8 5003  DSC2-200 50/100/200G 2-port 32G RAM 64G eMMC G2 Services Card
@@ -25295,11 +25246,7 @@
 	0200  MTT S80 Engineering Sample
 	0201  MTT S80
 	0202  MTT S70
-<<<<<<< HEAD
-	0203  G2D10
-=======
 	0203  MTT S60
->>>>>>> other/main
 	0211  G2D40
 	0221  G2S80
 	0222  MTT S3000
@@ -25347,8 +25294,6 @@
 	5220  IG5220-Based NVMe SSD
 	5236  IG5236-Based NVMe SSD
 	5636  IG5636-Based NVMe SSD
-<<<<<<< HEAD
-=======
 1f0f  NebulaMatrix Technology
 	1041  D1055AS vDPA Ethernet Controller
 		1f0f 0001  D1055AS vDPA Ethernet Controller
@@ -25362,7 +25307,6 @@
 	1601  M16104 Family Virtual Function
 	2022  D1055AS PCI Express Switch Upstream Port
 	9088  D1055AS PCI Express Switch Downstream Port
->>>>>>> other/main
 1f24  xFusion Digital Technologies Co., Ltd.
 	1058  EP500/EP600 NVMe SSD
 		1f24 1114  EP500 NVMe SSD(RI)
@@ -33151,8 +33095,6 @@
 		193d 4000  UN-GPU-XG310-32GB-FHFL
 	4908  DG1 [Iris Xe Graphics]
 	4909  DG1 [Iris Xe MAX 100]
-<<<<<<< HEAD
-=======
 	4b00  Elkhart Lake eSPI Controller
 	4b23  Elkhart Lake SMBus Controller
 	4b24  Elkhart Lake SPI (Flash) Controller
@@ -33164,7 +33106,6 @@
 	4b70  Elkhart Lake Management Engine Interface
 	4b7d  Elkhart Lake USB 3.10 XHCI
 	4b7f  Elkhart Lake PMC SRAM
->>>>>>> other/main
 	4c3d  Volume Management Device NVMe RAID Controller
 	4c8a  RocketLake-S GT1 [UHD Graphics 750]
 	4c8b  RocketLake-S GT1 [UHD Graphics 730]

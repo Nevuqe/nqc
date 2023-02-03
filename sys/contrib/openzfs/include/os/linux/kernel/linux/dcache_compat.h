@@ -74,15 +74,7 @@ zpl_d_drop_aliases(struct inode *inode)
 {
 	struct dentry *dentry;
 	spin_lock(&inode->i_lock);
-<<<<<<< HEAD
-#ifdef HAVE_DENTRY_D_U_ALIASES
-	hlist_for_each_entry(dentry, &inode->i_dentry, d_u.d_alias) {
-#else
 	hlist_for_each_entry(dentry, &inode->i_dentry, d_alias) {
-#endif
-=======
-	hlist_for_each_entry(dentry, &inode->i_dentry, d_alias) {
->>>>>>> other/main
 		if (!IS_ROOT(dentry) && !d_mountpoint(dentry) &&
 		    (dentry->d_inode == inode)) {
 			d_drop(dentry);

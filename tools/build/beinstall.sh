@@ -198,7 +198,7 @@ else
     errx "Unable to determine source control type"
 fi
 
-commit_ver=$(${objdir}/bin/freebsd-version/freebsd-version -u 2>/dev/null)
+commit_ver=$(${objdir}/bin/nqc-version/nqc-version -u 2>/dev/null)
 [ -z "${commit_ver}" ] && errx "Unable to determine FreeBSD version"
 
 BENAME="${commit_ver}-${commit_ts}"

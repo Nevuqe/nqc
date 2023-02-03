@@ -35,10 +35,7 @@
 
 #define	EBADRQC		56	/* Bad request code */
 #define	EBADSLT		57	/* Invalid slot */
-<<<<<<< HEAD
-=======
 #define	ENOKEY		126	/* Required key not available */
->>>>>>> other/main
 
 #define	ECHRNG		EDOM
 #define	ETIME		ETIMEDOUT

@@ -121,8 +121,6 @@ global:
 	lzma_stream_encoder_mt;
 	lzma_stream_encoder_mt_memusage;
 } XZ_5.1.2alpha;
-<<<<<<< HEAD
-=======
 
 XZ_5.4 {
 global:
@@ -136,4 +134,3 @@ global:
 	lzma_str_list_filters;
 	lzma_str_to_filters;
 } XZ_5.2;
->>>>>>> other/main

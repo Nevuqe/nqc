@@ -93,12 +93,6 @@ extern lzma_ret lzma_lz_decoder_init(lzma_next_coder *next,
 
 extern uint64_t lzma_lz_decoder_memusage(size_t dictionary_size);
 
-<<<<<<< HEAD
-extern void lzma_lz_decoder_uncompressed(
-		void *coder, lzma_vli uncompressed_size, bool allow_eopm);
-
-=======
->>>>>>> other/main
 
 //////////////////////
 // Inline functions //

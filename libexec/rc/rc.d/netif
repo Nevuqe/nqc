@@ -257,7 +257,7 @@ netif_common()
 		esac
 		if check_startmsgs; then
 			for ifn in ${_ok}; do
-				/sbin/ifconfig ${ifn} 1> /dev/null 2> /dev/null
+				/sbin/ifconfig ${ifn}
 			done
 		fi
 	fi

@@ -171,11 +171,8 @@ MODULE_PNP_INFO("U32:vendor;U32:device;V32:subvendor;V32:subdevice",	\
 #define	PCI_MSI_ADDRESS_HI	PCIR_MSI_ADDR_HIGH
 #define	PCI_MSI_FLAGS		PCIR_MSI_CTRL
 #define	PCI_MSI_FLAGS_ENABLE	PCIM_MSICTRL_MSI_ENABLE
-<<<<<<< HEAD
-=======
 #define	PCI_MSIX_FLAGS		PCIR_MSIX_CTRL
 #define	PCI_MSIX_FLAGS_ENABLE	PCIM_MSIXCTRL_MSIX_ENABLE
->>>>>>> other/main
 
 #define PCI_EXP_LNKCAP_CLKPM	0x00040000
 #define PCI_EXP_DEVSTA_TRPND	0x0020
@@ -329,10 +326,7 @@ struct pci_dev {
 	uint32_t		class;
 	uint8_t			revision;
 	uint8_t			msi_cap;
-<<<<<<< HEAD
-=======
 	uint8_t			msix_cap;
->>>>>>> other/main
 	bool			managed;	/* devres "pcim_*(). */
 	bool			want_iomap_res;
 	bool			msi_enabled;
@@ -1683,8 +1677,6 @@ pci_is_enabled(struct pci_dev *pdev)
 	    PCIM_CMD_BUSMASTEREN) != 0);
 }
 
-<<<<<<< HEAD
-=======
 static inline int
 pci_wait_for_pending_transaction(struct pci_dev *pdev)
 {
@@ -1692,5 +1684,4 @@ pci_wait_for_pending_transaction(struct pci_dev *pdev)
 	return (0);
 }
 
->>>>>>> other/main
 #endif	/* _LINUXKPI_LINUX_PCI_H_ */

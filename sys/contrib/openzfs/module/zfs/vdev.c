@@ -5802,8 +5802,6 @@ vdev_prop_set(vdev_t *vd, nvlist_t *innvl, nvlist_t *outnvl)
 			}
 			vd->vdev_failfast = intval & 1;
 			break;
-<<<<<<< HEAD
-=======
 		case VDEV_PROP_CHECKSUM_N:
 			if (nvpair_value_uint64(elem, &intval) != 0) {
 				error = EINVAL;
@@ -5832,7 +5830,6 @@ vdev_prop_set(vdev_t *vd, nvlist_t *innvl, nvlist_t *outnvl)
 			}
 			vd->vdev_io_t = intval;
 			break;
->>>>>>> other/main
 		default:
 			/* Most processing is done in vdev_props_set_sync */
 			break;
@@ -6162,25 +6159,6 @@ vdev_prop_get(vdev_t *vd, nvlist_t *innvl, nvlist_t *outnvl)
 				vdev_prop_add_list(outnvl, propname, strval,
 				    intval, src);
 				break;
-<<<<<<< HEAD
-			case VDEV_PROP_FAILFAST:
-				src = ZPROP_SRC_LOCAL;
-				strval = NULL;
-
-				err = zap_lookup(mos, objid, nvpair_name(elem),
-				    sizeof (uint64_t), 1, &intval);
-				if (err == ENOENT) {
-					intval = vdev_prop_default_numeric(
-					    prop);
-					err = 0;
-				} else if (err) {
-					break;
-				}
-				if (intval == vdev_prop_default_numeric(prop))
-					src = ZPROP_SRC_DEFAULT;
-
-				vdev_prop_add_list(outnvl, propname, strval,
-=======
 			case VDEV_PROP_CHECKSUM_N:
 			case VDEV_PROP_CHECKSUM_T:
 			case VDEV_PROP_IO_N:
@@ -6195,7 +6173,6 @@ vdev_prop_get(vdev_t *vd, nvlist_t *innvl, nvlist_t *outnvl)
 					src = ZPROP_SRC_LOCAL;
 
 				vdev_prop_add_list(outnvl, propname, NULL,
->>>>>>> other/main
 				    intval, src);
 				break;
 			/* Text Properties */

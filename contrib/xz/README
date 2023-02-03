@@ -202,11 +202,6 @@ XZ Utils
 
         https://translationproject.org/html/translators.html
 
-<<<<<<< HEAD
-    Several strings will change in a future version of xz so if you
-    wish to start a new translation, look at the code in the xz git
-    repository instead of a 5.2.x release.
-=======
     Below are notes and testing instructions specific to xz
     translations.
 
@@ -278,7 +273,6 @@ XZ Utils
         the result doesn't sound good in your language.
 
     Thanks for your help!
->>>>>>> other/main
 
 
 5. Other implementations of the .xz format

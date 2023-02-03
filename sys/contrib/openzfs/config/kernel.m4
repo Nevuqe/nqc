@@ -957,8 +957,6 @@ AC_DEFUN([ZFS_LINUX_TRY_COMPILE_HEADER], [
 		    [[ZFS_META_LICENSE]])],
 		    [test -f build/conftest/conftest.ko], [$3], [$4], [$5])
 	])
-<<<<<<< HEAD
-=======
 ])
 
 dnl #
@@ -991,5 +989,4 @@ AC_DEFUN([ZFS_LINUX_REQUIRE_API], [
 	], [
 		AC_MSG_RESULT(no)
 	])
->>>>>>> other/main
 ])

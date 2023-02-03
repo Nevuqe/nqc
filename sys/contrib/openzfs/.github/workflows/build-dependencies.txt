@@ -44,10 +44,7 @@ python3-dev
 python3-packaging
 python3-pip
 python3-setuptools
-<<<<<<< HEAD
-=======
 python3-sphinx
->>>>>>> other/main
 rng-tools-debian
 rsync
 samba

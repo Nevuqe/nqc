@@ -279,11 +279,7 @@ make_linuxboot_images()
 	zfs=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}.zfs
 	img=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}.img
 	img2=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}-zfs.img
-<<<<<<< HEAD
-	pool="linuxboot-testing"
-=======
 	pool="linuxboot"
->>>>>>> other/main
 	mkdir -p ${IMAGES}/${ma_combo}
 	makefs -t msdos -o fat_type=32 -o sectors_per_cluster=1 \
 	       -o volume_label=EFISYS -s100m ${esp} ${src}
@@ -448,10 +444,6 @@ make_freebsd_images()
 	ufs=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.ufs
 	img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
 	mkdir -p ${IMAGES}/${ma_combo}
-<<<<<<< HEAD
-# XXX 4096 sector?
-=======
->>>>>>> other/main
 	makefs -t msdos -o fat_type=32 -o sectors_per_cluster=1 \
 	       -o volume_label=EFISYS -s100m ${esp} ${src}
 	makefs -t ffs -B little -s 200m -o label=root ${ufs} ${dir} ${dir2}
@@ -461,8 +453,6 @@ make_freebsd_images()
 
     set -x
 
-<<<<<<< HEAD
-=======
     # BIOS i386
     a=i386:i386
     m=${a%%:*}
@@ -487,7 +477,6 @@ EOF
 	  -o ${img}
     rm -f ${src}/etc/fstab
 
->>>>>>> other/main
     # PowerPC for 32-bit mac
     a=powerpc:powerpc
     m=${a%%:*}
@@ -591,8 +580,6 @@ ${qemu_bin}/qemu-system-ppc -m 1g -M mac99,via=pmu \\
         -monitor telnet::4444,server,nowait \\
         -serial stdio \$*
 EOF
-<<<<<<< HEAD
-=======
 
     set -x
     a=i386:i386
@@ -611,7 +598,6 @@ ${qemu_bin}/qemu-system-i386 -m 1g \\
         -monitor telnet::4444,server,nowait \\
         -serial stdio \$*
 EOF
->>>>>>> other/main
 }
 
 # The smallest FAT32 filesystem is 33292 KB

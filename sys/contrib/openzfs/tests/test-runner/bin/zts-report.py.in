@@ -225,10 +225,7 @@ maybe = {
     'io/mmap': ['SKIP', fio_reason],
     'largest_pool/largest_pool_001_pos': ['FAIL', known_reason],
     'mmp/mmp_on_uberblocks': ['FAIL', known_reason],
-<<<<<<< HEAD
-=======
     'pam/setup': ['SKIP', "pamtester might be not available"],
->>>>>>> other/main
     'pool_checkpoint/checkpoint_discard_busy': ['FAIL', 11946],
     'projectquota/setup': ['SKIP', exec_reason],
     'removal/removal_condense_export': ['FAIL', known_reason],

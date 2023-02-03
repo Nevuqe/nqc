@@ -33,13 +33,7 @@
 .intel_syntax noprefix
 .text
 
-<<<<<<< HEAD
-.type zfs_blake3_hash_many_avx2,@function
-.p2align  6
-zfs_blake3_hash_many_avx2:
-=======
 ENTRY_ALIGN(zfs_blake3_hash_many_avx2, 64)
->>>>>>> other/main
         ENDBR
         push    r15
         push    r14

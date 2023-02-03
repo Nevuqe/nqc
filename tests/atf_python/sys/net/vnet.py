@@ -289,11 +289,7 @@ class VnetFactory(object):
         try:
             jid_str = run_cmd(cmd)
             jid = int(jid_str)
-<<<<<<< HEAD
-        except ValueError as e:
-=======
         except ValueError:
->>>>>>> other/main
             print("Jail creation failed, output: {}".format(jid_str))
             raise
         self._register_vnet(vnet_name)
@@ -314,13 +310,7 @@ class VnetFactory(object):
             with open(self.file_name) as f:
                 for line in f:
                     vnet_name = line.strip()
-<<<<<<< HEAD
-                    ToolsHelper.print_output(
-                        "/usr/sbin/jexec {} ifconfig -l".format(vnet_name)
-                    )
-=======
                     iface_factory.cleanup_vnet_interfaces(vnet_name)
->>>>>>> other/main
                     run_cmd("/usr/sbin/jail -r  {}".format(vnet_name))
             os.unlink(self.JAILS_FNAME)
         except OSError:

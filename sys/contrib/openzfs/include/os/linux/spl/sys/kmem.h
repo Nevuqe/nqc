@@ -40,12 +40,9 @@ extern void kmem_strfree(char *str);
 
 #define	kmem_scnprintf	scnprintf
 
-<<<<<<< HEAD
-=======
 #define	POINTER_IS_VALID(p)	(!((uintptr_t)(p) & 0x3))
 #define	POINTER_INVALIDATE(pp)	(*(pp) = (void *)((uintptr_t)(*(pp)) | 0x1))
 
->>>>>>> other/main
 /*
  * Memory allocation interfaces
  */

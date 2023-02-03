@@ -37,7 +37,7 @@ ldconfig_start()
 				_LDC="${_LDC} ${i}"
 			fi
 		done
-		startmsg 'ELF ldconfig path:' ${_LDC} 1> /dev/null
+		startmsg 'ELF ldconfig path:' ${_LDC}
 		${ldconfig} -elf ${_ins} ${_LDC}
 
 		machine_arch=$(sysctl -n hw.machine_arch)
@@ -58,7 +58,7 @@ ldconfig_start()
 					_LDC="${_LDC} ${i}"
 				fi
 			done
-			startmsg '32-bit compatibility ldconfig path:' ${_LDC} 1> /dev/null
+			startmsg '32-bit compatibility ldconfig path:' ${_LDC}
 			${ldconfig} -32 ${_ins} ${_LDC}
 			;;
 		esac

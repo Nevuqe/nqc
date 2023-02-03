@@ -17,20 +17,20 @@ stop_cmd="local_stop"
 
 local_start()
 {
-	# if [ -f /etc/rc.local ]; then
-	#	startmsg -n 'Starting local daemons:'
-	#	. /etc/rc.local
-	#	startmsg '.'
-	# fi
+	if [ -f /etc/rc.local ]; then
+		startmsg -n 'Starting local daemons:'
+		. /etc/rc.local
+		startmsg '.'
+	fi
 }
 
 local_stop()
 {
-	# if [ -f /etc/rc.shutdown.local ]; then
-	#	echo -n 'Shutting down local daemons:'
-	#	. /etc/rc.shutdown.local
-	#	echo '.'
-	# fi
+	if [ -f /etc/rc.shutdown.local ]; then
+		echo -n 'Shutting down local daemons:'
+		. /etc/rc.shutdown.local
+		echo '.'
+	fi
 }
 
 load_rc_config $name

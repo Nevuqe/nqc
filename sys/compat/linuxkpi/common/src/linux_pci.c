@@ -996,8 +996,6 @@ lkpi_pci_msi_desc_alloc(int irq)
 	return (desc);
 }
 
-<<<<<<< HEAD
-=======
 bool
 pci_device_is_present(struct pci_dev *pdev)
 {
@@ -1008,7 +1006,6 @@ pci_device_is_present(struct pci_dev *pdev)
 	return (bus_child_present(dev));
 }
 
->>>>>>> other/main
 CTASSERT(sizeof(dma_addr_t) <= sizeof(uint64_t));
 
 struct linux_dma_obj {
