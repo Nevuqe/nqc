@@ -138,9 +138,6 @@ md_load_dual(char *args, vm_offset_t *modulep, vm_offset_t *dtb, int kern64)
 #if defined(LOADER_FDT_SUPPORT)
     /* Copy out FDT */
     fdtp = 0;
-#if defined(__powerpc__)
-    if (getenv("usefdt") != NULL)
-#endif
     {
 	size = fdt_copy(addr);
 	fdtp = addr;

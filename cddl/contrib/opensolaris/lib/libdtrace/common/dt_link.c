@@ -219,15 +219,6 @@ prepare_elf32(dtrace_hdl_t *dtp, const dof_hdr_t *dof, dof_elf32_t *dep)
 /* XXX */
 			printf("%s:%s(%d): MIPS not implemented\n",
 			    __FUNCTION__, __FILE__, __LINE__);
-#elif defined(__powerpc__)
-			/*
-			 * Add 4 bytes to hit the low half of this 64-bit
-			 * big-endian address.
-			 */
-			rel->r_offset = s->dofs_offset +
-			    dofr[j].dofr_offset + 4;
-			rel->r_info = ELF32_R_INFO(count + dep->de_global,
-			    R_PPC_REL32);
 #elif defined(__riscv)
 /* XXX */
 			printf("%s:%s(%d): RISC-V not implemented\n",
@@ -403,11 +394,6 @@ prepare_elf64(dtrace_hdl_t *dtp, const dof_hdr_t *dof, dof_elf64_t *dep)
 /* XXX */
 #elif defined(__mips__)
 /* XXX */
-#elif defined(__powerpc__)
-			rel->r_offset = s->dofs_offset +
-			    dofr[j].dofr_offset;
-			rel->r_info = ELF64_R_INFO(count + dep->de_global,
-			    R_PPC64_REL64);
 #elif defined(__riscv)
 /* XXX */
 #elif defined(__i386) || defined(__amd64)
@@ -506,8 +492,6 @@ dump_elf32(dtrace_hdl_t *dtp, const dof_hdr_t *dof, int fd)
 	elf_file.ehdr.e_machine = EM_ARM;
 #elif defined(__mips__)
 	elf_file.ehdr.e_machine = EM_MIPS;
-#elif defined(__powerpc__)
-	elf_file.ehdr.e_machine = EM_PPC;
 #elif defined(__i386) || defined(__amd64)
 	elf_file.ehdr.e_machine = EM_386;
 #elif defined(__aarch64__)
@@ -646,11 +630,6 @@ dump_elf64(dtrace_hdl_t *dtp, const dof_hdr_t *dof, int fd)
 	elf_file.ehdr.e_machine = EM_ARM;
 #elif defined(__mips__)
 	elf_file.ehdr.e_machine = EM_MIPS;
-#elif defined(__powerpc64__)
-#if defined(_CALL_ELF) && _CALL_ELF == 2
-	elf_file.ehdr.e_flags = 2;
-#endif
-	elf_file.ehdr.e_machine = EM_PPC64;
 #elif defined(__i386) || defined(__amd64)
 	elf_file.ehdr.e_machine = EM_AMD64;
 #elif defined(__aarch64__)
@@ -853,89 +832,6 @@ dt_modtext(dtrace_hdl_t *dtp, char *p, int isenabled, GElf_Rela *rela,
 	printf("%s:%s(%d): MIPS not implemented\n", __FUNCTION__, __FILE__,
 	    __LINE__);
 	return (-1);
-}
-#elif defined(__powerpc__)
-/* The sentinel is 'xor r3,r3,r3'. */
-#define DT_OP_XOR_R3	0x7c631a78
-
-#define DT_OP_NOP		0x60000000
-#define DT_OP_BLR		0x4e800020
-
-/* This captures all forms of branching to address. */
-#define DT_IS_BRANCH(inst)	((inst & 0xfc000000) == 0x48000000)
-#define DT_IS_BL(inst)	(DT_IS_BRANCH(inst) && (inst & 0x01))
-
-#define	DT_REL_NONE		R_PPC_NONE
-
-static int
-dt_modtext(dtrace_hdl_t *dtp, char *p, int isenabled, GElf_Rela *rela,
-    uint32_t *off)
-{
-	uint32_t *ip;
-
-	if ((rela->r_offset & (sizeof (uint32_t) - 1)) != 0)
-		return (-1);
-
-	/*LINTED*/
-	ip = (uint32_t *)(p + rela->r_offset);
-
-	/*
-	 * We only know about some specific relocation types.
-	 */
-	if (GELF_R_TYPE(rela->r_info) != R_PPC_REL24 &&
-	    GELF_R_TYPE(rela->r_info) != R_PPC_PLTREL24 &&
-	    GELF_R_TYPE(rela->r_info) != R_PPC_NONE)
-		return (-1);
-
-	/*
-	 * We may have already processed this object file in an earlier linker
-	 * invocation. Check to see if the present instruction sequence matches
-	 * the one we would install below.
-	 */
-	if (isenabled) {
-		if (ip[0] == DT_OP_XOR_R3) {
-			(*off) += sizeof (ip[0]);
-			return (0);
-		}
-	} else {
-		if (ip[0] == DT_OP_NOP) {
-			(*off) += sizeof (ip[0]);
-			return (0);
-		}
-	}
-
-	/*
-	 * We only expect branch to address instructions.
-	 */
-	if (!DT_IS_BRANCH(ip[0])) {
-		dt_dprintf("found %x instead of a branch instruction at %llx\n",
-		    ip[0], (u_longlong_t)rela->r_offset);
-		return (-1);
-	}
-
-	if (isenabled) {
-		/*
-		 * It would necessarily indicate incorrect usage if an is-
-		 * enabled probe were tail-called so flag that as an error.
-		 * It's also potentially (very) tricky to handle gracefully,
-		 * but could be done if this were a desired use scenario.
-		 */
-		if (!DT_IS_BL(ip[0])) {
-			dt_dprintf("tail call to is-enabled probe at %llx\n",
-			    (u_longlong_t)rela->r_offset);
-			return (-1);
-		}
-
-		ip[0] = DT_OP_XOR_R3;
-		(*off) += sizeof (ip[0]);
-	} else {
-		if (DT_IS_BL(ip[0]))
-			ip[0] = DT_OP_NOP;
-		else
-			ip[0] = DT_OP_BLR;
-	}
-
-	return (0);
 }
 #elif defined(__riscv)
 #define	DT_REL_NONE		R_RISCV_NONE
@@ -1169,8 +1065,6 @@ process_obj(dtrace_hdl_t *dtp, const char *obj, int *eprobesp)
 		eclass = ELFCLASS64;
 #if defined(__mips__)
 		emachine1 = emachine2 = EM_MIPS;
-#elif defined(__powerpc__)
-		emachine1 = emachine2 = EM_PPC64;
 #if !defined(_CALL_ELF) || _CALL_ELF == 1
 		uses_funcdesc = 1;
 #endif

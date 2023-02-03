@@ -166,7 +166,7 @@ atomic_cmpxchg(atomic_t *v, int old, int new)
 #define	LINUXKPI_ATOMIC_16(...)
 #endif
 
-#if !(defined(i386) || (defined(__powerpc__) && !defined(__powerpc64__)))
+#if !(defined(i386))
 #define	LINUXKPI_ATOMIC_64(...) __VA_ARGS__
 #else
 #define	LINUXKPI_ATOMIC_64(...)

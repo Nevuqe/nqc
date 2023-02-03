@@ -125,15 +125,11 @@ atomic64_fetch_add_unless(atomic64_t *v, int64_t a, int64_t u)
 static inline int64_t
 atomic64_xchg(atomic64_t *v, int64_t i)
 {
-#if !(defined(__powerpc__) && !defined(__powerpc64__))
-	return (atomic_swap_64(&v->counter, i));
-#else
 	int64_t ret = atomic64_read(v);
 
 	while (!atomic_fcmpset_64(&v->counter, &ret, i))
 		;
 	return (ret);
-#endif
 }
 
 static inline int64_t
