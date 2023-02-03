@@ -1080,8 +1080,6 @@ process_obj(dtrace_hdl_t *dtp, const char *obj, int *eprobesp)
 		emachine1 = emachine2 = EM_ARM;
 #elif defined(__mips__)
 		emachine1 = emachine2 = EM_MIPS;
-#elif defined(__powerpc__)
-		emachine1 = emachine2 = EM_PPC;
 #elif defined(__i386) || defined(__amd64)
 		emachine1 = emachine2 = EM_386;
 #endif

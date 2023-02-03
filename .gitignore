@@ -12,7 +12,6 @@ _.amd64.*
 _.arm.*
 _.arm64.*
 _.i386.*
-_.powerpc.*
 _.riscv.*
 GPATH
 GRTAGS
