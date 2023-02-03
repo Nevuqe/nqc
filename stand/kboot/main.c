@@ -44,11 +44,49 @@ ssize_t kboot_copyin(const void *src, vm_offset_t dest, const size_t len);
 ssize_t kboot_copyout(vm_offset_t src, void *dest, const size_t len);
 ssize_t kboot_readin(readin_handle_t fd, vm_offset_t dest, const size_t len);
 int kboot_autoload(void);
-uint64_t kboot_loadaddr(u_int type, void *data, uint64_t addr);
 static void kboot_kseg_get(int *nseg, void **ptr);
 static void kboot_zfs_probe(void);
 
 extern int command_fdt_internal(int argc, char *argv[]);
+
+static uint64_t commit_limit;
+static uint64_t committed_as;
+static uint64_t mem_avail;
+
+static void
+memory_limits(void)
+{
+	int fd;
+	char buf[128];
+
+	/*
+	 * To properly size the slabs, we need to find how much memory we can
+	 * commit to using. commit_limit is the max, while commited_as is the
+	 * current total. We can use these later to allocate the largetst amount
+	 * of memory possible so we can support larger ram disks than we could
+	 * by using fixed segment sizes. We also grab the memory available so
+	 * we don't use more than 49% of that.
+	 */
+	fd = open("host:/proc/meminfo", O_RDONLY);
+	if (fd != -1) {
+		while (fgetstr(buf, sizeof(buf), fd) > 0) {
+			if (strncmp(buf, "MemAvailable:", 13) == 0) {
+				mem_avail = strtoll(buf + 13, NULL, 0);
+				mem_avail <<= 10; /* Units are kB */
+			} else if (strncmp(buf, "CommitLimit:", 12) == 0) {
+				commit_limit = strtoll(buf + 13, NULL, 0);
+				commit_limit <<= 10; /* Units are kB */
+			} else if (strncmp(buf, "Committed_AS:", 13) == 0) {
+				committed_as = strtoll(buf + 14, NULL, 0);
+				committed_as <<= 10; /* Units are kB */
+			}
+		}
+	}
+	printf("Commit limit: %lld Committed bytes %lld Available %lld\n",
+	    (long long)commit_limit, (long long)committed_as,
+	    (long long)mem_avail);
+	close(fd);
+}
 
 /*
  * NB: getdev should likely be identical to this most places, except maybe
@@ -151,7 +189,7 @@ int
 main(int argc, const char **argv)
 {
 	void *heapbase;
-	const size_t heapsize = 128*1024*1024;
+	const size_t heapsize = 64*1024*1024;
 	const char *bootdev;
 
 	archsw.arch_getdev = kboot_getdev;
@@ -159,7 +197,6 @@ main(int argc, const char **argv)
 	archsw.arch_copyout = kboot_copyout;
 	archsw.arch_readin = kboot_readin;
 	archsw.arch_autoload = kboot_autoload;
-	archsw.arch_loadaddr = kboot_loadaddr;
 	archsw.arch_kexec_kseg_get = kboot_kseg_get;
 	archsw.arch_zfs_probe = kboot_zfs_probe;
 
@@ -167,7 +204,7 @@ main(int argc, const char **argv)
 	do_init();
 
 	/*
-	 * Setup the heap 15MB should be plenty
+	 * Setup the heap, 64MB is minimum for ZFS booting
 	 */
 	heapbase = host_getmem(heapsize);
 	setheap(heapbase, heapbase + heapsize);
@@ -216,6 +253,8 @@ main(int argc, const char **argv)
 
 	setenv("LINES", "24", 1);
 	setenv("usefdt", "1", 1);
+
+	memory_limits();
 
 	/*
 	 * Find acpi, if it exists
@@ -374,18 +413,6 @@ kboot_autoload(void)
 {
 
 	return (0);
-}
-
-uint64_t
-kboot_loadaddr(u_int type, void *data, uint64_t addr)
-{
-
-	if (type == LOAD_ELF)
-		addr = roundup(addr, PAGE_SIZE);
-	else
-		addr += kboot_get_phys_load_segment();
-
-	return (addr);
 }
 
 static void
