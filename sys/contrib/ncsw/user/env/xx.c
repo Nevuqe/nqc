@@ -51,7 +51,6 @@
 #include <dev/dpaa/qman.h>
 #include <dev/dpaa/portals.h>
 
-#include <powerpc/mpc85xx/mpc85xx.h>
 #include "error_ext.h"
 #include "std_ext.h"
 #include "list_ext.h"
@@ -416,8 +415,6 @@ XX_EnableIntr(uintptr_t irq)
 	r = (struct resource *)irq;
 	irq = rman_get_start(r);
 
-	powerpc_intr_unmask(irq);
-
 	return (E_OK);
 }
 
@@ -428,8 +425,6 @@ XX_DisableIntr(uintptr_t irq)
 
 	r = (struct resource *)irq;
 	irq = rman_get_start(r);
-
-	powerpc_intr_mask(irq);
 
 	return (E_OK);
 }

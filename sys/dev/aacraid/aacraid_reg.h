@@ -421,7 +421,6 @@ typedef enum {
 	CPU_I960,
 	CPU_ARM,
 	CPU_SPARC,
-	CPU_POWERPC,
 	CPU_ALPHA,
 	CPU_P7,
 	CPU_I960_RX,

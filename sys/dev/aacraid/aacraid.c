@@ -167,7 +167,6 @@ static struct aac_code_lookup aac_cpu_variant[] = {
 	{"MIPS 4KC",		CPU_MIPS_4KC},
 	{"MIPS 5KC",		CPU_MIPS_5KC},
 	{"Unknown StrongARM",	CPUARM_xxx},
-	{"Unknown PowerPC",	CPUPPC_xxx},
 	{NULL, 0},
 	{"Unknown processor",	0}
 };

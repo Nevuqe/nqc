@@ -38,7 +38,6 @@ static const char *const raidz_impl_names[] = {
 	"avx512bw",
 	"aarch64_neon",
 	"aarch64_neonx2",
-	"powerpc_altivec",
 	NULL
 };
 

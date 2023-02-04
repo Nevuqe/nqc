@@ -393,7 +393,7 @@ _outb(u_char data, u_int port)
 }
 #endif
 
-#if defined(__i386__) || defined(__amd64__) || defined(__powerpc__) || defined(__aarch64__) || defined(__riscv)
+#if defined(__i386__) || defined(__amd64__) || defined(__aarch64__) || defined(__riscv)
 void *_ioremap_attr(vm_paddr_t phys_addr, unsigned long size, int attr);
 #else
 static __inline void *
@@ -523,7 +523,7 @@ void lkpi_arch_phys_wc_del(int);
 #define	arch_phys_wc_index(x)	\
 	(((x) < __MTRR_ID_BASE) ? -1 : ((x) - __MTRR_ID_BASE))
 
-#if defined(__amd64__) || defined(__i386__) || defined(__aarch64__) || defined(__powerpc__) || defined(__riscv)
+#if defined(__amd64__) || defined(__i386__) || defined(__aarch64__) || defined(__riscv)
 static inline int
 arch_io_reserve_memtype_wc(resource_size_t start, resource_size_t size)
 {

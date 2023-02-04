@@ -183,8 +183,6 @@ if test "$with_gnu_ld" = yes; then
       ;;
     amigaos*)
       case "$host_cpu" in
-        powerpc)
-          ;;
         m68k)
           hardcode_libdir_flag_spec='-L$libdir'
           hardcode_minus_L=yes
