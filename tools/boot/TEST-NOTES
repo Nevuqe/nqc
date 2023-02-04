@@ -17,6 +17,5 @@ o Will test
   o aarch64 Will test UEFI+ACPI on MBR/GPT, UEFI+ACPI+kboot, DTB+kboot
   o amd64 <big matrix here>
   o i386 legacy + {gpt,mbr} and cdrom boot (also the isoboot unified?)
-  o powerpc <who knows> but kboot+dtb
   o riscv UEFI+ACPI with GPT and serial console
 

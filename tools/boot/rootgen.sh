@@ -546,7 +546,6 @@ mk_geli_mbr_zfs_both() {
 # iso
 # pxeldr
 # u-boot
-# powerpc
 
 qser="-monitor telnet::4444,server,nowait -serial stdio -nographic"
 
@@ -665,10 +664,6 @@ make_one_image()
     echo "^^^^^^^^^^^^^^   Created $img   ^^^^^^^^^^^^^^^"
 }
 
-# Powerpc -- doesn't work but maybe it would enough for testing -- needs details
-# powerpc64
-# qemu-system-ppc64 -drive file=/path/to/disk.img,format=raw
-
 # Misc variables
 SRCTOP=$(make -v SRCTOP)
 cd ${SRCTOP}/stand
@@ -767,18 +762,6 @@ for arch in arm aarch64; do
 	bios=efi # Note: arm has some uboot support with ufs, what to do?
 	make_one_image ${arch} ${geli} ${scheme} ${fs} ${bios}
       done
-    done
-done
-
-# It's not clear that the nested looping paradigm is best for powerpc
-# due to its diversity.
-for arch in powerpc powerpc64 powerpc64le; do
-    geli=nogeli
-    for scheme in apm gpt; do
-	fs=ufs # zfs + gpt might be supported?
-	for bios in ofw uboot chrp; do
-	    make_one_image ${arch} ${geli} ${scheme} ${fs} ${bios}
-	done
     done
 done
 
