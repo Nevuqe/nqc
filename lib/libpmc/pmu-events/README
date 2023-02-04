@@ -129,7 +129,6 @@ where:
 
 		Example:
 			CPUID == 'GenuineIntel-6-2E' (on x86).
-			CPUID == '004b0100' (PVR value in Powerpc)
 	Version:
 		is the Version of the mapfile.
 
