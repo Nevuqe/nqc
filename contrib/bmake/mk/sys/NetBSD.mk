@@ -53,7 +53,6 @@ MACHINE_CPU ?=	${MACHINE_ARCH:C/mipse[bl]/mips/:C/mips64e[bl]/mips/:C/sh3e[bl]/s
     ${MACHINE_CPU} == "i386" || \
     ${MACHINE_CPU} == "m68k" || \
     ${MACHINE_CPU} == "mips" || \
-    ${MACHINE_CPU} == "powerpc" || \
     ${MACHINE_CPU} == "sparc" || \
     ${MACHINE_CPU} == "vax"
 DBG ?=	-O2
