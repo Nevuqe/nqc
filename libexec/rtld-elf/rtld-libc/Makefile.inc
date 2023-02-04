@@ -5,11 +5,7 @@
 .include <bsd.compiler.mk>
 
 LIBC_SRCTOP=${SRCTOP}/lib/libc
-.if exists(${LIBC_SRCTOP}/${MACHINE_ARCH:S/powerpc64le/powerpc64/})
-LIBC_ARCH=${MACHINE_ARCH:S/powerpc64le/powerpc64/}
-.else
 LIBC_ARCH=${MACHINE_CPUARCH}
-.endif
 
 CFLAGS+=	-I${SRCTOP}/libexec/rtld-elf/rtld-libc
 
@@ -59,12 +55,6 @@ _libc_other_objects+=aeabi_unwind_cpp
 .elif ${LIBC_ARCH} == "i386"
 # i386 needs i386_set_gsbase for allocate_initial_tls()
 _libc_other_objects+=i386_set_gsbase
-.elif ${LIBC_ARCH} == "powerpc" || ${LIBC_ARCH} == "powerpcspe"
-# ppc needs __syncicache and abs for reloc.c
-_libc_other_objects+=syncicache abs
-.elif ${LIBC_ARCH} == "powerpc64"
-# ppc64 needs __syncicache for reloc.c
-_libc_other_objects+=syncicache
 .endif
 
 # Extract all the .o files from libc_nossp_pic.a. This ensures that
