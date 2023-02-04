@@ -50,7 +50,6 @@ __FBSDID("$FreeBSD$");
 
 #include <dev/ofw/openfirm.h>
 #include <dev/ofw/ofw_bus.h>
-#include <powerpc/powermac/powermac_thermal.h>
 
 /* Inlet, Backside, U3 Heatsink sensor: MAX6690. */
 
@@ -286,10 +285,6 @@ max6690_start(void *xdev)
 
 	/* Now we can fill the properties into the allocated struct. */
 	sc->sc_nsensors = max6690_fill_sensor_prop(dev);
-
-	/* Register with powermac_thermal */
-	for (i = 0; i < sc->sc_nsensors; i++)
-		pmac_thermal_sensor_register(&sc->sc_sensors[i].therm);
 
 	/* Add sysctls for the sensors. */
 	for (i = 0; i < sc->sc_nsensors; i++) {

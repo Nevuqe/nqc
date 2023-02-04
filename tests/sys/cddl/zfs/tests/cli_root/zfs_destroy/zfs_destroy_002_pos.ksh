@@ -91,8 +91,6 @@ if is_global_zone ; then
 		BIGVOLSIZE=1Tb
 	[[ `$UNAME -p` == "mips" ]] && \
 		BIGVOLSIZE=1Tb
-	[[ `$UNAME -p` == "powerpc" ]] && \
-		BIGVOLSIZE=1Tb
 	log_must $ZFS create -sV $BIGVOLSIZE $TESTPOOL/$TESTVOL1
 fi
 

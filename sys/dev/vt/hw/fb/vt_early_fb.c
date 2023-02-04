@@ -228,15 +228,10 @@ vt_efb_init(struct vt_device *vd)
 		OF_getencprop(node, "address", &info->fb_pbase,
 		    sizeof(info->fb_pbase));
 
-	#if defined(__powerpc__)
-		sc->sc_memt = &bs_be_tag;
-		bus_space_map(sc->sc_memt, info->fb_pbase, info->fb_size,
-		    BUS_SPACE_MAP_PREFETCHABLE, &info->fb_vbase);
-	#else
 		bus_space_map(fdtbus_bs_tag, info->fb_pbase, info->fb_size,
 		    BUS_SPACE_MAP_PREFETCHABLE,
 		    (bus_space_handle_t *)&info->fb_vbase);
-	#endif
+
 	} else {
 		/*
 		 * Some IBM systems don't have an address property. Try to
@@ -266,14 +261,10 @@ vt_efb_init(struct vt_device *vd)
 		if (info->fb_pbase == n_pciaddrs) /* No candidates found */
 			return (CN_DEAD);
 
-	#if defined(__powerpc__)
-		OF_decode_addr(node, info->fb_pbase, &sc->sc_memt,
-		    &info->fb_vbase);
-	#else
 		bus_space_map(fdtbus_bs_tag, info->fb_pbase, info->fb_size,
 		    BUS_SPACE_MAP_PREFETCHABLE,
 		    (bus_space_handle_t *)&info->fb_vbase);
-	#endif
+
 	}
 
 	/* blank full size */

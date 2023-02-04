@@ -1892,8 +1892,7 @@ startup_alloc(uma_zone_t zone, vm_size_t bytes, int domain, uint8_t *pflag,
 
 	pa = VM_PAGE_TO_PHYS(m);
 	for (i = 0; i < pages; i++, pa += PAGE_SIZE) {
-#if defined(__aarch64__) || defined(__amd64__) || \
-    defined(__riscv) || defined(__powerpc64__)
+#if defined(__aarch64__) || defined(__amd64__) || defined(__riscv)
 		if ((wait & M_NODUMP) == 0)
 			dump_add_page(pa);
 #endif
@@ -1920,8 +1919,7 @@ startup_free(void *mem, vm_size_t bytes)
 	if (va >= bootstart && va + bytes <= bootmem)
 		pmap_remove(kernel_pmap, va, va + bytes);
 	for (; bytes != 0; bytes -= PAGE_SIZE, m++) {
-#if defined(__aarch64__) || defined(__amd64__) || \
-    defined(__riscv) || defined(__powerpc64__)
+#if defined(__aarch64__) || defined(__amd64__) || defined(__riscv)
 		dump_drop_page(VM_PAGE_TO_PHYS(m));
 #endif
 		vm_page_unwire_noq(m);

@@ -60,10 +60,6 @@ __FBSDID("$FreeBSD$");
 #include <arm/freescale/imx/imx_ccmvar.h>
 #endif
 
-#ifdef __powerpc__
-#include <powerpc/mpc85xx/mpc85xx.h>
-#endif
-
 #include <dev/gpio/gpiobusvar.h>
 
 #include <dev/ofw/ofw_bus.h>
@@ -405,11 +401,6 @@ fsl_sdhci_write_1(device_t dev, struct sdhci_slot *slot, bus_size_t off, uint8_t
 	if (off == SDHCI_POWER_CONTROL) {
 		return;
 	}
-#ifdef __powerpc__
-	/* XXX Reset doesn't seem to work as expected.  Do nothing for now. */
-	if (off == SDHCI_SOFTWARE_RESET)
-		return;
-#endif
 
 	val32 = RD4(sc, off & ~3);
 	val32 &= ~(0xff << (off & 3) * 8);
@@ -767,35 +758,6 @@ fsl_sdhci_get_card_present(device_t dev, struct sdhci_slot *slot)
 	return (sdhci_fdt_gpio_get_present(sc->gpio));
 }
 
-#ifdef __powerpc__
-static uint32_t
-fsl_sdhci_get_platform_clock(device_t dev)
-{
-	phandle_t node;
-	uint32_t clock;
-
-	node = ofw_bus_get_node(dev);
-
-	/* Get sdhci node properties */
-	if((OF_getprop(node, "clock-frequency", (void *)&clock,
-	    sizeof(clock)) <= 0) || (clock == 0)) {
-		clock = mpc85xx_get_system_clock();
-
-		if (clock == 0) {
-			device_printf(dev,"Cannot acquire correct sdhci "
-			    "frequency from DTS.\n");
-
-			return (0);
-		}
-	}
-
-	if (bootverbose)
-		device_printf(dev, "Acquired clock: %d from DTS\n", clock);
-
-	return (clock);
-}
-#endif
-
 static int
 fsl_sdhci_detach(device_t dev)
 {
@@ -828,10 +790,6 @@ fsl_sdhci_attach(device_t dev)
 {
 	struct fsl_sdhci_softc *sc = device_get_softc(dev);
 	int rid, err;
-#ifdef __powerpc__
-	phandle_t node;
-	uint32_t protctl;
-#endif
 
 	sc->dev = dev;
 
@@ -899,11 +857,7 @@ fsl_sdhci_attach(device_t dev)
 	 * We read in native byte order in the main driver, but the register
 	 * defaults to little endian.
 	 */
-#ifdef __powerpc__
-	sc->baseclk_hz = fsl_sdhci_get_platform_clock(dev);
-#else
 	sc->baseclk_hz = imx_ccm_sdhci_hz();
-#endif
 	sc->slot.max_clk = sc->baseclk_hz;
 
 	/*
@@ -911,18 +865,6 @@ fsl_sdhci_attach(device_t dev)
 	 * fail; see comments in sdhci_fdt_gpio.h for details.
 	 */
 	sc->gpio = sdhci_fdt_gpio_setup(dev, &sc->slot);
-
-#ifdef __powerpc__
-	node = ofw_bus_get_node(dev);
-	/* Default to big-endian on powerpc */
-	protctl = RD4(sc, SDHC_PROT_CTRL);
-	protctl &= ~SDHC_PROT_EMODE_MASK;
-	if (OF_hasprop(node, "little-endian"))
-		protctl |= SDHC_PROT_EMODE_LITTLE;
-	else
-		protctl |= SDHC_PROT_EMODE_BIG;
-	WR4(sc, SDHC_PROT_CTRL, protctl);
-#endif
 
 	sdhci_init_slot(dev, &sc->slot, 0);
 	sc->slot_init_done = true;
