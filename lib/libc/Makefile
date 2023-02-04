@@ -27,6 +27,7 @@ CFLAGS+=-DNO__SCCSID -DNO__RCSID
 
 LIB=c
 SHLIB_MAJOR= 7
+.if ${MK_SSP} != "no" && ${LIBC_ARCH} == "i386"
 SHLIB_LDSCRIPT=libc.ldscript
 .else
 SHLIB_LDSCRIPT=libc_nossp.ldscript
@@ -51,7 +52,7 @@ CFLAGS+=${CANCELPOINTS_CFLAGS}
 # Use a more efficient TLS model for libc since we can reasonably assume that
 # it will be loaded during program startup.
 .if ${LIBC_ARCH} == "aarch64" || ${LIBC_ARCH} == "amd64" || \
-    ${LIBC_ARCH} == "i386" || ${LIBC_ARCH} == "riscv" != ""
+    ${LIBC_ARCH} == "i386" || ${LIBC_ARCH} == "riscv"
 CFLAGS+= -ftls-model=initial-exec
 .endif
 
@@ -61,8 +62,7 @@ CFLAGS+= -ftls-model=initial-exec
 LDFLAGS+= -nodefaultlibs
 LIBADD+=	compiler_rt
 
-.if ${MK_SSP} != "no" && \
-    (${LIBC_ARCH} == "i386" != "")
+.if ${MK_SSP} != "no" && ${LIBC_ARCH} == "i386"
 LIBADD+=	ssp_nonshared
 .endif
 
