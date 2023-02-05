@@ -2643,7 +2643,6 @@ cas_pci_attach(device_t dev)
 	char buf[sizeof(CAS_LOCAL_MAC_ADDRESS)];
 	struct cas_softc *sc;
 	int i;
-
 	sc = device_get_softc(dev);
 	sc->sc_variant = CAS_UNKNOWN;
 	for (i = 0; cas_pci_devlist[i].cpd_desc != NULL; i++) {
@@ -2682,7 +2681,7 @@ cas_pci_attach(device_t dev)
 	}
 
 	CAS_LOCK_INIT(sc, device_get_nameunit(dev));
-	
+
 	/*
 	 * Dig out VPD (vital product data) and read the MAC address as well
 	 * as the PHY type.  The VPD resides in the PCI Expansion ROM (PCI
@@ -2847,7 +2846,6 @@ cas_pci_attach(device_t dev)
 		i = pci_get_slot(dev);
 	if (pcs[i] != 0)
 		sc->sc_flags |= CAS_SERDES;
-#endif
 
 	if (cas_attach(sc) != 0) {
 		device_printf(dev, "could not be attached\n");
