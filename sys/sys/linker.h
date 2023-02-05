@@ -227,7 +227,12 @@ void linker_kldload_unbusy(int flags);
 #define MODINFOMD_ESYM		0x0004		/* end of symbols */
 #define MODINFOMD_DYNAMIC	0x0005		/* _DYNAMIC pointer */
 #define MODINFOMD_MB2HDR	0x0006		/* MB2 header info */
-
+/* These values are MD on PowerPC */
+#if !defined(__powerpc__)
+#define MODINFOMD_ENVP		0x0006		/* envp[] */
+#define MODINFOMD_HOWTO		0x0007		/* boothowto */
+#define MODINFOMD_KERNEND	0x0008		/* kernend */
+#endif
 #define MODINFOMD_SHDR		0x0009		/* section header table */
 #define MODINFOMD_CTORS_ADDR	0x000a		/* address of .ctors */
 #define MODINFOMD_CTORS_SIZE	0x000b		/* size of .ctors */
