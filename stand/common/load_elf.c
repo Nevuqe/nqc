@@ -98,113 +98,6 @@ const char	*__elfN(moduletype) = "elf module";
 
 uint64_t	__elfN(relocation_offset) = 0;
 
-#ifdef __powerpc__
-extern void elf_wrong_field_size(void);
-#define CONVERT_FIELD(b, f, e)			\
-	switch (sizeof((b)->f)) {		\
-	case 2:					\
-		(b)->f = e ## 16toh((b)->f);	\
-		break;				\
-	case 4:					\
-		(b)->f = e ## 32toh((b)->f);	\
-		break;				\
-	case 8:					\
-		(b)->f = e ## 64toh((b)->f);	\
-		break;				\
-	default:				\
-		/* Force a link time error. */	\
-		elf_wrong_field_size();		\
-		break;				\
-	}
-
-#define CONVERT_SWITCH(h, d, f)			\
-	switch ((h)->e_ident[EI_DATA]) {	\
-	case ELFDATA2MSB:			\
-		f(d, be);			\
-		break;				\
-	case ELFDATA2LSB:			\
-		f(d, le);			\
-		break;				\
-	default:				\
-		return (EINVAL);		\
-	}
-
-
-static int elf_header_convert(Elf_Ehdr *ehdr)
-{
-	/*
-	 * Fixup ELF header endianness.
-	 *
-	 * The Xhdr structure was loaded using block read call to optimize file
-	 * accesses. It might happen, that the endianness of the system memory
-	 * is different that endianness of the ELF header.  Swap fields here to
-	 * guarantee that Xhdr always contain valid data regardless of
-	 * architecture.
-	 */
-#define HEADER_FIELDS(b, e)			\
-	CONVERT_FIELD(b, e_type, e);		\
-	CONVERT_FIELD(b, e_machine, e);		\
-	CONVERT_FIELD(b, e_version, e);		\
-	CONVERT_FIELD(b, e_entry, e);		\
-	CONVERT_FIELD(b, e_phoff, e);		\
-	CONVERT_FIELD(b, e_shoff, e);		\
-	CONVERT_FIELD(b, e_flags, e);		\
-	CONVERT_FIELD(b, e_ehsize, e);		\
-	CONVERT_FIELD(b, e_phentsize, e);	\
-	CONVERT_FIELD(b, e_phnum, e);		\
-	CONVERT_FIELD(b, e_shentsize, e);	\
-	CONVERT_FIELD(b, e_shnum, e);		\
-	CONVERT_FIELD(b, e_shstrndx, e)
-
-	CONVERT_SWITCH(ehdr, ehdr, HEADER_FIELDS);
-
-#undef HEADER_FIELDS
-
-	return (0);
-}
-
-static int elf_program_header_convert(const Elf_Ehdr *ehdr, Elf_Phdr *phdr)
-{
-#define PROGRAM_HEADER_FIELDS(b, e)		\
-	CONVERT_FIELD(b, p_type, e);		\
-	CONVERT_FIELD(b, p_flags, e);		\
-	CONVERT_FIELD(b, p_offset, e);		\
-	CONVERT_FIELD(b, p_vaddr, e);		\
-	CONVERT_FIELD(b, p_paddr, e);		\
-	CONVERT_FIELD(b, p_filesz, e);		\
-	CONVERT_FIELD(b, p_memsz, e);		\
-	CONVERT_FIELD(b, p_align, e)
-
-	CONVERT_SWITCH(ehdr, phdr, PROGRAM_HEADER_FIELDS);
-
-#undef PROGRAM_HEADER_FIELDS
-
-	return (0);
-}
-
-static int elf_section_header_convert(const Elf_Ehdr *ehdr, Elf_Shdr *shdr)
-{
-#define SECTION_HEADER_FIELDS(b, e)		\
-	CONVERT_FIELD(b, sh_name, e);		\
-	CONVERT_FIELD(b, sh_type, e);		\
-	CONVERT_FIELD(b, sh_link, e);		\
-	CONVERT_FIELD(b, sh_info, e);		\
-	CONVERT_FIELD(b, sh_flags, e);		\
-	CONVERT_FIELD(b, sh_addr, e);		\
-	CONVERT_FIELD(b, sh_offset, e);		\
-	CONVERT_FIELD(b, sh_size, e);		\
-	CONVERT_FIELD(b, sh_addralign, e);	\
-	CONVERT_FIELD(b, sh_entsize, e)
-
-	CONVERT_SWITCH(ehdr, shdr, SECTION_HEADER_FIELDS);
-
-#undef SECTION_HEADER_FIELDS
-
-	return (0);
-}
-#undef CONVERT_SWITCH
-#undef CONVERT_FIELD
-#else
 static int elf_header_convert(Elf_Ehdr *ehdr)
 {
 	return (0);
@@ -219,7 +112,6 @@ static int elf_section_header_convert(const Elf_Ehdr *ehdr, Elf_Shdr *shdr)
 {
 	return (0);
 }
-#endif
 
 #ifdef __amd64__
 static bool
@@ -389,14 +281,6 @@ __elfN(loadfile_raw)(char *filename, uint64_t dest,
 	 * Check to see what sort of module we are.
 	 */
 	kfp = file_findfile(NULL, __elfN(kerneltype));
-#ifdef __powerpc__
-	/*
-	 * Kernels can be ET_DYN, so just assume the first loaded object is the
-	 * kernel. This assumption will be checked later.
-	 */
-	if (kfp == NULL)
-		ef.kernel = 1;
-#endif
 	if (ef.kernel || ehdr->e_type == ET_EXEC) {
 		/* Looks like a kernel */
 		if (kfp != NULL) {
@@ -562,11 +446,7 @@ __elfN(loadimage)(struct preloaded_file *fp, elf_file_t ef, uint64_t off)
 	ret = 0;
 	firstaddr = lastaddr = 0;
 	ehdr = ef->ehdr;
-#ifdef __powerpc__
-	if (ef->kernel) {
-#else
 	if (ehdr->e_type == ET_EXEC) {
-#endif
 #if defined(__i386__) || defined(__amd64__)
 #if __ELF_WORD_SIZE == 64
 		/* x86_64 relocates after locore */
@@ -575,29 +455,6 @@ __elfN(loadimage)(struct preloaded_file *fp, elf_file_t ef, uint64_t off)
 		/* i386 relocates after locore */
 		off = - (off & 0xff000000u);
 #endif
-#elif defined(__powerpc__)
-		/*
-		 * On the purely virtual memory machines like e500, the kernel
-		 * is linked against its final VA range, which is most often
-		 * not available at the loader stage, but only after kernel
-		 * initializes and completes its VM settings. In such cases we
-		 * cannot use p_vaddr field directly to load ELF segments, but
-		 * put them at some 'load-time' locations.
-		 */
-		if (off & 0xf0000000u) {
-			off = -(off & 0xf0000000u);
-			/*
-			 * XXX the physical load address should not be
-			 * hardcoded. Note that the Book-E kernel assumes that
-			 * it's loaded at a 16MB boundary for now...
-			 */
-			off += 0x01000000;
-		}
-		ehdr->e_entry += off;
-		if (module_verbose >= MODULE_VERBOSE_FULL)
-			printf("Converted entry 0x%jx\n",
-			    (uintmax_t)ehdr->e_entry);
-
 #elif defined(__arm__) && !defined(EFI)
 		/*
 		 * The elf headers in arm kernels specify virtual addresses in
@@ -974,7 +831,7 @@ fake_modname(const char *name)
 	return fp;
 }
 
-#if (defined(__i386__) || defined(__powerpc__)) && __ELF_WORD_SIZE == 64
+#if (defined(__i386__)) && __ELF_WORD_SIZE == 64
 struct mod_metadata64 {
 	int		md_version;	/* structure version MDTV_* */
 	int		md_type;	/* type of entry MDT_* */
@@ -1123,7 +980,7 @@ __elfN(parse_modmetadata)(struct preloaded_file *fp, elf_file_t ef,
     Elf_Addr p_start, Elf_Addr p_end)
 {
 	struct mod_metadata md;
-#if (defined(__i386__) || defined(__powerpc__)) && __ELF_WORD_SIZE == 64
+#if (defined(__i386__)) && __ELF_WORD_SIZE == 64
 	struct mod_metadata64 md64;
 #elif defined(__amd64__) && __ELF_WORD_SIZE == 32
 	struct mod_metadata32 md32;
@@ -1143,7 +1000,7 @@ __elfN(parse_modmetadata)(struct preloaded_file *fp, elf_file_t ef,
 			v += ef->off;
 		else if (error != 0)
 			return (error);
-#if (defined(__i386__) || defined(__powerpc__)) && __ELF_WORD_SIZE == 64
+#if (defined(__i386__)) && __ELF_WORD_SIZE == 64
 		COPYOUT(v, &md64, sizeof(md64));
 		error = __elfN(reloc_ptr)(fp, ef, v, &md64, sizeof(md64));
 		if (error == EOPNOTSUPP) {

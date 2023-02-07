@@ -219,11 +219,3 @@ md_load(char *args, vm_offset_t *modulep, vm_offset_t *dtb)
 {
     return (md_load_dual(args, modulep, dtb, 0));
 }
-
-#if defined(__powerpc__)
-int
-md_load64(char *args, vm_offset_t *modulep, vm_offset_t *dtb)
-{
-    return (md_load_dual(args, modulep, dtb, 1));
-}
-#endif
