@@ -123,9 +123,6 @@ static struct procabi_table abis[] = {
 #else
 #error "Unsupported pointer size"
 #endif
-#if defined(__powerpc64__)
-	{ "FreeBSD ELF64 V2", &freebsd },
-#endif
 #if defined(__amd64__)
 	{ "FreeBSD a.out", &freebsd32 },
 #endif

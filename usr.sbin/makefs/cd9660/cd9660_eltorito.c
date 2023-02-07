@@ -102,8 +102,6 @@ cd9660_add_boot_disk(iso9660_disk *diskStructure, const char *boot_info)
 	/* Decode System */
 	if (strcmp(sysname, "i386") == 0)
 		new_image->system = ET_SYS_X86;
-	else if (strcmp(sysname, "powerpc") == 0)
-		new_image->system = ET_SYS_PPC;
 	else if (strcmp(sysname, "macppc") == 0 ||
 	         strcmp(sysname, "mac68k") == 0)
 		new_image->system = ET_SYS_MAC;
@@ -456,9 +454,6 @@ cd9660_setup_boot(iso9660_disk *diskStructure, int first_sector)
 		case ET_SYS_X86:
 			headp = &x86_head;
 			break;
-		case ET_SYS_PPC:
-			headp = &ppc_head;
-			break;
 		case ET_SYS_MAC:
 			headp = &mac_head;
 			break;
@@ -661,8 +656,6 @@ cd9660_write_boot(iso9660_disk *diskStructure, FILE *fd)
 
 		if (t->system == ET_SYS_MAC) 
 			apm_partitions++;
-		if (t->system == ET_SYS_PPC) 
-			mbr_partitions++;
 	}
 
 	/* some systems need partition tables as well */
@@ -683,8 +676,7 @@ cd9660_write_boot(iso9660_disk *diskStructure, FILE *fd)
 
 		/* Write all partition entries */
 		TAILQ_FOREACH(t, &diskStructure->boot_images, image_list) {
-			if (t->system != ET_SYS_PPC)
-				continue;
+			continue;
 			cd9660_write_mbr_partition_entry(fd, mbr_partitions++,
 			    t->sector * (diskStructure->sectorSize / 512),
 			    t->num_sectors * (diskStructure->sectorSize / 512),

@@ -875,9 +875,6 @@ ktrsyscall_freebsd(struct ktr_syscall *ktr, register_t **resip,
 
 			quad_align = 0;
 			if (sv_flags & SV_ILP32) {
-#ifdef __powerpc__
-				quad_align = 1;
-#endif
 				quad_slots = 2;
 			} else
 				quad_slots = 1;
