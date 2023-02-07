@@ -39,11 +39,7 @@
 
 #include "ef.h"
 
-#ifdef __powerpc64__
-#define PRI_ELF_SIZE PRIu64
-#else
 #define PRI_ELF_SIZE PRIu32
-#endif
 
 /*
  * Apply relocations to the values obtained from the file. `relbase' is the
@@ -79,11 +75,6 @@ ef_reloc(struct elf_file *ef, const void *reldata, int reltype, Elf_Off relbase,
 	case R_PPC_ADDR32:	/* word32 S + A */
 		*where32 = EF_SYMADDR(ef, symidx) + addend;
 		break;
-#ifdef __powerpc64__
-	case R_PPC64_ADDR64:	/* doubleword64 S + A */
-		*where = EF_SYMADDR(ef, symidx) + addend;
-		break;
-#endif
 	default:
 		warnx("unhandled relocation type %" PRI_ELF_SIZE, rtype);
 	}

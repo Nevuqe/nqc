@@ -308,13 +308,6 @@ acline_init(void)
 		acline_mode = ac_sysctl;
 		if (vflag)
 			warnx("using sysctl for AC line status");
-#ifdef __powerpc__
-	} else if ((skip_source_check || acline_mode_user == ac_sysctl) &&
-		   sysctlnametomib(PMUAC, acline_mib, &acline_mib_len) == 0) {
-		acline_mode = ac_sysctl;
-		if (vflag)
-			warnx("using sysctl for AC line status");
-#endif
 #ifdef USE_APM
 	} else if ((skip_source_check || acline_mode_user == ac_apm) &&
 		   (apm_fd = open(APMDEV, O_RDONLY)) >= 0) {

@@ -1580,12 +1580,6 @@
 /* canonical system (cpu-vendor-os) of where we should run */
 #if defined(__amd64__)
 #define STR_SYSTEM "amd64-undermydesk-freebsd"
-#elif defined(__powerpc64__) && __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-#define STR_SYSTEM "powerpc64le-undermydesk-freebsd"
-#elif defined(__powerpc64__)
-#define STR_SYSTEM "powerpc64-undermydesk-freebsd"
-#elif defined(__powerpc__)
-#define STR_SYSTEM "powerpc-undermydesk-freebsd"
 #elif defined(__aarch64__)
 #define STR_SYSTEM "arm64-undermydesk-freebsd"
 #elif defined(__arm__)
@@ -1655,13 +1649,6 @@ typedef unsigned int	uintptr_t;
 
 /* configure --enable-ipv6 */
 #define WANT_IPV6 1
-
-/* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
-   significant byte first (like Motorola and SPARC, unlike Intel). */
-#if defined(__ARMEB__) || defined(__MIPSEB__) || \
-    (defined(__powerpc__) && __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)
-#define WORDS_BIGENDIAN 1
-#endif
 
 /* routine worker child proc uses to exit. */
 #define WORKER_CHILD_EXIT exit
