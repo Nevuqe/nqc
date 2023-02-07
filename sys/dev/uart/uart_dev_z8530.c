@@ -45,12 +45,7 @@ __FBSDID("$FreeBSD$");
 
 #define	DEFAULT_RCLK	307200
 
-/* Hack! */
-#ifdef __powerpc__
-#define	UART_PCLK	0
-#else
 #define	UART_PCLK	MCB2_PCLK
-#endif
 
 /* Multiplexed I/O. */
 static __inline void

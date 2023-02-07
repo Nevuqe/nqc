@@ -821,10 +821,9 @@ quad_fixup(struct syscall_decode *sc)
 		switch (sc->args[i].type & ARG_MASK) {
 		case Quad:
 		case QuadHex:
-#if defined(__powerpc__) || defined(__arm__) || defined(__aarch64__)
+#if defined(__arm__) || defined(__aarch64__)
 			/*
-			 * 64-bit arguments on 32-bit powerpc and arm must be
-			 * 64-bit aligned.  If the current offset is
+			 * If the current offset is
 			 * not aligned, the calling convention inserts
 			 * a 32-bit pad argument that should be skipped.
 			 */
@@ -858,7 +857,6 @@ static void
 add_syscall(struct procabi *abi, u_int number, struct syscall *sc)
 {
 	struct extra_syscall *es;
-
 	/*
 	 * quad_fixup() is currently needed for all 32-bit ABIs.
 	 * TODO: This should probably be a function pointer inside struct

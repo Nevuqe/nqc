@@ -133,20 +133,6 @@ ofw_iicbus_attach(device_t dev)
 	bus_generic_probe(dev);
 	bus_enumerate_hinted_children(dev);
 
-	/*
-	 * Check if we're running on a PowerMac, needed for the I2C
-	 * address below.
-	 */
-	root = OF_peer(0);
-	compatlen = OF_getprop(root, "compatible", compat,
-				sizeof(compat));
-	if (compatlen != -1) {
-	    for (curstr = compat; curstr < compat + compatlen;
-		curstr += strlen(curstr) + 1) {
-		if (strncmp(curstr, "MacRISC", 7) == 0)
-		    iic_addr_8bit = 1;
-	    }
-	}
 
 	/*
 	 * Attach those children represented in the device tree.

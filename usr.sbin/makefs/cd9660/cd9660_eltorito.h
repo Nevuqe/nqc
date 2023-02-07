@@ -42,7 +42,6 @@
 /* Boot defines */
 #define	ET_ID		"EL TORITO SPECIFICATION"
 #define	ET_SYS_X86	0
-#define	ET_SYS_PPC	1
 #define	ET_SYS_MAC	2
 #define	ET_SYS_EFI	0xef	/* Platform ID at section header entry */
 

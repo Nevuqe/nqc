@@ -761,7 +761,7 @@ void f(void *x) { __dummy(x); }
 AC_MSG_CHECKING(if data alignment is required)
 aligned_access_required=yes
 AS_CASE([$host_cpu],
-  [i?86|amd64|x86_64|powerpc*|s390*],
+  [i?86|amd64|x86_64|s390*],
     [aligned_access_required=no],
   [arm*],
     [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[

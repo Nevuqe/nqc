@@ -45,8 +45,6 @@ system_id_string(u_char system_id)
 	switch (system_id) {
 	case ET_SYS_X86:
 		return ("i386");
-	case ET_SYS_PPC:
-		return ("powerpc");
 	case ET_SYS_MAC:
 		return ("mac");
 	case ET_SYS_EFI:

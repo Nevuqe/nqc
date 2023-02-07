@@ -2,10 +2,6 @@
 
 .PATH: ${SRCTOP}/sys/dev/scc
 
-.if ${MACHINE_CPUARCH} == "powerpc"
-scc_bfe= scc_bfe_macio.c scc_bfe_quicc.c scc_dev_quicc.c
-.endif
-
 KMOD=	scc
 SRCS=	${scc_bfe} scc_core.c scc_if.c scc_if.h \
 	scc_dev_z8530.c

@@ -1027,11 +1027,8 @@ vn_read_from_obj(struct vnode *vp, struct uio *uio)
 	 * variable so that possible concurrent extension does not
 	 * break calculation.
 	 */
-#if defined(__powerpc__) && !defined(__powerpc64__)
-	vsz = obj->un_pager.vnp.vnp_size;
-#else
 	vsz = atomic_load_64(&obj->un_pager.vnp.vnp_size);
-#endif
+
 	if (uio->uio_offset >= vsz) {
 		error = EJUSTRETURN;
 		goto out;

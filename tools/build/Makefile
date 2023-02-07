@@ -128,8 +128,6 @@ _host_arch=amd64
 .elif ${_host_arch} == "aarch64"
 # Linux calls arm64, aarch64, across the board
 _host_arch=arm64
-.elif ${_host_arch:Mppc*}
-_host_arch=powerpc
 .endif
 .if ${_host_arch} == "unknown"
 # HACK: If MACHINE is unknown, assume we are building on x86

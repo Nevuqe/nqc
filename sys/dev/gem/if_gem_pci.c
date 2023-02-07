@@ -53,11 +53,6 @@ __FBSDID("$FreeBSD$");
 #include <net/if.h>
 
 #include <machine/bus.h>
-#if defined(__powerpc__)
-#include <dev/ofw/ofw_bus.h>
-#include <dev/ofw/openfirm.h>
-#include <machine/ofw_machdep.h>
-#endif
 #include <machine/resource.h>
 
 #include <dev/gem/if_gemreg.h>
@@ -149,11 +144,7 @@ gem_pci_attach(device_t dev)
 {
 	struct gem_softc *sc;
 	int i;
-#if defined(__powerpc__)
-	char buf[sizeof(GEM_SHARED_PINS)];
-#else
 	int j;
-#endif
 
 	sc = device_get_softc(dev);
 	sc->sc_variant = GEM_UNKNOWN;
@@ -215,15 +206,6 @@ gem_pci_attach(device_t dev)
 	   GEM_PCI_BIF_CNF_M66EN) != 0)
 		sc->sc_flags |= GEM_PCI66;
 
-#if defined(__powerpc__)
-	OF_getetheraddr(dev, sc->sc_enaddr);
-	if (OF_getprop(ofw_bus_get_node(dev), GEM_SHARED_PINS, buf,
-	    sizeof(buf)) > 0) {
-		buf[sizeof(buf) - 1] = '\0';
-		if (strcmp(buf, GEM_SHARED_PINS_SERDES) == 0)
-			sc->sc_flags |= GEM_SERDES;
-	}
-#else
 	/*
 	 * Dig out VPD (vital product data) and read NA (network address).
 	 * The VPD resides in the PCI Expansion ROM (PCI FCode) and can't
@@ -310,7 +292,6 @@ gem_pci_attach(device_t dev)
 	bus_read_region_1(sc->sc_res[GEM_RES_BANK1],
 	    GEM_PCI_ROM_OFFSET + j + PCI_VPDRES_LARGE_SIZE + PCI_VPD_SIZE,
 	    sc->sc_enaddr, ETHER_ADDR_LEN);
-#endif
 	/*
 	 * The Xserve G5 has a fake GMAC with an all-zero MAC address.
 	 * Check for this, and don't attach in this case.

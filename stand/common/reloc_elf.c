@@ -193,7 +193,7 @@ __elfN(reloc)(struct elf_file *ef, symaddr_fn *symaddr, const void *reldata,
 	}
 
 	return (0);
-#elif defined(__powerpc__) || defined(__riscv)
+#elif defined(__riscv)
 	Elf_Size w;
 	const Elf_Rela *rela;
 
@@ -203,9 +203,7 @@ __elfN(reloc)(struct elf_file *ef, symaddr_fn *symaddr, const void *reldata,
 		if (relbase + rela->r_offset >= dataaddr &&
 		    relbase + rela->r_offset < dataaddr + len) {
 			switch (ELF_R_TYPE(rela->r_info)) {
-#if defined(__powerpc__)
-			case R_PPC_RELATIVE:
-#elif defined(__riscv)
+#if defined(__riscv)
 			case R_RISCV_RELATIVE:
 #endif
 				w = relbase + rela->r_addend;

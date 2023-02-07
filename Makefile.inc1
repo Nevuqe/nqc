@@ -146,10 +146,6 @@ KNOWN_ARCHES?=	aarch64/arm64 \
 		armv6/arm \
 		armv7/arm \
 		i386 \
-		powerpc \
-		powerpc64/powerpc \
-		powerpc64le/powerpc \
-		powerpcspe/powerpc \
 		riscv64/riscv \
 		riscv64sf/riscv
 
@@ -1618,15 +1614,7 @@ NO_KERNELOBJ=		t
 KERNCONF=${KERNFAST}
 .endif
 .endif
-.if ${TARGET_ARCH} == "powerpc64"
-KERNCONF?=	GENERIC64
-.elif ${TARGET_ARCH} == "powerpc64le"
-KERNCONF?=	GENERIC64LE
-.elif ${TARGET_ARCH} == "powerpcspe"
-KERNCONF?=	MPC85XXSPE
-.else
 KERNCONF?=	GENERIC
-.endif
 INSTKERNNAME?=	kernel
 
 KERNSRCDIR?=	${.CURDIR}/sys

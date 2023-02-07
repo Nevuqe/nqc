@@ -51,21 +51,6 @@ copyw(uint16_t *src, uint16_t *dst, size_t size)
 #define bzero_io(d, c)		bzero((void *)(d), (c))
 #define fill_io(p, d, c)	fill((p), (void *)(d), (c))
 #define fillw_io(p, d, c)	fillw((p), (void *)(d), (c))
-#elif defined(__powerpc__)
-
-#define bcopy_io(s, d, c)	ofwfb_bcopy((void *)(s), (void *)(d), (c))
-#define bcopy_toio(s, d, c)	ofwfb_bcopy((void *)(s), (void *)(d), (c))
-#define bcopy_fromio(s, d, c)	ofwfb_bcopy((void *)(s), (void *)(d), (c))
-#define bzero_io(d, c)		ofwfb_bzero((void *)(d), (c))
-#define fillw(p, d, c)		ofwfb_fillw((p), (void *)(d), (c))
-#define fillw_io(p, d, c)	ofwfb_fillw((p), (void *)(d), (c))
-#define	readw(a)		ofwfb_readw((u_int16_t *)(a))
-#define	writew(a, v)		ofwfb_writew((u_int16_t *)(a), (v))
-void ofwfb_bcopy(const void *s, void *d, size_t c);
-void ofwfb_bzero(void *d, size_t c);
-void ofwfb_fillw(int pat, void *base, size_t cnt);
-u_int16_t ofwfb_readw(u_int16_t *addr);
-void ofwfb_writew(u_int16_t *addr, u_int16_t val);
 
 #elif defined(__mips__) || defined(__arm__)
 

@@ -114,7 +114,7 @@ ATF_TC_BODY(sysarch_success, tc)
 		.handlers	= &handler
 	};
 #else
-	/* For PowerPC, ARM64, RISCV archs, sysarch(2) is not supported */
+	/* For ARM64, RISCV archs, sysarch(2) is not supported */
 	atf_tc_skip("sysarch(2) is not supported for the system architecture");
 #endif
 

@@ -104,7 +104,7 @@
 #
 # See src/UPDATING `COMMON ITEMS' for more complete information.
 #
-# If TARGET=machine (e.g. powerpc, arm64, ...) is specified you can
+# If TARGET=machine (e.g. arm64, ...) is specified you can
 # cross build world for other machine types using the buildworld target,
 # and once the world is built you can cross build a kernel using the
 # buildkernel target.
@@ -516,15 +516,10 @@ worlds: .PHONY
 #
 # Don't build rarely used, semi-supported architectures unless requested.
 #
-.if defined(EXTRA_TARGETS)
-# powerpcspe excluded from main list until clang fixed
-EXTRA_ARCHES_powerpc=	powerpcspe
-.endif
-TARGETS?=amd64 arm arm64 i386 powerpc riscv
+TARGETS?=amd64 arm arm64 i386 riscv
 _UNIVERSE_TARGETS=	${TARGETS}
 TARGET_ARCHES_arm?=	armv6 armv7
 TARGET_ARCHES_arm64?=	aarch64
-TARGET_ARCHES_powerpc?=	powerpc powerpc64 powerpc64le ${EXTRA_ARCHES_powerpc}
 TARGET_ARCHES_riscv?=	riscv64 riscv64sf
 .for target in ${TARGETS}
 TARGET_ARCHES_${target}?= ${target}
@@ -536,8 +531,6 @@ TOOLCHAINS_arm=		armv6-gcc12 armv7-gcc12
 TOOLCHAIN_armv7=	armv7-gcc12
 TOOLCHAINS_arm64=	aarch64-gcc12
 TOOLCHAINS_i386=	i386-gcc12
-TOOLCHAINS_powerpc=	powerpc-gcc12 powerpc64-gcc12
-TOOLCHAIN_powerpc64=	powerpc64-gcc12
 TOOLCHAINS_riscv=	riscv64-gcc12
 .endif
 

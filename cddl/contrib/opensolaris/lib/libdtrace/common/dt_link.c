@@ -215,15 +215,6 @@ prepare_elf32(dtrace_hdl_t *dtp, const dof_hdr_t *dof, dof_elf32_t *dep)
 			    dofr[j].dofr_offset;
 			rel->r_info = ELF32_R_INFO(count + dep->de_global,
 			    R_386_PC32);
-#elif defined(__powerpc__)
-			/*
-			 * Add 4 bytes to hit the low half of this 64-bit
-			 * big-endian address.
-			 */
-			rel->r_offset = s->dofs_offset +
-			    dofr[j].dofr_offset + 4;
-			rel->r_info = ELF32_R_INFO(count + dep->de_global,
-			    R_PPC_REL32);
 #elif defined(__riscv)
 			rel->r_offset = s->dofs_offset + dofr[j].dofr_offset;
 			rel->r_info = ELF32_R_INFO(count + dep->de_global,
@@ -397,11 +388,6 @@ prepare_elf64(dtrace_hdl_t *dtp, const dof_hdr_t *dof, dof_elf64_t *dep)
 			    R_AARCH64_PREL64);
 #elif defined(__arm__)
 /* XXX */
-#elif defined(__powerpc__)
-			rel->r_offset = s->dofs_offset +
-			    dofr[j].dofr_offset;
-			rel->r_info = ELF64_R_INFO(count + dep->de_global,
-			    R_PPC64_REL64);
 #elif defined(__riscv)
 			rel->r_offset = s->dofs_offset + dofr[j].dofr_offset;
 			rel->r_info = ELF64_R_INFO(count + dep->de_global,
@@ -500,8 +486,6 @@ dump_elf32(dtrace_hdl_t *dtp, const dof_hdr_t *dof, int fd)
 	elf_file.ehdr.e_type = ET_REL;
 #if defined(__arm__)
 	elf_file.ehdr.e_machine = EM_ARM;
-#elif defined(__powerpc__)
-	elf_file.ehdr.e_machine = EM_PPC;
 #elif defined(__i386) || defined(__amd64)
 	elf_file.ehdr.e_machine = EM_386;
 #elif defined(__aarch64__)
@@ -654,11 +638,6 @@ dump_elf64(dtrace_hdl_t *dtp, const dof_hdr_t *dof, int fd)
 	elf_file.ehdr.e_type = ET_REL;
 #if defined(__arm__)
 	elf_file.ehdr.e_machine = EM_ARM;
-#elif defined(__powerpc64__)
-#if defined(_CALL_ELF) && _CALL_ELF == 2
-	elf_file.ehdr.e_flags = 2;
-#endif
-	elf_file.ehdr.e_machine = EM_PPC64;
 #elif defined(__i386) || defined(__amd64)
 	elf_file.ehdr.e_machine = EM_AMD64;
 #elif defined(__aarch64__)
@@ -867,18 +846,8 @@ dt_modtext(dtrace_hdl_t *dtp, char *p, int isenabled, GElf_Rela *rela,
 	    __LINE__);
 	return (-1);
 }
-#elif defined(__powerpc__)
-/* The sentinel is 'xor r3,r3,r3'. */
-#define DT_OP_XOR_R3	0x7c631a78
-
-#define DT_OP_NOP		0x60000000
-#define DT_OP_BLR		0x4e800020
-
-/* This captures all forms of branching to address. */
-#define DT_IS_BRANCH(inst)	((inst & 0xfc000000) == 0x48000000)
-#define DT_IS_BL(inst)	(DT_IS_BRANCH(inst) && (inst & 0x01))
-
-#define	DT_REL_NONE		R_PPC_NONE
+#elif defined(__mips__)
+#define	DT_REL_NONE		R_MIPS_NONE
 
 static int
 dt_modtext(dtrace_hdl_t *dtp, char *p, int isenabled, GElf_Rela *rela,
@@ -1240,11 +1209,8 @@ process_obj(dtrace_hdl_t *dtp, const char *obj, int *eprobesp)
 
 	if (dtp->dt_oflags & DTRACE_O_LP64) {
 		eclass = ELFCLASS64;
-#if defined(__powerpc__)
-		emachine1 = emachine2 = EM_PPC64;
 #if !defined(_CALL_ELF) || _CALL_ELF == 1
 		uses_funcdesc = 1;
-#endif
 #elif defined(__i386) || defined(__amd64)
 		emachine1 = emachine2 = EM_AMD64;
 #elif defined(__aarch64__)
@@ -1257,8 +1223,6 @@ process_obj(dtrace_hdl_t *dtp, const char *obj, int *eprobesp)
 		eclass = ELFCLASS32;
 #if defined(__arm__)
 		emachine1 = emachine2 = EM_ARM;
-#elif defined(__powerpc__)
-		emachine1 = emachine2 = EM_PPC;
 #elif defined(__i386) || defined(__amd64)
 		emachine1 = emachine2 = EM_386;
 #endif

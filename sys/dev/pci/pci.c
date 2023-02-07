@@ -62,7 +62,7 @@ __FBSDID("$FreeBSD$");
 #include <machine/resource.h>
 #include <machine/stdarg.h>
 
-#if defined(__i386__) || defined(__amd64__) || defined(__powerpc__)
+#if defined(__i386__) || defined(__amd64__)
 #include <machine/intr_machdep.h>
 #endif
 
@@ -842,7 +842,7 @@ pci_read_cap(device_t pcib, pcicfgregs *cfg)
 {
 #define	REG(n, w)	PCIB_READ_CONFIG(pcib, cfg->bus, cfg->slot, cfg->func, n, w)
 #define	WREG(n, v, w)	PCIB_WRITE_CONFIG(pcib, cfg->bus, cfg->slot, cfg->func, n, v, w)
-#if defined(__i386__) || defined(__amd64__) || defined(__powerpc__)
+#if defined(__i386__) || defined(__amd64__)
 	uint64_t addr;
 #endif
 	uint32_t val;
@@ -893,7 +893,7 @@ pci_read_cap(device_t pcib, pcicfgregs *cfg)
 			if ((val & 0xe000) == PCIM_HTCAP_SLAVE)
 				cfg->ht.ht_slave = ptr;
 
-#if defined(__i386__) || defined(__amd64__) || defined(__powerpc__)
+#if defined(__i386__) || defined(__amd64__)
 			switch (val & PCIM_HTCMD_CAP_MASK) {
 			case PCIM_HTCAP_MSI_MAPPING:
 				if (!(val & PCIM_HTCMD_MSI_FIXED)) {
@@ -983,22 +983,6 @@ pci_read_cap(device_t pcib, pcicfgregs *cfg)
 		}
 	}
 
-#if defined(__powerpc__)
-	/*
-	 * Enable the MSI mapping window for all HyperTransport
-	 * slaves.  PCI-PCI bridges have their windows enabled via
-	 * PCIB_MAP_MSI().
-	 */
-	if (cfg->ht.ht_slave != 0 && cfg->ht.ht_msimap != 0 &&
-	    !(cfg->ht.ht_msictrl & PCIM_HTCMD_MSI_ENABLE)) {
-		device_printf(pcib,
-	    "Enabling MSI window for HyperTransport slave at pci%d:%d:%d:%d\n",
-		    cfg->domain, cfg->bus, cfg->slot, cfg->func);
-		 cfg->ht.ht_msictrl |= PCIM_HTCMD_MSI_ENABLE;
-		 WREG(cfg->ht.ht_msimap + PCIR_HT_COMMAND, cfg->ht.ht_msictrl,
-		     2);
-	}
-#endif
 /* REG and WREG use carry through to next functions */
 }
 

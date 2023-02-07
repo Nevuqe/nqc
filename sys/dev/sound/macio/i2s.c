@@ -82,8 +82,6 @@
 #include <dev/sound/pcm/sound.h>
 #include <dev/sound/macio/aoa.h>
 
-#include <powerpc/powermac/macgpiovar.h>
-
 struct i2s_softc {
 	struct aoa_softc 	 aoa;
 	phandle_t 		 node;
@@ -235,9 +233,6 @@ i2s_attach(device_t self)
 	    sc, &dbdma_ih);
 
 	oirq = rman_get_start(dbdma_irq);
-	err = powerpc_config_intr(oirq, INTR_TRIGGER_EDGE, INTR_POLARITY_LOW);
-	if (err != 0)
-		return (err);
 
 	/*
 	 * Register a hook for delayed attach in order to allow
@@ -373,10 +368,6 @@ aoagpio_attach(device_t gpio)
 
 		irq = rman_get_start(r);
 		DPRINTF(("interrupting at irq %d\n", irq));
-
-		if (powerpc_config_intr(irq, INTR_TRIGGER_EDGE, 
-		    INTR_POLARITY_LOW) != 0) 
-			return (ENXIO);
 
 		bus_setup_intr(gpio, r, INTR_TYPE_MISC | INTR_MPSAFE |
 		    INTR_ENTROPY, NULL, aoagpio_int, gpio, &cookie);

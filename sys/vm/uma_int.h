@@ -227,7 +227,7 @@ struct uma_hash {
  * Align field or structure to cache 'sector' in intel terminology.  This
  * is more efficient with adjacent line prefetch.
  */
-#if defined(__amd64__) || defined(__powerpc64__)
+#if defined(__amd64__)
 #define UMA_SUPER_ALIGN	(CACHE_LINE_SIZE * 2)
 #else
 #define UMA_SUPER_ALIGN	CACHE_LINE_SIZE

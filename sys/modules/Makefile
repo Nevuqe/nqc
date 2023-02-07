@@ -599,13 +599,11 @@ _ralfw=		ralfw
 _rtwnfw=	rtwnfw
 .endif
 
-.if ${MK_SOURCELESS_UCODE} != "no" && ${MACHINE_CPUARCH} != "arm" && \
-	${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "powerpcspe" && \
-	${MACHINE_CPUARCH} != "riscv"
+.if ${MK_SOURCELESS_UCODE} != "no" && ${MACHINE_CPUARCH} != "arm" && ${MACHINE_CPUARCH} != "riscv"
 _cxgbe=		cxgbe
 .endif
 
-.if ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "arm64" || ${MACHINE_ARCH:Mpowerpc64*}
+.if ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "arm64"
 _ice=		ice
 .if ${MK_SOURCELESS_UCODE} != "no"
 _ice_ddp=	ice_ddp
@@ -624,18 +622,8 @@ _if_cgem=	if_cgem
 .endif
 .endif
 
-# These rely on 64bit atomics
-.if ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "powerpcspe"
-_mps=		mps
-_mpr=		mpr
-.endif
-
 .if ${MK_TESTS} != "no" || defined(ALL_MODULES)
 SUBDIR+=	tests
-.endif
-
-.if ${MK_ZFS} != "no" || (defined(ALL_MODULES)  && ${MACHINE_CPUARCH} != "powerpc")
-SUBDIR+=	zfs
 .endif
 
 .if ${MK_SOURCELESS_UCODE} != "no"
@@ -824,30 +812,6 @@ _sbni=		sbni
 .if ${MACHINE_ARCH} == "armv7"
 _cfi=		cfi
 _cpsw=		cpsw
-.endif
-
-.if ${MACHINE_CPUARCH} == "powerpc"
-_aacraid=	aacraid
-_agp=		agp
-_an=		an
-_cardbus=	cardbus
-_cbb=		cbb
-_cfi=		cfi
-_cpufreq=	cpufreq
-_exca=		exca
-_ffec=		ffec
-_nvd=		nvd
-_nvme=		nvme
-.endif
-
-.if ${MACHINE_ARCH:Mpowerpc64*} != ""
-_ipmi=		ipmi
-_ixl=		ixl
-_nvram=		opal_nvram
-.endif
-.if ${MACHINE_CPUARCH} == "powerpc" && ${MACHINE_ARCH} != "powerpcspe"
-# Don't build powermac_nvram for powerpcspe, it's never supported.
-_nvram+=	powermac_nvram
 .endif
 
 .if ${MACHINE_CPUARCH} == "arm" || ${MACHINE_CPUARCH} == "aarch64"

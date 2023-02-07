@@ -99,7 +99,6 @@ typedef struct _IMAGE_FILE_HEADER {
 #define IMAGE_FILE_MACHINE_R3000             0x162   // MIPS little-endian, 0540 big-endian
 #define IMAGE_FILE_MACHINE_R4000             0x166   // MIPS little-endian
 #define IMAGE_FILE_MACHINE_ALPHA             0x184   // Alpha_AXP
-#define IMAGE_FILE_MACHINE_POWERPC           0x1F0   // IBM PowerPC Little-Endian
 #define IMAGE_FILE_MACHINE_TAHOE             0x7cc   // Intel EM machine
 //
 // Directory format.
@@ -445,29 +444,6 @@ typedef struct _IMAGE_RELOCATION {
 #define IMAGE_REL_ALPHA_SECTION              0xE
 #define IMAGE_REL_ALPHA_SECREL               0xF
 #define IMAGE_REL_ALPHA_REFLONGNB            0x10
-
-//
-// IBM PowerPC relocation types.
-//
-
-#define IMAGE_REL_PPC_ABSOLUTE 0x0000  // NOP
-#define IMAGE_REL_PPC_ADDR64   0x0001  // 64-bit address
-#define IMAGE_REL_PPC_ADDR32   0x0002  // 32-bit address
-#define IMAGE_REL_PPC_ADDR24   0x0003  // 26-bit address, shifted left 2 (branch absolute)
-#define IMAGE_REL_PPC_ADDR16   0x0004  // 16-bit address
-#define IMAGE_REL_PPC_ADDR14   0x0005  // 16-bit address, shifted left 2 (load doubleword)
-#define IMAGE_REL_PPC_REL24    0x0006  // 26-bit PC-relative offset, shifted left 2 (branch relative)
-#define IMAGE_REL_PPC_REL14    0x0007  // 16-bit PC-relative offset, shifted left 2 (br cond relative)
-#define IMAGE_REL_PPC_TOCREL16 0x0008  // 16-bit offset from TOC base
-#define IMAGE_REL_PPC_TOCREL14 0x0009  // 16-bit offset from TOC base, shifted left 2 (load doubleword)
-
-#define IMAGE_REL_PPC_ADDR32NB 0x000A  // 32-bit addr w/o image base
-#define IMAGE_REL_PPC_SECREL   0x000B  // va of containing section (as in an image sectionhdr)
-#define IMAGE_REL_PPC_SECTION  0x000C  // sectionheader number
-#define IMAGE_REL_PPC_IFGLUE   0x000D  // substitute TOC restore instruction iff symbol is glue code
-#define IMAGE_REL_PPC_IMGLUE   0x000E  // symbol is glue code; virtual address is TOC restore instruction
-
-#define IMAGE_REL_PPC_TYPEMASK 0x00FF  // mask to isolate above values in IMAGE_RELOCATION.Type
 
 // Flag bits in IMAGE_RELOCATION.TYPE
 

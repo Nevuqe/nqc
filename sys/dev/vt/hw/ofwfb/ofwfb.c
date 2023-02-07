@@ -146,19 +146,6 @@ ofwfb_bitblt_bitmap(struct vt_device *vd, const struct vt_window *vw,
 		uint8_t	 c[4];
 	} ch1, ch2;
 
-#ifdef __powerpc__
-	/* Deal with unmapped framebuffers */
-	if (sc->fb_flags & FB_FLAG_NOWRITE) {
-		if (pmap_bootstrapped) {
-			sc->fb_flags &= ~FB_FLAG_NOWRITE;
-			ofwfb_initialize(vd);
-			vd->vd_driver->vd_blank(vd, TC_BLACK);
-		} else {
-			return;
-		}
-	}
-#endif
-
 	fgc = sc->fb_cmap[fg];
 	bgc = sc->fb_cmap[bg];
 	b = m = 0;
@@ -562,27 +549,7 @@ ofwfb_init(struct vt_device *vd)
 	sc->fb.fb_size = sc->fb.fb_height * sc->fb.fb_stride;
 	sc->endian_flip = 0;
 
-#if defined(__powerpc__)
-	if (OF_hasprop(node, "little-endian")) {
-		sc->sc_memt = &bs_le_tag;
-#if BYTE_ORDER == BIG_ENDIAN
-		sc->endian_flip = 1;
-#endif
-        } else if (OF_hasprop(node, "big-endian")) {
-		sc->sc_memt = &bs_be_tag;
-#if BYTE_ORDER == LITTLE_ENDIAN
-		sc->endian_flip = 1;
-#endif
-	}
-	else {
-		/* Assume the framebuffer is in native endian. */
-#if BYTE_ORDER == BIG_ENDIAN
-		sc->sc_memt = &bs_be_tag;
-#else
-		sc->sc_memt = &bs_le_tag;
-#endif
-	}
-#elif defined(__arm__)
+#if defined(__arm__)
 	sc->sc_memt = fdtbus_bs_tag;
 #else
 	#error Unsupported platform!
@@ -623,58 +590,6 @@ ofwfb_init(struct vt_device *vd)
 
 		sc->fb.fb_pbase = (vm_paddr_t)fb_phys;
 	} else {
-#if defined(__powerpc__)
-		/*
-		 * Some IBM systems don't have an address property. Try to
-		 * guess the framebuffer region from the assigned addresses.
-		 * This is ugly, but there doesn't seem to be an alternative.
-		 * Linux does the same thing.
-		 */
-
-		struct ofw_pci_register pciaddrs[8];
-		int num_pciaddrs = 0;
-
-		/*
-		 * Get the PCI addresses of the adapter, if present. The node
-		 * may be the child of the PCI device: in that case, try the
-		 * parent for the assigned-addresses property.
-		 */
-		len = OF_getencprop(node, "assigned-addresses",
-		    (pcell_t *)pciaddrs, sizeof(pciaddrs));
-		if (len == -1) {
-			len = OF_getencprop(OF_parent(node), "assigned-addresses",
-			    (pcell_t *)pciaddrs, sizeof(pciaddrs));
-		}
-		if (len == -1)
-			len = 0;
-		num_pciaddrs = len / sizeof(struct ofw_pci_register);
-
-		j = num_pciaddrs;
-		for (i = 0; i < num_pciaddrs; i++) {
-			/* If it is too small, not the framebuffer */
-			if (pciaddrs[i].size_lo < sc->fb.fb_stride * height)
-				continue;
-			/* If it is not memory, it isn't either */
-			if (!(pciaddrs[i].phys_hi &
-			    OFW_PCI_PHYS_HI_SPACE_MEM32))
-				continue;
-
-			/* This could be the framebuffer */
-			j = i;
-
-			/* If it is prefetchable, it certainly is */
-			if (pciaddrs[i].phys_hi & OFW_PCI_PHYS_HI_PREFETCHABLE)
-				break;
-		}
-
-		if (j == num_pciaddrs) /* No candidates found */
-			return (CN_DEAD);
-
-		if (ofw_reg_to_paddr(node, j, &fb_phys, &fb_phys_size, NULL) < 0)
-			return (CN_DEAD);
-
-		sc->fb.fb_pbase = (vm_paddr_t)fb_phys;
-#else
 		/* No ability to interpret assigned-addresses otherwise */
 		return (CN_DEAD);
 #endif
@@ -687,17 +602,6 @@ ofwfb_init(struct vt_device *vd)
 	    BUS_SPACE_MAP_PREFETCHABLE,
 	    (bus_space_handle_t *)&sc->fb.fb_vbase);
 
-	#if defined(__powerpc__)
-	/*
-	 * If we are running on PowerPC in real mode (supported only on AIM
-	 * CPUs), the frame buffer may be inaccessible (real mode does not
-	 * necessarily cover all RAM) and may also be mapped with the wrong
-	 * cache properties (all real mode accesses are assumed cacheable).
-	 * Just don't write to it for the time being.
-	 */
-	if (!(cpu_features & PPC_FEATURE_BOOKE) && !(mfmsr() & PSL_DR))
-		sc->fb.fb_flags |= FB_FLAG_NOWRITE;
-	#endif
 	ofwfb_initialize(vd);
 	vt_fb_init(vd);
 

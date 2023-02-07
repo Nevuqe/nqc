@@ -84,10 +84,6 @@ BROKEN_OPTIONS+= CDDL ZFS
 . endif
 .endif
 
-.if ${MACHINE_CPUARCH} == "powerpc" && ${MACHINE_ARCH} == "powerpc"
-BROKEN_OPTIONS+= ZFS
-.endif
-
 # Things that don't work because the kernel doesn't have the support
 # for them.
 .if ${MACHINE} != "i386" && ${MACHINE} != "amd64"
@@ -97,11 +93,6 @@ BROKEN_OPTIONS+= OFED
 # Things that don't work based on toolchain support.
 .if ${MACHINE} != "i386" && ${MACHINE} != "amd64"
 BROKEN_OPTIONS+= KERNEL_RETPOLINE
-.endif
-
-# EFI doesn't exist on powerpc, or riscv
-.if ${MACHINE:Mpowerpc} || ${MACHINE:Mriscv}
-BROKEN_OPTIONS+=EFI
 .endif
 
 .if ${MACHINE_CPUARCH} == "i386" || ${MACHINE_CPUARCH} == "amd64"
