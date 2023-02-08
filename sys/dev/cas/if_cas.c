@@ -78,11 +78,6 @@ __FBSDID("$FreeBSD$");
 #include <netinet/udp.h>
 
 #include <machine/bus.h>
-#if defined(__powerpc__)
-#include <dev/ofw/ofw_bus.h>
-#include <dev/ofw/openfirm.h>
-#include <machine/ofw_machdep.h>
-#endif
 #include <machine/resource.h>
 
 #include <dev/mii/mii.h>
@@ -2648,10 +2643,6 @@ cas_pci_attach(device_t dev)
 	char buf[sizeof(CAS_LOCAL_MAC_ADDRESS)];
 	struct cas_softc *sc;
 	int i;
-#if !defined(__powerpc__)
-	u_char enaddr[4][ETHER_ADDR_LEN];
-	u_int j, k, lma, pcs[4], phy;
-#endif
 
 	sc = device_get_softc(dev);
 	sc->sc_variant = CAS_UNKNOWN;
@@ -2691,17 +2682,6 @@ cas_pci_attach(device_t dev)
 	}
 
 	CAS_LOCK_INIT(sc, device_get_nameunit(dev));
-
-#if defined(__powerpc__)
-	OF_getetheraddr(dev, sc->sc_enaddr);
-	if (OF_getprop(ofw_bus_get_node(dev), CAS_PHY_INTERFACE, buf,
-	    sizeof(buf)) > 0 || OF_getprop(ofw_bus_get_node(dev),
-	    CAS_PHY_TYPE, buf, sizeof(buf)) > 0) {
-		buf[sizeof(buf) - 1] = '\0';
-		if (strcmp(buf, CAS_PHY_TYPE_PCS) == 0)
-			sc->sc_flags |= CAS_SERDES;
-	}
-#else
 	/*
 	 * Dig out VPD (vital product data) and read the MAC address as well
 	 * as the PHY type.  The VPD resides in the PCI Expansion ROM (PCI
@@ -2866,7 +2846,6 @@ cas_pci_attach(device_t dev)
 		i = pci_get_slot(dev);
 	if (pcs[i] != 0)
 		sc->sc_flags |= CAS_SERDES;
-#endif
 
 	if (cas_attach(sc) != 0) {
 		device_printf(dev, "could not be attached\n");

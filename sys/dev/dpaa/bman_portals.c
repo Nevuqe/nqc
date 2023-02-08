@@ -45,8 +45,6 @@ __FBSDID("$FreeBSD$");
 #include <dev/ofw/ofw_bus.h>
 #include <dev/ofw/ofw_bus_subr.h>
 
-#include <powerpc/mpc85xx/mpc85xx.h>
-
 #include "bman.h"
 #include "portals.h"
 
