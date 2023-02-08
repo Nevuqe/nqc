@@ -22,8 +22,7 @@ _lockstat=	lockstat
 _plockstat=	plockstat
 .endif
 
-.if ${MACHINE_CPUARCH} == "aarch64" || ${MACHINE_CPUARCH} == "arm" || \
-    ${MACHINE_CPUARCH} == "riscv"
+.if ${MACHINE_CPUARCH} == "aarch64" || ${MACHINE_CPUARCH} == "riscv"
 _dtrace=	dtrace
 _dwatch=	dwatch
 _lockstat=	lockstat
