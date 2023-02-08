@@ -516,8 +516,6 @@ elf_machine(unsigned int mach)
 	case EM_VPP500: return "Fujitsu VPP500";
 	case EM_SPARC32PLUS: return "SPARC v8plus";
 	case EM_960: return "Intel 80960";
-	case EM_PPC: return "PowerPC 32-bit";
-	case EM_PPC64: return "PowerPC 64-bit";
 	case EM_S390: return "IBM System/390";
 	case EM_V800: return "NEC V800";
 	case EM_FR20: return "Fujitsu FR20";
@@ -2409,17 +2407,6 @@ dump_eflags(struct readelf *re, uint64_t e_flags)
 		default: break;
 		}
 		edesc = mips_eflags_desc;
-		break;
-	case EM_PPC64:
-		switch (e_flags) {
-		case 0: printf(", Unspecified or Power ELF V1 ABI"); break;
-		case 1: printf(", Power ELF V1 ABI"); break;
-		case 2: printf(", OpenPOWER ELF V2 ABI"); break;
-		default: break;
-		}
-		/* FALLTHROUGH */
-	case EM_PPC:
-		edesc = powerpc_eflags_desc;
 		break;
 	case EM_RISCV:
 		switch (e_flags & EF_RISCV_FLOAT_ABI_MASK) {
@@ -4573,8 +4560,6 @@ dump_attributes(struct readelf *re)
 				    re->ehdr.e_machine == EM_MIPS_RS3_LE)
 					dump_mips_attributes(re, p,
 					    sp + sublen);
-				else if (re->ehdr.e_machine == EM_PPC)
-					dump_ppc_attributes(p, sp + sublen);
 				p = sp + sublen;
 			}
 		}

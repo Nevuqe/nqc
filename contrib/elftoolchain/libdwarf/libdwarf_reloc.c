@@ -93,16 +93,6 @@ _dwarf_get_reloc_size(Dwarf_Debug dbg, Dwarf_Unsigned rel_type)
 		else if (rel_type == R_SPARC_UA64)
 			return (8);
 		break;
-	case EM_PPC:
-		if (rel_type == R_PPC_ADDR32)
-			return (4);
-		break;
-	case EM_PPC64:
-		if (rel_type == R_PPC_ADDR32)
-			return (4);
-		else if (rel_type == R_PPC64_ADDR64)
-			return (8);
-		break;
 	case EM_MIPS:
 		if (rel_type == R_MIPS_32)
 			return (4);

@@ -630,8 +630,6 @@ _ELF_DEFINE_EM(EM_VPP500,           17, "Fujitsu VPP500")		\
 _ELF_DEFINE_EM(EM_SPARC32PLUS,      18,					\
 	"Enhanced instruction set SPARC")				\
 _ELF_DEFINE_EM(EM_960,              19, "Intel 80960")			\
-_ELF_DEFINE_EM(EM_PPC,              20, "PowerPC")			\
-_ELF_DEFINE_EM(EM_PPC64,            21, "64-bit PowerPC")		\
 _ELF_DEFINE_EM(EM_S390,             22, "IBM System/390 Processor")	\
 _ELF_DEFINE_EM(EM_SPU,              23, "IBM SPU/SPC")			\
 _ELF_DEFINE_EM(EM_V800,             36, "NEC V800")			\

@@ -187,8 +187,6 @@ ELFNAMEEND(check)(int fd, const char *fn __unused)
 	case EM_ARM: break;
 	case EM_MIPS: break;
 	case /* EM_MIPS_RS3_LE */ EM_MIPS_RS4_BE: break;
-	case EM_PPC: break;
-	case EM_PPC64: break;
 #ifndef EM_RISCV
 #define	EM_RISCV	243
 #endif

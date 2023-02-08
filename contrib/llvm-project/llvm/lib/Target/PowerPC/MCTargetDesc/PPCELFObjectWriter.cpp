@@ -33,11 +33,6 @@ namespace {
   };
 }
 
-PPCELFObjectWriter::PPCELFObjectWriter(bool Is64Bit, uint8_t OSABI)
-  : MCELFObjectTargetWriter(Is64Bit, OSABI,
-                            Is64Bit ?  ELF::EM_PPC64 : ELF::EM_PPC,
-                            /*HasRelocationAddend*/ true) {}
-
 static MCSymbolRefExpr::VariantKind getAccessVariant(const MCValue &Target,
                                                      const MCFixup &Fixup) {
   const MCExpr *Expr = Fixup.getValue();

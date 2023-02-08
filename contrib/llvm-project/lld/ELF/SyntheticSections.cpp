@@ -696,10 +696,6 @@ uint64_t GotSection::getGlobalDynOffset(const Symbol &b) const {
 }
 
 void GotSection::finalizeContents() {
-  if (config->emachine == EM_PPC64 &&
-      numEntries <= target->gotHeaderEntriesNum && !ElfSym::globalOffsetTable)
-    size = 0;
-  else
     size = numEntries * config->wordsize;
 }
 
@@ -1156,12 +1152,6 @@ void MipsGotSection::writeTo(uint8_t *buf) {
 GotPltSection::GotPltSection()
     : SyntheticSection(SHF_ALLOC | SHF_WRITE, SHT_PROGBITS, config->wordsize,
                        ".got.plt") {
-  if (config->emachine == EM_PPC) {
-    name = ".plt";
-  } else if (config->emachine == EM_PPC64) {
-    type = SHT_NOBITS;
-    name = ".plt";
-  }
 }
 
 void GotPltSection::addEntry(Symbol &sym) {
@@ -1195,20 +1185,8 @@ static StringRef getIgotPltName() {
   if (config->emachine == EM_ARM)
     return ".got";
 
-  // On PowerPC64 the GotPltSection is renamed to '.plt' so the IgotPltSection
-  // needs to be named the same.
-  if (config->emachine == EM_PPC64)
-    return ".plt";
-
   return ".got.plt";
 }
-
-// On PowerPC64 the GotPltSection type is SHT_NOBITS so we have to follow suit
-// with the IgotPltSection.
-IgotPltSection::IgotPltSection()
-    : SyntheticSection(SHF_ALLOC | SHF_WRITE,
-                       config->emachine == EM_PPC64 ? SHT_NOBITS : SHT_PROGBITS,
-                       target->gotEntrySize, getIgotPltName()) {}
 
 void IgotPltSection::addEntry(Symbol &sym) {
   assert(symAux.back().pltIdx == entries.size());
@@ -1530,18 +1508,6 @@ DynamicSection<ELFT>::computeContents() {
       addInt(DT_MIPS_RLD_MAP_REL,
              in.mipsRldMap->getVA() - (getVA() + entries.size() * entsize));
     }
-  }
-
-  // DT_PPC_GOT indicates to glibc Secure PLT is used. If DT_PPC_GOT is absent,
-  // glibc assumes the old-style BSS PLT layout which we don't support.
-  if (config->emachine == EM_PPC)
-    addInSec(DT_PPC_GOT, *in.got);
-
-  // Glink dynamic tag is required by the V2 abi if the plt section isn't empty.
-  if (config->emachine == EM_PPC64 && in.plt->isNeeded()) {
-    // The Glink tag points to 32 bytes before the first lazy symbol resolution
-    // stub, which starts directly after the header.
-    addInt(DT_PPC64_GLINK, in.plt->getVA() + target->pltHeaderSize - 32);
   }
 
   addInt(DT_NULL, 0);
@@ -2228,11 +2194,7 @@ template <class ELFT> void SymbolTableSection<ELFT>::writeTo(uint8_t *buf) {
 
     // The 3 most significant bits of st_other are used by OpenPOWER ABI.
     // See getPPC64GlobalEntryToLocalEntryOffset() for more details.
-    if (config->emachine == EM_PPC64)
-      eSym->st_other |= sym->stOther & 0xe0;
-    // The most significant bit of st_other is used by AArch64 ABI for the
-    // variant PCS.
-    else if (config->emachine == EM_AARCH64)
+    if (config->emachine == EM_AARCH64)
       eSym->st_other |= sym->stOther & STO_AARCH64_VARIANT_PCS;
 
     if (BssSection *commonSec = getCommonSec(sym)) {
@@ -2524,11 +2486,6 @@ void HashTableSection::writeTo(uint8_t *buf) {
 PltSection::PltSection()
     : SyntheticSection(SHF_ALLOC | SHF_EXECINSTR, SHT_PROGBITS, 16, ".plt"),
       headerSize(target->pltHeaderSize) {
-  // On PowerPC, this section contains lazy symbol resolvers.
-  if (config->emachine == EM_PPC64) {
-    name = ".glink";
-    alignment = 4;
-  }
 
   // On x86 when IBT is enabled, this section contains the second PLT (lazy
   // symbol resolvers).
@@ -2583,10 +2540,6 @@ void PltSection::addSymbols() {
 
 IpltSection::IpltSection()
     : SyntheticSection(SHF_ALLOC | SHF_EXECINSTR, SHT_PROGBITS, 16, ".iplt") {
-  if (config->emachine == EM_PPC || config->emachine == EM_PPC64) {
-    name = ".glink";
-    alignment = 4;
-  }
 }
 
 void IpltSection::writeTo(uint8_t *buf) {
@@ -3567,13 +3520,6 @@ bool ARMExidxSyntheticSection::isNeeded() const {
 
 bool ARMExidxSyntheticSection::classof(const SectionBase *d) {
   return d->kind() == InputSectionBase::Synthetic && d->type == SHT_ARM_EXIDX;
-}
-
-ThunkSection::ThunkSection(OutputSection *os, uint64_t off)
-    : SyntheticSection(SHF_ALLOC | SHF_EXECINSTR, SHT_PROGBITS,
-                       config->emachine == EM_PPC64 ? 16 : 4, ".text.thunk") {
-  this->parent = os;
-  this->outSecOff = off;
 }
 
 size_t ThunkSection::getSize() const {

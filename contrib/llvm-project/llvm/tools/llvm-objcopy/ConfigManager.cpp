@@ -300,11 +300,6 @@ static const StringMap<MachineInfo> TargetMap{
     // RISC-V
     {"elf32-littleriscv", {ELF::EM_RISCV, false, true}},
     {"elf64-littleriscv", {ELF::EM_RISCV, true, true}},
-    // PowerPC
-    {"elf32-powerpc", {ELF::EM_PPC, false, false}},
-    {"elf32-powerpcle", {ELF::EM_PPC, false, true}},
-    {"elf64-powerpc", {ELF::EM_PPC64, true, false}},
-    {"elf64-powerpcle", {ELF::EM_PPC64, true, true}},
     // MIPS
     {"elf32-bigmips", {ELF::EM_MIPS, false, false}},
     {"elf32-ntradbigmips", {ELF::EM_MIPS, false, false}},

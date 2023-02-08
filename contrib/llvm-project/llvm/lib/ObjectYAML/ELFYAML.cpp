@@ -197,8 +197,6 @@ void ScalarEnumerationTraits<ELFYAML::ELF_EM>::enumeration(
   ECase(EM_VPP500);
   ECase(EM_SPARC32PLUS);
   ECase(EM_960);
-  ECase(EM_PPC);
-  ECase(EM_PPC64);
   ECase(EM_S390);
   ECase(EM_SPU);
   ECase(EM_V800);
@@ -839,12 +837,6 @@ void ScalarEnumerationTraits<ELFYAML::ELF_REL>::enumeration(
   case ELF::EM_CSKY:
 #include "llvm/BinaryFormat/ELFRelocs/CSKY.def"
     break;
-  case ELF::EM_PPC:
-#include "llvm/BinaryFormat/ELFRelocs/PowerPC.def"
-    break;
-  case ELF::EM_PPC64:
-#include "llvm/BinaryFormat/ELFRelocs/PowerPC64.def"
-    break;
   case ELF::EM_68K:
 #include "llvm/BinaryFormat/ELFRelocs/M68k.def"
     break;
@@ -893,20 +885,6 @@ void ScalarEnumerationTraits<ELFYAML::ELF_DYNTAG>::enumeration(
 #include "llvm/BinaryFormat/DynamicTags.def"
 #undef HEXAGON_DYNAMIC_TAG
 #define HEXAGON_DYNAMIC_TAG(name, value)
-    break;
-  case ELF::EM_PPC:
-#undef PPC_DYNAMIC_TAG
-#define PPC_DYNAMIC_TAG(name, value) DYNAMIC_TAG(name, value)
-#include "llvm/BinaryFormat/DynamicTags.def"
-#undef PPC_DYNAMIC_TAG
-#define PPC_DYNAMIC_TAG(name, value)
-    break;
-  case ELF::EM_PPC64:
-#undef PPC64_DYNAMIC_TAG
-#define PPC64_DYNAMIC_TAG(name, value) DYNAMIC_TAG(name, value)
-#include "llvm/BinaryFormat/DynamicTags.def"
-#undef PPC64_DYNAMIC_TAG
-#define PPC64_DYNAMIC_TAG(name, value)
     break;
   case ELF::EM_RISCV:
 #undef RISCV_DYNAMIC_TAG
