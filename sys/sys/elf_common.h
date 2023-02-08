@@ -221,8 +221,6 @@ typedef struct {
 #define	EM_VPP500	17	/* Fujitsu VPP500. */
 #define	EM_SPARC32PLUS	18	/* SPARC v8plus. */
 #define	EM_960		19	/* Intel 80960. */
-#define	EM_PPC		20	/* PowerPC 32-bit. */
-#define	EM_PPC64	21	/* PowerPC 64-bit. */
 #define	EM_S390		22	/* IBM System/390. */
 #define	EM_V800		36	/* NEC V800. */
 #define	EM_FR20		37	/* Fujitsu FR20. */
@@ -822,8 +820,6 @@ typedef struct {
 #define	NT_PROCSTAT_PSSTRINGS	15	/* Procstat ps_strings data. */
 #define	NT_PROCSTAT_AUXV	16	/* Procstat auxv data. */
 #define	NT_PTLWPINFO		17	/* Thread ptrace miscellaneous info. */
-#define	NT_PPC_VMX	0x100	/* PowerPC Altivec/VMX registers */
-#define	NT_PPC_VSX	0x102	/* PowerPC VSX registers */
 #define	NT_X86_SEGBASES	0x200	/* x86 FS/GS base addresses. */
 #define	NT_X86_XSTATE	0x202	/* x86 XSAVE extended state. */
 #define	NT_ARM_VFP	0x400	/* ARM VFP registers */

@@ -90,7 +90,6 @@ struct kerneldumpheader {
 #define	KERNELDUMP_ARM_VERSION		1
 #define	KERNELDUMP_I386_VERSION		2
 #define	KERNELDUMP_MIPS_VERSION		1
-#define	KERNELDUMP_POWERPC_VERSION	1
 #define	KERNELDUMP_RISCV_VERSION	1
 #define	KERNELDUMP_SPARC64_VERSION	1
 	uint64_t	dumplength;		/* excl headers */

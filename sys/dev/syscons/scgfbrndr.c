@@ -32,9 +32,6 @@
 __FBSDID("$FreeBSD$");
 
 #include "opt_syscons.h"
-#ifdef __powerpc__
-#include "opt_ofwfb.h"
-#endif
 
 #include <sys/param.h>
 #include <sys/systm.h>

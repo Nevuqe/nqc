@@ -155,7 +155,7 @@ typedef void			irqreturn_t;
 	    (vm_offset_t)(offset)) = htole64(val)
 
 #if !defined(__arm__)
-#if defined(__i386__) || defined(__amd64__) || defined(__powerpc__) || defined(__aarch64__)
+#if defined(__i386__) || defined(__amd64__) || defined(__aarch64__)
 #define DRM_MSG "This code is deprecated.  Install the graphics/drm-kmod pkg\n"
 #else
 #define DRM_MSG "This code is deprecated."

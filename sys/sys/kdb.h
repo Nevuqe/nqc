@@ -116,9 +116,7 @@ extern const char * volatile kdb_why;
 #define	KDB_WHY_CAM		"cam"		/* CAM has entered debugger. */
 #define	KDB_WHY_ACPI		"acpi"		/* ACPI entered debugger. */
 #define	KDB_WHY_TRAPSIG		"trapsig"	/* Sparc fault. */
-#define	KDB_WHY_POWERFAIL	"powerfail"	/* Powerfail NMI. */
 #define	KDB_WHY_MAC		"mac"		/* MAC Framework. */
-#define	KDB_WHY_POWERPC		"powerpc"	/* Unhandled powerpc intr. */
 #define	KDB_WHY_UNIONFS		"unionfs"	/* Unionfs bug. */
 #define	KDB_WHY_DTRACE		"dtrace"	/* DTrace action entered debugger. */
 #define	KDB_WHY_REBOOT		"reboot"	/* reboot was requested. */

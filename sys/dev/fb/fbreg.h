@@ -80,7 +80,7 @@ fillw(int val, uint16_t *buf, size_t size)
 #define	writew(a, v)		(*(uint16_t*)(a) = (v))
 #endif
 
-#else /* !__i386__ && !__amd64__ && !__powerpc__ */
+#else /* !__i386__ && !__amd64__
 #define bcopy_io(s, d, c)	memcpy_io((d), (s), (c))
 #define bcopy_toio(s, d, c)	memcpy_toio((d), (void *)(s), (c))
 #define bcopy_fromio(s, d, c)	memcpy_fromio((void *)(d), (s), (c))

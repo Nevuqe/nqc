@@ -10,9 +10,8 @@ TESTSRC=	${SRCTOP}/contrib/netbsd-tests/kernel
 TESTSDIR=	${TESTSBASE}/sys/kern
 
 ATF_TESTS_C+=	basic_signal
-.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "powerpc" && \
-	${MACHINE_ARCH} != "powerpcspe"
-# No support for atomic_load_64 on i386 or (32-bit) powerpc
+.if ${MACHINE_ARCH} != "i386"
+# No support for atomic_load_64 on i386
 ATF_TESTS_C+=	kcov
 .endif
 ATF_TESTS_C+=	kern_copyin
@@ -32,7 +31,7 @@ ATF_TESTS_C+=	sigwait
 ATF_TESTS_C+=	socket_accf
 ATF_TESTS_C+=	socket_msg_trunc
 TEST_METADATA.sigwait+=	is_exclusive="true"
-.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH:Mpowerpc*} == ""
+.if ${MACHINE_ARCH} != "i386"
 ATF_TESTS_C+=	subr_physmem_test
 .endif
 PLAIN_TESTS_C+=	subr_unit_test

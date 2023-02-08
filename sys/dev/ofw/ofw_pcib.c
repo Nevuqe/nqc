@@ -79,10 +79,6 @@ static int ofw_pcib_adjust_resource(device_t, device_t, int,
 static int ofw_pcib_translate_resource(device_t bus, int type,
 	rman_res_t start, rman_res_t *newstart);
 
-#ifdef __powerpc__
-static bus_space_tag_t ofw_pcib_bus_get_bus_tag(device_t, device_t);
-#endif
-
 /*
  * pcib interface
  */
@@ -118,9 +114,6 @@ static device_method_t	ofw_pcib_methods[] = {
 	DEVMETHOD(bus_deactivate_resource,	ofw_pcib_deactivate_resource),
 	DEVMETHOD(bus_adjust_resource,	ofw_pcib_adjust_resource),
 	DEVMETHOD(bus_translate_resource,	ofw_pcib_translate_resource),
-#ifdef __powerpc__
-	DEVMETHOD(bus_get_bus_tag,	ofw_pcib_bus_get_bus_tag),
-#endif
 
 	/* pcib interface */
 	DEVMETHOD(pcib_maxslots,	ofw_pcib_maxslots),
@@ -596,19 +589,10 @@ ofw_pcib_activate_resource(device_t bus, device_t child, int type, int rid,
 		return (ENOMEM);
 
 	rman_set_bushandle(res, handle);
-	rman_set_virtual(res, (void *)handle); /* XXX  for powerpc only ? */
+	rman_set_virtual(res, (void *)handle);
 
 	return (rman_activate_resource(res));
 }
-
-#ifdef __powerpc__
-static bus_space_tag_t
-ofw_pcib_bus_get_bus_tag(device_t bus, device_t child)
-{
-
-	return (&bs_le_tag);
-}
-#endif
 
 static int
 ofw_pcib_deactivate_resource(device_t bus, device_t child, int type, int rid,
