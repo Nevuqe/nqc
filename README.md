@@ -41,3 +41,10 @@ NQC Source Tree
 | tools | Utilities for regression testing and miscellaneous tasks |
 | usr.bin | User commands |
 | usr.sbin | System administration commands |
+
+Licensing
+---------
+
+This software is governed by the Nevuqe Open Source License (NOSL).
+
+You can find a full copy of the license, [here](./LICENSE).
