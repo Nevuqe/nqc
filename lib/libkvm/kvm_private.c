@@ -127,6 +127,12 @@ _kvm_malloc(kvm_t *kd, size_t n)
 	return (p);
 }
 
+int _kvm_probe_elf_kernel(kvm_t *kd, int class, int machine) {
+    return (kd->nlehdr.e_ident[EI_CLASS] == class &&
+            kd->nlehdr.e_type == ET_EXEC &&
+            kd->nlehdr.e_machine == machine);
+}
+
 int
 _kvm_is_minidump(kvm_t *kd)
 {
