@@ -140,10 +140,6 @@ CFLAGS+=	-mno-mmx -mno-sse -msoft-float
 INLINE_LIMIT?=	8000
 .endif
 
-.if ${MACHINE_CPUARCH} == "arm"
-INLINE_LIMIT?=	8000
-.endif
-
 .if ${MACHINE_CPUARCH} == "aarch64"
 # We generally don't want fpu instructions in the kernel.
 CFLAGS += -mgeneral-regs-only

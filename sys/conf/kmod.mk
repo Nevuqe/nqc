@@ -169,14 +169,6 @@ CFLAGS+=	-fno-omit-frame-pointer -mno-omit-leaf-frame-pointer
 CFLAGS+=	-fPIC
 .endif
 
-# Temporary workaround for PR 196407, which contains the fascinating details.
-# Don't allow clang to use fpu instructions or registers in kernel modules.
-.if ${MACHINE_CPUARCH} == arm
-CFLAGS.clang+=	-mno-movt
-CFLAGS.clang+=	-mfpu=none
-CFLAGS+=	-funwind-tables
-.endif
-
 .if defined(DEBUG) || defined(DEBUG_FLAGS)
 CTFFLAGS+=	-g
 .endif

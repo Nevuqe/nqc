@@ -14,7 +14,6 @@ Source Roadmap:
 | Directory | Description |
 | --------- | ----------- |
 | amd64 | AMD64 (64-bit x86) architecture support |
-| arm | 32-bit ARM architecture support |
 | arm64 | 64-bit ARM (AArch64) architecture support |
 | cam | Common Access Method storage subsystem - `cam(4)` and `ctl(4)` |
 | cddl | CDDL-licensed optional sources such as DTrace |
