@@ -518,7 +518,7 @@ worlds: .PHONY
 #
 TARGETS?=amd64 arm arm64 i386 riscv
 _UNIVERSE_TARGETS=	${TARGETS}
-TARGET_ARCHES_arm?=	armv6 armv7
+TARGET_ARCHES_arm?= armv7
 TARGET_ARCHES_arm64?=	aarch64
 TARGET_ARCHES_riscv?=	riscv64 riscv64sf
 .for target in ${TARGETS}
@@ -527,7 +527,6 @@ TARGET_ARCHES_${target}?= ${target}
 
 .if defined(USE_GCC_TOOLCHAINS)
 TOOLCHAINS_amd64=	amd64-gcc12
-TOOLCHAINS_arm=		armv6-gcc12 armv7-gcc12
 TOOLCHAIN_armv7=	armv7-gcc12
 TOOLCHAINS_arm64=	aarch64-gcc12
 TOOLCHAINS_i386=	i386-gcc12
