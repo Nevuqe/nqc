@@ -305,7 +305,7 @@ MK_META_MODE= no
 # exceptions.
 .if !defined(TARGET_ARCH) && defined(TARGET)
 # T->TA mapping is usually TARGET with arm64 the odd man out
-_TARGET_ARCH=	${TARGET:S/arm64/aarch64/:S/riscv/riscv64/:S/arm/armv7/}
+_TARGET_ARCH=	${TARGET:S/arm64/aarch64/:S/riscv/riscv64/}
 .elif !defined(TARGET) && defined(TARGET_ARCH) && \
     ${TARGET_ARCH} != ${MACHINE_ARCH}
 # TA->T mapping is accidentally CPUARCH with aarch64 the odd man out
@@ -516,9 +516,8 @@ worlds: .PHONY
 #
 # Don't build rarely used, semi-supported architectures unless requested.
 #
-TARGETS?=amd64 arm arm64 i386 riscv
+TARGETS?=amd64 arm64 i386 riscv
 _UNIVERSE_TARGETS=	${TARGETS}
-TARGET_ARCHES_arm?= armv7
 TARGET_ARCHES_arm64?=	aarch64
 TARGET_ARCHES_riscv?=	riscv64 riscv64sf
 .for target in ${TARGETS}
@@ -527,7 +526,6 @@ TARGET_ARCHES_${target}?= ${target}
 
 .if defined(USE_GCC_TOOLCHAINS)
 TOOLCHAINS_amd64=	amd64-gcc12
-TOOLCHAIN_armv7=	armv7-gcc12
 TOOLCHAINS_arm64=	aarch64-gcc12
 TOOLCHAINS_i386=	i386-gcc12
 TOOLCHAINS_riscv=	riscv64-gcc12
