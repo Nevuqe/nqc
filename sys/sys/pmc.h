@@ -159,7 +159,6 @@ enum pmc_cputype {
 	__PMC_CLASS(XSCALE,	0x0A,	"Intel XScale counters")	\
 	__PMC_CLASS(MIPS24K,	0x0B,	"MIPS 24K")			\
 	__PMC_CLASS(OCTEON,	0x0C,	"Cavium Octeon")		\
-	__PMC_CLASS(PPC7450,	0x0D,	"Motorola MPC7450 class")	\
 	__PMC_CLASS(SOFT,	0x0F,	"Software events")		\
 	__PMC_CLASS(ARMV7,	0x10,	"ARMv7")			\
 	__PMC_CLASS(ARMV8,	0x11,	"ARMv8")			\

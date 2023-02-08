@@ -52,9 +52,6 @@ llvm::Triple::ArchType darwin::getArchTypeForMachOArchName(StringRef Str) {
   // translation.
 
   return llvm::StringSwitch<llvm::Triple::ArchType>(Str)
-      .Cases("ppc", "ppc601", "ppc603", "ppc604", "ppc604e", llvm::Triple::ppc)
-      .Cases("ppc750", "ppc7400", "ppc7450", "ppc970", llvm::Triple::ppc)
-      .Case("ppc64", llvm::Triple::ppc64)
       .Cases("i386", "i486", "i486SX", "i586", "i686", llvm::Triple::x86)
       .Cases("pentium", "pentpro", "pentIIm3", "pentIIm5", "pentium4",
              llvm::Triple::x86)
@@ -2514,27 +2511,6 @@ DerivedArgList *MachO::TranslateArgs(const DerivedArgList &Args,
     StringRef Name = BoundArch;
     const Option MCpu = Opts.getOption(options::OPT_mcpu_EQ);
     const Option MArch = Opts.getOption(clang::driver::options::OPT_march_EQ);
-
-    // This code must be kept in sync with LLVM's getArchTypeForDarwinArch,
-    // which defines the list of which architectures we accept.
-    if (Name == "ppc")
-      ;
-    else if (Name == "ppc601")
-      DAL->AddJoinedArg(nullptr, MCpu, "601");
-    else if (Name == "ppc603")
-      DAL->AddJoinedArg(nullptr, MCpu, "603");
-    else if (Name == "ppc604")
-      DAL->AddJoinedArg(nullptr, MCpu, "604");
-    else if (Name == "ppc604e")
-      DAL->AddJoinedArg(nullptr, MCpu, "604e");
-    else if (Name == "ppc750")
-      DAL->AddJoinedArg(nullptr, MCpu, "750");
-    else if (Name == "ppc7400")
-      DAL->AddJoinedArg(nullptr, MCpu, "7400");
-    else if (Name == "ppc7450")
-      DAL->AddJoinedArg(nullptr, MCpu, "7450");
-    else if (Name == "ppc970")
-      DAL->AddJoinedArg(nullptr, MCpu, "970");
 
     else if (Name == "ppc64" || Name == "ppc64le")
       DAL->AddFlagArg(nullptr, Opts.getOption(options::OPT_m64));

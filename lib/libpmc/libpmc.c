@@ -136,8 +136,6 @@ PMC_CLASSDEP_TABLE(armv8, ARMV8);
 PMC_CLASSDEP_TABLE(cmn600_pmu, CMN600_PMU);
 PMC_CLASSDEP_TABLE(dmc620_pmu_cd2, DMC620_PMU_CD2);
 PMC_CLASSDEP_TABLE(dmc620_pmu_c, DMC620_PMU_C);
-PMC_CLASSDEP_TABLE(ppc7450, PPC7450);
-PMC_CLASSDEP_TABLE(ppc970, PPC970);
 PMC_CLASSDEP_TABLE(e500, E500);
 
 static struct pmc_event_descr soft_event_table[PMC_EV_DYN_COUNT];
@@ -1256,14 +1254,6 @@ pmc_event_names_of_class(enum pmc_class cl, const char ***eventnames,
 		ev = dmc620_pmu_c_event_table;
 		count = PMC_EVENT_TABLE_SIZE(dmc620_pmu_c);
 		break;
-	case PMC_CLASS_PPC7450:
-		ev = ppc7450_event_table;
-		count = PMC_EVENT_TABLE_SIZE(ppc7450);
-		break;
-	case PMC_CLASS_PPC970:
-		ev = ppc970_event_table;
-		count = PMC_EVENT_TABLE_SIZE(ppc970);
-		break;
 	case PMC_CLASS_E500:
 		ev = e500_event_table;
 		count = PMC_EVENT_TABLE_SIZE(e500);
@@ -1643,12 +1633,6 @@ _pmc_name_of_event(enum pmc_event pe, enum pmc_cputype cpu)
 		ev = dmc620_pmu_c_event_table;
 		evfence = dmc620_pmu_c_event_table +
 		    PMC_EVENT_TABLE_SIZE(dmc620_pmu_c);
-	} else if (pe >= PMC_EV_PPC7450_FIRST && pe <= PMC_EV_PPC7450_LAST) {
-		ev = ppc7450_event_table;
-		evfence = ppc7450_event_table + PMC_EVENT_TABLE_SIZE(ppc7450);
-	} else if (pe >= PMC_EV_PPC970_FIRST && pe <= PMC_EV_PPC970_LAST) {
-		ev = ppc970_event_table;
-		evfence = ppc970_event_table + PMC_EVENT_TABLE_SIZE(ppc970);
 	} else if (pe >= PMC_EV_E500_FIRST && pe <= PMC_EV_E500_LAST) {
 		ev = e500_event_table;
 		evfence = e500_event_table + PMC_EVENT_TABLE_SIZE(e500);
