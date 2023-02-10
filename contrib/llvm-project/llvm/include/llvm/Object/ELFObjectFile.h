@@ -1200,6 +1200,8 @@ StringRef ELFObjectFile<ELFT>::getFileFormatName() const {
       return "elf32-mips";
     case ELF::EM_MSP430:
       return "elf32-msp430";
+    case ELF::EM_PPC:
+      return (IsLittleEndian ? "elf32-powerpcle" : "elf32-powerpc");
     case ELF::EM_RISCV:
       return "elf32-littleriscv";
     case ELF::EM_CSKY:
@@ -1222,6 +1224,8 @@ StringRef ELFObjectFile<ELFT>::getFileFormatName() const {
       return "elf64-x86-64";
     case ELF::EM_AARCH64:
       return (IsLittleEndian ? "elf64-littleaarch64" : "elf64-bigaarch64");
+    case ELF::EM_PPC64:
+      return (IsLittleEndian ? "elf64-powerpcle" : "elf64-powerpc");
     case ELF::EM_RISCV:
       return "elf64-littleriscv";
     case ELF::EM_S390:
@@ -1278,6 +1282,10 @@ template <class ELFT> Triple::ArchType ELFObjectFile<ELFT>::getArch() const {
     }
   case ELF::EM_MSP430:
     return Triple::msp430;
+  case ELF::EM_PPC:
+    return IsLittleEndian ? Triple::ppcle : Triple::ppc;
+  case ELF::EM_PPC64:
+    return IsLittleEndian ? Triple::ppc64le : Triple::ppc64;
   case ELF::EM_RISCV:
     switch (EF.getHeader().e_ident[ELF::EI_CLASS]) {
     case ELF::ELFCLASS32:

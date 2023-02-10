@@ -153,6 +153,33 @@ static const CoreDefinition g_core_definitions[] = {
     {eByteOrderLittle, 8, 2, 4, llvm::Triple::mips64el,
      ArchSpec::eCore_mips64r6el, "mips64r6el"},
 
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_generic,
+     "powerpc"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc601,
+     "ppc601"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc602,
+     "ppc602"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc603,
+     "ppc603"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc603e,
+     "ppc603e"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc603ev,
+     "ppc603ev"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc604,
+     "ppc604"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc604e,
+     "ppc604e"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc620,
+     "ppc620"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc750,
+     "ppc750"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc7400,
+     "ppc7400"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc7450,
+     "ppc7450"},
+    {eByteOrderBig, 4, 4, 4, llvm::Triple::ppc, ArchSpec::eCore_ppc_ppc970,
+     "ppc970"},
+
     {eByteOrderLittle, 8, 4, 4, llvm::Triple::ppc64le,
      ArchSpec::eCore_ppc64le_generic, "powerpc64le"},
     {eByteOrderBig, 8, 4, 4, llvm::Triple::ppc64, ArchSpec::eCore_ppc64_generic,
@@ -329,6 +356,12 @@ static const ArchDefinitionEntry g_elf_arch_entries[] = {
      0xFFFFFFFFu, 0xFFFFFFFFu}, // Intel 80386
     {ArchSpec::eCore_x86_32_i486, llvm::ELF::EM_IAMCU, LLDB_INVALID_CPUTYPE,
      0xFFFFFFFFu, 0xFFFFFFFFu}, // Intel MCU // FIXME: is this correct?
+    {ArchSpec::eCore_ppc_generic, llvm::ELF::EM_PPC, LLDB_INVALID_CPUTYPE,
+     0xFFFFFFFFu, 0xFFFFFFFFu}, // PowerPC
+    {ArchSpec::eCore_ppc64le_generic, llvm::ELF::EM_PPC64,
+     ArchSpec::eCore_ppc64le_generic, 0xFFFFFFFFu, 0xFFFFFFFFu}, // PowerPC64le
+    {ArchSpec::eCore_ppc64_generic, llvm::ELF::EM_PPC64,
+     ArchSpec::eCore_ppc64_generic, 0xFFFFFFFFu, 0xFFFFFFFFu}, // PowerPC64
     {ArchSpec::eCore_arm_generic, llvm::ELF::EM_ARM, LLDB_INVALID_CPUTYPE,
      0xFFFFFFFFu, 0xFFFFFFFFu}, // ARM
     {ArchSpec::eCore_arm_aarch64, llvm::ELF::EM_AARCH64, LLDB_INVALID_CPUTYPE,

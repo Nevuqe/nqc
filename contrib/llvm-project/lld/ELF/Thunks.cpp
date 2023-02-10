@@ -1185,5 +1185,11 @@ Thunk *elf::addThunk(const InputSection &isec, Relocation &rel) {
   if (config->emachine == EM_MIPS)
     return addThunkMips(rel.type, s);
 
-  llvm_unreachable("add Thunk only supported for ARM and Mips");
+  if (config->emachine == EM_PPC)
+    return addThunkPPC32(isec, rel, s);
+
+  if (config->emachine == EM_PPC64)
+    return addThunkPPC64(rel.type, s, a);
+
+  llvm_unreachable("add Thunk only supported for ARM, Mips and PowerPC");
 }

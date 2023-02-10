@@ -145,6 +145,8 @@ enum {
   EM_VPP500 = 17,        // Fujitsu VPP500
   EM_SPARC32PLUS = 18,   // Enhanced instruction set SPARC
   EM_960 = 19,           // Intel 80960
+  EM_PPC = 20,           // PowerPC
+  EM_PPC64 = 21,         // PowerPC64
   EM_S390 = 22,          // IBM System/390
   EM_SPU = 23,           // IBM SPU/SPC
   EM_V800 = 36,          // NEC V800

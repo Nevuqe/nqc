@@ -32,6 +32,8 @@ uint16_t ELF::convertArchNameToEMachine(StringRef Arch) {
       .Case("vpp500", EM_VPP500)
       .Case("sparc32plus", EM_SPARC32PLUS)
       .Case("960", EM_960)
+      .Case("ppc", EM_PPC)
+      .Case("ppc64", EM_PPC64)
       .Case("s390", EM_S390)
       .Case("spu", EM_SPU)
       .Case("v800", EM_V800)
@@ -231,6 +233,10 @@ StringRef ELF::convertEMachineToArchName(uint16_t EMachine) {
     return "sparc32plus";
   case EM_960:
     return "960";
+  case EM_PPC:
+    return "ppc";
+  case EM_PPC64:
+    return "ppc64";
   case EM_S390:
     return "s390";
   case EM_SPU:

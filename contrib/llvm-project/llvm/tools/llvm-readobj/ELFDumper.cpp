@@ -1056,6 +1056,8 @@ const EnumEntry<unsigned> ElfMachineType[] = {
   ENUM_ENT(EM_VPP500,        "Fujitsu VPP500"),
   ENUM_ENT(EM_SPARC32PLUS,   "Sparc v8+"),
   ENUM_ENT(EM_960,           "Intel 80960"),
+  ENUM_ENT(EM_PPC,           "PowerPC"),
+  ENUM_ENT(EM_PPC64,         "PowerPC64"),
   ENUM_ENT(EM_S390,          "IBM S/390"),
   ENUM_ENT(EM_SPU,           "SPU"),
   ENUM_ENT(EM_V800,          "NEC V800 series"),

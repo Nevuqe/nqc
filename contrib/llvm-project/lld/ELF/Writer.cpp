@@ -203,6 +203,12 @@ void elf::addReservedSymbols() {
     // https://sourceware.org/ml/binutils/2004-12/msg00094.html
     if (symtab->find("__gnu_local_gp"))
       ElfSym::mipsLocalGp = addAbsolute("__gnu_local_gp");
+  } else if (config->emachine == EM_PPC) {
+    // glibc *crt1.o has a undefined reference to _SDA_BASE_. Since we don't
+    // support Small Data Area, define it arbitrarily as 0.
+    addOptionalRegular("_SDA_BASE_", nullptr, 0, STV_HIDDEN);
+  } else if (config->emachine == EM_PPC64) {
+    addPPC64SaveRestore();
   }
 
   // The Power Architecture 64-bit v2 ABI defines a TableOfContents (TOC) which
@@ -213,6 +219,9 @@ void elf::addReservedSymbols() {
   // the .got section.
   // We do not allow _GLOBAL_OFFSET_TABLE_ to be defined by input objects as the
   // correctness of some relocations depends on its value.
+  StringRef gotSymName =
+      (config->emachine == EM_PPC64) ? ".TOC." : "_GLOBAL_OFFSET_TABLE_";
+
   if (Symbol *s = symtab->find(gotSymName)) {
     if (s->isDefined()) {
       error(toString(s->file) + " cannot redefine linker defined symbol '" +
@@ -221,6 +230,8 @@ void elf::addReservedSymbols() {
     }
 
     uint64_t gotOff = 0;
+    if (config->emachine == EM_PPC64)
+      gotOff = 0x8000;
 
     s->resolve(Defined{/*file=*/nullptr, StringRef(), STB_GLOBAL, STV_HIDDEN,
                        STT_NOTYPE, gotOff, /*size=*/0, Out::elfHeader});
@@ -447,6 +458,16 @@ template <class ELFT> void elf::createSyntheticSections() {
     add(*in.got);
   }
 
+  if (config->emachine == EM_PPC) {
+    in.ppc32Got2 = std::make_unique<PPC32Got2Section>();
+    add(*in.ppc32Got2);
+  }
+
+  if (config->emachine == EM_PPC64) {
+    in.ppc64LongBranchTarget = std::make_unique<PPC64LongBranchTargetSection>();
+    add(*in.ppc64LongBranchTarget);
+  }
+
   in.gotPlt = std::make_unique<GotPltSection>();
   add(*in.gotPlt);
   in.igotPlt = std::make_unique<IgotPltSection>();
@@ -486,8 +507,11 @@ template <class ELFT> void elf::createSyntheticSections() {
     in.ibtPlt = std::make_unique<IBTPltSection>();
     add(*in.ibtPlt);
   }
-  
-  in.plt = std::make_unique<PltSection>();
+
+  if (config->emachine == EM_PPC)
+    in.plt = std::make_unique<PPC32GlinkSection>();
+  else
+    in.plt = std::make_unique<PltSection>();
   add(*in.plt);
   in.iplt = std::make_unique<IpltSection>();
   add(*in.iplt);
@@ -929,6 +953,32 @@ static unsigned getSectionRank(const OutputSection &osec) {
   if (osec.type == SHT_NOBITS)
     rank |= RF_BSS;
 
+  // Some architectures have additional ordering restrictions for sections
+  // within the same PT_LOAD.
+  if (config->emachine == EM_PPC64) {
+    // PPC64 has a number of special SHT_PROGBITS+SHF_ALLOC+SHF_WRITE sections
+    // that we would like to make sure appear is a specific order to maximize
+    // their coverage by a single signed 16-bit offset from the TOC base
+    // pointer. Conversely, the special .tocbss section should be first among
+    // all SHT_NOBITS sections. This will put it next to the loaded special
+    // PPC64 sections (and, thus, within reach of the TOC base pointer).
+    StringRef name = osec.name;
+    if (name != ".tocbss")
+      rank |= RF_PPC_NOT_TOCBSS;
+
+    if (name == ".toc1")
+      rank |= RF_PPC_TOCL;
+
+    if (name == ".toc")
+      rank |= RF_PPC_TOC;
+
+    if (name == ".got")
+      rank |= RF_PPC_GOT;
+
+    if (name == ".branch_lt")
+      rank |= RF_PPC_BRANCH_LT;
+  }
+
   if (config->emachine == EM_MIPS) {
     // All sections with SHF_MIPS_GPREL flag should be grouped together
     // because data in these sections is addressable with a gp relative address.
@@ -1369,9 +1419,22 @@ static void sortSection(OutputSection &osec,
     return;
 
   if (name == ".init_array" || name == ".fini_array") {
-  osec.sortInitFini();
+    osec.sortInitFini();
   } else if (name == ".ctors" || name == ".dtors") {
-  osec.sortCtorsDtors();
+    osec.sortCtorsDtors();
+  } else if (config->emachine == EM_PPC64 && name == ".toc") {
+    // .toc is allocated just after .got and is accessed using GOT-relative
+    // relocations. Object files compiled with small code model have an
+    // addressable range of [.got, .got + 0xFFFC] for GOT-relative relocations.
+    // To reduce the risk of relocation overflow, .toc contents are sorted so
+    // that sections having smaller relocation offsets are at beginning of .toc
+    assert(osec.commands.size() == 1);
+    auto *isd = cast<InputSectionDescription>(osec.commands[0]);
+    llvm::stable_sort(isd->sections,
+                      [](const InputSection *a, const InputSection *b) -> bool {
+                        return a->file->ppc64SmallCodeModelTocRelocs &&
+                               !b->file->ppc64SmallCodeModelTocRelocs;
+                      });
   }
 }
 
