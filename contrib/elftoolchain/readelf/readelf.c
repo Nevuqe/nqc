@@ -4453,10 +4453,6 @@ dump_ppc_attributes(uint8_t *p, uint8_t *pe)
 	while (p < pe) {
 		tag = _decode_uleb128(&p, pe);
 		switch (tag) {
-		case Tag_GNU_Power_ABI_FP:
-			val = _decode_uleb128(&p, pe);
-			printf("  Tag_GNU_Power_ABI_FP: %s\n", ppc_abi_fp(val));
-			break;
 		case Tag_GNU_Power_ABI_Vector:
 			val = _decode_uleb128(&p, pe);
 			printf("  Tag_GNU_Power_ABI_Vector: %s\n",
