@@ -346,7 +346,6 @@ static void dump_gnu_property_type_0(struct readelf *re, const char *buf,
     size_t sz);
 static void dump_hash(struct readelf *re);
 static void dump_phdr(struct readelf *re);
-static void dump_ppc_attributes(uint8_t *p, uint8_t *pe);
 static void dump_section_groups(struct readelf *re);
 static void dump_symtab(struct readelf *re, int i);
 static void dump_symtabs(struct readelf *re);
@@ -382,8 +381,6 @@ static const char *note_type_unknown(unsigned int nt);
 static const char *note_type_xen(unsigned int nt);
 static const char *option_kind(uint8_t kind);
 static const char *phdr_type(unsigned int mach, unsigned int ptype);
-static const char *ppc_abi_fp(uint64_t fp);
-static const char *ppc_abi_vector(uint64_t vec);
 static void readelf_usage(int status);
 static void readelf_version(void);
 static void search_loclist_at(struct readelf *re, Dwarf_Die die,
@@ -2025,39 +2022,6 @@ mips_abi_fp(uint64_t fp)
 		snprintf(s_mips_abi_fp, sizeof(s_mips_abi_fp), "Unknown(%ju)",
 		    (uintmax_t) fp);
 		return (s_mips_abi_fp);
-	}
-}
-
-static const char *
-ppc_abi_fp(uint64_t fp)
-{
-	static char s_ppc_abi_fp[64];
-
-	switch (fp) {
-	case 0: return "N/A";
-	case 1: return "Hard float (double precision)";
-	case 2: return "Soft float";
-	case 3: return "Hard float (single precision)";
-	default:
-		snprintf(s_ppc_abi_fp, sizeof(s_ppc_abi_fp), "Unknown(%ju)",
-		    (uintmax_t) fp);
-		return (s_ppc_abi_fp);
-	}
-}
-
-static const char *
-ppc_abi_vector(uint64_t vec)
-{
-	static char s_vec[64];
-
-	switch (vec) {
-	case 0: return "N/A";
-	case 1: return "Generic purpose registers";
-	case 2: return "AltiVec registers";
-	case 3: return "SPE registers";
-	default:
-		snprintf(s_vec, sizeof(s_vec), "Unknown(%ju)", (uintmax_t) vec);
-		return (s_vec);
 	}
 }
 
@@ -4444,29 +4408,6 @@ dump_mips_attributes(struct readelf *re, uint8_t *p, uint8_t *pe)
 #ifndef Tag_GNU_Power_ABI_Vector
 #define	Tag_GNU_Power_ABI_Vector	8
 #endif
-
-static void
-dump_ppc_attributes(uint8_t *p, uint8_t *pe)
-{
-	uint64_t tag, val;
-
-	while (p < pe) {
-		tag = _decode_uleb128(&p, pe);
-		switch (tag) {
-		case Tag_GNU_Power_ABI_Vector:
-			val = _decode_uleb128(&p, pe);
-			printf("  Tag_GNU_Power_ABI_Vector: %s\n",
-			    ppc_abi_vector(val));
-			break;
-		case 32:	/* Tag_compatibility */
-			p = dump_compatibility_tag(p, pe);
-			break;
-		default:
-			p = dump_unknown_tag(tag, p, pe);
-			break;
-		}
-	}
-}
 
 static void
 dump_attributes(struct readelf *re)
