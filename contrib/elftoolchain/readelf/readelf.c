@@ -442,13 +442,6 @@ static struct eflags_desc mips_eflags_desc[] = {
 	{0, NULL}
 };
 
-static struct eflags_desc powerpc_eflags_desc[] = {
-	{EF_PPC_EMB, "emb"},
-	{EF_PPC_RELOCATABLE, "relocatable"},
-	{EF_PPC_RELOCATABLE_LIB, "relocatable-lib"},
-	{0, NULL}
-};
-
 static struct eflags_desc riscv_eflags_desc[] = {
 	{EF_RISCV_RVC, "RVC"},
 	{EF_RISCV_RVE, "RVE"},
