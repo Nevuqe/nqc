@@ -1,123 +1,4 @@
-#
-# $FreeBSD$
-#
-# The common user-driven targets are (for a complete list, see build(7)):
-#
-# universe            - *Really* build *everything* (buildworld and
-#                       all kernels on all architectures).  Define
-#                       MAKE_JUST_KERNELS or WITHOUT_WORLDS to only build kernels,
-#                       MAKE_JUST_WORLDS or WITHOUT_KERNELS to only build userland.
-# tinderbox           - Same as universe, but presents a list of failed build
-#                       targets and exits with an error if there were any.
-# worlds	      - Same as universe, except just makes the worlds.
-# kernels	      - Same as universe, except just makes the kernels.
-# buildworld          - Rebuild *everything*, including glue to help do
-#                       upgrades.
-# installworld        - Install everything built by "buildworld".
-# world               - buildworld + installworld, no kernel.
-# buildkernel         - Rebuild the kernel and the kernel-modules.
-# installkernel       - Install the kernel and the kernel-modules.
-# installkernel.debug
-# reinstallkernel     - Reinstall the kernel and the kernel-modules.
-# reinstallkernel.debug
-# kernel              - buildkernel + installkernel.
-# kernel-toolchain    - Builds the subset of world necessary to build a kernel
-# kernel-toolchains   - Build kernel-toolchain for all universe targets.
-# doxygen             - Build API documentation of the kernel, needs doxygen.
-# checkworld          - Run test suite on installed world.
-# check-old           - List obsolete directories/files/libraries.
-# check-old-dirs      - List obsolete directories.
-# check-old-files     - List obsolete files.
-# check-old-libs      - List obsolete libraries.
-# delete-old          - Delete obsolete directories/files.
-# delete-old-dirs     - Delete obsolete directories.
-# delete-old-files    - Delete obsolete files.
-# delete-old-libs     - Delete obsolete libraries.
-# list-old-dirs       - Raw list of possibly obsolete directories.
-# list-old-files      - Raw list of possibly obsolete files.
-# list-old-libs       - Raw list of possibly obsolete libraries.
-# targets             - Print a list of supported TARGET/TARGET_ARCH pairs
-#                       for world and kernel targets.
-# toolchains          - Build a toolchain for all world and kernel targets.
-# makeman             - Regenerate src.conf(5)
-# sysent              - (Re)build syscall entries from syscalls.master.
-# xdev                - xdev-build + xdev-install for the architecture
-#                       specified with TARGET and TARGET_ARCH.
-# xdev-build          - Build cross-development tools.
-# xdev-install        - Install cross-development tools.
-# xdev-links          - Create traditional links in /usr/bin for cc, etc
-# native-xtools       - Create host binaries that produce target objects
-#                       for use in qemu user-mode jails.  TARGET and
-#                       TARGET_ARCH should be defined.
-# native-xtools-install
-#                     - Install the files to the given DESTDIR/NXTP where
-#                       NXTP defaults to /nxb-bin.
-#
-# This makefile is simple by design. The FreeBSD make automatically reads
-# the /usr/share/mk/sys.mk unless the -m argument is specified on the
-# command line. By keeping this makefile simple, it doesn't matter too
-# much how different the installed mk files are from those in the source
-# tree. This makefile executes a child make process, forcing it to use
-# the mk files from the source tree which are supposed to DTRT.
-#
-# Most of the user-driven targets (as listed above) are implemented in
-# Makefile.inc1.  The exceptions are universe, tinderbox and targets.
-#
-# If you want to build your system from source, be sure that /usr/obj has
-# at least 6 GB of disk space available.  A complete 'universe' build of
-# r340283 (2018-11) required 167 GB of space.  ZFS lz4 compression
-# achieved a 2.18x ratio, reducing actual space to 81 GB.
-#
-# For individuals wanting to build from the sources currently on their
-# system, the simple instructions are:
-#
-# 1.  `cd /usr/src'  (or to the directory containing your source tree).
-# 2.  Define `HISTORICAL_MAKE_WORLD' variable (see README).
-# 3.  `make world'
-#
-# For individuals wanting to upgrade their sources (even if only a
-# delta of a few days):
-#
-#  1.  `cd /usr/src'       (or to the directory containing your source tree).
-#  2.  `make buildworld'
-#  3.  `make buildkernel KERNCONF=YOUR_KERNEL_HERE'     (default is GENERIC).
-#  4.  `make installkernel KERNCONF=YOUR_KERNEL_HERE'   (default is GENERIC).
-#       [steps 3. & 4. can be combined by using the "kernel" target]
-#  5.  `reboot'        (in single user mode: boot -s from the loader prompt).
-#  6.  `etcupdate -p'
-#  7.  `make installworld'
-#  8.  `etcupdate -B'
-#  9.  `make delete-old'
-# 10.  `reboot'
-# 11.  `make delete-old-libs' (in case no 3rd party program uses them anymore)
-#
-# For individuals wanting to build from source with GCC from ports, first
-# install the appropriate GCC cross toolchain package:
-#   `pkg install ${TARGET_ARCH}-gccN`
-#
-# Once you have installed the necessary cross toolchain, simply pass
-# CROSS_TOOLCHAIN=${TARGET_ARCH}-gccN while building with the above steps,
-# e.g., `make buildworld CROSS_TOOLCHAIN=amd64-gcc6`.
-#
-# The ${TARGET_ARCH}-gccN packages are provided as flavors of the
-# devel/freebsd-gccN ports.
-#
-# See src/UPDATING `COMMON ITEMS' for more complete information.
-#
-# If TARGET=machine (e.g. arm64, ...) is specified you can
-# cross build world for other machine types using the buildworld target,
-# and once the world is built you can cross build a kernel using the
-# buildkernel target.
-#
-# Define the user-driven targets. These are listed here in alphabetical
-# order, but that's not important.
-#
-# Targets that begin with underscore are internal targets intended for
-# developer convenience only.  They are intentionally not documented and
-# completely subject to change without notice.
-#
-# For more information, see the build(7) manual page.
-#
+#	$Id: Makefile,v 1.123 2023/01/28 02:49:20 sjg Exp $
 
 .if defined(UNIVERSE_TARGET) || defined(MAKE_JUST_WORLDS) || defined(WITHOUT_KERNELS)
 __DO_KERNELS=no
@@ -421,11 +302,59 @@ world: upgrade_checks .PHONY
 	@echo "--------------------------------------------------------------"
 	${_+_}@cd ${.CURDIR}; ${_MAKE} post-world
 .endif
-	@echo
-	@echo "--------------------------------------------------------------"
-	@echo ">>> make world completed on `LC_ALL=C date`"
-	@echo "                   (started ${STARTTIME})"
-	@echo "--------------------------------------------------------------"
+
+MANTARGET?= cat
+MANDEST?= ${MANDIR}/${MANTARGET}1
+
+.if ${MANTARGET} == "cat"
+_mfromdir=${srcdir}
+.endif
+
+.include <prog.mk>
+
+CPPFLAGS+= -DMAKE_NATIVE -DHAVE_CONFIG_H
+COPTS.var.c += -Wno-cast-qual
+COPTS.job.c += -Wno-format-nonliteral
+COPTS.parse.c += -Wno-format-nonliteral
+COPTS.var.c += -Wno-format-nonliteral
+
+# Force these
+SHAREDIR= ${SHAREDIR.bmake:U${prefix}/share}
+BINDIR= ${BINDIR.bmake:U${prefix}/bin}
+MANDIR= ${MANDIR.bmake:U${SHAREDIR}/man}
+
+.if !exists(.depend)
+${OBJS}: config.h
+.endif
+
+# start-delete2 for bsd.after-import.mk
+
+# make sure that MAKE_VERSION gets updated.
+main.o: ${srcdir}/VERSION
+
+.if ${MK_AUTOCONF_MK} == "yes"
+CONFIGURE_DEPS += ${.CURDIR}/VERSION
+# we do not need or want the generated makefile
+CONFIGURE_ARGS += --without-makefile
+AUTOCONF_GENERATED_MAKEFILE = Makefile.config
+.include <autoconf.mk>
+.endif
+SHARE_MK ?= ${SHAREDIR}/mk
+MKSRC = ${srcdir}/mk
+INSTALL ?= ${srcdir}/install-sh
+
+.if ${MK_INSTALL_MK} == "yes"
+install: install-mk
+.endif
+
+beforeinstall:
+	test -d ${DESTDIR}${BINDIR} || ${INSTALL} -m ${DIRMODE} -d ${DESTDIR}${BINDIR}
+	test -d ${DESTDIR}${MANDEST} || ${INSTALL} -m ${DIRMODE} -d ${DESTDIR}${MANDEST}
+
+install-mk:
+.if exists(${MKSRC}/install-mk)
+	test -d ${DESTDIR}${SHARE_MK} || ${INSTALL} -m ${DIRMODE} -d ${DESTDIR}${SHARE_MK}
+	sh ${MKSRC}/install-mk -v -m ${NONBINMODE} ${DESTDIR}${SHARE_MK}
 .else
 world: .PHONY
 	@echo "WARNING: make world will overwrite your existing FreeBSD"
