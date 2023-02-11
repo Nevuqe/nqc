@@ -77,6 +77,10 @@ TargetInfo *elf::getTarget() {
     }
   case EM_MSP430:
     return getMSP430TargetInfo();
+  case EM_PPC:
+    return getPPCTargetInfo();
+  case EM_PPC64:
+    return getPPC64TargetInfo();
   case EM_RISCV:
     return getRISCVTargetInfo();
   case EM_SPARCV9:

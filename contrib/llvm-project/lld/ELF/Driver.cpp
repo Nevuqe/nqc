@@ -145,9 +145,13 @@ static std::tuple<ELFKind, uint16_t, uint8_t> parseEmulation(StringRef emul) {
           .Cases("elf32btsmip", "elf32btsmipn32", {ELF32BEKind, EM_MIPS})
           .Cases("elf32ltsmip", "elf32ltsmipn32", {ELF32LEKind, EM_MIPS})
           .Case("elf32lriscv", {ELF32LEKind, EM_RISCV})
+          .Cases("elf32ppc", "elf32ppclinux", {ELF32BEKind, EM_PPC})
+          .Cases("elf32lppc", "elf32lppclinux", {ELF32LEKind, EM_PPC})
           .Case("elf64btsmip", {ELF64BEKind, EM_MIPS})
           .Case("elf64ltsmip", {ELF64LEKind, EM_MIPS})
           .Case("elf64lriscv", {ELF64LEKind, EM_RISCV})
+          .Case("elf64ppc", {ELF64BEKind, EM_PPC64})
+          .Case("elf64lppc", {ELF64LEKind, EM_PPC64})
           .Cases("elf_amd64", "elf_x86_64", {ELF64LEKind, EM_X86_64})
           .Case("elf_i386", {ELF32LEKind, EM_386})
           .Case("elf_iamcu", {ELF32LEKind, EM_IAMCU})
@@ -315,6 +319,12 @@ static void checkOptions() {
 
   if (config->fixCortexA8 && config->emachine != EM_ARM)
     error("--fix-cortex-a8 is only supported on ARM targets");
+
+  if (config->tocOptimize && config->emachine != EM_PPC64)
+    error("--toc-optimize is only supported on PowerPC64 targets");
+
+  if (config->pcRelOptimize && config->emachine != EM_PPC64)
+    error("--pcrel-optimize is only supported on PowerPC64 targets");
 
   if (config->pie && config->shared)
     error("-shared and -pie may not be used together");
@@ -988,7 +998,8 @@ static bool getIsRela(opt::InputArgList &args) {
 
   // Otherwise use the psABI defined relocation entry format.
   uint16_t m = config->emachine;
-  return m == EM_AARCH64 || m == EM_AMDGPU || m == EM_HEXAGON || m == EM_RISCV || m == EM_X86_64;
+  return m == EM_AARCH64 || m == EM_AMDGPU || m == EM_HEXAGON || m == EM_PPC ||
+         m == EM_PPC64 || m == EM_RISCV || m == EM_X86_64;
 }
 
 static void parseClangOption(StringRef opt, const Twine &msg) {
@@ -1529,6 +1540,10 @@ static void setConfigs(opt::InputArgList &args) {
   config->checkDynamicRelocs =
       args.hasFlag(OPT_check_dynamic_relocations,
                    OPT_no_check_dynamic_relocations, checkDynamicRelocsDefault);
+  config->tocOptimize =
+      args.hasFlag(OPT_toc_optimize, OPT_no_toc_optimize, m == EM_PPC64);
+  config->pcRelOptimize =
+      args.hasFlag(OPT_pcrel_optimize, OPT_no_pcrel_optimize, m == EM_PPC64);
 }
 
 static bool isFormatBinary(StringRef s) {

@@ -44,7 +44,6 @@ CONFS=	DAEMON \
 	kld \
 	kldxref \
 	${_kpasswdd} \
-	late-start \
 	ldconfig \
 	linux \
 	local \

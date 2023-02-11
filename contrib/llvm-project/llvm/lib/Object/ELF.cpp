@@ -94,6 +94,20 @@ StringRef llvm::object::getELFRelocationTypeName(uint32_t Machine,
       break;
     }
     break;
+  case ELF::EM_PPC:
+    switch (Type) {
+#include "llvm/BinaryFormat/ELFRelocs/PowerPC.def"
+    default:
+      break;
+    }
+    break;
+  case ELF::EM_PPC64:
+    switch (Type) {
+#include "llvm/BinaryFormat/ELFRelocs/PowerPC64.def"
+    default:
+      break;
+    }
+    break;
   case ELF::EM_RISCV:
     switch (Type) {
 #include "llvm/BinaryFormat/ELFRelocs/RISCV.def"
@@ -189,6 +203,10 @@ uint32_t llvm::object::getELFRelativeRelocationType(uint32_t Machine) {
     return ELF::R_HEX_RELATIVE;
   case ELF::EM_LANAI:
     break;
+  case ELF::EM_PPC:
+    break;
+  case ELF::EM_PPC64:
+    return ELF::R_PPC64_RELATIVE;
   case ELF::EM_RISCV:
     return ELF::R_RISCV_RELATIVE;
   case ELF::EM_S390:
@@ -453,6 +471,22 @@ std::string ELFFile<ELFT>::getDynamicTagAsString(unsigned Arch,
 #define MIPS_DYNAMIC_TAG(name, value) DYNAMIC_STRINGIFY_ENUM(name, value)
 #include "llvm/BinaryFormat/DynamicTags.def"
 #undef MIPS_DYNAMIC_TAG
+    }
+    break;
+
+  case ELF::EM_PPC:
+    switch (Type) {
+#define PPC_DYNAMIC_TAG(name, value) DYNAMIC_STRINGIFY_ENUM(name, value)
+#include "llvm/BinaryFormat/DynamicTags.def"
+#undef PPC_DYNAMIC_TAG
+    }
+    break;
+
+  case ELF::EM_PPC64:
+    switch (Type) {
+#define PPC64_DYNAMIC_TAG(name, value) DYNAMIC_STRINGIFY_ENUM(name, value)
+#include "llvm/BinaryFormat/DynamicTags.def"
+#undef PPC64_DYNAMIC_TAG
     }
     break;
 

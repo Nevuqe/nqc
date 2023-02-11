@@ -508,7 +508,9 @@ int64_t RelocationScanner::computeAddend(const RelTy &rel, RelExpr expr,
     const uint8_t *buf = sec.rawData.data();
     addend = target.getImplicitAddend(buf + rel.r_offset, type);
   }
-  
+
+  if (config->emachine == EM_PPC64 && config->isPic && type == R_PPC64_TOC)
+    addend += getPPC64TocBase();
   if (config->emachine == EM_MIPS)
     addend += computeMipsAddend<ELFT>(rel, expr, isLocal);
 
@@ -1323,6 +1325,122 @@ template <class ELFT, class RelTy> void RelocationScanner::scanOne(RelTy *&i) {
 
   // Read an addend.
   int64_t addend = computeAddend<ELFT>(rel, expr, sym.isLocal());
+
+  if (config->emachine == EM_PPC64) {
+    // We can separate the small code model relocations into 2 categories:
+    // 1) Those that access the compiler generated .toc sections.
+    // 2) Those that access the linker allocated got entries.
+    // lld allocates got entries to symbols on demand. Since we don't try to
+    // sort the got entries in any way, we don't have to track which objects
+    // have got-based small code model relocs. The .toc sections get placed
+    // after the end of the linker allocated .got section and we do sort those
+    // so sections addressed with small code model relocations come first.
+    if (type == R_PPC64_TOC16 || type == R_PPC64_TOC16_DS)
+      sec.file->ppc64SmallCodeModelTocRelocs = true;
+
+    // Record the TOC entry (.toc + addend) as not relaxable. See the comment in
+    // InputSectionBase::relocateAlloc().
+    if (type == R_PPC64_TOC16_LO && sym.isSection() && isa<Defined>(sym) &&
+        cast<Defined>(sym).section->name == ".toc")
+      ppc64noTocRelax.insert({&sym, addend});
+
+    if ((type == R_PPC64_TLSGD && expr == R_TLSDESC_CALL) ||
+        (type == R_PPC64_TLSLD && expr == R_TLSLD_HINT)) {
+      if (i == end) {
+        errorOrWarn("R_PPC64_TLSGD/R_PPC64_TLSLD may not be the last "
+                    "relocation" +
+                    getLocation(sec, sym, offset));
+        return;
+      }
+
+      // Offset the 4-byte aligned R_PPC64_TLSGD by one byte in the NOTOC case,
+      // so we can discern it later from the toc-case.
+      if (i->getType(/*isMips64EL=*/false) == R_PPC64_REL24_NOTOC)
+        ++offset;
+    }
+  }
+
+  // If the relocation does not emit a GOT or GOTPLT entry but its computation
+  // uses their addresses, we need GOT or GOTPLT to be created.
+  //
+  // The 5 types that relative GOTPLT are all x86 and x86-64 specific.
+  if (oneof<R_GOTPLTONLY_PC, R_GOTPLTREL, R_GOTPLT, R_PLT_GOTPLT,
+            R_TLSDESC_GOTPLT, R_TLSGD_GOTPLT>(expr)) {
+    in.gotPlt->hasGotPltOffRel = true;
+  } else if (oneof<R_GOTONLY_PC, R_GOTREL, R_PPC32_PLTREL, R_PPC64_TOCBASE,
+                   R_PPC64_RELAX_TOC>(expr)) {
+    in.got->hasGotOffRel = true;
+  }
+
+  // Process TLS relocations, including relaxing TLS relocations. Note that
+  // R_TPREL and R_TPREL_NEG relocations are resolved in processAux.
+  if (expr == R_TPREL || expr == R_TPREL_NEG) {
+    if (config->shared) {
+      errorOrWarn("relocation " + toString(type) + " against " + toString(sym) +
+                  " cannot be used with -shared" +
+                  getLocation(sec, sym, offset));
+      return;
+    }
+  } else if (unsigned processed =
+                 handleTlsRelocation(type, sym, sec, offset, addend, expr)) {
+    i += (processed - 1);
+    return;
+  }
+
+  // Relax relocations.
+  //
+  // If we know that a PLT entry will be resolved within the same ELF module, we
+  // can skip PLT access and directly jump to the destination function. For
+  // example, if we are linking a main executable, all dynamic symbols that can
+  // be resolved within the executable will actually be resolved that way at
+  // runtime, because the main executable is always at the beginning of a search
+  // list. We can leverage that fact.
+  if (!sym.isPreemptible && (!sym.isGnuIFunc() || config->zIfuncNoplt)) {
+    if (expr != R_GOT_PC) {
+      // The 0x8000 bit of r_addend of R_PPC_PLTREL24 is used to choose call
+      // stub type. It should be ignored if optimized to R_PC.
+      if (config->emachine == EM_PPC && expr == R_PPC32_PLTREL)
+        addend &= ~0x8000;
+      // R_HEX_GD_PLT_B22_PCREL (call a@GDPLT) is transformed into
+      // call __tls_get_addr even if the symbol is non-preemptible.
+      if (!(config->emachine == EM_HEXAGON &&
+           (type == R_HEX_GD_PLT_B22_PCREL ||
+            type == R_HEX_GD_PLT_B22_PCREL_X ||
+            type == R_HEX_GD_PLT_B32_PCREL_X)))
+      expr = fromPlt(expr);
+    } else if (!isAbsoluteValue(sym)) {
+      expr = target.adjustGotPcExpr(type, addend, relocatedAddr);
+    }
+  }
+
+  // We were asked not to generate PLT entries for ifuncs. Instead, pass the
+  // direct relocation on through.
+  if (sym.isGnuIFunc() && config->zIfuncNoplt) {
+    sym.exportDynamic = true;
+    mainPart->relaDyn->addSymbolReloc(type, sec, offset, sym, addend, type);
+    return;
+  }
+
+  if (needsGot(expr)) {
+    if (config->emachine == EM_MIPS) {
+      // MIPS ABI has special rules to process GOT entries and doesn't
+      // require relocation entries for them. A special case is TLS
+      // relocations. In that case dynamic loader applies dynamic
+      // relocations to initialize TLS GOT entries.
+      // See "Global Offset Table" in Chapter 5 in the following document
+      // for detailed description:
+      // ftp://www.linux-mips.org/pub/linux/mips/doc/ABI/mipsabi.pdf
+      in.mipsGot->addEntry(*sec.file, sym, addend, expr);
+    } else {
+      sym.needsGot = true;
+    }
+  } else if (needsPlt(expr)) {
+    sym.needsPlt = true;
+  } else {
+    sym.hasDirectReloc = true;
+  }
+
+  processAux(expr, type, offset, sym, addend);
 }
 
 // R_PPC64_TLSGD/R_PPC64_TLSLD is required to mark `bl __tls_get_addr` for
@@ -1366,6 +1484,29 @@ template <class ELFT, class RelTy>
 void RelocationScanner::scan(ArrayRef<RelTy> rels) {
   // Not all relocations end up in Sec.Relocations, but a lot do.
   sec.relocations.reserve(rels.size());
+
+  if (config->emachine == EM_PPC64)
+    checkPPC64TLSRelax<RelTy>(sec, rels);
+
+  // For EhInputSection, OffsetGetter expects the relocations to be sorted by
+  // r_offset. In rare cases (.eh_frame pieces are reordered by a linker
+  // script), the relocations may be unordered.
+  SmallVector<RelTy, 0> storage;
+  if (isa<EhInputSection>(sec))
+    rels = sortRels(rels, storage);
+
+  end = static_cast<const void *>(rels.end());
+  for (auto i = rels.begin(); i != end;)
+    scanOne<ELFT>(i);
+
+  // Sort relocations by offset for more efficient searching for
+  // R_RISCV_PCREL_HI20 and R_PPC64_ADDR64.
+  if (config->emachine == EM_RISCV ||
+      (config->emachine == EM_PPC64 && sec.name == ".toc"))
+    llvm::stable_sort(sec.relocations,
+                      [](const Relocation &lhs, const Relocation &rhs) {
+                        return lhs.offset < rhs.offset;
+                      });
 }
 
 template <class ELFT> void elf::scanRelocations(InputSectionBase &s) {
@@ -1482,6 +1623,12 @@ void elf::postScanRelocations() {
                                  target->pltEntrySize * sym.getPltIdx(),
                              0);
           sym.needsCopy = true;
+          if (config->emachine == EM_PPC) {
+            // PPC32 canonical PLT entries are at the beginning of .glink
+            cast<Defined>(sym).value = in.plt->headerSize;
+            in.plt->headerSize += 16;
+            cast<PPC32GlinkSection>(*in.plt).canonical_plts.push_back(&sym);
+          }
         }
       }
     }

@@ -180,6 +180,12 @@ unsigned ELFHeader::GetRelocationJumpSlotType() const {
   default:
     assert(false && "architecture not supported");
     break;
+  case EM_PPC:
+    slot = R_PPC_JMP_SLOT;
+    break;
+  case EM_PPC64:
+    slot = R_PPC64_JMP_SLOT;
+    break;
   case EM_386:
   case EM_IAMCU: // FIXME: is this correct?
     slot = R_386_JUMP_SLOT;

@@ -420,7 +420,14 @@ void InputSection::copyRelocations(uint8_t *buf, ArrayRef<RelTy> rels) {
         p->r_addend = sym.getVA(addend) - section->getOutputSection()->addr;
       else if (config->relocatable && type != target.noneRel)
         sec->relocations.push_back({R_ABS, type, rel.r_offset, addend, &sym});
-    }
+    } else if (config->emachine == EM_PPC && type == R_PPC_PLTREL24 &&
+               p->r_addend >= 0x8000 && sec->file->ppc32Got2) {
+      // Similar to R_MIPS_GPREL{16,32}. If the addend of R_PPC_PLTREL24
+      // indicates that r30 is relative to the input section .got2
+      // (r_addend>=0x8000), after linking, r30 should be relative to the output
+      // section .got2 . To compensate for the shift, adjust r_addend by
+      // ppc32Got->outSecOff.
+      p->r_addend += sec->file->ppc32Got2->outSecOff;
     }
   }
 }
@@ -583,6 +590,12 @@ static int64_t getTlsTpOffset(const Symbol &s) {
     return s.getVA(0) + config->wordsize * 2 +
            ((tls->p_vaddr - config->wordsize * 2) & (tls->p_align - 1));
   case EM_MIPS:
+  case EM_PPC:
+  case EM_PPC64:
+    // Adjusted Variant 1. TP is placed with a displacement of 0x7000, which is
+    // to allow a signed 16-bit offset to reach 0x1000 of TCB/thread-library
+    // data and 0xf000 of the program's TLS segment.
+    return s.getVA(0) + (tls->p_vaddr & (tls->p_align - 1)) - 0x7000;
   case EM_RISCV:
     return s.getVA(0) + (tls->p_vaddr & (tls->p_align - 1));
 
@@ -706,6 +719,8 @@ uint64_t InputSectionBase::getRelocTargetVA(const InputFile *file, RelType type,
         dest = getARMUndefinedRelativeWeakVA(type, a, p);
       else if (config->emachine == EM_AARCH64)
         dest = getAArch64UndefinedRelativeWeakVA(type, p) + a;
+      else if (config->emachine == EM_PPC)
+        dest = p;
       else if (config->emachine == EM_RISCV)
         dest = getRISCVUndefinedRelativeWeakVA(type, p) + a;
       else
