@@ -108,6 +108,7 @@ ofw_iicbus_attach(device_t dev)
 	struct ofw_iicbus_devinfo *dinfo;
 	phandle_t child, node;
 	pcell_t freq, paddr;
+	device_t childdev;
 	u_int iic_addr_8bit = 0;
 
 	sc->dev = dev;
