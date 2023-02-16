@@ -78,12 +78,6 @@ __DEFAULT_NO_OPTIONS = \
 BROKEN_OPTIONS+= INIT_ALL_ZERO
 .endif
 
-.if ${MACHINE_CPUARCH} == "arm"
-. if ${MACHINE_ARCH:Marmv[67]*} == ""
-BROKEN_OPTIONS+= CDDL ZFS
-. endif
-.endif
-
 # Things that don't work because the kernel doesn't have the support
 # for them.
 .if ${MACHINE} != "i386" && ${MACHINE} != "amd64"
