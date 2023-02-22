@@ -158,8 +158,6 @@
             ru
             ..
         ..
-        sendmail
-        ..
         sm.bin
         ..
         zfs
@@ -827,8 +825,6 @@
             ..
         ..
         security
-        ..
-        sendmail
         ..
         skel
         ..
