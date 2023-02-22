@@ -233,7 +233,6 @@ lfC c l.
 /usr/lib/crontab.local	*	local cron daemon data base (moves to \f(CW/etc/crontab.local\fP)
 /usr/lib/lib*.a	\(dg	for local libraries
 /usr/lib/mail.rc	\(dg	system-wide mail(1) initialization (moves to \f(CW/etc/mail.rc\fP)
-/usr/lib/sendmail.cf	*	sendmail configuration (moves to \f(CW/etc/sendmail.cf\fP)
 /usr/lib/tmac/*	\(dd	for locally developed troff/nroff macros (moves to \f(CW/usr/share/tmac/*\fP)
 /usr/lib/uucp/*	\(dg	for local uucp configuration files
 /usr/man/manl	*	for manual pages for locally developed programs (moves to \f(CW/usr/local/man\fP)
@@ -359,7 +358,6 @@ lfC l.
 /var/run	(directory to store *.pid files)
 /var/rwho	(rwho databases)
 /var/spool/ftp	(home directory for anonymous ftp)
-/var/spool/mqueue	(sendmail spooling directory)
 /var/spool/news	(news spooling area)
 /var/spool/output	(printer spooling area)
 /var/spool/uucp	(uucp spooling area)
@@ -599,7 +597,6 @@ _	_	_
 /etc/syslog.conf	/etc/syslog.conf	pathnames of log files changed
 /etc/ttys	/etc/ttys	pathnames of executables changed
 /etc/passwd	/etc/master.passwd	new format; see below
-/usr/lib/sendmail.cf	/etc/sendmail.cf	changed pathnames
 /usr/lib/aliases	/etc/aliases	may contain changed pathnames
 /etc/*.pid	/var/run/*.pid
 
@@ -795,14 +792,6 @@ Several programs rely on the host name returned by
 .Xr gethostname
 to determine the local domain name.
 .PP
-If you are using the name server, your
-.Xr sendmail
-configuration file will need some updates to accommodate it.
-See the ``Sendmail Installation and Operation Guide'' (SMM:8) and
-the sample
-.Xr sendmail
-configuration files in
-.Pn /usr/src/usr.sbin/sendmail/cf .
 The aliases file,
 .Pn /etc/aliases
 has also been changed to add certain well-known addresses.
