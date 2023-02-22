@@ -220,7 +220,7 @@ find_user(db, name)
 	cron_db	*db;
 	char	*name;
 {
-	char *env_get(const char *name);
+	char *env_get(char *, char **);
 	user *u;
 
 	for (u = db->head; u != NULL; u = u->next)

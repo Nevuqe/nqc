@@ -244,7 +244,7 @@ int		job_runqueue(void),
 		allowed(char *),
 		strdtb(char *);
 
-char		*env_get(const char *name),
+char		*env_get(char *, char **),
 		*arpadate(time_t *),
 		*mkprints(unsigned char *, unsigned int),
 		*first_word(char *, char *),
