@@ -18,8 +18,17 @@ SYMLINKS=	../sbin/mailwrapper /usr/bin/mailq \
 .if ${MK_MAILWRAPPER} == "no" && ${MK_DMAGENT} != "no"
 SYMLINKS+=	../libexec/dma ${BINDIR}/mailwrapper
 .endif
+.endif
+
+.if ${MK_MAILWRAPPER} != "no" && ${MK_SENDMAIL} == "no"
+SYMLINKS+=	..${BINDIR}/mailwrapper /bin/rmail
+.endif
 
 .if ${MK_MAILWRAPPER} != "no"
+# We install here if dma(8) is enabled, or sendmail(8) isn't. In the
+# latter scenario, we take care of the possibility that neither sendmail(8) nor
+# dma(8) are installed and simply provide a default that can be changed for an
+# alternative in ports.
 .if ${MK_DMAGENT} != "no"
 CONFS=		${SRCTOP}/libexec/dma/dmagent/mailer.conf
 .else
