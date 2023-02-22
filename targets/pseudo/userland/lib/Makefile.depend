@@ -106,7 +106,6 @@ DIRDEPS = \
 	lib/libmandoc \
 	lib/libmd \
 	lib/libmemstat \
-	lib/libmilter \
 	lib/libmp \
 	lib/libnetgraph \
 	lib/libngatm \
@@ -150,10 +149,7 @@ DIRDEPS = \
 	lib/libsa \
 	lib/libsbuf \
 	lib/libsdp \
-	lib/libsm \
 	lib/libsmb \
-	lib/libsmdb \
-	lib/libsmutil \
 	lib/libsqlite3 \
 	lib/libstdbuf \
 	lib/libstdthreads \

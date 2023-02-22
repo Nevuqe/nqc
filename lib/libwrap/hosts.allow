@@ -47,12 +47,6 @@ ALL : [::1] : allow
 #ALL : [2001:db8:2:1:2:3:4:3fe1] : deny
 #ALL : [2001:db8:2:1::]/64 : allow
 
-# Sendmail can help protect you against spammers and relay-rapers
-sendmail : localhost : allow
-#sendmail : .nice.guy.example.com : allow
-#sendmail : .evil.cracker.example.com : deny
-sendmail : ALL : allow
-
 # Exim is an alternative to sendmail, available in the ports tree
 exim : localhost : allow
 #exim : .nice.guy.example.com : allow

@@ -36,7 +36,6 @@ DIRDEPS+= \
 	bin/rcp \
 	bin/realpath \
 	bin/rm \
-	bin/rmail \
 	bin/rmdir \
 	bin/setfacl \
 	bin/sh \
@@ -529,7 +528,6 @@ DIRDEPS+= \
 	usr.sbin/dnssec-settime \
 	usr.sbin/dnssec-signzone \
 	usr.sbin/dumpcis \
-	usr.sbin/editmap \
 	usr.sbin/edquota \
 	usr.sbin/etcupdate \
 	usr.sbin/extattr \

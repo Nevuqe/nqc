@@ -54,7 +54,7 @@ struct old_ps_strings {
 
 #include <stdarg.h>
 
-#define SPT_BUFSIZE 2048	/* from other parts of sendmail */
+#define SPT_BUFSIZE 2048
 
 static char *
 setproctitle_internal(const char *fmt, va_list ap)
