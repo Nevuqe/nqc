@@ -23,10 +23,6 @@ SYMLINKS+=	../libexec/sendmail/sendmail ${BINDIR}/mailwrapper
 .endif
 .endif
 
-.if ${MK_MAILWRAPPER} != "no" && ${MK_SENDMAIL} == "no"
-SYMLINKS+=	..${BINDIR}/mailwrapper /bin/rmail
-.endif
-
 .if ${MK_SENDMAIL} != "no"
 FILES=		${SRCTOP}/etc/mail/mailer.conf
 FILESDIR=	${SHAREDIR}/examples/sendmail

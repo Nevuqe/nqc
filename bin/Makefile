@@ -42,7 +42,6 @@ SUBDIR= cat \
 	timeout \
 	uuidgen
 
-SUBDIR.${MK_SENDMAIL}+=	rmail
 SUBDIR.${MK_TCSH}+=	csh
 SUBDIR.${MK_TESTS}+=	tests
 
