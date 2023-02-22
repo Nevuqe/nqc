@@ -12,17 +12,6 @@ NLS_ALIASES=	POSIX C \
 UPDATE_DEPENDFILE=	no
 
 SUBDIR+=termcap
-.if ${MK_SENDMAIL} != "no"
-SUBDIR+=sendmail
-.endif
-
-# NB: keep these sorted by MK_* knobs
-
-ETCMAIL=aliases
-.if ${MK_SENDMAIL} != "no"
-ETCMAIL+=Makefile README access.sample virtusertable.sample \
-	mailertable.sample
-.endif
 
 # Special top level files for FreeBSD
 FREEBSD=COPYRIGHT
@@ -67,9 +56,6 @@ distribution:
 		../var/unbound ${DESTDIR}/etc/unbound; \
 	fi
 .endif
-.if ${MK_SENDMAIL} != "no"
-	${_+_}cd ${.CURDIR}/sendmail; ${MAKE} distribution
-.endif
 .if ${MK_KERBEROS} != "no"
 	cd ${.CURDIR}/root; \
 	    ${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 644 \
@@ -77,15 +63,6 @@ distribution:
 		dot.k5login ${DESTDIR}/root/.k5login;
 .endif
 
-.if ${MK_MAIL} != "no"
-	cd ${.CURDIR}/mail; ${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 644 \
-	    -T "package=sendmail" ${ETCMAIL} ${DESTDIR}/etc/mail
-	if [ -d ${DESTDIR}/etc/mail -a -f ${DESTDIR}/etc/mail/aliases -a \
-	      ! -f ${DESTDIR}/etc/aliases ]; then \
-		${INSTALL_SYMLINK} -T "package=sendmail" \
-		mail/aliases ${DESTDIR}/etc/aliases; \
-	fi
-.endif
 .if ${MK_LOCATE} != "no"
 	${INSTALL} -o nobody -g ${BINGRP} -m 644 -T "package=runtime"\
 	    /dev/null ${DESTDIR}/var/db/locate.database
@@ -113,9 +90,6 @@ MTREES+=	mtree/BSD.lib32.dist		/usr/lib/debug/usr
 .if ${MK_TESTS} != "no"
 MTREES+=	mtree/BSD.tests.dist		${TESTSBASE}
 MTREES+=	mtree/BSD.tests.dist		/usr/lib/debug/${TESTSBASE}
-.endif
-.if ${MK_SENDMAIL} != "no"
-MTREES+=	mtree/BSD.sendmail.dist		/
 .endif
 .for mtree in ${LOCAL_MTREE}
 MTREES+=	../${mtree}			/
