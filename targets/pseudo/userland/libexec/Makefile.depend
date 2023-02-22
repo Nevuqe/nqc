@@ -17,7 +17,6 @@ DIRDEPS = \
 	libexec/ftpd \
 	libexec/getty \
 	libexec/hyperv \
-	libexec/mail.local \
 	libexec/mknetid \
 	libexec/pppoed \
 	libexec/rbootd \
@@ -31,7 +30,6 @@ DIRDEPS = \
 	libexec/rshd \
 	libexec/rtld-elf \
 	libexec/save-entropy \
-	libexec/smrsh \
 	libexec/talkd \
 	libexec/tcpd \
 	libexec/tftp-proxy \

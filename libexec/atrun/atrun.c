@@ -381,14 +381,6 @@ run_file(const char *filename, uid_t uid, gid_t gid)
 
 	if (chdir(pentry->pw_dir))
 		chdir("/");
-
-#ifdef __FreeBSD__
-	execl(_PATH_SENDMAIL, "sendmail", "-F", "Atrun Service",
-			"-odi", "-oem",
-			mailname, (char *) NULL);
-#else
-        execl(MAIL_CMD, MAIL_CMD, mailname, (char *) NULL);
-#endif
 	    perr("exec failed for mail command");
 
 	PRIV_END
