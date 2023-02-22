@@ -39,10 +39,6 @@ command was originally written by Bill Joy before he left Berkeley, and it
 contains no AT&T code, so it is in UUNET's archive of freely-distributable
 BSD code.)
 
-LINUX note: /usr/include/paths.h on some linux systems shows _PATH_SENDMAIL
-	to be /usr/bin/sendmail even though sendmail is installed in /usr/lib.
-	you should check this out.
-
 say:
 	make all
 

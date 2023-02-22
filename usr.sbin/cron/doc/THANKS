@@ -20,7 +20,6 @@ the source-file labelling in installed crontabs.
 
 Scott Narveson ported V2 to a Sequent, and sent in the most useful single batch
 of diffs I got from anybody.  Changes attributable to Scott are:
-	-> sendmail won't time out if the command is slow to generate output
 	-> day-of-week names aren't off by one anymore
 	-> crontab says the right thing if you do something you shouldn't do
 	-> crontab(5) man page is longer and more informative

@@ -192,7 +192,6 @@ typedef	struct _entry {
 #define	SEC_RES		0x20
 #define	INTERVAL	0x40
 #define	DONT_LOG	0x80
-#define	MAIL_WHEN_ERR	0x100
 	time_t	lastrun;
 } entry;
 
@@ -286,8 +285,6 @@ char	*DowNames[] = {
 		NULL
 	};
 
-char	*ProgramName,
-	*defmailto;
 int	LineNumber;
 unsigned Jitter,
 	RootJitter;
