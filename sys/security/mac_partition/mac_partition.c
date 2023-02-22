@@ -125,9 +125,6 @@ partition_cred_check_relabel(struct ucred *cred, struct label *newlabel)
 	if (SLOT(newlabel) != 0) {
 		/*
 		 * Require BSD privilege in order to change the partition.
-		 * Originally we also required that the process not be in a
-		 * partition in the first place, but this didn't interact
-		 * well with sendmail.
 		 */
 		error = priv_check_cred(cred, PRIV_MAC_PARTITION);
 	}
