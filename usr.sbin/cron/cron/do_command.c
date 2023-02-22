@@ -92,6 +92,7 @@ child_process(e, u)
 {
 	int		stdin_pipe[2], stdout_pipe[2];
 	register char	*input_data;
+	char		*usernm;
 	PID_T		jobpid, stdinjob;
 	register int	bytes = 1;
 	int		status = 0;
@@ -520,8 +521,6 @@ child_process(e, u)
 	/* wait for children to die.
 	 */
 	if (jobpid > 0) {
-		WAIT_T	waiter;
-
 		waiter = wait_on_child(jobpid, "grandchild command job");
 	}
 
