@@ -142,7 +142,6 @@ __DEFAULT_YES_OPTIONS = \
     LS_COLORS \
     MACHDEP_OPTIMIZATIONS \
     MAIL \
-    MAILWRAPPER \
     MAKE \
     MLX5TOOL \
     NDIS \
@@ -385,8 +384,6 @@ MK_CTF:=	no
 .endif
 
 .if ${MK_MAIL} == "no"
-MK_MAILWRAPPER:= no
-MK_SENDMAIL:=	no
 MK_DMAGENT:=	no
 .endif
 

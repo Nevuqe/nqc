@@ -584,7 +584,6 @@ DIRDEPS+= \
 	usr.sbin/lpr/lptest \
 	usr.sbin/lpr/pac \
 	usr.sbin/mailstats \
-	usr.sbin/mailwrapper \
 	usr.sbin/makefs \
 	usr.sbin/makemap \
 	usr.sbin/manctl \

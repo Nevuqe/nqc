@@ -5157,15 +5157,6 @@ OLD_FILES+=usr/share/misc/mail.help
 OLD_FILES+=usr/share/misc/mail.tildehelp
 .endif
 
-.if ${MK_MAILWRAPPER} == no
-OLD_FILES+=etc/mail/mailer.conf
-# Don't remove, for no mailwrapper case:
-# /usr/sbin/sendmail -> /usr/sbin/mailwrapper
-# /usr/sbin/mailwrapper -> /usr/libexec/sendmail/sendmail
-#OLD_FILES+=usr/sbin/mailwrapper
-OLD_FILES+=usr/share/man/man8/mailwrapper.8.gz
-.endif
-
 .if ${MK_MAKE} == no
 OLD_FILES+=usr/bin/make
 OLD_FILES+=usr/share/man/man1/make.1.gz
@@ -7177,9 +7168,6 @@ OLD_FILES+=etc/periodic/daily/440.status-mailq
 OLD_FILES+=etc/periodic/daily/460.status-mail-rejects
 OLD_FILES+=etc/periodic/daily/500.queuerun
 OLD_FILES+=etc/rc.d/sendmail
-.if ${MK_MAILWRAPPER} == no
-OLD_FILES+=bin/rmail
-.endif
 OLD_FILES+=usr/bin/vacation
 OLD_FILES+=usr/include/libmilter/mfapi.h
 OLD_FILES+=usr/include/libmilter/mfdef.h
@@ -7208,7 +7196,6 @@ OLD_FILES+=usr/share/man/man8/mailstats.8.gz
 OLD_FILES+=usr/share/man/man8/makemap.8.gz
 OLD_FILES+=usr/share/man/man8/praliases.8.gz
 OLD_FILES+=usr/share/man/man8/purgestat.8.gz
-OLD_FILES+=usr/share/man/man8/rmail.8.gz
 OLD_FILES+=usr/share/man/man8/sendmail.8.gz
 OLD_FILES+=usr/share/man/man8/smrsh.8.gz
 OLD_FILES+=usr/share/sendmail/cf/README
