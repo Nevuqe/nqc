@@ -106,8 +106,6 @@ main(argc, argv)
 	int secres1, secres2;
 	struct tm *tm;
 
-	ProgramName = argv[0];
-
 #if defined(BSD)
 	setlinebuf(stdout);
 	setlinebuf(stderr);

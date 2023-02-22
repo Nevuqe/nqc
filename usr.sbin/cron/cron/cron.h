@@ -301,8 +301,7 @@ char	*DebugFlagNames[] = {	/* sync with #defines */
 extern	char	*copyright[],
 		*MonthNames[],
 		*DowNames[],
-		*ProgramName,
-		*defmailto;
+		*ProgramName;
 extern	int	LineNumber;
 extern unsigned	Jitter,
 		RootJitter;
