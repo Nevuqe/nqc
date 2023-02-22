@@ -61,7 +61,7 @@ usage() {
 #endif
 
 	fprintf(stderr, "usage: cron [-j jitter] [-J rootjitter] "
-			"[-n] [-s] [-o] [-x debugflag[,...]]\n");
+			"[-m mailto] [-n] [-s] [-o] [-x debugflag[,...]]\n");
 #if DEBUGGING
 	fprintf(stderr, "\ndebugflags: ");
 
@@ -105,6 +105,8 @@ main(argc, argv)
 	int runnum;
 	int secres1, secres2;
 	struct tm *tm;
+
+	ProgramName = argv[0];
 
 #if defined(BSD)
 	setlinebuf(stdout);
@@ -536,6 +538,9 @@ parse_args(argc, argv)
 			if (*optarg == '\0' || *endp != '\0' || RootJitter > 60)
 				errx(ERROR_EXIT,
 				     "bad value for root jitter: %s", optarg);
+			break;
+		case 'm':
+			defmailto = optarg;
 			break;
 		case 'n':
 			dont_daemonize = 1;

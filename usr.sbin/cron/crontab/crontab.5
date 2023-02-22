@@ -117,6 +117,35 @@ On these systems,
 will be set also).
 .Pp
 If
+.Xr cron 8
+has any reason to send mail as a result of running commands in
+``this'' crontab, it will respect the following settings which may be
+defined in the crontab (but which are not taken from the login class).
+If
+.Ev MAILTO
+is defined (and non-empty), mail is
+sent to the user so named.
+If
+.Ev MAILFROM
+is defined (and non-empty), its value will be used as the from address.
+.Ev MAILTO
+may also be used to direct mail to multiple recipients
+by separating recipient users with a comma.
+If
+.Ev MAILTO
+is defined but empty (MAILTO=""), no
+mail will be sent.
+Otherwise mail is sent to the owner of the crontab.
+This
+option is useful if you decide on
+.Pa /bin/mail
+instead of
+.Pa /usr/lib/sendmail
+as
+your mailer when you install cron --
+.Pa /bin/mail
+does not do aliasing, and UUCP
+usually does not read its mail.
 .Pp
 The format of a cron command is very much the V7 standard, with a number of
 upward-compatible extensions.
@@ -195,6 +224,13 @@ input.
 The following command options can be supplied:
 .Bl -tag -width Ds
 .It Fl n
+No mail is sent after a successful run.
+The execution output will only be mailed if the command exits with a non-zero
+exit code.
+The
+.Fl n
+option is an attempt to cure potentially copious volumes of mail coming from
+.Xr cron 8 .
 .It Fl q
 Execution will not be logged.
 .El
@@ -248,6 +284,23 @@ is started or the crontab entry is reloaded.
 
 # use /bin/sh to run commands, overriding the default set by cron
 SHELL=/bin/sh
+# mail any output to `paul', no matter whose crontab this is
+MAILTO=paul
+#
+# run five minutes after midnight, every day
+5 0 * * *       $HOME/bin/daily.job >> $HOME/tmp/out 2>&1
+# run at 2:15pm on the first of every month -- output mailed to paul
+15 14 1 * *     $HOME/bin/monthly
+# run at 10 pm on weekdays, annoy Joe
+0 22 * * 1-5	mail -s "It's 10pm" joe%Joe,%%Where are your kids?%
+23 0-23/2 * * * echo "run 23 minutes after midn, 2am, 4am ..., everyday"
+5 4 * * sun     echo "run at 5 after 4 every sunday"
+# run at 5 minutes intervals, no matter how long it takes
+@300		svnlite up /usr/src
+# run every minute, suppress logging
+* * * * *       -q date
+# run every minute, only send mail if ping fails
+* * * * *       -n ping -c 1 freebsd.org
 .Ed
 .Sh SEE ALSO
 .Xr crontab 1 ,
@@ -279,6 +332,14 @@ or
 the
 environment handed to child processes is basically the one from
 .Pa /etc/rc .
+.Pp
+Command output is mailed to the crontab owner
+.No ( Bx
+cannot do this), can be
+mailed to a person other than the crontab owner (SysV cannot do this), or the
+feature can be turned off and no mail will be sent at all (SysV cannot do this
+either).
+.Pp
 All of the
 .Sq @
 directives that can appear in place of the first five fields
@@ -288,6 +349,9 @@ Command processing can be modified using command options.
 The
 .Sq -q
 option suppresses logging.
+The
+.Sq -n
+option does not mail on successful run.
 .Sh AUTHORS
 .An Paul Vixie Aq Mt paul@vix.com
 .Sh BUGS

@@ -38,7 +38,9 @@ static	void		process_crontab(char *, char *, char *,
 					     cron_db *, cron_db *);
 
 
-void load_database(cron_db *old_db)
+void
+load_database(old_db)
+	cron_db		*old_db;
 {
 	DIR		*dir;
 	struct stat	statbuf;
@@ -175,6 +177,12 @@ void load_database(cron_db *old_db)
 	}
 	closedir(dir);
 
+	/* if we don't do this, then when our children eventually call
+	 * getpwnam() in do_command.c's child_process to verify MAILTO=,
+	 * they will screw us up (and v-v).
+	 */
+	endpwent();
+
 	/* whatever's left in the old database is now junk.
 	 */
 	Debug(DLOAD, ("unlinking old database:\n"))
@@ -192,128 +200,136 @@ void load_database(cron_db *old_db)
 }
 
 
-void link_user(cron_db *db, user *u) {
-    if (db->head == NULL)
-        db->head = u;
-    if (db->tail)
-        db->tail->next = u;
-    u->prev = db->tail;
-    u->next = NULL;
-    db->tail = u;
-}
-
-void unlink_user(cron_db* db, user* u)
+void
+link_user(db, u)
+	cron_db	*db;
+	user	*u;
 {
-    if (u->prev == NULL)
-        db->head = u->next;
-    else
-        u->prev->next = u->next;
-
-    if (u->next == NULL)
-        db->tail = u->prev;
-    else
-        u->next->prev = u->prev;
+	if (db->head == NULL)
+		db->head = u;
+	if (db->tail)
+		db->tail->next = u;
+	u->prev = db->tail;
+	u->next = NULL;
+	db->tail = u;
 }
+
+
+void
+unlink_user(db, u)
+	cron_db	*db;
+	user	*u;
+{
+	if (u->prev == NULL)
+		db->head = u->next;
+	else
+		u->prev->next = u->next;
+
+	if (u->next == NULL)
+		db->tail = u->prev;
+	else
+		u->next->prev = u->prev;
+}
+
 
 user *
 find_user(db, name)
 	cron_db	*db;
 	char	*name;
 {
-	char *env_get(char *, char **);
-	user *u;
+	char	*env_get();
+	user	*u;
 
-	for (u = db->head; u != NULL; u = u->next)
+	for (u = db->head;  u != NULL;  u = u->next)
 		if (!strcmp(u->name, name))
 			break;
 	return u;
 }
 
+
 static void
-process_crontab(char *uname, char *fname, char *tabname,
-                struct stat *statbuf, cron_db *new_db, cron_db *old_db)
+process_crontab(uname, fname, tabname, statbuf, new_db, old_db)
+	char		*uname;
+	char		*fname;
+	char		*tabname;
+	struct stat	*statbuf;
+	cron_db		*new_db;
+	cron_db		*old_db;
 {
-    struct passwd *pw = NULL;
-    int crontab_fd = -1;
-    user *u;
-    entry *e;
-    time_t now;
+	struct passwd	*pw = NULL;
+	int		crontab_fd = OK - 1;
+	user		*u;
+	entry		*e;
+	time_t		now;
 
-    if (strcmp(fname, SYS_NAME) != 0 && !(pw = getpwnam(uname))) {
-        /* file doesn't have a user in passwd file. */
-        log_it(fname, getpid(), "ORPHAN", "no passwd entry");
-        goto next_crontab;
-    }
+	if (strcmp(fname, SYS_NAME) && !(pw = getpwnam(uname))) {
+		/* file doesn't have a user in passwd file.
+		 */
+		log_it(fname, getpid(), "ORPHAN", "no passwd entry");
+		goto next_crontab;
+	}
 
-    if ((crontab_fd = open(tabname, O_RDONLY)) < 0) {
-        /* crontab not accessible? */
-        log_it(fname, getpid(), "CAN'T OPEN", tabname);
-        goto next_crontab;
-    }
+	if ((crontab_fd = open(tabname, O_RDONLY, 0)) < OK) {
+		/* crontab not accessible?
+		 */
+		log_it(fname, getpid(), "CAN'T OPEN", tabname);
+		goto next_crontab;
+	}
 
-    if (fstat(crontab_fd, statbuf) < 0) {
-        log_it(fname, getpid(), "FSTAT FAILED", tabname);
-        goto next_crontab;
-    }
+	if (fstat(crontab_fd, statbuf) < OK) {
+		log_it(fname, getpid(), "FSTAT FAILED", tabname);
+		goto next_crontab;
+	}
 
-    Debug(DLOAD, ("\t%s:", fname));
+	Debug(DLOAD, ("\t%s:", fname))
+	u = find_user(old_db, fname);
+	if (u != NULL) {
+		/* if crontab has not changed since we last read it
+		 * in, then we can just use our existing entry.
+		 */
+		if (u->mtime == statbuf->st_mtime) {
+			Debug(DLOAD, (" [no change, using old data]"))
+			unlink_user(old_db, u);
+			link_user(new_db, u);
+			goto next_crontab;
+		}
 
-    u = find_user(old_db, fname);
-
-    if (u != NULL) {
-        /* if crontab has not changed since we last read it
-         * in, then we can just use our existing entry.
-         */
-        if (u->mtime == statbuf->st_mtime) {
-            Debug(DLOAD, (" [no change, using old data]"));
-            unlink_user(old_db, u);
-            link_user(new_db, u);
-            goto next_crontab;
-        }
-
-        /* before we fall through to the code that will reload
-         * the user, let's deallocate and unlink the user in
-         * the old database.  This is more a point of memory
-         * efficiency than anything else, since all leftover
-         * users will be deleted from the old database when
-         * we finish with the crontab...
-         */
-        Debug(DLOAD, (" [delete old data]"));
-        unlink_user(old_db, u);
-        free_user(u);
-        log_it(fname, getpid(), "RELOAD", tabname);
-    }
-
-    u = load_user(crontab_fd, pw, fname);
-
-    if (u != NULL) {
-        u->mtime = statbuf->st_mtime;
-
-        /*
-         * TargetTime == 0 when we're initially populating the database,
-         * and TargetTime > 0 any time after that (i.e. we're reloading
-         * cron.d/ files because they've been created/modified).  In the
-         * latter case, we should check for any interval jobs and run
-         * them 'n' seconds from the time the job was loaded/reloaded.
-         * Otherwise, they will not be run until cron is restarted.
-         */
-        if (TargetTime != 0) {
-            now = time(NULL);
-
-            for (e = u->crontab; e != NULL; e = e->next) {
-                if ((e->flags & INTERVAL) != 0) {
-                    e->lastexit = now;
-                }
-            }
-        }
-
-        link_user(new_db, u);
-    }
+		/* before we fall through to the code that will reload
+		 * the user, let's deallocate and unlink the user in
+		 * the old database.  This is more a point of memory
+		 * efficiency than anything else, since all leftover
+		 * users will be deleted from the old database when
+		 * we finish with the crontab...
+		 */
+		Debug(DLOAD, (" [delete old data]"))
+		unlink_user(old_db, u);
+		free_user(u);
+		log_it(fname, getpid(), "RELOAD", tabname);
+	}
+	u = load_user(crontab_fd, pw, fname);
+	if (u != NULL) {
+		u->mtime = statbuf->st_mtime;
+		/*
+		 * TargetTime == 0 when we're initially populating the database,
+		 * and TargetTime > 0 any time after that (i.e. we're reloading
+		 * cron.d/ files because they've been created/modified).  In the
+		 * latter case, we should check for any interval jobs and run
+		 * them 'n' seconds from the time the job was loaded/reloaded.
+		 * Otherwise, they will not be run until cron is restarted.
+		 */
+		if (TargetTime != 0) {
+			now = time(NULL);
+			for (e = u->crontab; e != NULL; e = e->next) {
+				if ((e->flags & INTERVAL) != 0)
+					e->lastexit = now;
+			}
+		}
+		link_user(new_db, u);
+	}
 
 next_crontab:
-    if (crontab_fd >= 0) {
-        Debug(DLOAD, (" [done]\n"));
-        close(crontab_fd);
-    }
+	if (crontab_fd >= OK) {
+		Debug(DLOAD, (" [done]\n"))
+		close(crontab_fd);
+	}
 }
-

@@ -68,3 +68,18 @@ your crontab commands, you don't need them anymore: just find a good place
 to put the `crontab.src' (or whatever you want to call it) file for that
 user, put the cron commands into it, and install it using the `crontab'
 command (probably with "-u USERNAME", but see the man page).
+
+If you run a 4.2-derived cron, you could of course just install your current
+crontab in toto as root's crontab.  It would work exactly the way your
+current one does, barring the extra steps in installing or changing it.
+There would still be advantages to this cron, mostly that you get mail if
+there is any output from your cron commands.
+
+One note about getting mail from cron: you will probably find, after you
+install this version of cron, that your cron commands are generating a lot
+of irritating output.  The work-around for this is to redirect all EXPECTED
+output to a per-execution log file, which you can examine if you want to
+see the output from the "last time" a command was executed; if you get any
+UNEXPECTED output, it will be mailed to you.  This takes a while to get
+right, but it's amazingly convenient.  Trust me.
+

@@ -556,6 +556,36 @@ mkprints(src, len)
 	return dst;
 }
 
+
+#ifdef MAIL_DATE
+/* Sat, 27 Feb 93 11:44:51 CST
+ * 123456789012345678901234567
+ */
+char *
+arpadate(clock)
+	time_t *clock;
+{
+	time_t t = clock ?*clock :time(0L);
+	struct tm *tm = localtime(&t);
+	static char ret[32];	/* zone name might be >3 chars */
+
+	if (tm->tm_year >= 100)
+		tm->tm_year += 1900;
+
+	(void) snprintf(ret, sizeof(ret), "%s, %2d %s %d %02d:%02d:%02d %s",
+		       DowNames[tm->tm_wday],
+		       tm->tm_mday,
+		       MonthNames[tm->tm_mon],
+		       tm->tm_year,
+		       tm->tm_hour,
+		       tm->tm_min,
+		       tm->tm_sec,
+		       TZONE(*tm));
+	return ret;
+}
+#endif /*MAIL_DATE*/
+
+
 #ifdef HAVE_SAVED_UIDS
 static int save_euid;
 int swap_uids() { save_euid = geteuid(); return seteuid(getuid()); }
