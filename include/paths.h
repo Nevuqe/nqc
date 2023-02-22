@@ -90,7 +90,7 @@
 #define	_PATH_RLOGIN	"/usr/bin/rlogin"
 #define	_PATH_RM	"/bin/rm"
 #define	_PATH_RSH	"/usr/bin/rsh"
-#define	_PATH_SENDMAIL	"/usr/sbin/sendmail"
+#define	_PATH_SENDMAIL
 #define	_PATH_SHELLS	"/etc/shells"
 #define	_PATH_TTY	"/dev/tty"
 #define	_PATH_UNIX	"don't use _PATH_UNIX"
