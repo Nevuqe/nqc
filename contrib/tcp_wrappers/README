@@ -216,8 +216,7 @@ to be appended to the /var/log/syslog file.
 By default, the wrapper logs go to the same place as the transaction
 logs of the sendmail daemon. The disposition can be changed by editing
 the Makefile and/or the syslog.conf file. Send a `kill -HUP' to the
-syslogd after changing its configuration file. Remember that syslogd,
-just like sendmail, insists on one or more TABs between the left-hand
+syslogd after changing its configuration file. Remember that syslogd insists on one or more TABs between the left-hand
 side and the right-hand side expressions in its configuration file.
 
 Solaris 2.x note: the syslog daemon depends on the m4 macro processor.
@@ -968,9 +967,7 @@ programs.  The hosts_access.3 manual page (`nroff -man' format)
 describes the external interface of the libwrap.a library.
 
 The tcpd program can even be used to control access to the mail
-service.  This can be useful when you suspect that someone is trying
-out some obscure sendmail bug, or when a remote site is misconfigured
-and keeps hammering your mail daemon.
+service.
 
 In that case, sendmail should not be run as a stand-alone network
 listener, but it should be registered in the inetd configuration file.

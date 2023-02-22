@@ -1,5 +1,4 @@
 # Transport programs for mail and news, used by iftoss
-sendmail /usr/lib/sendmail -f $F $T
 rnews  /usr/lib/news/rnews
 
 # Unpackers, used by ifunpack. 

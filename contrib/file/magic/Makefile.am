@@ -272,7 +272,6 @@ $(MAGIC_FRAGMENT_DIR)/sccs \
 $(MAGIC_FRAGMENT_DIR)/scientific \
 $(MAGIC_FRAGMENT_DIR)/securitycerts \
 $(MAGIC_FRAGMENT_DIR)/selinux \
-$(MAGIC_FRAGMENT_DIR)/sendmail \
 $(MAGIC_FRAGMENT_DIR)/sequent \
 $(MAGIC_FRAGMENT_DIR)/sereal \
 $(MAGIC_FRAGMENT_DIR)/sgi \

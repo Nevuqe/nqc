@@ -54,9 +54,6 @@ install: all
 	${INSTALL} -m 4754 -o root -g mail dma-mbox-create ${DESTDIR}${LIBEXEC}
 	${INSTALL} -m 0644 dma.8 ${DESTDIR}${MAN}/man8/
 
-sendmail-link:
-	cd ${DESTDIR}${SBIN} && ${LN} ${SYMLINK} dma sendmail
-
 mailq-link:
 	cd ${DESTDIR}${SBIN} && ${LN} ${SYMLINK} dma mailq
 

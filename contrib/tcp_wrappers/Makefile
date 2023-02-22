@@ -520,7 +520,7 @@ AR	= ar
 # Optional: Changing the default disposition of logfile records
 #
 # By default, logfile entries are written to the same file as used for
-# sendmail transaction logs. See your /etc/syslog.conf file for actual
+# transaction logs. See your /etc/syslog.conf file for actual
 # path names of logfiles. The tutorial section in the README file
 # gives a brief introduction to the syslog daemon.
 # 
@@ -536,8 +536,6 @@ AR	= ar
 # there must be TABs between fields.
 #
 # The LOG_XXX names below are taken from the /usr/include/syslog.h file.
-
-FACILITY= LOG_MAIL	# LOG_MAIL is what most sendmail daemons use
 
 # The syslog priority at which successful connections are logged.
 

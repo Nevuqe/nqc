@@ -43,7 +43,6 @@ if [ "${virecovery}" != "${RECDIR}/recover.*" ]; then
 		    do { if (substr($0,1,1) == " ") print; else exit } \
 		    while(getline) }' < "${i}" | uudecode -mr`
 		if [ -n "${recfile}" -a -s "${recfile}" ]; then
-			sendmail -odb -t < "${i}"
 			echo -n '.'
 		else
 			rm -f "${i}"

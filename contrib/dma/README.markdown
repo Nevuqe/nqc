@@ -7,8 +7,7 @@ and delivers the mails either locally or to a remote destination.
 Remote delivery includes several features like TLS/SSL support and
 SMTP authentication.
 
-dma is not intended as a replacement for real, big MTAs like sendmail(8)
-or postfix(1).  Consequently, dma does not listen on port 25 for
+dma is not intended as a replacement for real, big MTAs like postfix(1).  Consequently, dma does not listen on port 25 for
 incoming connections.
 
 
