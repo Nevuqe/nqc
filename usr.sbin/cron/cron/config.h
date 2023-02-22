@@ -20,10 +20,6 @@
  * $FreeBSD$
  */
 
-#if !defined(_PATH_SENDMAIL)
-# define _PATH_SENDMAIL "/usr/lib/sendmail"
-#endif /*SENDMAIL*/
-
 /*
  * these are site-dependent
  */
@@ -41,7 +37,7 @@
 			 * (hint: MAILTO= was added for this reason).
 			 */
 
-#define MAILCMD _PATH_SENDMAIL					/*-*/
+#define MAILCMD				/*-*/
 #define MAILARGS "%s -FCronDaemon -odi -oem -oi -t"             /*-*/
 			/* -Fx	 = set full-name of sender
 			 * -odi	 = Option Deliverymode Interactive

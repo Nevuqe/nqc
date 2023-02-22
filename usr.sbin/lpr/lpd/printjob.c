@@ -152,7 +152,6 @@ static char	*scnline(int _key, char *_p, int _c);
 static int	 sendfile(struct printer *_pp, int _type, char *_file, 
 		    char _format, int _copyreq);
 static int	 sendit(struct printer *_pp, char *_file);
-static void	 sendmail(struct printer *_pp, char *_userid, int _bombed);
 static void	 setty(const struct printer *_pp);
 static void	 wait4data(struct printer *_pp, const char *_dfile);
 
@@ -340,8 +339,6 @@ again:
 				(void) unlink(q->job_cfname);
 				q->job_cfname[0] = 'd';
 				(void) unlink(q->job_cfname);
-				if (logname[0])
-					sendmail(pp, logname, FATALERR);
 			}
 		}
 	}
@@ -468,7 +465,6 @@ printit(struct printer *pp, char *file)
 			if (pp->restricted) { /* restricted */
 				if (getpwnam(logname) == NULL) {
 					bombed = NOACCT;
-					sendmail(pp, line+1, bombed);
 					goto pass2;
 				}
 			}
@@ -563,7 +559,6 @@ printit(struct printer *pp, char *file)
 			case FILTERERR:
 			case ACCESS:
 				bombed = i;
-				sendmail(pp, logname, bombed);
 			}
 			title[0] = '\0';
 			continue;
@@ -587,8 +582,6 @@ pass2:
 			continue;
 
 		case 'M':
-			if (bombed < NOACCT)	/* already sent if >= NOACCT */
-				sendmail(pp, line+1, bombed);
 			continue;
 
 		case 'U':
@@ -946,7 +939,6 @@ sendit(struct printer *pp, char *file)
 			strlcpy(logname, line + 1, sizeof(logname));
 			if (pp->restricted) { /* restricted */
 				if (getpwnam(logname) == NULL) {
-					sendmail(pp, line+1, NOACCT);
 					err = ERROR;
 					break;
 				}
@@ -969,8 +961,6 @@ sendit(struct printer *pp, char *file)
 			case REPRINT:
 				(void) fclose(cfp);
 				return (REPRINT);
-			case ACCESS:
-				sendmail(pp, logname, ACCESS);
 			case ERROR:
 				err = ERROR;
 			}
@@ -1551,84 +1541,6 @@ dropit(int c)
 	default:
 		return (0);
 	}
-}
-
-/*
- * sendmail ---
- *   tell people about job completion
- */
-static void
-sendmail(struct printer *pp, char *userid, int bombed)
-{
-	register int i;
-	int p[2], s;
-	register const char *cp;
-	struct stat stb;
-	FILE *fp;
-
-	pipe(p);
-	if ((s = dofork(pp, DORETURN)) == 0) {		/* child */
-		dup2(p[0], STDIN_FILENO);
-		closelog();
-		closeallfds(3);
-		if ((cp = strrchr(_PATH_SENDMAIL, '/')) != NULL)
-			cp++;
-		else
-			cp = _PATH_SENDMAIL;
-		execl(_PATH_SENDMAIL, cp, "-t", (char *)0);
-		_exit(0);
-	} else if (s > 0) {				/* parent */
-		dup2(p[1], STDOUT_FILENO);
-		printf("To: %s@%s\n", userid, origin_host);
-		printf("Subject: %s printer job \"%s\"\n", pp->printer,
-			*jobname ? jobname : "<unknown>");
-		printf("Reply-To: root@%s\n\n", local_host);
-		printf("Your printer job ");
-		if (*jobname)
-			printf("(%s) ", jobname);
-
-		switch (bombed) {
-		case OK:
-			cp = "OK";
-			printf("\ncompleted successfully\n");
-			break;
-		default:
-		case FATALERR:
-			cp = "FATALERR";
-			printf("\ncould not be printed\n");
-			break;
-		case NOACCT:
-			cp = "NOACCT";
-			printf("\ncould not be printed without an account on %s\n",
-			    local_host);
-			break;
-		case FILTERERR:
-			cp = "FILTERERR";
-			if (stat(tempstderr, &stb) < 0 || stb.st_size == 0
-			    || (fp = fopen(tempstderr, "r")) == NULL) {
-				printf("\nhad some errors and may not have printed\n");
-				break;
-			}
-			printf("\nhad the following errors and may not have printed:\n");
-			while ((i = getc(fp)) != EOF)
-				putchar(i);
-			(void) fclose(fp);
-			break;
-		case ACCESS:
-			cp = "ACCESS";
-			printf("\nwas not printed because it was not linked to the original file\n");
-		}
-		fflush(stdout);
-		(void) close(STDOUT_FILENO);
-	} else {
-		syslog(LOG_WARNING, "unable to send mail to %s: %m", userid);
-		return;
-	}
-	(void) close(p[0]);
-	(void) close(p[1]);
-	wait(NULL);
-	syslog(LOG_INFO, "mail sent to user %s about job %s on printer %s (%s)",
-	    userid, *jobname ? jobname : "<unknown>", pp->printer, cp);
 }
 
 /*

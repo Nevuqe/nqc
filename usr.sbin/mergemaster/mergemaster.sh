@@ -1421,16 +1421,9 @@ case "${NEED_NEWALIASES}" in
 '') ;;
 *)
   echo ''
-  if [ -n "${DESTDIR}" ]; then
-    echo "*** You installed a new aliases file into ${DESTDIR}/etc/mail, but"
-    echo "    the newaliases command is limited to the directories configured"
-    echo "    in sendmail.cf.  Make sure to create your aliases database by"
-    echo "    hand when your sendmail configuration is done."
-  else
     echo "*** You installed a new aliases file, so make sure that you run"
     echo "    '/usr/bin/newaliases' to rebuild your aliases database"
     run_it_now '/usr/bin/newaliases'
-  fi
   ;;
 esac
 
