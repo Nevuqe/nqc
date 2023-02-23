@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <dev/drm2/drm_buffer.h>
 

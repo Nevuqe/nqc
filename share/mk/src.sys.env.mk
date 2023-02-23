@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # early setup only see also src.sys.mk
 

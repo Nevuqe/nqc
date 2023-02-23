@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)isatty.c	8.1 (Berkeley) 6/4/93");
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <termios.h>
 #include <unistd.h>

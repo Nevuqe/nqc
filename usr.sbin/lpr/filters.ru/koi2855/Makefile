@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	koi2855
 MAN=

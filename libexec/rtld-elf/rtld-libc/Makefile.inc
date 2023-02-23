@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # This makefiles adds the necessary libc dependencies for RTLD without pulling
 # in all of the complex libc bits such as locales, etc.
 

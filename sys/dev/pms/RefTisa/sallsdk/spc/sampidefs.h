@@ -18,7 +18,7 @@
 *LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
 *SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 *
-* $FreeBSD$
+* $NQC$
 *
 ********************************************************************************/
 /*******************************************************************************/
@@ -1119,11 +1119,11 @@ typedef struct agsaDeviceRegistrationRsp_s {
 #define FAILURE_PHY_ID_ALREADY_REGISTERED   0x04 /* Only for directly-attached SATA registration. The device registration failed because the SPC 8x6G detected an already -registered PHY ID for a directly attached SATA drive. */
 #define FAILURE_PORT_ID_OUT_OF_RANGE        0x05 /* PORT_ID specified in the REGISTER_DEVICE Command is out-of range (0-7).  */
 #define FAILURE_PORT_NOT_VALID_STATE        0x06 /* The PORT_ID specified in the REGISTER_DEVICE Command is not in PORT_VALID state. */
-#define FAILURE_DEVICE_TYPE_NOT_VALID       0x07 /* The device type, specified in the ‘S field in the REGISTER_DEVICE Command is not valid. */
+#define FAILURE_DEVICE_TYPE_NOT_VALID       0x07 /* The device type, specified in the ï¿½S field in the REGISTER_DEVICE Command is not valid. */
 
 #define MPI_ERR_DEVICE_HANDLE_UNAVAILABLE   0x1020 /* The device registration failed because the SPCv controller is running out of device handle resources. The parameter DEVICE_ID is not used. */
 #define MPI_ERR_DEVICE_ALREADY_REGISTERED   0x1021 /* The device registration failed because the SPCv controller detected an existing device handle with the same SAS address. The parameter DEVICE_ID contains the existing DEVICE _ID assigned to the SAS device. */
-#define MPI_ERR_DEVICE_TYPE_NOT_VALID       0x1022 /* The device type, specified in the ‘S field in the REGISTER_DEVICE_HANDLE Command (page 274) is not valid. */
+#define MPI_ERR_DEVICE_TYPE_NOT_VALID       0x1022 /* The device type, specified in the ï¿½S field in the REGISTER_DEVICE_HANDLE Command (page 274) is not valid. */
 #define MPI_ERR_PORT_INVALID_PORT_ID        0x1041 /* specified in the REGISTER_DEVICE_HANDLE Command (page 274) is invalid. i.e Out of supported range  */
 #define MPI_ERR_PORT_STATE_NOT_VALID        0x1042 /* The PORT_ID specified in the REGISTER_DEVICE_HANDLE Command (page 274) is not in PORT_VALID state.  */
 #define MPI_ERR_PORT_STATE_NOT_IN_USE       0x1043

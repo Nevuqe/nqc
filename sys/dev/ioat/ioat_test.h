@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifndef __IOAT_TEST_H__
 #define __IOAT_TEST_H__

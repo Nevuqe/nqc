@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 f_echoanddo() {
 	printf '%s\n' "$*"

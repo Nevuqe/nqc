@@ -1,6 +1,6 @@
 /*
  * This file is in the public domain.
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _DEV_ZLIB_ZCALLOC_

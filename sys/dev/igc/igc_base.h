@@ -3,7 +3,7 @@
  * Copyright 2021 Rubicon Communications, LLC (Netgate)
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _IGC_BASE_H_

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $Id: meta.autodep.mk,v 1.55 2021/12/13 08:12:01 sjg Exp $
 
 #

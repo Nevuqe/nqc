@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /** @file drm_vm.c
  * Support code for mmaping of DRM maps.

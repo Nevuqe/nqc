@@ -26,7 +26,7 @@
  *
  * Author: Lutz Donnerhacke <lutz@donnerhacke.de>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_NG_VLAN_ROTATE_H_

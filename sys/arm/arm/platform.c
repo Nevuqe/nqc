@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /*
  * Dispatch platform calls to the appropriate platform implementation

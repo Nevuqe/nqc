@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 
 export LESSOPEN="||/usr/bin/lesspipe.sh %s"

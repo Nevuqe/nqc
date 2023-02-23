@@ -75,7 +75,7 @@
 
 
 # RCSid:
-#	$FreeBSD$
+#	$NQC$
 #	$Id: meta2deps.sh,v 1.14 2020/10/02 03:11:17 sjg Exp $
 
 # Copyright (c) 2010-2013, Juniper Networks, Inc.

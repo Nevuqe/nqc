@@ -24,7 +24,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 	.section .init,"ax",@progbits
 	addq	$8,%rsp

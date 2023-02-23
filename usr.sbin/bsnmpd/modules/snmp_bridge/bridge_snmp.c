@@ -27,7 +27,7 @@
  *
  * Bridge MIB implementation for SNMPd.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

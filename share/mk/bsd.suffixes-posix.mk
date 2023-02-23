@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Posix 1003.2 mandated rules
 #

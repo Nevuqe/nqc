@@ -3,7 +3,7 @@
  *
  *	Block cache for dump
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

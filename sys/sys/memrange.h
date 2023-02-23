@@ -1,7 +1,7 @@
 /*
  * Memory range attribute operations, performed on /dev/mem
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_MEMRANGE_H_

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR=	iprop-log kstash ktutil
 SUBDIR_PARALLEL=

@@ -7,7 +7,7 @@
 /* This file implements VMCI Event code. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "vmci.h"
 #include "vmci_driver.h"

@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 * Multi purpose pin (MPP) configuration.
 

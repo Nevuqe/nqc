@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=		pam_group
 SRCS=		pam_group.c

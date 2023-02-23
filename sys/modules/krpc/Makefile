@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/rpc ${SRCTOP}/sys/rpc/rpcsec_tls
 KMOD=	krpc

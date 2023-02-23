@@ -54,7 +54,7 @@
 ** Specify breakpoint default action
 */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifdef TESTMAIN
 #include <stdlib.h>

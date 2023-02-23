@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include <bsd.compiler.mk>
 

@@ -1,5 +1,5 @@
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .if n .ftr C R
 .ig TL

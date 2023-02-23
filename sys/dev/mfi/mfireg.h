@@ -56,7 +56,7 @@
 #define _MFIREG_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /*
  * MegaRAID SAS MFI firmware definitions

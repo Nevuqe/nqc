@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 case [ in
 [[:alpha:]]) echo bad

@@ -12,7 +12,7 @@
 # the author assume any responsibility for damages incurred with
 # its use.
 #
-# $FreeBSD$
+# $NQC$
 #
 # This script creates and connects n router like nodes. Complex wide
 # area topologies can be created with the help of script.

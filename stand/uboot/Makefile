@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LOADER_UFS_SUPPORT?=	yes
 LOADER_CD9660_SUPPORT?=	no

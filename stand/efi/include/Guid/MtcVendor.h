@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /** @file
   GUID is for MTC variable.
 

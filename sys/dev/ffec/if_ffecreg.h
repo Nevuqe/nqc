@@ -31,7 +31,7 @@
 #define IF_FFECREG_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /*
  * Hardware defines for Freescale Fast Ethernet Controller.

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FWVERSION=	17
 NAME=		3160

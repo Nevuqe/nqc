@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Author: Gleb Smirnoff <glebius@freebsd.org>
 #

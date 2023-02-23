@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$")
+__FBSDID("$NQC$")
 	
 ENTRY(sqrt)
 	sqrtsd	%xmm0, %xmm0

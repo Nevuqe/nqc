@@ -26,7 +26,7 @@
  * in = 00 01 02 ... 3e (63 bytes)
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/types.h>

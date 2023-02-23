@@ -7,7 +7,7 @@
 /* Driver for VMware Virtual Machine Communication Interface (VMCI) device. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/bus.h>

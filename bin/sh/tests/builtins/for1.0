@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 false
 for i in `false`; do exit 3; done

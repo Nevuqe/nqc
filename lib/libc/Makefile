@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 2/3/94
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	clibs
 SHLIBDIR?= /lib

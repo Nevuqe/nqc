@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "../Makefile.inc"
 # Keep the existing tests directory structure (with subdirs per component)

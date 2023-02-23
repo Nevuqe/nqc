@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	bluetooth
 CONFS=		iwmbtfw.conf

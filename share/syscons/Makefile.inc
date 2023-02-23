@@ -1,3 +1,3 @@
-# $FreeBSD$
+# $NQC$
 
 FILESPACKAGE=	syscons

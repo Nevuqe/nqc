@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build nvme related tools and kernel modules.

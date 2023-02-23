@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	vtfontcvt
 SRCS=	vtfontcvt.c lz4.c

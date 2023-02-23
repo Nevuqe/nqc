@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	alias_ftp
 SRCS=	alias_ftp.c

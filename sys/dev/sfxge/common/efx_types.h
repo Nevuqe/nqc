@@ -31,7 +31,7 @@
  *
  * Ackowledgement to Fen Systems Ltd.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_SYS_EFX_TYPES_H

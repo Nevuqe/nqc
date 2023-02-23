@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FILES=		${SRCTOP}/sys/contrib/dev/iwlwififw/LICENCE.iwlwifi_firmware
 FILESDIR=	${SHAREDIR}/doc/legal

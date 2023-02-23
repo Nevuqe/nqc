@@ -2,7 +2,7 @@
 #
 # create message-id / in-reply-to database
 #
-# $FreeBSD$
+# $NQC$
 
 sub usage { die "usage: mid-index name < filelist"; }
 

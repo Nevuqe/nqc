@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 #!/bin/sh
 #
 # Copyright (c) 2014, Juniper Networks, Inc.

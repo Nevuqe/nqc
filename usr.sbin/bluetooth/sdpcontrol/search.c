@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: search.c,v 1.2 2003/09/08 17:35:15 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <netinet/in.h>

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 unalias -a
 alias alias0=command

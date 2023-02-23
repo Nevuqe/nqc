@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	dmardump
 SRCS=	dmardump.c

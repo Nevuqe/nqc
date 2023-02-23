@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Doing a make install builds /usr/share/examples
 

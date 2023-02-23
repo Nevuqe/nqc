@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: bthidd.c,v 1.8 2006/09/07 21:06:53 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/time.h>

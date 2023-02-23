@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	fixwhite
 BINDIR=	/usr/bin

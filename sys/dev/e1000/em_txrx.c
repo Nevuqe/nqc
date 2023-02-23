@@ -25,7 +25,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 #include "if_em.h"
 
 #ifdef RSS

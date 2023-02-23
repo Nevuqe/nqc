@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 S.yes+=		userboot
 S.yes+=		i386

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 unset LC_ALL
 LC_CTYPE=en_US.ISO8859-1

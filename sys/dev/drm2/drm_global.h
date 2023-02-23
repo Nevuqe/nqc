@@ -27,7 +27,7 @@
 /*
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _DRM_GLOBAL_H_
 #define _DRM_GLOBAL_H_

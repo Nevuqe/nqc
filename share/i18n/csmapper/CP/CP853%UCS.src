@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $NetBSD: CP853%UCS.src,v 1.1 2006/12/02 14:36:13 tnozaki Exp $
 
 TYPE		ROWCOL

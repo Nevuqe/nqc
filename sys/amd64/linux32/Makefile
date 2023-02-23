@@ -1,6 +1,6 @@
 # Makefile for syscall tables
 #
-# $FreeBSD$
+# $NQC$
 
 GENERATED_PREFIX=	linux32_
 

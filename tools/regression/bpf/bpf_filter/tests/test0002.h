@@ -1,7 +1,7 @@
 /*-
  * Test 0002:	BPF_RET+BPF_K
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

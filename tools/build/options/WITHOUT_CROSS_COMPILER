@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build any cross compiler in the cross-tools stage of buildworld.
 When compiling a different version of
 .Fx

@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 .am vS
 ..
 .am vE
@@ -843,7 +843,7 @@ rnd()
 
 .vE
 '-F
-.\" $FreeBSD$
+.\" $NQC$
 .am vS
 ..
 .am vE

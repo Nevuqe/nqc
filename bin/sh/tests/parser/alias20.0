@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 alias begin={ end=}
 : <<EOF &&

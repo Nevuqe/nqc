@@ -29,7 +29,7 @@
 #if !defined(_WIN32) || defined(__CYGWIN__)
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef HAVE_SYS_PARAM_H
 #include <sys/param.h>

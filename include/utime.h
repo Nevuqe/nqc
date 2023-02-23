@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)utime.h	8.1 (Berkeley) 6/2/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_UTIME_H_

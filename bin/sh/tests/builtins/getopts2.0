@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 set - -ax
 getopts ax option
 set -C

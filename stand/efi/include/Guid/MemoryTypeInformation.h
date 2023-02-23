@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /** @file
   This file defines:
   * Memory Type Information GUID for HOB and Variable.

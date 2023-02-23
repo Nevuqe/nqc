@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 # A basic regression test for gconcat append using "gconcat create",
 # i.e., manual mode.

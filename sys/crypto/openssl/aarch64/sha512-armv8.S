@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from sha512-armv8.pl. */
 // Copyright 2014-2020 The OpenSSL Project Authors. All Rights Reserved.
 //

@@ -30,7 +30,7 @@
  *
  *	@(#)radix.c	8.4 (Berkeley) 11/2/94
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /*
@@ -39,7 +39,7 @@
 
 #include "defs.h"
 
-__RCSID("$FreeBSD$");
+__RCSID("$NQC$");
 
 #define log(x, msg) syslog(x, msg)
 #define panic(s) {log(LOG_ERR,s); exit(1);}

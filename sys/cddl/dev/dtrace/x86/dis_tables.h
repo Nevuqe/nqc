@@ -27,7 +27,7 @@
 /*	  All Rights Reserved  	*/
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _DIS_TABLES_H

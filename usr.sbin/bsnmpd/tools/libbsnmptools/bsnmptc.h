@@ -28,7 +28,7 @@
  *
  * Textual conventions for snmp
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_BSNMP_TEXT_CONV_H_

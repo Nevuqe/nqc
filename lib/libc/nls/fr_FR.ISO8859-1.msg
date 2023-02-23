@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for fr_FR.ISO8859-1 locale
 $
@@ -6,55 +6,55 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Opération non autorisée
+1 Opï¿½ration non autorisï¿½e
 $ ENOENT
-2 Fichier ou répertoire inexistant
+2 Fichier ou rï¿½pertoire inexistant
 $ ESRCH
 3 Processus inconnu
 $ EINTR
-4 Appel système interrompu
+4 Appel systï¿½me interrompu
 $ EIO
-5 Erreur d'entrée/sortie
+5 Erreur d'entrï¿½e/sortie
 $ ENXIO
-6 Dispositif non configuré
+6 Dispositif non configurï¿½
 $ E2BIG
 7 Liste d'arguments trop longue
 $ ENOEXEC
-8 Format d'exécutable invalide
+8 Format d'exï¿½cutable invalide
 $ EBADF
 9 Mauvais descripteur de fichier
 $ ECHILD
 10 Pas de processus fils
 $ EDEADLK
-11 Étreinte mortelle détectée
+11 ï¿½treinte mortelle dï¿½tectï¿½e
 $ ENOMEM
-12 Impossible d'allouer de la mémoire
+12 Impossible d'allouer de la mï¿½moire
 $ EACCES
-13 Permission refusée
+13 Permission refusï¿½e
 $ EFAULT
 14 Mauvaise adresse
 $ ENOTBLK
 15 Dispositif en mode bloc requis
 $ EBUSY
-16 Dispositif occupé
+16 Dispositif occupï¿½
 $ EEXIST
 17 Le fichier existe
 $ EXDEV
-18 Lien inter-unités
+18 Lien inter-unitï¿½s
 $ ENODEV
-19 Opération non supportée par le dispositif
+19 Opï¿½ration non supportï¿½e par le dispositif
 $ ENOTDIR
-20 Pas un répertoire
+20 Pas un rï¿½pertoire
 $ EISDIR
-21 Est un répertoire
+21 Est un rï¿½pertoire
 $ EINVAL
 22 Argument invalide
 $ ENFILE
-23 Trop de fichiers ouverts sur le système
+23 Trop de fichiers ouverts sur le systï¿½me
 $ EMFILE
 24 Trop de fichiers ouverts
 $ ENOTTY
-25 Fonction inadaptée au dispositif
+25 Fonction inadaptï¿½e au dispositif
 $ ETXTBSY
 26 Fichier en cours d'utilisation
 $ EFBIG
@@ -62,25 +62,25 @@ $ EFBIG
 $ ENOSPC
 28 Plus d'espace disponible
 $ ESPIPE
-29 Recherche illégale
+29 Recherche illï¿½gale
 $ EROFS
-30 Système de fichier en lecture seulement
+30 Systï¿½me de fichier en lecture seulement
 $ EMLINK
 31 Trop de liens
 $ EPIPE
-32 Tube déconnecté
+32 Tube dï¿½connectï¿½
 $ EDOM
-33 Argument numérique hors définition
+33 Argument numï¿½rique hors dï¿½finition
 $ ERANGE
-34 Résultat trop grand
+34 Rï¿½sultat trop grand
 $ EAGAIN, EWOULDBLOCK
 35 Ressource indisponible temporairement
 $ EINPROGRESS
-36 Opération en cours
+36 Opï¿½ration en cours
 $ EALREADY
-37 Opération déjà en cours
+37 Opï¿½ration dï¿½jï¿½ en cours
 $ ENOTSOCK
-38 Opération de type socket sur un descripteur de fichier
+38 Opï¿½ration de type socket sur un descripteur de fichier
 $ EDESTADDRREQ
 39 Adresse de destination obligatoire
 $ EMSGSIZE
@@ -90,63 +90,63 @@ $ EPROTOTYPE
 $ ENOPROTOOPT
 42 Protocole non disponible
 $ EPROTONOSUPPORT
-43 Protocole non supporté
+43 Protocole non supportï¿½
 $ ESOCKTNOSUPPORT
-44 Type de socket non supporté
+44 Type de socket non supportï¿½
 $ EOPNOTSUPP
-45 Opération non supportée
+45 Opï¿½ration non supportï¿½e
 $ EPFNOSUPPORT
-46 Famille de protocole non supportée
+46 Famille de protocole non supportï¿½e
 $ EAFNOSUPPORT
-47 Famille d'adresse non supportée par la famille de protocole
+47 Famille d'adresse non supportï¿½e par la famille de protocole
 $ EADDRINUSE
 48 Adresse en cours d'utilisation
 $ EADDRNOTAVAIL
-49 Impossible d'assigner l'adresse demandée
+49 Impossible d'assigner l'adresse demandï¿½e
 $ ENETDOWN
-50 Plus de réseau
+50 Plus de rï¿½seau
 $ ENETUNREACH
-51 Réseau inaccessible
+51 Rï¿½seau inaccessible
 $ ENETRESET
-52 Connexion coupée par le réseau
+52 Connexion coupï¿½e par le rï¿½seau
 $ ECONNABORTED
 53 Connexion interrompue
 $ ECONNRESET
-54 Connexion interrompue par l'hôte distant
+54 Connexion interrompue par l'hï¿½te distant
 $ ENOBUFS
-55 Tampon saturé
+55 Tampon saturï¿½
 $ EISCONN
-56 La socket est déjà connectée
+56 La socket est dï¿½jï¿½ connectï¿½e
 $ ENOTCONN
-57 La socket n'est pas connectée
+57 La socket n'est pas connectï¿½e
 $ ESHUTDOWN
-58 Impossible d'envoyer après la coupure
+58 Impossible d'envoyer aprï¿½s la coupure
 $ ETOOMANYREFS
-59 Trop de références : lien impossible
+59 Trop de rï¿½fï¿½rencesï¿½: lien impossible
 $ ETIMEDOUT
-60 Dépassement du délai d'attente
+60 Dï¿½passement du dï¿½lai d'attente
 $ ECONNREFUSED
-61 Connexion refusée
+61 Connexion refusï¿½e
 $ ELOOP
 62 Trop de niveaux de liens symboliques
 $ ENAMETOOLONG
 63 Nom de fichier trop long
 $ EHOSTDOWN
-64 Hôte distant arrêté
+64 Hï¿½te distant arrï¿½tï¿½
 $ EHOSTUNREACH
-65 Pas de route vers l'hôte distant
+65 Pas de route vers l'hï¿½te distant
 $ ENOTEMPTY
-66 Répertoire non vide
+66 Rï¿½pertoire non vide
 $ EPROCLIM
 67 Trop de processus
 $ EUSERS
 68 Trop d'utilisateurs
 $ EDQUOT
-69 Quota de disque dépassé
+69 Quota de disque dï¿½passï¿½
 $ ESTALE
-70 Identificateur de fichier NFS périmé
+70 Identificateur de fichier NFS pï¿½rimï¿½
 $ EREMOTE
-71 Trop de niveaux extérieurs dans le path
+71 Trop de niveaux extï¿½rieurs dans le path
 $ EBADRPC
 72 Mauvaise structure RPC
 $ ERPCMISMATCH
@@ -156,29 +156,29 @@ $ EPROGUNAVAIL
 $ EPROGMISMATCH
 75 Mauvaise version de programme
 $ EPROCUNAVAIL
-76 Mauvaise procédure pour le programme
+76 Mauvaise procï¿½dure pour le programme
 $ ENOLCK
 77 Plus de verrous disponibles
 $ ENOSYS
-78 Fonction non implémentée
+78 Fonction non implï¿½mentï¿½e
 $ EFTYPE
-79 Type de fichier ou format inapproprié
+79 Type de fichier ou format inappropriï¿½
 $ EAUTH
 80 Erreur d'authentification
 $ ENEEDAUTH
 81 Authentification requise
 $ EIDRM
-82 Identifiant retiré
+82 Identifiant retirï¿½
 $ ENOMSG
-83 Aucun message du type souhaité
+83 Aucun message du type souhaitï¿½
 $ EOVERFLOW
-84 Valeur trop grande pour le type de donnée
+84 Valeur trop grande pour le type de donnï¿½e
 $ ECANCELED
-85 Opération annulée
+85 Opï¿½ration annulï¿½e
 $ EILSEQ
-86 Séquence d'octets illégale
+86 Sï¿½quence d'octets illï¿½gale
 $ ENOATTR
-87 Attribut non trouvé
+87 Attribut non trouvï¿½
 $ EDOOFUS
 88 Erreur de programmation
 $
@@ -192,7 +192,7 @@ $ SIGINT
 $ SIGQUIT
 3 Quitter
 $ SIGILL
-4 Instruction illégale
+4 Instruction illï¿½gale
 $ SIGTRAP
 5 Trace/BPT trap
 $ SIGABRT
@@ -202,7 +202,7 @@ $ SIGEMT
 $ SIGFPE
 8 Exception sur virgule flottante
 $ SIGKILL
-9 Tué
+9 Tuï¿½
 $ SIGBUS
 10 Bus error
 $ SIGSEGV
@@ -214,7 +214,7 @@ $ SIGPIPE
 $ SIGALRM
 14 Alarm clock
 $ SIGTERM
-15 Terminé
+15 Terminï¿½
 $ SIGURG
 16 Urgent I/O condition
 $ SIGSTOP

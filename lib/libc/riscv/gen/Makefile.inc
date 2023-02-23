@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS+=	_ctx_start.S \
 	fabs.S \

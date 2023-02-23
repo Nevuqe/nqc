@@ -1,5 +1,5 @@
 #	@(#)Makefile.inc	8.1 (Berkeley) 6/4/93
-# $FreeBSD$
+# $NQC$
 
 .if ${MK_MACHDEP_OPTIMIZATIONS} != "no"
 .PATH: ${LIBC_SRCTOP}/${LIBC_ARCH}/string

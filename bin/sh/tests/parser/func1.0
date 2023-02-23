@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # POSIX does not require these bytes to work in function names,
 # but making them all work seems a good goal.
 

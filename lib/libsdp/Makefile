@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.2 2003/09/07 20:34:19 max Exp $
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=lib${LIB}
 LIB=		sdp

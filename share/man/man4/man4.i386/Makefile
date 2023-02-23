@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 MAN=	apm.4 \
 	CPU_ELAN.4 \

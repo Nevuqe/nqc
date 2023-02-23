@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 arm/mv/armadaxp/armadaxp.c	standard
 arm/mv/mpic.c			standard

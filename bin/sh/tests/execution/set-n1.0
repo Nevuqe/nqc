@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 v=$( ($SH -n <<'EOF'
 for

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	runtime
 EXPAT=		${SRCTOP}/contrib/expat

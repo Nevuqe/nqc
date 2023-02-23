@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Enable building
 .Xr veriexec 8
 which loads the contents of verified manifests into the kernel

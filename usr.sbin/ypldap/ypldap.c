@@ -1,5 +1,5 @@
 /*	$OpenBSD: ypldap.c,v 1.16 2015/11/02 10:06:06 jmatthew Exp $ */
-/*	$FreeBSD */
+/*	$NQC */
 
 /*
  * Copyright (c) 2008 Pierre-Yves Ritschard <pyr@openbsd.org>

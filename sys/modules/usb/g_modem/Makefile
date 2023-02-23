@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 # Copyright (c) 2010 Hans Petter Selasky. All rights reserved.
 #

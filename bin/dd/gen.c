@@ -1,7 +1,7 @@
 /*-
  * This program is in the public domain
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 
-#	$FreeBSD$
+#	$NQC$
 #	$NetBSD: tables.awk,v 1.2 2014/02/27 01:17:13 ginsbach Exp $
 
 # Copyright (c) 2013 The NetBSD Foundation, Inc.

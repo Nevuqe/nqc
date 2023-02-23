@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Author: Philip Paeps <philip@freebsd.org>
 

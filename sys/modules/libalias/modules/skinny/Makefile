@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	alias_skinny
 SRCS=	alias_skinny.c

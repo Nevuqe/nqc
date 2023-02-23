@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for ca_ES.ISO8859-1 locale
 $
@@ -6,11 +6,11 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Operació no permesa
+1 Operaciï¿½ no permesa
 $ ENOENT
 2 Arxiu o directori inexistent
 $ ESRCH
-3 Procés inexistent
+3 Procï¿½s inexistent
 $ EINTR
 4 Crida del sistema interrompuda
 $ EIO
@@ -18,7 +18,7 @@ $ EIO
 $ ENXIO
 6 Dispositiu no configurat
 $ E2BIG
-7 Llista de paràmetres massa llarga
+7 Llista de parï¿½metres massa llarga
 $ ENOEXEC
 8 Error en el format de l'executable
 $ EBADF
@@ -28,11 +28,11 @@ $ ECHILD
 $ EDEADLK
 11 S'ha evitat el bloqueig del recurs
 $ ENOMEM
-12 No es pot assignar la memòria demanada
+12 No es pot assignar la memï¿½ria demanada
 $ EACCES
-13 Permís denegat
+13 Permï¿½s denegat
 $ EFAULT
-14 Adreça incorrecta
+14 Adreï¿½a incorrecta
 $ ENOTBLK
 15 Es necessita un dispositiu de blocs
 $ EBUSY
@@ -40,21 +40,21 @@ $ EBUSY
 $ EEXIST
 17 L'arxiu ja existeix
 $ EXDEV
-18 Enllaç entre dispositius
+18 Enllaï¿½ entre dispositius
 $ ENODEV
-19 Operació no suportada pel dispositiu
+19 Operaciï¿½ no suportada pel dispositiu
 $ ENOTDIR
-20 No és un directori
+20 No ï¿½s un directori
 $ EISDIR
-21 És un directori
+21 ï¿½s un directori
 $ EINVAL
-22 Paràmetre incorrecte
+22 Parï¿½metre incorrecte
 $ ENFILE
 23 Hi ha massa arxius oberts al sistema
 $ EMFILE
 24 Hi ha massa arxius oberts
 $ ENOTTY
-25 L'ioctl no és adecuat per al dispositiu
+25 L'ioctl no ï¿½s adecuat per al dispositiu
 $ ETXTBSY
 26 Arxiu de text ocupat
 $ EFBIG
@@ -62,11 +62,11 @@ $ EFBIG
 $ ENOSPC
 28 No queda espai lliure en el dispositiu
 $ ESPIPE
-29 Cerca il·legal
+29 Cerca ilï¿½legal
 $ EROFS
-30 Sistema d'arxius de només lectura
+30 Sistema d'arxius de nomï¿½s lectura
 $ EMLINK
-31 Massa enllaços
+31 Massa enllaï¿½os
 $ EPIPE
 32 Canal (pipe) trencat
 $ EDOM
@@ -74,15 +74,15 @@ $ EDOM
 $ ERANGE
 34 Resultat massa gran
 $ EAGAIN, EWOULDBLOCK
-35 El recurs no està disponible temporalment
+35 El recurs no estï¿½ disponible temporalment
 $ EINPROGRESS
-36 L'operació es troba en progrés actualment
+36 L'operaciï¿½ es troba en progrï¿½s actualment
 $ EALREADY
-37 L'operació ja es troba en progrés
+37 L'operaciï¿½ ja es troba en progrï¿½s
 $ ENOTSOCK
-38 Operació de tipus socket en quelcom que no ho és
+38 Operaciï¿½ de tipus socket en quelcom que no ho ï¿½s
 $ EDESTADDRREQ
-39 Es requereix l'adreça de destí
+39 Es requereix l'adreï¿½a de destï¿½
 $ EMSGSIZE
 40 Missatge massa llarg
 $ EPROTOTYPE
@@ -94,49 +94,49 @@ $ EPROTONOSUPPORT
 $ ESOCKTNOSUPPORT
 44 Tipus de socket no suportat
 $ EOPNOTSUPP
-45 Operació no suportada
+45 Operaciï¿½ no suportada
 $ EPFNOSUPPORT
-46 Família de protocols no suportada
+46 Famï¿½lia de protocols no suportada
 $ EAFNOSUPPORT
-47 Família d'adreces no suportada per la família de protocols
+47 Famï¿½lia d'adreces no suportada per la famï¿½lia de protocols
 $ EADDRINUSE
-48 L'adreça ja es troba en ús
+48 L'adreï¿½a ja es troba en ï¿½s
 $ EADDRNOTAVAIL
-49 No es pot assignar l'adreça demanada
+49 No es pot assignar l'adreï¿½a demanada
 $ ENETDOWN
 50 La xarxa no es troba disponible
 $ ENETUNREACH
 51 No es pot accedir a la xarxa
 $ ENETRESET
-52 La connexió a la xarxa s'ha perdut durant la reinicialització
+52 La connexiï¿½ a la xarxa s'ha perdut durant la reinicialitzaciï¿½
 $ ECONNABORTED
-53 El programari ha causat l'avort de la connexió
+53 El programari ha causat l'avort de la connexiï¿½
 $ ECONNRESET
-54 L'interlocutor ha reinicialitzat la comunicació
+54 L'interlocutor ha reinicialitzat la comunicaciï¿½
 $ ENOBUFS
-55 No hi ha prou espai per a la memoria intermèdia (buffer)
+55 No hi ha prou espai per a la memoria intermï¿½dia (buffer)
 $ EISCONN
 56 El socket ja es troba connectat
 $ ENOTCONN
 57 El socket no es troba connectat
 $ ESHUTDOWN
-58 No es pot enviar desprès de la desconnexió del socket
+58 No es pot enviar desprï¿½s de la desconnexiï¿½ del socket
 $ ETOOMANYREFS
-59 Hi ha massa referències: no es poden unir
+59 Hi ha massa referï¿½ncies: no es poden unir
 $ ETIMEDOUT
-60 El temps de connexió s'ha esgotat
+60 El temps de connexiï¿½ s'ha esgotat
 $ ECONNREFUSED
-61 Connexió rebutjada
+61 Connexiï¿½ rebutjada
 $ ELOOP
-62 Hi ha massa nivells d'enllaços simbòlics
+62 Hi ha massa nivells d'enllaï¿½os simbï¿½lics
 $ ENAMETOOLONG
 63 Nom d'arxiu massa llarg
 $ EHOSTDOWN
-64 La màquina no es troba disponible
+64 La mï¿½quina no es troba disponible
 $ EHOSTUNREACH
-65 No hi ha cap camí fins a la màquina
+65 No hi ha cap camï¿½ fins a la mï¿½quina
 $ ENOTEMPTY
-66 El directori no està buit
+66 El directori no estï¿½ buit
 $ EPROCLIM
 67 Hi ha massa processos
 $ EUSERS
@@ -146,25 +146,25 @@ $ EDQUOT
 $ ESTALE
 70 Descriptor d'arxiu NFS incorrecte
 $ EREMOTE
-71 Massa nivells en el camí de destí
+71 Massa nivells en el camï¿½ de destï¿½
 $ EBADRPC
 72 L'estructura RPC es incorrecta
 $ ERPCMISMATCH
-73 La versió del RPC es incorrecta
+73 La versiï¿½ del RPC es incorrecta
 $ EPROGUNAVAIL
 74 El programa RPC no es troba disponible
 $ EPROGMISMATCH
-75 Versió incorrecta del programa
+75 Versiï¿½ incorrecta del programa
 $ EPROCUNAVAIL
 76 Procediment erroni per al programa
 $ ENOLCK
 77 No hi ha bloquejos disponibles
 $ ENOSYS
-78 Funció no implementada
+78 Funciï¿½ no implementada
 $ EFTYPE
 79 Tipus d'arxiu o de format inadequat
 $ EAUTH
-80 Error d'autenticació
+80 Error d'autenticaciï¿½
 $ ENEEDAUTH
 81 Es necessita un autenticador
 $ EIDRM
@@ -172,13 +172,13 @@ $ EIDRM
 $ ENOMSG
 83 No hi ha missatges del tipus desitjat
 $ EOVERFLOW
-84 Valor massa gran per a ésser emmagatzemat en el tipus de dades
+84 Valor massa gran per a ï¿½sser emmagatzemat en el tipus de dades
 $ EILSEQ
-85 Seqüència de bytes il·legal
+85 Seqï¿½ï¿½ncia de bytes ilï¿½legal
 $ ENOTSUP
 86 No suportat
 $ ECANCELED
-87 Operació cancel·lada
+87 Operaciï¿½ cancelï¿½lada
 $ EBADMSG
 88 Missatje incorrecte o corrupte
 $ ENODATA
@@ -186,7 +186,7 @@ $ ENODATA
 $ ENOSR
 90 No hi ha recursos de tipus STREAM
 $ ENOSTR
-91 No és un STREAM
+91 No ï¿½s un STREAM
 $ ETIME
 92 Temps d'espera esgotat en el ioctl STREAM
 $ ENOATTR
@@ -194,7 +194,7 @@ $ ENOATTR
 $ EMULTIHOP
 94 S'ha intentat un multisalt
 $ ENOLINK
-95 L'enllaç s'ha servit
+95 L'enllaï¿½ s'ha servit
 $ EPROTO
 96 Error de protocol
 $
@@ -202,27 +202,27 @@ $ strsignal() support catalog
 $
 $set 2
 $ SIGHUP
-1 Fí de línia (hangup)
+1 Fï¿½ de lï¿½nia (hangup)
 $ SIGINT
-2 Interrupció
+2 Interrupciï¿½
 $ SIGQUIT
-3 Finalització
+3 Finalitzaciï¿½
 $ SIGILL
-4 Instrucció il·legal
+4 Instrucciï¿½ ilï¿½legal
 $ SIGTRAP
-5 Depuració (Trace/BPT)
+5 Depuraciï¿½ (Trace/BPT)
 $ SIGABRT
 6 Crida d'avort
 $ SIGEMT
 7 Captura d'EMT
 $ SIGFPE
-8 Excepció de coma flotant
+8 Excepciï¿½ de coma flotant
 $ SIGKILL
 9 Matat
 $ SIGBUS
 10 Error del bus
 $ SIGSEGV
-11 Error de segmentació
+11 Error de segmentaciï¿½
 $ SIGSYS
 12 Crida al sistema incorrecta
 $ SIGPIPE
@@ -232,7 +232,7 @@ $ SIGALRM
 $ SIGTERM
 15 Finalitzat
 $ SIGURG
-16 Condició urgent d'E/S
+16 Condiciï¿½ urgent d'E/S
 $ SIGSTOP
 17 Parat (per senyal)
 $ SIGTSTP
@@ -248,9 +248,9 @@ $ SIGTTOU
 $ SIGIO
 23 I/O permesa
 $ SIGXCPU
-24 S'ha sobrepassat el límit de temps de la CPU
+24 S'ha sobrepassat el lï¿½mit de temps de la CPU
 $ SIGXFSZ
-25 S'ha sobrepassat el límit de la longitud de l'arxiu
+25 S'ha sobrepassat el lï¿½mit de la longitud de l'arxiu
 $ SIGVTALRM
 26 El temporitzador virtual ha expirat
 $ SIGPROF
@@ -258,10 +258,10 @@ $ SIGPROF
 $ SIGWINCH
 28 Canvis en la mida de la finestra
 $ SIGINFO
-29 Demanda d'informació
+29 Demanda d'informaciï¿½
 $ SIGUSR1
 30 Senyal 1 definida per l'usuari
 $ SIGUSR2
 31 Senyal 2 definida per l'usuari
 $ SIGPWR
-32 Fallada/reinicialització de l'alimentació
+32 Fallada/reinicialitzaciï¿½ de l'alimentaciï¿½

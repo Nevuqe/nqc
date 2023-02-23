@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# $FreeBSD$
+# $NQC$
 #
 $dump="/var/tmp/route6d_dump";
 $pidfile="/var/run/route6d.pid";

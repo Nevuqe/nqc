@@ -28,7 +28,7 @@
  *
  * Helper functions common for all tools.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_BSNMP_TOOLS_H_

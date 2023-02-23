@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)in_pcb.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETINET_IN_PCB_VAR_H_

@@ -30,8 +30,8 @@
  * SUCH DAMAGE.
  *
  *	@(#)glob.h	8.1 (Berkeley) 6/2/93
- * from: $FreeBSD$
- * $FreeBSD$
+ * from: $NQC$
+ * $NQC$
  */
 
 #ifndef _GLOB_COMPAT11_H_

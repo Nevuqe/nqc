@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # mptable: broken (not 64 bit clean)
 # pnpinfo: crashes (not really useful anyway)

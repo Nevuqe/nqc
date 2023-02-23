@@ -26,7 +26,7 @@
  * SUCH DAMAGE.
  */
 
-/*$FreeBSD$*/
+/*$NQC$*/
 
 #ifndef _EM_H_DEFINED_
 #define _EM_H_DEFINED_

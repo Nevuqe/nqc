@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 #
 # Unpack an ACPI CA drop and restructure it to fit the FreeBSD layout
 #

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # ZFS is not supported, we want debugging until this is vetted and
 # we don't want the gptboot.efifat thing created.

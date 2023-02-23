@@ -36,7 +36,7 @@
  * advised of the possibility of such damage.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	GVINUMMOD	"g_vinum"
 #define	GVINUMKLD	"geom_vinum"

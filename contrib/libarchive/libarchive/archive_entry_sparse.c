@@ -25,7 +25,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "archive.h"
 #include "archive_entry.h"

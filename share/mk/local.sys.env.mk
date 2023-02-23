@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This makefile is for customizations that should be done early
 

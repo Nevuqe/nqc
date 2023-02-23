@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 # Tests vfs_lookup()'s handling of trailing slashes for symlinks that
 # point to files.  See kern/21768 for details.  Fixed in r193028.

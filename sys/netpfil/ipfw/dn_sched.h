@@ -29,7 +29,7 @@
 /*
  * The API to write a packet scheduling algorithm for dummynet.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _DN_SCHED_H

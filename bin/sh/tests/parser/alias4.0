@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 alias alias0=exit
 eval 'x=1 alias0 0'

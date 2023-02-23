@@ -1,4 +1,4 @@
-#$FreeBSD$
+#$NQC$
 
 arm/ti/aintc.c				standard
 

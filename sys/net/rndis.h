@@ -1,4 +1,4 @@
-/*	$FreeBSD$ */
+/*	$NQC$ */
 /*	$OpenBSD: if_urndisreg.h,v 1.19 2013/11/21 14:08:05 mpi Exp $ */
 
 /*

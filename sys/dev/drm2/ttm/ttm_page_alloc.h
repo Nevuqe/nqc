@@ -23,7 +23,7 @@
  * Authors: Dave Airlie <airlied@redhat.com>
  *          Jerome Glisse <jglisse@redhat.com>
  */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef TTM_PAGE_ALLOC
 #define TTM_PAGE_ALLOC
 

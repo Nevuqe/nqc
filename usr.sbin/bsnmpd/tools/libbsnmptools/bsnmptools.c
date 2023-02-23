@@ -28,7 +28,7 @@
  *
  * Helper functions for snmp client tools
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

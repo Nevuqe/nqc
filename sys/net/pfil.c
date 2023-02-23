@@ -1,4 +1,4 @@
-/*	$FreeBSD$ */
+/*	$NQC$ */
 /*	$NetBSD: pfil.c,v 1.20 2001/11/12 23:49:46 lukem Exp $	*/
 
 /*-

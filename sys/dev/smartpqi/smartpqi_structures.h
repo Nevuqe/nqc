@@ -23,7 +23,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _PQI_STRUCTURES_H
 #define _PQI_STRUCTURES_H

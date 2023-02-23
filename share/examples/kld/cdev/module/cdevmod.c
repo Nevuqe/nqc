@@ -67,7 +67,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD$
+ * $NQC$
  */
 #include <sys/param.h>
 #include <sys/systm.h>

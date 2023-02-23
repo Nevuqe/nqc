@@ -27,7 +27,7 @@
  */
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /*
  * KOI8-R -> CP866 conversion filter (Russian character sets)

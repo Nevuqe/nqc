@@ -1,3 +1,3 @@
-# $FreeBSD$
+# $NQC$
 
 CFLAGS+=	-mfpu=none

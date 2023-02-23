@@ -1,4 +1,4 @@
-# $FreeBSD$ 
+# $NQC$ 
 
 .sinclude <src.opts.mk>
 

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFI_GPT_H
 #define _EFI_GPT_H
 /*++

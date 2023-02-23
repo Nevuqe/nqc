@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.1/lib/ofed/libirdma/Makefile 336568 2018-07-20 23:49:57Z kib $
+# $NQC: releng/12.1/lib/ofed/libirdma/Makefile 336568 2018-07-20 23:49:57Z kib $
 
 _spath=	${SRCTOP}/contrib/ofed/libirdma
 _ipath=	${SRCTOP}/contrib/ofed/include

@@ -29,7 +29,7 @@
 /*
  * internal dummynet APIs.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _IP_DN_PRIVATE_H

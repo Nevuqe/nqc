@@ -1,6 +1,6 @@
 # ioat Loadable Kernel Module
 #
-# $FreeBSD$
+# $NQC$
 
 IOAT_SRC_PATH = ${SRCTOP}/sys
 

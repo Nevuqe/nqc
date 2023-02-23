@@ -1,5 +1,5 @@
 /* This file is in the public domain */
-/* $FreeBSD$ */
+/* $NQC$ */
 #pragma once
 
 #include <sys/endian.h>

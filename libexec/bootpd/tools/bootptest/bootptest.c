@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 char *usage = "bootptest [-h] server-name [vendor-data-template-file]";
 

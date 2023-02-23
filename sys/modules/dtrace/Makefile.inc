@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 IGNORE_PRAGMA=	1
 

@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * userspace compatibility code for dummynet schedulers
  */

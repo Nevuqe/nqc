@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <dev/isci/scil/sati.h>
 #include <dev/isci/scil/scif_sas_logger.h>

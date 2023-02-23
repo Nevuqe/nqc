@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 NEED_COMPAT=	32
 .include <bsd.compat.mk>

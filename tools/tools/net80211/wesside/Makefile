@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 SUBDIR=	dics udps wesside
 

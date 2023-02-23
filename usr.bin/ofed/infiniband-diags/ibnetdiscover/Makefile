@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	ibnetdiscover
 SRCS=	ibnetdiscover.c

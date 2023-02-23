@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)types.h	8.6 (Berkeley) 2/19/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_TYPES_H_

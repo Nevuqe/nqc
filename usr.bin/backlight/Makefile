@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	backlight
 MAN=	backlight.8

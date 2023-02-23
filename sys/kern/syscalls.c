@@ -2,7 +2,7 @@
  * System call names.
  *
  * DO NOT EDIT-- this file is automatically @generated.
- * $FreeBSD$
+ * $NQC$
  */
 
 const char *syscallnames[] = {

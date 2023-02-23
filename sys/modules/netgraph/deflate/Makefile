@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=		ng_deflate
 SRCS= 		ng_deflate.c

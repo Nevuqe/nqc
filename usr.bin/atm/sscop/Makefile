@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CONTRIB= ${SRCTOP}/contrib/ngatm/sscop
 

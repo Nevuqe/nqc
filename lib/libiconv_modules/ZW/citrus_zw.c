@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: citrus_zw.c,v 1.4 2008/06/14 16:01:08 tnozaki Exp $ */
 
 /*-

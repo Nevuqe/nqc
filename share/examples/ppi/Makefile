@@ -1,6 +1,6 @@
 # Makefile to build LCD control software for ppi(4) interface.
 #
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=examples
 FILESDIR=${SHAREDIR}/examples/ppi

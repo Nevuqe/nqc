@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 BLACKLIST_DIR=${SRCTOP}/contrib/blacklist
 

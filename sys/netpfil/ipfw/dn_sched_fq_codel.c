@@ -1,7 +1,7 @@
 /* 
  * FQ_Codel - The FlowQueue-Codel scheduler/AQM
  *
- * $FreeBSD$
+ * $NQC$
  * 
  * Copyright (C) 2016 Centre for Advanced Internet Architectures,
  *  Swinburne University of Technology, Melbourne, Australia.

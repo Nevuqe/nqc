@@ -1,3 +1,3 @@
 /* This file is in the public domain */
-/* $FreeBSD$ */
+/* $NQC$ */
 #include "blake2_kfreebsd.h"

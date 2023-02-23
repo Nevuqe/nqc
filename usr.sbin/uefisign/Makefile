@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	uefisign
 SRCS=	uefisign.c child.c pe.c

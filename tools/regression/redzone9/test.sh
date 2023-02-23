@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 
 sysctl debug.redzone.malloc_underflow=1
 sysctl debug.redzone.malloc_overflow=1

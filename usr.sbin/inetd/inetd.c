@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 1983, 1991, 1993, 1994\n\

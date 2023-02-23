@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /*
  * The use of printf()-family functions can be troublesome

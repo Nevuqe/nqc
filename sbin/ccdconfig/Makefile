@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=ccdconfig
 PROG=	ccdconfig

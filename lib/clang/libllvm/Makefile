@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include <src.opts.mk>
 .include "../llvm.pre.mk"

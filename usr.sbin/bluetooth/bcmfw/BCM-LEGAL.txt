@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 BCM firmware version 2.15
 Copyright (c) 2000-2002 Broadcom Corporation

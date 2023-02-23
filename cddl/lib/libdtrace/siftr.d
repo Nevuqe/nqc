@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #pragma D depends_on module kernel

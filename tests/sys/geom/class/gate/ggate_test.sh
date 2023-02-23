@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PIDFILE=ggated.pid
 PLAINFILES=plainfiles

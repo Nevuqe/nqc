@@ -29,7 +29,7 @@
  *
  * Author: Joe Marcus Clarke <marcus@FreeBSD.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifdef _KERNEL

@@ -220,4 +220,4 @@ ENTRY(aesni_set_deckey)
 	.cfi_endproc
 END(aesni_set_deckey)
 
-	.ident	"$FreeBSD$"
+	.ident	"$NQC$"

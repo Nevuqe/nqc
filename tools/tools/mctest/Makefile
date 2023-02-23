@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG_CXX=   mctest 
 LIBADD= pthread

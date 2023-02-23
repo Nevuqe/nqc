@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Although POSIX does not specify the effect of NUL bytes in scripts,
 # we ignore them.
 

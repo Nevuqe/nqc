@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	wake
 MAN=	wake.8

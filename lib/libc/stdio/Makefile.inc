@@ -1,5 +1,5 @@
 #	@(#)Makefile.inc	8.3 (Berkeley) 4/17/94
-# $FreeBSD$
+# $NQC$
 
 # stdio sources
 .PATH: ${LIBC_SRCTOP}/stdio

@@ -28,7 +28,7 @@
 /* Driver for Qualcomm IPQ4018 clock and reset device */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>

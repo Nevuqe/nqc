@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef	_OPENSOLARIS_PRIV_H_
 #define	_OPENSOLARIS_PRIV_H_

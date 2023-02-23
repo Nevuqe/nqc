@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_btsocket_rfcomm.h,v 1.10 2003/03/29 22:27:42 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_BTSOCKET_RFCOMM_H_

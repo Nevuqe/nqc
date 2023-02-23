@@ -2,7 +2,7 @@
 #
 # Common setup.
 #
-# $FreeBSD$
+# $NQC$
 #
 PATH=../:.:$PATH
 . config

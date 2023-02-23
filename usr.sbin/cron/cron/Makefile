@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CONFS=	crontab
 PROG=	cron

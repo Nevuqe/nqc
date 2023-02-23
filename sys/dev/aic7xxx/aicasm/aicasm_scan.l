@@ -42,7 +42,7 @@
  *
  * $Id: //depot/aic7xxx/aic7xxx/aicasm/aicasm_scan.l#19 $
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

@@ -1,5 +1,5 @@
 /* This generated file is in the public domain */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <uuid.h>
 #include <stdint.h>

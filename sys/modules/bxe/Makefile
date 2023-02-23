@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SYSDIR	?= ${SRCTOP}/sys
 

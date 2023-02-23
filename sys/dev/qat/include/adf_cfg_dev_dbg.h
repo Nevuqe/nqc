@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef ADF_CFG_DEV_DBG_H_
 #define ADF_CFG_DEV_DBG_H_
 

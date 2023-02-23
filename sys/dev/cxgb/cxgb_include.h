@@ -1,5 +1,5 @@
 /*
- *  $FreeBSD$
+ *  $NQC$
  */
 
 #include <sys/cdefs.h>

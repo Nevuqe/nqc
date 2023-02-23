@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DO32=1
 

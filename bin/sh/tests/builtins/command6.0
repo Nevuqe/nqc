@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 PATH=/var/empty
 case $(command -pV ls) in
 */var/empty/ls*)

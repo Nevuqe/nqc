@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 nosuchtool 2>/dev/null
 [ $? -ne 127 ] && exit 1

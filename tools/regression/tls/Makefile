@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR=libxx libyy ttls1 ttls2 ttls4
 

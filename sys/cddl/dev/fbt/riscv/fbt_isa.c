@@ -23,7 +23,7 @@
  * Portions Copyright 2013 Howard Su howardsu@freebsd.org
  * Portions Copyright 2016-2018 Ruslan Bukin <br@bsdpad.com>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /*

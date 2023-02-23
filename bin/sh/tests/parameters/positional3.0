@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 r=$(${SH} -c 'echo ${01:+yes}${010:+yes}' '' a '' '' '' '' '' '' '' '' b)
 [ "$r" = yesyes ]

@@ -27,7 +27,7 @@
 
 #include <machine/asm.h>
 #include <machine/armreg.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "assym.inc"
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "${SRCTOP}/lib/clang/clang.pre.mk"
 

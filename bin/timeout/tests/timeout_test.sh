@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 atf_test_case nominal
 nominal_head()

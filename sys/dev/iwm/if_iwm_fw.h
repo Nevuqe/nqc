@@ -71,7 +71,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 /*
- * $FreeBSD$
+ * $NQC$
  */
 #ifndef	__IF_IWM_FW_H__
 #define	__IF_IWM_FW_H__

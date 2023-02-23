@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  *
  *  Top users/processes display for Unix
  *

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: citrus_types.h,v 1.3 2003/10/27 00:12:42 lukem Exp $ */
 
 /*-

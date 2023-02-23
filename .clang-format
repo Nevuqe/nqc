@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Basic .clang-format
 ---
 BasedOnStyle: WebKit

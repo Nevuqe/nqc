@@ -1,5 +1,5 @@
 #	$NetBSD: Makefile,v 1.4 2006/11/09 15:25:37 jmmv Exp $
-# $FreeBSD$
+# $NQC$
 
 tests=	t_mount
 tests+=	t_statvfs

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include <bsd.init.mk>
 # Grab all the options for a kernel build. For backwards compat, we need to

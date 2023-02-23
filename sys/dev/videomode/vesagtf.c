@@ -1,5 +1,5 @@
 /* $NetBSD: vesagtf.c,v 1.2 2013/09/15 15:56:07 martin Exp $ */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*-
  * Copyright (c) 2006 Itronix Inc.
@@ -153,7 +153,7 @@
 #ifdef	_KERNEL
 #include <sys/cdefs.h>
 
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/systm.h>

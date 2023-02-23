@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 MIASM:=	${MIASM:Nfreebsd[467]_*}
 

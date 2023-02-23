@@ -49,7 +49,7 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef DEV_MMC_SUBR_H

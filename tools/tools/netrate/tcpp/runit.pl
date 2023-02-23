@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# $FreeBSD$
+# $NQC$
 #
 
 if ($#ARGV != 0) {

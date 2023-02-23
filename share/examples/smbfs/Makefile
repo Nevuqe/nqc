@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=utilities
 FILESDIR= ${SHAREDIR}/examples/smbfs

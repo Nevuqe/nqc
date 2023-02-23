@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build
 .Xr kdump 1
 and

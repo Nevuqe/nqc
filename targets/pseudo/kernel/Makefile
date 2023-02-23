@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Build the kernel ${KERNCONF}
 KERNCONF?= ${KERNEL:UGENERIC}

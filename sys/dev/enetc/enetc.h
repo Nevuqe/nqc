@@ -28,7 +28,7 @@
 #define _ENETC_H_
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 

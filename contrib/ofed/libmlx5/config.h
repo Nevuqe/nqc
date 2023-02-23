@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	min_t(type, x, y) ({			\
 	type __min1 = (x);			\

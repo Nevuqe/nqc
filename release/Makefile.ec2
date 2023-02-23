@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 #
 # Makefile for creating an EC2 AMI from a disk image.

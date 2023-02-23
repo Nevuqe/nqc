@@ -1,4 +1,4 @@
-/*	$FreeBSD$							*/
+/*	$NQC$							*/
 /*      $OpenBSD: pathnames.h,v 1.1 2003/09/25 19:32:44 otto Exp $	*/
 
 /*

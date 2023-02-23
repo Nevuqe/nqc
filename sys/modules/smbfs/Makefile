@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:	${SRCTOP}/sys/crypto/des \
 	${SRCTOP}/sys/crypto/des/arch/${MACHINE_CPUARCH} \

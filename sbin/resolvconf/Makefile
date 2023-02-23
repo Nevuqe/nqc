@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=resolvconf
 DIST=		${SRCTOP}/contrib/openresolv

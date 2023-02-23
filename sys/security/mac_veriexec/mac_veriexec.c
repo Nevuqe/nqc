@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * Copyright (c) 2011, 2012, 2013, 2015, 2016, 2019 Juniper Networks, Inc.
  * All rights reserved.

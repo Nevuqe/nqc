@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 riscv/sifive/fe310_aon.c		optional	fe310aon
 riscv/sifive/fu740_pci_dw.c		optional	fu740_pci_dw pci fdt

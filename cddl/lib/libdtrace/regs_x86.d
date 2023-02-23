@@ -21,7 +21,7 @@
  *
  * Portions Copyright 2009 Stacey Son sson@FreeBSD.org
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.

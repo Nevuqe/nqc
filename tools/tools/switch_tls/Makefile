@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	switch_tls
 MAN=

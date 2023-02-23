@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	rpc.statd
 MAN=	rpc.statd.8

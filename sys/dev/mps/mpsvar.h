@@ -29,7 +29,7 @@
  *
  * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MPSVAR_H

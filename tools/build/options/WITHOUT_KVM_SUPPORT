@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build some programs without optional
 .Nm libkvm
 support.

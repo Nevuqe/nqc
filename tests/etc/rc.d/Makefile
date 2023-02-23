@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TESTSDIR=	${TESTSBASE}/etc/rc.d
 

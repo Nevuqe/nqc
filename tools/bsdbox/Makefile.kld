@@ -1,6 +1,6 @@
 #
 # This builds the kld related programs.
 #
-# $FreeBSD$
+# $NQC$
 #
 CRUNCH_PROGS_sbin+=	kldload kldunload kldstat

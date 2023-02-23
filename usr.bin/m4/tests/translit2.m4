@@ -1,4 +1,4 @@
-dnl $FreeBSD$
+dnl $NQC$
 translit(`[HAVE_abc/def.h
 ]', `
 /.', `/  ')

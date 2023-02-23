@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 set -m
 /root/hast/sbin/hastd/ucarp_up.sh &

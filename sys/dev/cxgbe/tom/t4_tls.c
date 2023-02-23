@@ -31,7 +31,7 @@
 #include "opt_kern_tls.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef KERN_TLS
 #include <sys/param.h>

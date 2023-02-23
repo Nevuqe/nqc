@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	pam_exec
 SRCS=	pam_exec.c

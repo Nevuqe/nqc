@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 #include <dev/hyperv/vmbus/x86/hyperv_machdep.h>

@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_hci_cmds.h,v 1.1 2002/11/24 19:46:58 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_HCI_CMDS_H_

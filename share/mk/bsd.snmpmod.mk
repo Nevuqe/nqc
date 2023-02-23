@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 INCSDIR=	${INCLUDEDIR}/bsnmp
 

@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $FreeBSD$
+# $NQC$
 
 SHLIB_COMPAT=$(dirname $0)/shlib-compat.py
 

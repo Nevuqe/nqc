@@ -30,7 +30,7 @@
  *
  * Customisation of the SSCFU code to ng_sscfu.
  *
- * $FreeBSD$
+ * $NQC$
  */
 #include <sys/param.h>
 #include <sys/types.h>

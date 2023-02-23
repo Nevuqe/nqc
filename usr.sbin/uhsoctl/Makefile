@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	uhsoctl
 MAN=	uhsoctl.1

@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 # Makefile for the FreeBSD specific LibUSB 2.0
 #

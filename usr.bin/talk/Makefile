@@ -1,5 +1,5 @@
 #	From: @(#)Makefile	8.1 (Berkeley) 6/6/93
-# $FreeBSD$
+# $NQC$
 
 PROG=	talk
 SRCS=	ctl.c ctl_transact.c display.c get_addrs.c get_iface.c get_names.c \

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR = vmbus netvsc storvsc utilities hvsock hid
 

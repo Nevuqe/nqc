@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 MAN=	adb.4 \
 	akbd.4 \

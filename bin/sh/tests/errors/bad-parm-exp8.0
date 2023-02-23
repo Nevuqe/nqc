@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 v=1
 eval ": $(printf '${v-${w\372}}')"

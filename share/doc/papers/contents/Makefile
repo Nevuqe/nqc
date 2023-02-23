@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 VOLUME=	papers
 DOC=	contents

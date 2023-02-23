@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR=		dso
 TESTS_SUBDIRS=	dynamic

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	rtwn-rtl8192eufw
 IMG=	rtwn-rtl8192eufw

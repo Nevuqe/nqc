@@ -3,7 +3,7 @@
 # Configure and run this script to create the files for regression testing
 # for a new architecture/configuration.
 #
-# $FreeBSD$
+# $NQC$
 #
 
 TZ=UTC; export TZ

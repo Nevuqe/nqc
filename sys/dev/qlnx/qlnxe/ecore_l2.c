@@ -29,7 +29,7 @@
  * File : ecore_l2.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "bcm_osal.h"
 

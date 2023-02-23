@@ -1,6 +1,6 @@
 #
 # Test Case: ztest
-# $FreeBSD$
+# $NQC$
 #
 atf_test_case ztest
 ztest_head()

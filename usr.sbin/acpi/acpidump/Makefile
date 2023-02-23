@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	acpidump
 MAN=	acpidump.8

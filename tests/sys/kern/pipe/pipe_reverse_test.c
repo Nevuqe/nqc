@@ -35,7 +35,7 @@ SUCH DAMAGE.
 #include <unistd.h>
 
 /*
- * $FreeBSD$
+ * $NQC$
  * This program simply tests writing through the reverse direction of
  * a pipe.  Nothing too fancy, it's only needed because most pipe-using
  * programs never touch the reverse direction (it doesn't exist on

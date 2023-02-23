@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	iconv_std
 SRCS+=	citrus_iconv_std.c

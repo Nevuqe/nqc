@@ -1,5 +1,5 @@
 #	from: @(#)Makefile	5.8 (Berkeley) 7/28/90
-# $FreeBSD$
+# $NQC$
 
 PROG=	rarpd
 MAN=	rarpd.8

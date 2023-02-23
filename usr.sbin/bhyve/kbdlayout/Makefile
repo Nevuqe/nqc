@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	bhyve
 FILESDIR=	${SHAREDIR}/bhyve/kbdlayout

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 The below 4 samples require a VIMAGE enabled kernel:
 

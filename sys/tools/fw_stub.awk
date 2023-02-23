@@ -27,7 +27,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD$
+# $NQC$
 
 #
 # Script to generate module .c file from a list of firmware images
@@ -127,7 +127,7 @@ gsub(/[-\.]/, "_", modname);
 generated = "@" "generated";
 printc("/*\
  * Automatically " generated " by:\
- * $FreeBSD$\
+ * $NQC$\
  */");
 printc("#include <sys/param.h>");
 printc("#include <sys/errno.h>");

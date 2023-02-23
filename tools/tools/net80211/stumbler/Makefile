@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	stumbler
 BINDIR=	/usr/local/bin

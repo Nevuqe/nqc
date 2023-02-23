@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_l2cap_cmds.h,v 1.4 2003/04/01 18:15:26 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_L2CAP_CMDS_H_

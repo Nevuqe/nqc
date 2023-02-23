@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 OPENBSMDIR=${SRCTOP}/contrib/openbsm

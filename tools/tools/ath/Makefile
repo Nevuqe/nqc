@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 SUBDIR=	arcode athdebug athdecode athkey athpoke athprom athrd athregs athalq
 SUBDIR+=	athstats ath_prom_read athradar athaggrstats

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This conflicts with ksh extended patterns but occurs in the wild.
 

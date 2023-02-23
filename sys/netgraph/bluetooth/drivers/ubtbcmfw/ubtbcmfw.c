@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ubtbcmfw.c,v 1.3 2003/10/10 19:15:08 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/stdint.h>

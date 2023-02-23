@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Built on Wed  1 Apr 15:59:44 EEST 1998 by peppe@cs.uoi.gr
 #                                                         alt
@@ -10,7 +10,7 @@
   001   esc    esc    nop    nop    esc    esc    debug  nop     O
   002   '1'    '!'    nop    nop    '1'    '!'    nop    nop     O
   003   '2'    '"'    nul    nul    '2'    '"'    nul    nul     O
-  004   '3'    '£'    nop    nop    '3'    '£'    nop    nop     O
+  004   '3'    'ï¿½'    nop    nop    '3'    'ï¿½'    nop    nop     O
   005   '4'    '$'    nop    nop    '4'    '$'    nop    nop     O
   006   '5'    '%'    nop    nop    '5'    '%'    nop    nop     O
   007   '6'    '^'    rs     rs     '6'    '^'    rs     rs      O
@@ -140,7 +140,7 @@
   129   esc    esc    nop    nop    esc    esc    debug  nop     O
   130   '1'    '!'    nop    nop    '1'    '!'    nop    nop     O
   131   '2'    '"'    nul    nul    '2'    '"'    nul    nul     O
-  132   '3'    '£'    nop    nop    '3'    '£'    nop    nop     O
+  132   '3'    'ï¿½'    nop    nop    '3'    'ï¿½'    nop    nop     O
   133   '4'    '$'    nop    nop    '4'    '$'    nop    nop     O
   134   '5'    '%'    nop    nop    '5'    '%'    nop    nop     O
   135   '6'    '^'    rs     rs     '6'    '^'    rs     rs      O

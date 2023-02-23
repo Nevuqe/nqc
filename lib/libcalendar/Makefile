@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	calendar
 

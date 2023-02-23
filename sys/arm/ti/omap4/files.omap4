@@ -1,4 +1,4 @@
-#$FreeBSD$
+#$NQC$
 
 arm/ti/ti_smc.S					standard
 

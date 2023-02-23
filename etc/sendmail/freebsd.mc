@@ -48,7 +48,7 @@ divert(-1)
 #
 
 divert(0)
-VERSIONID(`$FreeBSD$')
+VERSIONID(`$NQC$')
 OSTYPE(freebsd6)
 DOMAIN(generic)
 

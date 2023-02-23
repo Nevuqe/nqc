@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TAP_TESTS_C+=	legacy_test
 

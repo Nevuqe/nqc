@@ -1,5 +1,5 @@
 /*	$NetBSD: svc_dg.h,v 1.1 2000/06/02 23:11:16 fvdl Exp $	*/
-/*	$FreeBSD$ */
+/*	$NQC$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

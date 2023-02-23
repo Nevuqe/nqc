@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Can we traverse up to / and find a 'mk/sys.mk'?
 #

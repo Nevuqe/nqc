@@ -1,4 +1,4 @@
- $FreeBSD$
+ $NQC$
 
 ; Linux ABI system call generic name/number map, based on Linux file
 ; include/uapi/asm-generic/unistd.h

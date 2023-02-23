@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for no_NO.ISO8859-1 locale
 $
@@ -20,13 +20,13 @@ $ ENXIO
 $ E2BIG
 7 Argumentlisten er for lang
 $ ENOEXEC
-8 Ukjent kjørbart format
+8 Ukjent kjï¿½rbart format
 $ EBADF
 9 Ugyldig fildeskriptor
 $ ECHILD
 10 Ingen barneprosess
 $ EDEADLK
-11 Vranglås unngått
+11 Vranglï¿½s unngï¿½tt
 $ ENOMEM
 12 Kan ikke allokere nok minne
 $ EACCES
@@ -34,7 +34,7 @@ $ EACCES
 $ EFAULT
 14 Ugyldig adresse
 $ ENOTBLK
-15 Blokk-enhet påkrevd
+15 Blokk-enhet pï¿½krevd
 $ EBUSY
 16 Enheten er opptatt
 $ EEXIST
@@ -42,7 +42,7 @@ $ EEXIST
 $ EXDEV
 18 Link mellom forskjellige enheter
 $ ENODEV
-19 Operasjonen er ikke støttet av enheten
+19 Operasjonen er ikke stï¿½ttet av enheten
 $ ENOTDIR
 20 Ikke en katalog
 $ EISDIR
@@ -50,17 +50,17 @@ $ EISDIR
 $ EINVAL
 22 Ugyldig argument
 $ ENFILE
-23 For mange åpne filer i systemet
+23 For mange ï¿½pne filer i systemet
 $ EMFILE
-24 For mange åpne filer
+24 For mange ï¿½pne filer
 $ ENOTTY
 25 Ugyldig ioctl for enheten
 $ ETXTBSY
-26 Kjørbar fil i bruk
+26 Kjï¿½rbar fil i bruk
 $ EFBIG
 27 Filen er for stor
 $ ENOSPC
-28 Ingen ledig plass på enheten
+28 Ingen ledig plass pï¿½ enheten
 $ ESPIPE
 29 Ugyldig seek operasjon
 $ EROFS
@@ -70,19 +70,19 @@ $ EMLINK
 $ EPIPE
 32 Brudt pipe
 $ EDOM
-33 Numerisk argument utenfor arbeidsområdet
+33 Numerisk argument utenfor arbeidsomrï¿½det
 $ ERANGE
 34 Resultatet er for stort
 $ EAGAIN, EWOULDBLOCK
 35 Ressurs midlertidig utilgjengelig
 $ EINPROGRESS
-36 Operasjonen er nå i gang
+36 Operasjonen er nï¿½ i gang
 $ EALREADY
 37 Operasjonen er allerede i gang
 $ ENOTSOCK
 38 Deskriptoren er ikke en socket
 $ EDESTADDRREQ
-39 Mottakeradresse er påkrevd
+39 Mottakeradresse er pï¿½krevd
 $ EMSGSIZE
 40 Meldingen er for lang
 $ EPROTOTYPE
@@ -90,19 +90,19 @@ $ EPROTOTYPE
 $ ENOPROTOOPT
 42 Protokollen er ikke tilgjengelig
 $ EPROTONOSUPPORT
-43 Protokollen er ikke støttet
+43 Protokollen er ikke stï¿½ttet
 $ ESOCKTNOSUPPORT
-44 Socket-typen er ikke støttet
+44 Socket-typen er ikke stï¿½ttet
 $ EOPNOTSUPP
-45 Operasjonen er ikke støttet
+45 Operasjonen er ikke stï¿½ttet
 $ EPFNOSUPPORT
-46 Protokollfamilien er ikke støttet
+46 Protokollfamilien er ikke stï¿½ttet
 $ EAFNOSUPPORT
-47 Adressetypen er ikke støttet av protokollfamilien
+47 Adressetypen er ikke stï¿½ttet av protokollfamilien
 $ EADDRINUSE
 48 Adressen er allerede i bruk
 $ EADDRNOTAVAIL
-49 Kan ikke bruke den ønskede adressen
+49 Kan ikke bruke den ï¿½nskede adressen
 $ ENETDOWN
 50 Nettverket er nede
 $ ENETUNREACH
@@ -110,7 +110,7 @@ $ ENETUNREACH
 $ ENETRESET
 52 Nettverket kuttet forbindelsen ved reset
 $ ECONNABORTED
-53 Programvaren forårsaket brudd av forbindelsen
+53 Programvaren forï¿½rsaket brudd av forbindelsen
 $ ECONNRESET
 54 Forbindelsen avbrudt av korrespondenten
 $ ENOBUFS
@@ -122,13 +122,13 @@ $ ENOTCONN
 $ ESHUTDOWN
 58 Kan ikke sende etter at socketen er tatt ned
 $ ETOOMANYREFS
-59 For mange referanser: kan ikke slå dem sammen
+59 For mange referanser: kan ikke slï¿½ dem sammen
 $ ETIMEDOUT
-60 Tiden til forbindelsen utløp
+60 Tiden til forbindelsen utlï¿½p
 $ ECONNREFUSED
 61 Forbindelse nektet
 $ ELOOP
-62 For mange nivåer med symbolske linker
+62 For mange nivï¿½er med symbolske linker
 $ ENAMETOOLONG
 63 Filnavnet er for langt
 $ EHOSTDOWN
@@ -144,9 +144,9 @@ $ EUSERS
 $ EDQUOT
 69 Diskkvote overskredet
 $ ESTALE
-70 Fastlåst NFS fildeskriptor
+70 Fastlï¿½st NFS fildeskriptor
 $ EREMOTE
-71 For mange nivåer med remote i stien
+71 For mange nivï¿½er med remote i stien
 $ EBADRPC
 72 Ugyldig RPC struktur
 $ ERPCMISMATCH
@@ -158,7 +158,7 @@ $ EPROGMISMATCH
 $ EPROCUNAVAIL
 76 Prosedyren finnes ikke i programmet
 $ ENOLCK
-77 Ingen låsing tilgjengelig
+77 Ingen lï¿½sing tilgjengelig
 $ ENOSYS
 78 Funksjonen er ikke implementert
 $ EFTYPE
@@ -216,15 +216,15 @@ $ SIGIO
 $ SIGXCPU
 24 CPU-tid overskredet
 $ SIGXFSZ
-25 Maksimal filstørrelse overskredet
+25 Maksimal filstï¿½rrelse overskredet
 $ SIGVTALRM
-26 Virtuell timer utløpt
+26 Virtuell timer utlï¿½pt
 $ SIGPROF
-27 Profileringstimer utløpt
+27 Profileringstimer utlï¿½pt
 $ SIGWINCH
-28 Vindustørrelse endres
+28 Vindustï¿½rrelse endres
 $ SIGINFO
-29 Informasjonsforespørsel
+29 Informasjonsforespï¿½rsel
 $ SIGUSR1
 30 Brukerdefinert signal 1
 $ SIGUSR2

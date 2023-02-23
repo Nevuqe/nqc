@@ -25,7 +25,7 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.\"	$FreeBSD$
+.\"	$NQC$
 .\"	@(#)0.t	8.1 (Berkeley) 6/8/93
 .\"
 .if n .ND

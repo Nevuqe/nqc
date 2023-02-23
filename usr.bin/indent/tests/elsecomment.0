@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* See r303484 and r309342 */
 void t(void) {
 	/* The two if statements below excercise two different code paths. */

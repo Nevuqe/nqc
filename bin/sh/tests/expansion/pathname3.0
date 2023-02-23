@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 v=12345678
 v=$v$v$v$v

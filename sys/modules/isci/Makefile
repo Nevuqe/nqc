@@ -1,6 +1,6 @@
 # isci driver Makefile
 #
-# $FreeBSD$
+# $NQC$
 
 ISCI_SRC_PATH = ${SRCTOP}/sys
 

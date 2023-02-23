@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build
 .Xr hastd 8
 and related utilities.

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 GREP=${GREP:-grep}
 CC=${CC:-cc}

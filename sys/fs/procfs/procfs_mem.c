@@ -35,7 +35,7 @@
  *
  *	@(#)procfs_mem.c	8.5 (Berkeley) 6/15/94
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

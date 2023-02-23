@@ -25,7 +25,7 @@
 
 
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 static void
 test_basic(const char *compression_type)

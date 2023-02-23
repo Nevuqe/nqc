@@ -1,7 +1,7 @@
 # Czech Standard Typewriter QWERTZ Keyboard
 # by Rudolf Cejka <cejkar@fit.vutbr.cz>
 #
-# $FreeBSD$
+# $NQC$
 #
 # English/Czech keyboard lock:  (Left)Alt+Shift
 # English/Czech keyboard shift: (Right)AltGr
@@ -15,17 +15,17 @@
 # Suspend power (APM): (Left)Alt+Pause
 #
 # Accent characters (viewable with ISO_8859-2 fonts):
-#   acute: [=/+] and =SZszRALCEINOUYralceinouy => ´¦¬¶¼ÀÁÅÆÉÍÑÓÚÝàáåæéíñóúý
-#   caron: Shift+[=/+] and =LSTZlstzCEDNRcednrUu => ·¥©«®µ¹»¾ÈÌÏÒØèìïòøÙù
-#   circumflex: Alt+Ctrl+[=/+] and =AIOaio => ^ÂÎÔâîô
-#   breve: Ctrl+Shift+[=/+] and =Aa => ¢Ãã
-#   cedilla: Ctrl+[-/_] and -SsCTct => ¸ªºÇÞçþ
-#   dot: Alt+[=/+] and =Zz => ÿ¯¿
-#   double acute: Alt+Shift+[-/_] and -OUou => ½ÕÛõû
-#   double dot: Alt+Shift+[=/+] and =AEOUaeou => ¨ÄËÖÜäëöü
-#   ogonek: Ctrl+Shift+[-/_] and -AaEe => ²¡±Êê
-#   ring: Ctrl+[=/+] and =Uuso78/ => °Ùùß¤§×÷
-#   slash: Alt+[-/_] and -LlDd => ­£³Ðð
+#   acute: [=/+] and =SZszRALCEINOUYralceinouy => ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#   caron: Shift+[=/+] and =LSTZlstzCEDNRcednrUu => ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#   circumflex: Alt+Ctrl+[=/+] and =AIOaio => ^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#   breve: Ctrl+Shift+[=/+] and =Aa => ï¿½ï¿½ï¿½
+#   cedilla: Ctrl+[-/_] and -SsCTct => ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#   dot: Alt+[=/+] and =Zz => ï¿½ï¿½ï¿½
+#   double acute: Alt+Shift+[-/_] and -OUou => ï¿½ï¿½ï¿½ï¿½ï¿½
+#   double dot: Alt+Shift+[=/+] and =AEOUaeou => ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#   ogonek: Ctrl+Shift+[-/_] and -AaEe => ï¿½ï¿½ï¿½ï¿½ï¿½
+#   ring: Ctrl+[=/+] and =Uuso78/ => ï¿½ï¿½ï¿½ß¤ï¿½ï¿½ï¿½
+#   slash: Alt+[-/_] and -LlDd => ï¿½ï¿½ï¿½ï¿½ï¿½
 #
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock

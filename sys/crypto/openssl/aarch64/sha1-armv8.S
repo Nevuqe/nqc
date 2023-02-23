@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from sha1-armv8.pl. */
 #include "arm_arch.h"
 

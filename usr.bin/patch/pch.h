@@ -24,7 +24,7 @@
  * behaviour
  *
  * $OpenBSD: pch.h,v 1.9 2003/10/31 20:20:45 millert Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #define	OLD_FILE	0

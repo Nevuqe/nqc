@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ZFSTOP=	${SRCTOP}/sys/contrib/openzfs
 

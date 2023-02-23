@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFIPXEBC_H
 #define _EFIPXEBC_H
 

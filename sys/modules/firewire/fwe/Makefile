@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Makefile for the fwe(4) module (Ethernet over IEEE1394)
 

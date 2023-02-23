@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=examples
 FILESDIR=${SHAREDIR}/examples/kld/${KMOD}

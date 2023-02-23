@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for pt_BR.ISO8859-1 locale
 $
@@ -6,21 +6,21 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Operação não permitida
+1 Operaï¿½ï¿½o nï¿½o permitida
 $ ENOENT
-2 Nenhum arquivo ou diretório encontrado
+2 Nenhum arquivo ou diretï¿½rio encontrado
 $ ESRCH
 3 Nenhum processo encontrado
 $ EINTR
 4 Chamada de sistema interrompida
 $ EIO
-5 Erro de entrada/saída
+5 Erro de entrada/saï¿½da
 $ ENXIO
-6 Dispositivo não configurado
+6 Dispositivo nï¿½o configurado
 $ E2BIG
 7 Lista de argumentos muito grande
 $ ENOEXEC
-8 Erro no formato de execução
+8 Erro no formato de execuï¿½ï¿½o
 $ EBADF
 9 Erro no descritor de arquivo
 $ ECHILD
@@ -28,11 +28,11 @@ $ ECHILD
 $ EDEADLK
 11 Bloqueio de recurso evitado
 $ ENOMEM
-12 Impossível alocar memória
+12 Impossï¿½vel alocar memï¿½ria
 $ EACCES
-13 Permissão negada
+13 Permissï¿½o negada
 $ EFAULT
-14 Endereço errado
+14 Endereï¿½o errado
 $ ENOTBLK
 15 Dispositivo de bloco requerido
 $ EBUSY
@@ -40,15 +40,15 @@ $ EBUSY
 $ EEXIST
 17 Arquivo existe
 $ EXDEV
-18 Ligação entre dispositivos
+18 Ligaï¿½ï¿½o entre dispositivos
 $ ENODEV
-19 Operação não suportada pelo dispositivo
+19 Operaï¿½ï¿½o nï¿½o suportada pelo dispositivo
 $ ENOTDIR
-20 Não é um diretório
+20 Nï¿½o ï¿½ um diretï¿½rio
 $ EISDIR
-21 É um diretório
+21 ï¿½ um diretï¿½rio
 $ EINVAL
-22 Argumento inválido
+22 Argumento invï¿½lido
 $ ENFILE
 23 Muitos arquivos abertos no sistema
 $ EMFILE
@@ -60,7 +60,7 @@ $ ETXTBSY
 $ EFBIG
 27 Arquivo muito grande
 $ ENOSPC
-28 Sem espaço no dispositivo
+28 Sem espaï¿½o no dispositivo
 $ ESPIPE
 29 seek ilegal
 $ EROFS
@@ -70,101 +70,101 @@ $ EMLINK
 $ EPIPE
 32 pipe quebrado
 $ EDOM
-33 Argumento numérico fora do domínio
+33 Argumento numï¿½rico fora do domï¿½nio
 $ ERANGE
 34 Resultado muito grande
 $ EAGAIN, EWOULDBLOCK
-35 Recurso temporariamente indisponível
+35 Recurso temporariamente indisponï¿½vel
 $ EINPROGRESS
-36 Operação em progresso agora
+36 Operaï¿½ï¿½o em progresso agora
 $ EALREADY
-37 Operação em progresso pronta
+37 Operaï¿½ï¿½o em progresso pronta
 $ ENOTSOCK
-38 Operação de socket em um não-socket
+38 Operaï¿½ï¿½o de socket em um nï¿½o-socket
 $ EDESTADDRREQ
-39 Endereço de destino requerido
+39 Endereï¿½o de destino requerido
 $ EMSGSIZE
 40 Mensagem muito grande
 $ EPROTOTYPE
 41 Tipo de protocolo errado para socket
 $ ENOPROTOOPT
-42 Protocolo não disponível
+42 Protocolo nï¿½o disponï¿½vel
 $ EPROTONOSUPPORT
-43 Protocolo não suportado
+43 Protocolo nï¿½o suportado
 $ ESOCKTNOSUPPORT
-44 Tipo de socket não suportado
+44 Tipo de socket nï¿½o suportado
 $ EOPNOTSUPP
-45 Operação não permitida
+45 Operaï¿½ï¿½o nï¿½o permitida
 $ EPFNOSUPPORT
-46 Família de protocolo não suportada
+46 Famï¿½lia de protocolo nï¿½o suportada
 $ EAFNOSUPPORT
-47 Família de endereços não suportada pela família de protocolos
+47 Famï¿½lia de endereï¿½os nï¿½o suportada pela famï¿½lia de protocolos
 $ EADDRINUSE
-48 Endereço já está em uso
+48 Endereï¿½o jï¿½ estï¿½ em uso
 $ EADDRNOTAVAIL
-49 Impossível obter endereço solicitado
+49 Impossï¿½vel obter endereï¿½o solicitado
 $ ENETDOWN
-50 Rede está parada
+50 Rede estï¿½ parada
 $ ENETUNREACH
-51 Rede está inalcançável
+51 Rede estï¿½ inalcanï¿½ï¿½vel
 $ ENETRESET
-52 Conexão de rede perdida durante reset
+52 Conexï¿½o de rede perdida durante reset
 $ ECONNABORTED
-53 Conexão abortada por software
+53 Conexï¿½o abortada por software
 $ ECONNRESET
-54 Conexão reiniciada pelo outro ponto
+54 Conexï¿½o reiniciada pelo outro ponto
 $ ENOBUFS
-55 Sem espaço de buffer disponível
+55 Sem espaï¿½o de buffer disponï¿½vel
 $ EISCONN
-56 Socket já está conectado
+56 Socket jï¿½ estï¿½ conectado
 $ ENOTCONN
-57 Socket não está conectado
+57 Socket nï¿½o estï¿½ conectado
 $ ESHUTDOWN
-58 Impossível enviar depois que o socket foi finalizado
+58 Impossï¿½vel enviar depois que o socket foi finalizado
 $ ETOOMANYREFS
-59 Muitas referências: impossível ligar
+59 Muitas referï¿½ncias: impossï¿½vel ligar
 $ ETIMEDOUT
-60 Tempo de operação expirou
+60 Tempo de operaï¿½ï¿½o expirou
 $ ECONNREFUSED
-61 Conexão recusada
+61 Conexï¿½o recusada
 $ ELOOP
-62 Muitos níveis de links simbólicos
+62 Muitos nï¿½veis de links simbï¿½licos
 $ ENAMETOOLONG
 63 Nome de arquivo muito grande
 $ EHOSTDOWN
-64 Host está desligado
+64 Host estï¿½ desligado
 $ EHOSTUNREACH
 65 Sem rota para o host
 $ ENOTEMPTY
-66 Diretório não está vazio
+66 Diretï¿½rio nï¿½o estï¿½ vazio
 $ EPROCLIM
 67 Muitos processos
 $ EUSERS
-68 Muitos usuários
+68 Muitos usuï¿½rios
 $ EDQUOT
 69 Quota de disco excedida
 $ ESTALE
 70 Manipulador de arquivo NFS velho
 $ EREMOTE
-71 Muitos níveis no caminho remoto
+71 Muitos nï¿½veis no caminho remoto
 $ EBADRPC
 72 Estrutura RPC incorreta
 $ ERPCMISMATCH
-73 Versão RPC incorreta
+73 Versï¿½o RPC incorreta
 $ EPROGUNAVAIL
-74 Programa RPC indisponível
+74 Programa RPC indisponï¿½vel
 $ EPROGMISMATCH
-75 Versão do programa incorreta
+75 Versï¿½o do programa incorreta
 $ EPROCUNAVAIL
 76 Procedimento incorreto para o programa
 $ ENOLCK
-77 Nenhum lock disponível
+77 Nenhum lock disponï¿½vel
 $ ENOSYS
-78 Função não implementada
+78 Funï¿½ï¿½o nï¿½o implementada
 $ EFTYPE
 79 Tipo de arquivo ou formato inapropriados
 $ EAUTH
-80 Erro de autenticação
+80 Erro de autenticaï¿½ï¿½o
 $ ENEEDAUTH
 81 Necessidade de autenticador
 $ EIDRM
@@ -174,13 +174,13 @@ $ ENOMSG
 $ EOVERFLOW
 84 Valor muito grande para ser armazenado neste tipo de dado
 $ ECANCELED
-85 Operação cancelada
+85 Operaï¿½ï¿½o cancelada
 $ EILSEQ
-86 Sequência de bytes ilegal
+86 Sequï¿½ncia de bytes ilegal
 $ ENOATTR
-87 Atributo não encontrado
+87 Atributo nï¿½o encontrado
 $ EDOOFUS
-88 Erro de programação
+88 Erro de programaï¿½ï¿½o
 $
 $ strsignal() support catalog
 $
@@ -188,11 +188,11 @@ $set 2
 $ SIGHUP
 1 Fim da linha (Hangup)
 $ SIGINT
-2 Interrupção
+2 Interrupï¿½ï¿½o
 $ SIGQUIT
-3 Saída
+3 Saï¿½da
 $ SIGILL
-4 Instrução ilegal
+4 Instruï¿½ï¿½o ilegal
 $ SIGTRAP
 5 Trap de Trace/BPT
 $ SIGABRT
@@ -200,23 +200,23 @@ $ SIGABRT
 $ SIGEMT
 7 EMT trap
 $ SIGFPE
-8 Exceção de ponto flutuante
+8 Exceï¿½ï¿½o de ponto flutuante
 $ SIGKILL
 9 Morreu
 $ SIGBUS
 10 Erro de barramento
 $ SIGSEGV
-11 Falha de segmentação
+11 Falha de segmentaï¿½ï¿½o
 $ SIGSYS
 12 Chamada de sistema incorreta
 $ SIGPIPE
 13 Pipe incorreto
 $ SIGALRM
-14 Alarme do relógio
+14 Alarme do relï¿½gio
 $ SIGTERM
 15 Terminado
 $ SIGURG
-16 Condição urgente de E/S
+16 Condiï¿½ï¿½o urgente de E/S
 $ SIGSTOP
 17 Suspendido (sinal)
 $ SIGTSTP
@@ -228,9 +228,9 @@ $ SIGCHLD
 $ SIGTTIN
 21 Parado (entrada de tty)
 $ SIGTTOU
-22 Parado (saída de tty)
+22 Parado (saï¿½da de tty)
 $ SIGIO
-23 E/S possível
+23 E/S possï¿½vel
 $ SIGXCPU
 24 Limite de tempo de CPU excedido
 $ SIGXFSZ
@@ -240,10 +240,10 @@ $ SIGVTALRM
 $ SIGPROF
 27 Temporizador de profiling expirou
 $ SIGWINCH
-28 Mudança no tamanho de janela
+28 Mudanï¿½a no tamanho de janela
 $ SIGINFO
-29 Requisição de informação
+29 Requisiï¿½ï¿½o de informaï¿½ï¿½o
 $ SIGUSR1
-30 Sinal 1 definido pelo usuário
+30 Sinal 1 definido pelo usuï¿½rio
 $ SIGUSR2
-31 Sinal 2 definido pelo usuário
+31 Sinal 2 definido pelo usuï¿½rio

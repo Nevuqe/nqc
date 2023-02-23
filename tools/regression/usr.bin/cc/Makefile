@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TESTS=	float
 CFLAGS+=-lm

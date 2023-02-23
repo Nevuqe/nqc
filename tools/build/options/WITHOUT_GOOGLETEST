@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Neither build nor install
 .Lb libgmock ,
 .Lb libgtest ,

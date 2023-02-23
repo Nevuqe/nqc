@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 .PATH: ${.CURDIR}/../../../netinet/tcp_stacks

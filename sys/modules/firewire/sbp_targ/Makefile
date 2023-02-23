@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Makefile for the SBP-II Target mode
 

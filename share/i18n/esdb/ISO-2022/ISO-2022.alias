@@ -1,4 +1,4 @@
-# $FreeBSD$ 
+# $NQC$ 
 # $NetBSD: ISO-2022.alias,v 1.6 2007/03/05 16:58:35 tnozaki Exp $
 
 CN	csiso2022cn

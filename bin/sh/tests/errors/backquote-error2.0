@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ${SH} -c 'echo `echo .BA"DCODE.`
 echo ".BAD"CODE.' 2>&1 | grep -q BADCODE && exit 1

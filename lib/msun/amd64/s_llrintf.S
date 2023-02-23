@@ -1,5 +1,5 @@
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$")
+__FBSDID("$NQC$")
 	
 /* sizeof(long) == sizeof(long long) */
 #define	fn	llrintf

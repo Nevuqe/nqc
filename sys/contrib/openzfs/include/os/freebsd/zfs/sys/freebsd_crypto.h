@@ -26,7 +26,7 @@
  *
  * Portions of this file were taken from GELI's implementation of hmac.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _ZFS_FREEBSD_CRYPTO_H

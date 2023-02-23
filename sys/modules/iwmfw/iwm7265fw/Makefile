@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	iwm7265fw
 IMG=	iwm-7265-17

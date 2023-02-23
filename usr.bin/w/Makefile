@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/6/93
-# $FreeBSD$
+# $NQC$
 
 PROG=	w
 SRCS=	fmt.c pr_time.c proc_compare.c w.c

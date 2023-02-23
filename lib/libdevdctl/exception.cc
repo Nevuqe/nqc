@@ -44,7 +44,7 @@
 
 #include "exception.h"
 
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /*============================ Namespace Control =============================*/
 using std::string;

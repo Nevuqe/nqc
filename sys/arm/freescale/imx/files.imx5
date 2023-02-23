@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Init
 arm/freescale/imx/imx_machdep.c		standard

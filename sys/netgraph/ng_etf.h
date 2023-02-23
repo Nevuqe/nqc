@@ -32,7 +32,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_NG_ETF_H_

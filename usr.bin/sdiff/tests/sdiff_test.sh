@@ -1,5 +1,5 @@
 # $NetBSD: t_sdiff.sh,v 1.1 2012/03/17 16:33:15 jruoho Exp $
-# $FreeBSD$
+# $NQC$
 #
 # Copyright (c) 2008, 2009 The NetBSD Foundation, Inc.
 # All rights reserved.

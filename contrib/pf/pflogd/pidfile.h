@@ -1,3 +1,3 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 int pidfile(const char *);

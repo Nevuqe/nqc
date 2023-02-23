@@ -59,7 +59,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fsck.h	8.4 (Berkeley) 5/9/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _FSCK_H_

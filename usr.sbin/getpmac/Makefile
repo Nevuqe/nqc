@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=   getpmac
 MAN=	getpmac.8

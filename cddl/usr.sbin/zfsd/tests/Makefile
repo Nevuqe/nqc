@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "${.CURDIR}/../Makefile.common"
 .PATH:	${.CURDIR:H}

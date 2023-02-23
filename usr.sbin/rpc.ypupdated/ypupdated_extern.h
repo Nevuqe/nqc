@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <db.h>

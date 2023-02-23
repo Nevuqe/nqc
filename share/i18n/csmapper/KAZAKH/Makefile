@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $NetBSD: Makefile.inc,v 1.1 2007/03/13 16:34:37 tnozaki Exp $
 
 CODE=	KAZAKH

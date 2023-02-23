@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:  ${.CURDIR}/../../../../sys/dev/ath/ath_hal
 

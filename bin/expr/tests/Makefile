@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 NETBSD_ATF_TESTS_SH=	expr_test
 

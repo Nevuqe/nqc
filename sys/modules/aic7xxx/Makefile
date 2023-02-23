@@ -1,5 +1,5 @@
 
-# $FreeBSD$
+# $NQC$
 
 SUBDIR= ahc ahd
 

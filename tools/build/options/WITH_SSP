@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build world with propolice stack smashing protection.

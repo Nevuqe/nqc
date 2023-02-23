@@ -32,7 +32,7 @@
 
 #
 #	@(#)vnode_if.sh	8.1 (Berkeley) 6/10/93
-# $FreeBSD$
+# $NQC$
 #
 # Script to produce VFS front-end sugar.
 #
@@ -174,7 +174,7 @@ common_head = \
     " * This file is " generated " automatically.\n" \
     " * Do not modify anything in here by hand.\n" \
     " *\n" \
-    " * Created from $FreeBSD$\n" \
+    " * Created from $NQC$\n" \
     " */\n" \
     "\n";
 

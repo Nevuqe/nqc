@@ -29,7 +29,7 @@
 #
 # Common subroutines used to build arm, arm64, or RISC-V SD card images.
 #
-# $FreeBSD$
+# $NQC$
 #
 
 cleanup() {

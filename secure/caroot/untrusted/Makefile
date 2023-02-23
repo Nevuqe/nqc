@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 BINDIR=		/usr/share/certs/untrusted
 

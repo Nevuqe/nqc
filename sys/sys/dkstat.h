@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)dkstat.h	8.2 (Berkeley) 1/21/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_DKSTAT_H_

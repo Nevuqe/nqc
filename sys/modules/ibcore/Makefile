@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 .PATH:  ${SRCTOP}/sys/ofed/drivers/infiniband/core
 
 KMOD=	ibcore

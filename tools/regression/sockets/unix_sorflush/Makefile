@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	unix_sorflush
 MAN=

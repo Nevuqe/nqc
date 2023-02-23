@@ -30,7 +30,7 @@
  *
  *	@(#)saioctl.h	8.1 (Berkeley) 6/11/93
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* ioctl's -- for disks just now */

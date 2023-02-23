@@ -5,7 +5,7 @@
 # will really execute ls, while the line with meta characters will execute
 # our special shell.
 #
-# $FreeBSD$
+# $NQC$
 
 .SHELL: path="${.CURDIR}/sh"
 

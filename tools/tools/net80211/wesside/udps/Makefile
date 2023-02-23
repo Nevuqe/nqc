@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	udps
 BINDIR=	/usr/local/bin

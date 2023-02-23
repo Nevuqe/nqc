@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $Id: meta.sys.mk,v 1.42 2021/12/13 05:50:55 sjg Exp $
 
 #

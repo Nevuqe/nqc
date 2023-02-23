@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)select.h	8.2 (Berkeley) 1/4/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_SELINFO_H_

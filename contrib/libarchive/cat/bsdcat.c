@@ -24,7 +24,7 @@
  */
 
 #include "bsdcat_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <stdio.h>
 #ifdef HAVE_STDLIB_H

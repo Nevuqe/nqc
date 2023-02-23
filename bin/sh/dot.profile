@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 HOME=/root
 export HOME

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*-
  * Principal Author: Parag Patel
  * Copyright (c) 2001

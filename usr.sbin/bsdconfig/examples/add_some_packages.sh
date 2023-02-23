@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 #
 # This sample installs a short list of packages from the main HTTP site.
 #

@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build and install vi, view, ex and related programs.

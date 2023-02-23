@@ -1,5 +1,5 @@
 /* Generated file */
-/* $FreeBSD$ */
+/* $NQC$ */
 #include <gssapi/gssapi.h>
 #include <roken.h>
 #include "config.h"

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=p1003_1b
 

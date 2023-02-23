@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 arm/mv/armada38x/armada38x.c	standard
 arm/mv/armadaxp/armadaxp.c	standard
 

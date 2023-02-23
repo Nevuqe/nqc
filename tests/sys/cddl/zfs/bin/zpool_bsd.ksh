@@ -1,7 +1,7 @@
 #!/usr/local/bin/ksh93 -p
 #
 
-# $FreeBSD$
+# $NQC$
 
 cmd=$1
 

@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build
 .Nm libc
 without floating-point support.

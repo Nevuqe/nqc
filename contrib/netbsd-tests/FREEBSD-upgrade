@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 This document contains a collection of notes specific to the import
 of the NetBSD test suite into head.  These notes are built on the instructions

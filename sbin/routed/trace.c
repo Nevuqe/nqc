@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #define	RIPCMDS
@@ -38,7 +38,7 @@
 #include <sys/signal.h>
 #include <fcntl.h>
 
-__RCSID("$FreeBSD$");
+__RCSID("$NQC$");
 
 
 

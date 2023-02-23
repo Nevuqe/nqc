@@ -44,7 +44,7 @@ static char sccsid[] = "@(#)vsscanf.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 __FBSDID("FreeBSD: src/lib/libc/stdio/vsscanf.c,v 1.11 2002/08/21 16:19:57 mike Exp ");
 #endif
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <limits.h>
 #include <stdarg.h>

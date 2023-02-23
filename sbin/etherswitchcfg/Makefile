@@ -1,5 +1,5 @@
 #	@(#)Makefile	5.4 (Berkeley) 6/5/91
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=runtime
 PROG=	etherswitchcfg

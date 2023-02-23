@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # String handling from the Arm Optimized Routines
 # https://github.com/ARM-software/optimized-routines

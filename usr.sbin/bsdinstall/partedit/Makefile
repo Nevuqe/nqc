@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 BINDIR= ${LIBEXECDIR}/bsdinstall
 PROG=	partedit

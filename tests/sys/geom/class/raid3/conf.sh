@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 name="$(mktemp -u graid3.XXXXXX)"
 class="raid3"

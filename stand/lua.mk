@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Common flags to build lua related files
 

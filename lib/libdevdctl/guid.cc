@@ -29,7 +29,7 @@
  *
  * Authors: Alan Somers         (Spectra Logic Corporation)
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /**
@@ -48,7 +48,7 @@
 
 #include "guid.h"
 
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 /*============================ Namespace Control =============================*/
 using std::string;
 namespace DevdCtl

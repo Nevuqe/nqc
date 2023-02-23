@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$FreeBSD$");
+__RCSID("$NQC$");
 
 #include <stdlib.h>
 #include <unistd.h>

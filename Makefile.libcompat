@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .if !targets(__<${_this:T}>__)
 __<${_this:T}>__:

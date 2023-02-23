@@ -23,7 +23,7 @@
 # SUCH DAMAGE.
 #
 
-# $FreeBSD$
+# $NQC$
 
 #
 # This program is a freestanding boot program to load an a.out binary

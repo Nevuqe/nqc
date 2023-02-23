@@ -1,4 +1,4 @@
-# $FreeBSD$ 
+# $NQC$ 
 
 PROGS=	listen connect
 MAN=

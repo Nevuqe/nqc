@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FILESDIR=	${SHAREDIR}/bsdconfig/networking
 FILES=		common.subr device.subr hostname.subr ipaddr.subr media.subr \

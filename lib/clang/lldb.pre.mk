@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "clang.pre.mk"
 

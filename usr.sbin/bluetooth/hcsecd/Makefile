@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.8 2003/08/14 20:06:20 max Exp $
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	bluetooth
 CONFS=		hcsecd.conf

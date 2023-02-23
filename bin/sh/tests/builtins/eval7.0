@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Assumes that break can break out of a loop outside eval.
 
 while :; do

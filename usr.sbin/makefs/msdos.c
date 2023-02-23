@@ -34,7 +34,7 @@
 
 #include <sys/cdefs.h>
 #if defined(__RCSID) && !defined(__lint)
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 #endif	/* !__lint */
 
 #include <sys/param.h>

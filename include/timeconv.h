@@ -37,7 +37,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _TIMECONV_H_

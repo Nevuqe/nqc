@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # inet sources
 .PATH: ${LIBC_SRCTOP}/inet

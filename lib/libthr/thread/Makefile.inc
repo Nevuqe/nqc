@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # thr sources
 .PATH: ${.CURDIR}/thread

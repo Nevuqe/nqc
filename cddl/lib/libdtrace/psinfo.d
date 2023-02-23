@@ -21,7 +21,7 @@
  *
  * Portions Copyright 2006 John Birrell jb@freebsd.org
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.

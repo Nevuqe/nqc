@@ -20,7 +20,7 @@
  *
  * Portions Copyright 2018 Devin Teske dteske@freebsd.org
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Copyright 2006 Sun Microsystems, Inc.  All rights reserved.

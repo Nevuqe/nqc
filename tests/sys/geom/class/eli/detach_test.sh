@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 . $(atf_get_srcdir)/conf.sh
 

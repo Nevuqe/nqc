@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Consider this file an example.
 #

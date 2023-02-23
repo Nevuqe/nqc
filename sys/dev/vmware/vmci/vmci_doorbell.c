@@ -7,7 +7,7 @@
 /* This file implements the VMCI doorbell API. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/types.h>
 

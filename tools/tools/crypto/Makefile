@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 #
 # Copyright (c) 2018		Conrad Meyer <cem@FreeBSD.org>
 # Copyright (c) 2002, 2003	Sam Leffler, Errno Consulting

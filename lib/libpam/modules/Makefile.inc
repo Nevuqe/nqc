@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PAMDIR=		${SRCTOP}/contrib/openpam
 

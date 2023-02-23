@@ -25,7 +25,7 @@ SOFTWARE.
 
 /*
  * Generalized hash table ADT
- * $FreeBSD$
+ * $NQC$
  *
  * Provides multiple, dynamically-allocated, variable-sized hash tables on
  * various data and keys.

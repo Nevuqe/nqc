@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for fi_FI.ISO8859-1 locale
 $
@@ -8,15 +8,15 @@ $set 1
 $ EPERM
 1 Toimintoa ei sallita
 $ ENOENT
-2 Tiedostoa tai hakemistoa ei löydy
+2 Tiedostoa tai hakemistoa ei lï¿½ydy
 $ ESRCH
-3 Prosessia ei löydy
+3 Prosessia ei lï¿½ydy
 $ EINTR
 4 Systeemikutsu keskeytyi
 $ EIO
-5 Syöttö/tulostusvirhe
+5 Syï¿½ttï¿½/tulostusvirhe
 $ ENXIO
-6 Laitetta ei määritelty
+6 Laitetta ei mï¿½ï¿½ritelty
 $ E2BIG
 7 Liikaa argumentteja
 $ ENOEXEC
@@ -26,9 +26,9 @@ $ EBADF
 $ ECHILD
 10 Ei lapsiprosesseja
 $ EDEADLK
-11 Resurssin ristiinlukitus vältetty
+11 Resurssin ristiinlukitus vï¿½ltetty
 $ ENOMEM
-12 Muistinvaraus epäonnistui
+12 Muistinvaraus epï¿½onnistui
 $ EACCES
 13 Lupa kielletty
 $ EFAULT
@@ -36,11 +36,11 @@ $ EFAULT
 $ ENOTBLK
 15 Tarvitaan lohko-osoitettava laite
 $ EBUSY
-16 Laite käytössä
+16 Laite kï¿½ytï¿½ssï¿½
 $ EEXIST
 17 Tiedosto on jo olemassa
 $ EXDEV
-18 Laitteiden välinen linkki
+18 Laitteiden vï¿½linen linkki
 $ ENODEV
 19 Laite ei tue toimintoa
 $ ENOTDIR
@@ -50,13 +50,13 @@ $ EISDIR
 $ EINVAL
 22 Virheellinen argumentti
 $ ENFILE
-23 Järjestelmässä on liian monta avointa tiedostoa
+23 Jï¿½rjestelmï¿½ssï¿½ on liian monta avointa tiedostoa
 $ EMFILE
 24 Liian monta avointa tiedostoa
 $ ENOTTY
 25 Virheellinen ohjaustoiminto laitteelle
 $ ETXTBSY
-26 Tiedosto on käytössä
+26 Tiedosto on kï¿½ytï¿½ssï¿½
 $ EFBIG
 27 Tiedosto liian suuri
 $ ENOSPC
@@ -64,105 +64,105 @@ $ ENOSPC
 $ ESPIPE
 29 Virheellinen haku
 $ EROFS
-30 Vain luettava tiedostojärjestelmä
+30 Vain luettava tiedostojï¿½rjestelmï¿½
 $ EMLINK
-31 Liian monta linkkiä
+31 Liian monta linkkiï¿½
 $ EPIPE
 32 Katkennut putki
 $ EDOM
-33 Numeerinen syöte virheellinen
+33 Numeerinen syï¿½te virheellinen
 $ ERANGE
 34 Tulos liian suuri
 $ EAGAIN, EWOULDBLOCK
-35 Resurssi ei ole tilapäisesti saatavilla
+35 Resurssi ei ole tilapï¿½isesti saatavilla
 $ EINPROGRESS
-36 Toiminta on käynnissä
+36 Toiminta on kï¿½ynnissï¿½
 $ EALREADY
-37 Toiminta oli jo käynnissä
+37 Toiminta oli jo kï¿½ynnissï¿½
 $ ENOTSOCK
 38 Socket-operaatio muulla kuin socketilla
 $ EDESTADDRREQ
 39 Tarvitaan kohdeosoite
 $ EMSGSIZE
-40 Sanoma liian pitkä
+40 Sanoma liian pitkï¿½
 $ EPROTOTYPE
-41 Väärä protokolla socketille
+41 Vï¿½ï¿½rï¿½ protokolla socketille
 $ ENOPROTOOPT
-42 Protokolla ei ole käytettävissä
+42 Protokolla ei ole kï¿½ytettï¿½vissï¿½
 $ EPROTONOSUPPORT
 43 Protokollaa ei tueta
 $ ESOCKTNOSUPPORT
-44 Socket-tyyppiä ei tueta
+44 Socket-tyyppiï¿½ ei tueta
 $ EOPNOTSUPP
 45 Toimintoa ei tueta
 $ EPFNOSUPPORT
-46 Protokollaperhettä ei tueta
+46 Protokollaperhettï¿½ ei tueta
 $ EAFNOSUPPORT
-47 Protokollaperhe ei tue osoiteperhettä
+47 Protokollaperhe ei tue osoiteperhettï¿½
 $ EADDRINUSE
-48 Osoite on jo käytössä
+48 Osoite on jo kï¿½ytï¿½ssï¿½
 $ EADDRNOTAVAIL
-49 Ei pysty antamaan pyydettyä osoitetta
+49 Ei pysty antamaan pyydettyï¿½ osoitetta
 $ ENETDOWN
-50 Verkko ei ole käytettävissä
+50 Verkko ei ole kï¿½ytettï¿½vissï¿½
 $ ENETUNREACH
-51 Verkkoon ei ole yhteyttä
+51 Verkkoon ei ole yhteyttï¿½
 $ ENETRESET
 52 Verkko sulki yhteyden
 $ ECONNABORTED
 53 Ohjelmiston aiheuttama yhteyden keskeytyminen
 $ ECONNRESET
-54 Isäntä nollasi yhteyden
+54 Isï¿½ntï¿½ nollasi yhteyden
 $ ENOBUFS
 55 Puskuritila on lopussa
 $ EISCONN
 56 Yhteys on jo olemassa
 $ ENOTCONN
-57 Yhteyttä ei ole olemassa
+57 Yhteyttï¿½ ei ole olemassa
 $ ESHUTDOWN
-58 Lähettäminen ei ole mahdollista yhteyden katkaisun jälkeen
+58 Lï¿½hettï¿½minen ei ole mahdollista yhteyden katkaisun jï¿½lkeen
 $ ETOOMANYREFS
-59 Liikaa viittauksia: ei voi yhdistää
+59 Liikaa viittauksia: ei voi yhdistï¿½ï¿½
 $ ETIMEDOUT
 60 Yhteyden aikavalvontakatkaisu
 $ ECONNREFUSED
-61 Yhteys hylätty
+61 Yhteys hylï¿½tty
 $ ELOOP
-62 Liian monta peräkkäistä symbolista linkkiä
+62 Liian monta perï¿½kkï¿½istï¿½ symbolista linkkiï¿½
 $ ENAMETOOLONG
-63 Tiedoston nimi on liian pitkä
+63 Tiedoston nimi on liian pitkï¿½
 $ EHOSTDOWN
-64 Isäntä ei vastaa
+64 Isï¿½ntï¿½ ei vastaa
 $ EHOSTUNREACH
-65 Ei reittiä isäntään
+65 Ei reittiï¿½ isï¿½ntï¿½ï¿½n
 $ ENOTEMPTY
-66 Hakemisto ei ole tyhjä
+66 Hakemisto ei ole tyhjï¿½
 $ EPROCLIM
 67 Liian monta prosessia
 $ EUSERS
-68 Liian monta käyttäjää
+68 Liian monta kï¿½yttï¿½jï¿½ï¿½
 $ EDQUOT
 69 Levytilarajoitus ylittyi
 $ ESTALE
 70 Vanhentunut NFS-yhteys
 $ EREMOTE
-71 Liian monta verkkolevyä polussa
+71 Liian monta verkkolevyï¿½ polussa
 $ EBADRPC
-72 Virheellinen RPC-pyyntö
+72 Virheellinen RPC-pyyntï¿½
 $ ERPCMISMATCH
-73 Väärä RPC-versio
+73 Vï¿½ï¿½rï¿½ RPC-versio
 $ EPROGUNAVAIL
-74 RPC ei käytettävissä
+74 RPC ei kï¿½ytettï¿½vissï¿½
 $ EPROGMISMATCH
-75 Väärä ohjelmaversio
+75 Vï¿½ï¿½rï¿½ ohjelmaversio
 $ EPROCUNAVAIL
-76 Väärä RPC-pyyntö ohjelmalle
+76 Vï¿½ï¿½rï¿½ RPC-pyyntï¿½ ohjelmalle
 $ ENOLCK
-77 Lukitus ei käytettävissä
+77 Lukitus ei kï¿½ytettï¿½vissï¿½
 $ ENOSYS
 78 Toimintoa ei ole
 $ EFTYPE
-79 Väärä tiedostotyyppi tai -formaatti
+79 Vï¿½ï¿½rï¿½ tiedostotyyppi tai -formaatti
 $
 $ strsignal() support catalog
 $
@@ -174,9 +174,9 @@ $ SIGINT
 $ SIGQUIT
 3 Lopetus
 $ SIGILL
-4 Laiton käsky
+4 Laiton kï¿½sky
 $ SIGTRAP
-5 Jäljitys/BPT ansa
+5 Jï¿½ljitys/BPT ansa
 $ SIGABRT
 6 Poistumisansa
 $ SIGEMT
@@ -186,7 +186,7 @@ $ SIGFPE
 $ SIGKILL
 9 Tapettu
 $ SIGBUS
-10 Väylävirhe
+10 Vï¿½ylï¿½virhe
 $ SIGSEGV
 11 Suojausvirhe
 $ SIGSYS
@@ -194,27 +194,27 @@ $ SIGSYS
 $ SIGPIPE
 13 Katkennut putki
 $ SIGALRM
-14 Hälytyskello
+14 Hï¿½lytyskello
 $ SIGTERM
 15 Lopetettu
 $ SIGURG
-16 Kiireellinen syöttö/tulostus
+16 Kiireellinen syï¿½ttï¿½/tulostus
 $ SIGSTOP
-17 Pysäytetty (signaali)
+17 Pysï¿½ytetty (signaali)
 $ SIGTSTP
-18 Pysäytetty
+18 Pysï¿½ytetty
 $ SIGCONT
 19 Jatkettu
 $ SIGCHLD
-20 Lapsiprosessi päättynyt
+20 Lapsiprosessi pï¿½ï¿½ttynyt
 $ SIGTTIN
-21 Pysäytetty (tty-syöte)
+21 Pysï¿½ytetty (tty-syï¿½te)
 $ SIGTTOU
-22 Pysäytetty (tty-tuloste)
+22 Pysï¿½ytetty (tty-tuloste)
 $ SIGIO
-23 Syöttö ja tulostus mahdollisia
+23 Syï¿½ttï¿½ ja tulostus mahdollisia
 $ SIGXCPU
-24 Keskusyksikköaikarajoitus ylitetty
+24 Keskusyksikkï¿½aikarajoitus ylitetty
 $ SIGXFSZ
 25 Tiedoston kokorajoitus ylitetty
 $ SIGVTALRM
@@ -224,10 +224,10 @@ $ SIGPROF
 $ SIGWINCH
 28 Ikkunan koko muuttuu
 $ SIGINFO
-29 Informaatiopyyntö
+29 Informaatiopyyntï¿½
 $ SIGUSR1
-30 Käyttäjän määriteltävä signaali 1
+30 Kï¿½yttï¿½jï¿½n mï¿½ï¿½riteltï¿½vï¿½ signaali 1
 $ SIGUSR2
-31 Käyttäjän määriteltävä signaali 2
+31 Kï¿½yttï¿½jï¿½n mï¿½ï¿½riteltï¿½vï¿½ signaali 2
 $ SIGPWR
 32 Virransaannin tilassa muutos

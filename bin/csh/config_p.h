@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*
  * config.h -- configure various defines for tcsh
  *

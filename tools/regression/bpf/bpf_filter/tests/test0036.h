@@ -1,7 +1,7 @@
 /*-
  * Test 0036:	BPF_ALU+BPF_AND+BPF_K
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

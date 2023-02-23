@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/geom/bde
 .PATH: ${SRCTOP}/sys/crypto/rijndael

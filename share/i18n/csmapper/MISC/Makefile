@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $NetBSD: Makefile.inc,v 1.13 2007/04/01 18:52:29 tnozaki Exp $
 
 CODE=	MISC

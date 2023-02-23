@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	cxgbtool
 SRCS=	cxgbtool.c

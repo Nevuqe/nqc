@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD$
+# $NQC$
 
 #
 # ident	"@(#)setup.ksh	1.5	09/01/12 SMI"

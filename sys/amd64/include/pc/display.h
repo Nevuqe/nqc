@@ -1,7 +1,7 @@
 /*
  * IBM PC display definitions
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* Color attributes for foreground text */

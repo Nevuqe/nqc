@@ -26,7 +26,7 @@
  *
  * Author: Lutz Donnerhacke <lutz@donnerhacke.de>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

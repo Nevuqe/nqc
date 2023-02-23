@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Check staged files are not stale.

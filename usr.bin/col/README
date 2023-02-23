@@ -1,6 +1,6 @@
 #	@(#)README	8.1 (Berkeley) 6/6/93
 #
-# $FreeBSD$
+# $NQC$
 
 col - filter out reverse line feeds.
 

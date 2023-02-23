@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 /**
  * @file icp_qat_fw_mmp.h
  * @defgroup icp_qat_fw_mmp ICP QAT FW MMP Processing Definitions

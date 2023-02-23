@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 # Perform temporary directory cleaning so that long-lived systems
 # don't end up with excessively old files there.

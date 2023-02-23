@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LDBL_PREC = 113
 

@@ -30,7 +30,7 @@
  *
  * Customisation of signalling source to the NG environment.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

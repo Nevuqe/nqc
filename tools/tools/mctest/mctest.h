@@ -24,7 +24,7 @@
 // SUCH DAMAGE.
 //
 //
-// $FreeBSD$
+// $NQC$
 //
 
 const char* DEFAULT_GROUP = "239.255.255.1";

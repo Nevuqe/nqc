@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 cat /dev/null
 hash
 hash -r

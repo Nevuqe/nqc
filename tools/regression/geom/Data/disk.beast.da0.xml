@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <DISKIMAGE>
   <comment>
-    $FreeBSD$
+    $NQC$
     alpha BSD label from beast.freebsd.org
   </comment>
   <sectorsize>512</sectorsize>

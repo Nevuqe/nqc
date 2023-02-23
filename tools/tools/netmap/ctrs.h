@@ -1,7 +1,7 @@
 #ifndef CTRS_H_
 #define CTRS_H_
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <sys/time.h>
 

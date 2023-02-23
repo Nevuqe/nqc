@@ -2,7 +2,7 @@
 #
 # Script for testing ap mode w/ WEP.
 #
-# $FreeBSD$
+# $NQC$
 #
 PATH=.:$PATH
 . config

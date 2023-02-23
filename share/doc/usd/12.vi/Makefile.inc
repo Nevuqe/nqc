@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 VOLUME=		usd/12.vi
 MACROS=		-ms

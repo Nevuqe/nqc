@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 echo 1..21
 

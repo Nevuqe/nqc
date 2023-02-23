@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Lua helper file for FreeBSD /usr/src builds.
 #

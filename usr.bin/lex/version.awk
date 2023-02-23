@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 BEGIN {
 	FS = "[ \t\.\"]+"

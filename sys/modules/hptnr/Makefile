@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 HPTNR=	${SRCTOP}/sys/dev/hptnr
 .PATH:	${HPTNR}
 

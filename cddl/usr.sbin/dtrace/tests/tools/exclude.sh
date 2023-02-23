@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This file lists DTrace tests which are known to fail or hang/crash the
 # system. They were pulled from the legacy DTrace test infrastructure in

@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 #	Name:             ISO/IEC 8859-13:1998  to Unicode
 #	Unicode version:  3.0

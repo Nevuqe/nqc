@@ -12,7 +12,7 @@
  * warranties of merchantability and fitness for a particular
  * purpose.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 		.set SIO_PRT,SIOPRT		# Base port

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include <googletest.test.inc.mk>
 

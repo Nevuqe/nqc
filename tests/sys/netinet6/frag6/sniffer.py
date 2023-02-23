@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 import threading
 import logging

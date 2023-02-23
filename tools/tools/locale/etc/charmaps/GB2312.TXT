@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 #	Name:             GB2312-80 to Unicode table (complete, hex format)
 #	Unicode version:  3.0

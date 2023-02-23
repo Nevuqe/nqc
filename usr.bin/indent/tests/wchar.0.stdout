@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* See r309220 */
 #include <wchar.h>
 

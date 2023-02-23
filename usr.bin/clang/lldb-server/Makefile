@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "${SRCTOP}/lib/clang/lldb.pre.mk"
 

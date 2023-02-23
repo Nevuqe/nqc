@@ -32,7 +32,7 @@
 #include "opt_platform.h"
 
 #include <sys/param.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <vm/vm.h>
 #include <vm/pmap.h>

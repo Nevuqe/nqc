@@ -1,5 +1,5 @@
 /*	@(#)auth_des.h	2.2 88/07/29 4.0 RPCSRC; from 1.3 88/02/08 SMI */
-/*	$FreeBSD$ */
+/*	$NQC$ */
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *

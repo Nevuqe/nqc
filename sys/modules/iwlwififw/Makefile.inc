@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Common rules for building iwlwifi firmware.
 

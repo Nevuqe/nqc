@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # All the dts files for allwinner systems we support.
 
 .if ${MACHINE_ARCH} == "armv7"

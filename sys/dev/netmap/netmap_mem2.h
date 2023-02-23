@@ -29,7 +29,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * (New) memory allocator for netmap
  */

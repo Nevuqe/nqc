@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/dev/mxge
 KMOD=	mxge_eth_z8e

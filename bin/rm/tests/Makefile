@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ATF_TESTS_SH+=  rm_test
 

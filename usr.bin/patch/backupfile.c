@@ -13,7 +13,7 @@
  * David MacKenzie <djm@ai.mit.edu>. Some algorithms adapted from GNU Emacs.
  *
  * $OpenBSD: backupfile.c,v 1.20 2009/10/27 23:59:41 deraadt Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <ctype.h>

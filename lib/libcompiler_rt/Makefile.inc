@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CRTARCH=	${MACHINE_CPUARCH:C/amd64/x86_64/}
 

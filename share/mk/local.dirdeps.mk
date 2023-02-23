@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 .if !target(_DIRDEP_USE)
 # we are the 1st makefile
 

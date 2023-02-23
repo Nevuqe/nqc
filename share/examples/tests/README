@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 This directory contains sample test programs along the Makefile and
 Kyuafile logic to get them build and installed.

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 /root/hast/sbin/hastd/ucarp_down.sh
 exit 0

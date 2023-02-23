@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FILESDIR=	${LIBEXECDIR}/bsdconfig/dot/include
 FILES=		messages.subr

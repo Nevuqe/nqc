@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD$
+# $NQC$
 
 SRCDIR=$(atf_get_srcdir)
 
@@ -38,13 +38,13 @@ check()
 	# to pass.
 	atf_check cp ${SRCDIR}/${tc}* .
 
-	# Remove $FreeBSD$ RCS expansions because they get re-indented, which
+	# Remove $NQC$ RCS expansions because they get re-indented, which
 	# changes the output
 	local out_file="${tc}.stdout"
 	if [ -f "${out_file}" ]; then
 		parsed_file=output_file.parsed
 
-		atf_check -o save:$parsed_file sed -e '/\$FreeBSD.*\$/d' \
+		atf_check -o save:$parsed_file sed -e '/\$NQC.*\$/d' \
 		    ${tc}.stdout
 		out_flag="-o file:$parsed_file"
 	fi
@@ -56,7 +56,7 @@ check()
 		# host, for determinism purposes.
 		profile_flag="-npro"
 	fi
-	sed -e '/\$FreeBSD.*\$/d' ${tc} > input_file.parsed
+	sed -e '/\$NQC.*\$/d' ${tc} > input_file.parsed
 	atf_check -s exit:${tc##*.} ${out_flag} ${indent} ${profile_flag} < input_file.parsed
 }
 

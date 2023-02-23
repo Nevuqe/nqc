@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	VALGRIND_MAKE_MEM_DEFINED(...)	0
 

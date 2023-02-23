@@ -34,7 +34,7 @@ static const char sccsid[] = "@(#)auth.c	8.3 (Berkeley) 5/30/95";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 
 /*

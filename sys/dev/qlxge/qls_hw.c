@@ -33,7 +33,7 @@
  * Content: Contains Hardware dependent functions
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "qls_os.h"
 #include "qls_hw.h"

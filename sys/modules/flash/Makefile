@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Build dev/flash modules.
 
 SUBDIR = 

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 #include <sys/param.h>
 #include <ddb/ddb.h>
 #include <ddb/db_access.h>

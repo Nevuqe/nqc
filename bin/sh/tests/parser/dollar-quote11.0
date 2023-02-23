@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # some sort of 't' outside BMP
 s=$s$(printf '\360\235\225\245')

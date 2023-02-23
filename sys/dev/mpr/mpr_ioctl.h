@@ -29,7 +29,7 @@
  *
  * Broadcom Inc. (LSI) MPT-Fusion Host Adapter FreeBSD userland interface
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*-
  * Copyright (c) 2011-2015 LSI Corp.
@@ -60,7 +60,7 @@
  *
  * Broadcom Inc. (LSI) MPT-Fusion Host Adapter FreeBSD
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MPR_IOCTL_H_

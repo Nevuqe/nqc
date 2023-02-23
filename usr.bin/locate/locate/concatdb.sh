@@ -32,7 +32,7 @@
 #
 # Please note: the sequence of databases is important.
 #
-# $FreeBSD$
+# $NQC$
 
 # stop on first error
 set -e

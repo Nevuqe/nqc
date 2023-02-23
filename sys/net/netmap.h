@@ -27,7 +27,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * Definitions of constants and the structures used by the netmap
  * framework, for the part visible to both kernel and userspace.

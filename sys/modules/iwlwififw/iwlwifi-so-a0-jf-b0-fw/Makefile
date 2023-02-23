@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FWVERSION=	73
 NAME=		so-a0-jf-b0

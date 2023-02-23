@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 ENTRY(generic_bs_r_1)
 	ldrb	w0, [x1, x2]

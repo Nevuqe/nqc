@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	gaithrstress
 LIBADD=	pthread

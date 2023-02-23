@@ -1,5 +1,5 @@
 /* $NetBSD: pickmode.c,v 1.3 2011/04/09 18:22:31 jdc Exp $ */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*-
  * Copyright (c) 2006 The NetBSD Foundation
@@ -30,7 +30,7 @@
  */ 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/libkern.h>

@@ -30,7 +30,7 @@
 # 
 # usage: mklocatedb [-presort] < filelist > database
 #
-# $FreeBSD$
+# $NQC$
 
 # stop on first error
 set -e

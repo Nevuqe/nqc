@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ATF_TEST=true
 class=mirror

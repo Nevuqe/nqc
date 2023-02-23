@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG =	rpc.rwalld
 SRCS =	rwalld.c

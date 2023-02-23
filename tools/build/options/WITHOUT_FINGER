@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build or install
 .Xr finger 1
 and

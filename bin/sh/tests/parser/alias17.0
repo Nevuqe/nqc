@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 v=1
 alias a='unalias -a

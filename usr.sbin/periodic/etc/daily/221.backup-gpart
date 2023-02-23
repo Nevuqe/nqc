@@ -1,6 +1,6 @@
 #!/bin/sh
 
-## $FreeBSD$
+## $NQC$
 ## Created by: Miroslav Lachman <000.fbsd@quip.cz>
 
 ## Backup of disk partitions layout, useful for gpart restore.

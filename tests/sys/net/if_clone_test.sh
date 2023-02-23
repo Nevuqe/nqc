@@ -29,7 +29,7 @@
 #
 #  Authors: Alan Somers         (Spectra Logic Corporation)
 #
-# $FreeBSD$
+# $NQC$
 
 # Outline:
 # For each cloned interface type, do three tests

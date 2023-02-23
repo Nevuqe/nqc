@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TESTSRC=	${SRCTOP}/contrib/netbsd-tests/lib/libpthread/dlopen/dso
 WARNS?=		3

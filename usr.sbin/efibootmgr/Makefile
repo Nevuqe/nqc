@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 EFIBOOT=${SRCTOP}/stand/efi
 EFIINCL=${SRCTOP}/stand/efi/include
 EFIVAR=${SRCTOP}/usr.sbin/efivar

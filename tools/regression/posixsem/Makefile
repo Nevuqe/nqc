@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	posixsem
 SRCS=	posixsem.c test.c

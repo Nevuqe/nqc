@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:	${SRCTOP}/sys/net
 KMOD=	if_bridge

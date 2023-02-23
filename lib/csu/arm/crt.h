@@ -1,2 +1,2 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Empty so we can include this unconditionally */

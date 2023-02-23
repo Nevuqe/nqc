@@ -26,7 +26,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD");
+__FBSDID("$NQC");
 
 /* This is the tree-walking code for POSIX systems. */
 #if !defined(_WIN32) || defined(__CYGWIN__)

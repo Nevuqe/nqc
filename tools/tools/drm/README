@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 gen-drm_pciids	Generate drm_pciids.h based on Linux' drm_pciids.h, FreeBSD's
 		drm_pciids.h and misc/pciids database.

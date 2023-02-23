@@ -47,7 +47,7 @@
 
 #ifndef lint
 static const char rcsid[] =
-	"$FreeBSD$";
+	"$NQC$";
 #endif /* not lint */
 
 static void usage(void);

@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 libnetbsd is a thin compatibility layer intended to allow a limited
 set of NetBSD software to compile as part of the FreeBSD build with

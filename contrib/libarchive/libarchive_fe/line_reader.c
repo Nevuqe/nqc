@@ -26,7 +26,7 @@
  */
 
 #include "lafe_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <errno.h>
 #include <stdio.h>

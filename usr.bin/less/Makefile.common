@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LSDIR=	${SRCTOP}/contrib/less
 .PATH:	${LSDIR}

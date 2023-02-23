@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #define __IEEEFP_NOINLINES__ 1
 #include <ieeefp.h>
 

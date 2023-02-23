@@ -27,7 +27,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 ENTRY(_ctx_start)
 	blr	x19		/* Call func from makecontext */

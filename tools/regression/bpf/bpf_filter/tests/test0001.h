@@ -1,7 +1,7 @@
 /*-
  * Test 0001:	Catch illegal instruction.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

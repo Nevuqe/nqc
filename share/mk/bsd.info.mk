@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # The include file <bsd.info.mk> handles installing GNU (tech)info files.
 # Texinfo is a documentation system that uses a single source

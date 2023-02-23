@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*
  * Copyright (C) 1984-2022  Mark Nudelman
  *

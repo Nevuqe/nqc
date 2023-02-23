@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS=	ex.rm
 

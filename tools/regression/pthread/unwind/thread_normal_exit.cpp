@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* test stack unwinding for a new thread */
 
 #include <pthread.h>

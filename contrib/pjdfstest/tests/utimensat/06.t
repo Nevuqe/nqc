@@ -1,6 +1,6 @@
 #! /bin/sh
 # vim: filetype=sh noexpandtab ts=8 sw=8
-# $FreeBSD$
+# $NQC$
 
 desc="utimensat with UTIME_NOW will work if the caller has write permission"
 

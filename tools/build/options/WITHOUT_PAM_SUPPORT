@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build some programs without PAM support, particularly
 .Xr ftpd 8
 and

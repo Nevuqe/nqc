@@ -1,7 +1,7 @@
 #
 # R64 -- Generic kernel configuration file with modifications for rescue.
 #
-# $FreeBSD$
+# $NQC$
 
 include GENERIC
 

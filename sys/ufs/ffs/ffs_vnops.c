@@ -59,12 +59,12 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)ufs_readwrite.c	8.11 (Berkeley) 5/8/95
- * from: $FreeBSD: .../ufs/ufs_readwrite.c,v 1.96 2002/08/12 09:22:11 phk ...
+ * from: $NQC: .../ufs/ufs_readwrite.c,v 1.96 2002/08/12 09:22:11 phk ...
  *	@(#)ffs_vnops.c	8.15 (Berkeley) 5/14/95
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "opt_directio.h"
 #include "opt_ffs.h"

@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 .Sh ADDITIONAL DOCUMENTATION
 .Fx
 uses

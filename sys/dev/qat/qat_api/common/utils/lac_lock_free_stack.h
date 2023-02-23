@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef LAC_LOCK_FREE_STACK_H_1
 #define LAC_LOCK_FREE_STACK_H_1
 #include "lac_mem_pools.h"

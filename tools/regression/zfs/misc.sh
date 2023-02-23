@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ntest=1
 os=`uname -s`

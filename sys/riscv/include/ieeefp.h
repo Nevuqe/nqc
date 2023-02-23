@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _MACHINE_IEEEFP_H_
 #define	_MACHINE_IEEEFP_H_

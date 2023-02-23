@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for de_DE.ISO8859-1 locale
 $
@@ -16,13 +16,13 @@ $ EINTR
 $ EIO
 5 Ein-/Ausgabefehler
 $ ENXIO
-6 Gerät ist nicht konfiguriert
+6 Gerï¿½t ist nicht konfiguriert
 $ E2BIG
 7 Argumentliste ist zu lang
 $ ENOEXEC
-8 Die Datei hat kein bekanntes ausführbares Format
+8 Die Datei hat kein bekanntes ausfï¿½hrbares Format
 $ EBADF
-9 Ungültiger Dateideskriptor
+9 Ungï¿½ltiger Dateideskriptor
 $ ECHILD
 10 Keine Kindprozesse
 $ EDEADLK
@@ -32,79 +32,79 @@ $ ENOMEM
 $ EACCES
 13 Zugriff verweigert
 $ EFAULT
-14 Ungültige Adresse
+14 Ungï¿½ltige Adresse
 $ ENOTBLK
-15 Es wird ein Blockgerät benötigt
+15 Es wird ein Blockgerï¿½t benï¿½tigt
 $ EBUSY
-16 Das Gerät ist belegt
+16 Das Gerï¿½t ist belegt
 $ EEXIST
 17 Datei existiert bereits
 $ EXDEV
-18 Link zwischen verschiedenen Geräten
+18 Link zwischen verschiedenen Gerï¿½ten
 $ ENODEV
-19 Die Operation wird von diesem Gerät nicht unterstützt
+19 Die Operation wird von diesem Gerï¿½t nicht unterstï¿½tzt
 $ ENOTDIR
 20 Kein Verzeichnis
 $ EISDIR
 21 Ist ein Verzeichnis
 $ EINVAL
-22 Ungültiges Argument
+22 Ungï¿½ltiges Argument
 $ ENFILE
 23 Zu viele offene Dateien im System
 $ EMFILE
 24 Zu viele offene Dateien
 $ ENOTTY
-25 Ungültiger IOCTL für dieses Gerät
+25 Ungï¿½ltiger IOCTL fï¿½r dieses Gerï¿½t
 $ ETXTBSY
 26 Datei wird benutzt
 $ EFBIG
-27 Datei zu groß
+27 Datei zu groï¿½
 $ ENOSPC
-28 Kein Platz mehr auf dem Gerät
+28 Kein Platz mehr auf dem Gerï¿½t
 $ ESPIPE
-29 Ungültige Positionierung
+29 Ungï¿½ltige Positionierung
 $ EROFS
-30 Dateisystem ist schreibgeschützt
+30 Dateisystem ist schreibgeschï¿½tzt
 $ EMLINK
 31 Zu viele Links
 $ EPIPE
 32 Unterbrochene Pipe
 $ EDOM
-33 Numerisches Argument außerhalb des Wertebereichs
+33 Numerisches Argument auï¿½erhalb des Wertebereichs
 $ ERANGE
-34 Ergebnis außerhalb des Wertebereichs
+34 Ergebnis auï¿½erhalb des Wertebereichs
 $ EAGAIN, EWOULDBLOCK
-35 Ressource vorübergehend nicht verfügbar
+35 Ressource vorï¿½bergehend nicht verfï¿½gbar
 $ EINPROGRESS
-36 Operation wird gerade ausgeführt
+36 Operation wird gerade ausgefï¿½hrt
 $ EALREADY
-37 Operation wird bereits ausgeführt
+37 Operation wird bereits ausgefï¿½hrt
 $ ENOTSOCK
 38 Deskriptor ist kein Socket
 $ EDESTADDRREQ
-39 Zieladresse benötigt
+39 Zieladresse benï¿½tigt
 $ EMSGSIZE
 40 Nachricht zu lang
 $ EPROTOTYPE
-41 Ungültiger Protokolltyp für diesen Socket
+41 Ungï¿½ltiger Protokolltyp fï¿½r diesen Socket
 $ ENOPROTOOPT
-42 Protokoll nicht verfügbar
+42 Protokoll nicht verfï¿½gbar
 $ EPROTONOSUPPORT
-43 Protokoll nicht unterstützt
+43 Protokoll nicht unterstï¿½tzt
 $ ESOCKTNOSUPPORT
-44 Sockettyp nicht unterstützt
+44 Sockettyp nicht unterstï¿½tzt
 $ EOPNOTSUPP
-45 Operation nicht unterstützt
+45 Operation nicht unterstï¿½tzt
 $ EPFNOSUPPORT
-46 Protokollfamilie nicht unterstützt
+46 Protokollfamilie nicht unterstï¿½tzt
 $ EAFNOSUPPORT
-47 Adressfamilie wird von der Protokollfamilie nicht unterstützt
+47 Adressfamilie wird von der Protokollfamilie nicht unterstï¿½tzt
 $ EADDRINUSE
 48 Adresse wird bereits benutzt
 $ EADDRNOTAVAIL
 49 Kann angeforderte Adresse nicht belegen
 $ ENETDOWN
-50 Netzwerk nicht verfügbar
+50 Netzwerk nicht verfï¿½gbar
 $ ENETUNREACH
 51 Netzwerk nicht erreichbar
 $ ENETRESET
@@ -114,7 +114,7 @@ $ ECONNABORTED
 $ ECONNRESET
 54 Verbindung wurde von der Gegenstelle geschlossen
 $ ENOBUFS
-55 Keine Buffer verfügbar
+55 Keine Buffer verfï¿½gbar
 $ EISCONN
 56 Socket ist schon verbunden
 $ ENOTCONN
@@ -124,15 +124,15 @@ $ ESHUTDOWN
 $ ETOOMANYREFS
 59 Zu viele Referenzen, kann nicht verbinden
 $ ETIMEDOUT
-60 Verbindungsabbruch durch Zeitüberschreitung
+60 Verbindungsabbruch durch Zeitï¿½berschreitung
 $ ECONNREFUSED
 61 Verbindung wurde abgelehnt
 $ ELOOP
-62 Zu viele symbolische Links (zirkulär?)
+62 Zu viele symbolische Links (zirkulï¿½r?)
 $ ENAMETOOLONG
 63 Dateiname zu lang
 $ EHOSTDOWN
-64 Host nicht verfügbar
+64 Host nicht verfï¿½gbar
 $ EHOSTUNREACH
 65 Keine Route zum Host
 $ ENOTEMPTY
@@ -142,41 +142,41 @@ $ EPROCLIM
 $ EUSERS
 68 Zu viele Benutzer
 $ EDQUOT
-69 Platzlimit überschritten
+69 Platzlimit ï¿½berschritten
 $ ESTALE
 70 Verwaister NFS-Dateideskriptor
 $ EREMOTE
 71 Zu viele Fernverweise in diesem Zugriff
 $ EBADRPC
-72 RPC-Struktur ist ungültig
+72 RPC-Struktur ist ungï¿½ltig
 $ ERPCMISMATCH
 73 RPC-Version ist falsch
 $ EPROGUNAVAIL
-74 RPC-Programm nicht verfügbar
+74 RPC-Programm nicht verfï¿½gbar
 $ EPROGMISMATCH
 75 Falsche Programmversion
 $ EPROCUNAVAIL
-76 Falsche Prozedur für dieses Programm
+76 Falsche Prozedur fï¿½r dieses Programm
 $ ENOLCK
-77 Keine Dateisperren verfügbar
+77 Keine Dateisperren verfï¿½gbar
 $ ENOSYS
 78 Funktion nicht implementiert
 $ EFTYPE
-79 Ungültiger Dateityp oder Dateiformat
+79 Ungï¿½ltiger Dateityp oder Dateiformat
 $ EAUTH
 80 Authentifizierungsfehler
 $ ENEEDAUTH
-81 Authentikator benötigt
+81 Authentikator benï¿½tigt
 $ EIDRM
 82 Identifizierung entfernt
 $ ENOMSG
-83 Keine Nachricht vom gewünschten Typ
+83 Keine Nachricht vom gewï¿½nschten Typ
 $ EOVERFLOW
-84 Wert zu groß, um in Datentyp zu speichern
+84 Wert zu groï¿½, um in Datentyp zu speichern
 $ ECANCELED
 85 Operation abgebrochen
 $ EILSEQ
-86 Ungültige Byte-Sequenz
+86 Ungï¿½ltige Byte-Sequenz
 $ ENOATTR
 87 Attribut nicht gefunden
 $ EDOOFUS
@@ -192,7 +192,7 @@ $ SIGINT
 $ SIGQUIT
 3 Programmende
 $ SIGILL
-4 Ungültiger Maschinenbefehl
+4 Ungï¿½ltiger Maschinenbefehl
 $ SIGTRAP
 5 Trace/BPT trap
 $ SIGABRT
@@ -200,7 +200,7 @@ $ SIGABRT
 $ SIGEMT
 7 EMT trap
 $ SIGFPE
-8 Fließkommafehler
+8 Flieï¿½kommafehler
 $ SIGKILL
 9 Unbedingter Programmabbruch
 $ SIGBUS
@@ -208,7 +208,7 @@ $ SIGBUS
 $ SIGSEGV
 11 Illegaler Speicherzugriff
 $ SIGSYS
-12 Ungültiger Systemaufruf
+12 Ungï¿½ltiger Systemaufruf
 $ SIGPIPE
 13 Unterbrochene Pipe
 $ SIGALRM
@@ -230,17 +230,17 @@ $ SIGTTIN
 $ SIGTTOU
 22 Gestoppt (Ausgabe)
 $ SIGIO
-23 Ein/Ausgabe möglich
+23 Ein/Ausgabe mï¿½glich
 $ SIGXCPU
-24 CPU-Zeitlimit überschritten
+24 CPU-Zeitlimit ï¿½berschritten
 $ SIGXFSZ
-25 Dateigrößenlimit überschritten
+25 Dateigrï¿½ï¿½enlimit ï¿½berschritten
 $ SIGVTALRM
 26 Virtueller Wecker abgelaufen
 $ SIGPROF
 27 Profil-Wecker abgelaufen
 $ SIGWINCH
-28 Fenstergröße hat sich verändert
+28 Fenstergrï¿½ï¿½e hat sich verï¿½ndert
 $ SIGINFO
 29 Informationsanforderung
 $ SIGUSR1

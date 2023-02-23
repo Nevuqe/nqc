@@ -37,7 +37,7 @@
  *
  * Author: Archie Cobbs <archie@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_NG_BRIDGE_H_

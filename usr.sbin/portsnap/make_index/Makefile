@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	make_index
 MAN=

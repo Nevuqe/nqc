@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Machine dependent definitions for the RISC-V architecture.
 #

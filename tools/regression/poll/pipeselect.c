@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <sys/socket.h>
 #include <sys/select.h>

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 USEOPTIONSMK=	yes
 INOPTIONSMK=	yes

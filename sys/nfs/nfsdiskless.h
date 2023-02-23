@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)nfsdiskless.h	8.2 (Berkeley) 3/30/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NFSCLIENT_NFSDISKLESS_H_

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mwldebug
 BINDIR=	/usr/local/bin

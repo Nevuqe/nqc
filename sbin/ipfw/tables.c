@@ -13,7 +13,7 @@
  *
  * in-kernel ipfw tables support.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 

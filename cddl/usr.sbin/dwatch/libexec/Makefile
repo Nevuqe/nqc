@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	dwatch
 FILESDIR=	${LIBEXECDIR}/dwatch

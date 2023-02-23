@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NQC$
 
 rm -rf siks
 mkdir -p siks

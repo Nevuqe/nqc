@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: citrus_memstream.h,v 1.3 2005/05/14 17:55:42 tshiozak Exp $ */
 
 /*-

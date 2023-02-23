@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  * 
  * $Id: dcons.c,v 1.65 2003/10/24 03:24:55 simokawa Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

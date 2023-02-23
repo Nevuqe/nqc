@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 export key='must contain this'
 unset x

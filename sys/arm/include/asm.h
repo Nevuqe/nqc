@@ -35,7 +35,7 @@
  *
  *	from: @(#)asm.h	5.5 (Berkeley) 5/7/91
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_ASM_H_

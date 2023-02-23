@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fcntl.h	8.3 (Berkeley) 1/21/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_FCNTL_H_

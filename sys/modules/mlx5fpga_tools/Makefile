@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 .PATH:	${SRCTOP}/sys/dev/mlx5/mlx5_fpga_tools
 
 KMOD=mlx5fpga_tools

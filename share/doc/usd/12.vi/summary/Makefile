@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DOC=		summary
 SRCS=		vi.summary

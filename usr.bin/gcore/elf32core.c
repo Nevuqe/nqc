@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef __LP64__
 #error "this file must be compiled for LP64."
 #endif

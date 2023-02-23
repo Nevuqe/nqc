@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 .PATH:	${SRCTOP}/sys/compat/linuxkpi/common/src
 
 KMOD=	linuxkpi

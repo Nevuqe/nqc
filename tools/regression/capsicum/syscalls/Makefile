@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SYSCALLS=	cap_fcntls_limit cap_getmode cap_ioctls_limit
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 x=a\ b
 [ "$x" = "${x?}" ] || exit 1

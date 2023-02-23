@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  * $OpenBSD: mkpath.c,v 1.2 2005/06/20 07:14:06 otto Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

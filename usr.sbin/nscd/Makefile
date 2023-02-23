@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CONFS=	nscd.conf
 PROG=	nscd

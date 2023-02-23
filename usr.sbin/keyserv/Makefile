@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	keyserv
 MAN=	keyserv.8

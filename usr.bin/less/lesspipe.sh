@@ -1,7 +1,7 @@
 #! /bin/sh
 # ex:ts=8
 
-# $FreeBSD$
+# $NQC$
 
 case "$1" in
 	*.zip)

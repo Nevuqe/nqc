@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <opencrypto/cbc_mac.h>
 #include <opencrypto/gmac.h>

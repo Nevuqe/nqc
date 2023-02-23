@@ -2,7 +2,7 @@
 #
 # Setup a TDMA master and bridge it to a wired NIC.
 #
-# $FreeBSD$
+# $NQC$
 #
 PATH=.:$PATH
 . config

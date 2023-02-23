@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 {
 	trap 'exit 0' INT

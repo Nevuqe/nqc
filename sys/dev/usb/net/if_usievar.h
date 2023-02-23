@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*-
  * Copyright (c) 2011 Anybots Inc

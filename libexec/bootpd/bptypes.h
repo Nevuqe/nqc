@@ -1,4 +1,4 @@
-/* $FreeBSD$
+/* $NQC$
  */
 
 #ifndef	BPTYPES_H

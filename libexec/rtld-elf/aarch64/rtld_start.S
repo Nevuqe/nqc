@@ -28,7 +28,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 ENTRY(.rtld_start)
 	mov	x19, x0		/* Put ps_strings in a callee-saved register */

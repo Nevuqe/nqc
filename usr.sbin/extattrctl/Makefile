@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	extattrctl
 MAN=	extattrctl.8

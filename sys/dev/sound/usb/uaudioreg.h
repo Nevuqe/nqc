@@ -1,5 +1,5 @@
 /*	$NetBSD: uaudioreg.h,v 1.12 2004/11/05 19:08:29 kent Exp $	*/
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD

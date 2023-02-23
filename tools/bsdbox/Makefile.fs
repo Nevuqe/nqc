@@ -1,7 +1,7 @@
 #
 # Filesystem related tools
 #
-# $FreeBSD$
+# $NQC$
 
 # mfs
 CRUNCH_PROGS_sbin+=	mdmfs mdconfig newfs

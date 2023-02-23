@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Makefile for the IEEE1394 OHCI chipset
 

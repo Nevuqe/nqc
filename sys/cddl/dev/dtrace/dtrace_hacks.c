@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* XXX Hacks.... */
 
 dtrace_cacheid_t dtrace_predcache_id;

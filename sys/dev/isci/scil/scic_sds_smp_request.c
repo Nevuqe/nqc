@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <dev/isci/scil/scic_sds_smp_request.h>
 #include <dev/isci/scil/scic_sds_logger.h>

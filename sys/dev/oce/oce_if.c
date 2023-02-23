@@ -38,7 +38,7 @@
  * Costa Mesa, CA 92626
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include "opt_inet6.h"
 #include "opt_inet.h"

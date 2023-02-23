@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD$
+ * $NQC$
  *
  * ELF compatibility definitions for OpenSolaris source.
  *

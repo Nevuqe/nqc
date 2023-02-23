@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	zonectl
 SRCS=	zonectl.c

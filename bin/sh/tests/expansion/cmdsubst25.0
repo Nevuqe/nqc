@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 IFS=' '
 set -- `printf '\n '`

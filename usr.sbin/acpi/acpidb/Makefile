@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	acpidb
 SRCS=	acpidb.c

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	chkgrp
 MAN=	chkgrp.8

@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 #	Name:             eucCN-80 to Unicode table (complete, hex format)
 #	Based on the GB2312.TXT

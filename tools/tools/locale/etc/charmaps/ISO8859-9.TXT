@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 #	Name:             ISO/IEC 8859-9:1999 to Unicode
 #	Unicode version:  3.0

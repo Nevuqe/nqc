@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*	$NetBSD: citrus_iconv_none.h,v 1.1 2003/06/25 09:51:43 tshiozak Exp $	*/
 
 /*-

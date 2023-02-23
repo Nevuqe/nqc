@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 if [ "$1" != nested ]; then
 	f() {

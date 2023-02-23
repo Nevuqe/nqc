@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS+=	exec.c \
 	efiserialio.c \

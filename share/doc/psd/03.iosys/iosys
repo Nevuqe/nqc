@@ -36,7 +36,7 @@
 .\" 
 .\"	@(#)iosys	8.1 (Berkeley) 6/8/93
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .EH 'PSD:3-%''The UNIX I/O System'
 .OH 'The UNIX I/O System''PSD:3-%'
 .TL

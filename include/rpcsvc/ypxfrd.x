@@ -66,7 +66,7 @@
 
 #ifndef RPC_HDR
 %#include <sys/cdefs.h>
-%__FBSDID("$FreeBSD$");
+%__FBSDID("$NQC$");
 #endif
 
 /* XXX cribbed from yp.x */

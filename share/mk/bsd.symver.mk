@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .if !target(__<bsd.symver.mk>__)
 __<bsd.symver.mk>__:

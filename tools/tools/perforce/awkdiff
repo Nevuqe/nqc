@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-#	$FreeBSD$
+#	$NQC$
 #
 
 BEGIN {

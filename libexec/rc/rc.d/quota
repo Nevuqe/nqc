@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 
 # Enable/Check the quotas (must be after ypbind if using NIS)

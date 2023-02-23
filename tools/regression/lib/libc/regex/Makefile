@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 GROT=	../../../../../lib/libc/regex/grot
 

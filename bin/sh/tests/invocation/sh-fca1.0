@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Test that attached options before and after c are processed
 
 case `${SH} -fca 'echo $-:$-:$0:$@' foo -bar` in

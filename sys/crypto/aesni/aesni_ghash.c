@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *
- *	$FreeBSD$
+ *	$NQC$
  *
  */
 

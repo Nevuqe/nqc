@@ -1,5 +1,5 @@
 /* $NetBSD: edid.c,v 1.12 2013/02/08 16:35:10 skrll Exp $ */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*-
  * Copyright (c) 2006 Itronix Inc.
@@ -33,7 +33,7 @@
  */ 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

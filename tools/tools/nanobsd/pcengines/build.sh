@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 
 if [ -z "${1}" -o \! -f "${1}" ]; then

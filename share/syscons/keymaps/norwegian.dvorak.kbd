@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock
 # code  base   shift  cntrl  shift  alt    shift  cntrl  shift state
@@ -30,7 +30,7 @@
   024   'r'    'R'    dc2    dc2    'r'    'R'    dc2    dc2     C
   025   'l'    'L'    ff     ff     'l'    'L'    ff     ff      C
   026   '''    '*'    nop    nop    '''    215    nop    nop     O
-  027   168    '^'    rs     rs     '¬'    '^'    rs     rs      O
+  027   168    '^'    rs     rs     'ï¿½'    '^'    rs     rs      O
   028   cr     cr     nl     nl     cr     cr     nl     nl      O
   029   lctrl  lctrl  lctrl  lctrl  lctrl  lctrl  lctrl  lctrl   O
   030   'a'    'A'    soh    soh    'a'    'A'    soh    soh     C

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 arm/arm/sp804.c					standard
 dev/uart/uart_dev_ns8250.c			optional	uart

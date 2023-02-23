@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
  /*
   * Routines to parse an inetd.conf or tlid.conf file. This would be a great
   * job for a PERL script.

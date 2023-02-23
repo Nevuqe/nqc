@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Support Clang static analyzer on SRCS.
 #

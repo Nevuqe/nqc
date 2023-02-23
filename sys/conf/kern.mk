@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 #
 # Warning flags for compiling the kernel and components of the kernel:

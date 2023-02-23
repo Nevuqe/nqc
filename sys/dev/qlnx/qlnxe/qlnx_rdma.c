@@ -30,7 +30,7 @@
  * Author: David C Somayajulu
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "qlnx_os.h"
 #include "bcm_osal.h"

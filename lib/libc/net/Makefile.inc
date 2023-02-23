@@ -1,5 +1,5 @@
 #	from @(#)Makefile.inc	8.2 (Berkeley) 9/5/93
-# $FreeBSD$
+# $NQC$
 
 # machine-independent net sources
 .PATH: ${LIBC_SRCTOP}/net

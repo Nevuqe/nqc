@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Copyright 2007 John Birrell <jb@FreeBSD.org>. All rights reserved.

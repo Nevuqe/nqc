@@ -33,7 +33,7 @@ extern "C" {
  * if SELF_TEST is defined.  You can use this free for any purpose.  It's in
  * the public domain.  It has no warranty.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #define rot(x, k) (((x) << (k)) | ((x) >> (32-(k))))

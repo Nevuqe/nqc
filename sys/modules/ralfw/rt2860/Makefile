@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 IMG=	rt2860
 

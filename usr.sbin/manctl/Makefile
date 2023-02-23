@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SCRIPTS=manctl.sh
 MAN=	manctl.8

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CFLAGS+=	-I${WORLDTMP}/legacy/usr/include
 DPADD+=		${WORLDTMP}/legacy/usr/lib/libegacy.a

@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD$
+# $NQC$
 
 # Various regression tests to test the -F flag to the 'update' command.
 
@@ -73,7 +73,7 @@ store_id()
 	file=$1
 	shift
 
-	echo -n '# $FreeBSD' >> $file
+	echo -n '# $NQC' >> $file
 	echo -n "$@" >> $file
 	echo '$' >> $file
 }

@@ -29,7 +29,7 @@
  * THE POSSIBILITY OF SUCH DAMAGES.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*
  * This file provides set of macros for logging:

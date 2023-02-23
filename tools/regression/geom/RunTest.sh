@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 MD=34
 TMP=/tmp/$$
@@ -27,7 +27,7 @@ do
 	MdLoad/MdLoad md${MD} $f
 	if [ -f Ref/$b ] ; then
 		if diskinfo /dev/md${MD}* | 
-		   diff -I '$FreeBSD' -u Ref/$b - > $TMP; then
+		   diff -I '$NQC' -u Ref/$b - > $TMP; then
 			echo "PASSED: $b"
 		else
 			echo "FAILED: $b" 

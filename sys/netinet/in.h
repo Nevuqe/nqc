@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)in.h	8.3 (Berkeley) 1/3/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETINET_IN_H_

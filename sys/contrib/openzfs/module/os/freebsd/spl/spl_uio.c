@@ -37,7 +37,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

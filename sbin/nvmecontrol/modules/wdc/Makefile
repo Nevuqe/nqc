@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	wdc
 SRCS=	wdc.c

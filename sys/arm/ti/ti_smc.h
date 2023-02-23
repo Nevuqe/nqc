@@ -25,7 +25,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef TI_SMC_H_

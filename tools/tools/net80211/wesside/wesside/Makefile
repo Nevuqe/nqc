@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	wesside
 BINDIR=	/usr/local/bin

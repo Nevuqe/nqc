@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # It may be argued that
 #   x=$(cat <<EOF

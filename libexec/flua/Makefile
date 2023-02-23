@@ -1,4 +1,4 @@
-#! $FreeBSD$
+#! $NQC$
 
 .include <src.lua.mk>
 

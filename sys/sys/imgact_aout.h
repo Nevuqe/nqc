@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)exec.h	8.1 (Berkeley) 6/11/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_IMGACT_AOUT_H_

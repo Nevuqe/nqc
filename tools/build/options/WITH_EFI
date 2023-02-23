@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build
 .Xr efivar 3
 and

@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.1 2005/06/23 00:30:50 max Exp $
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/dev/kbdmux
 

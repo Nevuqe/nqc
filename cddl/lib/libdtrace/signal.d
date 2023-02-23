@@ -22,7 +22,7 @@
  * Portions Copyright 2008 John Birrell jb@freebsd.org
  * Portions Copyright 2018 Devin Teske dteske@freebsd.org
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 inline int SIGHUP = 1;

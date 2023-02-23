@@ -1,5 +1,5 @@
 # Make `routed` for FreeBSD
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=runtime
 PROG=	routed

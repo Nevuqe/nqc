@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # If fully successful, cd -Pe must be like cd -P.
 

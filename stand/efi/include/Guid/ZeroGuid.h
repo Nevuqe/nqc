@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /** @file
   GUID has all zero values.
 

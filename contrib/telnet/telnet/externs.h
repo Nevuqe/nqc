@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)externs.h	8.3 (Berkeley) 5/30/95
- *	$FreeBSD$
+ *	$NQC$
  */
 
 #ifndef	BSD

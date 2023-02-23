@@ -1,5 +1,5 @@
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .NH
 Future Directions

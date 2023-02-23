@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 cd `dirname $0`
 cmd="./`basename $0 .t`"

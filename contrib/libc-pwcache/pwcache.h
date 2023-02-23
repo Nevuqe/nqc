@@ -1,5 +1,5 @@
 /*	$NetBSD: pwcache.h,v 1.5 2003/11/10 08:51:51 wiz Exp $	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.

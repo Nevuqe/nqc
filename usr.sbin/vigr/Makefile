@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SCRIPTS=	vigr
 MAN=	vigr.8

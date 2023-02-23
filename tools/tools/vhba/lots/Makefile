@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 KMOD=	vlots
 SRCS=	vhba_lots.c vhba.c
 CFLAGS += -I${.CURDIR}/.. -DVHBA_MOD=\"vlots\"

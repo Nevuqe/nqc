@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)uio.h	8.5 (Berkeley) 2/22/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS__IOVEC_H_

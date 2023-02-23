@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 libkey() {
 	libkey="lib_symbols_$1"

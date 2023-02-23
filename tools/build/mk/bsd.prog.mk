@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "Makefile.boot.pre"
 .include "../../../share/mk/bsd.prog.mk"

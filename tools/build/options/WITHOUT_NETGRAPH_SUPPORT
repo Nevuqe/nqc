@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build libraries, programs, and kernel modules without netgraph support.

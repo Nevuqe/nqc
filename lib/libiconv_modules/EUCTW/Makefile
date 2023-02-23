@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	EUCTW
 SRCS+=	citrus_euctw.c

@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)param.h	5.8 (Berkeley) 6/28/91
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _I386_INCLUDE_PARAM_H_

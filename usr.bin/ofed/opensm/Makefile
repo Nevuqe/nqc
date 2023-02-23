@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 _spath=	${SRCTOP}/contrib/ofed/opensm/opensm
 .PATH: ${_spath} ${_spath:H}/man

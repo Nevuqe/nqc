@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 bad=0
 for i in 0 1 2 3; do

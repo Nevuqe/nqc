@@ -24,7 +24,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  **************************************************************************/
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef TTM_MEMORY_H
 #define TTM_MEMORY_H

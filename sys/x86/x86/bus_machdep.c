@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef SAN_NEEDS_INTERCEPTORS
 #define	SAN_RUNTIME

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Generic build infrastructure for test programs.
 #

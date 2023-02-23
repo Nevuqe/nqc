@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ATF_TEST=true
 . $(atf_get_srcdir)/conf.sh

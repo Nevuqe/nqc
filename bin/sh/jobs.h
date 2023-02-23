@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)jobs.h	8.2 (Berkeley) 5/4/95
- * $FreeBSD$
+ * $NQC$
  */
 
 /* Mode argument to forkshell.  Don't change FORK_FG or FORK_BG. */

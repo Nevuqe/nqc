@@ -36,7 +36,7 @@
 .\" 
 .\"	@(#)m4.ms	6.3 (Berkeley) 6/5/93
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .de MH
 Bell Laboratories, Murray Hill, NJ 07974.
 ..

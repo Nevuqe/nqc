@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCDIR=		${SRCTOP}/contrib/llvm-project/clang
 

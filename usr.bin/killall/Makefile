@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	killall
 LIBADD=	jail

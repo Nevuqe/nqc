@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 v=$(
 	${SH} -c 'trap "echo ok; exit" USR1; kill -USR1 $$' &

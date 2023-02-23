@@ -37,7 +37,7 @@ We only pay attention to a subset of the information in the
 
 """
 RCSid:
-	$FreeBSD$
+	$NQC$
 	$Id: meta2deps.py,v 1.40 2021/12/13 19:32:46 sjg Exp $
 
 	Copyright (c) 2011-2020, Simon J. Gerraty

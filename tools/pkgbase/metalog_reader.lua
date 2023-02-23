@@ -25,7 +25,7 @@
 -- OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 -- SUCH DAMAGE.
 
--- $FreeBSD$
+-- $NQC$
 
 function main(args)
 	if #args == 0 then usage() end

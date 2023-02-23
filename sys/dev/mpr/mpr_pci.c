@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 /* PCI/PCI-X/PCIe bus interface for the Avago Tech (LSI) MPT3 controllers */
 

@@ -38,7 +38,7 @@
  * (but it has changed a lot)                                               *
  ****************************************************************************/
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define __INTERNAL_CAPS_VISIBLE
 #include <curses.priv.h>

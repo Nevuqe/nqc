@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 name="$(mktemp -u concat.XXXXXX)"
 class="concat"

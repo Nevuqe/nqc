@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SYSDIR?=${SRCTOP}/sys
 .PATH: ${SYSDIR}/net ${SYSDIR}/netinet ${SYSDIR}/netinet6

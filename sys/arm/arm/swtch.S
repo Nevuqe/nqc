@@ -85,7 +85,7 @@
 #include <machine/armreg.h>
 #include <machine/vfp.h>
 
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef VFP
 	.fpu vfp	/* allow VFP instructions */

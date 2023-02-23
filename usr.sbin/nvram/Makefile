@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	nvram
 MAN=	nvram.8

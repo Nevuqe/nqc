@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	intel-ucode-split
 MAN=

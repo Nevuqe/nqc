@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 PROG=	mfiutil
 
 SRCS=	mfiutil.c mfi_bbu.c mfi_cmd.c mfi_config.c mfi_drive.c mfi_evt.c \

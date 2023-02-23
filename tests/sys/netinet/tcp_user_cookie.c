@@ -29,7 +29,7 @@
  *
  *  Authors: George Neville-Neil
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <arpa/inet.h>

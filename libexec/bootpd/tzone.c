@@ -3,7 +3,7 @@
  *
  * This is shared by bootpd and bootpef
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifdef	SVR4

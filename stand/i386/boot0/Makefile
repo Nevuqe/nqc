@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG?=	boot0
 STRIP=

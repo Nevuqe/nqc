@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fs.h	8.7 (Berkeley) 4/19/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _FS_EXT2FS_FS_H_

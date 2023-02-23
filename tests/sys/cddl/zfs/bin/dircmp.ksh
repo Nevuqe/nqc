@@ -1,5 +1,5 @@
 #!/usr/local/bin/ksh93
 
-# $FreeBSD$
+# $NQC$
 
 diff -qr $*

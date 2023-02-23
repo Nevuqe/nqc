@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:		${.CURDIR}/../../../dev/jedec_dimm
 KMOD		= jedec_dimm

@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 PROG=	ethermulti
 SRCS+=	ethermulti.c

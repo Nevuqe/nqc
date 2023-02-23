@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w 
 
-#$FreeBSD$
+#$NQC$
 
 if ($#ARGV != 1) {
   print "bin2h.pl <firmware> <headername>\n";
@@ -50,7 +50,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 
-\$FreeBSD\$
+\$NQC\$
 
 ***************************************************************************/
 END

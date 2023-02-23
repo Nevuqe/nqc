@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)parser.h	8.3 (Berkeley) 5/4/95
- * $FreeBSD$
+ * $NQC$
  */
 
 /* control characters in argument strings */

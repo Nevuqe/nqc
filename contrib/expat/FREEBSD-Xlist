@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 *.MPW
 *.cmake
 *.def

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 all: main_thread_exit thread_normal_exit sem_wait_cancel \
      cond_wait_cancel cond_wait_cancel2 catch_pthread_exit
 

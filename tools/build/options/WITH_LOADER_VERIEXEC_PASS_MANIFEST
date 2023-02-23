@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Enable building
 .Xr loader 8
 with support to pass a verified manifest to the kernel.

@@ -7,7 +7,7 @@
 #
 # Mark Santcroos <marks@ripe.net>
 #
-# $FreeBSD$
+# $NQC$
 
 PATH=/sbin:/usr/sbin:/usr/bin:/bin
 

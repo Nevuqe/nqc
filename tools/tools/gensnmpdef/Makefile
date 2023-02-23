@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # NB: Install ports/net-mgmt/libsmi
 

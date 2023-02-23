@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build any mail support (MUA or MTA).

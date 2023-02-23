@@ -32,7 +32,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

@@ -29,7 +29,7 @@
  * File: ql_boot.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "ql_os.h"
 

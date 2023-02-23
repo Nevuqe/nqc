@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/contrib/libedit/readline
 INCS=	readline.h history.h tilde.h

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)profile.h	8.1 (Berkeley) 6/11/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifdef __i386__

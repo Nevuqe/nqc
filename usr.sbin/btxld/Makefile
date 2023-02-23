@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	btxld
 MAN=	btxld.8

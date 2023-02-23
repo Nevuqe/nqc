@@ -1,6 +1,6 @@
 #!/bin/csh
 #
-# $FreeBSD$
+# $NQC$
 #
 # Run tcpp -s -p 8 on the server, then this on the client.
 #

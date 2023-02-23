@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=   stdbuf
 SRCS=   stdbuf.c

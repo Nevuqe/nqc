@@ -1,6 +1,6 @@
 #! /usr/bin/awk -f
 #	$NetBSD: devlist2h.awk,v 1.9 2005/12/11 12:21:20 christos Exp $
-#	$FreeBSD$
+#	$NQC$
 #
 # Copyright (c) 1995, 1996 Christopher G. Demetriou
 # All rights reserved.
@@ -40,7 +40,7 @@ NR == 1 {
 	gsub("\\$", "", VERSION)
 	gsub(/ $/, "", VERSION)
 
-	printf("/*\t$FreeBSD" "$\t*/\n\n") > dfile
+	printf("/*\t$NQC" "$\t*/\n\n") > dfile
 	printf("/*\n") > dfile
 	printf(" * THIS FILE AUTOMATICALLY GENERATED.  DO NOT EDIT.\n") \
 	    > dfile

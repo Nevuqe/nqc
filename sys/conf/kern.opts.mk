@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Options set in the build system which affect the building of kernel
 # modules. These select which parts to compile in or out (eg INET) or which

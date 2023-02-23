@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: sdp.h,v 1.3 2003/09/05 00:33:59 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SDP_H_

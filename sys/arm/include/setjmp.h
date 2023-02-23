@@ -1,5 +1,5 @@
 /*	$NetBSD: setjmp.h,v 1.5 2013/01/11 13:56:32 matt Exp $	*/
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*
  * machine/setjmp.h: machine dependent setjmp-related information.

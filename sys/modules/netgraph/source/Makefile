@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=		ng_source
 SRCS= 		ng_source.c

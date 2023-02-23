@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 SHELL=/bin/sh
 PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin

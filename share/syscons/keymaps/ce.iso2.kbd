@@ -3,7 +3,7 @@
 #
 # Version 1.0 - 1999-03-18
 #
-# $FreeBSD$
+# $NQC$
 #
 # This map uses the US QWERTY keyboard for its basic layout.
 # It adds a "third row" to the top of the PC keyboard. To
@@ -28,31 +28,31 @@
 #
 # If you have an ISO-8859-2 font loaded, you can see the layout here:
 #
-# alt-` ² (ogonek) and alt-~ ¸ (cedilla)
-#   Examples: ê±þçº
-# alt-! ß (German double s)
-# alt-@ ° (degree)
-# alt-# ¤ (currency)
-# alt-$ § (section, called paragraf in most CE languages)
-# alt-% ¨ (umlaut, dve bodky)
-#   Examples: äüöë
-# alt-^ ^ (circumflex, vokáò)
-#   Examples: ôâî
-# alt-& ­ (hyphen, pomlèka, rozdeµovacie znamienko)
-# alt-* ° (ring)
-#   Examples: ùÙ
-# alt-( ½ (Hungarian long umlaut)
-#   Examples: õû
-# alt-) ÿ (dot accent)
-#   Examples: ¿¯
-# alt-- ´ (acute, då¾eò, èárka)
-#   Examples: á¶éíúñ¼àå
-# alt-= · (caron, mäkèeò, háèek) and alt-+ ¢ (breve)
-#   Examples: ãèøµï»ò¾
+# alt-` ï¿½ (ogonek) and alt-~ ï¿½ (cedilla)
+#   Examples: ï¿½ï¿½ï¿½
+# alt-! ï¿½ (German double s)
+# alt-@ ï¿½ (degree)
+# alt-# ï¿½ (currency)
+# alt-$ ï¿½ (section, called paragraf in most CE languages)
+# alt-% ï¿½ (umlaut, dve bodky)
+#   Examples: ï¿½ï¿½ï¿½ï¿½
+# alt-^ ^ (circumflex, vokï¿½ï¿½)
+#   Examples: ï¿½ï¿½ï¿½
+# alt-& ï¿½ (hyphen, pomlï¿½ka, rozdeï¿½ovacie znamienko)
+# alt-* ï¿½ (ring)
+#   Examples: ï¿½ï¿½
+# alt-( ï¿½ (Hungarian long umlaut)
+#   Examples: ï¿½ï¿½
+# alt-) ï¿½ (dot accent)
+#   Examples: ï¿½ï¿½
+# alt-- ï¿½ (acute, dï¿½eï¿½, ï¿½ï¿½rka)
+#   Examples: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+# alt-= ï¿½ (caron, mï¿½kï¿½eï¿½, hï¿½ï¿½ek) and alt-+ ï¿½ (breve)
+#   Examples: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 # alt-\ / (slash)
-#   Examples: ð³
-# alt-/ [on numeric keypad] ÷
-# alt-* [on numeric keypad] ×
+#   Examples: ï¿½
+# alt-/ [on numeric keypad] ï¿½
+# alt-* [on numeric keypad] ï¿½
 # alt-. [on numeric keypad] ,
 #
 # This layout offers access to the entire character set of

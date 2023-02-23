@@ -36,7 +36,7 @@
  *
  * Author: Dave Chapeskie
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_NG_SOURCE_H_

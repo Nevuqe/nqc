@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)xdr_subs.h	8.3 (Berkeley) 3/30/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NFS_XDR_SUBS_H_

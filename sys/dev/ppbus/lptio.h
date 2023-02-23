@@ -11,7 +11,7 @@
  *
  *	Geoff Rehmet, Rhodes University, South Africa <csgr@cs.ru.ac.za>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_DEV_PPBUS_LPT_H_

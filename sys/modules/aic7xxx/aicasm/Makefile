@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 MAKESRCPATH=	${SRCTOP}/sys/dev/aic7xxx/aicasm
 

@@ -10,7 +10,7 @@
 .\"
 .\"     @(#)vi.ref	8.88 (Berkeley) 10/19/96
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .so ref.so
 .tp

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from aesv8-armx.pl. */
 #include "arm_arch.h"
 

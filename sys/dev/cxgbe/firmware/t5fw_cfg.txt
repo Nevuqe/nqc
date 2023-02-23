@@ -289,5 +289,5 @@
 	version = 0x1
 	checksum = 0x34da8705
 #
-# $FreeBSD$
+# $NQC$
 #

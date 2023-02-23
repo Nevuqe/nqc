@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CONFS=	freebsd-update.conf
 SCRIPTS=freebsd-update.sh

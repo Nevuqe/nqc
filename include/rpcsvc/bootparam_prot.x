@@ -51,7 +51,7 @@
 %/*static char sccsid[] = "from: @(#)bootparam_prot.x	2.1 88/08/01 4.0 RPCSRC";*/
 %#endif /* not lint */
 %#include <sys/cdefs.h>
-%__FBSDID("$FreeBSD$");
+%__FBSDID("$NQC$");
 #endif
 
 const MAX_MACHINE_NAME  = 255;

@@ -1,7 +1,7 @@
 /*-
  * This file is in the public domain.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 typedef void (fwmethod)(int dev_fd, const char *filename, char ich, int count);

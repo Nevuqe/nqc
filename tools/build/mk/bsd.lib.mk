@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "Makefile.boot.pre"
 # Don't build shared libraries during bootstrap

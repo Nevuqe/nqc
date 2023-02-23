@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ATF_TESTS_C+=		memcmp_test
 ATF_TESTS_C+=		memset_s_test

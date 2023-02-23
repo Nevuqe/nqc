@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NQC$
 
 scriptpath=$(realpath $0)
 parent=$(dirname $scriptpath)

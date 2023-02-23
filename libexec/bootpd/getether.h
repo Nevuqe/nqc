@@ -1,4 +1,4 @@
 /* getether.h */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 extern int getether(char *ifname, char *eaptr);

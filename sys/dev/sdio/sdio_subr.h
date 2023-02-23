@@ -54,7 +54,7 @@
  * information, know-how or other confidential information to any third party.
  *
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SDIO_SUBR_H_

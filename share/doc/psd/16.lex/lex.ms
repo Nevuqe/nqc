@@ -36,7 +36,7 @@
 .\" 
 .\"	@(#)lex.ms	8.1 (Berkeley) 6/8/93
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .nr tm 0
 .de MH
 Bell Laboratories, Murray Hill, NJ 07974.

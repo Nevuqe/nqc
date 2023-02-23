@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 
 #
-# $FreeBSD$
+# $NQC$
 #
 # This script compares the file iso639 (from head/share/misc) with the file
 # ISO-639-2_8859-1.txt (from

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock
 # code  base   shift  cntrl  shift  alt    shift  cntrl  shift state
@@ -117,7 +117,7 @@
   129   esc    esc    esc    esc    esc    esc    debug  esc     O
   130   '1'    '!'    nop    nop    '1'    '!'    nop    nop     O
   131   '2'    '"'    nul    nul    '2'    '@'    nul    nul     O
-  132   '3'    '¹'    nop    nop    '3'    '#'    nop    nop     O
+  132   '3'    'ï¿½'    nop    nop    '3'    '#'    nop    nop     O
   133   '4'    ';'    nop    nop    '4'    ';'    nop    nop     O
   134   '5'    '%'    nop    nop    '5'    '%'    nop    nop     O
   135   '6'    ':'    rs     rs     '6'    '^'    rs     rs      O
@@ -129,43 +129,43 @@
   141   '='    '+'    nop    nop    '='    '+'    nop    nop     O
   142   bs     bs     del    del    bs     bs     del    del     O
   143   ht     btab   nop    nop    ht     btab   nop    nop     O
-  144   'é'    'É'    dc1    dc1    'q'    'Q'    dc1    dc1     C
-  145   'ö'    'Ö'    etb    etb    'w'    'W'    etb    etb     C
-  146   'ó'    'Ó'    enq    enq    'e'    'E'    enq    enq     C
-  147   'ê'    'Ê'    dc2    dc2    'r'    'R'    dc2    dc2     C
-  148   'å'    'Å'    dc4    dc4    't'    'T'    dc4    dc4     C
-  149   'í'    'Í'    em     em     'y'    'Y'    em     em      C
-  150   'ã'    'Ã'    nak    nak    'u'    'U'    nak    nak     C
-  151   'ø'    'Ø'    ht     ht     'i'    'I'    ht     ht      C
-  152   '¢'    '¡'    si     si     'o'    'O'    si     si      C
-  153   'ç'    'Ç'    dle    dle    'p'    'P'    dle    dle     C
-  154   'õ'    'Õ'    esc    esc    '['    '{'    esc    esc     C
+  144   'ï¿½'    'ï¿½'    dc1    dc1    'q'    'Q'    dc1    dc1     C
+  145   'ï¿½'    'ï¿½'    etb    etb    'w'    'W'    etb    etb     C
+  146   'ï¿½'    'ï¿½'    enq    enq    'e'    'E'    enq    enq     C
+  147   'ï¿½'    'ï¿½'    dc2    dc2    'r'    'R'    dc2    dc2     C
+  148   'ï¿½'    'ï¿½'    dc4    dc4    't'    'T'    dc4    dc4     C
+  149   'ï¿½'    'ï¿½'    em     em     'y'    'Y'    em     em      C
+  150   'ï¿½'    'ï¿½'    nak    nak    'u'    'U'    nak    nak     C
+  151   'ï¿½'    'ï¿½'    ht     ht     'i'    'I'    ht     ht      C
+  152   'ï¿½'    'ï¿½'    si     si     'o'    'O'    si     si      C
+  153   'ï¿½'    'ï¿½'    dle    dle    'p'    'P'    dle    dle     C
+  154   'ï¿½'    'ï¿½'    esc    esc    '['    '{'    esc    esc     C
   155   '''    '''    gs     gs     ']'    '}'    gs     gs      O
   156   cr     cr     nl     nl     cr     cr     nl     nl      O
   157   lctrl  lctrl  lctrl  lctrl  lctrl  lctrl  lctrl  lctrl   O
-  158   'ô'    'Ô'    soh    soh    'a'    'A'    soh    soh     C
-  159   'û'    'Û'    dc3    dc3    's'    'S'    dc3    dc3     C
-  160   'â'    'Â'    eot    eot    'd'    'D'    eot    eot     C
-  161   'à'    'À'    ack    ack    'f'    'F'    ack    ack     C
-  162   'ï'    'Ï'    bel    bel    'g'    'G'    bel    bel     C
-  163   'ð'    'Ð'    bs     bs     'h'    'H'    bs     bs      C
-  164   'î'    'Î'    nl     nl     'j'    'J'    nl     nl      C
-  165   'ë'    'Ë'    vt     vt     'k'    'K'    vt     vt      C
-  166   'ä'    'Ä'    ff     ff     'l'    'L'    ff     ff      C
-  167   'æ'    'Æ'    nop    nop    ';'    ':'    nop    nop     C
-  168   'ý'    'Ý'    nop    nop    '''    '"'    nop    nop     C
-  169   '¸'    '¨'    nop    nop    '`'    '~'    nop    nop     C
+  158   'ï¿½'    'ï¿½'    soh    soh    'a'    'A'    soh    soh     C
+  159   'ï¿½'    'ï¿½'    dc3    dc3    's'    'S'    dc3    dc3     C
+  160   'ï¿½'    'ï¿½'    eot    eot    'd'    'D'    eot    eot     C
+  161   'ï¿½'    'ï¿½'    ack    ack    'f'    'F'    ack    ack     C
+  162   'ï¿½'    'ï¿½'    bel    bel    'g'    'G'    bel    bel     C
+  163   'ï¿½'    'ï¿½'    bs     bs     'h'    'H'    bs     bs      C
+  164   'ï¿½'    'ï¿½'    nl     nl     'j'    'J'    nl     nl      C
+  165   'ï¿½'    'ï¿½'    vt     vt     'k'    'K'    vt     vt      C
+  166   'ï¿½'    'ï¿½'    ff     ff     'l'    'L'    ff     ff      C
+  167   'ï¿½'    'ï¿½'    nop    nop    ';'    ':'    nop    nop     C
+  168   'ï¿½'    'ï¿½'    nop    nop    '''    '"'    nop    nop     C
+  169   'ï¿½'    'ï¿½'    nop    nop    '`'    '~'    nop    nop     C
   170   lshift lshift lshift lshift lshift lshift lshift lshift  O
   171   '\'    '|'    fs     fs     '\'    '|'    fs     fs      O
-  172   'ÿ'    'ß'    sub    sub    'z'    'Z'    sub    sub     C
-  173   '÷'    '×'    can    can    'x'    'X'    can    can     C
-  174   'ñ'    'Ñ'    etx    etx    'c'    'C'    etx    etx     C
-  175   'ì'    'Ì'    syn    syn    'v'    'V'    syn    syn     C
-  176   '³'    '²'    stx    stx    'b'    'B'    stx    stx     C
-  177   'ò'    'Ò'    so     so     'n'    'N'    so     so      C
-  178   'ü'    'Ü'    cr     cr     'm'    'M'    cr     cr      C
-  179   'á'    'Á'    nop    nop    ','    '<'    nop    nop     C
-  180   'þ'    'Þ'    nop    nop    '.'    '>'    nop    nop     C
+  172   'ï¿½'    'ï¿½'    sub    sub    'z'    'Z'    sub    sub     C
+  173   'ï¿½'    'ï¿½'    can    can    'x'    'X'    can    can     C
+  174   'ï¿½'    'ï¿½'    etx    etx    'c'    'C'    etx    etx     C
+  175   'ï¿½'    'ï¿½'    syn    syn    'v'    'V'    syn    syn     C
+  176   'ï¿½'    'ï¿½'    stx    stx    'b'    'B'    stx    stx     C
+  177   'ï¿½'    'ï¿½'    so     so     'n'    'N'    so     so      C
+  178   'ï¿½'    'ï¿½'    cr     cr     'm'    'M'    cr     cr      C
+  179   'ï¿½'    'ï¿½'    nop    nop    ','    '<'    nop    nop     C
+  180   'ï¿½'    'ï¿½'    nop    nop    '.'    '>'    nop    nop     C
   181   '.'    ','    nop    nop    '/'    '?'    nop    nop     O
   182   rshift rshift rshift rshift rshift rshift rshift rshift  O
   183   '*'    '*'    '*'    '*'    '*'    '*'    '*'    '*'     O

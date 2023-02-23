@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # You really want:
 # PRINTERDEVICE=ps

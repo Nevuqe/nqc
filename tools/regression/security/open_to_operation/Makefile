@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	open_to_operation
 MAN=

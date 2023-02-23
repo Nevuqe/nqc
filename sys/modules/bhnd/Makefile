@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/dev/bhnd
 .PATH: ${SRCTOP}/sys/dev/bhnd/cores/chipc

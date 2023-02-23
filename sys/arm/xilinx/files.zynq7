@@ -1,7 +1,7 @@
 #
 # files.zynq7
 #
-# $FreeBSD$
+# $NQC$
 
 arm/xilinx/zy7_machdep.c			standard
 arm/xilinx/zy7_l2cache.c			standard

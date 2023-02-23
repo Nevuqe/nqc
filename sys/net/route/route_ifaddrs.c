@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)route.c	8.3.1.1 (Berkeley) 2/23/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #include "opt_route.h"

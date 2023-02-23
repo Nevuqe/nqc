@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 #
 # Library of internal routines for the print spooler suite.

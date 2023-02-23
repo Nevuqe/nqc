@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DTSO!=ls ${.CURDIR}/*.dtso
 

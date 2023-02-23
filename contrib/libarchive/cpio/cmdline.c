@@ -26,7 +26,7 @@
 
 
 #include "cpio_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>

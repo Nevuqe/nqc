@@ -1,4 +1,4 @@
-#$FreeBSD$
+#$NQC$
 
 .PATH:		${SRCTOP}/sys/dev/imcsmb
 KMOD		= imcsmb

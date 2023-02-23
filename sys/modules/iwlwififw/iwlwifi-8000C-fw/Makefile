@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FWVERSION=	36
 NAME=		8000C

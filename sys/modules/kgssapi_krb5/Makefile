@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/kgssapi/krb5
 KMOD=	kgssapi_krb5

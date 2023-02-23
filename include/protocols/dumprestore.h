@@ -35,7 +35,7 @@
  *
  *	@(#)dumprestore.h	8.2 (Berkeley) 1/21/94
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _PROTOCOLS_DUMPRESTORE_H_

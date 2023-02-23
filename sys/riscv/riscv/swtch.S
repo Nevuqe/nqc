@@ -40,7 +40,7 @@
 #include <machine/riscvreg.h>
 #include <machine/pte.h>
 
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef FPE
 .macro __fpe_state_save p

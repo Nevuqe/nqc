@@ -1,5 +1,5 @@
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .NH
 Managing Jails and the Jail File System Environment

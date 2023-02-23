@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: bthid_config.h,v 1.4 2006/09/07 21:06:53 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _BTHID_CONFIG_H_

@@ -48,7 +48,7 @@
  *	ftp://ftp.invisible-island.net/autoconf/
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef NC_CONFIG_H
 #define NC_CONFIG_H

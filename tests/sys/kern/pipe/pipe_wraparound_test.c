@@ -35,7 +35,7 @@ SUCH DAMAGE.
 #include <unistd.h>
 
 /*
- * $FreeBSD$
+ * $NQC$
  * This program tests to make sure that wraparound writes and reads
  * are working, assuming that 16K socket buffers are used.  In order
  * to really stress the pipe code with this test, kernel modifications

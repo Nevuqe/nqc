@@ -6,7 +6,7 @@
 # this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD$
+# $NQC$
 #
 # This script tries to find #include statements which are not needed in
 # the FreeBSD kernel tree.

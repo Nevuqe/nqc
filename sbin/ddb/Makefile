@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CONFS=	ddb.conf
 PACKAGE=runtime

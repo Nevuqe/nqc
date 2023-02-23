@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LOADER_INTERP=lua
 

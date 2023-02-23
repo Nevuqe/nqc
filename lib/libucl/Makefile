@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIBUCL_DIR=	${SRCTOP}/contrib/libucl
 

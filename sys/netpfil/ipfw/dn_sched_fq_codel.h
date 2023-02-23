@@ -30,7 +30,7 @@
 /*
  * FQ_Codel Structures and helper functions
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _IP_DN_SCHED_FQ_CODEL_H

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/netinet
 .PATH: ${SRCTOP}/sys/crypto

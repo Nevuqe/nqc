@@ -42,7 +42,7 @@ static char copyright[] =
 static char sccsid[] = "@(#)thash4.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/file.h>

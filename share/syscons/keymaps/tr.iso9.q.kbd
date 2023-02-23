@@ -1,6 +1,6 @@
 # Turkish ISO-8859-9 keymap by Evren Yurtesen (09-12-1999)
 #
-# $FreeBSD$
+# $NQC$
 #
 # For suggestions and corrections please contact with me.
 #
@@ -21,10 +21,10 @@
   000   nop    nop    nop    nop    nop    nop    nop    nop     O
   001   esc    esc    esc    esc    esc    esc    debug  esc     O
   002   '1'    '!'    nop    nop    '>'    nop    nop    nop     O
-  003   '2'    '''    nul    nul    '£'    nop    nul    nul     O
+  003   '2'    '''    nul    nul    'ï¿½'    nop    nul    nul     O
   004   '3'    '^'    nop    nop    '#'    nop    nop    nop     O
   005   '4'    '+'    nop    nop    '$'    nop    nop    nop     O
-  006   '5'    '%'    nop    nop    '½'    nop    nop    nop     O
+  006   '5'    '%'    nop    nop    'ï¿½'    nop    nop    nop     O
   007   '6'    '&'    nop    nop    nop    nop    nop    nop     O
   008   '7'    '/'    nop    nop    '{'    nop    nop    nop     O
   009   '8'    '('    nop    nop    '['    nop    nop    nop     O
@@ -59,7 +59,7 @@
   038   'l'    'L'    ff     ff     'l'    'L'    ff     ff      C
   039   254    222    nop    nop    180    222    nop    nop     C
   040   'i'    221    nop    nop    'i'    221    nop    nop     C
-  041   '"'    'é'    nop    nop    '<'    nop    nop    nop     O
+  041   '"'    'ï¿½'    nop    nop    '<'    nop    nop    nop     O
   042   lshift lshift lshift lshift lshift lshift lshift lshift  O
   043   ','    ';'    nop    nop    '`'    nop    nop    nop     O
   044   'z'    'Z'    sub    sub    'z'    'Z'    sub    sub     C

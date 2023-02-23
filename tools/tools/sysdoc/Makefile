@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 sysctl.5:
 	sh ${.CURDIR}/sysdoc.sh -k /boot/kernel

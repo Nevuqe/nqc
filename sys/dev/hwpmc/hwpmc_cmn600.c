@@ -33,7 +33,7 @@
 /* Arm CoreLink CMN-600 Coherent Mesh Network PMU Driver */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include "opt_acpi.h"
 

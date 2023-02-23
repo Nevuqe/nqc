@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from bsaes-armv7.pl. */
 @ Copyright 2012-2020 The OpenSSL Project Authors. All Rights Reserved.
 @

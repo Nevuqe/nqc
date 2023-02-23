@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	mapper_646
 SRCS=	citrus_mapper_646.c

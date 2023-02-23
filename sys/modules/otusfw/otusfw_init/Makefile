@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	otusfw_init
 FIRMWS=	otusfw_init:otusfw_init:1

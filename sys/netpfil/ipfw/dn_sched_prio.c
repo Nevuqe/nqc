@@ -27,7 +27,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 #ifdef _KERNEL
 #include <sys/malloc.h>

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 VOLUME=	psd
 DOC=	Title

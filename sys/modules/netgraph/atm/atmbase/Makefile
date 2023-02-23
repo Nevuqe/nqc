@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Author: Harti Brandt <harti@freebsd.org>
 #

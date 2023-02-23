@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 HAVE_FDT=yes
 

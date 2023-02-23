@@ -2,7 +2,7 @@
 #
 # Script for testing simple station mode operation.
 #
-# $FreeBSD$
+# $NQC$
 #
 PATH=.:$PATH
 . config

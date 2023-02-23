@@ -44,7 +44,7 @@
  *
  * Created      : 08/02/95
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_UNDEFINED_H_

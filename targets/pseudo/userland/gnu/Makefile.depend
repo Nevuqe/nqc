@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "${SRCTOP}/share/mk/src.opts.mk"
 

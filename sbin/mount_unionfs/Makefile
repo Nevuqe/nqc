@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.3 (Berkeley) 3/27/94
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=runtime
 PROG=	mount_unionfs

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PREFIX?=	/usr/local
 BINDIR?=	${PREFIX}/bin

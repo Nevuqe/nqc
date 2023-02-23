@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)nfsnode.h	8.9 (Berkeley) 5/14/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NFSCLIENT_NFSNODE_H_

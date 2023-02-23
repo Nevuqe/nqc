@@ -1,6 +1,6 @@
 #! /bin/sh
 # vim: filetype=sh noexpandtab ts=8 sw=8
-# $FreeBSD$
+# $NQC$
 
 desc="utimensat will work if the caller is the owner or root"
 

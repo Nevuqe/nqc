@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 echo $@
 if ! test -t 0 ; then
 	cat

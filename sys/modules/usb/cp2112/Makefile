@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 # Copyright (c) Andriy Gapon <avg@FreeBSD.org>
 #

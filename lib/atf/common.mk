@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Common Makefile code for all components of ATF.
 #

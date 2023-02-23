@@ -18,7 +18,7 @@
 *LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
 *SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 *
-* $FreeBSD$
+* $NQC$
 *
 ********************************************************************************/
 /*******************************************************************************/
@@ -113,8 +113,8 @@ Offset (Hex) Name Access Internal Offset Internal Name Comment
 #define V_Scratchpad_Rsvd_0_Register            0x6C    /* Host RW Local R/W 0x170 MSGU - Scratchpad 10 */
 #define V_Scratchpad_Rsvd_1_Register            0x70    /* Host RW Local R/W 0x178 MSGU - Scratchpad 11 */
 /* 0x74 - 0xFF Reserved R all 0s */
-#define V_Outbound_Queue_Consumer_Indices_Base  0x100  /*  typical value real offset is read from table to 0x1FF Host RW Local RO 0x1F100 – 0x1F1FF In DQ storage area*/
-#define V_Inbound_Queue_Producer_Indices        0x200  /*  typical value real offset is read from table to 0x3FF Host RW Local RO 0x1F200 – 0x1F3FF In DQ storage area, also mapped as WSM*/
+#define V_Outbound_Queue_Consumer_Indices_Base  0x100  /*  typical value real offset is read from table to 0x1FF Host RW Local RO 0x1F100 ï¿½ 0x1F1FF In DQ storage area*/
+#define V_Inbound_Queue_Producer_Indices        0x200  /*  typical value real offset is read from table to 0x3FF Host RW Local RO 0x1F200 ï¿½ 0x1F3FF In DQ storage area, also mapped as WSM*/
 /*
                SPC_V                                                 SPC
      Bar     Name                                 Offset     Bar     Name                    Offset

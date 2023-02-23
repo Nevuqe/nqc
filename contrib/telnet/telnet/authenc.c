@@ -33,7 +33,7 @@ static const char sccsid[] = "@(#)authenc.c	8.1 (Berkeley) 6/6/93";
 #endif
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #ifdef	AUTHENTICATION
 #ifdef	ENCRYPTION

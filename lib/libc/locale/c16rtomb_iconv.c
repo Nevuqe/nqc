@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #define	charXX_t	char16_t
 #define	cXXrtomb	c16rtomb
 #define	cXXrtomb_l	c16rtomb_l

@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$"); 
+__FBSDID("$NQC$"); 
 	
 ENTRY(remquol)
 	fldt    24(%rsp)

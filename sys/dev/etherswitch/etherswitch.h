@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef __SYS_DEV_ETHERSWITCH_ETHERSWITCH_H

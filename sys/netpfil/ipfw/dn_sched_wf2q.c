@@ -28,7 +28,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifdef _KERNEL

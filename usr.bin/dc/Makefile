@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 #	$OpenBSD: Makefile,v 1.2 2006/11/26 11:31:09 deraadt Exp $
 
 .include <src.opts.mk>

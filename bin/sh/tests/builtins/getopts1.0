@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 printf -- '-1-\n'
 set -- -abc

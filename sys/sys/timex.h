@@ -18,7 +18,7 @@
  *								       *
  ***********************************************************************
  *
- * $FreeBSD$
+ * $NQC$
  *
  * This header file defines the Network Time Protocol (NTP) interfaces
  * for user and daemon application programs.

@@ -29,7 +29,7 @@
 #define _BXE_IOCTL_H_
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__FBSDID("$NQC$");
 
 #include <sys/ioccom.h>
 

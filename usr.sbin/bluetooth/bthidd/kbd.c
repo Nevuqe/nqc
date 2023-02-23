@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: kbd.c,v 1.4 2006/09/07 21:06:53 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/consio.h>
