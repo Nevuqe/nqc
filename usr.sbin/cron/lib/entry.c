@@ -436,16 +436,6 @@ load_entry(file, error_func, pw, envp)
 	while (ch == '-') {
 		Debug(DPARS|DEXT, ("load_entry()...expecting option\n"))
 		switch (ch = get_char(file)) {
-		case 'n':
-			Debug(DPARS|DEXT, ("load_entry()...got MAIL_WHEN_ERR ('n') option\n"))
-			/* only allow the user to set the option once */
-			if ((e->flags & MAIL_WHEN_ERR) == MAIL_WHEN_ERR) {
-				Debug(DPARS|DEXT, ("load_entry()...duplicate MAIL_WHEN_ERR ('n') option\n"))
-				ecode = e_option;
-				goto eof;
-			}
-			e->flags |= MAIL_WHEN_ERR;
-			break;
 		case 'q':
 			Debug(DPARS|DEXT, ("load_entry()...got DONT_LOG ('q') option\n"))
 			/* only allow the user to set the option once */

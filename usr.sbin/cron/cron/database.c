@@ -177,12 +177,6 @@ load_database(old_db)
 	}
 	closedir(dir);
 
-	/* if we don't do this, then when our children eventually call
-	 * getpwnam() in do_command.c's child_process to verify MAILTO=,
-	 * they will screw us up (and v-v).
-	 */
-	endpwent();
-
 	/* whatever's left in the old database is now junk.
 	 */
 	Debug(DLOAD, ("unlinking old database:\n"))

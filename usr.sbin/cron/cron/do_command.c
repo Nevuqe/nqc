@@ -92,9 +92,8 @@ child_process(e, u)
 {
 	int		stdin_pipe[2], stdout_pipe[2];
 	register char	*input_data;
-	char		*usernm, *mailto, *mailfrom;
-	PID_T		jobpid, stdinjob, mailpid;
-	register FILE	*mail;
+	char		*usernm;
+	PID_T		jobpid, stdinjob;
 	register int	bytes = 1;
 	int		status = 0;
 	const char	*homedir = NULL;
@@ -113,8 +112,6 @@ child_process(e, u)
 	/* discover some useful and important environment settings
 	 */
 	usernm = env_get("LOGNAME", e->envp);
-	mailto = env_get("MAILTO", e->envp);
-	mailfrom = env_get("MAILFROM", e->envp);
 
 #ifdef PAM
 	/* use PAM to see if the user's account is available,
@@ -496,159 +493,12 @@ child_process(e, u)
 	 */
 	close(stdin_pipe[WRITE_PIPE]);
 
-	/*
-	 * read output from the grandchild.  it's stderr has been redirected to
-	 * it's stdout, which has been redirected to our pipe.  if there is any
-	 * output, we'll be mailing it to the user whose crontab this is...
-	 * when the grandchild exits, we'll get EOF.
-	 */
-
-	Debug(DPROC, ("[%d] child reading output from grandchild\n", getpid()))
-
-	/*local*/{
-		register FILE	*in = fdopen(stdout_pipe[READ_PIPE], "r");
-		register int	ch;
-
-		if (in == NULL) {
-			warn("fdopen failed in child");
-			_exit(ERROR_EXIT);
-		}
-
-		mail = NULL;
-
-		ch = getc(in);
-		if (ch != EOF) {
-			Debug(DPROC|DEXT,
-				("[%d] got data (%x:%c) from grandchild\n",
-					getpid(), ch, ch))
-
-			/* get name of recipient.  this is MAILTO if set to a
-			 * valid local username; USER otherwise.
-			 */
-			if (mailto == NULL) {
-				/* MAILTO not present, set to USER,
-				 * unless globally overridden.
-				 */
-				if (defmailto)
-					mailto = defmailto;
-				else
-					mailto = usernm;
-			}
-			if (mailto && *mailto == '\0')
-				mailto = NULL;
-
-			/* if we are supposed to be mailing, MAILTO will
-			 * be non-NULL.  only in this case should we set
-			 * up the mail command and subjects and stuff...
-			 */
-
-			if (mailto) {
-				register char	**env;
-				auto char	mailcmd[MAX_COMMAND];
-				auto char	hostname[MAXHOSTNAMELEN];
-
-				if (gethostname(hostname, MAXHOSTNAMELEN) == -1)
-					hostname[0] = '\0';
-				hostname[sizeof(hostname) - 1] = '\0';
-				(void) snprintf(mailcmd, sizeof(mailcmd),
-					       MAILARGS, MAILCMD);
-				if (!(mail = cron_popen(mailcmd, "w", e, &mailpid))) {
-					warn("%s", MAILCMD);
-					(void) _exit(ERROR_EXIT);
-				}
-				if (mailfrom == NULL || *mailfrom == '\0')
-					fprintf(mail, "From: Cron Daemon <%s@%s>\n",
-					    usernm, hostname);
-				else
-					fprintf(mail, "From: Cron Daemon <%s>\n",
-					    mailfrom);
-				fprintf(mail, "To: %s\n", mailto);
-				fprintf(mail, "Subject: Cron <%s@%s> %s\n",
-					usernm, first_word(hostname, "."),
-					e->cmd);
-# if defined(MAIL_DATE)
-				fprintf(mail, "Date: %s\n",
-					arpadate(&TargetTime));
-# endif /* MAIL_DATE */
-				for (env = e->envp;  *env;  env++)
-					fprintf(mail, "X-Cron-Env: <%s>\n",
-						*env);
-				fprintf(mail, "\n");
-
-				/* this was the first char from the pipe
-				 */
-				putc(ch, mail);
-			}
-
-			/* we have to read the input pipe no matter whether
-			 * we mail or not, but obviously we only write to
-			 * mail pipe if we ARE mailing.
-			 */
-
-			while (EOF != (ch = getc(in))) {
-				bytes++;
-				if (mail)
-					putc(ch, mail);
-			}
-		}
-		/*if data from grandchild*/
-
-		Debug(DPROC, ("[%d] got EOF from grandchild\n", getpid()))
-
-		/* also closes stdout_pipe[READ_PIPE] */
-		fclose(in);
-	}
-
 	/* wait for children to die.
 	 */
 	if (jobpid > 0) {
 		WAIT_T	waiter;
 
 		waiter = wait_on_child(jobpid, "grandchild command job");
-
-		/* If everything went well, and -n was set, _and_ we have mail,
-		 * we won't be mailing... so shoot the messenger!
-		 */
-		if (WIFEXITED(waiter) && WEXITSTATUS(waiter) == 0
-		    && (e->flags & MAIL_WHEN_ERR) == MAIL_WHEN_ERR
-		    && mail) {
-			Debug(DPROC, ("[%d] %s executed successfully, mail suppressed\n",
-				getpid(), "grandchild command job"))
-			kill(mailpid, SIGKILL);
-			(void)fclose(mail);
-			mail = NULL;
-		}
-
-
-		/* only close pipe if we opened it -- i.e., we're
-		 * mailing...
-		 */
-
-		if (mail) {
-			Debug(DPROC, ("[%d] closing pipe to mail\n",
-				getpid()))
-			/* Note: the pclose will probably see
-			 * the termination of the grandchild
-			 * in addition to the mail process, since
-			 * it (the grandchild) is likely to exit
-			 * after closing its stdout.
-			 */
-			status = cron_pclose(mail);
-
-			/* if there was output and we could not mail it,
-			 * log the facts so the poor user can figure out
-			 * what's going on.
-			 */
-			if (status) {
-				char buf[MAX_TEMPSTR];
-
-				snprintf(buf, sizeof(buf),
-			"mailed %d byte%s of output but got status 0x%04x\n",
-					bytes, (bytes==1)?"":"s",
-					status);
-				log_it(usernm, getpid(), "MAIL", buf);
-			}
-		}
 	}
 
 	if (*input_data && stdinjob > 0)

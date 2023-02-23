@@ -61,7 +61,7 @@ usage() {
 #endif
 
 	fprintf(stderr, "usage: cron [-j jitter] [-J rootjitter] "
-			"[-m mailto] [-n] [-s] [-o] [-x debugflag[,...]]\n");
+			"[-n] [-s] [-o] [-x debugflag[,...]]\n");
 #if DEBUGGING
 	fprintf(stderr, "\ndebugflags: ");
 
@@ -538,9 +538,6 @@ parse_args(argc, argv)
 			if (*optarg == '\0' || *endp != '\0' || RootJitter > 60)
 				errx(ERROR_EXIT,
 				     "bad value for root jitter: %s", optarg);
-			break;
-		case 'm':
-			defmailto = optarg;
 			break;
 		case 'n':
 			dont_daemonize = 1;
