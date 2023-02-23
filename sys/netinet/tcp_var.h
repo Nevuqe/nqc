@@ -127,13 +127,20 @@ struct sackhint {
 STAILQ_HEAD(tcp_log_stailq, tcp_log_mem);
 
 typedef enum {
-	TT_DELACK = 0,
-	TT_REXMT,
+	TT_REXMT = 0,
 	TT_PERSIST,
 	TT_KEEP,
 	TT_2MSL,
+	TT_DELACK,
 	TT_N,
 } tt_which;
+
+typedef enum {
+	TT_PROCESSING = 0,
+	TT_PROCESSED,
+	TT_STARTING,
+	TT_STOPPING,
+} tt_what;
 
 /*
  * Tcp control block, one per tcp connection.
@@ -1192,7 +1199,6 @@ void	 tcpip_fillheaders(struct inpcb *, uint16_t, void *, void *);
 void	 tcp_timer_activate(struct tcpcb *, tt_which, u_int);
 bool	 tcp_timer_active(struct tcpcb *, tt_which);
 void	 tcp_timer_stop(struct tcpcb *);
-void	 tcp_trace(short, short, struct tcpcb *, void *, struct tcphdr *, int);
 int	 inp_to_cpuid(struct inpcb *inp);
 /*
  * All tcp_hc_* functions are IPv4 and IPv6 (via in_conninfo)
