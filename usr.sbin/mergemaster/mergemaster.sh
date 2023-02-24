@@ -285,7 +285,7 @@ while getopts ":ascrvhipCPm:t:du:w:D:A:FU" COMMAND_LINE_ARGUMENT ; do
     ARCHSTRING='TARGET_ARCH='${OPTARG}
     ;;
   F)
-    FREEBSD_ID=yes
+    NQC_ID=yes
     ;;
   U)
     AUTO_UPGRADE=yes
@@ -354,7 +354,7 @@ while getopts ":ascrvhipCPm:t:du:w:D:A:FU" COMMAND_LINE_ARGUMENT ; do
 done
 
 if [ -n "$AUTO_RUN" ]; then
-  if [ -n "$FREEBSD_ID" -o -n "$AUTO_UPGRADE" -o -n "$AUTO_INSTALL" ]; then
+  if [ -n "$NQC_ID" -o -n "$AUTO_UPGRADE" -o -n "$AUTO_INSTALL" ]; then
     echo ''
     echo "*** You have included the -a option along with one or more options"
     echo '    that indicate that you wish mergemaster to actually make updates'
@@ -1158,7 +1158,7 @@ for COMPFILE in `find . -type f | sort`; do
       #
       # If the user chose the -F option, test for that before proceeding
       #
-      if [ -n "$FREEBSD_ID" ]; then
+      if [ -n "$NQC_ID" ]; then
         if diff -q -I'[$]FreeBSD.*[$]' "${DESTDIR}${COMPFILE#.}" "${COMPFILE}" > \
             /dev/null 2>&1; then
           if mm_install "${COMPFILE}"; then

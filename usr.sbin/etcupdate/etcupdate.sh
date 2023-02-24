@@ -401,7 +401,7 @@ compare_nqcid()
 	compare $1 $2
 	cmp=$?
 
-	if [ -n "$FREEBSD_ID" -a "$cmp" -eq $COMPARE_DIFFFILES ] && \
+	if [ -n "$NQC_ID" -a "$cmp" -eq $COMPARE_DIFFFILES ] && \
 	    nqcid_only $1 $2; then
 		return $COMPARE_EQUAL
 	fi
@@ -484,7 +484,7 @@ diffnode()
 {
 	local first second file old new diffargs
 
-	if [ -n "$FREEBSD_ID" ]; then
+	if [ -n "$NQC_ID" ]; then
 		diffargs="-I \\\$NQC.*\\\$"
 	else
 		diffargs=""
@@ -797,7 +797,7 @@ update_unmodified()
 # FreeBSD ID string from the "new" version of the file.
 #
 # $1 - pathname of the file to update (relative to DESTDIR)
-update_freebsdid()
+update_nqcid()
 {
 	local new dest file
 
@@ -1103,7 +1103,7 @@ handle_modified_file()
 	# If the only change in the new file versus the destination
 	# file is a change in the FreeBSD ID string and -F is
 	# specified, just install the new file.
-	if [ -n "$FREEBSD_ID" -a $newdestcmp -eq $COMPARE_DIFFFILES ] && \
+	if [ -n "$NQC_ID" -a $newdestcmp -eq $COMPARE_DIFFFILES ] && \
 	    nqcid_only $NEWTREE/$file $DESTDIR/$file; then
 		if update_unmodified $file; then
 			return
@@ -1138,7 +1138,7 @@ handle_modified_file()
 		# If the only change in the new file versus the old
 		# file is a change in the FreeBSD ID string and -F is
 		# specified, don't warn.
-		if [ -n "$FREEBSD_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
+		if [ -n "$NQC_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
 		    nqcid_only $OLDTREE/$file $NEWTREE/$file; then
 			return
 		fi
@@ -1176,9 +1176,9 @@ handle_modified_file()
 	# If the only change in the new file versus the old file is a
 	# change in the FreeBSD ID string and -F is specified, just
 	# update the FreeBSD ID string in the local file.
-	if [ -n "$FREEBSD_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
+	if [ -n "$NQC_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
 	    nqcid_only $OLDTREE/$file $NEWTREE/$file; then
-		if update_freebsdid $file; then
+		if update_nqcid $file; then
 			continue
 		fi
 	fi
@@ -1300,7 +1300,7 @@ handle_added_file()
 			# the destination file is a change in the
 			# FreeBSD ID string and -F is specified, just
 			# install the new file.
-			if [ -n "$FREEBSD_ID" ] && \
+			if [ -n "$NQC_ID" ] && \
 			    nqcid_only $NEWTREE/$file $DESTDIR/$file; then
 				if update_unmodified $file; then
 					return
@@ -1739,7 +1739,7 @@ SRCDIR=/usr/src
 DESTDIR=
 
 # Ignore changes in the FreeBSD ID string.
-FREEBSD_ID=
+NQC_ID=
 
 # Files that should always have the new version of the file installed.
 ALWAYS_INSTALL=
@@ -1759,7 +1759,7 @@ MAKE_OPTIONS=
 # - ALWAYS_INSTALL
 # - DESTDIR
 # - EDITOR
-# - FREEBSD_ID
+# - NQC_ID
 # - IGNORE_FILES
 # - LOGFILE
 # - MAKE_CMD
@@ -1820,7 +1820,7 @@ while getopts "d:m:nprs:t:A:BD:FI:L:M:N" option; do
 			DESTDIR=$OPTARG
 			;;
 		F)
-			FREEBSD_ID=YES
+			NQC_ID=YES
 			;;
 		I)
 			# To allow this option to be specified
