@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_bootp.h"
 #include "opt_inet.h"

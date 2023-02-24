@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(_start)
 	mv	a3, a2		# cleanup

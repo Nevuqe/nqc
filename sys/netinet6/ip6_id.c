@@ -64,7 +64,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * seed = random (bits - 1) bit

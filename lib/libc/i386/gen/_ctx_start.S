@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * _ctx_start((void *func)(int arg1, ..., argn),

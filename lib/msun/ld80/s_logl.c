@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /**
  * Implementation of the natural logarithm of x for Intel 80-bit format.

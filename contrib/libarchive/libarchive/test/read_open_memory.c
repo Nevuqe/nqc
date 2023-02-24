@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <errno.h>
 #include <stdlib.h>

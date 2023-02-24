@@ -43,7 +43,7 @@ static char sccsid[] = "@(#)recvjob.c	8.2 (Berkeley) 4/27/95";
 #endif
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Receive printer jobs from the network, queue them and

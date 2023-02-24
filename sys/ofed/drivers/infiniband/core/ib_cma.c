@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define	LINUXKPI_PARAM_PREFIX ibcore_
 

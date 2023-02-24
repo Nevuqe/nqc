@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Copyright(c) 2001-2021, Broadcom. All rights reserved. The

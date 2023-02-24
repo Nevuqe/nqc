@@ -1,5 +1,5 @@
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define MEMMOVE
 #include "bcopy.S"

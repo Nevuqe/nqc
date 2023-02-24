@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * USB Enhanced Host Controller Driver, a.k.a. USB 2.0 controller.

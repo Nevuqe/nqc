@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static int
 is_null(const char *p, size_t l)

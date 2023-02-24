@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 	
 ENTRY(sqrtf)
 	sqrtss	%xmm0, %xmm0

@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Regression test:  We used to get a bogus error message when we

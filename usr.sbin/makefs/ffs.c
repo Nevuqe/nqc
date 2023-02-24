@@ -68,7 +68,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #if HAVE_NBTOOL_CONFIG_H
 #include "nbtool_config.h"

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /* PCI/PCI-X/PCIe bus interface for the Avago Tech (LSI) MPT2 controllers */
 

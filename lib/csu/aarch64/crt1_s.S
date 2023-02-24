@@ -30,7 +30,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(_start)
 	mov	x3, x2		/* cleanup */

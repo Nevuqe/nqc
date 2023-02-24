@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/gsb_crc32.h>
 #include <sys/eventhandler.h>

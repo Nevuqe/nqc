@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #include "SYS.h"
 
 ENTRY(__sys_vfork)

@@ -9,7 +9,7 @@ MKIMG_SRC = ${SRCTOP}/usr.bin/mkimg
 WARNS= 0
 
 CFLAGS+= \
-	-D"__FBSDID(x)=" \
+	-D"__NQCID(x)=" \
 	-D_XOPEN_SOURCE -D_GNU_SOURCE
 
 .PATH: ${SRCTOP}/lib/libutil

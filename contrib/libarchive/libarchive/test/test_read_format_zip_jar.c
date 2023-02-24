@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Issue 822: jar files have an empty External File Attributes field which

@@ -32,7 +32,7 @@
  * LC_COLLATE database generation routines for localedef.
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/tree.h>

@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * bzero (void *b, size_t len)

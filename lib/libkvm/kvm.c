@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 __SCCSID("@(#)kvm.c	8.2 (Berkeley) 2/13/94");
 
 #include <sys/param.h>

@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #endif /* not lint */
 
 #include "namespace.h"

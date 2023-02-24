@@ -29,11 +29,11 @@
 #ifndef _MACHINE_ASM_H_
 #define	_MACHINE_ASM_H_
 
-#undef __FBSDID
-#if !defined(lint) && !defined(STRIP_FBSDID)
-#define	__FBSDID(s)     .ident s
+#undef __NQCID
+#if !defined(lint) && !defined(STRIP_NQCID)
+#define	__NQCID(s)     .ident s
 #else
-#define	__FBSDID(s)     /* nothing */
+#define	__NQCID(s)     /* nothing */
 #endif
 
 #define	_C_LABEL(x)	x

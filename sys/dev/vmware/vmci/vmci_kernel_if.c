@@ -7,7 +7,7 @@
 /* This file implements defines and helper functions. */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/malloc.h>
 #include <sys/proc.h>

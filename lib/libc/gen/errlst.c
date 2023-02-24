@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)errlst.c	8.2 (Berkeley) 11/16/93");
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <errno.h>
 #include <stdio.h>

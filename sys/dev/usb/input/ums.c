@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * HID spec: http://www.usb.org/developers/devclass_docs/HID1_11.pdf

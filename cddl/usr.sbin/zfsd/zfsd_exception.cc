@@ -53,7 +53,7 @@
 #include "vdev.h"
 #include "zfsd_exception.h"
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 /*============================ Namespace Control =============================*/
 using std::endl;
 using std::string;

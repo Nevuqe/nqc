@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * To properly implement setjmp/longjmp for the ARM AAPCS ABI, it has to be

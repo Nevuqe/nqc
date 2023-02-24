@@ -47,7 +47,7 @@ static const char sccsid[] = "@(#)caesar.c    8.1 (Berkeley) 5/31/93";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <errno.h>
 #include <math.h>

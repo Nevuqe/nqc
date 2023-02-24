@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static unsigned char nulls[1000];
 static unsigned char tmp[1000];

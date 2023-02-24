@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifndef lint
 static const char sccsid[] = "@(#)look_up.c	8.1 (Berkeley) 6/6/93";

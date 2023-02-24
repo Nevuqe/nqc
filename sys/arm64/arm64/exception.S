@@ -27,7 +27,7 @@
 
 #include <machine/asm.h>
 #include <machine/armreg.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "assym.inc"
 

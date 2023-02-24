@@ -30,7 +30,7 @@
 //
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 // C++ STL and other related includes
 #include <stdlib.h>

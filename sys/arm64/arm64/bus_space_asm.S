@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(generic_bs_r_1)
 	ldrb	w0, [x1, x2]

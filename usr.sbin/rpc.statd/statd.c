@@ -38,7 +38,7 @@
 /* The actual program logic is in the file procs.c			*/
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <err.h>
 #include <errno.h>

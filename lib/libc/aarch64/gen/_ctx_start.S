@@ -27,7 +27,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(_ctx_start)
 	blr	x19		/* Call func from makecontext */

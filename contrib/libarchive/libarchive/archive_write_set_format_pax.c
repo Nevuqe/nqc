@@ -26,7 +26,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>

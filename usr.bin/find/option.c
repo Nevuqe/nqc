@@ -37,7 +37,7 @@ static char sccsid[] = "@(#)option.c	8.2 (Berkeley) 4/16/94";
 */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/stat.h>

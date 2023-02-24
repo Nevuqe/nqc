@@ -13,7 +13,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #if LDBL_MANT_DIG == 64		/* ld80 version of k_sincosl.c. */
 

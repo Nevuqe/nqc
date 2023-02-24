@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * A basic exercise of lzop reading and writing.

@@ -35,7 +35,7 @@
 
 #include <machine/asm.h>
 
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 
 ENTRY(remainderl)
 	fldt	16(%esp)

@@ -28,7 +28,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 DEFINE_TEST(test_write_format_zip_empty)
 {

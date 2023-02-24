@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /* Driver for the Marvell 88e151x gigabit ethernet PHY. */
 

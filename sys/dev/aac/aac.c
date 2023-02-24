@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Driver for the Adaptec 'FSA' family of PCI/SCSI RAID adapters.

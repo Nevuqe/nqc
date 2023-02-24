@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  *	Manages physical address maps for ARM SMMUv3 and ARM Mali GPU.

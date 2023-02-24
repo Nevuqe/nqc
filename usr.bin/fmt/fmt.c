@@ -173,7 +173,7 @@ static const char copyright[] =
 "Copyright (c) 1997 Gareth McCaughan. All rights reserved.\n";
 #endif	/* not lint */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <err.h>
 #include <limits.h>

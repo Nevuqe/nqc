@@ -36,7 +36,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Generic bus_space functions.

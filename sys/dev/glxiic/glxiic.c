@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 /*
  * AMD Geode LX CS5536 System Management Bus controller.
  *

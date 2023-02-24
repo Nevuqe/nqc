@@ -291,7 +291,7 @@ struct name {							\
 #endif
 
 #if defined(__FreeBSD__)
-#define	ELFTC_VCSID(ID)		__FBSDID(ID)
+#define	ELFTC_VCSID(ID)		__NQCID(ID)
 #endif
 
 #if defined(__APPLE__) || defined(__GLIBC__) || defined(__GNU__) || \

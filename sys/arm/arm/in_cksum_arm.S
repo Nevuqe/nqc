@@ -44,7 +44,7 @@
 
 #include <machine/asm.h>
 #include "assym.inc"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 	.syntax	unified
 /*

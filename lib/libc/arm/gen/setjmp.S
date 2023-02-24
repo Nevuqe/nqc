@@ -41,7 +41,7 @@
 #include <machine/asm.h>
 #include <machine/setjmp.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * C library -- setjmp, longjmp

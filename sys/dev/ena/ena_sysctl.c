@@ -29,7 +29,7 @@
  */
 #include <sys/cdefs.h>
 #include <sys/param.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_rss.h"
 

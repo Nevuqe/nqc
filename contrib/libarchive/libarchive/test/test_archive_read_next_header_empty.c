@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static void
 test_empty_file1(void)

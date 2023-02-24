@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY_NP(__aeabi_memcpy)
 EENTRY_NP(__aeabi_memcpy4)

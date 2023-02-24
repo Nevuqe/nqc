@@ -33,7 +33,7 @@
 /* n25q Quad SPI Flash driver. */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_platform.h"
 

@@ -153,11 +153,11 @@
 #define	PIC_SYM(x,y)	x
 #endif	/* PIC */
 
-#undef __FBSDID
-#if !defined(lint) && !defined(STRIP_FBSDID)
-#define __FBSDID(s)     .ident s
+#undef __NQCID
+#if !defined(lint) && !defined(STRIP_NQCID)
+#define __NQCID(s)     .ident s
 #else
-#define __FBSDID(s)     /* nothing */
+#define __NQCID(s)     /* nothing */
 #endif
 
 #define	WEAK_ALIAS(alias,sym)						\

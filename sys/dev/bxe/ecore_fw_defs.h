@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifndef ECORE_FW_DEFS_H
 #define ECORE_FW_DEFS_H

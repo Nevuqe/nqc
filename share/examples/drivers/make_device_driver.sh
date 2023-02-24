@@ -144,7 +144,7 @@ cat >${TOP}/dev/${1}/${1}.c <<DONE
  */
 
 #include <sys/cdefs.h>
-__FBSDID("\$${RCS_KEYWORD}$");
+__NQCID("\$${RCS_KEYWORD}$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

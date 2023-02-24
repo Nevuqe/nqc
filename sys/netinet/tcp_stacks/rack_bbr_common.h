@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * __FBSDID("$NQC$");
+ * __NQCID("$NQC$");
  */
 
 /* Common defines and such used by both RACK and BBR */

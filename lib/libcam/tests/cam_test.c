@@ -27,7 +27,7 @@
 /* Tests functions in sys/cam/cam.c */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <errno.h>
 #include <fcntl.h>

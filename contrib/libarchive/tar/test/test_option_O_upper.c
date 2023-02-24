@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static const char *test4out[] = {"file1", "file2", NULL};
 static const char *test5err[] = {"file1", "file2", NULL};

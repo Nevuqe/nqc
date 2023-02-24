@@ -26,7 +26,7 @@
  * in = 00 01 02 ... 3e (63 bytes)
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/types.h>

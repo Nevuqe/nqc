@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 /*
  * Dallas Semiconductor DS1672 RTC sitting on the I2C bus.
  */

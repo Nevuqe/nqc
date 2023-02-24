@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * ld128 version of s_expl.c.  See ../ld80/s_expl.c for most comments.

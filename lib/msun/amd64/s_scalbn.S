@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 
 ENTRY(scalbn)
 	movsd	%xmm0,-8(%rsp)

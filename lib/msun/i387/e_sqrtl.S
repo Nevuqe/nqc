@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 
 ENTRY(sqrtl)
 	fldt	4(%esp)

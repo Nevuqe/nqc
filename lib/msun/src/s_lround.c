@@ -32,7 +32,7 @@
 #include <math.h>
 
 #ifndef type
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #define type		double
 #define	roundit		round
 #define dtype		long

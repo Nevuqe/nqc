@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static void
 verify_zip_filesize(uint64_t size, int expected)

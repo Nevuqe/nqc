@@ -4,7 +4,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 
 ENTRY(copysignl)
 	movl	24(%esp),%edx

@@ -36,7 +36,7 @@ static char sccsid[] = "@(#)tftp.c	8.1 (Berkeley) 6/6/93";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /* Many bug fixes are from Jim Guyton <guyton@rand-unix> */
 

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #include <sys/param.h>
 #include <ddb/ddb.h>
 #include <ddb/db_access.h>

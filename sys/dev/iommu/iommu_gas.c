@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define	RB_AUGMENT_CHECK(entry) iommu_gas_augment_entry(entry)
 

@@ -6,7 +6,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(ldiv)
 	movq	%rdi,%rax

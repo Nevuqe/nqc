@@ -25,7 +25,7 @@
 
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Test writing an empty archive.

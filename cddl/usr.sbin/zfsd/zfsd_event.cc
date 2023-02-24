@@ -69,7 +69,7 @@
 #include "zfsd_exception.h"
 #include "zpool_list.h"
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 /*============================ Namespace Control =============================*/
 using DevdCtl::Event;
 using DevdCtl::Guid;

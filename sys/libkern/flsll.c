@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 #include <sys/libkern.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Find Last Set bit

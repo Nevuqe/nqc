@@ -39,7 +39,7 @@
 
 #ifndef RPC_HDR
 %#include <sys/cdefs.h>
-%__FBSDID("$NQC$");
+%__NQCID("$NQC$");
 #endif
 
 #ifdef RPC_HDR

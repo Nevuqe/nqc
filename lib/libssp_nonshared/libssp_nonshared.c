@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 void __stack_chk_fail(void);
 void __stack_chk_fail_local(void);

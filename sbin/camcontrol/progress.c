@@ -44,7 +44,7 @@
 #include <unistd.h>
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "progress.h"
 

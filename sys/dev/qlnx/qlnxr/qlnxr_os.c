@@ -29,7 +29,7 @@
  * File: qlnxr_os.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "qlnxr_def.h"
 

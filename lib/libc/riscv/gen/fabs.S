@@ -37,7 +37,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(fabs)
 #ifdef __riscv_float_abi_double

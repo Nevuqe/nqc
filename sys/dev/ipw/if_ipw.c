@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*-
  * Intel(R) PRO/Wireless 2100 MiniPCI driver

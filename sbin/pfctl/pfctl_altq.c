@@ -19,7 +19,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define PFIOC_USE_LATEST
 #define _WANT_FREEBSD_BITSET

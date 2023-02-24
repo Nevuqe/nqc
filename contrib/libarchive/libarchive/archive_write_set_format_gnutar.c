@@ -27,7 +27,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$NQC: head/lib/libarchive/archive_write_set_format_gnu_tar.c 191579 2009-04-27 18:35:03Z gastal $");
+__NQCID("$NQC: head/lib/libarchive/archive_write_set_format_gnu_tar.c 191579 2009-04-27 18:35:03Z gastal $");
 
 
 #ifdef HAVE_ERRNO_H

@@ -134,14 +134,14 @@
 #include <stdint.h>
 #endif
 
-/* Get a real definition for __FBSDID if we can */
+/* Get a real definition for __NQCID if we can */
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
 /* If not, define it so as to avoid dangling semicolons. */
-#ifndef __FBSDID
-#define	__FBSDID(a)     struct _undefined_hack
+#ifndef __NQCID
+#define	__NQCID(a)     struct _undefined_hack
 #endif
 
 #ifndef O_BINARY

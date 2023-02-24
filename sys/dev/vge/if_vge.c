@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * VIA Networking Technologies VT612x PCI gigabit ethernet NIC driver.

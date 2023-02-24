@@ -30,7 +30,7 @@
 
 #include <sys/cdefs.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifdef	SRA
 #ifdef	ENCRYPTION

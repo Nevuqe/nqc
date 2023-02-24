@@ -31,7 +31,7 @@
 #include "opt_kern_tls.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifdef KERN_TLS
 #include <sys/param.h>

@@ -33,7 +33,7 @@
 #ifdef HID_COMPAT7
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 

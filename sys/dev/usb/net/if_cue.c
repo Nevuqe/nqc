@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * CATC USB-EL1210A USB to ethernet driver. Used in the CATC Netmate

@@ -35,7 +35,7 @@
 #include <sys/wait.h>
 #include <getopt.h>
 #include "eval_expr.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static int max_pmc_counters = 1;
 static int run_all = 0;

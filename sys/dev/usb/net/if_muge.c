@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * USB-To-Ethernet adapter driver for Microchip's LAN78XX and related families.

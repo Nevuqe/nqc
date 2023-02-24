@@ -18,7 +18,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*-
  * Ralink Technology RT2561, RT2561S and RT2661 chipset driver

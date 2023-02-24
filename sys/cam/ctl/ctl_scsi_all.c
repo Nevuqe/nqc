@@ -33,7 +33,7 @@
 
 #include <sys/param.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #ifdef _KERNEL

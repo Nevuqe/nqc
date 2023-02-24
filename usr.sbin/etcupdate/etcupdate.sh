@@ -381,7 +381,7 @@ compare()
 #
 # $1 - path of first file
 # $2 - path of second file
-fbsdid_only()
+nqcid_only()
 {
 
 	diff -qI '\$NQC.*\$' $1 $2 >/dev/null 2>&1
@@ -394,7 +394,7 @@ fbsdid_only()
 #
 # $1 - first node
 # $2 - second node
-compare_fbsdid()
+compare_nqcid()
 {
 	local cmp
 
@@ -402,7 +402,7 @@ compare_fbsdid()
 	cmp=$?
 
 	if [ -n "$FREEBSD_ID" -a "$cmp" -eq $COMPARE_DIFFFILES ] && \
-	    fbsdid_only $1 $2; then
+	    nqcid_only $1 $2; then
 		return $COMPARE_EQUAL
 	fi
 
@@ -490,7 +490,7 @@ diffnode()
 		diffargs=""
 	fi
 
-	compare_fbsdid $1/$3 $2/$3
+	compare_nqcid $1/$3 $2/$3
 	case $? in
 		$COMPARE_EQUAL)
 			;;
@@ -837,7 +837,7 @@ update_freebsdid()
 	# As an extra sanity check, fail the attempt if the updated
 	# version of the file has any differences aside from the
 	# FreeBSD ID string.
-	if ! fbsdid_only ${DESTDIR}$1 $file; then
+	if ! nqcid_only ${DESTDIR}$1 $file; then
 		rm -f $file
 		return 1
 	fi
@@ -1018,7 +1018,7 @@ handle_removed_file()
 		return
 	fi
 
-	compare_fbsdid $DESTDIR/$file $OLDTREE/$file
+	compare_nqcid $DESTDIR/$file $OLDTREE/$file
 	case $? in
 		$COMPARE_EQUAL)
 			if ! [ -d $DESTDIR/$file ]; then
@@ -1104,7 +1104,7 @@ handle_modified_file()
 	# file is a change in the FreeBSD ID string and -F is
 	# specified, just install the new file.
 	if [ -n "$FREEBSD_ID" -a $newdestcmp -eq $COMPARE_DIFFFILES ] && \
-	    fbsdid_only $NEWTREE/$file $DESTDIR/$file; then
+	    nqcid_only $NEWTREE/$file $DESTDIR/$file; then
 		if update_unmodified $file; then
 			return
 		else
@@ -1115,7 +1115,7 @@ handle_modified_file()
 	# If the local file is the same as the old file, install the
 	# new file.  If -F is specified and the only local change is
 	# in the FreeBSD ID string, then install the new file as well.
-	if compare_fbsdid $OLDTREE/$file $DESTDIR/$file; then
+	if compare_nqcid $OLDTREE/$file $DESTDIR/$file; then
 		if update_unmodified $file; then
 			return
 		fi
@@ -1139,7 +1139,7 @@ handle_modified_file()
 		# file is a change in the FreeBSD ID string and -F is
 		# specified, don't warn.
 		if [ -n "$FREEBSD_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
-		    fbsdid_only $OLDTREE/$file $NEWTREE/$file; then
+		    nqcid_only $OLDTREE/$file $NEWTREE/$file; then
 			return
 		fi
 
@@ -1177,7 +1177,7 @@ handle_modified_file()
 	# change in the FreeBSD ID string and -F is specified, just
 	# update the FreeBSD ID string in the local file.
 	if [ -n "$FREEBSD_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
-	    fbsdid_only $OLDTREE/$file $NEWTREE/$file; then
+	    nqcid_only $OLDTREE/$file $NEWTREE/$file; then
 		if update_freebsdid $file; then
 			continue
 		fi
@@ -1301,7 +1301,7 @@ handle_added_file()
 			# FreeBSD ID string and -F is specified, just
 			# install the new file.
 			if [ -n "$FREEBSD_ID" ] && \
-			    fbsdid_only $NEWTREE/$file $DESTDIR/$file; then
+			    nqcid_only $NEWTREE/$file $DESTDIR/$file; then
 				if update_unmodified $file; then
 					return
 				else

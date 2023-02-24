@@ -13,7 +13,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /* __ieee754_gamma_r(x, signgamp)
  * Reentrant version of the logarithm of the Gamma function 

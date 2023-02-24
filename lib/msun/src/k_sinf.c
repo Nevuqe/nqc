@@ -16,7 +16,7 @@
 
 #ifndef INLINE_KERNEL_SINDF
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #endif
 
 #include "math.h"

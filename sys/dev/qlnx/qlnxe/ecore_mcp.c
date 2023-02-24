@@ -28,7 +28,7 @@
  * File : ecore_mcp.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "bcm_osal.h"
 #include "ecore.h"

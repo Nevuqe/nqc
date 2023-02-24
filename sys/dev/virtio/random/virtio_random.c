@@ -29,7 +29,7 @@
 /* Driver for VirtIO entropy device. */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/types.h>

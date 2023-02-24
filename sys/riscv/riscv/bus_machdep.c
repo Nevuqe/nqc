@@ -36,7 +36,7 @@
 #include "opt_platform.h"
 
 #include <sys/param.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <vm/vm.h>
 #include <vm/pmap.h>

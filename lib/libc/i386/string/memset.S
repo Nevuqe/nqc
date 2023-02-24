@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * memset(void *b, int c, size_t len)

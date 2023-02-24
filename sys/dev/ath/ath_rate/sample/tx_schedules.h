@@ -40,7 +40,7 @@
 #define	__ATH_RATE_SAMPLE_TXSCHEDULES_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define A(_r) \
     (((_r) == 6)   ? 0 : (((_r) == 9)   ? 1 : (((_r) == 12)  ? 2 : \

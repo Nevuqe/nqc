@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * MALLOC.C - malloc equivalent, runs on top of zalloc and uses sbrk

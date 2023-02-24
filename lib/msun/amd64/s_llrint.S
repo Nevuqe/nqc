@@ -1,5 +1,5 @@
 #include <machine/asm.h>
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 	
 /* sizeof(long) == sizeof(long long) */
 #define	fn	llrint

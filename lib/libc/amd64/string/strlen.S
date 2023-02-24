@@ -4,7 +4,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Note: this routine was written with kernel use in mind (read: no simd),

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_mptable_force_htt.h"
 #include "opt_mptable_linux_bug_compat.h"

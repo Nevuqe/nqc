@@ -25,7 +25,7 @@
  */
 
 #include "lafe_platform.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_STDARG_H
 #include <stdarg.h>

@@ -27,7 +27,7 @@
 
 #include <sys/cdefs.h>
 #ifdef __FreeBSD__
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #endif
 
 /*

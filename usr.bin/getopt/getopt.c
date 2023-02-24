@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * This material, written by Henry Spencer, was released by him

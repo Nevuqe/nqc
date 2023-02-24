@@ -10,7 +10,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <stdlib.h>
@@ -597,7 +597,7 @@ static void table_print(struct table *t)
 	c = t->nentry;
 	printf(
 	    "#include <sys/cdefs.h>\n"
-	    "__FBSDID(\"$" "FreeBSD" "$\");\n"
+	    "__NQCID(\"$" "FreeBSD" "$\");\n"
 	    "\n"
 	    );
 	printf("static const unsigned %s_reg_safe_bm[%d] = {\n", t->gpu_prefix,

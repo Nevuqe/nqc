@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD

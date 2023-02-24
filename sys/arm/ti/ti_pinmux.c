@@ -34,7 +34,7 @@
  * Exposes pinmux module to pinctrl-compatible interface
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

@@ -34,7 +34,7 @@
  */
 
 #include <sys/types.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/mman.h>
 #include <sys/param.h>

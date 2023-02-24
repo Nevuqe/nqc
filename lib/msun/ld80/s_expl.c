@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /**
  * Compute the exponential of x for Intel 80-bit format.  This is based on:

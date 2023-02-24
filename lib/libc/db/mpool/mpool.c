@@ -33,7 +33,7 @@
 static char sccsid[] = "@(#)mpool.c	8.7 (Berkeley) 11/2/95";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "namespace.h"
 #include <sys/param.h>

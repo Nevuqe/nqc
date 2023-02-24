@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifndef _LINUX_SDIO_COMPAT_H_
 #define _LINUX_SDIO_COMPAT_H_

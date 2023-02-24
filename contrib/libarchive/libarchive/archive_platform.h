@@ -87,14 +87,14 @@
  * headers as required.
  */
 
-/* Get a real definition for __FBSDID or __RCSID if we can */
+/* Get a real definition for __NQCID or __RCSID if we can */
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
 /* If not, define them so as to avoid dangling semicolons. */
-#ifndef __FBSDID
-#define	__FBSDID(a)     struct _undefined_hack
+#ifndef __NQCID
+#define	__NQCID(a)     struct _undefined_hack
 #endif
 #ifndef __RCSID
 #define	__RCSID(a)     struct _undefined_hack

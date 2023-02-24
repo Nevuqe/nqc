@@ -30,7 +30,7 @@
  * Ulrich Drepper <drepper@redhat.com>. */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/endian.h>
 #include <sys/param.h>

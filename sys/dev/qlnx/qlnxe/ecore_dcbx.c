@@ -29,7 +29,7 @@
  * File : ecore_dcbx.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "bcm_osal.h"
 #include "ecore.h"

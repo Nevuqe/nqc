@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * With thanks to John Dyson for the original version of this.

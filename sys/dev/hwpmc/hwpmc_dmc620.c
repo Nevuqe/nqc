@@ -33,7 +33,7 @@
 /* Support for ARM DMC-620 Memory Controller PMU */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/lock.h>

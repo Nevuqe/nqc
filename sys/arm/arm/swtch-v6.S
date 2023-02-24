@@ -87,7 +87,7 @@
 #include <machine/sysreg.h>
 #include <machine/vfp.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #if defined(SMP)
 #define GET_PCPU(tmp, tmp2) \

@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifndef _DRM_LINUX_LIST_H_
 #define _DRM_LINUX_LIST_H_

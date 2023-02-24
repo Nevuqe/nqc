@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifndef __IOAT_H__
 #define __IOAT_H__

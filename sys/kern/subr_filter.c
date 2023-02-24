@@ -28,7 +28,7 @@
  * Author: Randall Stewart <rrs@netflix.com>
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #include <sys/types.h>
 #include <sys/time.h>
 #include <sys/errno.h>

@@ -34,7 +34,7 @@
 /* Generic ECAM PCIe driver FDT attachment */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_platform.h"
 

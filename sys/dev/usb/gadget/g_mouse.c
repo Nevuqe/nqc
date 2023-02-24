@@ -30,7 +30,7 @@
  */
 
 #include <sys/param.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/stdint.h>
 #include <sys/stddef.h>

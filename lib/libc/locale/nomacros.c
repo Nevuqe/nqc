@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Tell <ctype.h> to generate extern versions of all its inline

@@ -35,7 +35,7 @@
 
 #include "assym.inc"
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * FIXME:

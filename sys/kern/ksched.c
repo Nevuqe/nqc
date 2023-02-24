@@ -35,7 +35,7 @@
 /* ksched: Soft real time scheduling based on "rtprio". */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_posix.h"
 

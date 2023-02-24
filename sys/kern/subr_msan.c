@@ -35,7 +35,7 @@
 #define	SAN_RUNTIME
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #if 0
 __KERNEL_RCSID(0, "$NetBSD: subr_msan.c,v 1.14 2020/09/09 16:29:59 maxv Exp $");
 #endif

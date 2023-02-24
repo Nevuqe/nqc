@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifndef MRSAS_IOCTL_H
 #define	MRSAS_IOCTL_H

@@ -26,7 +26,7 @@
 
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static void
 test_format_filter_by_ext(const char *output_file, 

@@ -34,7 +34,7 @@
 
 #include <sys/types.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/stat.h>
 #include <sys/sysctl.h>

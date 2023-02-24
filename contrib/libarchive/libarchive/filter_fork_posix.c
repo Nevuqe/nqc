@@ -30,7 +30,7 @@
 #if defined(HAVE_PIPE) && defined(HAVE_FCNTL) && \
     (defined(HAVE_FORK) || defined(HAVE_VFORK) || defined(HAVE_POSIX_SPAWNP))
 
-__FBSDID("$NQC: head/lib/libarchive/filter_fork.c 182958 2008-09-12 05:33:00Z kientzle $");
+__NQCID("$NQC: head/lib/libarchive/filter_fork.c 182958 2008-09-12 05:33:00Z kientzle $");
 
 #if defined(HAVE_SYS_TYPES_H)
 #  include <sys/types.h>

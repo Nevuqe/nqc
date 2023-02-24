@@ -20,7 +20,7 @@
 *******************************************************************************/
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #include <dev/pms/config.h>
 
 #define MAJOR_REVISION	    1

@@ -26,7 +26,7 @@
 
 
 #include "cpio_platform.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <archive.h>

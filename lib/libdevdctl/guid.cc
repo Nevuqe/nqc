@@ -48,7 +48,7 @@
 
 #include "guid.h"
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 /*============================ Namespace Control =============================*/
 using std::string;
 namespace DevdCtl

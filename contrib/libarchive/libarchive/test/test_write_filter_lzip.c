@@ -26,7 +26,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * A basic exercise of lzip reading and writing.

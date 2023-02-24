@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>

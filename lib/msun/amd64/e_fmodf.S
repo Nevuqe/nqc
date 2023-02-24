@@ -4,7 +4,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 
 ENTRY(fmodf)
 	movss	%xmm0,-4(%rsp)

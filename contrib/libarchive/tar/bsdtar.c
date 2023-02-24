@@ -24,7 +24,7 @@
  */
 
 #include "bsdtar_platform.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_SYS_PARAM_H
 #include <sys/param.h>

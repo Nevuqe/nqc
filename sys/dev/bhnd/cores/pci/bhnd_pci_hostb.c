@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Broadcom BHND PCI/PCIe-Gen1 PCI-Host Bridge.

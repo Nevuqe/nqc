@@ -41,7 +41,7 @@ static char sccsid[] = "@(#)gcore.c	8.2 (Berkeley) 9/23/93";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Originally written by Eric Cooper in Fall 1981.

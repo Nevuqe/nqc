@@ -36,7 +36,7 @@
 #include "cd9660.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 static char cd9660_compute_gm_offset(time_t);
 

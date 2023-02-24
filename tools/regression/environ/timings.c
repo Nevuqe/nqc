@@ -34,7 +34,7 @@
 
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 
 const char value1[] = "Large ------------------ value";

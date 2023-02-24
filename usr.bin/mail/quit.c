@@ -35,7 +35,7 @@ static char sccsid[] = "@(#)quit.c	8.2 (Berkeley) 4/28/95";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "rcv.h"
 #include <fcntl.h>

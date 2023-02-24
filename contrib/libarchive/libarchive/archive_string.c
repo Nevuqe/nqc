@@ -25,7 +25,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * Basic resizable string support, to simplify manipulating arbitrary-sized

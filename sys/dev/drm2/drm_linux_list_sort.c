@@ -29,7 +29,7 @@
  */
 
 #include <dev/drm2/drmP.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 struct drm_list_sort_thunk {
 	int (*cmp)(void *, struct list_head *, struct list_head *);

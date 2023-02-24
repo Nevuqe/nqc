@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*
  * USBPHY "no-op" driver for Freescale family of SoCs.  This driver is used on

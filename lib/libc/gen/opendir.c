@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)opendir.c	8.8 (Berkeley) 5/1/95");
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "namespace.h"
 #include <sys/param.h>

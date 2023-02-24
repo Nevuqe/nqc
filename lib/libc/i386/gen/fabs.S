@@ -34,7 +34,7 @@
 	.asciz "@(#)fabs.s	5.2 (Berkeley) 12/17/90"
 #endif /* LIBC_SCCS and not lint */
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(fabs)
 	fldl	4(%esp)

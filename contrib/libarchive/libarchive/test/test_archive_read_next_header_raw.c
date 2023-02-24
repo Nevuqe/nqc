@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define DATA "random garbage for testing purposes"
 

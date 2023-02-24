@@ -5,7 +5,7 @@
 
 #include <machine/asm.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 /* RCSID("$NetBSD: s_significandf.S,v 1.3 1995/05/09 00:24:07 jtc Exp $") */
 
 ENTRY(significandf)

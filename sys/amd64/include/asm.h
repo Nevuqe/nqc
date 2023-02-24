@@ -106,12 +106,12 @@
 
 #define RCSID(x)	.text; .asciz x
 
-#undef __FBSDID
-#if !defined(STRIP_FBSDID)
-#define __FBSDID(s)	.ident s
+#undef __NQCID
+#if !defined(STRIP_NQCID)
+#define __NQCID(s)	.ident s
 #else
-#define __FBSDID(s)	/* nothing */
-#endif /* !STRIP_FBSDID */
+#define __NQCID(s)	/* nothing */
+#endif /* !STRIP_NQCID */
 
 #endif /* !_MACHINE_ASM_H_ */
 

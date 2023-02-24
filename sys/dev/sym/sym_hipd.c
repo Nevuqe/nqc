@@ -58,7 +58,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define SYM_DRIVER_NAME	"sym-1.6.5-20000902"
 

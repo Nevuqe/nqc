@@ -24,7 +24,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(fabs)
 	fabs d0, d0

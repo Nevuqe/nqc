@@ -28,7 +28,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 	.section .init,"ax",@progbits
 	ldr	lr, [sp]

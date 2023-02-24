@@ -36,7 +36,7 @@ static char sccsid[] = "@(#)fortran.c	8.3 (Berkeley) 4/2/94";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <ctype.h>
 #include <limits.h>

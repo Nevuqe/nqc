@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <opencrypto/gmac.h>
 #include <opencrypto/xform_auth.h>

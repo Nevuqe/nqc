@@ -36,7 +36,7 @@
 #include <machine/asm.h>
 #include <machine/armreg.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 .macro clear_step_flag pcbflags, tmp
 	tbz	\pcbflags, #PCB_SINGLE_STEP_SHIFT, 999f

@@ -15,7 +15,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /* 
  * stack is aligned as there's a possibility of branching to L_overflow

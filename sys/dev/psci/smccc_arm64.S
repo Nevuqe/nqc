@@ -31,7 +31,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 .macro arm_smccc_1_0	insn
 ENTRY(arm_smccc_\insn)

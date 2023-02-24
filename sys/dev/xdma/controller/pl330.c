@@ -31,7 +31,7 @@
 /* ARM PrimeCell DMA Controller (PL330) driver. */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "opt_platform.h"
 #include <sys/param.h>

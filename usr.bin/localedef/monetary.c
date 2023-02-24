@@ -32,7 +32,7 @@
  * LC_MONETARY database generation routines for localedef.
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <stdio.h>
 #include <stdlib.h>

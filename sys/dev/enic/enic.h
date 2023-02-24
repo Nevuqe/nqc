@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC: $");
+__NQCID("$NQC: $");
 
 #ifndef _ENIC_H
 #define _ENIC_H

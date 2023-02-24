@@ -30,7 +30,7 @@
 
 #include <machine/asm.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(strncmp)
 /* if (len == 0) return 0 */

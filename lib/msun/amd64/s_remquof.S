@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$"); 
+__NQCID("$NQC$"); 
 	
 ENTRY(remquof)
 	movss	%xmm0,-4(%rsp)

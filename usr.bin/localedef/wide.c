@@ -35,7 +35,7 @@
  * this approach means that we need a method for each and every encoding.
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <ctype.h>
 #include <stdlib.h>

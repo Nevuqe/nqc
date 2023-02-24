@@ -91,7 +91,7 @@
 */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #if 0
 #define ARCMSR_DEBUG1			1

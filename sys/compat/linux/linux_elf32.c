@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #define __ELF_WORD_SIZE 32
 #include <compat/linux/linux_elf.c>

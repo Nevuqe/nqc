@@ -7,7 +7,7 @@
 /* VMCI initialization. */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "vmci.h"
 #include "vmci_doorbell.h"

@@ -63,7 +63,7 @@
 
 #include "libmocks.h"
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*================================== Macros ==================================*/
 #define	NUM_ELEMENTS(x) (sizeof(x) / sizeof(*x))

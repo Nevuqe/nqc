@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 ENTRY(cerror)
 	addi	sp, sp, -16

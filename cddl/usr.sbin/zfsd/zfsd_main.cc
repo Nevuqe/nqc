@@ -56,7 +56,7 @@
 #include "vdev_iterator.h"
 #include "zfsd.h"
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 /*=============================== Program Main ===============================*/
 static void

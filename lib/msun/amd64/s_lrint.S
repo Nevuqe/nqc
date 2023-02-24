@@ -27,7 +27,7 @@
 #include <machine/asm.h>
 
 #ifndef fn
-__FBSDID("$NQC$")
+__NQCID("$NQC$")
 #define	fn	lrint
 #endif
 

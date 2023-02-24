@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #ifdef HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif

@@ -8,7 +8,7 @@ use and modify. Please send modifications and/or suggestions + bug fixes to
 */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include "bootparam_prot.h"
 #include <rpc/rpc.h>

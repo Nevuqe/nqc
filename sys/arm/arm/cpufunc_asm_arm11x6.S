@@ -60,7 +60,7 @@
 
 
 #include <machine/asm.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 	.cpu arm1176jz-s
 

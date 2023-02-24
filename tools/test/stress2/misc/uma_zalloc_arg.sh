@@ -65,7 +65,7 @@ diff --git a/sys/kern/kern_malloc.c b/sys/kern/kern_malloc.c
 index 01aff78..9d557a1 100644
 --- a/sys/kern/kern_malloc.c
 +++ b/sys/kern/kern_malloc.c
-@@ -50,6 +50,7 @@ __FBSDID("$NQC$");
+@@ -50,6 +50,7 @@ __NQCID("$NQC$");
  
  #include <sys/param.h>
  #include <sys/systm.h>
@@ -97,7 +97,7 @@ diff --git a/sys/vm/uma_core.c b/sys/vm/uma_core.c
 index 1f57dff..dfa18e6 100644
 --- a/sys/vm/uma_core.c
 +++ b/sys/vm/uma_core.c
-@@ -64,6 +64,7 @@ __FBSDID("$NQC$");
+@@ -64,6 +64,7 @@ __NQCID("$NQC$");
  #include <sys/param.h>
  #include <sys/systm.h>
  #include <sys/bitset.h>
@@ -133,7 +133,7 @@ diff --git a/sys/vm/uma_dbg.c b/sys/vm/uma_dbg.c
 index 3fbd29b..bed3130 100644
 --- a/sys/vm/uma_dbg.c
 +++ b/sys/vm/uma_dbg.c
-@@ -42,6 +42,8 @@ __FBSDID("$NQC$");
+@@ -42,6 +42,8 @@ __NQCID("$NQC$");
  #include <sys/lock.h>
  #include <sys/mutex.h>
  #include <sys/malloc.h>

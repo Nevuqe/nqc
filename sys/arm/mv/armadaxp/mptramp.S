@@ -27,7 +27,7 @@
 #include <machine/asm.h>
 #include <machine/armreg.h>
 
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 .global _C_LABEL(mptramp_pmu_boot)
 

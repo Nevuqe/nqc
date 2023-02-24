@@ -34,7 +34,7 @@ WORKDIR=work
 
 usage()
 {
-	echo "Usage: fbsdid.sh [-s script] [-w workdir]"
+	echo "Usage: nqcid.sh [-s script] [-w workdir]"
 	exit 1
 }
 

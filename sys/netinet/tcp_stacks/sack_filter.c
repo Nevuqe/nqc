@@ -24,7 +24,7 @@
  *
  */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 #ifndef _KERNEL
 #define _WANT_TCPCB 1
 #endif

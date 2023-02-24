@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 __SCCSID("@(#)regex.c	5.1 (Berkeley) 3/29/92");
 
 /*

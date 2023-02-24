@@ -35,7 +35,7 @@
  */
 /* This file contains wrappers for sysctls used during build/install */
 #include <sys/cdefs.h>
-__FBSDID("$NQC$");
+__NQCID("$NQC$");
 
 #include <sys/sysctl.h>
 
