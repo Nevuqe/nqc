@@ -3,7 +3,7 @@
 // whether or not they return the expected ECAPMODE.
 #include <sys/types.h>
 #include <sys/socket.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/sockio.h>
 #endif
 #include <sys/stat.h>
@@ -231,7 +231,7 @@ FORK_TEST_F(WithFiles, AllowedSocketSyscallsIfRoot) {
   // This test is disabled for now as the corresponding kernel change was
   // disabled.
 #if 0
-#ifdef __FreeBSD__
+#ifdef __NQC__
   struct if_clonereq req;
 
   req.ifcr_total = 0;

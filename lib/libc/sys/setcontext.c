@@ -37,9 +37,9 @@ __NQCID("$NQC$");
 #include "libc_private.h"
 
 __weak_reference(__sys_setcontext, __setcontext);
-__sym_compat(setcontext, __impl_setcontext, FBSD_1.0);
+__sym_compat(setcontext, __impl_setcontext, NQC_1.0);
 __weak_reference(setcontext, __impl_setcontext);
-__sym_default(setcontext, setcontext, FBSD_1.2);
+__sym_default(setcontext, setcontext, NQC_1.2);
 
 #pragma weak setcontext
 int

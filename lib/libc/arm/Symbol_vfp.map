@@ -2,14 +2,14 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	fpgetmask;
 	fpgetround;
 	fpsetmask;
 	fpsetround;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	fpgetsticky;
 	fpsetsticky;
 };

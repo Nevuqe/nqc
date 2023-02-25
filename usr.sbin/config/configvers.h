@@ -8,7 +8,7 @@
  * 6 digits of version.  The most significant are branch indicators at the
  * time when the last incompatible change was made (which is why it is
  * presently 6 on 7-current).  The least significant digits are incremented
- * as described below.  The format is similar to the __FreeBSD_version, but
+ * as described below.  The format is similar to the __NQC_version, but
  * not tied to it.
  *
  * DO NOT CASUALLY BUMP THIS NUMBER!  The rules are not the same as shared

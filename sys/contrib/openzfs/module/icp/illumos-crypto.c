@@ -139,7 +139,7 @@ icp_init(void)
 	return (0);
 }
 
-#if defined(_KERNEL) && defined(__FreeBSD__)
+#if defined(_KERNEL) && defined(__NQC__)
 module_exit(icp_fini);
 module_init(icp_init);
 #endif

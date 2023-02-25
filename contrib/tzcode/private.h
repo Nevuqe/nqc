@@ -648,7 +648,7 @@ void tzset(void);
 #ifndef HAVE_DECL_TIMEGM
 # if (202311 <= __STDC_VERSION__ \
       || defined __GLIBC__ || defined __tm_zone /* musl */ \
-      || defined __FreeBSD__ || defined __NetBSD__ || defined __OpenBSD__ \
+      || defined __NQC__ || defined __NetBSD__ || defined __OpenBSD__ \
       || (defined __APPLE__ && defined __MACH__))
 #  define HAVE_DECL_TIMEGM true
 # else
@@ -713,7 +713,7 @@ time_t posix2time(time_t);
    guessing if NO_TM_ZONE is defined.  Similarly for TM_GMTOFF.  */
 #if (defined __GLIBC__ \
      || defined __tm_zone /* musl */ \
-     || defined __FreeBSD__ || defined __NetBSD__ || defined __OpenBSD__ \
+     || defined __NQC__ || defined __NetBSD__ || defined __OpenBSD__ \
      || (defined __APPLE__ && defined __MACH__))
 # if !defined TM_GMTOFF && !defined NO_TM_GMTOFF
 #  define TM_GMTOFF tm_gmtoff

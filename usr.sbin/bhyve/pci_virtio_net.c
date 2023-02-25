@@ -647,7 +647,7 @@ pci_vtnet_init(struct pci_devinst *pi, nvlist_t *nvl)
 	sc->vsc_vs.vs_mtx = &sc->vsc_mtx;
 
 	/* use BAR 1 to map MSI-X table and PBA, if we're using MSI-X */
-	if (vi_intr_init(&sc->vsc_vs, 1, fbsdrun_virtio_msix())) {
+	if (vi_intr_init(&sc->vsc_vs, 1, nqcrun_virtio_msix())) {
 		free(sc);
 		return (1);
 	}

@@ -127,7 +127,7 @@ __RCSID(" NetBSD: main.c,v 1.117 2009/07/13 19:05:41 roy Exp  ");
 #include <locale.h>
 
 #endif	/* tnftp */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/sysctl.h>
 #endif
 

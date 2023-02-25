@@ -144,7 +144,7 @@ msg_send(int sock, const struct msghdr *msg)
 	return (0);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 int
 cred_send(int sock)
 {

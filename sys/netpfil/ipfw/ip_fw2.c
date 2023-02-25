@@ -435,7 +435,7 @@ iface_match(struct ifnet *ifp, ipfw_insn_if *cmd, struct ip_fw_chain *chain,
 				return(1);
 		}
 	} else {
-#if !defined(USERSPACE) && defined(__FreeBSD__)	/* and OSX too ? */
+#if !defined(USERSPACE) && defined(__NQC__)	/* and OSX too ? */
 		struct ifaddr *ia;
 
 		NET_EPOCH_ASSERT();
@@ -447,7 +447,7 @@ iface_match(struct ifnet *ifp, ipfw_insn_if *cmd, struct ip_fw_chain *chain,
 			    (ia->ifa_addr))->sin_addr.s_addr)
 				return (1);	/* match */
 		}
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	}
 	return(0);	/* no match, fail ... */
 }
@@ -476,7 +476,7 @@ iface_match(struct ifnet *ifp, ipfw_insn_if *cmd, struct ip_fw_chain *chain,
 static int
 verify_path(struct in_addr src, struct ifnet *ifp, u_int fib)
 {
-#if defined(USERSPACE) || !defined(__FreeBSD__)
+#if defined(USERSPACE) || !defined(__NQC__)
 	return 0;
 #else
 	struct nhop_object *nh;
@@ -505,7 +505,7 @@ verify_path(struct in_addr src, struct ifnet *ifp, u_int fib)
 
 	/* found valid route */
 	return 1;
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 }
 
 /*
@@ -1115,7 +1115,7 @@ check_uidgid(ipfw_insn_u32 *insn, struct ip_fw_args *args, int *ugid_lookupp,
 #if defined(USERSPACE)
 	return 0;	// not supported in userspace
 #else
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	/* XXX */
 	return cred_check(insn, proto, oif,
 	    dst_ip, dst_port, src_ip, src_port,
@@ -1217,7 +1217,7 @@ check_uidgid(ipfw_insn_u32 *insn, struct ip_fw_args *args, int *ugid_lookupp,
 	else if (insn->o.opcode == O_JAIL)
 		match = ((*uc)->cr_prison->pr_id == (int)insn->d[0]);
 	return (match);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 #endif /* not supported in userspace */
 }
 
@@ -1385,7 +1385,7 @@ ipfw_chk(struct ip_fw_args *args)
 	 * these types of constraints, as well as decrease contention
 	 * on pcb related locks.
 	 */
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	struct bsd_ucred ucred_cache;
 #else
 	struct ucred *ucred_cache = NULL;
@@ -1937,7 +1937,7 @@ do {								\
 					match = check_uidgid(
 						    (ipfw_insn_u32 *)cmd,
 						    args, &ucred_lookup,
-#ifdef __FreeBSD__
+#ifdef __NQC__
 						    &ucred_cache);
 #else
 						    (void *)&ucred_cache);
@@ -3343,7 +3343,7 @@ do {								\
 		printf("ipfw: ouch!, skip past end of rules, denying packet\n");
 	}
 	IPFW_PF_RUNLOCK(chain);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (ucred_cache != NULL)
 		crfree(ucred_cache);
 #endif

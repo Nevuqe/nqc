@@ -104,10 +104,10 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man8dir)"
 PROGRAMS = $(sbin_PROGRAMS)
-am__auditd_SOURCES_DIST = audit_warn.c auditd.c auditd_fbsd.c \
+am__auditd_SOURCES_DIST = audit_warn.c auditd.c auditd_nqc.c \
 	auditd_controlServer.c audit_triggersServer.c auditd_darwin.c
 @USE_MACH_IPC_FALSE@am_auditd_OBJECTS = audit_warn.$(OBJEXT) \
-@USE_MACH_IPC_FALSE@	auditd.$(OBJEXT) auditd_fbsd.$(OBJEXT)
+@USE_MACH_IPC_FALSE@	auditd.$(OBJEXT) auditd_nqc.$(OBJEXT)
 @USE_MACH_IPC_TRUE@am_auditd_OBJECTS = auditd_controlServer.$(OBJEXT) \
 @USE_MACH_IPC_TRUE@	audit_triggersServer.$(OBJEXT) \
 @USE_MACH_IPC_TRUE@	audit_warn.$(OBJEXT) auditd.$(OBJEXT) \
@@ -337,7 +337,7 @@ top_srcdir = @top_srcdir@
 @USE_NATIVE_INCLUDES_TRUE@INCLUDES = -I$(top_builddir) -I$(top_srcdir)
 auditd_LDADD = $(top_builddir)/libbsm/libbsm.la $(top_builddir)/libauditd/libauditd.la
 man8_MANS = auditd.8
-@USE_MACH_IPC_FALSE@auditd_SOURCES = audit_warn.c auditd.c auditd_fbsd.c
+@USE_MACH_IPC_FALSE@auditd_SOURCES = audit_warn.c auditd.c auditd_nqc.c
 @USE_MACH_IPC_TRUE@auditd_SOURCES = auditd_controlServer.c audit_triggersServer.c audit_warn.c auditd.c auditd_darwin.c
 @USE_MACH_IPC_TRUE@CLEANFILES = auditd_control_server.c auditd_controlServer.h audit_triggersServer.c audit_triggersServer.h
 all: all-am
@@ -438,7 +438,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auditd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auditd_controlServer.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auditd_darwin.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auditd_fbsd.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/auditd_nqc.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

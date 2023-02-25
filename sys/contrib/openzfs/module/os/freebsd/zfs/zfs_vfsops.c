@@ -114,7 +114,7 @@ static int zfs_version_zpl = ZPL_VERSION;
 SYSCTL_INT(_vfs_zfs_version, OID_AUTO, zpl, CTLFLAG_RD, &zfs_version_zpl, 0,
 	"ZPL_VERSION");
 
-#if __FreeBSD_version >= 1400018
+#if __NQC_version >= 1400018
 static int zfs_quotactl(vfs_t *vfsp, int cmds, uid_t id, void *arg,
     bool *mp_busy);
 #else
@@ -126,7 +126,7 @@ static int zfs_root(vfs_t *vfsp, int flags, vnode_t **vpp);
 static int zfs_statfs(vfs_t *vfsp, struct statfs *statp);
 static int zfs_vget(vfs_t *vfsp, ino_t ino, int flags, vnode_t **vpp);
 static int zfs_sync(vfs_t *vfsp, int waitfor);
-#if __FreeBSD_version >= 1300098
+#if __NQC_version >= 1300098
 static int zfs_checkexp(vfs_t *vfsp, struct sockaddr *nam, uint64_t *extflagsp,
     struct ucred **credanonp, int *numsecflavors, int *secflavors);
 #else
@@ -139,7 +139,7 @@ static void zfs_freevfs(vfs_t *vfsp);
 struct vfsops zfs_vfsops = {
 	.vfs_mount =		zfs_mount,
 	.vfs_unmount =		zfs_umount,
-#if __FreeBSD_version >= 1300049
+#if __NQC_version >= 1300049
 	.vfs_root =		vfs_cache_root,
 	.vfs_cachedroot = zfs_root,
 #else
@@ -285,7 +285,7 @@ done:
 }
 
 static int
-#if __FreeBSD_version >= 1400018
+#if __NQC_version >= 1400018
 zfs_quotactl(vfs_t *vfsp, int cmds, uid_t id, void *arg, bool *mp_busy)
 #else
 zfs_quotactl(vfs_t *vfsp, int cmds, uid_t id, void *arg)
@@ -314,7 +314,7 @@ zfs_quotactl(vfs_t *vfsp, int cmds, uid_t id, void *arg)
 			break;
 		default:
 			error = EINVAL;
-#if __FreeBSD_version < 1400018
+#if __NQC_version < 1400018
 			if (cmd == Q_QUOTAON || cmd == Q_QUOTAOFF)
 				vfs_unbusy(vfsp);
 #endif
@@ -376,13 +376,13 @@ zfs_quotactl(vfs_t *vfsp, int cmds, uid_t id, void *arg)
 	case Q_QUOTAON:
 		// As far as I can tell, you can't turn quotas on or off on zfs
 		error = 0;
-#if __FreeBSD_version < 1400018
+#if __NQC_version < 1400018
 		vfs_unbusy(vfsp);
 #endif
 		break;
 	case Q_QUOTAOFF:
 		error = ENOTSUP;
-#if __FreeBSD_version < 1400018
+#if __NQC_version < 1400018
 		vfs_unbusy(vfsp);
 #endif
 		break;
@@ -1575,7 +1575,7 @@ zfsvfs_teardown(zfsvfs_t *zfsvfs, boolean_t unmounting)
 		 * 'z_parent' is self referential for non-snapshots.
 		 */
 #ifdef FREEBSD_NAMECACHE
-#if __FreeBSD_version >= 1300117
+#if __NQC_version >= 1300117
 		cache_purgevfs(zfsvfs->z_parent->z_vfs);
 #else
 		cache_purgevfs(zfsvfs->z_parent->z_vfs, true);
@@ -1772,7 +1772,7 @@ zfs_vget(vfs_t *vfsp, ino_t ino, int flags, vnode_t **vpp)
 }
 
 static int
-#if __FreeBSD_version >= 1300098
+#if __NQC_version >= 1300098
 zfs_checkexp(vfs_t *vfsp, struct sockaddr *nam, uint64_t *extflagsp,
     struct ucred **credanonp, int *numsecflavors, int *secflavors)
 #else

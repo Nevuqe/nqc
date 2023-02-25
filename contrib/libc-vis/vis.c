@@ -142,7 +142,7 @@ static const wchar_t char_glob[] = L"*?[#";
  * loops below are using sizeof(uint64_t) - 1 instead of MB_LEN_MAX, and
  * the assertion is commented out.
  */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /*
  * On FreeBSD including <sys/systm.h> for CTASSERT only works in kernel
  * mode.
@@ -152,7 +152,7 @@ static const wchar_t char_glob[] = L"*?[#";
 #define _CTASSERT(x, y)         __CTASSERT(x, y)
 #define __CTASSERT(x, y)        typedef char __assert ## y[(x) ? 1 : -1]
 #endif
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 CTASSERT(MB_LEN_MAX <= sizeof(uint64_t));
 #endif /* !__NetBSD__ */
 #endif

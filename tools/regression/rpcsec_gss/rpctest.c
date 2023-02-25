@@ -27,7 +27,7 @@
  * $NQC$
  */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/cdefs.h>
 #else
 #define __unused

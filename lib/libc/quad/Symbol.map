@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	/*
 	 * These symbols really shouldn't be exported since they should
 	 * be pulled from libgcc, but the build of some applications is

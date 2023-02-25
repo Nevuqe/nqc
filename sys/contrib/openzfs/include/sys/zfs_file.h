@@ -29,7 +29,7 @@ typedef struct zfs_file {
 	int f_fd;
 	int f_dump_fd;
 } zfs_file_t;
-#elif defined(__linux__) || defined(__FreeBSD__)
+#elif defined(__linux__) || defined(__NQC__)
 typedef struct file zfs_file_t;
 #else
 #error "unknown OS"

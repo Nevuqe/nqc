@@ -187,11 +187,11 @@ void freebsd::Linker::ConstructJob(Compilation &C, const JobAction &JA,
   switch (Arch) {
   case llvm::Triple::x86:
     CmdArgs.push_back("-m");
-    CmdArgs.push_back("elf_i386_fbsd");
+    CmdArgs.push_back("elf_i386_nqc");
     break;
   case llvm::Triple::ppc:
     CmdArgs.push_back("-m");
-    CmdArgs.push_back("elf32ppc_fbsd");
+    CmdArgs.push_back("elf32ppc_nqc");
     break;
   case llvm::Triple::ppcle:
     CmdArgs.push_back("-m");
@@ -200,25 +200,25 @@ void freebsd::Linker::ConstructJob(Compilation &C, const JobAction &JA,
     break;
   case llvm::Triple::mips:
     CmdArgs.push_back("-m");
-    CmdArgs.push_back("elf32btsmip_fbsd");
+    CmdArgs.push_back("elf32btsmip_nqc");
     break;
   case llvm::Triple::mipsel:
     CmdArgs.push_back("-m");
-    CmdArgs.push_back("elf32ltsmip_fbsd");
+    CmdArgs.push_back("elf32ltsmip_nqc");
     break;
   case llvm::Triple::mips64:
     CmdArgs.push_back("-m");
     if (tools::mips::hasMipsAbiArg(Args, "n32"))
-      CmdArgs.push_back("elf32btsmipn32_fbsd");
+      CmdArgs.push_back("elf32btsmipn32_nqc");
     else
-      CmdArgs.push_back("elf64btsmip_fbsd");
+      CmdArgs.push_back("elf64btsmip_nqc");
     break;
   case llvm::Triple::mips64el:
     CmdArgs.push_back("-m");
     if (tools::mips::hasMipsAbiArg(Args, "n32"))
-      CmdArgs.push_back("elf32ltsmipn32_fbsd");
+      CmdArgs.push_back("elf32ltsmipn32_nqc");
     else
-      CmdArgs.push_back("elf64ltsmip_fbsd");
+      CmdArgs.push_back("elf64ltsmip_nqc");
     break;
   case llvm::Triple::riscv32:
     CmdArgs.push_back("-m");

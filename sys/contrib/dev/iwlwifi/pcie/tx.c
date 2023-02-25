@@ -12,7 +12,7 @@
 #include <net/ip6_checksum.h>
 #include <net/tso.h>
 #endif
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <net/mac80211.h>
 #endif
 
@@ -1217,7 +1217,7 @@ void iwl_pcie_hcmd_complete(struct iwl_trans *trans,
 		meta->source->resp_pkt = pkt;
 #if defined(__linux__)
 		meta->source->_rx_page_addr = (unsigned long)page_address(p);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		meta->source->_page = p;
 #endif
 		meta->source->_rx_page_order = trans_pcie->rx_page_order;

@@ -37,7 +37,7 @@ static const char rcsid[] =
 #include <sys/file.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/sysctl.h>
 #endif
 #include <sys/wait.h>
@@ -56,7 +56,7 @@ static const char rcsid[] =
 #include <syslog.h>
 #include <time.h>
 #include <unistd.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <paths.h>
 #else
 #include <getopt.h>
@@ -382,7 +382,7 @@ run_file(const char *filename, uid_t uid, gid_t gid)
 	if (chdir(pentry->pw_dir))
 		chdir("/");
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	execl(_PATH_SENDMAIL, "sendmail", "-F", "Atrun Service",
 			"-odi", "-oem",
 			mailname, (char *) NULL);
@@ -461,7 +461,7 @@ main(int argc, char *argv[])
     gid_t batch_gid;
     int c;
     int run_batch;
-#ifdef __FreeBSD__
+#ifdef __NQC__
     size_t ncpusz;
     double load_avg = -1;
     int ncpu;
@@ -485,7 +485,7 @@ main(int argc, char *argv[])
 	case 'l': 
 	    if (sscanf(optarg, "%lf", &load_avg) != 1)
 		perr("garbled option -l");
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	    if (load_avg <= 0.)
 		load_avg = LOADAVG_MX;
 #endif
@@ -504,7 +504,7 @@ main(int argc, char *argv[])
     if (chdir(ATJOB_DIR) != 0)
 	perr("cannot change to %s", ATJOB_DIR);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
     if (load_avg <= 0.) {
 	ncpusz = sizeof(size_t);
 	if (sysctlbyname("hw.ncpu", &ncpu, &ncpusz, NULL, 0) < 0)

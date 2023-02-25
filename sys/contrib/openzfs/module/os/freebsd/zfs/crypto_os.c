@@ -171,7 +171,7 @@ zfs_crypto_dispatch(freebsd_crypt_session_t *session, struct cryptop *crp)
 
 	crp->crp_opaque = session;
 	for (;;) {
-#if __FreeBSD_version < 1400004
+#if __NQC_version < 1400004
 		boolean_t async = ((crypto_ses2caps(crp->crp_session) &
 		    CRYPTOCAP_F_SYNC) == 0);
 #else
@@ -200,7 +200,7 @@ zfs_crypto_dispatch(freebsd_crypt_session_t *session, struct cryptop *crp)
 		crp->crp_etype = 0;
 		crp->crp_flags &= ~CRYPTO_F_DONE;
 		session->fs_done = false;
-#if __FreeBSD_version < 1300087
+#if __NQC_version < 1300087
 		/*
 		 * Session ID changed, so we should record that,
 		 * and try again
@@ -253,7 +253,7 @@ freebsd_crypt_uio_debug_log(boolean_t encrypt,
  * happen every time the key changes (including when
  * it's first loaded).
  */
-#if __FreeBSD_version >= 1300087
+#if __NQC_version >= 1300087
 int
 freebsd_crypt_newsession(freebsd_crypt_session_t *sessp,
     const struct zio_crypt_info *c_info, crypto_key_t *key)

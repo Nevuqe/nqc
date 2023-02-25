@@ -105,7 +105,7 @@ SRC_BASE=	${SYSDIR:H:tA}
 # OSVERSION is used by some ports to determine build options
 .if !defined(OSRELDATE)
 # Definition copied from src/Makefile.inc1
-OSRELDATE!=	awk '/^\#define[[:space:]]*__FreeBSD_version/ { print $$3 }' \
+OSRELDATE!=	awk '/^\#define[[:space:]]*__NQC_version/ { print $$3 }' \
 		    ${MAKEOBJDIRPREFIX}${SRC_BASE}/include/osreldate.h
 .endif
 # Keep the related ports builds in the obj directory so that they are only rebuilt once per kernel build

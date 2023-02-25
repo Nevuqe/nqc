@@ -34,7 +34,7 @@
 #    include <sys/uio.h>
 #  endif
 #  include <pthread.h>
-#  ifdef __FreeBSD__
+#  ifdef __NQC__
 #  include <pthread_np.h>
 #  endif
 #  include <signal.h>

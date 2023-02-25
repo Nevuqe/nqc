@@ -172,7 +172,7 @@ void rtw_tx_report_purge_timer(struct timer_list *t)
 	spin_lock_irqsave(&tx_report->q_lock, flags);
 	skb_queue_purge(&tx_report->queue);
 	spin_unlock_irqrestore(&tx_report->q_lock, flags);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	uint32_t qlen;
 
 	spin_lock_irqsave(&tx_report->q_lock, flags);
@@ -554,7 +554,7 @@ void rtw_tx(struct rtw_dev *rtwdev,
 	if (ret) {
 #if defined(__linux__)
 		rtw_err(rtwdev, "failed to write TX skb to HCI\n");
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		rtw_err(rtwdev, "%s: failed to write TX skb to HCI: %d\n", __func__, ret);
 #endif
 		goto out;
@@ -615,7 +615,7 @@ static int rtw_txq_push_skb(struct rtw_dev *rtwdev,
 	if (ret) {
 #if defined(__linux__)
 		rtw_err(rtwdev, "failed to write TX skb to HCI\n");
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		rtw_err(rtwdev, "%s: failed to write TX skb to HCI: %d\n", __func__, ret);
 #endif
 		return ret;
@@ -655,7 +655,7 @@ static void rtw_txq_push(struct rtw_dev *rtwdev,
 
 		ret = rtw_txq_push_skb(rtwdev, rtwtxq, skb);
 		if (ret) {
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 			dev_kfree_skb_any(skb);
 			rtw_err(rtwdev, "failed to push skb, ret %d\n", ret);
 #else

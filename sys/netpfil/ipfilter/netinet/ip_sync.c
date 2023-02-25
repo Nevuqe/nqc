@@ -30,14 +30,14 @@
 #  include <sys/mbuf.h>
 # endif
 # include <sys/select.h>
-# ifdef __FreeBSD__
+# ifdef __NQC__
 #  include <sys/selinfo.h>
 # endif
 #endif
 #if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
 # include <sys/proc.h>
 #endif
-#if defined(_KERNEL) && defined(__FreeBSD__)
+#if defined(_KERNEL) && defined(__NQC__)
 # include <sys/filio.h>
 # include <sys/fcntl.h>
 #else
@@ -79,7 +79,7 @@
 #ifdef  USE_INET6
 #include <netinet/icmp6.h>
 #endif
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 # if defined(_KERNEL) && !defined(IPFILTER_LKM)
 #  include <sys/libkern.h>
@@ -422,7 +422,7 @@ ipf_sync_write(ipf_main_softc_t *softc, struct uio *uio)
 
 	int err = 0;
 
-#  if defined(__NetBSD__) || defined(__FreeBSD__)
+#  if defined(__NetBSD__) || defined(__NQC__)
 	uio->uio_rw = UIO_WRITE;
 #  endif
 
@@ -568,7 +568,7 @@ ipf_sync_read(ipf_main_softc_t *softc, struct uio *uio)
 		return (EINVAL);
 	}
 
-#  if defined(__NetBSD__) || defined(__FreeBSD__)
+#  if defined(__NetBSD__) || defined(__NQC__)
 	uio->uio_rw = UIO_READ;
 #  endif
 

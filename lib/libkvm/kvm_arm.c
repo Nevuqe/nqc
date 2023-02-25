@@ -237,7 +237,7 @@ invalid:
  * not just those for a kernel crash dump.  Some architectures
  * have to deal with these NOT being constants!  (i.e. m68k)
  */
-#ifdef FBSD_NOT_YET
+#ifdef NQC_NOT_YET
 int
 _kvm_mdopen(kvm_t *kd)
 {

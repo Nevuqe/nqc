@@ -41,7 +41,7 @@ static const char rcsid[] = "$OpenBSD: pidfile.c,v 1.5 2002/05/26 09:29:02 deraa
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include "pidfile.h"
 #else
 #include <util.h>

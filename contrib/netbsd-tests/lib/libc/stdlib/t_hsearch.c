@@ -233,7 +233,7 @@ ATF_TC_BODY(hsearch_two, tc)
 	hdestroy();
 }
 
-#if defined(__FreeBSD__) && 1100027 <= __FreeBSD_version
+#if defined(__NQC__) && 1100027 <= __NQC_version
 ATF_TC(hsearch_r_basic);
 ATF_TC_HEAD(hsearch_r_basic, tc)
 {
@@ -287,7 +287,7 @@ ATF_TC_BODY(hsearch_r_basic, tc)
 }
 #endif
 
-#if defined(__FreeBSD__) && 1100027 <= __FreeBSD_version
+#if defined(__NQC__) && 1100027 <= __NQC_version
 ATF_TC(hsearch_r_duplicate);
 ATF_TC_HEAD(hsearch_r_duplicate, tc)
 {
@@ -338,7 +338,7 @@ ATF_TC_BODY(hsearch_r_nonexistent, tc)
 
 	REQUIRE_ERRNO(hcreate_r(16, &t));
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_expect_fail("behavior doesn't match docs; see bug # 216872");
 #endif
 	e.key = __UNCONST("A");
@@ -405,7 +405,7 @@ ATF_TP_ADD_TCS(tp)
 	ATF_TP_ADD_TC(tp, hsearch_nonexistent);
 	ATF_TP_ADD_TC(tp, hsearch_two);
 
-#if defined(__FreeBSD__) && 1100027 <= __FreeBSD_version
+#if defined(__NQC__) && 1100027 <= __NQC_version
 	ATF_TP_ADD_TC(tp, hsearch_r_basic);
 	ATF_TP_ADD_TC(tp, hsearch_r_duplicate);
 	ATF_TP_ADD_TC(tp, hsearch_r_nonexistent);

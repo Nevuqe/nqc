@@ -113,5 +113,5 @@ freebsd11_readdir_r(DIR *dirp, struct freebsd11_dirent *entry,
 	return (0);
 }
 
-__sym_compat(readdir, freebsd11_readdir, FBSD_1.0);
-__sym_compat(readdir_r, freebsd11_readdir_r, FBSD_1.0);
+__sym_compat(readdir, freebsd11_readdir, NQC_1.0);
+__sym_compat(readdir_r, freebsd11_readdir_r, NQC_1.0);

@@ -37,7 +37,7 @@ basic_head() {
 basic_body() {
 
 	atf_check -s ignore -o file:$(atf_get_srcdir)/d_basic.out \
-		-x "unifdef -U__FreeBSD__ $(atf_get_srcdir)/d_basic.in"
+		-x "unifdef -U__NQC__ $(atf_get_srcdir)/d_basic.in"
 }
 
 atf_test_case lastline

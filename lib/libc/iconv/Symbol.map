@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.3 {
+NQC_1.3 {
 	__bsd___iconv;
 	__bsd___iconv_free_list;
 	__bsd___iconv_get_list;
@@ -16,7 +16,7 @@ FBSD_1.3 {
 	__bsd_iconvlist;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_citrus_bcs_convert_to_lower;
 	_citrus_bcs_convert_to_upper;
 	_citrus_bcs_isalnum;

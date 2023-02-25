@@ -2964,7 +2964,7 @@ zpool_vdev_online(zpool_handle_t *zhp, const char *path, int flags,
 	if (!(flags & ZFS_ONLINE_SPARE) && avail_spare)
 		return (zfs_error(hdl, EZFS_ISSPARE, errbuf));
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	char *pathname;
 	if ((flags & ZFS_ONLINE_EXPAND ||
 	    zpool_get_prop_int(zhp, ZPOOL_PROP_AUTOEXPAND, NULL)) &&

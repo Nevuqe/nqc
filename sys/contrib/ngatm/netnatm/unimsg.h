@@ -35,7 +35,7 @@
 
 #include <sys/types.h>
 #ifdef _KERNEL
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/systm.h>
 #endif
 #include <sys/stdint.h>

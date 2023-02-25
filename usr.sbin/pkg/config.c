@@ -165,10 +165,10 @@ pkg_get_myabi(char *dest, size_t sz)
 	machine_arch[len] = '\0';
 
 	/*
-	 * Use __FreeBSD_version rather than kernel version (uts.release) for
+	 * Use __NQC_version rather than kernel version (uts.release) for
 	 * use in jails. This is equivalent to the value of uname -U.
 	 */
-	snprintf(dest, sz, "%s:%d:%s", uts.sysname, __FreeBSD_version/100000,
+	snprintf(dest, sz, "%s:%d:%s", uts.sysname, __NQC_version/100000,
 	    machine_arch);
 
 	return (error);

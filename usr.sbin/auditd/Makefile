@@ -20,7 +20,7 @@ CONFS+= ${OPENBSMETCDIR}/audit_warn
 CONFSMODE_${OPENBSMETCDIR}/audit_warn=  500
 CONFSDIR=       /etc/security
 PROG=	auditd
-SRCS=	auditd.c audit_warn.c auditd_fbsd.c
+SRCS=	auditd.c audit_warn.c auditd_nqc.c
 MAN=	auditd.8
 
 LIBADD=	auditd bsm

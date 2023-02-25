@@ -31,7 +31,7 @@
 #include <sys/param.h>
 
 #include <sys/socket.h>		/* For IFF_ defines */
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #include <net/if.h>		/* For IFF_ defines */
 #endif
 #include <net/route.h>

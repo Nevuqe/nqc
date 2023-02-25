@@ -73,7 +73,7 @@ priv_init(void)
 	int snaplen, ret, olderrno;
 	struct passwd *pw;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	for (i = 1; i < NSIG; i++)
 #else
 	for (i = 1; i < _NSIG; i++)

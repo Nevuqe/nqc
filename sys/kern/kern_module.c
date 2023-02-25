@@ -466,7 +466,7 @@ sys_modfind(struct thread *td, struct modfind_args *uap)
 	return (error);
 }
 
-MODULE_VERSION(kernel, __FreeBSD_version);
+MODULE_VERSION(kernel, __NQC_version);
 
 #ifdef COMPAT_FREEBSD32
 #include <sys/mount.h>

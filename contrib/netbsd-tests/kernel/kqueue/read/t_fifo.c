@@ -78,7 +78,7 @@ ATF_TC_BODY(fifo, tc)
 	RL(n = kevent(kq, NULL, 0, event, 1, NULL));
 
 	(void)printf("kevent num %d filt %d flags: %#x, fflags: %#x, "
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	    "data: %" PRIdPTR "\n", n, event[0].filter, event[0].flags,
 #else
 	    "data: %" PRId64 "\n", n, event[0].filter, event[0].flags,

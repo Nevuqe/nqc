@@ -126,7 +126,7 @@ CFLAGS+= -DLOADER_DISK_SUPPORT
 .if ${MACHINE_ARCH} == "amd64" && ${DO32:U0} == 1
 CFLAGS+=	-m32
 # LD_FLAGS is passed directly to ${LD}, not via ${CC}:
-LD_FLAGS+=	-m elf_i386_fbsd
+LD_FLAGS+=	-m elf_i386_nqc
 AFLAGS+=	--32
 .endif
 

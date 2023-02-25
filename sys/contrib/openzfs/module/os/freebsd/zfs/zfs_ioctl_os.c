@@ -39,7 +39,7 @@ __NQCID("$NQC$");
 
 #include <sys/zfs_ioctl_impl.h>
 
-#if __FreeBSD_version < 1201517
+#if __NQC_version < 1201517
 #define	vm_page_max_user_wired	vm_page_max_wired
 #endif
 
@@ -171,7 +171,7 @@ zfs_ioctl_init_os(void)
 	    zfs_secpolicy_config, POOL_CHECK_NONE);
 	zfs_ioctl_register_dataset_nolog(ZFS_IOC_UNJAIL, zfs_ioc_unjail,
 	    zfs_secpolicy_config, POOL_CHECK_NONE);
-	zfs_ioctl_register("fbsd_nextboot", ZFS_IOC_NEXTBOOT,
+	zfs_ioctl_register("nqc_nextboot", ZFS_IOC_NEXTBOOT,
 	    zfs_ioc_nextboot, zfs_secpolicy_config, NO_NAME,
 	    POOL_CHECK_NONE, B_FALSE, B_FALSE, zfs_keys_nextboot, 3);
 

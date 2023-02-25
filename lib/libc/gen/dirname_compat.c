@@ -78,4 +78,4 @@ __freebsd11_dirname(char *path)
 	return (dname);
 }
 
-__sym_compat(dirname, __freebsd11_dirname, FBSD_1.0);
+__sym_compat(dirname, __freebsd11_dirname, NQC_1.0);

@@ -3779,7 +3779,7 @@ commit d2b888762b9844eb0d8eb59909cdf5af5159f810
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Sat Apr 16 14:31:13 2022 +1000
 
-    Retire fbsd6 test VM.
+    Retire nqc6 test VM.
     
     It's long since out of support, relatively slow (it's i686) and the
     compiler has trouble with PIE.
@@ -3882,7 +3882,7 @@ commit 3741df98ffaaff92b474ee70d8ef276b5882f85a
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Mon Apr 4 23:52:11 2022 +1000
 
-    Disable security key on fbsd6 test host.
+    Disable security key on nqc6 test host.
 
 commit 32c12236f27ae83bfe6d2983b67c9bc67a83a417
 Author: Darren Tucker <dtucker@dtucker.net>
@@ -9402,7 +9402,7 @@ commit ecc186e46e3e30f27539b4311366dfda502f0a08
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Wed Jun 2 13:54:11 2021 +1000
 
-    Retire fbsd7 test target.
+    Retire nqc7 test target.
     
     It's the slowest of the selfhosted targets (since it's 32bit but has
     most of the crypto algos). We still have coverage for 32bit i386.
@@ -9835,7 +9835,7 @@ commit b16082aa110fa7128ece2a9037ff420c4a285317
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Mon Apr 26 13:35:44 2021 +1000
 
-    Add fbsd10 test target.
+    Add nqc10 test target.
 
 commit 2c805f16b24ea37cc051c6018fcb05defab6e57a
 Author: Darren Tucker <dtucker@dtucker.net>
@@ -9948,7 +9948,7 @@ commit 9403d0e805c77a5741ea8c3281bbe92558c2f125
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Fri Apr 16 18:14:25 2021 +1000
 
-    Add fbsd13 target.
+    Add nqc13 target.
 
 commit e86968280e358e62649d268d41f698d64d0dc9fa
 Author: Damien Miller <djm@mindrot.org>
@@ -10827,7 +10827,7 @@ commit e6528d91f12fba05f0ea64224091c9d0f38bdf1d
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Thu Feb 18 16:30:01 2021 +1100
 
-    Add fbsd12 test target.
+    Add nqc12 test target.
 
 commit 6506cb2798d98ff03a7cc06567c392a81f540680
 Author: Darren Tucker <dtucker@dtucker.net>

@@ -384,7 +384,7 @@ freebsd12_regcomp(regex_t * __restrict preg,
 	return (regcomp_internal(preg, pattern, cflags, PFLAG_LEGACY_ESC));
 }
 
-__sym_compat(regcomp, freebsd12_regcomp, FBSD_1.0);
+__sym_compat(regcomp, freebsd12_regcomp, NQC_1.0);
 #endif	/* !LIBREGEX */
 
 /*

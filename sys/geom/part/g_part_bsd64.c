@@ -170,13 +170,13 @@ MODULE_VERSION(geom_part_bsd64, 0);
 
 #define	EQUUID(a, b)	(memcmp(a, b, sizeof(struct uuid)) == 0)
 static struct uuid bsd64_uuid_unused = GPT_ENT_TYPE_UNUSED;
-static struct uuid bsd64_uuid_dfbsd_swap = GPT_ENT_TYPE_DRAGONFLY_SWAP;
-static struct uuid bsd64_uuid_dfbsd_ufs1 = GPT_ENT_TYPE_DRAGONFLY_UFS1;
-static struct uuid bsd64_uuid_dfbsd_vinum = GPT_ENT_TYPE_DRAGONFLY_VINUM;
-static struct uuid bsd64_uuid_dfbsd_ccd = GPT_ENT_TYPE_DRAGONFLY_CCD;
-static struct uuid bsd64_uuid_dfbsd_legacy = GPT_ENT_TYPE_DRAGONFLY_LEGACY;
-static struct uuid bsd64_uuid_dfbsd_hammer = GPT_ENT_TYPE_DRAGONFLY_HAMMER;
-static struct uuid bsd64_uuid_dfbsd_hammer2 = GPT_ENT_TYPE_DRAGONFLY_HAMMER2;
+static struct uuid bsd64_uuid_dnqc_swap = GPT_ENT_TYPE_DRAGONFLY_SWAP;
+static struct uuid bsd64_uuid_dnqc_ufs1 = GPT_ENT_TYPE_DRAGONFLY_UFS1;
+static struct uuid bsd64_uuid_dnqc_vinum = GPT_ENT_TYPE_DRAGONFLY_VINUM;
+static struct uuid bsd64_uuid_dnqc_ccd = GPT_ENT_TYPE_DRAGONFLY_CCD;
+static struct uuid bsd64_uuid_dnqc_legacy = GPT_ENT_TYPE_DRAGONFLY_LEGACY;
+static struct uuid bsd64_uuid_dnqc_hammer = GPT_ENT_TYPE_DRAGONFLY_HAMMER;
+static struct uuid bsd64_uuid_dnqc_hammer2 = GPT_ENT_TYPE_DRAGONFLY_HAMMER2;
 static struct uuid bsd64_uuid_freebsd_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
 static struct uuid bsd64_uuid_freebsd_nandfs = GPT_ENT_TYPE_FREEBSD_NANDFS;
 static struct uuid bsd64_uuid_freebsd_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
@@ -189,17 +189,17 @@ struct bsd64_uuid_alias {
 	uint8_t fstype;
 	int alias;
 };
-static struct bsd64_uuid_alias dfbsd_alias_match[] = {
-	{ &bsd64_uuid_dfbsd_swap, FS_SWAP, G_PART_ALIAS_DFBSD_SWAP },
-	{ &bsd64_uuid_dfbsd_ufs1, FS_BSDFFS, G_PART_ALIAS_DFBSD_UFS },
-	{ &bsd64_uuid_dfbsd_vinum, FS_VINUM, G_PART_ALIAS_DFBSD_VINUM },
-	{ &bsd64_uuid_dfbsd_ccd, FS_CCD, G_PART_ALIAS_DFBSD_CCD },
-	{ &bsd64_uuid_dfbsd_legacy, FS_OTHER, G_PART_ALIAS_DFBSD_LEGACY },
-	{ &bsd64_uuid_dfbsd_hammer, FS_HAMMER, G_PART_ALIAS_DFBSD_HAMMER },
-	{ &bsd64_uuid_dfbsd_hammer2, FS_HAMMER2, G_PART_ALIAS_DFBSD_HAMMER2 },
+static struct bsd64_uuid_alias dnqc_alias_match[] = {
+	{ &bsd64_uuid_dnqc_swap, FS_SWAP, G_PART_ALIAS_DNQC_SWAP },
+	{ &bsd64_uuid_dnqc_ufs1, FS_BSDFFS, G_PART_ALIAS_DNQC_UFS },
+	{ &bsd64_uuid_dnqc_vinum, FS_VINUM, G_PART_ALIAS_DNQC_VINUM },
+	{ &bsd64_uuid_dnqc_ccd, FS_CCD, G_PART_ALIAS_DNQC_CCD },
+	{ &bsd64_uuid_dnqc_legacy, FS_OTHER, G_PART_ALIAS_DNQC_LEGACY },
+	{ &bsd64_uuid_dnqc_hammer, FS_HAMMER, G_PART_ALIAS_DNQC_HAMMER },
+	{ &bsd64_uuid_dnqc_hammer2, FS_HAMMER2, G_PART_ALIAS_DNQC_HAMMER2 },
 	{ NULL, 0, 0}
 };
-static struct bsd64_uuid_alias fbsd_alias_match[] = {
+static struct bsd64_uuid_alias nqc_alias_match[] = {
 	{ &bsd64_uuid_freebsd_boot, FS_OTHER, G_PART_ALIAS_FREEBSD_BOOT },
 	{ &bsd64_uuid_freebsd_swap, FS_OTHER, G_PART_ALIAS_FREEBSD_SWAP },
 	{ &bsd64_uuid_freebsd_ufs, FS_OTHER, G_PART_ALIAS_FREEBSD_UFS },
@@ -237,7 +237,7 @@ bsd64_parse_type(const char *type, struct g_part_bsd64_entry *entry)
 			return (error);
 		if (EQUUID(&tmp, &bsd64_uuid_unused))
 			return (EINVAL);
-		for (uap = &dfbsd_alias_match[0]; uap->uuid != NULL; uap++) {
+		for (uap = &dnqc_alias_match[0]; uap->uuid != NULL; uap++) {
 			if (EQUUID(&tmp, uap->uuid)) {
 				/* Prefer fstype for known uuids */
 				entry->type_uuid = bsd64_uuid_unused;
@@ -250,7 +250,7 @@ bsd64_parse_type(const char *type, struct g_part_bsd64_entry *entry)
 		return (0);
 	}
 	/* The type specified as symbolic alias name */
-	for (uap = &fbsd_alias_match[0]; uap->uuid != NULL; uap++) {
+	for (uap = &nqc_alias_match[0]; uap->uuid != NULL; uap++) {
 		alias = g_part_alias_name(uap->alias);
 		if (!strcasecmp(type, alias)) {
 			entry->type_uuid = *uap->uuid;
@@ -258,7 +258,7 @@ bsd64_parse_type(const char *type, struct g_part_bsd64_entry *entry)
 			return (0);
 		}
 	}
-	for (uap = &dfbsd_alias_match[0]; uap->uuid != NULL; uap++) {
+	for (uap = &dnqc_alias_match[0]; uap->uuid != NULL; uap++) {
 		alias = g_part_alias_name(uap->alias);
 		if (!strcasecmp(type, alias)) {
 			entry->type_uuid = bsd64_uuid_unused;
@@ -418,7 +418,7 @@ g_part_bsd64_dumpto(struct g_part_table *table, struct g_part_entry *baseentry)
 	/* Allow dumping to a swap partition. */
 	entry = (struct g_part_bsd64_entry *)baseentry;
 	if (entry->fstype == FS_SWAP ||
-	    EQUUID(&entry->type_uuid, &bsd64_uuid_dfbsd_swap) ||
+	    EQUUID(&entry->type_uuid, &bsd64_uuid_dnqc_swap) ||
 	    EQUUID(&entry->type_uuid, &bsd64_uuid_freebsd_swap))
 		return (1);
 	return (0);
@@ -587,14 +587,14 @@ g_part_bsd64_type(struct g_part_table *basetable, struct g_part_entry *baseentry
 
 	entry = (struct g_part_bsd64_entry *)baseentry;
 	if (entry->fstype != FS_OTHER) {
-		for (uap = &dfbsd_alias_match[0]; uap->uuid != NULL; uap++)
+		for (uap = &dnqc_alias_match[0]; uap->uuid != NULL; uap++)
 			if (uap->fstype == entry->fstype)
 				return (g_part_alias_name(uap->alias));
 	} else {
-		for (uap = &fbsd_alias_match[0]; uap->uuid != NULL; uap++)
+		for (uap = &nqc_alias_match[0]; uap->uuid != NULL; uap++)
 			if (EQUUID(uap->uuid, &entry->type_uuid))
 				return (g_part_alias_name(uap->alias));
-		for (uap = &dfbsd_alias_match[0]; uap->uuid != NULL; uap++)
+		for (uap = &dnqc_alias_match[0]; uap->uuid != NULL; uap++)
 			if (EQUUID(uap->uuid, &entry->type_uuid))
 				return (g_part_alias_name(uap->alias));
 	}

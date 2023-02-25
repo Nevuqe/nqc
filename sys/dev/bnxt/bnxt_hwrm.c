@@ -718,9 +718,9 @@ bnxt_hwrm_func_drv_rgtr(struct bnxt_softc *softc)
 	    HWRM_FUNC_DRV_RGTR_INPUT_ENABLES_OS_TYPE);
 	req.os_type = htole16(HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_FREEBSD);
 
-	req.ver_maj = __FreeBSD_version / 100000;
-	req.ver_min = (__FreeBSD_version / 1000) % 100;
-	req.ver_upd = (__FreeBSD_version / 100) % 10;
+	req.ver_maj = __NQC_version / 100000;
+	req.ver_min = (__NQC_version / 1000) % 100;
+	req.ver_upd = (__NQC_version / 100) % 10;
 
 	return hwrm_send_message(softc, &req, sizeof(req));
 }

@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	acl_calc_mask;
 	acl_copy_entry;
 	acl_copy_ext;
@@ -65,7 +65,7 @@ FBSD_1.0 {
 	mac_set_proc;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	acl_add_flag_np;
 	acl_add_perm;
 	acl_clear_flags_np;
@@ -85,7 +85,7 @@ FBSD_1.1 {
 	acl_to_text_np;
 };
 
-FBSD_1.7 {
+NQC_1.7 {
 	acl_cmp_np;
 	acl_equiv_mode_np;
 	acl_extended_file_np;

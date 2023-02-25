@@ -236,7 +236,7 @@ static void iwl_pcie_restock_bd(struct iwl_trans *trans,
 
 #if defined(__linux__)
 	IWL_DEBUG_RX(trans, "Assigned virtual RB ID %u to queue %d index %d\n",
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	IWL_DEBUG_PCI_RW(trans, "Assigned virtual RB ID %u to queue %d index %d\n",
 		     (u32)rxb->vid, rxq->id, rxq->write);
 #endif

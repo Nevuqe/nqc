@@ -246,7 +246,7 @@ mount_snapshot(kthread_t *td, vnode_t **vpp, const char *fstype, char *fspath,
 		panic("mount: lost mount");
 	vn_seqc_write_end(vp);
 	VOP_UNLOCK1(vp);
-#if __FreeBSD_version >= 1300048
+#if __NQC_version >= 1300048
 	vfs_op_exit(mp);
 #endif
 	vfs_unbusy(mp);
@@ -269,7 +269,7 @@ vn_rele_async(vnode_t *vp, taskq_t *taskq)
 {
 	VERIFY3U(vp->v_usecount, >, 0);
 	if (refcount_release_if_not_last(&vp->v_usecount)) {
-#if __FreeBSD_version < 1300045
+#if __NQC_version < 1300045
 		vdrop(vp);
 #endif
 		return;

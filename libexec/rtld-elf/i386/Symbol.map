@@ -2,6 +2,6 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
     ___tls_get_addr;
 };

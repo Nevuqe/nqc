@@ -1,6 +1,6 @@
 # $NQC$
 
-FBSD_1.7 {
+NQC_1.7 {
 	global:
 		FreeBSD_cnvlist_free_binary;
 		FreeBSD_cnvlist_free_bool;

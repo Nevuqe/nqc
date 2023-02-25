@@ -96,7 +96,7 @@ CTASSERT(MAXSHELLCMDLEN >= MAXINTERP + 3);
  * It also meant the interpreter had no way of knowing which arguments came
  * from the first line of the shell script, and which arguments were specified
  * by the user on the command line.  That extra processing was dropped in the
- * 6.x branch on May 28, 2005 (matching __FreeBSD_version 600029).
+ * 6.x branch on May 28, 2005 (matching __NQC_version 600029).
  */
 int
 exec_shell_imgact(struct image_params *imgp)

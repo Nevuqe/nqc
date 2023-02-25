@@ -50,7 +50,7 @@ __NQCID("$NQC$");
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #include <getopt.h>
 #endif
 

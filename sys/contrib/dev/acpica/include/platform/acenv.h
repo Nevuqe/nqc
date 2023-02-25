@@ -314,7 +314,7 @@
 #elif defined(__DragonFly__)
 #include "acdragonfly.h"
 
-#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+#elif defined(__NQC__) || defined(__NQC_kernel__)
 #include <contrib/dev/acpica/include/platform/acfreebsd.h>
 
 #elif defined(__NetBSD__)

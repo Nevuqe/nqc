@@ -73,7 +73,7 @@ ATF_TC_BODY(sigqueue_basic, tc)
 
 	sv.sival_int = VALUE;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * From kern_sig.c:
 	 * Specification says sigqueue can only send signal to single process.
@@ -142,7 +142,7 @@ sigorder(int *ordered, const int *tosend, size_t len)
 	if (len == 1)
 		return len;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * Don't dedupe signal numbers (bug 212173)
 	 *

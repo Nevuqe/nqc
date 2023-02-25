@@ -46,5 +46,5 @@ freebsd11_devname_r(uint32_t dev, mode_t type, char *buf, int len)
 	return (devname_r(dev, type, buf, len));
 }
 
-__sym_compat(devname, freebsd11_devname, FBSD_1.0);
-__sym_compat(devname_r, freebsd11_devname_r, FBSD_1.0);
+__sym_compat(devname, freebsd11_devname, NQC_1.0);
+__sym_compat(devname_r, freebsd11_devname_r, NQC_1.0);

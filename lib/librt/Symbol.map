@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	aio_read;
 	aio_write;
 	aio_return;
@@ -25,18 +25,18 @@ FBSD_1.0 {
 	timer_getoverrun;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	lio_listio;
 	mq_getfd_np;
 	timer_oshandle_np;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	aio_readv;
 	aio_writev;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_mq_open;
 	_mq_close;
 	_mq_notify;

@@ -1,7 +1,7 @@
 /*
  * $NQC$
  */
-FBSD_1.1 {
+NQC_1.1 {
 	rpc_gss_seccreate;
 	rpc_gss_set_defaults;
 	rpc_gss_max_data_length;
@@ -20,7 +20,7 @@ FBSD_1.1 {
 	rpc_gss_svc_max_data_length;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__rpc_gss_unwrap;
 	__rpc_gss_unwrap_stub;
 	__rpc_gss_wrap;

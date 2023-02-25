@@ -60,7 +60,7 @@
 #include <signal.h>
 #include <stddef.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include "freebsd_test_suite/macros.h"
 
 static int
@@ -934,7 +934,7 @@ vale_polling_enable_disable(struct TestContext *ctx)
 	ctx->nr_first_cpu_id     = 0;
 	if ((ret = vale_polling_enable(ctx))) {
 		vale_detach(ctx);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		/* NETMAP_REQ_VALE_POLLING_DISABLE is disabled on FreeBSD,
 		 * because it is currently broken. We are happy to see that
 		 * it fails. */
@@ -2144,7 +2144,7 @@ tap_cleanup(int signo)
 	int ac = 0;
 
 	(void)signo;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ARGV_APPEND(av, ac, "ifconfig");
 	ARGV_APPEND(av, ac, ctx_.ifname);
 	ARGV_APPEND(av, ac, "destroy");
@@ -2172,7 +2172,7 @@ main(int argc, char **argv)
 	int opt;
 	int i;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	PLAIN_REQUIRE_KERNEL_MODULE("if_tap", 0);
 	PLAIN_REQUIRE_KERNEL_MODULE("netmap", 0);
 #endif
@@ -2244,7 +2244,7 @@ main(int argc, char **argv)
 		struct sigaction sa;
 		const char *av[8];
 		int ac = 0;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		ARGV_APPEND(av, ac, "ifconfig");
 		ARGV_APPEND(av, ac, ctx_.ifname);
 		ARGV_APPEND(av, ac, "create");

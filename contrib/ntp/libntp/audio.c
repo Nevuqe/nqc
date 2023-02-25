@@ -53,7 +53,7 @@
  * less verbose we make a proper typedef.
  * The joy of IOCTL programming...
  */
-# if defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__) || defined __OpenBSD__
+# if defined(__NQC__) || defined(__APPLE__) || defined(__NetBSD__) || defined __OpenBSD__
 typedef unsigned long ioctl_arg_T;
 #else
 typedef int ioctl_arg_T;

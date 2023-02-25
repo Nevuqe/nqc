@@ -1306,7 +1306,7 @@ failed:
     }
 }
 
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 
 #include <sys/param.h>
 #include <sys/sysctl.h>
@@ -1316,12 +1316,12 @@ failed:
 int UTIL_countCores(int logical)
 {
     static int numCores = 0; /* freebsd sysctl is native int sized */
-#if __FreeBSD_version >= 1300008
+#if __NQC_version >= 1300008
     static int perCore = 1;
 #endif
     if (numCores != 0) return numCores;
 
-#if __FreeBSD_version >= 1300008
+#if __NQC_version >= 1300008
     {   size_t size = sizeof(numCores);
         int ret = sysctlbyname("kern.smp.cores", &numCores, &size, NULL, 0);
         if (ret == 0) {

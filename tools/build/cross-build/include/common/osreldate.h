@@ -37,4 +37,4 @@
  */
 #pragma once
 
-#define __FreeBSD_version 0
+#define __NQC_version 0

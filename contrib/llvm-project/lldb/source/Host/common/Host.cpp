@@ -26,8 +26,8 @@
 #include <mach/mach_port.h>
 #endif
 
-#if defined(__linux__) || defined(__FreeBSD__) ||                              \
-    defined(__FreeBSD_kernel__) || defined(__APPLE__) ||                       \
+#if defined(__linux__) || defined(__NQC__) ||                              \
+    defined(__NQC_kernel__) || defined(__APPLE__) ||                       \
     defined(__NetBSD__) || defined(__OpenBSD__) || defined(__EMSCRIPTEN__)
 #if !defined(__ANDROID__)
 #include <spawn.h>
@@ -36,7 +36,7 @@
 #include <sys/wait.h>
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <pthread_np.h>
 #endif
 

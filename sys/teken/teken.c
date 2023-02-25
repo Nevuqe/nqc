@@ -29,18 +29,18 @@
  */
 
 #include <sys/cdefs.h>
-#if defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 #include <sys/param.h>
 #include <sys/limits.h>
 #include <sys/lock.h>
 #include <sys/systm.h>
 #define	teken_assert(x)		MPASS(x)
-#elif defined(__FreeBSD__) && defined(_STANDALONE)
+#elif defined(__NQC__) && defined(_STANDALONE)
 #include <stand.h>
 #include <sys/limits.h>
 #include <assert.h>
 #define	teken_assert(x)		assert(x)
-#else /* !(__FreeBSD__ && _STANDALONE) */
+#else /* !(__NQC__ && _STANDALONE) */
 #include <sys/types.h>
 #include <assert.h>
 #include <limits.h>
@@ -48,7 +48,7 @@
 #include <stdio.h>
 #include <string.h>
 #define	teken_assert(x)		assert(x)
-#endif /* __FreeBSD__ && _STANDALONE */
+#endif /* __NQC__ && _STANDALONE */
 
 /* debug messages */
 #define	teken_printf(x,...)

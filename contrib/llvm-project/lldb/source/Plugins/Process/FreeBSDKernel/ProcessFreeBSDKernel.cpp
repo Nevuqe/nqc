@@ -14,10 +14,10 @@
 #include "ProcessFreeBSDKernel.h"
 #include "ThreadFreeBSDKernel.h"
 
-#if LLDB_ENABLE_FBSDVMCORE
+#if LLDB_ENABLE_NQCVMCORE
 #include <fvc.h>
 #endif
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <kvm.h>
 #endif
 
@@ -28,7 +28,7 @@ LLDB_PLUGIN_DEFINE(ProcessFreeBSDKernel)
 
 namespace {
 
-#if LLDB_ENABLE_FBSDVMCORE
+#if LLDB_ENABLE_NQCVMCORE
 class ProcessFreeBSDKernelFVC : public ProcessFreeBSDKernel {
 public:
   ProcessFreeBSDKernelFVC(lldb::TargetSP target_sp, lldb::ListenerSP listener,
@@ -44,9 +44,9 @@ private:
 
   const char *GetError();
 };
-#endif // LLDB_ENABLE_FBSDVMCORE
+#endif // LLDB_ENABLE_NQCVMCORE
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 class ProcessFreeBSDKernelKVM : public ProcessFreeBSDKernel {
 public:
   ProcessFreeBSDKernelKVM(lldb::TargetSP target_sp, lldb::ListenerSP listener,
@@ -62,7 +62,7 @@ private:
 
   const char *GetError();
 };
-#endif // defined(__FreeBSD__)
+#endif // defined(__NQC__)
 
 } // namespace
 
@@ -76,7 +76,7 @@ lldb::ProcessSP ProcessFreeBSDKernel::CreateInstance(lldb::TargetSP target_sp,
                                                      bool can_connect) {
   ModuleSP executable = target_sp->GetExecutableModule();
   if (crash_file && !can_connect && executable) {
-#if LLDB_ENABLE_FBSDVMCORE
+#if LLDB_ENABLE_NQCVMCORE
     fvc_t *fvc =
         fvc_open(executable->GetFileSpec().GetPath().c_str(),
                  crash_file->GetPath().c_str(), nullptr, nullptr, nullptr);
@@ -85,7 +85,7 @@ lldb::ProcessSP ProcessFreeBSDKernel::CreateInstance(lldb::TargetSP target_sp,
                                                        fvc);
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
     kvm_t *kvm =
         kvm_open2(executable->GetFileSpec().GetPath().c_str(),
                   crash_file->GetPath().c_str(), O_RDONLY, nullptr, nullptr);
@@ -180,7 +180,7 @@ bool ProcessFreeBSDKernel::DoUpdateThreadList(ThreadList &old_thread_list,
     lldb::addr_t stoppcbs = FindSymbol("stoppcbs");
 
     // from FreeBSD sys/param.h
-    constexpr size_t fbsd_maxcomlen = 19;
+    constexpr size_t nqc_maxcomlen = 19;
 
     // iterate through a linked list of all processes
     // allproc is a pointer to the first list element, p_list field
@@ -192,7 +192,7 @@ bool ProcessFreeBSDKernel::DoUpdateThreadList(ThreadList &old_thread_list,
       int32_t pid =
           ReadSignedIntegerFromMemory(proc + offset_p_pid, 4, -1, error);
       // process' command-line string
-      char comm[fbsd_maxcomlen + 1];
+      char comm[nqc_maxcomlen + 1];
       ReadCStringFromMemory(proc + offset_p_comm, comm, sizeof(comm), error);
 
       // iterate through a linked list of all process' threads
@@ -209,7 +209,7 @@ bool ProcessFreeBSDKernel::DoUpdateThreadList(ThreadList &old_thread_list,
         int32_t oncpu =
             ReadSignedIntegerFromMemory(td + offset_td_oncpu, 4, -2, error);
         // thread name
-        char thread_name[fbsd_maxcomlen + 1];
+        char thread_name[nqc_maxcomlen + 1];
         ReadCStringFromMemory(td + offset_td_name, thread_name,
                               sizeof(thread_name), error);
 
@@ -272,7 +272,7 @@ lldb::addr_t ProcessFreeBSDKernel::FindSymbol(const char *name) {
   return sym ? sym->GetLoadAddress(&GetTarget()) : LLDB_INVALID_ADDRESS;
 }
 
-#if LLDB_ENABLE_FBSDVMCORE
+#if LLDB_ENABLE_NQCVMCORE
 
 ProcessFreeBSDKernelFVC::ProcessFreeBSDKernelFVC(lldb::TargetSP target_sp,
                                                  ListenerSP listener_sp,
@@ -297,9 +297,9 @@ size_t ProcessFreeBSDKernelFVC::DoReadMemory(lldb::addr_t addr, void *buf,
 
 const char *ProcessFreeBSDKernelFVC::GetError() { return fvc_geterr(m_fvc); }
 
-#endif // LLDB_ENABLE_FBSDVMCORE
+#endif // LLDB_ENABLE_NQCVMCORE
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 
 ProcessFreeBSDKernelKVM::ProcessFreeBSDKernelKVM(lldb::TargetSP target_sp,
                                                  ListenerSP listener_sp,
@@ -324,4 +324,4 @@ size_t ProcessFreeBSDKernelKVM::DoReadMemory(lldb::addr_t addr, void *buf,
 
 const char *ProcessFreeBSDKernelKVM::GetError() { return kvm_geterr(m_kvm); }
 
-#endif // defined(__FreeBSD__)
+#endif // defined(__NQC__)

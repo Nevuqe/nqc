@@ -7807,7 +7807,7 @@ fi;
 #include "confdefs.h"
 
 #include <osreldate.h>
-#if (__FreeBSD_version >= 400017)
+#if (__NQC_version >= 400017)
 #include <sys/consio.h>
 #include <sys/fbio.h>
 #else

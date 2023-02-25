@@ -1933,13 +1933,13 @@ static void agtiapi_cam_action( struct cam_sim *sim, union ccb * ccb )
     ccb->ccb_h.status = CAM_REQ_CMP;
     break;
   }
-#if __FreeBSD_version >= 900026
+#if __NQC_version >= 900026
   case XPT_SMP_IO:
   {
     agtiapi_QueueSMP( pmcsc, ccb );
     return;
   }
-#endif /* __FreeBSD_version >= 900026 */
+#endif /* __NQC_version >= 900026 */
   case XPT_SCSI_IO:
   {
     if(pmcsc->dev_scan == agFALSE)
@@ -2426,7 +2426,7 @@ agtiapi_StartTM(struct agtiapi_softc *pCard, ccb_t *pccb)
   return status;
 } /* agtiapi_StartTM */
 
-#if __FreeBSD_version > 901000
+#if __NQC_version > 901000
 /******************************************************************************
 agtiapi_PrepareSGList()
 
@@ -3382,7 +3382,7 @@ STATIC void agtiapi_StartSMP(struct agtiapi_softc *pmcsc)
   return;
 }
 
-#if __FreeBSD_version > 901000
+#if __NQC_version > 901000
 /******************************************************************************
 agtiapi_PrepareSMPSGList()
 

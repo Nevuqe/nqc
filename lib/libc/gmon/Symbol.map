@@ -2,13 +2,13 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	_mcleanup;
 	monstartup;
 	moncontrol;
 	mexitcount;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_gmonparam;
 };

@@ -28,7 +28,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <pthread.h>
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <pthread_np.h>
 #endif
 #include <sys/queue.h>
@@ -156,7 +156,7 @@ int
 l9p_threadpool_init(struct l9p_threadpool *tp, int size)
 {
 	struct l9p_worker *worker;
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	char threadname[16];
 #endif
 	int error;
@@ -196,7 +196,7 @@ l9p_threadpool_init(struct l9p_threadpool *tp, int size)
 		else
 			nworkers++;
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 		if (worker->ltw_responder) {
 			pthread_set_name_np(worker->ltw_thread, "9p-responder");
 		} else {

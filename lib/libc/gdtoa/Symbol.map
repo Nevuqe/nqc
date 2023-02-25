@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	/*
 	 * Standard functions from contrib/gdtoa
 	 */
@@ -13,7 +13,7 @@ FBSD_1.0 {
 	strtold;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	/* used in libm */
 	__hexnan_D2A;
 };

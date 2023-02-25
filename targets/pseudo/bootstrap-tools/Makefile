@@ -27,7 +27,7 @@ BSENV= \
 .if !defined(OSRELDATE)
 ord_h= /usr/include/osreldate.h
 .if exists(${ord_h})
-OSRELDATE!= sed -n '/define.*__FreeBSD_version/{s,^[^0-9]*,,p;q;}' ${ord_h}
+OSRELDATE!= sed -n '/define.*__NQC_version/{s,^[^0-9]*,,p;q;}' ${ord_h}
 .endif
 OSRELDATE?= 0
 .endif

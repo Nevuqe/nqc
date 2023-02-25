@@ -328,7 +328,7 @@
 #ifndef BR_USE_URANDOM
 #if defined _AIX \
 	|| defined __ANDROID__ \
-	|| defined __FreeBSD__ \
+	|| defined __NQC__ \
 	|| defined __NetBSD__ \
 	|| defined __OpenBSD__ \
 	|| defined __DragonFly__ \
@@ -342,7 +342,7 @@
 #ifndef BR_USE_GETENTROPY
 #if (defined __linux__ \
 	&& (__GLIBC__ > 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 25))) \
-	|| (defined __FreeBSD__ && __FreeBSD__ >= 12) \
+	|| (defined __NQC__ && __NQC__ >= 12) \
 	|| defined __OpenBSD__
 #define BR_USE_GETENTROPY   1
 #endif

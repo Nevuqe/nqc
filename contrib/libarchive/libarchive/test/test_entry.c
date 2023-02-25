@@ -419,14 +419,14 @@ DEFINE_TEST(test_entry)
 	assertEqualInt(set, 0x55);
 	failure("Testing set/get of fflags data.");
 	assertEqualInt(clear, 0xAA);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* Converting fflags bitmap to string is currently system-dependent. */
 	/* TODO: Make this system-independent. */
 	assertEqualString(archive_entry_fflags_text(e),
 	    "uappnd,nouchg,nodump,noopaque,uunlnk,nosystem");
 #endif
 
-#if defined(__FreeBSD__) || defined(__APPLE__)
+#if defined(__NQC__) || defined(__APPLE__)
 	/* Test archive_entry_copy_fflags_text_w() */
 	archive_entry_copy_fflags_text_w(e, L" ,nouappnd, nouchg, dump,hidden");
 	archive_entry_fflags(e, &set, &clear);
@@ -756,7 +756,7 @@ DEFINE_TEST(test_entry)
 	st.st_nlink = 345;
 	st.st_size = 123456789;
 	st.st_uid = 23;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* On FreeBSD, high-res timestamp data should come through. */
 	st.st_atimespec.tv_nsec = 6543210;
 	st.st_ctimespec.tv_nsec = 5432109;
@@ -776,7 +776,7 @@ DEFINE_TEST(test_entry)
 	assertEqualInt(archive_entry_nlink(e), 345);
 	assertEqualInt(archive_entry_size(e), 123456789);
 	assertEqualInt(archive_entry_uid(e), 23);
-#if __FreeBSD__
+#if __NQC__
 	/* On FreeBSD, high-res timestamp data should come through. */
 	assertEqualInt(archive_entry_atime_nsec(e), 6543210);
 	assertEqualInt(archive_entry_ctime_nsec(e), 5432109);
@@ -817,7 +817,7 @@ DEFINE_TEST(test_entry)
 	assertEqualInt(pst->st_nlink, 345);
 	assertEqualInt(pst->st_size, 123456789);
 	assertEqualInt(pst->st_uid, 23);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* On FreeBSD, high-res timestamp data should come through. */
 	assertEqualInt(pst->st_atimespec.tv_nsec, 321);
 	assertEqualInt(pst->st_ctimespec.tv_nsec, 432);
@@ -891,7 +891,7 @@ DEFINE_TEST(test_entry)
 	 * libarchive's more extensive configuration logic should find
 	 * the necessary definitions on every platform.
 	 */
-#if __FreeBSD__
+#if __NQC__
 	archive_entry_set_dev(e, 0x12345678);
 	assertEqualInt(archive_entry_devmajor(e), major(0x12345678));
 	assertEqualInt(archive_entry_devminor(e), minor(0x12345678));

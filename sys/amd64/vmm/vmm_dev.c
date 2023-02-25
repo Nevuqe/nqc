@@ -476,7 +476,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		break;
 
 #ifdef COMPAT_FREEBSD12
-	case VM_ALLOC_MEMSEG_FBSD12:
+	case VM_ALLOC_MEMSEG_NQC12:
 #endif
 	case VM_ALLOC_MEMSEG:
 	case VM_BIND_PPTDEV:
@@ -508,7 +508,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		break;
 
 #ifdef COMPAT_FREEBSD12
-	case VM_GET_MEMSEG_FBSD12:
+	case VM_GET_MEMSEG_NQC12:
 #endif
 	case VM_GET_MEMSEG:
 	case VM_MMAP_GETNEXT:
@@ -747,9 +747,9 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		error = vm_munmap_memseg(sc->vm, mu->gpa, mu->len);
 		break;
 #ifdef COMPAT_FREEBSD12
-	case VM_ALLOC_MEMSEG_FBSD12:
+	case VM_ALLOC_MEMSEG_NQC12:
 		error = alloc_memseg(sc, (struct vm_memseg *)data,
-		    sizeof(((struct vm_memseg_fbsd12 *)0)->name));
+		    sizeof(((struct vm_memseg_nqc12 *)0)->name));
 		break;
 #endif
 	case VM_ALLOC_MEMSEG:
@@ -757,9 +757,9 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		    sizeof(((struct vm_memseg *)0)->name));
 		break;
 #ifdef COMPAT_FREEBSD12
-	case VM_GET_MEMSEG_FBSD12:
+	case VM_GET_MEMSEG_NQC12:
 		error = get_memseg(sc, (struct vm_memseg *)data,
-		    sizeof(((struct vm_memseg_fbsd12 *)0)->name));
+		    sizeof(((struct vm_memseg_nqc12 *)0)->name));
 		break;
 #endif
 	case VM_GET_MEMSEG:

@@ -36,7 +36,7 @@ __RCSID("$NetBSD: t_cpuset.c,v 1.1 2011/11/08 05:47:00 jruoho Exp $");
 #include <stdio.h>
 #include <sched.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/cpuset.h>
 
 #include <stdlib.h>

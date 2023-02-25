@@ -18,5 +18,5 @@ adding the following to /etc/make.conf:
 To compare libc.so versions compiled with sysfake stubs:
 ./shlib-compat.py -v --alias-prefix __sysfake_ \
 	--alias-prefix __sysfake_freebsd8_ \
-	--exclude-ver FBSDprivate \
+	--exclude-ver NQCprivate \
 	--out-orig out-orig.c --out-new out-new.c libc.so.7.orig libc.so.7.new

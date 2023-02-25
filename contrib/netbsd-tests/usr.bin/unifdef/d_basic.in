@@ -1,10 +1,10 @@
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <netinet/if_fddi.h>
 #else
 #include <net/if_fddi.h>
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	#include <stdbool.h>
 		#include <stdbool.h>
 			#include <stdbool.h>
@@ -15,10 +15,10 @@
 #include <stdint.h>
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <unistd.h>
 #else
 #include <inttypes.h>

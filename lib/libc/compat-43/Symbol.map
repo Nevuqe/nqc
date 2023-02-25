@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	creat;
 	gethostid;
 	getwd;
@@ -17,7 +17,7 @@ FBSD_1.0 {
 	sigvec;
 };
 
-FBSD_1.2 {
+NQC_1.2 {
 	sighold;
 	sigignore;
 	sigrelse;
@@ -25,7 +25,7 @@ FBSD_1.2 {
 	xsi_sigpause;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__creat;
 	_creat;
 };

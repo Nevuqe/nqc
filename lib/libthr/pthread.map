@@ -5,7 +5,7 @@
 /*
  * Use the same naming scheme as libc.
  */
-FBSD_1.0 {
+NQC_1.0 {
 	pthread_atfork;
 	pthread_barrier_destroy;
 	pthread_barrier_init;
@@ -129,7 +129,7 @@ FBSD_1.0 {
  * List the private interfaces reserved for use in FreeBSD libraries.
  * These are not part of our application ABI.
  */
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__pthread_cond_timedwait;
 	__pthread_cond_wait;
 	__pthread_cxa_finalize;
@@ -301,7 +301,7 @@ FBSDprivate_1.0 {
 	_pli_rtli_version;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	__pthread_cleanup_pop_imp;
 	__pthread_cleanup_push_imp;
 	pthread_attr_getaffinity_np;
@@ -316,21 +316,21 @@ FBSD_1.1 {
 	pthread_mutex_setyieldloops_np;
 };
 
-FBSD_1.2 {
+NQC_1.2 {
 	pthread_getthreadid_np;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	 pthread_mutex_consistent;
 	 pthread_mutexattr_getrobust;
 	 pthread_mutexattr_setrobust;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	 pthread_get_name_np;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	 pthread_getname_np;
 	 pthread_peekjoin_np;
 	 pthread_setname_np;

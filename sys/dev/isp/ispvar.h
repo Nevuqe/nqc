@@ -40,7 +40,7 @@
 #include <dev/ic/isp_stds.h>
 #include <dev/ic/ispmbox.h>
 #endif
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 #include <dev/isp/isp_stds.h>
 #include <dev/isp/ispmbox.h>
 #endif

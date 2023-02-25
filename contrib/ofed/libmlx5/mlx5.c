@@ -363,7 +363,7 @@ static int mlx5_enable_sandy_bridge_fix(struct ibv_device *ibdev)
 	mlx5_local_cpu_set(ibdev, &dev_local_cpus);
 
 	/* check if my cpu set is in dev cpu */
-#if __FreeBSD_version < 1400046
+#if __NQC_version < 1400046
 	CPU_OR(&result_set, &my_cpus);
 	CPU_OR(&result_set, &dev_local_cpus);
 #else

@@ -55,9 +55,9 @@
 
 // This is used by configure.sh to test for FreeBSD.
 #ifdef BC_TEST_FREEBSD
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #error On FreeBSD with _POSIX_C_SOURCE
-#endif // __FreeBSD__
+#endif // __NQC__
 #endif // BC_TEST_FREEBSD
 
 // Windows has deprecated isatty() and the rest of these. Or doesn't have them.

@@ -131,7 +131,7 @@ bool elf::link(ArrayRef<const char *> args, llvm::raw_ostream &stdoutOS,
 static std::tuple<ELFKind, uint16_t, uint8_t> parseEmulation(StringRef emul) {
   uint8_t osabi = 0;
   StringRef s = emul;
-  if (s.endswith("_fbsd")) {
+  if (s.endswith("_nqc")) {
     s = s.drop_back(5);
     osabi = ELFOSABI_FREEBSD;
   }

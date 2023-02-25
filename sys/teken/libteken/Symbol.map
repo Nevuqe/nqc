@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.2 {
+NQC_1.2 {
 	teken_256to8;
 	teken_get_curattr;
 	teken_get_cursor;

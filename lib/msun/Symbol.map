@@ -3,7 +3,7 @@
  */
 
 /* 7.0-CURRENT */
-FBSD_1.0 {
+NQC_1.0 {
 	__fe_dfl_env;
 	tgamma;
 	acos;
@@ -184,7 +184,7 @@ FBSD_1.0 {
 };
 
 /* First added in 8.0-CURRENT */
-FBSD_1.1 {
+NQC_1.1 {
 	carg;
 	cargf;
 	csqrt;
@@ -220,7 +220,7 @@ FBSD_1.1 {
 };
 
 /* First added in 9.0-CURRENT */
-FBSD_1.2 {
+NQC_1.2 {
 	__isnanf;
 	cbrtl;
 	cexp;
@@ -230,7 +230,7 @@ FBSD_1.2 {
 };
 
 /* First added in 10.0-CURRENT */
-FBSD_1.3 {
+NQC_1.3 {
 	feclearexcept;
 	fegetexceptflag;
 	fetestexcept;
@@ -282,12 +282,12 @@ FBSD_1.3 {
 };
 
 /* First added in 11.0-CURRENT */
-FBSD_1.4 {
+NQC_1.4 {
 	lgammal_r;
 };
 
 /* First added in 12.0-CURRENT */
-FBSD_1.5 {
+NQC_1.5 {
 	cacoshl;
 	cacosl;
 	casinhl;
@@ -306,7 +306,7 @@ FBSD_1.5 {
 };
 
 /* First added in 14.0-CURRENT */
-FBSD_1.7 {
+NQC_1.7 {
 	cexpl;
 	cospi;
 	cospif;

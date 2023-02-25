@@ -7,7 +7,7 @@
  * don't know to what version they will eventually belong to, so for now
  * it has to be manual.
  */
-FBSD_1.0 {
+NQC_1.0 {
 	__acl_aclcheck_fd;
 	__acl_aclcheck_file;
 	__acl_aclcheck_link;
@@ -300,7 +300,7 @@ FBSD_1.0 {
 	truncate;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	__semctl;
 	closefrom;
 	cpuset;
@@ -329,7 +329,7 @@ FBSD_1.1 {
 	unlinkat;
 };
 
-FBSD_1.2 {
+NQC_1.2 {
 	cap_enter;
 	cap_getmode;
 	getloginclass;
@@ -345,7 +345,7 @@ FBSD_1.2 {
 	setloginclass;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	accept4;
 	aio_mlock;
 	bindat;
@@ -368,7 +368,7 @@ FBSD_1.3 {
 	wait6;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	futimens;
 	ppoll;
 	utimensat;
@@ -378,7 +378,7 @@ FBSD_1.4 {
 	recvmmsg;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	clock_nanosleep;
 	fdatasync;
 	fhstat;
@@ -400,7 +400,7 @@ FBSD_1.5 {
 	cpuset_setdomain;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	__sysctlbyname;
 	aio_readv;
 	aio_writev;
@@ -416,13 +416,13 @@ FBSD_1.6 {
 	shm_rename;
 };
 
-FBSD_1.7 {
+NQC_1.7 {
 	_Fork;
 	fspacectl;
 	swapoff;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	___acl_aclcheck_fd;
 	__sys___acl_aclcheck_fd;
 	___acl_aclcheck_file;

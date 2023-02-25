@@ -74,7 +74,7 @@ smb_lib_init(void)
 
 	if (smblib_initialized)
 		return 0;
-#if __FreeBSD_version > 400000
+#if __NQC_version > 400000
 	error = sysctlbyname("net.smb.version", &kv, &kvlen, NULL, 0);
 	if (error) {
 		warnx("%s: can't find kernel module\n", __FUNCTION__);

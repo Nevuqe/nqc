@@ -105,7 +105,7 @@ ATF_TC_BODY(setdomainname_basic, tc)
 
 		(void)memset(name, 0, sizeof(name));
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		/*
 		 * Sanity checks to ensure that the wrong invariant isn't being
 		 * tested for per PR # 181127
@@ -143,7 +143,7 @@ ATF_TC_BODY(setdomainname_limit, tc)
 	(void)memset(name, 0, sizeof(name));
 	backup_domain();
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE(setdomainname(name, MAXHOSTNAMELEN - 1 ) == 0);
 	ATF_REQUIRE(setdomainname(name, MAXHOSTNAMELEN) == -1);
 #endif

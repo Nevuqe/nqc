@@ -408,7 +408,7 @@ runtest(struct alg *ealg, struct alg *alg, int count, int size, u_long cmd, stru
 	close(fd);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 void
 resetstats()
 {
@@ -474,7 +474,7 @@ runtests(struct alg *ealg, struct alg *alg, int count, int size, u_long cmd, int
 		return;
 	}
 	tvp = (struct timeval *) region;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (profile) {
 		size_t tlen = sizeof (otiming);
 		int timing = 1;
@@ -514,7 +514,7 @@ runtests(struct alg *ealg, struct alg *alg, int count, int size, u_long cmd, int
 		    size, (double)nops*size / t,
 		    (double)nops*size / t * 8 / 1024 / 1024);
 	}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (profile) {
 		struct cryptostats stats;
 		size_t slen = sizeof (stats);

@@ -52,7 +52,7 @@ sighandler(int signo __unused)
 	/* Nothing. */
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define	asm __asm
 #endif
 
@@ -172,7 +172,7 @@ ATF_TC_BODY(getrusage_utime_zero, tc)
 	struct rusage ru;
 	size_t i;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_skip("this testcase passes/fails sporadically on FreeBSD/i386 "
 	    "@ r273153 (at least)");
 #endif

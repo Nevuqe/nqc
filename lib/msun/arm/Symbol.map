@@ -1,10 +1,10 @@
 /*
  * $NQC$
  */
-FBSD_1.0 {
+NQC_1.0 {
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	fesetexceptflag;
 	feraiseexcept;
 	fegetenv;

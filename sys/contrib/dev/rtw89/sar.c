@@ -250,7 +250,7 @@ static const struct cfg80211_sar_freq_ranges rtw89_common_sar_freq_ranges[] = {
 
 #if defined(__linux__)
 static_assert(RTW89_SAR_SUBBAND_NR ==
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw89_static_assert(RTW89_SAR_SUBBAND_NR ==
 #endif
 	      ARRAY_SIZE(rtw89_common_sar_freq_ranges));

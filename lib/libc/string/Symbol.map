@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	bcmp;
 	bcopy;
 	memcpy;
@@ -77,7 +77,7 @@ FBSD_1.0 {
 	wmemset;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	ffsll;
 	flsll;
 	memrchr;
@@ -91,7 +91,7 @@ FBSD_1.1 {
 	wcsnlen;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	strcasecmp_l;
 	strcasestr_l;
 	strchrnul;
@@ -100,26 +100,26 @@ FBSD_1.3 {
 	wcwidth_l;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	explicit_bzero;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	memset_s;
 	timingsafe_bcmp;
 	timingsafe_memcmp;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	strerror_l;
 };
 
-FBSD_1.7 {
+NQC_1.7 {
 	mempcpy;
 	strverscmp;
 	wmempcpy;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__strtok_r;
 };

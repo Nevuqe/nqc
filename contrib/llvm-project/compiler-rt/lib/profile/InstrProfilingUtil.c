@@ -38,7 +38,7 @@
 #include <zircon/syscalls.h>
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <signal.h>
 #include <sys/procctl.h>
 #endif
@@ -331,7 +331,7 @@ COMPILER_RT_VISIBILITY int lprofSuspendSigKill(void) {
   if (prctl(PR_GET_PDEATHSIG, &PDeachSig) == 0 && PDeachSig == SIGKILL)
     prctl(PR_SET_PDEATHSIG, 0);
   return (PDeachSig == SIGKILL);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
   int PDeachSig = 0, PDisableSig = 0;
   if (procctl(P_PID, 0, PROC_PDEATHSIG_STATUS, &PDeachSig) == 0 &&
       PDeachSig == SIGKILL)
@@ -345,7 +345,7 @@ COMPILER_RT_VISIBILITY int lprofSuspendSigKill(void) {
 COMPILER_RT_VISIBILITY void lprofRestoreSigKill(void) {
 #if defined(__linux__)
   prctl(PR_SET_PDEATHSIG, SIGKILL);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
   int PEnableSig = SIGKILL;
   procctl(P_PID, 0, PROC_PDEATHSIG_CTL, &PEnableSig);
 #endif

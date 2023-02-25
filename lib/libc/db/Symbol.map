@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	dbopen;
 	dbm_open;
 	dbm_close;
@@ -23,12 +23,12 @@ FBSD_1.0 {
 	mpool_stat;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	mpool_new;
 	mpool_delete;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__bt_open;
 	__dbpanic;
 	__hash_open;

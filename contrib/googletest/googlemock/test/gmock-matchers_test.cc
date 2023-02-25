@@ -3770,7 +3770,7 @@ TEST(WhenDynamicCastToTest, AmbiguousCast) {
 
   // This testcase fails on FreeBSD. See this GitHub issue for more details:
   // https://github.com/google/googletest/issues/2172
-#ifdef __FreeBSD__
+#ifdef __NQC__
   EXPECT_NONFATAL_FAILURE({
 #endif
   Base* as_base_ptr =
@@ -3781,7 +3781,7 @@ TEST(WhenDynamicCastToTest, AmbiguousCast) {
   EXPECT_THAT(
       as_base_ptr,
       WhenDynamicCastTo<AmbiguousCastTypes::VirtualDerived*>(Not(IsNull())));
-#ifdef __FreeBSD__
+#ifdef __NQC__
   }, "");
 #endif
 }

@@ -539,7 +539,7 @@ void _gone_in(int major, const char *msg);
 void _gone_in_dev(device_t dev, int major, const char *msg);
 #ifdef NO_OBSOLETE_CODE
 #define __gone_ok(m, msg)					 \
-	_Static_assert(m < P_OSREL_MAJOR(__FreeBSD_version)),	 \
+	_Static_assert(m < P_OSREL_MAJOR(__NQC_version)),	 \
 	    "Obsolete code: " msg);
 #else
 #define	__gone_ok(m, msg)

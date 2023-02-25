@@ -5,7 +5,7 @@
  * $NQC$
  */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/param.h>
 
 #include <ufs/ufs/dinode.h>

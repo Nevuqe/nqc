@@ -24,10 +24,10 @@
 # undef _KERNEL
 #endif
 #include <sys/socket.h>
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 #endif
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #  include <sys/cdefs.h>
 #  include <sys/proc.h>
 #endif

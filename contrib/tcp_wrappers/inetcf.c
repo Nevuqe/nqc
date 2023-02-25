@@ -248,7 +248,7 @@ char   *arg1;
 	 */
 	sprintf(daemon, "%s/%s", REAL_DAEMON_DIR, arg0);
 	if (STR_EQ(path, daemon)) {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	    wrap_status = WR_MAYBE;
 #else
 	    wrap_status = WR_NOT;

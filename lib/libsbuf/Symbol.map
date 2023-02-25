@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.2 {
+NQC_1.2 {
 	sbuf_new;
 	sbuf_clear;
 	sbuf_setpos;
@@ -26,20 +26,20 @@ FBSD_1.2 {
 	sbuf_set_flags;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	sbuf_start_section;
 	sbuf_end_section;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	sbuf_hexdump;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	sbuf_putbuf;
 };
 
 /* Added in FreeBSD 13.x */
-FBSD_1.6 {
+NQC_1.6 {
 	sbuf_printf_drain;
 };

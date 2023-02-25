@@ -453,7 +453,7 @@ zfs_avx512vbmi_available(void)
 #elif defined(__powerpc__)
 
 /* including <sys/auxv.h> clashes with AT_UID and others */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	AT_HWCAP	25	/* CPU feature flags. */
 #define	AT_HWCAP2	26	/* CPU feature flags 2. */
 extern int elf_aux_info(int aux, void *buf, int buflen);

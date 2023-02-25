@@ -27,7 +27,7 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-#include <sys/param.h>		/* to pick up __FreeBSD_version */
+#include <sys/param.h>		/* to pick up __NQC_version */
 #include <string.h>
 #include <stand.h>
 #include "bootstrap.h"
@@ -278,7 +278,7 @@ bf_init(void)
 	ficlExec(bf_vm, "only forth definitions");
 
 	/* Export some version numbers so that code can detect the loader/host version */
-	ficlSetEnv(bf_sys, "FreeBSD_version", __FreeBSD_version);
+	ficlSetEnv(bf_sys, "FreeBSD_version", __NQC_version);
 	ficlSetEnv(bf_sys, "loader_version", bootprog_rev);
 
 	/* try to load and run init file if present */

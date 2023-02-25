@@ -194,7 +194,7 @@ ATF_TC_BODY(setitimer_old, tc)
 
 	ATF_REQUIRE(setitimer(ITIMER_REAL, &it, &ot) == 0);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_MSG((ot.it_value.tv_sec < 4) ||
 	    (ot.it_value.tv_sec == 4 && ot.it_value.tv_usec <= 3),
 	    "setitimer(2) returned invalid it_value: %jd %jd",

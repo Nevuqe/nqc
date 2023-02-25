@@ -134,7 +134,7 @@ gl_readdir(void *v)
 		dir.d_ino = dd->pos;
 		dir.d_type = f->dir ? DT_DIR : DT_REG;
 		DPRINTF(("readdir %s %d\n", dir.d_name, dir.d_type));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		dir.d_reclen = -1; /* Does not have _DIRENT_RECLEN */
 #else
 		dir.d_reclen = _DIRENT_RECLEN(&dir, dir.d_namlen);

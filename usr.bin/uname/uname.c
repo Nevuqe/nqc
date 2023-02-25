@@ -281,7 +281,7 @@ native_uservers(void)
 {
 	static char buf[128];
 
-	snprintf(buf, sizeof(buf), "%d", __FreeBSD_version);
+	snprintf(buf, sizeof(buf), "%d", __NQC_version);
 	uservers = buf;
 }
 

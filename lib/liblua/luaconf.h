@@ -70,7 +70,7 @@
 #endif
 
 /* Local modifications: need io.popen */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define LUA_USE_POSIX
 #ifndef BOOTSTRAPPING
 #define LUA_USE_DLOPEN

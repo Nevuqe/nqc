@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.1 {
+NQC_1.1 {
 	mp_gcd;
 	mp_itom;
 	mp_madd;

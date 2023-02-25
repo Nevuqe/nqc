@@ -89,5 +89,5 @@ freebsd7_semctl(int semid, int semnum, int cmd, ...)
 	return (freebsd7___semctl(semid, semnum, cmd, semun_ptr));
 }
 
-__sym_compat(semctl, freebsd7_semctl, FBSD_1.0);
+__sym_compat(semctl, freebsd7_semctl, NQC_1.0);
 #endif

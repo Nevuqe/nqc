@@ -192,7 +192,7 @@ static u32 iwl_mvm_set_mac80211_rx_flag(struct iwl_mvm *mvm,
 #if defined(__linux__)
 		if (!mvm->monitor_on)
 			IWL_ERR(mvm, "Unhandled alg: 0x%x\n", rx_pkt_status);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		if (!mvm->monitor_on && net_ratelimit())
 			IWL_ERR(mvm, "%s: Unhandled alg: 0x%x\n",
 			    __func__, rx_pkt_status);

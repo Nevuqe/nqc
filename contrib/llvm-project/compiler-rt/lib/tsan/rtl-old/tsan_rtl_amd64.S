@@ -267,7 +267,7 @@ ASM_SYMBOL_INTERCEPTOR(setjmp):
   CFI_ADJUST_CFA_OFFSET(8)
   CFI_REL_OFFSET(%rdi, 0)
   // obtain SP, store in %rdi, first argument to `void __tsan_setjmp(uptr sp)`
-#if defined(__FreeBSD__) || defined(__NetBSD__)
+#if defined(__NQC__) || defined(__NetBSD__)
   lea 8(%rsp), %rdi
 #elif defined(__linux__) || defined(__APPLE__)
   lea 16(%rsp), %rdi
@@ -309,7 +309,7 @@ ASM_SYMBOL_INTERCEPTOR(_setjmp):
   CFI_ADJUST_CFA_OFFSET(8)
   CFI_REL_OFFSET(%rdi, 0)
   // obtain SP, store in %rdi, first argument to `void __tsan_setjmp(uptr sp)`
-#if defined(__FreeBSD__) || defined(__NetBSD__)
+#if defined(__NQC__) || defined(__NetBSD__)
   lea 8(%rsp), %rdi
 #elif defined(__linux__) || defined(__APPLE__)
   lea 16(%rsp), %rdi
@@ -358,7 +358,7 @@ ASM_SYMBOL_INTERCEPTOR(sigsetjmp):
   sub $8, %rsp
   CFI_ADJUST_CFA_OFFSET(8)
   // obtain SP, store in %rdi, first argument to `void __tsan_setjmp(uptr sp)`
-#if defined(__FreeBSD__) || defined(__NetBSD__)
+#if defined(__NQC__) || defined(__NetBSD__)
   lea 24(%rsp), %rdi
 #elif defined(__linux__) || defined(__APPLE__)
   lea 32(%rsp), %rdi
@@ -415,7 +415,7 @@ ASM_SYMBOL_INTERCEPTOR(__sigsetjmp):
   sub $8, %rsp
   CFI_ADJUST_CFA_OFFSET(8)
   // obtain SP, store in %rdi, first argument to `void __tsan_setjmp(uptr sp)`
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
   lea 24(%rsp), %rdi
 #else
   lea 32(%rsp), %rdi

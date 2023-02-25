@@ -614,7 +614,7 @@ void GetThreadStackAndTls(bool main, uptr *stk_addr, uptr *stk_size,
 
 #if !SANITIZER_FREEBSD
 typedef ElfW(Phdr) Elf_Phdr;
-#elif SANITIZER_WORDSIZE == 32 && __FreeBSD_version <= 902001  // v9.2
+#elif SANITIZER_WORDSIZE == 32 && __NQC_version <= 902001  // v9.2
 #define Elf_Phdr XElf32_Phdr
 #define dl_phdr_info xdl_phdr_info
 #define dl_iterate_phdr(c, b) xdl_iterate_phdr((c), (b))

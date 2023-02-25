@@ -6,7 +6,7 @@
 |*
 \*===----------------------------------------------------------------------===*/
 
-#if defined(__linux__) || defined(__FreeBSD__) || defined(__Fuchsia__) || \
+#if defined(__linux__) || defined(__NQC__) || defined(__Fuchsia__) || \
     (defined(__sun__) && defined(__svr4__)) || defined(__NetBSD__) || \
     defined(_AIX)
 
@@ -20,7 +20,7 @@
 #include "InstrProfiling.h"
 #include "InstrProfilingInternal.h"
 
-#if defined(__FreeBSD__) && !defined(ElfW)
+#if defined(__NQC__) && !defined(ElfW)
 /*
  * FreeBSD's elf.h and link.h headers do not define the ElfW(type) macro yet.
  * If this is added to all supported FreeBSD versions in the future, this

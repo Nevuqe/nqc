@@ -90,7 +90,7 @@ enum os_type {
 
 /// The current operating system.
 static enum os_type current_os =
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
     os_freebsd
 #elif defined(__linux__)
     os_linux

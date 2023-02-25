@@ -27,9 +27,9 @@ jobs:
           - dfly58
           - dfly60
           - dfly62
-          - fbsd10
-          - fbsd12
-          - fbsd13
+          - nqc10
+          - nqc12
+          - nqc13
           - minix3
           - nbsd3
           - nbsd4
@@ -57,9 +57,9 @@ jobs:
           - { target: dfly58, config: pam, host: libvirt }
           - { target: dfly60, config: pam, host: libvirt }
           - { target: dfly62, config: pam, host: libvirt }
-          - { target: fbsd10, config: pam, host: libvirt }
-          - { target: fbsd12, config: pam, host: libvirt }
-          - { target: fbsd13, config: pam, host: libvirt }
+          - { target: nqc10, config: pam, host: libvirt }
+          - { target: nqc12, config: pam, host: libvirt }
+          - { target: nqc13, config: pam, host: libvirt }
           - { target: nbsd8,  config: pam, host: libvirt }
           - { target: nbsd9,  config: pam, host: libvirt }
           - { target: openindiana, config: pam, host: libvirt }

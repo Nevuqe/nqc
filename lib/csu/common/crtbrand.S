@@ -45,7 +45,7 @@ __NQCID("$NQC$");
 	.4byte		NT_FREEBSD_ABI_TAG
 1:	.asciz		NOTE_FREEBSD_VENDOR
 2:	.p2align	2
-3:	.4byte		__FreeBSD_version
+3:	.4byte		__NQC_version
 4:
 
 	.section .note.GNU-stack,"",%progbits

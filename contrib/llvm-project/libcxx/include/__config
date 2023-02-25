@@ -150,7 +150,7 @@
 #    endif
 // Feature macros for disabling pre ABI v1 features. All of these options
 // are deprecated.
-#    if defined(__FreeBSD__)
+#    if defined(__NQC__)
 #      define _LIBCPP_DEPRECATED_ABI_DISABLE_PAIR_TRIVIAL_COPY_CTOR
 #    endif
 #  endif
@@ -290,7 +290,7 @@ If there are users of this configuration we are happy to provide support.
 #    endif // __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
 #  endif   // __BYTE_ORDER__
 
-#  ifdef __FreeBSD__
+#  ifdef __NQC__
 #    include <sys/endian.h>
 #    include <osreldate.h>
 #    if _BYTE_ORDER == _LITTLE_ENDIAN
@@ -298,7 +298,7 @@ If there are users of this configuration we are happy to provide support.
 #    else // _BYTE_ORDER == _LITTLE_ENDIAN
 #      define _LIBCPP_BIG_ENDIAN
 #    endif // _BYTE_ORDER == _LITTLE_ENDIAN
-#  endif   // __FreeBSD__
+#  endif   // __NQC__
 
 #  if defined(__NetBSD__) || defined(__OpenBSD__)
 #    include <sys/endian.h>
@@ -378,7 +378,7 @@ If there are users of this configuration we are happy to provide support.
 //      Use rand_s(), for use on Windows.
 //      When this option is used, the token passed to `std::random_device`'s
 //      constructor *must* be "/dev/urandom" -- anything else is an error.
-#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) ||                     \
+#  if defined(__APPLE__) || defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) ||                     \
       defined(__DragonFly__) || defined(__sun__)
 #    define _LIBCPP_USING_ARC4_RANDOM
 #  elif defined(__wasi__) || defined(__EMSCRIPTEN__)
@@ -727,12 +727,12 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
 #    define _LIBCPP_DECLARE_STRONG_ENUM_EPILOG(x)
 #  endif // _LIBCPP_CXX03_LANG
 
-#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(_LIBCPP_MSVCRT_LIKE) || defined(__sun__) ||                \
+#  if defined(__APPLE__) || defined(__NQC__) || defined(_LIBCPP_MSVCRT_LIKE) || defined(__sun__) ||                \
       defined(__NetBSD__)
 #    define _LIBCPP_LOCALE__L_EXTENSIONS 1
 #  endif
 
-#  ifdef __FreeBSD__
+#  ifdef __NQC__
 #    define _DECLARE_C99_LDBL_MATH 1
 #  endif
 
@@ -752,11 +752,11 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
 #    define _LIBCPP_HAS_NO_ALIGNED_ALLOCATION
 #  endif
 
-#  if defined(__APPLE__) || defined(__FreeBSD__)
+#  if defined(__APPLE__) || defined(__NQC__)
 #    define _LIBCPP_HAS_DEFAULTRUNELOCALE
 #  endif
 
-#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(__sun__)
+#  if defined(__APPLE__) || defined(__NQC__) || defined(__sun__)
 #    define _LIBCPP_WCTYPE_IS_MASK
 #  endif
 
@@ -901,7 +901,7 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
       !defined(_LIBCPP_HAS_THREAD_API_WIN32) &&                                                                        \
       !defined(_LIBCPP_HAS_THREAD_API_EXTERNAL)
 
-#    if defined(__FreeBSD__) ||                                                                                        \
+#    if defined(__NQC__) ||                                                                                        \
         defined(__wasi__) ||                                                                                           \
         defined(__NetBSD__) ||                                                                                         \
         defined(__OpenBSD__) ||                                                                                        \
@@ -985,7 +985,7 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
 #  endif
 
 // Some systems do not provide gets() in their C library, for security reasons.
-#  if defined(_LIBCPP_MSVCRT) || (defined(__FreeBSD_version) && __FreeBSD_version >= 1300043) || defined(__OpenBSD__)
+#  if defined(_LIBCPP_MSVCRT) || (defined(__NQC_version) && __NQC_version >= 1300043) || defined(__OpenBSD__)
 #    define _LIBCPP_C_HAS_NO_GETS
 #  endif
 

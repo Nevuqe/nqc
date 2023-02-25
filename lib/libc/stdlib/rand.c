@@ -138,25 +138,25 @@ rand_r(unsigned *ctx)
 
 static u_long next = 1;
 
-int __rand_fbsd12(void);
+int __rand_nqc12(void);
 int
-__rand_fbsd12(void)
+__rand_nqc12(void)
 {
 	return (do_rand(&next));
 }
-__sym_compat(rand, __rand_fbsd12, FBSD_1.0);
+__sym_compat(rand, __rand_nqc12, NQC_1.0);
 
-void __srand_fbsd12(unsigned seed);
+void __srand_nqc12(unsigned seed);
 void
-__srand_fbsd12(unsigned seed)
+__srand_nqc12(unsigned seed)
 {
 	next = seed;
 }
-__sym_compat(srand, __srand_fbsd12, FBSD_1.0);
+__sym_compat(srand, __srand_nqc12, NQC_1.0);
 
-void __sranddev_fbsd12(void);
+void __sranddev_nqc12(void);
 void
-__sranddev_fbsd12(void)
+__sranddev_nqc12(void)
 {
 	static bool warned = false;
 
@@ -165,4 +165,4 @@ __sranddev_fbsd12(void)
 		warned = true;
 	}
 }
-__sym_compat(sranddev, __sranddev_fbsd12, FBSD_1.0);
+__sym_compat(sranddev, __sranddev_nqc12, NQC_1.0);

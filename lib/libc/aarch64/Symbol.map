@@ -7,7 +7,7 @@
  * symbol maps from other parts of libc (i.e., not found in
  * stdlib/Symbol.map, string/Symbol.map, sys/Symbol.map, ...).
  */
-FBSD_1.0 {
+NQC_1.0 {
 	/* PSEUDO syscalls */
 	_exit;
 
@@ -32,6 +32,6 @@ FBSD_1.0 {
 	makecontext;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__makecontext;
 };

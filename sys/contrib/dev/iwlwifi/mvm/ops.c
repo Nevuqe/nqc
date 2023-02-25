@@ -4,7 +4,7 @@
  * Copyright (C) 2013-2015 Intel Mobile Communications GmbH
  * Copyright (C) 2016-2017 Intel Deutschland GmbH
  */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	LINUXKPI_PARAM_PREFIX	iwlwifi_mvm_
 #endif
 #include <linux/module.h>
@@ -38,7 +38,7 @@
 #if defined(__linux__)
 #define DRV_DESCRIPTION	"The new Intel(R) wireless AGN driver for Linux"
 MODULE_LICENSE("GPL");
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 #define DRV_DESCRIPTION	"The new Intel(R) wireless AGN/AC/AX based driver for FreeBSD"
 MODULE_LICENSE("BSD");
 #endif
@@ -49,7 +49,7 @@ static const struct iwl_op_mode_ops iwl_mvm_ops;
 static const struct iwl_op_mode_ops iwl_mvm_ops_mq;
 
 struct iwl_mvm_mod_params iwlmvm_mod_params = {
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	.power_scheme = IWL_POWER_SCHEME_CAM,	/* disable default PS */
 #else
 	.power_scheme = IWL_POWER_SCHEME_BPS,
@@ -85,7 +85,7 @@ static int __init iwl_mvm_init(void)
 }
 #if defined(__linux__)
 module_init(iwl_mvm_init);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 module_init_order(iwl_mvm_init, SI_ORDER_SECOND);
 #endif
 

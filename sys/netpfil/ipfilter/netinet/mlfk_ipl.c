@@ -22,7 +22,7 @@
 #include <sys/socket.h>
 #include <sys/sysctl.h>
 #include <sys/select.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 # include <sys/selinfo.h>
 # include <sys/jail.h>
 # ifdef _KERNEL
@@ -52,7 +52,7 @@
 VNET_DECLARE(ipf_main_softc_t, ipfmain);
 #define	V_ipfmain		VNET(ipfmain)
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static struct cdev *ipf_devs[IPL_LOGSIZE];
 #else
 static dev_t ipf_devs[IPL_LOGSIZE];
@@ -65,10 +65,10 @@ static int sysctl_ipf_int_auth ( SYSCTL_HANDLER_ARGS );
 static int sysctl_ipf_int_frag ( SYSCTL_HANDLER_ARGS );
 static int ipf_modload(void);
 static int ipf_modunload(void);
-static int ipf_fbsd_sysctl_create(void);
-static int ipf_fbsd_sysctl_destroy(void);
+static int ipf_nqc_sysctl_create(void);
+static int ipf_nqc_sysctl_destroy(void);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static	int	ipfopen(struct cdev*, int, int, struct thread *);
 static	int	ipfclose(struct cdev*, int, int, struct thread *);
 static	int	ipfread(struct cdev*, struct uio *, int);
@@ -141,7 +141,7 @@ SYSCTL_IPF(_net_inet_ipf, OID_AUTO, large_nat, CTLFLAG_RD, &VNET_NAME(ipfmain.ip
 
 #define CDEV_MAJOR 79
 #include <sys/poll.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 # include <sys/select.h>
 static int ipfpoll(struct cdev *dev, int events, struct thread *td);
 
@@ -254,7 +254,7 @@ ipf_modload(void)
 	if (ipf_load_all() != 0)
 		return (EIO);
 
-	if (ipf_fbsd_sysctl_create() != 0) {
+	if (ipf_nqc_sysctl_create() != 0) {
 		return (EIO);
 	}
 
@@ -311,7 +311,7 @@ ipf_modunload(void)
 
 	ipf_event_dereg();
 
-	ipf_fbsd_sysctl_destroy();
+	ipf_nqc_sysctl_destroy();
 
 	error = ipf_pfil_unhook();
 	if (error != 0)
@@ -433,7 +433,7 @@ sysctl_ipf_int_frag ( SYSCTL_HANDLER_ARGS )
 
 
 static int
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ipfpoll(struct cdev *dev, int events, struct thread *td)
 #else
 ipfpoll(dev_t dev, int events, struct proc *td)
@@ -486,7 +486,7 @@ ipfpoll(dev_t dev, int events, struct proc *td)
  * routines below for saving IP headers to buffer
  */
 static int
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ipfopen(struct cdev *dev, int flags, int devtype, struct thread *p)
 #else
 ipfopen(dev_t dev, int flags)
@@ -521,7 +521,7 @@ ipfopen(dev_t dev, int flags)
 
 
 static int
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ipfclose(struct cdev *dev, int flags, int devtype, struct thread *p)
 #else
 ipfclose(dev_t dev, int flags)
@@ -542,7 +542,7 @@ ipfclose(dev_t dev, int flags)
  * called during packet processing and cause an inconsistancy to appear in
  * the filter lists.
  */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static int ipfread(struct cdev *dev, struct uio *uio, int ioflag)
 #else
 static int ipfread(dev, uio, ioflag)
@@ -585,7 +585,7 @@ static int ipfread(dev, uio, ioflag)
  * called during packet processing and cause an inconsistancy to appear in
  * the filter lists.
  */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static int ipfwrite(struct cdev *dev, struct uio *uio, int ioflag)
 #else
 static int ipfwrite(dev, uio, ioflag)
@@ -611,7 +611,7 @@ static int ipfwrite(dev, uio, ioflag)
 }
 
 static int
-ipf_fbsd_sysctl_create(void)
+ipf_nqc_sysctl_create(void)
 {
 
 	sysctl_ctx_init(&ipf_clist);
@@ -644,7 +644,7 @@ ipf_fbsd_sysctl_create(void)
 }
 
 static int
-ipf_fbsd_sysctl_destroy(void)
+ipf_nqc_sysctl_destroy(void)
 {
 	if (sysctl_ctx_free(&ipf_clist)) {
 		printf("sysctl_ctx_free failed");

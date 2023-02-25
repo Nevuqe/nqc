@@ -16,5 +16,5 @@ __stack_chk_fail_local_hidden(void)
 	__stack_chk_fail();
 }
 
-__sym_compat(__stack_chk_fail_local, __stack_chk_fail_local_hidden, FBSD_1.0);
+__sym_compat(__stack_chk_fail_local, __stack_chk_fail_local_hidden, NQC_1.0);
 #endif

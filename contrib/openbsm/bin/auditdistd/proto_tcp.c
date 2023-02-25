@@ -587,7 +587,7 @@ tcp_address_match(const void *ctx, const char *addr)
 	}
 }
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 static void
 sockaddr_to_string(const void *sa, char *buf, size_t size)
 {
@@ -633,7 +633,7 @@ sockaddr_to_string(const void *sa, char *buf, size_t size)
 		break;
 	}
 }
-#endif	/* !__FreeBSD__ */
+#endif	/* !__NQC__ */
 
 static void
 tcp_local_address(const void *ctx, char *addr, size_t size)
@@ -650,7 +650,7 @@ tcp_local_address(const void *ctx, char *addr, size_t size)
 		PJDLOG_VERIFY(strlcpy(addr, "N/A", size) < size);
 		return;
 	}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	PJDLOG_VERIFY(snprintf(addr, size, "tcp://%S", &sa) < (ssize_t)size);
 #else
 	strlcpy(addr, "tcp://", size);
@@ -674,7 +674,7 @@ tcp_remote_address(const void *ctx, char *addr, size_t size)
 		PJDLOG_VERIFY(strlcpy(addr, "N/A", size) < size);
 		return;
 	}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	PJDLOG_VERIFY(snprintf(addr, size, "tcp://%S", &sa) < (ssize_t)size);
 #else
 	strlcpy(addr, "tcp://", size);

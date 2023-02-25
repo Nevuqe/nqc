@@ -352,7 +352,7 @@ extern void cv_broadcast(kcondvar_t *cv);
 #define	tsd_set(k, v) pthread_setspecific(k, v)
 #define	tsd_create(kp, d) pthread_key_create((pthread_key_t *)kp, d)
 #define	tsd_destroy(kp) /* nothing */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 typedef off_t loff_t;
 #endif
 

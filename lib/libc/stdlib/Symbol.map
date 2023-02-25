@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	_Exit;
 	a64l;
 	abort;
@@ -80,7 +80,7 @@ FBSD_1.0 {
 	twalk;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	at_quick_exit;
 	atof_l;
 	atoi_l;
@@ -100,7 +100,7 @@ FBSD_1.3 {
 	strtouq_l;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	atexit_b;
 	bsearch_b;
 	heapsort_b;
@@ -112,7 +112,7 @@ FBSD_1.4 {
 	reallocarray;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	__cxa_thread_atexit;
 	__cxa_thread_atexit_impl;
 	abort_handler_s;
@@ -120,19 +120,19 @@ FBSD_1.5 {
 	set_constraint_handler_s;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	ptsname_r;
 	qsort_s;
 	rand;
 	srand;
 };
 
-FBSD_1.7 {
+NQC_1.7 {
 	clearenv;
 	qsort_r;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__system;
 	_system;
 	__libc_system;

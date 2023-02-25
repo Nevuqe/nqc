@@ -31,7 +31,7 @@
 #include <osreldate.h>
 
 /* FreeBSD 5.0 and later has ACL and extattr support. */
-#if __FreeBSD__ > 4
+#if __NQC__ > 4
 #define ARCHIVE_ACL_FREEBSD 1
 #define ARCHIVE_XATTR_FREEBSD 1
 #define HAVE_ACL_GET_PERM_NP 1
@@ -39,14 +39,14 @@
 #define HAVE_STRUCT_XVFSCONF 1
 #define HAVE_SYS_ACL_H 1
 #define HAVE_SYS_EXTATTR_H 1
-#if __FreeBSD__ > 7
+#if __NQC__ > 7
 /* FreeBSD 8.0 and later has NFSv4 ACL support */
 #define ARCHIVE_ACL_FREEBSD_NFS4 1
 #define HAVE_ACL_GET_LINK_NP 1
 #define HAVE_ACL_IS_TRIVIAL_NP 1
 #define HAVE_ACL_SET_LINK_NP 1
-#endif /* __FreeBSD__ > 7 */
-#endif /* __FreeBSD__ > 4 */
+#endif /* __NQC__ > 7 */
+#endif /* __NQC__ > 4 */
 
 #ifdef WITH_OPENSSL
 #define HAVE_LIBCRYPTO 1
@@ -236,13 +236,13 @@
 #define HAVE_ZLIB_H 1
 #define TIME_WITH_SYS_TIME 1
 
-#if __FreeBSD_version >= 1100056
+#if __NQC_version >= 1100056
 #define HAVE_FUTIMENS 1
 #define HAVE_UTIMENSAT 1
 #endif
 
 /* FreeBSD 4 and earlier lack intmax_t/uintmax_t */
-#if __FreeBSD__ < 5
+#if __NQC__ < 5
 #define intmax_t int64_t
 #define uintmax_t uint64_t
 #endif

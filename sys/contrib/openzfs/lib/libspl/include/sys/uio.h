@@ -61,7 +61,7 @@ typedef enum zfs_uio_seg {
 	UIO_SYSSPACE =	1,
 } zfs_uio_seg_t;
 
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 typedef enum uio_seg  zfs_uio_seg_t;
 #endif
 

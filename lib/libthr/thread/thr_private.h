@@ -65,11 +65,11 @@ __NULLABILITY_PRAGMA_PUSH
 
 #define	FB10_COMPAT(func, sym)				\
 	WEAK_REF(func, SYM_FB10(sym));			\
-	SYM_COMPAT(sym, SYM_FB10(sym), FBSD_1.0)
+	SYM_COMPAT(sym, SYM_FB10(sym), NQC_1.0)
 
 #define	FB10_COMPAT_PRIVATE(func, sym)			\
 	WEAK_REF(func, SYM_FBP10(sym));			\
-	SYM_DEFAULT(sym, SYM_FBP10(sym), FBSDprivate_1.0)
+	SYM_DEFAULT(sym, SYM_FBP10(sym), NQCprivate_1.0)
 
 struct pthread;
 extern struct pthread	*_thr_initial __hidden;

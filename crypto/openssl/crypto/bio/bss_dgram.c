@@ -32,7 +32,7 @@
 #  define IPPROTO_IPV6 41       /* windows is lame */
 # endif
 
-# if defined(__FreeBSD__) && defined(IN6_IS_ADDR_V4MAPPED)
+# if defined(__NQC__) && defined(IN6_IS_ADDR_V4MAPPED)
 /* Standard definition causes type-punning problems. */
 #  undef IN6_IS_ADDR_V4MAPPED
 #  define s6_addr32 __u6_addr.__u6_addr32
@@ -1320,7 +1320,7 @@ static int dgram_sctp_write(BIO *b, const char *in, int inl)
     memset(sndrcvinfo, 0, sizeof(*sndrcvinfo));
     sndrcvinfo->sinfo_stream = sinfo->snd_sid;
     sndrcvinfo->sinfo_flags = sinfo->snd_flags;
-#   ifdef __FreeBSD__
+#   ifdef __NQC__
     sndrcvinfo->sinfo_flags |= pinfo->pr_policy;
 #   endif
     sndrcvinfo->sinfo_ppid = sinfo->snd_ppid;
@@ -1416,7 +1416,7 @@ static long dgram_sctp_ctrl(BIO *b, int cmd, long num, void *ptr)
         }
         memset(authkey, 0, sockopt_len);
         authkey->sca_keynumber = authkeyid.scact_keynumber + 1;
-#  ifndef __FreeBSD__
+#  ifndef __NQC__
         /*
          * This field is missing in FreeBSD 8.2 and earlier, and FreeBSD 8.3
          * and higher work without it.

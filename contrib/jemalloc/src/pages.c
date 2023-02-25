@@ -10,7 +10,7 @@
 
 #ifdef JEMALLOC_SYSCTL_VM_OVERCOMMIT
 #include <sys/sysctl.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/auxv.h>
 #include <vm/vm_param.h>
 #include <vm/vm.h>
@@ -182,7 +182,7 @@ pages_map(void *addr, size_t size, size_t alignment, bool *commit) {
 	assert(alignment >= PAGE);
 	assert(ALIGNMENT_ADDR2BASE(addr, alignment) == addr);
 
-#if defined(__FreeBSD__) && defined(MAP_EXCL)
+#if defined(__NQC__) && defined(MAP_EXCL)
 	/*
 	 * FreeBSD has mechanisms both to mmap at specific address without
 	 * touching existing mappings, and to mmap with specific alignment.
@@ -421,7 +421,7 @@ os_page_detect(void) {
 	SYSTEM_INFO si;
 	GetSystemInfo(&si);
 	return si.dwPageSize;
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	/*
 	 * This returns the value obtained from
 	 * the auxv vector, avoiding a syscall.
@@ -450,7 +450,7 @@ os_overcommits_sysctl(void) {
 #endif
 
 	sz = sizeof(vm_overcommit);
-#if defined(__FreeBSD__) && defined(VM_OVERCOMMIT)
+#if defined(__NQC__) && defined(VM_OVERCOMMIT)
 	int mib[2];
 
 	mib[0] = CTL_VM;
@@ -639,7 +639,7 @@ pages_boot(void) {
 
 	init_thp_state();
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * FreeBSD doesn't need the check; madvise(2) is known to work.
 	 */

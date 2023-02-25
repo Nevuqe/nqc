@@ -205,7 +205,7 @@ typedef HPT_U32 DEVICEID;
  * It would be better if ioctl code are the same on different platforms,
  * but we must not conflict with system defined ioctl code.
  ************************************************************************/
-#if defined(LINUX) || defined(__FreeBSD_version) || defined(linux)
+#if defined(LINUX) || defined(__NQC_version) || defined(linux)
 #define HPT_CTL_CODE(x) (x+0xFF00)
 #define HPT_CTL_CODE_LINUX_TO_IOP(x) ((x)-0xff00)
 #elif defined(_MS_WIN32_) || defined(WIN32)

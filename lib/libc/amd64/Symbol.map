@@ -7,7 +7,7 @@
  * symbol maps from other parts of libc (i.e., not found in
  * stdlib/Symbol.map, string/Symbol.map, sys/Symbol.map, ...).
  */
-FBSD_1.0 {
+NQC_1.0 {
 	/* PSEUDO syscalls */
 	_exit;
 
@@ -44,7 +44,7 @@ FBSD_1.0 {
 	vfork;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	 x86_pkru_get_perm;
 	 x86_pkru_set_perm;
 	 x86_pkru_protect_range;
@@ -56,7 +56,7 @@ FBSD_1.6 {
  * FreeBSD private ABI
  *
  */
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	/* PSEUDO syscalls */
 	_getlogin;
 

@@ -74,7 +74,7 @@ __RCSID("$NetBSD: t_mmap.c,v 1.12 2017/01/16 16:31:05 christos Exp $");
 #include <string.h>
 #include <unistd.h>
 #include <paths.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <stdint.h>
 #endif
 
@@ -379,7 +379,7 @@ ATF_TC_BODY(mmap_prot_3, tc)
 	fd = open(path, O_RDWR | O_CREAT, 0700);
 
 	if (fd < 0)
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 		atf_tc_skip("opening %s failed; skipping testcase: %s",
 		    path, strerror(errno));
 #else
@@ -410,7 +410,7 @@ ATF_TC_BODY(mmap_prot_3, tc)
 	ATF_REQUIRE(WIFEXITED(sta) != 0);
 	ATF_REQUIRE(WEXITSTATUS(sta) == SIGSEGV);
 	ATF_REQUIRE(munmap(map, 3) == 0);
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 	(void)close(fd);
 #endif
 }
@@ -547,7 +547,7 @@ ATF_TC_BODY(mmap_va0, tc)
 	 * Make an anonymous fixed mapping at zero address. If the address
 	 * is restricted as noted in security(7), the syscall should fail.
 	 */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (sysctlbyname("security.bsd.map_at_zero", &val, &len, NULL, 0) != 0)
 		atf_tc_fail("failed to read security.bsd.map_at_zero");
 	val = !val; /* 1 == enable  map at zero */

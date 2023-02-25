@@ -20,7 +20,7 @@
 // 32-bit mode.
 #if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
 #include <osreldate.h>
-#if __FreeBSD_version <= 902001  // v9.2
+#if __NQC_version <= 902001  // v9.2
 #include <link.h>
 #include <sys/param.h>
 #include <ucontext.h>
@@ -131,7 +131,7 @@ typedef int xdl_iterate_phdr_t(__xdl_iterate_hdr_callback, void *);
 
 }  // namespace __sanitizer
 
-#endif  // __FreeBSD_version <= 902001
+#endif  // __NQC_version <= 902001
 #endif  // SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
 
 #endif  // SANITIZER_FREEBSD_H

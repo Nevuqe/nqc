@@ -120,7 +120,7 @@ chacha20_randomstir(struct chacha20_s *chacha20)
 		SHA256_Init(&ctx);
 		SHA256_Update(&ctx, key, sizeof(key));
 		SHA256_Update(&ctx, &cc, sizeof(cc));
-		fver = __FreeBSD_version;
+		fver = __NQC_version;
 		SHA256_Update(&ctx, &fver, sizeof(fver));
 		_Static_assert(sizeof(key) == SHA256_DIGEST_LENGTH,
 		    "make sure 256 bits is still 256 bits");

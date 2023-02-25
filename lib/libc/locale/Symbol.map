@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	btowc;
 	digittoint;
 	isalnum;
@@ -101,7 +101,7 @@ FBSD_1.0 {
 	wcwidth;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	newlocale;
 	duplocale;
 	freelocale;
@@ -209,7 +209,7 @@ FBSD_1.3 {
 	mbrtoc32_l;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_PathLocale;
 	__detect_path_locale;
 	__collate_load_error;

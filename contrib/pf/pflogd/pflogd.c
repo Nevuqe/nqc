@@ -51,7 +51,7 @@ __NQCID("$NQC$");
 #include <errno.h>
 #include <stdarg.h>
 #include <fcntl.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <ifaddrs.h>
 #include "pidfile.h"
 #else
@@ -161,7 +161,7 @@ logmsg(int pri, const char *message, ...)
 	va_end(ap);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 __dead2 void
 #else
 __dead void
@@ -215,7 +215,7 @@ set_pcap_filter(void)
 int
 if_exists(char *ifname)
 {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	struct ifaddrs *ifdata, *mb;
 	int exists = 0;
 
@@ -406,7 +406,7 @@ int
 scan_dump(FILE *fp, off_t size)
 {
 	struct pcap_file_header hdr;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	struct pcap_sf_pkthdr ph;
 #else
 	struct pcap_pkthdr ph;
@@ -479,7 +479,7 @@ void
 dump_packet_nobuf(u_char *user, const struct pcap_pkthdr *h, const u_char *sp)
 {
 	FILE *f = (FILE *)user;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	struct pcap_sf_pkthdr sh;
 #endif
 
@@ -488,7 +488,7 @@ dump_packet_nobuf(u_char *user, const struct pcap_pkthdr *h, const u_char *sp)
 		return;
 	}
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	sh.ts.tv_sec = (bpf_int32)h->ts.tv_sec;
 	sh.ts.tv_usec = (bpf_int32)h->ts.tv_usec;
 	sh.caplen = h->caplen;
@@ -501,7 +501,7 @@ dump_packet_nobuf(u_char *user, const struct pcap_pkthdr *h, const u_char *sp)
 		off_t pos = ftello(f);
 
 		/* try to undo header to prevent corruption */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		if (pos < sizeof(sh) ||
 		    ftruncate(fileno(f), pos - sizeof(sh))) {
 #else
@@ -576,7 +576,7 @@ void
 dump_packet(u_char *user, const struct pcap_pkthdr *h, const u_char *sp)
 {
 	FILE *f = (FILE *)user;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	struct pcap_sf_pkthdr sh;
 	size_t len = sizeof(sh) + h->caplen;
 #else
@@ -609,7 +609,7 @@ dump_packet(u_char *user, const struct pcap_pkthdr *h, const u_char *sp)
 	}
 
  append:       
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	sh.ts.tv_sec = (bpf_int32)h->ts.tv_sec;
 	sh.ts.tv_usec = (bpf_int32)h->ts.tv_usec;
 	sh.caplen = h->caplen;

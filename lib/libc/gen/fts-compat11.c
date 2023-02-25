@@ -1210,11 +1210,11 @@ fts_ufslinks(FTS11 *sp, const FTSENT11 *ent)
 	return (priv->ftsp_linksreliable);
 }
 
-__sym_compat(fts_open, freebsd11_fts_open, FBSD_1.1);
-__sym_compat(fts_close, freebsd11_fts_close, FBSD_1.1);
-__sym_compat(fts_read, freebsd11_fts_read, FBSD_1.1);
-__sym_compat(fts_set, freebsd11_fts_set, FBSD_1.1);
-__sym_compat(fts_children, freebsd11_fts_children, FBSD_1.1);
-__sym_compat(fts_get_clientptr, freebsd11_fts_get_clientptr, FBSD_1.1);
-__sym_compat(fts_get_stream, freebsd11_fts_get_stream, FBSD_1.1);
-__sym_compat(fts_set_clientptr, freebsd11_fts_set_clientptr, FBSD_1.1);
+__sym_compat(fts_open, freebsd11_fts_open, NQC_1.1);
+__sym_compat(fts_close, freebsd11_fts_close, NQC_1.1);
+__sym_compat(fts_read, freebsd11_fts_read, NQC_1.1);
+__sym_compat(fts_set, freebsd11_fts_set, NQC_1.1);
+__sym_compat(fts_children, freebsd11_fts_children, NQC_1.1);
+__sym_compat(fts_get_clientptr, freebsd11_fts_get_clientptr, NQC_1.1);
+__sym_compat(fts_get_stream, freebsd11_fts_get_stream, NQC_1.1);
+__sym_compat(fts_set_clientptr, freebsd11_fts_set_clientptr, NQC_1.1);

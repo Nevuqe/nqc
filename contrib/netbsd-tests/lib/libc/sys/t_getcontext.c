@@ -51,7 +51,7 @@ run(int n, ...)
 	ATF_REQUIRE_EQ(n, DEPTH - calls - 1);
 
 	va_start(va, n);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #if defined(__amd64__) || defined(__sparc64__)
 	for (i = 0; i < 5; i++) {
 #elif defined(__aarch64__) || defined(__riscv)
@@ -118,7 +118,7 @@ ATF_TC_BODY(setcontext_link, tc)
 		uc[i].uc_stack.ss_size = STACKSZ;
 		uc[i].uc_link = (i > 0) ? &uc[i - 1] : &save;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #if defined(__amd64__) || defined(__sparc64__)
 		/*
 		 * FreeBSD/amd64 and FreeBSD/sparc64 only permit up to

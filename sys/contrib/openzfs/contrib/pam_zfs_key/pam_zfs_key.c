@@ -42,7 +42,7 @@
 #if	defined(__linux__)
 #include <security/pam_ext.h>
 #define	MAP_FLAGS MAP_PRIVATE | MAP_ANONYMOUS
-#elif	defined(__FreeBSD__)
+#elif	defined(__NQC__)
 #include <security/pam_appl.h>
 static void
 pam_syslog(pam_handle_t *pamh, int loglevel, const char *fmt, ...)

@@ -42,7 +42,7 @@
  */
 #if defined _AIX \
 	|| defined __ANDROID__ \
-	|| defined __FreeBSD__ \
+	|| defined __NQC__ \
 	|| defined __NetBSD__ \
 	|| defined __OpenBSD__ \
 	|| defined __DragonFly__ \

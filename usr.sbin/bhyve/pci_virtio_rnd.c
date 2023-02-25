@@ -192,7 +192,7 @@ pci_vtrnd_init(struct pci_devinst *pi, nvlist_t *nvl __unused)
 	pci_set_cfgdata16(pi, PCIR_SUBDEV_0, VIRTIO_ID_ENTROPY);
 	pci_set_cfgdata16(pi, PCIR_SUBVEND_0, VIRTIO_VENDOR);
 
-	if (vi_intr_init(&sc->vrsc_vs, 1, fbsdrun_virtio_msix()))
+	if (vi_intr_init(&sc->vrsc_vs, 1, nqcrun_virtio_msix()))
 		return (1);
 	vi_set_io_bar(&sc->vrsc_vs, 0);
 

@@ -18,5 +18,5 @@ auditd_controlServer.c auditd_controlServer.h: auditd_control.defs
 audit_triggersServer.c audit_triggersServer.h: audit_triggers.defs
 	$(MIG) -user /dev/null -header /dev/null -server audit_triggersServer.c -sheader audit_triggersServer.h $(top_srcdir)/bin/auditd/audit_triggers.defs
 else
-auditd_SOURCES = audit_warn.c auditd.c auditd_fbsd.c
+auditd_SOURCES = audit_warn.c auditd.c auditd_nqc.c
 endif

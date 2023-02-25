@@ -47,7 +47,7 @@ __RCSID("$NetBSD: h_atexit.c,v 1.1 2010/07/16 15:42:53 jmmv Exp $");
 extern int __cxa_atexit(void (*func)(void *), void *, void *);
 extern void __cxa_finalize(void *);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /* 
  * See comments in ../../lib/libc/stdlib/h_atexit.c about the deviation
  * between FreeBSD and NetBSD with this helper program
@@ -180,7 +180,7 @@ main(int argc, char *argv[])
 
 	exiting_state = 5;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ASSERT(0 == atexit(normal_handler_0));
 	ASSERT(0 == atexit(normal_handler_1));
 	ASSERT(0 == __cxa_atexit(cxa_handler_4, &arg_1, dso_handle_1));

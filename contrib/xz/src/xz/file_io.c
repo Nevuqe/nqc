@@ -627,7 +627,7 @@ io_open_src_real(file_pair *pair)
 		// fail with something else than ELOOP with O_NOFOLLOW.
 		bool was_symlink = false;
 
-#	if defined(__FreeBSD__) || defined(__DragonFly__)
+#	if defined(__NQC__) || defined(__DragonFly__)
 		if (errno == EMLINK)
 			was_symlink = true;
 

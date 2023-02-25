@@ -948,7 +948,7 @@ extern unsigned int sleepX __P((unsigned int seconds));
 **	See also BSD defines.
 */
 
-# if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+# if defined(__DragonFly__) || defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__)
 #  include <paths.h>
 #  define HASUNSETENV	1	/* has unsetenv(3) call */
 #  define HASSETSID	1	/* has POSIX setsid(2) call */
@@ -1016,47 +1016,47 @@ extern unsigned int sleepX __P((unsigned int seconds));
 #  define USESYSCTL		1	/* use sysctl(3) for getting ncpus */
 #  include <sys/sysctl.h>
 #  endif /* defined(__DragonFly__) */
-#  if defined(__FreeBSD__)
+#  if defined(__NQC__)
 #   define HASSETLOGIN	1	/* has setlogin(2) */
-#   if __FreeBSD_version >= 227001
+#   if __NQC_version >= 227001
 #    define HASSRANDOMDEV	1	/* has srandomdev(3) */
 #    define HASURANDOMDEV	1	/* has /dev/urandom(4) */
-#   endif /* __FreeBSD_version >= 227001 */
+#   endif /* __NQC_version >= 227001 */
 #   undef SPT_TYPE
-#   if __FreeBSD__ >= 2
+#   if __NQC__ >= 2
 #    include <osreldate.h>
-#    if __FreeBSD_version >= 199512	/* 2.2-current when it appeared */
-#     if __FreeBSD_version < 500012	/* Moved to libc in 2000 */
+#    if __NQC_version >= 199512	/* 2.2-current when it appeared */
+#     if __NQC_version < 500012	/* Moved to libc in 2000 */
 #      include <libutil.h>
 #     endif
 #     define SPT_TYPE	SPT_BUILTIN
-#    endif /* __FreeBSD_version >= 199512 */
-#    if __FreeBSD_version >= 222000	/* 2.2.2-release and later */
+#    endif /* __NQC_version >= 199512 */
+#    if __NQC_version >= 222000	/* 2.2.2-release and later */
 #     define HASSETUSERCONTEXT	1	/* BSDI-style login classes */
 #    endif
-#    if __FreeBSD_version >= 300000	/* 3.0.0-release and later */
+#    if __NQC_version >= 300000	/* 3.0.0-release and later */
 #     define HAVE_NANOSLEEP	1	/* has nanosleep(2) */
 #    endif
-#    if __FreeBSD_version >= 330000	/* 3.3.0-release and later */
+#    if __NQC_version >= 330000	/* 3.3.0-release and later */
 #     ifndef SMRSH_CMDDIR
 #      define SMRSH_CMDDIR	"/usr/libexec/sm.bin"
 #     endif
 #     ifndef SMRSH_PATH
 #      define SMRSH_PATH	"/bin:/usr/bin"
 #     endif
-#    endif /* __FreeBSD_version >= 330000 */
-#    if __FreeBSD_version >= 430000	/* 4.3.0-release and later */
+#    endif /* __NQC_version >= 330000 */
+#    if __NQC_version >= 430000	/* 4.3.0-release and later */
 #     define SOCKADDR_LEN_T	socklen_t	/* e.g., arg#3 to accept, getsockname */
 #     define SOCKOPT_LEN_T	socklen_t	/* arg#5 to getsockopt */
-#    endif /* __FreeBSD_version >= 430000 */
+#    endif /* __NQC_version >= 430000 */
 #    define USESYSCTL		1	/* use sysctl(3) for getting ncpus */
 #    include <sys/sysctl.h>
-#   endif /* __FreeBSD__ >= 2 */
+#   endif /* __NQC__ >= 2 */
 #   ifndef SPT_TYPE
 #    define SPT_TYPE	SPT_REUSEARGV
 #    define SPT_PADCHAR	'\0'		/* pad process title with nulls */
 #   endif
-#  endif /* defined(__FreeBSD__) */
+#  endif /* defined(__NQC__) */
 #  if defined(__OpenBSD__)
 #   undef SPT_TYPE
 #   define SPT_TYPE	SPT_BUILTIN	/* setproctitle is in libc */
@@ -1088,7 +1088,7 @@ extern unsigned int sleepX __P((unsigned int seconds));
 #    define SOCKOPT_LEN_T	socklen_t	/* arg#5 to getsockopt */
 #   endif
 #  endif /* defined(__OpenBSD__) */
-# endif /* defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) */
+# endif /* defined(__DragonFly__) || defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) */
 
 
 /*

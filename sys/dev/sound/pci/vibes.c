@@ -796,7 +796,7 @@ sv_attach(device_t dev) {
 	 * card has two more io regions that available for automatic
 	 * configuration by the pci code.  These need to be allocated
 	 * to used as control registers for the DMA engines.
-	 * Unfortunately FBSD has no bus_space_foo() functions so we
+	 * Unfortunately NQC has no bus_space_foo() functions so we
 	 * have to grab port space in region of existing resources.  Go
 	 * for space between midi and game ports.
 	 */

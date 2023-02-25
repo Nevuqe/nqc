@@ -9086,7 +9086,7 @@ AC_ARG_WITH(sysmouse,
 	if test "$cf_with_sysmouse" != no ; then
 	AC_TRY_COMPILE([
 #include <osreldate.h>
-#if (__FreeBSD_version >= 400017)
+#if (__NQC_version >= 400017)
 #include <sys/consio.h>
 #include <sys/fbio.h>
 #else

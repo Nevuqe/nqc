@@ -493,7 +493,7 @@ ATF_TC_BODY(bogus_timedwaits, tc)
 	PTHREAD_REQUIRE(pthread_mutex_unlock(&static_mutex));
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static void *
 destroy_busy_threadfunc(void *arg)
 {
@@ -665,7 +665,7 @@ ATF_TP_ADD_TCS(tp)
 	ATF_TP_ADD_TC(tp, cond_timedwait_race);
 	ATF_TP_ADD_TC(tp, broadcast);
 	ATF_TP_ADD_TC(tp, bogus_timedwaits);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_TP_ADD_TC(tp, destroy_busy);
 #endif
 	ATF_TP_ADD_TC(tp, destroy_after_cancel);

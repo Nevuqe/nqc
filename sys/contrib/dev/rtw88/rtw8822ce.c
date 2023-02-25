@@ -27,7 +27,7 @@ static struct pci_driver rtw_8822ce_driver = {
 	.remove = rtw_pci_remove,
 	.driver.pm = &rtw_pm_ops,
 	.shutdown = rtw_pci_shutdown,
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	.bsddriver.name = KBUILD_MODNAME,
 #endif
 };

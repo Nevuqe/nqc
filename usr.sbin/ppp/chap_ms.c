@@ -32,7 +32,7 @@
  */
 
 #include <ctype.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <openssl/des.h>
 #include <sha.h>
 #else
@@ -189,7 +189,7 @@ GenerateNTResponse(char *AuthenticatorChallenge, char *PeerChallenge,
   ChallengeResponse(Challenge, PasswordHash, Response);
 }
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #define LENGTH 20
 static char *
 SHA1_End(SHA_CTX *ctx, char *buf)

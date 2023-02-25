@@ -412,7 +412,7 @@ typedef enum {
 
 /* The following IFLIB_FEATURE_* defines are for driver modules to determine
  * what features this version of iflib supports. They shall be defined to the
- * first __FreeBSD_version that introduced the feature.
+ * first __NQC_version that introduced the feature.
  */
 /*
  * Driver can set its own TX queue selection function

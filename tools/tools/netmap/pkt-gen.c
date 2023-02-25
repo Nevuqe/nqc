@@ -151,14 +151,14 @@ ether_ntoa(const struct ether_addr *n)
 #include <linux/if_packet.h>    /* sockaddr_ll */
 #endif  /* linux */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/endian.h> /* le64toh */
 #include <machine/param.h>
 
 #include <pthread_np.h> /* pthread w/ affinity */
 #include <sys/cpuset.h> /* cpu_set */
 #include <net/if_dl.h>  /* LLADDR */
-#endif  /* __FreeBSD__ */
+#endif  /* __NQC__ */
 
 #ifdef __APPLE__
 
@@ -581,7 +581,7 @@ static int
 system_ncpus(void)
 {
 	int ncpus;
-#if defined (__FreeBSD__)
+#if defined (__NQC__)
 	int mib[2] = { CTL_HW, HW_NCPU };
 	size_t len = sizeof(mib);
 	sysctl(mib, 2, &ncpus, &len, NULL, 0);
@@ -608,7 +608,7 @@ system_ncpus(void)
 #define TAP_CLONEDEV	"/dev/net/tun"
 #endif /* __linux__ */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <net/if_tun.h>
 #define TAP_CLONEDEV	"/dev/tap"
 #endif /* __FreeBSD */
@@ -2780,7 +2780,7 @@ tap_alloc(char *dev)
 	 * int flags: interface flags (eg, IFF_TUN etc.)
 	 */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (dev[3]) { /* tapSomething */
 		static char buf[128];
 		snprintf(buf, sizeof(buf), "/dev/%s", dev);

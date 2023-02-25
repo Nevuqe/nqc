@@ -26,7 +26,7 @@
  * header on FreeBSD.
  */
 #if defined(__arm__) && !defined(__ARM_DWARF_EH__) &&                          \
-    !defined(__USING_SJLJ_EXCEPTIONS__) && !defined(__FreeBSD__)
+    !defined(__USING_SJLJ_EXCEPTIONS__) && !defined(__NQC__)
 // When building with older compilers (e.g. clang <3.9), it is possible that we
 // have a version of unwind.h which does not provide the EHABI declarations
 // which are quired for the C personality to conform to the specification.  In

@@ -47,7 +47,7 @@ osdep_uuidgen(mkimg_uuid_t *uuid)
 }
 #endif	/* __APPLE__ */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/uuid.h>
 
 static void
@@ -56,7 +56,7 @@ osdep_uuidgen(mkimg_uuid_t *uuid)
 
 	uuidgen((void *)uuid, 1);
 }
-#endif	/* __FreeBSD__ */
+#endif	/* __NQC__ */
 
 #ifdef __linux__
 #include <stdlib.h>

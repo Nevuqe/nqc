@@ -45,7 +45,7 @@ printaps(ap_session_t *aps, int opts, int proto)
 			ap.aps_state[0], ap.aps_state[1],
 			ap.aps_sel[0], ap.aps_sel[1]);
 #if (defined(NetBSD) && (NetBSD >= 199905) && (NetBSD < 1991011)) || \
-    defined(__FreeBSD__)
+    defined(__NQC__)
 		PRINTF("\t\tseq: off %hd/%hd min %x/%x\n",
 			ap.aps_seqoff[0], ap.aps_seqoff[1],
 			ap.aps_seqmin[0], ap.aps_seqmin[1]);

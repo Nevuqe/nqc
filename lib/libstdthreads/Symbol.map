@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.3 {
+NQC_1.3 {
 	call_once;
 	cnd_broadcast;
 	cnd_destroy;

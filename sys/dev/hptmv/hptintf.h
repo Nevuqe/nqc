@@ -164,7 +164,7 @@ typedef DWORD DEVICEID;
  * It would be better if ioctl code are the same on different platforms,
  * but we must not conflict with system defined ioctl code.
  ************************************************************************/
-#if defined(LINUX) || defined(__FreeBSD_version)
+#if defined(LINUX) || defined(__NQC_version)
 #define HPT_CTL_CODE(x) (x+0xFF00)
 #elif defined(_MS_WIN32_) || defined(WIN32)
 

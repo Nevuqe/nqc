@@ -26,14 +26,14 @@ typedef int     boolean_t;
 # ifdef __NetBSD__
 #  include <machine/lock.h>
 # endif
-# ifdef __FreeBSD__
+# ifdef __NQC__
 #  define _WANT_FILE
 # else
 #  define _KERNEL
 #  define	KERNEL
 # endif
 # include <sys/file.h>
-# ifdef __FreeBSD__
+# ifdef __NQC__
 #  undef _WANT_FILE
 # else
 #  undef  _KERNEL
@@ -167,7 +167,7 @@ find_tcp(int tfd, struct  tcpiphdr *ti)
 	fd = (struct filedesc *)malloc(sizeof(*fd));
 	if (fd == NULL)
 		return (NULL);
-#if defined( __FreeBSD__)
+#if defined( __NQC__)
 	if (KMCPY(fd, p->ki_fd, sizeof(*fd)) == -1)
 	    {
 		fprintf(stderr, "read(%#lx,%#lx) failed\n",

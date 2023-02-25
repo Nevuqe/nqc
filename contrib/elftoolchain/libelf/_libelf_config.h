@@ -26,7 +26,7 @@
  * $Id: _libelf_config.h 3764 2019-06-28 21:44:46Z emaste $
  */
 
-#if defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__)
+#if defined(__APPLE__) || defined(__DragonFly__) || defined(__NQC__)
 
 /*
  * Define LIBELF_{ARCH,BYTEORDER,CLASS} based on the machine architecture.
@@ -98,7 +98,7 @@
 #else
 #error	Unknown architecture.
 #endif
-#endif  /*  defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) */
+#endif  /*  defined(__APPLE__) || defined(__DragonFly__) || defined(__NQC__) */
 
 /*
  * Definitions for Minix3.

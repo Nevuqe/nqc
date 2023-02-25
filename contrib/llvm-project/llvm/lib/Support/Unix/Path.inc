@@ -42,9 +42,9 @@
 #if __has_include(<sys/clonefile.h>)
 #include <sys/clonefile.h>
 #endif
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 #include <osreldate.h>
-#if __FreeBSD_version >= 1300057
+#if __NQC_version >= 1300057
 #include <sys/auxv.h>
 #else
 #include <machine/elf.h>
@@ -73,14 +73,14 @@ extern char **environ;
 #endif
 
 #include <sys/types.h>
-#if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) &&   \
-    !defined(__linux__) && !defined(__FreeBSD_kernel__) && !defined(_AIX)
+#if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__NQC__) &&   \
+    !defined(__linux__) && !defined(__NQC_kernel__) && !defined(_AIX)
 #include <sys/statvfs.h>
 #define STATVFS statvfs
 #define FSTATVFS fstatvfs
 #define STATVFS_F_FRSIZE(vfs) vfs.f_frsize
 #else
-#if defined(__OpenBSD__) || defined(__FreeBSD__)
+#if defined(__OpenBSD__) || defined(__NQC__)
 #include <sys/mount.h>
 #include <sys/param.h>
 #elif defined(__linux__)
@@ -126,8 +126,8 @@ namespace fs {
 
 const file_t kInvalidFile = -1;
 
-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) ||     \
-    defined(__minix) || defined(__FreeBSD_kernel__) || defined(__linux__) ||   \
+#if defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) ||     \
+    defined(__minix) || defined(__NQC_kernel__) || defined(__linux__) ||   \
     defined(__CYGWIN__) || defined(__DragonFly__) || defined(_AIX) || defined(__GNU__) || \
     (defined(__sun__) && defined(__svr4__))
 static int
@@ -190,7 +190,7 @@ getprogpath(char ret[PATH_MAX], const char *bin)
   free(s);
   return nullptr;
 }
-#endif // __FreeBSD__ || __NetBSD__ || __FreeBSD_kernel__
+#endif // __NQC__ || __NetBSD__ || __NQC_kernel__
 
 /// GetMainExecutable - Return the path to the main executable, given the
 /// value of argv[0] from program startup.
@@ -206,13 +206,13 @@ std::string getMainExecutableImpl(const char *argv0, void *MainAddr) {
     if (realpath(exe_path, link_path))
       return link_path;
   }
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
   // On FreeBSD if the exec path specified in ELF auxiliary vectors is
   // preferred, if available.  /proc/curproc/file and the KERN_PROC_PATHNAME
   // sysctl may not return the desired path if there are multiple hardlinks
   // to the file.
   char exe_path[PATH_MAX];
-#if __FreeBSD_version >= 1300057
+#if __NQC_version >= 1300057
   if (elf_aux_info(AT_EXECPATH, exe_path, sizeof(exe_path)) == 0) {
     char link_path[PATH_MAX];
     if (realpath(exe_path, link_path))
@@ -238,7 +238,7 @@ std::string getMainExecutableImpl(const char *argv0, void *MainAddr) {
   if (getprogpath(exe_path, argv0) != NULL)
     return exe_path;
 #elif defined(__NetBSD__) || defined(__OpenBSD__) || defined(__minix) ||       \
-    defined(__DragonFly__) || defined(__FreeBSD_kernel__) || defined(_AIX)
+    defined(__DragonFly__) || defined(__NQC_kernel__) || defined(_AIX)
   const char *curproc = "/proc/curproc/file";
   char exe_path[PATH_MAX];
   if (sys::fs::exists(curproc)) {
@@ -954,7 +954,7 @@ ErrorOr<basic_file_status> directory_entry::status() const {
 // FreeBSD optionally provides /proc/self/fd, but it is incompatible with
 // Linux. The thing to use is realpath.
 //
-#if !defined(__FreeBSD__)
+#if !defined(__NQC__)
 #define TRY_PROC_SELF_FD
 #endif
 

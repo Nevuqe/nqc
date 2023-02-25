@@ -4,7 +4,7 @@
 #ifndef __CAPSICUM_H__
 #define __CAPSICUM_H__
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include "capsicum-freebsd.h"
 #endif
 

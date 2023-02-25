@@ -2,7 +2,7 @@
 /* Copyright(c) 2019-2020  Realtek Corporation
  */
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	LINUXKPI_PARAM_PREFIX	rtw89_debug_
 #endif
 
@@ -15,7 +15,7 @@
 #include "ps.h"
 #include "reg.h"
 #include "sar.h"
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #ifdef CONFIG_RTW89_DEBUGFS
 #include <linux/debugfs.h>
 #endif
@@ -382,7 +382,7 @@ static const struct txpwr_ent __txpwr_ent_byr[] = {
 
 #if defined(__linux__)
 static_assert((ARRAY_SIZE(__txpwr_ent_byr) * 4) ==
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw89_static_assert((ARRAY_SIZE(__txpwr_ent_byr) * 4) ==
 #endif
 	(R_AX_PWR_BY_RATE_MAX - R_AX_PWR_BY_RATE + 4));
@@ -441,7 +441,7 @@ static const struct txpwr_ent __txpwr_ent_lmt[] = {
 
 #if defined(__linux__)
 static_assert((ARRAY_SIZE(__txpwr_ent_lmt) * 2) ==
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw89_static_assert((ARRAY_SIZE(__txpwr_ent_lmt) * 2) ==
 #endif
 	(R_AX_PWR_LMT_MAX - R_AX_PWR_LMT + 4));
@@ -472,7 +472,7 @@ static const struct txpwr_ent __txpwr_ent_lmt_ru[] = {
 
 #if defined(__linux__)
 static_assert((ARRAY_SIZE(__txpwr_ent_lmt_ru) * 8) ==
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw89_static_assert((ARRAY_SIZE(__txpwr_ent_lmt_ru) * 8) ==
 #endif
 	(R_AX_PWR_RU_LMT_MAX - R_AX_PWR_RU_LMT + 4));
@@ -2652,7 +2652,7 @@ void __rtw89_debug(struct rtw89_dev *rtwdev,
 	if (rtw89_debug_mask & mask)
 #if defined(__linux__)
 		dev_printk(KERN_DEBUG, rtwdev->dev, "%pV", &vaf);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	{
 		char *str;
 		vasprintf(&str, M_KMALLOC, fmt, args);

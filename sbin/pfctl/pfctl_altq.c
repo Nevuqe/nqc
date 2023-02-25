@@ -215,7 +215,7 @@ print_altq(const struct pf_altq *a, unsigned int level,
 		return;
 	}
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (a->local_flags & PFALTQ_FLAG_IF_REMOVED)
 		printf("INACTIVE ");
 #endif
@@ -263,7 +263,7 @@ print_queue(const struct pf_altq *a, unsigned int level,
 {
 	unsigned int	i;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (a->local_flags & PFALTQ_FLAG_IF_REMOVED)
 		printf("INACTIVE ");
 #endif
@@ -1277,7 +1277,7 @@ getifmtu(char *ifname)
 	    sizeof(ifr.ifr_name))
 		errx(1, "getifmtu: strlcpy");
 	if (ioctl(s, SIOCGIFMTU, (caddr_t)&ifr) == -1)
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		ifr.ifr_mtu = 1500;
 #else
 		err(1, "SIOCGIFMTU");

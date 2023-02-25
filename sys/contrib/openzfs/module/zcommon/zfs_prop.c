@@ -483,7 +483,7 @@ zfs_prop_init(void)
 	zprop_register_index(ZFS_PROP_READONLY, "readonly", 0, PROP_INHERIT,
 	    ZFS_TYPE_FILESYSTEM | ZFS_TYPE_VOLUME, "on | off", "RDONLY",
 	    boolean_table, sfeatures);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	zprop_register_index(ZFS_PROP_ZONED, "jailed", 0, PROP_INHERIT,
 	    ZFS_TYPE_FILESYSTEM, "on | off", "JAILED", boolean_table,
 	    sfeatures);
@@ -1066,7 +1066,7 @@ zcommon_fini(void)
 	kfpu_fini();
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 module_init_early(zcommon_init);
 module_exit(zcommon_fini);
 #endif

@@ -51,7 +51,7 @@ h_pass(const char *buf, const char *fmt, int len,
 	exp = buf + len;
 	ret = strptime(buf, fmt, &tm);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_CHECK_MSG(ret == exp,
 	    "strptime(\"%s\", \"%s\", tm): incorrect return code: "
 	    "expected: %p, got: %p", buf, fmt, exp, ret);
@@ -90,7 +90,7 @@ h_fail(const char *buf, const char *fmt)
 {
 	struct tm tm = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, NULL };
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_CHECK_MSG(strptime(buf, fmt, &tm) == NULL, "strptime(\"%s\", "
 	    "\"%s\", &tm) should fail, but it didn't", buf, fmt);
 #else
@@ -103,7 +103,7 @@ static struct {
 	const char *name;
 	long offs;
 } zt[] = {
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	{ "Z",				0 },
 	{ "UT",				0 },
 	{ "UTC",			0 },
@@ -190,7 +190,7 @@ ztest1(const char *name, const char *fmt, long value)
 		value = 0;
 
 	switch (value) {
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	case -2:
 		value = -timezone;
 		break;
@@ -214,7 +214,7 @@ static void
 ztest(const char *fmt)
 {
 	setenv("TZ", "US/Eastern", 1);
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	ztest1("GMT", fmt, 0);
 	ztest1("UTC", fmt, 0);
 	ztest1("US/Eastern", fmt, -18000);
@@ -308,7 +308,7 @@ ATF_TC_BODY(day, tc)
 	h_pass("SaturDay", "%OA", 8, -1, -1, -1, -1, -1, -1, 6, -1);
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	h_fail("00", "%d");
 #endif
 }
@@ -319,7 +319,7 @@ ATF_TC_HEAD(hour, tc)
 {
 
 	atf_tc_set_md_var(tc, "descr",
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			  "Checks strptime(3) hour conversions [HIkl]");
 #else
 			  "Checks strptime(3) hour conversions [IH]");
@@ -332,7 +332,7 @@ ATF_TC_BODY(hour, tc)
 	h_fail("00", "%I");
 	h_fail("13", "%I");
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	h_pass("0", "%k", 1, -1, -1, 0, -1, -1, -1, -1, -1);
 	h_pass("04", "%k", 2, -1, -1, 4, -1, -1, -1, -1, -1);
 	h_pass(" 8", "%k", 2, -1, -1, 8, -1, -1, -1, -1, -1);
@@ -438,7 +438,7 @@ ATF_TC_BODY(seconds, tc)
 	h_pass("0", "%S", 1, 0, -1, -1, -1, -1, -1, -1, -1);
 	h_pass("59", "%S", 2, 59, -1, -1, -1, -1, -1, -1, -1);
 	h_pass("60", "%S", 2, 60, -1, -1, -1, -1, -1, -1, -1);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * (Much) older versions of the standard (up to the Issue 6) allowed for
 	 * [0;61] range in %S conversion for double-leap seconds, and it's
@@ -470,7 +470,7 @@ ATF_TC_BODY(year, tc)
 	h_pass("x2084y", "x%C%yy", 6, -1, -1, -1, -1, -1, 184, -1, -1);
 	h_pass("x8420y", "x%y%Cy", 6, -1, -1, -1, -1, -1, 184, -1, -1);
 	h_pass("%20845", "%%%C%y5", 6, -1, -1, -1, -1, -1, 184, -1, -1);
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	h_fail("%", "%E%");
 #endif
 

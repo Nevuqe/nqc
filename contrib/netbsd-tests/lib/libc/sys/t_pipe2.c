@@ -83,7 +83,7 @@ run(int flags)
 		ATF_REQUIRE((fcntl(fd[1], F_GETFL) & O_NONBLOCK) == 0);
 	}
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	if (flags & O_NOSIGPIPE) {
 		ATF_REQUIRE(fcntl(fd[0], F_GETNOSIGPIPE) != 0);
 		ATF_REQUIRE(fcntl(fd[1], F_GETNOSIGPIPE) != 0);
@@ -121,7 +121,7 @@ ATF_TC_BODY(pipe2_consume, tc)
 	int err, filedes[2];
 	int old;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	closefrom(4);
 #else
 	ATF_REQUIRE_MSG(closefrom(4) != -1, "closefrom failed: %s",

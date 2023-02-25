@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 __NQCID("$NQC$");
 #endif
 

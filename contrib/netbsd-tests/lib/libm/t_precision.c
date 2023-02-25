@@ -51,7 +51,7 @@ static volatile long double y = 1;
 
 ATF_TC_BODY(t_precision, tc)
 {
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 #ifdef	__i386__
 	atf_tc_expect_fail("the __HAVE_LONG_DOUBLE checks fail on i386");
 #endif

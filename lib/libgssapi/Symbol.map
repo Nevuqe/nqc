@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.1 {
+NQC_1.1 {
 	GSS_C_NT_ANONYMOUS;
 	GSS_C_NT_EXPORT_NAME;
 	GSS_C_NT_HOSTBASED_SERVICE;
@@ -69,7 +69,7 @@ FBSD_1.1 {
 	gss_wrap_size_limit;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_gss_copy_oid;
 	_gss_copy_buffer;
 	_gss_free_oid;

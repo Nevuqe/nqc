@@ -47,7 +47,7 @@
 #define BSD4_4	1
 
 /*
- * __FreeBSD_version numbers are documented in the Porter's Handbook.
+ * __NQC_version numbers are documented in the Porter's Handbook.
  * If you bump the version for any reason, you should update the documentation
  * there.
  * Currently this lives here in the doc/ repository:
@@ -60,7 +60,7 @@
  *		in the range 5 to 9.
  * Short hand: MMmmXXX
  *
- * __FreeBSD_version is bumped every time there's a change in the base system
+ * __NQC_version is bumped every time there's a change in the base system
  * that's noteworthy. A noteworthy change is any change which changes the
  * kernel's KBI in -CURRENT, one that changes some detail about the system that
  * external software (or the ports system) would want to know about, one that
@@ -69,17 +69,17 @@
  * to one per day / a couple per week except for security fixes.
  *
  * The approved way to obtain this from a shell script is:
- *	awk '/^\#define[[:space:]]*__FreeBSD_version/ {print $3}'
+ *	awk '/^\#define[[:space:]]*__NQC_version/ {print $3}'
  * Other methods to parse this file may work, but are not guaranteed against
  * future changes. The above script works back to FreeBSD 3.x when this macro
  * was introduced. This number is propagated to other places needing it that
  * cannot include sys/param.h and should only be updated here.
  */
-#undef __FreeBSD_version
-#define __FreeBSD_version 1400081
+#undef __NQC_version
+#define __NQC_version 1400081
 
 /*
- * __FreeBSD_kernel__ indicates that this system uses the kernel of FreeBSD,
+ * __NQC_kernel__ indicates that this system uses the kernel of FreeBSD,
  * which by definition is always true on FreeBSD. This macro is also defined
  * on other systems that use the kernel of FreeBSD, such as GNU/kFreeBSD.
  *
@@ -88,11 +88,11 @@
  * is part of FreeBSD itself.  However, be aware that as presence of this
  * macro is still not widespread (e.g. older FreeBSD versions, 3rd party
  * compilers, etc), it is STRONGLY DISCOURAGED to check for this macro in
- * external applications without also checking for __FreeBSD__ as an
+ * external applications without also checking for __NQC__ as an
  * alternative.
  */
-#undef __FreeBSD_kernel__
-#define __FreeBSD_kernel__
+#undef __NQC_kernel__
+#define __NQC_kernel__
 
 #if defined(_KERNEL) || defined(_WANT_P_OSREL)
 #define	P_OSREL_SIGWAIT			700000

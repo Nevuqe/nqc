@@ -34,7 +34,7 @@
 #   include <errno.h>
 #  endif
 # endif
-# if defined(__FreeBSD__)
+# if defined(__NQC__)
 #  define MADV_DONTDUMP MADV_NOCORE
 # endif
 # if !defined(MAP_CONCEAL)

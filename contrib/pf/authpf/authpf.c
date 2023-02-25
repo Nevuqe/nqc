@@ -33,7 +33,7 @@ __NQCID("$NQC$");
 
 #include <err.h>
 #include <errno.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <inttypes.h>
 #endif
 #include <libpfctl.h>
@@ -75,7 +75,7 @@ struct timeval	Tstart, Tend;	/* start and end times of session */
 
 volatile sig_atomic_t	want_death;
 static void		need_death(int signo);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static __dead2 void	do_death(int);
 #else
 static __dead void	do_death(int);
@@ -156,7 +156,7 @@ main(void)
 	else
 		shell = pw->pw_shell;
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	login_close(lc);
 #endif
 
@@ -164,7 +164,7 @@ main(void)
 	    strcmp(shell, PATH_AUTHPF_SHELL_NOIP)) {
 		syslog(LOG_ERR, "wrong shell for user %s, uid %u",
 		    pw->pw_name, pw->pw_uid);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	login_close(lc);
 #else
 		if (shell != pw->pw_shell)
@@ -173,7 +173,7 @@ main(void)
 		goto die;
 	}
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	login_close(lc);
 #else
 	if (shell != pw->pw_shell)
@@ -933,7 +933,7 @@ need_death(int signo __unused)
 /*
  * function that removes our stuff when we go away.
  */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static __dead2 void
 #else
 static __dead void

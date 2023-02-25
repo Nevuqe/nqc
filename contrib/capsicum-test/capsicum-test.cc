@@ -1,6 +1,6 @@
 #include "capsicum-test.h"
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/param.h>
 #include <sys/proc.h>
 #include <sys/queue.h>
@@ -57,7 +57,7 @@ char ProcessState(int pid) {
   fclose(f);
   return '?';
 #endif
-#ifdef __FreeBSD__
+#ifdef __NQC__
   // First check if the process exists/we have permission to see it. This
   // Avoids warning messages being printed to stderr by libprocstat.
   size_t len = 0;

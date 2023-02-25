@@ -31,7 +31,7 @@
 #include <sys/cdefs.h>
 __RCSID("$NetBSD: t_mlock.c,v 1.6 2016/08/09 12:02:44 kre Exp $");
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/param.h> /* NetBSD requires sys/param.h for sysctl(3), unlike FreeBSD */
 #endif
 #include <sys/mman.h>
@@ -46,7 +46,7 @@ __RCSID("$NetBSD: t_mlock.c,v 1.6 2016/08/09 12:02:44 kre Exp $");
 #include <stdlib.h>
 #include <unistd.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <limits.h>
 #define _KMEMUSER
 #include <machine/vmparam.h>
@@ -82,7 +82,7 @@ ATF_TC_BODY(mlock_clip, tc)
 	free(buf);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_WITH_CLEANUP(mlock_err);
 #else
 ATF_TC(mlock_err);
@@ -91,7 +91,7 @@ ATF_TC_HEAD(mlock_err, tc)
 {
 	atf_tc_set_md_var(tc, "descr",
 	    "Test error conditions in mlock(2) and munlock(2)");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.config", "allow_sysctl_side_effects");
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
@@ -108,7 +108,7 @@ ATF_TC_BODY(mlock_err, tc)
 #endif
 	void *buf;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* Set max_wired really really high to avoid EAGAIN */
 	set_vm_max_wired(INT_MAX);
 #else
@@ -130,7 +130,7 @@ ATF_TC_BODY(mlock_err, tc)
 	errno = 0;
 	ATF_REQUIRE_ERRNO(ENOMEM, munlock((char *)0, page) == -1);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* Wrap around should return EINVAL */
 	errno = 0;
 	ATF_REQUIRE_ERRNO(EINVAL, mlock((char *)-1, page) == -1);
@@ -145,7 +145,7 @@ ATF_TC_BODY(mlock_err, tc)
 
 	buf = malloc(page);	/* Get a valid address */
 	ATF_REQUIRE(buf != NULL);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	errno = 0;
 	/* Wrap around should return EINVAL */
 	ATF_REQUIRE_ERRNO(EINVAL, mlock(buf, -page) == -1);
@@ -176,7 +176,7 @@ ATF_TC_BODY(mlock_err, tc)
 #endif
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_CLEANUP(mlock_err, tc)
 {
 
@@ -218,7 +218,7 @@ ATF_TC_BODY(mlock_limits, tc)
 
 			errno = 0;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			/*
 			 * NetBSD doesn't conform to POSIX with ENOMEM requirement;
 			 * FreeBSD does.
@@ -245,7 +245,7 @@ ATF_TC_BODY(mlock_limits, tc)
 	free(buf);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_WITH_CLEANUP(mlock_mmap);
 #else
 ATF_TC(mlock_mmap);
@@ -253,7 +253,7 @@ ATF_TC(mlock_mmap);
 ATF_TC_HEAD(mlock_mmap, tc)
 {
 	atf_tc_set_md_var(tc, "descr", "Test mlock(2)-mmap(2) interaction");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.config", "allow_sysctl_side_effects");
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
@@ -268,7 +268,7 @@ ATF_TC_BODY(mlock_mmap, tc)
 #endif
 	void *buf;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* Set max_wired really really high to avoid EAGAIN */
 	set_vm_max_wired(INT_MAX);
 #endif
@@ -280,7 +280,7 @@ ATF_TC_BODY(mlock_mmap, tc)
 	buf = mmap(NULL, page, PROT_READ | PROT_WRITE, flags, -1, 0);
 
 	ATF_REQUIRE(buf != MAP_FAILED);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * The duplicate mlock call is added to ensure that the call works
 	 * as described above without MAP_WIRED support.
@@ -298,7 +298,7 @@ ATF_TC_BODY(mlock_mmap, tc)
 	buf = mmap(NULL, page, PROT_NONE, flags, -1, 0);
 
 	ATF_REQUIRE(buf != MAP_FAILED);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_ERRNO(ENOMEM, mlock(buf, page) != 0);
 #else
 	ATF_REQUIRE(mlock(buf, page) != 0);
@@ -306,7 +306,7 @@ ATF_TC_BODY(mlock_mmap, tc)
 	ATF_REQUIRE(munmap(buf, page) == 0);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_CLEANUP(mlock_mmap, tc)
 {
 
@@ -314,7 +314,7 @@ ATF_TC_CLEANUP(mlock_mmap, tc)
 }
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_WITH_CLEANUP(mlock_nested);
 #else
 ATF_TC(mlock_nested);
@@ -323,7 +323,7 @@ ATF_TC_HEAD(mlock_nested, tc)
 {
 	atf_tc_set_md_var(tc, "descr",
 	    "Test that consecutive mlock(2) calls succeed");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.config", "allow_sysctl_side_effects");
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
@@ -334,7 +334,7 @@ ATF_TC_BODY(mlock_nested, tc)
 	const size_t maxiter = 100;
 	void *buf;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* Set max_wired really really high to avoid EAGAIN */
 	set_vm_max_wired(INT_MAX);
 #endif
@@ -349,7 +349,7 @@ ATF_TC_BODY(mlock_nested, tc)
 	free(buf);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_CLEANUP(mlock_nested, tc)
 {
 
@@ -357,7 +357,7 @@ ATF_TC_CLEANUP(mlock_nested, tc)
 }
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_WITH_CLEANUP(mlock_unaligned);
 #else
 ATF_TC(mlock_unaligned);
@@ -366,7 +366,7 @@ ATF_TC_HEAD(mlock_unaligned, tc)
 {
 	atf_tc_set_md_var(tc, "descr",
 	    "Test that mlock(2) can lock page-unaligned memory");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.config", "allow_sysctl_side_effects");
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
@@ -376,7 +376,7 @@ ATF_TC_BODY(mlock_unaligned, tc)
 {
 	void *buf, *addr;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* Set max_wired really really high to avoid EAGAIN */
 	set_vm_max_wired(INT_MAX);
 #endif
@@ -395,7 +395,7 @@ ATF_TC_BODY(mlock_unaligned, tc)
 	(void)free(buf);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_CLEANUP(mlock_unaligned, tc)
 {
 
@@ -407,7 +407,7 @@ ATF_TC(munlock_unlocked);
 ATF_TC_HEAD(munlock_unlocked, tc)
 {
 	atf_tc_set_md_var(tc, "descr",
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	    "munlock(2) accepts unlocked memory");
 #else
 	    "munlock(2) of unlocked memory is an error");
@@ -422,7 +422,7 @@ ATF_TC_BODY(munlock_unlocked, tc)
 	buf = malloc(page);
 	ATF_REQUIRE(buf != NULL);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_EQ(munlock(buf, page), 0);
 #else
 	errno = 0;

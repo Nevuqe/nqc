@@ -50,7 +50,7 @@
 #define KMP_OS_DRAGONFLY 1
 #endif
 
-#if (defined __FreeBSD__)
+#if (defined __NQC__)
 #undef KMP_OS_FREEBSD
 #define KMP_OS_FREEBSD 1
 #endif

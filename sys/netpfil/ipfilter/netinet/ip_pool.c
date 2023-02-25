@@ -38,7 +38,7 @@
 # include <sys/stream.h>
 # include <sys/kmem.h>
 #endif
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 #endif
 

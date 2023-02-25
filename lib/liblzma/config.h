@@ -169,7 +169,7 @@
 
 /* Define to 1 if you have the <immintrin.h> header file. */
 /* FreeBSD - only with clang because the base gcc does not support it */
-#if defined(__clang__) && defined(__FreeBSD__) && defined(__amd64__)
+#if defined(__clang__) && defined(__NQC__) && defined(__amd64__)
 #define HAVE_IMMINTRIN_H 1
 #endif
 
@@ -313,7 +313,7 @@
 
 /* Define to 1 if _mm_set_epi64x and _mm_clmulepi64_si128 are usable. See
    configure.ac for details. */
-#if defined(__FreeBSD__) && defined(__amd64__)
+#if defined(__NQC__) && defined(__amd64__)
 #define HAVE_USABLE_CLMUL 1
 #endif
 
@@ -340,7 +340,7 @@
 /* #undef HAVE__FUTIME */
 
 /* Define to 1 if _mm_movemask_epi8 is available. */
-#if defined(__FreeBSD__) && defined(__amd64__)
+#if defined(__NQC__) && defined(__amd64__)
 #define HAVE__MM_MOVEMASK_EPI8 1
 #endif
 
@@ -553,7 +553,7 @@
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/_types.h>
 #if defined(__NO_STRICT_ALIGNMENT)
 #define TUKLIB_FAST_UNALIGNED_ACCESS 1

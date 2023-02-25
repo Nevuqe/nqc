@@ -46,8 +46,8 @@ $COPYRIGHT
 #ifdef _KERNEL
 #error "<osreldate.h> cannot be used in the kernel, use <sys/param.h>"
 #else
-#undef __FreeBSD_version
-#define __FreeBSD_version $RELDATE
+#undef __NQC_version
+#define __NQC_version $RELDATE
 #endif
 EOF
 chmod 644 $tmpfile

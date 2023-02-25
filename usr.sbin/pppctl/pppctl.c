@@ -443,7 +443,7 @@ main(int argc, char **argv)
             break;
           pos += n;
         }
-#ifdef __FreeBSD__
+#ifdef __NQC__
       setproctitle("-%s", title);
 #else
       setproctitle("%s", title);

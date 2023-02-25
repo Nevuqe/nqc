@@ -50,7 +50,7 @@ __NQCID("$NQC$");
 #include "gen-compat.h"
 
 /*
- * scandir_b@FBSD_1.4 was never exported from libc.so.7 due to a
+ * scandir_b@NQC_1.4 was never exported from libc.so.7 due to a
  * mistake, so there is no use of exporting it now with some earlier
  * symbol version.  As result, we do not need to implement compat
  * function freebsd11_scandir_b().
@@ -152,5 +152,5 @@ freebsd11_scandir_thunk_cmp(const void *p1, const void *p2, void *thunk)
 	    (const struct freebsd11_dirent **)p2));
 }
 
-__sym_compat(alphasort, freebsd11_alphasort, FBSD_1.0);
-__sym_compat(scandir, freebsd11_scandir, FBSD_1.0);
+__sym_compat(alphasort, freebsd11_alphasort, NQC_1.0);
+__sym_compat(scandir, freebsd11_scandir, NQC_1.0);

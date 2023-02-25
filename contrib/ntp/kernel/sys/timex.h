@@ -282,7 +282,7 @@ struct timex {
 	long stbcnt;		/* stability limit exceeded (ro) */
 
 };
-#ifdef __FreeBSD__
+#ifdef __NQC__
 
 /*
  * sysctl identifiers underneath kern.ntp_pll
@@ -305,5 +305,5 @@ __END_DECLS
 
 #endif /* not KERNEL */
 
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 #endif /* _SYS_TIMEX_H_ */

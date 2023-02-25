@@ -54,7 +54,7 @@ reply(caddr_t replyp, struct netbuf * raddrp, struct netconfig * nconf)
 	return 0;
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define	__rpc_control	rpc_control
 #endif
 
@@ -72,7 +72,7 @@ onehost(const char *host, const char *transp)
 	 */
 	tv.tv_sec = 0;
 	tv.tv_usec = 500000;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * FreeBSD does not allow setting the timeout using __rpc_control,
 	 * but does have clnt_create_timed() that allows passing a timeout.
@@ -90,7 +90,7 @@ onehost(const char *host, const char *transp)
 
 	tv.tv_sec = 1;
 	tv.tv_usec = 0;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (clnt_call(clnt, RPCBPROC_NULL, (xdrproc_t)xdr_void, NULL,
 	    (xdrproc_t)xdr_void, NULL, tv)
 	    != RPC_SUCCESS)
@@ -343,7 +343,7 @@ ATF_TC(tcp);
 ATF_TC_HEAD(tcp, tc)
 {
 	atf_tc_set_md_var(tc, "descr", "Checks svc tcp (select)");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
 }
@@ -358,7 +358,7 @@ ATF_TC(udp);
 ATF_TC_HEAD(udp, tc)
 {
 	atf_tc_set_md_var(tc, "descr", "Checks svc udp (select)");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
 }
@@ -373,7 +373,7 @@ ATF_TC(tcp_poll);
 ATF_TC_HEAD(tcp_poll, tc)
 {
 	atf_tc_set_md_var(tc, "descr", "Checks svc tcp (poll)");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
 }
@@ -388,7 +388,7 @@ ATF_TC(udp_poll);
 ATF_TC_HEAD(udp_poll, tc)
 {
 	atf_tc_set_md_var(tc, "descr", "Checks svc udp (poll)");
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_set_md_var(tc, "require.user", "root");
 #endif
 }

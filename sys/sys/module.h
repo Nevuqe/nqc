@@ -130,25 +130,25 @@ struct mod_pnp_match_info
 
 /*
  * Every kernel has a 'kernel' module with the version set to
- * __FreeBSD_version.  We embed a MODULE_DEPEND() inside every module
+ * __NQC_version.  We embed a MODULE_DEPEND() inside every module
  * that depends on the 'kernel' module.  It uses the current value of
- * __FreeBSD_version as the minimum and preferred versions.  For the
+ * __NQC_version as the minimum and preferred versions.  For the
  * maximum version it rounds the version up to the end of its branch
  * (i.e. M99999 for M.x).  This allows a module built on M.x to work
  * on M.y systems where y >= x, but fail on M.z systems where z < x.
  */
-#define	MODULE_KERNEL_MAXVER	(roundup(__FreeBSD_version, 100000) - 1)
+#define	MODULE_KERNEL_MAXVER	(roundup(__NQC_version, 100000) - 1)
 
 #define	DECLARE_MODULE_WITH_MAXVER(name, data, sub, order, maxver)	\
-	MODULE_DEPEND(name, kernel, __FreeBSD_version,			\
-	    __FreeBSD_version, maxver);					\
+	MODULE_DEPEND(name, kernel, __NQC_version,			\
+	    __NQC_version, maxver);					\
 	MODULE_METADATA(_md_##name, MDT_MODULE, &data, __XSTRING(name));\
 	SYSINIT(name##module, sub, order, module_register_init, &data);	\
 	struct __hack
 
 #ifdef KLD_TIED
 #define	DECLARE_MODULE(name, data, sub, order)				\
-	DECLARE_MODULE_WITH_MAXVER(name, data, sub, order, __FreeBSD_version)
+	DECLARE_MODULE_WITH_MAXVER(name, data, sub, order, __NQC_version)
 #else
 #define	DECLARE_MODULE(name, data, sub, order)							\
 	DECLARE_MODULE_WITH_MAXVER(name, data, sub, order, MODULE_KERNEL_MAXVER)
@@ -156,13 +156,13 @@ struct mod_pnp_match_info
 
 /*
  * The module declared with DECLARE_MODULE_TIED can only be loaded
- * into the kernel with exactly the same __FreeBSD_version.
+ * into the kernel with exactly the same __NQC_version.
  *
  * Use it for modules that use kernel interfaces that are not stable
  * even on STABLE/X branches.
  */
 #define	DECLARE_MODULE_TIED(name, data, sub, order)			\
-	DECLARE_MODULE_WITH_MAXVER(name, data, sub, order, __FreeBSD_version)
+	DECLARE_MODULE_WITH_MAXVER(name, data, sub, order, __NQC_version)
 
 #define	MODULE_VERSION_CONCAT(module, version)	_##module##_version
 #define	MODULE_VERSION(module, version)					\

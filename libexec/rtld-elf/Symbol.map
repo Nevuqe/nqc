@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
     _rtld_error;
     dlclose;
     dlerror;
@@ -18,11 +18,11 @@ FBSD_1.0 {
     __tls_get_addr;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
     fdlopen;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
     _rtld_thread_init;
     _rtld_allocate_tls;
     _rtld_free_tls;
@@ -32,7 +32,7 @@ FBSDprivate_1.0 {
     _rtld_get_stack_prot;
     _rtld_is_dlopened;
     _r_debug_postinit;
-    _rtld_version__FreeBSD_version;
+    _rtld_version__NQC_version;
     _rtld_version_laddr_offset;
     _rtld_version_dlpi_tls_data;
 };

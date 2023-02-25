@@ -741,7 +741,7 @@ pci_vtinput_init(struct pci_devinst *pi, nvlist_t *nvl)
 	pci_set_cfgdata16(pi, PCIR_SUBVEND_0, VIRTIO_SUBVEN_INPUT);
 
 	/* add MSI-X table BAR */
-	if (vi_intr_init(&sc->vsc_vs, 1, fbsdrun_virtio_msix()))
+	if (vi_intr_init(&sc->vsc_vs, 1, nqcrun_virtio_msix()))
 		goto failed;
 	/* add virtio register */
 	vi_set_io_bar(&sc->vsc_vs, 0);

@@ -36,7 +36,7 @@ static intptr_t stack_remaining(void) {
   local = (intptr_t)&local - (intptr_t)current->stack;
   return local;
 }
-#elif defined (_KERNEL) && defined(__FreeBSD__)
+#elif defined (_KERNEL) && defined(__NQC__)
 #include <sys/pcpu.h>
 static intptr_t stack_remaining(void) {
   intptr_t local;

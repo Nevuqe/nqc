@@ -624,9 +624,9 @@ xo_init_handle (xo_handle_t *xop)
     if (!xo_locale_inited) {
 	xo_locale_inited = 1;	/* Only do this once */
 
-#ifdef __FreeBSD__		/* Who does The Right Thing */
+#ifdef __NQC__		/* Who does The Right Thing */
 	const char *cp = "";
-#else /* __FreeBSD__ */
+#else /* __NQC__ */
 	const char *cp = getenv("LC_ALL");
 	if (cp == NULL)
 	    cp = getenv("LC_CTYPE");
@@ -634,7 +634,7 @@ xo_init_handle (xo_handle_t *xop)
 	    cp = getenv("LANG");
 	if (cp == NULL)
 	    cp = "C";		/* Default for C programs */
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 
 	(void) setlocale(LC_CTYPE, cp);
     }

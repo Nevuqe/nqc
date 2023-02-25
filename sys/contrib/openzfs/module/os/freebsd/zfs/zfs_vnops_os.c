@@ -40,7 +40,7 @@
 #include <sys/endian.h>
 #include <sys/vm.h>
 #include <sys/vnode.h>
-#if __FreeBSD_version >= 1300102
+#if __NQC_version >= 1300102
 #include <sys/smr.h>
 #endif
 #include <sys/dirent.h>
@@ -96,11 +96,11 @@
 
 VFS_SMR_DECLARE;
 
-#if __FreeBSD_version < 1300103
+#if __NQC_version < 1300103
 #define	NDFREE_PNBUF(ndp)	NDFREE((ndp), NDF_ONLY_PNBUF)
 #endif
 
-#if __FreeBSD_version >= 1300047
+#if __NQC_version >= 1300047
 #define	vm_page_wire_lock(pp)
 #define	vm_page_wire_unlock(pp)
 #else
@@ -116,7 +116,7 @@ VFS_SMR_DECLARE;
 #define	VNCHECKREF(vp)
 #endif
 
-#if __FreeBSD_version >= 1400045
+#if __NQC_version >= 1400045
 typedef uint64_t cookie_t;
 #else
 typedef ulong_t cookie_t;
@@ -329,7 +329,7 @@ page_busy(vnode_t *vp, int64_t start, int64_t off, int64_t nbytes)
 
 	obj = vp->v_object;
 	zfs_vmobject_assert_wlocked_12(obj);
-#if __FreeBSD_version < 1300050
+#if __NQC_version < 1300050
 	for (;;) {
 		if ((pp = vm_page_lookup(obj, OFF_TO_IDX(start))) != NULL &&
 		    pp->valid) {
@@ -380,14 +380,14 @@ page_unbusy(vm_page_t pp)
 {
 
 	vm_page_sunbusy(pp);
-#if __FreeBSD_version >= 1300041
+#if __NQC_version >= 1300041
 	vm_object_pip_wakeup(pp->object);
 #else
 	vm_object_pip_subtract(pp->object, 1);
 #endif
 }
 
-#if __FreeBSD_version > 1300051
+#if __NQC_version > 1300051
 static vm_page_t
 page_hold(vnode_t *vp, int64_t start)
 {
@@ -445,7 +445,7 @@ page_unhold(vm_page_t pp)
 {
 
 	vm_page_wire_lock(pp);
-#if __FreeBSD_version >= 1300035
+#if __NQC_version >= 1300035
 	vm_page_unwire(pp, PQ_ACTIVE);
 #else
 	vm_page_unhold(pp);
@@ -475,7 +475,7 @@ update_pages(znode_t *zp, int64_t start, int len, objset_t *os)
 
 	off = start & PAGEOFFSET;
 	zfs_vmobject_wlock_12(obj);
-#if __FreeBSD_version >= 1300041
+#if __NQC_version >= 1300041
 	vm_object_pip_add(obj, 1);
 #endif
 	for (start &= PAGEMASK; len > 0; start += PAGESIZE) {
@@ -496,7 +496,7 @@ update_pages(znode_t *zp, int64_t start, int len, objset_t *os)
 		len -= nbytes;
 		off = 0;
 	}
-#if __FreeBSD_version >= 1300041
+#if __NQC_version >= 1300041
 	vm_object_pip_wakeup(obj);
 #else
 	vm_object_pip_wakeupn(obj, 0);
@@ -547,7 +547,7 @@ mappedread_sf(znode_t *zp, int nbytes, zfs_uio_t *uio)
 				memset(va + bytes, 0, PAGESIZE - bytes);
 			zfs_unmap_page(sf);
 			zfs_vmobject_wlock_12(obj);
-#if  __FreeBSD_version >= 1300081
+#if  __NQC_version >= 1300081
 			if (error == 0) {
 				vm_page_valid(pp);
 				vm_page_activate(pp);
@@ -776,7 +776,7 @@ zfs_lookup(vnode_t *dvp, const char *nm, vnode_t **vpp,
 	znode_t *zdp = VTOZ(dvp);
 	znode_t *zp;
 	zfsvfs_t *zfsvfs = zdp->z_zfsvfs;
-#if	__FreeBSD_version > 1300124
+#if	__NQC_version > 1300124
 	seqc_t dvp_seqc;
 #endif
 	int	error = 0;
@@ -804,7 +804,7 @@ zfs_lookup(vnode_t *dvp, const char *nm, vnode_t **vpp,
 	if ((error = zfs_enter_verify_zp(zfsvfs, zdp, FTAG)) != 0)
 		return (error);
 
-#if	__FreeBSD_version > 1300124
+#if	__NQC_version > 1300124
 	dvp_seqc = vn_seqc_read_notmodify(dvp);
 #endif
 
@@ -971,14 +971,14 @@ zfs_lookup(vnode_t *dvp, const char *nm, vnode_t **vpp,
 		case RENAME:
 			if (error == ENOENT) {
 				error = EJUSTRETURN;
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 				cnp->cn_flags |= SAVENAME;
 #endif
 				break;
 			}
 			zfs_fallthrough;
 		case DELETE:
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 			if (error == 0)
 				cnp->cn_flags |= SAVENAME;
 #endif
@@ -986,7 +986,7 @@ zfs_lookup(vnode_t *dvp, const char *nm, vnode_t **vpp,
 		}
 	}
 
-#if	__FreeBSD_version > 1300124
+#if	__NQC_version > 1300124
 	if ((cnp->cn_flags & ISDOTDOT) != 0) {
 		/*
 		 * FIXME: zfs_lookup_lock relocks vnodes and does nothing to
@@ -1333,12 +1333,12 @@ zfs_lookup_internal(znode_t *dzp, const char *name, vnode_t **vpp,
 	cnp->cn_namelen = strlen(name);
 	cnp->cn_nameiop = nameiop;
 	cnp->cn_flags = ISLASTCN;
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	cnp->cn_flags |= SAVENAME;
 #endif
 	cnp->cn_lkflags = LK_EXCLUSIVE | LK_RETRY;
 	cnp->cn_cred = kcred;
-#if __FreeBSD_version < 1400037
+#if __NQC_version < 1400037
 	cnp->cn_thread = curthread;
 #endif
 
@@ -1543,7 +1543,7 @@ zfs_mkdir(znode_t *dzp, const char *dirname, vattr_t *vap, znode_t **zpp,
 	return (0);
 }
 
-#if	__FreeBSD_version < 1300124
+#if	__NQC_version < 1300124
 static void
 cache_vop_rmdir(struct vnode *dvp, struct vnode *vp)
 {
@@ -3104,7 +3104,7 @@ zfs_rename_check(znode_t *szp, znode_t *sdzp, znode_t *tdzp)
 	return (error);
 }
 
-#if	__FreeBSD_version < 1300124
+#if	__NQC_version < 1300124
 static void
 cache_vop_rename(struct vnode *fdvp, struct vnode *fvp, struct vnode *tdvp,
     struct vnode *tvp, struct componentname *fcnp, struct componentname *tcnp)
@@ -4428,7 +4428,7 @@ zfs_freebsd_write(struct vop_write_args *ap)
 	    ap->a_cred));
 }
 
-#if __FreeBSD_version >= 1300102
+#if __NQC_version >= 1300102
 /*
  * VOP_FPLOOKUP_VEXEC routines are subject to special circumstances, see
  * the comment above cache_fplookup for details.
@@ -4455,7 +4455,7 @@ zfs_freebsd_fplookup_vexec(struct vop_fplookup_vexec_args *v)
 }
 #endif
 
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 static int
 zfs_freebsd_fplookup_symlink(struct vop_fplookup_symlink_args *v)
 {
@@ -4513,7 +4513,7 @@ zfs_freebsd_access(struct vop_access_args *ap)
 	if (error == 0) {
 		accmode = ap->a_accmode & ~(VREAD|VWRITE|VEXEC|VAPPEND);
 		if (accmode != 0) {
-#if __FreeBSD_version >= 1300105
+#if __NQC_version >= 1300105
 			error = vaccess(vp->v_type, zp->z_mode, zp->z_uid,
 			    zp->z_gid, accmode, ap->a_cred);
 #else
@@ -4601,7 +4601,7 @@ zfs_freebsd_create(struct vop_create_args *ap)
 	znode_t *zp = NULL;
 	int rc, mode;
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(cnp->cn_flags & SAVENAME);
 #endif
 
@@ -4633,7 +4633,7 @@ static int
 zfs_freebsd_remove(struct vop_remove_args *ap)
 {
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(ap->a_cnp->cn_flags & SAVENAME);
 #endif
 
@@ -4657,7 +4657,7 @@ zfs_freebsd_mkdir(struct vop_mkdir_args *ap)
 	znode_t *zp = NULL;
 	int rc;
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(ap->a_cnp->cn_flags & SAVENAME);
 #endif
 
@@ -4685,7 +4685,7 @@ zfs_freebsd_rmdir(struct vop_rmdir_args *ap)
 {
 	struct componentname *cnp = ap->a_cnp;
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(cnp->cn_flags & SAVENAME);
 #endif
 
@@ -4940,7 +4940,7 @@ zfs_freebsd_rename(struct vop_rename_args *ap)
 	vnode_t *tvp = ap->a_tvp;
 	int error;
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(ap->a_fcnp->cn_flags & (SAVENAME|SAVESTART));
 	ASSERT(ap->a_tcnp->cn_flags & (SAVENAME|SAVESTART));
 #endif
@@ -4973,13 +4973,13 @@ zfs_freebsd_symlink(struct vop_symlink_args *ap)
 	struct componentname *cnp = ap->a_cnp;
 	vattr_t *vap = ap->a_vap;
 	znode_t *zp = NULL;
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	char *symlink;
 	size_t symlink_len;
 #endif
 	int rc;
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(cnp->cn_flags & SAVENAME);
 #endif
 
@@ -4992,7 +4992,7 @@ zfs_freebsd_symlink(struct vop_symlink_args *ap)
 	if (rc == 0) {
 		*ap->a_vpp = ZTOV(zp);
 		ASSERT_VOP_ELOCKED(ZTOV(zp), __func__);
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 		MPASS(zp->z_cached_symlink == NULL);
 		symlink_len = strlen(ap->a_target);
 		symlink = cache_symlink_alloc(symlink_len + 1, M_WAITOK);
@@ -5020,7 +5020,7 @@ zfs_freebsd_readlink(struct vop_readlink_args *ap)
 {
 	zfs_uio_t uio;
 	int error;
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	znode_t	*zp = VTOZ(ap->a_vp);
 	char *symlink, *base;
 	size_t symlink_len;
@@ -5028,7 +5028,7 @@ zfs_freebsd_readlink(struct vop_readlink_args *ap)
 #endif
 
 	zfs_uio_init(&uio, ap->a_uio);
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	trycache = false;
 	if (zfs_uio_segflg(&uio) == UIO_SYSSPACE &&
 	    zfs_uio_iovcnt(&uio) == 1) {
@@ -5038,7 +5038,7 @@ zfs_freebsd_readlink(struct vop_readlink_args *ap)
 	}
 #endif
 	error = zfs_readlink(ap->a_vp, &uio, ap->a_cred, NULL);
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	if (atomic_load_ptr(&zp->z_cached_symlink) != NULL ||
 	    error != 0 || !trycache) {
 		return (error);
@@ -5075,7 +5075,7 @@ zfs_freebsd_link(struct vop_link_args *ap)
 	if (tdvp->v_mount != vp->v_mount)
 		return (EXDEV);
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	ASSERT(cnp->cn_flags & SAVENAME);
 #endif
 
@@ -5095,7 +5095,7 @@ zfs_freebsd_inactive(struct vop_inactive_args *ap)
 {
 	vnode_t *vp = ap->a_vp;
 
-#if __FreeBSD_version >= 1300123
+#if __NQC_version >= 1300123
 	zfs_inactive(vp, curthread->td_ucred, NULL);
 #else
 	zfs_inactive(vp, ap->a_td->td_ucred, NULL);
@@ -5103,7 +5103,7 @@ zfs_freebsd_inactive(struct vop_inactive_args *ap)
 	return (0);
 }
 
-#if __FreeBSD_version >= 1300042
+#if __NQC_version >= 1300042
 #ifndef _SYS_SYSPROTO_H_
 struct vop_need_inactive_args {
 	struct vnode *a_vp;
@@ -5147,7 +5147,7 @@ zfs_freebsd_reclaim(struct vop_reclaim_args *ap)
 
 	ASSERT3P(zp, !=, NULL);
 
-#if __FreeBSD_version < 1300042
+#if __NQC_version < 1300042
 	/* Destroy the vm object and flush associated pages. */
 	vnode_destroy_vobject(vp);
 #endif
@@ -5209,7 +5209,7 @@ zfs_freebsd_pathconf(struct vop_pathconf_args *ap)
 	case _PC_NAME_MAX:
 		*ap->a_retval = NAME_MAX;
 		return (0);
-#if __FreeBSD_version >= 1400032
+#if __NQC_version >= 1400032
 	case _PC_DEALLOC_PRESENT:
 		*ap->a_retval = 1;
 		return (0);
@@ -5342,7 +5342,7 @@ zfs_getextattr_dir(struct vop_getextattr_args *ap, const char *attrname)
 		return (error);
 
 	flags = FREAD;
-#if __FreeBSD_version < 1400043
+#if __NQC_version < 1400043
 	NDINIT_ATVP(&nd, LOOKUP, NOFOLLOW, UIO_SYSSPACE, attrname,
 	    xvp, td);
 #else
@@ -5486,7 +5486,7 @@ zfs_deleteextattr_dir(struct vop_deleteextattr_args *ap, const char *attrname)
 	if (error != 0)
 		return (error);
 
-#if __FreeBSD_version < 1400043
+#if __NQC_version < 1400043
 	NDINIT_ATVP(&nd, DELETE, NOFOLLOW | LOCKPARENT | LOCKLEAF,
 	    UIO_SYSSPACE, attrname, xvp, ap->a_td);
 #else
@@ -5630,7 +5630,7 @@ zfs_setextattr_dir(struct vop_setextattr_args *ap, const char *attrname)
 		return (error);
 
 	flags = FFLAGS(O_WRONLY | O_CREAT);
-#if __FreeBSD_version < 1400043
+#if __NQC_version < 1400043
 	NDINIT_ATVP(&nd, LOOKUP, NOFOLLOW, UIO_SYSSPACE, attrname, xvp, td);
 #else
 	NDINIT_ATVP(&nd, LOOKUP, NOFOLLOW, UIO_SYSSPACE, attrname, xvp);
@@ -5816,7 +5816,7 @@ zfs_listextattr_dir(struct vop_listextattr_args *ap, const char *attrprefix)
 		return (error);
 	}
 
-#if __FreeBSD_version < 1400043
+#if __NQC_version < 1400043
 	NDINIT_ATVP(&nd, LOOKUP, NOFOLLOW | LOCKLEAF | LOCKSHARED,
 	    UIO_SYSSPACE, ".", xvp, td);
 #else
@@ -6131,20 +6131,20 @@ zfs_vptocnp(struct vop_vptocnp_args *ap)
 	zfs_exit(zfsvfs, FTAG);
 
 	covered_vp = vp->v_mount->mnt_vnodecovered;
-#if __FreeBSD_version >= 1300045
+#if __NQC_version >= 1300045
 	enum vgetstate vs = vget_prep(covered_vp);
 #else
 	vhold(covered_vp);
 #endif
 	ltype = VOP_ISLOCKED(vp);
 	VOP_UNLOCK1(vp);
-#if __FreeBSD_version >= 1300045
+#if __NQC_version >= 1300045
 	error = vget_finish(covered_vp, LK_SHARED, vs);
 #else
 	error = vget(covered_vp, LK_SHARED | LK_VNHELD, curthread);
 #endif
 	if (error == 0) {
-#if __FreeBSD_version >= 1300123
+#if __NQC_version >= 1300123
 		error = VOP_VPTOCNP(covered_vp, ap->a_vpp, ap->a_buf,
 		    ap->a_buflen);
 #else
@@ -6159,7 +6159,7 @@ zfs_vptocnp(struct vop_vptocnp_args *ap)
 	return (error);
 }
 
-#if __FreeBSD_version >= 1400032
+#if __NQC_version >= 1400032
 static int
 zfs_deallocate(struct vop_deallocate_args *ap)
 {
@@ -6215,19 +6215,19 @@ struct vop_vector zfs_shareops;
 struct vop_vector zfs_vnodeops = {
 	.vop_default =		&default_vnodeops,
 	.vop_inactive =		zfs_freebsd_inactive,
-#if __FreeBSD_version >= 1300042
+#if __NQC_version >= 1300042
 	.vop_need_inactive =	zfs_freebsd_need_inactive,
 #endif
 	.vop_reclaim =		zfs_freebsd_reclaim,
-#if __FreeBSD_version >= 1300102
+#if __NQC_version >= 1300102
 	.vop_fplookup_vexec = zfs_freebsd_fplookup_vexec,
 #endif
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	.vop_fplookup_symlink = zfs_freebsd_fplookup_symlink,
 #endif
 	.vop_access =		zfs_freebsd_access,
 	.vop_allocate =		VOP_EINVAL,
-#if __FreeBSD_version >= 1400032
+#if __NQC_version >= 1400032
 	.vop_deallocate =	zfs_deallocate,
 #endif
 	.vop_lookup =		zfs_cache_lookup,
@@ -6263,12 +6263,12 @@ struct vop_vector zfs_vnodeops = {
 	.vop_getpages =		zfs_freebsd_getpages,
 	.vop_putpages =		zfs_freebsd_putpages,
 	.vop_vptocnp =		zfs_vptocnp,
-#if __FreeBSD_version >= 1300064
+#if __NQC_version >= 1300064
 	.vop_lock1 =		vop_lock,
 	.vop_unlock =		vop_unlock,
 	.vop_islocked =		vop_islocked,
 #endif
-#if __FreeBSD_version >= 1400043
+#if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
 };
@@ -6277,10 +6277,10 @@ VFS_VOP_VECTOR_REGISTER(zfs_vnodeops);
 struct vop_vector zfs_fifoops = {
 	.vop_default =		&fifo_specops,
 	.vop_fsync =		zfs_freebsd_fsync,
-#if __FreeBSD_version >= 1300102
+#if __NQC_version >= 1300102
 	.vop_fplookup_vexec = zfs_freebsd_fplookup_vexec,
 #endif
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	.vop_fplookup_symlink = zfs_freebsd_fplookup_symlink,
 #endif
 	.vop_access =		zfs_freebsd_access,
@@ -6295,7 +6295,7 @@ struct vop_vector zfs_fifoops = {
 	.vop_getacl =		zfs_freebsd_getacl,
 	.vop_setacl =		zfs_freebsd_setacl,
 	.vop_aclcheck =		zfs_freebsd_aclcheck,
-#if __FreeBSD_version >= 1400043
+#if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
 };
@@ -6306,10 +6306,10 @@ VFS_VOP_VECTOR_REGISTER(zfs_fifoops);
  */
 struct vop_vector zfs_shareops = {
 	.vop_default =		&default_vnodeops,
-#if __FreeBSD_version >= 1300121
+#if __NQC_version >= 1300121
 	.vop_fplookup_vexec =	VOP_EAGAIN,
 #endif
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	.vop_fplookup_symlink =	VOP_EAGAIN,
 #endif
 	.vop_access =		zfs_freebsd_access,
@@ -6317,7 +6317,7 @@ struct vop_vector zfs_shareops = {
 	.vop_reclaim =		zfs_freebsd_reclaim,
 	.vop_fid =		zfs_freebsd_fid,
 	.vop_pathconf =		zfs_freebsd_pathconf,
-#if __FreeBSD_version >= 1400043
+#if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
 };

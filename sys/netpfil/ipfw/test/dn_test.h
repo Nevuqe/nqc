@@ -161,7 +161,7 @@ typedef struct _md_t moduledata_t;
 #include <ip_dn_private.h>
 #include <dn_sched.h>
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 int fls(int);
 #endif
 

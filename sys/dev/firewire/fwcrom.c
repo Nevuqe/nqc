@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 #endif
@@ -586,7 +586,7 @@ main()
 	crom_add_entry(&root, CSRKEY_VENDOR, 0xacde48);
 
 	crom_add_simple_text(&src, &root, &text1, "FreeBSD");
-	crom_add_entry(&root, CSRKEY_HW, __FreeBSD_version);
+	crom_add_entry(&root, CSRKEY_HW, __NQC_version);
 	crom_add_simple_text(&src, &root, &text2, "FreeBSD-5");
 
 	/* SBP unit directory */

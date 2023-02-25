@@ -51,7 +51,7 @@ extern int sys_scandir(const char *dirname, struct dirent ***namelist,
     int (*select)(const struct dirent *),
     int (*compar)(const struct dirent **, const struct dirent **));
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static inline const char *
 path_to_sysctl(const char *path, int out_len, char *out)
 {

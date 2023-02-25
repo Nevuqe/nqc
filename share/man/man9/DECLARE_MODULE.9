@@ -60,7 +60,7 @@ A module declared with
 .Fn DECLARE_MODULE_TIED
 will load only if the running kernel version
 (as specified by
-.Dv __FreeBSD_version )
+.Dv __NQC_version )
 is identical to that on which it was built.
 This declaration should be used by modules which depend on interfaces beyond
 the stable kernel KBI (such as ABI emulators or hypervisors that rely on

@@ -24,7 +24,7 @@
 # define HEADER_INTERNAL_KTLS
 # ifndef OPENSSL_NO_KTLS
 
-#  if defined(__FreeBSD__)
+#  if defined(__NQC__)
 #   include <sys/types.h>
 #   include <sys/socket.h>
 #   include <sys/ktls.h>
@@ -200,7 +200,7 @@ static ossl_inline ossl_ssize_t ktls_sendfile(int s, int fd, off_t off,
     return sbytes;
 }
 
-#  endif                         /* __FreeBSD__ */
+#  endif                         /* __NQC__ */
 
 #  if defined(OPENSSL_SYS_LINUX)
 

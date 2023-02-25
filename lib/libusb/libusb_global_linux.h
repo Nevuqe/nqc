@@ -61,7 +61,7 @@
 
 #include <compat/linux/linux_ioctl.h>
 
-#define	IOUSB(a) FBSD_L##a
+#define	IOUSB(a) NQC_L##a
 
 #ifndef __aligned
 #define	__aligned(x) __attribute__((__aligned__(x)))

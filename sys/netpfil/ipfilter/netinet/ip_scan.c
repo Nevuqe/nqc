@@ -27,7 +27,7 @@
 #endif
 #include <sys/socket.h>
 # include <sys/ioccom.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 # include <sys/filio.h>
 # include <sys/malloc.h>
 #else

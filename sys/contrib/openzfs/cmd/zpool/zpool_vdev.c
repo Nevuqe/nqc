@@ -1012,7 +1012,7 @@ make_disks(zpool_handle_t *zhp, nvlist_t *nv)
 		if (fd == -1) {
 			if (errno == EBUSY)
 				is_exclusive = 1;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			if (errno == EPERM)
 				is_exclusive = 1;
 #endif

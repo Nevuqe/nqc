@@ -50,7 +50,7 @@ __NQCID("$NQC$");
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+#if defined(__NQC__) || defined(__NQC_kernel__)
 #include <sys/disk.h>
 #elif defined(__NetBSD__) || defined(__OpenBSD__)
 #include <sys/disklabel.h>
@@ -226,7 +226,7 @@ file_open(struct archive *a, void *client_data)
 #endif
 	int fd = -1;
 	int is_disk_like = 0;
-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+#if defined(__NQC__) || defined(__NQC_kernel__)
 	off_t mediasize = 0; /* FreeBSD-specific, so off_t okay here. */
 #elif defined(__NetBSD__) || defined(__OpenBSD__)
 	struct disklabel dl;
@@ -317,7 +317,7 @@ file_open(struct archive *a, void *client_data)
 		/* Regular files act like disks. */
 		is_disk_like = 1;
 	}
-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+#if defined(__NQC__) || defined(__NQC_kernel__)
 	/* FreeBSD: if it supports DIOCGMEDIASIZE ioctl, it's disk-like. */
 	else if (S_ISCHR(st.st_mode) &&
 	    ioctl(fd, DIOCGMEDIASIZE, &mediasize) == 0 &&

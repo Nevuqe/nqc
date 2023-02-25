@@ -16,7 +16,7 @@ static const char rcsid[] = "@(#)$Id$";
 # define	KERNEL	1
 # define	_KERNEL	1
 #endif
-#if defined(__FreeBSD__) && \
+#if defined(__NQC__) && \
     !defined(KLD_MODULE) && !defined(IPFILTER_LKM)
 # include "opt_inet6.h"
 #endif
@@ -31,7 +31,7 @@ static const char rcsid[] = "@(#)$Id$";
 #include <sys/time.h>
 #include <sys/systm.h>
 #include <sys/dirent.h>
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/jail.h>
 #endif
 #include <sys/malloc.h>
@@ -1457,7 +1457,7 @@ ipf_pcksum6(struct mbuf *m, ip6_t *ip6, u_int32_t off, u_int32_t len)
 #endif
 
 void
-ipf_fbsd_kenv_get(ipf_main_softc_t *softc)
+ipf_nqc_kenv_get(ipf_main_softc_t *softc)
 {
 	TUNABLE_INT_FETCH("net.inet.ipf.large_nat",
 		&softc->ipf_large_nat);

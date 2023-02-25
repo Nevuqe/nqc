@@ -40,7 +40,7 @@
  * We have to ensure that we use the same constants as the target system when
  * bootstrapping localedef so that we generate compatible databases.
  */
-#ifndef __FreeBSD__
+#ifndef __NQC__
 typedef	int		__ct_rune_t;	/* arg type for ctype funcs */
 typedef	__ct_rune_t	__rune_t;	/* rune_t (see above) */
 typedef	__ct_rune_t	__wint_t;	/* wint_t (see above) */

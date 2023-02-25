@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	__xuname;
 	pthread_atfork;
 	pthread_attr_destroy;
@@ -295,7 +295,7 @@ FBSD_1.0 {
 	wordfree;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	arc4random_buf;
 	arc4random_uniform;
 	fdevname;
@@ -330,7 +330,7 @@ FBSD_1.1 {
 	__pthread_cleanup_push_imp;
 };
 
-FBSD_1.2 {
+NQC_1.2 {
 	cfmakesane;
 	endutxent;
 	getpagesizes;
@@ -354,7 +354,7 @@ FBSD_1.2 {
 	setutxent;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	clock_getcpuclockid;
 	dirfd;
 	dup3;
@@ -383,7 +383,7 @@ FBSD_1.3 {
 	waitid;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	getnetgrent_r;
 	pthread_mutex_consistent;
 	pthread_mutexattr_getrobust;
@@ -391,7 +391,7 @@ FBSD_1.4 {
 	stravis;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	alphasort;
 	basename;
 	daemonfd;
@@ -421,7 +421,7 @@ FBSD_1.5 {
 	timespec_get;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	eventfd;
 	eventfd_read;
 	eventfd_write;
@@ -435,7 +435,7 @@ FBSD_1.6 {
 	tcsetwinsize;
 };
 
-FBSD_1.7 {
+NQC_1.7 {
 	 posix_spawn_file_actions_addchdir_np;
 	 posix_spawn_file_actions_addclosefrom_np;
 	 posix_spawn_file_actions_addfchdir_np;
@@ -448,7 +448,7 @@ FBSD_1.7 {
 	 __cpuset_free;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	/* needed by thread libraries */
 	__thr_jtable;
 

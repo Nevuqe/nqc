@@ -56,7 +56,7 @@ ports attached to the switch)
  * is present in netmap_kern.h
  */
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/cdefs.h> /* prerequisite */
 __NQCID("$NQC$");
 

@@ -36,7 +36,7 @@ __RCSID("$NetBSD: h_readlink.c,v 1.1 2010/12/27 02:04:19 pgoyette Exp $");
 #include <unistd.h>
 #include <stdlib.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <err.h>
 #include <string.h>
 #endif
@@ -44,7 +44,7 @@ __RCSID("$NetBSD: h_readlink.c,v 1.1 2010/12/27 02:04:19 pgoyette Exp $");
 int
 main(int argc, char *argv[])
 {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	char b[512], *sl;
 	size_t len = atoi(argv[1]);
 	sl = malloc(len);

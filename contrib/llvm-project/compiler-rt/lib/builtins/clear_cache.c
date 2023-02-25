@@ -24,7 +24,7 @@ uint32_t FlushInstructionCache(uintptr_t hProcess, void *lpBaseAddress,
 uintptr_t GetCurrentProcess(void);
 #endif
 
-#if defined(__FreeBSD__) && defined(__arm__)
+#if defined(__NQC__) && defined(__arm__)
 // clang-format off
 #include <sys/types.h>
 #include <machine/sysarch.h>
@@ -65,7 +65,7 @@ void __clear_cache(void *start, void *end) {
 #elif defined(_WIN32) && (defined(__arm__) || defined(__aarch64__))
   FlushInstructionCache(GetCurrentProcess(), start, end - start);
 #elif defined(__arm__) && !defined(__APPLE__)
-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+#if defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__)
   struct arm_sync_icache_args arg;
 
   arg.addr = (uintptr_t)start;

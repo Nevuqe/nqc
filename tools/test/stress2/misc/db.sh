@@ -63,7 +63,7 @@ EOF
 #include <err.h>
 #include <errno.h>
 #include <pthread.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <pthread_np.h>
 #define	__NP__
 #endif

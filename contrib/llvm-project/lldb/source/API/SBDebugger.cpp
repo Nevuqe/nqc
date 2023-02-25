@@ -741,8 +741,8 @@ SBStructuredData SBDebugger::GetBuildConfiguration() {
   AddBoolConfigEntry(
       *config_up, "lua", LLDB_ENABLE_LUA,
       "A boolean value that indicates if lua support is enabled in LLDB");
-  AddBoolConfigEntry(*config_up, "fbsdvmcore", LLDB_ENABLE_FBSDVMCORE,
-                     "A boolean value that indicates if fbsdvmcore support is "
+  AddBoolConfigEntry(*config_up, "nqcvmcore", LLDB_ENABLE_NQCVMCORE,
+                     "A boolean value that indicates if nqcvmcore support is "
                      "enabled in LLDB");
   AddLLVMTargets(*config_up);
 

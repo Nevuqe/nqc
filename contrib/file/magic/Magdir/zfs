@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------
 # zfs:	file(1) magic for ZFS dumps
 #
-# From <rea-fbsd@codelabs.ru>
+# From <rea-nqc@codelabs.ru>
 # ZFS dump header has the following structure (as per zfs_ioctl.h
 # in FreeBSD with drr_type is set to DRR_BEGIN)
 #

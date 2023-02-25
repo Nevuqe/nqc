@@ -111,7 +111,7 @@ ATF_TC_BODY(file, tc)
 		num += n;
 
 		(void)printf("kevent num %d flags: %#x, fflags: %#x, data: "
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		    "%" PRIdPTR "\n", n, event[0].flags, event[0].fflags,
 #else
 		    "%" PRId64 "\n", n, event[0].flags, event[0].fflags,

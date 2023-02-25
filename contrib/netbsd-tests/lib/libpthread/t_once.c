@@ -31,7 +31,7 @@ __COPYRIGHT("@(#) Copyright (c) 2008\
  The NetBSD Foundation, inc. All rights reserved.");
 __RCSID("$NetBSD: t_once.c,v 1.1 2010/07/16 15:42:53 jmmv Exp $");
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/time.h> /* For itimer*, etc. */
 #endif
 #include <pthread.h>

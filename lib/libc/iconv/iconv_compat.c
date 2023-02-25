@@ -109,15 +109,15 @@ iconvlist_compat(int (*a) (unsigned int, const char * const *, void *), void *b)
 
 int _iconv_version_compat = 0x0108;	/* Magic - not used */
 
-__sym_compat(__iconv, __iconv_compat, FBSD_1.2);
-__sym_compat(__iconv_free_list, __iconv_free_list_compat, FBSD_1.2);
-__sym_compat(__iconv_get_list, __iconv_get_list_compat, FBSD_1.2);
-__sym_compat(_iconv_version, _iconv_version_compat, FBSD_1.3);
-__sym_compat(iconv, iconv_compat, FBSD_1.3);
-__sym_compat(iconv_canonicalize, iconv_canonicalize_compat, FBSD_1.2);
-__sym_compat(iconv_close, iconv_close_compat, FBSD_1.3);
-__sym_compat(iconv_open, iconv_open_compat, FBSD_1.3);
-__sym_compat(iconv_open_into, iconv_open_into_compat, FBSD_1.3);
-__sym_compat(iconv_set_relocation_prefix, iconv_set_relocation_prefix_compat, FBSD_1.3);
-__sym_compat(iconvctl, iconvctl_compat, FBSD_1.3);
-__sym_compat(iconvlist, iconvlist_compat, FBSD_1.3);
+__sym_compat(__iconv, __iconv_compat, NQC_1.2);
+__sym_compat(__iconv_free_list, __iconv_free_list_compat, NQC_1.2);
+__sym_compat(__iconv_get_list, __iconv_get_list_compat, NQC_1.2);
+__sym_compat(_iconv_version, _iconv_version_compat, NQC_1.3);
+__sym_compat(iconv, iconv_compat, NQC_1.3);
+__sym_compat(iconv_canonicalize, iconv_canonicalize_compat, NQC_1.2);
+__sym_compat(iconv_close, iconv_close_compat, NQC_1.3);
+__sym_compat(iconv_open, iconv_open_compat, NQC_1.3);
+__sym_compat(iconv_open_into, iconv_open_into_compat, NQC_1.3);
+__sym_compat(iconv_set_relocation_prefix, iconv_set_relocation_prefix_compat, NQC_1.3);
+__sym_compat(iconvctl, iconvctl_compat, NQC_1.3);
+__sym_compat(iconvlist, iconvlist_compat, NQC_1.3);

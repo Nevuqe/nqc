@@ -41,7 +41,7 @@
 
 static __inline bool
 isQEMU(void) {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	char *vm_guest_name_buf;
 	size_t len;
 	bool is_vm;

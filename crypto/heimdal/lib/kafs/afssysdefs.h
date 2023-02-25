@@ -82,13 +82,13 @@
 #define AFS_SYSCALL	31
 #endif
 
-#if defined(__FreeBSD__)
-#if __FreeBSD_version >= 500000
+#if defined(__NQC__)
+#if __NQC_version >= 500000
 #define AFS_SYSCALL 339
 #else
 #define AFS_SYSCALL 210
 #endif
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 
 #ifdef __DragonFly__
 #ifndef AFS_SYSCALL

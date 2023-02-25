@@ -717,45 +717,45 @@
 /*
  * Our libusb(8) calls emulated within linux(4).
  */
-#define	FBSD_LUSB_DEVICEENUMERATE	0xffff
-#define	FBSD_LUSB_DEV_QUIRK_ADD		0xfffe
-#define	FBSD_LUSB_DEV_QUIRK_GET		0xfffd
-#define	FBSD_LUSB_DEV_QUIRK_REMOVE	0xfffc
-#define	FBSD_LUSB_DO_REQUEST		0xfffb
-#define	FBSD_LUSB_FS_CLEAR_STALL_SYNC	0xfffa
-#define	FBSD_LUSB_FS_CLOSE		0xfff9
-#define	FBSD_LUSB_FS_COMPLETE		0xfff8
-#define	FBSD_LUSB_FS_INIT		0xfff7
-#define	FBSD_LUSB_FS_OPEN		0xfff6
-#define	FBSD_LUSB_FS_START		0xfff5
-#define	FBSD_LUSB_FS_STOP		0xfff4
-#define	FBSD_LUSB_FS_UNINIT		0xfff3
-#define	FBSD_LUSB_GET_CONFIG		0xfff2
-#define	FBSD_LUSB_GET_DEVICEINFO	0xfff1
-#define	FBSD_LUSB_GET_DEVICE_DESC	0xfff0
-#define	FBSD_LUSB_GET_FULL_DESC		0xffef
-#define	FBSD_LUSB_GET_IFACE_DRIVER	0xffee
-#define	FBSD_LUSB_GET_PLUGTIME		0xffed
-#define	FBSD_LUSB_GET_POWER_MODE	0xffec
-#define	FBSD_LUSB_GET_REPORT_DESC	0xffeb
-#define	FBSD_LUSB_GET_REPORT_ID		0xffea
-#define	FBSD_LUSB_GET_TEMPLATE		0xffe9
-#define	FBSD_LUSB_IFACE_DRIVER_ACTIVE	0xffe8
-#define	FBSD_LUSB_IFACE_DRIVER_DETACH	0xffe7
-#define	FBSD_LUSB_QUIRK_NAME_GET	0xffe6
-#define	FBSD_LUSB_READ_DIR		0xffe5
-#define	FBSD_LUSB_SET_ALTINTERFACE	0xffe4
-#define	FBSD_LUSB_SET_CONFIG		0xffe3
-#define	FBSD_LUSB_SET_IMMED		0xffe2
-#define	FBSD_LUSB_SET_POWER_MODE	0xffe1
-#define	FBSD_LUSB_SET_TEMPLATE		0xffe0
-#define	FBSD_LUSB_FS_OPEN_STREAM	0xffdf
-#define	FBSD_LUSB_GET_DEV_PORT_PATH	0xffde
-#define	FBSD_LUSB_GET_POWER_USAGE	0xffdd
-#define	FBSD_LUSB_DEVICESTATS		0xffdc
+#define	NQC_LUSB_DEVICEENUMERATE	0xffff
+#define	NQC_LUSB_DEV_QUIRK_ADD		0xfffe
+#define	NQC_LUSB_DEV_QUIRK_GET		0xfffd
+#define	NQC_LUSB_DEV_QUIRK_REMOVE	0xfffc
+#define	NQC_LUSB_DO_REQUEST		0xfffb
+#define	NQC_LUSB_FS_CLEAR_STALL_SYNC	0xfffa
+#define	NQC_LUSB_FS_CLOSE		0xfff9
+#define	NQC_LUSB_FS_COMPLETE		0xfff8
+#define	NQC_LUSB_FS_INIT		0xfff7
+#define	NQC_LUSB_FS_OPEN		0xfff6
+#define	NQC_LUSB_FS_START		0xfff5
+#define	NQC_LUSB_FS_STOP		0xfff4
+#define	NQC_LUSB_FS_UNINIT		0xfff3
+#define	NQC_LUSB_GET_CONFIG		0xfff2
+#define	NQC_LUSB_GET_DEVICEINFO	0xfff1
+#define	NQC_LUSB_GET_DEVICE_DESC	0xfff0
+#define	NQC_LUSB_GET_FULL_DESC		0xffef
+#define	NQC_LUSB_GET_IFACE_DRIVER	0xffee
+#define	NQC_LUSB_GET_PLUGTIME		0xffed
+#define	NQC_LUSB_GET_POWER_MODE	0xffec
+#define	NQC_LUSB_GET_REPORT_DESC	0xffeb
+#define	NQC_LUSB_GET_REPORT_ID		0xffea
+#define	NQC_LUSB_GET_TEMPLATE		0xffe9
+#define	NQC_LUSB_IFACE_DRIVER_ACTIVE	0xffe8
+#define	NQC_LUSB_IFACE_DRIVER_DETACH	0xffe7
+#define	NQC_LUSB_QUIRK_NAME_GET	0xffe6
+#define	NQC_LUSB_READ_DIR		0xffe5
+#define	NQC_LUSB_SET_ALTINTERFACE	0xffe4
+#define	NQC_LUSB_SET_CONFIG		0xffe3
+#define	NQC_LUSB_SET_IMMED		0xffe2
+#define	NQC_LUSB_SET_POWER_MODE	0xffe1
+#define	NQC_LUSB_SET_TEMPLATE		0xffe0
+#define	NQC_LUSB_FS_OPEN_STREAM	0xffdf
+#define	NQC_LUSB_GET_DEV_PORT_PATH	0xffde
+#define	NQC_LUSB_GET_POWER_USAGE	0xffdd
+#define	NQC_LUSB_DEVICESTATS		0xffdc
 
-#define	LINUX_IOCTL_FBSD_LUSB_MAX	0xffff
-#define	LINUX_IOCTL_FBSD_LUSB_MIN	0xffdc
+#define	LINUX_IOCTL_NQC_LUSB_MAX	0xffff
+#define	LINUX_IOCTL_NQC_LUSB_MIN	0xffdc
 
 /*
  * Linux btrfs clone operation

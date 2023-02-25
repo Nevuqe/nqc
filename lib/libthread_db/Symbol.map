@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	td_init;
 	td_ta_clear_event;
 	td_ta_delete;
@@ -33,6 +33,6 @@ FBSD_1.0 {
 	td_thr_validate;
 };
 
-FBSD_1.2 {
+NQC_1.2 {
 	td_thr_get_info;
 };

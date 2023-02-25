@@ -78,10 +78,10 @@ getlogin_r(char *logname, size_t namelen)
 
 /* FreeBSD 12 and earlier compat. */
 int
-__getlogin_r_fbsd12(char *logname, int namelen)
+__getlogin_r_nqc12(char *logname, int namelen)
 {
 	if (namelen < 1)
 		return (ERANGE);
 	return (getlogin_r(logname, namelen));
 }
-__sym_compat(getlogin_r, __getlogin_r_fbsd12, FBSD_1.0);
+__sym_compat(getlogin_r, __getlogin_r_nqc12, NQC_1.0);

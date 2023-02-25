@@ -35,7 +35,7 @@
  *
  */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 #endif

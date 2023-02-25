@@ -6,7 +6,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/procdesc.h>
 #endif
 

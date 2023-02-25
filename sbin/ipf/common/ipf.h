@@ -79,7 +79,7 @@
 
 #ifndef	U_32_T
 # define	U_32_T	1
-# if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || \
+# if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__NQC__) || \
     defined(__sgi)
 typedef	u_int32_t	u_32_t;
 # else
@@ -92,7 +92,7 @@ typedef uint32_t	u_32_t;
 typedef unsigned int	u_32_t;
 #   endif
 #  endif
-# endif /* __NetBSD__ || __OpenBSD__ || __FreeBSD__ || __sgi */
+# endif /* __NetBSD__ || __OpenBSD__ || __NQC__ || __sgi */
 #endif /* U_32_T */
 
 #ifndef	MAXHOSTNAMELEN

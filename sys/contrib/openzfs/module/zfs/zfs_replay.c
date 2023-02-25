@@ -73,7 +73,7 @@ zfs_init_vattr(vattr_t *vap, uint64_t mask, uint64_t mode,
 	memset(vap, 0, sizeof (*vap));
 	vap->va_mask = (uint_t)mask;
 	vap->va_mode = mode;
-#if defined(__FreeBSD__) || defined(__APPLE__)
+#if defined(__NQC__) || defined(__APPLE__)
 	vap->va_type = IFTOVT(mode);
 #endif
 	vap->va_uid = (uid_t)(IS_EPHEMERAL(uid)) ? -1 : uid;
@@ -435,7 +435,7 @@ zfs_replay_create_acl(void *arg1, void *arg2, boolean_t byteswap)
 
 bail:
 	if (error == 0 && zp != NULL) {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		VOP_UNLOCK1(ZTOV(zp));
 #endif
 		zrele(zp);
@@ -589,7 +589,7 @@ zfs_replay_create(void *arg1, void *arg2, boolean_t byteswap)
 
 out:
 	if (error == 0 && zp != NULL) {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		VOP_UNLOCK1(ZTOV(zp));
 #endif
 		zrele(zp);

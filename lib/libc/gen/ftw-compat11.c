@@ -98,4 +98,4 @@ done:
 	return (error);
 }
 
-__sym_compat(ftw, freebsd11_ftw, FBSD_1.0);
+__sym_compat(ftw, freebsd11_ftw, NQC_1.0);
