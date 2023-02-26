@@ -82,13 +82,13 @@ sysctl_devname(SYSCTL_HANDLER_ARGS)
 {
 	int error;
 	dev_t ud;
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 	uint32_t ud_compat;
 #endif
 	struct cdev_priv *cdp;
 	struct cdev *dev;
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 	if (req->newlen == sizeof(ud_compat)) {
 		error = SYSCTL_IN(req, &ud_compat, sizeof(ud_compat));
 		if (error == 0)

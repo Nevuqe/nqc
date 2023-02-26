@@ -47,14 +47,14 @@ __NQCID("$NQC$");
  * encryption, make sure you've got libcrypt.a around.
  */
 
-int __freebsd11_des_setkey(const char *key);
-int __freebsd11_des_cipher(const char *in, char *out, long salt, int num_iter);
-int __freebsd11_setkey(const char *key);
-int __freebsd11_encrypt(char *block, int flag);
+int __nqc11_des_setkey(const char *key);
+int __nqc11_des_cipher(const char *in, char *out, long salt, int num_iter);
+int __nqc11_setkey(const char *key);
+int __nqc11_encrypt(char *block, int flag);
 
 /* ARGSUSED */
 int
-__freebsd11_des_setkey(const char *key __unused)
+__nqc11_des_setkey(const char *key __unused)
 {
 	fprintf(stderr, "WARNING!  des_setkey(3) not present in the system!\n");
 	return (0);
@@ -62,7 +62,7 @@ __freebsd11_des_setkey(const char *key __unused)
 
 /* ARGSUSED */
 int
-__freebsd11_des_cipher(const char *in, char *out, long salt __unused,
+__nqc11_des_cipher(const char *in, char *out, long salt __unused,
     int num_iter __unused)
 {
 	fprintf(stderr, "WARNING!  des_cipher(3) not present in the system!\n");
@@ -72,7 +72,7 @@ __freebsd11_des_cipher(const char *in, char *out, long salt __unused,
 
 /* ARGSUSED */
 int
-__freebsd11_setkey(const char *key __unused)
+__nqc11_setkey(const char *key __unused)
 {
 	fprintf(stderr, "WARNING!  setkey(3) not present in the system!\n");
 	return (0);
@@ -80,13 +80,13 @@ __freebsd11_setkey(const char *key __unused)
 
 /* ARGSUSED */
 int
-__freebsd11_encrypt(char *block __unused, int flag __unused)
+__nqc11_encrypt(char *block __unused, int flag __unused)
 {
 	fprintf(stderr, "WARNING!  encrypt(3) not present in the system!\n");
 	return (0);
 }
 
-__sym_compat(des_setkey, __freebsd11_des_setkey, NQC_1.0);
-__sym_compat(des_cipher, __freebsd11_des_cipher, NQC_1.0);
-__sym_compat(setkey, __freebsd11_setkey, NQC_1.0);
-__sym_compat(encrypt, __freebsd11_encrypt, NQC_1.0);
+__sym_compat(des_setkey, __nqc11_des_setkey, NQC_1.0);
+__sym_compat(des_cipher, __nqc11_des_cipher, NQC_1.0);
+__sym_compat(setkey, __nqc11_setkey, NQC_1.0);
+__sym_compat(encrypt, __nqc11_encrypt, NQC_1.0);

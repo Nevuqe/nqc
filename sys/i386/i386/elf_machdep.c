@@ -52,17 +52,17 @@ __NQCID("$NQC$");
 #include <machine/md_var.h>
 #include <machine/npx.h>
 
-struct sysentvec elf32_freebsd_sysvec = {
+struct sysentvec elf32_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_fixup	= __elfN(freebsd_fixup),
+	.sv_fixup	= __elfN(nqc_fixup),
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
 	.sv_name	= "FreeBSD ELF32",
 	.sv_coredump	= __elfN(coredump),
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
-	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
+	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = __elfN(prepare_notes),
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,
@@ -72,12 +72,12 @@ struct sysentvec elf32_freebsd_sysvec = {
 	.sv_psstrings	= PS_STRINGS,
 	.sv_psstringssz	= sizeof(struct ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
-	.sv_copyout_auxargs = __elfN(freebsd_copyout_auxargs),
+	.sv_copyout_auxargs = __elfN(nqc_copyout_auxargs),
 	.sv_copyout_strings	= exec_copyout_strings,
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_ASLR | SV_IA32 | SV_ILP32 |
+	.sv_flags	= SV_ABI_NQC | SV_ASLR | SV_IA32 | SV_ILP32 |
 			    SV_SHP | SV_TIMEKEEP | SV_RNG_SEED_VER,
 	.sv_set_syscall_retval = cpu_set_syscall_retval,
 	.sv_fetch_syscall_args = cpu_fetch_syscall_args,
@@ -93,55 +93,55 @@ struct sysentvec elf32_freebsd_sysvec = {
 	.sv_regset_begin = SET_BEGIN(__elfN(regset)),
 	.sv_regset_end  = SET_LIMIT(__elfN(regset)),
 };
-INIT_SYSENTVEC(elf32_sysvec, &elf32_freebsd_sysvec);
+INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 
-static Elf32_Brandinfo freebsd_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+static Elf32_Brandinfo nqc_brand_info = {
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
 SYSINIT(elf32, SI_SUB_EXEC, SI_ORDER_FIRST,
 	(sysinit_cfunc_t) elf32_insert_brand_entry,
-	&freebsd_brand_info);
+	&nqc_brand_info);
 
-static Elf32_Brandinfo freebsd_brand_oinfo = {
-	.brand		= ELFOSABI_FREEBSD,
+static Elf32_Brandinfo nqc_brand_oinfo = {
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/usr/libexec/ld-elf.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
 SYSINIT(oelf32, SI_SUB_EXEC, SI_ORDER_ANY,
 	(sysinit_cfunc_t) elf32_insert_brand_entry,
-	&freebsd_brand_oinfo);
+	&nqc_brand_oinfo);
 
-static Elf32_Brandinfo kfreebsd_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+static Elf32_Brandinfo knqc_brand_info = {
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf32_kfreebsd_brandnote,
+	.brand_note	= &elf32_knqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE_MANDATORY
 };
 
 SYSINIT(kelf32, SI_SUB_EXEC, SI_ORDER_ANY,
 	(sysinit_cfunc_t) elf32_insert_brand_entry,
-	&kfreebsd_brand_info);
+	&knqc_brand_info);
 
 void
 elf32_dump_thread(struct thread *td, void *dst, size_t *off)

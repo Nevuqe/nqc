@@ -63,7 +63,7 @@ log_assert "Verify '-o' will set filesystem property temporarily, " \
 log_onexit cleanup
 
 set -A properties "atime" "exec" "readonly" "setuid"
-if ! is_freebsd; then
+if ! is_nqc; then
 	properties+=("devices")
 fi
 
@@ -85,7 +85,7 @@ function get_reverse_option
 			      "rw"        "ro" \
 			      "nosuid"    "suid" \
 			      "nodev"     "dev"
-	elif is_freebsd; then
+	elif is_nqc; then
 		set -A values "noatime"   "atime" \
 			      "noexec"    "exec" \
 			      "rw"        "ro" \

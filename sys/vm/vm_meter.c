@@ -142,7 +142,7 @@ SYSCTL_PROC(_vm, VM_LOADAVG, loadavg, CTLTYPE_STRUCT | CTLFLAG_RD |
     CTLFLAG_MPSAFE, NULL, 0, sysctl_vm_loadavg, "S,loadavg",
     "Machine loadaverage history");
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 struct vmtotal11 {
 	int16_t	t_rq;
 	int16_t	t_dw;
@@ -165,7 +165,7 @@ static int
 vmtotal(SYSCTL_HANDLER_ARGS)
 {
 	struct vmtotal total;
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	struct vmtotal11 total11;
 #endif
 	vm_object_t object;
@@ -173,7 +173,7 @@ vmtotal(SYSCTL_HANDLER_ARGS)
 	struct thread *td;
 
 	if (req->oldptr == NULL) {
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 		if (curproc->p_osrel < P_OSREL_VMTOTAL64)
 			return (SYSCTL_OUT(req, NULL, sizeof(total11)));
 #endif
@@ -270,7 +270,7 @@ vmtotal(SYSCTL_HANDLER_ARGS)
 	mtx_unlock(&vm_object_list_mtx);
 	total.t_pw = vm_wait_count();
 	total.t_free = vm_free_count();
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	/* sysctl(8) allocates twice as much memory as reported by sysctl(3) */
 	if (curproc->p_osrel < P_OSREL_VMTOTAL64 && (req->oldlen ==
 	    sizeof(total11) || req->oldlen == 2 * sizeof(total11))) {
@@ -311,12 +311,12 @@ static int
 sysctl_handle_vmstat(SYSCTL_HANDLER_ARGS)
 {
 	uint64_t val;
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 	uint32_t val32;
 #endif
 
 	val = counter_u64_fetch(*(counter_u64_t *)arg1);
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 	if (req->oldlen == sizeof(val32)) {
 		val32 = val;		/* truncate */
 		return (SYSCTL_OUT(req, &val32, sizeof(val32)));
@@ -405,7 +405,7 @@ VM_STATS_UINT(v_free_severe, "Severe page depletion point");
 SYSCTL_ULONG(_vm_stats_vm, OID_AUTO, v_user_wire_count, CTLFLAG_RD,
     &vm_user_wire_count, 0, "User-wired virtual memory");
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 /*
  * Provide compatibility sysctls for the benefit of old utilities which exit
  * with an error if they cannot be found.

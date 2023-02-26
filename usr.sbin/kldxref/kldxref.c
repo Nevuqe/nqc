@@ -44,7 +44,7 @@
 #include <sys/linker.h>
 #include <sys/stat.h>
 #include <sys/module.h>
-#define FREEBSD_ELF
+#define NQC_ELF
 
 #include <ctype.h>
 #include <err.h>

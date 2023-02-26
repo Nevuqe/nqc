@@ -412,8 +412,8 @@ David Petrou and John Milford. Proportional-Share Scheduling:
 Implementation and Evaluation in a Widely-Deployed Operating System,
 December 1997.
 .nf
-\s-2\fChttp://www.cs.cmu.edu/~dpetrou/papers/freebsd_lottery_writeup98.ps\fP\s+2
-\s-2\fChttp://www.cs.cmu.edu/~dpetrou/code/freebsd_lottery_code.tar.gz\fP\s+2
+\s-2\fChttp://www.cs.cmu.edu/~dpetrou/papers/nqc_lottery_writeup98.ps\fP\s+2
+\s-2\fChttp://www.cs.cmu.edu/~dpetrou/code/nqc_lottery_code.tar.gz\fP\s+2
 .IP \s-2[LOTTERY2]\s+2 .5i
 Carl A. Waldspurger and William E. Weihl. Lottery Scheduling: Flexible Proportional-Share Resource Management, Proceedings of the First Symposium on Operating Systems Design and Implementation (OSDI '94), pages 1-11, Monterey, California, November 1994.
 .nf

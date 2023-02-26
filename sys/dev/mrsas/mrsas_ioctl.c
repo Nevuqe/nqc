@@ -74,7 +74,7 @@ mrsas_passthru(struct mrsas_softc *sc, void *arg, u_long ioctlCmd)
 {
 	struct mrsas_iocpacket *user_ioc = (struct mrsas_iocpacket *)arg;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct mrsas_iocpacket32 *user_ioc32 = (struct mrsas_iocpacket32 *)arg;
 
 #endif
@@ -151,7 +151,7 @@ mrsas_passthru(struct mrsas_softc *sc, void *arg, u_long ioctlCmd)
 			if (!user_ioc->sgl[i].iov_len)
 				continue;
 			ioctl_data_size = user_ioc->sgl[i].iov_len;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		} else {
 			if (!user_ioc32->sgl[i].iov_len)
 				continue;
@@ -194,7 +194,7 @@ mrsas_passthru(struct mrsas_softc *sc, void *arg, u_long ioctlCmd)
 
 			iov_base_ptrin = user_ioc->sgl[i].iov_base;
 			iov_len = user_ioc->sgl[i].iov_len;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		} else {
 			kern_sge32[i].length = user_ioc32->sgl[i].iov_len;
 
@@ -268,7 +268,7 @@ mrsas_passthru(struct mrsas_softc *sc, void *arg, u_long ioctlCmd)
 		if (ioctlCmd == MRSAS_IOC_FIRMWARE_PASS_THROUGH64) {
 			iov_base_ptrin = user_ioc->sgl[i].iov_base;
 			iov_len = user_ioc->sgl[i].iov_len;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		} else {
 			iov_base_ptrin = PTRIN(user_ioc32->sgl[i].iov_base);
 			iov_len = user_ioc32->sgl[i].iov_len;
@@ -324,7 +324,7 @@ out:
 		if (ioctlCmd == MRSAS_IOC_FIRMWARE_PASS_THROUGH64) {
 			if (!user_ioc->sgl[i].iov_len)
 				continue;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		} else {
 			if (!user_ioc32->sgl[i].iov_len)
 				continue;

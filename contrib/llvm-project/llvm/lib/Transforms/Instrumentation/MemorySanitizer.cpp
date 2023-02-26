@@ -418,7 +418,7 @@ static const MemoryMapParams Linux_AArch64_MemoryMapParams = {
 };
 
 // aarch64 FreeBSD
-static const MemoryMapParams FreeBSD_AArch64_MemoryMapParams = {
+static const MemoryMapParams NQC_AArch64_MemoryMapParams = {
   0x1800000000000,  // AndMask
   0x0400000000000,  // XorMask
   0x0200000000000,  // ShadowBase
@@ -426,7 +426,7 @@ static const MemoryMapParams FreeBSD_AArch64_MemoryMapParams = {
 };
 
 // i386 FreeBSD
-static const MemoryMapParams FreeBSD_I386_MemoryMapParams = {
+static const MemoryMapParams NQC_I386_MemoryMapParams = {
   0x000180000000,  // AndMask
   0x000040000000,  // XorMask
   0x000020000000,  // ShadowBase
@@ -434,7 +434,7 @@ static const MemoryMapParams FreeBSD_I386_MemoryMapParams = {
 };
 
 // x86_64 FreeBSD
-static const MemoryMapParams FreeBSD_X86_64_MemoryMapParams = {
+static const MemoryMapParams NQC_X86_64_MemoryMapParams = {
   0xc00000000000,  // AndMask
   0x200000000000,  // XorMask
   0x100000000000,  // ShadowBase
@@ -474,14 +474,14 @@ static const PlatformMemoryMapParams Linux_ARM_MemoryMapParams = {
   &Linux_AArch64_MemoryMapParams,
 };
 
-static const PlatformMemoryMapParams FreeBSD_ARM_MemoryMapParams = {
+static const PlatformMemoryMapParams NQC_ARM_MemoryMapParams = {
   nullptr,
-  &FreeBSD_AArch64_MemoryMapParams,
+  &NQC_AArch64_MemoryMapParams,
 };
 
-static const PlatformMemoryMapParams FreeBSD_X86_MemoryMapParams = {
-  &FreeBSD_I386_MemoryMapParams,
-  &FreeBSD_X86_64_MemoryMapParams,
+static const PlatformMemoryMapParams NQC_X86_MemoryMapParams = {
+  &NQC_I386_MemoryMapParams,
+  &NQC_X86_64_MemoryMapParams,
 };
 
 static const PlatformMemoryMapParams NetBSD_X86_MemoryMapParams = {
@@ -908,13 +908,13 @@ void MemorySanitizer::initializeModule(Module &M) {
       case Triple::FreeBSD:
         switch (TargetTriple.getArch()) {
           case Triple::aarch64:
-            MapParams = FreeBSD_ARM_MemoryMapParams.bits64;
+            MapParams = NQC_ARM_MemoryMapParams.bits64;
             break;
           case Triple::x86_64:
-            MapParams = FreeBSD_X86_MemoryMapParams.bits64;
+            MapParams = NQC_X86_MemoryMapParams.bits64;
             break;
           case Triple::x86:
-            MapParams = FreeBSD_X86_MemoryMapParams.bits32;
+            MapParams = NQC_X86_MemoryMapParams.bits32;
             break;
           default:
             report_fatal_error("unsupported architecture");

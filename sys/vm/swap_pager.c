@@ -2511,7 +2511,7 @@ done:
 }
 
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 int
 freebsd13_swapoff(struct thread *td, struct freebsd13_swapoff_args *uap)
 {
@@ -2664,7 +2664,7 @@ swap_dev_info(int name, struct xswdev *xs, char *devname, size_t len)
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 #define XSWDEV_VERSION_11	1
 struct xswdev11 {
 	u_int	xsw_version;
@@ -2675,7 +2675,7 @@ struct xswdev11 {
 };
 #endif
 
-#if defined(__amd64__) && defined(COMPAT_FREEBSD32)
+#if defined(__amd64__) && defined(COMPAT_NQC32)
 struct xswdev32 {
 	u_int	xsw_version;
 	u_int	xsw_dev1, xsw_dev2;
@@ -2689,10 +2689,10 @@ static int
 sysctl_vm_swap_info(SYSCTL_HANDLER_ARGS)
 {
 	struct xswdev xs;
-#if defined(__amd64__) && defined(COMPAT_FREEBSD32)
+#if defined(__amd64__) && defined(COMPAT_NQC32)
 	struct xswdev32 xs32;
 #endif
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	struct xswdev11 xs11;
 #endif
 	int error;
@@ -2704,7 +2704,7 @@ sysctl_vm_swap_info(SYSCTL_HANDLER_ARGS)
 	error = swap_dev_info(*(int *)arg1, &xs, NULL, 0);
 	if (error != 0)
 		return (error);
-#if defined(__amd64__) && defined(COMPAT_FREEBSD32)
+#if defined(__amd64__) && defined(COMPAT_NQC32)
 	if (req->oldlen == sizeof(xs32)) {
 		memset(&xs32, 0, sizeof(xs32));
 		xs32.xsw_version = XSWDEV_VERSION;
@@ -2717,7 +2717,7 @@ sysctl_vm_swap_info(SYSCTL_HANDLER_ARGS)
 		return (error);
 	}
 #endif
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	if (req->oldlen == sizeof(xs11)) {
 		memset(&xs11, 0, sizeof(xs11));
 		xs11.xsw_version = XSWDEV_VERSION_11;

@@ -159,7 +159,7 @@
 #define IPS_ERR_RECOVERY		0xFC
 #define IPS_ERR_CKCOND			0xFF
 
-#define IPS_OS_FREEBSD			8
+#define IPS_OS_NQC			8
 #define IPS_VERSION_MAJOR		"0.90"
 #define IPS_VERSION_MINOR		".10"
 

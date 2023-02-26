@@ -27,7 +27,7 @@
 
 #include "archive_platform.h"
 
-#if ARCHIVE_ACL_FREEBSD
+#if ARCHIVE_ACL_NQC
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
@@ -62,7 +62,7 @@ static const acl_perm_map_t acl_posix_perm_map[] = {
 static const int acl_posix_perm_map_size =
     (int)(sizeof(acl_posix_perm_map)/sizeof(acl_posix_perm_map[0]));
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 static const acl_perm_map_t acl_nfs4_perm_map[] = {
 	{ARCHIVE_ENTRY_ACL_EXECUTE, ACL_EXECUTE},
 	{ARCHIVE_ENTRY_ACL_READ_DATA, ACL_READ_DATA},
@@ -100,13 +100,13 @@ static const acl_perm_map_t acl_nfs4_flag_map[] = {
 
 static const int acl_nfs4_flag_map_size =
     (int)(sizeof(acl_nfs4_flag_map)/sizeof(acl_nfs4_flag_map[0]));
-#endif /* ARCHIVE_ACL_FREEBSD_NFS4 */
+#endif /* ARCHIVE_ACL_NQC_NFS4 */
 
 static int
 translate_acl(struct archive_read_disk *a,
     struct archive_entry *entry, acl_t acl, int default_entry_acl_type)
 {
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	int brand;
 	acl_flagset_t	 acl_flagset;
 	acl_entry_type_t acl_type;
@@ -120,7 +120,7 @@ translate_acl(struct archive_read_disk *a,
 	void		*q;
 	const char	*ae_name;
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	// FreeBSD "brands" ACLs as POSIX.1e or NFSv4
 	// Make sure the "brand" on this ACL is consistent
 	// with the default_entry_acl_type bits provided.
@@ -205,7 +205,7 @@ translate_acl(struct archive_read_disk *a,
 		case ACL_OTHER:
 			ae_tag = ARCHIVE_ENTRY_ACL_OTHER;
 			break;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		case ACL_EVERYONE:
 			ae_tag = ARCHIVE_ENTRY_ACL_EVERYONE;
 			break;
@@ -219,7 +219,7 @@ translate_acl(struct archive_read_disk *a,
 		// XXX acl_type maps to allow/deny/audit/YYYY bits
 		entry_acl_type = default_entry_acl_type;
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		if (default_entry_acl_type & ARCHIVE_ENTRY_ACL_TYPE_NFS4) {
 			/*
 			 * acl_get_entry_type_np() fails with non-NFSv4 ACLs
@@ -280,7 +280,7 @@ translate_acl(struct archive_read_disk *a,
 			return (ARCHIVE_WARN);
 		}
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		if (default_entry_acl_type & ARCHIVE_ENTRY_ACL_TYPE_NFS4) {
 			perm_map_size = acl_nfs4_perm_map_size;
 			perm_map = acl_nfs4_perm_map;
@@ -288,7 +288,7 @@ translate_acl(struct archive_read_disk *a,
 #endif
 			perm_map_size = acl_posix_perm_map_size;
 			perm_map = acl_posix_perm_map;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		}
 #endif
 
@@ -326,7 +326,7 @@ set_acl(struct archive *a, int fd, const char *name,
 	acl_t		 acl;
 	acl_entry_t	 acl_entry;
 	acl_permset_t	 acl_permset;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	acl_flagset_t	 acl_flagset;
 	int		 r;
 #endif
@@ -353,7 +353,7 @@ set_acl(struct archive *a, int fd, const char *name,
 	case ARCHIVE_ENTRY_ACL_TYPE_DEFAULT:
 		acl_type = ACL_TYPE_DEFAULT;
 		break;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	case ARCHIVE_ENTRY_ACL_TYPE_NFS4:
 		acl_type = ACL_TYPE_NFS4;
 		break;
@@ -409,7 +409,7 @@ set_acl(struct archive *a, int fd, const char *name,
 		case ARCHIVE_ENTRY_ACL_OTHER:
 			acl_set_tag_type(acl_entry, ACL_OTHER);
 			break;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		case ARCHIVE_ENTRY_ACL_EVERYONE:
 			acl_set_tag_type(acl_entry, ACL_EVERYONE);
 			break;
@@ -421,7 +421,7 @@ set_acl(struct archive *a, int fd, const char *name,
 			goto exit_free;
 		}
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		r = 0;
 		switch (ae_type) {
 		case ARCHIVE_ENTRY_ACL_TYPE_ALLOW:
@@ -471,7 +471,7 @@ set_acl(struct archive *a, int fd, const char *name,
 			ret = ARCHIVE_FAILED;
 			goto exit_free;
 		}
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		if (ae_requested_type == ARCHIVE_ENTRY_ACL_TYPE_NFS4) {
 			perm_map_size = acl_nfs4_perm_map_size;
 			perm_map = acl_nfs4_perm_map;
@@ -479,7 +479,7 @@ set_acl(struct archive *a, int fd, const char *name,
 #endif
 			perm_map_size = acl_posix_perm_map_size;
 			perm_map = acl_posix_perm_map;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		}
 #endif
 
@@ -495,7 +495,7 @@ set_acl(struct archive *a, int fd, const char *name,
 			}
 		}
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		if (ae_requested_type == ARCHIVE_ENTRY_ACL_TYPE_NFS4) {
 			/*
 			 * acl_get_flagset_np() fails with non-NFSv4 ACLs
@@ -589,7 +589,7 @@ archive_read_disk_entry_setup_acls(struct archive_read_disk *a,
 
 	acl = NULL;
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	/* Try NFSv4 ACL first. */
 	if (*fd >= 0)
 		acl = acl_get_fd_np(*fd, ACL_TYPE_NFS4);
@@ -700,7 +700,7 @@ archive_write_disk_set_acls(struct archive *a, int fd, const char *name,
 		/* Simultaneous POSIX.1e and NFSv4 is not supported */
 		return (ret);
 	}
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	else if ((archive_acl_types(abstract_acl) &
 	    ARCHIVE_ENTRY_ACL_TYPE_NFS4) != 0) {
 		ret = set_acl(a, fd, name, abstract_acl, mode,
@@ -709,4 +709,4 @@ archive_write_disk_set_acls(struct archive *a, int fd, const char *name,
 #endif
 	return (ret);
 }
-#endif	/* ARCHIVE_ACL_FREEBSD */
+#endif	/* ARCHIVE_ACL_NQC */

@@ -43,7 +43,7 @@
 
 verify_runnable "global"
 
-if is_freebsd; then
+if is_nqc; then
 	log_unsupported "FreeBSD does not implement an analogue to ZERO_RANGE."
 fi
 

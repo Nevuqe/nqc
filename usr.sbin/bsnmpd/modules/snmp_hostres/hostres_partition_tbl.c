@@ -50,7 +50,7 @@
 #include "hostres_oid.h"
 #include "hostres_tree.h"
 
-#define	HR_FREEBSD_PART_TYPE	165
+#define	HR_NQC_PART_TYPE	165
 
 /* Maximum length for label and id including \0 */
 #define	PART_STR_MLEN	(128 + 1)
@@ -392,7 +392,7 @@ get_mbr(struct gclass *classp, int32_t ds_index, const char *disk_dev_name)
 				 * by slice) in get_bsd.
 				 */
 				part_type = strtol(conf->lg_val, NULL, 10);
-				if (part_type == HR_FREEBSD_PART_TYPE)
+				if (part_type == HR_NQC_PART_TYPE)
 					break;
 				HRDBG("-> MBR PROVIDER Name: %s", pp->lg_name);
 				HRDBG("Mediasize: %jd",

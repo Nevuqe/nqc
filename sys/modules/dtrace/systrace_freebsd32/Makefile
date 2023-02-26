@@ -4,7 +4,7 @@ SYSDIR?=	${SRCTOP}/sys
 
 .PATH:		${SYSDIR}/cddl/dev/systrace
 
-KMOD=		systrace_freebsd32
+KMOD=		systrace_nqc32
 SRCS=		systrace.c
 SRCS+=		vnode_if.h
 

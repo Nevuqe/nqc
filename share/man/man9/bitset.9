@@ -164,7 +164,7 @@
 .Fo BIT_COPY_STORE_REL
 .Fa "const SETSIZE" "struct STRUCTNAME *from" "struct STRUCTNAME *to"
 .Fc
-.Fd #define _WANT_FREEBSD_BITSET
+.Fd #define _WANT_NQC_BITSET
 .Sh DESCRIPTION
 The
 .Nm
@@ -187,7 +187,7 @@ or
 .In sys/bitset.h
 are included in a program.
 Userland programs must define 
-.Dv _WANT_FREEBSD_BITSET
+.Dv _WANT_NQC_BITSET
 before including these files to make the macros visible.
 .Pp
 The
@@ -611,7 +611,7 @@ In order to use the macros defined in
 and
 .In sys/_bitset.h
 in userland programs,
-.Dv _WANT_FREEBSD_BITSET
+.Dv _WANT_NQC_BITSET
 has to be defined before including the header files.
 This requirements exists to prevent a name space pollution due to macros defined in
 .Nm

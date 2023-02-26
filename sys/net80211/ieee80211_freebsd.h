@@ -26,8 +26,8 @@
  *
  * $NQC$
  */
-#ifndef _NET80211_IEEE80211_FREEBSD_H_
-#define _NET80211_IEEE80211_FREEBSD_H_
+#ifndef _NET80211_IEEE80211_NQC_H_
+#define _NET80211_IEEE80211_NQC_H_
 
 #ifdef _KERNEL
 #include <sys/param.h>
@@ -719,4 +719,4 @@ struct ieee80211_channel_survey {
 
 /* XXX TODO: the type fields */
 
-#endif /* _NET80211_IEEE80211_FREEBSD_H_ */
+#endif /* _NET80211_IEEE80211_NQC_H_ */

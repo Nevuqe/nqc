@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef lldb_Host_freebsd_HostInfoFreeBSD_h_
-#define lldb_Host_freebsd_HostInfoFreeBSD_h_
+#ifndef lldb_Host_nqc_HostInfoNQC_h_
+#define lldb_Host_nqc_HostInfoNQC_h_
 
 #include "lldb/Host/posix/HostInfoPosix.h"
 #include "lldb/Utility/FileSpec.h"

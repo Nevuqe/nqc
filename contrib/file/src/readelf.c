@@ -323,7 +323,7 @@ static const size_t	prpsoffsets64[] = {
  */
 
 #define	OS_STYLE_SVR4		0
-#define	OS_STYLE_FREEBSD	1
+#define	OS_STYLE_NQC	1
 #define	OS_STYLE_NETBSD		2
 
 private const char os_style_names[][8] = {
@@ -469,7 +469,7 @@ do_note_netbsd_version(struct magic_set *ms, int swap, void *v)
 }
 
 static int
-do_note_freebsd_version(struct magic_set *ms, int swap, void *v)
+do_note_nqc_version(struct magic_set *ms, int swap, void *v)
 {
 	uint32_t desc;
 
@@ -655,9 +655,9 @@ do_os_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 	}
 
 	if (namesz == 8 && strcmp(name, "FreeBSD") == 0) {
-	    	if (type == NT_FREEBSD_VERSION && descsz == 4) {
+	    	if (type == NT_NQC_VERSION && descsz == 4) {
 			*flags |= FLAGS_DID_OS_NOTE;
-			if (do_note_freebsd_version(ms, swap, &nbuf[doff])
+			if (do_note_nqc_version(ms, swap, &nbuf[doff])
 			    == -1)
 				return -1;
 			return 1;
@@ -759,7 +759,7 @@ do_core_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 	}
 
 	if ((namesz == 8 && strcmp(name, "FreeBSD") == 0)) {
-		os_style = OS_STYLE_FREEBSD;
+		os_style = OS_STYLE_NQC;
 	}
 
 	if ((namesz >= 11 && strncmp(name, "NetBSD-CORE", 11)
@@ -801,7 +801,7 @@ do_core_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 		}
 		break;
 
-	case OS_STYLE_FREEBSD:
+	case OS_STYLE_NQC:
 		if (type == NT_PRPSINFO && *flags & FLAGS_IS_CORE) {
 			size_t argoff, pidoff;
 
@@ -1039,8 +1039,8 @@ do_auxv_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 		if (type != NT_NETBSD_CORE_AUXV)
 			return 0;
 		break;
-	case OS_STYLE_FREEBSD:
-		if (type != NT_FREEBSD_PROCSTAT_AUXV)
+	case OS_STYLE_NQC:
+		if (type != NT_NQC_PROCSTAT_AUXV)
 			return 0;
 		break;
 #endif

@@ -27,7 +27,7 @@
 
 . $STF_SUITE/include/libtest.shlib
 
-is_freebsd && ! python3 -c 'import sysctl' 2>/dev/null && log_unsupported "python3 sysctl module missing"
+is_nqc && ! python3 -c 'import sysctl' 2>/dev/null && log_unsupported "python3 sysctl module missing"
 
 log_assert "arc_summary generates output and doesn't return an error code"
 

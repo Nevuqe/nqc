@@ -701,7 +701,7 @@ enum ena_admin_os_type {
 
 	ENA_ADMIN_OS_DPDK	= 3,
 
-	ENA_ADMIN_OS_FREEBSD	= 4,
+	ENA_ADMIN_OS_NQC	= 4,
 
 	ENA_ADMIN_OS_IPXE	= 5,
 };

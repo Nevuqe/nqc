@@ -33,8 +33,8 @@
  */
 
 /* Organizationally Unique Identifier assigned by IEEE 14 Nov 2013 */
-#define OUI_FREEBSD_BASE 0x589cfc000000
-#define OUI_FREEBSD(nic) (OUI_FREEBSD_BASE | (nic))
+#define OUI_NQC_BASE 0x589cfc000000
+#define OUI_NQC(nic) (OUI_NQC_BASE | (nic))
 
 /* 
  * OUIs are most often used to uniquely identify network interfaces
@@ -64,8 +64,8 @@
  */
 
 /* Allocate 20 bits to bhyve */
-#define OUI_FREEBSD_BHYVE_LOW	OUI_FREEBSD(0x000001)
-#define OUI_FREEBSD_BHYVE_HIGH	OUI_FREEBSD(0x0fffff)
+#define OUI_NQC_BHYVE_LOW	OUI_NQC(0x000001)
+#define OUI_NQC_BHYVE_HIGH	OUI_NQC(0x0fffff)
 
 /*
  * Allocate 16 bits for a pool to give to various interfaces that need a
@@ -74,11 +74,11 @@
  *
  * ether_gen_addr should be used to generate an address from this pool.
  */
-#define	OUI_FREEBSD_GENERATED_MASK	0x10ffff
-#define	OUI_FREEBSD_GENERATED_LOW	OUI_FREEBSD(0x100000)
-#define	OUI_FREEBSD_GENERATED_HIGH	OUI_FREEBSD(OUI_FREEBSD_GENERATED_MASK)
+#define	OUI_NQC_GENERATED_MASK	0x10ffff
+#define	OUI_NQC_GENERATED_LOW	OUI_NQC(0x100000)
+#define	OUI_NQC_GENERATED_HIGH	OUI_NQC(OUI_NQC_GENERATED_MASK)
 
 /* Allocate 16 bits for emulated NVMe devices */
-#define OUI_FREEBSD_NVME_MASK		0x20ffff
-#define OUI_FREEBSD_NVME_LOW		OUI_FREEBSD(0x200000)
-#define OUI_FREEBSD_NVME_HIGH		OUI_FREEBSD(OUI_FREEBSD_NVME_MASK)
+#define OUI_NQC_NVME_MASK		0x20ffff
+#define OUI_NQC_NVME_LOW		OUI_NQC(0x200000)
+#define OUI_NQC_NVME_HIGH		OUI_NQC(OUI_NQC_NVME_MASK)

@@ -65,7 +65,7 @@ set -A args  "" "create" "create -s" "create -V" "create -s -V" \
     "share" "unshare" "send" "send -i" "receive" "receive -d" "receive -vnF" \
     "recv" "recv -d" "recv -vnF" "allow" "unallow" \
     "blah blah" "-%" "--" "--?" "-*" "-="
-if is_freebsd; then
+if is_nqc; then
 	args+=("set jailed=")
 else
 	args+=("set zoned=")

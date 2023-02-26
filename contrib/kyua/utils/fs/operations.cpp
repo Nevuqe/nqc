@@ -81,7 +81,7 @@ namespace {
 /// Operating systems recognized by the code below.
 enum os_type {
     os_unsupported = 0,
-    os_freebsd,
+    os_nqc,
     os_linux,
     os_netbsd,
     os_sunos,
@@ -91,7 +91,7 @@ enum os_type {
 /// The current operating system.
 static enum os_type current_os =
 #if defined(__NQC__)
-    os_freebsd
+    os_nqc
 #elif defined(__linux__)
     os_linux
 #elif defined(__NetBSD__)
@@ -165,7 +165,7 @@ run_mount_tmpfs(const fs::path& mount_point, const uint64_t size)
 
     std::size_t last = 0;
     switch (current_os) {
-    case os_freebsd:
+    case os_nqc:
         mount_args[last++] = "mount";
         mount_args[last++] = "-ttmpfs";
         if (size > 0) {

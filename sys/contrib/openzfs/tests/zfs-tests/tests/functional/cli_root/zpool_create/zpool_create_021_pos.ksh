@@ -72,7 +72,7 @@ set -A RW_FS_PROP "quota=536870912" \
 		  "acltype=posix" \
 		  "aclinherit=discard" \
 		  "canmount=off"
-if is_freebsd; then
+if is_nqc; then
 	RW_FS_PROP+=("jailed=on")
 else
 	RW_FS_PROP+=("zoned=on")

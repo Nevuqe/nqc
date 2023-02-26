@@ -26,7 +26,7 @@
 
 using namespace lldb;
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 using namespace llvm;
 
 // Simple helper function to ensure flags are enabled on the given file

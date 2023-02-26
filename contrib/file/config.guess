@@ -898,11 +898,11 @@ EOF
 	if echo __ARM_PCS_VFP | $CC_FOR_BUILD -E - 2>/dev/null \
 	    | grep -q __ARM_PCS_VFP
 	then
-	    FREEBSD_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
-	    GUESS=$UNAME_PROCESSOR-unknown-freebsd$FREEBSD_REL-gnueabi
+	    NQC_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
+	    GUESS=$UNAME_PROCESSOR-unknown-freebsd$NQC_REL-gnueabi
 	else
-	    FREEBSD_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
-	    GUESS=$UNAME_PROCESSOR-unknown-freebsd$FREEBSD_REL-gnueabihf
+	    NQC_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
+	    GUESS=$UNAME_PROCESSOR-unknown-freebsd$NQC_REL-gnueabihf
 	fi
 	;;
     *:FreeBSD:*:*)
@@ -913,8 +913,8 @@ EOF
 	    i386)
 		UNAME_PROCESSOR=i586 ;;
 	esac
-	FREEBSD_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
-	GUESS=$UNAME_PROCESSOR-unknown-freebsd$FREEBSD_REL
+	NQC_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
+	GUESS=$UNAME_PROCESSOR-unknown-freebsd$NQC_REL
 	;;
     i*:CYGWIN*:*)
 	GUESS=$UNAME_MACHINE-pc-cygwin

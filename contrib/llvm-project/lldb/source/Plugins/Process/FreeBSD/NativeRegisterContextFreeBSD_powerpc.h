@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_powerpc.h ------------------*- C++ -*-===//
+//===-- NativeRegisterContextNQC_powerpc.h ------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,8 +8,8 @@
 
 #if defined(__powerpc__)
 
-#ifndef lldb_NativeRegisterContextFreeBSD_powerpc_h
-#define lldb_NativeRegisterContextFreeBSD_powerpc_h
+#ifndef lldb_NativeRegisterContextNQC_powerpc_h
+#define lldb_NativeRegisterContextNQC_powerpc_h
 
 // clang-format off
 #include <sys/types.h>
@@ -17,19 +17,19 @@
 // clang-format on
 
 #include "Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.h"
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_powerpc.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_powerpc.h"
 
 #include <array>
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
-class NativeRegisterContextFreeBSD_powerpc
+class NativeRegisterContextNQC_powerpc
     : public NativeRegisterContextFreeBSD {
 public:
-  NativeRegisterContextFreeBSD_powerpc(const ArchSpec &target_arch,
+  NativeRegisterContextNQC_powerpc(const ArchSpec &target_arch,
                                        NativeThreadProtocol &native_thread);
 
   uint32_t GetRegisterSetCount() const override;
@@ -63,12 +63,12 @@ private:
   Status ReadRegisterSet(RegSetKind set);
   Status WriteRegisterSet(RegSetKind set);
 
-  RegisterContextFreeBSD_powerpc &GetRegisterInfo() const;
+  RegisterContextNQC_powerpc &GetRegisterInfo() const;
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef lldb_NativeRegisterContextFreeBSD_powerpc_h
+#endif // #ifndef lldb_NativeRegisterContextNQC_powerpc_h
 
 #endif // defined (__powerpc__)

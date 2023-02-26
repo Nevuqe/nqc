@@ -61,7 +61,7 @@ MALLOC_DECLARE(M_USBDEV);
 
 #ifndef USB_GLOBAL_INCLUDE_FILE
 #include <dev/usb/usb_endian.h>
-#include <dev/usb/usb_freebsd.h>
+#include <dev/usb/usb_nqc.h>
 #endif
 
 #define	USB_STACK_VERSION 2000		/* 2.0 */

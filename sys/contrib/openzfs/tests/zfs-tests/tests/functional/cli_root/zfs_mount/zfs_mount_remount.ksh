@@ -53,7 +53,7 @@ function cleanup
 	return 0
 }
 
-if is_freebsd; then
+if is_nqc; then
 	typeset RO="-t zfs -ur"
 	typeset RW="-t zfs -uw"
 else
@@ -86,7 +86,7 @@ function checkmount # dataset option
 	typeset option="$2"
 	typeset options=""
 
-	if is_freebsd; then
+	if is_nqc; then
 		options=$(mount -p | awk -v ds="$dataset" '$1 == ds { print $4 }')
 	else
 		options=$(awk -v ds="$dataset" '$1 == ds { print $4 }' /proc/mounts)

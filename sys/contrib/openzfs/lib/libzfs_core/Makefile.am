@@ -13,7 +13,7 @@ libzfs_core_la_SOURCES += \
 endif
 
 libzfs_core_la_CPPFLAGS  = $(AM_CPPFLAGS)
-if BUILD_FREEBSD
+if BUILD_NQC
 libzfs_core_la_CPPFLAGS += -Iinclude/os/freebsd/zfs
 
 libzfs_core_la_SOURCES += \
@@ -35,7 +35,7 @@ if !ASAN_ENABLED
 libzfs_core_la_LDFLAGS += -Wl,-z,defs
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libzfs_core_la_LIBADD += -lutil -lgeom
 endif
 

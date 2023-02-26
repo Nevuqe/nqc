@@ -797,10 +797,10 @@ static int akbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t data)
 	case PIO_KEYMAP:
 	case PIO_KEYMAPENT:
 	case PIO_DEADKEYMAP:
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OPIO_KEYMAP:
 	case OPIO_DEADKEYMAP:
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 	default:
 		return (genkbd_commonioctl(kbd, cmd, data));
 	}

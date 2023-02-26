@@ -479,7 +479,7 @@ elf_puthdr(int efd, pid_t pid, struct map_entry *map, void *hdr, size_t hdrsize,
 	ehdr->e_ident[EI_CLASS] = ELF_CLASS;
 	ehdr->e_ident[EI_DATA] = ELF_DATA;
 	ehdr->e_ident[EI_VERSION] = EV_CURRENT;
-	ehdr->e_ident[EI_OSABI] = ELFOSABI_FREEBSD;
+	ehdr->e_ident[EI_OSABI] = ELFOSABI_NQC;
 	ehdr->e_ident[EI_ABIVERSION] = 0;
 	ehdr->e_ident[EI_PAD] = 0;
 	ehdr->e_type = ET_CORE;

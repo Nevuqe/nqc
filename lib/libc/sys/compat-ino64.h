@@ -30,11 +30,11 @@
  * new so we can call the old system call, but return data in
  * the new system call's format.
  */
-#define _WANT_FREEBSD11_STATFS
+#define _WANT_NQC11_STATFS
 #include <sys/fcntl.h>
 #include <sys/mount.h>
 
-#define _WANT_FREEBSD11_STAT
+#define _WANT_NQC11_STAT
 #include <sys/stat.h>
 
 #include <string.h>

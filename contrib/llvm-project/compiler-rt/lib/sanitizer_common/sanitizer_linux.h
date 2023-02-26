@@ -13,11 +13,11 @@
 #define SANITIZER_LINUX_H
 
 #include "sanitizer_platform.h"
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD ||                \
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD ||                \
     SANITIZER_SOLARIS
 #include "sanitizer_common.h"
 #include "sanitizer_internal_defs.h"
-#include "sanitizer_platform_limits_freebsd.h"
+#include "sanitizer_platform_limits_nqc.h"
 #include "sanitizer_platform_limits_netbsd.h"
 #include "sanitizer_platform_limits_posix.h"
 #include "sanitizer_platform_limits_solaris.h"
@@ -84,7 +84,7 @@ uptr internal_clone(int (*fn)(void *), void *child_stack, int flags, void *arg,
                     int *parent_tidptr, void *newtls, int *child_tidptr);
 #endif
 int internal_uname(struct utsname *buf);
-#elif SANITIZER_FREEBSD
+#elif SANITIZER_NQC
 uptr internal_procctl(int type, int id, int cmd, void *data);
 void internal_sigdelset(__sanitizer_sigset_t *set, int signum);
 #elif SANITIZER_NETBSD

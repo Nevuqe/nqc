@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_arm64.h --------------------*- C++ -*-===//
+//===-- NativeRegisterContextNQC_arm64.h --------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,8 +8,8 @@
 
 #if defined(__aarch64__)
 
-#ifndef lldb_NativeRegisterContextFreeBSD_arm64_h
-#define lldb_NativeRegisterContextFreeBSD_arm64_h
+#ifndef lldb_NativeRegisterContextNQC_arm64_h
+#define lldb_NativeRegisterContextNQC_arm64_h
 
 // clang-format off
 #include <sys/types.h>
@@ -24,19 +24,19 @@
 #include <array>
 
 #if __NQC_version >= 1300139
-#  define LLDB_HAS_FREEBSD_WATCHPOINT 1
+#  define LLDB_HAS_NQC_WATCHPOINT 1
 #endif
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
-class NativeRegisterContextFreeBSD_arm64
+class NativeRegisterContextNQC_arm64
     : public NativeRegisterContextFreeBSD,
       public NativeRegisterContextDBReg_arm64 {
 public:
-  NativeRegisterContextFreeBSD_arm64(const ArchSpec &target_arch,
+  NativeRegisterContextNQC_arm64(const ArchSpec &target_arch,
                                      NativeThreadProtocol &native_thread);
 
   uint32_t GetRegisterSetCount() const override;
@@ -64,7 +64,7 @@ private:
   // and sizes, so we do not have to worry about these (and we have
   // a unittest to assert that).
   std::array<uint8_t, sizeof(reg) + sizeof(fpreg)> m_reg_data;
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+#ifdef LLDB_HAS_NQC_WATCHPOINT
   dbreg m_dbreg;
   bool m_read_dbreg;
 #endif
@@ -78,9 +78,9 @@ private:
   RegisterInfoPOSIX_arm64 &GetRegisterInfo() const;
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef lldb_NativeRegisterContextFreeBSD_arm64_h
+#endif // #ifndef lldb_NativeRegisterContextNQC_arm64_h
 
 #endif // defined (__aarch64__)

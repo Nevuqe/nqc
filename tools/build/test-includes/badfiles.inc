@@ -190,7 +190,7 @@ BADHDRS= \
 	net80211/ieee80211_amrr.h \
 	net80211/ieee80211_crypto.h \
 	net80211/ieee80211_dfs.h \
-	net80211/ieee80211_freebsd.h \
+	net80211/ieee80211_nqc.h \
 	net80211/ieee80211_hostap.h \
 	net80211/ieee80211_ht.h \
 	net80211/ieee80211_input.h \

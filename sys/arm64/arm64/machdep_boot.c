@@ -183,7 +183,7 @@ linux_parse_boot_param(struct arm64_bootparams *abp)
 #endif
 
 static vm_offset_t
-freebsd_parse_boot_param(struct arm64_bootparams *abp)
+nqc_parse_boot_param(struct arm64_bootparams *abp)
 {
 	vm_offset_t lastaddr = 0;
 	void *kmdp;
@@ -222,7 +222,7 @@ parse_boot_param(struct arm64_bootparams *abp)
 	if (lastaddr != 0)
 		return (lastaddr);
 #endif
-	lastaddr = freebsd_parse_boot_param(abp);
+	lastaddr = nqc_parse_boot_param(abp);
 	if (lastaddr != 0)
 		return (lastaddr);
 

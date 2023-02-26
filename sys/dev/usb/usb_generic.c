@@ -29,7 +29,7 @@
 #ifdef USB_GLOBAL_INCLUDE_FILE
 #include USB_GLOBAL_INCLUDE_FILE
 #else
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/abi_compat.h>
 #endif
 #include <sys/stdint.h>
@@ -112,7 +112,7 @@ static int	ugen_set_interface(struct usb_fifo *, uint8_t, uint8_t);
 static int	ugen_get_cdesc(struct usb_fifo *, struct usb_gen_descriptor *);
 static int	ugen_get_sdesc(struct usb_fifo *, struct usb_gen_descriptor *);
 static int	ugen_get_iface_driver(struct usb_fifo *f, struct usb_gen_descriptor *ugd);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static int	ugen_get32(u_long cmd, struct usb_fifo *f, struct usb_gen_descriptor32 *ugd32);
 #endif
 static int	ugen_re_enumerate(struct usb_fifo *);
@@ -902,7 +902,7 @@ ugen_do_request(struct usb_fifo *f, struct usb_ctl_request *ur)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static int
 ugen_do_request32(struct usb_fifo *f, struct usb_ctl_request32 *ur32)
 {
@@ -1025,11 +1025,11 @@ ugen_fs_getbuffer(void **uptrp, struct usb_fifo *f, void *buffer,
 {
 	union {
 		void **ppBuffer;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		uint32_t *ppBuffer32;
 #endif
 	} u;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	uint32_t uptr32;
 #endif
 
@@ -1039,7 +1039,7 @@ ugen_fs_getbuffer(void **uptrp, struct usb_fifo *f, void *buffer,
 		if (fueword(u.ppBuffer + n, (long *)uptrp) != 0)
 			return (EFAULT);
 		return (0);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case sizeof(struct usb_fs_endpoint32):
 		if (fueword32(u.ppBuffer32 + n, &uptr32) != 0)
 			return (EFAULT);
@@ -1228,7 +1228,7 @@ static int
 ugen_fs_copyin(struct usb_fifo *f, uint8_t ep_index,
     struct usb_fs_endpoint* fs_ep)
 {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct usb_fs_endpoint32 fs_ep32;
 #endif
 	int error;
@@ -1241,7 +1241,7 @@ ugen_fs_copyin(struct usb_fifo *f, uint8_t ep_index,
 			return (error);
 		break;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case sizeof(struct usb_fs_endpoint32):
 		error = copyin(ugen_fs_ep_uptr(f, ep_index), &fs_ep32,
 		    f->fs_ep_sz);
@@ -1270,7 +1270,7 @@ ugen_fs_update(const struct usb_fs_endpoint *fs_ep,
 {
 	union {
 		struct usb_fs_endpoint *fs_ep_uptr;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		struct usb_fs_endpoint32 *fs_ep_uptr32;
 #endif
 	} u;
@@ -1285,7 +1285,7 @@ ugen_fs_update(const struct usb_fs_endpoint *fs_ep,
 		isoc_time_complete_uptr = &u.fs_ep_uptr->isoc_time_complete;
 		status_uptr = &u.fs_ep_uptr->status;
 		break;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case sizeof(struct usb_fs_endpoint32):
 		u.fs_ep_uptr32 = (struct usb_fs_endpoint32 *)
 		    ugen_fs_ep_uptr(f, ep_index);
@@ -2161,7 +2161,7 @@ ugen_iface_ioctl(struct usb_fifo *f, u_long cmd, void *addr, int fflags)
 static int
 ugen_ioctl_post(struct usb_fifo *f, u_long cmd, void *addr, int fflags)
 {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct usb_fs_init local_pinit;
 #endif
 	union {
@@ -2171,7 +2171,7 @@ ugen_ioctl_post(struct usb_fifo *f, u_long cmd, void *addr, int fflags)
 		struct usb_config_descriptor *cdesc;
 		struct usb_device_stats *stat;
 		struct usb_fs_init *pinit;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		struct usb_fs_init32 *pinit32;
 #endif
 		struct usb_fs_uninit *puninit;
@@ -2191,7 +2191,7 @@ ugen_ioctl_post(struct usb_fifo *f, u_long cmd, void *addr, int fflags)
 
 	DPRINTFN(6, "cmd=0x%08lx\n", cmd);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	switch (cmd) {
 	case USB_FS_INIT32:
 		PTRIN_CP(*u.pinit32, local_pinit, pEndpoints);
@@ -2277,7 +2277,7 @@ ugen_ioctl_post(struct usb_fifo *f, u_long cmd, void *addr, int fflags)
 		error = ugen_get_iface_driver(f, addr);
 		break;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case USB_GET_FULL_DESC32:
 	case USB_GET_STRING_DESC32:
 	case USB_GET_IFACE_DRIVER32:
@@ -2294,7 +2294,7 @@ ugen_ioctl_post(struct usb_fifo *f, u_long cmd, void *addr, int fflags)
 		error = ugen_do_request(f, addr);
 		break;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case USB_REQUEST32:
 	case USB_DO_REQUEST32:
 		if (!(fflags & FWRITE)) {
@@ -2469,7 +2469,7 @@ ugen_ctrl_fs_callback(struct usb_xfer *xfer, usb_error_t error)
 	}
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 void
 usb_gen_descriptor_from32(struct usb_gen_descriptor *ugd,
     const struct usb_gen_descriptor32 *ugd32)
@@ -2534,6 +2534,6 @@ ugen_get32(u_long cmd, struct usb_fifo *f, struct usb_gen_descriptor32 *ugd32)
 	return (error);
 }
 
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 #endif	/* USB_HAVE_UGEN */

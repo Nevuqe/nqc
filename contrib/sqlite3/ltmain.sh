@@ -4898,7 +4898,7 @@ lt_${my_prefix}_LTX_preloaded_symbols[] =
 };
 
 /* This works around a problem in FreeBSD linker */
-#ifdef FREEBSD_WORKAROUND
+#ifdef NQC_WORKAROUND
 static const void *lt_preloaded_setup() {
   return lt_${my_prefix}_LTX_preloaded_symbols;
 }
@@ -4921,7 +4921,7 @@ static const void *lt_preloaded_setup() {
 	  # pic_flag when linking with -static.  The problem exists in
 	  # FreeBSD 2.2.6 and is fixed in FreeBSD 3.1.
 	  *-*-freebsd2.*|*-*-freebsd3.0*|*-*-freebsdelf3.0*)
-	    pic_flag_for_symtable=" $pic_flag -DFREEBSD_WORKAROUND" ;;
+	    pic_flag_for_symtable=" $pic_flag -DNQC_WORKAROUND" ;;
 	  *-*-hpux*)
 	    pic_flag_for_symtable=" $pic_flag"  ;;
 	  *)

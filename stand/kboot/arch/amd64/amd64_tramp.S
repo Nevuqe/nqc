@@ -34,7 +34,7 @@
  */
 
 /*
- * Keep in sync with elf64_freebsd.c. Kexec starts tramp w/o any parameters, so
+ * Keep in sync with elf64_nqc.c. Kexec starts tramp w/o any parameters, so
  * store them here. This is constructed to be a useful stack:
  *
  * struct trampoline_data {

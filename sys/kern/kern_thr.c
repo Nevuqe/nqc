@@ -75,7 +75,7 @@ static int max_threads_hits;
 SYSCTL_INT(_kern_threads, OID_AUTO, max_threads_hits, CTLFLAG_RD,
     &max_threads_hits, 0, "kern.threads.max_threads_per_proc hit count");
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 static inline int
 suword_lwpid(void *addr, lwpid_t lwpid)

@@ -18,7 +18,7 @@ AC_CHECK_HEADERS([ \
     sys/mkdev.h \
 ])
 
-#HAS_FREEBSD_ACL
+#HAS_NQC_ACL
 
 AC_CHECK_FUNC([bindat],
 	      [AC_DEFINE([HAVE_BINDAT], [1], [Define if bindat exists])])

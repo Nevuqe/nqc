@@ -115,7 +115,7 @@ function setup_snap_env
 
 			if datasetnonexists $snap; then
 				log_must cp /etc/passwd $fname
-				if is_linux || is_freebsd; then
+				if is_linux || is_nqc; then
 					sync_all_pools
 					log_must sync
 				else
@@ -127,7 +127,7 @@ function setup_snap_env
 						log_must lockfs -f $TESTDIR1
 					fi
 				fi
-				if is_freebsd && [[ $dtst == $VOL ]]; then
+				if is_nqc && [[ $dtst == $VOL ]]; then
 					# Though sync does start a fs sync on
 					# FreeBSD, it does not wait for it to
 					# finish.  We can force a blocking sync
@@ -138,7 +138,7 @@ function setup_snap_env
 					    $ZVOL_DEVDIR/$VOL $TESTDIR1
 				fi
 				log_must zfs snapshot $snap
-				if is_freebsd && [[ $dtst == $VOL ]]; then
+				if is_nqc && [[ $dtst == $VOL ]]; then
 					log_must mount -uw \
 					    $ZVOL_DEVDIR/$VOL $TESTDIR1
 				fi

@@ -150,7 +150,7 @@ int vsnprintf(char *buf, size_t size, const char *fmt, va_list args);
  */
 int vsprintf(char *buf, const char *fmt, va_list args);
 
-#elif defined(NCSW_FREEBSD)
+#elif defined(NCSW_NQC)
 #include <sys/param.h>
 #include <sys/kernel.h>
 #include <sys/libkern.h>

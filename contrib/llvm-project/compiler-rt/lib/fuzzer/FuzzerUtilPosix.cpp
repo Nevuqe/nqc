@@ -150,7 +150,7 @@ size_t GetPeakRSSMb() {
   struct rusage usage;
   if (getrusage(RUSAGE_SELF, &usage))
     return 0;
-  if (LIBFUZZER_LINUX || LIBFUZZER_FREEBSD || LIBFUZZER_NETBSD ||
+  if (LIBFUZZER_LINUX || LIBFUZZER_NQC || LIBFUZZER_NETBSD ||
       LIBFUZZER_EMSCRIPTEN) {
     // ru_maxrss is in KiB
     return usage.ru_maxrss >> 10;

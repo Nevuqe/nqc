@@ -103,7 +103,7 @@ __NQCID("$NQC");
 
 static int setup_mac_metadata(struct archive_read_disk *,
     struct archive_entry *, int *fd);
-#ifdef ARCHIVE_XATTR_FREEBSD
+#ifdef ARCHIVE_XATTR_NQC
 static int setup_xattrs_namespace(struct archive_read_disk *,
     struct archive_entry *, int *, int);
 #endif
@@ -644,7 +644,7 @@ setup_xattrs(struct archive_read_disk *a,
 	return (ARCHIVE_OK);
 }
 
-#elif ARCHIVE_XATTR_FREEBSD
+#elif ARCHIVE_XATTR_NQC
 
 /*
  * FreeBSD extattr interface.

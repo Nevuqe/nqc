@@ -29,8 +29,8 @@
  * $NQC$
  */
 
-#ifndef _ZFS_FREEBSD_CRYPTO_H
-#define	_ZFS_FREEBSD_CRYPTO_H
+#ifndef _ZFS_NQC_CRYPTO_H
+#define	_ZFS_NQC_CRYPTO_H
 
 #include <sys/errno.h>
 #include <sys/mutex.h>
@@ -47,11 +47,11 @@
 
 struct zio_crypt_info;
 
-typedef struct freebsd_crypt_session {
+typedef struct nqc_crypt_session {
 	struct mtx		fs_lock;
 	crypto_session_t	fs_sid;
 	boolean_t	fs_done;
-} freebsd_crypt_session_t;
+} nqc_crypt_session_t;
 
 /*
  * Unused types to minimize code differences.
@@ -84,12 +84,12 @@ void crypto_mac_update(struct hmac_ctx *ctx, const void *data,
 void crypto_mac_final(struct hmac_ctx *ctx, void *out_data,
 	size_t out_data_size);
 
-int freebsd_crypt_newsession(freebsd_crypt_session_t *sessp,
+int nqc_crypt_newsession(nqc_crypt_session_t *sessp,
     const struct zio_crypt_info *, crypto_key_t *);
-void freebsd_crypt_freesession(freebsd_crypt_session_t *sessp);
+void nqc_crypt_freesession(nqc_crypt_session_t *sessp);
 
-int freebsd_crypt_uio(boolean_t, freebsd_crypt_session_t *,
+int nqc_crypt_uio(boolean_t, nqc_crypt_session_t *,
 	const struct zio_crypt_info *, zfs_uio_t *, crypto_key_t *, uint8_t *,
 	size_t, size_t);
 
-#endif /* _ZFS_FREEBSD_CRYPTO_H */
+#endif /* _ZFS_NQC_CRYPTO_H */

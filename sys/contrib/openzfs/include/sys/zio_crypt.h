@@ -23,7 +23,7 @@
 #include <sys/dmu.h>
 #include <sys/zfs_refcount.h>
 #if defined(__NQC__) && defined(_KERNEL)
-#include <sys/freebsd_crypto.h>
+#include <sys/nqc_crypto.h>
 #else
 #include <sys/crypto/api.h>
 #endif /* __NQC__ */
@@ -103,7 +103,7 @@ typedef struct zio_crypt_key {
 
 #if defined(__NQC__) && defined(_KERNEL)
 	/* Session for current encryption key.  Must always be set */
-	freebsd_crypt_session_t	zk_session;
+	nqc_crypt_session_t	zk_session;
 #else
 	/* template of current encryption key for illumos crypto api */
 	crypto_ctx_template_t zk_current_tmpl;

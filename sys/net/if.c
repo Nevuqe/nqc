@@ -119,7 +119,7 @@ _Static_assert(sizeof(((struct ifreq *)0)->ifr_name) ==
     offsetof(struct ifreq, ifr_ifru), "gap between ifr_name and ifr_ifru");
 
 __read_mostly epoch_t net_epoch_preempt;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <compat/freebsd32/freebsd32.h>
 
@@ -200,11 +200,11 @@ struct ifmediareq32 {
 };
 #define	SIOCGIFMEDIA32	_IOC_NEWTYPE(SIOCGIFMEDIA, struct ifmediareq32)
 #define	SIOCGIFXMEDIA32	_IOC_NEWTYPE(SIOCGIFXMEDIA, struct ifmediareq32)
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 union ifreq_union {
 	struct ifreq	ifr;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct ifreq32	ifr32;
 #endif
 };
@@ -2322,7 +2322,7 @@ ifr_buffer_get_buffer(void *data)
 	union ifreq_union *ifrup;
 
 	ifrup = data;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		return ((void *)(uintptr_t)
 		    ifrup->ifr32.ifr_ifru.ifru_buffer.buffer);
@@ -2336,7 +2336,7 @@ ifr_buffer_set_buffer_null(void *data)
 	union ifreq_union *ifrup;
 
 	ifrup = data;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		ifrup->ifr32.ifr_ifru.ifru_buffer.buffer = 0;
 	else
@@ -2350,7 +2350,7 @@ ifr_buffer_get_length(void *data)
 	union ifreq_union *ifrup;
 
 	ifrup = data;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		return (ifrup->ifr32.ifr_ifru.ifru_buffer.length);
 #endif
@@ -2363,7 +2363,7 @@ ifr_buffer_set_length(void *data, size_t len)
 	union ifreq_union *ifrup;
 
 	ifrup = data;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		ifrup->ifr32.ifr_ifru.ifru_buffer.length = len;
 	else
@@ -2377,7 +2377,7 @@ ifr_data_get_ptr(void *ifrp)
 	union ifreq_union *ifrup;
 
 	ifrup = ifrp;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		return ((void *)(uintptr_t)
 		    ifrup->ifr32.ifr_ifru.ifru_data);
@@ -2990,7 +2990,7 @@ ifhwioctl(u_long cmd, struct ifnet *ifp, caddr_t data, struct thread *td)
 int
 ifioctl(struct socket *so, u_long cmd, caddr_t data, struct thread *td)
 {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	union {
 		struct ifconf ifc;
 		struct ifdrv ifd;
@@ -3021,7 +3021,7 @@ ifioctl(struct socket *so, u_long cmd, caddr_t data, struct thread *td)
 	}
 #endif
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	saved_cmd = cmd;
 	switch (cmd) {
 	case SIOCGIFCONF32:
@@ -3176,7 +3176,7 @@ out_ref:
 	if_rele(ifp);
 out_noref:
 	CURVNET_RESTORE();
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (error != 0)
 		return (error);
 	switch (saved_cmd) {

@@ -526,7 +526,7 @@ OSAL_CRC8(u8 * cdu_crc8_table, u8 * data_to_crc, int data_to_crc_len, u8 init_va
 		qlnx_osal_iov_vf_cleanup(p_hwfn, relative_vf_id)
 
 #define OSAL_IOV_VF_ACQUIRE(p_hwfn, relative_vf_id) ECORE_SUCCESS
-#define OSAL_IOV_GET_OS_TYPE()	VFPF_ACQUIRE_OS_FREEBSD
+#define OSAL_IOV_GET_OS_TYPE()	VFPF_ACQUIRE_OS_NQC
 #define OSAL_IOV_PRE_START_VPORT(p_hwfn, relative_vf_id, params) ECORE_SUCCESS
 #define OSAL_IOV_POST_START_VPORT(p_hwfn, relative_vf_id, vport_id, opaque_fid) 
 #define OSAL_PF_VALIDATE_MODIFY_TUNN_CONFIG(p_hwfn, x, y, z) ECORE_SUCCESS

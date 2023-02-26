@@ -11,8 +11,8 @@
 #include "lldb/Target/Unwind.h"
 #include "lldb/Utility/Log.h"
 
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_i386.h"
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_x86_64.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_i386.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_x86_64.h"
 #include "Plugins/Process/Utility/RegisterInfoPOSIX_arm64.h"
 #include "ProcessFreeBSDKernel.h"
 #include "RegisterContextFreeBSDKernel_arm64.h"
@@ -64,12 +64,12 @@ ThreadFreeBSDKernel::CreateRegisterContextForFrame(StackFrame *frame) {
       break;
     case llvm::Triple::x86:
       m_thread_reg_ctx_sp = std::make_shared<RegisterContextFreeBSDKernel_i386>(
-          *this, new RegisterContextFreeBSD_i386(arch), m_pcb_addr);
+          *this, new RegisterContextNQC_i386(arch), m_pcb_addr);
       break;
     case llvm::Triple::x86_64:
       m_thread_reg_ctx_sp =
           std::make_shared<RegisterContextFreeBSDKernel_x86_64>(
-              *this, new RegisterContextFreeBSD_x86_64(arch), m_pcb_addr);
+              *this, new RegisterContextNQC_x86_64(arch), m_pcb_addr);
       break;
     default:
       assert(false && "Unsupported architecture passed to ThreadFreeBSDKernel");

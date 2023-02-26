@@ -226,7 +226,7 @@ pqisrc_passthru_ioctl(struct pqisrc_softstate *, void *, int);
 
 
 /* Functions Prototypes */
-/* FreeBSD_mem.c */
+/* NQC_mem.c */
 int os_dma_mem_alloc(pqisrc_softstate_t *,struct dma_mem *);
 void os_dma_mem_free(pqisrc_softstate_t *,struct dma_mem *);
 void *os_mem_alloc(pqisrc_softstate_t *,size_t);
@@ -243,7 +243,7 @@ int os_destroy_intr(pqisrc_softstate_t *);
 int os_get_processor_config(pqisrc_softstate_t *);
 void os_free_intr_config(pqisrc_softstate_t *);
 
-/* FreeBSD_ioctl.c */
+/* NQC_ioctl.c */
 int os_copy_to_user(struct pqisrc_softstate *, void *,
                 void *, int, int);
 int os_copy_from_user(struct pqisrc_softstate *, void *,
@@ -251,7 +251,7 @@ int os_copy_from_user(struct pqisrc_softstate *, void *,
 int create_char_dev(struct pqisrc_softstate *, int);
 void destroy_char_dev(struct pqisrc_softstate *);
  
-/* FreeBSD_misc.c*/ 
+/* NQC_misc.c*/ 
 int os_init_spinlock(struct pqisrc_softstate *, struct mtx *, char *);
 void os_uninit_spinlock(struct mtx *);
 int os_create_semaphore(const char *, int,struct sema *);
@@ -264,12 +264,12 @@ void os_complete_outstanding_cmds_nodevice(pqisrc_softstate_t *);
 void os_stop_heartbeat_timer(pqisrc_softstate_t *);
 void os_start_heartbeat_timer(void *);
 
-/* FreeBSD_cam.c */
+/* NQC_cam.c */
 uint8_t os_get_task_attr(rcb_t *);
 void smartpqi_target_rescan(struct pqisrc_softstate *);
 void os_rescan_target(struct pqisrc_softstate *, pqi_scsi_dev_t *);
 
-/* FreeBSD_intr.c FreeBSD_main.c */
+/* NQC_intr.c NQC_main.c */
 void pqisrc_event_worker(void *, int);
 void os_add_device(pqisrc_softstate_t *, pqi_scsi_dev_t *);
 void os_remove_device(pqisrc_softstate_t *, pqi_scsi_dev_t *); 

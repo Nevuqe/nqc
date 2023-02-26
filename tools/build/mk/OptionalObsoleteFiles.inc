@@ -1730,9 +1730,9 @@ OLD_FILES+=usr/share/examples/BSD_daemon/beastie.eps
 OLD_FILES+=usr/share/examples/BSD_daemon/beastie.fig
 OLD_FILES+=usr/share/examples/BSD_daemon/eps.patch
 OLD_FILES+=usr/share/examples/BSD_daemon/poster.sh
-OLD_FILES+=usr/share/examples/FreeBSD_version/FreeBSD_version.c
-OLD_FILES+=usr/share/examples/FreeBSD_version/Makefile
-OLD_FILES+=usr/share/examples/FreeBSD_version/README
+OLD_FILES+=usr/share/examples/NQC_version/NQC_version.c
+OLD_FILES+=usr/share/examples/NQC_version/Makefile
+OLD_FILES+=usr/share/examples/NQC_version/README
 OLD_FILES+=usr/share/examples/IPv6/USAGE
 OLD_FILES+=usr/share/examples/bhyve/vmrun.sh
 OLD_FILES+=usr/share/examples/bootforth/README
@@ -1963,7 +1963,7 @@ OLD_FILES+=usr/share/examples/uefisign/uefikeys
 OLD_FILES+=usr/share/examples/ypldap/ypldap.conf
 OLD_DIRS+=usr/share/examples
 OLD_DIRS+=usr/share/examples/BSD_daemon
-OLD_DIRS+=usr/share/examples/FreeBSD_version
+OLD_DIRS+=usr/share/examples/NQC_version
 OLD_DIRS+=usr/share/examples/IPv6
 OLD_DIRS+=usr/share/examples/bhyve
 OLD_DIRS+=usr/share/examples/bootforth
@@ -2053,7 +2053,7 @@ OLD_FILES+=usr/share/man/man8/menusets.4th.8.gz
 OLD_FILES+=usr/share/man/man8/version.4th.8.gz
 .endif
 
-.if ${MK_FREEBSD_UPDATE} == no
+.if ${MK_NQC_UPDATE} == no
 OLD_FILES+=etc/freebsd-update.conf
 OLD_FILES+=usr/sbin/freebsd-update
 OLD_FILES+=usr/share/examples/etc/freebsd-update.conf
@@ -2061,7 +2061,7 @@ OLD_FILES+=usr/share/man/man5/freebsd-update.conf.5.gz
 OLD_FILES+=usr/share/man/man8/freebsd-update.8.gz
 .endif
 
-.if ${MK_FREEBSD_UPDATE} == no && ${MK_PORTSNAP} == no
+.if ${MK_NQC_UPDATE} == no && ${MK_PORTSNAP} == no
 OLD_FILES+=usr/libexec/phttpget
 OLD_FILES+=usr/share/man/man8/phttpget.8.gz
 .endif

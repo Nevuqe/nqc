@@ -943,7 +943,7 @@
 /* Define to 1 if all of the C90 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
    backward compatibility; new code need not use it. */
-#define SYSTEM_FREEBSD 1
+#define SYSTEM_NQC 1
 
 /* True if ZFS is to be compiled for a Linux system */
 /* #undef SYSTEM_LINUX */
@@ -988,7 +988,7 @@
 /* #undef ZFS_IS_GPL_COMPATIBLE */
 
 /* Define the project alias string. */
-#define ZFS_META_ALIAS "zfs-2.1.99-FreeBSD_g57cfae4a2"
+#define ZFS_META_ALIAS "zfs-2.1.99-NQC_g57cfae4a2"
 
 /* Define the project author. */
 #define ZFS_META_AUTHOR "OpenZFS"
@@ -1018,7 +1018,7 @@
 #define ZFS_META_NAME "zfs"
 
 /* Define the project release. */
-#define ZFS_META_RELEASE "FreeBSD_g57cfae4a2"
+#define ZFS_META_RELEASE "NQC_g57cfae4a2"
 
 /* Define the project version. */
 #define ZFS_META_VERSION "2.1.99"

@@ -77,7 +77,7 @@ function block_device_wait
 		typeset elapsed=$((SECONDS - start))
 		[[ $elapsed > 60 ]] && \
 		    log_note udevadm settle time too long: $elapsed
-	elif is_freebsd; then
+	elif is_nqc; then
 		if [[ ${#@} -eq 0 ]]; then
 			# Do something that has to go through the geom event
 			# queue to complete.
@@ -114,7 +114,7 @@ function is_physical_device #device
 	if is_linux; then
 		is_disk_device "$DEV_DSKDIR/$device" && \
 		[ -f /sys/module/loop/parameters/max_part ]
-	elif is_freebsd; then
+	elif is_nqc; then
 		is_disk_device "$DEV_DSKDIR/$device" && \
 		echo $device | grep -qE \
 		    -e '^a?da[0-9]+$' \
@@ -180,7 +180,7 @@ function is_mpath_device #disk
 		else
 			false
 		fi
-	elif is_freebsd; then
+	elif is_nqc; then
 		is_disk_device $DEV_MPATHDIR/$disk
 	else
 		false
@@ -194,7 +194,7 @@ function is_disk_device #path
 {
 	typeset path=$1
 
-	if is_freebsd; then
+	if is_nqc; then
 		# FreeBSD doesn't have block devices, only character devices.
 		test -c $path
 	else
@@ -266,7 +266,7 @@ function get_device_dir #device
 {
 	typeset device=$1
 
-	if ! is_freebsd && ! is_physical_device $device; then
+	if ! is_nqc && ! is_physical_device $device; then
 		if [[ $device != "/" ]]; then
 			device=${device%/*}
 		fi
@@ -598,7 +598,7 @@ function corrupt_blocks_at_level # input_file corrupt_level
 
 	[[ -f $input_file ]] || log_fail "Couldn't find $input_file"
 
-	if is_freebsd; then
+	if is_nqc; then
 		# Temporarily allow corrupting an inuse device.
 		debugflags=$(sysctl -n kern.geom.debugflags)
 		sysctl kern.geom.debugflags=16
@@ -612,7 +612,7 @@ function corrupt_blocks_at_level # input_file corrupt_level
 		fi
 	done
 
-	if is_freebsd; then
+	if is_nqc; then
 		sysctl kern.geom.debugflags=$debugflags
 	fi
 

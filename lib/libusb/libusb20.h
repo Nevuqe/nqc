@@ -293,7 +293,7 @@ int	libusb20_be_set_template(struct libusb20_backend *pbe, int temp);
 
 struct libusb20_backend *libusb20_be_alloc(const struct libusb20_backend_methods *methods);
 struct libusb20_backend *libusb20_be_alloc_default(void);
-struct libusb20_backend *libusb20_be_alloc_freebsd(void);
+struct libusb20_backend *libusb20_be_alloc_nqc(void);
 struct libusb20_backend *libusb20_be_alloc_linux(void);
 struct libusb20_backend *libusb20_be_alloc_ugen20(void);
 struct libusb20_device *libusb20_be_device_foreach(struct libusb20_backend *pbe, struct libusb20_device *pdev);

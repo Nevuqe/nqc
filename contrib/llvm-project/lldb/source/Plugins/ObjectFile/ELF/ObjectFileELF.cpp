@@ -57,7 +57,7 @@ using namespace llvm::ELF;
 LLDB_PLUGIN_DEFINE(ObjectFileELF)
 
 // ELF note owner definitions
-static const char *const LLDB_NT_OWNER_FREEBSD = "FreeBSD";
+static const char *const LLDB_NT_OWNER_NQC = "FreeBSD";
 static const char *const LLDB_NT_OWNER_GNU = "GNU";
 static const char *const LLDB_NT_OWNER_NETBSD = "NetBSD";
 static const char *const LLDB_NT_OWNER_NETBSDCORE = "NetBSD-CORE";
@@ -67,8 +67,8 @@ static const char *const LLDB_NT_OWNER_CORE = "CORE";
 static const char *const LLDB_NT_OWNER_LINUX = "LINUX";
 
 // ELF note type definitions
-static const elf_word LLDB_NT_FREEBSD_ABI_TAG = 0x01;
-static const elf_word LLDB_NT_FREEBSD_ABI_SIZE = 4;
+static const elf_word LLDB_NT_NQC_ABI_TAG = 0x01;
+static const elf_word LLDB_NT_NQC_ABI_SIZE = 4;
 
 static const elf_word LLDB_NT_GNU_ABI_TAG = 0x01;
 static const elf_word LLDB_NT_GNU_ABI_SIZE = 16;
@@ -471,7 +471,7 @@ static const char *OSABIAsCString(unsigned char osabi_byte) {
     _MAKE_OSABI_CASE(ELFOSABI_SOLARIS);
     _MAKE_OSABI_CASE(ELFOSABI_AIX);
     _MAKE_OSABI_CASE(ELFOSABI_IRIX);
-    _MAKE_OSABI_CASE(ELFOSABI_FREEBSD);
+    _MAKE_OSABI_CASE(ELFOSABI_NQC);
     _MAKE_OSABI_CASE(ELFOSABI_TRU64);
     _MAKE_OSABI_CASE(ELFOSABI_MODESTO);
     _MAKE_OSABI_CASE(ELFOSABI_OPENBSD);
@@ -501,7 +501,7 @@ static bool GetOsFromOSABI(unsigned char osabi_byte,
   case ELFOSABI_AIX:
     ostype = llvm::Triple::OSType::AIX;
     break;
-  case ELFOSABI_FREEBSD:
+  case ELFOSABI_NQC:
     ostype = llvm::Triple::OSType::FreeBSD;
     break;
   case ELFOSABI_GNU:
@@ -1038,9 +1038,9 @@ ObjectFileELF::RefineModuleDetailsFromNote(lldb_private::DataExtractor &data,
               __FUNCTION__, note.n_name.c_str(), note.n_type);
 
     // Process FreeBSD ELF notes.
-    if ((note.n_name == LLDB_NT_OWNER_FREEBSD) &&
-        (note.n_type == LLDB_NT_FREEBSD_ABI_TAG) &&
-        (note.n_descsz == LLDB_NT_FREEBSD_ABI_SIZE)) {
+    if ((note.n_name == LLDB_NT_OWNER_NQC) &&
+        (note.n_type == LLDB_NT_NQC_ABI_TAG) &&
+        (note.n_descsz == LLDB_NT_NQC_ABI_SIZE)) {
       // Pull out the min version info.
       uint32_t version_info;
       if (data.GetU32(&offset, &version_info, 1) == nullptr) {

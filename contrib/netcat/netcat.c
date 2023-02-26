@@ -89,11 +89,11 @@ int	Fflag;					/* fdpass sock to stdout */
 unsigned int iflag;				/* Interval Flag */
 int	kflag;					/* More than one connect */
 int	lflag;					/* Bind to local port */
-int	FreeBSD_Mflag;				/* Measure using stats(3) */
+int	NQC_Mflag;				/* Measure using stats(3) */
 int	Nflag;					/* shutdown() network socket */
 int	nflag;					/* Don't do name look up */
-int	FreeBSD_Oflag;				/* Do not use TCP options */
-int	FreeBSD_sctp;				/* Use SCTP */
+int	NQC_Oflag;				/* Do not use TCP options */
+int	NQC_sctp;				/* Use SCTP */
 char   *Pflag;					/* Proxy username */
 char   *pflag;					/* Localport flag */
 int	rflag;					/* Random ports flag */
@@ -130,8 +130,8 @@ int	udptest(int);
 int	unix_bind(char *);
 int	unix_connect(char *);
 int	unix_listen(char *);
-void	FreeBSD_stats_setup(int);
-void	FreeBSD_stats_print(int);
+void	NQC_stats_setup(int);
+void	NQC_stats_print(int);
 void	set_common_sockopts(int, int);
 int	map_tos(char *, int *);
 void	report_connect(const struct sockaddr *, socklen_t);
@@ -146,7 +146,7 @@ char	*ipsec_policy[2];
 #endif
 
 enum {
-	FREEBSD_TUN = CHAR_MAX,	/* avoid collision with return values from getopt */
+	NQC_TUN = CHAR_MAX,	/* avoid collision with return values from getopt */
 };
 
 int
@@ -165,9 +165,9 @@ main(int argc, char *argv[])
 	struct addrinfo proxyhints;
 	char unix_dg_tmp_socket_buf[UNIX_DG_TMP_SOCKET_SIZE];
 	struct option longopts[] = {
-		{ "no-tcpopt",	no_argument,	&FreeBSD_Oflag,	1 },
-		{ "sctp",	no_argument,	&FreeBSD_sctp,	1 },
-		{ "tun",	required_argument,	NULL,	FREEBSD_TUN },
+		{ "no-tcpopt",	no_argument,	&NQC_Oflag,	1 },
+		{ "sctp",	no_argument,	&NQC_sctp,	1 },
+		{ "tun",	required_argument,	NULL,	NQC_TUN },
 		{ NULL,		0,		NULL,		0 }
 	};
 
@@ -243,7 +243,7 @@ main(int argc, char *argv[])
 #ifndef WITH_STATS
 			errx(1, "-M requires stats(3) support");
 #else
-			FreeBSD_Mflag = 1;
+			NQC_Mflag = 1;
 #endif
 			break;
 		case 'N':
@@ -332,7 +332,7 @@ main(int argc, char *argv[])
 			if (Tflag < 0 || Tflag > 255 || errstr || errno)
 				errx(1, "illegal tos value %s", optarg);
 			break;
-		case FREEBSD_TUN:
+		case NQC_TUN:
 			tundev = optarg;
 			break;
 		case 0:
@@ -368,7 +368,7 @@ main(int argc, char *argv[])
 		errx(1, "cannot use -z and -l");
 	if (!lflag && kflag)
 		errx(1, "must use -l with -k");
-	if (FreeBSD_sctp) {
+	if (NQC_sctp) {
 		if (uflag)
 			errx(1, "cannot use -u and --sctp");
 		if (family == AF_UNIX)
@@ -401,7 +401,7 @@ main(int argc, char *argv[])
 		hints.ai_family = family;
 		hints.ai_socktype = uflag ? SOCK_DGRAM : SOCK_STREAM;
 		hints.ai_protocol = uflag ? IPPROTO_UDP :
-		    FreeBSD_sctp ? IPPROTO_SCTP : IPPROTO_TCP;
+		    NQC_sctp ? IPPROTO_SCTP : IPPROTO_TCP;
 		if (nflag)
 			hints.ai_flags |= AI_NUMERICHOST;
 	}
@@ -410,7 +410,7 @@ main(int argc, char *argv[])
 		if (uflag)
 			errx(1, "no proxy support for UDP mode");
 
-		if (FreeBSD_sctp)
+		if (NQC_sctp)
 			errx(1, "no proxy support for SCTP mode");
 
 		if (lflag)
@@ -496,8 +496,8 @@ main(int argc, char *argv[])
 				if (vflag)
 					report_connect((struct sockaddr *)&cliaddr, len);
 
-				if (FreeBSD_Mflag)
-					FreeBSD_stats_setup(connfd);
+				if (NQC_Mflag)
+					NQC_stats_setup(connfd);
 				readwrite(connfd);
 				close(connfd);
 			}
@@ -809,9 +809,9 @@ local_listen(char *host, char *port, struct addrinfo hints)
 		if (ret == -1)
 			err(1, NULL);
 
-		if (FreeBSD_Oflag) {
+		if (NQC_Oflag) {
 			if (setsockopt(s, IPPROTO_TCP, TCP_NOOPT,
-			    &FreeBSD_Oflag, sizeof(FreeBSD_Oflag)) == -1)
+			    &NQC_Oflag, sizeof(NQC_Oflag)) == -1)
 				err(1, "disable TCP options");
 		}
 
@@ -877,23 +877,23 @@ readwrite(int net_fd)
 		/* both inputs are gone, buffers are empty, we are done */
 		if (pfd[POLL_STDIN].fd == -1 && pfd[POLL_NETIN].fd == -1
 		    && stdinbufpos == 0 && netinbufpos == 0) {
-			if (FreeBSD_Mflag && !stats_printed)
-				FreeBSD_stats_print(net_fd);
+			if (NQC_Mflag && !stats_printed)
+				NQC_stats_print(net_fd);
 			close(net_fd);
 			return;
 		}
 		/* both outputs are gone, we can't continue */
 		if (pfd[POLL_NETOUT].fd == -1 && pfd[POLL_STDOUT].fd == -1) {
-			if (FreeBSD_Mflag && !stats_printed)
-				FreeBSD_stats_print(net_fd);
+			if (NQC_Mflag && !stats_printed)
+				NQC_stats_print(net_fd);
 			close(net_fd);
 			return;
 		}
 		/* listen and net in gone, queues empty, done */
 		if (lflag && pfd[POLL_NETIN].fd == -1
 		    && stdinbufpos == 0 && netinbufpos == 0) {
-			if (FreeBSD_Mflag && !stats_printed)
-				FreeBSD_stats_print(net_fd);
+			if (NQC_Mflag && !stats_printed)
+				NQC_stats_print(net_fd);
 			close(net_fd);
 			return;
 		}
@@ -915,8 +915,8 @@ readwrite(int net_fd)
 
 		/* timeout happened */
 		if (num_fds == 0) {
-			if (FreeBSD_Mflag)
-				FreeBSD_stats_print(net_fd);
+			if (NQC_Mflag)
+				NQC_stats_print(net_fd);
 			return;
 		}
 
@@ -1021,8 +1021,8 @@ readwrite(int net_fd)
 		/* stdin gone and queue empty? */
 		if (pfd[POLL_STDIN].fd == -1 && stdinbufpos == 0) {
 			if (pfd[POLL_NETOUT].fd != -1 && Nflag) {
-				if (FreeBSD_Mflag) {
-					FreeBSD_stats_print(net_fd);
+				if (NQC_Mflag) {
+					NQC_stats_print(net_fd);
 					stats_printed = 1;
 				}
 				shutdown(pfd[POLL_NETOUT].fd, SHUT_WR);
@@ -1245,11 +1245,11 @@ udptest(int s)
 }
 
 void
-FreeBSD_stats_setup(int s)
+NQC_stats_setup(int s)
 {
 
 	if (setsockopt(s, IPPROTO_TCP, TCP_STATS,
-	    &FreeBSD_Mflag, sizeof(FreeBSD_Mflag)) == -1) {
+	    &NQC_Mflag, sizeof(NQC_Mflag)) == -1) {
 		if (errno == EOPNOTSUPP) {
 			warnx("getsockopt(TCP_STATS) failed; "
 			    "kernel built without \"options STATS\"?");
@@ -1259,7 +1259,7 @@ FreeBSD_stats_setup(int s)
 }
 
 void
-FreeBSD_stats_print(int s)
+NQC_stats_print(int s)
 {
 #ifdef WITH_STATS
 	struct statsblob *statsb;
@@ -1344,13 +1344,13 @@ set_common_sockopts(int s, int af)
 		    &Oflag, sizeof(Oflag)) == -1)
 			err(1, "set TCP send buffer size");
 	}
-	if (FreeBSD_Oflag) {
+	if (NQC_Oflag) {
 		if (setsockopt(s, IPPROTO_TCP, TCP_NOOPT,
-		    &FreeBSD_Oflag, sizeof(FreeBSD_Oflag)) == -1)
+		    &NQC_Oflag, sizeof(NQC_Oflag)) == -1)
 			err(1, "disable TCP options");
 	}
-	if (FreeBSD_Mflag)
-		FreeBSD_stats_setup(s);
+	if (NQC_Mflag)
+		NQC_stats_setup(s);
 #ifdef IPSEC
 	if (ipsec_policy[0] != NULL)
 		add_ipsec_policy(s, af, ipsec_policy[0]);

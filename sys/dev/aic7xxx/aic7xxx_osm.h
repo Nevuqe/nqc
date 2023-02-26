@@ -34,8 +34,8 @@
  * $NQC$
  */
 
-#ifndef _AIC7XXX_FREEBSD_H_
-#define _AIC7XXX_FREEBSD_H_
+#ifndef _AIC7XXX_NQC_H_
+#define _AIC7XXX_NQC_H_
 
 #include "opt_aic7xxx.h"	/* for config options */
 
@@ -253,4 +253,4 @@ ahc_platform_flushwork(struct ahc_softc *ahc)
 void	  ahc_done(struct ahc_softc *ahc, struct scb *scb);
 void	  ahc_send_async(struct ahc_softc *, char /*channel*/,
 			 u_int /*target*/, u_int /*lun*/, ac_code, void *arg);
-#endif  /* _AIC7XXX_FREEBSD_H_ */
+#endif  /* _AIC7XXX_NQC_H_ */

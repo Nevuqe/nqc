@@ -120,8 +120,8 @@ ypxfrd_get_map(char *host, char *map, char *domain, char *tmpname)
 
 	bzero((char *)&resp, sizeof(resp));
 
-	if ((clnt = clnt_create(host, YPXFRD_FREEBSD_PROG,
-				YPXFRD_FREEBSD_VERS, "tcp")) == NULL) {
+	if ((clnt = clnt_create(host, YPXFRD_NQC_PROG,
+				YPXFRD_NQC_VERS, "tcp")) == NULL) {
 		return(1);
 	}
 

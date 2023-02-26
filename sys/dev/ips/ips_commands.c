@@ -503,7 +503,7 @@ static void ips_write_nvram(ips_command_t *command){
 
 	strncpy(nvram->driver_high, IPS_VERSION_MAJOR, 4);
 	strncpy(nvram->driver_low, IPS_VERSION_MINOR, 4);
-	nvram->operating_system = IPS_OS_FREEBSD;	
+	nvram->operating_system = IPS_OS_NQC;	
 	bus_dmamap_sync(sc->command_dmatag, command->command_dmamap, 
 			BUS_DMASYNC_PREWRITE);
 	sc->ips_issue_cmd(command);

@@ -25,7 +25,7 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 #include <dev/drm2/drmP.h>
 #include <dev/drm2/drm.h>

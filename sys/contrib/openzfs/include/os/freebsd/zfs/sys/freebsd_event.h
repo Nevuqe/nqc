@@ -25,8 +25,8 @@
  * SUCH DAMAGE.
  */
 
-#ifndef	_ZFS_FREEBSD_EVENT_H
-#define	_ZFS_FREEBSD_EVENT_H
+#ifndef	_ZFS_NQC_EVENT_H
+#define	_ZFS_NQC_EVENT_H
 
 #ifdef _KERNEL
 
@@ -34,4 +34,4 @@ void   knlist_init_sx(struct knlist *knl, struct sx *lock);
 
 #endif /* !_KERNEL */
 
-#endif /* !_ZFS_FREEBSD_EVENT_H */
+#endif /* !_ZFS_NQC_EVENT_H */

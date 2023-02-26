@@ -30,8 +30,8 @@
  * Including this file is mandatory for all USB related c-files in the loader.
  */
 
-#ifndef _USB_FREEBSD_LOADER_H_
-#define	_USB_FREEBSD_LOADER_H_
+#ifndef _USB_NQC_LOADER_H_
+#define	_USB_NQC_LOADER_H_
 
 /* Default USB configuration */
 #define	USB_HAVE_UGEN 0
@@ -99,4 +99,4 @@ typedef uint32_t usb_ticks_t;		/* system defined */
 typedef uint16_t usb_power_mask_t;	/* see "USB_HW_POWER_XXX" */
 typedef uint16_t usb_stream_t;		/* stream ID */
 
-#endif					/* _USB_FREEBSD_LOADER_H_ */
+#endif					/* _USB_NQC_LOADER_H_ */

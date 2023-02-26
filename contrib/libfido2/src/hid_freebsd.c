@@ -16,7 +16,7 @@
 
 #define MAX_UHID	64
 
-struct hid_freebsd {
+struct hid_nqc {
 	int             fd;
 	size_t          report_in_len;
 	size_t          report_out_len;
@@ -128,7 +128,7 @@ void *
 fido_hid_open(const char *path)
 {
 	char				 buf[64];
-	struct hid_freebsd		*ctx;
+	struct hid_nqc		*ctx;
 	struct usb_gen_descriptor	 ugd;
 	int				 r;
 
@@ -164,7 +164,7 @@ fido_hid_open(const char *path)
 void
 fido_hid_close(void *handle)
 {
-	struct hid_freebsd *ctx = handle;
+	struct hid_nqc *ctx = handle;
 
 	if (close(ctx->fd) == -1)
 		fido_log_error(errno, "%s: close", __func__);
@@ -175,7 +175,7 @@ fido_hid_close(void *handle)
 int
 fido_hid_set_sigmask(void *handle, const fido_sigset_t *sigmask)
 {
-	struct hid_freebsd *ctx = handle;
+	struct hid_nqc *ctx = handle;
 
 	ctx->sigmask = *sigmask;
 	ctx->sigmaskp = &ctx->sigmask;
@@ -186,7 +186,7 @@ fido_hid_set_sigmask(void *handle, const fido_sigset_t *sigmask)
 int
 fido_hid_read(void *handle, unsigned char *buf, size_t len, int ms)
 {
-	struct hid_freebsd	*ctx = handle;
+	struct hid_nqc	*ctx = handle;
 	ssize_t			 r;
 
 	if (len != ctx->report_in_len) {
@@ -215,7 +215,7 @@ fido_hid_read(void *handle, unsigned char *buf, size_t len, int ms)
 int
 fido_hid_write(void *handle, const unsigned char *buf, size_t len)
 {
-	struct hid_freebsd	*ctx = handle;
+	struct hid_nqc	*ctx = handle;
 	ssize_t			 r;
 
 	if (len != ctx->report_out_len + 1) {
@@ -239,7 +239,7 @@ fido_hid_write(void *handle, const unsigned char *buf, size_t len)
 size_t
 fido_hid_report_in_len(void *handle)
 {
-	struct hid_freebsd *ctx = handle;
+	struct hid_nqc *ctx = handle;
 
 	return (ctx->report_in_len);
 }
@@ -247,7 +247,7 @@ fido_hid_report_in_len(void *handle)
 size_t
 fido_hid_report_out_len(void *handle)
 {
-	struct hid_freebsd *ctx = handle;
+	struct hid_nqc *ctx = handle;
 
 	return (ctx->report_out_len);
 }

@@ -561,9 +561,9 @@ enum drm_connector_force {
  */
 struct drm_connector {
 	struct drm_device *dev;
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	struct device kdev;
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 	struct device_attribute *attr;
 	struct list_head head;
 

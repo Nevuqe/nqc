@@ -37,7 +37,7 @@
 #if defined(NCSW_LINUX) && defined(__KERNEL__)
 #include <stdarg.h>
 
-#elif defined(NCSW_FREEBSD)
+#elif defined(NCSW_NQC)
 #include <sys/param.h>
 #include <sys/kernel.h>
 #include <machine/stdarg.h>

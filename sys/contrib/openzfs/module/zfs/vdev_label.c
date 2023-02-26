@@ -1333,7 +1333,7 @@ vdev_label_read_bootenv(vdev_t *rvd, nvlist_t *bootenv)
 				    VB_NVLIST);
 				break;
 			}
-			fnvlist_add_string(bootenv, FREEBSD_BOOTONCE, buf);
+			fnvlist_add_string(bootenv, NQC_BOOTONCE, buf);
 		}
 
 		/*

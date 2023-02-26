@@ -28,13 +28,13 @@
 ; types:
 ;	STD	always included
 ;	COMPAT	included on COMPAT #ifdef
-;	COMPAT4	included on COMPAT_FREEBSD4 #ifdef (FreeBSD 4 compat)
-;	COMPAT6	included on COMPAT_FREEBSD6 #ifdef (FreeBSD 6 compat)
-;	COMPAT7	included on COMPAT_FREEBSD7 #ifdef (FreeBSD 7 compat)
-;	COMPAT10 included on COMPAT_FREEBSD10 #ifdef (FreeBSD 10 compat)
-;	COMPAT11 included on COMPAT_FREEBSD11 #ifdef (FreeBSD 11 compat)
-;	COMPAT12 included on COMPAT_FREEBSD12 #ifdef (FreeBSD 12 compat)
-;	COMPAT13 included on COMPAT_FREEBSD13 #ifdef (FreeBSD 13 compat)
+;	COMPAT4	included on COMPAT_NQC4 #ifdef (FreeBSD 4 compat)
+;	COMPAT6	included on COMPAT_NQC6 #ifdef (FreeBSD 6 compat)
+;	COMPAT7	included on COMPAT_NQC7 #ifdef (FreeBSD 7 compat)
+;	COMPAT10 included on COMPAT_NQC10 #ifdef (FreeBSD 10 compat)
+;	COMPAT11 included on COMPAT_NQC11 #ifdef (FreeBSD 11 compat)
+;	COMPAT12 included on COMPAT_NQC12 #ifdef (FreeBSD 12 compat)
+;	COMPAT13 included on COMPAT_NQC13 #ifdef (FreeBSD 13 compat)
 ;	OBSOL	obsolete, not included in system, only specifies name
 ;	RESERVED reserved for local or vendor use (not for FreeBSD)
 ;	UNIMPL	not implemented, placeholder only

@@ -73,7 +73,7 @@ typeset ro_props="type used available avail creation referenced refer compressra
 typeset snap_ro_props="volsize recordsize recsize quota reservation reserv mountpoint \
 	sharenfs checksum compression compress atime devices exec readonly rdonly \
 	setuid version"
-if is_freebsd; then
+if is_nqc; then
 	snap_ro_props+=" jailed"
 else
 	snap_ro_props+=" zoned"

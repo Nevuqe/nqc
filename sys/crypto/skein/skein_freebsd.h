@@ -26,8 +26,8 @@
  * $NQC$
  */
 
-#ifndef _SKEIN_FREEBSD_H_
-#define _SKEIN_FREEBSD_H_
+#ifndef _SKEIN_NQC_H_
+#define _SKEIN_NQC_H_
 
 #define  SKEIN_256_BLOCK_BYTES ( 8*SKEIN_256_STATE_WORDS)
 #define  SKEIN_512_BLOCK_BYTES ( 8*SKEIN_512_STATE_WORDS)
@@ -85,4 +85,4 @@ char   *SKEIN512_FileChunk(const char *, char *, off_t, off_t);
 char   *SKEIN1024_FileChunk(const char *, char *, off_t, off_t);
 #endif
 
-#endif	/* ifndef _SKEIN_FREEBSD_H_ */
+#endif	/* ifndef _SKEIN_NQC_H_ */

@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_FREEBSDSIGNALS_H
-#define LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_FREEBSDSIGNALS_H
+#ifndef LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_NQCSIGNALS_H
+#define LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_NQCSIGNALS_H
 
 #include "lldb/Target/UnixSignals.h"
 
@@ -24,4 +24,4 @@ private:
 
 } // namespace lldb_private
 
-#endif // LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_FREEBSDSIGNALS_H
+#endif // LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_NQCSIGNALS_H

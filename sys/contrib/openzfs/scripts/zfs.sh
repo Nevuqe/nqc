@@ -24,7 +24,7 @@ KMOD_ZLIB_DEFLATE=${KMOD_ZLIB_DEFLATE:-zlib_deflate}
 KMOD_ZLIB_INFLATE=${KMOD_ZLIB_INFLATE:-zlib_inflate}
 KMOD_SPL=${KMOD_SPL:-spl}
 KMOD_ZFS=${KMOD_ZFS:-zfs}
-KMOD_FREEBSD=${KMOD_FREEBSD:-openzfs}
+KMOD_NQC=${KMOD_NQC:-openzfs}
 
 
 usage() {
@@ -127,8 +127,8 @@ load_module_linux() {
 	return 0
 }
 
-load_modules_freebsd() {
-	kldload "$KMOD_FREEBSD" || return 1
+load_modules_nqc() {
+	kldload "$KMOD_NQC" || return 1
 
 	if [ "$VERBOSE" = "yes" ]; then
 		echo "Successfully loaded ZFS module stack"
@@ -151,8 +151,8 @@ load_modules_linux() {
 	return 0
 }
 
-unload_modules_freebsd() {
-	kldunload "$KMOD_FREEBSD" || echo "Failed to unload $KMOD_FREEBSD"
+unload_modules_nqc() {
+	kldunload "$KMOD_NQC" || echo "Failed to unload $KMOD_NQC"
 
 	if [ "$VERBOSE" = "yes" ]; then
 		echo "Successfully unloaded ZFS module stack"
@@ -211,7 +211,7 @@ if [ "$UNLOAD" = "yes" ]; then
 	umount -t zfs -a
 	case $UNAME in
 		FreeBSD)
-		   unload_modules_freebsd
+		   unload_modules_nqc
 		   ;;
 		Linux)
 		   stack_check_linux
@@ -226,7 +226,7 @@ fi
 if [ "$LOAD" = "yes" ]; then
 	case $UNAME in
 		FreeBSD)
-		   load_modules_freebsd
+		   load_modules_nqc
 		   ;;
 		Linux)
 		   stack_clear_linux

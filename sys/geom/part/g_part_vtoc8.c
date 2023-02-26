@@ -118,29 +118,29 @@ vtoc8_parse_type(const char *type, uint16_t *tag)
 		*tag = (uint16_t)lt;
 		return (0);
 	}
-	alias = g_part_alias_name(G_PART_ALIAS_FREEBSD_NANDFS);
+	alias = g_part_alias_name(G_PART_ALIAS_NQC_NANDFS);
 	if (!strcasecmp(type, alias)) {
-		*tag = VTOC_TAG_FREEBSD_NANDFS;
+		*tag = VTOC_TAG_NQC_NANDFS;
 		return (0);
 	}
-	alias = g_part_alias_name(G_PART_ALIAS_FREEBSD_SWAP);
+	alias = g_part_alias_name(G_PART_ALIAS_NQC_SWAP);
 	if (!strcasecmp(type, alias)) {
-		*tag = VTOC_TAG_FREEBSD_SWAP;
+		*tag = VTOC_TAG_NQC_SWAP;
 		return (0);
 	}
-	alias = g_part_alias_name(G_PART_ALIAS_FREEBSD_UFS);
+	alias = g_part_alias_name(G_PART_ALIAS_NQC_UFS);
 	if (!strcasecmp(type, alias)) {
-		*tag = VTOC_TAG_FREEBSD_UFS;
+		*tag = VTOC_TAG_NQC_UFS;
 		return (0);
 	}
-	alias = g_part_alias_name(G_PART_ALIAS_FREEBSD_VINUM);
+	alias = g_part_alias_name(G_PART_ALIAS_NQC_VINUM);
 	if (!strcasecmp(type, alias)) {
-		*tag = VTOC_TAG_FREEBSD_VINUM;
+		*tag = VTOC_TAG_NQC_VINUM;
 		return (0);
 	}
-	alias = g_part_alias_name(G_PART_ALIAS_FREEBSD_ZFS);
+	alias = g_part_alias_name(G_PART_ALIAS_NQC_ZFS);
 	if (!strcasecmp(type, alias)) {
-		*tag = VTOC_TAG_FREEBSD_ZFS;
+		*tag = VTOC_TAG_NQC_ZFS;
 		return (0);
 	}
 	return (EINVAL);
@@ -294,7 +294,7 @@ g_part_vtoc8_dumpto(struct g_part_table *basetable,
 	 */
 	table = (struct g_part_vtoc8_table *)basetable;
 	tag = be16dec(&table->vtoc.part[entry->gpe_index - 1].tag);
-	return ((tag == 0 || tag == VTOC_TAG_FREEBSD_SWAP ||
+	return ((tag == 0 || tag == VTOC_TAG_NQC_SWAP ||
 	    tag == VTOC_TAG_SWAP) ? 1 : 0);
 }
 
@@ -551,16 +551,16 @@ g_part_vtoc8_type(struct g_part_table *basetable, struct g_part_entry *entry,
 
 	table = (struct g_part_vtoc8_table *)basetable;
 	tag = be16dec(&table->vtoc.part[entry->gpe_index - 1].tag);
-	if (tag == VTOC_TAG_FREEBSD_NANDFS)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_NANDFS));
-	if (tag == VTOC_TAG_FREEBSD_SWAP)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_SWAP));
-	if (tag == VTOC_TAG_FREEBSD_UFS)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_UFS));
-	if (tag == VTOC_TAG_FREEBSD_VINUM)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_VINUM));
-	if (tag == VTOC_TAG_FREEBSD_ZFS)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_ZFS));
+	if (tag == VTOC_TAG_NQC_NANDFS)
+		return (g_part_alias_name(G_PART_ALIAS_NQC_NANDFS));
+	if (tag == VTOC_TAG_NQC_SWAP)
+		return (g_part_alias_name(G_PART_ALIAS_NQC_SWAP));
+	if (tag == VTOC_TAG_NQC_UFS)
+		return (g_part_alias_name(G_PART_ALIAS_NQC_UFS));
+	if (tag == VTOC_TAG_NQC_VINUM)
+		return (g_part_alias_name(G_PART_ALIAS_NQC_VINUM));
+	if (tag == VTOC_TAG_NQC_ZFS)
+		return (g_part_alias_name(G_PART_ALIAS_NQC_ZFS));
 	snprintf(buf, bufsz, "!%d", tag);
 	return (buf);
 }

@@ -52,7 +52,7 @@ const struct tok bsd_af_values[] = {
     { BSD_AFNUM_APPLETALK, "Appletalk" },
     { BSD_AFNUM_IPX, "IPX" },
     { BSD_AFNUM_INET6_BSD, "IPv6" },
-    { BSD_AFNUM_INET6_FREEBSD, "IPv6" },
+    { BSD_AFNUM_INET6_NQC, "IPv6" },
     { BSD_AFNUM_INET6_DARWIN, "IPv6" },
     { 0, NULL}
 };

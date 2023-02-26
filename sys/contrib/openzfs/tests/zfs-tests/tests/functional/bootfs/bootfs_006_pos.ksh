@@ -111,7 +111,7 @@ verify_bootfs $TESTPOOL
 log_must zpool create $TESTPOOL mirror $VDEV1 $VDEV2 spare $VDEV3
 verify_bootfs $TESTPOOL
 
-if is_linux || is_freebsd; then
+if is_linux || is_nqc; then
 	# stripe
 	log_must zpool create $TESTPOOL $VDEV1 $VDEV2
 	verify_bootfs $TESTPOOL

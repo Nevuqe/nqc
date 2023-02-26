@@ -132,7 +132,7 @@ banner() {
 	sleep 5
 }
 
-test_discovery_freebsd_9() {
+test_discovery_nqc_9() {
 	kldload iscsi_initiator
 	check iscontrol -dt $TARGETIP > $TMPDIR/discovered
 	cat $TMPDIR/discovered
@@ -142,7 +142,7 @@ test_discovery_freebsd_9() {
 	rm -f $TMPDIR/expected $TMPDIR/discovered
 }
 
-test_discovery_freebsd() {
+test_discovery_nqc() {
 	/etc/rc.d/iscsid onestart
 	check iscsictl -Ad $TARGETIP
 	sleep 1
@@ -190,10 +190,10 @@ test_discovery() {
 		FreeBSD)
 			case `uname -r` in
 				9*)
-					test_discovery_freebsd_9
+					test_discovery_nqc_9
 					;;
 				*)
-					test_discovery_freebsd
+					test_discovery_nqc
 					;;
 			esac
 			;;
@@ -209,7 +209,7 @@ test_discovery() {
 	esac
 }
 
-test_attach_freebsd_9() {
+test_attach_nqc_9() {
 	[ ! -e LUN0 ] || die "$LUN0 already exists"
 	[ ! -e LUN1 ] || die "$LUN1 already exists"
 	[ ! -e LUN2 ] || die "$LUN2 already exists"
@@ -245,7 +245,7 @@ END
 	rm $TMPDIR/iscsi.conf
 }
 
-test_attach_freebsd() {
+test_attach_nqc() {
 	[ ! -e LUN0 ] || die "$LUN0 already exists"
 	[ ! -e LUN1 ] || die "$LUN1 already exists"
 	[ ! -e LUN2 ] || die "$LUN2 already exists"
@@ -311,10 +311,10 @@ test_attach() {
 		FreeBSD)
 			case `uname -r` in
 				9*)
-					test_attach_freebsd_9
+					test_attach_nqc_9
 					;;
 				*)
-					test_attach_freebsd
+					test_attach_nqc
 					;;
 			esac
 			;;
@@ -330,7 +330,7 @@ test_attach() {
 	esac
 }
 
-test_newfs_freebsd_ufs() {
+test_newfs_nqc_ufs() {
 	echo "*** UFS filesystem smoke test ***"
 	check newfs $LUN0
 	check newfs $LUN1
@@ -342,7 +342,7 @@ test_newfs_freebsd_ufs() {
 	check fsck -t ufs $LUN3
 }
 
-test_newfs_freebsd_zfs() {
+test_newfs_nqc_zfs() {
 	echo "*** ZFS filesystem smoke test ***"
 	check zpool create -f $ZFSPOOL $LUN0 $LUN1 $LUN2 $LUN3
 	check zpool destroy -f $ZFSPOOL
@@ -383,8 +383,8 @@ test_newfs_solaris_zfs() {
 test_newfs() {
 	case `uname` in
 		FreeBSD)
-			test_newfs_freebsd_ufs
-			test_newfs_freebsd_zfs
+			test_newfs_nqc_ufs
+			test_newfs_nqc_zfs
 			;;
 		Linux)
 			test_newfs_linux_ext4
@@ -637,7 +637,7 @@ test_postmark() {
 	esac
 }
 
-test_postgresql_freebsd() {
+test_postgresql_nqc() {
 	check newfs $LUN0
 	check mount -t ufs $LUN0 $MNTDIR
 	check chown pgsql $MNTDIR
@@ -738,7 +738,7 @@ test_postgresql() {
 	echo "*** postgresql ***"
 	case `uname` in
 		FreeBSD)
-			test_postgresql_freebsd
+			test_postgresql_nqc
 			;;
 		Linux)
 			test_postgresql_linux

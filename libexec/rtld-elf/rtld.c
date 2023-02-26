@@ -1684,33 +1684,33 @@ digest_notes(Obj_Entry *obj, Elf_Addr note_start, Elf_Addr note_end)
 	    note = (const Elf_Note *)((const char *)(note + 1) +
 	      roundup2(note->n_namesz, sizeof(Elf32_Addr)) +
 	      roundup2(note->n_descsz, sizeof(Elf32_Addr)))) {
-		if (note->n_namesz != sizeof(NOTE_FREEBSD_VENDOR) ||
+		if (note->n_namesz != sizeof(NOTE_NQC_VENDOR) ||
 		    note->n_descsz != sizeof(int32_t))
 			continue;
-		if (note->n_type != NT_FREEBSD_ABI_TAG &&
-		    note->n_type != NT_FREEBSD_FEATURE_CTL &&
-		    note->n_type != NT_FREEBSD_NOINIT_TAG)
+		if (note->n_type != NT_NQC_ABI_TAG &&
+		    note->n_type != NT_NQC_FEATURE_CTL &&
+		    note->n_type != NT_NQC_NOINIT_TAG)
 			continue;
 		note_name = (const char *)(note + 1);
-		if (strncmp(NOTE_FREEBSD_VENDOR, note_name,
-		    sizeof(NOTE_FREEBSD_VENDOR)) != 0)
+		if (strncmp(NOTE_NQC_VENDOR, note_name,
+		    sizeof(NOTE_NQC_VENDOR)) != 0)
 			continue;
 		switch (note->n_type) {
-		case NT_FREEBSD_ABI_TAG:
+		case NT_NQC_ABI_TAG:
 			/* FreeBSD osrel note */
 			p = (uintptr_t)(note + 1);
 			p += roundup2(note->n_namesz, sizeof(Elf32_Addr));
 			obj->osrel = *(const int32_t *)(p);
 			dbg("note osrel %d", obj->osrel);
 			break;
-		case NT_FREEBSD_FEATURE_CTL:
+		case NT_NQC_FEATURE_CTL:
 			/* FreeBSD ABI feature control note */
 			p = (uintptr_t)(note + 1);
 			p += roundup2(note->n_namesz, sizeof(Elf32_Addr));
 			obj->fctl0 = *(const uint32_t *)(p);
 			dbg("note fctl0 %#x", obj->fctl0);
 			break;
-		case NT_FREEBSD_NOINIT_TAG:
+		case NT_NQC_NOINIT_TAG:
 			/* FreeBSD 'crt does not call init' note */
 			obj->crt_no_init = true;
 			dbg("note crt_no_init");
@@ -6049,7 +6049,7 @@ parse_args(char* argv[], int argc, bool *use_pathp, int *fdp,
 				set_ld_elf_hints_path();
 				rtld_printf(
 				    "FreeBSD ld-elf.so.1 %s\n"
-				    "FreeBSD_version %d\n"
+				    "NQC_version %d\n"
 				    "Default lib path %s\n"
 				    "Hints lib path %s\n"
 				    "Env prefix %s\n"

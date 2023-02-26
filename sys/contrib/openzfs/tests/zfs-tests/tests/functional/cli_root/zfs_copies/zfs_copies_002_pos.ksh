@@ -80,7 +80,7 @@ for val in 1 2 3; do
 done
 
 log_note "Verify 'ls -s' can correctly list the space charged."
-if is_linux || is_freebsd; then
+if is_linux || is_nqc; then
 	blksize=1024
 else
 	blksize=512
@@ -93,7 +93,7 @@ done
 
 log_note "Verify df(1) can correctly display the space charged."
 for val in 1 2 3; do
-	if is_freebsd; then
+	if is_nqc; then
 		used=`df -m /$TESTPOOL/fs_$val | awk -v pa=$TESTPOOL/fs_$val -v fs=fs_$val '$0 ~ pa && $4 ~ fs {print $3}'`
 	else
 		used=`df -F zfs -k /$TESTPOOL/fs_$val/$FILE | awk -v pa=$TESTPOOL/fs_$val '$0 ~ pa {print $3}'`
@@ -104,7 +104,7 @@ done
 
 log_note "Verify du(1) can correctly display the space charged."
 for val in 1 2 3; do
-	if is_freebsd; then
+	if is_nqc; then
 		used=`du -h /$TESTPOOL/fs_$val/$FILE | awk '{print $1}'`
 	else
 		used=`du -k /$TESTPOOL/fs_$val/$FILE | awk '{print $1}'`

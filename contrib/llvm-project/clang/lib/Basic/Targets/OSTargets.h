@@ -197,8 +197,8 @@ public:
   }
 };
 
-#ifndef FREEBSD_CC_VERSION
-#define FREEBSD_CC_VERSION 0U
+#ifndef NQC_CC_VERSION
+#define NQC_CC_VERSION 0U
 #endif
 
 // FreeBSD Target
@@ -212,12 +212,12 @@ protected:
     unsigned Release = Triple.getOSMajorVersion();
     if (Release == 0U)
       Release = 8U;
-    unsigned CCVersion = FREEBSD_CC_VERSION;
+    unsigned CCVersion = NQC_CC_VERSION;
     if (CCVersion == 0U)
       CCVersion = Release * 100000U + 1U;
 
     Builder.defineMacro("__NQC__", Twine(Release));
-    Builder.defineMacro("__FreeBSD_cc_version", Twine(CCVersion));
+    Builder.defineMacro("__NQC_cc_version", Twine(CCVersion));
     Builder.defineMacro("__KPRINTF_ATTRIBUTE__");
     DefineStd(Builder, "unix", Opts);
     Builder.defineMacro("__ELF__");
@@ -548,7 +548,7 @@ protected:
   void getOSDefines(const LangOptions &Opts, const llvm::Triple &Triple,
                     MacroBuilder &Builder) const override {
     Builder.defineMacro("__NQC__", "9");
-    Builder.defineMacro("__FreeBSD_cc_version", "900001");
+    Builder.defineMacro("__NQC_cc_version", "900001");
     Builder.defineMacro("__KPRINTF_ATTRIBUTE__");
     DefineStd(Builder, "unix", Opts);
     Builder.defineMacro("__ELF__");

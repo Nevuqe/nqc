@@ -1746,7 +1746,7 @@ icl_cxgbei_conn_transfer_done(struct icl_conn *ic, void *arg)
 	}
 }
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 static void
 cxgbei_limits(struct adapter *sc, void *arg)
 {
@@ -1842,7 +1842,7 @@ icl_cxgbei_limits(struct icl_drv_limits *idl, int socket)
 	idl->idl_max_burst_length = max_burst_length;
 	idl->idl_first_burst_length = first_burst_length;
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	if (socket == 0) {
 		t4_iterate(cxgbei_limits, idl);
 		return (0);

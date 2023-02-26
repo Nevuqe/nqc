@@ -61,7 +61,7 @@ struct __mcontext {
 
 typedef struct __mcontext mcontext_t;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32_signal.h>
 typedef struct __mcontext32 {
 	uint32_t		mc_gregset[17];
@@ -84,6 +84,6 @@ typedef struct __mcontext32_vfp {
 	__uint32_t	mcv_fpscr;
 } mcontext32_vfp_t;
 
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 #endif	/* !_MACHINE_UCONTEXT_H_ */

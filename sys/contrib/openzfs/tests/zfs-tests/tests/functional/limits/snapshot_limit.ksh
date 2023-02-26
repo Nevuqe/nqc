@@ -54,7 +54,7 @@ function setup
 		log_must zfs create "$DATASET_TEST"
 		log_must zfs create "$DATASET_UTIL"
 	fi
-	if is_freebsd; then
+	if is_nqc; then
 		# Ensure our non-root user has the permission to create the
 		# mountpoints and mount the filesystems.
 		sysctl vfs.usermount=1
@@ -69,7 +69,7 @@ function setup
 
 function cleanup
 {
-	if is_freebsd; then
+	if is_nqc; then
 		sysctl vfs.usermount=0
 	fi
 	destroy_dataset "$DATASET_TEST" "-Rf"

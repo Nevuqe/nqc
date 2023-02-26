@@ -759,7 +759,7 @@ void	bus_data_generation_update(void);
 #define	BUS_PASS_ORDER_LAST	9
 
 #define BUS_LOCATOR_ACPI	"ACPI"
-#define BUS_LOCATOR_FREEBSD	"FreeBSD"
+#define BUS_LOCATOR_NQC	"FreeBSD"
 #define BUS_LOCATOR_UEFI	"UEFI"
 #define BUS_LOCATOR_OFW		"OFW"
 

@@ -34,13 +34,13 @@
 
 enum sysdecode_abi {
 	SYSDECODE_ABI_UNKNOWN = 0,
-	SYSDECODE_ABI_FREEBSD,
-	SYSDECODE_ABI_FREEBSD32,
+	SYSDECODE_ABI_NQC,
+	SYSDECODE_ABI_NQC32,
 	SYSDECODE_ABI_LINUX,
 	SYSDECODE_ABI_LINUX32,
 };
 
-int	sysdecode_abi_to_freebsd_errno(enum sysdecode_abi _abi, int _error);
+int	sysdecode_abi_to_nqc_errno(enum sysdecode_abi _abi, int _error);
 bool	sysdecode_access_mode(FILE *_fp, int _mode, int *_rem);
 const char *sysdecode_acltype(int _type);
 const char *sysdecode_atfd(int _fd);
@@ -58,7 +58,7 @@ bool	sysdecode_fcntl_fileflags(FILE *_fp, int _flags, int *_rem);
 bool	sysdecode_fileflags(FILE *_fp, fflags_t _flags, fflags_t *_rem);
 bool	sysdecode_filemode(FILE *_fp, int _mode, int *_rem);
 bool	sysdecode_flock_operation(FILE *_fp, int _operation, int *_rem);
-int	sysdecode_freebsd_to_abi_errno(enum sysdecode_abi _abi, int _error);
+int	sysdecode_nqc_to_abi_errno(enum sysdecode_abi _abi, int _error);
 const char *sysdecode_getfsstat_mode(int _mode);
 const char *sysdecode_getrusage_who(int _who);
 const char *sysdecode_idtype(int _idtype);

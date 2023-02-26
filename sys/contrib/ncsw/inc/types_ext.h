@@ -50,7 +50,7 @@
 #include "types_bb_gpp.h"
 
 #elif defined(__NQC__)
-#include "types_freebsd.h"
+#include "types_nqc.h"
 
 #elif defined(__GNUC__)
 #include "types_bb_gcc.h"

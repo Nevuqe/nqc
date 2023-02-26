@@ -1,7 +1,7 @@
 # $NQC$
 
 SRCS+=	start.S \
-	elf32_freebsd.c \
+	elf32_nqc.c \
 	exec.c
 
 .PATH:	${BOOTSRC}/i386/libi386

@@ -19,7 +19,7 @@
 typeset -a compress_prop_vals=('off' 'lzjb' 'lz4' 'gzip' 'zle' 'zstd')
 typeset -a checksum_prop_vals=('on' 'off' 'fletcher2' 'fletcher4' 'sha256'
     'noparity' 'sha512' 'skein' 'blake3')
-if ! is_freebsd; then
+if ! is_nqc; then
 	checksum_prop_vals+=('edonr')
 fi
 typeset -a recsize_prop_vals=('512' '1024' '2048' '4096' '8192' '16384'
@@ -75,7 +75,7 @@ function get_rand_prop_vals
 #
 typeset -a binary_props=('atime' 'devices' 'exec' 'readonly' 'setuid' 'xattr')
 
-if is_freebsd; then
+if is_nqc; then
 	binary_props+=('jailed')
 else
 	binary_props+=('zoned')

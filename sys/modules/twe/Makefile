@@ -2,7 +2,7 @@
 
 KMOD=	twe
 .PATH: ${SRCTOP}/sys/dev/${KMOD}
-SRCS=	bus_if.h device_if.h pci_if.h twe.c twe_freebsd.c
+SRCS=	bus_if.h device_if.h pci_if.h twe.c twe_nqc.c
 
 #CFLAGS+=-DTWE_DEBUG=0
 

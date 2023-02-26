@@ -288,7 +288,7 @@ COMMAND_SET(staging_slop, "staging_slop", "set staging slop",
 /*
  * The staging area must reside in the first 1GB or 4GB physical
  * memory: see elf64_exec() in
- * boot/efi/loader/arch/amd64/elf64_freebsd.c.
+ * boot/efi/loader/arch/amd64/elf64_nqc.c.
  */
 static EFI_PHYSICAL_ADDRESS
 get_staging_max(void)

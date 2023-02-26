@@ -96,7 +96,7 @@ __NQCID("$NQC$");
 
 #include <fs/devfs/devfs.h>
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_util.h>
 #endif
@@ -171,7 +171,7 @@ SYSCTL_INT(_kern, OID_AUTO, proc_vmmap_skip_resident_count, CTLFLAG_RW,
     "Skip calculation of the pages resident count in kern.proc.vmmap");
 
 CTASSERT(sizeof(struct kinfo_proc) == KINFO_PROC_SIZE);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 CTASSERT(sizeof(struct kinfo_proc32) == KINFO_PROC32_SIZE);
 #endif
 
@@ -1199,13 +1199,13 @@ fill_kinfo_proc_pgrp(struct proc *p, struct kinfo_proc *kp)
 
 	if ((p->p_flag & P_CONTROLT) && tp != NULL) {
 		kp->ki_tdev = tty_udev(tp);
-		kp->ki_tdev_freebsd11 = kp->ki_tdev; /* truncate */
+		kp->ki_tdev_nqc11 = kp->ki_tdev; /* truncate */
 		kp->ki_tpgid = tp->t_pgrp ? tp->t_pgrp->pg_id : NO_PID;
 		if (tp->t_session)
 			kp->ki_tsid = tp->t_session->s_sid;
 	} else {
 		kp->ki_tdev = NODEV;
-		kp->ki_tdev_freebsd11 = kp->ki_tdev; /* truncate */
+		kp->ki_tdev_nqc11 = kp->ki_tdev; /* truncate */
 	}
 }
 
@@ -1365,7 +1365,7 @@ pstats_free(struct pstats *ps)
 	free(ps, M_SUBPROC);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 /*
  * This function is typically used to copy out the kernel address, so
@@ -1407,7 +1407,7 @@ freebsd32_kinfo_proc_out(const struct kinfo_proc *ki, struct kinfo_proc32 *ki32)
 	CP(*ki, *ki32, ki_tsid);
 	CP(*ki, *ki32, ki_jobc);
 	CP(*ki, *ki32, ki_tdev);
-	CP(*ki, *ki32, ki_tdev_freebsd11);
+	CP(*ki, *ki32, ki_tdev_nqc11);
 	CP(*ki, *ki32, ki_siglist);
 	CP(*ki, *ki32, ki_sigmask);
 	CP(*ki, *ki32, ki_sigignore);
@@ -1485,14 +1485,14 @@ kern_proc_out_size(struct proc *p, int flags)
 	PROC_LOCK_ASSERT(p, MA_OWNED);
 
 	if ((flags & KERN_PROC_NOTHREADS) != 0) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if ((flags & KERN_PROC_MASK32) != 0) {
 			size += sizeof(struct kinfo_proc32);
 		} else
 #endif
 			size += sizeof(struct kinfo_proc);
 	} else {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if ((flags & KERN_PROC_MASK32) != 0)
 			size += sizeof(struct kinfo_proc32) * p->p_numthreads;
 		else
@@ -1508,7 +1508,7 @@ kern_proc_out(struct proc *p, struct sbuf *sb, int flags)
 {
 	struct thread *td;
 	struct kinfo_proc ki;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct kinfo_proc32 ki32;
 #endif
 	int error;
@@ -1519,7 +1519,7 @@ kern_proc_out(struct proc *p, struct sbuf *sb, int flags)
 	error = 0;
 	fill_kinfo_proc(p, &ki);
 	if ((flags & KERN_PROC_NOTHREADS) != 0) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if ((flags & KERN_PROC_MASK32) != 0) {
 			freebsd32_kinfo_proc_out(&ki, &ki32);
 			if (sbuf_bcat(sb, &ki32, sizeof(ki32)) != 0)
@@ -1531,7 +1531,7 @@ kern_proc_out(struct proc *p, struct sbuf *sb, int flags)
 	} else {
 		FOREACH_THREAD_IN_PROC(p, td) {
 			fill_kinfo_thread(td, &ki, 1);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 			if ((flags & KERN_PROC_MASK32) != 0) {
 				freebsd32_kinfo_proc_out(&ki, &ki32);
 				if (sbuf_bcat(sb, &ki32, sizeof(ki32)) != 0)
@@ -1709,7 +1709,7 @@ sysctl_kern_proc(SYSCTL_HANDLER_ARGS)
 		flags = 0;
 		oid_number &= ~KERN_PROC_INC_THREAD;
 	}
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (req->flags & SCTL_MASK32)
 		flags |= KERN_PROC_MASK32;
 #endif
@@ -1823,7 +1823,7 @@ enum proc_vector_type {
 	PROC_AUX,
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static int
 get_proc_vector32(struct thread *td, struct proc *p, char ***proc_vectorp,
     size_t *vsizep, enum proc_vector_type type)
@@ -1909,7 +1909,7 @@ get_proc_vector(struct thread *td, struct proc *p, char ***proc_vectorp,
 	size_t vsize, size;
 	int i;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(p, SV_ILP32) != 0)
 		return (get_proc_vector32(td, p, proc_vectorp, vsizep, type));
 #endif
@@ -2058,7 +2058,7 @@ proc_getauxv(struct thread *td, struct proc *p, struct sbuf *sb)
 
 	error = get_proc_vector(td, p, &auxv, &vsize, PROC_AUX);
 	if (error == 0) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (SV_PROC_FLAG(p, SV_ILP32) != 0)
 			size = vsize * sizeof(Elf32_Auxinfo);
 		else
@@ -2356,7 +2356,7 @@ sysctl_kern_proc_sv_name(SYSCTL_HANDLER_ARGS)
 CTASSERT(sizeof(struct kinfo_ovmentry) == KINFO_OVMENTRY_SIZE);
 #endif
 
-#ifdef COMPAT_FREEBSD7
+#ifdef COMPAT_NQC7
 static int
 sysctl_kern_proc_ovmmap(SYSCTL_HANDLER_ARGS)
 {
@@ -2498,7 +2498,7 @@ sysctl_kern_proc_ovmmap(SYSCTL_HANDLER_ARGS)
 	free(kve, M_TEMP);
 	return (error);
 }
-#endif	/* COMPAT_FREEBSD7 */
+#endif	/* COMPAT_NQC7 */
 
 #ifdef KINFO_VMENTRY_SIZE
 CTASSERT(sizeof(struct kinfo_vmentry) == KINFO_VMENTRY_SIZE);
@@ -2683,13 +2683,13 @@ kern_proc_vmmap_out(struct proc *p, struct sbuf *sb, ssize_t maxlen, int flags)
 				if (VOP_GETATTR(vp, &va, cred) == 0) {
 					kve->kve_vn_fileid = va.va_fileid;
 					kve->kve_vn_fsid = va.va_fsid;
-					kve->kve_vn_fsid_freebsd11 =
+					kve->kve_vn_fsid_nqc11 =
 					    kve->kve_vn_fsid; /* truncate */
 					kve->kve_vn_mode =
 					    MAKEIMODE(va.va_type, va.va_mode);
 					kve->kve_vn_size = va.va_size;
 					kve->kve_vn_rdev = va.va_rdev;
-					kve->kve_vn_rdev_freebsd11 =
+					kve->kve_vn_rdev_nqc11 =
 					    kve->kve_vn_rdev; /* truncate */
 					kve->kve_status = KF_ATTR_VALID;
 				}
@@ -2962,7 +2962,7 @@ sysctl_kern_proc_ps_strings(SYSCTL_HANDLER_ARGS)
 	struct proc *p;
 	vm_offset_t ps_strings;
 	int error;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	uint32_t ps_strings32;
 #endif
 
@@ -2972,7 +2972,7 @@ sysctl_kern_proc_ps_strings(SYSCTL_HANDLER_ARGS)
 	error = pget((pid_t)name[0], PGET_CANDEBUG, &p);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if ((req->flags & SCTL_MASK32) != 0) {
 		/*
 		 * We return 0 if the 32 bit emulation request is for a 64 bit
@@ -3080,7 +3080,7 @@ sysctl_kern_proc_sigtramp(SYSCTL_HANDLER_ARGS)
 	struct kinfo_sigtramp kst;
 	const struct sysentvec *sv;
 	int error;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct kinfo_sigtramp32 kst32;
 #endif
 
@@ -3091,7 +3091,7 @@ sysctl_kern_proc_sigtramp(SYSCTL_HANDLER_ARGS)
 	if (error != 0)
 		return (error);
 	sv = p->p_sysent;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if ((req->flags & SCTL_MASK32) != 0) {
 		bzero(&kst32, sizeof(kst32));
 		if (SV_PROC_FLAG(p, SV_ILP32)) {
@@ -3137,7 +3137,7 @@ sysctl_kern_proc_sigfastblk(SYSCTL_HANDLER_ARGS)
 	struct proc *p;
 	struct thread *td1;
 	uintptr_t addr;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	uint32_t addr32;
 #endif
 	int error;
@@ -3151,7 +3151,7 @@ sysctl_kern_proc_sigfastblk(SYSCTL_HANDLER_ARGS)
 		return (error);
 
 	PROC_LOCK(p);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32)) {
 		if (!SV_PROC_FLAG(p, SV_ILP32)) {
 			error = EINVAL;
@@ -3189,7 +3189,7 @@ errlocked:
 	if (error != 0)
 		return (error);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32)) {
 		addr32 = addr;
 		error = SYSCTL_OUT(req, &addr32, sizeof(addr32));
@@ -3214,7 +3214,7 @@ sysctl_kern_proc_vm_layout(SYSCTL_HANDLER_ARGS)
 	error = pget((pid_t)name[0], PGET_CANDEBUG, &p);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32)) {
 		if (!SV_PROC_FLAG(p, SV_ILP32)) {
 			PROC_UNLOCK(p);
@@ -3250,7 +3250,7 @@ sysctl_kern_proc_vm_layout(SYSCTL_HANDLER_ARGS)
 	    PROC_HAS_SHP(p))
 		kvm.kvm_map_flags |= KMAP_FLAG_ASLR_SHARED_PAGE;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32)) {
 		struct kinfo_vm_layout32 kvm32;
 
@@ -3273,7 +3273,7 @@ sysctl_kern_proc_vm_layout(SYSCTL_HANDLER_ARGS)
 #endif
 
 	error = SYSCTL_OUT(req, &kvm, sizeof(kvm));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 out:
 #endif
 	vmspace_free(vmspace);
@@ -3359,7 +3359,7 @@ static SYSCTL_NODE(_kern_proc, (KERN_PROC_PROC | KERN_PROC_INC_THREAD), proc_td,
 	CTLFLAG_RD | CTLFLAG_MPSAFE, sysctl_kern_proc,
 	"Return process table, including threads");
 
-#ifdef COMPAT_FREEBSD7
+#ifdef COMPAT_NQC7
 static SYSCTL_NODE(_kern_proc, KERN_PROC_OVMMAP, ovmmap, CTLFLAG_RD |
 	CTLFLAG_MPSAFE, sysctl_kern_proc_ovmmap, "Old Process vm map entries");
 #endif

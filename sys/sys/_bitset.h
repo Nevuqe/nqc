@@ -62,11 +62,11 @@ struct _t {								\
  * to every call.
  */
 
-#if defined(_KERNEL) || defined(_WANT_FREEBSD_BITSET)
+#if defined(_KERNEL) || defined(_WANT_NQC_BITSET)
 __BITSET_DEFINE(bitset, 1);
 
 #define	BITSET_DEFINE(_t, _s)	__BITSET_DEFINE(_t, _s)
 #define	BITSET_DEFINE_VAR(_t)	__BITSET_DEFINE_VAR(_t)
-#endif /* defined(_KERNEL) || defined(_WANT_FREEBSD_BITSET) */
+#endif /* defined(_KERNEL) || defined(_WANT_NQC_BITSET) */
 
 #endif /* !_SYS__BITSET_H_ */

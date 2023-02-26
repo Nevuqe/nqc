@@ -92,7 +92,7 @@ VERSION
 	NQC_1.7 {
 		global:
 			__vdso_ia32_sigcode;
-			__vdso_freebsd4_ia32_sigcode;
+			__vdso_nqc4_ia32_sigcode;
 			__vdso_ia32_osigcode;
 			__vdso_lcall_tramp;
 		local:

@@ -6,14 +6,14 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLDB_SOURCE_PLUGINS_PLATFORM_FREEBSD_PLATFORMFREEBSD_H
-#define LLDB_SOURCE_PLUGINS_PLATFORM_FREEBSD_PLATFORMFREEBSD_H
+#ifndef LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMNQC_H
+#define LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMNQC_H
 
 #include "Plugins/Platform/POSIX/PlatformPOSIX.h"
 #include "Plugins/TypeSystem/Clang/TypeSystemClang.h"
 
 namespace lldb_private {
-namespace platform_freebsd {
+namespace platform_nqc {
 
 class PlatformFreeBSD : public PlatformPOSIX {
 public:
@@ -63,7 +63,7 @@ private:
   std::unique_ptr<TypeSystemClang> m_type_system_up;
 };
 
-} // namespace platform_freebsd
+} // namespace platform_nqc
 } // namespace lldb_private
 
-#endif // LLDB_SOURCE_PLUGINS_PLATFORM_FREEBSD_PLATFORMFREEBSD_H
+#endif // LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMNQC_H

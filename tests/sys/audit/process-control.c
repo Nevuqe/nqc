@@ -48,7 +48,7 @@
 
 #include "utils.h"
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 static pid_t pid;
 static int filedesc, status;

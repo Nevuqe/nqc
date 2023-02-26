@@ -37,7 +37,7 @@
 #include "config.h"
 #elif defined(__NQC__)
 /* Building as part of FreeBSD system requires a pre-built config.h. */
-#include "config_freebsd.h"
+#include "config_nqc.h"
 #elif defined(__NetBSD__)
 /* Building as part of NetBSD system requires a pre-built config.h. */
 #include "config_netbsd.h"

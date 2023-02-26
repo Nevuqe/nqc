@@ -5439,7 +5439,7 @@ __qlnx_osal_vf_fill_acquire_resc_req(struct ecore_hwfn *p_hwfn,
 	p_sw_info->driver_version = (QLNX_VERSION_MAJOR << 24) |
 					(QLNX_VERSION_MINOR << 16) |
 					 QLNX_VERSION_BUILD;
-	p_sw_info->os_type = VFPF_ACQUIRE_OS_FREEBSD;
+	p_sw_info->os_type = VFPF_ACQUIRE_OS_NQC;
 
 	return;
 }
@@ -5744,7 +5744,7 @@ qlnx_set_id(struct ecore_dev *cdev, char name[NAME_SIZE],
                 snprintf(cdev->hwfns[i].name, NAME_SIZE, "%s-%d", name, i);
         }
 
-        cdev->drv_type = DRV_ID_DRV_TYPE_FREEBSD;
+        cdev->drv_type = DRV_ID_DRV_TYPE_NQC;
 
 	return ;
 }

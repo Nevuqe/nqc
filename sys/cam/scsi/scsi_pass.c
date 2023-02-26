@@ -1835,7 +1835,7 @@ passdoioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flag, struct thread 
 		union ccb **user_ccb, *ccb;
 		xpt_opcode fc;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 			error = ENOTTY;
 			goto bailout;
@@ -2015,7 +2015,7 @@ camioqueue_error:
 		struct pass_io_req *io_req;
 		int old_error;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 			error = ENOTTY;
 			goto bailout;

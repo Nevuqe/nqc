@@ -2206,7 +2206,7 @@ tc_fill_vdso_timehands(struct vdso_timehands *vdso_th)
 	return (enabled);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 uint32_t
 tc_fill_vdso_timehands32(struct vdso_timehands32 *vdso_th32)
 {

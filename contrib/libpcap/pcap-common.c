@@ -427,7 +427,7 @@
  * This is now used by FreeBSD for its BPF taps for USB; that has its
  * own headers.  So it is written, so it is done.
  */
-#define LINKTYPE_USB_FREEBSD	186
+#define LINKTYPE_USB_NQC	186
 
 /*
  * Bluetooth HCI UART transport layer (part H:4); requested by

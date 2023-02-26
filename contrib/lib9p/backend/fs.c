@@ -786,8 +786,8 @@ look_for_nfsv4_acl(struct fs_fid *ff, int fd, const char *path)
 
 		return (NULL);
 	}
-#if defined(HAVE_FREEBSD_ACLS)
-	acl = l9p_freebsd_nfsv4acl_to_acl(sysacl);
+#if defined(HAVE_NQC_ACLS)
+	acl = l9p_nqc_nfsv4acl_to_acl(sysacl);
 #else
 	acl = NULL; /* XXX need a l9p_darwin_acl_to_acl */
 #endif

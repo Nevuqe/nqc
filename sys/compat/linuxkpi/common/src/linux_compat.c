@@ -1110,7 +1110,7 @@ linux_file_ioctl_sub(struct file *fp, struct linux_file *filp,
 		/* fetch user-space pointer */
 		data = *(void **)data;
 	}
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		/* try the compat IOCTL handler first */
 		if (fop->compat_ioctl != NULL) {
@@ -1728,7 +1728,7 @@ linux_file_ioctl(struct file *fp, u_long cmd, void *data, struct ucred *cred,
 		*(int *)data = fgetown(&filp->f_sigio);
 		break;
 	case FIODGNAME:
-#ifdef	COMPAT_FREEBSD32
+#ifdef	COMPAT_NQC32
 	case FIODGNAME_32:
 #endif
 		if (filp->f_cdev == NULL || filp->f_cdev->cdev == NULL) {

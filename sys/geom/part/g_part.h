@@ -65,13 +65,13 @@ enum g_part_alias {
 	G_PART_ALIAS_DNQC_VINUM,	/* A Dnqc Vinum partition entry */
 	G_PART_ALIAS_EBR,		/* A EBR partition entry. */
 	G_PART_ALIAS_EFI,		/* A EFI system partition entry. */
-	G_PART_ALIAS_FREEBSD,		/* A BSD labeled partition entry. */
-	G_PART_ALIAS_FREEBSD_BOOT,	/* A FreeBSD boot partition entry. */
-	G_PART_ALIAS_FREEBSD_NANDFS,	/* A FreeBSD nandfs partition entry. */
-	G_PART_ALIAS_FREEBSD_SWAP,	/* A swap partition entry. */
-	G_PART_ALIAS_FREEBSD_UFS,	/* A UFS/UFS2 file system entry. */
-	G_PART_ALIAS_FREEBSD_VINUM,	/* A Vinum partition entry. */
-	G_PART_ALIAS_FREEBSD_ZFS,	/* A ZFS file system entry. */
+	G_PART_ALIAS_NQC,		/* A BSD labeled partition entry. */
+	G_PART_ALIAS_NQC_BOOT,	/* A FreeBSD boot partition entry. */
+	G_PART_ALIAS_NQC_NANDFS,	/* A FreeBSD nandfs partition entry. */
+	G_PART_ALIAS_NQC_SWAP,	/* A swap partition entry. */
+	G_PART_ALIAS_NQC_UFS,	/* A UFS/UFS2 file system entry. */
+	G_PART_ALIAS_NQC_VINUM,	/* A Vinum partition entry. */
+	G_PART_ALIAS_NQC_ZFS,	/* A ZFS file system entry. */
 	G_PART_ALIAS_HIFIVE_FSBL,	/* HiFive First Stage Bootloader */
 	G_PART_ALIAS_HIFIVE_BBL,	/* HiFive Second Stage Bootloader */
 	G_PART_ALIAS_LINUX_DATA,	/* A Linux data partition entry. */

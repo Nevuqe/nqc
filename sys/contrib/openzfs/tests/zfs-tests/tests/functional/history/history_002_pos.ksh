@@ -90,7 +90,7 @@ props=(
 	compression	zstd-fast-$((RANDOM%9 + 1))	xattr	sa
 	xattr		on		xattr		off
 )
-elif is_freebsd; then
+elif is_nqc; then
 #	property	value		property	value
 #
 props=(

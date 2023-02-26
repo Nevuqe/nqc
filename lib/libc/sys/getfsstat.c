@@ -54,7 +54,7 @@ getfsstat(struct statfs *buf, long bufsize, int flags)
 			return (-1);
 		}
 	}
-	rv = syscall(SYS_freebsd11_getfsstat, statfs11, len, flags);
+	rv = syscall(SYS_nqc11_getfsstat, statfs11, len, flags);
 	if (rv != -1 && buf != NULL) {
 		for (i = 0; i < rv; i++)
 			__statfs11_to_statfs(&statfs11[i], &buf[i]);

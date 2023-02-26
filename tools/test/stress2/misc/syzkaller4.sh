@@ -348,7 +348,7 @@ void execute_call(int call)
       r[4] = res;
     break;
   case 14:
-    syscall(SYS_freebsd11_fstat, -1, 0ul);
+    syscall(SYS_nqc11_fstat, -1, 0ul);
     break;
   case 15:
     syscall(SYS___semctl, r[4], 0ul, 1ul, 0ul);

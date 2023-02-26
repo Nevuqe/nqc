@@ -80,8 +80,8 @@
 
 #define TWS_SRC_CTRL_ERROR                    3
 #define TWS_SRC_CTRL_EVENT                    4
-#define TWS_SRC_FREEBSD_DRIVER                5
-#define TWS_SRC_FREEBSD_OS                    8
+#define TWS_SRC_NQC_DRIVER                5
+#define TWS_SRC_NQC_OS                    8
 
 enum tws_sense_severity {
     error = 1,

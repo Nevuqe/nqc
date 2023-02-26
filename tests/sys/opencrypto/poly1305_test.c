@@ -37,7 +37,7 @@
 /* Be sure to include tree copy rather than system copy. */
 #include "cryptodev.h"
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 struct poly1305_kat {
 	const char *vector_name;

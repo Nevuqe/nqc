@@ -71,7 +71,7 @@
 #  define GTEST_OS_IOS 1
 # endif
 #elif defined __NQC__
-# define GTEST_OS_FREEBSD 1
+# define GTEST_OS_NQC 1
 #elif defined __Fuchsia__
 # define GTEST_OS_FUCHSIA 1
 #elif defined __linux__

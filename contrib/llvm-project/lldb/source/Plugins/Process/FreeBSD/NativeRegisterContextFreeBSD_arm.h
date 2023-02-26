@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_arm.h ----------------------*- C++ -*-===//
+//===-- NativeRegisterContextNQC_arm.h ----------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,8 +8,8 @@
 
 #if defined(__arm__)
 
-#ifndef lldb_NativeRegisterContextFreeBSD_arm_h
-#define lldb_NativeRegisterContextFreeBSD_arm_h
+#ifndef lldb_NativeRegisterContextNQC_arm_h
+#define lldb_NativeRegisterContextNQC_arm_h
 
 // clang-format off
 #include <sys/types.h>
@@ -23,13 +23,13 @@
 #include <array>
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
-class NativeRegisterContextFreeBSD_arm : public NativeRegisterContextFreeBSD {
+class NativeRegisterContextNQC_arm : public NativeRegisterContextFreeBSD {
 public:
-  NativeRegisterContextFreeBSD_arm(const ArchSpec &target_arch,
+  NativeRegisterContextNQC_arm(const ArchSpec &target_arch,
                                    NativeThreadProtocol &native_thread);
 
   uint32_t GetRegisterSetCount() const override;
@@ -60,9 +60,9 @@ private:
   RegisterInfoPOSIX_arm &GetRegisterInfo() const;
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef lldb_NativeRegisterContextFreeBSD_arm_h
+#endif // #ifndef lldb_NativeRegisterContextNQC_arm_h
 
 #endif // defined (__arm__)

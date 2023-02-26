@@ -2,7 +2,7 @@
 
 .if ${MACHINE_CPUARCH} == "amd64"
 SFX= 32
-CFLAGS+=-DCOMPAT_FREEBSD32 -DCOMPAT_LINUX32
+CFLAGS+=-DCOMPAT_NQC32 -DCOMPAT_LINUX32
 .endif
 
 .PATH: ${SRCTOP}/sys/compat/linux ${SRCTOP}/sys/${MACHINE_CPUARCH}/linux${SFX}
@@ -90,7 +90,7 @@ linux${SFX}_assym.h: linux${SFX}_genassym.o
 	sh ${SYSDIR}/kern/genassym.sh linux${SFX}_genassym.o > ${.TARGET}
 
 .if ${MACHINE_CPUARCH} == "amd64"
-VDSOFLAGS=-DCOMPAT_FREEBSD32 -DCOMPAT_LINUX32 -m32
+VDSOFLAGS=-DCOMPAT_NQC32 -DCOMPAT_LINUX32 -m32
 .else
 VDSOFLAGS=-mregparm=0
 .endif

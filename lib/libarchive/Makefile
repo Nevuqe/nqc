@@ -35,7 +35,7 @@ SRCS=	archive_acl.c					\
 	archive_check_magic.c				\
 	archive_cmdline.c				\
 	archive_cryptor.c				\
-	archive_disk_acl_freebsd.c			\
+	archive_disk_acl_nqc.c			\
 	archive_digest.c				\
 	archive_entry.c					\
 	archive_entry_copy_stat.c			\

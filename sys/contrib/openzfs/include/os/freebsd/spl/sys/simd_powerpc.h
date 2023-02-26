@@ -46,8 +46,8 @@
  *   zfs_isa207_available()
  */
 
-#ifndef _FREEBSD_SIMD_POWERPC_H
-#define	_FREEBSD_SIMD_POWERPC_H
+#ifndef _NQC_SIMD_POWERPC_H
+#define	_NQC_SIMD_POWERPC_H
 
 #include <sys/types.h>
 #include <sys/cdefs.h>

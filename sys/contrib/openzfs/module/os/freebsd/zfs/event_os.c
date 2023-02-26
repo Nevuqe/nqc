@@ -30,7 +30,7 @@
 #include <sys/sx.h>
 #include <sys/event.h>
 
-#include <sys/freebsd_event.h>
+#include <sys/nqc_event.h>
 
 static void
 knlist_sx_xlock(void *arg)

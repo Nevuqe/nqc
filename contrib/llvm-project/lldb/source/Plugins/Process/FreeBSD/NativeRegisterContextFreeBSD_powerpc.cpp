@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_powerpc.cpp --------------------------===//
+//===-- NativeRegisterContextNQC_powerpc.cpp --------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,7 +8,7 @@
 
 #if defined(__powerpc__)
 
-#include "NativeRegisterContextFreeBSD_powerpc.h"
+#include "NativeRegisterContextNQC_powerpc.h"
 
 #include "lldb/Host/HostInfo.h"
 #include "lldb/Utility/DataBufferHeap.h"
@@ -27,7 +27,7 @@
 
 using namespace lldb;
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 
 static const uint32_t g_gpr_regnums[] = {
     gpr_r0_powerpc,  gpr_r1_powerpc,  gpr_r2_powerpc,  gpr_r3_powerpc,
@@ -67,37 +67,37 @@ static const RegisterSet g_reg_sets_powerpc[k_num_register_sets] = {
 NativeRegisterContextFreeBSD *
 NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
-  return new NativeRegisterContextFreeBSD_powerpc(target_arch, native_thread);
+  return new NativeRegisterContextNQC_powerpc(target_arch, native_thread);
 }
 
 static RegisterInfoInterface *
 CreateRegisterInfoInterface(const ArchSpec &target_arch) {
   if (HostInfo::GetArchitecture().GetAddressByteSize() == 4) {
-    return new RegisterContextFreeBSD_powerpc32(target_arch);
+    return new RegisterContextNQC_powerpc32(target_arch);
   } else {
     assert((HostInfo::GetArchitecture().GetAddressByteSize() == 8) &&
            "Register setting path assumes this is a 64-bit host");
-    return new RegisterContextFreeBSD_powerpc64(target_arch);
+    return new RegisterContextNQC_powerpc64(target_arch);
   }
 }
 
-NativeRegisterContextFreeBSD_powerpc::NativeRegisterContextFreeBSD_powerpc(
+NativeRegisterContextNQC_powerpc::NativeRegisterContextNQC_powerpc(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread)
     : NativeRegisterContextRegisterInfo(
           native_thread, CreateRegisterInfoInterface(target_arch)) {}
 
-RegisterContextFreeBSD_powerpc &
-NativeRegisterContextFreeBSD_powerpc::GetRegisterInfo() const {
-  return static_cast<RegisterContextFreeBSD_powerpc &>(
+RegisterContextNQC_powerpc &
+NativeRegisterContextNQC_powerpc::GetRegisterInfo() const {
+  return static_cast<RegisterContextNQC_powerpc &>(
       *m_register_info_interface_up);
 }
 
-uint32_t NativeRegisterContextFreeBSD_powerpc::GetRegisterSetCount() const {
+uint32_t NativeRegisterContextNQC_powerpc::GetRegisterSetCount() const {
   return k_num_register_sets;
 }
 
 const RegisterSet *
-NativeRegisterContextFreeBSD_powerpc::GetRegisterSet(uint32_t set_index) const {
+NativeRegisterContextNQC_powerpc::GetRegisterSet(uint32_t set_index) const {
   switch (GetRegisterInfoInterface().GetTargetArchitecture().GetMachine()) {
   case llvm::Triple::ppc:
     return &g_reg_sets_powerpc[set_index];
@@ -106,8 +106,8 @@ NativeRegisterContextFreeBSD_powerpc::GetRegisterSet(uint32_t set_index) const {
   }
 }
 
-llvm::Optional<NativeRegisterContextFreeBSD_powerpc::RegSetKind>
-NativeRegisterContextFreeBSD_powerpc::GetSetForNativeRegNum(
+llvm::Optional<NativeRegisterContextNQC_powerpc::RegSetKind>
+NativeRegisterContextNQC_powerpc::GetSetForNativeRegNum(
     uint32_t reg_num) const {
   switch (GetRegisterInfoInterface().GetTargetArchitecture().GetMachine()) {
   case llvm::Triple::ppc:
@@ -123,14 +123,14 @@ NativeRegisterContextFreeBSD_powerpc::GetSetForNativeRegNum(
   llvm_unreachable("Register does not belong to any register set");
 }
 
-uint32_t NativeRegisterContextFreeBSD_powerpc::GetUserRegisterCount() const {
+uint32_t NativeRegisterContextNQC_powerpc::GetUserRegisterCount() const {
   uint32_t count = 0;
   for (uint32_t set_index = 0; set_index < GetRegisterSetCount(); ++set_index)
     count += GetRegisterSet(set_index)->num_registers;
   return count;
 }
 
-Status NativeRegisterContextFreeBSD_powerpc::ReadRegisterSet(RegSetKind set) {
+Status NativeRegisterContextNQC_powerpc::ReadRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
@@ -139,10 +139,10 @@ Status NativeRegisterContextFreeBSD_powerpc::ReadRegisterSet(RegSetKind set) {
     return NativeProcessFreeBSD::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
                                                m_reg_data.data() + sizeof(reg));
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_powerpc::ReadRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_powerpc::ReadRegisterSet");
 }
 
-Status NativeRegisterContextFreeBSD_powerpc::WriteRegisterSet(RegSetKind set) {
+Status NativeRegisterContextNQC_powerpc::WriteRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
@@ -151,11 +151,11 @@ Status NativeRegisterContextFreeBSD_powerpc::WriteRegisterSet(RegSetKind set) {
     return NativeProcessFreeBSD::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
                                                m_reg_data.data() + sizeof(reg));
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_powerpc::WriteRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_powerpc::WriteRegisterSet");
 }
 
 Status
-NativeRegisterContextFreeBSD_powerpc::ReadRegister(const RegisterInfo *reg_info,
+NativeRegisterContextNQC_powerpc::ReadRegister(const RegisterInfo *reg_info,
                                                    RegisterValue &reg_value) {
   Status error;
 
@@ -191,7 +191,7 @@ NativeRegisterContextFreeBSD_powerpc::ReadRegister(const RegisterInfo *reg_info,
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_powerpc::WriteRegister(
+Status NativeRegisterContextNQC_powerpc::WriteRegister(
     const RegisterInfo *reg_info, const RegisterValue &reg_value) {
   Status error;
 
@@ -226,7 +226,7 @@ Status NativeRegisterContextFreeBSD_powerpc::WriteRegister(
   return WriteRegisterSet(set);
 }
 
-Status NativeRegisterContextFreeBSD_powerpc::ReadAllRegisterValues(
+Status NativeRegisterContextNQC_powerpc::ReadAllRegisterValues(
     lldb::WritableDataBufferSP &data_sp) {
   Status error;
 
@@ -245,20 +245,20 @@ Status NativeRegisterContextFreeBSD_powerpc::ReadAllRegisterValues(
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_powerpc::WriteAllRegisterValues(
+Status NativeRegisterContextNQC_powerpc::WriteAllRegisterValues(
     const lldb::DataBufferSP &data_sp) {
   Status error;
 
   if (!data_sp) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_powerpc::%s invalid data_sp provided",
+        "NativeRegisterContextNQC_powerpc::%s invalid data_sp provided",
         __FUNCTION__);
     return error;
   }
 
   if (data_sp->GetByteSize() != m_reg_data.size()) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_powerpc::%s data_sp contained mismatched "
+        "NativeRegisterContextNQC_powerpc::%s data_sp contained mismatched "
         "data size, expected %zu, actual %" PRIu64,
         __FUNCTION__, m_reg_data.size(), data_sp->GetByteSize());
     return error;
@@ -266,7 +266,7 @@ Status NativeRegisterContextFreeBSD_powerpc::WriteAllRegisterValues(
 
   const uint8_t *src = data_sp->GetBytes();
   if (src == nullptr) {
-    error.SetErrorStringWithFormat("NativeRegisterContextFreeBSD_powerpc::%s "
+    error.SetErrorStringWithFormat("NativeRegisterContextNQC_powerpc::%s "
                                    "DataBuffer::GetBytes() returned a null "
                                    "pointer",
                                    __FUNCTION__);
@@ -281,7 +281,7 @@ Status NativeRegisterContextFreeBSD_powerpc::WriteAllRegisterValues(
   return WriteRegisterSet(FPRegSet);
 }
 
-llvm::Error NativeRegisterContextFreeBSD_powerpc::CopyHardwareWatchpointsFrom(
+llvm::Error NativeRegisterContextNQC_powerpc::CopyHardwareWatchpointsFrom(
     NativeRegisterContextFreeBSD &source) {
   return llvm::Error::success();
 }

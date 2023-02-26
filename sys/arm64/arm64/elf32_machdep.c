@@ -82,17 +82,17 @@ extern void freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask);
 u_long __read_frequently elf32_hwcap;
 u_long __read_frequently elf32_hwcap2;
 
-static struct sysentvec elf32_freebsd_sysvec = {
+static struct sysentvec elf32_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= freebsd32_sysent,
-	.sv_fixup	= elf32_freebsd_fixup,
+	.sv_fixup	= elf32_nqc_fixup,
 	.sv_sendsig	= freebsd32_sendsig,
 	.sv_sigcode	= aarch32_sigcode,
 	.sv_szsigcode	= &sz_aarch32_sigcode,
 	.sv_name	= "FreeBSD ELF32",
 	.sv_coredump	= elf32_coredump,
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
-	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
+	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = elf32_prepare_notes,
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,
@@ -102,12 +102,12 @@ static struct sysentvec elf32_freebsd_sysvec = {
 	.sv_psstrings	= FREEBSD32_PS_STRINGS,
 	.sv_psstringssz	= sizeof(struct freebsd32_ps_strings),
 	.sv_stackprot	= VM_PROT_READ | VM_PROT_WRITE,
-	.sv_copyout_auxargs = elf32_freebsd_copyout_auxargs,
+	.sv_copyout_auxargs = elf32_nqc_copyout_auxargs,
 	.sv_copyout_strings = freebsd32_copyout_strings,
 	.sv_setregs	= freebsd32_setregs,
 	.sv_fixlimit	= NULL, // XXX
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_ILP32 | SV_SHP | SV_TIMEKEEP |
+	.sv_flags	= SV_ABI_NQC | SV_ILP32 | SV_SHP | SV_TIMEKEEP |
 	    SV_RNG_SEED_VER,
 	.sv_set_syscall_retval = freebsd32_set_syscall_retval,
 	.sv_fetch_syscall_args = freebsd32_fetch_syscall_args,
@@ -124,17 +124,17 @@ static struct sysentvec elf32_freebsd_sysvec = {
 	.sv_regset_begin = SET_BEGIN(__elfN(regset)),
 	.sv_regset_end	= SET_LIMIT(__elfN(regset)),
 };
-INIT_SYSENTVEC(elf32_sysvec, &elf32_freebsd_sysvec);
+INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 
 static Elf32_Brandinfo freebsd32_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_ARM,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= "/libexec/ld-elf32.so.1",
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE,
 	.header_supported= elf32_arm_abi_supported,
 };
@@ -153,9 +153,9 @@ elf32_arm_abi_supported(struct image_params *imgp, int32_t *osrel __unused,
 	    ID_AA64PFR0_EL0_64_32)
 		return (FALSE);
 
-#define	EF_ARM_EABI_FREEBSD_MIN	EF_ARM_EABI_VER4
+#define	EF_ARM_EABI_NQC_MIN	EF_ARM_EABI_VER4
 	hdr = (const Elf32_Ehdr *)imgp->image_header;
-	if (EF_ARM_EABI_VERSION(hdr->e_flags) < EF_ARM_EABI_FREEBSD_MIN) {
+	if (EF_ARM_EABI_VERSION(hdr->e_flags) < EF_ARM_EABI_NQC_MIN) {
 		if (bootverbose)
 			uprintf("Attempting to execute non EABI binary "
 			    "(rev %d) image %s",

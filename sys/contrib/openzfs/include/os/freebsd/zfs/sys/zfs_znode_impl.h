@@ -25,8 +25,8 @@
  * Copyright 2016 Nexenta Systems, Inc. All rights reserved.
  */
 
-#ifndef	_FREEBSD_ZFS_SYS_ZNODE_IMPL_H
-#define	_FREEBSD_ZFS_SYS_ZNODE_IMPL_H
+#ifndef	_NQC_ZFS_SYS_ZNODE_IMPL_H
+#define	_NQC_ZFS_SYS_ZNODE_IMPL_H
 
 #include <sys/list.h>
 #include <sys/dmu.h>
@@ -183,4 +183,4 @@ extern int zfs_znode_parent_and_name(struct znode *zp, struct znode **dzpp,
 }
 #endif
 
-#endif	/* _FREEBSD_SYS_FS_ZFS_ZNODE_H */
+#endif	/* _NQC_SYS_FS_ZFS_ZNODE_H */

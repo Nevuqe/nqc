@@ -4212,7 +4212,7 @@ bus_generic_get_device_path(device_t bus, device_t child, const char *locator,
 	if (parent != NULL && strcmp(locator, BUS_LOCATOR_ACPI) != 0) {
 		rv = BUS_GET_DEVICE_PATH(parent, bus, locator, sb);
 	}
-	if (strcmp(locator, BUS_LOCATOR_FREEBSD) == 0) {
+	if (strcmp(locator, BUS_LOCATOR_NQC) == 0) {
 		if (rv == 0) {
 			sbuf_printf(sb, "/%s", device_get_nameunit(child));
 		}

@@ -67,7 +67,7 @@ update_uefi_bootentry()
 	# No entries so directly create one and return
 	if [ ${nentries} -eq 0 ]; then
 		f_dprintf "Creating UEFI boot entry"
-		efibootmgr --create --activate --label "$EFI_LABEL_NAME" --loader "${mntpt}/${FREEBSD_BOOTNAME}" > /dev/null
+		efibootmgr --create --activate --label "$EFI_LABEL_NAME" --loader "${mntpt}/${NQC_BOOTNAME}" > /dev/null
 		return
 	fi
 
@@ -77,13 +77,13 @@ update_uefi_bootentry()
 		for entry in $(efibootmgr | awk "\$NF == \"$EFI_LABEL_NAME\" { sub(/.*Boot/,\"\", \$1); sub(/\*/,\"\", \$1); print \$1 }"); do
 			efibootmgr -B -b ${entry}
 		done
-		efibootmgr --create --activate --label "$EFI_LABEL_NAME" --loader "${mntpt}/${FREEBSD_BOOTNAME}" > /dev/null
+		efibootmgr --create --activate --label "$EFI_LABEL_NAME" --loader "${mntpt}/${NQC_BOOTNAME}" > /dev/null
 		return
 	fi
 
-	FREEBSD_BOOTLABEL=$(dialog_uefi_entryname "${EFI_LABEL_NAME}")
+	NQC_BOOTLABEL=$(dialog_uefi_entryname "${EFI_LABEL_NAME}")
 	[ $? -eq $DIALOG_CANCEL ] && exit 1
-	efibootmgr --create --activate --label "$FREEBSD_BOOTLABEL" --loader "${mntpt}/${FREEBSD_BOOTNAME}" > /dev/null
+	efibootmgr --create --activate --label "$NQC_BOOTLABEL" --loader "${mntpt}/${NQC_BOOTNAME}" > /dev/null
 }
 
 f_dialog_title "Boot Configuration"
@@ -101,13 +101,13 @@ if [ -n "$(awk '{if ($2=="/boot/efi") printf("%s\n",$1);}' $PATH_FSTAB)" ]; then
 	esac
 	BOOTDIR="/efi/boot"
 	BOOTNAME="${BOOTDIR}/boot${ARCHBOOTNAME}.efi"
-	FREEBSD_BOOTDIR="/efi/freebsd"
-	FREEBSD_BOOTNAME="${FREEBSD_BOOTDIR}/loader.efi"
+	NQC_BOOTDIR="/efi/freebsd"
+	NQC_BOOTNAME="${NQC_BOOTDIR}/loader.efi"
 	mntpt="$BSDINSTALL_CHROOT/boot/efi"
 
 	f_dprintf "Installing loader.efi onto ESP"
-	mkdir -p "${mntpt}/${FREEBSD_BOOTDIR}" "${mntpt}/${BOOTDIR}"
-	cp "$BSDINSTALL_CHROOT/boot/loader.efi" "${mntpt}/${FREEBSD_BOOTNAME}"
+	mkdir -p "${mntpt}/${NQC_BOOTDIR}" "${mntpt}/${BOOTDIR}"
+	cp "$BSDINSTALL_CHROOT/boot/loader.efi" "${mntpt}/${NQC_BOOTNAME}"
 
 	#
 	# The following shouldn't be necessary. UEFI defines a way to

@@ -61,7 +61,7 @@
 #include <stddef.h>
 
 #ifdef __NQC__
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 static int
 eventfd(int x __unused, int y __unused)

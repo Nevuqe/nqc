@@ -46,7 +46,7 @@ LDFLAGS=	-nostdlib -static -T ${LDSCRIPT}
 LDFLAGS+=	-Wl,-znotext
 
 SRCS+=		main.c vers.c
-SRCS+=		copy.c devicename.c elf_freebsd.c glue.c
+SRCS+=		copy.c devicename.c elf_nqc.c glue.c
 SRCS+=		net.c reboot.c time.c gfx_fb_stub.c
 SRCS+=		uboot_console.c uboot_disk.c uboot_fdt.c uboot_module.c
 

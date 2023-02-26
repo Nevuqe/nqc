@@ -40,7 +40,7 @@
 #include <strings.h>
 
 #include <atf-c.h>
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 ATF_TC(params);
 ATF_TC_HEAD(params, tc)

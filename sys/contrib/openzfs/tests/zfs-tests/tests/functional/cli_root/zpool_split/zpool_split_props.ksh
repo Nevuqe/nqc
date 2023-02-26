@@ -35,7 +35,7 @@ function cleanup
 	destroy_pool $TESTPOOL
 	destroy_pool $TESTPOOL2
 	rm -f $DEVICE1 $DEVICE2
-	! is_freebsd && log_must mmp_clear_hostid
+	! is_nqc && log_must mmp_clear_hostid
 }
 
 function setup_mirror
@@ -58,7 +58,7 @@ typeset bad_props=("bootfs=$TESTPOOL2/bootfs" 'version=28' 'ashift=4'
     'allocated=1234' 'capacity=5678' 'multihost=none'
     'feature@async_destroy=disabled' 'feature@xxx_fake_xxx=enabled'
     'propname=propval' 'readonly=on')
-if ! is_freebsd; then
+if ! is_nqc; then
 	good_props+=('multihost=on')
 	bad_props+=('multihost=none')
 	if [ -e $HOSTID_FILE ]; then

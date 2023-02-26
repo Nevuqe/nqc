@@ -70,13 +70,13 @@ struct frame {
 	int dummy;
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct sigframe32 {
 	struct siginfo32		sf_si;
 	ucontext32_t			sf_uc;
 	mcontext32_vfp_t		sf_vfp;
 };
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 #endif /* !LOCORE */
 

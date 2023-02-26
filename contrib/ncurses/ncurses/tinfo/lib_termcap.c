@@ -56,7 +56,7 @@ MODULE_ID("$Id: lib_termcap.c,v 1.88 2020/02/02 23:34:34 tom Exp $")
 NCURSES_EXPORT_VAR(char *) UP = 0;
 NCURSES_EXPORT_VAR(char *) BC = 0;
 
-#ifdef FREEBSD_NATIVE
+#ifdef NQC_NATIVE
 extern char _nc_termcap[];	/* buffer to copy out */
 #endif
 
@@ -208,7 +208,7 @@ NCURSES_SP_NAME(tgetent) (NCURSES_SP_DCLx char *bufp, const char *name)
 
     }
 
-#ifdef FREEBSD_NATIVE
+#ifdef NQC_NATIVE
     /*
      * This is a REALLY UGLY hack. Basically, if we originate with
      * a termcap source, try and copy it out.

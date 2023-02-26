@@ -284,7 +284,7 @@ typedef struct {
 /* NetBSD executables (name = "NetBSD") */
 #define	NT_NETBSD_VERSION	1
 #define	NT_NETBSD_EMULATION	2
-#define	NT_FREEBSD_VERSION	1
+#define	NT_NQC_VERSION	1
 #define	NT_OPENBSD_VERSION	1
 #define	NT_DRAGONFLY_VERSION	1
 /*
@@ -367,7 +367,7 @@ typedef struct {
 /*
  * FreeBSD specific notes
  */
-#define NT_FREEBSD_PROCSTAT_AUXV	16
+#define NT_NQC_PROCSTAT_AUXV	16
 
 #if !defined(ELFSIZE) && defined(ARCH_ELFSIZE)
 #define ELFSIZE ARCH_ELFSIZE

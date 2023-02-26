@@ -135,10 +135,10 @@ static struct drm_ioctl_desc drm_ioctls[] = {
 
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETRESOURCES, drm_mode_getresources, DRM_CONTROL_ALLOW|DRM_UNLOCKED),
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	DRM_IOCTL_DEF(DRM_IOCTL_PRIME_HANDLE_TO_FD, drm_prime_handle_to_fd_ioctl, DRM_AUTH|DRM_UNLOCKED),
 	DRM_IOCTL_DEF(DRM_IOCTL_PRIME_FD_TO_HANDLE, drm_prime_fd_to_handle_ioctl, DRM_AUTH|DRM_UNLOCKED),
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETPLANERESOURCES, drm_mode_getplane_res, DRM_CONTROL_ALLOW|DRM_UNLOCKED),
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETCRTC, drm_mode_getcrtc, DRM_CONTROL_ALLOW|DRM_UNLOCKED),
@@ -168,7 +168,7 @@ static struct drm_ioctl_desc drm_ioctls[] = {
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_OBJ_SETPROPERTY, drm_mode_obj_set_property_ioctl, DRM_MASTER|DRM_CONTROL_ALLOW|DRM_UNLOCKED),
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 extern struct drm_ioctl_desc drm_compat_ioctls[];
 #endif
 
@@ -408,7 +408,7 @@ int drm_ioctl(struct cdev *kdev, u_long cmd, caddr_t data, int flags,
 	if ((nr >= DRM_CORE_IOCTL_COUNT) &&
 	    ((nr < DRM_COMMAND_BASE) || (nr >= DRM_COMMAND_END)))
 		goto err_i1;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32) &&
 	    (nr >= DRM_COMMAND_BASE) && (nr < DRM_COMMAND_END) &&
 	    (nr < DRM_COMMAND_BASE + *dev->driver->num_compat_ioctls) &&
@@ -421,7 +421,7 @@ int drm_ioctl(struct cdev *kdev, u_long cmd, caddr_t data, int flags,
 		ioctl = &dev->driver->ioctls[nr - DRM_COMMAND_BASE];
 	}
 	else if ((nr >= DRM_COMMAND_END) || (nr < DRM_COMMAND_BASE)) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		/*
 		 * Called whenever a 32-bit process running under a 64-bit
 		 * kernel performs an ioctl on /dev/drm.
@@ -443,14 +443,14 @@ int drm_ioctl(struct cdev *kdev, u_long cmd, caddr_t data, int flags,
 	/* Do not trust userspace, use our own definition */
 	func = ioctl->func;
 	/* is there a local override? */
-#ifdef FREEBSD_NOTYET
-#ifdef COMPAT_FREEBSD32
+#ifdef NQC_NOTYET
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32) &&
 	    (nr == DRM_IOCTL_NR(DRM_IOCTL_DMA)) && dev->driver->dma_compat_ioctl)
 		func = dev->driver->dma_compat_ioctl;
 	else
 #endif
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 	if ((nr == DRM_IOCTL_NR(DRM_IOCTL_DMA)) && dev->driver->dma_ioctl)
 		func = dev->driver->dma_ioctl;
 

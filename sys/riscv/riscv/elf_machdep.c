@@ -63,17 +63,17 @@ static const char *riscv_machine_arch(struct proc *p);
 
 u_long elf_hwcap;
 
-static struct sysentvec elf64_freebsd_sysvec = {
+static struct sysentvec elf64_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_fixup	= __elfN(freebsd_fixup),
+	.sv_fixup	= __elfN(nqc_fixup),
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
 	.sv_name	= "FreeBSD ELF64",
 	.sv_coredump	= __elfN(coredump),
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
-	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
+	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = __elfN(prepare_notes),
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,
@@ -83,12 +83,12 @@ static struct sysentvec elf64_freebsd_sysvec = {
 	.sv_psstrings	= 0,	/* Filled in during boot. */
 	.sv_psstringssz	= sizeof(struct ps_strings),
 	.sv_stackprot	= VM_PROT_READ | VM_PROT_WRITE,
-	.sv_copyout_auxargs = __elfN(freebsd_copyout_auxargs),
+	.sv_copyout_auxargs = __elfN(nqc_copyout_auxargs),
 	.sv_copyout_strings	= exec_copyout_strings,
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_LP64 | SV_SHP | SV_TIMEKEEP |
+	.sv_flags	= SV_ABI_NQC | SV_LP64 | SV_SHP | SV_TIMEKEEP |
 	    SV_ASLR | SV_RNG_SEED_VER,
 	.sv_set_syscall_retval = cpu_set_syscall_retval,
 	.sv_fetch_syscall_args = cpu_fetch_syscall_args,
@@ -105,7 +105,7 @@ static struct sysentvec elf64_freebsd_sysvec = {
 	.sv_regset_begin = SET_BEGIN(__elfN(regset)),
 	.sv_regset_end  = SET_LIMIT(__elfN(regset)),
 };
-INIT_SYSENTVEC(elf64_sysvec, &elf64_freebsd_sysvec);
+INIT_SYSENTVEC(elf64_sysvec, &elf64_nqc_sysvec);
 
 static const char *
 riscv_machine_arch(struct proc *p)
@@ -117,19 +117,19 @@ riscv_machine_arch(struct proc *p)
 	return (MACHINE_ARCH);
 }
 
-static Elf64_Brandinfo freebsd_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+static Elf64_Brandinfo nqc_brand_info = {
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_RISCV,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf64_freebsd_sysvec,
+	.sysvec		= &elf64_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf64_freebsd_brandnote,
+	.brand_note	= &elf64_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 SYSINIT(elf64, SI_SUB_EXEC, SI_ORDER_FIRST,
-    (sysinit_cfunc_t)elf64_insert_brand_entry, &freebsd_brand_info);
+    (sysinit_cfunc_t)elf64_insert_brand_entry, &nqc_brand_info);
 
 static void
 elf64_register_sysvec(void *arg)
@@ -153,7 +153,7 @@ elf64_register_sysvec(void *arg)
 	}
 }
 SYSINIT(elf64_register_sysvec, SI_SUB_VM, SI_ORDER_ANY, elf64_register_sysvec,
-    &elf64_freebsd_sysvec);
+    &elf64_nqc_sysvec);
 
 static bool debug_kld;
 SYSCTL_BOOL(_debug, OID_AUTO, kld_reloc, CTLFLAG_RW, &debug_kld, 0,

@@ -10,7 +10,7 @@ makeoptions	CONF_CFLAGS+="-march=armv7a"
 # Add options for armv7 that are not in sys/conf/NOTES...
 
 options 	FDT			# Flattened device tree support
-options 	FREEBSD_BOOT_LOADER	# Process metadata passed from loader(8)
+options 	NQC_BOOT_LOADER	# Process metadata passed from loader(8)
 options 	LINUX_BOOT_ABI		# Process metadata passed from U-Boot
 options 	PLATFORM		# Include platform_if support
 options 	SMP			# Nearly all v7 SoCs are multicore
@@ -47,11 +47,11 @@ device		backlight
 
 # Undo options from sys/conf/NOTES that we do not want...
 
-nooptions	COMPAT_FREEBSD4
-nooptions	COMPAT_FREEBSD5
-nooptions	COMPAT_FREEBSD6
-nooptions	COMPAT_FREEBSD7
-nooptions	COMPAT_FREEBSD9
+nooptions	COMPAT_NQC4
+nooptions	COMPAT_NQC5
+nooptions	COMPAT_NQC6
+nooptions	COMPAT_NQC7
+nooptions	COMPAT_NQC9
 nooptions	PPC_PROBE_CHIPSET
 nooptions	MAXCPU		# value is set in machine/param.h
 

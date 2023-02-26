@@ -1574,7 +1574,7 @@ zfsvfs_teardown(zfsvfs_t *zfsvfs, boolean_t unmounting)
 		 * v_vfsp set to the parent's filesystem's vfsp.  Note,
 		 * 'z_parent' is self referential for non-snapshots.
 		 */
-#ifdef FREEBSD_NAMECACHE
+#ifdef NQC_NAMECACHE
 #if __NQC_version >= 1300117
 		cache_purgevfs(zfsvfs->z_parent->z_vfs);
 #else

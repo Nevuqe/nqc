@@ -2,7 +2,7 @@
 
 PACKAGE=lib${LIB}
 LIB=	vmmapi
-SRCS=	vmmapi.c vmmapi_freebsd.c
+SRCS=	vmmapi.c vmmapi_nqc.c
 INCS=	vmmapi.h
 
 LIBADD=	util

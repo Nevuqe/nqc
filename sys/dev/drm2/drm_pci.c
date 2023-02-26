@@ -375,9 +375,9 @@ int drm_get_pci_dev(device_t kdev, struct drm_device *dev,
 			goto err_g5;
 	}
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	list_add_tail(&dev->driver_item, &driver->device_list);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	DRM_INFO("Initialized %s %d.%d.%d %s for %s on minor %d\n",
 		 driver->name, driver->major, driver->minor, driver->patchlevel,

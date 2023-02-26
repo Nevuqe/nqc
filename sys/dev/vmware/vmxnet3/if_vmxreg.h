@@ -182,7 +182,7 @@ struct vmxnet3_rxcompdesc {
 #define VMXNET3_GOS_LINUX	0x04
 #define VMXNET3_GOS_WINDOWS	0x08
 #define VMXNET3_GOS_SOLARIS	0x0C
-#define VMXNET3_GOS_FREEBSD	0x10
+#define VMXNET3_GOS_NQC	0x10
 #define VMXNET3_GOS_PXE		0x14
 
 #define VMXNET3_GOS_32BIT	0x01

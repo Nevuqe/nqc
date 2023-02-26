@@ -37,7 +37,7 @@
 #if defined(__NetBSD__)
 #include <net80211/ieee80211_netbsd.h>
 #elif defined(__NQC__)
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 #elif defined(__linux__)
 #include <net80211/ieee80211_linux.h>
 #else

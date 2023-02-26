@@ -17334,7 +17334,7 @@ _LT_EOF
 };
 
 /* This works around a problem in FreeBSD linker */
-#ifdef FREEBSD_WORKAROUND
+#ifdef NQC_WORKAROUND
 static const void *lt_preloaded_setup() {
   return lt__PROGRAM__LTX_preloaded_symbols;
 }

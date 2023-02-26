@@ -37,7 +37,7 @@ __NQCID("$NQC$");
 
 #include <atf-c.h>
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 /*
  * A variant of ATF_REQUIRE that is suitable for use in child

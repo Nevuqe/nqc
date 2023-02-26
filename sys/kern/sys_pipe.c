@@ -514,7 +514,7 @@ kern_pipe(struct thread *td, int fildes[2], int flags, struct filecaps *fcaps1,
 	return (0);
 }
 
-#ifdef COMPAT_FREEBSD10
+#ifdef COMPAT_NQC10
 /* ARGSUSED */
 int
 freebsd10_pipe(struct thread *td, struct freebsd10_pipe_args *uap __unused)

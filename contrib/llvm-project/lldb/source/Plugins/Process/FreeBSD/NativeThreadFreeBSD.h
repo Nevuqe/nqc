@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef liblldb_NativeThreadFreeBSD_H_
-#define liblldb_NativeThreadFreeBSD_H_
+#ifndef liblldb_NativeThreadNQC_H_
+#define liblldb_NativeThreadNQC_H_
 
 #include "lldb/Host/common/NativeThreadProtocol.h"
 
@@ -18,7 +18,7 @@
 #include <string>
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
@@ -83,7 +83,7 @@ private:
 };
 
 typedef std::shared_ptr<NativeThreadFreeBSD> NativeThreadFreeBSDSP;
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef liblldb_NativeThreadFreeBSD_H_
+#endif // #ifndef liblldb_NativeThreadNQC_H_

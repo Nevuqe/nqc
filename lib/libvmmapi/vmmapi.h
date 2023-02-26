@@ -249,13 +249,13 @@ int	vm_get_topology(struct vmctx *ctx, uint16_t *sockets, uint16_t *cores,
 /*
  * FreeBSD specific APIs
  */
-int	vm_setup_freebsd_registers(struct vmctx *ctx, int vcpu,
+int	vm_setup_nqc_registers(struct vmctx *ctx, int vcpu,
 				uint64_t rip, uint64_t cr3, uint64_t gdtbase,
 				uint64_t rsp);
-int	vm_setup_freebsd_registers_i386(struct vmctx *vmctx, int vcpu,
+int	vm_setup_nqc_registers_i386(struct vmctx *vmctx, int vcpu,
 					uint32_t eip, uint32_t gdtbase,
 					uint32_t esp);
-void	vm_setup_freebsd_gdt(uint64_t *gdtr);
+void	vm_setup_nqc_gdt(uint64_t *gdtr);
 
 /*
  * Save and restore

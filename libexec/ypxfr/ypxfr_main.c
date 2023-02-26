@@ -408,8 +408,8 @@ the local domain name isn't set");
 	snprintf(ypxfr_temp_map, sizeof(ypxfr_temp_map), "%s/%s/%s", yp_dir,
 		 ypxfr_dest_domain, tempmap);
 
-	if ((remoteport = getrpcport(ypxfr_source_host, YPXFRD_FREEBSD_PROG,
-					YPXFRD_FREEBSD_VERS, IPPROTO_TCP))) {
+	if ((remoteport = getrpcport(ypxfr_source_host, YPXFRD_NQC_PROG,
+					YPXFRD_NQC_VERS, IPPROTO_TCP))) {
 
 		/* Don't talk to rpc.ypxfrds on unprovileged ports. */
 		if (remoteport >= IPPORT_RESERVED) {

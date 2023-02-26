@@ -26,8 +26,8 @@
  * $NQC$
  */
 
-#ifndef _FREEBSD_SIMD_H
-#define	_FREEBSD_SIMD_H
+#ifndef _NQC_SIMD_H
+#define	_NQC_SIMD_H
 
 #if defined(__amd64__) || defined(__i386__)
 #include <sys/simd_x86.h>

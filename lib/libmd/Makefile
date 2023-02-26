@@ -17,7 +17,7 @@ SRCS=	md4c.c md5c.c md4hl.c md5hl.c \
 	skein.c skein_block.c \
 	skein256hl.c skein512hl.c skein1024hl.c
 INCS=	md4.h md5.h ripemd.h sha.h sha224.h sha256.h sha384.h sha512.h \
-	sha512t.h skein.h skein_port.h skein_freebsd.h skein_iv.h
+	sha512t.h skein.h skein_port.h skein_nqc.h skein_iv.h
 
 WARNS?=	0
 

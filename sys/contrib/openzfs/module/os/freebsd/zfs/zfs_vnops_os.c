@@ -4117,7 +4117,7 @@ struct vop_getpages_args {
 #endif
 
 static int
-zfs_freebsd_getpages(struct vop_getpages_args *ap)
+zfs_nqc_getpages(struct vop_getpages_args *ap)
 {
 
 	return (zfs_getpages(ap->a_vp, ap->a_m, ap->a_count, ap->a_rbehind,
@@ -4286,7 +4286,7 @@ struct vop_putpages_args {
 #endif
 
 static int
-zfs_freebsd_putpages(struct vop_putpages_args *ap)
+zfs_nqc_putpages(struct vop_putpages_args *ap)
 {
 
 	return (zfs_putpages(ap->a_vp, ap->a_m, ap->a_count, ap->a_sync,
@@ -4305,7 +4305,7 @@ struct vop_bmap_args {
 #endif
 
 static int
-zfs_freebsd_bmap(struct vop_bmap_args *ap)
+zfs_nqc_bmap(struct vop_bmap_args *ap)
 {
 
 	if (ap->a_bop != NULL)
@@ -4330,7 +4330,7 @@ struct vop_open_args {
 #endif
 
 static int
-zfs_freebsd_open(struct vop_open_args *ap)
+zfs_nqc_open(struct vop_open_args *ap)
 {
 	vnode_t	*vp = ap->a_vp;
 	znode_t *zp = VTOZ(vp);
@@ -4352,7 +4352,7 @@ struct vop_close_args {
 #endif
 
 static int
-zfs_freebsd_close(struct vop_close_args *ap)
+zfs_nqc_close(struct vop_close_args *ap)
 {
 
 	return (zfs_close(ap->a_vp, ap->a_fflag, 1, 0, ap->a_cred));
@@ -4370,7 +4370,7 @@ struct vop_ioctl_args {
 #endif
 
 static int
-zfs_freebsd_ioctl(struct vop_ioctl_args *ap)
+zfs_nqc_ioctl(struct vop_ioctl_args *ap)
 {
 
 	return (zfs_ioctl(ap->a_vp, ap->a_command, (intptr_t)ap->a_data,
@@ -4402,7 +4402,7 @@ struct vop_read_args {
 #endif
 
 static int
-zfs_freebsd_read(struct vop_read_args *ap)
+zfs_nqc_read(struct vop_read_args *ap)
 {
 	zfs_uio_t uio;
 	zfs_uio_init(&uio, ap->a_uio);
@@ -4420,7 +4420,7 @@ struct vop_write_args {
 #endif
 
 static int
-zfs_freebsd_write(struct vop_write_args *ap)
+zfs_nqc_write(struct vop_write_args *ap)
 {
 	zfs_uio_t uio;
 	zfs_uio_init(&uio, ap->a_uio);
@@ -4434,7 +4434,7 @@ zfs_freebsd_write(struct vop_write_args *ap)
  * the comment above cache_fplookup for details.
  */
 static int
-zfs_freebsd_fplookup_vexec(struct vop_fplookup_vexec_args *v)
+zfs_nqc_fplookup_vexec(struct vop_fplookup_vexec_args *v)
 {
 	vnode_t *vp;
 	znode_t *zp;
@@ -4457,7 +4457,7 @@ zfs_freebsd_fplookup_vexec(struct vop_fplookup_vexec_args *v)
 
 #if __NQC_version >= 1300139
 static int
-zfs_freebsd_fplookup_symlink(struct vop_fplookup_symlink_args *v)
+zfs_nqc_fplookup_symlink(struct vop_fplookup_symlink_args *v)
 {
 	vnode_t *vp;
 	znode_t *zp;
@@ -4487,7 +4487,7 @@ struct vop_access_args {
 #endif
 
 static int
-zfs_freebsd_access(struct vop_access_args *ap)
+zfs_nqc_access(struct vop_access_args *ap)
 {
 	vnode_t *vp = ap->a_vp;
 	znode_t *zp = VTOZ(vp);
@@ -4544,7 +4544,7 @@ struct vop_lookup_args {
 #endif
 
 static int
-zfs_freebsd_lookup(struct vop_lookup_args *ap, boolean_t cached)
+zfs_nqc_lookup(struct vop_lookup_args *ap, boolean_t cached)
 {
 	struct componentname *cnp = ap->a_cnp;
 	char nm[NAME_MAX + 1];
@@ -4557,10 +4557,10 @@ zfs_freebsd_lookup(struct vop_lookup_args *ap, boolean_t cached)
 }
 
 static int
-zfs_freebsd_cachedlookup(struct vop_cachedlookup_args *ap)
+zfs_nqc_cachedlookup(struct vop_cachedlookup_args *ap)
 {
 
-	return (zfs_freebsd_lookup((struct vop_lookup_args *)ap, B_TRUE));
+	return (zfs_nqc_lookup((struct vop_lookup_args *)ap, B_TRUE));
 }
 
 #ifndef _SYS_SYSPROTO_H_
@@ -4580,7 +4580,7 @@ zfs_cache_lookup(struct vop_lookup_args *ap)
 	if (zfsvfs->z_use_namecache)
 		return (vfs_cache_lookup(ap));
 	else
-		return (zfs_freebsd_lookup(ap, B_FALSE));
+		return (zfs_nqc_lookup(ap, B_FALSE));
 }
 
 #ifndef _SYS_SYSPROTO_H_
@@ -4593,7 +4593,7 @@ struct vop_create_args {
 #endif
 
 static int
-zfs_freebsd_create(struct vop_create_args *ap)
+zfs_nqc_create(struct vop_create_args *ap)
 {
 	zfsvfs_t *zfsvfs;
 	struct componentname *cnp = ap->a_cnp;
@@ -4630,7 +4630,7 @@ struct vop_remove_args {
 #endif
 
 static int
-zfs_freebsd_remove(struct vop_remove_args *ap)
+zfs_nqc_remove(struct vop_remove_args *ap)
 {
 
 #if __NQC_version < 1400068
@@ -4651,7 +4651,7 @@ struct vop_mkdir_args {
 #endif
 
 static int
-zfs_freebsd_mkdir(struct vop_mkdir_args *ap)
+zfs_nqc_mkdir(struct vop_mkdir_args *ap)
 {
 	vattr_t *vap = ap->a_vap;
 	znode_t *zp = NULL;
@@ -4681,7 +4681,7 @@ struct vop_rmdir_args {
 #endif
 
 static int
-zfs_freebsd_rmdir(struct vop_rmdir_args *ap)
+zfs_nqc_rmdir(struct vop_rmdir_args *ap)
 {
 	struct componentname *cnp = ap->a_cnp;
 
@@ -4704,7 +4704,7 @@ struct vop_readdir_args {
 #endif
 
 static int
-zfs_freebsd_readdir(struct vop_readdir_args *ap)
+zfs_nqc_readdir(struct vop_readdir_args *ap)
 {
 	zfs_uio_t uio;
 	zfs_uio_init(&uio, ap->a_uio);
@@ -4721,7 +4721,7 @@ struct vop_fsync_args {
 #endif
 
 static int
-zfs_freebsd_fsync(struct vop_fsync_args *ap)
+zfs_nqc_fsync(struct vop_fsync_args *ap)
 {
 
 	return (zfs_fsync(VTOZ(ap->a_vp), 0, ap->a_td->td_ucred));
@@ -4736,7 +4736,7 @@ struct vop_getattr_args {
 #endif
 
 static int
-zfs_freebsd_getattr(struct vop_getattr_args *ap)
+zfs_nqc_getattr(struct vop_getattr_args *ap)
 {
 	vattr_t *vap = ap->a_vap;
 	xvattr_t xvap;
@@ -4808,7 +4808,7 @@ struct vop_setattr_args {
 #endif
 
 static int
-zfs_freebsd_setattr(struct vop_setattr_args *ap)
+zfs_nqc_setattr(struct vop_setattr_args *ap)
 {
 	vnode_t *vp = ap->a_vp;
 	vattr_t *vap = ap->a_vap;
@@ -4932,7 +4932,7 @@ struct vop_rename_args {
 #endif
 
 static int
-zfs_freebsd_rename(struct vop_rename_args *ap)
+zfs_nqc_rename(struct vop_rename_args *ap)
 {
 	vnode_t *fdvp = ap->a_fdvp;
 	vnode_t *fvp = ap->a_fvp;
@@ -4968,7 +4968,7 @@ struct vop_symlink_args {
 #endif
 
 static int
-zfs_freebsd_symlink(struct vop_symlink_args *ap)
+zfs_nqc_symlink(struct vop_symlink_args *ap)
 {
 	struct componentname *cnp = ap->a_cnp;
 	vattr_t *vap = ap->a_vap;
@@ -5016,7 +5016,7 @@ struct vop_readlink_args {
 #endif
 
 static int
-zfs_freebsd_readlink(struct vop_readlink_args *ap)
+zfs_nqc_readlink(struct vop_readlink_args *ap)
 {
 	zfs_uio_t uio;
 	int error;
@@ -5066,7 +5066,7 @@ struct vop_link_args {
 #endif
 
 static int
-zfs_freebsd_link(struct vop_link_args *ap)
+zfs_nqc_link(struct vop_link_args *ap)
 {
 	struct componentname *cnp = ap->a_cnp;
 	vnode_t *vp = ap->a_vp;
@@ -5091,7 +5091,7 @@ struct vop_inactive_args {
 #endif
 
 static int
-zfs_freebsd_inactive(struct vop_inactive_args *ap)
+zfs_nqc_inactive(struct vop_inactive_args *ap)
 {
 	vnode_t *vp = ap->a_vp;
 
@@ -5112,7 +5112,7 @@ struct vop_need_inactive_args {
 #endif
 
 static int
-zfs_freebsd_need_inactive(struct vop_need_inactive_args *ap)
+zfs_nqc_need_inactive(struct vop_need_inactive_args *ap)
 {
 	vnode_t *vp = ap->a_vp;
 	znode_t	*zp = VTOZ(vp);
@@ -5139,7 +5139,7 @@ struct vop_reclaim_args {
 #endif
 
 static int
-zfs_freebsd_reclaim(struct vop_reclaim_args *ap)
+zfs_nqc_reclaim(struct vop_reclaim_args *ap)
 {
 	vnode_t	*vp = ap->a_vp;
 	znode_t	*zp = VTOZ(vp);
@@ -5175,7 +5175,7 @@ struct vop_fid_args {
 #endif
 
 static int
-zfs_freebsd_fid(struct vop_fid_args *ap)
+zfs_nqc_fid(struct vop_fid_args *ap)
 {
 
 	return (zfs_fid(ap->a_vp, (void *)ap->a_fid, NULL));
@@ -5191,7 +5191,7 @@ struct vop_pathconf_args {
 #endif
 
 static int
-zfs_freebsd_pathconf(struct vop_pathconf_args *ap)
+zfs_nqc_pathconf(struct vop_pathconf_args *ap)
 {
 	ulong_t val;
 	int error;
@@ -6001,7 +6001,7 @@ struct vop_getacl_args {
 #endif
 
 static int
-zfs_freebsd_getacl(struct vop_getacl_args *ap)
+zfs_nqc_getacl(struct vop_getacl_args *ap)
 {
 	int		error;
 	vsecattr_t	vsecattr;
@@ -6033,7 +6033,7 @@ struct vop_setacl_args {
 #endif
 
 static int
-zfs_freebsd_setacl(struct vop_setacl_args *ap)
+zfs_nqc_setacl(struct vop_setacl_args *ap)
 {
 	int		error;
 	vsecattr_t vsecattr;
@@ -6086,7 +6086,7 @@ struct vop_aclcheck_args {
 #endif
 
 static int
-zfs_freebsd_aclcheck(struct vop_aclcheck_args *ap)
+zfs_nqc_aclcheck(struct vop_aclcheck_args *ap)
 {
 
 	return (EOPNOTSUPP);
@@ -6214,54 +6214,54 @@ struct vop_vector zfs_shareops;
 
 struct vop_vector zfs_vnodeops = {
 	.vop_default =		&default_vnodeops,
-	.vop_inactive =		zfs_freebsd_inactive,
+	.vop_inactive =		zfs_nqc_inactive,
 #if __NQC_version >= 1300042
-	.vop_need_inactive =	zfs_freebsd_need_inactive,
+	.vop_need_inactive =	zfs_nqc_need_inactive,
 #endif
-	.vop_reclaim =		zfs_freebsd_reclaim,
+	.vop_reclaim =		zfs_nqc_reclaim,
 #if __NQC_version >= 1300102
-	.vop_fplookup_vexec = zfs_freebsd_fplookup_vexec,
+	.vop_fplookup_vexec = zfs_nqc_fplookup_vexec,
 #endif
 #if __NQC_version >= 1300139
-	.vop_fplookup_symlink = zfs_freebsd_fplookup_symlink,
+	.vop_fplookup_symlink = zfs_nqc_fplookup_symlink,
 #endif
-	.vop_access =		zfs_freebsd_access,
+	.vop_access =		zfs_nqc_access,
 	.vop_allocate =		VOP_EINVAL,
 #if __NQC_version >= 1400032
 	.vop_deallocate =	zfs_deallocate,
 #endif
 	.vop_lookup =		zfs_cache_lookup,
-	.vop_cachedlookup =	zfs_freebsd_cachedlookup,
-	.vop_getattr =		zfs_freebsd_getattr,
-	.vop_setattr =		zfs_freebsd_setattr,
-	.vop_create =		zfs_freebsd_create,
-	.vop_mknod =		(vop_mknod_t *)zfs_freebsd_create,
-	.vop_mkdir =		zfs_freebsd_mkdir,
-	.vop_readdir =		zfs_freebsd_readdir,
-	.vop_fsync =		zfs_freebsd_fsync,
-	.vop_open =		zfs_freebsd_open,
-	.vop_close =		zfs_freebsd_close,
-	.vop_rmdir =		zfs_freebsd_rmdir,
-	.vop_ioctl =		zfs_freebsd_ioctl,
-	.vop_link =		zfs_freebsd_link,
-	.vop_symlink =		zfs_freebsd_symlink,
-	.vop_readlink =		zfs_freebsd_readlink,
-	.vop_read =		zfs_freebsd_read,
-	.vop_write =		zfs_freebsd_write,
-	.vop_remove =		zfs_freebsd_remove,
-	.vop_rename =		zfs_freebsd_rename,
-	.vop_pathconf =		zfs_freebsd_pathconf,
-	.vop_bmap =		zfs_freebsd_bmap,
-	.vop_fid =		zfs_freebsd_fid,
+	.vop_cachedlookup =	zfs_nqc_cachedlookup,
+	.vop_getattr =		zfs_nqc_getattr,
+	.vop_setattr =		zfs_nqc_setattr,
+	.vop_create =		zfs_nqc_create,
+	.vop_mknod =		(vop_mknod_t *)zfs_nqc_create,
+	.vop_mkdir =		zfs_nqc_mkdir,
+	.vop_readdir =		zfs_nqc_readdir,
+	.vop_fsync =		zfs_nqc_fsync,
+	.vop_open =		zfs_nqc_open,
+	.vop_close =		zfs_nqc_close,
+	.vop_rmdir =		zfs_nqc_rmdir,
+	.vop_ioctl =		zfs_nqc_ioctl,
+	.vop_link =		zfs_nqc_link,
+	.vop_symlink =		zfs_nqc_symlink,
+	.vop_readlink =		zfs_nqc_readlink,
+	.vop_read =		zfs_nqc_read,
+	.vop_write =		zfs_nqc_write,
+	.vop_remove =		zfs_nqc_remove,
+	.vop_rename =		zfs_nqc_rename,
+	.vop_pathconf =		zfs_nqc_pathconf,
+	.vop_bmap =		zfs_nqc_bmap,
+	.vop_fid =		zfs_nqc_fid,
 	.vop_getextattr =	zfs_getextattr,
 	.vop_deleteextattr =	zfs_deleteextattr,
 	.vop_setextattr =	zfs_setextattr,
 	.vop_listextattr =	zfs_listextattr,
-	.vop_getacl =		zfs_freebsd_getacl,
-	.vop_setacl =		zfs_freebsd_setacl,
-	.vop_aclcheck =		zfs_freebsd_aclcheck,
-	.vop_getpages =		zfs_freebsd_getpages,
-	.vop_putpages =		zfs_freebsd_putpages,
+	.vop_getacl =		zfs_nqc_getacl,
+	.vop_setacl =		zfs_nqc_setacl,
+	.vop_aclcheck =		zfs_nqc_aclcheck,
+	.vop_getpages =		zfs_nqc_getpages,
+	.vop_putpages =		zfs_nqc_putpages,
 	.vop_vptocnp =		zfs_vptocnp,
 #if __NQC_version >= 1300064
 	.vop_lock1 =		vop_lock,
@@ -6276,25 +6276,25 @@ VFS_VOP_VECTOR_REGISTER(zfs_vnodeops);
 
 struct vop_vector zfs_fifoops = {
 	.vop_default =		&fifo_specops,
-	.vop_fsync =		zfs_freebsd_fsync,
+	.vop_fsync =		zfs_nqc_fsync,
 #if __NQC_version >= 1300102
-	.vop_fplookup_vexec = zfs_freebsd_fplookup_vexec,
+	.vop_fplookup_vexec = zfs_nqc_fplookup_vexec,
 #endif
 #if __NQC_version >= 1300139
-	.vop_fplookup_symlink = zfs_freebsd_fplookup_symlink,
+	.vop_fplookup_symlink = zfs_nqc_fplookup_symlink,
 #endif
-	.vop_access =		zfs_freebsd_access,
-	.vop_getattr =		zfs_freebsd_getattr,
-	.vop_inactive =		zfs_freebsd_inactive,
+	.vop_access =		zfs_nqc_access,
+	.vop_getattr =		zfs_nqc_getattr,
+	.vop_inactive =		zfs_nqc_inactive,
 	.vop_read =		VOP_PANIC,
-	.vop_reclaim =		zfs_freebsd_reclaim,
-	.vop_setattr =		zfs_freebsd_setattr,
+	.vop_reclaim =		zfs_nqc_reclaim,
+	.vop_setattr =		zfs_nqc_setattr,
 	.vop_write =		VOP_PANIC,
-	.vop_pathconf = 	zfs_freebsd_pathconf,
-	.vop_fid =		zfs_freebsd_fid,
-	.vop_getacl =		zfs_freebsd_getacl,
-	.vop_setacl =		zfs_freebsd_setacl,
-	.vop_aclcheck =		zfs_freebsd_aclcheck,
+	.vop_pathconf = 	zfs_nqc_pathconf,
+	.vop_fid =		zfs_nqc_fid,
+	.vop_getacl =		zfs_nqc_getacl,
+	.vop_setacl =		zfs_nqc_setacl,
+	.vop_aclcheck =		zfs_nqc_aclcheck,
 #if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
@@ -6312,11 +6312,11 @@ struct vop_vector zfs_shareops = {
 #if __NQC_version >= 1300139
 	.vop_fplookup_symlink =	VOP_EAGAIN,
 #endif
-	.vop_access =		zfs_freebsd_access,
-	.vop_inactive =		zfs_freebsd_inactive,
-	.vop_reclaim =		zfs_freebsd_reclaim,
-	.vop_fid =		zfs_freebsd_fid,
-	.vop_pathconf =		zfs_freebsd_pathconf,
+	.vop_access =		zfs_nqc_access,
+	.vop_inactive =		zfs_nqc_inactive,
+	.vop_reclaim =		zfs_nqc_reclaim,
+	.vop_fid =		zfs_nqc_fid,
+	.vop_pathconf =		zfs_nqc_pathconf,
 #if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif

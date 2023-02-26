@@ -21,7 +21,7 @@
 #include "ah_desc.h"
 #include "ah_internal.h"
 
-#include "ar9300_freebsd_inc.h"
+#include "ar9300_nqc_inc.h"
 
 #include "ar9300/ar9300phy.h"
 #include "ar9300/ar9300.h"

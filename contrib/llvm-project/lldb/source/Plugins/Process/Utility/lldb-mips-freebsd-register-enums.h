@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_LLDB_MIPS_FREEBSD_REGISTER_ENUMS_H
-#define LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_LLDB_MIPS_FREEBSD_REGISTER_ENUMS_H
+#ifndef LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_LLDB_MIPS_NQC_REGISTER_ENUMS_H
+#define LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_LLDB_MIPS_NQC_REGISTER_ENUMS_H
 
 namespace lldb_private {
 // LLDB register codes (e.g. RegisterKind == eRegisterKindLLDB)
@@ -100,4 +100,4 @@ enum {
   k_num_fpr_registers_mips64 = k_last_fpr_mips64 - k_first_fpr_mips64 + 1,
 };
 } // namespace lldb_private
-#endif // LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_LLDB_MIPS_FREEBSD_REGISTER_ENUMS_H
+#endif // LLDB_SOURCE_PLUGINS_PROCESS_UTILITY_LLDB_MIPS_NQC_REGISTER_ENUMS_H

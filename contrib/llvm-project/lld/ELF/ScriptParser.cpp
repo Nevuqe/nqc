@@ -462,7 +462,7 @@ void ScriptParser::readOutputFormat() {
   }
   s = config->bfdname;
   if (s.consume_back("-freebsd"))
-    config->osabi = ELFOSABI_FREEBSD;
+    config->osabi = ELFOSABI_NQC;
 
   std::tie(config->ekind, config->emachine) = parseBfdName(s);
   if (config->emachine == EM_NONE)

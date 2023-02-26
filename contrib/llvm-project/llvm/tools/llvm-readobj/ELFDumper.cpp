@@ -1013,7 +1013,7 @@ const EnumEntry<unsigned> ElfOSABI[] = {
   {"Solaris",      "UNIX - Solaris",       ELF::ELFOSABI_SOLARIS},
   {"AIX",          "UNIX - AIX",           ELF::ELFOSABI_AIX},
   {"IRIX",         "UNIX - IRIX",          ELF::ELFOSABI_IRIX},
-  {"FreeBSD",      "UNIX - FreeBSD",       ELF::ELFOSABI_FREEBSD},
+  {"FreeBSD",      "UNIX - FreeBSD",       ELF::ELFOSABI_NQC},
   {"TRU64",        "UNIX - TRU64",         ELF::ELFOSABI_TRU64},
   {"Modesto",      "Novell - Modesto",     ELF::ELFOSABI_MODESTO},
   {"OpenBSD",      "UNIX - OpenBSD",       ELF::ELFOSABI_OPENBSD},
@@ -5164,12 +5164,12 @@ static bool printLLVMOMPOFFLOADNote(raw_ostream &OS, uint32_t NoteType,
 }
 
 const EnumEntry<unsigned> FreeBSDFeatureCtlFlags[] = {
-    {"ASLR_DISABLE", NT_FREEBSD_FCTL_ASLR_DISABLE},
-    {"PROTMAX_DISABLE", NT_FREEBSD_FCTL_PROTMAX_DISABLE},
-    {"STKGAP_DISABLE", NT_FREEBSD_FCTL_STKGAP_DISABLE},
-    {"WXNEEDED", NT_FREEBSD_FCTL_WXNEEDED},
-    {"LA48", NT_FREEBSD_FCTL_LA48},
-    {"ASG_DISABLE", NT_FREEBSD_FCTL_ASG_DISABLE},
+    {"ASLR_DISABLE", NT_NQC_FCTL_ASLR_DISABLE},
+    {"PROTMAX_DISABLE", NT_NQC_FCTL_PROTMAX_DISABLE},
+    {"STKGAP_DISABLE", NT_NQC_FCTL_STKGAP_DISABLE},
+    {"WXNEEDED", NT_NQC_FCTL_WXNEEDED},
+    {"LA48", NT_NQC_FCTL_LA48},
+    {"ASG_DISABLE", NT_NQC_FCTL_ASG_DISABLE},
 };
 
 struct FreeBSDNote {
@@ -5183,15 +5183,15 @@ getFreeBSDNote(uint32_t NoteType, ArrayRef<uint8_t> Desc, bool IsCore) {
   if (IsCore)
     return None; // No pretty-printing yet.
   switch (NoteType) {
-  case ELF::NT_FREEBSD_ABI_TAG:
+  case ELF::NT_NQC_ABI_TAG:
     if (Desc.size() != 4)
       return None;
     return FreeBSDNote{
         "ABI tag",
         utostr(support::endian::read32<ELFT::TargetEndianness>(Desc.data()))};
-  case ELF::NT_FREEBSD_ARCH_TAG:
+  case ELF::NT_NQC_ARCH_TAG:
     return FreeBSDNote{"Arch tag", toStringRef(Desc).str()};
-  case ELF::NT_FREEBSD_FEATURE_CTL: {
+  case ELF::NT_NQC_FEATURE_CTL: {
     if (Desc.size() != 4)
       return None;
     unsigned Value =
@@ -5443,25 +5443,25 @@ const NoteType GNUNoteTypes[] = {
 };
 
 const NoteType FreeBSDCoreNoteTypes[] = {
-    {ELF::NT_FREEBSD_THRMISC, "NT_THRMISC (thrmisc structure)"},
-    {ELF::NT_FREEBSD_PROCSTAT_PROC, "NT_PROCSTAT_PROC (proc data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_FILES, "NT_PROCSTAT_FILES (files data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_VMMAP, "NT_PROCSTAT_VMMAP (vmmap data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_GROUPS, "NT_PROCSTAT_GROUPS (groups data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_UMASK, "NT_PROCSTAT_UMASK (umask data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_RLIMIT, "NT_PROCSTAT_RLIMIT (rlimit data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_OSREL, "NT_PROCSTAT_OSREL (osreldate data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_PSSTRINGS,
+    {ELF::NT_NQC_THRMISC, "NT_THRMISC (thrmisc structure)"},
+    {ELF::NT_NQC_PROCSTAT_PROC, "NT_PROCSTAT_PROC (proc data)"},
+    {ELF::NT_NQC_PROCSTAT_FILES, "NT_PROCSTAT_FILES (files data)"},
+    {ELF::NT_NQC_PROCSTAT_VMMAP, "NT_PROCSTAT_VMMAP (vmmap data)"},
+    {ELF::NT_NQC_PROCSTAT_GROUPS, "NT_PROCSTAT_GROUPS (groups data)"},
+    {ELF::NT_NQC_PROCSTAT_UMASK, "NT_PROCSTAT_UMASK (umask data)"},
+    {ELF::NT_NQC_PROCSTAT_RLIMIT, "NT_PROCSTAT_RLIMIT (rlimit data)"},
+    {ELF::NT_NQC_PROCSTAT_OSREL, "NT_PROCSTAT_OSREL (osreldate data)"},
+    {ELF::NT_NQC_PROCSTAT_PSSTRINGS,
      "NT_PROCSTAT_PSSTRINGS (ps_strings data)"},
-    {ELF::NT_FREEBSD_PROCSTAT_AUXV, "NT_PROCSTAT_AUXV (auxv data)"},
+    {ELF::NT_NQC_PROCSTAT_AUXV, "NT_PROCSTAT_AUXV (auxv data)"},
 };
 
 const NoteType FreeBSDNoteTypes[] = {
-    {ELF::NT_FREEBSD_ABI_TAG, "NT_FREEBSD_ABI_TAG (ABI version tag)"},
-    {ELF::NT_FREEBSD_NOINIT_TAG, "NT_FREEBSD_NOINIT_TAG (no .init tag)"},
-    {ELF::NT_FREEBSD_ARCH_TAG, "NT_FREEBSD_ARCH_TAG (architecture tag)"},
-    {ELF::NT_FREEBSD_FEATURE_CTL,
-     "NT_FREEBSD_FEATURE_CTL (FreeBSD feature control)"},
+    {ELF::NT_NQC_ABI_TAG, "NT_NQC_ABI_TAG (ABI version tag)"},
+    {ELF::NT_NQC_NOINIT_TAG, "NT_NQC_NOINIT_TAG (no .init tag)"},
+    {ELF::NT_NQC_ARCH_TAG, "NT_NQC_ARCH_TAG (architecture tag)"},
+    {ELF::NT_NQC_FEATURE_CTL,
+     "NT_NQC_FEATURE_CTL (FreeBSD feature control)"},
 };
 
 const NoteType NetBSDCoreNoteTypes[] = {

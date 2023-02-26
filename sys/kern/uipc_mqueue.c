@@ -2714,7 +2714,7 @@ static struct syscall_helper_data mq_syscalls[] = {
 	SYSCALL_INIT_LAST
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_proto.h>
 #include <compat/freebsd32/freebsd32_signal.h>
@@ -2887,7 +2887,7 @@ mqinit(void)
 	error = syscall_helper_register(mq_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	error = syscall32_helper_register(mq32_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
@@ -2899,7 +2899,7 @@ static int
 mqunload(void)
 {
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	syscall32_helper_unregister(mq32_syscalls);
 #endif
 	syscall_helper_unregister(mq_syscalls);

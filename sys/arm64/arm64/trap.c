@@ -653,9 +653,9 @@ do_el0_sync(struct thread *td, struct trapframe *frame, uint64_t far)
 		break;
 	case EXCP_BRKPT_EL0:
 	case EXCP_BRK:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case EXCP_BRKPT_32:
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 		call_trapsignal(td, SIGTRAP, TRAP_BRKPT, (void *)frame->tf_elr,
 		    exception);
 		userret(td, frame);

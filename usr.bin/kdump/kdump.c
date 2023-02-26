@@ -47,8 +47,8 @@ __NQCID("$NQC$");
 #ifdef __LP64__
 #define	_WANT_KEVENT32
 #endif
-#define	_WANT_FREEBSD11_KEVENT
-#define	_WANT_FREEBSD_BITSET
+#define	_WANT_NQC11_KEVENT
+#define	_WANT_NQC_BITSET
 #include <sys/param.h>
 #include <sys/capsicum.h>
 #include <sys/_bitset.h>
@@ -126,7 +126,7 @@ void ktrfaultend(struct ktr_faultend *);
 void ktrkevent(struct kevent *);
 void ktrstructarray(struct ktr_struct_array *, size_t);
 void ktrbitset(char *, struct bitset *, size_t);
-void ktrsyscall_freebsd(struct ktr_syscall *ktr, register_t **resip,
+void ktrsyscall_nqc(struct ktr_syscall *ktr, register_t **resip,
     int *resnarg, char *resc, u_int sv_flags);
 void usage(void);
 
@@ -743,7 +743,7 @@ dumpheader(struct ktr_header *kth, u_int sv_flags)
 		case SV_ABI_LINUX:
 			abi = "L";
 			break;
-		case SV_ABI_FREEBSD:
+		case SV_ABI_NQC:
 			abi = "F";
 			break;
 		default:
@@ -783,10 +783,10 @@ syscallabi(u_int sv_flags)
 {
 
 	if (sv_flags == 0)
-		return (SYSDECODE_ABI_FREEBSD);
+		return (SYSDECODE_ABI_NQC);
 	switch (sv_flags & SV_ABI_MASK) {
-	case SV_ABI_FREEBSD:
-		return (SYSDECODE_ABI_FREEBSD);
+	case SV_ABI_NQC:
+		return (SYSDECODE_ABI_NQC);
 	case SV_ABI_LINUX:
 #ifdef __LP64__
 		if (sv_flags & SV_ILP32)
@@ -837,8 +837,8 @@ ktrsyscall(struct ktr_syscall *ktr, u_int sv_flags)
 		char c = '(';
 		if (fancy) {
 			switch (sv_flags & SV_ABI_MASK) {
-			case SV_ABI_FREEBSD:
-				ktrsyscall_freebsd(ktr, &ip, &narg, &c,
+			case SV_ABI_NQC:
+				ktrsyscall_nqc(ktr, &ip, &narg, &c,
 				    sv_flags);
 				break;
 #ifdef SYSDECODE_HAVE_LINUX
@@ -862,7 +862,7 @@ ktrsyscall(struct ktr_syscall *ktr, u_int sv_flags)
 }
 
 void
-ktrsyscall_freebsd(struct ktr_syscall *ktr, register_t **resip,
+ktrsyscall_nqc(struct ktr_syscall *ktr, register_t **resip,
     int *resnarg, char *resc, u_int sv_flags)
 {
 	int narg = ktr->ktr_narg;
@@ -1066,8 +1066,8 @@ ktrsyscall_freebsd(struct ktr_syscall *ktr, register_t **resip,
 				ip++;
 				narg--;
 				break;
-#ifdef SYS_freebsd6_mmap
-			case SYS_freebsd6_mmap:
+#ifdef SYS_nqc6_mmap
+			case SYS_nqc6_mmap:
 				print_number(ip, narg, c);
 				print_number(ip, narg, c);
 				putchar(',');
@@ -1184,8 +1184,8 @@ ktrsyscall_freebsd(struct ktr_syscall *ktr, register_t **resip,
 				narg--;
 				break;
 			}
-#ifdef SYS_freebsd6_lseek
-			case SYS_freebsd6_lseek:
+#ifdef SYS_nqc6_lseek
+			case SYS_nqc6_lseek:
 				print_number(ip, narg, c);
 				/* Hidden 'pad' argument, not in lseek(2) */
 				print_number(ip, narg, c);
@@ -1322,8 +1322,8 @@ ktrsyscall_freebsd(struct ktr_syscall *ktr, register_t **resip,
 				ip++;
 				narg--;
 				break;
-#ifdef SYS_freebsd12_shm_open
-			case SYS_freebsd12_shm_open:
+#ifdef SYS_nqc12_shm_open
+			case SYS_nqc12_shm_open:
 				if (ip[0] == (uintptr_t)SHM_ANON) {
 					printf("(SHM_ANON");
 					ip++;
@@ -1639,7 +1639,7 @@ ktrsysret(struct ktr_sysret *ktr, u_int sv_flags)
 	else if (error == EJUSTRETURN)
 		printf("JUSTRETURN");
 	else {
-		printf("-1 errno %d", sysdecode_freebsd_to_abi_errno(
+		printf("-1 errno %d", sysdecode_nqc_to_abi_errno(
 		    syscallabi(sv_flags), error));
 		if (fancy)
 			printf(" %s", strerror(ktr->ktr_error));

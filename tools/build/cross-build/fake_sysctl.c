@@ -44,7 +44,7 @@ __NQCID("$NQC$");
 #include <sysexits.h>
 
 int
-__freebsd_sysctlbyname(const char *name, void *oldp, size_t *oldlenp,
+__nqc_sysctlbyname(const char *name, void *oldp, size_t *oldlenp,
     const void *newp, size_t newlen)
 {
 	if (strcmp(name, "kern.vm_guest") == 0) {

@@ -69,7 +69,7 @@ __NQCID("$NQC$");
 #include "io/vhpet.h"
 #include "io/vrtc.h"
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 struct vm_stats_old {
 	int		cpuid;				/* in */
 	int		num_entries;			/* out */
@@ -393,7 +393,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 	struct vm_pptdev_mmio *pptmmio;
 	struct vm_pptdev_msi *pptmsi;
 	struct vm_pptdev_msix *pptmsix;
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	struct vm_stats_old *vmstats_old;
 #endif
 	struct vm_stats *vmstats;
@@ -475,7 +475,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		vcpus_locked = SINGLE;
 		break;
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 	case VM_ALLOC_MEMSEG_NQC12:
 #endif
 	case VM_ALLOC_MEMSEG:
@@ -507,7 +507,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		vcpus_locked = ALL;
 		break;
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 	case VM_GET_MEMSEG_NQC12:
 #endif
 	case VM_GET_MEMSEG:
@@ -519,7 +519,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		memsegs_locked = true;
 		break;
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case VM_STATS_OLD:
 #endif
 	case VM_STATS:
@@ -577,7 +577,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 					statdesc->desc, sizeof(statdesc->desc));
 		break;
 	}
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case VM_STATS_OLD:
 		vmstats_old = (struct vm_stats_old *)data;
 		getmicrotime(&vmstats_old->tv);
@@ -746,7 +746,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		mu = (struct vm_munmap *)data;
 		error = vm_munmap_memseg(sc->vm, mu->gpa, mu->len);
 		break;
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 	case VM_ALLOC_MEMSEG_NQC12:
 		error = alloc_memseg(sc, (struct vm_memseg *)data,
 		    sizeof(((struct vm_memseg_nqc12 *)0)->name));
@@ -756,7 +756,7 @@ vmmdev_ioctl(struct cdev *cdev, u_long cmd, caddr_t data, int fflag,
 		error = alloc_memseg(sc, (struct vm_memseg *)data,
 		    sizeof(((struct vm_memseg *)0)->name));
 		break;
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 	case VM_GET_MEMSEG_NQC12:
 		error = get_memseg(sc, (struct vm_memseg *)data,
 		    sizeof(((struct vm_memseg_nqc12 *)0)->name));

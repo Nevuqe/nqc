@@ -47,7 +47,7 @@ __NQCID("$NQC$");
 #include <sys/ioccom.h>
 #endif					/* !_IOWR */
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 /* Compilation error FIX */
 #include <sys/mount.h>
 #include <compat/freebsd32/freebsd32.h>
@@ -64,7 +64,7 @@ __NQCID("$NQC$");
 
 #define	MRSAS_IOC_GET_PCI_INFO				_IOR('M', 7, MRSAS_DRV_PCI_INFORMATION)
 #define	MRSAS_IOC_FIRMWARE_PASS_THROUGH64	_IOWR('M', 1, struct mrsas_iocpacket)
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #define	MRSAS_IOC_FIRMWARE_PASS_THROUGH32	_IOWR('M', 1, struct mrsas_iocpacket32)
 #endif
 
@@ -102,7 +102,7 @@ struct mrsas_iocpacket {
 
 #pragma pack()
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #pragma pack(1)
 struct mrsas_iocpacket32 {
 	u_int16_t host_no;
@@ -119,6 +119,6 @@ struct mrsas_iocpacket32 {
 };
 
 #pragma pack()
-#endif					/* COMPAT_FREEBSD32 */
+#endif					/* COMPAT_NQC32 */
 
 #endif					/* MRSAS_IOCTL_H */

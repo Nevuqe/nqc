@@ -1504,7 +1504,7 @@ wordexpcmd(int argc, char **argv)
  */
 
 int
-freebsd_wordexpcmd(int argc __unused, char **argv __unused)
+nqc_wordexpcmd(int argc __unused, char **argv __unused)
 {
 	struct arglist arglist;
 	union node *args, *n;

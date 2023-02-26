@@ -50,7 +50,7 @@ function cleanup
 	poolexists $TESTPOOL && destroy_pool $TESTPOOL
 }
 
-if is_freebsd; then
+if is_nqc; then
 	typeset swap_disks=$(swapinfo -l | awk '/\/dev/ {print $1}')
 elif is_linux; then
 	typeset swap_disks=$(swapon -s | awk '/\/dev/ {print $1}')

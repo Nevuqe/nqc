@@ -282,7 +282,7 @@ ptsdev_ioctl(struct file *fp, u_long cmd, void *data,
 		tty_unlock(tp);
 		return (0);
 	case FIODGNAME:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case FIODGNAME_32:
 #endif
 	{
@@ -598,7 +598,7 @@ ptsdev_fill_kinfo(struct file *fp, struct kinfo_file *kif, struct filedesc *fdp)
 	kif->kf_type = KF_TYPE_PTS;
 	tp = fp->f_data;
 	kif->kf_un.kf_pts.kf_pts_dev = tty_udev(tp);
-	kif->kf_un.kf_pts.kf_pts_dev_freebsd11 =
+	kif->kf_un.kf_pts.kf_pts_dev_nqc11 =
 	    kif->kf_un.kf_pts.kf_pts_dev; /* truncate */
 	strlcpy(kif->kf_path, tty_devname(tp), sizeof(kif->kf_path));
 	return (0);

@@ -4,7 +4,7 @@
 #ifndef ADF_ACCEL_DEVICES_H_
 #define ADF_ACCEL_DEVICES_H_
 
-#include "qat_freebsd.h"
+#include "qat_nqc.h"
 #include "adf_cfg_common.h"
 
 #define ADF_CFG_NUM_SERVICES 4

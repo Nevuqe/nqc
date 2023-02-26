@@ -114,7 +114,7 @@ static int driver_wired_multi(const char *ifname, const u8 *addr, int add)
 		dlp->sdl_slen = 0;
 		os_memcpy(LLADDR(dlp), addr, ETH_ALEN);
 	}
-#endif /* defined(__NQC__) || defined(__DragonFly__) || defined(FreeBSD_kernel__) */
+#endif /* defined(__NQC__) || defined(__DragonFly__) || defined(NQC_kernel__) */
 #if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
 	{
 		struct sockaddr *sap;
@@ -213,7 +213,7 @@ static int driver_wired_get_ifstatus(const char *ifname, int *status)
 
 	return 0;
 }
-#endif /* defined(__NQC__) || defined(__DragonFly__) || defined(FreeBSD_kernel__) */
+#endif /* defined(__NQC__) || defined(__DragonFly__) || defined(NQC_kernel__) */
 
 
 int driver_wired_init_common(struct driver_wired_common_data *common,
@@ -275,7 +275,7 @@ int driver_wired_init_common(struct driver_wired_common_data *common,
 		       status == 0)
 			sleep(1);
 	}
-#endif /* defined(__NQC__) || defined(__DragonFly__) || defined(FreeBSD_kernel__) */
+#endif /* defined(__NQC__) || defined(__DragonFly__) || defined(NQC_kernel__) */
 
 	return 0;
 }

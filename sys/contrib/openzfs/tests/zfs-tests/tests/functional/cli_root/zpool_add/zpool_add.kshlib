@@ -53,7 +53,7 @@ function find_mnttab_dev
 	typeset mnttabdev _
 	typeset mnttabdevs=""
 
-	if is_freebsd; then
+	if is_nqc; then
 		# FreeBSD doesn't have a mnttab file.
 		mount -p | awk -v dir="^${DEV_DSKDIR}" \
 		    '$1 ~ dir { print $1 }'

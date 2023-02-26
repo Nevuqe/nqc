@@ -125,7 +125,7 @@ log_must rm -rf /$TESTPOOL/$TESTFS/dict
 # TX_SETATTR
 log_must touch /$TESTPOOL/$TESTFS/setattr
 log_must chmod 567 /$TESTPOOL/$TESTFS/setattr
-if is_freebsd; then
+if is_nqc; then
 	log_must chgrp wheel /$TESTPOOL/$TESTFS/setattr
 else
 	log_must chgrp root /$TESTPOOL/$TESTFS/setattr

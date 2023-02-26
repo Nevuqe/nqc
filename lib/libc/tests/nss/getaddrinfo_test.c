@@ -43,7 +43,7 @@ __NQCID("$NQC$");
 
 #include <atf-c.h>
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 #include "testutil.h"
 
 enum test_methods {

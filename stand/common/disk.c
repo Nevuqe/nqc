@@ -138,7 +138,7 @@ ptable_print(void *arg, const char *pname, const struct ptable_entry *part)
 		return (1);
 
 	res = 0;
-	if (part->type == PART_FREEBSD) {
+	if (part->type == PART_NQC) {
 		/* Open slice with BSD label */
 		dev.dd.d_dev = pa->dev->dd.d_dev;
 		dev.dd.d_unit = pa->dev->dd.d_unit;
@@ -329,7 +329,7 @@ disk_open(struct disk_devdesc *dev, uint64_t mediasize, u_int sectorsize)
 		 * whole MBR slice.
 		 */
 		if (partition == D_PARTWILD &&
-		    part.type != PART_FREEBSD)
+		    part.type != PART_NQC)
 			goto out;
 		/* Try to read BSD label */
 		table = ptable_open(dev, part.end - part.start + 1,

@@ -22,7 +22,7 @@
 __NQCID("$NQC$");
 
 #define PFIOC_USE_LATEST
-#define _WANT_FREEBSD_BITSET
+#define _WANT_NQC_BITSET
 
 #include <sys/types.h>
 #include <sys/bitset.h>

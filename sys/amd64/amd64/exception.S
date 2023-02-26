@@ -1093,7 +1093,7 @@ ENTRY(fork_trampoline)
  * included.
  */
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	.data
 	.p2align 4
 	.text

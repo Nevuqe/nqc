@@ -179,7 +179,7 @@ static void reaper(int sig)
 		while (wait3(&status, WNOHANG, NULL) > 0)
 			children--;
 	} else {
-		(void) pmap_unset(YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS);
+		(void) pmap_unset(YPXFRD_NQC_PROG, YPXFRD_NQC_VERS);
 		exit(0);
 	}
 
@@ -253,7 +253,7 @@ main(int argc, char *argv[])
 		openlog("rpc.ypxfrd", LOG_PID, LOG_DAEMON);
 #endif
 		sock = RPC_ANYSOCK;
-		(void) pmap_unset(YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS);
+		(void) pmap_unset(YPXFRD_NQC_PROG, YPXFRD_NQC_VERS);
 	}
 
 	if ((_rpcfdtype == 0) || (_rpcfdtype == SOCK_DGRAM)) {
@@ -264,8 +264,8 @@ main(int argc, char *argv[])
 		}
 		if (!_rpcpmstart)
 			proto = IPPROTO_UDP;
-		if (!svc_register(transp, YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, ypxfrd_freebsd_prog_1, proto)) {
-			_msgout("unable to register (YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, udp).");
+		if (!svc_register(transp, YPXFRD_NQC_PROG, YPXFRD_NQC_VERS, ypxfrd_nqc_prog_1, proto)) {
+			_msgout("unable to register (YPXFRD_NQC_PROG, YPXFRD_NQC_VERS, udp).");
 			exit(1);
 		}
 	}
@@ -278,8 +278,8 @@ main(int argc, char *argv[])
 		}
 		if (!_rpcpmstart)
 			proto = IPPROTO_TCP;
-		if (!svc_register(transp, YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, ypxfrd_freebsd_prog_1, proto)) {
-			_msgout("unable to register (YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, tcp).");
+		if (!svc_register(transp, YPXFRD_NQC_PROG, YPXFRD_NQC_VERS, ypxfrd_nqc_prog_1, proto)) {
+			_msgout("unable to register (YPXFRD_NQC_PROG, YPXFRD_NQC_VERS, tcp).");
 			exit(1);
 		}
 	}

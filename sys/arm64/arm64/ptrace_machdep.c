@@ -54,7 +54,7 @@ __NQCID("$NQC$");
 int
 cpu_ptrace(struct thread *td, int req, void *arg, int data)
 {
-#if defined(VFP) && defined(COMPAT_FREEBSD32)
+#if defined(VFP) && defined(COMPAT_NQC32)
 	mcontext32_vfp_t vfp;
 	int error;
 
@@ -80,7 +80,7 @@ cpu_ptrace(struct thread *td, int req, void *arg, int data)
 #endif
 }
 
-#if defined(VFP) && defined(COMPAT_FREEBSD32)
+#if defined(VFP) && defined(COMPAT_NQC32)
 static bool
 get_arm_vfp(struct regset *rs, struct thread *td, void *buf, size_t *sizep)
 {
@@ -134,7 +134,7 @@ static struct regset regset_arm64_tls = {
 };
 ELF_REGSET(regset_arm64_tls);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static bool
 get_arm_tls(struct regset *rs, struct thread *td, void *buf,
     size_t *sizep)

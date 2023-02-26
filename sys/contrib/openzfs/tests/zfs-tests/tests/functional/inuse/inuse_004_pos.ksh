@@ -71,7 +71,7 @@ function mini_format
 
 	if is_linux; then
 		parted $disk -s -- mklabel gpt
-	elif is_freebsd; then
+	elif is_nqc; then
 		gpart create -s gpt $disk
 	else
 		format -e -s -d $disk -f <(printf '%s\n' partition modify)

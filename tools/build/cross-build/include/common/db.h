@@ -38,5 +38,5 @@
 #pragma once
 
 /* Ensure that we use the FreeBSD version of the db functions */
-#define dbopen __freebsd_dbopen
+#define dbopen __nqc_dbopen
 #include_next <db.h>

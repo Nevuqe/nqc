@@ -29,7 +29,7 @@
 #ifndef _DRM_MODE_H
 #define _DRM_MODE_H
 
-#include <dev/drm2/drm_os_freebsd.h>
+#include <dev/drm2/drm_os_nqc.h>
 
 #define DRM_DISPLAY_INFO_LEN	32
 #define DRM_CONNECTOR_NAME_LEN	32

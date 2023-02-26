@@ -8,7 +8,7 @@ PACKAGE=examples
 FILESDIR=	${SHAREDIR}/examples
 
 LDIRS=	BSD_daemon \
-	FreeBSD_version \
+	NQC_version \
 	IPv6 \
 	bootforth \
 	csh \
@@ -53,9 +53,9 @@ PACKAGE_bhyve/vmrun.sh=	bhyve
 .endif
 .endif
 
-SE_DIRS+=	FreeBSD_version
-SE_FREEBSD_VERSION= \
-	FreeBSD_version.c \
+SE_DIRS+=	NQC_version
+SE_NQC_VERSION= \
+	NQC_version.c \
 	Makefile \
 	README
 

@@ -2791,13 +2791,13 @@ vn_fill_kinfo_vnode(struct vnode *vp, struct kinfo_file *kif)
 	else
 		kif->kf_un.kf_file.kf_file_fsid =
 		    vp->v_mount->mnt_stat.f_fsid.val[0];
-	kif->kf_un.kf_file.kf_file_fsid_freebsd11 =
+	kif->kf_un.kf_file.kf_file_fsid_nqc11 =
 	    kif->kf_un.kf_file.kf_file_fsid; /* truncate */
 	kif->kf_un.kf_file.kf_file_fileid = va.va_fileid;
 	kif->kf_un.kf_file.kf_file_mode = MAKEIMODE(va.va_type, va.va_mode);
 	kif->kf_un.kf_file.kf_file_size = va.va_size;
 	kif->kf_un.kf_file.kf_file_rdev = va.va_rdev;
-	kif->kf_un.kf_file.kf_file_rdev_freebsd11 =
+	kif->kf_un.kf_file.kf_file_rdev_nqc11 =
 	    kif->kf_un.kf_file.kf_file_rdev; /* truncate */
 	kif->kf_un.kf_file.kf_file_nlink = va.va_nlink;
 	return (0);
@@ -2818,8 +2818,8 @@ vn_mmap(struct file *fp, vm_map_t map, vm_offset_t *addr, vm_size_t size,
 	boolean_t writecounted;
 	int error;
 
-#if defined(COMPAT_FREEBSD7) || defined(COMPAT_FREEBSD6) || \
-    defined(COMPAT_FREEBSD5) || defined(COMPAT_FREEBSD4)
+#if defined(COMPAT_NQC7) || defined(COMPAT_NQC6) || \
+    defined(COMPAT_NQC5) || defined(COMPAT_NQC4)
 	/*
 	 * POSIX shared-memory objects are defined to have
 	 * kernel persistence, and are not defined to support

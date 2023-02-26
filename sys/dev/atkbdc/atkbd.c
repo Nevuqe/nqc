@@ -945,8 +945,8 @@ atkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	int error;
 	int s;
 	int i;
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 	int ival;
 #endif
 
@@ -955,8 +955,8 @@ atkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	case KDGKBMODE:		/* get keyboard mode */
 		*(int *)arg = state->ks_mode;
 		break;
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 	case _IO('K', 7):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -987,8 +987,8 @@ atkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	case KDGETLED:		/* get keyboard LED */
 		*(int *)arg = KBD_LED_VAL(kbd);
 		break;
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 	case _IO('K', 66):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1029,8 +1029,8 @@ atkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	case KDGKBSTATE:	/* get lock key state */
 		*(int *)arg = state->ks_state & LOCK_MASK;
 		break;
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 	case _IO('K', 20):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1064,8 +1064,8 @@ atkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		}
 		return error;
 
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 	case _IO('K', 67):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1090,10 +1090,10 @@ atkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	case PIO_KEYMAP:	/* set keyboard translation table */
 	case PIO_KEYMAPENT:	/* set keyboard translation table entry */
 	case PIO_DEADKEYMAP:	/* set accent key translation table */
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OPIO_KEYMAP:	/* set keyboard translation table (compat) */
 	case OPIO_DEADKEYMAP:	/* set accent key translation table (compat) */
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 		state->ks_accents = 0;
 		/* FALLTHROUGH */
 	default:

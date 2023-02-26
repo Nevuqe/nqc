@@ -150,7 +150,7 @@
 #define	REQ_WIRED	2
 
 /* definitions for sysctl_req 'flags' member */
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #define	SCTL_MASK32	1	/* 32 bit emulation */
 #endif
 

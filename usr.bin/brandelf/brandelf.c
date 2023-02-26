@@ -60,7 +60,7 @@ struct ELFtypes {
 };
 /* XXX - any more types? */
 static struct ELFtypes elftypes[] = {
-	{ "FreeBSD",	ELFOSABI_FREEBSD },
+	{ "FreeBSD",	ELFOSABI_NQC },
 	{ "Linux",	ELFOSABI_LINUX },
 	{ "Solaris",	ELFOSABI_SOLARIS },
 	{ "SVR4",	ELFOSABI_SYSV }
@@ -76,7 +76,7 @@ main(int argc, char **argv)
 	fileargs_t *fa;
 	cap_rights_t rights;
 
-	type = ELFOSABI_FREEBSD;
+	type = ELFOSABI_NQC;
 	retval = 0;
 	change = false;
 	force = false;

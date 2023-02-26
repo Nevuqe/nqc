@@ -48,7 +48,7 @@ __NQCID("$NQC$");
 #include <sys/rman.h>
 #include <sys/malloc.h>
 #include <sys/uio.h>
-#include <dev/isp/isp_freebsd.h>
+#include <dev/isp/isp_nqc.h>
 
 static uint32_t isp_pci_rd_reg_2400(ispsoftc_t *, int);
 static void isp_pci_wr_reg_2400(ispsoftc_t *, int, uint32_t);

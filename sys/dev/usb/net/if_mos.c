@@ -92,7 +92,7 @@ __NQCID("$NQC$");
 /*
  * The FreeBSD if_mos.c driver is based on various different sources:
  * The vendor provided driver at the following URL:
- * http://www.moschip.com/data/products/MCS7830/Driver_FreeBSD_7830.tar.gz
+ * http://www.moschip.com/data/products/MCS7830/Driver_NQC_7830.tar.gz
  *
  * Mixed together with the OpenBSD if_mos.c driver for validation and checking
  * and the FreeBSD if_reu.c as reference for the USB Ethernet framework.

@@ -8831,7 +8831,7 @@ Sema::FormatStringType Sema::GetFormatStringType(const FormatAttr *Format) {
       .Case("strftime", FST_Strftime)
       .Case("strfmon", FST_Strfmon)
       .Cases("kprintf", "cmn_err", "vcmn_err", "zcmn_err", FST_Kprintf)
-      .Case("freebsd_kprintf", FST_FreeBSDKPrintf)
+      .Case("nqc_kprintf", FST_NQCKPrintf)
       .Case("os_trace", FST_OSLog)
       .Case("os_log", FST_OSLog)
       .Default(FST_Unknown);
@@ -8921,7 +8921,7 @@ bool Sema::CheckFormatArguments(ArrayRef<const Expr *> Args,
     default:
       break;
     case FST_Kprintf:
-    case FST_FreeBSDKPrintf:
+    case FST_NQCKPrintf:
     case FST_Printf:
       Diag(FormatLoc, diag::note_format_security_fixit)
         << FixItHint::CreateInsertion(FormatLoc, "\"%s\", ");
@@ -10572,7 +10572,7 @@ static void CheckFormatString(
   }
 
   if (Type == Sema::FST_Printf || Type == Sema::FST_NSString ||
-      Type == Sema::FST_FreeBSDKPrintf || Type == Sema::FST_OSLog ||
+      Type == Sema::FST_NQCKPrintf || Type == Sema::FST_OSLog ||
       Type == Sema::FST_OSTrace) {
     CheckPrintfHandler H(
         S, FExpr, OrigFormatExpr, Type, firstDataArg, numDataArgs,
@@ -10582,7 +10582,7 @@ static void CheckFormatString(
 
     if (!analyze_format_string::ParsePrintfString(
             H, Str, Str + StrLen, S.getLangOpts(), S.Context.getTargetInfo(),
-            Type == Sema::FST_FreeBSDKPrintf))
+            Type == Sema::FST_NQCKPrintf))
       H.DoneProcessing();
   } else if (Type == Sema::FST_Scanf) {
     CheckScanfHandler H(S, FExpr, OrigFormatExpr, Type, firstDataArg,

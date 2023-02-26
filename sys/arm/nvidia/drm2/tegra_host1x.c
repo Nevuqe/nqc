@@ -158,7 +158,7 @@ host1x_drm_exit(struct host1x_softc *sc)
 {
 	struct client_info *entry;
 	int rv;
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	struct drm_device *dev, *tmp;
 #endif
 	LOCK(sc);
@@ -179,7 +179,7 @@ host1x_drm_exit(struct host1x_softc *sc)
 		entry->activated = 0;
 	}
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	list_for_each_entry_safe(dev, tmp, &driver->device_list, driver_item)
 		drm_put_dev(dev);
 #endif

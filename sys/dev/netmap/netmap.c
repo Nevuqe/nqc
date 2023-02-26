@@ -143,7 +143,7 @@ ports attached to the switch)
  *  	structure for each open().
  *
  *      os-specific:
- *  	    FreeBSD: see netmap_open() (netmap_freebsd.c)
+ *  	    FreeBSD: see netmap_open() (netmap_nqc.c)
  *  	    linux:   see linux_netmap_open() (netmap_linux.c)
  *
  * > 2. on each descriptor, the process issues an ioctl() to identify
@@ -220,7 +220,7 @@ ports attached to the switch)
  * >    the shared memory region.
  *
  *      os-specific:
- *  	    FreeBSD: netmap_mmap_single (netmap_freebsd.c).
+ *  	    FreeBSD: netmap_mmap_single (netmap_nqc.c).
  *  	    linux:   linux_netmap_mmap (netmap_linux.c).
  *
  * > 4. using the functions in the netmap(4) userspace API, a process

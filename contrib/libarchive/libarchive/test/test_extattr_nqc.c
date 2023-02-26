@@ -33,7 +33,7 @@ __NQCID("$NQC$");
  * Verify extended attribute restore-to-disk.  This test is FreeBSD-specific.
  */
 
-DEFINE_TEST(test_extattr_freebsd)
+DEFINE_TEST(test_extattr_nqc)
 {
 #if !defined(__NQC__)
 	skipping("FreeBSD-specific extattr restore test");

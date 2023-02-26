@@ -84,7 +84,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 		.bt_byteorder = ELFDATA2LSB,
 		.bt_elfclass  = ELFCLASS32,
 		.bt_machine   = EM_386,
-		.bt_osabi     = ELFOSABI_FREEBSD,
+		.bt_osabi     = ELFOSABI_NQC,
 	},
 
 	{
@@ -208,7 +208,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 		.bt_byteorder = ELFDATA2LSB,
 		.bt_elfclass  = ELFCLASS64,
 		.bt_machine   = EM_ALPHA,
-		.bt_osabi     = ELFOSABI_FREEBSD
+		.bt_osabi     = ELFOSABI_NQC
 	},
 
 	{
@@ -287,7 +287,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 		.bt_byteorder = ELFDATA2MSB,
 		.bt_elfclass  = ELFCLASS64,
 		.bt_machine   = EM_RISCV,
-		.bt_osabi     = ELFOSABI_FREEBSD,
+		.bt_osabi     = ELFOSABI_NQC,
 	},
 
 	{
@@ -356,7 +356,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 		.bt_byteorder = ELFDATA2MSB,
 		.bt_elfclass  = ELFCLASS64,
 		.bt_machine   = EM_SPARCV9,
-		.bt_osabi     = ELFOSABI_FREEBSD
+		.bt_osabi     = ELFOSABI_NQC
 	},
 
 	{
@@ -389,7 +389,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 		.bt_byteorder = ELFDATA2LSB,
 		.bt_elfclass  = ELFCLASS64,
 		.bt_machine   = EM_X86_64,
-		.bt_osabi     = ELFOSABI_FREEBSD
+		.bt_osabi     = ELFOSABI_NQC
 	},
 
 	{

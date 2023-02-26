@@ -794,11 +794,11 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	fkeyarg_t *fkeyp;
 	int error;
 	int i;
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	int j;
 	okeymap_t *omapp;
 	oaccentmap_t *oaccentmapp;
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 
 	GIANT_REQUIRED;
 	switch (cmd) {
@@ -827,7 +827,7 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		error = copyout(kbd->kb_keymap, *(void **)arg,
 		    sizeof(keymap_t));
 		return (error);
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OGIO_KEYMAP:	/* get keyboard translation table (compat) */
 		mapp = kbd->kb_keymap;
 		omapp = (okeymap_t *)arg;
@@ -840,14 +840,14 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 			omapp->key[i].flgs = mapp->key[i].flgs;
 		}
 		break;
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 	case PIO_KEYMAP:	/* set keyboard translation table */
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OPIO_KEYMAP:	/* set keyboard translation table (compat) */
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 #ifndef KBD_DISABLE_KEYMAP_LOAD
 		mapp = malloc(sizeof *mapp, M_TEMP, M_WAITOK);
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 		if (cmd == OPIO_KEYMAP) {
 			omapp = (okeymap_t *)arg;
 			mapp->n_keys = omapp->n_keys;
@@ -859,7 +859,7 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 				mapp->key[i].flgs = omapp->key[i].flgs;
 			}
 		} else
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 		{
 			error = copyin(*(void **)arg, mapp, sizeof *mapp);
 			if (error != 0) {
@@ -914,7 +914,7 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		    sizeof(accentmap_t));
 		return (error);
 		break;
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OGIO_DEADKEYMAP:	/* get accent key translation table (compat) */
 		accentmapp = kbd->kb_accentmap;
 		oaccentmapp = (oaccentmap_t *)arg;
@@ -930,15 +930,15 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 			}
 		}
 		break;
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 
 	case PIO_DEADKEYMAP:	/* set accent key translation table */
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OPIO_DEADKEYMAP:	/* set accent key translation table (compat) */
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 #ifndef KBD_DISABLE_KEYMAP_LOAD
 		accentmapp = malloc(sizeof(*accentmapp), M_TEMP, M_WAITOK);
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 		if (cmd == OPIO_DEADKEYMAP) {
 			oaccentmapp = (oaccentmap_t *)arg;
 			accentmapp->n_accs = oaccentmapp->n_accs;
@@ -953,7 +953,7 @@ genkbd_commonioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 				}
 			}
 		} else
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 		{
 			error = copyin(*(void **)arg, accentmapp, sizeof(*accentmapp));
 			if (error != 0) {

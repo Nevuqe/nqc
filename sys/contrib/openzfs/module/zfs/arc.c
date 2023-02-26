@@ -534,7 +534,7 @@ arc_stats_t arc_stats = {
 	{ "dbuf_size",			KSTAT_DATA_UINT64 },
 	{ "dnode_size",			KSTAT_DATA_UINT64 },
 	{ "bonus_size",			KSTAT_DATA_UINT64 },
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	{ "other_size",			KSTAT_DATA_UINT64 },
 #endif
 	{ "anon_size",			KSTAT_DATA_UINT64 },
@@ -7356,7 +7356,7 @@ arc_kstat_update(kstat_t *ksp, int rw)
 	    wmsum_value(&arc_sums.arcstat_metadata_size);
 	as->arcstat_dbuf_size.value.ui64 =
 	    wmsum_value(&arc_sums.arcstat_dbuf_size);
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	as->arcstat_other_size.value.ui64 =
 	    wmsum_value(&arc_sums.arcstat_bonus_size) +
 	    aggsum_value(&arc_sums.arcstat_dnode_size) +

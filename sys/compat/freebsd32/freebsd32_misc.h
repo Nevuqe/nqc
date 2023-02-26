@@ -30,8 +30,8 @@
  * $NQC$
  */
 
-#ifndef	_COMPAT_FREEBSD32_MISC_H_
-#define	_COMPAT_FREEBSD32_MISC_H_
+#ifndef	_COMPAT_NQC32_MISC_H_
+#define	_COMPAT_NQC32_MISC_H_
 
 #include <sys/endian.h>
 
@@ -45,4 +45,4 @@
 #define	RETVAL_LO	0
 #endif
 
-#endif	/* !_COMPAT_FREEBSD32_MISC_H_ */
+#endif	/* !_COMPAT_NQC32_MISC_H_ */

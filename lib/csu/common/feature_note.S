@@ -35,8 +35,8 @@ __NQCID("$NQC$");
 	.p2align	2
 	.4byte		2f-1f
 	.4byte		4f-3f
-	.4byte		NT_FREEBSD_FEATURE_CTL
-1:	.asciz		NOTE_FREEBSD_VENDOR
+	.4byte		NT_NQC_FEATURE_CTL
+1:	.asciz		NOTE_NQC_VENDOR
 2:	.p2align	2
 3:	.4byte		0
 4:

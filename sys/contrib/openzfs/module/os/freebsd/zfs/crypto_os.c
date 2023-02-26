@@ -45,7 +45,7 @@ __NQCID("$NQC$");
 #include <sys/fs/zfs.h>
 #include <sys/zio.h>
 
-#include <sys/freebsd_crypto.h>
+#include <sys/nqc_crypto.h>
 
 #define	SHA512_HMAC_BLOCK_SIZE	128
 
@@ -137,9 +137,9 @@ crypto_mac(const crypto_key_t *key, const void *in_data, size_t in_data_size,
 }
 
 static int
-freebsd_zfs_crypt_done(struct cryptop *crp)
+nqc_zfs_crypt_done(struct cryptop *crp)
 {
-	freebsd_crypt_session_t *ses;
+	nqc_crypt_session_t *ses;
 
 	ses = crp->crp_opaque;
 	mtx_lock(&ses->fs_lock);
@@ -150,14 +150,14 @@ freebsd_zfs_crypt_done(struct cryptop *crp)
 }
 
 static int
-freebsd_zfs_crypt_done_sync(struct cryptop *crp)
+nqc_zfs_crypt_done_sync(struct cryptop *crp)
 {
 
 	return (0);
 }
 
 void
-freebsd_crypt_freesession(freebsd_crypt_session_t *sess)
+nqc_crypt_freesession(nqc_crypt_session_t *sess)
 {
 	mtx_destroy(&sess->fs_lock);
 	crypto_freesession(sess->fs_sid);
@@ -165,7 +165,7 @@ freebsd_crypt_freesession(freebsd_crypt_session_t *sess)
 }
 
 static int
-zfs_crypto_dispatch(freebsd_crypt_session_t *session, struct cryptop *crp)
+zfs_crypto_dispatch(nqc_crypt_session_t *session, struct cryptop *crp)
 {
 	int error;
 
@@ -177,8 +177,8 @@ zfs_crypto_dispatch(freebsd_crypt_session_t *session, struct cryptop *crp)
 #else
 		boolean_t async = !CRYPTO_SESS_SYNC(crp->crp_session);
 #endif
-		crp->crp_callback = async ? freebsd_zfs_crypt_done :
-		    freebsd_zfs_crypt_done_sync;
+		crp->crp_callback = async ? nqc_zfs_crypt_done :
+		    nqc_zfs_crypt_done_sync;
 		error = crypto_dispatch(crp);
 		if (error == 0) {
 			if (async) {
@@ -211,8 +211,8 @@ zfs_crypto_dispatch(freebsd_crypt_session_t *session, struct cryptop *crp)
 	return (error);
 }
 static void
-freebsd_crypt_uio_debug_log(boolean_t encrypt,
-    freebsd_crypt_session_t *input_sessionp,
+nqc_crypt_uio_debug_log(boolean_t encrypt,
+    nqc_crypt_session_t *input_sessionp,
     const struct zio_crypt_info *c_info,
     zfs_uio_t *data_uio,
     crypto_key_t *key,
@@ -255,7 +255,7 @@ freebsd_crypt_uio_debug_log(boolean_t encrypt,
  */
 #if __NQC_version >= 1300087
 int
-freebsd_crypt_newsession(freebsd_crypt_session_t *sessp,
+nqc_crypt_newsession(nqc_crypt_session_t *sessp,
     const struct zio_crypt_info *c_info, crypto_key_t *key)
 {
 	struct crypto_session_params csp = {0};
@@ -334,8 +334,8 @@ bad:
 }
 
 int
-freebsd_crypt_uio(boolean_t encrypt,
-    freebsd_crypt_session_t *input_sessionp,
+nqc_crypt_uio(boolean_t encrypt,
+    nqc_crypt_session_t *input_sessionp,
     const struct zio_crypt_info *c_info,
     zfs_uio_t *data_uio,
     crypto_key_t *key,
@@ -344,18 +344,18 @@ freebsd_crypt_uio(boolean_t encrypt,
     size_t auth_len)
 {
 	struct cryptop *crp;
-	freebsd_crypt_session_t *session = NULL;
+	nqc_crypt_session_t *session = NULL;
 	int error = 0;
 	size_t total = 0;
 
-	freebsd_crypt_uio_debug_log(encrypt, input_sessionp, c_info, data_uio,
+	nqc_crypt_uio_debug_log(encrypt, input_sessionp, c_info, data_uio,
 	    key, ivbuf, datalen, auth_len);
 	for (int i = 0; i < zfs_uio_iovcnt(data_uio); i++)
 		total += zfs_uio_iovlen(data_uio, i);
 	zfs_uio_resid(data_uio) = total;
 	if (input_sessionp == NULL) {
 		session = kmem_zalloc(sizeof (*session), KM_SLEEP);
-		error = freebsd_crypt_newsession(session, c_info, key);
+		error = nqc_crypt_newsession(session, c_info, key);
 		if (error)
 			goto out;
 	} else
@@ -387,7 +387,7 @@ out:
 		printf("%s: returning error %d\n", __FUNCTION__, error);
 #endif
 	if (input_sessionp == NULL) {
-		freebsd_crypt_freesession(session);
+		nqc_crypt_freesession(session);
 		kmem_free(session, sizeof (*session));
 	}
 	return (error);
@@ -395,7 +395,7 @@ out:
 
 #else
 int
-freebsd_crypt_newsession(freebsd_crypt_session_t *sessp,
+nqc_crypt_newsession(nqc_crypt_session_t *sessp,
     const struct zio_crypt_info *c_info, crypto_key_t *key)
 {
 	struct cryptoini cria = {0}, crie = {0}, *crip;
@@ -501,8 +501,8 @@ bad:
  * it when done.
  */
 int
-freebsd_crypt_uio(boolean_t encrypt,
-    freebsd_crypt_session_t *input_sessionp,
+nqc_crypt_uio(boolean_t encrypt,
+    nqc_crypt_session_t *input_sessionp,
     const struct zio_crypt_info *c_info,
     zfs_uio_t *data_uio,
     crypto_key_t *key,
@@ -514,10 +514,10 @@ freebsd_crypt_uio(boolean_t encrypt,
 	struct cryptodesc *enc_desc, *auth_desc;
 	struct enc_xform *xform;
 	struct auth_hash *xauth;
-	freebsd_crypt_session_t *session = NULL;
+	nqc_crypt_session_t *session = NULL;
 	int error;
 
-	freebsd_crypt_uio_debug_log(encrypt, input_sessionp, c_info, data_uio,
+	nqc_crypt_uio_debug_log(encrypt, input_sessionp, c_info, data_uio,
 	    key, ivbuf, datalen, auth_len);
 	switch (c_info->ci_crypt_type) {
 	case ZC_TYPE_GCM:
@@ -571,7 +571,7 @@ freebsd_crypt_uio(boolean_t encrypt,
 
 	if (input_sessionp == NULL) {
 		session = kmem_zalloc(sizeof (*session), KM_SLEEP);
-		error = freebsd_crypt_newsession(session, c_info, key);
+		error = nqc_crypt_newsession(session, c_info, key);
 		if (error)
 			goto out;
 	} else
@@ -622,7 +622,7 @@ freebsd_crypt_uio(boolean_t encrypt,
 	crypto_freereq(crp);
 out:
 	if (input_sessionp == NULL) {
-		freebsd_crypt_freesession(session);
+		nqc_crypt_freesession(session);
 		kmem_free(session, sizeof (*session));
 	}
 bad:

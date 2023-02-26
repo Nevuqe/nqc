@@ -43,7 +43,7 @@ lstat(const char *path, struct stat *sb)
 
 	if (__getosreldate() >= INO64_FIRST)
 		return (__sys_fstatat(AT_FDCWD, path, sb, AT_SYMLINK_NOFOLLOW));
-	rv = syscall(SYS_freebsd11_lstat, path, &stat11);
+	rv = syscall(SYS_nqc11_lstat, path, &stat11);
 	if (rv == 0)
 		__stat11_to_stat(&stat11, sb);
 	return (rv);

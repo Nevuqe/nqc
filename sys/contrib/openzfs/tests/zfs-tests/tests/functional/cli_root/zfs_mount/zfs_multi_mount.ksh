@@ -59,7 +59,7 @@ log_must mkfile 128k $FILENAME
 log_must eval "exec 9<> $FILENAME" # open file
 
 # 3. Lazy umount
-if is_freebsd; then
+if is_nqc; then
 	# FreeBSD does not support lazy unmount
 	log_must umount $MNTPFS
 else

@@ -13562,7 +13562,7 @@ typedef struct hwrm_func_drv_rgtr_input {
 	/* Linux OS. */
 	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_LINUX	UINT32_C(0x24)
 	/* FreeBSD OS. */
-	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_FREEBSD   UINT32_C(0x2a)
+	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_NQC   UINT32_C(0x2a)
 	/* VMware ESXi OS. */
 	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_ESXI	UINT32_C(0x68)
 	/* Microsoft Windows 8 64-bit OS. */
@@ -14001,7 +14001,7 @@ typedef struct hwrm_func_drv_qver_output {
 	/* Linux OS. */
 	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_LINUX	UINT32_C(0x24)
 	/* FreeBSD OS. */
-	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_FREEBSD   UINT32_C(0x2a)
+	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_NQC   UINT32_C(0x2a)
 	/* VMware ESXi OS. */
 	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_ESXI	UINT32_C(0x68)
 	/* Microsoft Windows 8 64-bit OS. */

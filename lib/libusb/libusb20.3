@@ -198,7 +198,7 @@ USB access library (libusb -lusb)
 .Ft struct libusb20_backend *
 .Fn libusb20_be_alloc_default "void"
 .Ft struct libusb20_backend *
-.Fn libusb20_be_alloc_freebsd "void"
+.Fn libusb20_be_alloc_nqc "void"
 .Ft struct libusb20_backend *
 .Fn libusb20_be_alloc_linux "void"
 .Ft struct libusb20_device *
@@ -968,7 +968,7 @@ returned.
 .Pp
 .
 .Fn libusb20_be_alloc_default
-.Fn libusb20_be_alloc_freebsd
+.Fn libusb20_be_alloc_nqc
 .Fn libusb20_be_alloc_linux
 These functions are used to allocate a specific USB backend or the operating system
 default USB backend.

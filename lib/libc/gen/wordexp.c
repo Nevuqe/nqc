@@ -117,7 +117,7 @@ we_write_fully(int fd, const char *buffer, size_t len)
 
 /*
  * we_askshell --
- *	Use the `freebsd_wordexp' /bin/sh builtin function to do most of the
+ *	Use the `nqc_wordexp' /bin/sh builtin function to do most of the
  *	work in expanding the word string. This function is complicated by
  *	memory management.
  */
@@ -180,7 +180,7 @@ we_askshell(const char *words, wordexp_t *we, int flags)
 			_exit(1);
 		execl(_PATH_BSHELL, "sh", flags & WRDE_UNDEF ? "-u" : "+u",
 		    "-c", "IFS=$1;eval \"$2\";"
-		    "freebsd_wordexp -f \"$3\" ${4:+\"$4\"}",
+		    "nqc_wordexp -f \"$3\" ${4:+\"$4\"}",
 		    "",
 		    ifs != NULL ? ifs : " \t\n",
 		    flags & WRDE_SHOWERR ? "" : "exec 2>/dev/null",

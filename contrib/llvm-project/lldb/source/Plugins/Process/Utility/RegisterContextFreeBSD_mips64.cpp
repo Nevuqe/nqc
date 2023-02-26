@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSD_mips64.cpp ---------------------------------===//
+//===-- RegisterContextNQC_mips64.cpp ---------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===---------------------------------------------------------------------===//
 
-#include "RegisterContextFreeBSD_mips64.h"
+#include "RegisterContextNQC_mips64.h"
 #include "RegisterContextPOSIX_mips64.h"
 #include "lldb-mips-freebsd-register-enums.h"
 #include <vector>
@@ -103,7 +103,7 @@ typedef struct _GPR {
   uint64_t pc;
   uint64_t ic;
   uint64_t dummy;
-} GPR_freebsd_mips;
+} GPR_nqc_mips;
 
 typedef struct _FPR {
   uint64_t f0;
@@ -140,7 +140,7 @@ typedef struct _FPR {
   uint64_t f31;
   uint64_t fcsr;
   uint64_t fir;
-} FPR_freebsd_mips;
+} FPR_nqc_mips;
 
 // Include RegisterInfos_mips64 to declare our g_register_infos_mips64
 // structure.
@@ -148,32 +148,32 @@ typedef struct _FPR {
 #include "RegisterInfos_mips64.h"
 #undef DECLARE_REGISTER_INFOS_MIPS64_STRUCT
 
-RegisterContextFreeBSD_mips64::RegisterContextFreeBSD_mips64(
+RegisterContextNQC_mips64::RegisterContextNQC_mips64(
     const ArchSpec &target_arch)
     : RegisterInfoInterface(target_arch) {}
 
-size_t RegisterContextFreeBSD_mips64::GetGPRSize() const {
-  return sizeof(GPR_freebsd_mips);
+size_t RegisterContextNQC_mips64::GetGPRSize() const {
+  return sizeof(GPR_nqc_mips);
 }
 
 const RegisterSet *
-RegisterContextFreeBSD_mips64::GetRegisterSet(size_t set) const {
+RegisterContextNQC_mips64::GetRegisterSet(size_t set) const {
   // Check if RegisterSet is available
   if (set < k_num_register_sets)
     return &g_reg_sets_mips64[set];
   return nullptr;
 }
 
-size_t RegisterContextFreeBSD_mips64::GetRegisterSetCount() const {
+size_t RegisterContextNQC_mips64::GetRegisterSetCount() const {
   return k_num_register_sets;
 }
 
-const RegisterInfo *RegisterContextFreeBSD_mips64::GetRegisterInfo() const {
+const RegisterInfo *RegisterContextNQC_mips64::GetRegisterInfo() const {
   assert(m_target_arch.GetCore() == ArchSpec::eCore_mips64);
   return g_register_infos_mips64;
 }
 
-uint32_t RegisterContextFreeBSD_mips64::GetRegisterCount() const {
+uint32_t RegisterContextNQC_mips64::GetRegisterCount() const {
   return static_cast<uint32_t>(sizeof(g_register_infos_mips64) /
                                sizeof(g_register_infos_mips64[0]));
 }

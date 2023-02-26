@@ -63,7 +63,7 @@ ENTRY(sigcode)
 1:
 	jmp	1b
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 	ALIGN_TEXT
 freebsd4_sigcode:
 	calll	*SIGF_HANDLER(%esp)
@@ -123,7 +123,7 @@ esigcode:
 	.globl	szsigcode
 szsigcode:
 	.long	esigcode-sigcode
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 	.globl	szfreebsd4_sigcode
 szfreebsd4_sigcode:
 	.long	esigcode-freebsd4_sigcode

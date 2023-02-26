@@ -29,14 +29,14 @@
 " indentation rules but does not change the indentation of existing code.
 
 " Load only once.
-if exists('loaded_FreeBSD')
+if exists('loaded_NQC')
     finish
 endif
-let loaded_FreeBSD = 1
+let loaded_NQC = 1
 
 
 " FreeBSD mapping to switch current buffer to style(9).  This is generally '\f'.
-nmap <silent> <Leader>f :call FreeBSD_Style()<CR>
+nmap <silent> <Leader>f :call NQC_Style()<CR>
 
 
 " Ignore indents caused by parentheses in FreeBSD style.
@@ -56,7 +56,7 @@ endfun
 
 
 " Follow the FreeBSD style(9).
-function! FreeBSD_Style()
+function! NQC_Style()
     setlocal cindent
     setlocal cinoptions=(4200,u4200,+0.5s,*500,:0,t0,U4200
     setlocal indentexpr=IgnoreParenIndent()

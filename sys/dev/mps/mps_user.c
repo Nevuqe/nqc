@@ -2314,7 +2314,7 @@ mps_ioctl(struct cdev *dev, u_long cmd, void *arg, int flag,
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 struct mps_cfg_page_req32 {
 	MPI2_CONFIG_PAGE_HEADER header;
@@ -2493,13 +2493,13 @@ mps_ioctl32(struct cdev *dev, u_long cmd32, void *_arg, int flag,
 
 	return (error);
 }
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 static int
 mps_ioctl_devsw(struct cdev *dev, u_long com, caddr_t arg, int flag,
     struct thread *td)
 {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		return (mps_ioctl32(dev, com, arg, flag, td));
 #endif

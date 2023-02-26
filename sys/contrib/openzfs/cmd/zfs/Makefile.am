@@ -17,6 +17,6 @@ zfs_LDADD = \
 
 zfs_LDADD += $(LTLIBINTL)
 
-if BUILD_FREEBSD
+if BUILD_NQC
 zfs_LDADD += -lgeom -ljail
 endif

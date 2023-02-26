@@ -181,7 +181,7 @@ public:
 };
 #endif /* KMP_USE_HWLOC */
 
-#if KMP_OS_LINUX || KMP_OS_FREEBSD
+#if KMP_OS_LINUX || KMP_OS_NQC
 #if KMP_OS_LINUX
 /* On some of the older OS's that we build on, these constants aren't present
    in <asm/unistd.h> #included from <sys.syscall.h>. They must be the same on
@@ -256,7 +256,7 @@ public:
 #endif /* __NR_sched_getaffinity */
 #error Unknown or unsupported architecture
 #endif /* KMP_ARCH_* */
-#elif KMP_OS_FREEBSD
+#elif KMP_OS_NQC
 #include <pthread.h>
 #include <pthread_np.h>
 #endif
@@ -337,7 +337,7 @@ class KMPNativeAffinity : public KMPAffinity {
 #if KMP_OS_LINUX
       long retval =
           syscall(__NR_sched_getaffinity, 0, __kmp_affin_mask_size, mask);
-#elif KMP_OS_FREEBSD
+#elif KMP_OS_NQC
       int r = pthread_getaffinity_np(pthread_self(), __kmp_affin_mask_size,
                                      reinterpret_cast<cpuset_t *>(mask));
       int retval = (r == 0 ? 0 : -1);
@@ -357,7 +357,7 @@ class KMPNativeAffinity : public KMPAffinity {
 #if KMP_OS_LINUX
       long retval =
           syscall(__NR_sched_setaffinity, 0, __kmp_affin_mask_size, mask);
-#elif KMP_OS_FREEBSD
+#elif KMP_OS_NQC
       int r = pthread_setaffinity_np(pthread_self(), __kmp_affin_mask_size,
                                      reinterpret_cast<cpuset_t *>(mask));
       int retval = (r == 0 ? 0 : -1);
@@ -399,7 +399,7 @@ class KMPNativeAffinity : public KMPAffinity {
   }
   api_type get_api_type() const override { return NATIVE_OS; }
 };
-#endif /* KMP_OS_LINUX || KMP_OS_FREEBSD */
+#endif /* KMP_OS_LINUX || KMP_OS_NQC */
 
 #if KMP_OS_WINDOWS
 class KMPNativeAffinity : public KMPAffinity {

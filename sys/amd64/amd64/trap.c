@@ -578,7 +578,7 @@ trap(struct trapframe *frame)
 			if (pti) {
 				if (frame->tf_rip ==
 				    (uintptr_t)IDTVEC(fast_syscall_pti) ||
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 				    frame->tf_rip ==
 				    (uintptr_t)IDTVEC(int0x80_syscall_pti) ||
 #endif
@@ -587,7 +587,7 @@ trap(struct trapframe *frame)
 			} else {
 				if (frame->tf_rip ==
 				    (uintptr_t)IDTVEC(fast_syscall) ||
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 				    frame->tf_rip ==
 				    (uintptr_t)IDTVEC(int0x80_syscall) ||
 #endif

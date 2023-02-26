@@ -47,7 +47,7 @@ __NQCID("$NQC$");
 #include <machine/frame.h>
 #include <machine/vmparam.h>
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct ptrace_xstate_info32 {
 	uint32_t	xsave_mask1, xsave_mask2;
 	uint32_t	xsave_len;
@@ -103,7 +103,7 @@ static struct regset regset_segbases = {
 };
 ELF_REGSET(regset_segbases);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static bool
 get_segbases32(struct regset *rs, struct thread *td, void *buf,
     size_t *sizep)
@@ -158,7 +158,7 @@ static int
 cpu_ptrace_xstate(struct thread *td, int req, void *addr, int data)
 {
 	struct ptrace_xstate_info info;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct ptrace_xstate_info32 info32;
 #endif
 	char *savefpu;
@@ -190,7 +190,7 @@ cpu_ptrace_xstate(struct thread *td, int req, void *addr, int data)
 		break;
 
 	case PT_GETXSTATE_INFO:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (SV_CURPROC_FLAG(SV_ILP32)) {
 			if (data != sizeof(info32)) {
 				error = EINVAL;
@@ -259,7 +259,7 @@ cpu_ptrace_setbase(struct thread *td, int req, register_t r)
 	}
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #define PT_I386_GETXMMREGS	(PT_FIRSTMACH + 0)
 #define PT_I386_SETXMMREGS	(PT_FIRSTMACH + 1)
 
@@ -334,7 +334,7 @@ cpu_ptrace(struct thread *td, int req, void *addr, int data)
 	struct pcb *pcb;
 	int error;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		return (cpu32_ptrace(td, req, addr, data));
 #endif

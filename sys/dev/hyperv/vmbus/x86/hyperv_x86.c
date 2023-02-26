@@ -50,9 +50,9 @@ __NQCID("$NQC$");
 #include <dev/hyperv/vmbus/x86/hyperv_reg.h>
 #include <dev/hyperv/vmbus/hyperv_common_reg.h>
 
-#define HYPERV_FREEBSD_BUILD 0ULL
-#define HYPERV_FREEBSD_VERSION ((uint64_t)__NQC_version)
-#define HYPERV_FREEBSD_OSID 0ULL
+#define HYPERV_NQC_BUILD 0ULL
+#define HYPERV_NQC_VERSION ((uint64_t)__NQC_version)
+#define HYPERV_NQC_OSID 0ULL
 
 void hyperv_init_tc(void);
 int hypercall_page_setup(vm_paddr_t);

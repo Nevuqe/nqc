@@ -25,7 +25,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#if !(SANITIZER_NETBSD || SANITIZER_FREEBSD || SANITIZER_LINUX)
+#if !(SANITIZER_NETBSD || SANITIZER_NQC || SANITIZER_LINUX)
 #error "Support for your platform has not been implemented"
 #endif
 
@@ -35,7 +35,7 @@
 extern "C" void *__mmap(void *, size_t, int, int, int, int, off_t);
 #endif
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #include <sys/thr.h>
 #endif
 
@@ -69,7 +69,7 @@ inline ThreadId GetTid() {
 #if SANITIZER_NETBSD
   DEFINE__REAL(int, _lwp_self);
   return _REAL(_lwp_self);
-#elif SANITIZER_FREEBSD
+#elif SANITIZER_NQC
   long Tid;
   thr_self(&Tid);
   return Tid;
@@ -83,7 +83,7 @@ inline int TgKill(pid_t pid, ThreadId tid, int sig) {
   DEFINE__REAL(int, _lwp_kill, int a, int b);
   (void)pid;
   return _REAL(_lwp_kill, tid, sig);
-#elif SANITIZER_FREEBSD
+#elif SANITIZER_NQC
   return syscall(SYS_thr_kill2, pid, tid, sig);
 #else
   return syscall(SYS_tgkill, pid, tid, sig);
@@ -94,7 +94,7 @@ inline void *Mmap(void *addr, size_t length, int prot, int flags, int fd,
                   off_t offset) {
 #if SANITIZER_NETBSD
   return __mmap(addr, length, prot, flags, fd, 0, offset);
-#elif SANITIZER_FREEBSD && (defined(__aarch64__) || defined(__x86_64__))
+#elif SANITIZER_NQC && (defined(__aarch64__) || defined(__x86_64__))
   return (void *)__syscall(SYS_mmap, addr, length, prot, flags, fd, offset);
 #else
   return (void *)syscall(SYS_mmap, addr, length, prot, flags, fd, offset);

@@ -90,7 +90,7 @@ CFLAGS+=	-fno-common
 # XXX LOCORE means "don't declare C stuff" not "for locore.s".
 ASM_CFLAGS= -x assembler-with-cpp -DLOCORE ${CFLAGS} ${ASM_CFLAGS.${.IMPSRC:T}}
 
-COMPAT_FREEBSD32_ENABLED!= grep COMPAT_FREEBSD32 opt_global.h || true ; echo
+COMPAT_NQC32_ENABLED!= grep COMPAT_NQC32 opt_global.h || true ; echo
 
 KASAN_ENABLED!=	grep KASAN opt_global.h || true ; echo
 .if !empty(KASAN_ENABLED)
@@ -205,7 +205,7 @@ ZSTD_DECOMPRESS_BLOCK_FLAGS= -fno-tree-vectorize
 ZINCDIR=$S/contrib/openzfs/include
 # Common for dtrace / zfs
 CDDL_CFLAGS=	\
-	-DFREEBSD_NAMECACHE \
+	-DNQC_NAMECACHE \
 	-D_SYS_VMEM_H_ \
 	-D__KERNEL \
 	-D__KERNEL__ \
@@ -240,7 +240,7 @@ CDDL_C=		${CC} -c ${CDDL_CFLAGS} ${WERROR} ${.IMPSRC}
 ZFS_CFLAGS+=	-I$S/contrib/openzfs/module/icp/include \
 	${CDDL_CFLAGS} -DBUILDING_ZFS -DHAVE_UIO_ZEROCOPY \
 	-DWITH_NETDUMP -D__KERNEL__ -D_SYS_CONDVAR_H_ -DSMP \
-	-DIN_FREEBSD_BASE
+	-DIN_NQC_BASE
 
 .if ${MACHINE_ARCH} == "amd64"
 ZFS_CFLAGS+= -D__x86_64 -DHAVE_SSE2 -DHAVE_SSSE3 -DHAVE_SSE4_1 -DHAVE_SSE4_2 \

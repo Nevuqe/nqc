@@ -64,7 +64,7 @@ set -A FS_ONLY_PROP "quota=536870912" \
                     "snapdir=visible" \
 		    "canmount=off" \
 		    "version=1"
-if is_freebsd; then
+if is_nqc; then
 	FS_ONLY_PROP+=("jailed=on")
 else
 	FS_ONLY_PROP+=("zoned=on")

@@ -315,7 +315,7 @@ nm_os_mbuf_has_seg_offld(struct mbuf *m)
 }
 
 static void
-freebsd_generic_rx_handler(if_t ifp, struct mbuf *m)
+nqc_generic_rx_handler(if_t ifp, struct mbuf *m)
 {
 	int stolen;
 
@@ -353,7 +353,7 @@ nm_os_catch_rx(struct netmap_generic_adapter *gna, int intercept)
 		}
 		if_setcapenablebit(ifp, IFCAP_NETMAP, 0);
 		gna->save_if_input = if_getinputfn(ifp);
-		if_setinputfn(ifp, freebsd_generic_rx_handler);
+		if_setinputfn(ifp, nqc_generic_rx_handler);
 	} else {
 		if (!gna->save_if_input) {
 			nm_prerr("Failed to undo RX intercept on %s",
@@ -1467,7 +1467,7 @@ netmap_kqfilter(struct cdev *dev, struct knote *kn)
 }
 
 static int
-freebsd_netmap_poll(struct cdev *cdevi __unused, int events, struct thread *td)
+nqc_netmap_poll(struct cdev *cdevi __unused, int events, struct thread *td)
 {
 	struct netmap_priv_d *priv;
 	if (devfs_get_cdevpriv((void **)&priv)) {
@@ -1477,7 +1477,7 @@ freebsd_netmap_poll(struct cdev *cdevi __unused, int events, struct thread *td)
 }
 
 static int
-freebsd_netmap_ioctl(struct cdev *dev __unused, u_long cmd, caddr_t data,
+nqc_netmap_ioctl(struct cdev *dev __unused, u_long cmd, caddr_t data,
 		int ffla __unused, struct thread *td)
 {
 	int error;
@@ -1530,8 +1530,8 @@ struct cdevsw netmap_cdevsw = {
 	.d_name = "netmap",
 	.d_open = netmap_open,
 	.d_mmap_single = netmap_mmap_single,
-	.d_ioctl = freebsd_netmap_ioctl,
-	.d_poll = freebsd_netmap_poll,
+	.d_ioctl = nqc_netmap_ioctl,
+	.d_poll = nqc_netmap_poll,
 	.d_kqfilter = netmap_kqfilter,
 	.d_close = netmap_close,
 };

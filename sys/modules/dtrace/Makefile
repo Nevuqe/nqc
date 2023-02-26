@@ -23,7 +23,7 @@ SUBDIR+=	kinst
 .endif
 .if ${MACHINE_CPUARCH} == "amd64" || \
     ${MACHINE_CPUARCH} == "aarch64"
-SUBDIR+=	systrace_freebsd32
+SUBDIR+=	systrace_nqc32
 .endif
 
 .include <bsd.subdir.mk>

@@ -600,7 +600,7 @@ acl_match(acl_entry_t aclent, struct myacl_t *myacl)
 	}
 	return (1);
 }
-#else /* ARCHIVE_ACL_FREEBSD_NFS4 */
+#else /* ARCHIVE_ACL_NQC_NFS4 */
 static int
 acl_match(acl_entry_t aclent, struct myacl_t *myacl)
 {

@@ -48,7 +48,7 @@
 #elif defined(NCSW_VXWORKS)
 #include "private/stdioP.h"
 
-#elif defined(NCSW_FREEBSD)
+#elif defined(NCSW_NQC)
 #include <sys/param.h>
 #include <sys/kernel.h>
 #include <sys/libkern.h>

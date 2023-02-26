@@ -68,7 +68,7 @@ static struct {
 	const char name[9];
 } flavors[] = {
 	{F_MTREE, "mtree"},
-	{F_FREEBSD9, "freebsd9"},
+	{F_NQC9, "freebsd9"},
 	{F_NETBSD6, "netbsd6"},
 };
 
@@ -244,7 +244,7 @@ main(int argc, char **argv)
 		usage();
 
 	switch (flavor) {
-	case F_FREEBSD9:
+	case F_NQC9:
 		if (cflag && iflag) {
 			warnx("-c and -i passed, replacing -i with -j for "
 			    "FreeBSD compatibility");

@@ -49,7 +49,7 @@ log_assert "Verify file link count is zero on zfs"
 export ITERS=10
 export NUMFILES=10000
 
-if is_freebsd; then
+if is_nqc; then
 	log_unsupported "Not applicable on FreeBSD"
 fi
 

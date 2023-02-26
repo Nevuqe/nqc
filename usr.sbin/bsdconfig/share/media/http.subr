@@ -72,7 +72,7 @@ HTTP_DIRS="
 #
 f_dialog_menu_media_http()
 {
-	f_dialog_title "$msg_please_select_a_freebsd_http_distribution_site"
+	f_dialog_title "$msg_please_select_a_nqc_http_distribution_site"
 	local title="$DIALOG_TITLE" btitle="$DIALOG_BACKTITLE"
 	f_dialog_title_restore
 	local prompt="$msg_please_select_the_site_closest_to_you_or_other"
@@ -179,7 +179,7 @@ f_media_set_http()
 	other)
 		setvar $VAR_HTTP_PATH "http://"
 		f_variable_get_value $VAR_HTTP_PATH \
-			"$msg_please_specify_url_of_freebsd_http_distribution"
+			"$msg_please_specify_url_of_nqc_http_distribution"
 		f_getvar $VAR_HTTP_PATH url
 		if [ ! "${url#http://}" ]; then
 			unset $VAR_HTTP_PATH

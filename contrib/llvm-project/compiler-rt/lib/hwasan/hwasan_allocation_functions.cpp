@@ -162,7 +162,7 @@ INTERCEPTOR_ALIAS(void *, realloc, void *ptr, SIZE_T size);
 INTERCEPTOR_ALIAS(void *, reallocarray, void *ptr, SIZE_T nmemb, SIZE_T size);
 INTERCEPTOR_ALIAS(void *, malloc, SIZE_T size);
 
-#  if !SANITIZER_FREEBSD && !SANITIZER_NETBSD
+#  if !SANITIZER_NQC && !SANITIZER_NETBSD
 INTERCEPTOR_ALIAS(void *, memalign, SIZE_T alignment, SIZE_T size);
 INTERCEPTOR_ALIAS(void *, pvalloc, SIZE_T size);
 INTERCEPTOR_ALIAS(void, cfree, void *ptr);

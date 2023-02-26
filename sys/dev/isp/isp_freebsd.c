@@ -33,7 +33,7 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-#include <dev/isp/isp_freebsd.h>
+#include <dev/isp/isp_nqc.h>
 #include <sys/unistd.h>
 #include <sys/kthread.h>
 #include <sys/conf.h>

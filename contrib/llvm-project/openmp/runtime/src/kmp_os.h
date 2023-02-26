@@ -75,7 +75,7 @@
 #error Unknown compiler
 #endif
 
-#if (KMP_OS_LINUX || KMP_OS_WINDOWS || KMP_OS_FREEBSD)
+#if (KMP_OS_LINUX || KMP_OS_WINDOWS || KMP_OS_NQC)
 #define KMP_AFFINITY_SUPPORTED 1
 #if KMP_OS_WINDOWS && KMP_ARCH_X86_64
 #define KMP_GROUP_AFFINITY 1
@@ -87,7 +87,7 @@
 #define KMP_GROUP_AFFINITY 0
 #endif
 
-#if (KMP_OS_LINUX || (KMP_OS_FREEBSD && __NQC_version >= 1301000))
+#if (KMP_OS_LINUX || (KMP_OS_NQC && __NQC_version >= 1301000))
 #define KMP_HAVE_SCHED_GETCPU 1
 #else
 #define KMP_HAVE_SCHED_GETCPU 0
@@ -214,7 +214,7 @@ typedef kmp_uint32 kmp_uint;
 
 // stdarg handling
 #if (KMP_ARCH_ARM || KMP_ARCH_X86_64 || KMP_ARCH_AARCH64) &&                   \
-    (KMP_OS_FREEBSD || KMP_OS_LINUX)
+    (KMP_OS_NQC || KMP_OS_LINUX)
 typedef va_list *kmp_va_list;
 #define kmp_va_deref(ap) (*(ap))
 #define kmp_va_addr_of(ap) (&(ap))

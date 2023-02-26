@@ -5,7 +5,7 @@
 
 KMOD= qat_api
 
-SRCS+= freebsd_module.c
+SRCS+= nqc_module.c
 SRCS+= common/compression/dc_datapath.c
 SRCS+= common/compression/dc_header_footer.c
 SRCS+= common/compression/dc_session.c
@@ -49,7 +49,7 @@ SRCS+= common/crypto/sym/qat/lac_sym_qat_key.c
 SRCS+= common/crypto/sym/key/lac_sym_key.c
 SRCS+= common/stubs/lac_stubs.c
 SRCS+= device/dev_info.c
-SRCS+= qat_kernel/src/lac_adf_interface_freebsd.c
+SRCS+= qat_kernel/src/lac_adf_interface_nqc.c
 SRCS+= qat_kernel/src/qat_transport.c
 SRCS+= qat_kernel/src/lac_symbols.c
 SRCS+= qat_utils/src/QatUtilsServices.c

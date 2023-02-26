@@ -120,11 +120,11 @@ static right_info known_rights[] = {
   RIGHTS_INFO(CAP_LINKAT_TARGET),
 #endif
   /* Linux aliased some FD operations for pdgetpid/pdkill */
-#ifdef CAP_PDGETPID_FREEBSD
-  RIGHTS_INFO(CAP_PDGETPID_FREEBSD),
+#ifdef CAP_PDGETPID_NQC
+  RIGHTS_INFO(CAP_PDGETPID_NQC),
 #endif
-#ifdef CAP_PDKILL_FREEBSD
-  RIGHTS_INFO(CAP_PDKILL_FREEBSD),
+#ifdef CAP_PDKILL_NQC
+  RIGHTS_INFO(CAP_PDKILL_NQC),
 #endif
   /* Linux-specific rights */
 #ifdef CAP_FSIGNAL

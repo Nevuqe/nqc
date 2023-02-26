@@ -83,7 +83,7 @@ __NQCID("$NQC$");
  * to only the most generic programming techniques in the test harness
  * and thus avoid conditionals altogether.  Where that's not possible,
  * try to minimize conditionals by grouping platform-specific tests in
- * one place (e.g., test_acl_freebsd) or by adding new assert()
+ * one place (e.g., test_acl_nqc) or by adding new assert()
  * functions (e.g., assertMakeHardlink()) to cover up platform
  * differences.  Platform-specific coding in libarchive_test is often
  * a symptom that some capability is missing from libarchive itself.

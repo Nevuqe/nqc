@@ -54,11 +54,11 @@
 #endif // BC_TEST_OPENBSD
 
 // This is used by configure.sh to test for FreeBSD.
-#ifdef BC_TEST_FREEBSD
+#ifdef BC_TEST_NQC
 #ifdef __NQC__
 #error On FreeBSD with _POSIX_C_SOURCE
 #endif // __NQC__
-#endif // BC_TEST_FREEBSD
+#endif // BC_TEST_NQC
 
 // Windows has deprecated isatty() and the rest of these. Or doesn't have them.
 // So these are just fixes for Windows.

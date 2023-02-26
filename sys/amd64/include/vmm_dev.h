@@ -66,7 +66,7 @@ struct vm_memseg_nqc12 {
 	size_t		len;
 	char		name[64];
 };
-_Static_assert(sizeof(struct vm_memseg_nqc12) == 80, "COMPAT_FREEBSD12 ABI");
+_Static_assert(sizeof(struct vm_memseg_nqc12) == 80, "COMPAT_NQC12 ABI");
 
 struct vm_register {
 	int		cpuid;

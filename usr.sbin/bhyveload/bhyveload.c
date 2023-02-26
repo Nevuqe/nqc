@@ -500,13 +500,13 @@ cb_exec(void *arg, uint64_t rip)
 	int error;
 
 	if (cr3 == 0)
-		error = vm_setup_freebsd_registers_i386(ctx, BSP, rip, gdtbase,
+		error = vm_setup_nqc_registers_i386(ctx, BSP, rip, gdtbase,
 		    rsp);
 	else
-		error = vm_setup_freebsd_registers(ctx, BSP, rip, cr3, gdtbase,
+		error = vm_setup_nqc_registers(ctx, BSP, rip, cr3, gdtbase,
 		    rsp);
 	if (error) {
-		perror("vm_setup_freebsd_registers");
+		perror("vm_setup_nqc_registers");
 		cb_exit(NULL, USERBOOT_EXIT_QUIT);
 	}
 

@@ -35,7 +35,7 @@ SRCS= \
 	libmap.c
 MAN?=		rtld.1
 ACFLAGS+=	-DLOCORE
-CFLAGS+=	-Wall -DFREEBSD_ELF -DIN_RTLD -ffreestanding
+CFLAGS+=	-Wall -DNQC_ELF -DIN_RTLD -ffreestanding
 CFLAGS+=	-I${SRCTOP}/lib/csu/common
 RTLD_ARCH=	${MACHINE_CPUARCH}
 CFLAGS+=	-I${RTLD_ELF_DIR}/${RTLD_ARCH} -I${RTLD_ELF_DIR}

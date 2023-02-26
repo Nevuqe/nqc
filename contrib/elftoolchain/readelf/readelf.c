@@ -370,8 +370,8 @@ static int loc_at_comparator(const void *la1, const void *la2);
 static const char *mips_abi_fp(uint64_t fp);
 static const char *note_type(const char *note_name, unsigned int et,
     unsigned int nt);
-static const char *note_type_freebsd(unsigned int nt);
-static const char *note_type_freebsd_core(unsigned int nt);
+static const char *note_type_nqc(unsigned int nt);
+static const char *note_type_nqc_core(unsigned int nt);
 static const char *note_type_go(unsigned int nt);
 static const char *note_type_gnu(unsigned int nt);
 static const char *note_type_linux_core(unsigned int nt);
@@ -469,7 +469,7 @@ elf_osabi(unsigned int abi)
 	case ELFOSABI_SOLARIS: return "Solaris";
 	case ELFOSABI_AIX: return "AIX";
 	case ELFOSABI_IRIX: return "IRIX";
-	case ELFOSABI_FREEBSD: return "FreeBSD";
+	case ELFOSABI_NQC: return "FreeBSD";
 	case ELFOSABI_TRU64: return "TRU64";
 	case ELFOSABI_MODESTO: return "MODESTO";
 	case ELFOSABI_OPENBSD: return "OpenBSD";
@@ -1056,7 +1056,7 @@ st_type(unsigned int mach, unsigned int os, unsigned int stype)
 	case STT_TLS: return "TLS";
 	default:
 		if (stype >= STT_LOOS && stype <= STT_HIOS) {
-			if ((os == ELFOSABI_GNU || os == ELFOSABI_FREEBSD) &&
+			if ((os == ELFOSABI_GNU || os == ELFOSABI_NQC) &&
 			    stype == STT_GNU_IFUNC)
 				return "IFUNC";
 			snprintf(s_stype, sizeof(s_stype), "OS+%#x",
@@ -1135,9 +1135,9 @@ note_type(const char *name, unsigned int et, unsigned int nt)
 		return note_type_linux_core(nt);
 	else if (strcmp(name, "FreeBSD") == 0)
 		if (et == ET_CORE)
-			return note_type_freebsd_core(nt);
+			return note_type_nqc_core(nt);
 		else
-			return note_type_freebsd(nt);
+			return note_type_nqc(nt);
 	else if (strcmp(name, "GNU") == 0 && et != ET_CORE)
 		return note_type_gnu(nt);
 	else if (strcmp(name, "Go") == 0 && et != ET_CORE)
@@ -1152,19 +1152,19 @@ note_type(const char *name, unsigned int et, unsigned int nt)
 }
 
 static const char *
-note_type_freebsd(unsigned int nt)
+note_type_nqc(unsigned int nt)
 {
 	switch (nt) {
-	case 1: return "NT_FREEBSD_ABI_TAG";
-	case 2: return "NT_FREEBSD_NOINIT_TAG";
-	case 3: return "NT_FREEBSD_ARCH_TAG";
-	case 4: return "NT_FREEBSD_FEATURE_CTL";
+	case 1: return "NT_NQC_ABI_TAG";
+	case 2: return "NT_NQC_NOINIT_TAG";
+	case 3: return "NT_NQC_ARCH_TAG";
+	case 4: return "NT_NQC_FEATURE_CTL";
 	default: return (note_type_unknown(nt));
 	}
 }
 
 static const char *
-note_type_freebsd_core(unsigned int nt)
+note_type_nqc_core(unsigned int nt)
 {
 	switch (nt) {
 	case 1: return "NT_PRSTATUS";
@@ -3706,11 +3706,11 @@ dump_notes(struct readelf *re)
 }
 
 static struct flag_desc note_feature_ctl_flags[] = {
-	{ NT_FREEBSD_FCTL_ASLR_DISABLE,		"ASLR_DISABLE" },
-	{ NT_FREEBSD_FCTL_PROTMAX_DISABLE,	"PROTMAX_DISABLE" },
-	{ NT_FREEBSD_FCTL_STKGAP_DISABLE,	"STKGAP_DISABLE" },
-	{ NT_FREEBSD_FCTL_WXNEEDED,		"WXNEEDED" },
-	{ NT_FREEBSD_FCTL_LA48,			"LA48" },
+	{ NT_NQC_FCTL_ASLR_DISABLE,		"ASLR_DISABLE" },
+	{ NT_NQC_FCTL_PROTMAX_DISABLE,	"PROTMAX_DISABLE" },
+	{ NT_NQC_FCTL_STKGAP_DISABLE,	"STKGAP_DISABLE" },
+	{ NT_NQC_FCTL_WXNEEDED,		"WXNEEDED" },
+	{ NT_NQC_FCTL_LA48,			"LA48" },
 	{ 0, NULL }
 };
 
@@ -3765,16 +3765,16 @@ dump_notes_data(struct readelf *re, const char *name, uint32_t type,
 
 	if (strcmp(name, "FreeBSD") == 0) {
 		switch (type) {
-		case NT_FREEBSD_ABI_TAG:
+		case NT_NQC_ABI_TAG:
 			if (sz != 4)
 				goto unknown;
 			printf("   ABI tag: %u\n", ubuf[0]);
 			return;
-		/* NT_FREEBSD_NOINIT_TAG carries no data, treat as unknown. */
-		case NT_FREEBSD_ARCH_TAG:
+		/* NT_NQC_NOINIT_TAG carries no data, treat as unknown. */
+		case NT_NQC_ARCH_TAG:
 			printf("   Arch tag: %s\n", buf);
 			return;
-		case NT_FREEBSD_FEATURE_CTL:
+		case NT_NQC_FEATURE_CTL:
 			if (sz != 4)
 				goto unknown;
 			printf("   Features:");

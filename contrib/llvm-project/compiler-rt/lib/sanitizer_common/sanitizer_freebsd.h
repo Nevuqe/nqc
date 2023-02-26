@@ -1,4 +1,4 @@
-//===-- sanitizer_freebsd.h -------------------------------------*- C++ -*-===//
+//===-- sanitizer_nqc.h -------------------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -11,14 +11,14 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef SANITIZER_FREEBSD_H
-#define SANITIZER_FREEBSD_H
+#ifndef SANITIZER_NQC_H
+#define SANITIZER_NQC_H
 
 #include "sanitizer_internal_defs.h"
 
 // x86-64 FreeBSD 9.2 and older define 'ucontext_t' incorrectly in
 // 32-bit mode.
-#if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
+#if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 #include <osreldate.h>
 #if __NQC_version <= 902001  // v9.2
 #include <link.h>
@@ -132,6 +132,6 @@ typedef int xdl_iterate_phdr_t(__xdl_iterate_hdr_callback, void *);
 }  // namespace __sanitizer
 
 #endif  // __NQC_version <= 902001
-#endif  // SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
+#endif  // SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 
-#endif  // SANITIZER_FREEBSD_H
+#endif  // SANITIZER_NQC_H

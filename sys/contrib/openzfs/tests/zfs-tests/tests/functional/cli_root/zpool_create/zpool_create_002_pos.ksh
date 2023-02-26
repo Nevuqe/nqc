@@ -52,7 +52,7 @@ function cleanup
 	done
 
 	rm -f $disk1 $disk2
-	if is_freebsd; then
+	if is_nqc; then
 		umount -f $TESTDIR
 		rm -rf $TESTDIR
 	fi
@@ -80,13 +80,13 @@ log_must destroy_pool $TESTPOOL1
 
 log_note "'zpool create' without '-f' will fail " \
 	"while device is in use by a ufs filesystem."
-if is_freebsd; then
+if is_nqc; then
 	# fs must be mounted for create to fail on FreeBSD
 	log_must mkdir -p $TESTDIR
 	log_must mount ${DEV_DSKDIR}/${DISK1} $TESTDIR
 fi
 log_mustnot zpool create $TESTPOOL $DISK1
-if is_freebsd; then
+if is_nqc; then
 	# fs must not be mounted to create pool even with -f
 	log_must umount -f $TESTDIR
 	log_must rm -rf $TESTDIR
@@ -104,7 +104,7 @@ log_must poolexists $TESTPOOL
 
 log_must destroy_pool $TESTPOOL
 
-if ! is_freebsd; then
+if ! is_nqc; then
 	log_note "'zpool create' mirror without '-f' will fail " \
 		"while devices are of different types."
 	log_mustnot zpool create $TESTPOOL mirror $disk1 $DISK0

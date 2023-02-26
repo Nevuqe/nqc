@@ -2728,7 +2728,7 @@ ena_config_host_info(struct ena_com_dev *ena_dev, device_t dev)
 
 	if (pci_get_id(dev, PCI_ID_RID, &rid) == 0)
 		host_info->bdf = rid;
-	host_info->os_type = ENA_ADMIN_OS_FREEBSD;
+	host_info->os_type = ENA_ADMIN_OS_NQC;
 	host_info->kernel_ver = osreldate;
 
 	sprintf(host_info->kernel_ver_str, "%d", osreldate);

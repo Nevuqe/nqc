@@ -8,7 +8,7 @@
 // Misc utils for Linux.
 //===----------------------------------------------------------------------===//
 #include "FuzzerPlatform.h"
-#if LIBFUZZER_LINUX || LIBFUZZER_NETBSD || LIBFUZZER_FREEBSD ||                \
+#if LIBFUZZER_LINUX || LIBFUZZER_NETBSD || LIBFUZZER_NQC ||                \
     LIBFUZZER_EMSCRIPTEN
 #include "FuzzerCommand.h"
 

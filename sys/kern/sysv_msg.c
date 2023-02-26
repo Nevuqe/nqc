@@ -179,15 +179,15 @@ static struct syscall_helper_data msg_syscalls[] = {
 	SYSCALL_INIT_HELPER(msgget),
 	SYSCALL_INIT_HELPER(msgsnd),
 	SYSCALL_INIT_HELPER(msgrcv),
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	SYSCALL_INIT_HELPER(msgsys),
 	SYSCALL_INIT_HELPER_COMPAT(freebsd7_msgctl),
 #endif
 	SYSCALL_INIT_LAST
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_ipc.h>
 #include <compat/freebsd32/freebsd32_proto.h>
@@ -201,9 +201,9 @@ static struct syscall_helper_data msg32_syscalls[] = {
 	SYSCALL32_INIT_HELPER(freebsd32_msgrcv),
 	SYSCALL32_INIT_HELPER_COMPAT(msgget),
 	SYSCALL32_INIT_HELPER(freebsd32_msgsys),
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
-	SYSCALL32_INIT_HELPER(freebsd7_freebsd32_msgctl),
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
+	SYSCALL32_INIT_HELPER(freebsd7_nqc32_msgctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -304,7 +304,7 @@ msginit(void)
 	error = syscall_helper_register(msg_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	error = syscall32_helper_register(msg32_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
@@ -322,7 +322,7 @@ msgunload(void)
 #endif
 
 	syscall_helper_unregister(msg_syscalls);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	syscall32_helper_unregister(msg32_syscalls);
 #endif
 
@@ -1417,7 +1417,7 @@ static int
 sysctl_msqids(SYSCTL_HANDLER_ARGS)
 {
 	struct msqid_kernel tmsqk;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct msqid_kernel32 tmsqk32;
 #endif
 	struct prison *pr, *rpr;
@@ -1439,7 +1439,7 @@ sysctl_msqids(SYSCTL_HANDLER_ARGS)
 				tmsqk.u.msg_perm.key = IPC_PRIVATE;
 		}
 		mtx_unlock(&msq_mtx);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (SV_CURPROC_FLAG(SV_ILP32)) {
 			bzero(&tmsqk32, sizeof(tmsqk32));
 			freebsd32_ipcperm_out(&tmsqk.u.msg_perm,
@@ -1671,18 +1671,18 @@ msg_prison_cleanup(struct prison *pr)
 
 SYSCTL_JAIL_PARAM_SYS_NODE(sysvmsg, CTLFLAG_RW, "SYSV message queues");
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 int
 freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
 {
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	AUDIT_ARG_SVIPC_WHICH(uap->which);
 	switch (uap->which) {
 	case 0:
-		return (freebsd7_freebsd32_msgctl(td,
-		    (struct freebsd7_freebsd32_msgctl_args *)&uap->a2));
+		return (freebsd7_nqc32_msgctl(td,
+		    (struct freebsd7_nqc32_msgctl_args *)&uap->a2));
 	case 2:
 		return (freebsd32_msgsnd(td,
 		    (struct freebsd32_msgsnd_args *)&uap->a2));
@@ -1697,11 +1697,11 @@ freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
 #endif
 }
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 int
-freebsd7_freebsd32_msgctl(struct thread *td,
-    struct freebsd7_freebsd32_msgctl_args *uap)
+freebsd7_nqc32_msgctl(struct thread *td,
+    struct freebsd7_nqc32_msgctl_args *uap)
 {
 	struct msqid_ds msqbuf;
 	struct msqid_ds_old32 msqbuf32;
@@ -1823,8 +1823,8 @@ freebsd32_msgrcv(struct thread *td, struct freebsd32_msgrcv_args *uap)
 }
 #endif
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 
 /* XXX casting to (sy_call_t *) is bogus, as usual. */
 static sy_call_t *msgcalls[] = {
@@ -1916,5 +1916,5 @@ freebsd7_msgctl(struct thread *td, struct freebsd7_msgctl_args *uap)
 
 #undef CP
 
-#endif	/* COMPAT_FREEBSD4 || COMPAT_FREEBSD5 || COMPAT_FREEBSD6 ||
-	   COMPAT_FREEBSD7 */
+#endif	/* COMPAT_NQC4 || COMPAT_NQC5 || COMPAT_NQC6 ||
+	   COMPAT_NQC7 */

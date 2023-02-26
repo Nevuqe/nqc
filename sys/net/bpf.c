@@ -96,7 +96,7 @@ __NQCID("$NQC$");
 #include <sys/kernel.h>
 #include <sys/sysctl.h>
 
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 
 #include <security/mac/mac_framework.h>
 
@@ -137,7 +137,7 @@ struct bpf_program_buffer {
 #define	SIZEOF_BPF_HDR(type)	\
     (offsetof(type, bh_hdrlen) + sizeof(((type *)0)->bh_hdrlen))
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <compat/freebsd32/freebsd32.h>
 #define BPF_ALIGNMENT32 sizeof(int32_t)
@@ -1399,12 +1399,12 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 		case BIOCFLUSH:
 		case BIOCGDLT:
 		case BIOCGDLTLIST:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		case BIOCGDLTLIST32:
 #endif
 		case BIOCGETIF:
 		case BIOCGRTIMEOUT:
-#if defined(COMPAT_FREEBSD32) && defined(__amd64__)
+#if defined(COMPAT_NQC32) && defined(__amd64__)
 		case BIOCGRTIMEOUT32:
 #endif
 		case BIOCGSTATS:
@@ -1416,7 +1416,7 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 		case FIONREAD:
 		case BIOCLOCK:
 		case BIOCSRTIMEOUT:
-#if defined(COMPAT_FREEBSD32) && defined(__amd64__)
+#if defined(COMPAT_NQC32) && defined(__amd64__)
 		case BIOCSRTIMEOUT32:
 #endif
 		case BIOCIMMEDIATE:
@@ -1427,7 +1427,7 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 			return (EPERM);
 		}
 	}
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	/*
 	 * If we see a 32-bit compat ioctl, mark the stream as 32-bit so
 	 * that it will get 32-bit packet headers.
@@ -1495,7 +1495,7 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 	case BIOCSETF:
 	case BIOCSETFNR:
 	case BIOCSETWF:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case BIOCSETF32:
 	case BIOCSETFNR32:
 	case BIOCSETWF32:
@@ -1545,7 +1545,7 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 	/*
 	 * Get a list of supported data link types.
 	 */
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case BIOCGDLTLIST32:
 		{
 			struct bpf_dltlist32 *list32;
@@ -1641,12 +1641,12 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 	 * Set read timeout.
 	 */
 	case BIOCSRTIMEOUT:
-#if defined(COMPAT_FREEBSD32) && defined(__amd64__)
+#if defined(COMPAT_NQC32) && defined(__amd64__)
 	case BIOCSRTIMEOUT32:
 #endif
 		{
 			struct timeval *tv = (struct timeval *)addr;
-#if defined(COMPAT_FREEBSD32) && !defined(__mips__)
+#if defined(COMPAT_NQC32) && !defined(__mips__)
 			struct timeval32 *tv32;
 			struct timeval tv64;
 
@@ -1672,12 +1672,12 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 	 * Get read timeout.
 	 */
 	case BIOCGRTIMEOUT:
-#if defined(COMPAT_FREEBSD32) && defined(__amd64__)
+#if defined(COMPAT_NQC32) && defined(__amd64__)
 	case BIOCGRTIMEOUT32:
 #endif
 		{
 			struct timeval *tv;
-#if defined(COMPAT_FREEBSD32) && defined(__amd64__)
+#if defined(COMPAT_NQC32) && defined(__amd64__)
 			struct timeval32 *tv32;
 			struct timeval tv64;
 
@@ -1689,7 +1689,7 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 
 			tv->tv_sec = d->bd_rtout / hz;
 			tv->tv_usec = (d->bd_rtout % hz) * tick;
-#if defined(COMPAT_FREEBSD32) && defined(__amd64__)
+#if defined(COMPAT_NQC32) && defined(__amd64__)
 			if (cmd == BIOCGRTIMEOUT32) {
 				tv32 = (struct timeval32 *)addr;
 				tv32->tv_sec = tv->tv_sec;
@@ -1948,7 +1948,7 @@ bpfioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flags,
 static int
 bpf_setf(struct bpf_d *d, struct bpf_program *fp, u_long cmd)
 {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct bpf_program fp_swab;
 	struct bpf_program32 *fp32;
 #endif
@@ -1961,7 +1961,7 @@ bpf_setf(struct bpf_d *d, struct bpf_program *fp, u_long cmd)
 	u_int flen;
 	bool track_event;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	switch (cmd) {
 	case BIOCSETF32:
 	case BIOCSETWF32:
@@ -2506,7 +2506,7 @@ bpf_hdrlen(struct bpf_d *d)
 #ifndef BURN_BRIDGES
 	if (d->bd_tstamp == BPF_T_NONE ||
 	    BPF_T_FORMAT(d->bd_tstamp) == BPF_T_MICROTIME)
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (d->bd_compat32)
 			hdrlen += SIZEOF_BPF_HDR(struct bpf_hdr32);
 		else
@@ -2515,7 +2515,7 @@ bpf_hdrlen(struct bpf_d *d)
 	else
 #endif
 		hdrlen += SIZEOF_BPF_HDR(struct bpf_xhdr);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (d->bd_compat32)
 		hdrlen = BPF_WORDALIGN32(hdrlen);
 	else
@@ -2572,7 +2572,7 @@ catchpacket(struct bpf_d *d, u_char *pkt, u_int pktlen, u_int snaplen,
 	struct bpf_xhdr hdr;
 #ifndef BURN_BRIDGES
 	struct bpf_hdr hdr_old;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct bpf_hdr32 hdr32_old;
 #endif
 #endif
@@ -2621,7 +2621,7 @@ catchpacket(struct bpf_d *d, u_char *pkt, u_int pktlen, u_int snaplen,
 	 * buffer is considered immutable by the buffer model, try to rotate
 	 * the buffer and wakeup pending processes.
 	 */
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (d->bd_compat32)
 		curlen = BPF_WORDALIGN32(d->bd_slen);
 	else
@@ -2669,7 +2669,7 @@ catchpacket(struct bpf_d *d, u_char *pkt, u_int pktlen, u_int snaplen,
 		struct bpf_ts ts;
 		if (do_timestamp)
 			bpf_bintime2ts(bt, &ts, tstype);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (d->bd_compat32) {
 			bzero(&hdr32_old, sizeof(hdr32_old));
 			if (do_timestamp) {

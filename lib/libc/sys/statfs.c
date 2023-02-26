@@ -42,7 +42,7 @@ statfs(const char *path, struct statfs *buf)
 
 	if (__getosreldate() >= INO64_FIRST)
 		return (__sys_statfs(path, buf));
-	rv = syscall(SYS_freebsd11_statfs, path, &statfs11);
+	rv = syscall(SYS_nqc11_statfs, path, &statfs11);
 	if (rv == 0)
 		__statfs11_to_statfs(&statfs11, buf);
 	return (rv);

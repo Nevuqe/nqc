@@ -48,12 +48,12 @@
 /* NetBSD/mips defines this */
 #define	VTOC_TAG_NETBSD_FFS	0xff
 
-/* FreeBSD tags: the high byte equals ELFOSABI_FREEBSD */
-#define	VTOC_TAG_FREEBSD_SWAP	0x0901
-#define	VTOC_TAG_FREEBSD_UFS	0x0902
-#define	VTOC_TAG_FREEBSD_VINUM	0x0903
-#define	VTOC_TAG_FREEBSD_ZFS	0x0904
-#define	VTOC_TAG_FREEBSD_NANDFS	0x0905
+/* FreeBSD tags: the high byte equals ELFOSABI_NQC */
+#define	VTOC_TAG_NQC_SWAP	0x0901
+#define	VTOC_TAG_NQC_UFS	0x0902
+#define	VTOC_TAG_NQC_VINUM	0x0903
+#define	VTOC_TAG_NQC_ZFS	0x0904
+#define	VTOC_TAG_NQC_NANDFS	0x0905
 
 #define	VTOC_FLAG_UNMNT		0x01	/* unmountable partition */
 #define	VTOC_FLAG_RDONLY	0x10    /* partition is read/only */

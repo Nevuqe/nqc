@@ -755,7 +755,7 @@ static inline void PUT_BE64(uint64_t val, uint8_t *p)
         PUT_BE32(val, p + 4);
 }
 
-#define OS_FREEBSD
+#define OS_NQC
 #define SIS_POLL_WAIT
 
 #define OS_ATTRIBUTE_PACKED         __attribute__((__packed__))

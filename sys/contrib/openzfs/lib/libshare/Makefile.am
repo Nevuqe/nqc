@@ -20,7 +20,7 @@ libshare_la_SOURCES += \
 	%D%/os/linux/smb.c
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libshare_la_SOURCES += \
 	%D%/os/freebsd/nfs.c \
 	%D%/os/freebsd/smb.c

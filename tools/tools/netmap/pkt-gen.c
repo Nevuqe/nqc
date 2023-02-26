@@ -611,7 +611,7 @@ system_ncpus(void)
 #ifdef __NQC__
 #include <net/if_tun.h>
 #define TAP_CLONEDEV	"/dev/tap"
-#endif /* __FreeBSD */
+#endif /* __NQC */
 
 #ifdef __APPLE__
 // #warning TAP not supported on apple ?

@@ -74,8 +74,8 @@
 
 #ifdef _KERNEL
 
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 #define	IOCPARM_IVAL(x)	((int)(intptr_t)(void *)*(caddr_t *)(void *)(x))
 #endif
 

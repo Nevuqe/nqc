@@ -37,7 +37,7 @@ __NQCID("$NQC$");
 #include <stdlib.h>
 #include <string.h>
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 static int dirfd = -1;
 static char *abspath;

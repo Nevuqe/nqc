@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_x86_64.h -------------------*- C++ -*-===//
+//===-- NativeRegisterContextNQC_x86_64.h -------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,8 +8,8 @@
 
 #if defined(__i386__) || defined(__x86_64__)
 
-#ifndef lldb_NativeRegisterContextFreeBSD_x86_64_h
-#define lldb_NativeRegisterContextFreeBSD_x86_64_h
+#ifndef lldb_NativeRegisterContextNQC_x86_64_h
+#define lldb_NativeRegisterContextNQC_x86_64_h
 
 // clang-format off
 #include <sys/param.h>
@@ -28,15 +28,15 @@
 #define LLDB_INVALID_XSAVE_OFFSET UINT32_MAX
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
-class NativeRegisterContextFreeBSD_x86_64
+class NativeRegisterContextNQC_x86_64
     : public NativeRegisterContextFreeBSD,
       public NativeRegisterContextDBReg_x86 {
 public:
-  NativeRegisterContextFreeBSD_x86_64(const ArchSpec &target_arch,
+  NativeRegisterContextNQC_x86_64(const ArchSpec &target_arch,
                                       NativeThreadProtocol &native_thread);
   uint32_t GetRegisterSetCount() const override;
 
@@ -88,9 +88,9 @@ private:
   llvm::Optional<YMMSplitPtr> GetYMMSplitReg(uint32_t reg);
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef lldb_NativeRegisterContextFreeBSD_x86_64_h
+#endif // #ifndef lldb_NativeRegisterContextNQC_x86_64_h
 
 #endif // defined(__x86_64__)

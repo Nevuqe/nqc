@@ -32,8 +32,8 @@
 
 /* FreeBSD 5.0 and later has ACL and extattr support. */
 #if __NQC__ > 4
-#define ARCHIVE_ACL_FREEBSD 1
-#define ARCHIVE_XATTR_FREEBSD 1
+#define ARCHIVE_ACL_NQC 1
+#define ARCHIVE_XATTR_NQC 1
 #define HAVE_ACL_GET_PERM_NP 1
 #define HAVE_ARC4RANDOM_BUF 1
 #define HAVE_STRUCT_XVFSCONF 1
@@ -41,7 +41,7 @@
 #define HAVE_SYS_EXTATTR_H 1
 #if __NQC__ > 7
 /* FreeBSD 8.0 and later has NFSv4 ACL support */
-#define ARCHIVE_ACL_FREEBSD_NFS4 1
+#define ARCHIVE_ACL_NQC_NFS4 1
 #define HAVE_ACL_GET_LINK_NP 1
 #define HAVE_ACL_IS_TRIVIAL_NP 1
 #define HAVE_ACL_SET_LINK_NP 1

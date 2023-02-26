@@ -1,4 +1,4 @@
-//===-- sanitizer_platform_limits_freebsd.h -------------------------------===//
+//===-- sanitizer_platform_limits_nqc.h -------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -11,10 +11,10 @@
 // Sizes and layouts of platform-specific FreeBSD data structures.
 //===----------------------------------------------------------------------===//
 
-#ifndef SANITIZER_PLATFORM_LIMITS_FREEBSD_H
-#define SANITIZER_PLATFORM_LIMITS_FREEBSD_H
+#ifndef SANITIZER_PLATFORM_LIMITS_NQC_H
+#define SANITIZER_PLATFORM_LIMITS_NQC_H
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 
 #  include "sanitizer_internal_defs.h"
 #  include "sanitizer_platform.h"
@@ -732,4 +732,4 @@ extern unsigned struct_StringList_sz;
 
 #endif
 
-#endif  // SANITIZER_FREEBSD
+#endif  // SANITIZER_NQC

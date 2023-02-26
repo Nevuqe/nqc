@@ -70,7 +70,7 @@ f_media_get_type()
 	f_dialog_title_restore
 	local prompt="$msg_choose_installation_media_description"
 	local menu_list="
-		'1 $msg_cd_dvd'    '$msg_install_from_a_freebsd_cd_dvd'
+		'1 $msg_cd_dvd'    '$msg_install_from_a_nqc_cd_dvd'
 		'2 $msg_ftp'       '$msg_install_from_an_ftp_server'
 		'3 $msg_http_proxy'
 		                '$msg_install_from_an_ftp_server_thru_proxy'

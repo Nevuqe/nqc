@@ -90,7 +90,7 @@ function do_vol_test
 
 	case "$type" in
 	"ext2")
-		if is_freebsd; then
+		if is_nqc; then
 			log_unsupported "ext2 test not implemented for freebsd"
 		fi
 		log_must eval "new_fs $vol_b_path >/dev/null 2>&1"
@@ -104,7 +104,7 @@ function do_vol_test
 		log_must mount $vol_b_path $mntp
 		;;
 	"zfs")
-		if is_freebsd; then
+		if is_nqc; then
 			# Pool creation on zvols is forbidden by default.
 			# Save and restore the current setting.
 			typeset _saved=$(get_tunable VOL_RECURSIVE)

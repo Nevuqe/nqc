@@ -50,7 +50,7 @@ function cleanup_testenv
 	if [[ -n $lofidev ]]; then
 		if is_linux; then
 			losetup -d $lofidev
-		elif is_freebsd; then
+		elif is_nqc; then
 			mdconfig -du ${lofidev#md}
 		else
 			lofiadm -d $lofidev
@@ -80,7 +80,7 @@ if is_linux; then
 	lofidev=$(losetup -f)
 	log_must losetup $lofidev ${LDEV2%% *}
 	lofidev=${lofidev##*/}
-elif is_freebsd; then
+elif is_nqc; then
 	lofidev=$(mdconfig -a ${LDEV2%% *})
 else
 	lofidev=${LDEV2%% *}

@@ -669,7 +669,7 @@ function verify_fs_snapshot
 	log_must zfs destroy $snap
 
 	# Creating snaps via mkdir is not supported on FreeBSD
-	if ! is_freebsd; then
+	if ! is_nqc; then
 		typeset snapdir=${mntpt}/.zfs/snapshot/snap.$stamp
 		user_run $user mkdir $snapdir
 		if ! datasetexists $snap ; then

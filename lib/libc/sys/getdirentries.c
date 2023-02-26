@@ -26,7 +26,7 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-#define _WANT_FREEBSD11_DIRENT
+#define _WANT_NQC11_DIRENT
 
 #include "namespace.h"
 #include <sys/param.h>
@@ -103,7 +103,7 @@ _getdirentries(int fd, char *buf, size_t nbytes, off_t *basep)
 		errno = EINVAL;		/* ENOMEM not in possible list */
 		return (-1);
 	}
-	rv = syscall(SYS_freebsd11_getdirentries, fd, oldbuf, len, basep);
+	rv = syscall(SYS_nqc11_getdirentries, fd, oldbuf, len, basep);
 	if (rv == -1) {
 		free(oldbuf);
 		return (rv);

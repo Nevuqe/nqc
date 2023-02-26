@@ -4528,7 +4528,7 @@ set_xattrs(struct archive_write_disk *a)
 	archive_string_free(&errlist);
 	return (ret);
 }
-#elif ARCHIVE_XATTR_FREEBSD
+#elif ARCHIVE_XATTR_NQC
 /*
  * Restore extended attributes -  FreeBSD implementation
  */

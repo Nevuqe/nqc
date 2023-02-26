@@ -35,8 +35,8 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-#ifndef COMPAT_FREEBSD32
-#error "Unable to compile Linux-emulator due to missing COMPAT_FREEBSD32 option!"
+#ifndef COMPAT_NQC32
+#error "Unable to compile Linux-emulator due to missing COMPAT_NQC32 option!"
 #endif
 
 #define	__ELF_WORD_SIZE	32
@@ -831,7 +831,7 @@ linux32_fixlimit(struct rlimit *rl, int which)
 struct sysentvec elf_linux_sysvec = {
 	.sv_size	= LINUX32_SYS_MAXSYSCALL,
 	.sv_table	= linux32_sysent,
-	.sv_fixup	= elf32_freebsd_fixup,
+	.sv_fixup	= elf32_nqc_fixup,
 	.sv_sendsig	= linux_sendsig,
 	.sv_sigcode	= &_binary_linux32_vdso_so_o_start,
 	.sv_szsigcode	= &linux_szsigcode,

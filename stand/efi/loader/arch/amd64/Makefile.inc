@@ -2,7 +2,7 @@
 
 SRCS+=	amd64_tramp.S \
 	start.S \
-	elf64_freebsd.c \
+	elf64_nqc.c \
 	trap.c \
 	multiboot2.c \
 	exc.S

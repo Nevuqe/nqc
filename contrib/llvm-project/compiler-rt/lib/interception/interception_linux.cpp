@@ -13,7 +13,7 @@
 
 #include "interception.h"
 
-#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD || \
+#if SANITIZER_LINUX || SANITIZER_NQC || SANITIZER_NETBSD || \
     SANITIZER_SOLARIS
 
 #include <dlfcn.h>   // for dlsym() and dlvsym()
@@ -64,7 +64,7 @@ bool InterceptFunction(const char *name, uptr *ptr_to_real, uptr func,
 }
 
 // dlvsym is a GNU extension supported by some other platforms.
-#if SANITIZER_GLIBC || SANITIZER_FREEBSD || SANITIZER_NETBSD
+#if SANITIZER_GLIBC || SANITIZER_NQC || SANITIZER_NETBSD
 static void *GetFuncAddr(const char *name, const char *ver) {
   return dlvsym(RTLD_NEXT, name, ver);
 }
@@ -75,9 +75,9 @@ bool InterceptFunction(const char *name, const char *ver, uptr *ptr_to_real,
   *ptr_to_real = (uptr)addr;
   return addr && (func == wrapper);
 }
-#endif  // SANITIZER_GLIBC || SANITIZER_FREEBSD || SANITIZER_NETBSD
+#endif  // SANITIZER_GLIBC || SANITIZER_NQC || SANITIZER_NETBSD
 
 }  // namespace __interception
 
-#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD ||
+#endif  // SANITIZER_LINUX || SANITIZER_NQC || SANITIZER_NETBSD ||
         // SANITIZER_SOLARIS

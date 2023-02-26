@@ -300,7 +300,7 @@ static const char *ei_data[] = {
 static const char *ei_abis[256] = {
 	"ELFOSABI_NONE", "ELFOSABI_HPUX", "ELFOSABI_NETBSD", "ELFOSABI_LINUX",
 	"ELFOSABI_HURD", "ELFOSABI_86OPEN", "ELFOSABI_SOLARIS", "ELFOSABI_AIX",
-	"ELFOSABI_IRIX", "ELFOSABI_FREEBSD", "ELFOSABI_TRU64",
+	"ELFOSABI_IRIX", "ELFOSABI_NQC", "ELFOSABI_TRU64",
 	"ELFOSABI_MODESTO", "ELFOSABI_OPENBSD",
 	[255] = "ELFOSABI_STANDALONE"
 };
@@ -318,10 +318,10 @@ static const char *p_flags[] = {
 #define NT_ELEM(x)	[x] = #x,
 static const char *nt_types[] = {
 	"",
-	NT_ELEM(NT_FREEBSD_ABI_TAG)
-	NT_ELEM(NT_FREEBSD_NOINIT_TAG)
-	NT_ELEM(NT_FREEBSD_ARCH_TAG)
-	NT_ELEM(NT_FREEBSD_FEATURE_CTL)
+	NT_ELEM(NT_NQC_ABI_TAG)
+	NT_ELEM(NT_NQC_NOINIT_TAG)
+	NT_ELEM(NT_NQC_ARCH_TAG)
+	NT_ELEM(NT_NQC_FEATURE_CTL)
 };
 
 /* http://www.sco.com/developers/gabi/latest/ch4.sheader.html#sh_type */

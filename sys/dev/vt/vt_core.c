@@ -2343,8 +2343,8 @@ vtterm_ioctl(struct terminal *tm, u_long cmd, caddr_t data,
 	struct vt_device *vd = vw->vw_device;
 	keyboard_t *kbd;
 	int error, i, s;
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4) || defined(COMPAT_43)
 	int ival;
 
 	switch (cmd) {
@@ -2404,10 +2404,10 @@ skip_thunk:
 	case PIO_KEYMAP:
 	case GIO_DEADKEYMAP:
 	case PIO_DEADKEYMAP:
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OGIO_DEADKEYMAP:
 	case OPIO_DEADKEYMAP:
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 	case GETFKEY:
 	case SETFKEY:
 	case KDGKBINFO:

@@ -102,7 +102,7 @@ __DEFAULT_YES_OPTIONS = \
     FLOPPY \
     FORTH \
     FP_LIBC \
-    FREEBSD_UPDATE \
+    NQC_UPDATE \
     FTP \
     GAMES \
     GH_BC \

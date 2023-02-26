@@ -14,7 +14,7 @@
 # against 30300 for gcc likely isn't  what you wanted (since versions of gcc
 # prior to 4.2 likely have no prayer of working).
 #
-# COMPILER_FREEBSD_VERSION is the compiler's __FreeBSD_cc_version value.
+# COMPILER_NQC_VERSION is the compiler's __NQC_cc_version value.
 #
 # COMPILER_FEATURES will contain one or more of the following, based on
 # compiler support for that feature:
@@ -152,7 +152,7 @@ _cc_vars+=XCC X_
 # The value is only used/exported for the same environment that impacts
 # CC and COMPILER_* settings here.
 _exported_vars=	${X_}COMPILER_TYPE ${X_}COMPILER_VERSION \
-		${X_}COMPILER_FREEBSD_VERSION ${X_}COMPILER_RESOURCE_DIR
+		${X_}COMPILER_NQC_VERSION ${X_}COMPILER_RESOURCE_DIR
 ${X_}_cc_hash=	${${cc}}${MACHINE}${PATH}
 ${X_}_cc_hash:=	${${X_}_cc_hash:hash}
 # Only import if none of the vars are set differently somehow else.
@@ -179,7 +179,7 @@ ${var}=	${${var}__${${X_}_cc_hash}}
 # generated files - thus there is no compiler.
 ${X_}COMPILER_TYPE= none
 ${X_}COMPILER_VERSION= 0
-${X_}COMPILER_FREEBSD_VERSION= 0
+${X_}COMPILER_NQC_VERSION= 0
 .elif !defined(${X_}COMPILER_TYPE) || !defined(${X_}COMPILER_VERSION)
 _v!=	${${cc}:N${CCACHE_BIN}} --version || echo 0.0.0
 
@@ -216,13 +216,13 @@ ${X_}COMPILER_FEATURES=	apple-clang
 .endif
 .undef _v
 .endif
-.if !defined(${X_}COMPILER_FREEBSD_VERSION)
-${X_}COMPILER_FREEBSD_VERSION!=	{ echo "__FreeBSD_cc_version" | ${${cc}:N${CCACHE_BIN}} -E - 2>/dev/null || echo __FreeBSD_cc_version; } | sed -n '$$p'
-# If we get a literal "__FreeBSD_cc_version" back then the compiler
+.if !defined(${X_}COMPILER_NQC_VERSION)
+${X_}COMPILER_NQC_VERSION!=	{ echo "__NQC_cc_version" | ${${cc}:N${CCACHE_BIN}} -E - 2>/dev/null || echo __NQC_cc_version; } | sed -n '$$p'
+# If we get a literal "__NQC_cc_version" back then the compiler
 # is a non-FreeBSD build that doesn't support it or some other error
 # occurred.
-.if ${${X_}COMPILER_FREEBSD_VERSION} == "__FreeBSD_cc_version"
-${X_}COMPILER_FREEBSD_VERSION=	unknown
+.if ${${X_}COMPILER_NQC_VERSION} == "__NQC_cc_version"
+${X_}COMPILER_NQC_VERSION=	unknown
 .endif
 .endif
 
@@ -271,7 +271,7 @@ ${X_}COMPILER_FEATURES+=	aarch64-sha512
 # Use CC's values
 X_COMPILER_TYPE=	${COMPILER_TYPE}
 X_COMPILER_VERSION=	${COMPILER_VERSION}
-X_COMPILER_FREEBSD_VERSION=	${COMPILER_FREEBSD_VERSION}
+X_COMPILER_NQC_VERSION=	${COMPILER_NQC_VERSION}
 X_COMPILER_FEATURES=	${COMPILER_FEATURES}
 X_COMPILER_RESOURCE_DIR=	${COMPILER_RESOURCE_DIR}
 .endif	# ${cc} == "CC" || (${cc} == "XCC" && ${XCC} != ${CC})

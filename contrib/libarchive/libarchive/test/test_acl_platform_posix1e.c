@@ -24,7 +24,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$NQC: head/lib/libarchive/test/test_acl_freebsd.c 189427 2009-03-06 04:21:23Z kientzle $");
+__NQCID("$NQC: head/lib/libarchive/test/test_acl_nqc.c 189427 2009-03-06 04:21:23Z kientzle $");
 
 #if ARCHIVE_ACL_POSIX1E
 #include <sys/acl.h>
@@ -62,7 +62,7 @@ acl_entry_get_perm(acl_entry_t aclent)
 #endif
 {
 	int permset = 0;
-#if ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL
+#if ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL
 	acl_permset_t opaque_ps;
 #endif
 
@@ -168,7 +168,7 @@ acl_match(aclent_t *aclent, struct archive_test_acl_t *myacl)
 	return (1);
 }
 
-#else	/* ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL */
+#else	/* ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL */
 static int
 acl_match(acl_entry_t aclent, struct archive_test_acl_t *myacl)
 {

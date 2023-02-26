@@ -258,7 +258,7 @@ cat "${tmpdirout}"/cdrom.inf~ | sed "s/^\(CD_VOLUME[[:space:]]\{0,\}=[[:space:]]
 rm "${tmpdirout}"/cdrom.inf~ || exit 1
 
 mkisofs -b boot/cdboot -no-emul-boot -r -J \
-	-V "FreeBSD_Install" \
+	-V "NQC_Install" \
 	-publisher "The FreeBSD Project.  https://www.freebsd.org/" \
 	-o ${DVDIMAGE} "${tmpdirout}" \
 	|| exit 1 

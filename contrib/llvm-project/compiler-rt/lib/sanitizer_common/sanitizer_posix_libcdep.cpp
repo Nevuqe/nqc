@@ -36,7 +36,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 // The MAP_NORESERVE define has been removed in FreeBSD 11.x, and even before
 // that, it was never implemented.  So just define it to zero.
 #undef MAP_NORESERVE
@@ -321,7 +321,7 @@ bool MmapFixedNoReserve(uptr fixed_addr, uptr size, const char *name) {
 }
 
 bool MmapFixedSuperNoReserve(uptr fixed_addr, uptr size, const char *name) {
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
   if (common_flags()->no_huge_pages_for_shadow)
     return MmapFixedNoReserve(fixed_addr, size, name);
   // MAP_NORESERVE is implicit with FreeBSD

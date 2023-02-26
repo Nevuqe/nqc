@@ -4,7 +4,7 @@
 	${SRCTOP}/sys/dev/hyperv/vmbus \
 
 KMOD=	hv_storvsc
-SRCS =	hv_storvsc_drv_freebsd.c \
+SRCS =	hv_storvsc_drv_nqc.c \
 	hv_vstorage.h
 SRCS+=	bus_if.h device_if.h opt_cam.h vmbus_if.h
 

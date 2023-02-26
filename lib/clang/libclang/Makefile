@@ -10,8 +10,8 @@ CFLAGS+=	-I${OBJTOP}/lib/clang/libllvm
 CFLAGS+=	-I${CLANG_SRCS}/lib/Basic
 CFLAGS+=	-I${CLANG_SRCS}/lib/Driver
 
-# Ensure FREEBSD_CC_VERSION is defined for Basic/Targets.cpp
-CFLAGS.Targets.cpp+= -include ../freebsd_cc_version.h
+# Ensure NQC_CC_VERSION is defined for Basic/Targets.cpp
+CFLAGS.Targets.cpp+= -include ../nqc_cc_version.h
 
 # Work around GCC bug 67888
 .if ${COMPILER_TYPE} == "gcc"

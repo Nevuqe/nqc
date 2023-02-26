@@ -237,7 +237,7 @@ in6_mask2len(struct in6_addr *mask, u_char *lim0)
 	return x * 8 + y;
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct in6_ndifreq32 {
 	char ifname[IFNAMSIZ];
 	uint32_t ifindex;
@@ -307,7 +307,7 @@ in6_control(struct socket *so, u_long cmd, void *data,
 	case SIOCGDEFIFACE_IN6:
 		return (nd6_ioctl(cmd, data, ifp));
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case SIOCGDEFIFACE32_IN6:
 		{
 			struct in6_ndifreq ndif;

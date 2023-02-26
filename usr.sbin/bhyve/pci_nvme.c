@@ -674,7 +674,7 @@ pci_nvme_init_nsdata(struct pci_nvme_softc *sc,
 		    sc->nsc_pi->pi_func);
 
 		if (data != NULL) {
-			eui64 = OUI_FREEBSD_NVME_LOW | crc16(0, data, strlen(data));
+			eui64 = OUI_NQC_NVME_LOW | crc16(0, data, strlen(data));
 			free(data);
 		}
 		nvstore->eui64 = (eui64 << 16) | (nsid & 0xffff);

@@ -86,7 +86,7 @@ struct sndstioc_nv_arg {
 	_IO('D', 103)
 
 #ifdef _KERNEL
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 struct sndstioc_nv_arg32 {
 	uint32_t nbytes;

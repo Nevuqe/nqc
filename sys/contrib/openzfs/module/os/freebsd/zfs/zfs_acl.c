@@ -2306,7 +2306,7 @@ zfs_zaccess_append(znode_t *zp, uint32_t *working_mode, boolean_t *check_privs,
  *
  * This routine is based on zfs_fastaccesschk_execute which has slowpath
  * calling zfs_zaccess. This would be incorrect on FreeBSD (see
- * zfs_freebsd_access for the difference). Thus this variant let's the
+ * zfs_nqc_access for the difference). Thus this variant let's the
  * caller handle the slowpath (if necessary).
  *
  * On top of that we perform a lockless check for ZFS_NO_EXECS_DENIED.

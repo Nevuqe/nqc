@@ -262,7 +262,7 @@ possible spoof attempt from %s:%d",
 #endif
 		    (rqstp->rq_prog == YPPROG &&
 		     rqstp->rq_proc == YPPROC_XFR) ||
-		    (rqstp->rq_prog == YPXFRD_FREEBSD_PROG &&
+		    (rqstp->rq_prog == YPXFRD_NQC_PROG &&
 		     rqstp->rq_proc == YPXFRD_GETMAP)) &&
 		     ntohs(rqhost->sin_port) >= IPPORT_RESERVED) {
 			yp_error("access to %s denied -- client %s:%d \

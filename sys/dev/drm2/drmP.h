@@ -103,7 +103,7 @@ __NQCID("$NQC$");
 #include <dev/drm2/drm_linux_list.h>
 #include <dev/drm2/drm_gem_names.h>
 
-#include <dev/drm2/drm_os_freebsd.h>
+#include <dev/drm2/drm_os_nqc.h>
 
 #if defined(CONFIG_AGP) || (defined(CONFIG_AGP_MODULE) && defined(MODULE))
 #define __OS_HAS_AGP 1
@@ -356,15 +356,15 @@ struct drm_freelist {
 	atomic_t count;		       /**< Number of free buffers */
 	struct drm_buf *next;	       /**< End pointer */
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	wait_queue_head_t waiting;     /**< Processes waiting on free bufs */
-#endif /* defined(FREEBSD_NOTYET) */
+#endif /* defined(NQC_NOTYET) */
 	int low_mark;		       /**< Low water mark */
 	int high_mark;		       /**< High water mark */
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	atomic_t wfh;		       /**< If waiting for high mark */
 	spinlock_t lock;
-#endif /* defined(FREEBSD_NOTYET) */
+#endif /* defined(NQC_NOTYET) */
 };
 
 typedef struct drm_dma_handle {
@@ -630,13 +630,13 @@ struct drm_gem_object {
 
 	void *driver_private;
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	/* dma buf exported from this GEM object */
 	struct dma_buf *export_dma_buf;
 
 	/* dma buf attachment backing this object */
 	struct dma_buf_attachment *import_attach;
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 };
 
 #include <dev/drm2/drm_crtc.h>
@@ -867,7 +867,7 @@ struct drm_driver {
 	int (*gem_open_object) (struct drm_gem_object *, struct drm_file *);
 	void (*gem_close_object) (struct drm_gem_object *, struct drm_file *);
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	/* prime: */
 	/* export handle -> fd (see drm_gem_prime_handle_to_fd() helper) */
 	int (*prime_handle_to_fd)(struct drm_device *dev, struct drm_file *file_priv,
@@ -881,7 +881,7 @@ struct drm_driver {
 	/* import dmabuf -> GEM */
 	struct drm_gem_object * (*gem_prime_import)(struct drm_device *dev,
 				struct dma_buf *dma_buf);
-#endif /* defined(FREEBSD_NOTYET) */
+#endif /* defined(NQC_NOTYET) */
 
 	/* dumb alloc support */
 	int (*dumb_create)(struct drm_file *file_priv,
@@ -913,7 +913,7 @@ struct drm_driver {
 	struct drm_ioctl_desc *ioctls;
 	int num_ioctls;
 	struct drm_bus *bus;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct drm_ioctl_desc *compat_ioctls;
 	int *num_compat_ioctls;
 #endif
@@ -1376,7 +1376,7 @@ extern unsigned int drm_timestamp_monotonic;
 extern struct drm_local_map *drm_getsarea(struct drm_device *dev);
 
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 extern int drm_gem_prime_handle_to_fd(struct drm_device *dev,
 		struct drm_file *file_priv, uint32_t handle, uint32_t flags,
 		int *prime_fd);
@@ -1403,7 +1403,7 @@ void drm_prime_remove_imported_buf_handle(struct drm_prime_file_private *prime_f
 int drm_prime_add_dma_buf(struct drm_device *dev, struct drm_gem_object *obj);
 int drm_prime_lookup_obj(struct drm_device *dev, struct dma_buf *buf,
 			 struct drm_gem_object **obj);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 				/* Scatter Gather Support (drm_scatter.h) */
 extern void drm_sg_cleanup(struct drm_sg_mem * entry);
@@ -1581,7 +1581,7 @@ extern int drm_pcie_get_speed_cap_mask(struct drm_device *dev, u32 *speed_mask);
 int drm_get_platform_dev(device_t kdev, struct drm_device *dev,
 			 struct drm_driver *driver);
 
-/* FreeBSD specific -- should be moved to drm_os_freebsd.h */
+/* FreeBSD specific -- should be moved to drm_os_nqc.h */
 
 #define	DRM_GEM_MAPPING_MASK	(3ULL << 62)
 #define	DRM_GEM_MAPPING_KEY	(2ULL << 62) /* Non-canonical address form */
@@ -1786,13 +1786,13 @@ void ttm_bo_release_mmap(struct ttm_buffer_object *bo);
 				/* Memory management support (drm_memory.h) */
 extern void drm_free_agp(DRM_AGP_MEM * handle, int pages);
 extern int drm_bind_agp(DRM_AGP_MEM * handle, unsigned int start);
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 extern DRM_AGP_MEM *drm_agp_bind_pages(struct drm_device *dev,
 				       struct page **pages,
 				       unsigned long num_pages,
 				       uint32_t gtt_offset,
 				       uint32_t type);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 extern int drm_unbind_agp(DRM_AGP_MEM * handle);
 
 				/* AGP/GART support (drm_agpsupport.h) */
@@ -1837,7 +1837,7 @@ static inline int drm_unbind_agp(DRM_AGP_MEM * handle)
 {
 	return -ENODEV;
 }
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 static inline struct agp_memory *drm_agp_bind_pages(struct drm_device *dev,
 					      struct page **pages,
 					      unsigned long num_pages,

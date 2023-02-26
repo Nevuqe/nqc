@@ -45,7 +45,7 @@ zfs_list="/ /lib /sbin /tmp /usr /var /var/adm /var/run"
 # Append our ZFS filesystems to the list, not worrying about duplicates.
 if is_linux; then
 	typeset mounts=$(mount | awk '$5 == "zfs" {print $3}')
-elif is_freebsd; then
+elif is_nqc; then
 	typeset mounts=$(mount -p | awk '$3 == "zfs" {print $2}')
 else
 	typeset mounts=$(mount -p | awk '$4 == "zfs" {print $3}')
@@ -61,7 +61,7 @@ if is_linux; then
 	if [[ -z $mounts ]]; then
 		mounts=$(awk '/zfs/ { print $2 }' /proc/mounts)
 	fi
-elif is_freebsd; then
+elif is_nqc; then
 	# Umountall and umount not supported on FreeBSD
 	mounts=$(mount -t zfs | sort -r | awk '{print $3}')
 else

@@ -69,7 +69,7 @@ SDT_PROVIDER_DECLARE(opencrypto);
 
 SDT_PROBE_DEFINE1(opencrypto, dev, ioctl, error, "int"/*line number*/);
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 /*
  * Previously, most ioctls were performed against a cloned descriptor
  * of /dev/crypto obtained via CRIOGET.  Now all ioctls are performed
@@ -80,7 +80,7 @@ SDT_PROBE_DEFINE1(opencrypto, dev, ioctl, error, "int"/*line number*/);
 
 /* the following are done against the cloned descriptor */
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <compat/freebsd32/freebsd32.h>
 
@@ -344,7 +344,7 @@ cse_create(struct fcrypt *fcr, struct session2_op *sop)
 	int crid, error, mac;
 
 	mac = sop->mac;
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 	switch (sop->mac) {
 	case CRYPTO_AES_128_NIST_GMAC:
 	case CRYPTO_AES_192_NIST_GMAC:
@@ -1132,12 +1132,12 @@ crypto_ioctl(struct cdev *dev, u_long cmd, caddr_t data, int flag,
 	int error = 0;
 	union {
 		struct session2_op sopc;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		struct crypt_op copc;
 		struct crypt_aead aeadc;
 #endif
 	} thunk;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	u_long cmd32;
 	void *data32;
 
@@ -1179,7 +1179,7 @@ crypto_ioctl(struct cdev *dev, u_long cmd, caddr_t data, int flag,
 	devfs_get_cdevpriv((void **)&fcr);
 
 	switch (cmd) {
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 	case CRIOGET:
 		/*
 		 * NB: This may fail in cases that the old
@@ -1242,7 +1242,7 @@ crypto_ioctl(struct cdev *dev, u_long cmd, caddr_t data, int flag,
 		break;
 	}
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	switch (cmd32) {
 	case CIOCGSESSION32:
 		if (error == 0)

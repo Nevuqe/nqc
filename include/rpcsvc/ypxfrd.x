@@ -161,8 +161,8 @@ case FALSE:
 	xfrstat xfrstat;
 };
 
-program YPXFRD_FREEBSD_PROG {
-	version YPXFRD_FREEBSD_VERS {
+program YPXFRD_NQC_PROG {
+	version YPXFRD_NQC_VERS {
 		union xfr
 		YPXFRD_GETMAP(ypxfr_mapname) = 1;
 	} = 1;

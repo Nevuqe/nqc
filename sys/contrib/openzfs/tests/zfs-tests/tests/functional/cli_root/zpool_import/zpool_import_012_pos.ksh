@@ -138,7 +138,7 @@ for option in "" "-Df"; do
 				if ((nfs_share_bit == 1)); then
 					log_note "Set sharenfs=on $pool"
 					log_must zfs set sharenfs=on $pool
-					! is_freebsd && log_must is_shared $pool
+					! is_nqc && log_must is_shared $pool
 					f_share="true"
 					nfs_flag="sharenfs=on"
 				fi
@@ -180,13 +180,13 @@ for option in "" "-Df"; do
 					for fs in $mount_fs; do
 						log_must ismounted $pool/$fs
 						[[ -n $f_share ]] && \
-						    ! is_freebsd && \
+						    ! is_nqc && \
 						    log_must is_shared $pool/$fs
 					done
 
 					for fs in $nomount_fs; do
 						log_mustnot ismounted $pool/$fs
-						! is_freebsd && \
+						! is_nqc && \
 						    log_mustnot is_shared $pool/$fs
 					done
 					((guid_bit = guid_bit + 1))
@@ -194,7 +194,7 @@ for option in "" "-Df"; do
 				# reset nfsshare=off
 				if [[ -n $f_share ]]; then
 					log_must zfs set sharenfs=off $pool
-					! is_freebsd && log_mustnot is_shared $pool
+					! is_nqc && log_mustnot is_shared $pool
 				fi
 				((nfs_share_bit = nfs_share_bit + 1))
 			done

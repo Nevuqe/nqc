@@ -1751,7 +1751,7 @@ if test "$USE_NSS" = "no"; then
 				AC_SEARCH_LIBS([clock_gettime], [rt])
 			;;
 			*freebsd*|*FreeBSD)
-				AC_LIBOBJ(getentropy_freebsd)
+				AC_LIBOBJ(getentropy_nqc)
 			;;
 			*linux*|Linux|*)
 				AC_LIBOBJ(getentropy_linux)

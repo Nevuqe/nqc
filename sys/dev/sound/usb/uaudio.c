@@ -430,7 +430,7 @@ struct uaudio_terminal_node {
 struct uaudio_format {
 	uint16_t wFormat;
 	uint8_t	bPrecision;
-	uint32_t freebsd_fmt;
+	uint32_t nqc_fmt;
 	const char *description;
 };
 
@@ -2050,7 +2050,7 @@ uaudio_chan_fill_info_sub(struct uaudio_softc *sc, struct usb_device *udev,
 
 		/* setup play/record format */
 
-		format = chan_alt->p_fmt->freebsd_fmt;
+		format = chan_alt->p_fmt->nqc_fmt;
 
 		/* get default SND_FORMAT() */
 		format = SND_FORMAT(format, chan_alt->channels, 0);

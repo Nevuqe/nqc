@@ -265,7 +265,7 @@ usage(void)
 }
 
 static bool
-has_freebsd_abi_tag(const char *fname, Elf *elf, GElf_Ehdr *ehdr, off_t offset,
+has_nqc_abi_tag(const char *fname, Elf *elf, GElf_Ehdr *ehdr, off_t offset,
     size_t len)
 {
 	Elf_Data dst, src;
@@ -316,9 +316,9 @@ has_freebsd_abi_tag(const char *fname, Elf *elf, GElf_Ehdr *ehdr, off_t offset,
 			break;
 
 		name = buf;
-		if (note->n_namesz == sizeof(ELF_NOTE_FREEBSD) &&
-		    strncmp(name, ELF_NOTE_FREEBSD, note->n_namesz) == 0 &&
-		    note->n_type == NT_FREEBSD_ABI_TAG &&
+		if (note->n_namesz == sizeof(ELF_NOTE_NQC) &&
+		    strncmp(name, ELF_NOTE_NQC, note->n_namesz) == 0 &&
+		    note->n_type == NT_NQC_ABI_TAG &&
 		    note->n_descsz == sizeof(uint32_t)) {
 			has_abi_tag = true;
 			break;
@@ -430,7 +430,7 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 	}
 #endif
 
-	freebsd = ehdr.e_ident[EI_OSABI] == ELFOSABI_FREEBSD;
+	freebsd = ehdr.e_ident[EI_OSABI] == ELFOSABI_NQC;
 	for (i = 0; i < ehdr.e_phnum; i++) {
 		if (gelf_getphdr(elf, i, &phdr) == NULL) {
 			warnx("%s: %s", fname, elf_errmsg(0));
@@ -440,7 +440,7 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 		switch (phdr.p_type) {
 		case PT_NOTE:
 			if (ehdr.e_ident[EI_OSABI] == ELFOSABI_NONE && !freebsd)
-				freebsd = has_freebsd_abi_tag(fname, elf, &ehdr,
+				freebsd = has_nqc_abi_tag(fname, elf, &ehdr,
 				    phdr.p_offset, phdr.p_filesz);
 			break;
 		case PT_DYNAMIC:

@@ -82,7 +82,7 @@ fill_regs(struct thread *td, struct reg *regs)
 
 	memcpy(regs->x, frame->tf_x, sizeof(regs->x));
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	/*
 	 * We may be called here for a 32bits process, if we're using a
 	 * 64bits debugger. If so, put PC and SPSR where it expects it.
@@ -106,7 +106,7 @@ set_regs(struct thread *td, struct reg *regs)
 
 	memcpy(frame->tf_x, regs->x, sizeof(frame->tf_x));
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		/*
 		 * We may be called for a 32bits process if we're using
@@ -322,7 +322,7 @@ set_dbregs(struct thread *td, struct dbreg *regs)
 	return (0);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 int
 fill_regs32(struct thread *td, struct reg32 *regs)
 {

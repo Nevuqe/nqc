@@ -16,7 +16,7 @@ SRCS+=  device_if.h bus_if.h pci_if.h opt_cam.h opt_scsi.h
 CFLAGS+= -fgnu89-inline
 
 .if ${MACHINE_ARCH} == "amd64"
-CFLAGS+= -DCOMPAT_FREEBSD32
+CFLAGS+= -DCOMPAT_NQC32
 .endif
 
 clean_cscope:

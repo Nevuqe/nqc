@@ -162,7 +162,7 @@ SYSINCS+=	${SRCTOP}/sys/sys/bitcount.h
 
 # dbopen() behaves differently on Linux and FreeBSD so we ensure that we
 # bootstrap the FreeBSD db code. The cross-build headers #define dbopen() to
-# __freebsd_dbopen() so that we don't ever use the host version
+# __nqc_dbopen() so that we don't ever use the host version
 INCS+=	${SRCTOP}/include/db.h
 LIBC_SRCTOP=	${SRCTOP}/lib/libc/
 .include "${LIBC_SRCTOP}/db/Makefile.inc"

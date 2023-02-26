@@ -19,7 +19,7 @@
 				/* 11 is obsolete execv */
 #define	SYS_chdir	12
 #define	SYS_fchdir	13
-#define	SYS_freebsd11_mknod	14
+#define	SYS_nqc11_mknod	14
 #define	SYS_chmod	15
 #define	SYS_chown	16
 #define	SYS_break	17
@@ -47,7 +47,7 @@
 #define	SYS_getppid	39
 				/* 40 is old lstat */
 #define	SYS_dup	41
-#define	SYS_freebsd10_pipe	42
+#define	SYS_nqc10_pipe	42
 #define	SYS_getegid	43
 #define	SYS_profil	44
 #define	SYS_ktrace	45
@@ -77,7 +77,7 @@
 #define	SYS_sbrk	69
 #define	SYS_sstk	70
 				/* 71 is old mmap */
-#define	SYS_freebsd11_vadvise	72
+#define	SYS_nqc11_vadvise	72
 #define	SYS_munmap	73
 #define	SYS_mprotect	74
 #define	SYS_madvise	75
@@ -179,14 +179,14 @@
 				/* 185 is obsolete lfs_markv */
 				/* 186 is obsolete lfs_segclean */
 				/* 187 is obsolete lfs_segwait */
-#define	SYS_freebsd11_stat	188
-#define	SYS_freebsd11_fstat	189
-#define	SYS_freebsd11_lstat	190
+#define	SYS_nqc11_stat	188
+#define	SYS_nqc11_fstat	189
+#define	SYS_nqc11_lstat	190
 #define	SYS_pathconf	191
 #define	SYS_fpathconf	192
 #define	SYS_getrlimit	194
 #define	SYS_setrlimit	195
-#define	SYS_freebsd11_getdirentries	196
+#define	SYS_nqc11_getdirentries	196
 				/* 197 is freebsd6 mmap */
 #define	SYS___syscall	198
 				/* 199 is freebsd6 lseek */
@@ -199,16 +199,16 @@
 #define	SYS_futimes	206
 #define	SYS_getpgid	207
 #define	SYS_poll	209
-#define	SYS_freebsd7___semctl	220
+#define	SYS_nqc7___semctl	220
 #define	SYS_semget	221
 #define	SYS_semop	222
 				/* 223 is obsolete semconfig */
-#define	SYS_freebsd7_msgctl	224
+#define	SYS_nqc7_msgctl	224
 #define	SYS_msgget	225
 #define	SYS_msgsnd	226
 #define	SYS_msgrcv	227
 #define	SYS_shmat	228
-#define	SYS_freebsd7_shmctl	229
+#define	SYS_nqc7_shmctl	229
 #define	SYS_shmdt	230
 #define	SYS_shmget	231
 #define	SYS_clock_gettime	232
@@ -234,19 +234,19 @@
 #define	SYS_aio_read	255
 #define	SYS_aio_write	256
 #define	SYS_lio_listio	257
-#define	SYS_freebsd11_getdents	272
+#define	SYS_nqc11_getdents	272
 #define	SYS_lchmod	274
 				/* 275 is obsolete netbsd_lchown */
 #define	SYS_lutimes	276
 				/* 277 is obsolete netbsd_msync */
-#define	SYS_freebsd11_nstat	278
-#define	SYS_freebsd11_nfstat	279
-#define	SYS_freebsd11_nlstat	280
+#define	SYS_nqc11_nstat	278
+#define	SYS_nqc11_nfstat	279
+#define	SYS_nqc11_nlstat	280
 #define	SYS_preadv	289
 #define	SYS_pwritev	290
 				/* 297 is freebsd4 fhstatfs */
 #define	SYS_fhopen	298
-#define	SYS_freebsd11_fhstat	299
+#define	SYS_nqc11_fhstat	299
 #define	SYS_modnext	300
 #define	SYS_modstat	301
 #define	SYS_modfnext	302
@@ -310,7 +310,7 @@
 #define	SYS_getresuid	360
 #define	SYS_getresgid	361
 #define	SYS_kqueue	362
-#define	SYS_freebsd11_kevent	363
+#define	SYS_nqc11_kevent	363
 				/* 364 is obsolete __cap_get_proc */
 				/* 365 is obsolete __cap_set_proc */
 				/* 366 is obsolete __cap_get_fd */
@@ -341,10 +341,10 @@
 #define	SYS_uuidgen	392
 #define	SYS_sendfile	393
 #define	SYS_mac_syscall	394
-#define	SYS_freebsd11_getfsstat	395
-#define	SYS_freebsd11_statfs	396
-#define	SYS_freebsd11_fstatfs	397
-#define	SYS_freebsd11_fhstatfs	398
+#define	SYS_nqc11_getfsstat	395
+#define	SYS_nqc11_statfs	396
+#define	SYS_nqc11_fstatfs	397
+#define	SYS_nqc11_fhstatfs	398
 #define	SYS_ksem_close	400
 #define	SYS_ksem_post	401
 #define	SYS_ksem_wait	402
@@ -366,7 +366,7 @@
 #define	SYS_getcontext	421
 #define	SYS_setcontext	422
 #define	SYS_swapcontext	423
-#define	SYS_freebsd13_swapoff	424
+#define	SYS_nqc13_swapoff	424
 #define	SYS___acl_get_link	425
 #define	SYS___acl_set_link	426
 #define	SYS___acl_delete_link	427
@@ -376,8 +376,8 @@
 #define	SYS_thr_exit	431
 #define	SYS_thr_self	432
 #define	SYS_thr_kill	433
-#define	SYS_freebsd10__umtx_lock	434
-#define	SYS_freebsd10__umtx_unlock	435
+#define	SYS_nqc10__umtx_lock	434
+#define	SYS_nqc10__umtx_unlock	435
 #define	SYS_jail_attach	436
 #define	SYS_extattr_list_fd	437
 #define	SYS_extattr_list_file	438
@@ -420,7 +420,7 @@
 #define	SYS_truncate	479
 #define	SYS_ftruncate	480
 #define	SYS_thr_kill2	481
-#define	SYS_freebsd12_shm_open	482
+#define	SYS_nqc12_shm_open	482
 #define	SYS_shm_unlink	483
 #define	SYS_cpuset	484
 #define	SYS_cpuset_setid	485
@@ -431,12 +431,12 @@
 #define	SYS_fchmodat	490
 #define	SYS_fchownat	491
 #define	SYS_fexecve	492
-#define	SYS_freebsd11_fstatat	493
+#define	SYS_nqc11_fstatat	493
 #define	SYS_futimesat	494
 #define	SYS_linkat	495
 #define	SYS_mkdirat	496
 #define	SYS_mkfifoat	497
-#define	SYS_freebsd11_mknodat	498
+#define	SYS_nqc11_mknodat	498
 #define	SYS_openat	499
 #define	SYS_readlinkat	500
 #define	SYS_renameat	501
@@ -447,7 +447,7 @@
 #define	SYS_jail_get	506
 #define	SYS_jail_set	507
 #define	SYS_jail_remove	508
-#define	SYS_freebsd12_closefrom	509
+#define	SYS_nqc12_closefrom	509
 #define	SYS___semctl	510
 #define	SYS_msgctl	511
 #define	SYS_shmctl	512

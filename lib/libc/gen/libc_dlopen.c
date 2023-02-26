@@ -53,7 +53,7 @@ libc_dlopen(const char *path, int mode)
 }
 
 void
-__FreeBSD_libc_enter_restricted_mode(void)
+__NQC_libc_enter_restricted_mode(void)
 {
 
 	__libc_restricted_mode = 1;

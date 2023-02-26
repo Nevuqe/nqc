@@ -42,7 +42,7 @@ __NQCID("$NQC$");
 #include <sys/aio.h>
 #include <sys/capsicum.h>
 #include <sys/types.h>
-#define	_WANT_FREEBSD11_KEVENT
+#define	_WANT_NQC11_KEVENT
 #include <sys/event.h>
 #include <sys/ioccom.h>
 #include <sys/mman.h>
@@ -53,7 +53,7 @@ __NQCID("$NQC$");
 #include <sys/resource.h>
 #include <sys/sched.h>
 #include <sys/socket.h>
-#define _WANT_FREEBSD11_STAT
+#define _WANT_NQC11_STAT
 #include <sys/stat.h>
 #include <sys/sysctl.h>
 #include <sys/time.h>
@@ -2790,7 +2790,7 @@ print_syscall_ret(struct trussinfo *trussinfo, int error, syscallarg_t *retval)
 		fprintf(trussinfo->outfile, " EJUSTRETURN\n");
 	else if (error != 0) {
 		fprintf(trussinfo->outfile, " ERR#%d '%s'\n",
-		    sysdecode_freebsd_to_abi_errno(t->proc->abi->abi, error),
+		    sysdecode_nqc_to_abi_errno(t->proc->abi->abi, error),
 		    strerror(error));
 	} else if (sc->decode.ret_type == 2 &&
 	    t->proc->abi->pointer_size == 4) {

@@ -14,10 +14,10 @@
 #include "lldb/Utility/LLDBLog.h"
 #include "lldb/Utility/Log.h"
 
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_i386.h"
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_mips64.h"
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_powerpc.h"
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_x86_64.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_i386.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_mips64.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_powerpc.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_x86_64.h"
 #include "Plugins/Process/Utility/RegisterContextLinux_i386.h"
 #ifdef LLDB_ENABLE_ALL
 #include "Plugins/Process/Utility/RegisterContextLinux_s390x.h"
@@ -89,19 +89,19 @@ ThreadElfCore::CreateRegisterContextForFrame(StackFrame *frame) {
       case llvm::Triple::arm:
         break;
       case llvm::Triple::ppc:
-        reg_interface = new RegisterContextFreeBSD_powerpc32(arch);
+        reg_interface = new RegisterContextNQC_powerpc32(arch);
         break;
       case llvm::Triple::ppc64:
-        reg_interface = new RegisterContextFreeBSD_powerpc64(arch);
+        reg_interface = new RegisterContextNQC_powerpc64(arch);
         break;
       case llvm::Triple::mips64:
-        reg_interface = new RegisterContextFreeBSD_mips64(arch);
+        reg_interface = new RegisterContextNQC_mips64(arch);
         break;
       case llvm::Triple::x86:
-        reg_interface = new RegisterContextFreeBSD_i386(arch);
+        reg_interface = new RegisterContextNQC_i386(arch);
         break;
       case llvm::Triple::x86_64:
-        reg_interface = new RegisterContextFreeBSD_x86_64(arch);
+        reg_interface = new RegisterContextNQC_x86_64(arch);
         break;
       default:
         break;

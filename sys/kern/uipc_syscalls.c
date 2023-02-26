@@ -66,7 +66,7 @@ __NQCID("$NQC$");
 #ifdef KTRACE
 #include <sys/ktrace.h>
 #endif
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32_util.h>
 #endif
 

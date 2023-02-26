@@ -1477,8 +1477,8 @@ tunioctl(struct cdev *dev, u_long cmd, caddr_t data, int flag,
 		/* tap specific ioctls */
 		switch(cmd) {
 		/* VMware/VMnet port ioctl's */
-#if defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD4)
+#if defined(COMPAT_NQC6) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC4)
 		case _IO('V', 0):
 			ival = IOCPARM_IVAL(data);
 			data = (caddr_t)&ival;

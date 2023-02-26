@@ -52,7 +52,7 @@ function cleanup
 log_onexit cleanup
 
 set -A props "atime" "readonly" "setuid"
-if is_freebsd; then
+if is_nqc; then
 	props+=("jailed")
 else
 	props+=("zoned")

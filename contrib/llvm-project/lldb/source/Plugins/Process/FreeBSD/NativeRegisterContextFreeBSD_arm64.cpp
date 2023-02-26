@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_arm64.cpp ----------------------------===//
+//===-- NativeRegisterContextNQC_arm64.cpp ----------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,7 +8,7 @@
 
 #if defined(__aarch64__)
 
-#include "NativeRegisterContextFreeBSD_arm64.h"
+#include "NativeRegisterContextNQC_arm64.h"
 
 #include "lldb/Utility/DataBufferHeap.h"
 #include "lldb/Utility/RegisterValue.h"
@@ -26,19 +26,19 @@
 
 using namespace lldb;
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 
 NativeRegisterContextFreeBSD *
 NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
-  return new NativeRegisterContextFreeBSD_arm64(target_arch, native_thread);
+  return new NativeRegisterContextNQC_arm64(target_arch, native_thread);
 }
 
-NativeRegisterContextFreeBSD_arm64::NativeRegisterContextFreeBSD_arm64(
+NativeRegisterContextNQC_arm64::NativeRegisterContextNQC_arm64(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread)
     : NativeRegisterContextRegisterInfo(
           native_thread, new RegisterInfoPOSIX_arm64(target_arch, 0))
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+#ifdef LLDB_HAS_NQC_WATCHPOINT
       ,
       m_read_dbreg(false)
 #endif
@@ -48,27 +48,27 @@ NativeRegisterContextFreeBSD_arm64::NativeRegisterContextFreeBSD_arm64(
 }
 
 RegisterInfoPOSIX_arm64 &
-NativeRegisterContextFreeBSD_arm64::GetRegisterInfo() const {
+NativeRegisterContextNQC_arm64::GetRegisterInfo() const {
   return static_cast<RegisterInfoPOSIX_arm64 &>(*m_register_info_interface_up);
 }
 
-uint32_t NativeRegisterContextFreeBSD_arm64::GetRegisterSetCount() const {
+uint32_t NativeRegisterContextNQC_arm64::GetRegisterSetCount() const {
   return GetRegisterInfo().GetRegisterSetCount();
 }
 
 const RegisterSet *
-NativeRegisterContextFreeBSD_arm64::GetRegisterSet(uint32_t set_index) const {
+NativeRegisterContextNQC_arm64::GetRegisterSet(uint32_t set_index) const {
   return GetRegisterInfo().GetRegisterSet(set_index);
 }
 
-uint32_t NativeRegisterContextFreeBSD_arm64::GetUserRegisterCount() const {
+uint32_t NativeRegisterContextNQC_arm64::GetUserRegisterCount() const {
   uint32_t count = 0;
   for (uint32_t set_index = 0; set_index < GetRegisterSetCount(); ++set_index)
     count += GetRegisterSet(set_index)->num_registers;
   return count;
 }
 
-Status NativeRegisterContextFreeBSD_arm64::ReadRegisterSet(uint32_t set) {
+Status NativeRegisterContextNQC_arm64::ReadRegisterSet(uint32_t set) {
   switch (set) {
   case RegisterInfoPOSIX_arm64::GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
@@ -78,10 +78,10 @@ Status NativeRegisterContextFreeBSD_arm64::ReadRegisterSet(uint32_t set) {
         PT_GETFPREGS, m_thread.GetID(),
         m_reg_data.data() + sizeof(RegisterInfoPOSIX_arm64::GPR));
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_arm64::ReadRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_arm64::ReadRegisterSet");
 }
 
-Status NativeRegisterContextFreeBSD_arm64::WriteRegisterSet(uint32_t set) {
+Status NativeRegisterContextNQC_arm64::WriteRegisterSet(uint32_t set) {
   switch (set) {
   case RegisterInfoPOSIX_arm64::GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
@@ -91,11 +91,11 @@ Status NativeRegisterContextFreeBSD_arm64::WriteRegisterSet(uint32_t set) {
         PT_SETFPREGS, m_thread.GetID(),
         m_reg_data.data() + sizeof(RegisterInfoPOSIX_arm64::GPR));
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_arm64::WriteRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_arm64::WriteRegisterSet");
 }
 
 Status
-NativeRegisterContextFreeBSD_arm64::ReadRegister(const RegisterInfo *reg_info,
+NativeRegisterContextNQC_arm64::ReadRegister(const RegisterInfo *reg_info,
                                                  RegisterValue &reg_value) {
   Status error;
 
@@ -122,7 +122,7 @@ NativeRegisterContextFreeBSD_arm64::ReadRegister(const RegisterInfo *reg_info,
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_arm64::WriteRegister(
+Status NativeRegisterContextNQC_arm64::WriteRegister(
     const RegisterInfo *reg_info, const RegisterValue &reg_value) {
   Status error;
 
@@ -148,7 +148,7 @@ Status NativeRegisterContextFreeBSD_arm64::WriteRegister(
   return WriteRegisterSet(set);
 }
 
-Status NativeRegisterContextFreeBSD_arm64::ReadAllRegisterValues(
+Status NativeRegisterContextNQC_arm64::ReadAllRegisterValues(
     lldb::WritableDataBufferSP &data_sp) {
   Status error;
 
@@ -167,20 +167,20 @@ Status NativeRegisterContextFreeBSD_arm64::ReadAllRegisterValues(
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_arm64::WriteAllRegisterValues(
+Status NativeRegisterContextNQC_arm64::WriteAllRegisterValues(
     const lldb::DataBufferSP &data_sp) {
   Status error;
 
   if (!data_sp) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_arm64::%s invalid data_sp provided",
+        "NativeRegisterContextNQC_arm64::%s invalid data_sp provided",
         __FUNCTION__);
     return error;
   }
 
   if (data_sp->GetByteSize() != m_reg_data.size()) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_arm64::%s data_sp contained mismatched "
+        "NativeRegisterContextNQC_arm64::%s data_sp contained mismatched "
         "data size, expected %" PRIu64 ", actual %" PRIu64,
         __FUNCTION__, m_reg_data.size(), data_sp->GetByteSize());
     return error;
@@ -188,7 +188,7 @@ Status NativeRegisterContextFreeBSD_arm64::WriteAllRegisterValues(
 
   const uint8_t *src = data_sp->GetBytes();
   if (src == nullptr) {
-    error.SetErrorStringWithFormat("NativeRegisterContextFreeBSD_arm64::%s "
+    error.SetErrorStringWithFormat("NativeRegisterContextNQC_arm64::%s "
                                    "DataBuffer::GetBytes() returned a null "
                                    "pointer",
                                    __FUNCTION__);
@@ -203,10 +203,10 @@ Status NativeRegisterContextFreeBSD_arm64::WriteAllRegisterValues(
   return WriteRegisterSet(RegisterInfoPOSIX_arm64::FPRegSet);
 }
 
-llvm::Error NativeRegisterContextFreeBSD_arm64::CopyHardwareWatchpointsFrom(
+llvm::Error NativeRegisterContextNQC_arm64::CopyHardwareWatchpointsFrom(
     NativeRegisterContextFreeBSD &source) {
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
-  auto &r_source = static_cast<NativeRegisterContextFreeBSD_arm64 &>(source);
+#ifdef LLDB_HAS_NQC_WATCHPOINT
+  auto &r_source = static_cast<NativeRegisterContextNQC_arm64 &>(source);
   llvm::Error error = r_source.ReadHardwareDebugInfo();
   if (error)
     return error;
@@ -225,8 +225,8 @@ llvm::Error NativeRegisterContextFreeBSD_arm64::CopyHardwareWatchpointsFrom(
 #endif
 }
 
-llvm::Error NativeRegisterContextFreeBSD_arm64::ReadHardwareDebugInfo() {
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+llvm::Error NativeRegisterContextNQC_arm64::ReadHardwareDebugInfo() {
+#ifdef LLDB_HAS_NQC_WATCHPOINT
   Log *log = GetLog(POSIXLog::Registers);
 
   // we're fully stateful, so no need to reread control registers ever
@@ -255,8 +255,8 @@ llvm::Error NativeRegisterContextFreeBSD_arm64::ReadHardwareDebugInfo() {
 }
 
 llvm::Error
-NativeRegisterContextFreeBSD_arm64::WriteHardwareDebugRegs(DREGType) {
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+NativeRegisterContextNQC_arm64::WriteHardwareDebugRegs(DREGType) {
+#ifdef LLDB_HAS_NQC_WATCHPOINT
   assert(m_read_dbreg && "dbregs must be read before writing them back");
 
   // copy data from m_*_regs to m_dbreg before writing it back

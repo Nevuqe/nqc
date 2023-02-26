@@ -252,7 +252,7 @@ CWARNFLAGS+=	-Wno-system-headers
 # How to handle FreeBSD custom printf format specifiers.
 .if ${COMPILER_TYPE} == "clang" || \
     (${COMPILER_TYPE} == "gcc" && ${COMPILER_VERSION} >= 120100)
-FORMAT_EXTENSIONS=	-D__printf__=__freebsd_kprintf__
+FORMAT_EXTENSIONS=	-D__printf__=__nqc_kprintf__
 .else
 FORMAT_EXTENSIONS=	-fformat-extensions
 .endif

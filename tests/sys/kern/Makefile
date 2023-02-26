@@ -94,7 +94,7 @@ SRCS.libkern_crc32+=	crc32_sse42.c
 SRCS.libkern_crc32+=	crc32c_armv8.S
 .endif
 
-CFLAGS.subr_physmem.c+=	-D_WANT_FREEBSD_BITSET
+CFLAGS.subr_physmem.c+=	-D_WANT_NQC_BITSET
 SRCS.subr_physmem_test+= subr_physmem_test.c subr_physmem.c
 
 # subr_unit.c contains functions whose prototypes lie in headers that cannot be

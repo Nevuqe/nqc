@@ -73,7 +73,7 @@ struct osigframe {
 	osiginfo_t	sf_siginfo;
 };
 #endif
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 /* FreeBSD 4.x */
 struct freebsd4_sigframe {
 	register_t	sf_signum;

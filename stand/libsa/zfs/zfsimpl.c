@@ -1868,7 +1868,7 @@ vdev_read_bootenv(vdev_t *vdev)
 		benv = nvlist_create(NV_UNIQUE_NAME);
 		if (benv != NULL) {
 			if (ok)
-				nvlist_add_string(benv, FREEBSD_BOOTONCE,
+				nvlist_add_string(benv, NQC_BOOTONCE,
 				    command);
 			else
 				nvlist_add_uint64(benv, BOOTENV_VERSION,

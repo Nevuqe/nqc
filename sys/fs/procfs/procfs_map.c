@@ -47,7 +47,7 @@
 #include <sys/resourcevar.h>
 #include <sys/rwlock.h>
 #include <sys/sbuf.h>
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/sysent.h>
 #endif
 #include <sys/uio.h>
@@ -93,7 +93,7 @@ procfs_doprocmap(PFS_FILL_ARGS)
 	vm_prot_t e_prot;
 	unsigned int last_timestamp;
 	bool super;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	bool wrap32;
 #endif
 
@@ -106,7 +106,7 @@ procfs_doprocmap(PFS_FILL_ARGS)
 	if (uio->uio_rw != UIO_READ)
 		return (EOPNOTSUPP);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	wrap32 = false;
 	if (SV_CURPROC_FLAG(SV_ILP32)) {
 		if (!(SV_PROC_FLAG(p, SV_ILP32)))
@@ -209,7 +209,7 @@ procfs_doprocmap(PFS_FILL_ARGS)
 		    "0x%lx 0x%lx %d %d %p %s%s%s %d %d 0x%x %s %s %s %s %s %d\n",
 			(u_long)e_start, (u_long)e_end,
 			resident, privateresident,
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 			wrap32 ? NULL : obj,	/* Hide 64 bit value */
 #else
 			obj,

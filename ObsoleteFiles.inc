@@ -10703,7 +10703,7 @@ OLD_FILES+=usr/share/man/man4/patm.4.gz
 OLD_FILES+=usr/share/man/man4/utopia.4.gz
 OLD_FILES+=usr/share/man/man8/atmconfig.8.gz
 OLD_FILES+=usr/share/man/man9/utopia.9.gz
-OLD_FILES+=usr/share/snmp/defs/atm_freebsd.def
+OLD_FILES+=usr/share/snmp/defs/atm_nqc.def
 OLD_FILES+=usr/share/snmp/defs/atm_tree.def
 OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM-FREEBSD-MIB.txt
 OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM.txt
@@ -16143,7 +16143,7 @@ OLD_FILES+=usr/bin/kenv
 OLD_FILES+=usr/sbin/elf2aout
 # 200210XX
 OLD_FILES+=usr/include/libusbhid.h
-OLD_FILES+=usr/share/man/man3/All_FreeBSD.3.gz
+OLD_FILES+=usr/share/man/man3/All_NQC.3.gz
 OLD_FILES+=usr/share/man/man3/CheckRules.3.gz
 OLD_FILES+=usr/share/man/man3/ChunkCanBeRoot.3.gz
 OLD_FILES+=usr/share/man/man3/Clone_Disk.3.gz

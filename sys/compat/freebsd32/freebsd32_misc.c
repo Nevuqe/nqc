@@ -36,8 +36,8 @@ __NQCID("$NQC$");
 
 #define __ELF_WORD_SIZE 32
 
-#ifdef COMPAT_FREEBSD11
-#define	_WANT_FREEBSD11_KEVENT
+#ifdef COMPAT_NQC11
+#define	_WANT_NQC11_KEVENT
 #endif
 
 #include <sys/param.h>
@@ -124,7 +124,7 @@ __NQCID("$NQC$");
 #include <compat/freebsd32/freebsd32_signal.h>
 #include <compat/freebsd32/freebsd32_proto.h>
 
-FEATURE(compat_freebsd_32bit, "Compatible with 32-bit FreeBSD");
+FEATURE(compat_nqc_32bit, "Compatible with 32-bit FreeBSD");
 
 struct ptrace_io_desc32 {
 	int		piod_op;
@@ -266,7 +266,7 @@ freebsd32_wait6(struct thread *td, struct freebsd32_wait6_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 static void
 copy_statfs(struct statfs *in, struct ostatfs32 *out)
 {
@@ -312,10 +312,10 @@ freebsd32_getfsstat(struct thread *td, struct freebsd32_getfsstat_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
-freebsd4_freebsd32_getfsstat(struct thread *td,
-    struct freebsd4_freebsd32_getfsstat_args *uap)
+freebsd4_nqc32_getfsstat(struct thread *td,
+    struct freebsd4_nqc32_getfsstat_args *uap)
 {
 	struct statfs *buf, *sp;
 	struct ostatfs32 stat32;
@@ -343,12 +343,12 @@ freebsd4_freebsd32_getfsstat(struct thread *td,
 }
 #endif
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 int
-freebsd11_freebsd32_getfsstat(struct thread *td,
-    struct freebsd11_freebsd32_getfsstat_args *uap)
+freebsd11_nqc32_getfsstat(struct thread *td,
+    struct freebsd11_nqc32_getfsstat_args *uap)
 {
-	return(kern_freebsd11_getfsstat(td, uap->buf, uap->bufsize,
+	return(kern_nqc11_getfsstat(td, uap->buf, uap->bufsize,
 	    uap->mode));
 }
 #endif
@@ -536,10 +536,10 @@ freebsd32_mmap(struct thread *td, struct freebsd32_mmap_args *uap)
 	    }));
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
-freebsd6_freebsd32_mmap(struct thread *td,
-    struct freebsd6_freebsd32_mmap_args *uap)
+freebsd6_nqc32_mmap(struct thread *td,
+    struct freebsd6_nqc32_mmap_args *uap)
 {
 	int prot;
 
@@ -791,16 +791,16 @@ freebsd32_kevent(struct thread *td, struct freebsd32_kevent_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 static int
 freebsd32_kevent11_copyout(void *arg, struct kevent *kevp, int count)
 {
-	struct freebsd11_freebsd32_kevent_args *uap;
+	struct freebsd11_nqc32_kevent_args *uap;
 	struct freebsd11_kevent32 ks32[KQ_NEVENTS];
 	int i, error;
 
 	KASSERT(count <= KQ_NEVENTS, ("count (%d) > KQ_NEVENTS", count));
-	uap = (struct freebsd11_freebsd32_kevent_args *)arg;
+	uap = (struct freebsd11_nqc32_kevent_args *)arg;
 
 	for (i = 0; i < count; i++) {
 		CP(kevp[i], ks32[i], ident);
@@ -822,12 +822,12 @@ freebsd32_kevent11_copyout(void *arg, struct kevent *kevp, int count)
 static int
 freebsd32_kevent11_copyin(void *arg, struct kevent *kevp, int count)
 {
-	struct freebsd11_freebsd32_kevent_args *uap;
+	struct freebsd11_nqc32_kevent_args *uap;
 	struct freebsd11_kevent32 ks32[KQ_NEVENTS];
 	int i, j, error;
 
 	KASSERT(count <= KQ_NEVENTS, ("count (%d) > KQ_NEVENTS", count));
-	uap = (struct freebsd11_freebsd32_kevent_args *)arg;
+	uap = (struct freebsd11_nqc32_kevent_args *)arg;
 
 	error = copyin(uap->changelist, ks32, count * sizeof *ks32);
 	if (error)
@@ -849,8 +849,8 @@ done:
 }
 
 int
-freebsd11_freebsd32_kevent(struct thread *td,
-    struct freebsd11_freebsd32_kevent_args *uap)
+freebsd11_nqc32_kevent(struct thread *td,
+    struct freebsd11_nqc32_kevent_args *uap)
 {
 	struct timespec32 ts32;
 	struct timespec ts, *tsp;
@@ -1886,9 +1886,9 @@ freebsd32_adjtime(struct thread *td, struct freebsd32_adjtime_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
-freebsd4_freebsd32_statfs(struct thread *td, struct freebsd4_freebsd32_statfs_args *uap)
+freebsd4_nqc32_statfs(struct thread *td, struct freebsd4_nqc32_statfs_args *uap)
 {
 	struct ostatfs32 s32;
 	struct statfs *sp;
@@ -1905,9 +1905,9 @@ freebsd4_freebsd32_statfs(struct thread *td, struct freebsd4_freebsd32_statfs_ar
 }
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
-freebsd4_freebsd32_fstatfs(struct thread *td, struct freebsd4_freebsd32_fstatfs_args *uap)
+freebsd4_nqc32_fstatfs(struct thread *td, struct freebsd4_nqc32_fstatfs_args *uap)
 {
 	struct ostatfs32 s32;
 	struct statfs *sp;
@@ -1924,9 +1924,9 @@ freebsd4_freebsd32_fstatfs(struct thread *td, struct freebsd4_freebsd32_fstatfs_
 }
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
-freebsd4_freebsd32_fhstatfs(struct thread *td, struct freebsd4_freebsd32_fhstatfs_args *uap)
+freebsd4_nqc32_fhstatfs(struct thread *td, struct freebsd4_nqc32_fhstatfs_args *uap)
 {
 	struct ostatfs32 s32;
 	struct statfs *sp;
@@ -2038,10 +2038,10 @@ ofreebsd32_getdirentries(struct thread *td,
 }
 #endif
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 int
-freebsd11_freebsd32_getdirentries(struct thread *td,
-    struct freebsd11_freebsd32_getdirentries_args *uap)
+freebsd11_nqc32_getdirentries(struct thread *td,
+    struct freebsd11_nqc32_getdirentries_args *uap)
 {
 	long base;
 	int32_t base32;
@@ -2057,12 +2057,12 @@ freebsd11_freebsd32_getdirentries(struct thread *td,
 	}
 	return (error);
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 /* versions with the 'int pad' argument */
 int
-freebsd6_freebsd32_pread(struct thread *td, struct freebsd6_freebsd32_pread_args *uap)
+freebsd6_nqc32_pread(struct thread *td, struct freebsd6_nqc32_pread_args *uap)
 {
 
 	return (kern_pread(td, uap->fd, uap->buf, uap->nbyte,
@@ -2070,7 +2070,7 @@ freebsd6_freebsd32_pread(struct thread *td, struct freebsd6_freebsd32_pread_args
 }
 
 int
-freebsd6_freebsd32_pwrite(struct thread *td, struct freebsd6_freebsd32_pwrite_args *uap)
+freebsd6_nqc32_pwrite(struct thread *td, struct freebsd6_nqc32_pwrite_args *uap)
 {
 
 	return (kern_pwrite(td, uap->fd, uap->buf, uap->nbyte,
@@ -2078,7 +2078,7 @@ freebsd6_freebsd32_pwrite(struct thread *td, struct freebsd6_freebsd32_pwrite_ar
 }
 
 int
-freebsd6_freebsd32_lseek(struct thread *td, struct freebsd6_freebsd32_lseek_args *uap)
+freebsd6_nqc32_lseek(struct thread *td, struct freebsd6_nqc32_lseek_args *uap)
 {
 	int error;
 	off_t pos;
@@ -2093,7 +2093,7 @@ freebsd6_freebsd32_lseek(struct thread *td, struct freebsd6_freebsd32_lseek_args
 }
 
 int
-freebsd6_freebsd32_truncate(struct thread *td, struct freebsd6_freebsd32_truncate_args *uap)
+freebsd6_nqc32_truncate(struct thread *td, struct freebsd6_nqc32_truncate_args *uap)
 {
 
 	return (kern_truncate(td, uap->path, UIO_USERSPACE,
@@ -2101,12 +2101,12 @@ freebsd6_freebsd32_truncate(struct thread *td, struct freebsd6_freebsd32_truncat
 }
 
 int
-freebsd6_freebsd32_ftruncate(struct thread *td, struct freebsd6_freebsd32_ftruncate_args *uap)
+freebsd6_nqc32_ftruncate(struct thread *td, struct freebsd6_nqc32_ftruncate_args *uap)
 {
 
 	return (kern_ftruncate(td, uap->fd, PAIR32TO64(off_t, uap->length)));
 }
-#endif /* COMPAT_FREEBSD6 */
+#endif /* COMPAT_NQC6 */
 
 struct sf_hdtr32 {
 	uint32_t headers;
@@ -2149,7 +2149,7 @@ freebsd32_do_sendfile(struct thread *td,
 			    hdtr32.hdr_cnt, &hdr_uio);
 			if (error)
 				goto out;
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 			/*
 			 * In FreeBSD < 5.0 the nbytes to send also included
 			 * the header.  If compat is specified subtract the
@@ -2193,10 +2193,10 @@ out:
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
-freebsd4_freebsd32_sendfile(struct thread *td,
-    struct freebsd4_freebsd32_sendfile_args *uap)
+freebsd4_nqc32_sendfile(struct thread *td,
+    struct freebsd4_nqc32_sendfile_args *uap)
 {
 	return (freebsd32_do_sendfile(td,
 	    (struct freebsd32_sendfile_args *)uap, 1));
@@ -2379,7 +2379,7 @@ freebsd32_fhstat(struct thread *td, struct freebsd32_fhstat_args *uap)
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 extern int ino64_trunc_error;
 
 static int
@@ -2462,8 +2462,8 @@ freebsd11_cvtstat32(struct stat *in, struct freebsd11_stat32 *out)
 }
 
 int
-freebsd11_freebsd32_stat(struct thread *td,
-    struct freebsd11_freebsd32_stat_args *uap)
+freebsd11_nqc32_stat(struct thread *td,
+    struct freebsd11_nqc32_stat_args *uap)
 {
 	struct stat sb;
 	struct freebsd11_stat32 sb32;
@@ -2480,8 +2480,8 @@ freebsd11_freebsd32_stat(struct thread *td,
 }
 
 int
-freebsd11_freebsd32_fstat(struct thread *td,
-    struct freebsd11_freebsd32_fstat_args *uap)
+freebsd11_nqc32_fstat(struct thread *td,
+    struct freebsd11_nqc32_fstat_args *uap)
 {
 	struct stat sb;
 	struct freebsd11_stat32 sb32;
@@ -2497,8 +2497,8 @@ freebsd11_freebsd32_fstat(struct thread *td,
 }
 
 int
-freebsd11_freebsd32_fstatat(struct thread *td,
-    struct freebsd11_freebsd32_fstatat_args *uap)
+freebsd11_nqc32_fstatat(struct thread *td,
+    struct freebsd11_nqc32_fstatat_args *uap)
 {
 	struct stat sb;
 	struct freebsd11_stat32 sb32;
@@ -2515,8 +2515,8 @@ freebsd11_freebsd32_fstatat(struct thread *td,
 }
 
 int
-freebsd11_freebsd32_lstat(struct thread *td,
-    struct freebsd11_freebsd32_lstat_args *uap)
+freebsd11_nqc32_lstat(struct thread *td,
+    struct freebsd11_nqc32_lstat_args *uap)
 {
 	struct stat sb;
 	struct freebsd11_stat32 sb32;
@@ -2533,8 +2533,8 @@ freebsd11_freebsd32_lstat(struct thread *td,
 }
 
 int
-freebsd11_freebsd32_fhstat(struct thread *td,
-    struct freebsd11_freebsd32_fhstat_args *uap)
+freebsd11_nqc32_fhstat(struct thread *td,
+    struct freebsd11_nqc32_fhstat_args *uap)
 {
 	struct stat sb;
 	struct freebsd11_stat32 sb32;
@@ -2588,8 +2588,8 @@ freebsd11_cvtnstat32(struct stat *sb, struct nstat32 *nsb32)
 }
 
 int
-freebsd11_freebsd32_nstat(struct thread *td,
-    struct freebsd11_freebsd32_nstat_args *uap)
+freebsd11_nqc32_nstat(struct thread *td,
+    struct freebsd11_nqc32_nstat_args *uap)
 {
 	struct stat sb;
 	struct nstat32 nsb;
@@ -2606,8 +2606,8 @@ freebsd11_freebsd32_nstat(struct thread *td,
 }
 
 int
-freebsd11_freebsd32_nlstat(struct thread *td,
-    struct freebsd11_freebsd32_nlstat_args *uap)
+freebsd11_nqc32_nlstat(struct thread *td,
+    struct freebsd11_nqc32_nlstat_args *uap)
 {
 	struct stat sb;
 	struct nstat32 nsb;
@@ -2624,8 +2624,8 @@ freebsd11_freebsd32_nlstat(struct thread *td,
 }
 
 int
-freebsd11_freebsd32_nfstat(struct thread *td,
-    struct freebsd11_freebsd32_nfstat_args *uap)
+freebsd11_nqc32_nfstat(struct thread *td,
+    struct freebsd11_nqc32_nfstat_args *uap)
 {
 	struct nstat32 nub;
 	struct stat ub;
@@ -2830,10 +2830,10 @@ freebsd32_sigaction(struct thread *td, struct freebsd32_sigaction_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
-freebsd4_freebsd32_sigaction(struct thread *td,
-			     struct freebsd4_freebsd32_sigaction_args *uap)
+freebsd4_nqc32_sigaction(struct thread *td,
+			     struct freebsd4_nqc32_sigaction_args *uap)
 {
 	struct sigaction32 s32;
 	struct sigaction sa, osa, *sap;
@@ -2849,7 +2849,7 @@ freebsd4_freebsd32_sigaction(struct thread *td,
 		sap = &sa;
 	} else
 		sap = NULL;
-	error = kern_sigaction(td, uap->sig, sap, &osa, KSA_FREEBSD4);
+	error = kern_sigaction(td, uap->sig, sap, &osa, KSA_NQC4);
 	if (error == 0 && uap->oact != NULL) {
 		s32.sa_u = PTROUT(osa.sa_handler);
 		CP(osa, s32, sa_flags);
@@ -3227,7 +3227,7 @@ siginfo_to_siginfo32(const siginfo_t *src, struct siginfo32 *dst)
 	dst->si_overrun = src->si_overrun;
 }
 
-#ifndef _FREEBSD32_SYSPROTO_H_
+#ifndef _NQC32_SYSPROTO_H_
 struct freebsd32_sigqueue_args {
         pid_t pid;
         int signum;
@@ -3906,7 +3906,7 @@ freebsd32_fcntl(struct thread *td, struct freebsd32_fcntl_args *uap)
 		tmp = uap->arg;
 		break;
 	}
-	return (kern_fcntl_freebsd(td, uap->fd, uap->cmd, tmp));
+	return (kern_fcntl_nqc(td, uap->fd, uap->cmd, tmp));
 }
 
 int

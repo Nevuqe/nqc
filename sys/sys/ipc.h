@@ -71,8 +71,8 @@ typedef	__uid_t		uid_t;
 #define	_UID_T_DECLARED
 #endif
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7) || \
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7) || \
     defined(COMPAT_43)
 struct ipc_perm_old {
 	unsigned short	cuid;	/* creator user id */
@@ -131,8 +131,8 @@ struct thread;
 struct proc;
 struct vmspace;
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 void	ipcperm_old2new(struct ipc_perm_old *, struct ipc_perm *);
 void	ipcperm_new2old(struct ipc_perm *, struct ipc_perm_old *);
 #endif

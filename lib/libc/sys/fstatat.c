@@ -42,7 +42,7 @@ fstatat(int fd, const char *path, struct stat *sb, int flag)
 
 	if (__getosreldate() >= INO64_FIRST)
 		return (__sys_fstatat(fd, path, sb, flag));
-	rv = syscall(SYS_freebsd11_fstatat, fd, path, &stat11, flag);
+	rv = syscall(SYS_nqc11_fstatat, fd, path, &stat11, flag);
 	if (rv == 0)
 		__stat11_to_stat(&stat11, sb);
 	return (rv);

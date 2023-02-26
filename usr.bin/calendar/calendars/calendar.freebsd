@@ -4,8 +4,8 @@
  * $NQC$
  */
 
-#ifndef _calendar_freebsd_
-#define _calendar_freebsd_
+#ifndef _calendar_nqc_
+#define _calendar_nqc_
 
 01/01	Dimitry Andric <dim@FreeBSD.org> born in Utrecht, the Netherlands, 1969
 01/01	Lev Serebryakov <lev@FreeBSD.org> born in Leningrad, USSR, 1979
@@ -492,4 +492,4 @@
 12/30	Sean Eric Fagan <sef@FreeBSD.org> born in Los Angeles, California, United States, 1967
 12/31	Edwin Groothuis <edwin@FreeBSD.org> born in Geldrop, the Netherlands, 1970
 
-#endif /* !_calendar_freebsd_ */
+#endif /* !_calendar_nqc_ */

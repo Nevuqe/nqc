@@ -247,11 +247,11 @@ ${var}=		${HOST_${var}}
 
 .if ${MACHINE:Nhost:Ncommon} != "" && ${MACHINE} != ${HOST_MACHINE}
 # cross-building
-.if !defined(FREEBSD_REVISION)
-FREEBSD_REVISION!= sed -n '/^REVISION=/{s,.*=,,;s,",,g;p; }' ${SRCTOP}/sys/conf/newvers.sh
-.export FREEBSD_REVISION
+.if !defined(NQC_REVISION)
+NQC_REVISION!= sed -n '/^REVISION=/{s,.*=,,;s,",,g;p; }' ${SRCTOP}/sys/conf/newvers.sh
+.export NQC_REVISION
 .endif
-CROSS_TARGET_FLAGS= -target ${MACHINE_ARCH}-unknown-freebsd${FREEBSD_REVISION}
+CROSS_TARGET_FLAGS= -target ${MACHINE_ARCH}-unknown-freebsd${NQC_REVISION}
 CFLAGS+= ${CROSS_TARGET_FLAGS}
 ACFLAGS+= ${CROSS_TARGET_FLAGS}
 LDFLAGS+= -Wl,-m -Wl,elf_${MACHINE_ARCH}_nqc

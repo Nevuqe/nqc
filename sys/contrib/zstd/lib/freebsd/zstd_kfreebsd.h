@@ -26,8 +26,8 @@
  * $NQC$
  */
 
-#ifndef ZSTD_KFREEBSD_H
-#define ZSTD_KFREEBSD_H
+#ifndef ZSTD_KNQC_H
+#define ZSTD_KNQC_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -45,4 +45,4 @@ extern "C" {
 }
 #endif
 
-#endif /* ZSTD_KFREEBSD_H */
+#endif /* ZSTD_KNQC_H */

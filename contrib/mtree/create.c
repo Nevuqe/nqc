@@ -154,7 +154,7 @@ cwalk(FILE *fp)
 				if (!nflag)
 					fprintf(fp, "%*s# %s\n", indent, "",
 					    p->fts_path);
-			if (p->fts_level > 0 || flavor == F_FREEBSD9) {
+			if (p->fts_level > 0 || flavor == F_NQC9) {
 				fprintf(fp, "%*s..\n", indent, "");
 				if (!bflag)
 					fprintf(fp, "\n");
@@ -229,7 +229,7 @@ statf(FILE *fp, int indent, FTSENT *p)
 		output(fp, indent, &offset, "nlink=%ju",
 		    (uintmax_t)p->fts_statp->st_nlink);
 	if (keys & F_SIZE &&
-	    (flavor == F_FREEBSD9 || S_ISREG(p->fts_statp->st_mode)))
+	    (flavor == F_NQC9 || S_ISREG(p->fts_statp->st_mode)))
 		output(fp, indent, &offset, "size=%ju",
 		    (uintmax_t)p->fts_statp->st_size);
 	if (keys & F_TIME)

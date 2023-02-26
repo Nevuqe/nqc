@@ -119,11 +119,11 @@ static struct g_part_bsd_alias {
 	uint8_t		type;
 	int		alias;
 } bsd_alias_match[] = {
-	{ FS_BSDFFS,	G_PART_ALIAS_FREEBSD_UFS },
-	{ FS_SWAP,	G_PART_ALIAS_FREEBSD_SWAP },
-	{ FS_ZFS,	G_PART_ALIAS_FREEBSD_ZFS },
-	{ FS_VINUM,	G_PART_ALIAS_FREEBSD_VINUM },
-	{ FS_NANDFS,	G_PART_ALIAS_FREEBSD_NANDFS },
+	{ FS_BSDFFS,	G_PART_ALIAS_NQC_UFS },
+	{ FS_SWAP,	G_PART_ALIAS_NQC_SWAP },
+	{ FS_ZFS,	G_PART_ALIAS_NQC_ZFS },
+	{ FS_VINUM,	G_PART_ALIAS_NQC_VINUM },
+	{ FS_NANDFS,	G_PART_ALIAS_NQC_NANDFS },
 	{ FS_HAMMER,	G_PART_ALIAS_DNQC_HAMMER },
 	{ FS_HAMMER2,	G_PART_ALIAS_DNQC_HAMMER2 },
 };
@@ -482,15 +482,15 @@ g_part_bsd_type(struct g_part_table *basetable, struct g_part_entry *baseentry,
 	entry = (struct g_part_bsd_entry *)baseentry;
 	type = entry->part.p_fstype;
 	if (type == FS_NANDFS)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_NANDFS));
+		return (g_part_alias_name(G_PART_ALIAS_NQC_NANDFS));
 	if (type == FS_SWAP)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_SWAP));
+		return (g_part_alias_name(G_PART_ALIAS_NQC_SWAP));
 	if (type == FS_BSDFFS)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_UFS));
+		return (g_part_alias_name(G_PART_ALIAS_NQC_UFS));
 	if (type == FS_VINUM)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_VINUM));
+		return (g_part_alias_name(G_PART_ALIAS_NQC_VINUM));
 	if (type == FS_ZFS)
-		return (g_part_alias_name(G_PART_ALIAS_FREEBSD_ZFS));
+		return (g_part_alias_name(G_PART_ALIAS_NQC_ZFS));
 	snprintf(buf, bufsz, "!%d", type);
 	return (buf);
 }

@@ -365,7 +365,7 @@ nopgrp:
 		kp->ki_xstat = KW_EXITCODE(proc.p_xexit, proc.p_xsig);
 		kp->ki_acflag = proc.p_acflag;
 		kp->ki_lock = proc.p_lock;
-		kp->ki_tdev_freebsd11 = kp->ki_tdev; /* truncate */
+		kp->ki_tdev_nqc11 = kp->ki_tdev; /* truncate */
 
 		/* Per-thread items; iterate as appropriate. */
 		td = TAILQ_FIRST(&proc.p_threads);

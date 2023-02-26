@@ -41,12 +41,12 @@ function cleanup
 	for DISK in $DISKS; do
 		zpool labelclear -f $DEV_RDSKDIR/$DISK
 	done
-	if is_freebsd; then
+	if is_nqc; then
 		log_must sysctl kern.geom.debugflags=$saved_debugflags
 	fi
 }
 
-if is_freebsd; then
+if is_nqc; then
 	# FreeBSD won't allow writing to an in-use device without this set
 	saved_debugflags=$(sysctl -n kern.geom.debugflags)
 	log_must sysctl kern.geom.debugflags=16

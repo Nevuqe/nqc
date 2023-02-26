@@ -65,7 +65,7 @@ typeset zfs_props=("type" used available creation volsize referenced \
     snapdir aclinherit canmount primarycache secondarycache version \
     usedbychildren usedbydataset usedbyrefreservation usedbysnapshots \
     filesystem_limit snapshot_limit filesystem_count snapshot_count)
-if is_freebsd; then
+if is_nqc; then
 	typeset zfs_props_os=(jailed aclmode)
 else
 	typeset zfs_props_os=(zoned acltype)

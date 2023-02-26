@@ -66,7 +66,7 @@ __NQCID("$NQC$");
 #ifdef KTRACE
 #include <sys/ktrace.h>
 #endif
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_syscall.h>
 #include <compat/freebsd32/freebsd32_util.h>
@@ -89,7 +89,7 @@ static struct syscall_helper_data sctp_syscalls[] = {
 	SYSCALL_INIT_LAST
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static struct syscall_helper_data sctp32_syscalls[] = {
 	SYSCALL32_INIT_HELPER_COMPAT(sctp_peeloff),
 	SYSCALL32_INIT_HELPER_COMPAT(sctp_generic_sendmsg),
@@ -107,7 +107,7 @@ sctp_syscalls_init(void)
 	error = syscall_helper_register(sctp_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	error = syscall32_helper_register(sctp32_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
@@ -124,7 +124,7 @@ sctp_syscalls_uninit(void)
 {
 	int error;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	error = syscall32_helper_unregister(sctp32_syscalls);
 	if (error != 0)
 		return (error);
@@ -341,7 +341,7 @@ sys_sctp_generic_sendmsg_iov(struct thread *td, struct sctp_generic_sendmsg_iov_
 	if (error != 0)
 		goto sctp_bad1;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		error = freebsd32_copyiniov((struct iovec32 *)uap->iov,
 		    uap->iovlen, &iov, EMSGSIZE);
@@ -442,7 +442,7 @@ sys_sctp_generic_recvmsg(struct thread *td, struct sctp_generic_recvmsg_args *ua
 	    &fp);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
 		error = freebsd32_copyiniov((struct iovec32 *)uap->iov,
 		    uap->iovlen, &iov, EMSGSIZE);

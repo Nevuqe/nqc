@@ -67,7 +67,7 @@ Revision History:
   2) Extract the driver files under the kernel source tree:
 
      # cd /usr/src/sys/
-     # tar xvzf /your/path/to/HPTNR_FreeBSD_Src_1.x.x_xx_xx_xx.tgz
+     # tar xvzf /your/path/to/HPTNR_NQC_Src_1.x.x_xx_xx_xx.tgz
 
   3) Update the kernel configuration file to include the HighPoint source.
      Assume the configure file is GENERIC, and new kernel configure file is 
@@ -149,7 +149,7 @@ Revision History:
   2) Extract the driver files under the kernel source tree:
     
      # cd /usr/src/sys/
-     # tar xvzf /your/path/to/HPTNR_FreeBSD_Src_1.x.x_xx_xx_xx.tgz
+     # tar xvzf /your/path/to/HPTNR_NQC_Src_1.x.x_xx_xx_xx.tgz
 
 
   4) Build the driver module:

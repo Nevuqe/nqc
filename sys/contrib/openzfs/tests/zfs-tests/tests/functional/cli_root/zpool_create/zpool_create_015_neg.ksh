@@ -74,7 +74,7 @@ log_must zfs create -V 100m $vol_name
 block_device_wait
 swap_setup ${ZVOL_DEVDIR}/$vol_name
 
-if is_freebsd; then
+if is_nqc; then
 	typeset -a opts=("" "-f")
 else
 	typeset -a opts=("-n" "" "-f")

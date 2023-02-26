@@ -31,7 +31,7 @@
 
 . $STF_SUITE/include/libtest.shlib
 
-if is_linux || is_freebsd; then
+if is_linux || is_nqc; then
 	log_unsupported "Privilege tests require pfexec command"
 fi
 

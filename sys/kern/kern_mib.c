@@ -146,7 +146,7 @@ char kernelname[MAXPATHLEN] = PATH_KERNEL;	/* XXX bloat */
 SYSCTL_STRING(_kern, KERN_BOOTFILE, bootfile, CTLFLAG_RW | CTLFLAG_MPSAFE,
     kernelname, sizeof kernelname, "Name of kernel file booted");
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 static int
 sysctl_maxphys(SYSCTL_HANDLER_ARGS)
 {
@@ -296,7 +296,7 @@ proc_machine_arch(struct proc *p)
 
 	if (p->p_sysent->sv_machine_arch != NULL)
 		return (p->p_sysent->sv_machine_arch(p));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(p, SV_ILP32))
 		return (MACHINE_ARCH32);
 #endif
@@ -319,7 +319,7 @@ SYSCTL_PROC(_hw, HW_MACHINE_ARCH, machine_arch, CTLTYPE_STRING | CTLFLAG_RD |
     "System architecture");
 
 #ifndef MACHINE_ARCHES
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #define	MACHINE_ARCHES	MACHINE_ARCH " " MACHINE_ARCH32
 #else
 #define	MACHINE_ARCHES	MACHINE_ARCH
@@ -616,20 +616,20 @@ SYSCTL_PROC(_kern, OID_AUTO, build_id,
 SYSCTL_NODE(_kern, OID_AUTO, features, CTLFLAG_RD | CTLFLAG_MPSAFE, 0,
     "Kernel Features");
 
-#ifdef COMPAT_FREEBSD4
-FEATURE(compat_freebsd4, "Compatible with FreeBSD 4");
+#ifdef COMPAT_NQC4
+FEATURE(compat_nqc4, "Compatible with FreeBSD 4");
 #endif
 
-#ifdef COMPAT_FREEBSD5
-FEATURE(compat_freebsd5, "Compatible with FreeBSD 5");
+#ifdef COMPAT_NQC5
+FEATURE(compat_nqc5, "Compatible with FreeBSD 5");
 #endif
 
-#ifdef COMPAT_FREEBSD6
-FEATURE(compat_freebsd6, "Compatible with FreeBSD 6");
+#ifdef COMPAT_NQC6
+FEATURE(compat_nqc6, "Compatible with FreeBSD 6");
 #endif
 
-#ifdef COMPAT_FREEBSD7
-FEATURE(compat_freebsd7, "Compatible with FreeBSD 7");
+#ifdef COMPAT_NQC7
+FEATURE(compat_nqc7, "Compatible with FreeBSD 7");
 #endif
 
 /*

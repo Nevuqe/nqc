@@ -32,7 +32,7 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-#define _WANT_FREEBSD_BITSET
+#define _WANT_NQC_BITSET
 
 #include <sys/param.h>
 #include <sys/types.h>

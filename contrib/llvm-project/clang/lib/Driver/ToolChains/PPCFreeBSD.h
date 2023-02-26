@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_PPC_FREEBSD_H
-#define LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_PPC_FREEBSD_H
+#ifndef LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_PPC_NQC_H
+#define LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_PPC_NQC_H
 
 #include "FreeBSD.h"
 
@@ -30,4 +30,4 @@ public:
 } // end namespace driver
 } // end namespace clang
 
-#endif // LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_PPC_FREEBSD_H
+#endif // LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_PPC_NQC_H

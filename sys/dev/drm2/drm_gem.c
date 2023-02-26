@@ -168,7 +168,7 @@ free:
 }
 EXPORT_SYMBOL(drm_gem_object_alloc);
 
-#if defined(FREEBSD_NOTYET)
+#if defined(NQC_NOTYET)
 static void
 drm_gem_remove_prime_handles(struct drm_gem_object *obj, struct drm_file *filp)
 {
@@ -198,7 +198,7 @@ drm_gem_handle_delete(struct drm_file *filp, u32 handle)
 	}
 	dev = obj->dev;
 
-#if defined(FREEBSD_NOTYET)
+#if defined(NQC_NOTYET)
 	drm_gem_remove_prime_handles(obj, filp);
 #endif
 
@@ -378,7 +378,7 @@ drm_gem_object_release_handle(uint32_t name, void *ptr, void *data)
 	struct drm_gem_object *obj = ptr;
 	struct drm_device *dev = obj->dev;
 
-#if defined(FREEBSD_NOTYET)
+#if defined(NQC_NOTYET)
 	drm_gem_remove_prime_handles(obj, file_priv);
 #endif
 

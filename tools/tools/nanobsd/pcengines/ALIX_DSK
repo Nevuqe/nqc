@@ -23,14 +23,14 @@ options 	PSEUDOFS
 options 	GEOM_PART_GPT
 options 	GEOM_LABEL
 options 	COMPAT_43TTY
-options 	COMPAT_FREEBSD4		# Compatible with FreeBSD4
-options 	COMPAT_FREEBSD5		# Compatible with FreeBSD5
-options 	COMPAT_FREEBSD6		# Compatible with FreeBSD6
-options 	COMPAT_FREEBSD7		# Compatible with FreeBSD7
-options 	COMPAT_FREEBSD9		# Compatible with FreeBSD9
-options 	COMPAT_FREEBSD10	# Compatible with FreeBSD10
-options 	COMPAT_FREEBSD11	# Compatible with FreeBSD11
-options 	COMPAT_FREEBSD12	# Compatible with FreeBSD12
+options 	COMPAT_NQC4		# Compatible with FreeBSD4
+options 	COMPAT_NQC5		# Compatible with FreeBSD5
+options 	COMPAT_NQC6		# Compatible with FreeBSD6
+options 	COMPAT_NQC7		# Compatible with FreeBSD7
+options 	COMPAT_NQC9		# Compatible with FreeBSD9
+options 	COMPAT_NQC10	# Compatible with FreeBSD10
+options 	COMPAT_NQC11	# Compatible with FreeBSD11
+options 	COMPAT_NQC12	# Compatible with FreeBSD12
 options 	SCSI_DELAY=5000
 options 	SYSVSHM
 options 	SYSVMSG

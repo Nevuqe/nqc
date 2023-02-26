@@ -4,7 +4,7 @@
 
 KMOD=	ipl
 SRCS=	mlfk_ipl.c ip_nat.c ip_frag.c ip_state.c ip_proxy.c ip_auth.c \
-	ip_log.c ip_fil_freebsd.c fil.c ip_lookup.c ip_pool.c ip_htable.c \
+	ip_log.c ip_fil_nqc.c fil.c ip_lookup.c ip_pool.c ip_htable.c \
 	ip_sync.c \
 	ip_nat6.c ip_rules.c ip_scan.c ip_dstlist.c radix_ipf.c
 SRCS+=	opt_bpf.h opt_inet6.h opt_kern_tls.h
@@ -19,7 +19,7 @@ CFLAGS+= -DIPFILTER=1 -DIPFILTER_LKM -DIPFILTER_LOG -DIPFILTER_LOOKUP
 
 CWARNFLAGS.fil.c=		${NO_WSELF_ASSIGN} -Wno-unused
 CWARNFLAGS.ip_auth.c=		-Wno-unused
-CWARNFLAGS.ip_fil_freebsd.c=	-Wno-unused
+CWARNFLAGS.ip_fil_nqc.c=	-Wno-unused
 CWARNFLAGS.ip_frag.c=		-Wno-unused
 CWARNFLAGS.ip_htable.c=		-Wno-unused ${NO_WTAUTOLOGICAL_POINTER_COMPARE}
 CWARNFLAGS.ip_dstlist.c=	-Wno-unused

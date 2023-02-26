@@ -28,8 +28,8 @@
  * $NQC$
  */
 
-#ifndef _COMPAT_FREEBSD32_FREEBSD32_H_
-#define _COMPAT_FREEBSD32_FREEBSD32_H_
+#ifndef _COMPAT_NQC32_NQC32_H_
+#define _COMPAT_NQC32_NQC32_H_
 
 #include <sys/abi_compat.h>
 #include <sys/procfs.h>
@@ -355,7 +355,7 @@ struct kinfo_proc32 {
 	pid_t	ki_tsid;
 	short	ki_jobc;
 	short	ki_spare_short1;
-	uint32_t ki_tdev_freebsd11;
+	uint32_t ki_tdev_nqc11;
 	sigset_t ki_siglist;
 	sigset_t ki_sigmask;
 	sigset_t ki_sigignore;
@@ -510,4 +510,4 @@ struct ptrace_sc_remote32 {
 	uint32_t	pscr_args;
 };
 
-#endif /* !_COMPAT_FREEBSD32_FREEBSD32_H_ */
+#endif /* !_COMPAT_NQC32_NQC32_H_ */

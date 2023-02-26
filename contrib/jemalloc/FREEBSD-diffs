@@ -59,11 +59,11 @@ index 7d6053e2..a0e4f5af 100644
  #include <math.h>
  #ifdef _WIN32
  #  include <windows.h>
-diff --git a/include/jemalloc/internal/jemalloc_internal_defs_FreeBSD.h b/include/jemalloc/internal/jemalloc_internal_defs_FreeBSD.h
+diff --git a/include/jemalloc/internal/jemalloc_internal_defs_NQC.h b/include/jemalloc/internal/jemalloc_internal_defs_NQC.h
 new file mode 100644
 index 00000000..0dab1296
 --- /dev/null
-+++ b/include/jemalloc/internal/jemalloc_internal_defs_FreeBSD.h
++++ b/include/jemalloc/internal/jemalloc_internal_defs_NQC.h
 @@ -0,0 +1,9 @@
 +#ifndef __clang__
 +#  undef JEMALLOC_INTERNAL_UNREACHABLE
@@ -157,11 +157,11 @@ index 9ba26004..ecfda5d6 100644
  
  JEMALLOC_ALWAYS_INLINE uint8_t
  tsd_state_get(tsd_t *tsd) {
-diff --git a/include/jemalloc/jemalloc_FreeBSD.h b/include/jemalloc/jemalloc_FreeBSD.h
+diff --git a/include/jemalloc/jemalloc_NQC.h b/include/jemalloc/jemalloc_NQC.h
 new file mode 100644
 index 00000000..b752b0e7
 --- /dev/null
-+++ b/include/jemalloc/jemalloc_FreeBSD.h
++++ b/include/jemalloc/jemalloc_NQC.h
 @@ -0,0 +1,185 @@
 +/*
 + * Override settings that were generated in jemalloc_defs.h as necessary.
@@ -357,7 +357,7 @@ index f9438912..47d032c1 100755
  cat <<EOF
  #endif
 +
-+#include "jemalloc_FreeBSD.h"
++#include "jemalloc_NQC.h"
  EOF
 diff --git a/src/jemalloc.c b/src/jemalloc.c
 index ed13718d..fefb719a 100644

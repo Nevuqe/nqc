@@ -79,10 +79,10 @@ CTASSERT(sizeof(struct ia32_mcontext) == 640);
 CTASSERT(sizeof(struct ia32_ucontext) == 704);
 CTASSERT(sizeof(struct ia32_sigframe) == 800);
 CTASSERT(sizeof(struct siginfo32) == 64);
-#ifdef COMPAT_FREEBSD4
-CTASSERT(sizeof(struct ia32_freebsd4_mcontext) == 260);
-CTASSERT(sizeof(struct ia32_freebsd4_ucontext) == 324);
-CTASSERT(sizeof(struct ia32_freebsd4_sigframe) == 408);
+#ifdef COMPAT_NQC4
+CTASSERT(sizeof(struct ia32_nqc4_mcontext) == 260);
+CTASSERT(sizeof(struct ia32_nqc4_ucontext) == 324);
+CTASSERT(sizeof(struct ia32_nqc4_sigframe) == 408);
 #endif
 
 #include "vdso_ia32_offsets.h"
@@ -103,18 +103,18 @@ SYSCTL_ULONG(_compat_ia32, OID_AUTO, maxssiz, CTLFLAG_RWTUN, &ia32_maxssiz, 0, "
 static u_long	ia32_maxvmem = IA32_MAXVMEM;
 SYSCTL_ULONG(_compat_ia32, OID_AUTO, maxvmem, CTLFLAG_RWTUN, &ia32_maxvmem, 0, "");
 
-struct sysentvec ia32_freebsd_sysvec = {
+struct sysentvec ia32_nqc_sysvec = {
 	.sv_size	= FREEBSD32_SYS_MAXSYSCALL,
 	.sv_table	= freebsd32_sysent,
-	.sv_fixup	= elf32_freebsd_fixup,
+	.sv_fixup	= elf32_nqc_fixup,
 	.sv_sendsig	= ia32_sendsig,
 	.sv_sigcode	= _binary_elf_vdso32_so_1_start,
 	.sv_szsigcode	= (int *)&_binary_elf_vdso32_so_1_size,
 	.sv_sigcodeoff	= VDSO_IA32_SIGCODE_OFFSET,
 	.sv_name	= "FreeBSD ELF32",
 	.sv_coredump	= elf32_coredump,
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
-	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
+	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = elf32_prepare_notes,
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,
@@ -124,12 +124,12 @@ struct sysentvec ia32_freebsd_sysvec = {
 	.sv_psstrings	= FREEBSD32_PS_STRINGS,
 	.sv_psstringssz	= sizeof(struct freebsd32_ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
-	.sv_copyout_auxargs	= elf32_freebsd_copyout_auxargs,
+	.sv_copyout_auxargs	= elf32_nqc_copyout_auxargs,
 	.sv_copyout_strings	= freebsd32_copyout_strings,
 	.sv_setregs	= ia32_setregs,
 	.sv_fixlimit	= ia32_fixlimit,
 	.sv_maxssiz	= &ia32_maxssiz,
-	.sv_flags	= SV_ABI_FREEBSD | SV_ASLR | SV_IA32 | SV_ILP32 |
+	.sv_flags	= SV_ABI_NQC | SV_ASLR | SV_IA32 | SV_ILP32 |
 			    SV_SHP | SV_TIMEKEEP | SV_RNG_SEED_VER | SV_DSO_SIG,
 	.sv_set_syscall_retval = ia32_set_syscall_retval,
 	.sv_fetch_syscall_args = ia32_fetch_syscall_args,
@@ -145,17 +145,17 @@ struct sysentvec ia32_freebsd_sysvec = {
 	.sv_regset_begin = SET_BEGIN(__elfN(regset)),
 	.sv_regset_end  = SET_LIMIT(__elfN(regset)),
 };
-INIT_SYSENTVEC(elf_ia32_sysvec, &ia32_freebsd_sysvec);
+INIT_SYSENTVEC(elf_ia32_sysvec, &ia32_nqc_sysvec);
 
 static Elf32_Brandinfo ia32_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &ia32_freebsd_sysvec,
+	.sysvec		= &ia32_nqc_sysvec,
 	.interp_newpath	= "/libexec/ld-elf32.so.1",
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
@@ -164,14 +164,14 @@ SYSINIT(ia32, SI_SUB_EXEC, SI_ORDER_MIDDLE,
 	&ia32_brand_info);
 
 static Elf32_Brandinfo ia32_brand_oinfo = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/usr/libexec/ld-elf.so.1",
-	.sysvec		= &ia32_freebsd_sysvec,
+	.sysvec		= &ia32_nqc_sysvec,
 	.interp_newpath	= "/libexec/ld-elf32.so.1",
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
@@ -180,13 +180,13 @@ SYSINIT(oia32, SI_SUB_EXEC, SI_ORDER_ANY,
 	&ia32_brand_oinfo);
 
 static Elf32_Brandinfo kia32_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld.so.1",
-	.sysvec		= &ia32_freebsd_sysvec,
-	.brand_note	= &elf32_kfreebsd_brandnote,
+	.sysvec		= &ia32_nqc_sysvec,
+	.brand_note	= &elf32_knqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE_MANDATORY
 };
 

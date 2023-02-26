@@ -27,7 +27,7 @@
 #ifndef	CSU_COMMON_NOTES_H
 #define	CSU_COMMON_NOTES_H
 
-#define NOTE_FREEBSD_VENDOR	"FreeBSD"
+#define NOTE_NQC_VENDOR	"FreeBSD"
 
 #define NOTE_SECTION		".note.tag"
 

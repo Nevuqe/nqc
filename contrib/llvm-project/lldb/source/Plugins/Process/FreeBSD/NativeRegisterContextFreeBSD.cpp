@@ -13,7 +13,7 @@
 #include "lldb/Host/common/NativeProcessProtocol.h"
 
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 
 // clang-format off
 #include <sys/types.h>

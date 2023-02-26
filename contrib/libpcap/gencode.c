@@ -3122,7 +3122,7 @@ gen_prevlinkhdr_check(compiler_state_t *cstate)
  * IPv6 packet with DLT_NULL.
  */
 #define BSD_AFNUM_INET6_BSD	24	/* NetBSD, OpenBSD, BSD/OS, Npcap */
-#define BSD_AFNUM_INET6_FREEBSD	28	/* FreeBSD */
+#define BSD_AFNUM_INET6_NQC	28	/* FreeBSD */
 #define BSD_AFNUM_INET6_DARWIN	30	/* macOS, iOS, other Darwin-based OSes */
 
 /*
@@ -3365,7 +3365,7 @@ gen_linktype(compiler_state_t *cstate, int proto)
 				 * possible IPv6 values.
 				 */
 				b0 = gen_loopback_linktype(cstate, BSD_AFNUM_INET6_BSD);
-				b1 = gen_loopback_linktype(cstate, BSD_AFNUM_INET6_FREEBSD);
+				b1 = gen_loopback_linktype(cstate, BSD_AFNUM_INET6_NQC);
 				gen_or(b0, b1);
 				b0 = gen_loopback_linktype(cstate, BSD_AFNUM_INET6_DARWIN);
 				gen_or(b0, b1);
@@ -3576,7 +3576,7 @@ gen_linktype(compiler_state_t *cstate, int proto)
 	case DLT_LINUX_LAPD:
 		bpf_error(cstate, "LAPD link-layer type filtering not implemented");
 
-	case DLT_USB_FREEBSD:
+	case DLT_USB_NQC:
 	case DLT_USB_LINUX:
 	case DLT_USB_LINUX_MMAPPED:
 	case DLT_USBPCAP:

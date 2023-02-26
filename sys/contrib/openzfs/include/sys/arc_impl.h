@@ -640,7 +640,7 @@ typedef struct arc_stats {
 	 * Number of bytes consumed by bonus buffers.
 	 */
 	kstat_named_t arcstat_bonus_size;
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 	/*
 	 * Sum of the previous three counters, provided for compatibility.
 	 */
