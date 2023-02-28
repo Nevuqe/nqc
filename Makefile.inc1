@@ -390,7 +390,7 @@ SUBDIR+=cddl
 .endif
 SUBDIR+=gnu include
 .if ${MK_KERBEROS} != "no"
-SUBDIR+=kerberos5
+SUBDIR+=secure/kerberos5
 .endif
 .if ${MK_RESCUE} != "no"
 SUBDIR+=rescue
