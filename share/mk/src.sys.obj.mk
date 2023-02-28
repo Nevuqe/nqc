@@ -22,8 +22,7 @@
 #  The expected OBJDIR is stored in __objdir for auto.obj.mk to use.
 #
 #  AUTO_OBJ is opportunistically enabled if the computed .OBJDIR is writable
-#  by the current user.  Some top-level targets disable this behavior in
-#  Makefile.sys.inc.
+#  by the current user.
 #
 
 _default_makeobjdirprefix?=	/usr/obj

@@ -90,7 +90,4 @@ MAKESYSPATH:=	${.PARSEDIR:tA}
 .export MAKESYSPATH
 .endif
 
-.if ${RELDIR:U} == "." && ${.MAKE.LEVEL} == 0
-.-include "${.CURDIR}/Makefile.sys.inc"
-.endif
 .include <src.sys.obj.mk>
