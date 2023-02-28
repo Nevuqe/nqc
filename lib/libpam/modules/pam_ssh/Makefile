@@ -1,7 +1,7 @@
 # PAM module for SSH
 # $FreeBSD$
 
-SSHDIR=	${SRCTOP}/crypto/openssh
+SSHDIR=	${SRCTOP}/secure/crypto/openssh
 
 LIB=	pam_ssh
 MAN=	pam_ssh.8

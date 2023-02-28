@@ -9,7 +9,7 @@ MAN=		libmp.3
 INCS=		mp.h
 SRCS=		mpasbn.c
 
-CFLAGS+=	-I${SRCTOP}/crypto
+CFLAGS+=	-I${SRCTOP}/secure/crypto
 
 VERSION_DEF=	${SRCTOP}/lib/libc/Versions.def
 SYMBOL_MAPS=	${.CURDIR}/Symbol.map

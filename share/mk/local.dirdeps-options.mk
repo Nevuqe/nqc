@@ -7,13 +7,13 @@ DIRDEPS.CASPER.yes+= lib/libcasper/libcasper
 DIRDEPS.GSSAPI.yes+= lib/libgssapi
 DIRDEPS.JAIL.yes+= lib/libjail
 DIRDEPS.KERBEROS_SUPPORT.yes+= \
-	kerberos5/lib/libasn1 \
-	kerberos5/lib/libheimbase \
-	kerberos5/lib/libheimipcc \
-	kerberos5/lib/libhx509 \
-	kerberos5/lib/libkrb5 \
-	kerberos5/lib/libroken \
-	kerberos5/lib/libwind
+	secure/kerberos5/lib/libasn1 \
+	secure/kerberos5/lib/libheimbase \
+	secure/kerberos5/lib/libheimipcc \
+	secure/kerberos5/lib/libhx509 \
+	secure/kerberos5/lib/libkrb5 \
+	secure/kerberos5/lib/libroken \
+	secure/kerberos5/lib/libwind
 
 DIRDEPS.NIS.yes+= \
 	include/rpc \

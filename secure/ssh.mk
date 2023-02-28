@@ -2,7 +2,7 @@
 
 .include <src.opts.mk>
 
-SSHDIR=		${SRCTOP}/crypto/openssh
+SSHDIR=		${SRCTOP}/secure/crypto/openssh
 
 CFLAGS+= -I${SSHDIR} -include ssh_namespace.h
 SRCS+=	 ssh_namespace.h

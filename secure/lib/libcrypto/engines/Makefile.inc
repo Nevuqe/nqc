@@ -2,7 +2,7 @@
 
 SHLIBDIR=	${LIBDIR}/engines
 
-LCRYPTO_SRC=	${SRCTOP}/crypto/openssl
+LCRYPTO_SRC=	${SRCTOP}/secure/crypto/openssl
 
 CFLAGS+=	-I${LCRYPTO_SRC}/engines
 CFLAGS+=	-I${LCRYPTO_SRC}/include
