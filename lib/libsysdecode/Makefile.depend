@@ -16,18 +16,18 @@ DIRDEPS = \
 	include/rpc \
 	include/rpcsvc \
 	include/xlocale \
-	kerberos5/lib/libasn1 \
-	kerberos5/lib/libgssapi_krb5 \
-	kerberos5/lib/libhdb \
-	kerberos5/lib/libheimbase \
-	kerberos5/lib/libheimntlm \
-	kerberos5/lib/libhx509 \
-	kerberos5/lib/libkadm5clnt \
-	kerberos5/lib/libkafs5 \
-	kerberos5/lib/libkdc \
-	kerberos5/lib/libkrb5 \
-	kerberos5/lib/libroken \
-	kerberos5/lib/libwind \
+	secure/kerberos5/lib/libasn1 \
+	secure/kerberos5/lib/libgssapi_krb5 \
+	secure/kerberos5/lib/libhdb \
+	secure/kerberos5/lib/libheimbase \
+	secure/kerberos5/lib/libheimntlm \
+	secure/kerberos5/lib/libhx509 \
+	secure/kerberos5/lib/libkadm5clnt \
+	secure/kerberos5/lib/libkafs5 \
+	secure/kerberos5/lib/libkdc \
+	secure/kerberos5/lib/libkrb5 \
+	secure/kerberos5/lib/libroken \
+	secure/kerberos5/lib/libwind \
 	lib/${CSU_DIR} \
 	lib/atf/libatf-c \
 	lib/lib80211 \

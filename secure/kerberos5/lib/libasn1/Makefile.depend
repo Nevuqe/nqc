@@ -5,8 +5,8 @@ DIRDEPS = \
 	include \
 	include/arpa \
 	include/xlocale \
-	kerberos5/lib/libroken \
-	kerberos5/tools/asn1_compile.host \
+	secure/kerberos5/lib/libroken \
+	secure/kerberos5/tools/asn1_compile.host \
 	lib/${CSU_DIR} \
 	lib/libc \
 	lib/libcom_err \

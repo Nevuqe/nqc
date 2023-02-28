@@ -2361,11 +2361,11 @@ ${_bt}-usr.bin/mkcsmapper: ${_bt}-usr.bin/yacc ${_bt_lex_depend}
 
 .if ${MK_KERBEROS} != "no"
 _kerberos5_bootstrap_tools= \
-	kerberos5/tools/make-roken \
-	kerberos5/lib/libroken \
-	kerberos5/lib/libvers \
-	kerberos5/tools/asn1_compile \
-	kerberos5/tools/slc \
+	secure/kerberos5/tools/make-roken \
+	secure/kerberos5/lib/libroken \
+	secure/kerberos5/lib/libvers \
+	secure/kerberos5/tools/asn1_compile \
+	secure/kerberos5/tools/slc \
 	usr.bin/compile_et
 
 .ORDER: ${_kerberos5_bootstrap_tools:C/^/${_bt}-/g}
@@ -3075,9 +3075,9 @@ secure/lib/libssh__L: lib/libz__L secure/lib/libcrypto__L lib/libcrypt__L
 secure/lib/libssh__L: lib/libldns__L
 .endif
 .if ${MK_GSSAPI} != "no" && ${MK_KERBEROS_SUPPORT} != "no"
-secure/lib/libssh__L: lib/libgssapi__L kerberos5/lib/libkrb5__L \
-    kerberos5/lib/libhx509__L kerberos5/lib/libasn1__L lib/libcom_err__L \
-    lib/libmd__L kerberos5/lib/libroken__L
+secure/lib/libssh__L: lib/libgssapi__L secure/kerberos5/lib/libkrb5__L \
+    secure/kerberos5/lib/libhx509__L secure/kerberos5/lib/libasn1__L lib/libcom_err__L \
+    lib/libmd__L secure/kerberos5/lib/libroken__L
 .endif
 .endif
 .endif
@@ -3085,22 +3085,22 @@ _secure_lib=	secure/lib
 .endif
 
 .if ${MK_KERBEROS} != "no"
-kerberos5/lib/libasn1__L: lib/libcom_err__L kerberos5/lib/libroken__L
-kerberos5/lib/libhdb__L: kerberos5/lib/libasn1__L lib/libcom_err__L \
-    kerberos5/lib/libkrb5__L kerberos5/lib/libroken__L \
-    kerberos5/lib/libwind__L lib/libsqlite3__L
-kerberos5/lib/libheimntlm__L: secure/lib/libcrypto__L kerberos5/lib/libkrb5__L \
-    kerberos5/lib/libroken__L lib/libcom_err__L
-kerberos5/lib/libhx509__L: kerberos5/lib/libasn1__L lib/libcom_err__L \
-    secure/lib/libcrypto__L kerberos5/lib/libroken__L kerberos5/lib/libwind__L
-kerberos5/lib/libkrb5__L: kerberos5/lib/libasn1__L lib/libcom_err__L \
-    lib/libcrypt__L secure/lib/libcrypto__L kerberos5/lib/libhx509__L \
-    kerberos5/lib/libroken__L kerberos5/lib/libwind__L \
-    kerberos5/lib/libheimbase__L kerberos5/lib/libheimipcc__L
-kerberos5/lib/libroken__L: lib/libcrypt__L
-kerberos5/lib/libwind__L: kerberos5/lib/libroken__L lib/libcom_err__L
-kerberos5/lib/libheimbase__L: lib/libthr__L
-kerberos5/lib/libheimipcc__L: kerberos5/lib/libroken__L kerberos5/lib/libheimbase__L lib/libthr__L
+secure/kerberos5/lib/libasn1__L: lib/libcom_err__L secure/kerberos5/lib/libroken__L
+secure/kerberos5/lib/libhdb__L: secure/kerberos5/lib/libasn1__L lib/libcom_err__L \
+    secure/kerberos5/lib/libkrb5__L secure/kerberos5/lib/libroken__L \
+    secure/kerberos5/lib/libwind__L lib/libsqlite3__L
+secure/kerberos5/lib/libheimntlm__L: secure/lib/libcrypto__L secure/kerberos5/lib/libkrb5__L \
+    secure/kerberos5/lib/libroken__L lib/libcom_err__L
+secure/kerberos5/lib/libhx509__L: secure/kerberos5/lib/libasn1__L lib/libcom_err__L \
+    secure/lib/libcrypto__L secure/kerberos5/lib/libroken__L secure/kerberos5/lib/libwind__L
+secure/kerberos5/lib/libkrb5__L: secure/kerberos5/lib/libasn1__L lib/libcom_err__L \
+    lib/libcrypt__L secure/lib/libcrypto__L secure/kerberos5/lib/libhx509__L \
+    secure/kerberos5/lib/libroken__L secure/kerberos5/lib/libwind__L \
+    secure/kerberos5/lib/libheimbase__L secure/kerberos5/lib/libheimipcc__L
+secure/kerberos5/lib/libroken__L: lib/libcrypt__L
+secure/kerberos5/lib/libwind__L: secure/kerberos5/lib/libroken__L lib/libcom_err__L
+secure/kerberos5/lib/libheimbase__L: lib/libthr__L
+secure/kerberos5/lib/libheimipcc__L: secure/kerberos5/lib/libroken__L secure/kerberos5/lib/libheimbase__L lib/libthr__L
 .endif
 
 lib/libsqlite3__L: lib/libthr__L
@@ -3110,17 +3110,17 @@ _lib_libgssapi=	lib/libgssapi
 .endif
 
 .if ${MK_KERBEROS} != "no"
-_kerberos5_lib=	kerberos5/lib
-_kerberos5_lib_libasn1= kerberos5/lib/libasn1
-_kerberos5_lib_libhdb= kerberos5/lib/libhdb
-_kerberos5_lib_libheimbase= kerberos5/lib/libheimbase
-_kerberos5_lib_libkrb5= kerberos5/lib/libkrb5
-_kerberos5_lib_libhx509= kerberos5/lib/libhx509
-_kerberos5_lib_libroken= kerberos5/lib/libroken
-_kerberos5_lib_libheimntlm= kerberos5/lib/libheimntlm
+_kerberos5_lib=	secure/kerberos5/lib
+_kerberos5_lib_libasn1= secure/kerberos5/lib/libasn1
+_kerberos5_lib_libhdb= secure/kerberos5/lib/libhdb
+_kerberos5_lib_libheimbase= secure/kerberos5/lib/libheimbase
+_kerberos5_lib_libkrb5= secure/kerberos5/lib/libkrb5
+_kerberos5_lib_libhx509= secure/kerberos5/lib/libhx509
+_kerberos5_lib_libroken= secure/kerberos5/lib/libroken
+_kerberos5_lib_libheimntlm= secure/kerberos5/lib/libheimntlm
 _libsqlite3= lib/libsqlite3
-_kerberos5_lib_libheimipcc= kerberos5/lib/libheimipcc
-_kerberos5_lib_libwind= kerberos5/lib/libwind
+_kerberos5_lib_libheimipcc= secure/kerberos5/lib/libheimipcc
+_kerberos5_lib_libwind= secure/kerberos5/lib/libwind
 _libcom_err= lib/libcom_err
 .endif
 

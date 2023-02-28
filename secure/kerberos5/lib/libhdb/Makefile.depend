@@ -5,13 +5,13 @@ DIRDEPS = \
 	include \
 	include/arpa \
 	include/xlocale \
-	kerberos5/lib/libasn1 \
-	kerberos5/lib/libheimbase \
-	kerberos5/lib/libhx509 \
-	kerberos5/lib/libkrb5 \
-	kerberos5/lib/libroken \
-	kerberos5/lib/libwind \
-	kerberos5/tools/asn1_compile.host \
+	secure/kerberos5/lib/libasn1 \
+	secure/kerberos5/lib/libheimbase \
+	secure/kerberos5/lib/libhx509 \
+	secure/kerberos5/lib/libkrb5 \
+	secure/kerberos5/lib/libroken \
+	secure/kerberos5/lib/libwind \
+	secure/kerberos5/tools/asn1_compile.host \
 	lib/${CSU_DIR} \
 	lib/libc \
 	lib/libcom_err \
