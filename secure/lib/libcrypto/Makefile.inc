@@ -6,7 +6,7 @@
 OPENSSL_VER=	1.1.1t
 OPENSSL_DATE=	2023-02-07
 
-LCRYPTO_SRC=	${SRCTOP}/crypto/openssl
+LCRYPTO_SRC=	${SRCTOP}/secure/crypto/openssl
 LCRYPTO_DOC=	${LCRYPTO_SRC}/doc
 
 CFLAGS+=	-I${LCRYPTO_SRC}

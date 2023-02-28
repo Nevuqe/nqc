@@ -4,7 +4,7 @@
 
 NO_LINT=
 
-KRB5DIR=	${SRCTOP}/crypto/heimdal
+KRB5DIR=	${SRCTOP}/secure/crypto/heimdal
 
 CFLAGS+=	-DHAVE_CONFIG_H -I${.CURDIR:H:H}/include
 
