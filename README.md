@@ -22,11 +22,9 @@ NQC Source Tree
 | bin | System/user commands |
 | cddl | Various commands and libraries under the Common Development and Distribution License |
 | contrib | Packages contributed by 3rd parties |
-| crypto | Cryptography files (see [crypto/README](crypto/README)) |
 | etc | Template files for /etc |
 | gnu | Commands and libraries under the GNU General Public License (GPL) or Lesser General Public License (LGPL) |
 | include | System include files |
-| kerberos5 | Kerberos5 (Heimdal) package |
 | lib | System libraries |
 | libexec | System daemons |
 | release | Release building Makefile & associated tools |
