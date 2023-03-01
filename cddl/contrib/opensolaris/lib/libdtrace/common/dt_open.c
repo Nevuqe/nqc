@@ -1602,12 +1602,6 @@ alloc:
 	 * reporting of compiler errors requires dtrace_open() to succeed).
 	 */
 #ifdef __FreeBSD__
-#ifdef __LP64__
-	if ((dtp->dt_oflags & DTRACE_O_ILP32) != 0) {
-		if (dtrace_setopt(dtp, "libdir") != 0)
-			return (set_open_errno(dtp, errp, dtp->dt_errno));
-	}
-#endif
 	if (dtrace_setopt(dtp, "libdir", _dtrace_libdir) != 0)
 		return (set_open_errno(dtp, errp, dtp->dt_errno));
 #else
