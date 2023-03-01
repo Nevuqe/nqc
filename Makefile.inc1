@@ -836,11 +836,6 @@ XCFLAGS+=	--sysroot=${WORLDTMP}
 XCFLAGS+=	${BFLAGS}
 .endif
 
-.if ${MK_LIB32} == "yes"
-_LIBCOMPAT= 32
-.include "Makefile.libcompat"
-.endif
-
 # META_MODE normally ignores host file changes since every build updates
 # timestamps (see NO_META_IGNORE_HOST in sys.mk).  There are known times
 # when the ABI breaks though that we want to force rebuilding WORLDTMP
