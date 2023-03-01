@@ -288,12 +288,6 @@ __DEFAULT_YES_OPTIONS+=LLDB
 .else
 __DEFAULT_NO_OPTIONS+=LLDB
 .endif
-# LIB32 is supported on amd64 and powerpc64
-.if (${__T} == "amd64" || ${__T} == "powerpc64")
-__DEFAULT_YES_OPTIONS+=LIB32
-.else
-BROKEN_OPTIONS+=LIB32
-.endif
 # EFI doesn't exist on powerpc (well, officially)
 .if ${__T:Mpowerpc*}
 BROKEN_OPTIONS+=EFI

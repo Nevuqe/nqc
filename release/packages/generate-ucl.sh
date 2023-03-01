@@ -52,10 +52,6 @@ main() {
 			outname=${outname%%-dev}
 			_descr="Development Files"
 			;;
-		libcompat-lib32_dev|liby-lib32_dev)
-			outname=${outname%%-lib32_dev}
-			_descr="32-bit Libraries, Development Files"
-			;;
 		libcompat-man|libelftc-man)
 			outname=${outname%%-man}
 			_descr="Manual Pages"
@@ -67,21 +63,6 @@ main() {
 			outname="runtime"
 			_descr="$(make -C ${srctree}/release/packages -f Makefile.package -V ${outname}_DESCR)"
 			vital="true"
-			;;
-		*-lib32_dev)
-			outname="${outname%%-lib32_dev}"
-			_descr="32-bit Libraries, Development Files"
-			pkgdeps="${outname}"
-			;;
-		*-lib32_dbg)
-			outname="${outname%%-lib32_dbg}"
-			_descr="32-bit Libraries, Debugging Symbols"
-			pkgdeps="${outname}"
-			;;
-		*-lib32)
-			outname="${outname%%-lib32}"
-			_descr="32-bit Libraries"
-			pkgdeps="${outname}"
 			;;
 		*-dev)
 			outname="${outname%%-dev}"

@@ -35,7 +35,7 @@ set -e
 # macro SIZEOF_VOID_P which is (1) not really needed by Expat as of today and
 # (2) a problem to "multilib" systems with one shared installed
 # /usr/include/expat_config.h for two Expats with different "void *" sizes
-# installed in e.g. /usr/lib32 and /usr/lib64.  Hence we patch macro
+# installed in e.g. /usr/lib64.  Hence we patch macro
 # SIZEOF_VOID_P out of template expat_config.h.in so that configure will
 # not put SIZEOF_VOID_P in the eventual expat_config.h.
 patch_expat_config_h_in() {

@@ -22,11 +22,6 @@ endif
 # Override for explicitly specified ARCHFLAG.
 # Use locally compiled libcaprights in this case, on the
 # assumption that any installed version is 64-bit.
-ifeq ($(ARCHFLAG),-m32)
-PROCESSOR=i386
-PLATFORM_LIBDIR=/usr/lib32
-LIBCAPRIGHTS=./libcaprights.a
-endif
 ifeq ($(ARCHFLAG),-mx32)
 PROCESSOR=x32
 PLATFORM_LIBDIR=/usr/libx32

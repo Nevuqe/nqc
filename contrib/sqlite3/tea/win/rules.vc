@@ -16,7 +16,6 @@ _RULES_VC = 1
 
 cc32		= $(CC)   # built-in default.
 link32		= link
-lib32		= lib
 rc32		= $(RC)   # built-in default.
 
 !ifndef INSTALLDIR

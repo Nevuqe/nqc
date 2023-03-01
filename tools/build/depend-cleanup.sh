@@ -10,7 +10,7 @@
 #
 # We handle those cases here in an ad-hoc fashion by looking for the known-
 # bad case in the main .depend file, and if found deleting all of the related
-# .depend files (including for example the lib32 version).
+# .depend files.
 #
 # These tests increase the build time (albeit by a small amount), so they
 # should be removed once enough time has passed and it is extremely unlikely
@@ -32,9 +32,7 @@ clean_dep()
 		echo "Removing stale dependencies and objects for $2.$3"
 		rm -f \
 		    "$OBJTOP"/$1/.depend.$2.* \
-		    "$OBJTOP"/$1/$2.*o \
-		    "$OBJTOP"/obj-lib32/$1/.depend.$2.* \
-		    "$OBJTOP"/obj-lib32/$1/$2.*o
+		    "$OBJTOP"/$1/$2.*o
 	fi
 }
 
@@ -48,8 +46,6 @@ clean_dep lib/libc   closefrom S
 if [ -e "$OBJTOP"/cddl/lib/libzfs/.depend.libzfs_changelist.o ] && \
     egrep -qw "cddl/contrib/opensolaris/lib/libzfs/common/libzfs_changelist.c" \
     "$OBJTOP"/cddl/lib/libzfs/.depend.libzfs_changelist.o; then
-	echo "Removing old ZFS tree"
-	rm -rf "$OBJTOP"/cddl "$OBJTOP"/obj-lib32/cddl
 fi
 
 # 20200916  WARNS bumped, need bootstrapped crunchgen stubs
@@ -65,12 +61,6 @@ if [ -e "$OBJTOP"/sbin/pfctl/.depend.pf_ruleset.o ] && \
     "$OBJTOP"/sbin/pfctl/.depend.pf_ruleset.o; then
 	echo "Removing old pf_ruleset dependecy file"
 	rm -rf "$OBJTOP"/sbin/pfctl/.depend.pf_ruleset.o
-fi
-
-# 20210108  821aa63a0940   non-widechar version of ncurses removed
-if [ -e "$OBJTOP"/lib/ncurses/ncursesw ]; then
-	echo "Removing stale ncurses objects"
-	rm -rf "$OBJTOP"/lib/ncurses "$OBJTOP"/obj-lib32/lib/ncurses
 fi
 
 # 20210608  f20893853e8e    move from atomic.S to atomic.c

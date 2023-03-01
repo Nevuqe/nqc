@@ -1,10 +1,6 @@
 # $FreeBSD$
 
-.if !defined(COMPAT_32BIT)
 GEOM_CLASS_DIR?=/lib/geom
-.else
-GEOM_CLASS_DIR?=/usr/lib32/geom
-.endif
 
 GEOM_CLASSES=	cache
 GEOM_CLASSES+=	concat

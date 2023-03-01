@@ -1158,22 +1158,6 @@ IRIX
 	the developers' option in order to get the necessary include
 	files.
 
-	If you compile with -lmalloc (the fast memory allocator), you may
-	get warning messages such as the following:
-
-	   ld32: WARNING 85: definition of _calloc in /usr/lib32/libmalloc.so
-		preempts that definition in /usr/lib32/mips3/libc.so.
-	   ld32: WARNING 85: definition of _malloc in /usr/lib32/libmalloc.so
-		preempts that definition in /usr/lib32/mips3/libc.so.
-	   ld32: WARNING 85: definition of _realloc in /usr/lib32/libmalloc.so
-		preempts that definition in /usr/lib32/mips3/libc.so.
-	   ld32: WARNING 85: definition of _free in /usr/lib32/libmalloc.so
-		preempts that definition in /usr/lib32/mips3/libc.so.
-	   ld32: WARNING 85: definition of _cfree in /usr/lib32/libmalloc.so
-		preempts that definition in /usr/lib32/mips3/libc.so.
-
-	These are unavoidable and innocuous -- just ignore them.
-
 IRIX 6.x
 	If you are using XFS filesystem, avoid using the -32 ABI switch to
 	the cc compiler if possible.

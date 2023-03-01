@@ -502,7 +502,6 @@ OS	:	IRIX 6.2
 CONFIG	:	sgi
 ENVIRON	:	n/a
 NOTES	:	CCOPTIONS=-OPT:fold_arith_limit=4000
-NOTES	:	SHLIBDIR=/usr/lib32
 NOTES	:	LDPOSTLIB = -nostdlib -L$(ROOT)$(SHLIBDIR)/mips3 \
 NOTES	:	-L$(ROOT)$(SHLIBDIR)
 NOTES	:	In config.h #undef NLS and #undef NLS_CATALOGS

@@ -67,11 +67,7 @@
 #define	_PATH_GBDE	"/sbin/gbde"
 #define	_PATH_GELI	"/sbin/geli"
 #define	_PATH_HALT	"/sbin/halt"
-#ifdef COMPAT_32BIT
-#define	_PATH_I18NMODULE	"/usr/lib32/i18n"
-#else
 #define	_PATH_I18NMODULE	"/usr/lib/i18n"
-#endif
 #define	_PATH_IFCONFIG	"/sbin/ifconfig"
 #define	_PATH_KMEM	"/dev/kmem"
 #define	_PATH_LIBMAP_CONF	"/etc/libmap.conf"

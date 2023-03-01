@@ -43,9 +43,6 @@
 #define	_PATH_ELF_HINTS		_PATH_ELF32_HINTS
 #define	_PATH_LIBMAP_CONF	"/etc/libmap32.conf"
 #define	_BASENAME_RTLD		_COMPAT32_BASENAME_RTLD
-#define	STANDARD_LIBRARY_PATH	"/lib32:/usr/lib32"
-#define	LD_			"LD_32_"
-#define	TOKEN_LIB		"lib32"
 #endif
 
 #ifndef _PATH_ELF_HINTS

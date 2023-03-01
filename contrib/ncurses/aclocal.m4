@@ -8969,14 +8969,12 @@ case x$PKG_CONFIG_LIBDIR in
 			$cf_path/lib/*64-linux-gnu \
 			$cf_path/share \
 			$cf_path/lib64 \
-			$cf_path/lib32 \
 			$cf_path/lib"
 		;;
 	(*)
 		cf_search_path="\
 			$cf_path/lib/*-linux-gnu \
 			$cf_path/share \
-			$cf_path/lib32 \
 			$cf_path/lib \
 			$cf_path/libdata"
 		;;

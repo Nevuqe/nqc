@@ -20,60 +20,6 @@ COMPAT_COMPILER_TYPE=${COMPILER_TYPE}
 .endif
 
 # -------------------------------------------------------------------
-# 32 bit world
-.if ${COMPAT_ARCH} == "amd64"
-HAS_COMPAT=32
-.if empty(COMPAT_CPUTYPE)
-LIB32CPUFLAGS=	-march=i686 -mmmx -msse -msse2
-.else
-LIB32CPUFLAGS=	-march=${COMPAT_CPUTYPE}
-.endif
-.if ${COMPAT_COMPILER_TYPE} == gcc
-.else
-LIB32CPUFLAGS+=	-target x86_64-unknown-freebsd${OS_REVISION}
-.endif
-LIB32CPUFLAGS+=	-m32
-LIB32_MACHINE=	i386
-LIB32_MACHINE_ARCH=	i386
-LIB32WMAKEENV=	MACHINE_CPU="i686 mmx sse sse2"
-LIB32WMAKEFLAGS=	\
-		AS="${XAS} --32" \
-		LD="${XLD} -m elf_i386_fbsd"
-
-.elif ${COMPAT_ARCH} == "powerpc64"
-HAS_COMPAT=32
-.if empty(COMPAT_CPUTYPE)
-LIB32CPUFLAGS=	-mcpu=powerpc
-.else
-LIB32CPUFLAGS=	-mcpu=${COMPAT_CPUTYPE}
-.endif
-
-.if ${COMPAT_COMPILER_TYPE} == "gcc"
-LIB32CPUFLAGS+=	-m32
-.else
-LIB32CPUFLAGS+=	-target powerpc-unknown-freebsd${OS_REVISION}
-.endif
-
-LIB32_MACHINE=	powerpc
-LIB32_MACHINE_ARCH=	powerpc
-LIB32WMAKEFLAGS=	\
-		LD="${XLD} -m elf32ppc_fbsd"
-.endif
-
-LIB32WMAKEFLAGS+= NM="${XNM}"
-LIB32WMAKEFLAGS+= OBJCOPY="${XOBJCOPY}"
-
-LIB32CFLAGS=	-DCOMPAT_32BIT
-LIB32DTRACE=	${DTRACE} -32
-LIB32WMAKEFLAGS+=	-DCOMPAT_32BIT
-LIB32_MACHINE_ABI=	${MACHINE_ABI:N*64} long32 ptr32
-.if ${COMPAT_ARCH} == "amd64"
-LIB32_MACHINE_ABI+=	time32
-.else
-LIB32_MACHINE_ABI+=	time64
-.endif
-
-# -------------------------------------------------------------------
 # In the program linking case, select LIBCOMPAT
 .if defined(NEED_COMPAT)
 .ifndef HAS_COMPAT
@@ -122,9 +68,6 @@ LIBCOMPATLDFLAGS+=	-L${WORLDTMP}/usr/lib${libcompat}
 
 LIBCOMPATWMAKEENV+=	MACHINE=${LIBCOMPAT_MACHINE}
 LIBCOMPATWMAKEENV+=	MACHINE_ARCH=${LIBCOMPAT_MACHINE_ARCH}
-
-# -B is needed to find /usr/lib32/crti.o for gcc.
-LIBCOMPATCFLAGS+=	-B${WORLDTMP}/usr/lib${libcompat}
 
 .if defined(WANT_COMPAT)
 LIBDIR_BASE:=	/usr/lib${libcompat}

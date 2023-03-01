@@ -18,9 +18,6 @@ MK_UBSAN=	no
 CONFS=		libmap.conf
 .endif
 PROG?=		ld-elf.so.1
-.if (${PROG:M*ld-elf32*} != "")
-TAGS+=		lib32
-.endif
 SRCS= \
 	crtbrand.S \
 	rtld_start.S \
