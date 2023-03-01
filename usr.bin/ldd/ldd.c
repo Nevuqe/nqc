@@ -81,56 +81,6 @@ static void	usage(void);
 #if __ELF_WORD_SIZE > 32 && defined(ELF32_SUPPORTED)
 #define	TYPE_ELF32	2	/* Explicit 32 bits on architectures >32 bits */
 
-#define	_PATH_LDD32	"/usr/bin/ldd32"
-
-static int
-execldd32(char *file, char *fmt1, char *fmt2, int aflag)
-{
-	char *argv[9];
-	int i, rval, status;
-
-	LDD_UNSETENV("TRACE_LOADED_OBJECTS");
-	rval = 0;
-	i = 0;
-	argv[i++] = strdup(_PATH_LDD32);
-	if (aflag)
-		argv[i++] = strdup("-a");
-	if (fmt1 != NULL) {
-		argv[i++] = strdup("-f");
-		argv[i++] = strdup(fmt1);
-	}
-	if (fmt2 != NULL) {
-		argv[i++] = strdup("-f");
-		argv[i++] = strdup(fmt2);
-	}
-	argv[i++] = strdup(file);
-	argv[i++] = NULL;
-
-	switch (fork()) {
-	case -1:
-		err(1, "fork");
-		break;
-	case 0:
-		execv(_PATH_LDD32, argv);
-		warn("%s", _PATH_LDD32);
-		_exit(127);
-		break;
-	default:
-		if (wait(&status) < 0)
-			rval = 1;
-		else if (WIFSIGNALED(status))
-			rval = 1;
-		else if (WIFEXITED(status) && WEXITSTATUS(status) != 0)
-			rval = 1;
-		break;
-	}
-	while (i--)
-		free(argv[i]);
-	LDD_SETENV("TRACE_LOADED_OBJECTS", "yes", 1);
-	return (rval);
-}
-#endif
-
 int
 main(int argc, char *argv[])
 {
@@ -184,11 +134,6 @@ main(int argc, char *argv[])
 		switch (type) {
 		case TYPE_ELF:
 			break;
-#if __ELF_WORD_SIZE > 32 && defined(ELF32_SUPPORTED)
-		case TYPE_ELF32:
-			rval |= execldd32(*argv, fmt1, fmt2, aflag);
-			continue;
-#endif
 		case TYPE_UNKNOWN:
 		default:
 			/*
