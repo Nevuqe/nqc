@@ -70,6 +70,11 @@ CFLAGS+=	-DBC_ENABLE_NLS=1
 MAN_SRC_BC=	bc/A.1
 MAN_SRC_DC=	dc/A.1
 
+# prevent floating point incompatibilities caused by -flto on some architectures
+.if ${MACHINE_ARCH} != riscv64
+CFLAGS+=	-flto
+.endif
+
 HAS_TESTS=	yes
 SUBDIR.${MK_TESTS}+= tests
 

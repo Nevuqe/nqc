@@ -52,16 +52,8 @@ copyw(uint16_t *src, uint16_t *dst, size_t size)
 #define fill_io(p, d, c)	fill((p), (void *)(d), (c))
 #define fillw_io(p, d, c)	fillw((p), (void *)(d), (c))
 
-#elif defined(__mips__) || defined(__arm__)
+#elif defined(__arm__)
 
-/*
- * Use amd64/i386-like settings under the assumption that MIPS-based display
- * drivers will have to add a level of indirection between a syscons-managed
- * frame buffer and the actual video hardware.  We are forced to do this
- * because syscons doesn't carry around required busspace handles and tags to
- * use here.  This is only really a problem for true VGA devices hooked up to
- * MIPS, as others will be performing a translation anyway.
- */
 #define bcopy_io(s, d, c)	memcpy((void *)(d), (void *)(s), (c))
 #define bcopy_toio(s, d, c)	memcpy((void *)(d), (void *)(s), (c))
 #define bcopy_fromio(s, d, c)	memcpy((void *)(d), (void *)(s), (c))
@@ -75,10 +67,8 @@ fillw(int val, uint16_t *buf, size_t size)
 }
 #define fillw_io(p, d, c)	fillw((p), (void *)(d), (c))
 
-#if defined(__arm__)
 #define	readw(a)		(*(uint16_t*)(a))
 #define	writew(a, v)		(*(uint16_t*)(a) = (v))
-#endif
 
 #else /* !__i386__ && !__amd64__ */
 #define bcopy_io(s, d, c)	memcpy_io((d), (s), (c))
