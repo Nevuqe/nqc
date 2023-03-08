@@ -41,7 +41,6 @@
 /* Ensure that unistd.h pulls in getopt */
 #define __USE_POSIX2
 #endif
-
 #include_next <unistd.h>
 #include <fcntl.h>
 #include <getopt.h>
