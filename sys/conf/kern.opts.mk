@@ -78,10 +78,7 @@ __DEFAULT_NO_OPTIONS = \
 BROKEN_OPTIONS+= INIT_ALL_ZERO
 .endif
 
-# Things that don't work because the kernel doesn't have the support
-# for them.
-.if ${MACHINE} != "i386" && ${MACHINE} != "amd64" && \
-    ${MACHINE_ARCH:Mpowerpc64*} == ""
+.if ${MACHINE_CPUARCH} == "arm"
 BROKEN_OPTIONS+= OFED
 .endif
 

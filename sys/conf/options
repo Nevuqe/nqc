@@ -509,7 +509,6 @@ SCTP_DETAILED_STR_STATS	opt_sctp.h # Use per PR-SCTP policy stream stats
 NETGRAPH
 NETGRAPH_DEBUG		opt_netgraph.h
 NETGRAPH_ASYNC		opt_netgraph.h
-NETGRAPH_ATMLLC		opt_netgraph.h
 NETGRAPH_BLUETOOTH	opt_netgraph.h
 NETGRAPH_BLUETOOTH_BT3C	opt_netgraph.h
 NETGRAPH_BLUETOOTH_H4	opt_netgraph.h
@@ -562,13 +561,6 @@ NETGRAPH_TTY		opt_netgraph.h
 NETGRAPH_UI		opt_netgraph.h
 NETGRAPH_VJC		opt_netgraph.h
 NETGRAPH_VLAN		opt_netgraph.h
-
-# NgATM options
-NGATM_ATMBASE		opt_netgraph.h
-NGATM_SSCOP		opt_netgraph.h
-NGATM_SSCFU		opt_netgraph.h
-NGATM_UNI		opt_netgraph.h
-NGATM_CCATM		opt_netgraph.h
 
 # DRM options
 DRM_DEBUG		opt_drm.h
