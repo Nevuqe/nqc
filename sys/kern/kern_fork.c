@@ -205,7 +205,7 @@ SYSCTL_INT(_kern, OID_AUTO, lastpid, CTLFLAG_RD, &lastpid, 0,
  * modulus that is too big causes a LOT more process table scans and slows
  * down fork processing as the pidchecked caching is defeated.
  */
-static int randompid = 0;
+static int randompid = 1;
 
 static int
 sysctl_kern_randompid(SYSCTL_HANDLER_ARGS)
