@@ -2,7 +2,7 @@
 /* Copyright(c) 2018-2019  Realtek Corporation
  */
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	LINUXKPI_PARAM_PREFIX	rtw88_pci_
 #endif
 
@@ -16,7 +16,7 @@
 #include "fw.h"
 #include "ps.h"
 #include "debug.h"
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/pm.h>
 #endif
 
@@ -59,7 +59,7 @@ static u8 rtw_pci_read8(struct rtw_dev *rtwdev, u32 addr)
 
 #if defined(__linux__)
 	return readb(rtwpci->mmap + addr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	u8 val;
 
 	val = bus_read_1((struct resource *)rtwpci->mmap, addr);
@@ -74,7 +74,7 @@ static u16 rtw_pci_read16(struct rtw_dev *rtwdev, u32 addr)
 
 #if defined(__linux__)
 	return readw(rtwpci->mmap + addr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	u16 val;
 
 	val = bus_read_2((struct resource *)rtwpci->mmap, addr);
@@ -89,7 +89,7 @@ static u32 rtw_pci_read32(struct rtw_dev *rtwdev, u32 addr)
 
 #if defined(__linux__)
 	return readl(rtwpci->mmap + addr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	u32 val;
 
 	val = bus_read_4((struct resource *)rtwpci->mmap, addr);
@@ -104,7 +104,7 @@ static void rtw_pci_write8(struct rtw_dev *rtwdev, u32 addr, u8 val)
 
 #if defined(__linux__)
 	writeb(val, rtwpci->mmap + addr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_IO_RW, "W08 (%#010x) <- %#04x\n", addr, val);
 	return (bus_write_1((struct resource *)rtwpci->mmap, addr, val));
 #endif
@@ -116,7 +116,7 @@ static void rtw_pci_write16(struct rtw_dev *rtwdev, u32 addr, u16 val)
 
 #if defined(__linux__)
 	writew(val, rtwpci->mmap + addr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_IO_RW, "W16 (%#010x) <- %#06x\n", addr, val);
 	return (bus_write_2((struct resource *)rtwpci->mmap, addr, val));
 #endif
@@ -128,7 +128,7 @@ static void rtw_pci_write32(struct rtw_dev *rtwdev, u32 addr, u32 val)
 
 #if defined(__linux__)
 	writel(val, rtwpci->mmap + addr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_IO_RW, "W32 (%#010x) <- %#010x\n", addr, val);
 	return (bus_write_4((struct resource *)rtwpci->mmap, addr, val));
 #endif
@@ -698,7 +698,7 @@ static void rtw_pci_deep_ps_leave(struct rtw_dev *rtwdev)
 	struct rtw_pci *rtwpci = (struct rtw_pci *)rtwdev->priv;
 
 	lockdep_assert_held(&rtwpci->irq_lock);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	lockdep_assert_held(&((struct rtw_pci *)rtwdev->priv)->irq_lock);
 #endif
 
@@ -730,7 +730,7 @@ static u8 ac_to_hwq[] = {
 
 #if defined(__linux__)
 static_assert(ARRAY_SIZE(ac_to_hwq) == IEEE80211_NUM_ACS);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw88_static_assert(ARRAY_SIZE(ac_to_hwq) == IEEE80211_NUM_ACS);
 #endif
 
@@ -968,7 +968,7 @@ static int rtw_pci_write_data_rsvd_page(struct rtw_dev *rtwdev, u8 *buf,
 
 	ret = rtw_pci_tx_write_data(rtwdev, &pkt_info, skb, RTW_TX_QUEUE_BCN);
 	if (ret) {
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 		dev_kfree_skb_any(skb);
 #endif
 		rtw_err(rtwdev, "failed to write rsvd page data\n");
@@ -995,7 +995,7 @@ static int rtw_pci_write_data_h2c(struct rtw_dev *rtwdev, u8 *buf, u32 size)
 
 	ret = rtw_pci_tx_write_data(rtwdev, &pkt_info, skb, RTW_TX_QUEUE_H2C);
 	if (ret) {
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 		dev_kfree_skb_any(skb);
 #endif
 		rtw_err(rtwdev, "failed to write h2c data\n");
@@ -1304,7 +1304,7 @@ static int rtw_pci_io_mapping(struct rtw_dev *rtwdev,
 		return ret;
 	}
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	ret = dma_set_mask(&pdev->dev, DMA_BIT_MASK(32));
 	if (ret) {
 		rtw_err(rtwdev, "failed to set dma mask to 32-bit\n");
@@ -1319,7 +1319,7 @@ static int rtw_pci_io_mapping(struct rtw_dev *rtwdev,
 #endif
 
 	len = pci_resource_len(pdev, bar_id);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	linuxkpi_pcim_want_to_use_bus_functions(pdev);
 #endif
 	rtwpci->mmap = pci_iomap(pdev, bar_id, len);
@@ -1330,7 +1330,7 @@ static int rtw_pci_io_mapping(struct rtw_dev *rtwdev,
 	}
 
 	return 0;
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 err_release_regions:
 	pci_release_regions(pdev);
 	return ret;
@@ -1949,7 +1949,7 @@ EXPORT_SYMBOL(rtw_pci_shutdown);
 MODULE_AUTHOR("Realtek Corporation");
 MODULE_DESCRIPTION("Realtek 802.11ac wireless PCI driver");
 MODULE_LICENSE("Dual BSD/GPL");
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 MODULE_VERSION(rtw_pci, 1);
 MODULE_DEPEND(rtw_pci, linuxkpi, 1, 1, 1);
 MODULE_DEPEND(rtw_pci, linuxkpi_wlan, 1, 1, 1);

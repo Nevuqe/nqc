@@ -91,7 +91,7 @@
 #if defined(IPFILTER_BPF) && defined(_KERNEL)
 # include <net/bpf.h>
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 #endif
 #include "netinet/ipl.h"

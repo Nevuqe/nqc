@@ -73,7 +73,7 @@
  */
 
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/cdefs.h> /* prerequisite */
 
 #include <sys/types.h>

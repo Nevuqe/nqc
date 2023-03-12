@@ -30,7 +30,7 @@
 /*
  * common headers
  */
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/cdefs.h>
 #include <sys/param.h>
 #include <sys/kernel.h>

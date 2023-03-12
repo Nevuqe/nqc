@@ -5,7 +5,7 @@
  * Copyright (C) 2015-2017 Intel Deutschland GmbH
  */
 #include <linux/devcoredump.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/delay.h>
 #endif
 #include "iwl-drv.h"
@@ -888,7 +888,7 @@ iwl_fw_error_dump_file(struct iwl_fw_runtime *fwrt,
 #if defined(__linux__)
 		strncpy(dump_info->bus_human_readable, fwrt->dev->bus->name,
 			sizeof(dump_info->bus_human_readable) - 1);
-#elif defined(__NQC__) && defined(__FreeBSD__)	/* XXX TODO */
+#elif defined(__NQC__)	/* XXX TODO */
 		strncpy(dump_info->bus_human_readable, "<bus>",
 			sizeof(dump_info->bus_human_readable) - 1);
 #endif
@@ -2188,7 +2188,7 @@ static u32 iwl_dump_ini_mem(struct iwl_fw_runtime *fwrt, struct list_head *list,
 #if defined(__linux__)
 		 "header size %llu > free_size %d",
 		 header_size, free_size)) {
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 		 "header size %ju > free_size %d",
 		 (uintmax_t)header_size, free_size)) {
 #endif
@@ -2644,7 +2644,7 @@ static void iwl_fw_error_ini_dump(struct iwl_fw_runtime *fwrt,
 {
 #if defined(__linux__)
 	LIST_HEAD(dump_list);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	LINUX_LIST_HEAD(dump_list);
 #endif
 	struct scatterlist *sg_dump_data;

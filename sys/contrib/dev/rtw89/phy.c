@@ -474,11 +474,11 @@ void rtw89_phy_rate_pattern_vif(struct rtw89_dev *rtwdev,
 	rtw89_debug(rtwdev, RTW89_DBG_RA,
 #if defined(__linux__)
 		    "configure pattern: rate 0x%x, mask 0x%llx, mode 0x%x\n",
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 		    "configure pattern: rate 0x%x, mask 0x%jx, mode 0x%x\n",
 #endif
 		    next_pattern.rate,
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 		    (uintmax_t)
 #endif
 		    next_pattern.ra_mask,
@@ -1914,7 +1914,7 @@ rtw89_phy_fill_txpwr_limit_ru_160m(struct rtw89_dev *rtwdev,
 
 #if defined(__linux__)
 	static_assert(ARRAY_SIZE(ofst) == RTW89_RU_SEC_NUM);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw89_static_assert(ARRAY_SIZE(ofst) == RTW89_RU_SEC_NUM);
 #endif
 	for (i = 0; i < RTW89_RU_SEC_NUM; i++) {
@@ -3757,7 +3757,7 @@ static void
 
 #if defined(__linux__)
 static_assert(ARRAY_SIZE(_rfk_handler) == RTW89_RFK_F_NUM);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw89_static_assert(ARRAY_SIZE(_rfk_handler) == RTW89_RFK_F_NUM);
 #endif
 

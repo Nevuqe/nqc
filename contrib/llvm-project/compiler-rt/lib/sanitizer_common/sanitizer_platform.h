@@ -37,7 +37,7 @@
 #  define SANITIZER_GLIBC 0
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #  define SANITIZER_NQC 1
 #else
 #  define SANITIZER_NQC 0

@@ -603,7 +603,7 @@ terminate_cleanup(void)
 	if (outfile == NULL)
 		return;
 
-#if !defined(__NQC__) && !defined(__FreeBSD__)
+#if !defined(__NQC__)
 	if (dounlink) {
 		fprintf(stderr, "Removing %s\n", outfile);
 		unlink(outfile);

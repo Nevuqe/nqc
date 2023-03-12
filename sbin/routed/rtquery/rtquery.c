@@ -63,7 +63,7 @@ __COPYRIGHT("@(#) Copyright (c) 1983, 1988, 1993\n"
 	    "  All rights reserved.\n");
 #ifdef __NetBSD__
 __RCSID("$NetBSD$");
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 __RCSID("$NQC$");
 #else
 __RCSID("$Revision: 2.26 $");

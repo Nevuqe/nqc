@@ -79,7 +79,7 @@
 #ifdef  USE_INET6
 #include <netinet/icmp6.h>
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 # if defined(_KERNEL) && !defined(IPFILTER_LKM)
 #  include <sys/libkern.h>

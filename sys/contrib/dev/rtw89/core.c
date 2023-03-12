@@ -2,7 +2,7 @@
 /* Copyright(c) 2019-2020  Realtek Corporation
  */
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	LINUXKPI_PARAM_PREFIX	rtw89_
 #endif
 
@@ -632,14 +632,14 @@ __rtw89_core_tx_adjust_he_qos_htc(struct rtw89_dev *rtwdev,
 	data = skb_push(skb, IEEE80211_HT_CTL_LEN);
 #if defined(__linux__)
 	memmove(data, data + IEEE80211_HT_CTL_LEN, hdr_len);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	memmove(data, (u8 *)data + IEEE80211_HT_CTL_LEN, hdr_len);
 #endif
 
 	hdr = data;
 #if defined(__linux__)
 	htc = data + hdr_len;
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	htc = (__le32 *)((u8 *)data + hdr_len);
 #endif
 	hdr->frame_control |= cpu_to_le16(IEEE80211_FCTL_ORDER);
@@ -649,7 +649,7 @@ __rtw89_core_tx_adjust_he_qos_htc(struct rtw89_dev *rtwdev,
 
 #if defined(__linux__)
 	qc = data + hdr_len - IEEE80211_QOS_CTL_LEN;
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	qc = (u8 *)data + hdr_len - IEEE80211_QOS_CTL_LEN;
 #endif
 	qc[0] |= IEEE80211_QOS_CTL_EOSP;

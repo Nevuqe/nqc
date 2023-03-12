@@ -80,7 +80,7 @@
 
 /****************** local defines *********************/
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define NLS_BUGS
 #define BSD_STYLE_COLORLS
 /* Use LC_MESSAGES locale category to open the message catalog */

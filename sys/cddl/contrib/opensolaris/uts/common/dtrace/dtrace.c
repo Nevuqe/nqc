@@ -3654,7 +3654,7 @@ dtrace_dif_variable(dtrace_mstate_t *mstate, dtrace_state_t *state, uint64_t v,
 		return (dtrace_dif_varstr(
 		    (uintptr_t)curthread->t_procp->p_zone->zone_name,
 		    state, mstate));
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	/*
 	 * On NQC, we introduce compatibility to zonename by falling through
 	 * into jailname.

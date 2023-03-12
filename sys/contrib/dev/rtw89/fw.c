@@ -1294,7 +1294,7 @@ int rtw89_fw_h2c_macid_pause(struct rtw89_dev *rtwdev, u8 sh, u8 grp,
 
 #if defined(__linux__)
 	skb = rtw89_fw_h2c_alloc_skb_with_hdr(rtwdev, H2C_JOIN_INFO_LEN);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	skb = rtw89_fw_h2c_alloc_skb_with_hdr(rtwdev, len);
 #endif
 	if (!skb) {
@@ -1404,7 +1404,7 @@ int rtw89_fw_h2c_ra(struct rtw89_dev *rtwdev, struct rtw89_ra_info *ra, bool csi
 	rtw89_debug(rtwdev, RTW89_DBG_RA,
 #if defined(__linux__)
 		    "ra cmd msk: %llx ", ra->ra_mask);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 		    "ra cmd msk: %jx ", (uintmax_t)ra->ra_mask);
 #endif
 

@@ -16,7 +16,7 @@
 #include "iwl-fh.h"
 #include "iwl-scd.h"
 #include <linux/dmapool.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <net/mac80211.h>
 #endif
 
@@ -988,7 +988,7 @@ void iwl_txq_log_scd_error(struct iwl_trans *trans, struct iwl_txq *txq)
 	if (trans->trans_cfg->use_tfh) {
 		IWL_ERR(trans, "Queue %d is stuck %d %d\n", txq_id,
 			txq->read_ptr, txq->write_ptr);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 		/*
 		 * Dump some more queue and timer information to rule
 		 * out a LinuxKPI issues and gather some extra data.

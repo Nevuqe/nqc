@@ -30,7 +30,7 @@
 #ifndef _NET_NETMAP_BDG_H_
 #define _NET_NETMAP_BDG_H_
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define BDG_RWLOCK_T		struct rwlock // struct rwlock
 
 #define	BDG_RWINIT(b)		\

@@ -1755,7 +1755,7 @@ static const struct coex_rf_para rf_para_rx_8821c[] = {
 
 #if defined(__linux__)
 static_assert(ARRAY_SIZE(rf_para_tx_8821c) == ARRAY_SIZE(rf_para_rx_8821c));
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw88_static_assert(ARRAY_SIZE(rf_para_tx_8821c) == ARRAY_SIZE(rf_para_rx_8821c));
 #endif
 

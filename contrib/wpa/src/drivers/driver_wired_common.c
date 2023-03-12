@@ -21,7 +21,7 @@
 #include <net/if_arp.h>
 #include <net/if.h>
 #endif /* __linux__ */
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__)
 #include <net/if_dl.h>
 #include <net/if_media.h>
 #endif /* defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__) */
@@ -101,7 +101,7 @@ static int driver_wired_multi(const char *ifname, const u8 *addr, int add)
 	ifr.ifr_hwaddr.sa_family = AF_UNSPEC;
 	os_memcpy(ifr.ifr_hwaddr.sa_data, addr, ETH_ALEN);
 #endif /* __linux__ */
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__)
 	{
 		struct sockaddr_dl *dlp;
 
@@ -187,7 +187,7 @@ int driver_wired_get_capa(void *priv, struct wpa_driver_capa *capa)
 }
 
 
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__)
 static int driver_wired_get_ifstatus(const char *ifname, int *status)
 {
 	struct ifmediareq ifmr;
@@ -265,7 +265,7 @@ int driver_wired_init_common(struct driver_wired_common_data *common,
 		wpa_printf(MSG_DEBUG, "%s: Enabled allmulti mode", __func__);
 		common->iff_allmulti = 1;
 	}
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__)
 	{
 		int status;
 

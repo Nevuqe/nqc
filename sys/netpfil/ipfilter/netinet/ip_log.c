@@ -15,7 +15,7 @@
 # define        KERNEL	1
 # define        _KERNEL	1
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(_KERNEL)
+#if defined(__NQC__) && !defined(_KERNEL)
 # include <osreldate.h>
 #endif
 #ifndef SOLARIS
@@ -39,7 +39,7 @@
 # undef _KERNEL
 # undef KERNEL
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 # include <sys/fcntl.h>
 # include <sys/filio.h>
 #else
@@ -78,7 +78,7 @@
 #ifdef sun
 # include <net/af.h>
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <net/if_var.h>
 # include <net/if_private.h>
 #endif
@@ -103,7 +103,7 @@
 #include "netinet/ip_frag.h"
 #include "netinet/ip_state.h"
 #include "netinet/ip_auth.h"
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NetBSD__)
+#if defined(__NQC__) || defined(__NetBSD__)
 # include <sys/malloc.h>
 #endif
 /* END OF INCLUDES */

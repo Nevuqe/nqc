@@ -1148,7 +1148,7 @@
  * them collide with something used elsewhere.  On platforms that
  * don't already define it, define it as 246.
  */
-#if !defined(__NQC__) && !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__APPLE__)
+#if !defined(__NQC__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__APPLE__)
 #define DLT_PFSYNC		246
 #endif
 

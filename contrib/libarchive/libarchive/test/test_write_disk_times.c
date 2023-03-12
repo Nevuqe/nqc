@@ -96,7 +96,7 @@ DEFINE_TEST(test_write_disk_times)
 	assertFileAtimeRecent("file4");
 	assertFileMtimeRecent("file4");
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	/*
 	 * High-res mtime and atime on NQC.
 	 */

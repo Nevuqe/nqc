@@ -48,7 +48,7 @@ extern void ID0logout(const struct utmpx *);
 extern int ID0bind_un(int, const struct sockaddr_un *);
 extern int ID0connect_un(int, const struct sockaddr_un *);
 extern int ID0kill(pid_t, int);
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 extern int ID0kldload(const char *);
 #endif
 #ifndef NONETGRAPH
@@ -72,7 +72,7 @@ extern int ID0NgMkSockNode(const char *, int *, int *);
 #define ID0connect_un(s, n) \
 	connect(s, (const struct sockaddr *)(n), sizeof *(n))
 #define ID0kill kill
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 #include <sys/param.h>
 #include <sys/linker.h>
 #define ID0kldload kldload

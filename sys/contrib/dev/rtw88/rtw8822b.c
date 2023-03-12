@@ -2342,7 +2342,7 @@ static const struct coex_5g_afh_map afh_5g_8822b[] = {
 };
 #if defined(__linux__)
 static_assert(ARRAY_SIZE(rf_para_tx_8822b) == ARRAY_SIZE(rf_para_rx_8822b));
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw88_static_assert(ARRAY_SIZE(rf_para_tx_8822b) == ARRAY_SIZE(rf_para_rx_8822b));
 #endif
 

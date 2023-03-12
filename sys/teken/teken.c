@@ -29,13 +29,13 @@
  */
 
 #include <sys/cdefs.h>
-#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 #include <sys/param.h>
 #include <sys/limits.h>
 #include <sys/lock.h>
 #include <sys/systm.h>
 #define	teken_assert(x)		MPASS(x)
-#elif defined(__NQC__) && defined(__FreeBSD__) && defined(_STANDALONE)
+#elif defined(__NQC__) && defined(_STANDALONE)
 #include <stand.h>
 #include <sys/limits.h>
 #include <assert.h>

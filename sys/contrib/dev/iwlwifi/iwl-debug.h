@@ -31,7 +31,7 @@
 #ifndef _IWL_DEBUG_H
 #define	_IWL_DEBUG_H
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #ifdef CONFIG_IWLWIFI_DEBUG
 #include <sys/types.h>
 #endif
@@ -111,7 +111,7 @@ void __iwl_err(struct device *, enum iwl_err_mode, const char *, ...);
 bool iwl_have_debug_level(enum iwl_dl);
 #if defined(__linux__)
 void iwl_print_hex_dump(void *, enum iwl_dl, const char *, uint8_t *, size_t);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 void iwl_print_hex_dump(void *, enum iwl_dl, const char *, const uint8_t *, size_t);
 #endif
 void __iwl_dbg(struct device *, u32, bool, const char *, const char *fmt, ...);

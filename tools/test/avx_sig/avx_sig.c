@@ -117,7 +117,7 @@ show_diff(const struct xmm *xmm1, const struct xmm *xmm2)
 	const struct xmmreg *r1, *r2;
 	unsigned i, j;
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	printf("thr %d\n", pthread_getthreadid_np());
 #elif defined(__linux__)
 	printf("thr %ld\n", syscall(SYS_gettid));

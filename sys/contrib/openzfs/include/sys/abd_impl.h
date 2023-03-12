@@ -92,7 +92,7 @@ void abd_iter_unmap(struct abd_iter *);
 #define	ABD_GANG(abd)		(abd->abd_u.abd_gang)
 
 #if defined(_KERNEL)
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	abd_enter_critical(flags)	critical_enter()
 #define	abd_exit_critical(flags)	critical_exit()
 #else

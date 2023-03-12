@@ -1575,7 +1575,7 @@ main(int argc, const char *argv[])
 	sigaction(SIGALRM, &sa, 0);
 
 	nointr = 0;
-#if defined(__NQC__) && defined(__FreeBSD__) && __NQC_version < 800040
+#if defined(__NQC__) && __NQC_version < 800040
 	{
 		/*
 		 * NQC with userland NLM can't interrupt a blocked

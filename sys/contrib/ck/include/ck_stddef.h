@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 #include <sys/stddef.h>
 #else
 #include <stddef.h>

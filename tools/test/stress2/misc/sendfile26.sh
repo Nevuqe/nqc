@@ -97,7 +97,7 @@ sender_start(void *buffer __unused)
 		off_t sbytes = 0;
 
 		do {
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 			ret = sendfile(fd, sock, cursor, to_send,
 			    NULL, &sbytes, 0);
 			if (ret == 0) {

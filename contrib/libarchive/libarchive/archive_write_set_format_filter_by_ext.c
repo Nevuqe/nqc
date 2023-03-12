@@ -50,7 +50,7 @@ struct { const char *name; int (*format)(struct archive *); int (*filter)(struct
 	{ ".jar",	archive_write_set_format_zip,             archive_write_add_filter_none},
 	{ ".cpio",	archive_write_set_format_cpio,            archive_write_add_filter_none},
 	{ ".iso",	archive_write_set_format_iso9660,         archive_write_add_filter_none},
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NQC_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
+#if defined(__NQC__) || defined(__NQC_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
 	{ ".a",	        archive_write_set_format_ar_bsd,          archive_write_add_filter_none},
 	{ ".ar",	archive_write_set_format_ar_bsd,          archive_write_add_filter_none},
 #else         

@@ -30,7 +30,7 @@
 
 /* Note: this file can be used on linux/macOS when bootstrapping tools. */
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/mount.h> /* for BLKGETSIZE64 */
 
 #define	stat64	stat

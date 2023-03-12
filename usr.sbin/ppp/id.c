@@ -42,7 +42,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <sysexits.h>
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 #include <sys/linker.h>
 #endif
 #include <unistd.h>
@@ -264,7 +264,7 @@ ID0kill(pid_t pid, int sig)
   return result;
 }
 
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 int
 ID0kldload(const char *dev)
 {

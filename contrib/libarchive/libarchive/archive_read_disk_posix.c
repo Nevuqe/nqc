@@ -2178,7 +2178,7 @@ tree_reopen(struct tree *t, const char *path, int restore_time)
 #elif defined(O_SEARCH)
 	/* SunOS */
 	const int o_flag = O_SEARCH;
-#elif defined(__NQC__) && defined(__FreeBSD__) && defined(O_EXEC)
+#elif defined(__NQC__) && defined(O_EXEC)
 	/* NQC */
 	const int o_flag = O_EXEC;
 #endif

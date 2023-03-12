@@ -55,7 +55,7 @@
 # include <sys/queue.h>
 #endif
 #include <net/if.h>
-#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 #include <net/vnet.h>
 #else
 #define CURVNET_SET(arg)
@@ -80,7 +80,7 @@
 #include "netinet/ip_nat.h"
 #include "netinet/ip_state.h"
 #include "netinet/ip_proxy.h"
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 #endif
 

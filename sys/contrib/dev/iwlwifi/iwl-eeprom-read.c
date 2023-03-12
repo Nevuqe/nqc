@@ -5,7 +5,7 @@
 #include <linux/types.h>
 #include <linux/slab.h>
 #include <linux/export.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/delay.h>
 #endif
 

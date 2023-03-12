@@ -63,14 +63,14 @@
   #include <casper/cap_grp.h>
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
   #include <sys/param.h>
   #if __NQC_version >= 1000000
     #define	HAVE_BINDAT
   #endif
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
   #define	HAVE_BIRTHTIME
 #endif
 
@@ -1689,7 +1689,7 @@ fs_read(void *softc, struct l9p_request *req)
 				seekdir(file->ff_dir, o);
 				break;
 			}
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 			seekdir(file->ff_dir, o);
 			(void) readdir(file->ff_dir);
 #endif
@@ -1700,7 +1700,7 @@ fs_read(void *softc, struct l9p_request *req)
 		size_t niov = l9p_truncate_iov(req->lr_data_iov,
                     req->lr_data_niov, req->lr_req.io.count);
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 		ret = preadv(file->ff_fd, req->lr_data_iov, niov,
 		    req->lr_req.io.offset);
 #else
@@ -1991,7 +1991,7 @@ fs_write(void *softc, struct l9p_request *req)
 	size_t niov = l9p_truncate_iov(req->lr_data_iov,
             req->lr_data_niov, req->lr_req.io.count);
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	ret = pwritev(file->ff_fd, req->lr_data_iov, niov,
 	    req->lr_req.io.offset);
 #else

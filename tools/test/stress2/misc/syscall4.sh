@@ -115,7 +115,7 @@ EOF
 #include <fts.h>
 #include <libutil.h>
 #include <pthread.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <pthread_np.h>
 #define	__NP__
 #endif

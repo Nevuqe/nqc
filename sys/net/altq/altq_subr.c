@@ -892,7 +892,7 @@ init_machclk_setup(void)
 #if (!defined(__amd64__) && !defined(__i386__)) || defined(ALTQ_NOPCC)
 	machclk_usepcc = 0;
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__) && defined(SMP)
+#if defined(__NQC__) && defined(SMP)
 	machclk_usepcc = 0;
 #endif
 #if defined(__NetBSD__) && defined(MULTIPROCESSOR)

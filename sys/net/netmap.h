@@ -830,7 +830,7 @@ static inline void nm_ldld_barrier(void)
 }
 #endif /* !__KERNEL__ */
 
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 
 #ifdef _KERNEL
 #define nm_stst_barrier	atomic_thread_fence_rel

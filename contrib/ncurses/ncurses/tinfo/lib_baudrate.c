@@ -40,7 +40,7 @@
 
 #include <curses.priv.h>
 #include <termcap.h>		/* ospeed */
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__OpenBSD__)
+#if defined(__NQC__) || defined(__OpenBSD__)
 #include <sys/param.h>
 #endif
 

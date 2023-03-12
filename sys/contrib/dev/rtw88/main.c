@@ -2,7 +2,7 @@
 /* Copyright(c) 2018-2019  Realtek Corporation
  */
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	LINUXKPI_PARAM_PREFIX	rtw88_
 #endif
 
@@ -325,7 +325,7 @@ int rtw_sta_add(struct rtw_dev *rtwdev, struct ieee80211_sta *sta,
 #if defined(__linux__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "sta %pM joined with macid %d\n",
 		sta->addr, si->mac_id);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "sta %6D joined with macid %d\n",
 		sta->addr, ":", si->mac_id);
 #endif
@@ -352,7 +352,7 @@ void rtw_sta_remove(struct rtw_dev *rtwdev, struct ieee80211_sta *sta,
 #if defined(__linux__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "sta %pM with macid %d left\n",
 		sta->addr, si->mac_id);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "sta %6D with macid %d left\n",
 		sta->addr, ":", si->mac_id);
 #endif
@@ -1191,7 +1191,7 @@ void rtw_update_sta_info(struct rtw_dev *rtwdev, struct rtw_sta_info *si,
 				       WIRELESS_HT;
 #if defined(__linux__)
 		} else if (sta->deflink.supp_rates[0] <= 0xf) {
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 		} else if (sta->deflink.supp_rates[NL80211_BAND_2GHZ] <= 0xf) {
 #endif
 			wireless_set = WIRELESS_CCK;
@@ -1666,7 +1666,7 @@ static void __update_firmware_info_legacy(struct rtw_dev *rtwdev,
 	struct rtw_fw_hdr_legacy *legacy =
 #if defined(__linux__)
 				(struct rtw_fw_hdr_legacy *)fw->firmware->data;
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	    __DECONST(struct rtw_fw_hdr_legacy *, fw->firmware->data);
 #endif
 
@@ -2072,7 +2072,7 @@ int rtw_core_init(struct rtw_dev *rtwdev)
 		}
 	}
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	rtw_wait_firmware_completion(rtwdev);
 #endif
 

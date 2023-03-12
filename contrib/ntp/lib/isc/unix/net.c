@@ -61,7 +61,7 @@
 /*%
  * sysctl variants
  */
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+#if defined(__NQC__) || defined(__APPLE__) || defined(__DragonFly__)
 #define USE_SYSCTL_PORTRANGE
 #define SYSCTL_V4PORTRANGE_LOW	"net.inet.ip.portrange.hifirst"
 #define SYSCTL_V4PORTRANGE_HIGH	"net.inet.ip.portrange.hilast"

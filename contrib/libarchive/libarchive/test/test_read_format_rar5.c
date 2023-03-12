@@ -1091,7 +1091,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("readonly.txt", archive_entry_pathname(ae));
 	assertEqualString("rdonly", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_READONLY;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_READONLY;
@@ -1103,7 +1103,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("hidden.txt", archive_entry_pathname(ae));
 	assertEqualString("hidden", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_HIDDEN;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_HIDDEN;
@@ -1115,7 +1115,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("system.txt", archive_entry_pathname(ae));
 	assertEqualString("system", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_SYSTEM;;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_SYSTEM;
@@ -1127,7 +1127,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("ro_hidden.txt", archive_entry_pathname(ae));
 	assertEqualString("rdonly,hidden", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_READONLY | UF_HIDDEN;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN;
@@ -1139,7 +1139,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("dir_readonly", archive_entry_pathname(ae));
 	assertEqualString("rdonly", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_READONLY;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_READONLY;
@@ -1151,7 +1151,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("dir_hidden", archive_entry_pathname(ae));
 	assertEqualString("hidden", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_HIDDEN;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_HIDDEN;
@@ -1163,7 +1163,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("dir_system", archive_entry_pathname(ae));
 	assertEqualString("system", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_SYSTEM;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_SYSTEM;
@@ -1175,7 +1175,7 @@ DEFINE_TEST(test_read_format_rar5_fileattr)
 	assertEqualString("dir_rohidden", archive_entry_pathname(ae));
 	assertEqualString("rdonly,hidden", archive_entry_fflags_text(ae));
 	archive_entry_fflags(ae, &set, &clear);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	flag = UF_READONLY | UF_HIDDEN;
 #elif defined(_WIN32) && !defined(CYGWIN)
 	flag = FILE_ATTRIBUTE_READONLY | FILE_ATTRIBUTE_HIDDEN;

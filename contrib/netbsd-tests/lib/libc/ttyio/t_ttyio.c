@@ -50,7 +50,7 @@ __RCSID("$NetBSD: t_ttyio.c,v 1.3 2017/01/10 01:31:40 christos Exp $");
 #include <util.h>
 #elif defined(__bsdi__)
 int openpty(int *, int *, char *, struct termios *, struct winsize *);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 #include <libutil.h>
 #else
 #error where openpty?

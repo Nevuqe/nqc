@@ -210,7 +210,7 @@ ATF_TC_BODY(dup3_err, tc)
 	ATF_REQUIRE(fd >= 0);
 
 	errno = 0;
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__linux__)
+#if defined(__NQC__) || defined(__linux__)
 	/*
 	 * NQC and linux return EINVAL, because...
 	 *
@@ -222,7 +222,7 @@ ATF_TC_BODY(dup3_err, tc)
 #endif
 
 	errno = 0;
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__linux__)
+#if defined(__NQC__) || defined(__linux__)
 	ATF_REQUIRE_ERRNO(EINVAL, dup3(-1, -1, O_CLOEXEC) == -1);
 	ATF_REQUIRE_ERRNO(EBADF, dup3(fd, -1, O_CLOEXEC) == -1);
 #else

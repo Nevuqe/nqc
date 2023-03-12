@@ -41,7 +41,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 #include <sys/module.h>
 #endif
 #include <termios.h>
@@ -50,7 +50,7 @@
 #endif
 #include <unistd.h>
 
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 #include "id.h"
 #include "log.h"
 #endif
@@ -413,7 +413,7 @@ Concatinate(char *buf, size_t sz, int argc, const char *const *argv)
   }
 }
 
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
 int
 loadmodules(int how, const char *module, ...)
 {

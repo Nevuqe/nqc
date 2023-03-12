@@ -11,7 +11,7 @@
 #include <linux/iopoll.h>
 #include <linux/workqueue.h>
 #include <net/mac80211.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/seq_file.h>
 #include <linux/lockdep.h>
 #include <linux/interrupt.h>
@@ -4186,7 +4186,7 @@ void rtw89_core_scan_complete(struct rtw89_dev *rtwdev,
 
 #if defined(__linux__)
 #define	rtw89_static_assert(_x)		static_assert(_x)
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 #define	rtw89_static_assert(_x)		_Static_assert(_x, "bad array size")
 #endif
 

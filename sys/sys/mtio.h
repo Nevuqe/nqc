@@ -62,7 +62,7 @@ struct mtop {
 #define MTCACHE		8	/* enable controller cache */
 #define MTNOCACHE	9	/* disable controller cache */
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 /* Set block size for device. If device is a variable size dev		*/
 /* a non zero parameter will change the device to a fixed block size	*/
 /* device with block size set to that of the parameter passed in.	*/

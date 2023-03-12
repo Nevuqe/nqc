@@ -6,7 +6,7 @@
  */
 #include <linux/etherdevice.h>
 #include <linux/skbuff.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <net/ieee80211_radiotap.h>
 #endif
 #include "iwl-trans.h"
@@ -407,7 +407,7 @@ static int iwl_mvm_rx_crypto(struct iwl_mvm *mvm, struct ieee80211_sta *sta,
 		return 0;
 
 	/* TODO: handle packets encrypted with unknown alg */
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* XXX-BZ do similar to rx.c for now as these are plenty. */
 	if ((status & IWL_RX_MPDU_STATUS_SEC_MASK) ==
 	    IWL_RX_MPDU_STATUS_SEC_ENC_ERR)
@@ -476,7 +476,7 @@ static int iwl_mvm_rx_crypto(struct iwl_mvm *mvm, struct ieee80211_sta *sta,
 		    !mvm->monitor_on && net_ratelimit())
 #if defined(__linux__)
 			IWL_ERR(mvm, "Unhandled alg: 0x%x\n", status);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 			IWL_ERR(mvm, "%s: Unhandled alg: 0x%x\n",
 			    __func__, status);
 #endif
@@ -534,7 +534,7 @@ static bool iwl_mvm_is_dup(struct ieee80211_sta *sta, int queue,
 		return false;
 
 	mvm_sta = iwl_mvm_sta_from_mac80211(sta);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	if (WARN_ON(mvm_sta->dup_data == NULL))
 		return false;
 #endif
@@ -965,7 +965,7 @@ static bool iwl_mvm_reorder(struct iwl_mvm *mvm,
 		desc->amsdu_info & IWL_RX_MPDU_AMSDU_LAST_SUBFRAME;
 #if defined(__linux__)
 	u8 tid = ieee80211_get_tid(hdr);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	u8 tid;
 #endif
 	u8 sub_frame_idx = desc->amsdu_info &
@@ -1012,7 +1012,7 @@ static bool iwl_mvm_reorder(struct iwl_mvm *mvm,
 		return false;
 	}
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	tid = ieee80211_get_tid(hdr);
 #endif
 	if (WARN(tid != baid_data->tid || mvm_sta->sta_id != baid_data->sta_id,

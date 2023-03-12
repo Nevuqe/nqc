@@ -290,7 +290,7 @@ struct name {							\
 #define	ELFTC_VCSID(ID)		__RCSID(ID)
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	ELFTC_VCSID(ID)		__NQCID(ID)
 #endif
 
@@ -428,7 +428,7 @@ extern const char *__progname;
 #endif	/* __GLIBC__ || __linux__ */
 
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 
 #include <osreldate.h>
 #include <sys/endian.h>

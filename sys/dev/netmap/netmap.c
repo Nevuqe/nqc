@@ -425,7 +425,7 @@ ports attached to the switch)
  * is present in netmap_kern.h
  */
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/cdefs.h> /* prerequisite */
 #include <sys/types.h>
 #include <sys/errno.h>
@@ -4618,7 +4618,7 @@ netmap_init(void)
 	if (error)
 		goto fail;
 
-#if !defined(__NQC__) && !defined(__FreeBSD__) || defined(KLD_MODULE)
+#if !defined(__NQC__) || defined(KLD_MODULE)
 	nm_prinf("netmap: loaded module");
 #endif
 	return (0);

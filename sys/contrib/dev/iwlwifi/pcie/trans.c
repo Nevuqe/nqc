@@ -14,7 +14,7 @@
 #include <linux/module.h>
 #include <linux/wait.h>
 #include <linux/seq_file.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/delay.h>
 #endif
 
@@ -76,7 +76,7 @@ void iwl_trans_pcie_dump_regs(struct iwl_trans *trans)
 			goto err_read;
 #if defined(__linux__)
 	print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET, 32, 4, buf, i, 0);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	iwl_print_hex_dump(NULL, IWL_DL_ANY, prefix, (u8 *)buf, i);
 #endif
 
@@ -85,7 +85,7 @@ void iwl_trans_pcie_dump_regs(struct iwl_trans *trans)
 		*ptr = iwl_read32(trans, i);
 #if defined(__linux__)
 	print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET, 32, 4, buf, i, 0);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	iwl_print_hex_dump(NULL, IWL_DL_ANY, prefix, (u8 *)buf, i);
 #endif
 
@@ -98,7 +98,7 @@ void iwl_trans_pcie_dump_regs(struct iwl_trans *trans)
 #if defined(__linux__)
 		print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET,
 			       32, 4, buf, i, 0);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 		iwl_print_hex_dump(NULL, IWL_DL_ANY, prefix, (u8 *)buf, i);
 #endif
 	}
@@ -117,7 +117,7 @@ void iwl_trans_pcie_dump_regs(struct iwl_trans *trans)
 			goto err_read;
 #if defined(__linux__)
 	print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET, 32, 4, buf, i, 0);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	iwl_print_hex_dump(NULL, IWL_DL_ANY, prefix, (u8 *)buf, i);
 #endif
 
@@ -136,7 +136,7 @@ void iwl_trans_pcie_dump_regs(struct iwl_trans *trans)
 #if defined(__linux__)
 		print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET, 32,
 			       4, buf, i, 0);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 		iwl_print_hex_dump(NULL, IWL_DL_ANY, prefix, (u8 *)buf, i);
 #endif
 	}
@@ -145,7 +145,7 @@ void iwl_trans_pcie_dump_regs(struct iwl_trans *trans)
 err_read:
 #if defined(__linux__)
 	print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET, 32, 4, buf, i, 0);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	iwl_print_hex_dump(NULL, IWL_DL_ANY, prefix, (u8 *)buf, i);
 #endif
 	IWL_ERR(trans, "Read failed at 0x%X\n", i);
@@ -1935,7 +1935,7 @@ static u32 iwl_trans_pcie_read32(struct iwl_trans *trans, u32 ofs)
 {
 	return readl(IWL_TRANS_GET_PCIE_TRANS(trans)->hw_base + ofs);
 }
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 static void iwl_trans_pcie_write8(struct iwl_trans *trans, u32 ofs, u8 val)
 {
 
@@ -3651,7 +3651,7 @@ struct iwl_trans *iwl_trans_pcie_alloc(struct pci_dev *pdev,
 		goto out_no_pci;
 	}
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	linuxkpi_pcim_want_to_use_bus_functions(pdev);
 #endif
 	table = pcim_iomap_table(pdev);

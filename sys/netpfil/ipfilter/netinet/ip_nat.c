@@ -58,11 +58,11 @@ struct file;
 # include <sys/stream.h>
 # include <sys/kmem.h>
 #endif
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/queue.h>
 #endif
 #include <net/if.h>
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <net/if_var.h>
 #endif
 #ifdef sun
@@ -93,7 +93,7 @@ extern struct ifnet vpnif;
 #include "netinet/ip_lookup.h"
 #include "netinet/ip_dstlist.h"
 #include "netinet/ip_sync.h"
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/malloc.h>
 #endif
 #ifdef HAS_SYS_MD5_H

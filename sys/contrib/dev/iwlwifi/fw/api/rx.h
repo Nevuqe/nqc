@@ -239,7 +239,7 @@ enum iwl_rx_mpdu_status {
 	IWL_RX_MPDU_STATUS_SEC_TKIP		= 0x3 << 8,
 	IWL_RX_MPDU_STATUS_SEC_EXT_ENC		= 0x4 << 8,
 	IWL_RX_MPDU_STATUS_SEC_GCM		= 0x5 << 8,
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	IWL_RX_MPDU_STATUS_SEC_ENC_ERR		= 0x7 << 8,
 #endif
 	IWL_RX_MPDU_STATUS_DECRYPTED		= BIT(11),
@@ -758,7 +758,7 @@ struct iwl_rxq_sync_cmd {
 	__le32 count;
 #if defined(__linux__)
 	u8 payload[];
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	u8 payload[0];
 #endif
 } __packed; /* MULTI_QUEUE_DRV_SYNC_HDR_CMD_API_S_VER_1 */
@@ -774,7 +774,7 @@ struct iwl_rxq_sync_notification {
 	__le32 count;
 #if defined(__linux__)
 	u8 payload[];
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	u8 payload[0];
 #endif
 } __packed; /* MULTI_QUEUE_DRV_SYNC_HDR_CMD_API_S_VER_1 */
@@ -856,7 +856,7 @@ struct iwl_rfh_queue_config {
 	u8 reserved[3];
 #if defined(__linux__)
 	struct iwl_rfh_queue_data data[];
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	struct iwl_rfh_queue_data data[0];
 #endif
 } __packed; /* RFH_QUEUE_CONFIG_API_S_VER_1 */

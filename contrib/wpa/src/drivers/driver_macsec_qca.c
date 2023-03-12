@@ -18,7 +18,7 @@
 #include <net/if_arp.h>
 #include <net/if.h>
 #endif /* __linux__ */
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__)
 #include <net/if_dl.h>
 #include <net/if_media.h>
 #endif /* defined(__NQC__) || defined(__DragonFly__) || defined(__NQC_kernel__) */

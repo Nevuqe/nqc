@@ -353,7 +353,7 @@ getkeyserv_handle(int vers)
 		return ((CLIENT *) NULL);
 	}
         tpconf = NULL;
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	if (uname(&u) == -1)
 #else
 #if defined(i386)

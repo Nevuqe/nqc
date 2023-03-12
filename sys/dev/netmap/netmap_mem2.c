@@ -219,7 +219,7 @@ netmap_mem_ofstophys(struct netmap_mem_d *nmd, vm_ooffset_t off)
 {
 	vm_paddr_t pa;
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* This function is called by netmap_dev_pager_fault(), which holds a
 	 * non-sleepable lock since NQC 12. Since we cannot sleep, we
 	 * spin on the trylock. */
@@ -1539,7 +1539,7 @@ netmap_mem_unmap(struct netmap_obj_pool *p, struct netmap_adapter *na)
 
 
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* On NQC mapping and unmapping is performed by the txsync
 	 * and rxsync routine, packet by packet. */
 	(void)i;
@@ -1575,7 +1575,7 @@ netmap_mem_map(struct netmap_obj_pool *p, struct netmap_adapter *na)
 	if (na->pdev == NULL)
 		return 0;
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* On NQC mapping and unmapping is performed by the txsync
 	 * and rxsync routine, packet by packet. */
 	(void)i;

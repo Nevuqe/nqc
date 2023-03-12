@@ -210,7 +210,7 @@ static int rtw_ops_add_interface(struct ieee80211_hw *hw,
 
 #if defined(__linux__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "start vif %pM on port %d\n", vif->addr, rtwvif->port);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "start vif %6D on port %d\n", vif->addr, ":", rtwvif->port);
 #endif
 	return 0;
@@ -225,7 +225,7 @@ static void rtw_ops_remove_interface(struct ieee80211_hw *hw,
 
 #if defined(__linux__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "stop vif %pM on port %d\n", vif->addr, rtwvif->port);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "stop vif %6D on port %d\n", vif->addr, ":", rtwvif->port);
 #endif
 
@@ -256,7 +256,7 @@ static int rtw_ops_change_interface(struct ieee80211_hw *hw,
 #if defined(__linux__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "change vif %pM (%d)->(%d), p2p (%d)->(%d)\n",
 		vif->addr, vif->type, type, vif->p2p, p2p);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	rtw_dbg(rtwdev, RTW_DBG_STATE, "change vif %6D (%d)->(%d), p2p (%d)->(%d)\n",
 		vif->addr, ":", vif->type, type, vif->p2p, p2p);
 #endif

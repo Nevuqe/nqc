@@ -43,7 +43,7 @@ extern "C" {
 
 #ifdef _KERNEL
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/limits.h>
 #elif defined(__linux__)
 #include <linux/limits.h>

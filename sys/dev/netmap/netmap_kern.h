@@ -80,7 +80,7 @@
 #define WITH_NMNULL
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/selinfo.h>
 
 #define likely(x)	__builtin_expect((long)!!(x), 1L)
@@ -233,7 +233,7 @@ typedef struct hrtimer{
 #define	NMG_UNLOCK()		NM_MTX_UNLOCK(netmap_global_lock)
 #define	NMG_LOCK_ASSERT()	NM_MTX_ASSERT(netmap_global_lock)
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define nm_prerr_int	printf
 #define nm_prinf_int	printf
 #elif defined (_WIN32)
@@ -1727,7 +1727,7 @@ extern int netmap_generic_txqdisc;
 
 #define NM_IS_NATIVE(ifp)	(NM_NA_VALID(ifp) && NA(ifp)->nm_dtor == netmap_hw_dtor)
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 
 /* Assigns the device IOMMU domain to an allocator.
  * Returns -ENOMEM in case the domain is different */

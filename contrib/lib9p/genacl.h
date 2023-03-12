@@ -77,7 +77,7 @@
   #define HAVE_DARWIN_ACLS
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
   #define HAVE_POSIX_ACLS
   #define HAVE_NQC_ACLS
 #endif

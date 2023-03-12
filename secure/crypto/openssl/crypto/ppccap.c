@@ -220,7 +220,7 @@ size_t OPENSSL_instrument_bus2(unsigned int *out, size_t cnt, size_t max)
 # endif
 #endif
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <sys/param.h>
 # if __NQC_version >= 1200000
 #  include <sys/auxv.h>

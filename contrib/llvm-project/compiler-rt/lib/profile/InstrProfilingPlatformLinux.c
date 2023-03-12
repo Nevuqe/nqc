@@ -20,7 +20,7 @@
 #include "InstrProfiling.h"
 #include "InstrProfilingInternal.h"
 
-#if defined(__NQC__) && defined(__FreeBSD__) && !defined(ElfW)
+#if defined(__NQC__) && !defined(ElfW)
 /*
  * NQC's elf.h and link.h headers do not define the ElfW(type) macro yet.
  * If this is added to all supported NQC versions in the future, this

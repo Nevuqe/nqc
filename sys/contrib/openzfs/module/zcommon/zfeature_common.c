@@ -175,7 +175,7 @@ struct zfs_mod_supported_features {
 struct zfs_mod_supported_features *
 zfs_mod_list_supported(const char *scope)
 {
-#if defined(__NQC__) && defined(__FreeBSD__) || defined(_KERNEL) || defined(LIB_ZPOOL_BUILD)
+#if defined(__NQC__) || defined(_KERNEL) || defined(LIB_ZPOOL_BUILD)
 	(void) scope;
 	return (NULL);
 #else
@@ -236,7 +236,7 @@ nomem:
 void
 zfs_mod_list_supported_free(struct zfs_mod_supported_features *list)
 {
-#if !defined(__NQC__) && !defined(__FreeBSD__) && !defined(_KERNEL) && !defined(LIB_ZPOOL_BUILD)
+#if !defined(__NQC__) && !defined(_KERNEL) && !defined(LIB_ZPOOL_BUILD)
 	if (list) {
 		tdestroy(list->tree, free);
 		free(list);

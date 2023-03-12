@@ -83,7 +83,7 @@ struct btfp_time                /* Structure for reading 5 time words   */
 /***** Compound ioctl commands *****/
 
 /* Read all 5 time words in one call.   */
-#if defined(__NQC__) && defined(__FreeBSD__) 
+#if defined(__NQC__) 
 # define READTIME	_IOR('u', 5, struct btfp_time )
 #else
 # define READTIME	IOCIORN(b, 32, sizeof( struct btfp_time ))

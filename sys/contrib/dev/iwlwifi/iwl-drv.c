@@ -4,7 +4,7 @@
  * Copyright (C) 2013-2015 Intel Mobile Communications GmbH
  * Copyright (C) 2016-2017 Intel Deutschland GmbH
  */
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	LINUXKPI_PARAM_PREFIX	iwlwifi_
 #endif
 #include <linux/completion.h>
@@ -35,7 +35,7 @@
 #if defined(__linux__)
 #define DRV_DESCRIPTION	"Intel(R) Wireless WiFi driver for Linux"
 MODULE_LICENSE("GPL");
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 #define DRV_DESCRIPTION	"Intel(R) Wireless WiFi based driver for NQC"
 MODULE_LICENSE("BSD");
 MODULE_VERSION(if_iwlwifi, 1);
@@ -77,7 +77,7 @@ struct iwl_drv {
 	char firmware_name[64];         /* name of firmware file to load */
 
 	struct completion request_firmware_complete;
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	struct completion drv_start_complete;
 #endif
 
@@ -1270,7 +1270,7 @@ static int iwl_parse_tlv_firmware(struct iwl_drv *drv,
 		IWL_ERR(drv, "invalid TLV after parsing: %zd\n", len);
 #if defined(__linux__)
 		iwl_print_hex_dump(drv, IWL_DL_FW, data, len);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 #ifdef CONFIG_IWLWIFI_DEBUGFS
 		iwl_print_hex_dump(drv, IWL_DL_FW, "TLV ", data, len);
 #endif
@@ -1285,7 +1285,7 @@ static int iwl_parse_tlv_firmware(struct iwl_drv *drv,
  tlv_error:
 #if defined(__linux__)
 	iwl_print_hex_dump(drv, IWL_DL_FW, tlv_data, tlv_len);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 #ifdef CONFIG_IWLWIFI_DEBUGFS
 	iwl_print_hex_dump(drv, IWL_DL_FW, "TLV ", tlv_data, tlv_len);
 #endif
@@ -1739,7 +1739,7 @@ struct iwl_drv *iwl_drv_start(struct iwl_trans *trans)
 	drv->dev = trans->dev;
 
 	init_completion(&drv->request_firmware_complete);
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	init_completion(&drv->drv_start_complete);
 #endif
 	INIT_LIST_HEAD(&drv->list);
@@ -1761,7 +1761,7 @@ struct iwl_drv *iwl_drv_start(struct iwl_trans *trans)
 		goto err_fw;
 	}
 
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	/*
 	 * Wait until initilization is done before returning in order to
 	 * replicate NQC's synchronous behaviour -- we cannot create
@@ -1788,7 +1788,7 @@ void iwl_drv_stop(struct iwl_drv *drv)
 {
 #if defined(__linux__)
 	wait_for_completion(&drv->request_firmware_complete);
-#elif defined(__NQC__) && defined(__FreeBSD__)
+#elif defined(__NQC__)
 	wait_for_completion(&drv->drv_start_complete);
 #endif
 
@@ -1826,7 +1826,7 @@ struct iwl_mod_params iwlwifi_mod_params = {
 	.power_level = IWL_POWER_INDEX_1,
 	.uapsd_disable = IWL_DISABLE_UAPSD_BSS | IWL_DISABLE_UAPSD_P2P_CLIENT,
 	.enable_ini = ENABLE_INI,
-#if defined(__NQC__) && defined(__FreeBSD__)
+#if defined(__NQC__)
 	.disable_11n = 1,
 	.disable_11ac = true,
 	.disable_11ax = true,
