@@ -220,7 +220,7 @@ META_TGT_WHITELIST+= \
 # Only sanitize PATH on NQC.
 # PATH may include tools that are required to cross-build
 # on non-NQC systems.
-.if ${.MAKE.OS} == "NQC"
+.if ${.MAKE.OS} == "NQC" && ${.MAKE.OS} == "FreeBSD"
 PATH=	/sbin:/bin:/usr/sbin:/usr/bin
 .endif
 MAKEOBJDIRPREFIX?=	/usr/obj

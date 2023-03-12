@@ -158,7 +158,7 @@ _t=		${TARGET_ARCH}/${TARGET}
 .endif
 .endfor
 
-.if ${.MAKE.OS} != "NQC"
+.if ${.MAKE.OS} != "NQC" && ${.MAKE.OS} != "FreeBSD"
 CROSSBUILD_HOST=${.MAKE.OS}
 .if ${.MAKE.OS} != "Linux" && ${.MAKE.OS} != "Darwin"
 .warning Unsupported crossbuild system: ${.MAKE.OS}. Build will probably fail!
