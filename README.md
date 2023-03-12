@@ -1,9 +1,9 @@
 What is NQC?
 ============
 
-Nevuqe Core (NQC) is an operating system that is based on the NQC operating system. This means that it
-leverages the features and functionality of NQC to provide a stable and secure environment for running
-various applications and services.
+Nevuqe Core (NQC) is an operating system focused on developing a core operating system based on the BSD architecture. 
+This project aims to provide a stable and secure base operating system that is compatible with a wide range of hardware platforms.
+NQC is the groundwork for Nevuqe's operating system, Enso. 
 
 For more information and resources on NQC, you can visit the Nevuqe developer site at [developer.nevuqe.com](https://developer.nevuqe.com).
 Here, you will find detailed documentation, guides, and other information to help you get started with NQC.
