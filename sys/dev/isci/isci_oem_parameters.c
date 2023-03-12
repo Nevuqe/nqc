@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <dev/isci/isci.h>
 #include <vm/vm.h>

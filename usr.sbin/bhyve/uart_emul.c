@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <dev/ic/ns16550.h>

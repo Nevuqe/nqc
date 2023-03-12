@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /* ilogb(double x)
  * return the binary exponent of non-zero x

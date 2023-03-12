@@ -41,7 +41,7 @@
 #include "assym.inc"
 #include <machine/asm.h>
 #include <machine/armreg.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/errno.h>
 

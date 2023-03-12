@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$")
+__NQCID("$FreeBSD$")
 
 ENTRY(finite)
 	movl	8(%esp),%eax

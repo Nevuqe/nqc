@@ -24,7 +24,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #define __LIBARCHIVE_BUILD
 #include <archive_crc32.h>

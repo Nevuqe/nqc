@@ -57,7 +57,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /*
  * driver for 3Com internal PHYs

@@ -115,7 +115,7 @@ After any copyright and license comment, there is a blank line.
 Include
 .Li $\&FreeBSD$
 or
-.Li __FBSDID("$\&FreeBSD$");
+.Li __NQCID("$\&FreeBSD$");
 only if you are certain the new code will be merged to stable/12.
 The tag will be removed from legacy code in the future.
 Non-C/C++ source files follow the example above, while C/C++ source files
@@ -152,7 +152,7 @@ come first.
 If
 .In sys/cdefs.h
 is needed for
-.Fn __FBSDID ,
+.Fn __NQCID ,
 include it first.
 If either
 .In sys/types.h

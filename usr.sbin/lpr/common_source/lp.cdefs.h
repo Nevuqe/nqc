@@ -83,18 +83,18 @@
 #endif
 
 /*
- * All the lpr source files will want to reference __FBSDID() to
+ * All the lpr source files will want to reference __NQCID() to
  * handle rcs id's.
  */
-#if !defined(__FBSDID)
-#  if defined(lint) || defined(STRIP_FBSDID)
-#    define	__FBSDID(s)	struct skip_rcsid_struct
+#if !defined(__NQCID)
+#  if defined(lint) || defined(STRIP_NQCID)
+#    define	__NQCID(s)	struct skip_rcsid_struct
 #  elif defined(__IDSTRING)			/* NetBSD */
-#    define	__FBSDID(s)	__IDSTRING(rcsid,s)
+#    define	__NQCID(s)	__IDSTRING(rcsid,s)
 #  else
-#    define	__FBSDID(s)	static const char rcsid[] __unused = s
+#    define	__NQCID(s)	static const char rcsid[] __unused = s
 #  endif
-#endif /* __FBSDID */
+#endif /* __NQCID */
 
 /*
  * Some lpr include files use __BEGIN_DECLS and __END_DECLS.

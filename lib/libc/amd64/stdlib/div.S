@@ -6,7 +6,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 ENTRY(div)
 	movl	%edi,%eax

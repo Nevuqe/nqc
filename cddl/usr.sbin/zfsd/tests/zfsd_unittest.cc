@@ -63,7 +63,7 @@
 
 #include "libmocks.h"
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /*================================== Macros ==================================*/
 #define	NUM_ELEMENTS(x) (sizeof(x) / sizeof(*x))

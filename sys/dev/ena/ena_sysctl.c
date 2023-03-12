@@ -29,7 +29,7 @@
  */
 #include <sys/cdefs.h>
 #include <sys/param.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include "opt_rss.h"
 

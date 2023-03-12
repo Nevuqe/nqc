@@ -30,7 +30,7 @@
  */
 
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /*
  * This test doesn't actually check that the zip writer is

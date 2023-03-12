@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/types.h>		/* u_short etc */
 #ifndef WITHOUT_CAPSICUM

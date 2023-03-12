@@ -91,7 +91,7 @@
 */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #if 0
 #define ARCMSR_DEBUG1			1

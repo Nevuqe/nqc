@@ -31,7 +31,7 @@
  * $FreeBSD$
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /*
  * Implement some basic spectral scan control logic.

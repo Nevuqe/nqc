@@ -83,7 +83,7 @@ def __format_arg(fmtarg): return __attribute__((__format_arg__ (fmtarg)))
 
 def __GLOBL(sym): return __GLOBL1(sym)
 
-def __FBSDID(s): return __IDSTRING(__CONCAT(__rcsid_,__LINE__),s)
+def __NQCID(s): return __IDSTRING(__CONCAT(__rcsid_,__LINE__),s)
 
 def __RCSID(s): return __IDSTRING(__CONCAT(__rcsid_,__LINE__),s)
 

@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #ifdef HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>

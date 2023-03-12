@@ -29,7 +29,7 @@
  * File : ecore_init_ops.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /* include the precompiled configuration values - only once */
 #include "bcm_osal.h"

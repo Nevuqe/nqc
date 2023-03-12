@@ -48,7 +48,7 @@
 
 #include "guid.h"
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 /*============================ Namespace Control =============================*/
 using std::string;
 namespace DevdCtl

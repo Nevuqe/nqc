@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include "opt_mptable_force_htt.h"
 #include "opt_mptable_linux_bug_compat.h"

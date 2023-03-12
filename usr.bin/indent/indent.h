@@ -27,7 +27,7 @@
  */
 
 #if 0
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 #endif
 
 void	add_typename(const char *);

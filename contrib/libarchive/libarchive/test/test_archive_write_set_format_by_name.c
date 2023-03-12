@@ -25,7 +25,7 @@
 
 
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 static void
 test_format_by_name(const char *format_name, const char *compression_type,

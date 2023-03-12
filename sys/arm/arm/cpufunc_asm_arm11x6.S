@@ -60,7 +60,7 @@
 
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 	.cpu arm1176jz-s
 

@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$")
+__NQCID("$FreeBSD$")
 
 ENTRY(scalbnf)
 	movss	%xmm0,-8(%rsp)

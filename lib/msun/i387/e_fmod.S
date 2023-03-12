@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$")
+__NQCID("$FreeBSD$")
 
 ENTRY(fmod)
 	fldl	12(%esp)

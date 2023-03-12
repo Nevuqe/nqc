@@ -15,7 +15,7 @@
 #define __IMAGE_AUTHTICATION_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <Guid/GlobalVariable.h>
 #include <Protocol/Hash.h>

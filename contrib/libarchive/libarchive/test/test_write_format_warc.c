@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 static void test_read(struct archive *a, char *buff, size_t used, char *filedata)
 {

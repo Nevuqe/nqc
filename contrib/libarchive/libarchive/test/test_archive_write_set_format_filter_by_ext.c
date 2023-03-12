@@ -26,7 +26,7 @@
 
 
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 static void
 test_format_filter_by_ext(const char *output_file, 

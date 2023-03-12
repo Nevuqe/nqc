@@ -29,7 +29,7 @@
 /* Based on sys/arm/ti/ti_sysc.c */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

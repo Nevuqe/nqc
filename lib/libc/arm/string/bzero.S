@@ -31,7 +31,7 @@
 
 #include <machine/asm.h>
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #define _BZERO
 #include "memset.S"

@@ -30,7 +30,7 @@
 
 #include <machine/asm.h>
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 ENTRY(strcmp)
 1:

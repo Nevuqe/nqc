@@ -36,7 +36,7 @@ static char sccsid[] = "@(#)printlist.c	8.1 (Berkeley) 6/6/93";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <err.h>
 #include <string.h>

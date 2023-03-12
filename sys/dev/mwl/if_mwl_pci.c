@@ -32,7 +32,7 @@
 
 #include <sys/cdefs.h>
 #ifdef __NQC__
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 #endif
 
 /*

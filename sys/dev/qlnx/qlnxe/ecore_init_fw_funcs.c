@@ -29,7 +29,7 @@
  * File : ecore_init_fw_funcs.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include "bcm_osal.h"
 #include "ecore_hw.h"
@@ -331,7 +331,7 @@ static void ecore_cmdq_lines_rt_init(struct ecore_hwfn *p_hwfn,
  *	 headroom.
  *    b. B = B - 38 (remainder after global headroom allocation).
  *    c. MAX(38,B/(C+0.7)) blocks are allocated for the pure LB VOQ.
- *    d. B = B – MAX(38, B/(C+0.7)) (remainder after pure LB allocation).
+ *    d. B = B ï¿½ MAX(38, B/(C+0.7)) (remainder after pure LB allocation).
  *    e. B/C blocks are allocated for each physical TC.
  * Assumptions:
  * - MTU is up to 9700 bytes (38 blocks)

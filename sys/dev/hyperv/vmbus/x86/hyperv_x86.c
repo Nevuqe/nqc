@@ -30,7 +30,7 @@
  * Implements low-level interactions with Hyper-V/Azure
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

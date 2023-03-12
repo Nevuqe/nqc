@@ -24,7 +24,7 @@
  *
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 #ifndef _KERNEL
 #define _WANT_TCPCB 1
 #endif

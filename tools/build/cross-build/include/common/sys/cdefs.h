@@ -51,8 +51,8 @@
 
 #endif
 
-#ifndef __FBSDID
-#define __FBSDID(id)
+#ifndef __NQCID
+#define __NQCID(id)
 #endif
 
 #ifndef __IDSTRING
@@ -224,8 +224,8 @@
 #ifndef __RCSID
 #define __RCSID(x)
 #endif
-#ifndef __FBSDID
-#define __FBSDID(x)
+#ifndef __NQCID
+#define __NQCID(x)
 #endif
 #ifndef __RCSID
 #define __RCSID(x)

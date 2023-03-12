@@ -44,7 +44,7 @@
 
 #include <machine/asm.h>
 #include "assym.inc"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 	.syntax	unified
 /*

@@ -40,7 +40,7 @@
 #if 0
 static char sccsid[] = "@(#)muldi3.c	8.1 (Berkeley) 6/4/93";
 #else
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 #endif
 #endif /* LIBC_SCCS and not lint */
 

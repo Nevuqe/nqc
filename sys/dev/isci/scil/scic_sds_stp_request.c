@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <dev/isci/scil/intel_sat.h>
 #include <dev/isci/scil/intel_sata.h>

@@ -39,9 +39,9 @@
 #if defined(LIBC_SCCS) && !defined(lint)
 static char sccsid[] = "@(#)strtouq.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
-__FBSDID("FreeBSD: src/lib/libc/stdlib/strtoull.c,v 1.18 2002/09/06 11:23:59 tjr Exp ");
+__NQCID("FreeBSD: src/lib/libc/stdlib/strtoull.c,v 1.18 2002/09/06 11:23:59 tjr Exp ");
 #endif
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <errno.h>
 #include <limits.h>

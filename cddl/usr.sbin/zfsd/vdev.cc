@@ -66,7 +66,7 @@
 #include "zfsd_exception.h"
 #include "zpool_list.h"
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 /*============================ Namespace Control =============================*/
 using std::string;
 using std::stringstream;

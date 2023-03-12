@@ -38,7 +38,7 @@
 
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <machine/armreg.h>
 

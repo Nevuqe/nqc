@@ -36,7 +36,7 @@
 
 #if defined(__NQC__)
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 #endif
 
 #include <sys/param.h>

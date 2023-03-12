@@ -27,7 +27,7 @@
 #include <machine/asm.h>
 
 #ifndef fn
-__FBSDID("$FreeBSD$")
+__NQCID("$FreeBSD$")
 #define	fn	lrintf
 #endif
 

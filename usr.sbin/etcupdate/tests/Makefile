@@ -3,7 +3,7 @@
 PLAIN_TESTS_SH=
 .for test in	always_test \
 		conflicts_test \
-		fbsdid_test \
+		nqcid_test \
 		ignore_test \
 		preworld_test \
 		tests_test \

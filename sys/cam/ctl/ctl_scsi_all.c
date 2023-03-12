@@ -33,7 +33,7 @@
 
 #include <sys/param.h>
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/types.h>
 #ifdef _KERNEL

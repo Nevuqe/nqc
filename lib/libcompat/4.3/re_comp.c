@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 __SCCSID("@(#)regex.c	5.1 (Berkeley) 3/29/92");
 
 /*

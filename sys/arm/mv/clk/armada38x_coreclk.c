@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FressBSD$");
+__NQCID("$FressBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>

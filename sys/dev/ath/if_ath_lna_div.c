@@ -31,7 +31,7 @@
  * $FreeBSD$
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /*
  * This module handles LNA diversity for those chips which implement LNA

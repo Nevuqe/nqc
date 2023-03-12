@@ -27,7 +27,7 @@
 #define ARCHIVE_OPTIONS_PRIVATE_H_INCLUDED
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include "archive_private.h"
 

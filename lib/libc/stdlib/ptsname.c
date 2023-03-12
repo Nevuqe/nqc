@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 #ifndef lint
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 #endif /* not lint */
 
 #include "namespace.h"

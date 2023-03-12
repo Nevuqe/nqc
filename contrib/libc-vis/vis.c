@@ -59,8 +59,8 @@
 #if defined(LIBC_SCCS) && !defined(lint)
 __RCSID("$NetBSD: vis.c,v 1.74 2017/11/27 16:37:21 christos Exp $");
 #endif /* LIBC_SCCS and not lint */
-#ifdef __FBSDID
-__FBSDID("$FreeBSD$");
+#ifdef __NQCID
+__NQCID("$FreeBSD$");
 #define	_DIAGASSERT(x)	assert(x)
 #endif
 

@@ -34,7 +34,7 @@
  */
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 /*
  * ctlinfo - This collection of routines will know everything there is to

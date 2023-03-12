@@ -32,7 +32,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 .arch_extension sec	/* For smc */
 .arch_extension virt	/* For hvc */

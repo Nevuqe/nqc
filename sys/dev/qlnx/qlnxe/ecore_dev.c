@@ -29,7 +29,7 @@
  * File : ecore_dev.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include "bcm_osal.h"
 #include "reg_addr.h"

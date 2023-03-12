@@ -34,7 +34,7 @@
 
 #include <sys/types.h>
 
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <sys/stat.h>
 #include <sys/sysctl.h>

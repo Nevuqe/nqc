@@ -29,7 +29,7 @@
  */
 
 #include <dev/drm2/drmP.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 struct drm_list_sort_thunk {
 	int (*cmp)(void *, struct list_head *, struct list_head *);

@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 ENTRY_NP(__aeabi_memcpy)
 EENTRY_NP(__aeabi_memcpy4)

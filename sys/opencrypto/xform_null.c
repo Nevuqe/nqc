@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include <opencrypto/xform_auth.h>
 #include <opencrypto/xform_enc.h>

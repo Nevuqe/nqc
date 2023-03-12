@@ -30,7 +30,7 @@
 /* Modified from the kernel GSSAPI code for RPC-over-TLS. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD$");
+__NQCID("$FreeBSD$");
 
 #include "opt_kern_tls.h"
 
