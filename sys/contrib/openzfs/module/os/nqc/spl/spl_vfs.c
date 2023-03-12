@@ -227,7 +227,7 @@ mount_snapshot(kthread_t *td, vnode_t **vpp, const char *fstype, char *fspath,
 	mp->mnt_optnew = NULL;
 
 	vn_lock(vp, LK_EXCLUSIVE | LK_RETRY);
-#ifdef FREEBSD_NAMECACHE
+#ifdef NQC_NAMECACHE
 	cache_purge(vp);
 #endif
 	VI_LOCK(vp);

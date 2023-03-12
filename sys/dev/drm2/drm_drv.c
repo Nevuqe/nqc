@@ -135,10 +135,10 @@ static struct drm_ioctl_desc drm_ioctls[] = {
 
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETRESOURCES, drm_mode_getresources, DRM_CONTROL_ALLOW|DRM_UNLOCKED),
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	DRM_IOCTL_DEF(DRM_IOCTL_PRIME_HANDLE_TO_FD, drm_prime_handle_to_fd_ioctl, DRM_AUTH|DRM_UNLOCKED),
 	DRM_IOCTL_DEF(DRM_IOCTL_PRIME_FD_TO_HANDLE, drm_prime_fd_to_handle_ioctl, DRM_AUTH|DRM_UNLOCKED),
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETPLANERESOURCES, drm_mode_getplane_res, DRM_CONTROL_ALLOW|DRM_UNLOCKED),
 	DRM_IOCTL_DEF(DRM_IOCTL_MODE_GETCRTC, drm_mode_getcrtc, DRM_CONTROL_ALLOW|DRM_UNLOCKED),
@@ -443,14 +443,14 @@ int drm_ioctl(struct cdev *kdev, u_long cmd, caddr_t data, int flags,
 	/* Do not trust userspace, use our own definition */
 	func = ioctl->func;
 	/* is there a local override? */
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 #ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32) &&
 	    (nr == DRM_IOCTL_NR(DRM_IOCTL_DMA)) && dev->driver->dma_compat_ioctl)
 		func = dev->driver->dma_compat_ioctl;
 	else
 #endif
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 	if ((nr == DRM_IOCTL_NR(DRM_IOCTL_DMA)) && dev->driver->dma_ioctl)
 		func = dev->driver->dma_ioctl;
 

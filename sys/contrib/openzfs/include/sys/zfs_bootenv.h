@@ -35,9 +35,9 @@ extern "C" {
 
 #define	GRUB_ENVMAP		BE_GRUB_VENDOR ":" "envmap"
 
-#define	FREEBSD_BOOTONCE	BE_NQC_VENDOR ":" "bootonce"
-#define	FREEBSD_BOOTONCE_USED	BE_NQC_VENDOR ":" "bootonce-used"
-#define	FREEBSD_NVSTORE		BE_NQC_VENDOR ":" "nvstore"
+#define	NQC_BOOTONCE	BE_NQC_VENDOR ":" "bootonce"
+#define	NQC_BOOTONCE_USED	BE_NQC_VENDOR ":" "bootonce-used"
+#define	NQC_NVSTORE		BE_NQC_VENDOR ":" "nvstore"
 #define	ILLUMOS_BOOTONCE	BE_ILLUMOS_VENDOR ":" "bootonce"
 #define	ILLUMOS_BOOTONCE_USED	BE_ILLUMOS_VENDOR ":" "bootonce-used"
 #define	ILLUMOS_NVSTORE		BE_ILLUMOS_VENDOR ":" "nvstore"

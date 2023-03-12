@@ -86,14 +86,14 @@ static int drm_setup(struct drm_device * dev)
 	DRM_INIT_WAITQUEUE(&dev->context_wait);
 	dev->if_version = 0;
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	dev->ctx_start = 0;
 	dev->lck_start = 0;
 
 	dev->buf_async = NULL;
 	DRM_INIT_WAITQUEUE(&dev->buf_readers);
 	DRM_INIT_WAITQUEUE(&dev->buf_writers);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	DRM_DEBUG("\n");
 
@@ -208,10 +208,10 @@ static int drm_open_helper(struct cdev *kdev, int flags, int fmt,
 	if (dev->driver->driver_features & DRIVER_GEM)
 		drm_gem_open(dev, priv);
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	if (drm_core_check_feature(dev, DRIVER_PRIME))
 		drm_prime_init_file_private(&priv->prime);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	if (dev->driver->open) {
 		ret = dev->driver->open(dev, priv);
@@ -373,7 +373,7 @@ void drm_release(void *data)
 	if (dev->driver->driver_features & DRIVER_GEM)
 		drm_gem_release(dev, file_priv);
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	mutex_lock(&dev->ctxlist_mutex);
 	if (!list_empty(&dev->ctxlist)) {
 		struct drm_ctx_list *pos, *n;
@@ -394,7 +394,7 @@ void drm_release(void *data)
 		}
 	}
 	mutex_unlock(&dev->ctxlist_mutex);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	DRM_LOCK(dev);
 
@@ -437,10 +437,10 @@ void drm_release(void *data)
 	if (dev->driver->postclose)
 		dev->driver->postclose(dev, file_priv);
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	if (drm_core_check_feature(dev, DRIVER_PRIME))
 		drm_prime_destroy_file_private(&file_priv->prime);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	free(file_priv, DRM_MEM_FILES);
 

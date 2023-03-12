@@ -1,3 +1,3 @@
 /* $FreeBSD$ */
 
-#define	FREEBSD_CC_VERSION		1400004
+#define	NQC_CC_VERSION		1400004

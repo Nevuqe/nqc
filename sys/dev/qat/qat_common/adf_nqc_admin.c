@@ -29,7 +29,7 @@
 /* Admin Messages Registers */
 #define ADF_MAILBOX_STRIDE 0x1000
 #define ADF_ADMINMSG_LEN 32
-#define FREEBSD_ALLIGNMENT_SIZE 64
+#define NQC_ALLIGNMENT_SIZE 64
 #define ADF_INIT_CONFIG_SIZE 1024
 
 static u8 const_tab[1024] __aligned(1024) = {
@@ -473,7 +473,7 @@ adf_init_admin_comms(struct adf_accel_dev *accel_dev)
 	csr = pmisc->virt_addr;
 	ret = bus_dma_mem_create(&admin->dma_mem,
 				 accel_dev->dma_tag,
-				 FREEBSD_ALLIGNMENT_SIZE,
+				 NQC_ALLIGNMENT_SIZE,
 				 BUS_SPACE_MAXADDR,
 				 PAGE_SIZE,
 				 0);
@@ -546,7 +546,7 @@ adf_init_admin_comms(struct adf_accel_dev *accel_dev)
 
 	ret = bus_dma_mem_create(&admin->dma_hb,
 				 accel_dev->dma_tag,
-				 FREEBSD_ALLIGNMENT_SIZE,
+				 NQC_ALLIGNMENT_SIZE,
 				 BUS_SPACE_MAXADDR,
 				 PAGE_SIZE,
 				 0);

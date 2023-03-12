@@ -146,7 +146,7 @@ char	*ipsec_policy[2];
 #endif
 
 enum {
-	FREEBSD_TUN = CHAR_MAX,	/* avoid collision with return values from getopt */
+	NQC_TUN = CHAR_MAX,	/* avoid collision with return values from getopt */
 };
 
 int
@@ -167,7 +167,7 @@ main(int argc, char *argv[])
 	struct option longopts[] = {
 		{ "no-tcpopt",	no_argument,	&NQC_Oflag,	1 },
 		{ "sctp",	no_argument,	&NQC_sctp,	1 },
-		{ "tun",	required_argument,	NULL,	FREEBSD_TUN },
+		{ "tun",	required_argument,	NULL,	NQC_TUN },
 		{ NULL,		0,		NULL,		0 }
 	};
 
@@ -332,7 +332,7 @@ main(int argc, char *argv[])
 			if (Tflag < 0 || Tflag > 255 || errstr || errno)
 				errx(1, "illegal tos value %s", optarg);
 			break;
-		case FREEBSD_TUN:
+		case NQC_TUN:
 			tundev = optarg;
 			break;
 		case 0:

@@ -229,10 +229,10 @@ static Elf_Brandinfo *elf_brand_list[MAX_BRANDS];
 #define	aligned(a, t)	(rounddown2((u_long)(a), sizeof(t)) == (u_long)(a))
 
 Elf_Brandnote __elfN(nqc_brandnote) = {
-	.hdr.n_namesz	= sizeof(FREEBSD_ABI_VENDOR),
+	.hdr.n_namesz	= sizeof(NQC_ABI_VENDOR),
 	.hdr.n_descsz	= sizeof(int32_t),
 	.hdr.n_type	= NT_NQC_ABI_TAG,
-	.vendor		= FREEBSD_ABI_VENDOR,
+	.vendor		= NQC_ABI_VENDOR,
 	.flags		= BN_TRANSLATE_OSREL,
 	.trans_osrel	= __elfN(nqc_trans_osrel)
 };
@@ -250,7 +250,7 @@ __elfN(nqc_trans_osrel)(const Elf_Note *note, int32_t *osrel)
 }
 
 static const char GNU_ABI_VENDOR[] = "GNU";
-static int GNU_KFREEBSD_ABI_DESC = 3;
+static int GNU_KNQC_ABI_DESC = 3;
 
 Elf_Brandnote __elfN(knqc_brandnote) = {
 	.hdr.n_namesz	= sizeof(GNU_ABI_VENDOR),
@@ -271,7 +271,7 @@ knqc_trans_osrel(const Elf_Note *note, int32_t *osrel)
 	p += roundup2(note->n_namesz, ELF_NOTE_ROUNDSIZE);
 
 	desc = (const Elf32_Word *)p;
-	if (desc[0] != GNU_KFREEBSD_ABI_DESC)
+	if (desc[0] != GNU_KNQC_ABI_DESC)
 		return (false);
 
 	/*
@@ -2072,19 +2072,19 @@ __elfN(populate_note)(int type, void *src, void *dst, size_t size, void **descp)
 	buf = dst;
 	if (buf != NULL) {
 		note = (Elf_Note *)buf;
-		note->n_namesz = sizeof(FREEBSD_ABI_VENDOR);
+		note->n_namesz = sizeof(NQC_ABI_VENDOR);
 		note->n_descsz = size;
 		note->n_type = type;
 		buf += sizeof(*note);
-		buf += append_note_data(FREEBSD_ABI_VENDOR, buf,
-		    sizeof(FREEBSD_ABI_VENDOR));
+		buf += append_note_data(NQC_ABI_VENDOR, buf,
+		    sizeof(NQC_ABI_VENDOR));
 		append_note_data(src, buf, size);
 		if (descp != NULL)
 			*descp = buf;
 	}
 
 	notesize = sizeof(Elf_Note) +		/* note header */
-	    roundup2(sizeof(FREEBSD_ABI_VENDOR), ELF_NOTE_ROUNDSIZE) +
+	    roundup2(sizeof(NQC_ABI_VENDOR), ELF_NOTE_ROUNDSIZE) +
 						/* note name */
 	    roundup2(size, ELF_NOTE_ROUNDSIZE);	/* note description */
 
@@ -2811,7 +2811,7 @@ brandnote_cb(const Elf_Note *note, void *arg0, bool *res)
 }
 
 static Elf_Note fctl_note = {
-	.n_namesz = sizeof(FREEBSD_ABI_VENDOR),
+	.n_namesz = sizeof(NQC_ABI_VENDOR),
 	.n_descsz = sizeof(uint32_t),
 	.n_type = NT_NQC_FEATURE_CTL,
 };
@@ -2868,7 +2868,7 @@ __elfN(check_note)(struct image_params *imgp, Elf_Brandnote *brandnote,
 			for (j = 0; j < hdr->e_phnum; j++) {
 				if (phdr[j].p_type == PT_NOTE &&
 				    __elfN(parse_notes)(imgp, &fctl_note,
-				    FREEBSD_ABI_VENDOR, &phdr[j],
+				    NQC_ABI_VENDOR, &phdr[j],
 				    note_fctl_cb, &f_arg))
 					break;
 			}

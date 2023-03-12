@@ -31,7 +31,7 @@ __FBSDID("$FreeBSD$");
 #include <efichar.h>
 #include <efilib.h>
 
-static EFI_GUID FreeBSDBootVarGUID = FREEBSD_BOOT_VAR_GUID;
+static EFI_GUID FreeBSDBootVarGUID = NQC_BOOT_VAR_GUID;
 static EFI_GUID GlobalBootVarGUID = EFI_GLOBAL_VARIABLE;
 
 EFI_STATUS

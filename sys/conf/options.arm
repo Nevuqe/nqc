@@ -12,7 +12,7 @@ EFI			opt_platform.h
 FLASHADDR		opt_global.h
 GIC_DEFAULT_ICFGR_INIT	opt_global.h
 INTRNG			opt_global.h
-FREEBSD_BOOT_LOADER	opt_global.h
+NQC_BOOT_LOADER	opt_global.h
 KERNBASE		opt_global.h
 KERNVIRTADDR		opt_global.h
 LINUX_BOOT_ABI		opt_global.h

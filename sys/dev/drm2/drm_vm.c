@@ -43,7 +43,7 @@ __FBSDID("$FreeBSD$");
 #include <dev/drm2/drmP.h>
 #include <dev/drm2/drm.h>
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 int
 drm_mmap(struct cdev *kdev, vm_ooffset_t offset, vm_paddr_t *paddr,
     int prot, vm_memattr_t *memattr)
@@ -144,4 +144,4 @@ drm_mmap(struct cdev *kdev, vm_ooffset_t offset, vm_paddr_t *paddr,
 	*paddr = phys;
 	return 0;
 }
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */

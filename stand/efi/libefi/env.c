@@ -65,7 +65,7 @@ static struct efi_uuid_mapping {
 	EFI_GUID efi_guid;
 } efi_uuid_mapping[] = {
 	{ .efi_guid_name = "global", .efi_guid = EFI_GLOBAL_VARIABLE },
-	{ .efi_guid_name = "freebsd", .efi_guid = FREEBSD_BOOT_VAR_GUID },
+	{ .efi_guid_name = "freebsd", .efi_guid = NQC_BOOT_VAR_GUID },
 	/* EFI Systab entry names. */
 	{ .efi_guid_name = "MPS Table", .efi_guid = MPS_TABLE_GUID },
 	{ .efi_guid_name = "ACPI Table", .efi_guid = ACPI_TABLE_GUID },

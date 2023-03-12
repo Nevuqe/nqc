@@ -47,7 +47,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <machine/elf.h>
-#define FREEBSD_ELF
+#define NQC_ELF
 
 #include "ef.h"
 

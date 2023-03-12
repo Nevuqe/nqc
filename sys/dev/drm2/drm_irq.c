@@ -604,10 +604,10 @@ int drm_calc_vbltimestamp_from_scanoutpos(struct drm_device *dev, int crtc,
 
 		/* Get system timestamp after query. */
 		getmicrouptime(&raw_time);
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 		if (!drm_timestamp_monotonic)
 			mono_time_offset = ktime_get_monotonic_offset();
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 		critical_exit();
 
@@ -665,13 +665,13 @@ int drm_calc_vbltimestamp_from_scanoutpos(struct drm_device *dev, int crtc,
 		vbl_status |= 0x8;
 	}
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	if (!drm_timestamp_monotonic)
 		etime = ktime_sub(etime, mono_time_offset);
 
 	/* save this only for debugging purposes */
 	tv_etime = ktime_to_timeval(etime);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 	/* Subtract time delta from raw timestamp to get final
 	 * vblank_time timestamp for end of vblank.
 	 */
@@ -695,10 +695,10 @@ static struct timeval get_drm_timestamp(void)
 	struct timeval now;
 
 	microtime(&now);
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	if (!drm_timestamp_monotonic)
 		now = ktime_sub(now, ktime_get_monotonic_offset());
-#endif /* defined(FREEBSD_NOTYET) */
+#endif /* defined(NQC_NOTYET) */
 
 	return now;
 }

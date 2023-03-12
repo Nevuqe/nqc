@@ -71,7 +71,7 @@ struct promise_raid_disk {
 struct promise_raid_conf {
 	char		promise_id[24];
 #define PROMISE_MAGIC		"Promise Technology, Inc."
-#define FREEBSD_MAGIC		"FreeBSD ATA driver RAID "
+#define NQC_MAGIC		"FreeBSD ATA driver RAID "
 
 	uint32_t	dummy_0;
 	uint64_t	magic_0;
@@ -364,7 +364,7 @@ next:
 
 	/* Check if this is an Promise RAID struct */
 	if (strncmp(meta->promise_id, PROMISE_MAGIC, strlen(PROMISE_MAGIC)) &&
-	    strncmp(meta->promise_id, FREEBSD_MAGIC, strlen(FREEBSD_MAGIC))) {
+	    strncmp(meta->promise_id, NQC_MAGIC, strlen(NQC_MAGIC))) {
 		if (subdisks == 0)
 			G_RAID_DEBUG(1,
 			    "Promise signature check failed on %s", pp->name);

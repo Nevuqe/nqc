@@ -149,8 +149,8 @@
  *
  *****************************************************************************/
 
-#ifndef __ACFREEBSD_H__
-#define __ACFREEBSD_H__
+#ifndef __ACNQC_H__
+#define __ACNQC_H__
 
 
 #include <sys/types.h>
@@ -226,4 +226,4 @@
 
 #endif /* _KERNEL */
 
-#endif /* __ACFREEBSD_H__ */
+#endif /* __ACNQC_H__ */

@@ -35,7 +35,7 @@ __FBSDID("$FreeBSD$");
 
 #include <stand.h>
 
-#define FREEBSD_ELF
+#define NQC_ELF
 #include <sys/link_elf.h>
 
 #include "bootstrap.h"

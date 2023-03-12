@@ -494,8 +494,8 @@ void drm_put_dev(struct drm_device *dev)
 	mtx_destroy(&dev->ctxlist_mutex);
 	mtx_destroy(&dev->pcir_lock);
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	list_del(&dev->driver_item);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 }
 EXPORT_SYMBOL(drm_put_dev);

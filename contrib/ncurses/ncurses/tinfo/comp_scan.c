@@ -591,7 +591,7 @@ _nc_get_token(bool silent)
 		if (!silent) {
 		    if (*after_list == '\0')
 			_nc_warning("empty longname field");
-#ifndef FREEBSD_NATIVE
+#ifndef NQC_NATIVE
 		    else if (strchr(after_list, ' ') == 0)
 			_nc_warning("older tic versions may treat the description field as an alias");
 #endif

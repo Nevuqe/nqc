@@ -159,9 +159,9 @@ int drm_get_platform_dev(device_t kdev, struct drm_device *dev,
 			goto err_g3;
 	}
 
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	list_add_tail(&dev->driver_item, &driver->device_list);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 	sx_xunlock(&drm_global_mutex);
 

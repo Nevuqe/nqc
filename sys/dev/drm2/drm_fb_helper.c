@@ -230,7 +230,7 @@ static int drm_fb_helper_parse_command_line(struct drm_fb_helper *fb_helper)
 	return 0;
 }
 
-#if 0 && defined(FREEBSD_NOTYET)
+#if 0 && defined(NQC_NOTYET)
 static void drm_fb_helper_save_lut_atomic(struct drm_crtc *crtc, struct drm_fb_helper *helper)
 {
 	uint16_t *r_base, *g_base, *b_base;
@@ -333,7 +333,7 @@ int drm_fb_helper_debug_leave(struct fb_info *info)
 	return 0;
 }
 EXPORT_SYMBOL(drm_fb_helper_debug_leave);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 bool drm_fb_helper_restore_fbdev_mode(struct drm_fb_helper *fb_helper)
 {
@@ -369,7 +369,7 @@ static bool drm_fb_helper_force_kernel_mode(void)
 	return error;
 }
 
-#if 0 && defined(FREEBSD_NOTYET)
+#if 0 && defined(NQC_NOTYET)
 int drm_fb_helper_panic(struct notifier_block *n, unsigned long ununsed,
 			void *panic_str)
 {
@@ -388,7 +388,7 @@ EXPORT_SYMBOL(drm_fb_helper_panic);
 static struct notifier_block paniced = {
 	.notifier_call = drm_fb_helper_panic,
 };
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 /**
  * drm_fb_helper_restore - restore the framebuffer console (kernel) config
@@ -427,7 +427,7 @@ static struct sysrq_key_op sysrq_drm_fb_helper_restore_op = { };
 #endif
 #endif
 
-#if 0 && defined(FREEBSD_NOTYET)
+#if 0 && defined(NQC_NOTYET)
 static void drm_fb_helper_dpms(struct fb_info *info, int dpms_mode)
 {
 	struct drm_fb_helper *fb_helper = info->par;
@@ -484,7 +484,7 @@ int drm_fb_helper_blank(int blank, struct fb_info *info)
 	return 0;
 }
 EXPORT_SYMBOL(drm_fb_helper_blank);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 static void drm_fb_helper_crtc_free(struct drm_fb_helper *helper)
 {
@@ -554,14 +554,14 @@ void drm_fb_helper_fini(struct drm_fb_helper *fb_helper)
 {
 	if (!list_empty(&fb_helper->kernel_fb_list)) {
 		list_del(&fb_helper->kernel_fb_list);
-#if 0 && defined(FREEBSD_NOTYET)
+#if 0 && defined(NQC_NOTYET)
 		if (list_empty(&kernel_fb_helper_list)) {
 			pr_info("drm: unregistered panic notifier\n");
 			atomic_notifier_chain_unregister(&panic_notifier_list,
 							 &paniced);
 			unregister_sysrq_key('v', &sysrq_drm_fb_helper_restore_op);
 		}
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 	}
 
 	drm_fb_helper_crtc_free(fb_helper);
@@ -569,7 +569,7 @@ void drm_fb_helper_fini(struct drm_fb_helper *fb_helper)
 }
 EXPORT_SYMBOL(drm_fb_helper_fini);
 
-#if 0 && defined(FREEBSD_NOTYET)
+#if 0 && defined(NQC_NOTYET)
 static int setcolreg(struct drm_crtc *crtc, u16 red, u16 green,
 		     u16 blue, u16 regno, struct fb_info *info)
 {
@@ -830,7 +830,7 @@ int drm_fb_helper_pan_display(struct fb_var_screeninfo *var,
 	return ret;
 }
 EXPORT_SYMBOL(drm_fb_helper_pan_display);
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 
 int drm_fb_helper_single_fb_probe(struct drm_fb_helper *fb_helper,
 				  int preferred_bpp)
@@ -979,7 +979,7 @@ int drm_fb_helper_single_fb_probe(struct drm_fb_helper *fb_helper,
 	}
 #endif
 
-#if 0 && defined(FREEBSD_NOTYET)
+#if 0 && defined(NQC_NOTYET)
 	/* Switch back to kernel console on panic */
 	/* multi card linked list maybe */
 	if (list_empty(&kernel_fb_helper_list)) {
@@ -988,7 +988,7 @@ int drm_fb_helper_single_fb_probe(struct drm_fb_helper *fb_helper,
 					       &paniced);
 		register_sysrq_key('v', &sysrq_drm_fb_helper_restore_op);
 	}
-#endif /* FREEBSD_NOTYET */
+#endif /* NQC_NOTYET */
 	if (new_fb)
 		list_add(&fb_helper->kernel_fb_list, &kernel_fb_helper_list);
 

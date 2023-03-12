@@ -44,7 +44,7 @@ options 	KBD_INSTALL_CDEV	# install a CDEV entry in /dev
 options 	HWPMC_HOOKS		# Necessary kernel hooks for hwpmc(4)
 options 	CAPABILITY_MODE		# Capsicum capability mode
 options 	CAPABILITIES		# Capsicum capabilites
-options 	FREEBSD_BOOT_LOADER	# Process metadata passed from loader(8)
+options 	NQC_BOOT_LOADER	# Process metadata passed from loader(8)
 options 	VFP			# Enable floating point hardware support
 options 	MAC			# Support for Mandatory Access Control (MAC)
 

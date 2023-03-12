@@ -10,7 +10,7 @@ makeoptions	CONF_CFLAGS+="-march=armv7a"
 # Add options for armv7 that are not in sys/conf/NOTES...
 
 options 	FDT			# Flattened device tree support
-options 	FREEBSD_BOOT_LOADER	# Process metadata passed from loader(8)
+options 	NQC_BOOT_LOADER	# Process metadata passed from loader(8)
 options 	LINUX_BOOT_ABI		# Process metadata passed from U-Boot
 options 	PLATFORM		# Include platform_if support
 options 	SMP			# Nearly all v7 SoCs are multicore

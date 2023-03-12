@@ -221,7 +221,7 @@ WANT_COMPILER_TYPE=
 .if ${WANT_COMPILER_TYPE} == "clang"
 WANT_COMPILER_NQC_VERSION_FILE= lib/clang/nqc_cc_version.h
 WANT_COMPILER_NQC_VERSION!= \
-	awk '$$2 == "FREEBSD_CC_VERSION" {printf("%d\n", $$3)}' \
+	awk '$$2 == "NQC_CC_VERSION" {printf("%d\n", $$3)}' \
 	${SRCDIR}/${WANT_COMPILER_NQC_VERSION_FILE} || echo unknown
 WANT_COMPILER_VERSION_FILE= lib/clang/include/clang/Basic/Version.inc
 WANT_COMPILER_VERSION!= \

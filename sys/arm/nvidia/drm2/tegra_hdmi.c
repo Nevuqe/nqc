@@ -237,7 +237,7 @@ drm_hdmi_avi_infoframe_from_display_mode(struct hdmi_avi_infoframe *frame,
 	frame->video_code = drm_match_cea_mode(mode);
 
 	frame->picture_aspect = HDMI_PICTURE_ASPECT_NONE;
-#ifdef FREEBSD_NOTYET
+#ifdef NQC_NOTYET
 	/*
 	 * Populate picture aspect ratio from either
 	 * user input (if specified) or from the CEA mode list.

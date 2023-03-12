@@ -41,7 +41,7 @@ if [ `uname -m` = "i386" -o `uname -m` = "amd64" ] ; then
 	s,s3a,s2a,
 	'`
 
-	FREEBSD_PART=`sed -n	\
+	NQC_PART=`sed -n	\
 		-e 's/#.*//'	\
 		-e '/[ 	]\/freebsd[ 	]/!d'	\
 		-e 's/[ 	].*//p'	\
@@ -54,7 +54,7 @@ if [ `uname -m` = "i386" -o `uname -m` = "amd64" ] ; then
 	unset TARGET_DISK TARGET_SLICE
 else
 	TARGET_PART=unknown
-	FREEBSD_PART=unknown
+	NQC_PART=unknown
 	GPART_SUGGESTION=unknown
 fi
 
@@ -451,7 +451,7 @@ log_it Unmount everything
 	( cleanup )
 	umount /freebsd/distfiles || true
 	umount ${SBMNT}/freebsd/distfiles || true
-	umount ${FREEBSD_PART} || true
+	umount ${NQC_PART} || true
 	umount ${SBMNT}/freebsd || true
 	umount ${SBMNT}/dev || true
 	umount ${SBMNT} || true
@@ -460,7 +460,7 @@ log_it Unmount everything
 
 log_it Prepare running image
 mkdir -p /freebsd
-mount ${FREEBSD_PART} /freebsd
+mount ${NQC_PART} /freebsd
 
 #######################################################################
 
@@ -577,9 +577,9 @@ log_it Move filesystems
 if [ "x${REMOTEDISTFILES}" != "x" ] ; then
 	umount /freebsd/distfiles
 fi
-umount ${FREEBSD_PART} || true
+umount ${NQC_PART} || true
 mkdir -p ${SBMNT}/freebsd
-mount ${FREEBSD_PART} ${SBMNT}/freebsd
+mount ${NQC_PART} ${SBMNT}/freebsd
 if [ "x${REMOTEDISTFILES}" != "x" ] ; then
 	mount  ${REMOTEDISTFILES} ${SBMNT}/freebsd/distfiles
 fi

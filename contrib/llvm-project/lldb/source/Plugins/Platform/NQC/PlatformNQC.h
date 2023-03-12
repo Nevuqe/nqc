@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMFREEBSD_H
-#define LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMFREEBSD_H
+#ifndef LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMNQC_H
+#define LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMNQC_H
 
 #include "Plugins/Platform/POSIX/PlatformPOSIX.h"
 #include "Plugins/TypeSystem/Clang/TypeSystemClang.h"
@@ -66,4 +66,4 @@ private:
 } // namespace platform_nqc
 } // namespace lldb_private
 
-#endif // LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMFREEBSD_H
+#endif // LLDB_SOURCE_PLUGINS_PLATFORM_NQC_PLATFORMNQC_H

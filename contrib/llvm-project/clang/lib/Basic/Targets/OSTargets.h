@@ -197,8 +197,8 @@ public:
   }
 };
 
-#ifndef FREEBSD_CC_VERSION
-#define FREEBSD_CC_VERSION 0U
+#ifndef NQC_CC_VERSION
+#define NQC_CC_VERSION 0U
 #endif
 
 // FreeBSD Target
@@ -212,7 +212,7 @@ protected:
     unsigned Release = Triple.getOSMajorVersion();
     if (Release == 0U)
       Release = 8U;
-    unsigned CCVersion = FREEBSD_CC_VERSION;
+    unsigned CCVersion = NQC_CC_VERSION;
     if (CCVersion == 0U)
       CCVersion = Release * 100000U + 1U;
 

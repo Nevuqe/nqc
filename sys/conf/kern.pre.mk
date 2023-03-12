@@ -205,7 +205,7 @@ ZSTD_DECOMPRESS_BLOCK_FLAGS= -fno-tree-vectorize
 ZINCDIR=$S/contrib/openzfs/include
 # Common for dtrace / zfs
 CDDL_CFLAGS=	\
-	-DFREEBSD_NAMECACHE \
+	-DNQC_NAMECACHE \
 	-D_SYS_VMEM_H_ \
 	-D__KERNEL \
 	-D__KERNEL__ \

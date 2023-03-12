@@ -19,7 +19,7 @@
 
 # What version of FreeBSD to we snag the ISOs from to extract the binaries
 # we are testing
-FREEBSD_VERSION=13.1
+NQC_VERSION=13.1
 # eg https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-bootonly.iso.xz
 URLBASE="https://download.freebsd.org/releases"
 : ${STAND_ROOT:="${HOME}/stand-test-root"}
@@ -91,10 +91,10 @@ update_nqc_img_cache()
     for a in $ARCHES; do
 	m=${a%%:*}
 	ma=${a##*:}
-	fetch_one $m $ma ${FREEBSD_VERSION} bootonly.iso
+	fetch_one $m $ma ${NQC_VERSION} bootonly.iso
     done
 
-    fetch_one arm armv7 ${FREEBSD_VERSION} GENERICSD.img
+    fetch_one arm armv7 ${NQC_VERSION} GENERICSD.img
 }
 
 make_minimal_nqc_tree()
@@ -180,7 +180,7 @@ make_nqc_minimal_trees()
     for a in $ARCHES; do
 	m=${a%%:*}
 	ma=${a##*:}
-	make_minimal_nqc_tree $m $ma ${FREEBSD_VERSION} bootonly.iso
+	make_minimal_nqc_tree $m $ma ${NQC_VERSION} bootonly.iso
     done
     # Note: armv7 isn't done yet as its the odd-man out -- we need to extract things
     # in a special way, so punt for the moment
