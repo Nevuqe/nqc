@@ -13188,7 +13188,7 @@ public:
     FST_Strftime,
     FST_Strfmon,
     FST_Kprintf,
-    FST_FreeBSDKPrintf,
+    FST_NQCKPrintf,
     FST_OSTrace,
     FST_OSLog,
     FST_Unknown

@@ -29,10 +29,10 @@
 " indentation rules but does not change the indentation of existing code.
 
 " Load only once.
-if exists('loaded_FreeBSD')
+if exists('loaded_NQC')
     finish
 endif
-let loaded_FreeBSD = 1
+let loaded_NQC = 1
 
 
 " FreeBSD mapping to switch current buffer to style(9).  This is generally '\f'.

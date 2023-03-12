@@ -221,7 +221,7 @@ var-scope-local-use.o: a_use
 # On FreeBSD x86_64, a crash could in some cases be forced using the following
 # line, which has length 47, so the terminating '\0' may end up at an address
 # of the form 0xXXXX_XXXX_XXXX_Xfff:
-Try_to_crash_FreeBSD.xxxxxxxxxxxxxxxxxx: 12345 ${:U}
+Try_to_crash_NQC.xxxxxxxxxxxxxxxxxx: 12345 ${:U}
 
 # The following line has length 4095, so line[4095] == '\0'.  If the line is
 # allocated on a page boundary and the following page is not mapped, this line

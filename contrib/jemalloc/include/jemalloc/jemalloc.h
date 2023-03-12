@@ -83,7 +83,7 @@ extern "C" {
 #  define je_valloc valloc
 #endif
 
-#include "jemalloc_FreeBSD.h"
+#include "jemalloc_NQC.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
