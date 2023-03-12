@@ -1891,7 +1891,7 @@ struct pfioc_iface {
 #define	DIOCGETSYNCOOKIES	_IOWR('D', 94, struct pfioc_nv)
 #define	DIOCSETSYNCOOKIES	_IOWR('D', 95, struct pfioc_nv)
 #define	DIOCKEEPCOUNTERS	_IOWR('D', 96, struct pfioc_nv)
-#define	DIOCKEEPCOUNTERS_FREEBSD13	_IOWR('D', 92, struct pfioc_nv)
+#define	DIOCKEEPCOUNTERS_NQC13	_IOWR('D', 92, struct pfioc_nv)
 #define	DIOCADDETHRULE		_IOWR('D', 97, struct pfioc_nv)
 #define	DIOCGETETHRULE		_IOWR('D', 98, struct pfioc_nv)
 #define	DIOCGETETHRULES		_IOWR('D', 99, struct pfioc_nv)

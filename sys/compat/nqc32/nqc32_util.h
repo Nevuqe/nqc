@@ -30,8 +30,8 @@
  * $FreeBSD$
  */
 
-#ifndef _COMPAT_FREEBSD32_FREEBSD32_UTIL_H_
-#define _COMPAT_FREEBSD32_FREEBSD32_UTIL_H_
+#ifndef _COMPAT_NQC32_NQC32_UTIL_H_
+#define _COMPAT_NQC32_NQC32_UTIL_H_
 
 #include <sys/cdefs.h>
 #include <sys/exec.h>
@@ -124,4 +124,4 @@ struct image_args;
 int freebsd32_exec_copyin_args(struct image_args *args, const char *fname,
 	    enum uio_seg segflg, uint32_t *argv, uint32_t *envv);
 
-#endif /* !_COMPAT_FREEBSD32_FREEBSD32_UTIL_H_ */
+#endif /* !_COMPAT_NQC32_NQC32_UTIL_H_ */

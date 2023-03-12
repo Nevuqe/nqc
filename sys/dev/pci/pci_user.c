@@ -65,7 +65,7 @@ __FBSDID("$FreeBSD$");
 #include "pcib_if.h"
 #include "pci_if.h"
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct pci_conf32 {
 	struct pcisel	pc_sel;		/* domain+bus+slot+function */
 	u_int8_t	pc_hdr;		/* PCI header type */
@@ -217,7 +217,7 @@ pci_conf_match_native(struct pci_match_conf *matches, int num_matches,
 	return(1);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static int
 pci_conf_match32(struct pci_match_conf32 *matches, int num_matches,
 	       struct pci_conf *match_buf)
@@ -282,10 +282,10 @@ pci_conf_match32(struct pci_match_conf32 *matches, int num_matches,
 
 	return(1);
 }
-#endif	/* COMPAT_FREEBSD32 */
+#endif	/* COMPAT_NQC32 */
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6)
 #define PRE7_COMPAT
 
 typedef enum {
@@ -340,7 +340,7 @@ struct pci_io_old {
 	u_int32_t	pi_data;	/* data to write or result of read */
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct pci_conf_old32 {
 	struct pcisel_old pc_sel;	/* bus+slot+function */
 	uint8_t		pc_hdr;		/* PCI header type */
@@ -369,7 +369,7 @@ struct pci_match_conf_old32 {
 };
 
 #define	PCIOCGETCONF_OLD32	_IOWR('p', 1, struct pci_conf_io32)
-#endif	/* COMPAT_FREEBSD32 */
+#endif	/* COMPAT_NQC32 */
 
 #define	PCIOCGETCONF_OLD	_IOWR('p', 1, struct pci_conf_io)
 #define	PCIOCREAD_OLD		_IOWR('p', 2, struct pci_io_old)
@@ -438,7 +438,7 @@ pci_conf_match_old(struct pci_match_conf_old *matches, int num_matches,
 	return(1);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static int
 pci_conf_match_old32(struct pci_match_conf_old32 *matches, int num_matches,
     struct pci_conf *match_buf)
@@ -501,17 +501,17 @@ pci_conf_match_old32(struct pci_match_conf_old32 *matches, int num_matches,
 
 	return (1);
 }
-#endif	/* COMPAT_FREEBSD32 */
+#endif	/* COMPAT_NQC32 */
 #endif	/* !PRE7_COMPAT */
 
 union pci_conf_union {
 	struct pci_conf		pc;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct pci_conf32	pc32;
 #endif
 #ifdef PRE7_COMPAT
 	struct pci_conf_old	pco;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct pci_conf_old32	pco32;
 #endif
 #endif
@@ -526,7 +526,7 @@ pci_conf_match(u_long cmd, struct pci_match_conf *matches, int num_matches,
 	case PCIOCGETCONF:
 		return (pci_conf_match_native(
 		    (struct pci_match_conf *)matches, num_matches, match_buf));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 		return (pci_conf_match32((struct pci_match_conf32 *)matches,
 		    num_matches, match_buf));
@@ -536,7 +536,7 @@ pci_conf_match(u_long cmd, struct pci_match_conf *matches, int num_matches,
 		return (pci_conf_match_old(
 		    (struct pci_match_conf_old *)matches, num_matches,
 		    match_buf));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF_OLD32:
 		return (pci_conf_match_old32(
 		    (struct pci_match_conf_old32 *)matches, num_matches,
@@ -648,14 +648,14 @@ pci_match_conf_size(u_long cmd)
 	switch (cmd) {
 	case PCIOCGETCONF:
 		return (sizeof(struct pci_match_conf));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 		return (sizeof(struct pci_match_conf32));
 #endif
 #ifdef PRE7_COMPAT
 	case PCIOCGETCONF_OLD:
 		return (sizeof(struct pci_match_conf_old));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF_OLD32:
 		return (sizeof(struct pci_match_conf_old32));
 #endif
@@ -673,14 +673,14 @@ pci_conf_size(u_long cmd)
 	switch (cmd) {
 	case PCIOCGETCONF:
 		return (sizeof(struct pci_conf));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 		return (sizeof(struct pci_conf32));
 #endif
 #ifdef PRE7_COMPAT
 	case PCIOCGETCONF_OLD:
 		return (sizeof(struct pci_conf_old));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF_OLD32:
 		return (sizeof(struct pci_conf_old32));
 #endif
@@ -694,7 +694,7 @@ pci_conf_size(u_long cmd)
 static void
 pci_conf_io_init(struct pci_conf_io *cio, caddr_t data, u_long cmd)
 {
-#if defined(COMPAT_FREEBSD32)
+#if defined(COMPAT_NQC32)
 	struct pci_conf_io32 *cio32;
 #endif
 
@@ -706,7 +706,7 @@ pci_conf_io_init(struct pci_conf_io *cio, caddr_t data, u_long cmd)
 		*cio = *(struct pci_conf_io *)data;
 		return;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 #ifdef PRE7_COMPAT
 	case PCIOCGETCONF_OLD32:
@@ -735,7 +735,7 @@ pci_conf_io_update_data(const struct pci_conf_io *cio, caddr_t data,
     u_long cmd)
 {
 	struct pci_conf_io *d_cio;
-#if defined(COMPAT_FREEBSD32)
+#if defined(COMPAT_NQC32)
 	struct pci_conf_io32 *cio32;
 #endif
 
@@ -751,7 +751,7 @@ pci_conf_io_update_data(const struct pci_conf_io *cio, caddr_t data,
 		d_cio->num_matches = cio->num_matches;
 		return;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 #ifdef PRE7_COMPAT
 	case PCIOCGETCONF_OLD32:
@@ -783,7 +783,7 @@ pci_conf_for_copyout(const struct pci_conf *pcp, union pci_conf_union *pcup,
 		pcup->pc = *pcp;
 		return;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 		pcup->pc32.pc_sel = pcp->pc_sel;
 		pcup->pc32.pc_hdr = pcp->pc_hdr;
@@ -802,7 +802,7 @@ pci_conf_for_copyout(const struct pci_conf *pcp, union pci_conf_union *pcup,
 #endif
 
 #ifdef PRE7_COMPAT
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF_OLD32:
 		pcup->pco32.pc_sel.pc_bus = pcp->pc_sel.pc_bus;
 		pcup->pco32.pc_sel.pc_dev = pcp->pc_sel.pc_dev;
@@ -821,7 +821,7 @@ pci_conf_for_copyout(const struct pci_conf *pcp, union pci_conf_union *pcup,
 		pcup->pco32.pd_unit = (uint32_t)pcp->pd_unit;
 		return;
 
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 	case PCIOCGETCONF_OLD:
 		pcup->pco.pc_sel.pc_bus = pcp->pc_sel.pc_bus;
 		pcup->pco.pc_sel.pc_dev = pcp->pc_sel.pc_dev;
@@ -1043,12 +1043,12 @@ pci_ioctl(struct cdev *dev, u_long cmd, caddr_t data, int flag, struct thread *t
 	if ((flag & FWRITE) == 0) {
 		switch (cmd) {
 		case PCIOCGETCONF:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		case PCIOCGETCONF32:
 #endif
 #ifdef PRE7_COMPAT
 		case PCIOCGETCONF_OLD:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		case PCIOCGETCONF_OLD32:
 #endif
 #endif
@@ -1068,12 +1068,12 @@ pci_ioctl(struct cdev *dev, u_long cmd, caddr_t data, int flag, struct thread *t
 
 	switch (cmd) {
 	case PCIOCGETCONF:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF32:
 #endif
 #ifdef PRE7_COMPAT
 	case PCIOCGETCONF_OLD:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case PCIOCGETCONF_OLD32:
 #endif
 #endif
@@ -1319,7 +1319,7 @@ getconfexit:
 							  io->pi_width);
 				error = 0;
 			} else {
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 				if (cmd == PCIOCREAD_OLD) {
 					io_old->pi_data = -1;
 					error = 0;

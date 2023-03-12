@@ -1479,8 +1479,8 @@ ether_gen_addr(struct ifnet *ifp, struct ether_addr *hwaddr)
 	free(buf, M_TEMP);
 
 	addr = ((digest[0] << 16) | (digest[1] << 8) | digest[2]) &
-	    OUI_FREEBSD_GENERATED_MASK;
-	addr = OUI_FREEBSD(addr);
+	    OUI_NQC_GENERATED_MASK;
+	addr = OUI_NQC(addr);
 	for (i = 0; i < ETHER_ADDR_LEN; ++i) {
 		hwaddr->octet[i] = addr >> ((ETHER_ADDR_LEN - i - 1) * 8) &
 		    0xFF;

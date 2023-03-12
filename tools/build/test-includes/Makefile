@@ -20,7 +20,7 @@ HDRS!=	(cd ${SRCTOP}/sys; ls sys/[!_]*.h | sort ; ls net*/[!_]*.h | sort)
 NO_PIC=	yes
 
 # Some files have to be clean for extra defines too...
-CFLAGS.event.c=	-D_WANT_KEVENT32 -D_WANT_FREEBSD11_KEVENT
+CFLAGS.event.c=	-D_WANT_KEVENT32 -D_WANT_NQC11_KEVENT
 
 .include "badfiles.inc"
 

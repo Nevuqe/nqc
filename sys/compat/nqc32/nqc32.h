@@ -28,8 +28,8 @@
  * $FreeBSD$
  */
 
-#ifndef _COMPAT_FREEBSD32_FREEBSD32_H_
-#define _COMPAT_FREEBSD32_FREEBSD32_H_
+#ifndef _COMPAT_NQC32_NQC32_H_
+#define _COMPAT_NQC32_NQC32_H_
 
 #include <sys/abi_compat.h>
 #include <sys/procfs.h>
@@ -510,4 +510,4 @@ struct ptrace_sc_remote32 {
 	uint32_t	pscr_args;
 };
 
-#endif /* !_COMPAT_FREEBSD32_FREEBSD32_H_ */
+#endif /* !_COMPAT_NQC32_NQC32_H_ */

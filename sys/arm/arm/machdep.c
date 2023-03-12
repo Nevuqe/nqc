@@ -100,9 +100,9 @@ __FBSDID("$FreeBSD$");
 #define	debugf(fmt, args...)
 #endif
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7) || \
-    defined(COMPAT_FREEBSD9)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7) || \
+    defined(COMPAT_NQC9)
 #error FreeBSD/arm doesn't provide compatibility with releases prior to 10
 #endif
 

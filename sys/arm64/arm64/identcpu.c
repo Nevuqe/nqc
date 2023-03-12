@@ -50,7 +50,7 @@ __FBSDID("$FreeBSD$");
 static void print_cpu_midr(struct sbuf *sb, u_int cpu);
 static void print_cpu_features(u_int cpu);
 static void print_cpu_caches(struct sbuf *sb, u_int);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static u_long parse_cpu_features_hwcap32(void);
 #endif
 
@@ -136,7 +136,7 @@ struct cpu_desc {
 	uint64_t	id_aa64pfr1;
 	uint64_t	id_aa64zfr0;
 	uint64_t	ctr;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	uint64_t	id_isar5;
 	uint64_t	mvfr0;
 	uint64_t	mvfr1;
@@ -1379,7 +1379,7 @@ static struct mrs_field id_aa64zfr0_fields[] = {
 };
 
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 /* ID_ISAR5_EL1 */
 static struct mrs_field_value id_isar5_vcma[] = {
 	MRS_FIELD_VALUE_NONE_IMPL(ID_ISAR5, VCMA, NONE, IMPL),
@@ -1581,7 +1581,7 @@ static struct mrs_field mvfr1_fields[] = {
 	MRS_FIELD(MVFR1, FPFtZ, false, MRS_LOWER, mvfr1_fpftz),
 	MRS_FIELD_END,
 };
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 struct mrs_user_reg {
 	u_int		reg;
@@ -1611,12 +1611,12 @@ static struct mrs_user_reg user_regs[] = {
 
 	USER_REG(ID_AA64PFR0_EL1, id_aa64pfr0),
 	USER_REG(ID_AA64PFR1_EL1, id_aa64pfr1),
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	USER_REG(ID_ISAR5_EL1, id_isar5),
 
 	USER_REG(MVFR0_EL1, mvfr0),
 	USER_REG(MVFR1_EL1, mvfr1),
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 };
 
 #define	CPU_DESC_FIELD(desc, idx)					\
@@ -1901,7 +1901,7 @@ identify_cpu_sysinit(void *dummy __unused)
 	/* Find the values to export to userspace as AT_HWCAP and AT_HWCAP2 */
 	parse_cpu_features();
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	/* Set the default caps and any that need to check multiple fields */
 	elf32_hwcap |= parse_cpu_features_hwcap32();
 #endif
@@ -1949,7 +1949,7 @@ cpu_features_sysinit(void *dummy __unused)
 /* Log features before APs are released and start printing to the dmesg. */
 SYSINIT(cpu_features, SI_SUB_SMP - 1, SI_ORDER_ANY, cpu_features_sysinit, NULL);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static u_long
 parse_cpu_features_hwcap32(void)
 {
@@ -1965,7 +1965,7 @@ parse_cpu_features_hwcap32(void)
 
 	return (hwcap);
 }
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 static void
 print_ctr_fields(struct sbuf *sb, uint64_t reg, void *arg)
@@ -2302,7 +2302,7 @@ print_cpu_features(u_int cpu)
 		}
 	}
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	/* AArch32 Instruction Set Attribute Register 5 */
 	if (SHOULD_PRINT_REG(id_isar5))
 		print_id_register(sb, "AArch32 Instruction Set Attributes 5",
@@ -2416,7 +2416,7 @@ identify_cpu(u_int cpu)
 		cpu_desc[cpu].ccsidr[i][j] = READ_SPECIALREG(ccsidr_el1);
 	}
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	/* Only read aarch32 SRs if EL0-32 is available */
 	if (ID_AA64PFR0_EL0_VAL(cpu_desc[cpu].id_aa64pfr0) ==
 	    ID_AA64PFR0_EL0_64_32) {

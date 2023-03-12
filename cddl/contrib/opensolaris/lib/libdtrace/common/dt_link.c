@@ -482,7 +482,7 @@ dump_elf32(dtrace_hdl_t *dtp, const dof_hdr_t *dof, int fd)
 #else
 	elf_file.ehdr.e_ident[EI_DATA] = ELFDATA2LSB;
 #endif
-	elf_file.ehdr.e_ident[EI_OSABI] = ELFOSABI_FREEBSD;
+	elf_file.ehdr.e_ident[EI_OSABI] = ELFOSABI_NQC;
 	elf_file.ehdr.e_type = ET_REL;
 #if defined(__arm__)
 	elf_file.ehdr.e_machine = EM_ARM;
@@ -634,7 +634,7 @@ dump_elf64(dtrace_hdl_t *dtp, const dof_hdr_t *dof, int fd)
 #else
 	elf_file.ehdr.e_ident[EI_DATA] = ELFDATA2LSB;
 #endif
-	elf_file.ehdr.e_ident[EI_OSABI] = ELFOSABI_FREEBSD;
+	elf_file.ehdr.e_ident[EI_OSABI] = ELFOSABI_NQC;
 	elf_file.ehdr.e_type = ET_REL;
 #if defined(__arm__)
 	elf_file.ehdr.e_machine = EM_ARM;

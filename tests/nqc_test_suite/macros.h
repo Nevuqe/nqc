@@ -26,8 +26,8 @@
  * $FreeBSD$
  */
 
-#ifndef	_FREEBSD_TEST_MACROS_H_
-#define	_FREEBSD_TEST_MACROS_H_
+#ifndef	_NQC_TEST_MACROS_H_
+#define	_NQC_TEST_MACROS_H_
 
 #include <sys/param.h>
 #include <sys/module.h>

@@ -90,15 +90,15 @@ CC_NEWRENO	opt_global.h
 CC_VEGAS	opt_global.h
 COMPAT_43	opt_global.h
 COMPAT_43TTY	opt_global.h
-COMPAT_FREEBSD4	opt_global.h
-COMPAT_FREEBSD5	opt_global.h
-COMPAT_FREEBSD6	opt_global.h
-COMPAT_FREEBSD7	opt_global.h
-COMPAT_FREEBSD9	opt_global.h
-COMPAT_FREEBSD10	opt_global.h
-COMPAT_FREEBSD11	opt_global.h
-COMPAT_FREEBSD12	opt_global.h
-COMPAT_FREEBSD13	opt_global.h
+COMPAT_NQC4	opt_global.h
+COMPAT_NQC5	opt_global.h
+COMPAT_NQC6	opt_global.h
+COMPAT_NQC7	opt_global.h
+COMPAT_NQC9	opt_global.h
+COMPAT_NQC10	opt_global.h
+COMPAT_NQC11	opt_global.h
+COMPAT_NQC12	opt_global.h
+COMPAT_NQC13	opt_global.h
 COMPAT_LINUXKPI	opt_dontuse.h
 COMPILING_LINT	opt_global.h
 CY_PCI_FASTINTR

@@ -4572,7 +4572,7 @@ vfsconf2x(struct sysctl_req *req, struct vfsconf *vfsp)
 	return (SYSCTL_OUT(req, &xvfsp, sizeof(xvfsp)));
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct xvfsconf32 {
 	uint32_t	vfc_vfsops;
 	char		vfc_name[MFSNAMELEN];
@@ -4608,7 +4608,7 @@ sysctl_vfs_conflist(SYSCTL_HANDLER_ARGS)
 	error = 0;
 	vfsconf_slock();
 	TAILQ_FOREACH(vfsp, &vfsconf, vfc_list) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (req->flags & SCTL_MASK32)
 			error = vfsconf2x32(req, vfsp);
 		else
@@ -4660,7 +4660,7 @@ vfs_sysctl(SYSCTL_HANDLER_ARGS)
 		vfsconf_sunlock();
 		if (vfsp == NULL)
 			return (EOPNOTSUPP);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (req->flags & SCTL_MASK32)
 			return (vfsconf2x32(req, vfsp));
 		else

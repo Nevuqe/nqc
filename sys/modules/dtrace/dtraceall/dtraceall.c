@@ -82,7 +82,7 @@ MODULE_DEPEND(dtraceall, kinst, 1, 1, 1);
 #endif
 MODULE_DEPEND(dtraceall, sdt, 1, 1, 1);
 MODULE_DEPEND(dtraceall, systrace, 1, 1, 1);
-#if defined(COMPAT_FREEBSD32)
+#if defined(COMPAT_NQC32)
 MODULE_DEPEND(dtraceall, systrace_nqc32, 1, 1, 1);
 #endif
 MODULE_DEPEND(dtraceall, profile, 1, 1, 1);

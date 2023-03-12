@@ -337,35 +337,35 @@ options 	EPOCH_TRACE
 # Old tty interface.
 options 	COMPAT_43TTY
 
-# Note that as a general rule, COMPAT_FREEBSD<n> depends on
-# COMPAT_FREEBSD<n+1>, COMPAT_FREEBSD<n+2>, etc.
+# Note that as a general rule, COMPAT_NQC<n> depends on
+# COMPAT_NQC<n+1>, COMPAT_NQC<n+2>, etc.
 
 # Enable FreeBSD4 compatibility syscalls
-options 	COMPAT_FREEBSD4
+options 	COMPAT_NQC4
 
 # Enable FreeBSD5 compatibility syscalls
-options 	COMPAT_FREEBSD5
+options 	COMPAT_NQC5
 
 # Enable FreeBSD6 compatibility syscalls
-options 	COMPAT_FREEBSD6
+options 	COMPAT_NQC6
 
 # Enable FreeBSD7 compatibility syscalls
-options 	COMPAT_FREEBSD7
+options 	COMPAT_NQC7
 
 # Enable FreeBSD9 compatibility syscalls
-options 	COMPAT_FREEBSD9
+options 	COMPAT_NQC9
 
 # Enable FreeBSD10 compatibility syscalls
-options 	COMPAT_FREEBSD10
+options 	COMPAT_NQC10
 
 # Enable FreeBSD11 compatibility syscalls
-options 	COMPAT_FREEBSD11
+options 	COMPAT_NQC11
 
 # Enable FreeBSD12 compatibility syscalls
-options 	COMPAT_FREEBSD12
+options 	COMPAT_NQC12
 
 # Enable FreeBSD13 compatibility syscalls
-options 	COMPAT_FREEBSD13
+options 	COMPAT_NQC13
 
 # Enable Linux Kernel Programming Interface
 options 	COMPAT_LINUXKPI

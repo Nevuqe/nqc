@@ -41,7 +41,7 @@ __FBSDID("$FreeBSD$");
 #include "opt_hid.h"
 
 #include <sys/param.h>
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/abi_compat.h>
 #endif
 #include <sys/bus.h>
@@ -118,7 +118,7 @@ struct hidraw_softc {
 	struct cdev *dev;
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct hidraw_gen_descriptor32 {
 	uint32_t hgd_data;	/* void * */
 	uint16_t hgd_lang_id;
@@ -535,7 +535,7 @@ hidraw_write(struct cdev *dev, struct uio *uio, int flag)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static void
 update_hgd32(const struct hidraw_gen_descriptor *hgd,
     struct hidraw_gen_descriptor32 *hgd32)
@@ -560,7 +560,7 @@ hidraw_ioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flag,
     struct thread *td)
 {
 	uint8_t local_buf[HIDRAW_LOCAL_BUFSIZE];
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct hidraw_gen_descriptor local_hgd;
 	struct hidraw_gen_descriptor32 *hgd32 = NULL;
 #endif
@@ -582,7 +582,7 @@ hidraw_ioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flag,
 
 	hgd = (struct hidraw_gen_descriptor *)addr;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	switch (cmd) {
 	case HIDRAW_GET_REPORT_DESC32:
 	case HIDRAW_GET_REPORT32:
@@ -648,7 +648,7 @@ hidraw_ioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flag,
 			size = sc->sc_rdesc->len;
 		}
 		hgd->hgd_actlen = size;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (hgd32 != NULL)
 			update_hgd32(hgd, hgd32);
 #endif
@@ -747,7 +747,7 @@ hidraw_ioctl(struct cdev *dev, u_long cmd, caddr_t addr, int flag,
 		if (!error)
 			error = copyout(buf, hgd->hgd_data, size);
 		HIDRAW_LOCAL_FREE(local_buf, buf);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		/*
 		 * HIDRAW_GET_REPORT is declared _IOWR, but hgd is not written
 		 * so we don't call update_hgd32().

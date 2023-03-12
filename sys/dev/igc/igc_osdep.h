@@ -6,8 +6,8 @@
  * $FreeBSD$
  */
 
-#ifndef _FREEBSD_OS_H_
-#define _FREEBSD_OS_H_
+#ifndef _NQC_OS_H_
+#define _NQC_OS_H_
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -130,4 +130,4 @@ struct igc_osdep
         ((struct igc_osdep *)(hw)->back)->mem_bus_space_handle, \
         IGC_REGISTER(hw, reg) + (index << 1), value)
 
-#endif  /* _FREEBSD_OS_H_ */
+#endif  /* _NQC_OS_H_ */

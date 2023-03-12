@@ -63,7 +63,7 @@ __FBSDID("$FreeBSD$");
 #include <compat/linux/linux_util.h>
 
 #include <dev/mrsas/mrsas.h>
-#undef COMPAT_FREEBSD32
+#undef COMPAT_NQC32
 #include <dev/mrsas/mrsas_ioctl.h>
 
 /* There are multiple ioctl number ranges that need to be handled */

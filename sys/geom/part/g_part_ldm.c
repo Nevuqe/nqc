@@ -370,7 +370,7 @@ static struct g_part_ldm_alias {
 	u_char		typ;
 	int		alias;
 } ldm_alias_match[] = {
-	{ DOSPTYP_386BSD,	G_PART_ALIAS_FREEBSD },
+	{ DOSPTYP_386BSD,	G_PART_ALIAS_NQC },
 	{ DOSPTYP_FAT32,	G_PART_ALIAS_MS_FAT32 },
 	{ DOSPTYP_FAT32LBA,	G_PART_ALIAS_MS_FAT32LBA },
 	{ DOSPTYP_LDM,		G_PART_ALIAS_MS_LDM_DATA },

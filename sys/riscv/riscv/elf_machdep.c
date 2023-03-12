@@ -72,7 +72,7 @@ static struct sysentvec elf64_nqc_sysvec = {
 	.sv_szsigcode	= &szsigcode,
 	.sv_name	= "FreeBSD ELF64",
 	.sv_coredump	= __elfN(coredump),
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = __elfN(prepare_notes),
 	.sv_imgact_try	= NULL,
@@ -88,7 +88,7 @@ static struct sysentvec elf64_nqc_sysvec = {
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_LP64 | SV_SHP | SV_TIMEKEEP |
+	.sv_flags	= SV_ABI_NQC | SV_LP64 | SV_SHP | SV_TIMEKEEP |
 	    SV_ASLR | SV_RNG_SEED_VER,
 	.sv_set_syscall_retval = cpu_set_syscall_retval,
 	.sv_fetch_syscall_args = cpu_fetch_syscall_args,
@@ -118,7 +118,7 @@ riscv_machine_arch(struct proc *p)
 }
 
 static Elf64_Brandinfo nqc_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_RISCV,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,

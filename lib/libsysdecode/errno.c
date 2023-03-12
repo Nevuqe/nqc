@@ -45,8 +45,8 @@ sysdecode_abi_to_nqc_errno(enum sysdecode_abi abi, int error)
 {
 
 	switch (abi) {
-	case SYSDECODE_ABI_FREEBSD:
-	case SYSDECODE_ABI_FREEBSD32:
+	case SYSDECODE_ABI_NQC:
+	case SYSDECODE_ABI_NQC32:
 		return (error);
 #if defined(__aarch64__) || defined(__amd64__) || defined(__i386__)
 	case SYSDECODE_ABI_LINUX:
@@ -75,8 +75,8 @@ sysdecode_nqc_to_abi_errno(enum sysdecode_abi abi, int error)
 {
 
 	switch (abi) {
-	case SYSDECODE_ABI_FREEBSD:
-	case SYSDECODE_ABI_FREEBSD32:
+	case SYSDECODE_ABI_NQC:
+	case SYSDECODE_ABI_NQC32:
 		return (error);
 #if defined(__aarch64__) || defined(__amd64__) || defined(__i386__)
 	case SYSDECODE_ABI_LINUX:

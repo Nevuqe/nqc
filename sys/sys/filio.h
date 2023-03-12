@@ -75,7 +75,7 @@ struct fiobmap2_arg {
 #define	FIOGSHMLPGCNF	_IOR('f', 101, struct shm_largepage_conf)
 
 #ifdef _KERNEL
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct fiodgname_arg32 {
 	int		len;
 	uint32_t	buf;	/* (void *) */

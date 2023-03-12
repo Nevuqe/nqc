@@ -34,7 +34,7 @@
 #define __GENERAL_H
 
 #include "std_ext.h"
-#if !defined(NCSW_LINUX) && !defined(NCSW_FREEBSD)
+#if !defined(NCSW_LINUX) && !defined(NCSW_NQC)
 #include "errno.h"
 #endif
 

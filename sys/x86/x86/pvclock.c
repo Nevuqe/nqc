@@ -67,7 +67,7 @@ static void		 pvclock_read_wall_clock(struct pvclock_wall_clock *wc,
 static u_int		 pvclock_tc_get_timecount(struct timecounter *tc);
 static uint32_t		 pvclock_tc_vdso_timehands(
     struct vdso_timehands *vdso_th, struct timecounter *tc);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static uint32_t		 pvclock_tc_vdso_timehands32(
     struct vdso_timehands32 *vdso_th, struct timecounter *tc);
 #endif
@@ -240,7 +240,7 @@ pvclock_tc_vdso_timehands(struct vdso_timehands *vdso_th,
 	    pvc->vdso_enable_without_rdtscp));
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static uint32_t
 pvclock_tc_vdso_timehands32(struct vdso_timehands32 *vdso_th,
     struct timecounter *tc)
@@ -316,7 +316,7 @@ pvclock_init(struct pvclock *pvc, device_t dev, const char *tc_name,
 	pvc->tc.tc_flags = tc_flags;
 	pvc->tc.tc_priv = pvc;
 	pvc->tc.tc_fill_vdso_timehands = pvclock_tc_vdso_timehands;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	pvc->tc.tc_fill_vdso_timehands32 = pvclock_tc_vdso_timehands32;
 #endif
 

@@ -54,7 +54,7 @@ __FBSDID("$FreeBSD$");
 
 #include "filemon.h"
 
-#if defined(COMPAT_FREEBSD32)
+#if defined(COMPAT_NQC32)
 #include <compat/freebsd32/freebsd32_syscall.h>
 #include <compat/freebsd32/freebsd32_proto.h>
 #include <compat/freebsd32/freebsd32_util.h>

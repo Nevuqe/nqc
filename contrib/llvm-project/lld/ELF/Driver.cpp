@@ -133,7 +133,7 @@ static std::tuple<ELFKind, uint16_t, uint8_t> parseEmulation(StringRef emul) {
   StringRef s = emul;
   if (s.endswith("_fbsd")) {
     s = s.drop_back(5);
-    osabi = ELFOSABI_FREEBSD;
+    osabi = ELFOSABI_NQC;
   }
 
   std::pair<ELFKind, uint16_t> ret =

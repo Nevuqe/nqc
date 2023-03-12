@@ -28,8 +28,8 @@
  *
  * $FreeBSD$
  */
-#ifndef _RDMA_IB_ADDR_FREEBSD_H
-#define	_RDMA_IB_ADDR_FREEBSD_H
+#ifndef _RDMA_IB_ADDR_NQC_H
+#define	_RDMA_IB_ADDR_NQC_H
 
 #ifdef INET
 static inline struct ifnet *
@@ -107,4 +107,4 @@ dev_get_by_index(struct vnet *vnet, int if_index)
 	return (retval);
 }
 
-#endif	/* _RDMA_IB_ADDR_FREEBSD_H */
+#endif	/* _RDMA_IB_ADDR_NQC_H */

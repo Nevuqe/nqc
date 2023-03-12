@@ -172,15 +172,15 @@ AC_DEFUN([ZFS_AC_DEBUG_KMEM_TRACKING], [
 	AC_MSG_RESULT([$enable_debug_kmem_tracking])
 ])
 
-AC_DEFUN([ZFS_AC_DEBUG_INVARIANTS_DETECT_FREEBSD], [
+AC_DEFUN([ZFS_AC_DEBUG_INVARIANTS_DETECT_NQC], [
 	AS_IF([sysctl -n kern.conftxt | grep -Fqx $'options\tINVARIANTS'],
 		[enable_invariants="yes"],
 		[enable_invariants="no"])
 ])
 
 AC_DEFUN([ZFS_AC_DEBUG_INVARIANTS_DETECT], [
-	AM_COND_IF([BUILD_FREEBSD],
-		[ZFS_AC_DEBUG_INVARIANTS_DETECT_FREEBSD],
+	AM_COND_IF([BUILD_NQC],
+		[ZFS_AC_DEBUG_INVARIANTS_DETECT_NQC],
 		[enable_invariants="no"])
 ])
 

@@ -69,12 +69,12 @@ sysdecode_syscallname(enum sysdecode_abi abi, unsigned int code)
 {
 
 	switch (abi) {
-	case SYSDECODE_ABI_FREEBSD:
+	case SYSDECODE_ABI_NQC:
 		if (code < nitems(syscallnames))
 			return (syscallnames[code]);
 		break;
 #if defined(__amd64__) || defined(__powerpc64__) || defined(__aarch64__)
-	case SYSDECODE_ABI_FREEBSD32:
+	case SYSDECODE_ABI_NQC32:
 		if (code < nitems(freebsd32_syscallnames))
 			return (freebsd32_syscallnames[code]);
 		break;

@@ -16,7 +16,7 @@
 # - retpoline: support for generating PLT with retpoline speculative
 #              execution vulnerability mitigation
 #
-# LINKER_FREEBSD_VERSION is the linker's internal source version.
+# LINKER_NQC_VERSION is the linker's internal source version.
 #
 # These variables with an X_ prefix will also be provided if XLD is set.
 #
@@ -38,7 +38,7 @@ _ld_vars+=XLD X_
 # The value is only used/exported for the same environment that impacts
 # LD and LINKER_* settings here.
 _exported_vars=	${X_}LINKER_TYPE ${X_}LINKER_VERSION ${X_}LINKER_FEATURES \
-		${X_}LINKER_FREEBSD_VERSION
+		${X_}LINKER_NQC_VERSION
 ${X_}_ld_hash=	${${ld}}${MACHINE}${PATH}
 ${X_}_ld_hash:=	${${X_}_ld_hash:hash}
 # Only import if none of the vars are set differently somehow else.
@@ -67,7 +67,7 @@ _ld_version!=	(${${ld}} -v 2>&1 || echo none) | sed -n 1p
 .endif
 .if ${_ld_version:[1..2]} == "GNU ld"
 ${X_}LINKER_TYPE=	bfd
-${X_}LINKER_FREEBSD_VERSION=	0
+${X_}LINKER_NQC_VERSION=	0
 _v=	${_ld_version:M[1-9]*.[0-9]*:[1]}
 .elif ${_ld_version:MLLD}
 # Strip any leading PACKAGE_VENDOR string (e.g. "Homebrew")
@@ -75,9 +75,9 @@ _ld_version:=${_ld_version:[*]:C/^.* LLD /LLD /:[@]}
 ${X_}LINKER_TYPE=	lld
 _v=	${_ld_version:[2]}
 .if ${_ld_version:[3]} == "(FreeBSD"
-${X_}LINKER_FREEBSD_VERSION:=	${_ld_version:[4]:C/.*-([^-]*)\)/\1/}
+${X_}LINKER_NQC_VERSION:=	${_ld_version:[4]:C/.*-([^-]*)\)/\1/}
 .else
-${X_}LINKER_FREEBSD_VERSION=	0
+${X_}LINKER_NQC_VERSION=	0
 .endif
 .elif ${_ld_version:[1]} == "@(\#)PROGRAM:ld"
 # bootstrap linker on MacOS
@@ -119,7 +119,7 @@ ${X_}LINKER_FEATURES+=	ifunc-noplt
 X_LINKER_TYPE=		${LINKER_TYPE}
 X_LINKER_VERSION=	${LINKER_VERSION}
 X_LINKER_FEATURES=	${LINKER_FEATURES}
-X_LINKER_FREEBSD_VERSION= ${LINKER_FREEBSD_VERSION}
+X_LINKER_NQC_VERSION= ${LINKER_NQC_VERSION}
 .endif	# ${ld} == "LD" || (${ld} == "XLD" && ${XLD} != ${LD})
 
 # Export the values so sub-makes don't have to look them up again, using the

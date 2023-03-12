@@ -334,7 +334,7 @@ handle_core_note(Elf *elf, GElf_Ehdr *elfhdr, GElf_Phdr *phdr,
 		switch (nhdr_l.n_type) {
 		case NT_PRSTATUS: {
 			raw_size = 0;
-			if (elfhdr->e_ident[EI_OSABI] == ELFOSABI_FREEBSD &&
+			if (elfhdr->e_ident[EI_OSABI] == ELFOSABI_NQC &&
 			    nhdr_l.n_namesz == 0x8 &&
 			    !strcmp(name,"FreeBSD")) {
 				if (elfhdr->e_ident[EI_CLASS] == ELFCLASS32) {

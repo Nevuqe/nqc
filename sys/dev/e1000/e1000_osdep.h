@@ -34,8 +34,8 @@
 /*$FreeBSD$*/
 
 
-#ifndef _FREEBSD_OS_H_
-#define _FREEBSD_OS_H_
+#ifndef _NQC_OS_H_
+#define _NQC_OS_H_
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -255,5 +255,5 @@ struct e1000_osdep
 #define ASSERT_NO_LOCKS()
 #endif
 
-#endif  /* _FREEBSD_OS_H_ */
+#endif  /* _NQC_OS_H_ */
 

@@ -511,38 +511,38 @@ tdfx_query_fetch(u_int cmd, struct tdfx_pio_data *piod)
 	 * size witll result in wrong data being passed, and that's bad */
 	/* A few of these were pulled during the attach phase */
 	switch(piod->port) {
-		case PCI_VENDOR_ID_FREEBSD:
+		case PCI_VENDOR_ID_NQC:
 			if(piod->size != 2) return -EINVAL;
 			copyout(&tdfx_info->vendor, piod->value, piod->size);
 			return 0;
-		case PCI_DEVICE_ID_FREEBSD:
+		case PCI_DEVICE_ID_NQC:
 			if(piod->size != 2) return -EINVAL;
 			copyout(&tdfx_info->type, piod->value, piod->size);
 			return 0;
-		case PCI_BASE_ADDRESS_0_FREEBSD:
+		case PCI_BASE_ADDRESS_0_NQC:
 			if(piod->size != 4) return -EINVAL;
 			copyout(&tdfx_info->addr0, piod->value, piod->size);
 			return 0;
-		case PCI_BASE_ADDRESS_1_FREEBSD:
+		case PCI_BASE_ADDRESS_1_NQC:
 			if(piod->size != 4) return -EINVAL;
 			copyout(&tdfx_info->addr1, piod->value, piod->size);
 			return 0;
-		case PCI_PRIBUS_FREEBSD:
+		case PCI_PRIBUS_NQC:
 			if(piod->size != 1) return -EINVAL;
 			break;
-		case PCI_IOBASE_0_FREEBSD:
+		case PCI_IOBASE_0_NQC:
 			if(piod->size != 2) return -EINVAL;
 			break;
-		case PCI_IOLIMIT_0_FREEBSD:
+		case PCI_IOLIMIT_0_NQC:
 			if(piod->size != 2) return -EINVAL;
 			break;
-		case SST1_PCI_SPECIAL1_FREEBSD:
+		case SST1_PCI_SPECIAL1_NQC:
 			if(piod->size != 4) return -EINVAL;
 			break;
-		case PCI_REVISION_ID_FREEBSD:
+		case PCI_REVISION_ID_NQC:
 			if(piod->size != 1) return -EINVAL;
 			break;
-		case SST1_PCI_SPECIAL4_FREEBSD:
+		case SST1_PCI_SPECIAL4_NQC:
 			if(piod->size != 4) return -EINVAL;
 			break;
 		default:
@@ -604,19 +604,19 @@ tdfx_query_update(u_int cmd, struct tdfx_pio_data *piod)
 	 * by poorly written clients */
 
 	switch(piod->port) {
-		case PCI_COMMAND_FREEBSD:
+		case PCI_COMMAND_NQC:
 			if(piod->size != 2) return -EINVAL;
 			break;
-		case SST1_PCI_SPECIAL1_FREEBSD:
+		case SST1_PCI_SPECIAL1_NQC:
 			if(piod->size != 4) return -EINVAL;
 			break;
-		case SST1_PCI_SPECIAL2_FREEBSD:
+		case SST1_PCI_SPECIAL2_NQC:
 			if(piod->size != 4) return -EINVAL;
 			break;
-		case SST1_PCI_SPECIAL3_FREEBSD:
+		case SST1_PCI_SPECIAL3_NQC:
 			if(piod->size != 4) return -EINVAL;
 			break;
-		case SST1_PCI_SPECIAL4_FREEBSD:
+		case SST1_PCI_SPECIAL4_NQC:
 			if(piod->size != 4) return -EINVAL;
 			break;
 		default:

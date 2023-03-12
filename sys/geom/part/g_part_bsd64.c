@@ -177,12 +177,12 @@ static struct uuid bsd64_uuid_dfbsd_ccd = GPT_ENT_TYPE_DRAGONFLY_CCD;
 static struct uuid bsd64_uuid_dfbsd_legacy = GPT_ENT_TYPE_DRAGONFLY_LEGACY;
 static struct uuid bsd64_uuid_dfbsd_hammer = GPT_ENT_TYPE_DRAGONFLY_HAMMER;
 static struct uuid bsd64_uuid_dfbsd_hammer2 = GPT_ENT_TYPE_DRAGONFLY_HAMMER2;
-static struct uuid bsd64_uuid_nqc_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
-static struct uuid bsd64_uuid_nqc_nandfs = GPT_ENT_TYPE_FREEBSD_NANDFS;
-static struct uuid bsd64_uuid_nqc_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
-static struct uuid bsd64_uuid_nqc_ufs = GPT_ENT_TYPE_FREEBSD_UFS;
-static struct uuid bsd64_uuid_nqc_vinum = GPT_ENT_TYPE_FREEBSD_VINUM;
-static struct uuid bsd64_uuid_nqc_zfs = GPT_ENT_TYPE_FREEBSD_ZFS;
+static struct uuid bsd64_uuid_nqc_boot = GPT_ENT_TYPE_NQC_BOOT;
+static struct uuid bsd64_uuid_nqc_nandfs = GPT_ENT_TYPE_NQC_NANDFS;
+static struct uuid bsd64_uuid_nqc_swap = GPT_ENT_TYPE_NQC_SWAP;
+static struct uuid bsd64_uuid_nqc_ufs = GPT_ENT_TYPE_NQC_UFS;
+static struct uuid bsd64_uuid_nqc_vinum = GPT_ENT_TYPE_NQC_VINUM;
+static struct uuid bsd64_uuid_nqc_zfs = GPT_ENT_TYPE_NQC_ZFS;
 
 struct bsd64_uuid_alias {
 	struct uuid *uuid;
@@ -200,12 +200,12 @@ static struct bsd64_uuid_alias dfbsd_alias_match[] = {
 	{ NULL, 0, 0}
 };
 static struct bsd64_uuid_alias fbsd_alias_match[] = {
-	{ &bsd64_uuid_nqc_boot, FS_OTHER, G_PART_ALIAS_FREEBSD_BOOT },
-	{ &bsd64_uuid_nqc_swap, FS_OTHER, G_PART_ALIAS_FREEBSD_SWAP },
-	{ &bsd64_uuid_nqc_ufs, FS_OTHER, G_PART_ALIAS_FREEBSD_UFS },
-	{ &bsd64_uuid_nqc_zfs, FS_OTHER, G_PART_ALIAS_FREEBSD_ZFS },
-	{ &bsd64_uuid_nqc_vinum, FS_OTHER, G_PART_ALIAS_FREEBSD_VINUM },
-	{ &bsd64_uuid_nqc_nandfs, FS_OTHER, G_PART_ALIAS_FREEBSD_NANDFS },
+	{ &bsd64_uuid_nqc_boot, FS_OTHER, G_PART_ALIAS_NQC_BOOT },
+	{ &bsd64_uuid_nqc_swap, FS_OTHER, G_PART_ALIAS_NQC_SWAP },
+	{ &bsd64_uuid_nqc_ufs, FS_OTHER, G_PART_ALIAS_NQC_UFS },
+	{ &bsd64_uuid_nqc_zfs, FS_OTHER, G_PART_ALIAS_NQC_ZFS },
+	{ &bsd64_uuid_nqc_vinum, FS_OTHER, G_PART_ALIAS_NQC_VINUM },
+	{ &bsd64_uuid_nqc_nandfs, FS_OTHER, G_PART_ALIAS_NQC_NANDFS },
 	{ NULL, 0, 0}
 };
 

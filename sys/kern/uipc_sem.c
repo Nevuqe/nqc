@@ -435,13 +435,13 @@ ksem_create_copyout_semid(struct thread *td, semid_t *semidp, int fd,
     int compat32)
 {
 	semid_t semid;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	int32_t semid32;
 #endif
 	void *ptr;
 	size_t ptrs;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (compat32) {
 		semid32 = fd;
 		ptr = &semid32;
@@ -452,7 +452,7 @@ ksem_create_copyout_semid(struct thread *td, semid_t *semidp, int fd,
 		ptr = &semid;
 		ptrs = sizeof(semid);
 		compat32 = 0; /* silence gcc */
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	}
 #endif
 
@@ -959,7 +959,7 @@ static struct syscall_helper_data ksem_syscalls[] = {
 	SYSCALL_INIT_LAST
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_proto.h>
 #include <compat/freebsd32/freebsd32_signal.h>
@@ -1041,7 +1041,7 @@ ksem_module_init(void)
 	error = syscall_helper_register(ksem_syscalls, SY_THR_STATIC_KLD);
 	if (error)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	error = syscall32_helper_register(ksem32_syscalls, SY_THR_STATIC_KLD);
 	if (error)
 		return (error);
@@ -1053,7 +1053,7 @@ static void
 ksem_module_destroy(void)
 {
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	syscall32_helper_unregister(ksem32_syscalls);
 #endif
 	syscall_helper_unregister(ksem_syscalls);

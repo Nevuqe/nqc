@@ -60,7 +60,7 @@ export INSTALL_PYTHON_DIR=$(pythonsitedir)
 
 export KMOD_SPL=$(abs_top_builddir)/module/spl.ko
 export KMOD_ZFS=$(abs_top_builddir)/module/zfs.ko
-export KMOD_FREEBSD=$(abs_top_builddir)/module/openzfs.ko
+export KMOD_NQC=$(abs_top_builddir)/module/openzfs.ko
 endef
 
 export SCRIPTS_EXTRA_ENVIRONMENT

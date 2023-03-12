@@ -11,9 +11,9 @@
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_platform.h"
-#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+#if SANITIZER_NQC || SANITIZER_NETBSD
 #include "sanitizer_common.h"
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #include "sanitizer_nqc.h"
 #endif
 #include "sanitizer_procmaps.h"
@@ -23,14 +23,14 @@
 #include <sys/sysctl.h>
 // clang-format on
 #include <unistd.h>
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #include <sys/user.h>
 #endif
 
 #include <limits.h>
 
 // Fix 'kinfo_vmentry' definition on FreeBSD prior v9.2 in 32-bit mode.
-#if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
+#if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 #include <osreldate.h>
 #if __NQC_version <= 902001 // v9.2
 #define kinfo_vmentry xkinfo_vmentry
@@ -41,7 +41,7 @@ namespace __sanitizer {
 
 void ReadProcMaps(ProcSelfMapsBuff *proc_maps) {
   const int Mib[] = {
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
     CTL_KERN,
     KERN_PROC,
     KERN_PROC_VMMAP,
@@ -98,7 +98,7 @@ bool MemoryMappingLayout::Next(MemoryMappedSegment *segment) {
                       VmEntry->kve_path);
   }
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
   data_.current += VmEntry->kve_structsize;
 #else
   data_.current += sizeof(*VmEntry);

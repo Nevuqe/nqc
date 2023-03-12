@@ -54,7 +54,7 @@ PACKAGE_bhyve/vmrun.sh=	bhyve
 .endif
 
 SE_DIRS+=	NQC_version
-SE_FREEBSD_VERSION= \
+SE_NQC_VERSION= \
 	NQC_version.c \
 	Makefile \
 	README

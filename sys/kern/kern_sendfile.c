@@ -1285,7 +1285,7 @@ sendfile(struct thread *td, struct sendfile_args *uap, int compat)
 			    &hdr_uio);
 			if (error != 0)
 				goto out;
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 			/*
 			 * In FreeBSD < 5.0 the nbytes to send also included
 			 * the header.  If compat is specified subtract the
@@ -1347,7 +1347,7 @@ sys_sendfile(struct thread *td, struct sendfile_args *uap)
 	return (sendfile(td, uap, 0));
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_sendfile(struct thread *td, struct freebsd4_sendfile_args *uap)
 {
@@ -1363,4 +1363,4 @@ freebsd4_sendfile(struct thread *td, struct freebsd4_sendfile_args *uap)
 
 	return (sendfile(td, &args, 1));
 }
-#endif /* COMPAT_FREEBSD4 */
+#endif /* COMPAT_NQC4 */

@@ -12,7 +12,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_common/sanitizer_platform.h"
-#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+#if SANITIZER_LINUX || SANITIZER_NQC || SANITIZER_NETBSD
 
 #include "sanitizer_common/sanitizer_common.h"
 #include "sanitizer_common/sanitizer_libc.h"
@@ -61,7 +61,7 @@
 # undef sa_sigaction
 #endif
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 extern "C" void *__libc_stack_end;
 void *__libc_stack_end = 0;
 #endif
@@ -401,7 +401,7 @@ static uptr UnmangleLongJmpSp(uptr mangled_sp) {
 # endif
 #elif defined(__powerpc__)
 # define LONG_JMP_SP_ENV_SLOT 0
-#elif SANITIZER_FREEBSD
+#elif SANITIZER_NQC
 # ifdef __aarch64__
 #  define LONG_JMP_SP_ENV_SLOT 1
 # else
@@ -534,4 +534,4 @@ void cur_thread_finalize() {
 
 }  // namespace __tsan
 
-#endif  // SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+#endif  // SANITIZER_LINUX || SANITIZER_NQC || SANITIZER_NETBSD

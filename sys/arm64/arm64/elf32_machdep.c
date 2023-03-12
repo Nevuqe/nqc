@@ -91,7 +91,7 @@ static struct sysentvec elf32_nqc_sysvec = {
 	.sv_szsigcode	= &sz_aarch32_sigcode,
 	.sv_name	= "FreeBSD ELF32",
 	.sv_coredump	= elf32_coredump,
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = elf32_prepare_notes,
 	.sv_imgact_try	= NULL,
@@ -107,7 +107,7 @@ static struct sysentvec elf32_nqc_sysvec = {
 	.sv_setregs	= freebsd32_setregs,
 	.sv_fixlimit	= NULL, // XXX
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_ILP32 | SV_SHP | SV_TIMEKEEP |
+	.sv_flags	= SV_ABI_NQC | SV_ILP32 | SV_SHP | SV_TIMEKEEP |
 	    SV_RNG_SEED_VER,
 	.sv_set_syscall_retval = freebsd32_set_syscall_retval,
 	.sv_fetch_syscall_args = freebsd32_fetch_syscall_args,
@@ -127,7 +127,7 @@ static struct sysentvec elf32_nqc_sysvec = {
 INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 
 static Elf32_Brandinfo freebsd32_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_ARM,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
@@ -153,9 +153,9 @@ elf32_arm_abi_supported(struct image_params *imgp, int32_t *osrel __unused,
 	    ID_AA64PFR0_EL0_64_32)
 		return (FALSE);
 
-#define	EF_ARM_EABI_FREEBSD_MIN	EF_ARM_EABI_VER4
+#define	EF_ARM_EABI_NQC_MIN	EF_ARM_EABI_VER4
 	hdr = (const Elf32_Ehdr *)imgp->image_header;
-	if (EF_ARM_EABI_VERSION(hdr->e_flags) < EF_ARM_EABI_FREEBSD_MIN) {
+	if (EF_ARM_EABI_VERSION(hdr->e_flags) < EF_ARM_EABI_NQC_MIN) {
 		if (bootverbose)
 			uprintf("Attempting to execute non EABI binary "
 			    "(rev %d) image %s",

@@ -308,7 +308,7 @@
 
 #define	__BITSET_SIZE(_s)	(__bitset_words((_s)) * sizeof(long))
 
-#if defined(_KERNEL) || defined(_WANT_FREEBSD_BITSET)
+#if defined(_KERNEL) || defined(_WANT_NQC_BITSET)
 /*
  * Dynamically allocate a bitset.
  */
@@ -357,6 +357,6 @@
 #define	BITSET_FSET(n)				__BITSET_FSET(n)
 #define	BITSET_SIZE(_s)				__BITSET_SIZE(_s)
 #define	BITSET_T_INITIALIZER(x)			__BITSET_T_INITIALIZER(x)
-#endif /* defined(_KERNEL) || defined(_WANT_FREEBSD_BITSET) */
+#endif /* defined(_KERNEL) || defined(_WANT_NQC_BITSET) */
 
 #endif /* !_SYS_BITSET_H_ */

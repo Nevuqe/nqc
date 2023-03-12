@@ -3092,7 +3092,7 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 	struct mfi_softc *sc;
 	union mfi_statrequest *ms;
 	struct mfi_ioc_packet *ioc;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct mfi_ioc_packet32 *ioc32;
 #endif
 	struct mfi_ioc_aen *aen;
@@ -3103,7 +3103,7 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 	size_t len;
 	int i, res;
 	struct mfi_ioc_passthru *iop = (struct mfi_ioc_passthru *)arg;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct mfi_ioc_passthru32 *iop32 = (struct mfi_ioc_passthru32 *)arg;
 	struct mfi_ioc_passthru iop_swab;
 #endif
@@ -3161,7 +3161,7 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 		break;
 	}
 	case MFI_CMD:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case MFI_CMD32:
 #endif
 		{
@@ -3209,12 +3209,12 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 			cm->cm_flags |= MFI_CMD_DATAIN | MFI_CMD_DATAOUT;
 		cm->cm_len = cm->cm_frame->header.data_len;
 		if (cm->cm_frame->header.cmd == MFI_CMD_STP) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 			if (cmd == MFI_CMD) {
 #endif
 				/* Native */
 				cm->cm_stp_len = ioc->mfi_sgl[0].iov_len;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 			} else {
 				/* 32bit on 64bit */
 				ioc32 = (struct mfi_ioc_packet32 *)ioc;
@@ -3243,13 +3243,13 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 			if ((cm->cm_flags & MFI_CMD_DATAOUT) ||
 			    (cm->cm_frame->header.cmd == MFI_CMD_STP)) {
 				for (i = 0; i < ioc->mfi_sge_count; i++) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 					if (cmd == MFI_CMD) {
 #endif
 						/* Native */
 						addr = ioc->mfi_sgl[i].iov_base;
 						len = ioc->mfi_sgl[i].iov_len;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 					} else {
 						/* 32bit on 64bit */
 						ioc32 = (struct mfi_ioc_packet32 *)ioc;
@@ -3303,13 +3303,13 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 			if ((cm->cm_flags & MFI_CMD_DATAIN) ||
 			    (cm->cm_frame->header.cmd == MFI_CMD_STP)) {
 				for (i = 0; i < ioc->mfi_sge_count; i++) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 					if (cmd == MFI_CMD) {
 #endif
 						/* Native */
 						addr = ioc->mfi_sgl[i].iov_base;
 						len = ioc->mfi_sgl[i].iov_len;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 					} else {
 						/* 32bit on 64bit */
 						ioc32 = (struct mfi_ioc_packet32 *)ioc;
@@ -3333,7 +3333,7 @@ mfi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int flag, struct thread *td
 			bcopy(&ioc->mfi_frame.raw[ioc->mfi_sense_off],
 			    &sense_ptr.sense_ptr_data[0],
 			    sizeof(sense_ptr.sense_ptr_data));
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 			if (cmd != MFI_CMD) {
 				/*
 				 * not 64bit native so zero out any address
@@ -3433,7 +3433,7 @@ out:
 			    cmd, arg, flag, td));
 			break;
 		}
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case MFIIO_PASSTHRU32:
 		if (!SV_CURPROC_FLAG(SV_ILP32)) {
 			error = ENOTTY;
@@ -3447,7 +3447,7 @@ out:
 #endif
 	case MFIIO_PASSTHRU:
 		error = mfi_user_command(sc, iop);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (cmd == MFIIO_PASSTHRU32)
 			iop32->ioc_frame = iop_swab.ioc_frame;
 #endif

@@ -66,7 +66,7 @@ struct sysentvec elf64_nqc_sysvec_la48 = {
 	.sv_sigcodeoff	= VDSO_SIGCODE_OFFSET,
 	.sv_name	= "FreeBSD ELF64",
 	.sv_coredump	= __elfN(coredump),
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = __elfN(prepare_notes),
 	.sv_imgact_try	= NULL,
@@ -82,7 +82,7 @@ struct sysentvec elf64_nqc_sysvec_la48 = {
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_ASLR | SV_LP64 | SV_SHP |
+	.sv_flags	= SV_ABI_NQC | SV_ASLR | SV_LP64 | SV_SHP |
 			    SV_TIMEKEEP | SV_RNG_SEED_VER | SV_DSO_SIG,
 	.sv_set_syscall_retval = cpu_set_syscall_retval,
 	.sv_fetch_syscall_args = cpu_fetch_syscall_args,
@@ -109,7 +109,7 @@ struct sysentvec elf64_nqc_sysvec_la57 = {
 	.sv_sigcodeoff	= VDSO_SIGCODE_OFFSET,
 	.sv_name	= "FreeBSD ELF64",
 	.sv_coredump	= __elfN(coredump),
-	.sv_elf_core_osabi = ELFOSABI_FREEBSD,
+	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = FREEBSD_ABI_VENDOR,
 	.sv_elf_core_prepare_notes = __elfN(prepare_notes),
 	.sv_imgact_try	= NULL,
@@ -125,7 +125,7 @@ struct sysentvec elf64_nqc_sysvec_la57 = {
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
 	.sv_maxssiz	= NULL,
-	.sv_flags	= SV_ABI_FREEBSD | SV_ASLR | SV_LP64 | SV_SHP |
+	.sv_flags	= SV_ABI_NQC | SV_ASLR | SV_LP64 | SV_SHP |
 			    SV_TIMEKEEP | SV_RNG_SEED_VER | SV_DSO_SIG,
 	.sv_set_syscall_retval = cpu_set_syscall_retval,
 	.sv_fetch_syscall_args = cpu_fetch_syscall_args,
@@ -173,7 +173,7 @@ nqc_brand_info_la57_img_compat(struct image_params *imgp,
 {
 	if ((imgp->proc->p_md.md_flags & P_MD_LA57) != 0)
 		return (TRUE);
-	if (fctl0 == NULL || (*fctl0 & NT_FREEBSD_FCTL_LA48) != 0)
+	if (fctl0 == NULL || (*fctl0 & NT_NQC_FCTL_LA48) != 0)
 		return (FALSE);
 	if ((imgp->proc->p_md.md_flags & P_MD_LA48) != 0)
 		return (FALSE);
@@ -181,7 +181,7 @@ nqc_brand_info_la57_img_compat(struct image_params *imgp,
 }
 
 static Elf64_Brandinfo nqc_brand_info_la48 = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
@@ -193,7 +193,7 @@ static Elf64_Brandinfo nqc_brand_info_la48 = {
 };
 
 static Elf64_Brandinfo nqc_brand_info_la57 = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
@@ -220,7 +220,7 @@ SYSINIT(elf64, SI_SUB_EXEC, SI_ORDER_FIRST,
     sysinit_register_elf64_brand_entries, NULL);
 
 static Elf64_Brandinfo nqc_brand_oinfo = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
@@ -235,7 +235,7 @@ SYSINIT(oelf64, SI_SUB_EXEC, SI_ORDER_ANY,
     (sysinit_cfunc_t)elf64_insert_brand_entry, &nqc_brand_oinfo);
 
 static Elf64_Brandinfo knqc_brand_info = {
-	.brand		= ELFOSABI_FREEBSD,
+	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,

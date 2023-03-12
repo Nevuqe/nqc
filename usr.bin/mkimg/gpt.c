@@ -42,26 +42,26 @@ __FBSDID("$FreeBSD$");
 #include "scheme.h"
 
 static mkimg_uuid_t gpt_uuid_efi = GPT_ENT_TYPE_EFI;
-static mkimg_uuid_t gpt_uuid_nqc = GPT_ENT_TYPE_FREEBSD;
-static mkimg_uuid_t gpt_uuid_nqc_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
-static mkimg_uuid_t gpt_uuid_nqc_nandfs = GPT_ENT_TYPE_FREEBSD_NANDFS;
-static mkimg_uuid_t gpt_uuid_nqc_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
-static mkimg_uuid_t gpt_uuid_nqc_ufs = GPT_ENT_TYPE_FREEBSD_UFS;
-static mkimg_uuid_t gpt_uuid_nqc_vinum = GPT_ENT_TYPE_FREEBSD_VINUM;
-static mkimg_uuid_t gpt_uuid_nqc_zfs = GPT_ENT_TYPE_FREEBSD_ZFS;
+static mkimg_uuid_t gpt_uuid_nqc = GPT_ENT_TYPE_NQC;
+static mkimg_uuid_t gpt_uuid_nqc_boot = GPT_ENT_TYPE_NQC_BOOT;
+static mkimg_uuid_t gpt_uuid_nqc_nandfs = GPT_ENT_TYPE_NQC_NANDFS;
+static mkimg_uuid_t gpt_uuid_nqc_swap = GPT_ENT_TYPE_NQC_SWAP;
+static mkimg_uuid_t gpt_uuid_nqc_ufs = GPT_ENT_TYPE_NQC_UFS;
+static mkimg_uuid_t gpt_uuid_nqc_vinum = GPT_ENT_TYPE_NQC_VINUM;
+static mkimg_uuid_t gpt_uuid_nqc_zfs = GPT_ENT_TYPE_NQC_ZFS;
 static mkimg_uuid_t gpt_uuid_mbr = GPT_ENT_TYPE_MBR;
 static mkimg_uuid_t gpt_uuid_ms_basic_data = GPT_ENT_TYPE_MS_BASIC_DATA;
 static mkimg_uuid_t gpt_uuid_prep_boot = GPT_ENT_TYPE_PREP_BOOT;
 
 static struct mkimg_alias gpt_aliases[] = {
     {	ALIAS_EFI, ALIAS_PTR2TYPE(&gpt_uuid_efi) },
-    {	ALIAS_FREEBSD, ALIAS_PTR2TYPE(&gpt_uuid_nqc) },
-    {	ALIAS_FREEBSD_BOOT, ALIAS_PTR2TYPE(&gpt_uuid_nqc_boot) },
-    {	ALIAS_FREEBSD_NANDFS, ALIAS_PTR2TYPE(&gpt_uuid_nqc_nandfs) },
-    {	ALIAS_FREEBSD_SWAP, ALIAS_PTR2TYPE(&gpt_uuid_nqc_swap) },
-    {	ALIAS_FREEBSD_UFS, ALIAS_PTR2TYPE(&gpt_uuid_nqc_ufs) },
-    {	ALIAS_FREEBSD_VINUM, ALIAS_PTR2TYPE(&gpt_uuid_nqc_vinum) },
-    {	ALIAS_FREEBSD_ZFS, ALIAS_PTR2TYPE(&gpt_uuid_nqc_zfs) },
+    {	ALIAS_NQC, ALIAS_PTR2TYPE(&gpt_uuid_nqc) },
+    {	ALIAS_NQC_BOOT, ALIAS_PTR2TYPE(&gpt_uuid_nqc_boot) },
+    {	ALIAS_NQC_NANDFS, ALIAS_PTR2TYPE(&gpt_uuid_nqc_nandfs) },
+    {	ALIAS_NQC_SWAP, ALIAS_PTR2TYPE(&gpt_uuid_nqc_swap) },
+    {	ALIAS_NQC_UFS, ALIAS_PTR2TYPE(&gpt_uuid_nqc_ufs) },
+    {	ALIAS_NQC_VINUM, ALIAS_PTR2TYPE(&gpt_uuid_nqc_vinum) },
+    {	ALIAS_NQC_ZFS, ALIAS_PTR2TYPE(&gpt_uuid_nqc_zfs) },
     {	ALIAS_MBR, ALIAS_PTR2TYPE(&gpt_uuid_mbr) },
     {	ALIAS_NTFS, ALIAS_PTR2TYPE(&gpt_uuid_ms_basic_data) },
     {	ALIAS_PPCBOOT, ALIAS_PTR2TYPE(&gpt_uuid_prep_boot) },

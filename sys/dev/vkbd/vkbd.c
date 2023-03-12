@@ -1088,7 +1088,7 @@ vkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 {
 	vkbd_state_t	*state = (vkbd_state_t *) kbd->kb_data;
 	int		 i;
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	int		 ival;
 #endif
 
@@ -1099,7 +1099,7 @@ vkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		*(int *)arg = state->ks_mode;
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 7):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1135,7 +1135,7 @@ vkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		*(int *)arg = KBD_LED_VAL(kbd);
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 66):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1166,7 +1166,7 @@ vkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		*(int *)arg = state->ks_state & LOCK_MASK;
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 20):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1191,7 +1191,7 @@ vkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		vkbd_status_changed(state);
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 67):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1206,10 +1206,10 @@ vkbd_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	case PIO_KEYMAP:	/* set keyboard translation table */
 	case PIO_KEYMAPENT:	/* set keyboard translation table entry */
 	case PIO_DEADKEYMAP:	/* set accent key translation table */
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OPIO_KEYMAP:	/* set keyboard translation table (compat) */
 	case OPIO_DEADKEYMAP:	/* set accent key translation table (compat) */
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 		state->ks_accents = 0;
 		/* FALLTHROUGH */
 

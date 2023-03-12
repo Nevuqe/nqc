@@ -194,7 +194,7 @@ kern_mmap_maxprot(struct proc *p, int prot)
 {
 
 	if ((p->p_flag2 & P2_PROTMAX_DISABLE) != 0 ||
-	    (p->p_fctl0 & NT_FREEBSD_FCTL_PROTMAX_DISABLE) != 0)
+	    (p->p_fctl0 & NT_NQC_FCTL_PROTMAX_DISABLE) != 0)
 		return (_PROT_ALL);
 	if (((p->p_flag2 & P2_PROTMAX_ENABLE) != 0 || imply_prot_max) &&
 	    prot != PROT_NONE)
@@ -428,7 +428,7 @@ done:
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD6)
+#if defined(COMPAT_NQC6)
 int
 freebsd6_mmap(struct thread *td, struct freebsd6_mmap_args *uap)
 {
@@ -486,7 +486,7 @@ kern_ommap(struct thread *td, uintptr_t hint, int len, int oprot,
 #define	OMAP_FIXED	0x0100
 
 	prot = cvtbsdprot[oprot & 0x7];
-#if (defined(COMPAT_FREEBSD32) && defined(__amd64__)) || defined(__i386__)
+#if (defined(COMPAT_NQC32) && defined(__amd64__)) || defined(__i386__)
 	if (i386_read_exec && SV_PROC_FLAG(td->td_proc, SV_ILP32) &&
 	    prot != 0)
 		prot |= PROT_EXEC;
@@ -676,7 +676,7 @@ kern_mprotect(struct thread *td, uintptr_t addr0, size_t size, int prot)
 	addr -= pageoff;
 	size += pageoff;
 	size = (vm_size_t) round_page(size);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		if (((addr + size) & 0xffffffff) < addr)
 			return (EINVAL);

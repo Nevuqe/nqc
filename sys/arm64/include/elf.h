@@ -150,7 +150,7 @@ __ElfType(Auxinfo);
 #define	HWCAP2_RNG		0x00010000
 #define	HWCAP2_BTI		0x00020000
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 /* ARM HWCAP */
 #define	HWCAP32_HALF		0x00000002	/* Always set.               */
 #define	HWCAP32_THUMB		0x00000004	/* Always set.               */

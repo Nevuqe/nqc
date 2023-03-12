@@ -24,8 +24,8 @@
  * SUCH DAMAGE.
  */
 
-#ifndef __FREEBSD_XZ_CONFIG_H__
-#define __FREEBSD_XZ_CONFIG_H__
+#ifndef __NQC_XZ_CONFIG_H__
+#define __NQC_XZ_CONFIG_H__
 
 #include <sys/param.h>
 #include <sys/endian.h>
@@ -69,4 +69,4 @@
 
 #define	get_le32(ptr)	le32toh(*(const uint32_t *)(ptr))
 
-#endif /* __FREEBSD_XZ_CONFIG_H__ */
+#endif /* __NQC_XZ_CONFIG_H__ */

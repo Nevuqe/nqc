@@ -28,8 +28,8 @@
  * $FreeBSD$
  */
 
-#ifndef _COMPAT_FREEBSD32_FREEBSD32_IPC_H_
-#define _COMPAT_FREEBSD32_FREEBSD32_IPC_H_
+#ifndef _COMPAT_NQC32_NQC32_IPC_H_
+#define _COMPAT_NQC32_NQC32_IPC_H_
 
 struct ipc_perm32 {
 	uid_t		cuid;
@@ -128,8 +128,8 @@ struct shminfo32 {
 	uint32_t	shmall;
 };
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 struct ipc_perm_old32 {
 	uint16_t	cuid;
 	uint16_t	cgid;
@@ -196,4 +196,4 @@ void	freebsd32_ipcperm_old_out(struct ipc_perm *ip,
 void	freebsd32_ipcperm_in(struct ipc_perm32 *ip32, struct ipc_perm *ip);
 void	freebsd32_ipcperm_out(struct ipc_perm *ip, struct ipc_perm32 *ip32);
 
-#endif /* !_COMPAT_FREEBSD32_FREEBSD32_IPC_H_ */
+#endif /* !_COMPAT_NQC32_NQC32_IPC_H_ */

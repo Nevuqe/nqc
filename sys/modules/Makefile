@@ -664,7 +664,7 @@ _neta=		neta
 
 .if ${MACHINE_CPUARCH} == "i386" || ${MACHINE_CPUARCH} == "amd64"
 _agp=		agp
-.if ${MACHINE_CPUARCH} == "i386" || !empty(COMPAT_FREEBSD32_ENABLED)
+.if ${MACHINE_CPUARCH} == "i386" || !empty(COMPAT_NQC32_ENABLED)
 _aout=		aout
 .endif
 _bios=		bios

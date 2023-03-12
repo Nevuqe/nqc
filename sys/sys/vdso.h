@@ -116,7 +116,7 @@ struct vdso_sv_tk *alloc_sv_tk(void);
 
 #define	VDSO_TH_NUM	4
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 /*
  * i386 is the only arch with a 32 bit time_t.

@@ -34,7 +34,7 @@ __FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/ucred.h>
-#define	_WANT_FREEBSD11_STATFS
+#define	_WANT_NQC11_STATFS
 #include <sys/mount.h>
 #include <stdlib.h>
 #include "gen-compat.h"

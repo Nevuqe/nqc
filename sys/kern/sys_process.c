@@ -66,7 +66,7 @@ __FBSDID("$FreeBSD$");
 #include <vm/vm_page.h>
 #include <vm/vm_param.h>
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/procfs.h>
 #endif
 
@@ -275,7 +275,7 @@ proc_write_regset(struct thread *td, int note, struct iovec *iov)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 /* For 32 bit binaries, we need to expose the 32 bit regs layouts. */
 int
 proc_read_regs32(struct thread *td, struct reg32 *regs32)
@@ -733,7 +733,7 @@ sys_ptrace(struct thread *td, struct ptrace_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 /*
  *   PROC_READ(regs, td2, addr);
  * becomes either:
@@ -844,7 +844,7 @@ kern_ptrace(struct thread *td, int req, pid_t pid, void *addr, int data)
 	struct thr_syscall_req *tsr;
 	int error, num, tmp;
 	lwpid_t tid = 0, *buf;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	int wrap32 = 0, safe = 0;
 #endif
 	bool proctree_locked, p2_req_set;
@@ -927,7 +927,7 @@ kern_ptrace(struct thread *td, int req, pid_t pid, void *addr, int data)
 		tid = td2->td_tid;
 	}
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	/*
 	 * Test if we're a 32 bit client and what the target is.
 	 * Set the wrap controls accordingly.
@@ -1157,7 +1157,7 @@ kern_ptrace(struct thread *td, int req, pid_t pid, void *addr, int data)
 	case PT_GET_SC_ARGS:
 		CTR1(KTR_PTRACE, "PT_GET_SC_ARGS: pid %d", p->p_pid);
 		if ((td2->td_dbgflags & (TDB_SCE | TDB_SCX)) == 0
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		    || (wrap32 && !safe)
 #endif
 		    ) {
@@ -1173,7 +1173,7 @@ kern_ptrace(struct thread *td, int req, pid_t pid, void *addr, int data)
 
 	case PT_GET_SC_RET:
 		if ((td2->td_dbgflags & (TDB_SCX)) == 0
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		    || (wrap32 && !safe)
 #endif
 		    ) {

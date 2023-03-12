@@ -3019,7 +3019,7 @@ static struct dlt_choice dlt_choices[] = {
 	DLT_CHOICE(JUNIPER_VP, "Juniper Voice PIC"),
 	DLT_CHOICE(A429, "Arinc 429"),
 	DLT_CHOICE(A653_ICM, "Arinc 653 Interpartition Communication"),
-	DLT_CHOICE(USB_FREEBSD, "USB with FreeBSD header"),
+	DLT_CHOICE(USB_NQC, "USB with FreeBSD header"),
 	DLT_CHOICE(BLUETOOTH_HCI_H4, "Bluetooth HCI UART transport layer"),
 	DLT_CHOICE(IEEE802_16_MAC_CPS, "IEEE 802.16 MAC Common Part Sublayer"),
 	DLT_CHOICE(USB_LINUX, "USB with Linux header"),

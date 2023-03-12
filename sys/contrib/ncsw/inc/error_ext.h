@@ -40,7 +40,7 @@
 #ifndef __ERROR_EXT_H
 #define __ERROR_EXT_H
 
-#if defined(NCSW_FREEBSD)
+#if defined(NCSW_NQC)
 #include <sys/param.h>
 #include <sys/errno.h>
 #include <sys/pcpu.h>

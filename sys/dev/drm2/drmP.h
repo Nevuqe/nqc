@@ -913,7 +913,7 @@ struct drm_driver {
 	struct drm_ioctl_desc *ioctls;
 	int num_ioctls;
 	struct drm_bus *bus;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct drm_ioctl_desc *compat_ioctls;
 	int *num_compat_ioctls;
 #endif

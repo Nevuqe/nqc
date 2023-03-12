@@ -50,8 +50,8 @@ MKMODULESENV+=	SAN_CFLAGS="${SAN_CFLAGS}"
 MKMODULESENV+=	GCOV_CFLAGS="${GCOV_CFLAGS}"
 .endif
 
-.if !empty(COMPAT_FREEBSD32_ENABLED)
-MKMODULESENV+=	COMPAT_FREEBSD32_ENABLED="yes"
+.if !empty(COMPAT_NQC32_ENABLED)
+MKMODULESENV+=	COMPAT_NQC32_ENABLED="yes"
 .endif
 
 # Allow overriding the kernel debug directory, so kernel and user debug may be

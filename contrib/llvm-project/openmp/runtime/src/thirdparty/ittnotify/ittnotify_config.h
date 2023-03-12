@@ -23,9 +23,9 @@
 #define ITT_OS_MAC 3
 #endif /* ITT_OS_MAC */
 
-#ifndef ITT_OS_FREEBSD
-#define ITT_OS_FREEBSD 4
-#endif /* ITT_OS_FREEBSD */
+#ifndef ITT_OS_NQC
+#define ITT_OS_NQC 4
+#endif /* ITT_OS_NQC */
 
 #ifndef ITT_OS
 #if defined WIN32 || defined _WIN32
@@ -33,7 +33,7 @@
 #elif defined(__APPLE__) && defined(__MACH__)
 #define ITT_OS ITT_OS_MAC
 #elif defined(__NQC__)
-#define ITT_OS ITT_OS_FREEBSD
+#define ITT_OS ITT_OS_NQC
 #else
 #define ITT_OS ITT_OS_LINUX
 #endif
@@ -51,17 +51,17 @@
 #define ITT_PLATFORM_MAC 3
 #endif /* ITT_PLATFORM_MAC */
 
-#ifndef ITT_PLATFORM_FREEBSD
-#define ITT_PLATFORM_FREEBSD 4
-#endif /* ITT_PLATFORM_FREEBSD */
+#ifndef ITT_PLATFORM_NQC
+#define ITT_PLATFORM_NQC 4
+#endif /* ITT_PLATFORM_NQC */
 
 #ifndef ITT_PLATFORM
 #if ITT_OS == ITT_OS_WIN
 #define ITT_PLATFORM ITT_PLATFORM_WIN
 #elif ITT_OS == ITT_OS_MAC
 #define ITT_PLATFORM ITT_PLATFORM_MAC
-#elif ITT_OS == ITT_OS_FREEBSD
-#define ITT_PLATFORM ITT_PLATFORM_FREEBSD
+#elif ITT_OS == ITT_OS_NQC
+#define ITT_PLATFORM ITT_PLATFORM_NQC
 #else
 #define ITT_PLATFORM ITT_PLATFORM_POSIX
 #endif

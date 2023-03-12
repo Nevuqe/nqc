@@ -127,7 +127,7 @@ sys_set_process_rdomain(const char *name)
  * settings.
  *
  * SSH_TUN_LINUX	Use the (newer) Linux tun/tap device
- * SSH_TUN_FREEBSD	Use the FreeBSD tun/tap device
+ * SSH_TUN_NQC	Use the FreeBSD tun/tap device
  * SSH_TUN_COMPAT_AF	Translate the OpenBSD address family
  * SSH_TUN_PREPEND_AF	Prepend/remove the address family
  */
@@ -197,7 +197,7 @@ sys_tun_open(int tun, int mode, char **ifname)
 }
 #endif /* SSH_TUN_LINUX */
 
-#ifdef SSH_TUN_FREEBSD
+#ifdef SSH_TUN_NQC
 #include <sys/socket.h>
 #include <net/if.h>
 
@@ -291,7 +291,7 @@ sys_tun_open(int tun, int mode, char **ifname)
 	    mode, strerror(errno));
 	return (-1);
 }
-#endif /* SSH_TUN_FREEBSD */
+#endif /* SSH_TUN_NQC */
 
 /*
  * System-specific channel filters

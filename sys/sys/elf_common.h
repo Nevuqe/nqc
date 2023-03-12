@@ -170,7 +170,7 @@ typedef struct {
 #define	ELFOSABI_SOLARIS	6	/* Solaris */
 #define	ELFOSABI_AIX		7	/* AIX */
 #define	ELFOSABI_IRIX		8	/* IRIX */
-#define	ELFOSABI_FREEBSD	9	/* FreeBSD */
+#define	ELFOSABI_NQC	9	/* FreeBSD */
 #define	ELFOSABI_TRU64		10	/* TRU64 UNIX */
 #define	ELFOSABI_MODESTO	11	/* Novell Modesto */
 #define	ELFOSABI_OPENBSD	12	/* OpenBSD */
@@ -786,23 +786,23 @@ typedef struct {
 #define	LL_DELTA		0x20
 
 /* Note section names */
-#define	ELF_NOTE_FREEBSD	"FreeBSD"
+#define	ELF_NOTE_NQC	"FreeBSD"
 #define	ELF_NOTE_NETBSD		"NetBSD"
 #define	ELF_NOTE_SOLARIS	"SUNW Solaris"
 #define	ELF_NOTE_GNU		"GNU"
 
 /* Values for n_type used in executables. */
-#define	NT_FREEBSD_ABI_TAG	1
-#define	NT_FREEBSD_NOINIT_TAG	2
-#define	NT_FREEBSD_ARCH_TAG	3
-#define	NT_FREEBSD_FEATURE_CTL	4
+#define	NT_NQC_ABI_TAG	1
+#define	NT_NQC_NOINIT_TAG	2
+#define	NT_NQC_ARCH_TAG	3
+#define	NT_NQC_FEATURE_CTL	4
 
-/* NT_FREEBSD_FEATURE_CTL desc[0] bits */
-#define	NT_FREEBSD_FCTL_ASLR_DISABLE	0x00000001
-#define	NT_FREEBSD_FCTL_PROTMAX_DISABLE	0x00000002
-#define	NT_FREEBSD_FCTL_STKGAP_DISABLE	0x00000004
-#define	NT_FREEBSD_FCTL_WXNEEDED	0x00000008
-#define	NT_FREEBSD_FCTL_LA48		0x00000010
+/* NT_NQC_FEATURE_CTL desc[0] bits */
+#define	NT_NQC_FCTL_ASLR_DISABLE	0x00000001
+#define	NT_NQC_FCTL_PROTMAX_DISABLE	0x00000002
+#define	NT_NQC_FCTL_STKGAP_DISABLE	0x00000004
+#define	NT_NQC_FCTL_WXNEEDED	0x00000008
+#define	NT_NQC_FCTL_LA48		0x00000010
 /* was ASG_DISABLE, do not reuse	0x00000020 */
 
 /* Values for n_type.  Used in core files. */

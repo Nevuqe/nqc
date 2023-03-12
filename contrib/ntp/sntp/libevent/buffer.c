@@ -107,7 +107,7 @@
 #define SENDFILE_IS_LINUX	1
 #elif defined(EVENT__HAVE_SENDFILE) && defined(__NQC__)
 #define USE_SENDFILE		1
-#define SENDFILE_IS_FREEBSD	1
+#define SENDFILE_IS_NQC	1
 #elif defined(EVENT__HAVE_SENDFILE) && defined(__APPLE__)
 #define USE_SENDFILE		1
 #define SENDFILE_IS_MACOSX	1
@@ -2452,7 +2452,7 @@ evbuffer_write_sendfile(struct evbuffer *buffer, evutil_socket_t dest_fd,
 	    EVBUFFER_CHAIN_EXTRA(struct evbuffer_chain_file_segment,
 		chain);
 	const int source_fd = info->segment->fd;
-#if defined(SENDFILE_IS_MACOSX) || defined(SENDFILE_IS_FREEBSD)
+#if defined(SENDFILE_IS_MACOSX) || defined(SENDFILE_IS_NQC)
 	int res;
 	ev_off_t len = chain->off;
 #elif defined(SENDFILE_IS_LINUX) || defined(SENDFILE_IS_SOLARIS)
@@ -2468,7 +2468,7 @@ evbuffer_write_sendfile(struct evbuffer *buffer, evutil_socket_t dest_fd,
 		return (-1);
 
 	return (len);
-#elif defined(SENDFILE_IS_FREEBSD)
+#elif defined(SENDFILE_IS_NQC)
 	res = sendfile(source_fd, dest_fd, chain->misalign, chain->off, NULL, &len, 0);
 	if (res == -1 && !EVUTIL_ERR_RW_RETRIABLE(errno))
 		return (-1);

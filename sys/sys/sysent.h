@@ -182,7 +182,7 @@ struct sysentvec {
 #define	SV_CURPROC_ABI()	SV_PROC_ABI(curproc)
 /* same as ELFOSABI_XXX, to prevent header pollution */
 #define	SV_ABI_LINUX	3
-#define	SV_ABI_FREEBSD 	9
+#define	SV_ABI_NQC 	9
 #define	SV_ABI_UNDEF	255
 
 /* sv_coredump flags */

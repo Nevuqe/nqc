@@ -237,15 +237,15 @@ static struct syscall_helper_data sem_syscalls[] = {
 	SYSCALL_INIT_HELPER(__semctl),
 	SYSCALL_INIT_HELPER(semget),
 	SYSCALL_INIT_HELPER(semop),
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	SYSCALL_INIT_HELPER(semsys),
 	SYSCALL_INIT_HELPER_COMPAT(freebsd7___semctl),
 #endif
 	SYSCALL_INIT_LAST
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_ipc.h>
 #include <compat/freebsd32/freebsd32_proto.h>
@@ -258,8 +258,8 @@ static struct syscall_helper_data sem32_syscalls[] = {
 	SYSCALL32_INIT_HELPER_COMPAT(semget),
 	SYSCALL32_INIT_HELPER_COMPAT(semop),
 	SYSCALL32_INIT_HELPER(freebsd32_semsys),
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	SYSCALL32_INIT_HELPER(freebsd7_nqc32___semctl),
 #endif
 	SYSCALL_INIT_LAST
@@ -335,7 +335,7 @@ seminit(void)
 	error = syscall_helper_register(sem_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	error = syscall32_helper_register(sem32_syscalls, SY_THR_STATIC_KLD);
 	if (error != 0)
 		return (error);
@@ -352,7 +352,7 @@ semunload(void)
 	if (semtot != 0)
 		return (EBUSY);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	syscall32_helper_unregister(sem32_syscalls);
 #endif
 	syscall_helper_unregister(sem_syscalls);
@@ -1527,7 +1527,7 @@ sysctl_sema(SYSCTL_HANDLER_ARGS)
 {
 	struct prison *pr, *rpr;
 	struct semid_kernel tsemak;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct semid_kernel32 tsemak32;
 #endif
 	void *outaddr;
@@ -1548,7 +1548,7 @@ sysctl_sema(SYSCTL_HANDLER_ARGS)
 				tsemak.u.sem_perm.key = IPC_PRIVATE;
 		}
 		mtx_unlock(&sema_mtx[i]);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (SV_CURPROC_FLAG(SV_ILP32)) {
 			bzero(&tsemak32, sizeof(tsemak32));
 			freebsd32_ipcperm_out(&tsemak.u.sem_perm,
@@ -1752,8 +1752,8 @@ sem_prison_cleanup(struct prison *pr)
 
 SYSCTL_JAIL_PARAM_SYS_NODE(sysvsem, CTLFLAG_RW, "SYSV semaphores");
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 
 /* XXX casting to (sy_call_t *) is bogus, as usual. */
 static sy_call_t *semcalls[] = {
@@ -1855,16 +1855,16 @@ freebsd7___semctl(struct thread *td, struct freebsd7___semctl_args *uap)
 	return (error);
 }
 
-#endif /* COMPAT_FREEBSD{4,5,6,7} */
+#endif /* COMPAT_NQC{4,5,6,7} */
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 int
 freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
 {
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	AUDIT_ARG_SVIPC_WHICH(uap->which);
 	switch (uap->which) {
 	case 0:
@@ -1878,8 +1878,8 @@ freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
 #endif
 }
 
-#if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
-    defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
+#if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
+    defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 int
 freebsd7_nqc32___semctl(struct thread *td,
     struct freebsd7_nqc32___semctl_args *uap)
@@ -2024,4 +2024,4 @@ freebsd32___semctl(struct thread *td, struct freebsd32___semctl_args *uap)
 	return (error);
 }
 
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */

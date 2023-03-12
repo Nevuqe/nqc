@@ -230,7 +230,7 @@ static struct cd_quirk_entry cd_quirk_table[] =
 	}
 };
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct ioc_read_toc_entry32 {
 	u_char	address_format;
 	u_char	starting_track;
@@ -1731,7 +1731,7 @@ te_data_get_ptr(void *irtep, u_long cmd)
 {
 	union {
 		struct ioc_read_toc_entry irte;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		struct ioc_read_toc_entry32 irte32;
 #endif
 	} *irteup;
@@ -1740,7 +1740,7 @@ te_data_get_ptr(void *irtep, u_long cmd)
 	switch (IOCPARM_LEN(cmd)) {
 	case sizeof(irteup->irte):
 		return (irteup->irte.data);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case sizeof(irteup->irte32):
 		return ((struct cd_toc_entry *)(uintptr_t)irteup->irte32.data);
 #endif
@@ -2048,7 +2048,7 @@ cdioctl(struct disk *dp, u_long cmd, void *addr, int flag, struct thread *td)
 		}
 		break;
 	case CDIOREADTOCENTRYS:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case CDIOREADTOCENTRYS_32:
 #endif
 		{

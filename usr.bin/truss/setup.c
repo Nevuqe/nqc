@@ -75,7 +75,7 @@ static void	new_proc(struct trussinfo *, pid_t, lwpid_t);
 
 static struct procabi freebsd = {
 	.type = "FreeBSD",
-	.abi = SYSDECODE_ABI_FREEBSD,
+	.abi = SYSDECODE_ABI_NQC,
 	.pointer_size = sizeof(void *),
 	.extra_syscalls = STAILQ_HEAD_INITIALIZER(freebsd.extra_syscalls),
 	.syscalls = { NULL }
@@ -88,7 +88,7 @@ static struct procabi freebsd = {
 #if __SIZEOF_POINTER__ > 4
 static struct procabi freebsd32 = {
 	.type = "FreeBSD32",
-	.abi = SYSDECODE_ABI_FREEBSD32,
+	.abi = SYSDECODE_ABI_NQC32,
 	.pointer_size = sizeof(uint32_t),
 	.compat_prefix = "freebsd32_",
 	.extra_syscalls = STAILQ_HEAD_INITIALIZER(freebsd32.extra_syscalls),

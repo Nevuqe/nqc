@@ -78,7 +78,7 @@ __FBSDID("$FreeBSD$");
 FEATURE(iscsi_kernel_proxy, "iSCSI initiator built with ICL_KERNEL_PROXY");
 #endif
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 struct iscsi_daemon_request13 {
 	unsigned int			idr_session_id;
 	struct iscsi_session_conf	idr_conf;
@@ -1485,7 +1485,7 @@ iscsi_ioctl_daemon_wait(struct iscsi_softc *sc,
 		memcpy(&request->idr_conf, &is->is_conf,
 		    sizeof(request->idr_conf));
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 		if (freebsd13) {
 			struct icl_drv_limits idl;
 			struct iscsi_daemon_request13 *request13;
@@ -2242,7 +2242,7 @@ iscsi_ioctl(struct cdev *dev, u_long cmd, caddr_t arg, int mode,
 	case ISCSIDWAIT:
 		return (iscsi_ioctl_daemon_wait(sc,
 		    (struct iscsi_daemon_request *)arg, false));
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case ISCSIDWAIT13:
 		return (iscsi_ioctl_daemon_wait(sc,
 		    (struct iscsi_daemon_request *)arg, true));

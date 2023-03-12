@@ -195,7 +195,7 @@ const MappingDesc kMemoryLayout[] = {
   ((((uptr)(mem)) & ~0xC00000000000ULL) + 0x080000000000ULL)
 #define SHADOW_TO_ORIGIN(shadow) (((uptr)(shadow)) + 0x140000000000ULL)
 
-#elif SANITIZER_FREEBSD && defined(__aarch64__)
+#elif SANITIZER_NQC && defined(__aarch64__)
 
 // Low memory: main binary, MAP_32BIT mappings and modules
 // High memory: heap, modules and main thread stack
@@ -216,7 +216,7 @@ const MappingDesc kMemoryLayout[] = {
 #define MEM_TO_SHADOW(mem) (LINEARIZE_MEM((mem)) + 0x200000000000ULL)
 #define SHADOW_TO_ORIGIN(shadow) (((uptr)(shadow)) + 0x500000000000)
 
-#elif SANITIZER_FREEBSD && SANITIZER_WORDSIZE == 64
+#elif SANITIZER_NQC && SANITIZER_WORDSIZE == 64
 
 // Low memory: main binary, MAP_32BIT mappings and modules
 // High memory: heap, modules and main thread stack

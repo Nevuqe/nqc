@@ -850,7 +850,7 @@ enum ena_admin_os_type {
 	ENA_ADMIN_OS_LINUX                          = 1,
 	ENA_ADMIN_OS_WIN                            = 2,
 	ENA_ADMIN_OS_DPDK                           = 3,
-	ENA_ADMIN_OS_FREEBSD                        = 4,
+	ENA_ADMIN_OS_NQC                        = 4,
 	ENA_ADMIN_OS_IPXE                           = 5,
 	ENA_ADMIN_OS_ESXI                           = 6,
 	ENA_ADMIN_OS_MACOS                          = 7,

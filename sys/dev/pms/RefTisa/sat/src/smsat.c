@@ -2504,7 +2504,7 @@ smsatInquiryPage83(
    */
   if ( oneDeviceData->satWWNSupport)
   {
-#ifndef PMC_FREEBSD  
+#ifndef PMC_NQC  
     /* Fill in SAT Rev8 Table85 */
     /*
      * Logical unit name derived from the world wide name.
@@ -2579,7 +2579,7 @@ smsatInquiryPage83(
   }
   else
   {
-#ifndef PMC_FREEBSD  
+#ifndef PMC_NQC  
     /* Fill in SAT Rev8 Table86 */
     /*
      * Logical unit name derived from the model number and serial number.

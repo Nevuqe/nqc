@@ -65,12 +65,12 @@ struct ControlFeatures {
 };
 
 static struct ControlFeatures featurelist[] = {
-	{ "noaslr",	NT_FREEBSD_FCTL_ASLR_DISABLE,	"Disable ASLR" },
-	{ "noprotmax",	NT_FREEBSD_FCTL_PROTMAX_DISABLE,
+	{ "noaslr",	NT_NQC_FCTL_ASLR_DISABLE,	"Disable ASLR" },
+	{ "noprotmax",	NT_NQC_FCTL_PROTMAX_DISABLE,
 	    "Disable implicit PROT_MAX" },
-	{ "nostackgap",	NT_FREEBSD_FCTL_STKGAP_DISABLE, "Disable stack gap" },
-	{ "wxneeded",	NT_FREEBSD_FCTL_WXNEEDED, "Requires W+X mappings" },
-	{ "la48",	NT_FREEBSD_FCTL_LA48, "amd64: Limit user VA to 48bit" },
+	{ "nostackgap",	NT_NQC_FCTL_STKGAP_DISABLE, "Disable stack gap" },
+	{ "wxneeded",	NT_NQC_FCTL_WXNEEDED, "Requires W+X mappings" },
+	{ "la48",	NT_NQC_FCTL_LA48, "amd64: Limit user VA to 48bit" },
 };
 
 static struct option long_opts[] = {
@@ -302,7 +302,7 @@ edit_file_features(Elf *elf, int phcount, int fd, char *val, bool endian_swap)
 
 	if (!get_file_features(elf, phcount, fd, &features, &off,
 	    endian_swap)) {
-		warnx("NT_FREEBSD_FEATURE_CTL note not found");
+		warnx("NT_NQC_FEATURE_CTL note not found");
 		return (false);
 	}
 
@@ -424,7 +424,7 @@ get_file_features(Elf *elf, int phcount, int fd, uint32_t *features,
 
 			if (note.n_namesz != 8 ||
 			    strncmp("FreeBSD", name, 7) != 0 ||
-			    note.n_type != NT_FREEBSD_FEATURE_CTL) {
+			    note.n_type != NT_NQC_FEATURE_CTL) {
 				/* Not the right note. Skip the description */
 				if (lseek(fd, descsz, SEEK_CUR) < 0) {
 					warn("lseek() failed.");
@@ -464,6 +464,6 @@ get_file_features(Elf *elf, int phcount, int fd, uint32_t *features,
 		}
 	}
 
-	warnx("NT_FREEBSD_FEATURE_CTL note not found");
+	warnx("NT_NQC_FEATURE_CTL note not found");
 	return (false);
 }

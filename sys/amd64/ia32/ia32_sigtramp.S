@@ -87,7 +87,7 @@ __vdso_ia32_sigcode:
 	ALIGN_TEXT
 	.globl	__vdso_nqc4_ia32_sigcode
 __vdso_nqc4_ia32_sigcode:
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 	calll	*IA32_SIGF_HANDLER(%esp)
 	leal	IA32_SIGF_UC4(%esp),%eax/* get ucontext */
 	pushl	%eax

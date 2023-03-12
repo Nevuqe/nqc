@@ -31,8 +31,8 @@
  * $FreeBSD$
  */
 
-#ifndef _COMPAT_FREEBSD32_IOCTL_H_
-#define	_COMPAT_FREEBSD32_IOCTL_H_
+#ifndef _COMPAT_NQC32_IOCTL_H_
+#define	_COMPAT_NQC32_IOCTL_H_
 
 #include <cam/scsi/scsi_sg.h>
 
@@ -60,4 +60,4 @@ struct pci_bar_mmap32 {
 #define	SG_IO_32	_IOWR(SGIOC, 0x85, struct sg_io_hdr32)
 #define	PCIOCBARMMAP_32	_IOWR('p', 8, struct pci_bar_mmap32)
 
-#endif	/* _COMPAT_FREEBSD32_IOCTL_H_ */
+#endif	/* _COMPAT_NQC32_IOCTL_H_ */

@@ -716,7 +716,7 @@ bnxt_hwrm_func_drv_rgtr(struct bnxt_softc *softc)
 
 	req.enables = htole32(HWRM_FUNC_DRV_RGTR_INPUT_ENABLES_VER |
 	    HWRM_FUNC_DRV_RGTR_INPUT_ENABLES_OS_TYPE);
-	req.os_type = htole16(HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_FREEBSD);
+	req.os_type = htole16(HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_NQC);
 
 	req.ver_maj = __NQC_version / 100000;
 	req.ver_min = (__NQC_version / 1000) % 100;

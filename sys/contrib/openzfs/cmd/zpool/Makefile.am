@@ -14,7 +14,7 @@ zpool_SOURCES = \
 	%D%/zpool_util.h \
 	%D%/zpool_vdev.c
 
-if BUILD_FREEBSD
+if BUILD_NQC
 zpool_SOURCES += \
 	%D%/os/freebsd/zpool_vdev_os.c
 endif
@@ -33,7 +33,7 @@ zpool_LDADD = \
 
 zpool_LDADD += $(LTLIBINTL)
 
-if BUILD_FREEBSD
+if BUILD_NQC
 zpool_LDADD += -lgeom
 endif
 zpool_LDADD += -lm $(LIBBLKID_LIBS) $(LIBUUID_LIBS)

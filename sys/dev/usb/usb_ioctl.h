@@ -316,7 +316,7 @@ struct usb_gen_quirk {
 #define	USB_DEV_QUIRK_REMOVE	_IOW ('Q', 3, struct usb_gen_quirk)
 
 #ifdef _KERNEL
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 
 struct usb_read_dir32 {
 	uint32_t urd_data;
@@ -387,7 +387,7 @@ struct usb_fs_init32 {
 
 #define	USB_FS_INIT32	_IOC_NEWTYPE(USB_FS_INIT, struct usb_fs_init32)
 
-#endif	/* COMPAT_FREEBSD32 */
+#endif	/* COMPAT_NQC32 */
 #endif	/* _KERNEL */
 
 #endif					/* _USB_IOCTL_H_ */

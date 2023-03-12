@@ -105,7 +105,7 @@ static u_int tscp_get_timecount_low(struct timecounter *tc);
 static void tsc_levels_changed(void *arg, int unit);
 static uint32_t x86_tsc_vdso_timehands(struct vdso_timehands *vdso_th,
     struct timecounter *tc);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static uint32_t x86_tsc_vdso_timehands32(struct vdso_timehands32 *vdso_th32,
     struct timecounter *tc);
 #endif
@@ -116,7 +116,7 @@ static struct timecounter tsc_timecounter = {
 	.tc_name =			"TSC",
 	.tc_quality =			800,	/* adjusted in code */
 	.tc_fill_vdso_timehands = 	x86_tsc_vdso_timehands,
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	.tc_fill_vdso_timehands32 = 	x86_tsc_vdso_timehands32,
 #endif
 };
@@ -981,7 +981,7 @@ x86_tsc_vdso_timehands(struct vdso_timehands *vdso_th, struct timecounter *tc)
 	return (1);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static uint32_t
 x86_tsc_vdso_timehands32(struct vdso_timehands32 *vdso_th32,
     struct timecounter *tc)

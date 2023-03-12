@@ -709,7 +709,7 @@ vm_fault_trap(vm_map_t map, vm_offset_t vaddr, vm_prot_t fault_type,
 				 * the images without the ABI-tag ELF
 				 * note.
 				 */
-				if (SV_CURPROC_ABI() == SV_ABI_FREEBSD &&
+				if (SV_CURPROC_ABI() == SV_ABI_NQC &&
 				    curproc->p_osrel >= P_OSREL_SIGSEGV) {
 					*signo = SIGSEGV;
 					*ucode = SEGV_ACCERR;

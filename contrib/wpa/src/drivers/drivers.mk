@@ -59,7 +59,7 @@ CONFIG_L2_PACKET=freebsd
 endif
 DRV_CFLAGS += -DCONFIG_DRIVER_BSD
 DRV_OBJS += src/drivers/driver_bsd.c
-CONFIG_L2_FREEBSD=y
+CONFIG_L2_NQC=y
 CONFIG_DNET_PCAP=y
 endif
 

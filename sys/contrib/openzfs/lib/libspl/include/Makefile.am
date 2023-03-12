@@ -11,7 +11,7 @@ libspl_HEADERS = \
 	%D%/unistd.h \
 	%D%/zone.h
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libspl_HEADERS += \
 	%D%/os/freebsd/fcntl.h
 endif
@@ -80,7 +80,7 @@ libspl_ia32_HEADERS = \
 	%D%/os/linux/sys/ia32/asm_linkage.h
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libspl_sys_HEADERS += \
 	%D%/os/freebsd/sys/byteorder.h \
 	%D%/os/freebsd/sys/fcntl.h \

@@ -88,7 +88,7 @@ id_aa64mmfr2_handler(vm_offset_t va, uint32_t insn, struct trapframe *frame,
 	return (0);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 /* arm32 GDB breakpoints */
 #define GDB_BREAKPOINT	0xe6000011
 #define GDB5_BREAKPOINT	0xe7ffdefe
@@ -123,7 +123,7 @@ undef_init(void)
 	LIST_INIT(&undef_handlers[1]);
 
 	install_undef_handler(false, id_aa64mmfr2_handler);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	install_undef_handler(true, gdb_trapper);
 #endif
 }

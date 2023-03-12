@@ -60,7 +60,7 @@ ${CC} ${DEBUG} -x assembler-with-cpp -DLOCORE -fPIC -nostdinc -c \
 
 ${NM} -D elf-vdso32.so.1 | ${AWK} \
    '/__vdso_ia32_sigcode/{printf "#define VDSO_IA32_SIGCODE_OFFSET 0x%s\n",$1}
-    /__vdso_nqc4_ia32_sigcode/{printf "#define VDSO_FREEBSD4_IA32_SIGCODE_OFFSET 0x%s\n",$1}
+    /__vdso_nqc4_ia32_sigcode/{printf "#define VDSO_NQC4_IA32_SIGCODE_OFFSET 0x%s\n",$1}
     /__vdso_ia32_osigcode/{printf "#define VDSO_IA32_OSIGCODE_OFFSET 0x%s\n",$1}
     /__vdso_lcall_tramp/{printf "#define VDSO_LCALL_TRAMP_OFFSET 0x%s\n",$1}' \
    >vdso_ia32_offsets.h

@@ -6,7 +6,7 @@
 #include "xray_defs.h"
 #include "xray_interface_internal.h"
 
-#if SANITIZER_FREEBSD || SANITIZER_NETBSD || SANITIZER_APPLE
+#if SANITIZER_NQC || SANITIZER_NETBSD || SANITIZER_APPLE
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #elif SANITIZER_FUCHSIA
@@ -82,7 +82,7 @@ uint64_t getTSCFrequency() XRAY_NEVER_INSTRUMENT {
   }
   return TSCFrequency == -1 ? 0 : static_cast<uint64_t>(TSCFrequency);
 }
-#elif SANITIZER_FREEBSD || SANITIZER_NETBSD || SANITIZER_APPLE
+#elif SANITIZER_NQC || SANITIZER_NETBSD || SANITIZER_APPLE
 uint64_t getTSCFrequency() XRAY_NEVER_INSTRUMENT {
     long long TSCFrequency = -1;
     size_t tscfreqsz = sizeof(TSCFrequency);

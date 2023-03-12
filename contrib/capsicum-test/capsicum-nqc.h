@@ -1,5 +1,5 @@
-#ifndef __CAPSICUM_FREEBSD_H__
-#define __CAPSICUM_FREEBSD_H__
+#ifndef __CAPSICUM_NQC_H__
+#define __CAPSICUM_NQC_H__
 #ifdef __NQC__
 /************************************************************
  * FreeBSD Capsicum Functionality.
@@ -70,4 +70,4 @@ typedef unsigned long cap_ioctl_t;
 
 #endif  /* __NQC__ */
 
-#endif /*__CAPSICUM_FREEBSD_H__*/
+#endif /*__CAPSICUM_NQC_H__*/

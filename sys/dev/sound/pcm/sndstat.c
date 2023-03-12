@@ -41,7 +41,7 @@
 #include <sys/nv.h>
 #include <sys/dnv.h>
 #include <sys/sx.h>
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/sysent.h>
 #endif
 
@@ -912,7 +912,7 @@ sndstat_flush_user_devs(struct sndstat_file *pf)
 	return (0);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static int
 compat_sndstat_get_devs32(struct sndstat_file *pf, caddr_t data)
 {
@@ -967,7 +967,7 @@ sndstat_ioctl(
 	case SNDSTIOC_GET_DEVS:
 		err = sndstat_get_devs(pf, data);
 		break;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case SNDSTIOC_GET_DEVS32:
 		if (!SV_CURPROC_FLAG(SV_ILP32)) {
 			err = ENODEV;
@@ -979,7 +979,7 @@ sndstat_ioctl(
 	case SNDSTIOC_ADD_USER_DEVS:
 		err = sndstat_add_user_devs(pf, data);
 		break;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	case SNDSTIOC_ADD_USER_DEVS32:
 		if (!SV_CURPROC_FLAG(SV_ILP32)) {
 			err = ENODEV;

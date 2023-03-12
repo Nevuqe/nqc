@@ -280,7 +280,7 @@ uhid_snes_ioctl(struct usb_fifo *fifo, u_long cmd, void *data, int fflags)
 {
 	struct uhid_snes_softc *sc = usb_fifo_softc(fifo);
 	struct usb_gen_descriptor *ugd;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct usb_gen_descriptor local_ugd;
 	struct usb_gen_descriptor32 *ugd32 = NULL;
 #endif
@@ -289,7 +289,7 @@ uhid_snes_ioctl(struct usb_fifo *fifo, u_long cmd, void *data, int fflags)
 	uint8_t id;
 
 	ugd = data;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	switch (cmd) {
 	case USB_GET_REPORT_DESC32:
 	case USB_GET_REPORT32:
@@ -403,7 +403,7 @@ uhid_snes_ioctl(struct usb_fifo *fifo, u_long cmd, void *data, int fflags)
 		break;
 	}
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (ugd32 != NULL)
 		update_usb_gen_descriptor32(ugd32, ugd);
 #endif

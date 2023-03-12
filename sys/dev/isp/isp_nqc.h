@@ -29,8 +29,8 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#ifndef	_ISP_FREEBSD_H
-#define	_ISP_FREEBSD_H
+#ifndef	_ISP_NQC_H
+#define	_ISP_NQC_H
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -634,4 +634,4 @@ int isp_fcp_next_crn(ispsoftc_t *, uint8_t *, XS_T *);
 
 #include <dev/isp/isp_library.h>
 
-#endif	/* _ISP_FREEBSD_H */
+#endif	/* _ISP_NQC_H */

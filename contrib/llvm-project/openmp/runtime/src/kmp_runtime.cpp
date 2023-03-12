@@ -4695,7 +4695,7 @@ static void __kmp_initialize_team(kmp_team_t *team, int new_nproc,
   KF_TRACE(10, ("__kmp_initialize_team: exit: team=%p\n", team));
 }
 
-#if (KMP_OS_LINUX || KMP_OS_FREEBSD) && KMP_AFFINITY_SUPPORTED
+#if (KMP_OS_LINUX || KMP_OS_NQC) && KMP_AFFINITY_SUPPORTED
 /* Sets full mask for thread and returns old mask, no changes to structures. */
 static void
 __kmp_set_thread_affinity_mask_full_tmp(kmp_affin_mask_t *old_mask) {
@@ -5278,7 +5278,7 @@ __kmp_allocate_team(kmp_root_t *root, int new_nproc, int max_nproc,
 #endif
       }
     } else { // team->t.t_nproc < new_nproc
-#if (KMP_OS_LINUX || KMP_OS_FREEBSD) && KMP_AFFINITY_SUPPORTED
+#if (KMP_OS_LINUX || KMP_OS_NQC) && KMP_AFFINITY_SUPPORTED
       kmp_affin_mask_t *old_mask;
       if (KMP_AFFINITY_CAPABLE()) {
         KMP_CPU_ALLOC(old_mask);
@@ -5326,7 +5326,7 @@ __kmp_allocate_team(kmp_root_t *root, int new_nproc, int max_nproc,
           __kmp_reinitialize_team(team, new_icvs, NULL);
         }
 
-#if (KMP_OS_LINUX || KMP_OS_FREEBSD) && KMP_AFFINITY_SUPPORTED
+#if (KMP_OS_LINUX || KMP_OS_NQC) && KMP_AFFINITY_SUPPORTED
         /* Temporarily set full mask for primary thread before creation of
            workers. The reason is that workers inherit the affinity from the
            primary thread, so if a lot of workers are created on the single
@@ -5362,7 +5362,7 @@ __kmp_allocate_team(kmp_root_t *root, int new_nproc, int max_nproc,
           }
         }
 
-#if (KMP_OS_LINUX || KMP_OS_FREEBSD) && KMP_AFFINITY_SUPPORTED
+#if (KMP_OS_LINUX || KMP_OS_NQC) && KMP_AFFINITY_SUPPORTED
         if (KMP_AFFINITY_CAPABLE()) {
           /* Restore initial primary thread's affinity mask */
           __kmp_set_system_affinity(old_mask, TRUE);
@@ -8753,7 +8753,7 @@ __kmp_determine_reduction_method(
 #if KMP_ARCH_X86_64 || KMP_ARCH_PPC64 || KMP_ARCH_AARCH64 ||                   \
     KMP_ARCH_MIPS64 || KMP_ARCH_RISCV64
 
-#if KMP_OS_LINUX || KMP_OS_DRAGONFLY || KMP_OS_FREEBSD || KMP_OS_NETBSD ||     \
+#if KMP_OS_LINUX || KMP_OS_DRAGONFLY || KMP_OS_NQC || KMP_OS_NETBSD ||     \
     KMP_OS_OPENBSD || KMP_OS_WINDOWS || KMP_OS_DARWIN || KMP_OS_HURD
 
     int teamsize_cutoff = 4;
@@ -8777,12 +8777,12 @@ __kmp_determine_reduction_method(
     }
 #else
 #error "Unknown or unsupported OS"
-#endif // KMP_OS_LINUX || KMP_OS_DRAGONFLY || KMP_OS_FREEBSD || KMP_OS_NETBSD ||
+#endif // KMP_OS_LINUX || KMP_OS_DRAGONFLY || KMP_OS_NQC || KMP_OS_NETBSD ||
        // KMP_OS_OPENBSD || KMP_OS_WINDOWS || KMP_OS_DARWIN || KMP_OS_HURD
 
 #elif KMP_ARCH_X86 || KMP_ARCH_ARM || KMP_ARCH_AARCH || KMP_ARCH_MIPS
 
-#if KMP_OS_LINUX || KMP_OS_FREEBSD || KMP_OS_WINDOWS || KMP_OS_HURD
+#if KMP_OS_LINUX || KMP_OS_NQC || KMP_OS_WINDOWS || KMP_OS_HURD
 
     // basic tuning
 

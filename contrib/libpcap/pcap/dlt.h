@@ -679,7 +679,7 @@
  * defines DLT_USB as 186, we don't get a redefinition warning.
  * (NetBSD 7 does that.)
  */
-#define DLT_USB_FREEBSD		186
+#define DLT_USB_NQC		186
 #define DLT_USB			186
 
 /*

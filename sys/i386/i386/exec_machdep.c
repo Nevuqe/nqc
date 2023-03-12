@@ -109,7 +109,7 @@ static int  set_fpcontext(struct thread *td, mcontext_t *mcp,
 #ifdef COMPAT_43
 static void osendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
 #endif
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 static void freebsd4_sendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
 #endif
 
@@ -256,7 +256,7 @@ osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 }
 #endif /* COMPAT_43 */
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 static void
 freebsd4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 {
@@ -374,7 +374,7 @@ freebsd4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	PROC_LOCK(p);
 	mtx_lock(&psp->ps_mtx);
 }
-#endif	/* COMPAT_FREEBSD4 */
+#endif	/* COMPAT_NQC4 */
 
 void
 sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
@@ -397,7 +397,7 @@ sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	sig = ksi->ksi_signo;
 	psp = p->p_sigacts;
 	mtx_assert(&psp->ps_mtx, MA_OWNED);
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 	if (SIGISMEMBER(psp->ps_nqc4, sig)) {
 		freebsd4_sendsig(catcher, ksi, mask);
 		return;
@@ -654,7 +654,7 @@ osigreturn(struct thread *td, struct osigreturn_args *uap)
 }
 #endif /* COMPAT_43 */
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_sigreturn(struct thread *td, struct freebsd4_sigreturn_args *uap)
 {
@@ -751,7 +751,7 @@ freebsd4_sigreturn(struct thread *td, struct freebsd4_sigreturn_args *uap)
 	kern_sigprocmask(td, SIG_SETMASK, &ucp->uc_sigmask, NULL, 0);
 	return (EJUSTRETURN);
 }
-#endif	/* COMPAT_FREEBSD4 */
+#endif	/* COMPAT_NQC4 */
 
 int
 sys_sigreturn(struct thread *td, struct sigreturn_args *uap)

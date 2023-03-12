@@ -41,7 +41,7 @@
 #endif
 
 #define	NCSW_PPC_CORE
-#define	NCSW_FREEBSD
+#define	NCSW_NQC
 
 /* Debugging */
 #define	DEBUG_ERRORS		1

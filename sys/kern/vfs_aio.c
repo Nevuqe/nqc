@@ -183,7 +183,7 @@ SYSCTL_INT(_p1003_1b, CTL_P1003_1B_AIO_LISTIO_MAX, aio_listio_max,
     CTLFLAG_RD | CTLFLAG_CAPRD, &max_aio_queue_per_proc,
     0, "Maximum aio requests for a single lio_listio call");
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 typedef struct oaiocb {
 	int	aio_fildes;		/* File descriptor */
 	off_t	aio_offset;		/* File offset for I/O */
@@ -1365,7 +1365,7 @@ unref:
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 static int
 convert_old_sigevent(struct osigevent *osig, struct sigevent *nsig)
 {
@@ -1482,7 +1482,7 @@ static struct aiocb_ops aiocb_ops = {
 	.store_aiocb = aiocb_store_aiocb,
 };
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 static struct aiocb_ops aiocb_ops_osigevent = {
 	.aio_copyin = aiocb_copyin_old_sigevent,
 	.fetch_status = aiocb_fetch_status,
@@ -2167,7 +2167,7 @@ sys_aio_error(struct thread *td, struct aio_error_args *uap)
 }
 
 /* syscall - asynchronous read from a file (REALTIME) */
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_aio_read(struct thread *td, struct freebsd6_aio_read_args *uap)
 {
@@ -2192,7 +2192,7 @@ sys_aio_readv(struct thread *td, struct aio_readv_args *uap)
 }
 
 /* syscall - asynchronous write to a file (REALTIME) */
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_aio_write(struct thread *td, struct freebsd6_aio_write_args *uap)
 {
@@ -2368,7 +2368,7 @@ kern_lio_listio(struct thread *td, int mode, struct aiocb * const *uacb_list,
 }
 
 /* syscall - list directed I/O (REALTIME) */
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_lio_listio(struct thread *td, struct freebsd6_lio_listio_args *uap)
 {
@@ -2716,7 +2716,7 @@ filt_lio(struct knote *kn, long hint)
 	return (lj->lioj_flags & LIOJ_KEVENT_POSTED);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <sys/socket.h>
 #include <sys/sysent.h>
@@ -2732,7 +2732,7 @@ struct __aiocb_private32 {
 	uint32_t kernelinfo;
 };
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 typedef struct oaiocb32 {
 	int	aio_fildes;		/* File descriptor */
 	uint64_t aio_offset __packed;	/* File offset for I/O */
@@ -2758,7 +2758,7 @@ typedef struct aiocb32 {
 	struct	sigevent32 aio_sigevent;	/* Signal to deliver */
 } aiocb32_t;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 static int
 convert_old_sigevent32(struct osigevent32 *osig, struct sigevent *nsig)
 {
@@ -2913,7 +2913,7 @@ static struct aiocb_ops aiocb32_ops = {
 	.store_aiocb = aiocb32_store_aiocb,
 };
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 static struct aiocb_ops aiocb32_ops_osigevent = {
 	.aio_copyin = aiocb32_copyin_old_sigevent,
 	.fetch_status = aiocb32_fetch_status,
@@ -2975,7 +2975,7 @@ freebsd32_aio_error(struct thread *td, struct freebsd32_aio_error_args *uap)
 	return (kern_aio_error(td, (struct aiocb *)uap->aiocbp, &aiocb32_ops));
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_nqc32_aio_read(struct thread *td,
     struct freebsd6_nqc32_aio_read_args *uap)
@@ -3002,7 +3002,7 @@ freebsd32_aio_readv(struct thread *td, struct freebsd32_aio_readv_args *uap)
 	    &aiocb32_ops));
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_nqc32_aio_write(struct thread *td,
     struct freebsd6_nqc32_aio_write_args *uap)
@@ -3068,7 +3068,7 @@ freebsd32_aio_fsync(struct thread *td, struct freebsd32_aio_fsync_args *uap)
 	    &aiocb32_ops));
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_nqc32_lio_listio(struct thread *td,
     struct freebsd6_nqc32_lio_listio_args *uap)

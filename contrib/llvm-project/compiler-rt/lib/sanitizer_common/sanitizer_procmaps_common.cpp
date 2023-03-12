@@ -11,7 +11,7 @@
 
 #include "sanitizer_platform.h"
 
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD ||                \
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD ||                \
     SANITIZER_SOLARIS
 
 #include "sanitizer_common.h"

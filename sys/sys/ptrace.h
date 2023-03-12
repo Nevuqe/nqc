@@ -247,7 +247,7 @@ ssize_t	proc_readmem(struct thread *_td, struct proc *_p, vm_offset_t _va,
 	    void *_buf, size_t _len);
 ssize_t	proc_writemem(struct thread *_td, struct proc *_p, vm_offset_t _va,
 	    void *_buf, size_t _len);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct reg32;
 struct fpreg32;
 struct dbreg32;

@@ -13,7 +13,7 @@
 
 #include "sanitizer_platform.h"
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 
 #include <sys/capsicum.h>
 #include <sys/consio.h>
@@ -558,4 +558,4 @@ COMPILER_CHECK(__sanitizer_XDR_FREE == XDR_FREE);
 CHECK_TYPE_SIZE(sem_t);
 
 COMPILER_CHECK(sizeof(__sanitizer_cap_rights_t) >= sizeof(cap_rights_t));
-#endif  // SANITIZER_FREEBSD
+#endif  // SANITIZER_NQC

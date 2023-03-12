@@ -28,7 +28,7 @@
  * $FreeBSD$
  */
 
-#define _WANT_FREEBSD_BITSET
+#define _WANT_NQC_BITSET
 
 #include <sys/param.h>
 #include <sys/counter.h>

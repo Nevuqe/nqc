@@ -17,43 +17,43 @@
 #define compat(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 #define compat4(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd4_, name)
 #else
 #define compat4(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 #define compat6(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd6_, name)
 #else
 #define compat6(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD7
+#ifdef COMPAT_NQC7
 #define compat7(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd7_, name)
 #else
 #define compat7(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD10
+#ifdef COMPAT_NQC10
 #define compat10(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd10_, name)
 #else
 #define compat10(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 #define compat11(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd11_, name)
 #else
 #define compat11(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 #define compat12(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd12_, name)
 #else
 #define compat12(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys
 #endif
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 #define compat13(n, name) .sy_narg = n, .sy_call = (sy_call_t *)__CONCAT(freebsd13_, name)
 #else
 #define compat13(n, name) .sy_narg = 0, .sy_call = (sy_call_t *)nosys

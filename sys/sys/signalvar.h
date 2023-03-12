@@ -201,7 +201,7 @@ __sigseteq(sigset_t *set1, sigset_t *set2)
 	return (1);
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 struct osigevent {
 	int	sigev_notify;		/* Notification type */
 	union {

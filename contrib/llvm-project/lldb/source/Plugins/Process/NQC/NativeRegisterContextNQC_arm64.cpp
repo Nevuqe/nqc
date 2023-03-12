@@ -38,7 +38,7 @@ NativeRegisterContextNQC_arm64::NativeRegisterContextNQC_arm64(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread)
     : NativeRegisterContextRegisterInfo(
           native_thread, new RegisterInfoPOSIX_arm64(target_arch, 0))
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+#ifdef LLDB_HAS_NQC_WATCHPOINT
       ,
       m_read_dbreg(false)
 #endif
@@ -205,7 +205,7 @@ Status NativeRegisterContextNQC_arm64::WriteAllRegisterValues(
 
 llvm::Error NativeRegisterContextNQC_arm64::CopyHardwareWatchpointsFrom(
     NativeRegisterContextFreeBSD &source) {
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+#ifdef LLDB_HAS_NQC_WATCHPOINT
   auto &r_source = static_cast<NativeRegisterContextNQC_arm64 &>(source);
   llvm::Error error = r_source.ReadHardwareDebugInfo();
   if (error)
@@ -226,7 +226,7 @@ llvm::Error NativeRegisterContextNQC_arm64::CopyHardwareWatchpointsFrom(
 }
 
 llvm::Error NativeRegisterContextNQC_arm64::ReadHardwareDebugInfo() {
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+#ifdef LLDB_HAS_NQC_WATCHPOINT
   Log *log = GetLog(POSIXLog::Registers);
 
   // we're fully stateful, so no need to reread control registers ever
@@ -256,7 +256,7 @@ llvm::Error NativeRegisterContextNQC_arm64::ReadHardwareDebugInfo() {
 
 llvm::Error
 NativeRegisterContextNQC_arm64::WriteHardwareDebugRegs(DREGType) {
-#ifdef LLDB_HAS_FREEBSD_WATCHPOINT
+#ifdef LLDB_HAS_NQC_WATCHPOINT
   assert(m_read_dbreg && "dbregs must be read before writing them back");
 
   // copy data from m_*_regs to m_dbreg before writing it back

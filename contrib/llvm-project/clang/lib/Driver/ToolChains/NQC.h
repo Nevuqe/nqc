@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_FREEBSD_H
-#define LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_FREEBSD_H
+#ifndef LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_NQC_H
+#define LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_NQC_H
 
 #include "Gnu.h"
 #include "clang/Driver/Driver.h"
@@ -94,4 +94,4 @@ protected:
 } // end namespace driver
 } // end namespace clang
 
-#endif // LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_FREEBSD_H
+#endif // LLVM_CLANG_LIB_DRIVER_TOOLCHAINS_NQC_H

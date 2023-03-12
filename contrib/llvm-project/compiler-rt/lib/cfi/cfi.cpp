@@ -14,7 +14,7 @@
 #include <elf.h>
 
 #include "sanitizer_common/sanitizer_common.h"
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #include <sys/link_elf.h>
 #endif
 #include <link.h>
@@ -28,7 +28,7 @@ typedef ElfW(Ehdr) Elf_Ehdr;
 typedef ElfW(Addr) Elf_Addr;
 typedef ElfW(Sym) Elf_Sym;
 typedef ElfW(Dyn) Elf_Dyn;
-#elif SANITIZER_FREEBSD
+#elif SANITIZER_NQC
 #if SANITIZER_WORDSIZE == 64
 #define ElfW64_Dyn Elf_Dyn
 #define ElfW64_Sym Elf_Sym
@@ -171,7 +171,7 @@ void ShadowBuilder::Add(uptr begin, uptr end, uptr cfi_check) {
     *s = sv;
 }
 
-#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD
+#if SANITIZER_LINUX || SANITIZER_NQC || SANITIZER_NETBSD
 void ShadowBuilder::Install() {
   MprotectReadOnly(shadow_, GetShadowSize());
   uptr main_shadow = GetShadow();

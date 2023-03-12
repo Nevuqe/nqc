@@ -283,7 +283,7 @@ ksyms_snapshot(struct ksyms_softc *sc, struct tsizes *ts)
 	hdr->kh_ehdr.e_ident[EI_MAG2] = ELFMAG2;
 	hdr->kh_ehdr.e_ident[EI_MAG3] = ELFMAG3;
 	hdr->kh_ehdr.e_ident[EI_DATA] = ELF_DATA;
-	hdr->kh_ehdr.e_ident[EI_OSABI] = ELFOSABI_FREEBSD;
+	hdr->kh_ehdr.e_ident[EI_OSABI] = ELFOSABI_NQC;
 	hdr->kh_ehdr.e_ident[EI_CLASS] = ELF_CLASS;
 	hdr->kh_ehdr.e_ident[EI_VERSION] = EV_CURRENT;
 	hdr->kh_ehdr.e_ident[EI_ABIVERSION] = 0;

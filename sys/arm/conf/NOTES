@@ -59,11 +59,11 @@ device		backlight
 
 # Undo options from sys/conf/NOTES that we do not want...
 
-nooptions	COMPAT_FREEBSD4
-nooptions	COMPAT_FREEBSD5
-nooptions	COMPAT_FREEBSD6
-nooptions	COMPAT_FREEBSD7
-nooptions	COMPAT_FREEBSD9
+nooptions	COMPAT_NQC4
+nooptions	COMPAT_NQC5
+nooptions	COMPAT_NQC6
+nooptions	COMPAT_NQC7
+nooptions	COMPAT_NQC9
 nooptions	PPC_PROBE_CHIPSET
 nooptions	MAXCPU		# value is set in machine/param.h
 

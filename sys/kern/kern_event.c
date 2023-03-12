@@ -34,8 +34,8 @@ __FBSDID("$FreeBSD$");
 #include "opt_ktrace.h"
 #include "opt_kqueue.h"
 
-#ifdef COMPAT_FREEBSD11
-#define	_WANT_FREEBSD11_KEVENT
+#ifdef COMPAT_NQC11
+#define	_WANT_NQC11_KEVENT
 #endif
 
 #include <sys/param.h>
@@ -1206,7 +1206,7 @@ kevent_copyin(void *arg, struct kevent *kevp, int count)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 static int
 kevent11_copyout(void *arg, struct kevent *kevp, int count)
 {

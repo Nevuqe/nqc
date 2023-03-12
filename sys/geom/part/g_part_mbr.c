@@ -128,7 +128,7 @@ static struct g_part_mbr_alias {
 	u_char		typ;
 	int		alias;
 } mbr_alias_match[] = {
-	{ DOSPTYP_386BSD,	G_PART_ALIAS_FREEBSD },
+	{ DOSPTYP_386BSD,	G_PART_ALIAS_NQC },
 	{ DOSPTYP_APPLE_BOOT,	G_PART_ALIAS_APPLE_BOOT },
 	{ DOSPTYP_APPLE_UFS,	G_PART_ALIAS_APPLE_UFS },
 	{ DOSPTYP_EFI,		G_PART_ALIAS_EFI },

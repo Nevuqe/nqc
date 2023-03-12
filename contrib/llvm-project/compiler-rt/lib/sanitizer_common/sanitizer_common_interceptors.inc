@@ -63,7 +63,7 @@
 #define va_copy(dst, src) ((dst) = (src))
 #endif // _WIN32
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #define pthread_setname_np pthread_set_name_np
 #define inet_aton __inet_aton
 #define inet_pton __inet_pton
@@ -1959,7 +1959,7 @@ UNUSED static void unpoison_passwd(void *ctx, __sanitizer_passwd *pwd) {
       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, pwd->pw_gecos,
                                      internal_strlen(pwd->pw_gecos) + 1);
 #endif
-#if SANITIZER_APPLE || SANITIZER_FREEBSD || SANITIZER_NETBSD
+#if SANITIZER_APPLE || SANITIZER_NQC || SANITIZER_NETBSD
     if (pwd->pw_class)
       COMMON_INTERCEPTOR_WRITE_RANGE(ctx, pwd->pw_class,
                                      internal_strlen(pwd->pw_class) + 1);
@@ -2625,7 +2625,7 @@ INTERCEPTOR_WITH_SUFFIX(int, wait, int *status) {
   return res;
 }
 // On FreeBSD id_t is always 64-bit wide.
-#if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32)
+#if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 INTERCEPTOR_WITH_SUFFIX(int, waitid, int idtype, long long id, void *infop,
                         int options) {
 #else
@@ -3973,7 +3973,7 @@ INTERCEPTOR(char *, strerror, int errnum) {
 //    static storage.
 #if ((_POSIX_C_SOURCE >= 200112L || _XOPEN_SOURCE >= 600) && !_GNU_SOURCE) || \
     SANITIZER_APPLE || SANITIZER_ANDROID || SANITIZER_NETBSD ||                 \
-    SANITIZER_FREEBSD
+    SANITIZER_NQC
 // POSIX version. Spec is not clear on whether buf is NULL-terminated.
 // At least on OSX, buf contents are valid even when the call fails.
 INTERCEPTOR(int, strerror_r, int errnum, char *buf, SIZE_T buflen) {

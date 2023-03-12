@@ -245,7 +245,7 @@ kern_pread(struct thread *td, int fd, void *buf, size_t nbyte, off_t offset)
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD6)
+#if defined(COMPAT_NQC6)
 int
 freebsd6_pread(struct thread *td, struct freebsd6_pread_args *uap)
 {
@@ -447,7 +447,7 @@ kern_pwrite(struct thread *td, int fd, const void *buf, size_t nbyte,
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD6)
+#if defined(COMPAT_NQC6)
 int
 freebsd6_pwrite(struct thread *td, struct freebsd6_pwrite_args *uap)
 {
@@ -678,7 +678,7 @@ sys_ioctl(struct thread *td, struct ioctl_args *uap)
 	size = IOCPARM_LEN(com);
 	if ((size > IOCPARM_MAX) ||
 	    ((com & (IOC_VOID  | IOC_IN | IOC_OUT)) == 0) ||
-#if defined(COMPAT_FREEBSD5) || defined(COMPAT_FREEBSD4) || defined(COMPAT_43)
+#if defined(COMPAT_NQC5) || defined(COMPAT_NQC4) || defined(COMPAT_43)
 	    ((com & IOC_OUT) && size == 0) ||
 #else
 	    ((com & (IOC_IN | IOC_OUT)) && size == 0) ||

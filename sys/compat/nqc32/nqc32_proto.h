@@ -5,8 +5,8 @@
  * $FreeBSD$
  */
 
-#ifndef _FREEBSD32_SYSPROTO_H_
-#define	_FREEBSD32_SYSPROTO_H_
+#ifndef _NQC32_SYSPROTO_H_
+#define	_NQC32_SYSPROTO_H_
 
 #include <sys/signal.h>
 #include <sys/acl.h>
@@ -891,7 +891,7 @@ int	ofreebsd32_getdirentries(struct thread *, struct ofreebsd32_getdirentries_ar
 #endif /* COMPAT_43 */
 
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 
 struct freebsd4_nqc32_getfsstat_args {
 	char buf_l_[PADL_(struct ostatfs32 *)]; struct ostatfs32 * buf; char buf_r_[PADR_(struct ostatfs32 *)];
@@ -936,10 +936,10 @@ int	freebsd4_nqc32_sendfile(struct thread *, struct freebsd4_nqc32_sendfile_args
 int	freebsd4_nqc32_sigaction(struct thread *, struct freebsd4_nqc32_sigaction_args *);
 int	freebsd4_nqc32_sigreturn(struct thread *, struct freebsd4_nqc32_sigreturn_args *);
 
-#endif /* COMPAT_FREEBSD4 */
+#endif /* COMPAT_NQC4 */
 
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 
 struct freebsd6_nqc32_pread_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
@@ -1008,10 +1008,10 @@ int	freebsd6_nqc32_aio_read(struct thread *, struct freebsd6_nqc32_aio_read_args
 int	freebsd6_nqc32_aio_write(struct thread *, struct freebsd6_nqc32_aio_write_args *);
 int	freebsd6_nqc32_lio_listio(struct thread *, struct freebsd6_nqc32_lio_listio_args *);
 
-#endif /* COMPAT_FREEBSD6 */
+#endif /* COMPAT_NQC6 */
 
 
-#ifdef COMPAT_FREEBSD7
+#ifdef COMPAT_NQC7
 
 struct freebsd7_nqc32___semctl_args {
 	char semid_l_[PADL_(int)]; int semid; char semid_r_[PADR_(int)];
@@ -1033,10 +1033,10 @@ int	freebsd7_nqc32___semctl(struct thread *, struct freebsd7_nqc32___semctl_args
 int	freebsd7_nqc32_msgctl(struct thread *, struct freebsd7_nqc32_msgctl_args *);
 int	freebsd7_nqc32_shmctl(struct thread *, struct freebsd7_nqc32_shmctl_args *);
 
-#endif /* COMPAT_FREEBSD7 */
+#endif /* COMPAT_NQC7 */
 
 
-#ifdef COMPAT_FREEBSD10
+#ifdef COMPAT_NQC10
 
 struct freebsd10_nqc32__umtx_lock_args {
 	char umtx_l_[PADL_(struct umtx *)]; struct umtx * umtx; char umtx_r_[PADR_(struct umtx *)];
@@ -1047,10 +1047,10 @@ struct freebsd10_nqc32__umtx_unlock_args {
 int	freebsd10_nqc32__umtx_lock(struct thread *, struct freebsd10_nqc32__umtx_lock_args *);
 int	freebsd10_nqc32__umtx_unlock(struct thread *, struct freebsd10_nqc32__umtx_unlock_args *);
 
-#endif /* COMPAT_FREEBSD10 */
+#endif /* COMPAT_NQC10 */
 
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 
 struct freebsd11_nqc32_stat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
@@ -1117,19 +1117,19 @@ int	freebsd11_nqc32_kevent(struct thread *, struct freebsd11_nqc32_kevent_args *
 int	freebsd11_nqc32_getfsstat(struct thread *, struct freebsd11_nqc32_getfsstat_args *);
 int	freebsd11_nqc32_fstatat(struct thread *, struct freebsd11_nqc32_fstatat_args *);
 
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 
 
-#endif /* COMPAT_FREEBSD12 */
+#endif /* COMPAT_NQC12 */
 
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 
 
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 
 #define	FREEBSD32_SYS_AUE_nqc32_wait4	AUE_WAIT4
 #define	FREEBSD32_SYS_AUE_nqc4_nqc32_getfsstat	AUE_GETFSSTAT
@@ -1298,4 +1298,4 @@ int	freebsd11_nqc32_fstatat(struct thread *, struct freebsd11_nqc32_fstatat_args
 #undef PADL_
 #undef PADR_
 
-#endif /* !_FREEBSD32_SYSPROTO_H_ */
+#endif /* !_NQC32_SYSPROTO_H_ */

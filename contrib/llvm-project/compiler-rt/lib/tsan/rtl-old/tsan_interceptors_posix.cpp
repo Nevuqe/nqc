@@ -35,7 +35,7 @@
 
 using namespace __tsan;
 
-#if SANITIZER_FREEBSD || SANITIZER_APPLE
+#if SANITIZER_NQC || SANITIZER_APPLE
 #define stdout __stdoutp
 #define stderr __stderrp
 #endif
@@ -102,14 +102,14 @@ extern __sanitizer_FILE __sF[];
 #else
 extern __sanitizer_FILE *stdout, *stderr;
 #endif
-#if !SANITIZER_FREEBSD && !SANITIZER_APPLE && !SANITIZER_NETBSD
+#if !SANITIZER_NQC && !SANITIZER_APPLE && !SANITIZER_NETBSD
 const int PTHREAD_MUTEX_RECURSIVE = 1;
 const int PTHREAD_MUTEX_RECURSIVE_NP = 1;
 #else
 const int PTHREAD_MUTEX_RECURSIVE = 2;
 const int PTHREAD_MUTEX_RECURSIVE_NP = 2;
 #endif
-#if !SANITIZER_FREEBSD && !SANITIZER_APPLE && !SANITIZER_NETBSD
+#if !SANITIZER_NQC && !SANITIZER_APPLE && !SANITIZER_NETBSD
 const int EPOLL_CTL_ADD = 1;
 #endif
 const int SIGILL = 4;
@@ -119,7 +119,7 @@ const int SIGFPE = 8;
 const int SIGSEGV = 11;
 const int SIGPIPE = 13;
 const int SIGTERM = 15;
-#if defined(__mips__) || SANITIZER_FREEBSD || SANITIZER_APPLE || SANITIZER_NETBSD
+#if defined(__mips__) || SANITIZER_NQC || SANITIZER_APPLE || SANITIZER_NETBSD
 const int SIGBUS = 10;
 const int SIGSYS = 12;
 #else
@@ -142,7 +142,7 @@ typedef __sanitizer::u16 mode_t;
 # define F_TLOCK 2      /* Test and lock a region for exclusive use.  */
 # define F_TEST  3      /* Test a region for other processes locks.  */
 
-#if SANITIZER_FREEBSD || SANITIZER_APPLE || SANITIZER_NETBSD
+#if SANITIZER_NQC || SANITIZER_APPLE || SANITIZER_NETBSD
 const int SA_SIGINFO = 0x40;
 const int SIG_SETMASK = 3;
 #elif defined(__mips__)
@@ -289,7 +289,7 @@ void ScopedInterceptor::DisableIgnoresImpl() {
 }
 
 #define TSAN_INTERCEPT(func) INTERCEPT_FUNCTION(func)
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 # define TSAN_INTERCEPT_VER(func, ver) INTERCEPT_FUNCTION(func)
 # define TSAN_MAYBE_INTERCEPT_NETBSD_ALIAS(func)
 # define TSAN_MAYBE_INTERCEPT_NETBSD_ALIAS_THR(func)
@@ -957,7 +957,7 @@ void PlatformCleanUpThreadState(ThreadState *thr) {
 }
 }  // namespace __tsan
 
-#if !SANITIZER_APPLE && !SANITIZER_NETBSD && !SANITIZER_FREEBSD
+#if !SANITIZER_APPLE && !SANITIZER_NETBSD && !SANITIZER_NQC
 static void thread_finalize(void *v) {
   uptr iter = (uptr)v;
   if (iter > 1) {
@@ -989,7 +989,7 @@ extern "C" void *__tsan_thread_start_func(void *arg) {
     ThreadState *thr = cur_thread_init();
     // Thread-local state is not initialized yet.
     ScopedIgnoreInterceptors ignore;
-#if !SANITIZER_APPLE && !SANITIZER_NETBSD && !SANITIZER_FREEBSD
+#if !SANITIZER_APPLE && !SANITIZER_NETBSD && !SANITIZER_NQC
     ThreadIgnoreBegin(thr, 0);
     if (pthread_setspecific(interceptor_ctx()->finalize_key,
                             (void *)GetPthreadDestructorIterations())) {
@@ -1549,7 +1549,7 @@ TSAN_INTERCEPTOR(int, __fxstat, int version, int fd, void *buf) {
 #endif
 
 TSAN_INTERCEPTOR(int, fstat, int fd, void *buf) {
-#if SANITIZER_FREEBSD || SANITIZER_APPLE || SANITIZER_ANDROID || SANITIZER_NETBSD
+#if SANITIZER_NQC || SANITIZER_APPLE || SANITIZER_ANDROID || SANITIZER_NETBSD
   SCOPED_TSAN_INTERCEPTOR(fstat, fd, buf);
   if (fd > 0)
     FdAccess(thr, pc, fd);
@@ -2515,7 +2515,7 @@ int sigaction_impl(int sig, const __sanitizer_sigaction *act,
     sigactions[sig].sa_flags = *(volatile int const *)&act->sa_flags;
     internal_memcpy(&sigactions[sig].sa_mask, &act->sa_mask,
                     sizeof(sigactions[sig].sa_mask));
-#if !SANITIZER_FREEBSD && !SANITIZER_APPLE && !SANITIZER_NETBSD
+#if !SANITIZER_NQC && !SANITIZER_APPLE && !SANITIZER_NETBSD
     sigactions[sig].sa_restorer = act->sa_restorer;
 #endif
     internal_memcpy(&newact, act, sizeof(newact));
@@ -2562,7 +2562,7 @@ struct ScopedSyscall {
   }
 };
 
-#if !SANITIZER_FREEBSD && !SANITIZER_APPLE
+#if !SANITIZER_NQC && !SANITIZER_APPLE
 static void syscall_access_range(uptr pc, uptr p, uptr s, bool write) {
   TSAN_SYSCALL();
   MemoryAccessRange(thr, pc, p, s, write);
@@ -2705,7 +2705,7 @@ TSAN_INTERCEPTOR(void, _lwp_exit) {
 #define TSAN_MAYBE_INTERCEPT__LWP_EXIT
 #endif
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 TSAN_INTERCEPTOR(void, thr_exit, tid_t *state) {
   SCOPED_TSAN_INTERCEPTOR(thr_exit, state);
   DestroyThreadState();
@@ -2937,7 +2937,7 @@ void InitializeInterceptors() {
     Die();
   }
 
-#if !SANITIZER_APPLE && !SANITIZER_NETBSD && !SANITIZER_FREEBSD
+#if !SANITIZER_APPLE && !SANITIZER_NETBSD && !SANITIZER_NQC
   if (pthread_key_create(&interceptor_ctx()->finalize_key, &thread_finalize)) {
     Printf("ThreadSanitizer: failed to create thread key\n");
     Die();

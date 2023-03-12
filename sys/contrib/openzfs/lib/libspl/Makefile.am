@@ -30,7 +30,7 @@ libspl_la_SOURCES += \
 	%D%/os/linux/zone.c
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libspl_la_SOURCES += \
 	%D%/os/freebsd/getexecname.c \
 	%D%/os/freebsd/gethostid.c \

@@ -47,8 +47,8 @@ __FBSDID("$FreeBSD$");
 #ifdef __LP64__
 #define	_WANT_KEVENT32
 #endif
-#define	_WANT_FREEBSD11_KEVENT
-#define	_WANT_FREEBSD_BITSET
+#define	_WANT_NQC11_KEVENT
+#define	_WANT_NQC_BITSET
 #include <sys/param.h>
 #include <sys/capsicum.h>
 #include <sys/_bitset.h>
@@ -743,7 +743,7 @@ dumpheader(struct ktr_header *kth, u_int sv_flags)
 		case SV_ABI_LINUX:
 			abi = "L";
 			break;
-		case SV_ABI_FREEBSD:
+		case SV_ABI_NQC:
 			abi = "F";
 			break;
 		default:
@@ -783,10 +783,10 @@ syscallabi(u_int sv_flags)
 {
 
 	if (sv_flags == 0)
-		return (SYSDECODE_ABI_FREEBSD);
+		return (SYSDECODE_ABI_NQC);
 	switch (sv_flags & SV_ABI_MASK) {
-	case SV_ABI_FREEBSD:
-		return (SYSDECODE_ABI_FREEBSD);
+	case SV_ABI_NQC:
+		return (SYSDECODE_ABI_NQC);
 	case SV_ABI_LINUX:
 #ifdef __LP64__
 		if (sv_flags & SV_ILP32)
@@ -837,7 +837,7 @@ ktrsyscall(struct ktr_syscall *ktr, u_int sv_flags)
 		char c = '(';
 		if (fancy) {
 			switch (sv_flags & SV_ABI_MASK) {
-			case SV_ABI_FREEBSD:
+			case SV_ABI_NQC:
 				ktrsyscall_nqc(ktr, &ip, &narg, &c,
 				    sv_flags);
 				break;

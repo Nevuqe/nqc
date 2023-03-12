@@ -44,7 +44,7 @@ extern char * strtok ( char * str, const char * delimiters );
 #include "linux/posix_types.h"
 #include "linux/string.h"
 
-#elif defined(NCSW_FREEBSD)
+#elif defined(NCSW_NQC)
 #include <sys/param.h>
 #include <sys/kernel.h>
 #include <sys/libkern.h>

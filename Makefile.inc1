@@ -105,7 +105,7 @@ MK_CLANG_BOOTSTRAP=	no
 .endif
 .endif
 
-# Pull in COMPILER_TYPE and COMPILER_FREEBSD_VERSION early. Pull it from the
+# Pull in COMPILER_TYPE and COMPILER_NQC_VERSION early. Pull it from the
 # tree to be friendlier to foreign OS builds. It's safe to do so unconditionally
 # here since we will always have the right make, unlike in src/Makefile
 # Don't include bsd.linker.mk yet until XBINUTILS is handled (after src.opts.mk)
@@ -216,33 +216,33 @@ WANT_COMPILER_TYPE=	clang
 WANT_COMPILER_TYPE=
 .endif
 
-.if !defined(WANT_COMPILER_FREEBSD_VERSION) && !make(showconfig) && \
+.if !defined(WANT_COMPILER_NQC_VERSION) && !make(showconfig) && \
     !make(test-system-linker)
 .if ${WANT_COMPILER_TYPE} == "clang"
-WANT_COMPILER_FREEBSD_VERSION_FILE= lib/clang/nqc_cc_version.h
-WANT_COMPILER_FREEBSD_VERSION!= \
+WANT_COMPILER_NQC_VERSION_FILE= lib/clang/nqc_cc_version.h
+WANT_COMPILER_NQC_VERSION!= \
 	awk '$$2 == "FREEBSD_CC_VERSION" {printf("%d\n", $$3)}' \
-	${SRCDIR}/${WANT_COMPILER_FREEBSD_VERSION_FILE} || echo unknown
+	${SRCDIR}/${WANT_COMPILER_NQC_VERSION_FILE} || echo unknown
 WANT_COMPILER_VERSION_FILE= lib/clang/include/clang/Basic/Version.inc
 WANT_COMPILER_VERSION!= \
 	awk '$$2 == "CLANG_VERSION" {split($$3, a, "."); print a[1] * 10000 + a[2] * 100 + a[3]}' \
 	${SRCDIR}/${WANT_COMPILER_VERSION_FILE} || echo unknown
 .endif
-.export WANT_COMPILER_FREEBSD_VERSION WANT_COMPILER_VERSION
-.endif	# !defined(WANT_COMPILER_FREEBSD_VERSION)
+.export WANT_COMPILER_NQC_VERSION WANT_COMPILER_VERSION
+.endif	# !defined(WANT_COMPILER_NQC_VERSION)
 
 # It needs to be the same revision as we would build for the bootstrap.
 # If the expected vs CC is different then we can't skip.
 # GCC cannot be used for cross-arch yet.  For clang we pass -target later if
 # TARGET_ARCH!=MACHINE_ARCH.
 .if ${MK_SYSTEM_COMPILER} == "yes" && \
-    defined(WANT_COMPILER_FREEBSD_VERSION) && \
+    defined(WANT_COMPILER_NQC_VERSION) && \
     ${MK_CLANG_BOOTSTRAP} == "yes" && \
     !make(xdev*) && \
     ${X_COMPILER_TYPE} == ${WANT_COMPILER_TYPE} && \
     (${X_COMPILER_TYPE} == "clang" || ${TARGET_ARCH} == ${MACHINE_ARCH}) && \
     ${X_COMPILER_VERSION} == ${WANT_COMPILER_VERSION} && \
-    ${X_COMPILER_FREEBSD_VERSION} == ${WANT_COMPILER_FREEBSD_VERSION}
+    ${X_COMPILER_NQC_VERSION} == ${WANT_COMPILER_NQC_VERSION}
 # Everything matches, disable the bootstrap compiler.
 MK_CLANG_BOOTSTRAP=	no
 USING_SYSTEM_COMPILER=	yes
@@ -258,31 +258,31 @@ WANT_LINKER_TYPE=		lld
 WANT_LINKER_TYPE=
 .endif
 
-.if !defined(WANT_LINKER_FREEBSD_VERSION) && !make(showconfig) && \
+.if !defined(WANT_LINKER_NQC_VERSION) && !make(showconfig) && \
     !make(test-system-compiler)
 .if ${WANT_LINKER_TYPE} == "lld"
-WANT_LINKER_FREEBSD_VERSION_FILE= lib/clang/include/lld/Common/Version.inc
-WANT_LINKER_FREEBSD_VERSION!= \
-	awk '$$2 == "LLD_FREEBSD_VERSION" {print $$3}' \
-	${SRCDIR}/${WANT_LINKER_FREEBSD_VERSION_FILE} || echo unknown
+WANT_LINKER_NQC_VERSION_FILE= lib/clang/include/lld/Common/Version.inc
+WANT_LINKER_NQC_VERSION!= \
+	awk '$$2 == "LLD_NQC_VERSION" {print $$3}' \
+	${SRCDIR}/${WANT_LINKER_NQC_VERSION_FILE} || echo unknown
 WANT_LINKER_VERSION_FILE= lib/clang/include/lld/Common/Version.inc
 WANT_LINKER_VERSION!= \
 	awk '$$2 == "LLD_VERSION_STRING" {gsub("\"", "", $$3); split($$3, a, "."); print a[1] * 10000 + a[2] * 100 + a[3]}' \
 	${SRCDIR}/${WANT_LINKER_VERSION_FILE} || echo unknown
 .else
-WANT_LINKER_FREEBSD_VERSION_FILE=
-WANT_LINKER_FREEBSD_VERSION=
+WANT_LINKER_NQC_VERSION_FILE=
+WANT_LINKER_NQC_VERSION=
 .endif
-.export WANT_LINKER_FREEBSD_VERSION WANT_LINKER_VERSION
-.endif	# !defined(WANT_LINKER_FREEBSD_VERSION)
+.export WANT_LINKER_NQC_VERSION WANT_LINKER_VERSION
+.endif	# !defined(WANT_LINKER_NQC_VERSION)
 
 .if ${MK_SYSTEM_LINKER} == "yes" && \
-    defined(WANT_LINKER_FREEBSD_VERSION) && \
+    defined(WANT_LINKER_NQC_VERSION) && \
     (${MK_LLD_BOOTSTRAP} == "yes") && \
     !make(xdev*) && \
     ${X_LINKER_TYPE} == ${WANT_LINKER_TYPE} && \
     ${X_LINKER_VERSION} == ${WANT_LINKER_VERSION} && \
-    ${X_LINKER_FREEBSD_VERSION} == ${WANT_LINKER_FREEBSD_VERSION}
+    ${X_LINKER_NQC_VERSION} == ${WANT_LINKER_NQC_VERSION}
 # Everything matches, disable the bootstrap linker.
 MK_LLD_BOOTSTRAP=	no
 USING_SYSTEM_LINKER=	yes
@@ -296,20 +296,20 @@ TEST_SYSTEM_COMPILER_VARS= \
 	USING_SYSTEM_COMPILER MK_SYSTEM_COMPILER \
 	MK_CROSS_COMPILER MK_CLANG_BOOTSTRAP \
 	WANT_COMPILER_TYPE WANT_COMPILER_VERSION WANT_COMPILER_VERSION_FILE \
-	WANT_COMPILER_FREEBSD_VERSION WANT_COMPILER_FREEBSD_VERSION_FILE \
+	WANT_COMPILER_NQC_VERSION WANT_COMPILER_NQC_VERSION_FILE \
 	CC COMPILER_TYPE COMPILER_FEATURES COMPILER_VERSION \
-	COMPILER_FREEBSD_VERSION \
+	COMPILER_NQC_VERSION \
 	XCC X_COMPILER_TYPE X_COMPILER_FEATURES X_COMPILER_VERSION \
-	X_COMPILER_FREEBSD_VERSION
+	X_COMPILER_NQC_VERSION
 TEST_SYSTEM_LINKER_VARS= \
 	USING_SYSTEM_LINKER MK_SYSTEM_LINKER \
 	MK_LLD_BOOTSTRAP \
 	WANT_LINKER_TYPE WANT_LINKER_VERSION WANT_LINKER_VERSION_FILE \
-	WANT_LINKER_FREEBSD_VERSION WANT_LINKER_FREEBSD_VERSION_FILE \
+	WANT_LINKER_NQC_VERSION WANT_LINKER_NQC_VERSION_FILE \
 	LD LINKER_TYPE LINKER_FEATURES LINKER_VERSION \
-	LINKER_FREEBSD_VERSION \
+	LINKER_NQC_VERSION \
 	XLD X_LINKER_TYPE X_LINKER_FEATURES X_LINKER_VERSION \
-	X_LINKER_FREEBSD_VERSION
+	X_LINKER_NQC_VERSION
 
 .for _t in compiler linker
 test-system-${_t}: .PHONY
@@ -338,12 +338,12 @@ test-system-${_t}: .PHONY
 _TOOLCHAIN_METADATA_VARS=	COMPILER_VERSION \
 				COMPILER_TYPE \
 				COMPILER_FEATURES \
-				COMPILER_FREEBSD_VERSION \
+				COMPILER_NQC_VERSION \
 				COMPILER_RESOURCE_DIR \
 				LINKER_VERSION \
 				LINKER_FEATURES \
 				LINKER_TYPE \
-				LINKER_FREEBSD_VERSION
+				LINKER_NQC_VERSION
 toolchain-metadata.mk: .PHONY .META
 	@: > ${.TARGET}
 	@echo ".info Using cached toolchain metadata from build at $$(hostname) on $$(date)" \

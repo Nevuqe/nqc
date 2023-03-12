@@ -52,7 +52,7 @@ __FBSDID("$FreeBSD$");
 
 #define	DHCP_ENV_NOVENDOR	1	/* do not parse vendor options */
 #define	DHCP_ENV_PXE		10	/* assume pxe vendor options */
-#define	DHCP_ENV_FREEBSD	11	/* assume freebsd vendor options */
+#define	DHCP_ENV_NQC	11	/* assume freebsd vendor options */
 /* set DHCP_ENV to one of the values above to export dhcp options to kenv */
 #define DHCP_ENV		DHCP_ENV_NO_VENDOR
 
@@ -494,7 +494,7 @@ struct dhcp_opt {
 };
 
 static struct dhcp_opt vndr_opt[] = { /* Vendor Specific Options */
-#if DHCP_ENV == DHCP_ENV_FREEBSD /* FreeBSD table in the original code */
+#if DHCP_ENV == DHCP_ENV_NQC /* FreeBSD table in the original code */
 	{0,	0,	"FreeBSD"},		/* prefix */
 	{1,	__TXT,	"kernel"},
 	{2,	__TXT,	"kernelname"},

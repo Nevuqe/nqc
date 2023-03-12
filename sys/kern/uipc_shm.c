@@ -1354,7 +1354,7 @@ kern_shm_open2(struct thread *td, const char *userpath, int flags, mode_t mode,
 }
 
 /* System calls. */
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 int
 freebsd12_shm_open(struct thread *td, struct freebsd12_shm_open_args *uap)
 {

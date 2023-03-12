@@ -1,7 +1,7 @@
 if BUILD_LINUX
 include $(srcdir)/%D%/os/linux/Makefile.am
 endif
-if BUILD_FREEBSD
+if BUILD_NQC
 include $(srcdir)/%D%/os/freebsd/Makefile.am
 endif
 

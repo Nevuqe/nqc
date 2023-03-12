@@ -978,7 +978,7 @@ kbdmux_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	kbdmux_kbd_t	*k;
 	keyboard_info_t	*ki;
 	int		 error = 0, mode;
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	int		 ival;
 #endif
 
@@ -1089,7 +1089,7 @@ kbdmux_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		KBDMUX_UNLOCK(state);
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 7):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1129,7 +1129,7 @@ kbdmux_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		KBDMUX_UNLOCK(state);
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 66):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1164,7 +1164,7 @@ kbdmux_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		KBDMUX_UNLOCK(state);
 		break;
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 20):
 		ival = IOCPARM_IVAL(arg);
 		arg = (caddr_t)&ival;
@@ -1191,7 +1191,7 @@ kbdmux_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 		return (kbdmux_ioctl(kbd, KDSETLED, arg));
 		/* NOT REACHED */
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 	case _IO('K', 67):
 		cmd = KDSETRAD;
 		ival = IOCPARM_IVAL(arg);
@@ -1242,12 +1242,12 @@ kbdmux_ioctl(keyboard_t *kbd, u_long cmd, caddr_t arg)
 	case PIO_KEYMAP:	/* set keyboard translation table */
 	case PIO_KEYMAPENT:	/* set keyboard translation table entry */
 	case PIO_DEADKEYMAP:	/* set accent key translation table */
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 	case OPIO_KEYMAP:	/* set keyboard translation table (compat) */
 	case OPIO_DEADKEYMAP:	/* set accent key translation table (compat) */
 		KBDMUX_LOCK(state);
 		state->ks_accents = 0;
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 
 		/* perform command on all slave keyboards */
 		SLIST_FOREACH(k, &state->ks_kbds, next)

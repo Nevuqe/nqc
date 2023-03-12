@@ -6,8 +6,8 @@
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");
 
-#ifndef _DRM_OS_FREEBSD_H_
-#define	_DRM_OS_FREEBSD_H_
+#ifndef _DRM_OS_NQC_H_
+#define	_DRM_OS_NQC_H_
 
 #include <sys/fbio.h>
 #include <sys/smp.h>
@@ -603,7 +603,7 @@ typedef struct drm_pci_id_list
 #undef	CONFIG_INTEL_IOMMU
 #endif
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #define	CONFIG_COMPAT
 #endif
 
@@ -717,4 +717,4 @@ do {									\
 		printf("NOTYET: %s at %s:%d\n", __func__, __FILE__, __LINE__); \
 } while (0)
 
-#endif /* _DRM_OS_FREEBSD_H_ */
+#endif /* _DRM_OS_NQC_H_ */

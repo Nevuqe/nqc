@@ -25,7 +25,7 @@
 #include "test.h"
 __FBSDID("$FreeBSD$");
 
-#if ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_LIBACL
+#if ARCHIVE_ACL_NQC || ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_LIBACL
 static const acl_perm_t acl_perms[] = {
 #if ARCHIVE_ACL_DARWIN
     ACL_READ_DATA,
@@ -50,7 +50,7 @@ static const acl_perm_t acl_perms[] = {
     ACL_EXECUTE,
     ACL_WRITE,
     ACL_READ,
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
     ACL_READ_DATA,
     ACL_LIST_DIRECTORY,
     ACL_WRITE_DATA,
@@ -67,10 +67,10 @@ static const acl_perm_t acl_perms[] = {
     ACL_WRITE_ACL,
     ACL_WRITE_OWNER,
     ACL_SYNCHRONIZE
-#endif	/* ARCHIVE_ACL_FREEBSD_NFS4 */
+#endif	/* ARCHIVE_ACL_NQC_NFS4 */
 #endif /* !ARCHIVE_ACL_DARWIN */
 };
-#if ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC_NFS4
 static const acl_flag_t acl_flags[] = {
 #if ARCHIVE_ACL_DARWIN
     ACL_ENTRY_INHERITED,
@@ -78,7 +78,7 @@ static const acl_flag_t acl_flags[] = {
     ACL_ENTRY_DIRECTORY_INHERIT,
     ACL_ENTRY_LIMIT_INHERIT,
     ACL_ENTRY_ONLY_INHERIT
-#else	/* ARCHIVE_ACL_FREEBSD_NFS4 */
+#else	/* ARCHIVE_ACL_NQC_NFS4 */
     ACL_ENTRY_FILE_INHERIT,
     ACL_ENTRY_DIRECTORY_INHERIT,
     ACL_ENTRY_NO_PROPAGATE_INHERIT,
@@ -88,9 +88,9 @@ static const acl_flag_t acl_flags[] = {
 #ifdef ACL_ENTRY_INHERITED
     ACL_ENTRY_INHERITED
 #endif
-#endif	/* ARCHIVE_ACL_FREEBSD_NFS4 */
+#endif	/* ARCHIVE_ACL_NQC_NFS4 */
 };
-#endif /* ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_FREEBSD_NFS4 */
+#endif /* ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC_NFS4 */
 
 /*
  * Compare two ACL entries on FreeBSD or on Mac OS X
@@ -102,10 +102,10 @@ compare_acl_entry(acl_entry_t ae_a, acl_entry_t ae_b, int is_nfs4)
 	acl_permset_t permset_a, permset_b;
 	int perm_a, perm_b, perm_start, perm_end;
 	void *qual_a, *qual_b;
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	acl_entry_type_t type_a, type_b;
 #endif
-#if ARCHIVE_ACL_FREEBSD_NFS4 || ARCHIVE_ACL_DARWIN
+#if ARCHIVE_ACL_NQC_NFS4 || ARCHIVE_ACL_DARWIN
 	acl_flagset_t flagset_a, flagset_b;
 	int flag_a, flag_b;
 #endif
@@ -159,7 +159,7 @@ compare_acl_entry(acl_entry_t ae_a, acl_entry_t ae_b, int is_nfs4)
 		acl_free(qual_b);
 	}
 
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	if (is_nfs4) {
 		/* Compare NFS4 ACL type */
 		r = acl_get_entry_type_np(ae_a, &type_a);
@@ -187,7 +187,7 @@ compare_acl_entry(acl_entry_t ae_a, acl_entry_t ae_b, int is_nfs4)
 
 	perm_start = 0;
 	perm_end = (int)(sizeof(acl_perms) / sizeof(acl_perms[0]));
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 	if (is_nfs4)
 		perm_start = 3;
 	else
@@ -208,7 +208,7 @@ compare_acl_entry(acl_entry_t ae_a, acl_entry_t ae_b, int is_nfs4)
 			return (0);
 	}
 
-#if ARCHIVE_ACL_FREEBSD_NFS4 || ARCHIVE_ACL_DARWIN
+#if ARCHIVE_ACL_NQC_NFS4 || ARCHIVE_ACL_DARWIN
 	if (is_nfs4) {
 		r = acl_get_flagset_np(ae_a, &flagset_a);
 		failure("acl_get_flagset_np() error: %s", strerror(errno));
@@ -229,12 +229,12 @@ compare_acl_entry(acl_entry_t ae_a, acl_entry_t ae_b, int is_nfs4)
 				return (0);
 		}
 	}
-#else	/* ARCHIVE_ACL_FREEBSD_NFS4 || ARCHIVE_ACL_DARWIN */
+#else	/* ARCHIVE_ACL_NQC_NFS4 || ARCHIVE_ACL_DARWIN */
 	(void)is_nfs4;	/* UNUSED */
 #endif
 	return (1);
 }
-#endif	/* ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_LIBACL */
+#endif	/* ARCHIVE_ACL_NQC || ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_LIBACL */
 
 #if ARCHIVE_ACL_SUPPORT
 /*
@@ -276,7 +276,7 @@ compare_acls(const char *path_a, const char *path_b)
         aclent_t *aclent_a, *aclent_b;
         ace_t *ace_a, *ace_b;
 	int e;
-#elif ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL
+#elif ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL
 	acl_t acl_a, acl_b;
 	acl_entry_t aclent_a, aclent_b;
 	int a, b, r;
@@ -288,7 +288,7 @@ compare_acls(const char *path_a, const char *path_b)
 	richacl_b = NULL;
 #endif
 
-#if ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL || \
+#if ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL || \
     ARCHIVE_ACL_SUNOS
 	acl_a = NULL;
 	acl_b = NULL;
@@ -379,11 +379,11 @@ compare_acls(const char *path_a, const char *path_b)
 		return (ret);
         }
 #endif /* ARCHIVE_ACL_LIBRICHACL */
-#if ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL
+#if ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL
 #if ARCHIVE_ACL_DARWIN
 	is_nfs4 = 1;
 	acl_a = acl_get_file(path_a, ACL_TYPE_EXTENDED);
-#elif ARCHIVE_ACL_FREEBSD_NFS4
+#elif ARCHIVE_ACL_NQC_NFS4
 	acl_a = acl_get_file(path_a, ACL_TYPE_NFS4);
 	if (acl_a != NULL)
 		is_nfs4 = 1;
@@ -395,12 +395,12 @@ compare_acls(const char *path_a, const char *path_b)
 		return (-1);
 #if ARCHIVE_ACL_DARWIN
 	acl_b = acl_get_file(path_b, ACL_TYPE_EXTENDED);
-#elif ARCHIVE_ACL_FREEBSD_NFS4
+#elif ARCHIVE_ACL_NQC_NFS4
 	acl_b = acl_get_file(path_b, ACL_TYPE_NFS4);
 #endif
 #if !ARCHIVE_ACL_DARWIN
 	if (acl_b == NULL) {
-#if ARCHIVE_ACL_FREEBSD_NFS4
+#if ARCHIVE_ACL_NQC_NFS4
 		if (is_nfs4) {
 			acl_free(acl_a);
 			return (0);
@@ -441,7 +441,7 @@ compare_acls(const char *path_a, const char *path_b)
 	/* Entry count must match */
 	if (a != b)
 		ret = 0;
-#endif	/* ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL */
+#endif	/* ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL */
 #endif	/* !ARCHIVE_ACL_SUNOS */
 exit_free:
 #if ARCHIVE_ACL_SUNOS

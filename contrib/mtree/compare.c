@@ -72,7 +72,7 @@ __RCSID("$NetBSD: compare.c,v 1.58 2013/11/21 18:39:50 christos Exp $");
 #define	INDENTNAMELEN	8
 #define MARK								\
 do {									\
-	if (flavor == F_FREEBSD9) {					\
+	if (flavor == F_NQC9) {					\
 		len = printf("%s changed\n", RP(p));			\
 		tab = "\t";						\
 	} else {							\
@@ -176,7 +176,7 @@ compare(NODE *s, FTSENT *p)
 		break;
 #endif
 typeerr:		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "\ttype expected %s found %s\n" : "\ttype (%s, %s)\n",
 		    nodetype(s->type), inotype(p->fts_statp->st_mode));
 		return (label);
@@ -199,7 +199,7 @@ typeerr:		LABEL;
 	    (s->type == F_BLOCK || s->type == F_CHAR) &&
 	    s->st_rdev != p->fts_statp->st_rdev) {
 		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "%sdevice expected %#jx found %#jx" :
 		    "%sdevice (%#jx, %#jx",
 		    tab, (uintmax_t)s->st_rdev,
@@ -213,10 +213,10 @@ typeerr:		LABEL;
 			      p->fts_statp->st_gid) == -1) )
 				printf(", not modified: %s%s\n",
 				    strerror(errno),
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 			 else
 				printf(", modified%s\n",
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 		} else
 			printf(")\n");
 		tab = "\t";
@@ -224,34 +224,34 @@ typeerr:		LABEL;
 	/* Set the uid/gid first, then set the mode. */
 	if (s->flags & (F_UID | F_UNAME) && s->st_uid != p->fts_statp->st_uid) {
 		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "%suser expected %lu found %lu" : "%suser (%lu, %lu",
 		    tab, (u_long)s->st_uid, (u_long)p->fts_statp->st_uid);
 		if (uflag) {
 			if (lchown(p->fts_accpath, s->st_uid, -1))
 				printf(", not modified: %s%s\n",
 				    strerror(errno),
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 			else
 				printf(", modified%s\n",
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 		} else
 			printf(")\n");
 		tab = "\t";
 	}
 	if (s->flags & (F_GID | F_GNAME) && s->st_gid != p->fts_statp->st_gid) {
 		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "%sgid expected %lu found %lu" : "%sgid (%lu, %lu",
 		    tab, (u_long)s->st_gid, (u_long)p->fts_statp->st_gid);
 		if (uflag) {
 			if (lchown(p->fts_accpath, -1, s->st_gid))
 				printf(", not modified: %s%s\n",
 				    strerror(errno),
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 			else
 				printf(", modified%s\n",
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 		}
 		else
 			printf(")\n");
@@ -276,7 +276,7 @@ typeerr:		LABEL;
 		}
 
 		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "%spermissions expcted %#lo found %#lo" :
 		    "%spermissions (%#lo, %#lo",
 		    tab, (u_long)s->st_mode,
@@ -285,10 +285,10 @@ typeerr:		LABEL;
 			if (lchmod(p->fts_accpath, s->st_mode))
 				printf(", not modified: %s%s\n",
 				    strerror(errno),
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 			else
 				printf(", modified%s\n",
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 		}
 		else
 			printf(")\n");
@@ -298,7 +298,7 @@ typeerr:		LABEL;
 	if (s->flags & F_NLINK && s->type != F_DIR &&
 	    s->st_nlink != p->fts_statp->st_nlink) {
 		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "%slink count expected %lu found %lu\n" :
 		    "%slink count (%lu, %lu)\n",
 		    tab, (u_long)s->st_nlink, (u_long)p->fts_statp->st_nlink);
@@ -306,7 +306,7 @@ typeerr:		LABEL;
 	}
 	if (s->flags & F_SIZE && s->st_size != p->fts_statp->st_size) {
 		LABEL;
-		printf(flavor == F_FREEBSD9 ?
+		printf(flavor == F_NQC9 ?
 		    "%ssize expected %ju found %ju\n" : "%ssize (%ju, %ju)\n",
 		    tab, (uintmax_t)s->st_size,
 		    (uintmax_t)p->fts_statp->st_size);
@@ -342,7 +342,7 @@ typeerr:		LABEL;
 		if (tv[0].tv_sec != tv[1].tv_sec ||
 		    tv[0].tv_usec != tv[1].tv_usec) {
 			LABEL;
-			printf(flavor == F_FREEBSD9 ?
+			printf(flavor == F_NQC9 ?
 			    "%smodification time expected %.24s found " :
 			    "%smodification time (%.24s, ",
 			    tab, ctime(&smtime));
@@ -352,12 +352,12 @@ typeerr:		LABEL;
 				if (utimes(p->fts_accpath, tv))
 					printf(", not modified: %s%s\n",
 					    strerror(errno),
-					    flavor == F_FREEBSD9 ? "" : ")");
+					    flavor == F_NQC9 ? "" : ")");
 				else
 					printf(", modified%s\n",
-					    flavor == F_FREEBSD9 ? "" : ")");
+					    flavor == F_NQC9 ? "" : ")");
 			} else
-				printf("%s\n", flavor == F_FREEBSD9 ? "" : ")");
+				printf("%s\n", flavor == F_NQC9 ? "" : ")");
 			tab = "\t";
 		}
 	}
@@ -374,7 +374,7 @@ typeerr:		LABEL;
 			char *f_s;
 			LABEL;
 			f_s = flags_to_string(s->st_flags, "none");
-			printf(flavor == F_FREEBSD9 ?
+			printf(flavor == F_NQC9 ?
 			    "%sflags expected \"%s\" found " :
 			    "%sflags (\"%s\" is not ", tab, f_s);
 			free(f_s);
@@ -390,7 +390,7 @@ typeerr:		LABEL;
 			else
 				SETFLAGS(0, (~SP_FLGS & CH_MASK));
 		} else
-			printf("%s\n", flavor == F_FREEBSD9 ? "" : ")");
+			printf("%s\n", flavor == F_NQC9 ? "" : ")");
 		tab = "\t";
 	}
 #endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
@@ -416,7 +416,7 @@ typeerr:		LABEL;
 			close(fd);
 			if (s->cksum != val) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ?
+				printf(flavor == F_NQC9 ?
 				    "%scksum expected %lu found %lu\n" :
 				    "%scksum (%lu, %lu)\n",
 				    tab, s->cksum, (unsigned long)val);
@@ -434,7 +434,7 @@ typeerr:		LABEL;
 		} else {
 			if (strcmp(s->md5digest, digestbuf)) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ?
+				printf(flavor == F_NQC9 ?
 				    "%s%s expected %s found %s\n" :
 				    "%s%s (0x%s, 0x%s)\n",
 				    tab, MD5KEY, s->md5digest, digestbuf);
@@ -454,7 +454,7 @@ typeerr:		LABEL;
 		} else {
 			if (strcmp(s->rmd160digest, digestbuf)) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ?
+				printf(flavor == F_NQC9 ?
 				    "%s%s expected %s found %s\n" :
 				    "%s%s (0x%s, 0x%s)\n",
 				    tab, RMD160KEY, s->rmd160digest, digestbuf);
@@ -474,7 +474,7 @@ typeerr:		LABEL;
 		} else {
 			if (strcmp(s->sha1digest, digestbuf)) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ? 
+				printf(flavor == F_NQC9 ? 
 				    "%s%s expected %s found %s\n" :
 				    "%s%s (0x%s, 0x%s)\n",
 				    tab, SHA1KEY, s->sha1digest, digestbuf);
@@ -494,7 +494,7 @@ typeerr:		LABEL;
 		} else {
 			if (strcmp(s->sha256digest, digestbuf)) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ? 
+				printf(flavor == F_NQC9 ? 
 				    "%s%s expected %s found %s\n" :
 				    "%s%s (0x%s, 0x%s)\n",
 				    tab, SHA256KEY, s->sha256digest, digestbuf);
@@ -513,7 +513,7 @@ typeerr:		LABEL;
 		} else {
 			if (strcmp(s->sha384digest, digestbuf)) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ? 
+				printf(flavor == F_NQC9 ? 
 				    "%s%s expected %s found %s\n" :
 				    "%s%s (0x%s, 0x%s)\n",
 				    tab, SHA384KEY, s->sha384digest, digestbuf);
@@ -532,7 +532,7 @@ typeerr:		LABEL;
 		} else {
 			if (strcmp(s->sha512digest, digestbuf)) {
 				LABEL;
-				printf(flavor == F_FREEBSD9 ? 
+				printf(flavor == F_NQC9 ? 
 				    "%s%s expected %s found %s\n" :
 				    "%s%s (0x%s, 0x%s)\n",
 				    tab, SHA512KEY, s->sha512digest, digestbuf);
@@ -545,7 +545,7 @@ typeerr:		LABEL;
 	if (s->flags & F_SLINK &&
 	    strcmp(cp = rlink(p->fts_accpath), s->slink)) {
 		LABEL;
-		printf(flavor == F_FREEBSD9 ? 
+		printf(flavor == F_NQC9 ? 
 		    "%slink ref expected %s found %s" :
 		    "%slink ref (%s, %s", tab, cp, s->slink);
 		if (uflag) {
@@ -553,12 +553,12 @@ typeerr:		LABEL;
 			    (symlink(s->slink, p->fts_accpath) == -1) )
 				printf(", not modified: %s%s\n",
 				    strerror(errno),
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 			else
 				printf(", modified%s\n",
-				    flavor == F_FREEBSD9 ? "" : ")");
+				    flavor == F_NQC9 ? "" : ")");
 		} else
-			printf("%s\n", flavor == F_FREEBSD9 ? "" : ")");
+			printf("%s\n", flavor == F_NQC9 ? "" : ")");
 	}
 	return (label);
 }

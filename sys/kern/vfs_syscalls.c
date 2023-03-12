@@ -44,7 +44,7 @@ __FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 #include <sys/abi_compat.h>
 #endif
 #include <sys/bio.h>
@@ -583,7 +583,7 @@ out:
 	return (0);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 /*
  * Get old format filesystem statistics.
  */
@@ -741,9 +741,9 @@ freebsd4_cvtstatfs(struct statfs *nsp, struct ostatfs *osp)
 	    MIN(MNAMELEN, OMNAMELEN));
 	osp->f_fsid = nsp->f_fsid;
 }
-#endif /* COMPAT_FREEBSD4 */
+#endif /* COMPAT_NQC4 */
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 /*
  * Get old format filesystem statistics.
  */
@@ -882,7 +882,7 @@ freebsd11_cvtstatfs(struct statfs *nsp, struct freebsd11_statfs *osp)
 	strlcpy(osp->f_mntfromname, nsp->f_mntfromname,
 	    MIN(MNAMELEN, sizeof(osp->f_mntfromname)));
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 /*
  * Change current working directory to a given file descriptor.
@@ -1297,7 +1297,7 @@ sys_mknodat(struct thread *td, struct mknodat_args *uap)
 	    uap->dev));
 }
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 int
 freebsd11_mknod(struct thread *td,
     struct freebsd11_mknod_args *uap)
@@ -1315,7 +1315,7 @@ freebsd11_mknodat(struct thread *td,
 	return (kern_mknodat(td, uap->fd, uap->path, UIO_USERSPACE, uap->mode,
 	    uap->dev));
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 int
 kern_mknodat(struct thread *td, int fd, const char *path, enum uio_seg pathseg,
@@ -2038,7 +2038,7 @@ olseek(struct thread *td, struct olseek_args *uap)
 }
 #endif /* COMPAT_43 */
 
-#if defined(COMPAT_FREEBSD6)
+#if defined(COMPAT_NQC6)
 /* Version with the 'pad' argument */
 int
 freebsd6_lseek(struct thread *td, struct freebsd6_lseek_args *uap)
@@ -2252,7 +2252,7 @@ cvtstat(struct stat *st, struct ostat *ost)
 }
 #endif /* COMPAT_43 */
 
-#if defined(COMPAT_43) || defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_43) || defined(COMPAT_NQC11)
 int ino64_trunc_error;
 SYSCTL_INT(_vfs, OID_AUTO, ino64_trunc_error, CTLFLAG_RW,
     &ino64_trunc_error, 0,
@@ -2399,7 +2399,7 @@ freebsd11_fstatat(struct thread *td, struct freebsd11_fstatat_args* uap)
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	return (error);
 }
-#endif	/* COMPAT_FREEBSD11 */
+#endif	/* COMPAT_NQC11 */
 
 /*
  * Get file status
@@ -2468,7 +2468,7 @@ kern_statat(struct thread *td, int flag, int fd, const char *path,
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 /*
  * Implementation of the NetBSD [l]stat() functions.
  */
@@ -2550,7 +2550,7 @@ freebsd11_nlstat(struct thread *td, struct freebsd11_nlstat_args *uap)
 		error = copyout(&nsb, uap->ub, sizeof (nsb));
 	return (error);
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 /*
  * Get configurable pathname variables.
@@ -3519,7 +3519,7 @@ otruncate(struct thread *td, struct otruncate_args *uap)
 }
 #endif /* COMPAT_43 */
 
-#if defined(COMPAT_FREEBSD6)
+#if defined(COMPAT_NQC6)
 /* Versions with the pad argument */
 int
 freebsd6_truncate(struct thread *td, struct freebsd6_truncate_args *uap)
@@ -3962,7 +3962,7 @@ fdout:
 	return (error);
 }
 
-#if defined(COMPAT_43) || defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_43) || defined(COMPAT_NQC11)
 int
 freebsd11_kern_getdirentries(struct thread *td, int fd, char *ubuf, u_int count,
     long *basep, void (*func)(struct freebsd11_dirent *))
@@ -4100,7 +4100,7 @@ kern_ogetdirentries(struct thread *td, struct ogetdirentries_args *uap,
 }
 #endif /* COMPAT_43 */
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 #ifndef _SYS_SYSPROTO_H_
 struct freebsd11_getdirentries_args {
 	int	fd;
@@ -4135,7 +4135,7 @@ freebsd11_getdents(struct thread *td, struct freebsd11_getdents_args *uap)
 	ap.basep = NULL;
 	return (freebsd11_getdirentries(td, &ap));
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 /*
  * Read a block of directory entries in a filesystem independent format.

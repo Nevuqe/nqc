@@ -185,7 +185,7 @@ db_nextframe(struct amd64_frame **fp, db_addr_t *ip, struct thread *td)
 		    strcmp(name, "Xfast_syscall_pti") == 0 ||
 		    strcmp(name, "fast_syscall_common") == 0)
 			frame_type = SYSCALL;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		else if (strcmp(name, "Xint0x80_syscall") == 0)
 			frame_type = SYSCALL;
 #endif

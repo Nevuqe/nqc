@@ -174,7 +174,7 @@ timehands_update(struct vdso_sv_tk *svtk)
 	tk->tk_enabled = enabled;
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static void
 timehands_update32(struct vdso_sv_tk *svtk)
 {
@@ -209,7 +209,7 @@ timehands_update32(struct vdso_sv_tk *svtk)
  * context.
  */
 static struct vdso_sv_tk *host_svtk;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 static struct vdso_sv_tk *compat32_svtk;
 #endif
 
@@ -219,7 +219,7 @@ timekeep_push_vdso(void)
 
 	if (host_svtk != NULL)
 		timehands_update(host_svtk);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (compat32_svtk != NULL)
 		timehands_update32(compat32_svtk);
 #endif
@@ -244,7 +244,7 @@ alloc_sv_tk(void)
 	return (svtk);
 }
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 struct vdso_sv_tk *
 alloc_sv_tk_compat32(void)
 {
@@ -316,7 +316,7 @@ exec_sysvec_init(void *param)
 	MPASS(sv->sv_shared_page_base != 0);
 
 	sv->sv_shared_page_obj = shared_page_obj;
-	if ((flags & SV_ABI_MASK) == SV_ABI_FREEBSD) {
+	if ((flags & SV_ABI_MASK) == SV_ABI_NQC) {
 		if ((flags & SV_DSO_SIG) != 0) {
 			res = shared_page_fill((uintptr_t)sv->sv_szsigcode,
 			    16, sv->sv_sigcode);
@@ -333,9 +333,9 @@ exec_sysvec_init(void *param)
 		}
 	}
 	if ((flags & SV_TIMEKEEP) != 0) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if ((flags & SV_ILP32) != 0) {
-			if ((flags & SV_ABI_MASK) == SV_ABI_FREEBSD) {
+			if ((flags & SV_ABI_MASK) == SV_ABI_NQC) {
 				KASSERT(compat32_svtk == NULL,
 				    ("Compat32 already registered"));
 				compat32_svtk = alloc_sv_tk_compat32();
@@ -346,7 +346,7 @@ exec_sysvec_init(void *param)
 			sv->sv_timekeep_offset = compat32_svtk->sv_timekeep_off;
 		} else {
 #endif
-			if ((flags & SV_ABI_MASK) == SV_ABI_FREEBSD) {
+			if ((flags & SV_ABI_MASK) == SV_ABI_NQC) {
 				KASSERT(host_svtk == NULL,
 				    ("Host already registered"));
 				host_svtk = alloc_sv_tk();
@@ -355,13 +355,13 @@ exec_sysvec_init(void *param)
 				    ("Host not registered"));
 			}
 			sv->sv_timekeep_offset = host_svtk->sv_timekeep_off;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		}
 #endif
 	}
 #ifdef RANDOM_FENESTRASX
 	if ((flags & (SV_ABI_MASK | SV_RNG_SEED_VER)) ==
-	    (SV_ABI_FREEBSD | SV_RNG_SEED_VER)) {
+	    (SV_ABI_NQC | SV_RNG_SEED_VER)) {
 		/*
 		 * Only allocate a single VDSO entry for multiple sysentvecs,
 		 * i.e., native and COMPAT32.
@@ -387,7 +387,7 @@ exec_sysvec_init_secondary(struct sysentvec *sv, struct sysentvec *sv2)
 	sv2->sv_shared_page_obj = sv->sv_shared_page_obj;
 	sv2->sv_sigcode_offset = sv->sv_sigcode_offset;
 	sv2->sv_vdso_offset = sv->sv_vdso_offset;
-	if ((sv2->sv_flags & SV_ABI_MASK) != SV_ABI_FREEBSD)
+	if ((sv2->sv_flags & SV_ABI_MASK) != SV_ABI_NQC)
 		return;
 	sv2->sv_timekeep_offset = sv->sv_timekeep_offset;
 	sv2->sv_fxrng_gen_offset = sv->sv_fxrng_gen_offset;

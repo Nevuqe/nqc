@@ -29,8 +29,8 @@
  * $FreeBSD$
  */
 
-#ifndef _ZFS_FREEBSD_CRYPTO_H
-#define	_ZFS_FREEBSD_CRYPTO_H
+#ifndef _ZFS_NQC_CRYPTO_H
+#define	_ZFS_NQC_CRYPTO_H
 
 #include <sys/errno.h>
 #include <sys/mutex.h>
@@ -92,4 +92,4 @@ int nqc_crypt_uio(boolean_t, nqc_crypt_session_t *,
 	const struct zio_crypt_info *, zfs_uio_t *, crypto_key_t *, uint8_t *,
 	size_t, size_t);
 
-#endif /* _ZFS_FREEBSD_CRYPTO_H */
+#endif /* _ZFS_NQC_CRYPTO_H */

@@ -38,7 +38,7 @@ extern char sigcode[];
 extern int szsigcode;
 extern u_long elf_hwcap;
 extern u_long elf_hwcap2;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 extern u_long elf32_hwcap;
 extern u_long elf32_hwcap2;
 #endif

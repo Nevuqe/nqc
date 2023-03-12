@@ -26,8 +26,8 @@
  * $FreeBSD$
  */
 
-#ifndef _ZSTD_FREEBSD_STDLIB_H_
-#define	_ZSTD_FREEBSD_STDLIB_H_
+#ifndef _ZSTD_NQC_STDLIB_H_
+#define	_ZSTD_NQC_STDLIB_H_
 
 #ifdef _KERNEL
 
@@ -42,4 +42,4 @@ MALLOC_DECLARE(M_ZSTD);
 
 #endif /* _KERNEL */
 
-#endif /* _ZSTD_FREEBSD_STDLIB_H_ */
+#endif /* _ZSTD_NQC_STDLIB_H_ */

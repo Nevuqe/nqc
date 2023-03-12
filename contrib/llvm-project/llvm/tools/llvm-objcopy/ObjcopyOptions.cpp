@@ -329,7 +329,7 @@ getOutputTargetInfoByTargetName(StringRef TargetName) {
                              OriginalTargetName.str().c_str());
   MachineInfo MI = Iter->getValue();
   if (IsFreeBSD)
-    MI.OSABI = ELF::ELFOSABI_FREEBSD;
+    MI.OSABI = ELF::ELFOSABI_NQC;
 
   FileFormat Format;
   if (TargetName.startswith("elf"))

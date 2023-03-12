@@ -183,7 +183,7 @@ static int crypto_workers_num = 0;
 SYSCTL_INT(_kern_crypto, OID_AUTO, num_workers, CTLFLAG_RDTUN,
 	   &crypto_workers_num, 0,
 	   "Number of crypto workers used to dispatch crypto jobs");
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 SYSCTL_INT(_kern, OID_AUTO, crypto_workers_num, CTLFLAG_RDTUN,
 	   &crypto_workers_num, 0,
 	   "Number of crypto workers used to dispatch crypto jobs");
@@ -195,7 +195,7 @@ int	crypto_devallowsoft = 0;
 SYSCTL_INT(_kern_crypto, OID_AUTO, allow_soft, CTLFLAG_RWTUN,
 	   &crypto_devallowsoft, 0,
 	   "Enable use of software crypto by /dev/crypto");
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 SYSCTL_INT(_kern, OID_AUTO, cryptodevallowsoft, CTLFLAG_RWTUN,
 	   &crypto_devallowsoft, 0,
 	   "Enable/disable use of software crypto by /dev/crypto");

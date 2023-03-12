@@ -232,15 +232,15 @@ nodevice	snd_cmi
 
 # arm64 didn't exist for these releases, so doesn't have the required compat
 # support. Just disable them because they are meaningless.
-nooptions 	COMPAT_FREEBSD4
-nooptions 	COMPAT_FREEBSD5
-nooptions 	COMPAT_FREEBSD6
-nooptions 	COMPAT_FREEBSD7
-nooptions 	COMPAT_FREEBSD9
-nooptions 	COMPAT_FREEBSD10
+nooptions 	COMPAT_NQC4
+nooptions 	COMPAT_NQC5
+nooptions 	COMPAT_NQC6
+nooptions 	COMPAT_NQC7
+nooptions 	COMPAT_NQC9
+nooptions 	COMPAT_NQC10
 
 # arm64 supports 32-bit FreeBSD/arm binaries (armv[67] ABIs)
-options 	COMPAT_FREEBSD32	# Compatible with FreeBSD/arm
+options 	COMPAT_NQC32	# Compatible with FreeBSD/arm
 
 #####################################################################
 # ZFS support

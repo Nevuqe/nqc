@@ -13,7 +13,7 @@
 
 #include "sanitizer_platform.h"
 
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD || \
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD || \
     SANITIZER_SOLARIS
 
 #include "sanitizer_allocator_internal.h"
@@ -45,7 +45,7 @@
 #define ElfW(type) Elf_##type
 #endif
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #include <pthread_np.h>
 #include <stdlib.h>
 #include <osreldate.h>
@@ -220,7 +220,7 @@ void InitTlsSize() { }
 // On glibc x86_64, ThreadDescriptorSize() needs to be precise due to the usage
 // of g_tls_size. On other targets, ThreadDescriptorSize() is only used by lsan
 // to get the pointer to thread-specific data keys in the thread control block.
-#if (SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_SOLARIS) && \
+#if (SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_SOLARIS) && \
     !SANITIZER_ANDROID && !SANITIZER_GO
 // sizeof(struct pthread) from glibc.
 static atomic_uintptr_t thread_descriptor_size;
@@ -435,7 +435,7 @@ __attribute__((unused)) static void GetStaticTlsBoundary(uptr *addr, uptr *size,
   *addr = ranges[l].begin;
   *size = ranges[r - 1].end - ranges[l].begin;
 }
-#endif  // (x86_64 || i386 || mips || ...) && (SANITIZER_FREEBSD ||
+#endif  // (x86_64 || i386 || mips || ...) && (SANITIZER_NQC ||
         // SANITIZER_LINUX) && !SANITIZER_ANDROID && !SANITIZER_GO
 
 #if SANITIZER_NETBSD
@@ -509,7 +509,7 @@ static void GetTls(uptr *addr, uptr *size) {
   const uptr pre_tcb_size = TlsPreTcbSize();
   *addr = tp - pre_tcb_size;
   *size = g_tls_size + pre_tcb_size;
-#elif SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_SOLARIS
+#elif SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_SOLARIS
   uptr align;
   GetStaticTlsBoundary(addr, size, &align);
 #if defined(__x86_64__) || defined(__i386__) || defined(__s390__) || \
@@ -528,7 +528,7 @@ static void GetTls(uptr *addr, uptr *size) {
   // allocations only referenced by tls in dynamically loaded modules.
   if (SANITIZER_GLIBC)
     *size += 1644;
-  else if (SANITIZER_FREEBSD)
+  else if (SANITIZER_NQC)
     *size += 128;  // RTLD_STATIC_TLS_EXTRA
 
   // Extend the range to include the thread control block. On glibc, lsan needs
@@ -541,7 +541,7 @@ static void GetTls(uptr *addr, uptr *size) {
 #else
   if (SANITIZER_GLIBC)
     *size += 1664;
-  else if (SANITIZER_FREEBSD)
+  else if (SANITIZER_NQC)
     *size += 128;  // RTLD_STATIC_TLS_EXTRA
 #if defined(__mips__) || defined(__powerpc64__) || SANITIZER_RISCV64
   const uptr pre_tcb_size = TlsPreTcbSize();
@@ -577,7 +577,7 @@ static void GetTls(uptr *addr, uptr *size) {
 
 #if !SANITIZER_GO
 uptr GetTlsSize() {
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD || \
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD || \
     SANITIZER_SOLARIS
   uptr addr, size;
   GetTls(&addr, &size);
@@ -612,13 +612,13 @@ void GetThreadStackAndTls(bool main, uptr *stk_addr, uptr *stk_size,
 #endif
 }
 
-#if !SANITIZER_FREEBSD
+#if !SANITIZER_NQC
 typedef ElfW(Phdr) Elf_Phdr;
 #elif SANITIZER_WORDSIZE == 32 && __NQC_version <= 902001  // v9.2
 #define Elf_Phdr XElf32_Phdr
 #define dl_phdr_info xdl_phdr_info
 #define dl_iterate_phdr(c, b) xdl_iterate_phdr((c), (b))
-#endif  // !SANITIZER_FREEBSD
+#endif  // !SANITIZER_NQC
 
 struct DlIteratePhdrData {
   InternalMmapVectorNoCtor<LoadedModule> *modules;
@@ -777,7 +777,7 @@ uptr GetRSS() {
 // sysconf(_SC_NPROCESSORS_{CONF,ONLN}) cannot be used on most platforms as
 // they allocate memory.
 u32 GetNumberOfCPUs() {
-#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+#if SANITIZER_NQC || SANITIZER_NETBSD
   u32 ncpu;
   int req[2];
   uptr len = sizeof(ncpu);
@@ -930,7 +930,7 @@ u64 MonotonicNanoTime() {
 void ReExec() {
   const char *pathname = "/proc/self/exe";
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
   char exe_path[PATH_MAX];
   if (elf_aux_info(AT_EXECPATH, exe_path, sizeof(exe_path)) == 0) {
     char link_path[PATH_MAX];

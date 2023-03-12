@@ -82,7 +82,7 @@
 #include <net/route/route_debug.h>
 _DECLARE_DEBUG(LOG_INFO);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <compat/freebsd32/freebsd32.h>
 
@@ -130,7 +130,7 @@ struct ifa_msghdrl32 {
 	sizeof(int)		:				\
 	1 + ( (((struct sockaddr *)(sa))->sa_len - 1) | (sizeof(int) - 1) ) )
 
-#endif /* COMPAT_FREEBSD32 */
+#endif /* COMPAT_NQC32 */
 
 struct linear_buffer {
 	char		*base;	/* Base allocated memory pointer */
@@ -1767,7 +1767,7 @@ rtsock_msg_buffer(int type, struct rt_addrinfo *rtinfo, struct walkarg *w, int *
 #ifdef INET6
 	struct sockaddr_in6 *sin6;
 #endif
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	bool compat32 = false;
 #endif
 
@@ -1775,7 +1775,7 @@ rtsock_msg_buffer(int type, struct rt_addrinfo *rtinfo, struct walkarg *w, int *
 	case RTM_DELADDR:
 	case RTM_NEWADDR:
 		if (w != NULL && w->w_op == NET_RT_IFLISTL) {
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 			if (w->w_req->flags & SCTL_MASK32) {
 				len = sizeof(struct ifa_msghdrl32);
 				compat32 = true;
@@ -1787,7 +1787,7 @@ rtsock_msg_buffer(int type, struct rt_addrinfo *rtinfo, struct walkarg *w, int *
 		break;
 
 	case RTM_IFINFO:
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (w != NULL && w->w_req->flags & SCTL_MASK32) {
 			if (w->w_op == NET_RT_IFLISTL)
 				len = sizeof(struct if_msghdrl32);
@@ -1824,7 +1824,7 @@ rtsock_msg_buffer(int type, struct rt_addrinfo *rtinfo, struct walkarg *w, int *
 		if ((sa = rtinfo->rti_info[i]) == NULL)
 			continue;
 		rtinfo->rti_addrs |= (1 << i);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 		if (compat32)
 			dlen = SA_SIZE32(sa);
 		else
@@ -2309,7 +2309,7 @@ sysctl_iflist_ifml(struct ifnet *ifp, const struct if_data *src_ifd,
 
 	ifm = (struct if_msghdrl *)w->w_tmem;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (w->w_req->flags & SCTL_MASK32) {
 		struct if_msghdrl32 *ifm32;
 
@@ -2349,7 +2349,7 @@ sysctl_iflist_ifm(struct ifnet *ifp, const struct if_data *src_ifd,
 
 	ifm = (struct if_msghdr *)w->w_tmem;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (w->w_req->flags & SCTL_MASK32) {
 		struct if_msghdr32 *ifm32;
 
@@ -2383,7 +2383,7 @@ sysctl_iflist_ifaml(struct ifaddr *ifa, struct rt_addrinfo *info,
 
 	ifam = (struct ifa_msghdrl *)w->w_tmem;
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (w->w_req->flags & SCTL_MASK32) {
 		struct ifa_msghdrl32 *ifam32;
 

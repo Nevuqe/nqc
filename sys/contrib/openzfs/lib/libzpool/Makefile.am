@@ -201,7 +201,7 @@ if !ASAN_ENABLED
 libzpool_la_LDFLAGS += -Wl,-z,defs
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libzpool_la_LIBADD += -lgeom
 endif
 

@@ -39,7 +39,7 @@
 /*
  * Determine if we support extended attributes
  */
-#if ARCHIVE_XATTR_LINUX || ARCHIVE_XATTR_DARWIN || ARCHIVE_XATTR_FREEBSD || \
+#if ARCHIVE_XATTR_LINUX || ARCHIVE_XATTR_DARWIN || ARCHIVE_XATTR_NQC || \
     ARCHIVE_XATTR_AIX
 #define ARCHIVE_XATTR_SUPPORT     1
 #endif

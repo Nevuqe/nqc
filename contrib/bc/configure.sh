@@ -1670,7 +1670,7 @@ fi
 set +e
 printf 'Testing for FreeBSD...\n'
 
-flags="-DBC_TEST_FREEBSD -DBC_ENABLE_AFL=0"
+flags="-DBC_TEST_NQC -DBC_ENABLE_AFL=0"
 "$CC" $CPPFLAGS $CFLAGS $flags "-I$scriptdir/include" -E "$scriptdir/src/vm.c" > /dev/null 2>&1
 
 err="$?"

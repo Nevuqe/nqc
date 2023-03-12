@@ -36,8 +36,8 @@ __FBSDID("$FreeBSD$");
 
 #define __ELF_WORD_SIZE 32
 
-#ifdef COMPAT_FREEBSD11
-#define	_WANT_FREEBSD11_KEVENT
+#ifdef COMPAT_NQC11
+#define	_WANT_NQC11_KEVENT
 #endif
 
 #include <sys/param.h>
@@ -266,7 +266,7 @@ freebsd32_wait6(struct thread *td, struct freebsd32_wait6_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 static void
 copy_statfs(struct statfs *in, struct ostatfs32 *out)
 {
@@ -312,7 +312,7 @@ freebsd32_getfsstat(struct thread *td, struct freebsd32_getfsstat_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_getfsstat(struct thread *td,
     struct freebsd4_nqc32_getfsstat_args *uap)
@@ -343,7 +343,7 @@ freebsd4_nqc32_getfsstat(struct thread *td,
 }
 #endif
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 int
 freebsd11_nqc32_getfsstat(struct thread *td,
     struct freebsd11_nqc32_getfsstat_args *uap)
@@ -536,7 +536,7 @@ freebsd32_mmap(struct thread *td, struct freebsd32_mmap_args *uap)
 	    }));
 }
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 int
 freebsd6_nqc32_mmap(struct thread *td,
     struct freebsd6_nqc32_mmap_args *uap)
@@ -791,7 +791,7 @@ freebsd32_kevent(struct thread *td, struct freebsd32_kevent_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 static int
 freebsd32_kevent11_copyout(void *arg, struct kevent *kevp, int count)
 {
@@ -1886,7 +1886,7 @@ freebsd32_adjtime(struct thread *td, struct freebsd32_adjtime_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_statfs(struct thread *td, struct freebsd4_nqc32_statfs_args *uap)
 {
@@ -1905,7 +1905,7 @@ freebsd4_nqc32_statfs(struct thread *td, struct freebsd4_nqc32_statfs_args *uap)
 }
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_fstatfs(struct thread *td, struct freebsd4_nqc32_fstatfs_args *uap)
 {
@@ -1924,7 +1924,7 @@ freebsd4_nqc32_fstatfs(struct thread *td, struct freebsd4_nqc32_fstatfs_args *ua
 }
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_fhstatfs(struct thread *td, struct freebsd4_nqc32_fhstatfs_args *uap)
 {
@@ -2038,7 +2038,7 @@ ofreebsd32_getdirentries(struct thread *td,
 }
 #endif
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 int
 freebsd11_nqc32_getdirentries(struct thread *td,
     struct freebsd11_nqc32_getdirentries_args *uap)
@@ -2057,9 +2057,9 @@ freebsd11_nqc32_getdirentries(struct thread *td,
 	}
 	return (error);
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 /* versions with the 'int pad' argument */
 int
 freebsd6_nqc32_pread(struct thread *td, struct freebsd6_nqc32_pread_args *uap)
@@ -2106,7 +2106,7 @@ freebsd6_nqc32_ftruncate(struct thread *td, struct freebsd6_nqc32_ftruncate_args
 
 	return (kern_ftruncate(td, uap->fd, PAIR32TO64(off_t, uap->length)));
 }
-#endif /* COMPAT_FREEBSD6 */
+#endif /* COMPAT_NQC6 */
 
 struct sf_hdtr32 {
 	uint32_t headers;
@@ -2149,7 +2149,7 @@ freebsd32_do_sendfile(struct thread *td,
 			    hdtr32.hdr_cnt, &hdr_uio);
 			if (error)
 				goto out;
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 			/*
 			 * In FreeBSD < 5.0 the nbytes to send also included
 			 * the header.  If compat is specified subtract the
@@ -2193,7 +2193,7 @@ out:
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_sendfile(struct thread *td,
     struct freebsd4_nqc32_sendfile_args *uap)
@@ -2379,7 +2379,7 @@ freebsd32_fhstat(struct thread *td, struct freebsd32_fhstat_args *uap)
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 extern int ino64_trunc_error;
 
 static int
@@ -2830,7 +2830,7 @@ freebsd32_sigaction(struct thread *td, struct freebsd32_sigaction_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_sigaction(struct thread *td,
 			     struct freebsd4_nqc32_sigaction_args *uap)
@@ -2849,7 +2849,7 @@ freebsd4_nqc32_sigaction(struct thread *td,
 		sap = &sa;
 	} else
 		sap = NULL;
-	error = kern_sigaction(td, uap->sig, sap, &osa, KSA_FREEBSD4);
+	error = kern_sigaction(td, uap->sig, sap, &osa, KSA_NQC4);
 	if (error == 0 && uap->oact != NULL) {
 		s32.sa_u = PTROUT(osa.sa_handler);
 		CP(osa, s32, sa_flags);
@@ -3227,7 +3227,7 @@ siginfo_to_siginfo32(const siginfo_t *src, struct siginfo32 *dst)
 	dst->si_overrun = src->si_overrun;
 }
 
-#ifndef _FREEBSD32_SYSPROTO_H_
+#ifndef _NQC32_SYSPROTO_H_
 struct freebsd32_sigqueue_args {
         pid_t pid;
         int signum;

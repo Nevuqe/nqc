@@ -1231,7 +1231,7 @@ kern_jail_set(struct thread *td, struct uio *optuio, int flags)
 		}
 	}
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		uint32_t hid32;
 
@@ -2422,7 +2422,7 @@ kern_jail_get(struct thread *td, struct uio *optuio, int flags)
 	error = vfs_setopts(opts, "host.hostuuid", pr->pr_hostuuid);
 	if (error != 0 && error != ENOENT)
 		goto done;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		uint32_t hid32 = pr->pr_hostid;
 

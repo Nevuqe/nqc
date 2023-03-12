@@ -12,7 +12,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_common/sanitizer_platform.h"
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD || \
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD || \
     SANITIZER_SOLARIS
 
 #include "asan_interceptors.h"
@@ -37,7 +37,7 @@
 #include <unistd.h>
 #include <unwind.h>
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #include <sys/link_elf.h>
 #endif
 
@@ -45,7 +45,7 @@
 #include <link.h>
 #endif
 
-#if SANITIZER_ANDROID || SANITIZER_FREEBSD || SANITIZER_SOLARIS
+#if SANITIZER_ANDROID || SANITIZER_NQC || SANITIZER_SOLARIS
 #include <ucontext.h>
 extern "C" void* _DYNAMIC;
 #elif SANITIZER_NETBSD
@@ -60,7 +60,7 @@ extern ElfW(Dyn) _DYNAMIC[];
 
 // x86-64 FreeBSD 9.2 and older define 'ucontext_t' incorrectly in
 // 32-bit mode.
-#if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32) && \
+#if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32) && \
   __NQC_version <= 902001  // v9.2
 #define ucontext_t xucontext_t
 #endif
@@ -241,5 +241,5 @@ bool HandleDlopenInit() {
 
 } // namespace __asan
 
-#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD ||
+#endif  // SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD ||
         // SANITIZER_SOLARIS

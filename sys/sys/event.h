@@ -91,7 +91,7 @@ struct kevent {
 	__uint64_t	ext[4];		/* extensions */
 };
 
-#if defined(_WANT_FREEBSD11_KEVENT)
+#if defined(_WANT_NQC11_KEVENT)
 /* Older structure used in FreeBSD 11.x and older. */
 struct freebsd11_kevent {
 	__uintptr_t	ident;		/* identifier for this event */
@@ -120,7 +120,7 @@ struct kevent32 {
 	__uint32_t	ext64[8];
 };
 
-#ifdef _WANT_FREEBSD11_KEVENT
+#ifdef _WANT_NQC11_KEVENT
 struct freebsd11_kevent32 {
 	__uint32_t	ident;		/* identifier for this event */
 	short		filter;		/* filter for event */

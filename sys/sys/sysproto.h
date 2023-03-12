@@ -2441,7 +2441,7 @@ int	ogetdirentries(struct thread *, struct ogetdirentries_args *);
 #endif /* COMPAT_43 */
 
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 
 struct freebsd4_getfsstat_args {
 	char buf_l_[PADL_(struct ostatfs *)]; struct ostatfs * buf; char buf_r_[PADR_(struct ostatfs *)];
@@ -2499,10 +2499,10 @@ int	freebsd4_sendfile(struct thread *, struct freebsd4_sendfile_args *);
 int	freebsd4_sigaction(struct thread *, struct freebsd4_sigaction_args *);
 int	freebsd4_sigreturn(struct thread *, struct freebsd4_sigreturn_args *);
 
-#endif /* COMPAT_FREEBSD4 */
+#endif /* COMPAT_NQC4 */
 
 
-#ifdef COMPAT_FREEBSD6
+#ifdef COMPAT_NQC6
 
 struct freebsd6_pread_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
@@ -2565,10 +2565,10 @@ int	freebsd6_aio_read(struct thread *, struct freebsd6_aio_read_args *);
 int	freebsd6_aio_write(struct thread *, struct freebsd6_aio_write_args *);
 int	freebsd6_lio_listio(struct thread *, struct freebsd6_lio_listio_args *);
 
-#endif /* COMPAT_FREEBSD6 */
+#endif /* COMPAT_NQC6 */
 
 
-#ifdef COMPAT_FREEBSD7
+#ifdef COMPAT_NQC7
 
 struct freebsd7___semctl_args {
 	char semid_l_[PADL_(int)]; int semid; char semid_r_[PADR_(int)];
@@ -2590,10 +2590,10 @@ int	freebsd7___semctl(struct thread *, struct freebsd7___semctl_args *);
 int	freebsd7_msgctl(struct thread *, struct freebsd7_msgctl_args *);
 int	freebsd7_shmctl(struct thread *, struct freebsd7_shmctl_args *);
 
-#endif /* COMPAT_FREEBSD7 */
+#endif /* COMPAT_NQC7 */
 
 
-#ifdef COMPAT_FREEBSD10
+#ifdef COMPAT_NQC10
 
 struct freebsd10__umtx_lock_args {
 	char umtx_l_[PADL_(struct umtx *)]; struct umtx * umtx; char umtx_r_[PADR_(struct umtx *)];
@@ -2605,10 +2605,10 @@ int	freebsd10_pipe(struct thread *, struct freebsd10_pipe_args *);
 int	freebsd10__umtx_lock(struct thread *, struct freebsd10__umtx_lock_args *);
 int	freebsd10__umtx_unlock(struct thread *, struct freebsd10__umtx_unlock_args *);
 
-#endif /* COMPAT_FREEBSD10 */
+#endif /* COMPAT_NQC10 */
 
 
-#ifdef COMPAT_FREEBSD11
+#ifdef COMPAT_NQC11
 
 struct freebsd11_mknod_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
@@ -2713,10 +2713,10 @@ int	freebsd11_fhstatfs(struct thread *, struct freebsd11_fhstatfs_args *);
 int	freebsd11_fstatat(struct thread *, struct freebsd11_fstatat_args *);
 int	freebsd11_mknodat(struct thread *, struct freebsd11_mknodat_args *);
 
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 
 struct freebsd12_shm_open_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
@@ -2729,17 +2729,17 @@ struct freebsd12_closefrom_args {
 int	freebsd12_shm_open(struct thread *, struct freebsd12_shm_open_args *);
 int	freebsd12_closefrom(struct thread *, struct freebsd12_closefrom_args *);
 
-#endif /* COMPAT_FREEBSD12 */
+#endif /* COMPAT_NQC12 */
 
 
-#ifdef COMPAT_FREEBSD13
+#ifdef COMPAT_NQC13
 
 struct freebsd13_swapoff_args {
 	char name_l_[PADL_(const char *)]; const char * name; char name_r_[PADR_(const char *)];
 };
 int	freebsd13_swapoff(struct thread *, struct freebsd13_swapoff_args *);
 
-#endif /* COMPAT_FREEBSD13 */
+#endif /* COMPAT_NQC13 */
 
 #define	SYS_AUE_exit	AUE_EXIT
 #define	SYS_AUE_fork	AUE_FORK

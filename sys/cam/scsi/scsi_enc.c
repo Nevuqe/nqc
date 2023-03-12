@@ -359,7 +359,7 @@ enc_ioctl(struct cdev *dev, u_long cmd, caddr_t arg_addr, int flag,
 	void *addr;
 	int error, i;
 
-#ifdef	COMPAT_FREEBSD32
+#ifdef	COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32))
 		return (ENOTTY);
 #endif

@@ -42,7 +42,7 @@ __FBSDID("$FreeBSD$");
 #include <sys/aio.h>
 #include <sys/capsicum.h>
 #include <sys/types.h>
-#define	_WANT_FREEBSD11_KEVENT
+#define	_WANT_NQC11_KEVENT
 #include <sys/event.h>
 #include <sys/ioccom.h>
 #include <sys/mman.h>
@@ -53,7 +53,7 @@ __FBSDID("$FreeBSD$");
 #include <sys/resource.h>
 #include <sys/sched.h>
 #include <sys/socket.h>
-#define _WANT_FREEBSD11_STAT
+#define _WANT_NQC11_STAT
 #include <sys/stat.h>
 #include <sys/sysctl.h>
 #include <sys/time.h>

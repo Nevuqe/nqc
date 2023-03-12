@@ -307,7 +307,7 @@ ogetkerninfo(struct thread *td, struct ogetkerninfo_args *uap)
 }
 #endif /* COMPAT_43 */
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 /*
  * This is the FreeBSD-1.1 compatible uname(2) interface.  These days it is
  * done in libc as a wrapper around a bunch of sysctl's.  This must maintain
@@ -427,4 +427,4 @@ freebsd4_setdomainname(struct thread *td,
 	return (userland_sysctl(td, name, 2, 0, 0, 0, uap->domainname,
 	    uap->len, 0, 0));
 }
-#endif /* COMPAT_FREEBSD4 */
+#endif /* COMPAT_NQC4 */

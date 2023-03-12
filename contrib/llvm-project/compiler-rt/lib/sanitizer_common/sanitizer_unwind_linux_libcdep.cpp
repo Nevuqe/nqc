@@ -11,7 +11,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_platform.h"
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD || \
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD || \
     SANITIZER_SOLARIS
 #include "sanitizer_common.h"
 #include "sanitizer_stacktrace.h"
@@ -20,7 +20,7 @@
 #include <dlfcn.h>  // for dlopen()
 #endif
 
-#if SANITIZER_FREEBSD
+#if SANITIZER_NQC
 #define _GNU_SOURCE  // to declare _Unwind_Backtrace() from <unwind.h>
 #endif
 #include <unwind.h>
@@ -176,5 +176,5 @@ void BufferedStackTrace::UnwindSlow(uptr pc, void *context, u32 max_depth) {
 
 }  // namespace __sanitizer
 
-#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD ||
+#endif  // SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD ||
         // SANITIZER_SOLARIS

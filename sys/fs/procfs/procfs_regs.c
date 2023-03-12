@@ -50,7 +50,7 @@
 #include <fs/pseudofs/pseudofs.h>
 #include <fs/procfs/procfs.h>
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 #include <sys/procfs.h>
 #include <sys/sysent.h>
 #include <machine/fpu.h>
@@ -81,7 +81,7 @@ procfs_doprocregs(PFS_FILL_ARGS)
 	int error;
 	struct reg r;
 	struct thread *td2;
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	struct reg32 r32;
 	int wrap32 = 0;
 #endif
@@ -101,7 +101,7 @@ procfs_doprocregs(PFS_FILL_ARGS)
 	}
 
 	td2 = FIRST_THREAD_IN_PROC(p);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32)) {
 		if ((SV_PROC_FLAG(td2->td_proc, SV_ILP32)) == 0) {
 			PROC_UNLOCK(p);

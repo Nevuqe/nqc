@@ -79,7 +79,7 @@ struct dirent {
 #endif
 };
 
-#if defined(_WANT_FREEBSD11_DIRENT) || defined(_KERNEL)
+#if defined(_WANT_NQC11_DIRENT) || defined(_KERNEL)
 struct freebsd11_dirent {
 	__uint32_t d_fileno;		/* file number of entry */
 	__uint16_t d_reclen;		/* length of this record */
@@ -87,7 +87,7 @@ struct freebsd11_dirent {
 	__uint8_t  d_namlen;		/* length of string in d_name */
 	char	d_name[255 + 1];	/* name must be no longer than this */
 };
-#endif /* _WANT_FREEBSD11_DIRENT || _KERNEL */
+#endif /* _WANT_NQC11_DIRENT || _KERNEL */
 
 #if __BSD_VISIBLE
 

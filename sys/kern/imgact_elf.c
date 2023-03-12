@@ -231,7 +231,7 @@ static Elf_Brandinfo *elf_brand_list[MAX_BRANDS];
 Elf_Brandnote __elfN(nqc_brandnote) = {
 	.hdr.n_namesz	= sizeof(FREEBSD_ABI_VENDOR),
 	.hdr.n_descsz	= sizeof(int32_t),
-	.hdr.n_type	= NT_FREEBSD_ABI_TAG,
+	.hdr.n_type	= NT_NQC_ABI_TAG,
 	.vendor		= FREEBSD_ABI_VENDOR,
 	.flags		= BN_TRANSLATE_OSREL,
 	.trans_osrel	= __elfN(nqc_trans_osrel)
@@ -1260,7 +1260,7 @@ __CONCAT(exec_, __elfN(imgact))(struct image_params *imgp)
 		 */
 		if (baddr == 0) {
 			if ((sv->sv_flags & SV_ASLR) == 0 ||
-			    (fctl0 & NT_FREEBSD_FCTL_ASLR_DISABLE) != 0)
+			    (fctl0 & NT_NQC_FCTL_ASLR_DISABLE) != 0)
 				et_dyn_addr = __elfN(pie_base);
 			else if ((__elfN(pie_aslr_enabled) &&
 			    (imgp->proc->p_flag2 & P2_ASLR_DISABLE) == 0) ||
@@ -1299,7 +1299,7 @@ __CONCAT(exec_, __elfN(imgact))(struct image_params *imgp)
 	}
 	if ((sv->sv_flags & SV_ASLR) == 0 ||
 	    (imgp->proc->p_flag2 & P2_ASLR_DISABLE) != 0 ||
-	    (fctl0 & NT_FREEBSD_FCTL_ASLR_DISABLE) != 0) {
+	    (fctl0 & NT_NQC_FCTL_ASLR_DISABLE) != 0) {
 		KASSERT(et_dyn_addr != ET_DYN_ADDR_RAND,
 		    ("et_dyn_addr == RAND and !ASLR"));
 	} else if ((imgp->proc->p_flag2 & P2_ASLR_ENABLE) != 0 ||
@@ -1321,7 +1321,7 @@ __CONCAT(exec_, __elfN(imgact))(struct image_params *imgp)
 			imgp->imgp_flags |= IMGP_ASLR_SHARED_PAGE;
 	}
 
-	if ((!__elfN(allow_wx) && (fctl0 & NT_FREEBSD_FCTL_WXNEEDED) == 0 &&
+	if ((!__elfN(allow_wx) && (fctl0 & NT_NQC_FCTL_WXNEEDED) == 0 &&
 	    (imgp->proc->p_flag2 & P2_WXORX_DISABLE) == 0) ||
 	    (imgp->proc->p_flag2 & P2_WXORX_ENABLE_EXEC) != 0)
 		imgp->map_flags |= MAP_WXORX;
@@ -2161,7 +2161,7 @@ __elfN(putnote)(struct thread *td, struct note_info *ninfo, struct sbuf *sb)
  * Miscellaneous note out functions.
  */
 
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 #include <compat/freebsd32/freebsd32.h>
 #include <compat/freebsd32/freebsd32_signal.h>
 
@@ -2270,7 +2270,7 @@ __elfN(get_prstatus)(struct regset *rs, struct thread *td, void *buf,
 		status->pr_osreldate = osreldate;
 		status->pr_cursig = td->td_proc->p_sig;
 		status->pr_pid = td->td_tid;
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 		fill_regs32(td, &status->pr_reg);
 #else
 		fill_regs(td, &status->pr_reg);
@@ -2288,7 +2288,7 @@ __elfN(set_prstatus)(struct regset *rs, struct thread *td, void *buf,
 
 	KASSERT(size == sizeof(*status), ("%s: invalid size", __func__));
 	status = buf;
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 	set_regs32(td, &status->pr_reg);
 #else
 	set_regs(td, &status->pr_reg);
@@ -2314,7 +2314,7 @@ __elfN(get_fpregset)(struct regset *rs, struct thread *td, void *buf,
 		KASSERT(*sizep == sizeof(*fpregset), ("%s: invalid size",
 		    __func__));
 		fpregset = buf;
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 		fill_fpregs32(td, fpregset);
 #else
 		fill_fpregs(td, fpregset);
@@ -2332,7 +2332,7 @@ __elfN(set_fpregset)(struct regset *rs, struct thread *td, void *buf,
 
 	fpregset = buf;
 	KASSERT(size == sizeof(*fpregset), ("%s: invalid size", __func__));
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 	set_fpregs32(td, fpregset);
 #else
 	set_fpregs(td, fpregset);
@@ -2393,7 +2393,7 @@ __elfN(get_lwpinfo)(struct regset *rs, struct thread *td, void *buf,
 		if (td->td_si.si_signo != 0) {
 			pl.pl_event = PL_EVENT_SIGNAL;
 			pl.pl_flags |= PL_FLAG_SI;
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 			siginfo_to_siginfo32(&td->td_si, &pl.pl_siginfo);
 #else
 			pl.pl_siginfo = td->td_si;
@@ -2679,7 +2679,7 @@ __elfN(note_procstat_psstrings)(void *arg, struct sbuf *sb, size_t *sizep)
 	if (sb != NULL) {
 		KASSERT(*sizep == size, ("invalid size"));
 		structsize = sizeof(ps_strings);
-#if defined(COMPAT_FREEBSD32) && __ELF_WORD_SIZE == 32
+#if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
 		ps_strings = PTROUT(PROC_PS_STRINGS(p));
 #else
 		ps_strings = PROC_PS_STRINGS(p);
@@ -2813,7 +2813,7 @@ brandnote_cb(const Elf_Note *note, void *arg0, bool *res)
 static Elf_Note fctl_note = {
 	.n_namesz = sizeof(FREEBSD_ABI_VENDOR),
 	.n_descsz = sizeof(uint32_t),
-	.n_type = NT_FREEBSD_FEATURE_CTL,
+	.n_type = NT_NQC_FEATURE_CTL,
 };
 
 struct fctl_cb_arg {

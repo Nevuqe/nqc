@@ -98,7 +98,7 @@ MAN+=	bluetooth.device.conf.5 \
 	bluetooth.protocols.5
 .endif
 
-.if ${MK_FREEBSD_UPDATE} != "no"
+.if ${MK_NQC_UPDATE} != "no"
 MAN+=	freebsd-update.conf.5
 .endif
 

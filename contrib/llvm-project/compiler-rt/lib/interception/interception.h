@@ -16,7 +16,7 @@
 
 #include "sanitizer_common/sanitizer_internal_defs.h"
 
-#if !SANITIZER_LINUX && !SANITIZER_FREEBSD && !SANITIZER_APPLE &&      \
+#if !SANITIZER_LINUX && !SANITIZER_NQC && !SANITIZER_APPLE &&      \
     !SANITIZER_NETBSD && !SANITIZER_WINDOWS && !SANITIZER_FUCHSIA && \
     !SANITIZER_SOLARIS
 #  error "Interception doesn't work on this operating system."
@@ -130,7 +130,7 @@ const interpose_substitution substitution_##func_name[] \
     extern "C" ret_type func(__VA_ARGS__);
 # define DECLARE_WRAPPER_WINAPI(ret_type, func, ...) \
     extern "C" __declspec(dllimport) ret_type __stdcall func(__VA_ARGS__);
-#elif SANITIZER_FREEBSD || SANITIZER_NETBSD
+#elif SANITIZER_NQC || SANITIZER_NETBSD
 # define WRAP(x) __interceptor_ ## x
 # define WRAPPER_NAME(x) "__interceptor_" #x
 # define INTERCEPTOR_ATTRIBUTE __attribute__((visibility("default")))
@@ -271,13 +271,13 @@ typedef unsigned long uptr;
 
 #define INCLUDED_FROM_INTERCEPTION_LIB
 
-#if SANITIZER_LINUX || SANITIZER_FREEBSD || SANITIZER_NETBSD || \
+#if SANITIZER_LINUX || SANITIZER_NQC || SANITIZER_NETBSD || \
     SANITIZER_SOLARIS
 
 # include "interception_linux.h"
-# define INTERCEPT_FUNCTION(func) INTERCEPT_FUNCTION_LINUX_OR_FREEBSD(func)
+# define INTERCEPT_FUNCTION(func) INTERCEPT_FUNCTION_LINUX_OR_NQC(func)
 # define INTERCEPT_FUNCTION_VER(func, symver) \
-    INTERCEPT_FUNCTION_VER_LINUX_OR_FREEBSD(func, symver)
+    INTERCEPT_FUNCTION_VER_LINUX_OR_NQC(func, symver)
 #elif SANITIZER_APPLE
 # include "interception_mac.h"
 # define INTERCEPT_FUNCTION(func) INTERCEPT_FUNCTION_MAC(func)

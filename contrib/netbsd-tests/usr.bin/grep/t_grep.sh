@@ -334,7 +334,7 @@ context2_body()
 # - 1 : gnu grep 2.51 (base)
 # - 2 : gnu grep (ports)
 GREP_TYPE_BSD=0
-GREP_TYPE_GNU_FREEBSD=1
+GREP_TYPE_GNU_NQC=1
 GREP_TYPE_GNU=2
 GREP_TYPE_UNKNOWN=3
 
@@ -349,7 +349,7 @@ grep_type()
 	*"GNU grep"*)
 		case "$grep_version" in
 		*2.5.1-FreeBSD*)
-			return $GREP_TYPE_GNU_FREEBSD
+			return $GREP_TYPE_GNU_NQC
 			;;
 		*)
 			return $GREP_TYPE_GNU
@@ -368,7 +368,7 @@ oflag_zerolen_head()
 oflag_zerolen_body()
 {
 	grep_type
-	if [ $? -eq $GREP_TYPE_GNU_FREEBSD ]; then
+	if [ $? -eq $GREP_TYPE_GNU_NQC ]; then
 		atf_expect_fail "this test doesn't pass with gnu grep in base"
 	fi
 
@@ -410,7 +410,7 @@ color_head()
 color_body()
 {
 	grep_type
-	if [ $? -eq $GREP_TYPE_GNU_FREEBSD ]; then
+	if [ $? -eq $GREP_TYPE_GNU_NQC ]; then
 		atf_expect_fail "this test doesn't pass with gnu grep in base"
 	fi
 
@@ -573,7 +573,7 @@ excessive_matches_head()
 excessive_matches_body()
 {
 	grep_type
-	if [ $? -eq $GREP_TYPE_GNU_FREEBSD ]; then
+	if [ $? -eq $GREP_TYPE_GNU_NQC ]; then
 		atf_expect_fail "this test does not pass with GNU grep in base"
 	fi
 
@@ -670,7 +670,7 @@ ocolor_metadata_head()
 ocolor_metadata_body()
 {
 	grep_type
-	if [ $? -eq $GREP_TYPE_GNU_FREEBSD ]; then
+	if [ $? -eq $GREP_TYPE_GNU_NQC ]; then
 		atf_expect_fail "this test does not pass with GNU grep in base"
 	fi
 
@@ -705,7 +705,7 @@ grep_nomatch_flags_body()
 {
 	grep_type
 
-	if [ $? -eq $GREP_TYPE_GNU_FREEBSD ]; then
+	if [ $? -eq $GREP_TYPE_GNU_NQC ]; then
 		atf_expect_fail "this test does not pass with GNU grep in base"
 	fi
 

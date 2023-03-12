@@ -87,7 +87,7 @@ extern const char _binary_elf_vdso32_so_1_start[];
 extern const char _binary_elf_vdso32_so_1_end[];
 extern char _binary_elf_vdso32_so_1_size;
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 static void freebsd4_ia32_sendsig(sig_t, ksiginfo_t *, sigset_t *);
 #endif
 
@@ -437,7 +437,7 @@ ia32_osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 }
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 static void
 freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 {
@@ -536,7 +536,7 @@ freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 
 	regs->tf_rsp = (uintptr_t)sfp;
 	regs->tf_rip = PROC_SIGCODE(p) +
-	    VDSO_FREEBSD4_IA32_SIGCODE_OFFSET - VDSO_IA32_SIGCODE_OFFSET;
+	    VDSO_NQC4_IA32_SIGCODE_OFFSET - VDSO_IA32_SIGCODE_OFFSET;
 	regs->tf_rflags &= ~(PSL_T | PSL_D);
 	regs->tf_cs = _ucode32sel;
 	regs->tf_ss = _udatasel;
@@ -547,7 +547,7 @@ freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	PROC_LOCK(p);
 	mtx_lock(&psp->ps_mtx);
 }
-#endif	/* COMPAT_FREEBSD4 */
+#endif	/* COMPAT_NQC4 */
 
 void
 ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
@@ -570,7 +570,7 @@ ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	PROC_LOCK_ASSERT(p, MA_OWNED);
 	sig = siginfo.si_signo;
 	psp = p->p_sigacts;
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 	if (SIGISMEMBER(psp->ps_nqc4, sig)) {
 		freebsd4_ia32_sendsig(catcher, ksi, mask);
 		return;
@@ -749,7 +749,7 @@ ofreebsd32_sigreturn(struct thread *td, struct ofreebsd32_sigreturn_args *uap)
 }
 #endif
 
-#ifdef COMPAT_FREEBSD4
+#ifdef COMPAT_NQC4
 int
 freebsd4_nqc32_sigreturn(struct thread *td,
     struct freebsd4_nqc32_sigreturn_args *uap)
@@ -816,7 +816,7 @@ freebsd4_nqc32_sigreturn(struct thread *td,
 	set_pcb_flags(td->td_pcb, PCB_FULL_IRET);
 	return (EJUSTRETURN);
 }
-#endif	/* COMPAT_FREEBSD4 */
+#endif	/* COMPAT_NQC4 */
 
 int
 freebsd32_sigreturn(struct thread *td, struct freebsd32_sigreturn_args *uap)

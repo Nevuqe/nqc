@@ -1508,7 +1508,7 @@ sys_close_range(struct thread *td, struct close_range_args *uap)
 	return (kern_close_range(td, uap->flags, uap->lowfd, uap->highfd));
 }
 
-#ifdef COMPAT_FREEBSD12
+#ifdef COMPAT_NQC12
 /*
  * Close open file descriptors.
  */
@@ -1532,7 +1532,7 @@ freebsd12_closefrom(struct thread *td, struct freebsd12_closefrom_args *uap)
 	lowfd = MAX(0, uap->lowfd);
 	return (kern_close_range(td, 0, lowfd, ~0U));
 }
-#endif	/* COMPAT_FREEBSD12 */
+#endif	/* COMPAT_NQC12 */
 
 #if defined(COMPAT_43)
 /*
@@ -1561,7 +1561,7 @@ ofstat(struct thread *td, struct ofstat_args *uap)
 }
 #endif /* COMPAT_43 */
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 int
 freebsd11_fstat(struct thread *td, struct freebsd11_fstat_args *uap)
 {
@@ -1577,7 +1577,7 @@ freebsd11_fstat(struct thread *td, struct freebsd11_fstat_args *uap)
 		error = copyout(&osb, uap->sb, sizeof(osb));
 	return (error);
 }
-#endif	/* COMPAT_FREEBSD11 */
+#endif	/* COMPAT_NQC11 */
 
 /*
  * Return status information about a file descriptor.
@@ -1630,7 +1630,7 @@ kern_fstat(struct thread *td, int fd, struct stat *sbp)
 	return (error);
 }
 
-#if defined(COMPAT_FREEBSD11)
+#if defined(COMPAT_NQC11)
 /*
  * Return status information about a file descriptor.
  */
@@ -1656,7 +1656,7 @@ freebsd11_nfstat(struct thread *td, struct freebsd11_nfstat_args *uap)
 		error = copyout(&nub, uap->sb, sizeof(nub));
 	return (error);
 }
-#endif /* COMPAT_FREEBSD11 */
+#endif /* COMPAT_NQC11 */
 
 /*
  * Return pathconf information about a file descriptor.
@@ -4663,7 +4663,7 @@ sysctl_kern_proc_filedesc(SYSCTL_HANDLER_ARGS)
 	return (error != 0 ? error : error2);
 }
 
-#ifdef COMPAT_FREEBSD7
+#ifdef COMPAT_NQC7
 #ifdef KINFO_OFILE_SIZE
 CTASSERT(sizeof(struct kinfo_ofile) == KINFO_OFILE_SIZE);
 #endif
@@ -4788,7 +4788,7 @@ skip:
 static SYSCTL_NODE(_kern_proc, KERN_PROC_OFILEDESC, ofiledesc,
     CTLFLAG_RD|CTLFLAG_MPSAFE, sysctl_kern_proc_ofiledesc,
     "Process ofiledesc entries");
-#endif	/* COMPAT_FREEBSD7 */
+#endif	/* COMPAT_NQC7 */
 
 int
 vntype_to_kinfo(int vtype)

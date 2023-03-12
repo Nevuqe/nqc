@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_common/sanitizer_platform.h"
-#if SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
+#if SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD
 
 #  include <dlfcn.h>
 #  include <elf.h>
@@ -449,4 +449,4 @@ void HwasanInstallAtForkHandler() {
 
 }  // namespace __hwasan
 
-#endif  // SANITIZER_FREEBSD || SANITIZER_LINUX || SANITIZER_NETBSD
+#endif  // SANITIZER_NQC || SANITIZER_LINUX || SANITIZER_NETBSD

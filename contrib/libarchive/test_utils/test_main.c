@@ -2739,7 +2739,7 @@ getXattr(const char *path, const char *name, size_t *sizep)
 	size = getxattr(path, name, NULL, 0, 0, XATTR_NOFOLLOW);
 #elif ARCHIVE_XATTR_AIX
 	size = lgetea(path, name, NULL, 0);
-#elif ARCHIVE_XATTR_FREEBSD
+#elif ARCHIVE_XATTR_NQC
 	size = extattr_get_link(path, EXTATTR_NAMESPACE_USER, name + 5,
 	    NULL, 0);
 #endif
@@ -2752,7 +2752,7 @@ getXattr(const char *path, const char *name, size_t *sizep)
 		size = getxattr(path, name, value, size, 0, XATTR_NOFOLLOW);
 #elif ARCHIVE_XATTR_AIX
 		size = lgetea(path, name, value, size);
-#elif ARCHIVE_XATTR_FREEBSD
+#elif ARCHIVE_XATTR_NQC
 		size = extattr_get_link(path, EXTATTR_NAMESPACE_USER, name + 5,
 		    value, size);
 #endif
@@ -2787,7 +2787,7 @@ setXattr(const char *path, const char *name, const void *value, size_t size)
 	if (setxattr(path, name, value, size, 0, XATTR_NOFOLLOW) == 0)
 #elif ARCHIVE_XATTR_AIX
 	if (lsetea(path, name, value, size, 0) == 0)
-#elif ARCHIVE_XATTR_FREEBSD
+#elif ARCHIVE_XATTR_NQC
 	if (extattr_set_link(path, EXTATTR_NAMESPACE_USER, name + 5, value,
 	    size) > -1)
 #else
@@ -2871,13 +2871,13 @@ setTestAcl(const char *path)
 {
 #if ARCHIVE_ACL_SUPPORT
 	int r = 1;
-#if ARCHIVE_ACL_LIBACL || ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_DARWIN
+#if ARCHIVE_ACL_LIBACL || ARCHIVE_ACL_NQC || ARCHIVE_ACL_DARWIN
 	acl_t acl;
 #endif
 #if ARCHIVE_ACL_LIBRICHACL
 	struct richacl *richacl;
 #endif
-#if ARCHIVE_ACL_LIBACL || ARCHIVE_ACL_FREEBSD
+#if ARCHIVE_ACL_LIBACL || ARCHIVE_ACL_NQC
 	const char *acltext_posix1e = "user:1:rw-,"
 	    "group:15:r-x,"
 	    "user::rwx,"
@@ -2894,7 +2894,7 @@ setTestAcl(const char *path)
 	    { OTHER_OBJ, -1, 4 | 2 | 1 }
 	};
 #endif
-#if ARCHIVE_ACL_FREEBSD /* FreeBSD NFS4 */
+#if ARCHIVE_ACL_NQC /* FreeBSD NFS4 */
 	const char *acltext_nfs4 = "user:1:rwpaRcs::allow:1,"
 	    "group:15:rxaRcs::allow:15,"
 	    "owner@:rwpxaARWcCos::allow,"
@@ -2950,7 +2950,7 @@ setTestAcl(const char *path)
 	};
 #endif /* ARCHIVE_ACL_DARWIN */
 
-#if ARCHIVE_ACL_FREEBSD
+#if ARCHIVE_ACL_NQC
 	acl = acl_from_text(acltext_nfs4);
 	failure("acl_from_text() error: %s", strerror(errno));
 	if (assert(acl != NULL) == 0)
@@ -2998,7 +2998,7 @@ setTestAcl(const char *path)
 #endif /* ARCHIVE_ACL_DARWIN */
 
 #if ARCHIVE_ACL_NFS4
-#if ARCHIVE_ACL_FREEBSD
+#if ARCHIVE_ACL_NQC
 	r = acl_set_file(path, ACL_TYPE_NFS4, acl);
 	acl_free(acl);
 #elif ARCHIVE_ACL_LIBRICHACL
@@ -3016,7 +3016,7 @@ setTestAcl(const char *path)
 #endif	/* ARCHIVE_ACL_NFS4 */
 
 #if ARCHIVE_ACL_POSIX1E
-#if ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_LIBACL
+#if ARCHIVE_ACL_NQC || ARCHIVE_ACL_LIBACL
 	acl = acl_from_text(acltext_posix1e);
 	failure("acl_from_text() error: %s", strerror(errno));
 	if (assert(acl != NULL) == 0)

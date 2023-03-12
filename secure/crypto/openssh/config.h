@@ -1979,7 +1979,7 @@
 /* #undef SSH_TUN_COMPAT_AF */
 
 /* Open tunnel devices the FreeBSD way */
-#define SSH_TUN_FREEBSD 1
+#define SSH_TUN_NQC 1
 
 /* Open tunnel devices the Linux tun/tap way */
 /* #undef SSH_TUN_LINUX */

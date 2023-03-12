@@ -1,5 +1,5 @@
-#ifndef	__AR9300_FREEBSD_INC_H__
-#define	__AR9300_FREEBSD_INC_H__
+#ifndef	__AR9300_NQC_INC_H__
+#define	__AR9300_NQC_INC_H__
 
 /*
  * Define some configuration entries for the AR9300 HAL, so #if entries
@@ -257,4 +257,4 @@ static const u_int32_t mci_concur_tx_max_pwr[4][8] =
 #define ATH_MCI_CONCUR_TX_LOWEST_PWR_MASK     0x00ff0000
 #define ATH_MCI_CONCUR_TX_LOWEST_PWR_MASK_S   16
 
-#endif	/* __AR9300_FREEBSD_INC_H__ */
+#endif	/* __AR9300_NQC_INC_H__ */

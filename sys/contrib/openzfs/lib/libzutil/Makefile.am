@@ -22,7 +22,7 @@ libzutil_la_SOURCES += \
 	%D%/os/linux/zutil_import_os.c
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libzutil_la_SOURCES += \
 	%D%/os/freebsd/zutil_device_path_os.c \
 	%D%/os/freebsd/zutil_import_os.c

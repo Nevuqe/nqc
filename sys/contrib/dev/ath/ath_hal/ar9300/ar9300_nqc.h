@@ -1,5 +1,5 @@
-#ifndef	__AR9300_FREEBSD_H__
-#define	__AR9300_FREEBSD_H__
+#ifndef	__AR9300_NQC_H__
+#define	__AR9300_NQC_H__
 
 extern	void ar9300_attach_nqc_ops(struct ath_hal *ah);
 extern	HAL_BOOL ar9300_reset_nqc(struct ath_hal *ah, HAL_OPMODE opmode,
@@ -80,4 +80,4 @@ extern	HAL_BOOL ar9300_nqc_get_mib_cycle_counts(struct ath_hal *ah,
 extern	HAL_BOOL ar9300_nqc_get_dfs_default_thresh(struct ath_hal *ah,
 	    HAL_PHYERR_PARAM *pe);
 
-#endif	/* __AR9300_FREEBSD_H__ */
+#endif	/* __AR9300_NQC_H__ */

@@ -20,7 +20,7 @@ dist_libzfs_la_SOURCES = \
 	%D%/libzfs_status.c \
 	%D%/libzfs_util.c
 
-if BUILD_FREEBSD
+if BUILD_NQC
 dist_libzfs_la_SOURCES += \
 	%D%/os/freebsd/libzfs_compat.c \
 	%D%/os/freebsd/libzfs_zmount.c
@@ -68,7 +68,7 @@ if !ASAN_ENABLED
 libzfs_la_LDFLAGS += -Wl,-z,defs
 endif
 
-if BUILD_FREEBSD
+if BUILD_NQC
 libzfs_la_LIBADD += -lutil -lgeom
 endif
 

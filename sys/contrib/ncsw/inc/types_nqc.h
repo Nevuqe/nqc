@@ -24,8 +24,8 @@
  * SUCH DAMAGE.
  */
 
-#ifndef TYPES_FREEBSD_H_
-#define TYPES_FREEBSD_H_
+#ifndef TYPES_NQC_H_
+#define TYPES_NQC_H_
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -101,4 +101,4 @@ typedef vm_paddr_t	physAddress_t;
 #define WRITE_UINT32                _WRITE_UINT32
 #define WRITE_UINT64                _WRITE_UINT64
 
-#endif /* TYPES_FREEBSD_H_ */
+#endif /* TYPES_NQC_H_ */

@@ -203,7 +203,7 @@ static struct {
 	{"solaris", ELFOSABI_SOLARIS},
 	{"aix", ELFOSABI_AIX},
 	{"irix", ELFOSABI_IRIX},
-	{"freebsd", ELFOSABI_FREEBSD},
+	{"freebsd", ELFOSABI_NQC},
 	{"tru64", ELFOSABI_TRU64},
 	{"modesto", ELFOSABI_MODESTO},
 	{"openbsd", ELFOSABI_OPENBSD},
@@ -413,7 +413,7 @@ create_elf(struct elfcopy *ecp)
 	 * move the section headers, while Binutils is probably configured
 	 * this way when it's compiled on FreeBSD.
 	 */
-	if (oeh.e_ident[EI_OSABI] == ELFOSABI_FREEBSD)
+	if (oeh.e_ident[EI_OSABI] == ELFOSABI_NQC)
 		shtab = insert_shtab(ecp, 1);
 	else
 		shtab = insert_shtab(ecp, 0);

@@ -629,7 +629,7 @@ cpu_set_upcall(struct thread *td, void (*entry)(void *), void *arg,
 	 */
 	cpu_thread_clean(td);
 
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		/*
 		 * Set the trap frame to point at the beginning of the entry
@@ -683,7 +683,7 @@ cpu_set_user_tls(struct thread *td, void *tls_base)
 
 	pcb = td->td_pcb;
 	set_pcb_flags(pcb, PCB_FULL_IRET);
-#ifdef COMPAT_FREEBSD32
+#ifdef COMPAT_NQC32
 	if (SV_PROC_FLAG(td->td_proc, SV_ILP32)) {
 		pcb->pcb_gsbase = (register_t)tls_base;
 		return (0);

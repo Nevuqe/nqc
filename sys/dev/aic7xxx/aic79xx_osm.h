@@ -35,8 +35,8 @@
  * $FreeBSD$
  */
 
-#ifndef _AIC79XX_FREEBSD_H_
-#define _AIC79XX_FREEBSD_H_
+#ifndef _AIC79XX_NQC_H_
+#define _AIC79XX_NQC_H_
 
 #include "opt_aic79xx.h"	/* for config options */
 
@@ -269,4 +269,4 @@ ahd_platform_flushwork(struct ahd_softc *ahd)
 void	  ahd_done(struct ahd_softc *ahd, struct scb *scb);
 void	  ahd_send_async(struct ahd_softc *, char /*channel*/,
 			 u_int /*target*/, u_int /*lun*/, ac_code, void *arg);
-#endif  /* _AIC79XX_FREEBSD_H_ */
+#endif  /* _AIC79XX_NQC_H_ */

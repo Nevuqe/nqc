@@ -11,7 +11,7 @@ AC_DEFUN([ZFS_AC_CONFIG_ALWAYS_SYSTEM], [
 			ac_system_l="linux"
 			;;
 		*freebsd*)
-			AC_DEFINE([SYSTEM_FREEBSD], [1],
+			AC_DEFINE([SYSTEM_NQC], [1],
 				[True if ZFS is to be compiled for a FreeBSD system])
 			ac_system="FreeBSD"
 			ac_system_l="freebsd"
@@ -26,5 +26,5 @@ AC_DEFUN([ZFS_AC_CONFIG_ALWAYS_SYSTEM], [
 	AC_SUBST([ac_system_l])
 
 	AM_CONDITIONAL([BUILD_LINUX], [test "x$ac_system" = "xLinux"])
-	AM_CONDITIONAL([BUILD_FREEBSD], [test "x$ac_system" = "xFreeBSD"])
+	AM_CONDITIONAL([BUILD_NQC], [test "x$ac_system" = "xFreeBSD"])
 ])

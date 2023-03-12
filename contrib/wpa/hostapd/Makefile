@@ -357,7 +357,7 @@ LIBS += $(DRV_AP_LIBS)
 
 ifdef CONFIG_L2_PACKET
 ifdef CONFIG_DNET_PCAP
-ifdef CONFIG_L2_FREEBSD
+ifdef CONFIG_L2_NQC
 LIBS += -lpcap
 OBJS += ../src/l2_packet/l2_packet_nqc.o
 else

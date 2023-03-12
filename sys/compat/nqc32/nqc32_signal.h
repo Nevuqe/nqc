@@ -28,8 +28,8 @@
  * $FreeBSD$
  */
 
-#ifndef _COMPAT_FREEBSD32_SIGNAL_H_
-#define _COMPAT_FREEBSD32_SIGNAL_H_
+#ifndef _COMPAT_NQC32_SIGNAL_H_
+#define _COMPAT_NQC32_SIGNAL_H_
 
 struct sigaltstack32 {
 	uint32_t	ss_sp;		/* signal stack base */
@@ -65,4 +65,4 @@ struct sigevent;
 int convert_sigevent32(struct sigevent32 *sig32, struct sigevent *sig);
 void siginfo_to_siginfo32(const siginfo_t *src, struct siginfo32 *dst);
 
-#endif /* !_COMPAT_FREEBSD32_SIGNAL_H_ */
+#endif /* !_COMPAT_NQC32_SIGNAL_H_ */

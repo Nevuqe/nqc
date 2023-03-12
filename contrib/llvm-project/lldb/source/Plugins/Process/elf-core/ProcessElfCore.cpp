@@ -622,12 +622,12 @@ llvm::Error ProcessElfCore::parseFreeBSDNotes(llvm::ArrayRef<CoreNote> notes) {
       have_prpsinfo = true;
       ParseFreeBSDPrPsInfo(*this, note.data, lp64);
       break;
-    case ELF::NT_FREEBSD_THRMISC: {
+    case ELF::NT_NQC_THRMISC: {
       lldb::offset_t offset = 0;
       thread_data.name = note.data.GetCStr(&offset, 20);
       break;
     }
-    case ELF::NT_FREEBSD_PROCSTAT_AUXV:
+    case ELF::NT_NQC_PROCSTAT_AUXV:
       // FIXME: FreeBSD sticks an int at the beginning of the note
       m_auxv = DataExtractor(note.data, 4, note.data.GetByteSize() - 4);
       break;

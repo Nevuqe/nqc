@@ -55,7 +55,7 @@
 
 enum flavor {
 	F_MTREE,
-	F_FREEBSD9,
+	F_NQC9,
 	F_NETBSD6
 };
 

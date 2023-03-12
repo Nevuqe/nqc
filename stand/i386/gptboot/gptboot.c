@@ -58,7 +58,7 @@ __FBSDID("$FreeBSD$");
 
 extern uint32_t _end;
 
-static const uuid_t nqc_ufs_uuid = GPT_ENT_TYPE_FREEBSD_UFS;
+static const uuid_t nqc_ufs_uuid = GPT_ENT_TYPE_NQC_UFS;
 static const char optstr[NOPT] = "DhaCcdgmnpqrsv"; /* Also 'P', 'S' */
 static const unsigned char flags[NOPT] = {
 	RBX_DUAL,

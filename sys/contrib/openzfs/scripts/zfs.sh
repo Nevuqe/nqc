@@ -24,7 +24,7 @@ KMOD_ZLIB_DEFLATE=${KMOD_ZLIB_DEFLATE:-zlib_deflate}
 KMOD_ZLIB_INFLATE=${KMOD_ZLIB_INFLATE:-zlib_inflate}
 KMOD_SPL=${KMOD_SPL:-spl}
 KMOD_ZFS=${KMOD_ZFS:-zfs}
-KMOD_FREEBSD=${KMOD_FREEBSD:-openzfs}
+KMOD_NQC=${KMOD_NQC:-openzfs}
 
 
 usage() {
@@ -128,7 +128,7 @@ load_module_linux() {
 }
 
 load_modules_nqc() {
-	kldload "$KMOD_FREEBSD" || return 1
+	kldload "$KMOD_NQC" || return 1
 
 	if [ "$VERBOSE" = "yes" ]; then
 		echo "Successfully loaded ZFS module stack"
@@ -152,7 +152,7 @@ load_modules_linux() {
 }
 
 unload_modules_nqc() {
-	kldunload "$KMOD_FREEBSD" || echo "Failed to unload $KMOD_FREEBSD"
+	kldunload "$KMOD_NQC" || echo "Failed to unload $KMOD_NQC"
 
 	if [ "$VERBOSE" = "yes" ]; then
 		echo "Successfully unloaded ZFS module stack"

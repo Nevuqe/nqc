@@ -943,7 +943,7 @@
 /* Define to 1 if all of the C90 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
    backward compatibility; new code need not use it. */
-#define SYSTEM_FREEBSD 1
+#define SYSTEM_NQC 1
 
 /* True if ZFS is to be compiled for a Linux system */
 /* #undef SYSTEM_LINUX */
