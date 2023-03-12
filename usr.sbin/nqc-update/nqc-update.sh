@@ -2436,8 +2436,8 @@ upgrade_oldall_to_oldnew () {
 # Helper for upgrade_merge: Return zero true iff the two files differ only
 # in the contents of their RCS tags.
 samef () {
-	X=`sed -E 's/\\$FreeBSD.*\\$/\$FreeBSD\$/' < $1 | ${SHA256}`
-	Y=`sed -E 's/\\$FreeBSD.*\\$/\$FreeBSD\$/' < $2 | ${SHA256}`
+	X=`sed -E 's/\\$NQC.*\\$/\$NQC\$/' < $1 | ${SHA256}`
+	Y=`sed -E 's/\\$NQC.*\\$/\$NQC\$/' < $2 | ${SHA256}`
 
 	if [ $X = $Y ]; then
 		return 0;

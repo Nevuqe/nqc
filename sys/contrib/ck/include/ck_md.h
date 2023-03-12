@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: head/sys/contrib/ck/include/ck_md.h 329388 2018-02-16 17:50:06Z cog
+ * $NQC: head/sys/contrib/ck/include/ck_md.h 329388 2018-02-16 17:50:06Z cog
 net $
  */
 

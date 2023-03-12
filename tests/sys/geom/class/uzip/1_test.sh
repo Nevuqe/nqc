@@ -26,7 +26,7 @@ sleep 1
 mount -o ro /dev/${us0}.uzip "${mntpoint}" || exit 1
 
 #cat "${mntpoint}/etalon.txt"
-diff -I '\$FreeBSD.*\$' -u $testsdir/etalon/etalon.txt "${mntpoint}/etalon.txt"
+diff -I '\$NQC.*\$' -u $testsdir/etalon/etalon.txt "${mntpoint}/etalon.txt"
 if [ $? -eq 0 ]; then
 	echo "ok 1"
 else

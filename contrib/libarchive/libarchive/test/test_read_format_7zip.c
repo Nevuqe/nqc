@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$FreeBSD");
+__NQCID("$NQC");
 
 #if defined(_WIN32) && !defined(__CYGWIN__)
 #define	close		_close

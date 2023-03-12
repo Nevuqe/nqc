@@ -253,7 +253,7 @@ EOF
 		fi
 
 		echo ".It Va ${opt}"
-		sed -e'/\$FreeBSD.*\$/d' ${opt}
+		sed -e'/\$NQC.*\$/d' ${opt}
 		if [ -n "${targets}" ] ; then
 			echo '.Pp'
 			echo 'This is a default setting on'

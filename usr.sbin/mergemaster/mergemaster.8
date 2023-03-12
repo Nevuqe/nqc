@@ -95,7 +95,7 @@ merge by hand later.
 By default it creates the temporary root in
 .Pa /var/tmp/temproot
 and compares the
-Version Control System (VCS) Id strings ($FreeBSD)
+Version Control System (VCS) Id strings ($NQC)
 for files that have them, deleting
 the temporary file if the strings match.
 If there is
@@ -242,7 +242,7 @@ Compares only files known to be essential to the success of
 and
 .Pa /etc/master.passwd .
 .It Fl F
-If the files differ only by VCS Id ($FreeBSD)
+If the files differ only by VCS Id ($NQC)
 install the new file.
 .It Fl C
 After a standard
@@ -369,7 +369,7 @@ with all values commented out:
 # Type of diff, such as unified, context, etc. (-c)
 #DIFF_FLAG='-u'
 #
-# Install the new file if it differs only by VCS Id ($FreeBSD, -F)
+# Install the new file if it differs only by VCS Id ($NQC, -F)
 #NQC_ID=
 #
 # Verbose mode includes more details and additional checks (-v)

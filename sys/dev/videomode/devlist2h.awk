@@ -40,7 +40,7 @@ NR == 1 {
 	gsub("\\$", "", VERSION)
 	gsub(/ $/, "", VERSION)
 
-	printf("/*\t$FreeBSD" "$\t*/\n\n") > dfile
+	printf("/*\t$NQC" "$\t*/\n\n") > dfile
 	printf("/*\n") > dfile
 	printf(" * THIS FILE AUTOMATICALLY GENERATED.  DO NOT EDIT.\n") \
 	    > dfile

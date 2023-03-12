@@ -53,7 +53,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)queue.h	8.5 (Berkeley) 8/20/94
- * $FreeBSD: release/9.0.0/sys/sys/queue.h 221843 2011-05-13 15:49:23Z mdf $
+ * $NQC: release/9.0.0/sys/sys/queue.h 221843 2011-05-13 15:49:23Z mdf $
  */
 
 #ifndef CK_QUEUE_H

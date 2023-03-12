@@ -158,7 +158,7 @@ foreach my $vendor_define (sort keys(%linux_pciids)) {
 print STDERR "\nWrite FreeBSD header to stdout...\n";
 print <<"EOF";
 /*
- * \$FreeBSD\$
+ * \$NQC\$
  */
 
 /*

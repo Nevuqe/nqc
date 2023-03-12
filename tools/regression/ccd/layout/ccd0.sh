@@ -10,7 +10,7 @@ foo() {
 	echo $f
 	sh ccd.sh $1 $2 $3 $4 $5 $6 > _.$f
 	if [ -f ref.$f ] ; then
-		diff -u -I '$FreeBSD' ref.$f _.$f
+		diff -u -I '$NQC' ref.$f _.$f
 	fi
 }
 

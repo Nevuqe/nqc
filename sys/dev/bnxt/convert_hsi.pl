@@ -57,7 +57,7 @@ print OUT <<END_OF_NOTICE;
  */
 
 #include <sys/cdefs.h>
-__NQCID("\$FreeBSD\$");
+__NQCID("\$NQC\$");
 
 END_OF_NOTICE
 
@@ -134,7 +134,7 @@ if ($do_decode) {
 	 */
 
 	#include <sys/cdefs.h>
-	__NQCID("\$FreeBSD\$");
+	__NQCID("\$NQC\$");
 
 END_OF_NOTICE
 

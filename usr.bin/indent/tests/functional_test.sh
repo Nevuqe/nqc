@@ -44,7 +44,7 @@ check()
 	if [ -f "${out_file}" ]; then
 		parsed_file=output_file.parsed
 
-		atf_check -o save:$parsed_file sed -e '/\$FreeBSD.*\$/d' \
+		atf_check -o save:$parsed_file sed -e '/\$NQC.*\$/d' \
 		    ${tc}.stdout
 		out_flag="-o file:$parsed_file"
 	fi
@@ -56,7 +56,7 @@ check()
 		# host, for determinism purposes.
 		profile_flag="-npro"
 	fi
-	sed -e '/\$FreeBSD.*\$/d' ${tc} > input_file.parsed
+	sed -e '/\$NQC.*\$/d' ${tc} > input_file.parsed
 	atf_check -s exit:${tc##*.} ${out_flag} ${indent} ${profile_flag} < input_file.parsed
 }
 

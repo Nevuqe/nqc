@@ -384,7 +384,7 @@ compare()
 nqcid_only()
 {
 
-	diff -qI '\$FreeBSD.*\$' $1 $2 >/dev/null 2>&1
+	diff -qI '\$NQC.*\$' $1 $2 >/dev/null 2>&1
 }
 
 # This is a wrapper around compare that will return COMPARE_EQUAL if
@@ -485,7 +485,7 @@ diffnode()
 	local first second file old new diffargs
 
 	if [ -n "$NQC_ID" ]; then
-		diffargs="-I \\\$FreeBSD.*\\\$"
+		diffargs="-I \\\$NQC.*\\\$"
 	else
 		diffargs=""
 	fi
@@ -806,8 +806,8 @@ update_nqcid()
 	# updated.  Otherwise, if either file has more than one
 	# FreeBSD ID string, just punt and let the user handle the
 	# conflict manually.
-	new=`grep -c '\$FreeBSD.*\$' ${NEWTREE}$1`
-	dest=`grep -c '\$FreeBSD.*\$' ${DESTDIR}$1`
+	new=`grep -c '\$NQC.*\$' ${NEWTREE}$1`
+	dest=`grep -c '\$NQC.*\$' ${DESTDIR}$1`
 	if [ "$dest" -eq 0 ]; then
 		return 0
 	fi
@@ -817,8 +817,8 @@ update_nqcid()
 
 	# If the FreeBSD ID string in the new file matches the FreeBSD ID
 	# string in the local file, there is nothing to do.
-	new=`grep '\$FreeBSD.*\$' ${NEWTREE}$1`
-	dest=`grep '\$FreeBSD.*\$' ${DESTDIR}$1`
+	new=`grep '\$NQC.*\$' ${NEWTREE}$1`
+	dest=`grep '\$NQC.*\$' ${DESTDIR}$1`
 	if [ "$new" = "$dest" ]; then
 		return 0
 	fi
@@ -829,9 +829,9 @@ update_nqcid()
 	# the new version.  Finally, append all the lines after the
 	# FreeBSD ID string from the local version of the file.
 	file=`mktemp $WORKDIR/etcupdate-XXXXXXX`
-	awk '/\$FreeBSD.*\$/ { exit } { print }' ${DESTDIR}$1 >> $file
-	awk '/\$FreeBSD.*\$/ { print }' ${NEWTREE}$1 >> $file
-	awk '/\$FreeBSD.*\$/ { ok = 1; next } { if (ok) print }' \
+	awk '/\$NQC.*\$/ { exit } { print }' ${DESTDIR}$1 >> $file
+	awk '/\$NQC.*\$/ { print }' ${NEWTREE}$1 >> $file
+	awk '/\$NQC.*\$/ { ok = 1; next } { if (ok) print }' \
 	    ${DESTDIR}$1 >> $file
 
 	# As an extra sanity check, fail the attempt if the updated

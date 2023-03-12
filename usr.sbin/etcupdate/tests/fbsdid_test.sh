@@ -73,7 +73,7 @@ store_id()
 	file=$1
 	shift
 
-	echo -n '# $FreeBSD' >> $file
+	echo -n '# $NQC' >> $file
 	echo -n "$@" >> $file
 	echo '$' >> $file
 }

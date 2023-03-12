@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD: $");
+__NQCID("$NQC: $");
 
 #ifndef _ENIC_H
 #define _ENIC_H

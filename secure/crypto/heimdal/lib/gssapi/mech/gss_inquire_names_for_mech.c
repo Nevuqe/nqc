@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$FreeBSD: src/lib/libgssapi/gss_inquire_names_for_mech.c,v 1.1 2005/12/29 14:40:20 dfr Exp $
+ *	$NQC: src/lib/libgssapi/gss_inquire_names_for_mech.c,v 1.1 2005/12/29 14:40:20 dfr Exp $
  */
 
 #include "mech_locl.h"
