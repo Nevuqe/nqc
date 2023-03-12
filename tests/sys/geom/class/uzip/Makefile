@@ -22,7 +22,7 @@ ${ZIMAGE}: ${IMAGE}
 
 ${UZIMAGE}: ${IMAGE} ${ZIMAGE}
 	printf "#\n# $$" >${.TARGET}
-	printf "FreeBSD$$\n#\n\n" >> ${.TARGET}
+	printf "NQC$$\n#\n\n" >> ${.TARGET}
 	uuencode ${ZIMAGE} ${ZIMAGE} >>${.TARGET}
 
 ${PACKAGE}FILES+=		conf.sh 1_endian_big.img.uzip.uue \
