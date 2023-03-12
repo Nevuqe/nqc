@@ -29,7 +29,7 @@
 # Bring the network down and up again during NFS tests.
 
 # "panic: re_txeof: freeing NULL mbufs!" seen:
-# https://people.frebsd.org/~pho/stress/log/nfs14.txt
+# https://people.freebsd.org/~pho/stress/log/nfs14.txt
 
 # This is a very disruptive test, so be aware!
 [ -z "$footshoot" ] && exit 0

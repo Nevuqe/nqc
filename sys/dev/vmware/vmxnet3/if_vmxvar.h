@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2013 Tsubai Masanari
- * Copyright (c) 2013 Bryan Venteicher <bryanv@frebsd.org>
+ * Copyright (c) 2013 Bryan Venteicher <bryanv@freebsd.org>
  * Copyright (c) 2018 Patrick Kelsey
  *
  * Permission to use, copy, modify, and distribute this software for any

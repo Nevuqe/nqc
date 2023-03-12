@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2019 Emmanuel Vadot <manu@freebsd.org>
  * Copyright (c) 2016 Vladimir Belian <fate10@gmail.com>
  * All rights reserved.
  *

@@ -30,7 +30,7 @@
 # UID   PID  PPID CPU PRI NI  VSZ  RSS MWCHAN STAT TT     TIME COMMAND
 #   0 72280     1   0  20  0 5992 1768 mntref D     0- 0:03.20 umount /mnt
 
-# https://people.frebsd.org/~pho/stress/log/kostik990.txt
+# https://people.freebsd.org/~pho/stress/log/kostik990.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `swapinfo | wc -l` -eq 1 ] && exit 0

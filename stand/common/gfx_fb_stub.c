@@ -1,5 +1,5 @@
 /*-
- * Copyright 2021 Toomas Soome <tsoome@frebsd.org>
+ * Copyright 2021 Toomas Soome <tsoome@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

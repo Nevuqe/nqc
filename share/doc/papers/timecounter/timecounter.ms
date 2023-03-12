@@ -15,7 +15,7 @@ delim ��
 .TI
 Timecounters: Efficient and precise timekeeping in SMP kernels.
 .AA
-.A "Poul-Henning Kamp" "The FreBSD Project"
+.A "Poul-Henning Kamp" "The FreeBSD Project"
 .AB
 The NQC timecounters are an architecture-independent implementation
 of a binary timescale using whatever hardware support is at hand  
@@ -1037,7 +1037,7 @@ APRIL 2001.
 [PHK2001]
 "Monitoring Natural Gas Usage"
 Poul-Henning Kamp
-http://phk.frebsd.dk/Gasdims/
+http://phk.freebsd.dk/Gasdims/
 .LP
 [MILLS1992]
 "A computer-controlled LORAN-C receiver for precision timekeeping."

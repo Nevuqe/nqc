@@ -4,7 +4,7 @@
  * Copyright (c) 1999 Kazutaka YOKOTA <yokota@zodiac.mech.utsunomiya-u.ac.jp>
  * All rights reserved.
  *
- * Copyright (c) 2008-2009 Ed Schouten <ed@frebsd.org>
+ * Copyright (c) 2008-2009 Ed Schouten <ed@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (C) 2008 Roman Kurakin rik@frebsd.org. All rights reserved.
+# Copyright (C) 2008 Roman Kurakin rik@freebsd.org. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -259,7 +259,7 @@ rm "${tmpdirout}"/cdrom.inf~ || exit 1
 
 mkisofs -b boot/cdboot -no-emul-boot -r -J \
 	-V "NQC_Install" \
-	-publisher "The FreBSD Project.  https://www.frebsd.org/" \
+	-publisher "The FreeBSD Project.  https://www.freebsd.org/" \
 	-o ${DVDIMAGE} "${tmpdirout}" \
 	|| exit 1 
 

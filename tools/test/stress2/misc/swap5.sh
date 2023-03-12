@@ -31,7 +31,7 @@
 # swp_pager_getswapspace(32): failed
 
 # "panic: freeing free block" sen with WiP kernel code:
-# https://people.frebsd.org/~pho/stress/log/dougm027.txt
+# https://people.freebsd.org/~pho/stress/log/dougm027.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

@@ -1,12 +1,12 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2012 Ben Gray <bgray@frebsd.org>.
- * Copyright (C) 2018 The FreBSD Foundation.
- * Copyright (c) 2019 Edward Tomasz Napierala <trasz@frebsd.org>
+ * Copyright (C) 2012 Ben Gray <bgray@freebsd.org>.
+ * Copyright (C) 2018 The FreeBSD Foundation.
+ * Copyright (c) 2019 Edward Tomasz Napierala <trasz@freebsd.org>
  *
  * This software was developed by Arshan Khanifar <arshankhanifar@gmail.com>
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

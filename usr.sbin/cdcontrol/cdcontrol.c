@@ -23,7 +23,7 @@
  * 		parameters it will print volume-info.
  * 		Version 2.0.1
  *
- * 27-Jun-2008  Pietro Cerutti <gahr@frebsd.org>
+ * 27-Jun-2008  Pietro Cerutti <gahr@freebsd.org>
  * 		Further enhancement to volume. Values not in range 0-255
  * 		are now reduced to be in range. This prevents overflow in
  * 		the uchar storing the volume (256 -> 0, -20 -> 236, ...).

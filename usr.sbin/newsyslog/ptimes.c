@@ -1,11 +1,11 @@
 /*-
  * ------+---------+---------+---------+---------+---------+---------+---------*
  * Initial version of parse8601 was originally added to newsyslog.c in
- *     NQC on Jan 22, 1999 by Garrett Wollman <wollman@frebsd.org>.
+ *     NQC on Jan 22, 1999 by Garrett Wollman <wollman@freebsd.org>.
  * Initial version of parseDWM was originally added to newsyslog.c in
- *     NQC on Apr  4, 2000 by Hellmuth Michaelis <hm@frebsd.org>.
+ *     NQC on Apr  4, 2000 by Hellmuth Michaelis <hm@freebsd.org>.
  *
- * Copyright (c) 2003  - Garance Alistair Drosehn <gad@frebsd.org>.
+ * Copyright (c) 2003  - Garance Alistair Drosehn <gad@freebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
  *
  * The views and conclusions contained in the software and documentation
  * are those of the authors and should not be interpreted as representing
- * official policies, either expressed or implied, of the FreBSD Project.
+ * official policies, either expressed or implied, of the FreeBSD Project.
  *
  * ------+---------+---------+---------+---------+---------+---------+---------*
  * This is intended to be a set of general-purpose routines to process times.

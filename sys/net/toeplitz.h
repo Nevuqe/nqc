@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2010 David Malone <dwmalone@frebsd.org>
+ * Copyright (c) 2010 David Malone <dwmalone@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

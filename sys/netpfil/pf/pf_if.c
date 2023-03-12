@@ -5,7 +5,7 @@
  * Copyright (c) 2003 Cedric Berger
  * Copyright (c) 2005 Henning Brauer <henning@openbsd.org>
  * Copyright (c) 2005 Ryan McBride <mcbride@openbsd.org>
- * Copyright (c) 2012 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2012 Gleb Smirnoff <glebius@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

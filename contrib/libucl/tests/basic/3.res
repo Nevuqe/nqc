@@ -1,4 +1,4 @@
-packagesite = "http://pkg-test.frebsd.org/pkg-test/unknown/latest";
+packagesite = "http://pkg-test.freebsd.org/pkg-test/unknown/latest";
 squaretest = "some[]value";
 alias {
     all-depends = "query %dn-%dv";

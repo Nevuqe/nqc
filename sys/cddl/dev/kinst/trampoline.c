@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: CDDL 1.0
  *
- * Copyright 2022 Christos Margiolis <christos@frebsd.org>
- * Copyright 2022 Mark Johnston <markj@frebsd.org>
+ * Copyright 2022 Christos Margiolis <christos@freebsd.org>
+ * Copyright 2022 Mark Johnston <markj@freebsd.org>
  */
 
 #include <sys/param.h>

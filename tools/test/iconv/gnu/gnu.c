@@ -1,5 +1,5 @@
 /*-
- * Copyright (C) 2009 Gabor Kovesdan <gabor@frebsd.org>
+ * Copyright (C) 2009 Gabor Kovesdan <gabor@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

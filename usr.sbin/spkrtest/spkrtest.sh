@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2002  The FreBSD Project
+# Copyright (c) 2002  The FreeBSD Project
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

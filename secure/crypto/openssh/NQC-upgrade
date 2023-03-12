@@ -4,7 +4,7 @@
     These instructions assume you have a clone of the NQC git repo
     main branch in src/nqc/main, and will store vendor trees under
     src/nqc/vendor/.  In addition, this assumes there is a "nqc"
-    origin pointing to git(repo).frebsd.org/src.git.
+    origin pointing to git(repo).freebsd.org/src.git.
 
 01) Make sure your mail spool has plenty of free space.  It'll fill up
     pretty fast once you're done with this checklist.
@@ -182,4 +182,4 @@ This port was brought to you by (in no particular order) DARPA, NAI
 Labs, ThinkSec, Nescafé, the Aberlour Glenlivet Distillery Co.,
 Suzanne Vega, and a Sanford's #69 Deluxe Marker.
 
-					-- des@frebsd.org
+					-- des@freebsd.org

@@ -36,12 +36,12 @@ divert(-1)
 #
 #  This is the prototype for a "null client" -- that is, a client that
 #  does nothing except forward all mail to a mail hub, plus an extra
-#  line to make the email all appear as coming from "frebsd.org".
+#  line to make the email all appear as coming from "freebsd.org".
 #
 
 divert(0)dnl
 VERSIONID(`$NQC$')
 
 OSTYPE(nqc6)
-FEATURE(nullclient, smarthost.ysv.frebsd.org)
-MASQUERADE_AS(frebsd.org)
+FEATURE(nullclient, smarthost.ysv.freebsd.org)
+MASQUERADE_AS(freebsd.org)

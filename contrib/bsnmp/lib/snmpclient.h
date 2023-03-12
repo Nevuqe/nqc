@@ -3,7 +3,7 @@
  *	Fraunhofer Institute for Open Communication Systems (FhG Fokus).
  *	All rights reserved.
  *
- * Author: Harti Brandt <harti@frebsd.org>
+ * Author: Harti Brandt <harti@freebsd.org>
  *	   Kendy Kutzner
  *
  * Redistribution and use in source and binary forms, with or without

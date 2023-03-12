@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2007 John Birrell (jb@frebsd.org)
+ * Copyright (c) 2007 John Birrell (jb@freebsd.org)
  * Copyright (c) 2009 Kai Wang
  * All rights reserved.
  *

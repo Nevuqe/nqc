@@ -35,11 +35,11 @@
 
 # Sample problems found:
 # Thread stuck in stopprof.
-# http://people.frebsd.org/~pho/stress/log/kostik732.txt
+# http://people.freebsd.org/~pho/stress/log/kostik732.txt
 # Fixed by r275121.
 
 # panic: td 0xcbe1ac40 is not suspended.
-# https://people.frebsd.org/~pho/stress/log/kostik807.txt
+# https://people.freebsd.org/~pho/stress/log/kostik807.txt
 # Fixed by r282944.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

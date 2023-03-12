@@ -29,7 +29,7 @@
 # Sched fuzz test scenario.
 
 # "panic: sleeping thread" seen:
-# https://people.frebsd.org/~pho/stress/log/schedfuzz.txt
+# https://people.freebsd.org/~pho/stress/log/schedfuzz.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

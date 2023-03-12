@@ -2,13 +2,13 @@
  * SPDX-License-Identifier: BSD-4-Clause
  *
  * Copyright (c) 1995 John Birrell <jb@cimlogic.com.au>.
- * Copyright (c) 2006 David Xu <davidxu@frebsd.org>.
- * Copyright (c) 2015, 2016 The FreBSD Foundation
+ * Copyright (c) 2006 David Xu <davidxu@freebsd.org>.
+ * Copyright (c) 2015, 2016 The FreeBSD Foundation
  *
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

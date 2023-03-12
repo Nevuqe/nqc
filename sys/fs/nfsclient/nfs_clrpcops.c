@@ -5104,7 +5104,7 @@ nfsrpc_exchangeid(struct nfsmount *nmp, struct nfsclclient *clp,
 
 	/* Set the implementation id4 */
 	*tl = txdr_unsigned(1);
-	(void) nfsm_strtom(nd, "frebsd.org", strlen("frebsd.org"));
+	(void) nfsm_strtom(nd, "freebsd.org", strlen("freebsd.org"));
 	(void) nfsm_strtom(nd, version, strlen(version));
 	NFSM_BUILD(tl, uint32_t *, NFSX_V4TIME);
 	verstime.tv_sec = 1293840000;		/* Jan 1, 2011 */

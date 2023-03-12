@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2002 Daniel Eischen <deischen@frebsd.org>.
- * Copyright (c) 2005 David Xu <davidxu@frebsd.org>.
+ * Copyright (c) 2002 Daniel Eischen <deischen@freebsd.org>.
+ * Copyright (c) 2005 David Xu <davidxu@freebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

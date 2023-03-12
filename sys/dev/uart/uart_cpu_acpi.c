@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2016 The FreBSD Foundation
+ * Copyright (c) 2016 The FreeBSD Foundation
  * Copyright (c) 2019 Colin Percival
  * All rights reserved.
  *

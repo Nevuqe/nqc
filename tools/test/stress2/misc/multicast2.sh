@@ -3,7 +3,7 @@
 # D19886 Fix numerous refcount bugs in multicast
 
 # Page fault in in6_pcbpurgeif0+0xc8 seen.
-# https://people.frebsd.org/~pho/stress/log/mmacy035.txt
+# https://people.freebsd.org/~pho/stress/log/mmacy035.txt
 # Test scenario by mmacy
 
 # Fixed by r349507

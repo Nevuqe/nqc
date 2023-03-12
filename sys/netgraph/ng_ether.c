@@ -36,8 +36,8 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Authors: Archie Cobbs <archie@frebsd.org>
- *	    Julian Elischer <julian@frebsd.org>
+ * Authors: Archie Cobbs <archie@freebsd.org>
+ *	    Julian Elischer <julian@freebsd.org>
  *
  * $NQC$
  */

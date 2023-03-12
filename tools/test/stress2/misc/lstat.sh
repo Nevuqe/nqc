@@ -28,7 +28,7 @@
 
 # Hunt for;
 # Bug 204764 - Filesystem deadlock, process in vodead state
-#    https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=204764
+#    https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=204764
 # No problem seen.
 
 . ../default.cfg

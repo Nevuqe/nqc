@@ -38,7 +38,7 @@ versions of the include files should be used in the build.  Normally, the
 CVS vendor import goes along the following lines:
 
   cd ~/p4/projects/trustedbsd/openbsm
-  cvs -n -d rwatson@repoman.frebsd.org:/home/ncvs -q import \
+  cvs -n -d rwatson@repoman.freebsd.org:/home/ncvs -q import \
 	src/contrib/openbsm TrustedBSD OPENBSM_1_0_ALPHA_1
 
 Replacing the version string as required.  Remove the "-n" argument once

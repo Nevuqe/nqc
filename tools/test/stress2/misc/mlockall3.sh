@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2013 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
 
 # mlockall(2) test scenario.
 # "panic: vm_page_unwire: page xxx's wire count is zero" seen.
-# http://people.frebsd.org/~pho/stress/log/mlockall.txt
+# http://people.freebsd.org/~pho/stress/log/mlockall.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

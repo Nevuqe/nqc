@@ -35,7 +35,7 @@
 /*
  * CAM Target Layer SCSI library interface
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #ifndef	_CTL_UTIL_H

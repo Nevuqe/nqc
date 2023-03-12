@@ -20,7 +20,7 @@
  */
 
 /*
- * Copyright (c) 2019 Mariusz Zaborski <oshogbo@frebsd.org>
+ * Copyright (c) 2019 Mariusz Zaborski <oshogbo@freebsd.org>
  * Use is subject to license terms.
  */
 

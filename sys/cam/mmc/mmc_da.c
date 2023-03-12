@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2006 Bernd Walter <tisco@frebsd.org> All rights reserved.
- * Copyright (c) 2009 Alexander Motin <mav@frebsd.org> All rights reserved.
- * Copyright (c) 2015-2017 Ilya Bakulin <kibab@frebsd.org> All rights reserved.
- * Copyright (c) 2006 M. Warner Losh <imp@frebsd.org>
+ * Copyright (c) 2006 Bernd Walter <tisco@freebsd.org> All rights reserved.
+ * Copyright (c) 2009 Alexander Motin <mav@freebsd.org> All rights reserved.
+ * Copyright (c) 2015-2017 Ilya Bakulin <kibab@freebsd.org> All rights reserved.
+ * Copyright (c) 2006 M. Warner Losh <imp@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -28,8 +28,8 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * Some code derived from the sys/dev/mmc and sys/cam/ata
- * Thanks to Warner Losh <imp@frebsd.org>, Alexander Motin <mav@frebsd.org>
- * Bernd Walter <tisco@frebsd.org>, and other authors.
+ * Thanks to Warner Losh <imp@freebsd.org>, Alexander Motin <mav@freebsd.org>
+ * Bernd Walter <tisco@freebsd.org>, and other authors.
  */
 
 #include <sys/cdefs.h>

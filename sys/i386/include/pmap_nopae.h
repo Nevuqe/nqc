@@ -4,7 +4,7 @@
  * Copyright (c) 1991 Regents of the University of California.
  * All rights reserved.
  *
- * Copyright (c) 2018 The FreBSD Foundation
+ * Copyright (c) 2018 The FreeBSD Foundation
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
@@ -12,8 +12,8 @@
  * Science Department and William Jolitz of UUNET Technologies Inc.
  *
  * Portions of this software were developed by
- * Konstantin Belousov <kib@frebsd.org> under sponsorship from
- * the FreBSD Foundation.
+ * Konstantin Belousov <kib@freebsd.org> under sponsorship from
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

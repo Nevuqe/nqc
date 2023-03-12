@@ -1,5 +1,5 @@
 #
-# Copyright 2022 Mateusz Piotrowski <0mp@frebsd.org>
+# Copyright 2022 Mateusz Piotrowski <0mp@freebsd.org>
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #

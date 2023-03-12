@@ -51,7 +51,7 @@ Options:
   -k KEY       -- Trust an RSA key with SHA256 hash of KEY
   -r release   -- Target for upgrade (e.g., 11.1-RELEASE)
   -s server    -- Server from which to fetch updates
-                  (default: update.frebsd.org)
+                  (default: update.freebsd.org)
   -t address   -- Mail output of cron command, if any, to address
                   (default: root)
   --not-running-from-cron
@@ -1054,8 +1054,8 @@ IDS_check_params () {
 # a useful answer, use the server name specified by the user.
 # Put another way... look up _http._tcp.${SERVERNAME} and pick a server
 # from that; or if no servers are returned, use ${SERVERNAME}.
-# This allows a user to specify "portsnap.frebsd.org" (in which case
-# portsnap will select one of the mirrors) or "portsnap5.tld.frebsd.org"
+# This allows a user to specify "portsnap.freebsd.org" (in which case
+# portsnap will select one of the mirrors) or "portsnap5.tld.freebsd.org"
 # (in which case portsnap will use that particular server, since there
 # won't be an SRV entry for that name).
 #
@@ -1120,7 +1120,7 @@ fetch_pick_server () {
 			This may be because upgrading from this platform (${ARCH})
 			or release (${RELNUM}) is unsupported by `basename $0`. Only
 			platforms with Tier 1 support can be upgraded by `basename $0`.
-			See https://www.frebsd.org/platforms/ for more info.
+			See https://www.freebsd.org/platforms/ for more info.
 
 			If unsupported, NQC must be upgraded by source.
 		EOF

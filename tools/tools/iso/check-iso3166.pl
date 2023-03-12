@@ -8,7 +8,7 @@
 # http://www.iso.org/iso/list-en1-semic-3.txt) and iso3166-countrycodes.txt
 # (from ftp://ftp.ripe.net/) to see if there any differences.
 #
-# Created by Edwin Groothuis <edwin@frebsd.org> for the FreBSD Project.
+# Created by Edwin Groothuis <edwin@freebsd.org> for the FreeBSD Project.
 #
 
 use strict;

@@ -27,8 +27,8 @@
 #
 
 # "panic: Freeing unused sector 79510 22 ff800000" seen.
-# http://people.frebsd.org/~pho/stress/log/msdos5.txt
-# FS corruption seen: http://people.frebsd.org/~pho/stress/log/msdos5-2.txt
+# http://people.freebsd.org/~pho/stress/log/msdos5.txt
+# FS corruption seen: http://people.freebsd.org/~pho/stress/log/msdos5-2.txt
 # Fixed by r333693.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

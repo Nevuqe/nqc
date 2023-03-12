@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2012 Oleg Moskalenko <mom040267@gmail.com>
- * Copyright (C) 2012 Gabor Kovesdan <gabor@frebsd.org>
+ * Copyright (C) 2012 Gabor Kovesdan <gabor@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

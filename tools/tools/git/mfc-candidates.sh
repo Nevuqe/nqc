@@ -3,10 +3,10 @@
 #-
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2022 The FreBSD Foundation
+# Copyright 2022 The FreeBSD Foundation
 #
 # This software was developed by Ed Maste
-# under sponsorship from the FreBSD Foundation.
+# under sponsorship from the FreeBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted providing that the following conditions

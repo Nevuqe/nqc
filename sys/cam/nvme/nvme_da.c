@@ -25,7 +25,7 @@
  * SUCH DAMAGE.
  *
  * Derived from ata_da.c:
- * Copyright (c) 2009 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2009 Alexander Motin <mav@freebsd.org>
  */
 
 #include <sys/cdefs.h>

@@ -1,9 +1,9 @@
 /*-
  * Copyright (c) 2013, 2014 Andrew Turner
- * Copyright (c) 2021 The FreBSD Foundation
+ * Copyright (c) 2021 The FreeBSD Foundation
  *
  * Portions of this software were developed by Andrew Turner
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

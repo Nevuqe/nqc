@@ -27,7 +27,7 @@
 #
 
 # Page fault seen:
-# https://people.frebsd.org/~pho/stress/log/kostik907.txt
+# https://people.freebsd.org/~pho/stress/log/kostik907.txt
 # Fixed by: r302019 + r302020.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

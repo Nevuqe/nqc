@@ -2,8 +2,8 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011-2012 Ian Lepore All rights reserved.
- * Copyright (c) 2012 Marius Strobl <marius@frebsd.org> All rights reserved.
- * Copyright (c) 2006 M. Warner Losh <imp@frebsd.org>
+ * Copyright (c) 2012 Marius Strobl <marius@freebsd.org> All rights reserved.
+ * Copyright (c) 2006 M. Warner Losh <imp@freebsd.org>
 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

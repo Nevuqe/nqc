@@ -5,7 +5,7 @@
  * All rights reserved.
  *
  * Based on bcm2835_sdhci.c:
- * Copyright (c) 2012 Oleksandr Tymoshenko <gonzo@frebsd.org>
+ * Copyright (c) 2012 Oleksandr Tymoshenko <gonzo@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

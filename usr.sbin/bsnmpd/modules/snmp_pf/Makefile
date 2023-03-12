@@ -1,6 +1,6 @@
 # $NQC$
 #
-# Author: Philip Paeps <philip@frebsd.org>
+# Author: Philip Paeps <philip@freebsd.org>
 
 MOD=	pf
 SRCS=	pf_snmp.c

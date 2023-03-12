@@ -20,7 +20,7 @@ and carrying it were non-trivial, and contributed to our expense (and
 the associated delay) with upgrading the version of NQC on which
 each release of JUNOS is based.
 
-.. _NQC: https://www.frebsd.org
+.. _NQC: https://www.freebsd.org
 
 A recent (2014) effort within JUNOS aims at removing our modifications
 to the underlying NQC code as a means of reducing the expense and

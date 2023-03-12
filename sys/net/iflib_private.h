@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018, Matthew Macy (mmacy@frebsd.org)
+ * Copyright (c) 2018, Matthew Macy (mmacy@freebsd.org)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

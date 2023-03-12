@@ -4018,7 +4018,7 @@ summary of the changes in that release.
 	Portability:
 		Add the ability to read IPv6 interface addresses into class
 			'w' under NQC (and possibly others).  From Jun
-			Kuriyama of IMG SRC, Inc. and the FreBSD Project.
+			Kuriyama of IMG SRC, Inc. and the FreeBSD Project.
 		Replace code for finding the number of CPUs on HPUX.
 		NCRUNIX MP-RAS 3.02 SO_REUSEADDR socket option does not
 			work properly causing problems if the accept()

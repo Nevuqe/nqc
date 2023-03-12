@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 1999,2000,2001,2002 Søren Schmidt <sos@frebsd.org>
+ * Copyright (c) 1999,2000,2001,2002 Søren Schmidt <sos@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

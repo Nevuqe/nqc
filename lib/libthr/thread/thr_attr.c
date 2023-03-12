@@ -35,8 +35,8 @@
 
 /*
  * Copyright (c) 1998 Daniel Eischen <eischen@vigrid.com>.
- * Copyright (C) 2001 Jason Evans <jasone@frebsd.org>.
- * Copyright (c) 2002,2003 Alexey Zelkin <phantom@frebsd.org>
+ * Copyright (C) 2001 Jason Evans <jasone@freebsd.org>.
+ * Copyright (c) 2002,2003 Alexey Zelkin <phantom@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

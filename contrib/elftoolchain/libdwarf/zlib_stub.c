@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2021 The FreBSD Foundation
+ * Copyright (c) 2021 The FreeBSD Foundation
  *
  * This software was developed by Mark Johnston under sponsorship from
- * the FreBSD Foundation.
+ * the FreeBSD Foundation.
  */
 
 #include <sys/cdefs.h>

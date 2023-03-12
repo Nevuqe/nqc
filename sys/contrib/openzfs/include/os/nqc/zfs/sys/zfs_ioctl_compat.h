@@ -19,8 +19,8 @@
  * CDDL HEADER END
  */
 /*
- * Copyright 2014 Xin Li <delphij@frebsd.org>.  All rights reserved.
- * Copyright 2013 Martin Matuska <mm@frebsd.org>.  All rights reserved.
+ * Copyright 2014 Xin Li <delphij@freebsd.org>.  All rights reserved.
+ * Copyright 2013 Martin Matuska <mm@freebsd.org>.  All rights reserved.
  * Use is subject to license terms.
  */
 

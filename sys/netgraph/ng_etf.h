@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Julian Elischer <julian@frebsd.org>
+ * Author: Julian Elischer <julian@freebsd.org>
  *
  * $NQC$
  */

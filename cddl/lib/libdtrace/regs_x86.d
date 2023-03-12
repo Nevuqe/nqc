@@ -19,7 +19,7 @@
  *
  * CDDL HEADER END
  *
- * Portions Copyright 2009 Stacey Son sson@frebsd.org
+ * Portions Copyright 2009 Stacey Son sson@freebsd.org
  *
  * $NQC$
  */

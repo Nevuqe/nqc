@@ -30,7 +30,7 @@
 # "panic: Assertion ma[i]->dirty == VM_PAGE_BITS_ALL failed" seen.
 # Fixed by r324794
 
-# Original test scenario by fsu@frebsd.org
+# Original test scenario by fsu@freebsd.org
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

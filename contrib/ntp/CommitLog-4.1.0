@@ -2979,7 +2979,7 @@
 2000-01-03  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* ntpd/refclock_oncore.c (oncore_read_config): Patches and cleanup
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 	more isascii() stuff from HMS.
 
 	* ntpd/refclock_fg.c (fg_receive): Cast.
@@ -3005,7 +3005,7 @@
 	* ntpd/refclock_oncore.c: Add proof-of-concept support for
 	  delivering receiver data stream to other processes through
 	  a memory-mapped file.
-	  From: Poul-Henning Kamp <phk@frebsd.org>
+	  From: Poul-Henning Kamp <phk@freebsd.org>
 
 2000-01-02  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -3904,7 +3904,7 @@
 
 	* ntpd/refclock_oncore.c (oncore_start): This makes the Oncore run
 	on systems without hardpps().
-	From: Poul-Henning Kamp <phk@frebsd.org>
+	From: Poul-Henning Kamp <phk@freebsd.org>
 
 1999-08-28  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -4254,7 +4254,7 @@
         * html/monopt.htm: We have four types of files now
         * ntpd/refclock_oncore.c: If debug is on, tell when
         we are waiting for a valid almanac
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 	* include/ntp_machine.h (HAVE_TERMIOS): STREAMS does not imply
 	HAVE_TERMIOS !!!
@@ -4703,7 +4703,7 @@ Sat Apr 24 01:00:53 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* ntpdc/ntpdc_ops.c: (kerninfo)  Report in seconds regardless of
 	kernel precision.  Report kernel flags as text.
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 Sun Apr 18 14:26:51 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -4712,7 +4712,7 @@ Sun Apr 18 14:26:51 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 	* ntpd/ntp_refclock.c (refclock_ioctl): We don't want
 	PPS_HARDPPSONASSERT by default.
 	* ntpd/refclock_oncore.c: Prefer timepps.h over sys/timepps.h
-	From: Poul-Henning Kamp <phk@frebsd.org>
+	From: Poul-Henning Kamp <phk@freebsd.org>
 
 Tue Apr 13 17:32:35 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -4734,7 +4734,7 @@ Wed Apr  7 03:02:23 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* ntpd/refclock_oncore.c: Use timepps.h or sys/timepps.h
 	* configure.in: Look for either timepps.h or sys/timepps.h
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 	* ntpd/ntp_io.c (create_sockets): Don't warn about ENXIO.
 	(Several places)
@@ -5089,7 +5089,7 @@ Tue Jan  5 19:02:51 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 	* html/driver30.htm: Updated.
 	* html/refclock.htm: Refer to driver30
 	* ntpd/refclock_oncore.c: Vastly improve and make less NQC centric,
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk> and
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk> and
 		Reg.Clemens <reg@dwf.com>
 
 	* include/ntp.h: Portability/lint patches
@@ -5236,7 +5236,7 @@ Mon Nov 16 19:17:34 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 	does it by hand.  Should also work with non-UT models, as long as
 	they talk the Motorola Binary Protocol.  The driver Doesn't (need
 	to) know where the author lives anymore.
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 	* ntpd/refclock_palisade.h: New version.
 	* ntpd/refclock_palisade.c: New version.
@@ -5545,7 +5545,7 @@ Sun Jul  5 22:15:34 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* kernel/sys/timex.h (MOD_CANSCALE): Add rest of patch to handle
 	scaling.
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 Wed Jun 10 21:16:01 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -5553,7 +5553,7 @@ Wed Jun 10 21:16:01 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* ntpd/ntp_loopfilter.c (local_clock): MOD_CANSCALE patches, and
 	be careful with the integration if we're nearly perfect.
-	From: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	From: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 	* util/tickadj.c (main): Typo fix...
 	From: Marion Hakanson <hakanson@cse.ogi.edu>
@@ -5966,7 +5966,7 @@ Tue Mar 10 22:26:14 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 Sat Mar  7 02:57:17 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* ntpd/ntp_loopfilter.c (local_clock): Patch STA_FLL check
-	From: Poul-Henning Kamp <phk@frebsd.org>
+	From: Poul-Henning Kamp <phk@freebsd.org>
 
 	* various: Renamed ACTS to CLOCK_ACTS, ARBITER to CLOCK_ARBITER,
 	ARCRON_MSF to CLOCK_ARCRON_MSF, AS2201 to CLOCK_AS2201, BANC to
@@ -5987,7 +5987,7 @@ Sat Mar  7 02:57:17 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 	Requested by: Sven Dietrich <Sven_Dietrich@Trimble.COM>
 
 	* configure.in: gdt-surveying code is gone.  Sigh.
-	Reported by: Poul-Henning Kamp <phk@critter.frebsd.dk>
+	Reported by: Poul-Henning Kamp <phk@critter.freebsd.dk>
 
 Wed Mar  4 21:41:06 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 

@@ -21,7 +21,7 @@
 # Stopped at      kdb_enter+0x37: movq    $0,0x12724de(%rip)
 # db> x/s version
 # version: NQC 14.0-CURRENT #0 main-n249253-4ccbbe5f0689: Wed Sep  8 07:26:48 CEST 2021
-# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO\012
+# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO\012
 # db> 
 
 # Fixed by 6e3af6321ba4 - main - sctp: Fix lock recursion in sctp_swap_inpcb_for_listen()

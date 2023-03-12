@@ -1,5 +1,5 @@
 /*-
- * Written by Mateusz Guzik <mjg@frebsd.org>
+ * Written by Mateusz Guzik <mjg@freebsd.org>
  * Public domain.
  */
 

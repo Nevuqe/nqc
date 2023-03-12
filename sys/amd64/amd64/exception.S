@@ -1,15 +1,15 @@
 /*-
  * Copyright (c) 1989, 1990 William F. Jolitz.
  * Copyright (c) 1990 The Regents of the University of California.
- * Copyright (c) 2007-2018 The FreBSD Foundation
+ * Copyright (c) 2007-2018 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by A. Joseph Koshy under
- * sponsorship from the FreBSD Foundation and Google, Inc.
+ * sponsorship from the FreeBSD Foundation and Google, Inc.
  *
  * Portions of this software were developed by
- * Konstantin Belousov <kib@frebsd.org> under sponsorship from
- * the FreBSD Foundation.
+ * Konstantin Belousov <kib@freebsd.org> under sponsorship from
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

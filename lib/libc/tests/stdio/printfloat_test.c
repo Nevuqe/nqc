@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002-2009 David Schultz <das@frebsd.org>
+ * Copyright (c) 2002-2009 David Schultz <das@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -373,7 +373,7 @@ ATF_TC_BODY(hexadecimal_rounding, tc)
 ATF_TC_WITHOUT_HEAD(subnormal_double);
 ATF_TC_BODY(subnormal_double, tc)
 {
-	/* Regression test for https://bugs.frebsd.org/253847 */
+	/* Regression test for https://bugs.freebsd.org/253847 */
 	double positive = __DBL_DENORM_MIN__;
 	testfmt("4.9406564584124654418e-324", "%20.20g", positive);
 	testfmt("4.9406564584124654418E-324", "%20.20G", positive);

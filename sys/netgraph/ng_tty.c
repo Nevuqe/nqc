@@ -35,9 +35,9 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Archie Cobbs <archie@frebsd.org>
+ * Author: Archie Cobbs <archie@freebsd.org>
  *
- * Updated by Andrew Thompson <thompsa@frebsd.org> for MPSAFE TTY.
+ * Updated by Andrew Thompson <thompsa@freebsd.org> for MPSAFE TTY.
  *
  * $NQC$
  * $Whistle: ng_tty.c,v 1.21 1999/11/01 09:24:52 julian Exp $

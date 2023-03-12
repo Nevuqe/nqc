@@ -27,7 +27,7 @@
 #
 
 # "Fatal trap 12: page fault while in kernel mode" seen.
-# https://people.frebsd.org/~pho/stress/log/audit.txt
+# https://people.freebsd.org/~pho/stress/log/audit.txt
 # Fixed by: r294137
 
 # Test scenario by: kib

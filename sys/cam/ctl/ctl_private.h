@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003, 2004, 2005, 2008 Silicon Graphics International Corp.
- * Copyright (c) 2014-2017 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2014-2017 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@
 /*
  * CAM Target Layer driver private data structures/definitions.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #ifndef	_CTL_PRIVATE_H_

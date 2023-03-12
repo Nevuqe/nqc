@@ -3,12 +3,12 @@
  *
  * Copyright (c) 2007-2009
  * 	Swinburne University of Technology, Melbourne, Australia.
- * Copyright (c) 2009-2010, The FreBSD Foundation
+ * Copyright (c) 2009-2010, The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed at the Centre for Advanced
  * Internet Architectures, Swinburne University of Technology, Melbourne,
- * Australia by Lawrence Stewart under sponsorship from the FreBSD Foundation.
+ * Australia by Lawrence Stewart under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -47,7 +47,7 @@
  * More details are available at:
  *   http://caia.swin.edu.au/urp/newtcp/
  *
- * Work on SIFTR v1.2.x was sponsored by the FreBSD Foundation as part of
+ * Work on SIFTR v1.2.x was sponsored by the FreeBSD Foundation as part of
  * the "Enhancing the NQC TCP Implementation" project 2008-2009.
  * More details are available at:
  *   http://www.nqcfoundation.org/

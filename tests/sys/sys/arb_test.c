@@ -1,6 +1,6 @@
 /*	$OpenBSD: rb-test.c,v 1.4 2008/04/13 00:22:17 djm Exp $	*/
 /*
- * Copyright 2019 Edward Tomasz Napierala <trasz@frebsd.org>
+ * Copyright 2019 Edward Tomasz Napierala <trasz@freebsd.org>
  * Copyright 2002 Niels Provos <provos@citi.umich.edu>
  * All rights reserved.
  *

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2013 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # Watchdog fired:
-# https://people.frebsd.org/~pho/stress/log/kostik853.txt
+# https://people.freebsd.org/~pho/stress/log/kostik853.txt
 # but runs for a long time without watchdogd and deadlkres.
 
 . ../default.cfg

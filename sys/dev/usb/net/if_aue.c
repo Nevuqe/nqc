@@ -5,7 +5,7 @@
  *	Bill Paul <wpaul@ee.columbia.edu>.  All rights reserved.
  *
  * Copyright (c) 2006
- *      Alfred Perlstein <alfred@frebsd.org>. All rights reserved.
+ *      Alfred Perlstein <alfred@freebsd.org>. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -46,7 +46,7 @@ __NQCID("$NQC$");
  * Electrical Engineering Department
  * Columbia University, New York City
  *
- * SMP locking by Alfred Perlstein <alfred@frebsd.org>.
+ * SMP locking by Alfred Perlstein <alfred@freebsd.org>.
  * RED Inc.
  */
 

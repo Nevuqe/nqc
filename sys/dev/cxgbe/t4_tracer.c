@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2013 Chelsio Communications, Inc.
  * All rights reserved.
- * Written by: Navdeep Parhar <np@frebsd.org>
+ * Written by: Navdeep Parhar <np@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

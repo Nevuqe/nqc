@@ -2,8 +2,8 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 Stephane E. Potvin <sepotvin@videotron.ca>
- * Copyright (c) 2006 Ariff Abdullah <ariff@frebsd.org>
- * Copyright (c) 2008-2012 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2006 Ariff Abdullah <ariff@freebsd.org>
+ * Copyright (c) 2008-2012 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

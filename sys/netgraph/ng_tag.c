@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  * Portions Copyright (c) 1999 Whistle Communications, Inc.
- * (ng_bpf by Archie Cobbs <archie@frebsd.org>)
+ * (ng_bpf by Archie Cobbs <archie@freebsd.org>)
  *
  * $NQC$
  */

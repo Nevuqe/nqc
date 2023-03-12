@@ -4,8 +4,8 @@
  * Copyright (c) 2006 Uwe Stuehler <uwe@openbsd.org>
  * Copyright (c) 2012 Stefan Sperling <stsp@openbsd.org>
  * Copyright (c) 2020 Henri Hennebert <hlh@restart.be>
- * Copyright (c) 2020 Gary Jennejohn <gj@frebsd.org>
- * Copyright (c) 2020 Jesper Schmitz Mouridsen <jsm@frebsd.org>
+ * Copyright (c) 2020 Gary Jennejohn <gj@freebsd.org>
+ * Copyright (c) 2020 Jesper Schmitz Mouridsen <jsm@freebsd.org>
  * All rights reserved.
  *
  * Patch from:

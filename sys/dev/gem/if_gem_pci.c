@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
  *
  * Copyright (C) 2001 Eduardo Horvath.
- * Copyright (c) 2007 Marius Strobl <marius@frebsd.org>
+ * Copyright (c) 2007 Marius Strobl <marius@freebsd.org>
  * All rights reserved.
  *
  *

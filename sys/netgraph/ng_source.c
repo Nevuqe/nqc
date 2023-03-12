@@ -3,7 +3,7 @@
  */
 
 /*-
- * Copyright (c) 2005 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2005 Gleb Smirnoff <glebius@freebsd.org>
  * Copyright 2002 Sandvine Inc.
  * All rights reserved.
  *

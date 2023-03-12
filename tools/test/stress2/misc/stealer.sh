@@ -27,11 +27,11 @@
 #
 
 # Process stuck in objtrm wait state
-# http://people.frebsd.org/~pho/stress/log/stealer.txt
+# http://people.freebsd.org/~pho/stress/log/stealer.txt
 # Fixed in r263328.
 
 # "panic: freeing free block" seen:
-# https://people.frebsd.org/~pho/stress/log/stealer-2.txt
+# https://people.freebsd.org/~pho/stress/log/stealer-2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

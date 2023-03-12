@@ -21,7 +21,7 @@
 /*
  * Copyright (c) 2005, 2010, Oracle and/or its affiliates. All rights reserved.
  *
- * Copyright (c) 2006-2010 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2006-2010 Pawel Jakub Dawidek <pjd@freebsd.org>
  * All rights reserved.
  *
  * Portions Copyright 2010 Robert Milkowski
@@ -32,7 +32,7 @@
  * Copyright (c) 2014 Integros [integros.com]
  */
 
-/* Portions Copyright 2011 Martin Matuska <mm@frebsd.org> */
+/* Portions Copyright 2011 Martin Matuska <mm@freebsd.org> */
 
 /*
  * ZFS volume emulation driver.

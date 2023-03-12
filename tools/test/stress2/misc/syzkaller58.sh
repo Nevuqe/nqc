@@ -18,7 +18,7 @@
 # Stopped at      kdb_enter+0x32: movq    $0,0x1277d83(%rip)
 # db> x/s version
 # NQC 14.0-CURRENT #0 reap-n255837-0bdda1ded8d: Thu May 26 22:38:04 CEST 2022
-# pho@mercat1.netperf.frebsd.org:/var/tmp/deviant3/sys/amd64/compile/PHO
+# pho@mercat1.netperf.freebsd.org:/var/tmp/deviant3/sys/amd64/compile/PHO
 # db> 
 
 # Submitted by:	 markj

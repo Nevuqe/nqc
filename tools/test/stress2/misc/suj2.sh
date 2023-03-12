@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2010 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2010 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # Page fault on SUJ enabled FS
-# Fix: http://docs.frebsd.org/cgi/mid.cgi?20100823211257.GI2396
+# Fix: http://docs.freebsd.org/cgi/mid.cgi?20100823211257.GI2396
 
 # Tets scenario by Mateusz Guzik mjguzik gmail com
 

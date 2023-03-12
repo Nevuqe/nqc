@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2016 The FreBSD Foundation
+ * Copyright (c) 2016 The FreeBSD Foundation
  *
  * This software was developed by Andrew Turner under
- * the sponsorship of the FreBSD Foundation.
+ * the sponsorship of the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

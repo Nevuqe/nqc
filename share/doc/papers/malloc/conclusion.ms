@@ -1,7 +1,7 @@
 .\"
 .\" ----------------------------------------------------------------------------
 .\" "THE BEER-WARE LICENSE" (Revision 42):
-.\" <phk@frebsd.org> wrote this file.  As long as you retain this notice you
+.\" <phk@freebsd.org> wrote this file.  As long as you retain this notice you
 .\" can do whatever you want with this stuff. If we meet some day, and you think
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
@@ -40,7 +40,7 @@ done in assembler using 5-hole ``Baudot'' paper tape for a drum storage
 device attached to a 20 bit germanium transistor computer with 2000 words
 of memory, but that was many years ago.
 .PP
-Peter Wemm <peter@frebsd.org> came up with the idea to store the
+Peter Wemm <peter@freebsd.org> came up with the idea to store the
 page-directory in mmap(2)'ed memory instead of in the heap.
 This has proven to be a good move.
 .PP

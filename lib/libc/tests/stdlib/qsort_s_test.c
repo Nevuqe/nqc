@@ -1,7 +1,7 @@
 /*-
- * Copyright (C) 2020 Edward Tomasz Napierala <trasz@frebsd.org>
+ * Copyright (C) 2020 Edward Tomasz Napierala <trasz@freebsd.org>
  * Copyright (c) 2017 Juniper Networks.  All rights reserved.
- * Copyright (C) 2004 Maxim Sobolev <sobomax@frebsd.org>
+ * Copyright (C) 2004 Maxim Sobolev <sobomax@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -3,7 +3,7 @@
 # Based on https://gist.github.com/zonque/7d03568eab14a2bb57cb by
 # Daniel Mack github@zonque.org
 
-# Modified version of sctp.sh by Michael Tuexen <tuexen@frebsd.org>:
+# Modified version of sctp.sh by Michael Tuexen <tuexen@freebsd.org>:
 # * Use loopback as the address of the server on both side initialized using
 #   htonl(INADDR_LOOPBACK).
 # * Negotiate only 1 stream in both directions since only one stream is used.
@@ -13,10 +13,10 @@
 # * Initialize flags before calling sctp_recvmsg().
 
 # "panic: Don't own TCB lock" seen:
-# https://people.frebsd.org/~pho/stress/log/sctp2.txt
+# https://people.freebsd.org/~pho/stress/log/sctp2.txt
 
 # "panic: soclose: SS_NOFDREF on enter" seen:
-# https://people.frebsd.org/~pho/stress/log/sctp2-2.txt
+# https://people.freebsd.org/~pho/stress/log/sctp2-2.txt
 
 kldstat -v | grep -q sctp || kldload sctp.ko
 cat > /tmp/sctp2.c <<EOF

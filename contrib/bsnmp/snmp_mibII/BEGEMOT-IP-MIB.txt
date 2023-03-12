@@ -3,7 +3,7 @@
 --	Hartmut Brandt
 --	All rights reserved.
 --
--- Author: Harti Brandt <harti@frebsd.org>
+-- Author: Harti Brandt <harti@freebsd.org>
 --
 -- Redistribution and use in source and binary forms, with or without
 -- modification, are permitted provided that the following conditions
@@ -51,7 +51,7 @@ begemotIp MODULE-IDENTITY
 
 	     Fax:	+49 8153 28 2843
 
-	     E-mail:	harti@frebsd.org"
+	     E-mail:	harti@freebsd.org"
     DESCRIPTION
 	    "The MIB for IP stuff that is not in the official IP MIBs."
     REVISION	"200602130000Z"

@@ -34,7 +34,7 @@
 
 # Seen with WiP kernel code:
 # panic: refcount 0xfffffe015105bdfc wraparound
-# https://people.frebsd.org/~pho/stress/log/log0154.txt
+# https://people.freebsd.org/~pho/stress/log/log0154.txt
 
 . ../default.cfg
 

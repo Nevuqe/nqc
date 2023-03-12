@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005 John Baldwin <jhb@frebsd.org>
- * Copyright (c) 2020 The FreBSD Foundation
+ * Copyright (c) 2005 John Baldwin <jhb@freebsd.org>
+ * Copyright (c) 2020 The FreeBSD Foundation
  *
  * Portions of this software were developed by Mark Johnston under
- * sponsorship from the FreBSD Foundation.
+ * sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

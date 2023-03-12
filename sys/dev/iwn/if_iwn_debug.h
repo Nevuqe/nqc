@@ -4,7 +4,7 @@
  * Copyright (c) 2007-2009
  *      Damien Bergamini <damien.bergamini@free.fr>
  * Copyright (c) 2008
- *      Benjamin Close <benjsc@frebsd.org>
+ *      Benjamin Close <benjsc@freebsd.org>
  * Copyright (c) 2008 Sam Leffler, Errno Consulting
  *
  * Permission to use, copy, modify, and distribute this software for any

@@ -28,13 +28,13 @@
 
 # 'panic: vnode_pager_generic_getpages: page 0xc3350b0c offset beyond vp
 # 0xcc187000 size' seen.
-# https://people.frebsd.org/~pho/stress/log/mmap28.txt
+# https://people.freebsd.org/~pho/stress/log/mmap28.txt
 # This was introduced by r292373.
 #
 # A page fault is seen on a non INVARIANTS kernel w/ r292373,
 # whereas this test runs as expected on r292372.
-# https://people.frebsd.org/~pho/stress/log/mmap28-2.txt
-# https://people.frebsd.org/~pho/stress/log/mmap28-3.txt
+# https://people.freebsd.org/~pho/stress/log/mmap28-2.txt
+# https://people.freebsd.org/~pho/stress/log/mmap28-3.txt
 # To repeat, run this test with "sysctl vfs.ffs.use_buf_pager=0".
 # Fixed by r307626
 

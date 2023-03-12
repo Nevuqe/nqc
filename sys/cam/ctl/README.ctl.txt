@@ -3,7 +3,7 @@
 CTL - CAM Target Layer Description
 
 Revision 1.4 (December 29th, 2011)
-Ken Merry <ken@frebsd.org>
+Ken Merry <ken@freebsd.org>
 
 Table of Contents:
 =================

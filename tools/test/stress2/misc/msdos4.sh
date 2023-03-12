@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2010 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2010 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
 # "panic: leaf should be empty" seen
 
 # "panic: Assertion sq->sq_wchan != NULL" seen:
-# https://people.frebsd.org/~pho/stress/log/msdos4.txt
+# https://people.freebsd.org/~pho/stress/log/msdos4.txt
 
 . ../default.cfg
 

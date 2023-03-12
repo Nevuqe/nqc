@@ -27,9 +27,9 @@
 # SUCH DAMAGE.
 #
 
-# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=257522
-# https://people.frebsd.org/~pho/stress/log/log0158.txt
-# Original test scenario by trasz@frebsd.org
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=257522
+# https://people.freebsd.org/~pho/stress/log/log0158.txt
+# Original test scenario by trasz@freebsd.org
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

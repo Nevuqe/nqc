@@ -7,7 +7,7 @@ contact_links:
     url: https://zfsonlinux.topicbox.com/groups/zfs-discuss
     about: Get community support for OpenZFS on Linux
   - name: NQC Community Support Mailing list
-    url: https://lists.frebsd.org/mailman/listinfo/nqc-fs
+    url: https://lists.freebsd.org/mailman/listinfo/nqc-fs
     about: Get community support for OpenZFS on NQC
   - name: OpenZFS on IRC
     url: https://web.libera.chat/#openzfs

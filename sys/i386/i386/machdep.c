@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2018 The FreBSD Foundation
+ * Copyright (c) 2018 The FreeBSD Foundation
  * Copyright (c) 1992 Terrence R. Lambert.
  * Copyright (c) 1982, 1987, 1990 The Regents of the University of California.
  * All rights reserved.
@@ -10,7 +10,7 @@
  * William Jolitz.
  *
  * Portions of this software were developed by A. Joseph Koshy under
- * sponsorship from the FreBSD Foundation and Google, Inc.
+ * sponsorship from the FreeBSD Foundation and Google, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

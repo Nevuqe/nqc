@@ -36,7 +36,7 @@
  * Copyright (c) 2016-2017 Robert N. M. Watson
  * All rights reserved.
  *
- * This software was developed for the FreBSD Project in part by McAfee
+ * This software was developed for the FreeBSD Project in part by McAfee
  * Research, the Security Research Division of McAfee, Inc under DARPA/SPAWAR
  * contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA CHATS research
  * program.

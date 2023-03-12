@@ -28,11 +28,11 @@
 
 # Parallel mount and umount of file systems
 # "panic: Bad link elm 0xfffff8052a20cc00 prev->next != elm" seen:
-# http://people.frebsd.org/~pho/stress/log/crossmp3.txt
+# http://people.freebsd.org/~pho/stress/log/crossmp3.txt
 # Fixed in r269853
 
 # panic: softdep_waitidle: work added after flush:
-# http://people.frebsd.org/~pho/stress/log/crossmp3-2.txt, fixed by r273967.
+# http://people.freebsd.org/~pho/stress/log/crossmp3-2.txt, fixed by r273967.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

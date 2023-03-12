@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * Portions Copyright 2018 Devin Teske dteske@frebsd.org
+ * Portions Copyright 2018 Devin Teske dteske@freebsd.org
  *
  * $NQC$
  */

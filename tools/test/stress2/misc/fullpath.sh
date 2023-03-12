@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Test scenario by marcus@frebsd.org
+# Test scenario by marcus@freebsd.org
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ -z "`type perl 2>/dev/null`" ] && exit 0

@@ -28,7 +28,7 @@
 # Stopped at      x32: movq    $0,0x12a1323(%rip)
 # db> x/s version
 # version: NQC 14.0-CURRENT #0 main-n257506-eed634d113d-dirty: Thu Aug 18 13:56:53 CEST 2022
-# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO\012
+# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO\012
 # db> 
 
 . ../default.cfg

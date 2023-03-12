@@ -31,7 +31,7 @@
 
 # Bug 257557 Garbage on disk (or USB memory stick) can cause GEOM taste ffs_sbget() to crash.
 # "panic: wrong length 4352 for sectorsize 512" seen:
-# https://people.frebsd.org/~pho/stress/log/log0159.txt
+# https://people.freebsd.org/~pho/stress/log/log0159.txt
 
 . ../default.cfg
 

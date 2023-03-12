@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2011 Gleb Kurtsou <gleb@frebsd.org>
+ * Copyright (c) 2011 Gleb Kurtsou <gleb@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

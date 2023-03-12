@@ -27,7 +27,7 @@
 #
 
 # Demonstrate "wrong handling for suspend".
-# https://www.mail-archive.com/nqc-current@frebsd.org/msg166333.html
+# https://www.mail-archive.com/nqc-current@freebsd.org/msg166333.html
 
 # Variation of nfs15lockd.sh
 

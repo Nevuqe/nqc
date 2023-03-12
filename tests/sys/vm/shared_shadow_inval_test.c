@@ -1,9 +1,9 @@
 /*
  * Copyright (c) 2021 Dell Inc. or its subsidiaries. All Rights Reserved.
- * Copyright (c) 2022 The FreBSD Foundation
+ * Copyright (c) 2022 The FreeBSD Foundation
  *
  * Portions of this software were developed by Mark Johnston under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -37,8 +37,8 @@
  * expects that a fully shadowed page is unmapped, but at one point the
  * use of a shared shadow object could break this invariant.
  *
- * This is a regression test for an issue isolated by rlibby@frebsd.org
- * from an issue detected by stress2's collapse.sh by jeff@frebsd.org.
+ * This is a regression test for an issue isolated by rlibby@freebsd.org
+ * from an issue detected by stress2's collapse.sh by jeff@freebsd.org.
  * The issue became CVE-2021-29626.
  *
  * This file is written as an ATF test suite but may be compiled as a

@@ -28,10 +28,10 @@
 
 # Copy of mmap10.sh with msync() added.
 # "panic: vm_map_protect: inaccessible wired map entry" seen:
-# http://people.frebsd.org/~pho/stress/log/mmap11.txt
+# http://people.freebsd.org/~pho/stress/log/mmap11.txt
 # No problems seen after r271681.
 
-# http://people.frebsd.org/~pho/stress/log/kostik730.txt, Fixed in r273784
+# http://people.freebsd.org/~pho/stress/log/kostik730.txt, Fixed in r273784
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

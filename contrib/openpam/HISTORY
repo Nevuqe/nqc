@@ -206,7 +206,7 @@ OpenPAM Feterita						2005-02-01
 
  - BUGFIX: Correct numerous markup errors, invalid cross-references,
    and other issues in the manual pages, with kind assistance from
-   Ruslan Ermilov <ru@frebsd.org>.
+   Ruslan Ermilov <ru@freebsd.org>.
 
  - BUGFIX: Avoid multiple evaluation of macro arguments in ENTERX()
    and RETURNX() macros.

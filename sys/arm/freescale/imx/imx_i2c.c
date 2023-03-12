@@ -1,11 +1,11 @@
 /*-
  * Copyright (C) 2008-2009 Semihalf, Michal Hajduk
- * Copyright (c) 2012, 2013 The FreBSD Foundation
- * Copyright (c) 2015 Ian Lepore <ian@frebsd.org>
+ * Copyright (c) 2012, 2013 The FreeBSD Foundation
+ * Copyright (c) 2015 Ian Lepore <ian@freebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by Oleksandr Rybalko
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

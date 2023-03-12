@@ -1,11 +1,11 @@
 /*-
  * Copyright (C) 2018 Cavium Inc.
  * Copyright (c) 2015 Ruslan Bukin <br@bsdpad.com>
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Semihalf under
- * the sponsorship of the FreBSD Foundation.
+ * the sponsorship of the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

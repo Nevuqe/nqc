@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2016 Mark Johnston <markj@frebsd.org>
+# Copyright (c) 2016 Mark Johnston <markj@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,11 +28,11 @@
 #
 
 # Reproduce problem reported as PR 211531.
-# https://reviews.frebsd.org/D7398
+# https://reviews.freebsd.org/D7398
 
 # "panic: __rw_wlock_hard: recursing but non-recursive rw unp_link_rwlock @
 #  ../../../kern/uipc_usrreq.c:655" seen:
-# https://people.frebsd.org/~pho/stress/log/unix_socket_detach.txt
+# https://people.freebsd.org/~pho/stress/log/unix_socket_detach.txt
 # Fixed in r303855.
 
 . ../default.cfg

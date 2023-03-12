@@ -69,7 +69,7 @@ rm -rf /tmp/datamove5
 exit 0
 EOF
 /*-
- * Copyright (c) 2006, Stephan Uphoff <ups@frebsd.org>
+ * Copyright (c) 2006, Stephan Uphoff <ups@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

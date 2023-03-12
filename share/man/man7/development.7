@@ -1,4 +1,4 @@
-.\" Copyright (c) 2018 Edward Tomasz Napierala <trasz@frebsd.org>
+.\" Copyright (c) 2018 Edward Tomasz Napierala <trasz@freebsd.org>
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -39,14 +39,14 @@ Doc is the documentation, such as the
 Handbook.
 To read more, see:
 .Pp
-.Lk https://docs.frebsd.org/en/books/fdp-primer/
+.Lk https://docs.freebsd.org/en/books/fdp-primer/
 .Pp
 Ports, described further in
 .Xr ports 7 ,
 are the way to build, package, and install third party software.
 To read more, see:
 .Pp
-.Lk https://docs.frebsd.org/en/books/porters-handbook/
+.Lk https://docs.freebsd.org/en/books/porters-handbook/
 .Pp
 The last one, src, revolves around the source code for the base system,
 consisting of the kernel, and the libraries and utilities commonly called
@@ -55,21 +55,21 @@ the world.
 The Committer's Guide, describing topics relevant to all committers,
 can be found at:
 .Pp
-.Lk https://docs.frebsd.org/en/articles/committers-guide/
+.Lk https://docs.freebsd.org/en/articles/committers-guide/
 .Pp
 .Fx
 src development takes place in the project-hosted
 Git repository, located at:
 .Pp
-.Lk https://git.frebsd.org/src.git
+.Lk https://git.freebsd.org/src.git
 .Pp
 The push URL is:
 .Pp
-.Lk ssh://git@gitrepo.frebsd.org/src.git
+.Lk ssh://git@gitrepo.freebsd.org/src.git
 .Pp
 There is also a list of public, read-only Git mirrors at:
 .Pp
-.Lk https://docs.frebsd.org/en/books/handbook/mirrors/#external-mirrors
+.Lk https://docs.freebsd.org/en/books/handbook/mirrors/#external-mirrors
 .Pp
 The
 .Ql main
@@ -101,7 +101,7 @@ For coding conventions, see
 To ask questions regarding development, use the mailing lists,
 such as nqc-arch@ and nqc-hackers@:
 .Pp
-.Lk https://lists.frebsd.org
+.Lk https://lists.freebsd.org
 .Pp
 To get your patches integrated into the main
 .Fx
@@ -110,20 +110,20 @@ it is a code review tool that allows other developers to review the changes,
 suggest improvements, and, eventually, allows them to pick up the change and
 commit it:
 .Pp
-.Lk https://reviews.frebsd.org
+.Lk https://reviews.freebsd.org
 .Pp
 To check the latest
 .Fx
 build and test status of CURRENT and STABLE branches,
 the continuous integration system is at:
 .Pp
-.Lk https://ci.frebsd.org
+.Lk https://ci.freebsd.org
 .Pp
 .Sh EXAMPLES
 Check out the CURRENT branch, build it, and install, overwriting the current
 system:
 .Bd -literal -offset indent
-git clone https://git.frebsd.org/src.git src
+git clone https://git.freebsd.org/src.git src
 cd src
 make -sj8 buildworld buildkernel installkernel
 shutdown -r now
@@ -188,18 +188,18 @@ make -sj8 kernel KERNFAST=1 DESTDIR=/clients/arm
 The
 .Nm
 manual page was originally written by
-.An Matthew Dillon Aq Mt dillon@frebsd.org
+.An Matthew Dillon Aq Mt dillon@freebsd.org
 and first appeared
 in
 .Fx 5.0 ,
 December 2002.
 It was since extensively modified by
-.An Eitan Adler Aq Mt eadler@frebsd.org
+.An Eitan Adler Aq Mt eadler@freebsd.org
 to reflect the repository conversion from
 .Lk https://www.nongnu.org/cvs/ CVS
 to
 .Lk https://subversion.apache.org/ Subversion .
 It was rewritten from scratch by
-.An Edward Tomasz Napierala Aq Mt trasz@frebsd.org
+.An Edward Tomasz Napierala Aq Mt trasz@freebsd.org
 for
 .Fx 12.0 .

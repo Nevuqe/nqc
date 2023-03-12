@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2022 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,10 +30,10 @@
 # Parallel mount and umount test
 
 # umount(1) stuck in "mount drain" seen:
-# https://people.frebsd.org/~pho/stress/log/log0205.txt
+# https://people.freebsd.org/~pho/stress/log/log0205.txt
 
-# https://people.frebsd.org/~pho/stress/log/log0226.txt
-# https://people.frebsd.org/~pho/stress/log/log0404.txt
+# https://people.freebsd.org/~pho/stress/log/log0226.txt
+# https://people.freebsd.org/~pho/stress/log/log0404.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

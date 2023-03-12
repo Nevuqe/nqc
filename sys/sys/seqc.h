@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Mateusz Guzik <mjg@frebsd.org>
+ * Copyright (c) 2014 Mateusz Guzik <mjg@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

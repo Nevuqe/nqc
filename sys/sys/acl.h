@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999-2001 Robert N. M. Watson
- * Copyright (c) 2008 Edward Tomasz Napierała <trasz@frebsd.org>
+ * Copyright (c) 2008 Edward Tomasz Napierała <trasz@freebsd.org>
  * All rights reserved.
  *
  * This software was developed by Robert Watson for the TrustedBSD Project.

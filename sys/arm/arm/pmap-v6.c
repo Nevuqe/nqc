@@ -5,8 +5,8 @@
  * Copyright (c) 1994 John S. Dyson
  * Copyright (c) 1994 David Greenman
  * Copyright (c) 2005-2010 Alan L. Cox <alc@cs.rice.edu>
- * Copyright (c) 2014-2016 Svatopluk Kraus <skra@frebsd.org>
- * Copyright (c) 2014-2016 Michal Meloun <mmel@frebsd.org>
+ * Copyright (c) 2014-2016 Svatopluk Kraus <skra@freebsd.org>
+ * Copyright (c) 2014-2016 Michal Meloun <mmel@freebsd.org>
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
@@ -43,7 +43,7 @@
  * Copyright (c) 2003 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreBSD Project by Jake Burkholder,
+ * This software was developed for the FreeBSD Project by Jake Burkholder,
  * Safeport Network Services, and Network Associates Laboratories, the
  * Security Research Division of Network Associates, Inc. under
  * DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA

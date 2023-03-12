@@ -53,7 +53,7 @@ ATF_TC_BODY(socket_afinet_bind_zero, tc)
 	struct sockaddr_in sin;
 
 	if (atf_tc_get_config_var_as_bool_wd(tc, "ci", false))
-		atf_tc_skip("doesn't work when mac_portacl(4) loaded (https://bugs.frebsd.org/238781)");
+		atf_tc_skip("doesn't work when mac_portacl(4) loaded (https://bugs.freebsd.org/238781)");
 
 	sd = socket(PF_INET, SOCK_DGRAM, 0);
 	ATF_CHECK(sd >= 0);

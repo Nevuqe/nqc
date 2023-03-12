@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2017 The FreBSD Foundation
+ * Copyright (c) 2017 The FreeBSD Foundation
  * Copyright (c) 2018, 2019 Intel Corporation
  *
- * This software was developed by Konstantin Belousov <kib@frebsd.org>
- * under sponsorship from the FreBSD Foundation.
+ * This software was developed by Konstantin Belousov <kib@freebsd.org>
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

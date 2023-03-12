@@ -3,12 +3,12 @@
  *
  * Copyright (c) 2007, Myricom Inc.
  * Copyright (c) 2008, Intel Corporation.
- * Copyright (c) 2012 The FreBSD Foundation
+ * Copyright (c) 2012 The FreeBSD Foundation
  * Copyright (c) 2016-2021 Mellanox Technologies.
  * All rights reserved.
  *
  * Portions of this software were developed by Bjoern Zeeb
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

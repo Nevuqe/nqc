@@ -751,7 +751,7 @@ options 	SCTP_DEBUG
 # 
 # I have not yet committed the tools to get and print
 # the logs, I will do that eventually .. before then
-# if you want them send me an email rrs@frebsd.org
+# if you want them send me an email rrs@freebsd.org
 # You basically must have ktr(4) enabled for these
 # and you then set the sysctl to turn on/off various
 # logging bits. Use ktrdump(8) to pull the log and run

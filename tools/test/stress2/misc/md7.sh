@@ -28,7 +28,7 @@
 
 # Deadlock seen: The softdep code requesting workqueue cleanups while
 # owning vnode locks:
-# https://people.frebsd.org/~pho/stress/log/kostik812.txt
+# https://people.freebsd.org/~pho/stress/log/kostik812.txt
 # Fixed by: r283600
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

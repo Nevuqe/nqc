@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreBSD Foundation
+ * Copyright (c) 2019 The FreeBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -248,7 +248,7 @@ TEST_F(Mknod, socket)
 /*
  * Nothing bad should happen if the server returns the parent's inode number
  * for the newly created file.  Regression test for bug 263662.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263662
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263662
  */
 TEST_F(Mknod, parent_inode)
 {

@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2020 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@
 # fsck test with forced unmount of a SUJ FS.
 # Variation of gnop8.sh by Kirk McKusick <mckusick@mckusick.com>
 
-# https://people.frebsd.org/~pho/stress/log/gnop9.txt
+# https://people.freebsd.org/~pho/stress/log/gnop9.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

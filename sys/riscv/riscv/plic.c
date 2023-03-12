@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2018 Ruslan Bukin <br@bsdpad.com>
  * All rights reserved.
- * Copyright (c) 2019 Mitchell Horne <mhorne@frebsd.org>
+ * Copyright (c) 2019 Mitchell Horne <mhorne@freebsd.org>
  *
  * Portions of this software were developed by SRI International and the
  * University of Cambridge Computer Laboratory (Department of Computer Science

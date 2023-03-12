@@ -27,7 +27,7 @@
 #
 
 # mlockall(2) / nullfs(5) scenario causes:
-# http://people.frebsd.org/~pho/stress/log/kostik619.txt
+# http://people.freebsd.org/~pho/stress/log/kostik619.txt
 # kern/182661, fixed in r256211.
 
 . ../default.cfg

@@ -50,7 +50,7 @@ __NQCID("$NQC$");
 /*
  * A timecounter based on the free-running ACPI timer.
  *
- * Based on the i386-only mp_clock.c by <phk@frebsd.org>.
+ * Based on the i386-only mp_clock.c by <phk@freebsd.org>.
  */
 
 /* Hooks for the ACPI CA debugging infrastructure */

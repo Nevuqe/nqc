@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2012 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Deadlock seen: http://people.frebsd.org/~pho/stress/log/ext2fs.txt
+# Deadlock seen: http://people.freebsd.org/~pho/stress/log/ext2fs.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

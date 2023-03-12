@@ -30,7 +30,7 @@
 # A "(cd /mnt; umount /mnt)" test scenario, which triggered random memory
 # corruptions.
 
-# Page fault seen: https://people.frebsd.org/~pho/stress/log/kostik1230.txt
+# Page fault seen: https://people.freebsd.org/~pho/stress/log/kostik1230.txt
 # First seen with r354204
 # Initial fix by r354367
 

@@ -1,7 +1,7 @@
 #
 # Regression tests for date(1)
 #
-# Submitted by Edwin Groothuis <edwin@frebsd.org>
+# Submitted by Edwin Groothuis <edwin@freebsd.org>
 #
 # $NQC$
 #

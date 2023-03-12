@@ -2,9 +2,9 @@
  * Pkg conf
  */
 
-#packagesite http//pkg.frebsd.org/nqc-9-amd64/latest
-#packagesite http//pkg.frebsd.org/nqc-9-amd64/latest
-packagesite: http://pkg-test.frebsd.org/pkg-test/${ABI}/latest
+#packagesite http//pkg.freebsd.org/nqc-9-amd64/latest
+#packagesite http//pkg.freebsd.org/nqc-9-amd64/latest
+packagesite: http://pkg-test.freebsd.org/pkg-test/${ABI}/latest
 squaretest: some[]value
 ALIAS             : {
   all-depends: query %dn-%dv,

@@ -1,9 +1,9 @@
 /*
  * Copyright (c) 2017 Eric van Gyzen
- * Copyright (c) 2014 The FreBSD Foundation.
+ * Copyright (c) 2014 The FreeBSD Foundation.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

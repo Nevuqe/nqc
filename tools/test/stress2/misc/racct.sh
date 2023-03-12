@@ -30,9 +30,9 @@
 # non-zero RACCT destroy.
 
 # "panic: destroying non-empty racct ..." seen.
-# https://people.frebsd.org/~pho/stress/log/racct.txt
+# https://people.freebsd.org/~pho/stress/log/racct.txt
 # "Page fault in slab_free_item()" seen:
-# https://people.frebsd.org/~pho/stress/log/racct-2.txt
+# https://people.freebsd.org/~pho/stress/log/racct-2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ "`sysctl -in kern.racct.enable`" != "1" ] &&

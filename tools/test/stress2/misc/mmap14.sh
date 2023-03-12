@@ -28,18 +28,18 @@
 
 # Simplified version of mmap10.sh with focus on core dumps
 # Deadlock seen:
-# http://people.frebsd.org/~pho/stress/log/kostik673.txt
+# http://people.freebsd.org/~pho/stress/log/kostik673.txt
 # No issues seen with r272060.
 
 # panic: vm_reserv_populate: reserv 0xfffff807cbd46300 is already promoted
-# http://people.frebsd.org/~pho/stress/log/kostik764.txt
+# http://people.freebsd.org/~pho/stress/log/kostik764.txt
 # Fixed by r280238
 
 # panic: vm_reserv_break: reserv 0xfffff807cbe9af00 is full
-# https://people.frebsd.org/~pho/stress/log/alan006.txt
+# https://people.freebsd.org/~pho/stress/log/alan006.txt
 
 # panic: vm_page_dirty: page is invalid!
-# https://people.frebsd.org/~pho/stress/log/kostik818.txt
+# https://people.freebsd.org/~pho/stress/log/kostik818.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

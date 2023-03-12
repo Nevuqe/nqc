@@ -2,7 +2,7 @@
 #
 # $NQC$
 
-# John Hay -- John.Hay@icomtek.csir.co.za / jhay@frebsd.org
+# John Hay -- John.Hay@icomtek.csir.co.za / jhay@freebsd.org
 
 use Socket;
 use Getopt::Std;

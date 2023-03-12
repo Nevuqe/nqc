@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008,	Jeffrey Roberson <jeff@frebsd.org>
+ * Copyright (c) 2008,	Jeffrey Roberson <jeff@freebsd.org>
  * All rights reserved.
  *
  * Copyright (c) 2008 Nokia Corporation

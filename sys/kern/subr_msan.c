@@ -3,10 +3,10 @@
 /*
  * Copyright (c) 2019-2020 Maxime Villard, m00nbsd.net
  * All rights reserved.
- * Copyright (c) 2021 The FreBSD Foundation
+ * Copyright (c) 2021 The FreeBSD Foundation
  *
  * Portions of this software were developed by Mark Johnston under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * This code is part of the KMSAN subsystem of the NetBSD kernel.
  *

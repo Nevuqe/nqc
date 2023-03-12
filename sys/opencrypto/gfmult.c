@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2014 The FreeBSD Foundation
  *
  * This software was developed by John-Mark Gurney under
- * the sponsorship of the FreBSD Foundation and
+ * the sponsorship of the FreeBSD Foundation and
  * Rubicon Communications, LLC (Netgate).
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

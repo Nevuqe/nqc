@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2014 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2014 Alexander Motin <mav@freebsd.org>
  * Copyright (c) 2004, 2005 Silicon Graphics International Corp.
  * All rights reserved.
  *

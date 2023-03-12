@@ -3,7 +3,7 @@
  * Copyright (c) 2010 iX Systems, Inc.
  * Copyright (c) 2010 Panasas, Inc.
  * Copyright (c) 2013, 2014 Mellanox Technologies, Ltd.
- * Copyright (c) 2017 Mark Johnston <markj@frebsd.org>
+ * Copyright (c) 2017 Mark Johnston <markj@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

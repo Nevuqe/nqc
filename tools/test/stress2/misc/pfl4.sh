@@ -27,7 +27,7 @@
 #
 
 # "panic: invalid queue 255" seen:
-# https://people.frebsd.org/~pho/stress/log/pfl4.txt
+# https://people.freebsd.org/~pho/stress/log/pfl4.txt
 
 . ../default.cfg
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

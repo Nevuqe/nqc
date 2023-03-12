@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2021 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,13 +28,13 @@
 
 # Test scenario from D17599 "Fix for double free when deleting entries from
 # epoch managed lists"
-# by Hans Petter Selasky <hselasky@frebsd.org>
+# by Hans Petter Selasky <hselasky@freebsd.org>
 
 # "panic: starting DAD on non-tentative address 0xfffff8010c311000" seen.
-# https://people.frebsd.org/~pho/stress/log/epoch.txt
+# https://people.freebsd.org/~pho/stress/log/epoch.txt
 
 # Fatal trap 9: general protection fault while in kernel mode
-# https://people.frebsd.org/~pho/stress/log/epoch-2.txt
+# https://people.freebsd.org/~pho/stress/log/epoch-2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 if=`ifconfig | grep -w mtu | grep -v RUNNING | sed 's/:.*//' | head -1`

@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2002, 2003 David Schultz <das@frebsd.org>
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2002, 2003 David Schultz <das@freebsd.org>
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

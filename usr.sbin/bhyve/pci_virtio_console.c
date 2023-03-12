@@ -4,7 +4,7 @@
  * Copyright (c) 2016 iXsystems Inc.
  * All rights reserved.
  *
- * This software was developed by Jakub Klama <jceel@frebsd.org>
+ * This software was developed by Jakub Klama <jceel@freebsd.org>
  * under sponsorship from iXsystems Inc.
  *
  * Redistribution and use in source and binary forms, with or without

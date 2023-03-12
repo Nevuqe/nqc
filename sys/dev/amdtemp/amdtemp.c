@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008, 2009 Rui Paulo <rpaulo@frebsd.org>
- * Copyright (c) 2009 Norikatsu Shigemura <nork@frebsd.org>
- * Copyright (c) 2009-2012 Jung-uk Kim <jkim@frebsd.org>
+ * Copyright (c) 2008, 2009 Rui Paulo <rpaulo@freebsd.org>
+ * Copyright (c) 2009 Norikatsu Shigemura <nork@freebsd.org>
+ * Copyright (c) 2009-2012 Jung-uk Kim <jkim@freebsd.org>
  * All rights reserved.
- * Copyright (c) 2017-2020 Conrad Meyer <cem@frebsd.org>. All rights reserved.
+ * Copyright (c) 2017-2020 Conrad Meyer <cem@freebsd.org>. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

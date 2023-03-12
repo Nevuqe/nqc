@@ -19,7 +19,7 @@ __NQCID("$NQC$");
 /*
  * See e_acosh.c for complete comments.
  *
- * Converted to long double by David Schultz <das@frebsd.org> and
+ * Converted to long double by David Schultz <das@freebsd.org> and
  * Bruce D. Evans.
  */
 

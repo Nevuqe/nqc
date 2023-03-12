@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2009 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
 # page fault from fs/zfs/dbuf.c:1807
 
 # Page fault seen:
-# https://people.frebsd.org/~pho/stress/log/zfs3-2.txt
+# https://people.freebsd.org/~pho/stress/log/zfs3-2.txt
 # Fixed in r308887.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

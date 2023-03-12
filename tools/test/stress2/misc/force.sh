@@ -31,10 +31,10 @@
 # Run with marcus.cfg on a 1g swap backed MD with UFS SU fs.
 
 # Page fault seen in WiP kernel code:
-# https://people.frebsd.org/~pho/stress/log/kirk113.txt
+# https://people.freebsd.org/~pho/stress/log/kirk113.txt
 
 # Deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/chs002.txt
+# https://people.freebsd.org/~pho/stress/log/chs002.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

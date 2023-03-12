@@ -78,7 +78,7 @@
 
 /*
  * LaunchD flag (Mac OS X and, maybe, NQC only.)  See launchd(8) and
- * http://wiki.frebsd.org/launchd for more information.
+ * http://wiki.freebsd.org/launchd for more information.
  *
  *	In order for auditd to work "on demand" with launchd(8) it can't:
  *		call daemon(3)

@@ -198,7 +198,7 @@ lacp_linkstate_destroy_stress_head()
 lacp_linkstate_destroy_stress_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ]; then
-		atf_skip "https://bugs.frebsd.org/244168"
+		atf_skip "https://bugs.freebsd.org/244168"
 	fi
 
 	local TAP0 TAP1 LAGG MAC SRCDIR
@@ -407,7 +407,7 @@ witness_head()
 witness_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ]; then
-		atf_skip "https://bugs.frebsd.org/244163 and https://bugs.frebsd.org/251726"
+		atf_skip "https://bugs.freebsd.org/244163 and https://bugs.freebsd.org/251726"
 	fi
 	if [ `sysctl -n debug.witness.watch` -ne 1 ]; then
 		atf_skip "witness(4) is not enabled"

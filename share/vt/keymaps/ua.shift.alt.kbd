@@ -2,7 +2,7 @@
 #
 # keyboard mapping for both Ukrainian and Russian languages
 #   by sia@lot.cs.kiev.ua
-#   based on ru.koi8-r.kbd by ache@frebsd.org
+#   based on ru.koi8-r.kbd by ache@freebsd.org
 #   some additions by petr@i.am and kunia@i.am
 #
 #   it has  'i', 'ye','yi',"g'" at positions of '-','=','\','`';

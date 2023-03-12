@@ -22,7 +22,7 @@
 /*
  * Copyright (c) 2005, 2010, Oracle and/or its affiliates. All rights reserved.
  * Copyright (c) 2011 by Delphix. All rights reserved.
- * Copyright (c) 2013 Martin Matuska <mm@frebsd.org>. All rights reserved.
+ * Copyright (c) 2013 Martin Matuska <mm@freebsd.org>. All rights reserved.
  */
 
 

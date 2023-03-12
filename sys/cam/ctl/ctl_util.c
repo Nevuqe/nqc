@@ -34,7 +34,7 @@
 /*
  * CAM Target Layer SCSI library
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #include <sys/cdefs.h>

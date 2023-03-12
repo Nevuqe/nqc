@@ -1,14 +1,14 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2002, Jeffrey Roberson <jeff@frebsd.org>
- * Copyright (c) 2008-2009, Lawrence Stewart <lstewart@frebsd.org>
- * Copyright (c) 2010, The FreBSD Foundation
+ * Copyright (c) 2002, Jeffrey Roberson <jeff@freebsd.org>
+ * Copyright (c) 2008-2009, Lawrence Stewart <lstewart@freebsd.org>
+ * Copyright (c) 2010, The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed at the Centre for Advanced
  * Internet Architectures, Swinburne University of Technology, Melbourne,
- * Australia by Lawrence Stewart under sponsorship from the FreBSD Foundation.
+ * Australia by Lawrence Stewart under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

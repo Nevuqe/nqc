@@ -29,7 +29,7 @@
 # A fuzz test triggered a failed block allocation unwinding problem.
 
 # "panic: ffs_blkfree_cg: freeing free block" seen:
-# https://people.frebsd.org/~pho/stress/log/kostik923.txt
+# https://people.freebsd.org/~pho/stress/log/kostik923.txt
 # Fixed by r304232.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

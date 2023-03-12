@@ -28,7 +28,7 @@
 #
 
 # "panic: vm_map_entry_set_vnode_text: wrong object type, ..." seen:
-# https://people.frebsd.org/~pho/stress/log/kostik1205.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1205.txt
 # Fixed by r348701
 
 # Test scenario suggestion by kib@

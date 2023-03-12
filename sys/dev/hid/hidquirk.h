@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008 Hans Petter Selasky. All rights reserved.
- * Copyright (c) 2020 Vladimir Kondratyev <wulf@frebsd.org>
+ * Copyright (c) 2020 Vladimir Kondratyev <wulf@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

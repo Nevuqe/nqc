@@ -29,7 +29,7 @@
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
-# Freeze seen: https://people.frebsd.org/~pho/stress/log/kostik1241.txt
+# Freeze seen: https://people.freebsd.org/~pho/stress/log/kostik1241.txt
 # Fixed by: r355474
 
 . ../default.cfg

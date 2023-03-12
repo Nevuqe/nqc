@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2021 Alex Richardson <arichardson@frebsd.org>
+ * Copyright 2018-2021 Alex Richardson <arichardson@freebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and

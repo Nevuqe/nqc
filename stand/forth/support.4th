@@ -1,4 +1,4 @@
-\ Copyright (c) 1999 Daniel C. Sobral <dcs@frebsd.org>
+\ Copyright (c) 1999 Daniel C. Sobral <dcs@freebsd.org>
 \ All rights reserved.
 \ 
 \ Redistribution and use in source and binary forms, with or without

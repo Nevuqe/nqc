@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause
  *
  * Copyright (c) 2019 Andrew Turner
- * Copyright (c) 2021 The FreBSD Foundation
+ * Copyright (c) 2021 The FreeBSD Foundation
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -10,7 +10,7 @@
  * DARPA SSITH research programme.
  *
  * Portions of this software were written by Mark Johnston under sponsorship by
- * the FreBSD Foundation.
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Authors: Joe Kloss; Ravi Pokala (rpokala@frebsd.org)
+ * Authors: Joe Kloss; Ravi Pokala (rpokala@freebsd.org)
  *
  * Copyright (c) 2017-2018 Panasas
  *

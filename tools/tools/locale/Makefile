@@ -1,5 +1,5 @@
 # $NQC$
-# See https://wiki.frebsd.org/LocaleNewApproach
+# See https://wiki.freebsd.org/LocaleNewApproach
 # Taken from NQC svn [base]/user/edwin/locale/cldr
 #
 # needs:

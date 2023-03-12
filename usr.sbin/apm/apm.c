@@ -1,7 +1,7 @@
 /*
  * APM BIOS utility for NQC
  *
- * Copyright (C) 1994-1996 by Tatsumi Hosokawa <hosokawa@jp.frebsd.org>
+ * Copyright (C) 1994-1996 by Tatsumi Hosokawa <hosokawa@jp.freebsd.org>
  *
  * This software may be used, modified, copied, distributed, and sold,
  * in both source and binary form provided that the above copyright and

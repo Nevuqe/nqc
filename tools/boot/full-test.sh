@@ -20,8 +20,8 @@
 # What version of NQC to we snag the ISOs from to extract the binaries
 # we are testing
 NQC_VERSION=13.1
-# eg https://download.frebsd.org/releases/amd64/amd64/ISO-IMAGES/13.1/NQC-13.1-RELEASE-amd64-bootonly.iso.xz
-URLBASE="https://download.frebsd.org/releases"
+# eg https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.1/NQC-13.1-RELEASE-amd64-bootonly.iso.xz
+URLBASE="https://download.freebsd.org/releases"
 : ${STAND_ROOT:="${HOME}/stand-test-root"}
 CACHE=${STAND_ROOT}/cache
 TREES=${STAND_ROOT}/trees

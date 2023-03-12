@@ -28,13 +28,13 @@
 #
 
 # "panic: handle_workitem_remove: DIRCHG and worklist not empty." seen:
-# https://people.frebsd.org/~pho/stress/log/rename14.txt
+# https://people.freebsd.org/~pho/stress/log/rename14.txt
 # Fixed by r356714
 
-# Based on a syzkaller scenario reported by tuexen@frebsd.org
+# Based on a syzkaller scenario reported by tuexen@freebsd.org
 
 # "panic: journal_jremref: Lost inodedep":
-# https://people.frebsd.org/~pho/stress/log/log0279.txt
+# https://people.freebsd.org/~pho/stress/log/log0279.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

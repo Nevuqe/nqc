@@ -55,7 +55,7 @@ ATF_TC_BODY(nstosbt, tc)
 	/* 1 second */
 	atf_check_nstosbt((1ll << 32) - 4, 999999999);
 	atf_check_nstosbt(1ll << 32, 1000000000);
-	/* 2 seconds https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263073 */
+	/* 2 seconds https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263073 */
 	atf_check_nstosbt((1ll << 33) - 4, 1999999999);
 	atf_check_nstosbt(1ll << 33, 2000000000);
 	/* 4 seconds */
@@ -83,7 +83,7 @@ ATF_TC_BODY(ustosbt, tc)
 	/* 1 second */
 	atf_check_ustosbt((1ll << 32) - 4295, 999999);
 	atf_check_ustosbt(1ll << 32, 1000000);
-	/* 2 seconds https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263073 */
+	/* 2 seconds https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263073 */
 	atf_check_ustosbt((1ll << 33) - 4295, 1999999);
 	atf_check_ustosbt(1ll << 33, 2000000);
 	/* 4 seconds */
@@ -111,7 +111,7 @@ ATF_TC_BODY(mstosbt, tc)
 	/* 1 second */
 	atf_check_mstosbt((1ll << 32) - 4294968, 999);
 	atf_check_mstosbt(1ll << 32, 1000);
-	/* 2 seconds https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263073 */
+	/* 2 seconds https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263073 */
 	atf_check_mstosbt((1ll << 33) - 4294968, 1999);
 	atf_check_mstosbt(1ll << 33, 2000);
 	/* 4 seconds */

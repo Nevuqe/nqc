@@ -199,7 +199,7 @@ Here are some examples of well-formed PRs:
 I will review your submission, respond with comments, and once the
 quirk is deemed necessary and ready for committing, I'll commit it,
 referencing the PR. (Again, all quirks must be submitted as PRs).
-Questions? Email njl AT frebsd.org.
+Questions? Email njl AT freebsd.org.
 
 5. Note to Committers
 

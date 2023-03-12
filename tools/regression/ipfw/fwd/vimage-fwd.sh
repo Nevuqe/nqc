@@ -1,6 +1,6 @@
 #!/bin/sh
 #-
-# Copyright (c) 2010, "Bjoern A. Zeeb" <bz@frebsd.org>
+# Copyright (c) 2010, "Bjoern A. Zeeb" <bz@freebsd.org>
 # Copyright (c) 2011, Sandvine Incorporated ULC.
 # All rights reserved.
 #

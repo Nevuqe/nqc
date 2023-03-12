@@ -2,7 +2,7 @@ $NQC$
 
 This is the Begemot micro-SNMP daemon. It is the base for the ILMI daemon
 for ngATM. Be careful to feed changes back to the maintainer
-<harti@frebsd.org>, because the code here is actually shared with other
+<harti@freebsd.org>, because the code here is actually shared with other
 environments besides NQC.
 
 Import should be done by:

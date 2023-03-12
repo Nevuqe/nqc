@@ -27,7 +27,7 @@
 #
 
 # Hang seen:
-# http://people.frebsd.org/~pho/stress/log/kostik707.txt
+# http://people.freebsd.org/~pho/stress/log/kostik707.txt
 # Fixed by r270203.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2020 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# Deadlock seen: https://people.frebsd.org/~pho/stress/log/mark169.txt
+# Deadlock seen: https://people.freebsd.org/~pho/stress/log/mark169.txt
 # Test scenario based on the syzkaller reproducer syzkaller21.sh and comments
 # by markj@.
 

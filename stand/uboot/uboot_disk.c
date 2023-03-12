@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2008 Semihalf, Rafal Jaworowski
  * Copyright (c) 2009 Semihalf, Piotr Ziecik
- * Copyright (c) 2012 Andrey V. Elsukov <ae@frebsd.org>
+ * Copyright (c) 2012 Andrey V. Elsukov <ae@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

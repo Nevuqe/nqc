@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011-2013 Alexander Motin <mav@frebsd.org>
- * Copyright (c) 2006-2007 Matthew Jacob <mjacob@frebsd.org>
+ * Copyright (c) 2011-2013 Alexander Motin <mav@freebsd.org>
+ * Copyright (c) 2006-2007 Matthew Jacob <mjacob@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,8 +27,8 @@
  * SUCH DAMAGE.
  */
 /*
- * Based upon work by Pawel Jakub Dawidek <pjd@frebsd.org> for all of the
- * fine geom examples, and by Poul Henning Kamp <phk@frebsd.org> for GEOM
+ * Based upon work by Pawel Jakub Dawidek <pjd@freebsd.org> for all of the
+ * fine geom examples, and by Poul Henning Kamp <phk@freebsd.org> for GEOM
  * itself, all of which is most gratefully acknowledged.
  */
 

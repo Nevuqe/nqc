@@ -8,10 +8,10 @@
  *   by Monte Mitzelfelt (for latest top see http://www.groupsys.com/topinfo/)
  *
  * AUTHOR:  Christos Zoulas <christos@ee.cornell.edu>
- *          Steven Wallace  <swallace@frebsd.org>
- *          Wolfram Schneider <wosch@frebsd.org>
+ *          Steven Wallace  <swallace@freebsd.org>
+ *          Wolfram Schneider <wosch@freebsd.org>
  *          Thomas Moestl <tmoestl@gmx.net>
- *          Eitan Adler <eadler@frebsd.org>
+ *          Eitan Adler <eadler@freebsd.org>
  *
  * $NQC$
  */

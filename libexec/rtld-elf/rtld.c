@@ -2,14 +2,14 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 1996, 1997, 1998, 1999, 2000 John D. Polstra.
- * Copyright 2003 Alexander Kabaev <kan@frebsd.org>.
- * Copyright 2009-2013 Konstantin Belousov <kib@frebsd.org>.
+ * Copyright 2003 Alexander Kabaev <kan@freebsd.org>.
+ * Copyright 2009-2013 Konstantin Belousov <kib@freebsd.org>.
  * Copyright 2012 John Marino <draco@marino.st>.
- * Copyright 2014-2017 The FreBSD Foundation
+ * Copyright 2014-2017 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

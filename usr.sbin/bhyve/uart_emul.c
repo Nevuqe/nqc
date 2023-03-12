@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012 NetApp, Inc.
- * Copyright (c) 2013 Neel Natu <neel@frebsd.org>
+ * Copyright (c) 2013 Neel Natu <neel@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

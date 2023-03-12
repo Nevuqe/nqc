@@ -30,7 +30,7 @@
 
 # Test with different sector size using gnop(8).
 # Out of VM seen:
-# https://people.frebsd.org/~pho/stress/log/gnop.txt
+# https://people.freebsd.org/~pho/stress/log/gnop.txt
 
 flag=/tmp/gnop.sh.flag
 test() {

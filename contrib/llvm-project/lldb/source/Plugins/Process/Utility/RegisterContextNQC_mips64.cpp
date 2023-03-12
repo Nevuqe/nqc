@@ -61,7 +61,7 @@ static const RegisterSet g_reg_sets_mips64[k_num_register_sets] = {
      g_fp_regnums_mips64},
 };
 
-// http://svnweb.frebsd.org/base/head/sys/mips/include/regnum.h
+// http://svnweb.freebsd.org/base/head/sys/mips/include/regnum.h
 typedef struct _GPR {
   uint64_t zero;
   uint64_t r1;

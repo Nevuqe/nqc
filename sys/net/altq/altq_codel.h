@@ -1,7 +1,7 @@
 /*
  * CoDel - The Controlled-Delay Active Queue Management algorithm
  *
- *  Copyright (C) 2013 Ermal Luçi <eri@frebsd.org>
+ *  Copyright (C) 2013 Ermal Luçi <eri@freebsd.org>
  *  Copyright (C) 2011-2012 Kathleen Nichols <nichols@pollere.com>
  *  Copyright (C) 2011-2012 Van Jacobson <van@pollere.net>
  *  Copyright (C) 2012 Michael D. Taht <dave.taht@bufferbloat.net>

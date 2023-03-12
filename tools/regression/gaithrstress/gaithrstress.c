@@ -195,7 +195,7 @@ main(int argc, char **argv) {
 		setprogname(argv[0]);
 	printf("%s: threaded stress-tester for getaddrinfo(3)\n",
 	    getprogname());
-	printf("(c) 2004 Brian Feldman <green@frebsd.org>\n");
+	printf("(c) 2004 Brian Feldman <green@freebsd.org>\n");
 	while ((ch = getopt(argc, argv, "4s:t:w:")) != -1) {
 		switch (ch) {
 		case '4':

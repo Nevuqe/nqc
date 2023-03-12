@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Adrian Chadd <adrian@frebsd.org>
+ * Copyright (c) 2012 Adrian Chadd <adrian@freebsd.org>
  * All Rights Reserved.
  *
  * Permission to use, copy, modify, and/or distribute this software for any

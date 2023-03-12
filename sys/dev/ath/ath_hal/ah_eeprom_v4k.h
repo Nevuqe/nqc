@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: ISC
  *
- * Copyright (c) 2009 Rui Paulo <rpaulo@frebsd.org>
+ * Copyright (c) 2009 Rui Paulo <rpaulo@freebsd.org>
  * Copyright (c) 2008 Sam Leffler, Errno Consulting
  * Copyright (c) 2008 Atheros Communications, Inc.
  *

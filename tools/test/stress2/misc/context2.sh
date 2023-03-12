@@ -27,7 +27,7 @@
 #
 
 # This problem was seen with WiP kernel code:
-# https://people.frebsd.org/~pho/stress/log/kostik1210.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1210.txt
 
 . ../default.cfg
 

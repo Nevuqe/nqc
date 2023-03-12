@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008, 2009 Silicon Graphics International Corp.
- * Copyright (c) 2014-2015 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2014-2015 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -35,7 +35,7 @@
 /*
  * Peripheral driver interface between CAM and CTL (CAM Target Layer).
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #include <sys/cdefs.h>

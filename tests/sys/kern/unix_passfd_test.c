@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2005 Robert N. M. Watson
  * Copyright (c) 2015 Mark Johnston
- * Copyright (c) 2022 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2022 Gleb Smirnoff <glebius@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

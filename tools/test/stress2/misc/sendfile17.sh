@@ -30,7 +30,7 @@
 # sendfile() over socket pairs test. Variation of sendfile15.sh with
 # ualarm(2) added.
 
-# Page fault seen: https://people.frebsd.org/~pho/stress/log/dougm029.txt
+# Page fault seen: https://people.freebsd.org/~pho/stress/log/dougm029.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2020 Vladimir Kondratyev <wulf@frebsd.org>
+ * Copyright (c) 2020 Vladimir Kondratyev <wulf@freebsd.org>
  * Copyright (c) 2020 Val Packett <val@packett.cool>
  *
  * Redistribution and use in source and binary forms, with or without

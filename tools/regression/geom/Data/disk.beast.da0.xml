@@ -2,7 +2,7 @@
 <DISKIMAGE>
   <comment>
     $NQC$
-    alpha BSD label from beast.frebsd.org
+    alpha BSD label from beast.freebsd.org
   </comment>
   <sectorsize>512</sectorsize>
   <mediasize>0</mediasize>

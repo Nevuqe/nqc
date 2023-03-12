@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 Vincenzo Maffione <vmaffione@frebsd.org>
+ * Copyright (c) 2019 Vincenzo Maffione <vmaffione@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

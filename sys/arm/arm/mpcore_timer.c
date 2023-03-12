@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2011 The FreBSD Foundation
+ * Copyright (c) 2011 The FreeBSD Foundation
  * All rights reserved.
  *
  * Developed by Ben Gray <ben.r.gray@gmail.com>

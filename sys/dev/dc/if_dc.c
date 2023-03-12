@@ -57,7 +57,7 @@ __NQCID("$NQC$");
  *
  * Datasheets for the 21143 are available at developer.intel.com.
  * Datasheets for the clone parts can be found at their respective sites.
- * (Except for the PNIC; see www.frebsd.org/~wpaul/PNIC/pnic.ps.gz.)
+ * (Except for the PNIC; see www.freebsd.org/~wpaul/PNIC/pnic.ps.gz.)
  * The PNIC II is essentially a Macronix 98715A chip; the only difference
  * worth noting is that its multicast hash table is only 128 bits wide
  * instead of 512.

@@ -1,13 +1,13 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009, 2013 The FreBSD Foundation
+ * Copyright (c) 2009, 2013 The FreeBSD Foundation
  *
  * This software was developed by Ed Schouten under sponsorship from the
- * FreBSD Foundation.
+ * FreeBSD Foundation.
  *
  * Portions of this software were developed by Oleksandr Rybalko
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

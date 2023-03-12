@@ -1,11 +1,11 @@
 /*-
  * Copyright (c) 2004 Marcel Moolenaar
  * Copyright (c) 2001 Doug Rabson
- * Copyright (c) 2016 The FreBSD Foundation
+ * Copyright (c) 2016 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

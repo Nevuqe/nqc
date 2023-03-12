@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2005 Olivier Houchard All rights reserved.
  * Copyright (c) 2012 Thomas Skibo All rights reserved.
- * Copyright (c) 2005 M. Warner Losh <imp@frebsd.org>
+ * Copyright (c) 2005 M. Warner Losh <imp@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

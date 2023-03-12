@@ -2,7 +2,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2007 Hans Petter Selasky <hselasky@frebsd.org>
+ * Copyright (c) 2007 Hans Petter Selasky <hselasky@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -38,7 +38,7 @@
  */
 #define	USB_TEMPLATE_VENDOR		0x16c0
 #define	USB_TEMPLATE_MANUFACTURER	\
-	"The FreBSD Project (https://www.frebsd.org)"
+	"The FreeBSD Project (https://www.freebsd.org)"
 #endif
 
 typedef const void *(usb_temp_get_string_desc_t)(uint16_t lang_id, uint8_t string_index);

@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999 Michael Smith <msmith@frebsd.org>
- * Copyright (c) 1999 Kazutaka YOKOTA <yokota@frebsd.org>
+ * Copyright (c) 1999 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1999 Kazutaka YOKOTA <yokota@freebsd.org>
  * Copyright (c) 2005 Antony Mawer <antony@mawer.org>
  * All rights reserved.
  *

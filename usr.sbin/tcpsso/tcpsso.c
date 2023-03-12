@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2022 Michael Tuexen <tuexen@frebsd.org>
- * Copyright (c) 2009 Juli Mallett <jmallett@frebsd.org>
+ * Copyright (c) 2022 Michael Tuexen <tuexen@freebsd.org>
+ * Copyright (c) 2009 Juli Mallett <jmallett@freebsd.org>
  * Copyright (c) 2004 Markus Friedl <markus@openbsd.org>
  *
  * Redistribution and use in source and binary forms, with or without

@@ -29,7 +29,7 @@
 # Copy of swap.sh, but without a swap disk and using 110% of hw.usermem
 # All memory is in active or in laundry, and there are several processes
 # swapped out:
-# https://people.frebsd.org/~pho/stress/log/kostik1068.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1068.txt
 
 . ../default.cfg
 

@@ -1,7 +1,7 @@
 /*-
  * ichsmb.c
  *
- * Author: Archie Cobbs <archie@frebsd.org>
+ * Author: Archie Cobbs <archie@freebsd.org>
  * Copyright (c) 2000 Whistle Communications, Inc.
  * All rights reserved.
  * 

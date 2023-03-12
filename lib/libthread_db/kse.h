@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2001 Julian Elischer <julian@frebsd.org>
- * for the FreBSD Foundation.
+ * Copyright (C) 2001 Julian Elischer <julian@freebsd.org>
+ * for the FreeBSD Foundation.
  *
  *  All rights reserved.
  *

@@ -7,7 +7,7 @@ __NQCID("$NQC$");
  * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-2-Clause-NetBSD
  *
  * Copyright (c) 2005, Takanori Watanabe All rights reserved.
- * Copyright (c) 2003 M. Warner Losh <imp@frebsd.org>
+ * Copyright (c) 2003 M. Warner Losh <imp@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

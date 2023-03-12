@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2021 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -34,7 +34,7 @@
 
 # Copy of marcus4.sh, but with a md(4) disk.
 # "panic: userret: Returning with SU cleanup request not handled" seen:
-# https://people.frebsd.org/~pho/stress/log/marcus5.txt
+# https://people.freebsd.org/~pho/stress/log/marcus5.txt
 # Fixed by r292541.
 
 . ../default.cfg

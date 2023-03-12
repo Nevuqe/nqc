@@ -29,7 +29,7 @@
 # Test OOM killing.
 
 # sort stuck in "pfault" seen.
-# https://people.frebsd.org/~pho/stress/log/oom2.txt
+# https://people.freebsd.org/~pho/stress/log/oom2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `sysctl -n vm.swap_total` -gt 0 ] && { swapoff -a; off=1; }

@@ -3,12 +3,12 @@
  *
  * Copyright (c) 2003, 2004 Silicon Graphics International Corp.
  * Copyright (c) 1997-2007 Kenneth D. Merry
- * Copyright (c) 2012 The FreBSD Foundation
- * Copyright (c) 2018 Marcelo Araujo <araujo@frebsd.org>
+ * Copyright (c) 2012 The FreeBSD Foundation
+ * Copyright (c) 2018 Marcelo Araujo <araujo@freebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -40,7 +40,7 @@
 /*
  * CAM Target Layer exercise program.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #include <sys/cdefs.h>

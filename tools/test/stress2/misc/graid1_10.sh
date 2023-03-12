@@ -27,7 +27,7 @@
 #
 
 # Read error handling for synchronization requests
-# Test scenario by Mark Johnston <markj@frebsd.org>
+# Test scenario by Mark Johnston <markj@freebsd.org>
 # Fixed by r327779
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -197,7 +197,7 @@ __attribute__((unused)) static bool GetLibcVersion(int *major, int *minor,
 //
 // musl before 1.2.3 and NQC as of 12.2 incorrectly set dlpi_tls_data to
 // the TLS initialization image
-// https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=254774
+// https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=254774
 __attribute__((unused)) static int g_use_dlpi_tls_data;
 
 #if SANITIZER_GLIBC && !SANITIZER_GO

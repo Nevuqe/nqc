@@ -29,7 +29,7 @@
 # Non UFS SU gmirror stop -f test.
 
 # Page fault seen:
-# https://people.frebsd.org/~pho/stress/log/graid1_4.txt
+# https://people.freebsd.org/~pho/stress/log/graid1_4.txt
 # Fixed in r316867
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

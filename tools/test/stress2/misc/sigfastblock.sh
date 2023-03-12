@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# sigfastblock test scenario by Konstantin Belousov <kib@frebsd.org>
+# sigfastblock test scenario by Konstantin Belousov <kib@freebsd.org>
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

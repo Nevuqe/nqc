@@ -18,7 +18,7 @@ http://www.crufty.net/sjg/docs/signing-server.htm
 
 X.509 certificates chains offer a lot of flexibility over time and are
 a great solution for an embedded vendor like Juniper or even
-frebsd.org, but are probably overkill for personal or small site use.
+freebsd.org, but are probably overkill for personal or small site use.
 
 Setting up a CA for this is rather involved so I'll just provide a
 link below to suitable tutorial below.

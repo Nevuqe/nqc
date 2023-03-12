@@ -36,7 +36,7 @@
  * Function definitions used both within CTL and potentially in various CTL
  * clients.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #ifndef	_CTL_H_

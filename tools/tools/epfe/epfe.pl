@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# Copyright (c) 1996 Wolfram Schneider <wosch@frebsd.org>. Berlin.
+# Copyright (c) 1996 Wolfram Schneider <wosch@freebsd.org>. Berlin.
 #
 # epfe - extract printing filter examples from printing.sgml
 #

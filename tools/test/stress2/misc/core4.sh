@@ -29,7 +29,7 @@
 # Test multiple (parallel) core dumps and umount -f
 
 # "panic: vn_finished_write: neg cnt" seen.
-# http://people.frebsd.org/~pho/core4.sh
+# http://people.freebsd.org/~pho/core4.sh
 # Fixed in r274501
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

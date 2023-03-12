@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1999 Luoqi Chen <luoqi@frebsd.org>
+ * Copyright (c) 1999 Luoqi Chen <luoqi@freebsd.org>
  * Copyright (c) 2015-2016 Ruslan Bukin <br@bsdpad.com>
  * All rights reserved.
  *

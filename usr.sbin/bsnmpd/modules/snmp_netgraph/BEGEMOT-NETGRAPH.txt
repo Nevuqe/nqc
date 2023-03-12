@@ -3,7 +3,7 @@
 --	Fraunhofer Institute for Open Communication Systems (FhG Fokus).
 --	All rights reserved.
 --
--- Author: Harti Brandt <harti@frebsd.org>
+-- Author: Harti Brandt <harti@freebsd.org>
 --
 -- Redistribution of this software and documentation and use in source and
 -- binary forms, with or without modification, are permitted provided that
@@ -56,7 +56,7 @@ begemotNg MODULE-IDENTITY
 
 	     Fax:	+49 30 3463 7352
 
-	     E-mail:	harti@frebsd.org"
+	     E-mail:	harti@freebsd.org"
     DESCRIPTION
 	    "The MIB for the NetGraph access module for SNMP."
     REVISION "200311140000Z"

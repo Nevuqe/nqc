@@ -3,7 +3,7 @@
  *
  * Copyright (c) 1990, 1991, 1993
  *	The Regents of the University of California.  All rights reserved.
- * Copyright (c) 2019 Andrey V. Elsukov <ae@frebsd.org>
+ * Copyright (c) 2019 Andrey V. Elsukov <ae@freebsd.org>
  *
  * This code is derived from the Stanford/CMU enet packet filter,
  * (net/enet.c) distributed as part of 4.3BSD, and code contributed

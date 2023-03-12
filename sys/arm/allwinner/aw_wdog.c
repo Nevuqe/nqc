@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2013 Oleksandr Tymoshenko <gonzo@frebsd.org>
- * Copyright (c) 2016 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2013 Oleksandr Tymoshenko <gonzo@freebsd.org>
+ * Copyright (c) 2016 Emmanuel Vadot <manu@freebsd.org>
  * Copyright (c) 2022 Julien Cassette <julien.cassette@gmail.com>
  * All rights reserved.
  *

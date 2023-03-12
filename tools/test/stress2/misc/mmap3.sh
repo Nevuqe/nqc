@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2009 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # Variation of mmap2.sh with focus on random arguments for mprotect()
-# https://people.frebsd.org/~pho/stress/log/kostik209.txt
+# https://people.freebsd.org/~pho/stress/log/kostik209.txt
 
 . ../default.cfg
 

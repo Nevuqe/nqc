@@ -37,7 +37,7 @@
 # Stopped at      kdb_enter+0x32: movq    $0,0x129f1a3(%rip)
 # db> x/s version
 # version:        NQC 14.0-CURRENT #0 main-n256319-c11e64ce51308: Sat Jun 25 07:12:49 CEST 2022\012
-# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
+# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
 # db>
 
 [ `uname -p` != "amd64" ] && exit 0

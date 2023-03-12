@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2014 Hudson River Trading LLC
- * Written by: John H. Baldwin <jhb@frebsd.org>
+ * Written by: John H. Baldwin <jhb@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

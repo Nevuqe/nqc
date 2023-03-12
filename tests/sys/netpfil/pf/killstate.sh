@@ -115,7 +115,7 @@ v6_body()
 	pft_init
 
 	if [ "$(atf_config_get ci false)" = "true" ]; then
-		atf_skip "https://bugs.frebsd.org/260458"
+		atf_skip "https://bugs.freebsd.org/260458"
 	fi
 
 	epair=$(vnet_mkepair)

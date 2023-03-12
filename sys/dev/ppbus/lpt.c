@@ -248,7 +248,7 @@ lpt_port_test(device_t ppbus, u_char data, u_char mask)
 
 /*
  * Probe simplified by replacing multiple loops with a hardcoded
- * test pattern - 1999/02/08 des@frebsd.org
+ * test pattern - 1999/02/08 des@freebsd.org
  *
  * New lpt port probe Geoff Rehmet - Rhodes University - 14/2/94
  * Based partially on Rod Grimes' printer probe

@@ -27,7 +27,7 @@
 #
 
 # fdatasync(2) fuzz. Variation of fdatasync.sh.
-# https://people.frebsd.org/~pho/stress/log/fdatasync2.txt
+# https://people.freebsd.org/~pho/stress/log/fdatasync2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

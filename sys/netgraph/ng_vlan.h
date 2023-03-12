@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Ruslan Ermilov <ru@frebsd.org>
+ * Author: Ruslan Ermilov <ru@freebsd.org>
  *
  * $NQC$
  */

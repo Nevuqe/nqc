@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011 Ed Schouten <ed@frebsd.org>
- *                    David Chisnall <theraven@frebsd.org>
+ * Copyright (c) 2011 Ed Schouten <ed@freebsd.org>
+ *                    David Chisnall <theraven@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

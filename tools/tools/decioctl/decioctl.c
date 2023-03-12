@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005-2006,2016 John H. Baldwin <jhb@frebsd.org>
+ * Copyright (c) 2005-2006,2016 John H. Baldwin <jhb@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

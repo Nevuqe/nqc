@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: (BSD-2-Clause-NQC AND BSD-1-Clause)
  *
  * Copyright (c) 2006 Sam Leffler, Errno Consulting
- * Copyright (c) 2008-2009 Weongyo Jeong <weongyo@frebsd.org>
+ * Copyright (c) 2008-2009 Weongyo Jeong <weongyo@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

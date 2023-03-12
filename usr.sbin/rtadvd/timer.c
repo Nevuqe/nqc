@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (C) 1998 WIDE Project.
- * Copyright (C) 2011 Hiroki Sato <hrs@frebsd.org>
+ * Copyright (C) 2011 Hiroki Sato <hrs@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

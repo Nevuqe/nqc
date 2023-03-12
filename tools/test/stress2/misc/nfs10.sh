@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2013 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,9 +27,9 @@
 #
 
 # nfsv4 test scenario
-# Deadlock seen:  http://people.frebsd.org/~pho/stress/log/nfs10.txt
-# Lock violation: http://people.frebsd.org/~pho/stress/log/nfs10-2.txt
-# Double fault:   http://people.frebsd.org/~pho/stress/log/nfs10-3.txt
+# Deadlock seen:  http://people.freebsd.org/~pho/stress/log/nfs10.txt
+# Lock violation: http://people.freebsd.org/~pho/stress/log/nfs10-2.txt
+# Double fault:   http://people.freebsd.org/~pho/stress/log/nfs10-3.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

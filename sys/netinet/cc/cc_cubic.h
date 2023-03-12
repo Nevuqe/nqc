@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008-2010 Lawrence Stewart <lstewart@frebsd.org>
- * Copyright (c) 2010 The FreBSD Foundation
+ * Copyright (c) 2008-2010 Lawrence Stewart <lstewart@freebsd.org>
+ * Copyright (c) 2010 The FreeBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Lawrence Stewart while studying at the Centre
@@ -12,7 +12,7 @@
  *
  * Portions of this software were developed at the Centre for Advanced
  * Internet Architectures, Swinburne University of Technology, Melbourne,
- * Australia by David Hayes under sponsorship from the FreBSD Foundation.
+ * Australia by David Hayes under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

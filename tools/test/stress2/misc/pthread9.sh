@@ -27,7 +27,7 @@
 #
 
 # Thread suspend deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/pthread9.txt
+# https://people.freebsd.org/~pho/stress/log/pthread9.txt
 
 # Test scenario by Conrad Meyer.
 # Fixed by r283320.

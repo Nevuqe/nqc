@@ -28,7 +28,7 @@
 
 # panic: pmap active 0xfffff801d22cdae8" seen.
 # Variation of  mmap18.sh.
-# http://people.frebsd.org/~pho/stress/log/kostik712.txt
+# http://people.freebsd.org/~pho/stress/log/kostik712.txt
 # Fixed by r271000.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

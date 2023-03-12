@@ -3,7 +3,7 @@
  *	Hartmut Brandt.
  *	All rights reserved.
  *
- * Author: Harti Brandt <harti@frebsd.org>
+ * Author: Harti Brandt <harti@freebsd.org>
  *
  * Redistribution of this software and documentation and use in source and
  * binary forms, with or without modification, are permitted provided that

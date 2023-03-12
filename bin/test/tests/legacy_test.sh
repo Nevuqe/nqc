@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #-
-# Copyright (c) June 1996 Wolfram Schneider <wosch@frebsd.org>. Berlin.
+# Copyright (c) June 1996 Wolfram Schneider <wosch@freebsd.org>. Berlin.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

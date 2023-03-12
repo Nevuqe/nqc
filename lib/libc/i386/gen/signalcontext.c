@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2002 Jonathan Mini <mini@frebsd.org>
+ * Copyright (c) 2002 Jonathan Mini <mini@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -19,7 +19,7 @@
 # Stopped at      kdb_enter+0x34: movl    $0,kdb_why
 # db> x/s version
 # version:        NQC 14.0-CURRENT #0 main-n257606-9ea2716b775-dirty: Thu Aug 25 10:47:45 CEST 2022
-# pho@mercat1.netperf.frebsd.org:/media/ob
+# pho@mercat1.netperf.freebsd.org:/media/ob
 # j/usr/src/i386.i386/sys/PHO\012
 # db> show proc
 # Process 54680 (date) at 0x28905d50:

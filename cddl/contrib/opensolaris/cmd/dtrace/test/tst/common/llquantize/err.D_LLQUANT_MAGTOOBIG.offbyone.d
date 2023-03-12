@@ -10,7 +10,7 @@
  */
 
 /*
- * Copyright 2017 Mark Johnston <markj@frebsd.org>
+ * Copyright 2017 Mark Johnston <markj@freebsd.org>
  */
 
 /*

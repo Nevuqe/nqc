@@ -28,7 +28,7 @@
 #
 
 # Deadlock with one really small domain:
-# https://people.frebsd.org/~pho/stress/log/mark074.txt
+# https://people.freebsd.org/~pho/stress/log/mark074.txt
 
 [ `sysctl -n vm.ndomains` -eq 1 ] && exit 0
 

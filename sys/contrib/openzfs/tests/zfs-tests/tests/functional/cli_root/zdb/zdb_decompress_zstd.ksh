@@ -12,10 +12,10 @@
 #
 
 #
-# Copyright (c) 2020 The FreBSD Foundation [1]
+# Copyright (c) 2020 The FreeBSD Foundation [1]
 #
 # [1] Portions of this software were developed by Allan Jude
-#     under sponsorship from the FreBSD Foundation.
+#     under sponsorship from the FreeBSD Foundation.
 
 . $STF_SUITE/include/libtest.shlib
 

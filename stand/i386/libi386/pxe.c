@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2000 Alfred Perlstein <alfred@frebsd.org>
- * Copyright (c) 2000 Paul Saab <ps@frebsd.org>
+ * Copyright (c) 2000 Alfred Perlstein <alfred@freebsd.org>
+ * Copyright (c) 2000 Paul Saab <ps@freebsd.org>
  * All rights reserved.
- * Copyright (c) 2000 John Baldwin <jhb@frebsd.org>
+ * Copyright (c) 2000 John Baldwin <jhb@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

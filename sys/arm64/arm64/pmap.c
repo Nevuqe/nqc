@@ -11,7 +11,7 @@
  * All rights reserved.
  * Copyright (c) 2014 Andrew Turner
  * All rights reserved.
- * Copyright (c) 2014-2016 The FreBSD Foundation
+ * Copyright (c) 2014-2016 The FreeBSD Foundation
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
@@ -19,7 +19,7 @@
  * Science Department and William Jolitz of UUNET Technologies Inc.
  *
  * This software was developed by Andrew Turner under sponsorship from
- * the FreBSD Foundation.
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -55,7 +55,7 @@
  * Copyright (c) 2003 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreBSD Project by Jake Burkholder,
+ * This software was developed for the FreeBSD Project by Jake Burkholder,
  * Safeport Network Services, and Network Associates Laboratories, the
  * Security Research Division of Network Associates, Inc. under
  * DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA

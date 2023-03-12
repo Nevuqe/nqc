@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2007 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2007 Pawel Jakub Dawidek <pjd@freebsd.org>
  * Copyright (c) 2013 iXsystems, Inc.
  * All rights reserved.
  *

@@ -1,6 +1,6 @@
 #!/bin/sh
 #-
-# Copyright (c) 2017 Edward Tomasz Napierala <trasz@frebsd.org>
+# Copyright (c) 2017 Edward Tomasz Napierala <trasz@freebsd.org>
 #
 # This software was developed by SRI International and the University of
 # Cambridge Computer Laboratory under DARPA/AFRL contract (FA8750-10-C-0237)
@@ -33,7 +33,7 @@
 # instances in parallel, 10 by default, each performing a number of fetches,
 # 100 by default, and then printing out the time it took.
 #
-# Example usage: ./fetchbench -i 2 -n 5 http://frebsd.org
+# Example usage: ./fetchbench -i 2 -n 5 http://freebsd.org
 
 usage()
 {

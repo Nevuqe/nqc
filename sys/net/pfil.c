@@ -4,7 +4,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2019 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2019 Gleb Smirnoff <glebius@freebsd.org>
  * Copyright (c) 1996 Matthew R. Green
  * All rights reserved.
  *

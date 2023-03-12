@@ -21,7 +21,7 @@
  * $NQC$
  */
 /*
- * Copyright (c) 2018 Michael Tuexen <tuexen@frebsd.org>
+ * Copyright (c) 2018 Michael Tuexen <tuexen@freebsd.org>
  */
 
 #pragma D depends_on library ip.d

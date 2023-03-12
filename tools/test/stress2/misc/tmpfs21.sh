@@ -34,7 +34,7 @@
 # Test scenario suggestion by:	 kib
 
 # umount(8) stuck in suspwt seen.
-# https://people.frebsd.org/~pho/stress/log/tmpfs21.txt
+# https://people.freebsd.org/~pho/stress/log/tmpfs21.txt
 # Fixed by r355061
 
 (cd ../testcases/swap; ./swap -t 10m -i 20) > /dev/null &

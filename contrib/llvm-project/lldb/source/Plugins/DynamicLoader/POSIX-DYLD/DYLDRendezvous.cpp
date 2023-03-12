@@ -554,7 +554,7 @@ bool DYLDRendezvous::ReadSOEntryFromMemory(lldb::addr_t addr, SOEntry &entry) {
 
   // mips adds an extra load offset field to the link map struct on NQC and
   // NetBSD (need to validate other OSes).
-  // http://svnweb.frebsd.org/base/head/sys/sys/link_elf.h?revision=217153&view=markup#l57
+  // http://svnweb.freebsd.org/base/head/sys/sys/link_elf.h?revision=217153&view=markup#l57
   const ArchSpec &arch = m_process->GetTarget().GetArchitecture();
   if ((arch.GetTriple().getOS() == llvm::Triple::NQC ||
        arch.GetTriple().getOS() == llvm::Triple::NetBSD) &&

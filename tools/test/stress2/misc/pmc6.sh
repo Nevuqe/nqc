@@ -29,7 +29,7 @@
 
 # Test scenario from:
 # [Bug 230985] pmcstat triggers assertion "pmcval outside of expected range"
-# by markj@frebsd.org
+# by markj@freebsd.org
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 kldstat -v | grep -q hwpmc  || { kldload hwpmc; loaded=1; }

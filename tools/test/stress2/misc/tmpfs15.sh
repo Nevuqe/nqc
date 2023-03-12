@@ -30,7 +30,7 @@
 
 # "panic: Assertion de->td_cookie == de->td_hash failed at
 #    /usr/src/sys/modules/tmpfs/../../fs/tmpfs/tmpfs_subr.c:964" seen.
-# https://people.frebsd.org/~pho/stress/log/tmpfs15.txt
+# https://people.freebsd.org/~pho/stress/log/tmpfs15.txt
 # Fixed by 284594.
 
 # Test scenario by kib@

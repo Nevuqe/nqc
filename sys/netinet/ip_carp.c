@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2002 Michael Shalayeff.
  * Copyright (c) 2003 Ryan McBride.
- * Copyright (c) 2011 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2011 Gleb Smirnoff <glebius@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

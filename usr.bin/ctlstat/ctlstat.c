@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004, 2008, 2009 Silicon Graphics International Corp.
- * Copyright (c) 2017 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2017 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -35,7 +35,7 @@
 /*
  * CAM Target Layer statistics program
  *
- * Authors: Ken Merry <ken@frebsd.org>, Will Andrews <will@frebsd.org>
+ * Authors: Ken Merry <ken@freebsd.org>, Will Andrews <will@freebsd.org>
  */
 
 #include <sys/cdefs.h>

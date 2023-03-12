@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2022 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -48,7 +48,7 @@
 # Stopped at      kdb_enter+0x34: movl    $0,kdb_why
 # db> x/s version
 # version: NQC 14.0-CURRENT #0 ast-n257558-eb20af97a66-dirty: Mon Aug 22 17:53:22 CEST 2022
-# pho@mercat1.netperf.frebsd.org:/media/obj/var/tmp/deviant3/i386.i386/sys/PHO
+# pho@mercat1.netperf.freebsd.org:/media/obj/var/tmp/deviant3/i386.i386/sys/PHO
 # db> 
 
 inc=/usr/include/sys/syscall.h

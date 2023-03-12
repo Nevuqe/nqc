@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreBSD Foundation
+ * Copyright (c) 2019 The FreeBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -92,7 +92,7 @@ virtual void SetUp() {
 }
 };
 
-/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236379 */
+/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236379 */
 TEST_F(AioFsync, aio_fsync)
 {
 	const char FULLPATH[] = "mountpoint/some_file.txt";

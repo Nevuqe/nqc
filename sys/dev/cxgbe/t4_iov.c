@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2015-2016 Chelsio Communications, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@frebsd.org>
+ * Written by: John Baldwin <jhb@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

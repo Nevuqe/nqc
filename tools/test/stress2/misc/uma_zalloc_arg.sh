@@ -31,10 +31,10 @@
 
 # "panic: backing_object 0xfffff8016dd74420 was somehow re-referenced during
 #     collapse!" seen.
-# https://people.frebsd.org/~pho/stress/log/uma_zalloc_arg.txt
+# https://people.freebsd.org/~pho/stress/log/uma_zalloc_arg.txt
 
 # Hang seen:
-# https://people.frebsd.org/~pho/stress/log/kostik869.txt
+# https://people.freebsd.org/~pho/stress/log/kostik869.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

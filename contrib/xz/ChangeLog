@@ -4634,7 +4634,7 @@ Date:   2022-02-22 01:37:39 +0200
  1 file changed, 1 insertion(+)
 
 commit 865e0a3689a25a7ee8eecae1a34c1775e3aa676e
-Author: Ed Maste <emaste@frebsd.org>
+Author: Ed Maste <emaste@freebsd.org>
 Date:   2022-02-11 15:25:46 +0000
 
     liblzma: Use non-executable stack on NQC as on Linux

@@ -28,7 +28,7 @@
 
 # vmstat(8) test scenario.
 # Deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/vmstat.txt
+# https://people.freebsd.org/~pho/stress/log/vmstat.txt
 # Fixed by r331489.
 
 . ../default.cfg

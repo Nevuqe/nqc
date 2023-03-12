@@ -6,10 +6,10 @@ IEEE 1394 support for NQC-5.X and 4.X.
 
 	  This tarball contains IEEE1394(FireWire) driver which is first
 	written by Katsushi Kobayashi[1] <ikob@koganei.wide.ad.jp> and
-	modified by Hidetoshi Shimokawa <simokawa@frebsd.org>.
+	modified by Hidetoshi Shimokawa <simokawa@freebsd.org>.
 	Please note this driver is still under development.
 	You can find latest snapshots under:
-		https://people.frebsd.org/~simokawa/
+		https://people.freebsd.org/~simokawa/
 	named firewire-2002XXXX.tar.gz
 
 	The driver consists of 6 parts:
@@ -120,7 +120,7 @@ IEEE 1394 support for NQC-5.X and 4.X.
 	- HDD: Logitec USB/FireWire LHD-P30FU
 	- HDD: Yano A-dish 120GB
 	- HDD: Yano B-Max 320GB
-		The repository of cvsup2.jp.frebsd.org is on this device.
+		The repository of cvsup2.jp.freebsd.org is on this device.
 	- HDD: Personal Storage 3000XT 160GB
 		The last sector of this drive cannot be accessed..
 	- DVD-RAM: Panasonic LF-D340JD 
@@ -145,4 +145,4 @@ References:
 
 
 Hidetoshi Shimokawa
-simokawa@frebsd.org
+simokawa@freebsd.org

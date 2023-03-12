@@ -19,10 +19,10 @@
  * CDDL HEADER END
  */
 /*
- * Copyright (c) 2006 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2006 Pawel Jakub Dawidek <pjd@freebsd.org>
  * All rights reserved.
  *
- * Portions Copyright (c) 2012 Martin Matuska <mm@frebsd.org>
+ * Portions Copyright (c) 2012 Martin Matuska <mm@freebsd.org>
  */
 
 #include <sys/zfs_context.h>

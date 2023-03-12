@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2019 The FreBSD Foundation, Inc.
+ * Copyright (c) 2019 The FreeBSD Foundation, Inc.
  *
  * This driver was written by Gerald ND Aryeetey <gndaryee@uwaterloo.ca>
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

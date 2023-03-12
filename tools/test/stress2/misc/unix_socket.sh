@@ -28,7 +28,7 @@
 #
 
 # "panic: mutex unp not owned at ../../../kern/uipc_usrreq.c:879" seen:
-# https://people.frebsd.org/~pho/stress/log/mmacy018.txt
+# https://people.freebsd.org/~pho/stress/log/mmacy018.txt
 # Fixed by r334756.
 
 . ../default.cfg

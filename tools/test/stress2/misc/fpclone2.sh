@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Test scenario by kib@frebsd.org
+# Test scenario by kib@freebsd.org
 
 # Test of patch for Giant trick in cdevsw
 

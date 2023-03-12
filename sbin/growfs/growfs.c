@@ -3,14 +3,14 @@
  *
  * Copyright (c) 1980, 1989, 1993 The Regents of the University of California.
  * Copyright (c) 2000 Christoph Herrmann, Thomas-Henning von Kamptz
- * Copyright (c) 2012 The FreBSD Foundation
+ * Copyright (c) 2012 The FreeBSD Foundation
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
  * Christoph Herrmann and Thomas-Henning von Kamptz, Munich and Frankfurt.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

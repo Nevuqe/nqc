@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # Page fault seen:
-# http://people.frebsd.org/~pho/stress/log/lockf.txt
+# http://people.freebsd.org/~pho/stress/log/lockf.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

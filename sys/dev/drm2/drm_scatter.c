@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2009 Robert C. Noland III <rnoland@frebsd.org>
+ * Copyright (c) 2009 Robert C. Noland III <rnoland@freebsd.org>
  * All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a

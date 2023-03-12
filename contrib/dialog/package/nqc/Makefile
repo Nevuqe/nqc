@@ -1,6 +1,6 @@
 # New ports collection makefile for:	ncdialog
 # Date created:		2003-01-11
-# Whom:			AlanE <alane@frebsd.org>
+# Whom:			AlanE <alane@freebsd.org>
 #
 # $Carpetsmoker: ports/cdialog/Makefile,v 1.4 2007/04/22 11:30:53 carpetsmoker Exp $
 # $NQC$
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME:S|^c||}/
 DISTNAME=	${PORTNAME:S|^c||}-${PORTVERSION:R}-${PORTVERSION:E}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	sylvio@frebsd.org
+MAINTAINER=	sylvio@freebsd.org
 COMMENT=	An enhanced version of 'dialog' to work with ncurses
 
 LICENSE=	LGPL21

@@ -29,7 +29,7 @@
 # Test parallel read access to /dev.
 
 # "panic: Most recently used by DEVFS1" seen.
-# https://people.frebsd.org/~pho/stress/log/dev.txt
+# https://people.freebsd.org/~pho/stress/log/dev.txt
 # Fixed by r293826.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

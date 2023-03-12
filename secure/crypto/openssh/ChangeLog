@@ -1149,7 +1149,7 @@ commit dffa64480163fbf76af7e4fb62c26bb0dd6642aa
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Wed Nov 9 08:27:47 2022 +1100
 
-    Fix comment text.  From emaste at frebsd.org.
+    Fix comment text.  From emaste at freebsd.org.
 
 commit d9df5689c29823ab830ec4f54c83c6cc3c0077ad
 Author: Pierre Ossman <ossman@cendio.se>
@@ -1321,7 +1321,7 @@ Date:   Sun Nov 6 10:55:59 2022 +1100
     Use "prohibit-password" in -portable comments.
     
     "without-password" is the deprecated alias for "prohibit-password",
-    so we should reference the latter. From emaste at frebsd.org.
+    so we should reference the latter. From emaste at freebsd.org.
 
 commit 0f7e1eba55259ec037f515000b4c4afbf446230a
 Author: Darren Tucker <dtucker@dtucker.net>
@@ -1331,7 +1331,7 @@ Date:   Sun Nov 6 10:50:01 2022 +1100
     
     Some versions of NQC do not support using id 0 to refer to the
     current pid for procctl, so pass getpid() explicitly.  From
-    emaste at frebsd.org.
+    emaste at freebsd.org.
 
 commit 32fddb982fd61b11a2f218a115975a87ab126d43
 Author: Darren Tucker <dtucker@dtucker.net>
@@ -3672,7 +3672,7 @@ Date:   Sat Apr 23 20:17:26 2022 +1000
 
     Cache timezone data in capsicum sandbox.
     
-    From emaste at frebsd.org, originally part of NQC commit r339216
+    From emaste at freebsd.org, originally part of NQC commit r339216
     / fc3c19a9 with autoconf bits added by me.
 
 commit c31404426d212e2964ff9e5e58e1d0fce3d83f27
@@ -10947,7 +10947,7 @@ Date:   Thu Feb 18 10:33:58 2021 +1100
     Fortunately in this case, we can harmlessly leak as the process is
     about to exec the shell/command.
     
-    From https://reviews.frebsd.org/D28617 via Ed Maste; ok dtucker@
+    From https://reviews.freebsd.org/D28617 via Ed Maste; ok dtucker@
 
 commit bc9b0c25703215501da28aa7a6539f96c0fa656f
 Author: Darren Tucker <dtucker@dtucker.net>

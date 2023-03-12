@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2015 Gleb Smirnoff <glebius@frebsd.org>
- * Copyright (c) 2015 Adrian Chadd <adrian@frebsd.org>
+ * Copyright (c) 2015 Gleb Smirnoff <glebius@freebsd.org>
+ * Copyright (c) 2015 Adrian Chadd <adrian@freebsd.org>
  * Copyright (c) 1982, 1986, 1988, 1993
  *	The Regents of the University of California.  All rights reserved.
  *

@@ -2,7 +2,7 @@
 
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2009 Edwin Groothuis <edwin@frebsd.org>
+# Copyright 2009 Edwin Groothuis <edwin@freebsd.org>
 # Copyright 2015 John Marino <draco@marino.st>
 #
 # Redistribution and use in source and binary forms, with or without

@@ -1,9 +1,9 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2003-2004  Sean M. Kelly <smkelly@frebsd.org>
+ * Copyright (c) 2003-2004  Sean M. Kelly <smkelly@freebsd.org>
  * Copyright (c) 2013 iXsystems.com,
- *                    author: Alfred Perlstein <alfred@frebsd.org>
+ *                    author: Alfred Perlstein <alfred@freebsd.org>
  *
  * All rights reserved.
  *

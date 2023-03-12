@@ -2,7 +2,7 @@
  * Copyright (c) 2005 Nate Lawson
  * Copyright (c) 2000 Munehiro Matsuda
  * Copyright (c) 2000 Takanori Watanabe
- * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@frebsd.org>
+ * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

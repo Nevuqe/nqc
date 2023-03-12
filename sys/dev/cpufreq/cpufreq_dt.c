@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2018 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2018 Emmanuel Vadot <manu@freebsd.org>
  * Copyright (c) 2016 Jared McNeill <jmcneill@invisible.ca>
  *
  * Redistribution and use in source and binary forms, with or without

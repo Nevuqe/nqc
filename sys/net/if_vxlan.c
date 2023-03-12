@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014, Bryan Venteicher <bryanv@frebsd.org>
+ * Copyright (c) 2014, Bryan Venteicher <bryanv@freebsd.org>
  * All rights reserved.
  * Copyright (c) 2020, Chelsio Communications.
  *

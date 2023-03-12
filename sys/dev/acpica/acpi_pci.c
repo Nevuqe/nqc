@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 1997, Stefan Esser <se@frebsd.org>
- * Copyright (c) 2000, Michael Smith <msmith@frebsd.org>
+ * Copyright (c) 1997, Stefan Esser <se@freebsd.org>
+ * Copyright (c) 2000, Michael Smith <msmith@freebsd.org>
  * Copyright (c) 2000, BSDi
  * All rights reserved.
  *

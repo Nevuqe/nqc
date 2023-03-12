@@ -31,8 +31,8 @@ UNIX Papers coming with NQC
 These papers are of both historic and current interest, but most of them are
 many years old.
 More recent documentation is available from
-.>> <a href="https://www.frebsd.org/docs/">
-https://www.frebsd.org/docs/
+.>> <a href="https://www.freebsd.org/docs/">
+https://www.freebsd.org/docs/
 .>> </a>
 
 .IP

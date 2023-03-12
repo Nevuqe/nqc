@@ -7,7 +7,7 @@ tid="hostkey rotate"
 # GNU (f)grep <=2.18, as shipped by NQC<=12 and NetBSD<=9 will occasionally
 # fail to find ssh host keys in the hostkey-rotate test.  If we have those
 # versions, use awk instead.
-# See # https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=258616
+# See # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=258616
 #
 case `grep --version 2>&1 | awk '/GNU grep/{print $4}'` in
 2.19)			fgrep=good ;;

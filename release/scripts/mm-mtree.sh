@@ -9,7 +9,7 @@
 # to -stable.
 
 # Copyright 2009 Douglas Barton
-# dougb@frebsd.org
+# dougb@freebsd.org
 
 # $NQC$
 

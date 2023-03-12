@@ -36,7 +36,7 @@
 #	John Kunze, Berkeley
 #	Craig Leres, Berkeley
 #
-# Please submit changes via https://bugs.frebsd.org/submit/
+# Please submit changes via https://bugs.freebsd.org/submit/
 #
 # << EOH - after reordering, above header lines survive and this line dies >>
 #
@@ -1476,7 +1476,7 @@ nansi.sysk|nansisysk|PC-DOS Public Domain NANSI.SYS with keypad redefined for vi
 	:al=\E[1L:dl=\E[1M:ic=\E[1@:dc=\E[1P:\
 	:is=U4 PC-DOS Public Domain NANSI.SYS with keypad redefined for vi 9-29-86\n\E[;75;8p:\
 	:tc=ansi.sysk:
-#	Hellmuth Michaelis <hm@frebsd.org>
+#	Hellmuth Michaelis <hm@freebsd.org>
 #	pcvt vt220 terminal emulator console (pc keyboard & monitor)
 #	termcap entries for pure VT220-Emulation and 25, 28, 35, 40, 43 and
 #	50 lines entries
@@ -4612,7 +4612,7 @@ linux-m|Linux Console no color:\
 cygwin:\
 	:xn@:op=\E[39;49m:Km=\E[M:tc=linux:
 # Multilingual Sysinstall (kon2 console)
-# HOSOKAWA, Tatsumi (hosokawa@frebsd.org)
+# HOSOKAWA, Tatsumi (hosokawa@freebsd.org)
 kons25x|kons25-euc:\
 	:ac=q\207x\214m\205v\212j\202t\210n\206u\211l\204w\213k\203y\053z\053f\336~\245a\043h\043`^D.v-\136I^U0\215:\
 	:ve=\E[25h:vi=\E[25l:\
@@ -4631,7 +4631,7 @@ pilot|tgtelnet:am:xn:bs:co#39:li#16:cl=\Ec:cm=\Em%+ %+ :ho=\Em  :nw=\Em~ :\
 # Termcap entry for rxvt, taken from the sources of rxvt-2.6.3
 # with additional @7 capability to make END work correctly.
 # From Giorgos Keramidas <charon@labs.gr>
-# Fix alternate character set capabilities (ae, as) -- nectar@frebsd.org
+# Fix alternate character set capabilities (ae, as) -- nectar@freebsd.org
 rxvt-mono|rxvt terminal emulator (monochrome) (X Window System):\
 	:am:eo:km:mi:ms:xn:xo:\
 	:co#80:it#8:li#24:\

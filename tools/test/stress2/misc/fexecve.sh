@@ -31,7 +31,7 @@
 # "panic: vm_page_free_prep: page 0x61e5968 has unexpected ref_count ." seen
 # Fixed by r352748
 
-# Test scenario by: Mark Johnston <markj@frebsd.org>
+# Test scenario by: Mark Johnston <markj@freebsd.org>
 
 cat > /tmp/fexecve.c <<EOF
 #include <sys/param.h>

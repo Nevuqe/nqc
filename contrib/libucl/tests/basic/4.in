@@ -3,7 +3,7 @@ version : "0.9.3"
 origin : "devel/pkgconf"
 comment : "Utility to help to configure compiler and linker flags"
 arch : "nqc:9:x86:64"
-maintainer : "bapt@frebsd.org"
+maintainer : "bapt@freebsd.org"
 prefix : "/usr/local"
 licenselogic : "single"
 licenses : [

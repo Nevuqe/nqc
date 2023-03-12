@@ -1304,7 +1304,7 @@ PSARGS_ACTION=$( cat <&9 )
 } <<EOF
 #!/usr/sbin/dtrace -s
 /* -
- * Copyright (c) 2014-2018 Devin Teske <dteske@frebsd.org>
+ * Copyright (c) 2014-2018 Devin Teske <dteske@freebsd.org>
  * All rights reserved.
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -19,7 +19,7 @@
 		<p>In particular, you can ask for satellite positions, satellite health, signal levels, the ephemeris and the almanac, and you can set many operational parameters. In the case of the VP, you can get the pseudorange corrections necessary to act as a DGPS base station, and you can see the raw satellite data messages themselves.</p>
 		<p>When using the Oncore GPS receiver with NTP, this additional information is usually not available since the receiver is only talking to the oncore driver in NTPD. To make this information available for use in other programs, (say graphic displays of satellites positions, plots of SA, etc.), a shared memory interface (SHMEM) has been added to the refclock_oncore driver on those operating systems that support shared memory.</p>
 		<p>To make use of this information you will need an Oncore Reference Manual for the Oncore GPS receiver that you have. The Manual for the VP only exists as a paper document, the UT+/GT+/M12 manuals are available as a pdf documents at <a href="http://www.synergy-gps.com/Mot_Manuals.html">Synergy</a> .</p>
-		<p>This interface was written by Poul-Henning Kamp (phk@frebsd.org), and modified by Reg Clemens (reg@dwf.com). The interface is known to work in NQC, Linux, and Solaris.</p>
+		<p>This interface was written by Poul-Henning Kamp (phk@freebsd.org), and modified by Reg Clemens (reg@dwf.com). The interface is known to work in NQC, Linux, and Solaris.</p>
 		<h4>Activating the Interface</h4>
 		<p>Although the Shared Memory Interface will be compiled into the Oncore driver on those systems where Shared Memory is supported, to activate this interface you must include a <b>STATUS</b> or <b>SHMEM</b> line in the <tt>/etc/ntp.oncore</tt> data file that looks like</p>
 		<pre>
@@ -156,7 +156,7 @@
 		<p>There are two complete examples available. The first plots satellite positions and the station position as affected by SA, and keeps track of the mean station position, so you can run it for periods of days to get a better station position. The second shows the effective horizon by watching satellite tracks. The examples will be found in the GNU-zipped tar file <a href="ftp://ftp.udel.edu/pub/ntp/software/OncorePlot.tar.gz">ftp://ftp.udel.edu/pub/ntp/software/OncorePlot.tar.gz</a>.</p>
 		<p>Try the new interface, enjoy.</p>
 		<hr>
-		<address>Reg.Clemens (reg@dwf.com), Poul-Henning Kamp (phk@frebsd.org)</address>
+		<address>Reg.Clemens (reg@dwf.com), Poul-Henning Kamp (phk@freebsd.org)</address>
 		<hr>
 		<script type="text/javascript" language="javascript" src="scripts/footer.txt"></script>
 	</body>

@@ -16,7 +16,7 @@
 # [ thread pid 36460 tid 546462 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x127b48e(%rip)
 # db> x/s version
-# version:        NQC 14.0-CURRENT #0 main-n254248-88b3e65fcff2a: Sun Apr  3 11:21:34 CEST 2022\012    pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO\012
+# version:        NQC 14.0-CURRENT #0 main-n254248-88b3e65fcff2a: Sun Apr  3 11:21:34 CEST 2022\012    pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO\012
 # db>
 
 [ `uname -p` != "amd64" ] && exit 0

@@ -1599,7 +1599,7 @@ Here is a list of NQC 2.2.x-RELEASE drivers and its conditions:
 You may want to add an invocation of "rtsol" in "/etc/pccard_ether",
 if you are using notebook computers and PCMCIA ethernet card.
 
-(*) These drivers are distributed with PAO (http://www.jp.frebsd.org/PAO/).
+(*) These drivers are distributed with PAO (http://www.jp.freebsd.org/PAO/).
 
 (**) There was some report says that, if you make sr driver up and down and
 then up, the kernel may hang up.  We have disabled frame-relay support from
@@ -1675,7 +1675,7 @@ Here is a list of NQC 3.x-RELEASE drivers and its conditions:
 	xl	?		ok		-
 
 (*) These drivers are distributed with PAO as PAO3
-    (http://www.jp.frebsd.org/PAO/).
+    (http://www.jp.freebsd.org/PAO/).
 (**) there were trouble reports with multicast filter initialization.
 
 More drivers will just simply work on KAME NQC 3.x-RELEASE but have not

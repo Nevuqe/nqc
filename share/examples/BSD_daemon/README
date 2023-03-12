@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
-# <phk@frebsd.org> wrote this file.  As long as you retain this notice you
+# <phk@freebsd.org> wrote this file.  As long as you retain this notice you
 # can do whatever you want with this stuff. If we meet some day, and you think
 # this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 # ----------------------------------------------------------------------------
@@ -11,7 +11,7 @@
 This directory contains various stuff relating to the NQC daemon
 logo "beastie" and graphic profile.
 
-Kirk Mckusick <mckusick@frebsd.org> holds the copyright to the
+Kirk Mckusick <mckusick@freebsd.org> holds the copyright to the
 BSD Daemon and you may need to get his explicit permission before
 you use it.  Please see his web-page on the subject:
 	http://www.mckusick.com/beastie/mainpage/copyright.html
@@ -20,7 +20,7 @@ beastie.fig
 	An Xfig(1) drawing of the 4.3 daemon.
 
 	This rendering of "beastie" was produced by Poul-Henning
-	Kamp <phk@frebsd.org> and is released under the "beerware"
+	Kamp <phk@freebsd.org> and is released under the "beerware"
 	license.  In addition to beer Poul-Henning collects NQC
 	merchandise ("nudge nudge, wink wink, he said knowingly.")
 

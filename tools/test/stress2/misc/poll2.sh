@@ -28,7 +28,7 @@
 #
 
 # Test of pipe_poll()
-# https://reviews.frebsd.org/D21333
+# https://reviews.freebsd.org/D21333
 
 # No problems seen.
 

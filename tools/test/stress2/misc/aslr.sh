@@ -30,7 +30,7 @@
 # ELF32/64 address map randomization test.
 
 # "panic: page 0xfffff8103971b840 has queue state" seen in WiP kernel code.
-# https://people.frebsd.org/~pho/stress/log/mark087.txt
+# https://people.freebsd.org/~pho/stress/log/mark087.txt
 
 old32=`sysctl -ni kern.elf32.aslr.enable`
 old64=`sysctl -ni kern.elf64.aslr.enable`

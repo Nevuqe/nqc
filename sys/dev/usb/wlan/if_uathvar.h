@@ -5,7 +5,7 @@
  * Copyright (c) 2006
  *	Damien Bergamini <damien.bergamini@free.fr>
  * Copyright (c) 2006 Sam Leffler, Errno Consulting
- * Copyright (c) 2008-2009 Weongyo Jeong <weongyo@frebsd.org>
+ * Copyright (c) 2008-2009 Weongyo Jeong <weongyo@freebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

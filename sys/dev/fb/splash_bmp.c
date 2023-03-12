@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999 Michael Smith <msmith@frebsd.org>
- * Copyright (c) 1999 Kazutaka YOKOTA <yokota@frebsd.org>
+ * Copyright (c) 1999 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1999 Kazutaka YOKOTA <yokota@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -165,7 +165,7 @@ bmp_splash(video_adapter_t *adp, int on)
 /*
 ** Code to handle Microsoft DIB (".BMP") format images.
 **
-** Blame me (msmith@frebsd.org) if this is broken, not Soren.
+** Blame me (msmith@freebsd.org) if this is broken, not Soren.
 */
 
 typedef struct tagBITMAPFILEHEADER {    /* bmfh */

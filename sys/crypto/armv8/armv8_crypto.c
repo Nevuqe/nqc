@@ -1,16 +1,16 @@
 /*-
- * Copyright (c) 2005-2008 Pawel Jakub Dawidek <pjd@frebsd.org>
- * Copyright (c) 2010 Konstantin Belousov <kib@frebsd.org>
- * Copyright (c) 2014,2016 The FreBSD Foundation
+ * Copyright (c) 2005-2008 Pawel Jakub Dawidek <pjd@freebsd.org>
+ * Copyright (c) 2010 Konstantin Belousov <kib@freebsd.org>
+ * Copyright (c) 2014,2016 The FreeBSD Foundation
  * Copyright (c) 2020 Ampere Computing
  * All rights reserved.
  *
  * Portions of this software were developed by John-Mark Gurney
- * under sponsorship of the FreBSD Foundation and
+ * under sponsorship of the FreeBSD Foundation and
  * Rubicon Communications, LLC (Netgate).
  *
  * This software was developed by Andrew Turner under
- * sponsorship from the FreBSD Foundation.
+ * sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

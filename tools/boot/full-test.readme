@@ -2,7 +2,7 @@ First, you will need a few things.
 
 (1) a small cache of binaries. You'll need to put these into
  ~/stand-test-root/cache. You can find the tarball at
- freefall.frebsd.org:~imp/cache.tar. You can just extract this in ~. These are
+ freefall.freebsd.org:~imp/cache.tar. You can just extract this in ~. These are
  the linux kernels I'm testing with.
 
 (2) The latest qemu-system-aarch64 (I think ports/pkg version of emulators/qemu

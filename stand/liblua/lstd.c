@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Pedro Souza <pedrosouza@frebsd.org>
+ * Copyright (c) 2014 Pedro Souza <pedrosouza@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

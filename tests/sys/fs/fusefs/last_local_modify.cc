@@ -204,7 +204,7 @@ static void* write_th(void* arg) {
  * * Thread 2 acquires the vnode lock.  At this point it must not add the
  *   now-stale file size to the attribute cache.
  *
- * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=259071
+ * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259071
  */
 TEST_P(LastLocalModify, lookup)
 {
@@ -358,7 +358,7 @@ TEST_P(LastLocalModify, lookup)
  * * The vnode lock acquired, thread 1 must not overwrite the attr cache's size
  *   with the old value.
  *
- * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=259071
+ * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259071
  */
 TEST_P(LastLocalModify, vfs_vget)
 {

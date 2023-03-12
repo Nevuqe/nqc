@@ -29,14 +29,14 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # Page fault seen in call from handle_workitem_freeblocks():
-# https://people.frebsd.org/~pho/stress/log/snap11.txt
+# https://people.freebsd.org/~pho/stress/log/snap11.txt
 # Fixed by r321347-9.
 
 # "panic: handle_written_inodeblock: not started" seen:
-# https://people.frebsd.org/~pho/stress/log/snap11-2.txt
+# https://people.freebsd.org/~pho/stress/log/snap11-2.txt
 
 # "panic: Barrier request in delayed write" seen:
-# https://people.frebsd.org/~pho/stress/log/snap11-3.txt
+# https://people.freebsd.org/~pho/stress/log/snap11-3.txt
 
 . ../default.cfg
 

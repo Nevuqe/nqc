@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2016 Matthew Macy (mmacy@mattmacy.io)
- * Copyright (c) 2017-2021 Hans Petter Selasky (hselasky@frebsd.org)
+ * Copyright (c) 2017-2021 Hans Petter Selasky (hselasky@freebsd.org)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

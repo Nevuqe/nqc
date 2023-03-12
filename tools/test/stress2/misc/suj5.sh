@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2010 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2010 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: general protection fault" seen:
-# https://people.frebsd.org/~pho/stress/log/log0398.txt
+# https://people.freebsd.org/~pho/stress/log/log0398.txt
 
 . ../default.cfg
 

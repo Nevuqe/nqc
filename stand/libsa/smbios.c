@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005-2009 Jung-uk Kim <jkim@frebsd.org>
+ * Copyright (c) 2005-2009 Jung-uk Kim <jkim@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

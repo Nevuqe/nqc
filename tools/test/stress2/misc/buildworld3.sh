@@ -30,7 +30,7 @@
 # Buildworld / quota test scenario.
 
 # "panic: chkdquot: missing dquot" seen
-# https://people.frebsd.org/~pho/stress/log/kostik1113.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1113.txt
 # Fixed in r338798 + r338799
 
 . ../default.cfg

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@frebsd.org>
+ * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@freebsd.org>
  * All rights reserved.
  *
  * This software was developed by Lawrence Stewart while studying at the Centre

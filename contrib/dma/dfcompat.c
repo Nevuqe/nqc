@@ -61,7 +61,7 @@ strlcpy(char *dst, const char *src, size_t siz)
 #ifndef HAVE_REALLOCF
 
 /*-
- * Copyright (c) 1998, M. Warner Losh <imp@frebsd.org>
+ * Copyright (c) 1998, M. Warner Losh <imp@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -32,7 +32,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2018 Prodrive Technologies, https://prodrive-technologies.com/
- * Author: Ed Schouten <ed@frebsd.org>
+ * Author: Ed Schouten <ed@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

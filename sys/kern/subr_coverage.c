@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2018 The FreBSD Foundation. All rights reserved.
+ * Copyright (C) 2018 The FreeBSD Foundation. All rights reserved.
  * Copyright (C) 2018, 2019 Andrew Turner
  *
  * This software was developed by Mitchell Horne under sponsorship of
- * the FreBSD Foundation.
+ * the FreeBSD Foundation.
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory under DARPA/AFRL contract FA8750-10-C-0237

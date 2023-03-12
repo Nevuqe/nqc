@@ -3,7 +3,7 @@
  * Copyright (c) 2006 SPARTA, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreBSD Project by Network
+ * This software was developed for the FreeBSD Project by Network
  * Associates Laboratories, the Security Research Division of Network
  * Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"),
  * as part of the DARPA CHATS research program.

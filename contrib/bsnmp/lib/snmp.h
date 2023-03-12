@@ -3,13 +3,13 @@
  *	Fraunhofer Institute for Open Communication Systems (FhG Fokus).
  *	All rights reserved.
  *
- * Author: Harti Brandt <harti@frebsd.org>
+ * Author: Harti Brandt <harti@freebsd.org>
  *
- * Copyright (c) 2010 The FreBSD Foundation
+ * Copyright (c) 2010 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Shteryana Sotirova Shopova
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  *
  * Redistribution and use in source and binary forms, with or without

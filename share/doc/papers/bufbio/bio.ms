@@ -1,6 +1,6 @@
 .\" ----------------------------------------------------------------------------
 .\" "THE BEER-WARE LICENSE" (Revision 42):
-.\" <phk@frebsd.org> wrote this file.  As long as you retain this notice you
+.\" <phk@freebsd.org> wrote this file.  As long as you retain this notice you
 .\" can do whatever you want with this stuff. If we meet some day, and you think
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
@@ -16,9 +16,9 @@ The case for struct bio
 .br
 A road map for a stackable BIO subsystem in NQC
 .AU
-Poul-Henning Kamp <phk@frebsd.org>
+Poul-Henning Kamp <phk@freebsd.org>
 .AI
-The FreBSD Project
+The FreeBSD Project
 .AB
 Historically, the only translation performed on I/O requests after
 they they left the file-system layer were logical sub disk implementation
@@ -420,7 +420,7 @@ The next step is to substitute struct bio for struct buf in all the code
 which only care about the I/O aspect: device drivers, diskslice/label.
 The patch to do this is up for review. \**
 .FS
-And can be found at http://phk.frebsd.dk/misc
+And can be found at http://phk.freebsd.dk/misc
 .FE
 and consists mainly of systematic substitutions like these
 .DS

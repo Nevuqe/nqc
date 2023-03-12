@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@
 # open(c4c08510,e6d06d00) at open+0x18
 # syscall(e6d06d38) at syscall+0x252
 
-# Test scenario by kib@frebsd.org
+# Test scenario by kib@freebsd.org
 
 . ../default.cfg
 

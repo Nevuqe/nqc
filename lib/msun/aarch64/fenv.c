@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2004 David Schultz <das@frebsd.org>
- * Copyright (c) 2013 Andrew Turner <andrew@frebsd.org>
+ * Copyright (c) 2004 David Schultz <das@freebsd.org>
+ * Copyright (c) 2013 Andrew Turner <andrew@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

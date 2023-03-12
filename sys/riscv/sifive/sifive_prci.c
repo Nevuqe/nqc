@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2019 Axiado Corporation
  * All rights reserved.
- * Copyright (c) 2021 Jessica Clarke <jrtc27@frebsd.org>
+ * Copyright (c) 2021 Jessica Clarke <jrtc27@freebsd.org>
  *
  * This software was developed in part by Kristof Provost under contract for
  * Axiado Corporation.

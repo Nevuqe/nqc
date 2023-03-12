@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2017 Konstantin Belousov <kib@frebsd.org>
+# Copyright (c) 2017 Konstantin Belousov <kib@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -32,7 +32,7 @@
 
 # Variation of nfs_halfpage.sh with a 2GB file.
 # Mark pages after EOF as clean after pageout.
-# https://reviews.frebsd.org/D11697
+# https://reviews.freebsd.org/D11697
 # Committed as r321580 + r321581.
 
 dir=/tmp

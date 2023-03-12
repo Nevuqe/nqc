@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 Damjan Marion <dmarion@frebsd.org>
+ * Copyright (c) 2012 Damjan Marion <dmarion@freebsd.org>
  * Copyright (c) 2016 Rubicon Communications, LLC (Netgate)
  * All rights reserved.
  *

@@ -13,7 +13,7 @@
 #
 # CDDL HEADER END
 #
-# Copyright (c) 2020 by Mariusz Zaborski <oshogbo@frebsd.org>.
+# Copyright (c) 2020 by Mariusz Zaborski <oshogbo@freebsd.org>.
 
 #
 # DESCRIPTION:

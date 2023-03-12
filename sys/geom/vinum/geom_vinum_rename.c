@@ -4,7 +4,7 @@
  *  Copyright (c) 2005 Chris Jones
  *  All rights reserved.
  *
- * This software was developed for the FreBSD Project by Chris Jones
+ * This software was developed for the FreeBSD Project by Chris Jones
  * thanks to the support of Google's Summer of Code program and
  * mentoring by Lukas Ertl.
  *

@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2014 Ruslan Bukin <br@bsdpad.com>
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * This software was developed by SRI International and the University of
@@ -8,7 +8,7 @@
  * ("CTSRD"), as part of the DARPA CRASH research programme.
  *
  * Portions of this software were developed by Andrew Turner
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

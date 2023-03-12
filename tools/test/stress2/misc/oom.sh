@@ -28,7 +28,7 @@
 
 # Test OOM killing.
 
-# https://people.frebsd.org/~pho/stress/log/kostik847.txt
+# https://people.freebsd.org/~pho/stress/log/kostik847.txt
 # Fixed by r290915 and r290917
 
 # Expect:

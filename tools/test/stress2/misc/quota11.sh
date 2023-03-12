@@ -27,7 +27,7 @@
 #
 
 # "panic: share->excl" seen.
-# http://people.frebsd.org/~pho/stress/log/kostik715.txt
+# http://people.freebsd.org/~pho/stress/log/kostik715.txt
 # Fixed in r270795 and r270797
 
 # Test scenario by Hiroki Sato <hrs NQC org>

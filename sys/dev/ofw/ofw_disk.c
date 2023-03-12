@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2002 Benno Rice <benno@frebsd.org>
+ * Copyright (C) 2002 Benno Rice <benno@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

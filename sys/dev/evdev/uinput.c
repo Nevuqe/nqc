@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2014 Jakub Wojciech Klama <jceel@frebsd.org>
- * Copyright (c) 2015-2016 Vladimir Kondratyev <wulf@frebsd.org>
+ * Copyright (c) 2014 Jakub Wojciech Klama <jceel@freebsd.org>
+ * Copyright (c) 2015-2016 Vladimir Kondratyev <wulf@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

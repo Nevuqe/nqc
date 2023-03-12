@@ -23,13 +23,13 @@ You're encouraged to add more features to these files - I'm not a Forth
 hacker, unfortunately...
 
 Andrzej Bialecki
-<abial@frebsd.org>
+<abial@freebsd.org>
 
 If you use loader.rc/menuconf.4th, be sure to create /boot/stable.conf and
 /boot/current.conf, like described in loader.conf(5), with appropriate
 configuration to distinguish one from the other.
 
 Daniel C. Sobral
-<dcs@frebsd.org>
+<dcs@freebsd.org>
 
 $NQC$

@@ -31,7 +31,7 @@
 
 # "mdconfig -o force" test scenario with nullfs.
 # Looping in kernel with WiP kernel code seen:
-# https://people.frebsd.org/~pho/stress/log/kirk125.txt
+# https://people.freebsd.org/~pho/stress/log/kirk125.txt
 
 . ../default.cfg
 

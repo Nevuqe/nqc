@@ -1,6 +1,6 @@
 # $NQC$
 #
-# Author: Harti Brandt <harti@frebsd.org>
+# Author: Harti Brandt <harti@freebsd.org>
 
 .include <src.opts.mk>
 

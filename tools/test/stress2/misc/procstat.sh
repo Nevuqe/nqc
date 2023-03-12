@@ -29,7 +29,7 @@
 
 # procstat -k test scenario
 # Page fault seen in stack_save_td()
-# https://people.frebsd.org/~pho/stress/log/procstat.txt
+# https://people.freebsd.org/~pho/stress/log/procstat.txt
 
 [ `uname -m` = "i386" ] || exit 0 # XXX Known issue on i386 XXX
 . ../default.cfg

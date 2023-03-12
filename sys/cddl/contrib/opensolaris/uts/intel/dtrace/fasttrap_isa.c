@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * Portions Copyright 2010 The FreBSD Foundation
+ * Portions Copyright 2010 The FreeBSD Foundation
  *
  * $NQC$
  */

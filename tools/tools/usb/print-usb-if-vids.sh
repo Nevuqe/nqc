@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# Copyright (c) 2004 David E. O'Brien <obrien@frebsd.org>
+# Copyright (c) 2004 David E. O'Brien <obrien@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

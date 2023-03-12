@@ -31,7 +31,7 @@
 # Run with marcus.cfg on a 1g swap backed MD with UFS SU fs.
 
 # "panic: softdep_load_inodeblock: nlink we read isn't what we wrote" seen in
-# WiP kernel code: https://people.frebsd.org/~pho/stress/log/kirk130.txt
+# WiP kernel code: https://people.freebsd.org/~pho/stress/log/kirk130.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

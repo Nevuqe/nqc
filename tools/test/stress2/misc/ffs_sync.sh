@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "ffs_fsync: dirty" seen:
-# http://people.frebsd.org/~pho/stress/log/ffs_sync.txt
+# http://people.freebsd.org/~pho/stress/log/ffs_sync.txt
 
 . ../default.cfg
 

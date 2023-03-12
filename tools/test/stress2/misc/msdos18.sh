@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 #
-# Copyright (c) 2023 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2023 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -29,7 +29,7 @@
 
 # D38549: msdosfs deextend: validate pages of the partial buffer
 
-# https://people.frebsd.org/~pho/stress/log/log0420.txt
+# https://people.freebsd.org/~pho/stress/log/log0420.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

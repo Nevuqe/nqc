@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  * This software includes fragments of the following programs:
- *	tcpmssd		Ruslan Ermilov <ru@frebsd.org>
+ *	tcpmssd		Ruslan Ermilov <ru@freebsd.org>
  *
  * $NQC$
  */

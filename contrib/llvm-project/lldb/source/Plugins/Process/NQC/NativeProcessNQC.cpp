@@ -220,7 +220,7 @@ void NativeProcessNQC::MonitorSIGTRAP(lldb::pid_t pid) {
       // established during this period are propagated to new threads,
       // explicitly copy the DR value at the time the new thread is reported.
       //
-      // See also: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=250954
+      // See also: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250954
 
       llvm::Error error = t.CopyWatchpointsFrom(
           static_cast<NativeThreadNQC &>(*GetCurrentThread()));

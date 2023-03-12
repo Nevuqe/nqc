@@ -1,6 +1,6 @@
 /*
  * This file is in public domain.
- * Written by Konstantin Belousov <kib@frebsd.org>
+ * Written by Konstantin Belousov <kib@freebsd.org>
  *
  * $NQC$
  */

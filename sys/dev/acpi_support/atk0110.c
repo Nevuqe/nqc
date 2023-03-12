@@ -2,7 +2,7 @@
 /*	$OpenBSD: atk0110.c,v 1.1 2009/07/23 01:38:16 cnst Exp $	*/
 
 /*
- * Copyright (c) 2009, 2010 Constantine A. Murenin <cnst++@frebsd.org>
+ * Copyright (c) 2009, 2010 Constantine A. Murenin <cnst++@freebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2022 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -29,11 +29,11 @@
 
 # fsck_ffs(8) false CLEAN claim scenario
 
-# https://people.frebsd.org/~pho/fsck9.sh.diskimage.20220716T150359.txt
-# https://people.frebsd.org/~pho/fsck9.sh.diskimage.20220716T150359.gz
+# https://people.freebsd.org/~pho/fsck9.sh.diskimage.20220716T150359.txt
+# https://people.freebsd.org/~pho/fsck9.sh.diskimage.20220716T150359.gz
 
-# https://people.frebsd.org/~pho/fsck9.sh.diskimage.20220716T172428.txt
-# https://people.frebsd.org/~pho/fsck9.sh.diskimage.20220716T172428.gz
+# https://people.freebsd.org/~pho/fsck9.sh.diskimage.20220716T172428.txt
+# https://people.freebsd.org/~pho/fsck9.sh.diskimage.20220716T172428.gz
 
 . ../default.cfg
 

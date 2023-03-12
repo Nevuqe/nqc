@@ -34,7 +34,7 @@
 # Stopped at      kdb_enter+0x34: movl    $0,kdb_why
 # db> x/s version
 # version: NQC 14.0-CURRENT #0 main-n260354-34b867ca30479: Mon Jan 30 07:26:30 CET 2023
-# pho@mercat1.netperf.frebsd.org:/mnt25/obj/usr/src/i386.i386/sys/PHO
+# pho@mercat1.netperf.freebsd.org:/mnt25/obj/usr/src/i386.i386/sys/PHO
 # db>
 
 . ../default.cfg

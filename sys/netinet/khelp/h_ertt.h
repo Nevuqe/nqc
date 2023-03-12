@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2009-2010
  * 	Swinburne University of Technology, Melbourne, Australia
- * Copyright (c) 2010 Lawrence Stewart <lstewart@frebsd.org>
+ * Copyright (c) 2010 Lawrence Stewart <lstewart@freebsd.org>
  * All rights reserved.
  *
  * This software was developed at the Centre for Advanced Internet

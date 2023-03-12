@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005 David Xu <davidxu@frebsd.org>
+ * Copyright (c) 2005 David Xu <davidxu@freebsd.org>
  * Copyright (c) 2015 Ruslan Bukin <br@bsdpad.com>
  * All rights reserved.
  *

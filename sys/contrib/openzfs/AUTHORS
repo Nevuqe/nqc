@@ -27,12 +27,12 @@ CONTRIBUTORS:
     Alex Wilson <alex.wilson@joyent.com>
     Alex Zhuravlev <alexey.zhuravlev@intel.com>
     Alexander Eremin <a.eremin@nexenta.com>
-    Alexander Motin <mav@frebsd.org>
+    Alexander Motin <mav@freebsd.org>
     Alexander Pyhalov <apyhalov@gmail.com>
     Alexander Stetsenko <ams@nexenta.com>
     Alexey Shvetsov <alexxy@gentoo.org>
     Alexey Smirnoff <fling@member.fsf.org>
-    Allan Jude <allanjude@frebsd.org>
+    Allan Jude <allanjude@freebsd.org>
     AndCycle <andcycle@andcycle.idv.tw>
     Andreas Buschmann <andreas.buschmann@tech.net.de>
     Andreas Dilger <adilger@intel.com>
@@ -42,7 +42,7 @@ CONTRIBUTORS:
     Andrew Stormont <andrew.stormont@nexenta.com>
     Andrew Tselischev <andrewtselischev@gmail.com>
     Andrey Vesnovaty <andrey.vesnovaty@gmail.com>
-    Andriy Gapon <avg@frebsd.org>
+    Andriy Gapon <avg@freebsd.org>
     Andy Bakun <github@thwartedefforts.org>
     Aniruddha Shankar <k@191a.net>
     Antonio Russo <antonio.e.russo@gmail.com>
@@ -174,7 +174,7 @@ CONTRIBUTORS:
     Joshua M. Clulow <josh@sysmgr.org>
     Justin Bedő <cu@cua0.org>
     Justin Lecher <jlec@gentoo.org>
-    Justin T. Gibbs <gibbs@frebsd.org>
+    Justin T. Gibbs <gibbs@freebsd.org>
     Jörg Thalheim <joerg@higgsboson.tk>
     KORN Andras <korn@elan.rulez.org>
     Kamil Domański <kamil@domanski.co>
@@ -200,7 +200,7 @@ CONTRIBUTORS:
     Marcel Wysocki <maci.stgn@gmail.com>
     Mark Shellenbaum <Mark.Shellenbaum@Oracle.COM>
     Mark Wright <markwright@internode.on.net>
-    Martin Matuska <mm@frebsd.org>
+    Martin Matuska <mm@freebsd.org>
     Massimo Maggi <me@massimo-maggi.eu>
     Matt Johnston <matt@fugro-fsi.com.au>
     Matt Kemp <matt@mattikus.com>
@@ -239,8 +239,8 @@ CONTRIBUTORS:
     Pavel Boldin <boldin.pavel@gmail.com>
     Pavel Snajdr <snajpa@snajpa.net>
     Pavel Zakharov <pavel.zakharov@delphix.com>
-    Pawel Jakub Dawidek <pjd@frebsd.org>
-    Pedro Giffuni <pfg@frebsd.org>
+    Pawel Jakub Dawidek <pjd@freebsd.org>
+    Pedro Giffuni <pfg@freebsd.org>
     Peng <peng.hse@xtaotech.com>
     Peter Ashford <ashford@accs.com>
     Prakash Surya <prakash.surya@delphix.com>
@@ -276,7 +276,7 @@ CONTRIBUTORS:
     Stephen Blinick <stephen.blinick@delphix.com>
     Steve Dougherty <sdougherty@barracuda.com>
     Steven Burgess <sburgess@dattobackup.com>
-    Steven Hartland <smh@frebsd.org>
+    Steven Hartland <smh@freebsd.org>
     Steven Johnson <sjohnson@sakuraindustries.com>
     Stian Ellingsen <stian@plaimi.net>
     Suman Chakravartula <schakrava@gmail.com>
@@ -300,10 +300,10 @@ CONTRIBUTORS:
     Tyler J. Stachecki <stachecki.tyler@gmail.com>
     Vitaut Bajaryn <vitaut.bayaryn@gmail.com>
     Weigang Li <weigang.li@intel.com>
-    Will Andrews <will@frebsd.org>
+    Will Andrews <will@freebsd.org>
     Will Rouesnel <w.rouesnel@gmail.com>
     Wolfgang Bumiller <w.bumiller@proxmox.com>
-    Xin Li <delphij@frebsd.org>
+    Xin Li <delphij@freebsd.org>
     Ying Zhu <casualfisher@gmail.com>
     YunQiang Su <syq@debian.org>
     Yuri Pankov <yuri.pankov@gmail.com>

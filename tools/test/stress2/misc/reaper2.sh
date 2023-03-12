@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2022 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@
 # procctl(2) threaded test
 
 # panic: exiting process is stopped" seen:
-# https://people.frebsd.org/~pho/stress/log/log0285.txt
+# https://people.freebsd.org/~pho/stress/log/log0285.txt
 
 prog=`basename ${0%.sh}`
 cat > /tmp/$prog.c <<EOF

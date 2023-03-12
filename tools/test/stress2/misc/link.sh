@@ -28,7 +28,7 @@
 
 # Deadlock seen for file systems which suspend writes on unmount, such as
 # UFS and tmpfs.
-# http://people.frebsd.org/~pho/stress/log/link.txt
+# http://people.freebsd.org/~pho/stress/log/link.txt
 # Fixed by r272130
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

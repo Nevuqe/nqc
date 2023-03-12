@@ -1,5 +1,5 @@
 #-
-# Copyright (c) 2015 Luiz Otavio O Souza <loos@frebsd.org>
+# Copyright (c) 2015 Luiz Otavio O Souza <loos@freebsd.org>
 # Copyright (c) 2014 Ruslan Bukin <br@bsdpad.com>
 # All rights reserved.
 #

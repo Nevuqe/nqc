@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2001 Takanori Watanabe <takawata@jp.frebsd.org>
- * Copyright (c) 2001 Mitsuru IWASAKI <iwasaki@jp.frebsd.org>
+ * Copyright (c) 2001 Takanori Watanabe <takawata@jp.freebsd.org>
+ * Copyright (c) 2001 Mitsuru IWASAKI <iwasaki@jp.freebsd.org>
  * Copyright (c) 2003 Peter Wemm
- * Copyright (c) 2008-2012 Jung-uk Kim <jkim@frebsd.org>
+ * Copyright (c) 2008-2012 Jung-uk Kim <jkim@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

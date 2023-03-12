@@ -29,7 +29,7 @@
 # Copy of holdcnt02.sh, but with mmap'ed write.
 # Use 16 GB RAM or less.
 # Deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/alan018.txt
+# https://people.freebsd.org/~pho/stress/log/alan018.txt
 
 # Test scenario suggestion by alc@
 

@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2019 Klara Inc.
- * Copyright (c) 2015 Baptiste Daroussin <bapt@frebsd.org>
- * Copyright (c) 2015 Allan Jude <allanjude@frebsd.org>
+ * Copyright (c) 2015 Baptiste Daroussin <bapt@freebsd.org>
+ * Copyright (c) 2015 Allan Jude <allanjude@freebsd.org>
  * Copyright (c) 2000 by Matthew Jacob
  * All rights reserved.
  *

@@ -558,8 +558,8 @@ SOURCE_DATE_EPOCH=	${PKG_TIMESTAMP}
 .endif
 
 PKG_NAME_PREFIX?=	NQC
-PKG_MAINTAINER?=	re@frebsd.org
-PKG_WWW?=		https://www.frebsd.org
+PKG_MAINTAINER?=	re@freebsd.org
+PKG_WWW?=		https://www.freebsd.org
 .export PKG_NAME_PREFIX
 .export PKG_MAINTAINER
 .export PKG_WWW

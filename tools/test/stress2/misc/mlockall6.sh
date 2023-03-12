@@ -28,7 +28,7 @@
 #
 
 # "panic: Lock (rw) vm object not locked @ vm/vm_page.c:1013" seen:
-# https://people.frebsd.org/~pho/stress/log/mlockall6-2.txt
+# https://people.freebsd.org/~pho/stress/log/mlockall6-2.txt
 
 . ../default.cfg
 

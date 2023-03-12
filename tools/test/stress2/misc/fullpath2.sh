@@ -35,7 +35,7 @@
 #   explanation why unlocked check for the flag is considered safe.
 
 # 'panic: namei: garbage in ni_resflags: 1':
-# https://people.frebsd.org/~pho/stress/log/fullpath2.txt
+# https://people.freebsd.org/~pho/stress/log/fullpath2.txt
 # Fixed by r367130
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

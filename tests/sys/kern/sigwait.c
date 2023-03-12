@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2022 Dmitry Chagin <dchagin@frebsd.org>
+ * Copyright (c) 2022 Dmitry Chagin <dchagin@freebsd.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */

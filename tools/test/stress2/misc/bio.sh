@@ -30,10 +30,10 @@
 # Test scenario suggestion by: jeff@
 
 # Out of VM deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/jeff114.txt
+# https://people.freebsd.org/~pho/stress/log/jeff114.txt
 
 # panic: deadlkres: possible deadlock detected:
-# https://people.frebsd.org/~pho/stress/log/jeff115.txt
+# https://people.freebsd.org/~pho/stress/log/jeff115.txt
 
 . ../default.cfg
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

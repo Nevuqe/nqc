@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-2-Clause-NetBSD
  *
  * Copyright (c) 2001-2003, 2005, 2008
- *	Shunsuke Akiyama <akiyama@jp.frebsd.org>.
+ *	Shunsuke Akiyama <akiyama@jp.freebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

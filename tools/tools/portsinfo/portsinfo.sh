@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) April 1997 Wolfram Schneider <wosch@frebsd.org>, Berlin.
+# Copyright (c) April 1997 Wolfram Schneider <wosch@freebsd.org>, Berlin.
 #
 # portsinfo - Generate list of new ports for last two weeks.
 #
@@ -7,7 +7,7 @@
 
 PATH=/bin:/usr/bin:/usr/local/bin:$PATH; export PATH
 
-host=https://www.frebsd.org
+host=https://www.freebsd.org
 url=$host/cgi/ports.cgi
 time='?type=new&time=2+week+ago&sektion=all'
 time2='?type=changed&time=2+week+ago&sektion=all'
@@ -31,9 +31,9 @@ type make install to install the application.
 
 For more information about using ports, see the ports collection
 
-	https://www.frebsd.org/handbook/ports.html
+	https://www.freebsd.org/handbook/ports.html
 and
-	https://www.frebsd.org/ports/
+	https://www.freebsd.org/ports/
 
 EOF
 

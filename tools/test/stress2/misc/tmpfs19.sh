@@ -31,7 +31,7 @@
 # Test scenario suggestion by kib@
 
 # Thread stuck in vmwait seen:
-# https://people.frebsd.org/~pho/stress/log/jeff138.txt
+# https://people.freebsd.org/~pho/stress/log/jeff138.txt
 # Fixed by r355771
 
 . ../default.cfg

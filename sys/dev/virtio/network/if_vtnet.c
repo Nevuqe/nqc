@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011, Bryan Venteicher <bryanv@frebsd.org>
+ * Copyright (c) 2011, Bryan Venteicher <bryanv@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1759,7 +1759,7 @@ vtnet_rxq_csum_needs_csum(struct vtnet_rxq *rxq, struct mbuf *m, uint16_t etype,
 	 * Default to receiving the packet as-is for performance reasons, but
 	 * this can cause issues if the packet is to be forwarded because it
 	 * does not contain a valid checksum. This patch may be helpful:
-	 * https://reviews.frebsd.org/D6611. In the meantime, have the driver
+	 * https://reviews.freebsd.org/D6611. In the meantime, have the driver
 	 * compute the checksum if requested.
 	 *
 	 * BMV: Need to add an CSUM_PARTIAL flag?

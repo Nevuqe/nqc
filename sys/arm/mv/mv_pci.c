@@ -2,14 +2,14 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (c) 2008 MARVELL INTERNATIONAL LTD.
- * Copyright (c) 2010 The FreBSD Foundation
+ * Copyright (c) 2010 The FreeBSD Foundation
  * Copyright (c) 2010-2015 Semihalf
  * All rights reserved.
  *
  * Developed by Semihalf.
  *
  * Portions of this software were developed by Semihalf
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

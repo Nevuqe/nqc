@@ -65,8 +65,8 @@ Next, install ports and sources:
 	cd /nqc
 	mkdir ports src packages
 
-	svn co https://svn0.us-east.frebsd.org/base/stable/10 src
-	svn co https://svn0.us-east.frebsd.org/ports/head ports
+	svn co https://svn0.us-east.freebsd.org/base/stable/10 src
+	svn co https://svn0.us-east.freebsd.org/ports/head ports
 
 And we should be ready to try a shot:
 
@@ -143,7 +143,7 @@ A partial example:
 
 		chpass -p "\$1\$VcM.9Ow8\$IcXHs0h9jsk27b8N64lOm/" phk
 
-		sed -i "" -e 's/^DS/DSorigo.frebsd.dk/' /etc/mail/sendmail.cf
+		sed -i "" -e 's/^DS/DSorigo.freebsd.dk/' /etc/mail/sendmail.cf
 		sed -i "" -e '/console/s/^/#/' /etc/syslog.conf
 		echo "beastie_disable=YES" >> /boot/loader.conf
 		touch /root/.hushlogin

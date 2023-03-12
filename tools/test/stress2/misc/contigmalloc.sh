@@ -38,7 +38,7 @@
 # contigmalloc(5 pages)
 
 # "panic: vm_reserv_alloc_contig: reserv 0xff... isn't free" seen.
-# http://people.frebsd.org/~pho/stress/log/contigmalloc.txt
+# http://people.freebsd.org/~pho/stress/log/contigmalloc.txt
 # Fixed by r271351.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

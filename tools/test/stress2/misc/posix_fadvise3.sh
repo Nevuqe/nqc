@@ -27,11 +27,11 @@
 #
 
 # Looping thread seen:
-# https://people.frebsd.org/~pho/stress/log/kostik855.txt
+# https://people.freebsd.org/~pho/stress/log/kostik855.txt
 # Fixed by r293197.
 
 # Again on i386:
-# https://people.frebsd.org/~pho/stress/log/kostik867.txt
+# https://people.freebsd.org/~pho/stress/log/kostik867.txt
 # Fixed by r295716.
 
 . ../default.cfg

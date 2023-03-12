@@ -27,7 +27,7 @@
 #
 
 # Non threaded Mach IPC test scenario
-# https://people.frebsd.org/~pho/stress/log/kip018.txt
+# https://people.freebsd.org/~pho/stress/log/kip018.txt
 
 ps -p1 | grep -q launchd || exit 0
 

@@ -1,5 +1,5 @@
 # $NQC$
-# Author: Shteryana Shopova <syrinx@frebsd.org>
+# Author: Shteryana Shopova <syrinx@freebsd.org>
 
 BINDIR?= /usr/bin
 PACKAGE=	bsnmp

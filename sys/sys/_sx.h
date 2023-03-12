@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2007 Attilio Rao <attilio@frebsd.org>
+ * Copyright (c) 2007 Attilio Rao <attilio@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

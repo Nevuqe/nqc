@@ -1,13 +1,13 @@
 /*-
- * Copyright (c) 2014, 2015 The FreBSD Foundation.
+ * Copyright (c) 2014, 2015 The FreeBSD Foundation.
  * Copyright (c) 2014 Andrew Turner.
  * All rights reserved.
  *
  * This software was developed by Andrew Turner under
- * sponsorship from the FreBSD Foundation.
+ * sponsorship from the FreeBSD Foundation.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2002 Alfred Perlstein <alfred@frebsd.org>.
+ * Copyright (c) 2002 Alfred Perlstein <alfred@freebsd.org>.
  * Copyright (c) 1995 John Birrell <jb@cimlogic.com.au>.
  * All rights reserved.
  *

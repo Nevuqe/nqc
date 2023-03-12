@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2003 Silicon Graphics International Corp.
  * Copyright (c) 2011 Spectra Logic Corporation
- * Copyright (c) 2014-2017 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2014-2017 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@
 /*
  * CAM Target Layer ioctl interface.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #ifndef	_CTL_IOCTL_H_

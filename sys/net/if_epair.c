@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008 The FreBSD Foundation
- * Copyright (c) 2009-2021 Bjoern A. Zeeb <bz@frebsd.org>
+ * Copyright (c) 2008 The FreeBSD Foundation
+ * Copyright (c) 2009-2021 Bjoern A. Zeeb <bz@freebsd.org>
  *
  * This software was developed by CK Software GmbH under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

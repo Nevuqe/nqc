@@ -22,8 +22,8 @@
  */
 /*
  * Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2013 Mark Johnston <markj@frebsd.org>
- * Copyright (c) 2018 Michael Tuexen <tuexen@frebsd.org>
+ * Copyright (c) 2013 Mark Johnston <markj@freebsd.org>
+ * Copyright (c) 2018 Michael Tuexen <tuexen@freebsd.org>
  */
 
 #pragma D depends_on library ip.d

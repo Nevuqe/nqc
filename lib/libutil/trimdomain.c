@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Brian Somers <brian@Awfulhak.org>
- *   Based on original work by Atsushi Murai <amurai@frebsd.org>
+ *   Based on original work by Atsushi Murai <amurai@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

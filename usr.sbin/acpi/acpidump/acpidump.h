@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 Doug Rabson
- * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@frebsd.org>
+ * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

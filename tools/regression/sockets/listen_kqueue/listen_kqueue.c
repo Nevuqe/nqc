@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2017 Hartmut Brandt <harti@frebsd.org>
- * Copyright (c) 2017 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2017 Hartmut Brandt <harti@freebsd.org>
+ * Copyright (c) 2017 Gleb Smirnoff <glebius@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

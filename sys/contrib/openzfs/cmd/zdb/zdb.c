@@ -27,10 +27,10 @@
  * Copyright (c) 2017, 2018 Lawrence Livermore National Security, LLC.
  * Copyright (c) 2015, 2017, Intel Corporation.
  * Copyright (c) 2020 Datto Inc.
- * Copyright (c) 2020, The FreBSD Foundation [1]
+ * Copyright (c) 2020, The FreeBSD Foundation [1]
  *
  * [1] Portions of this software were developed by Allan Jude
- *     under sponsorship from the FreBSD Foundation.
+ *     under sponsorship from the FreeBSD Foundation.
  * Copyright (c) 2021 Allan Jude
  * Copyright (c) 2021 Toomas Soome <tsoome@me.com>
  */

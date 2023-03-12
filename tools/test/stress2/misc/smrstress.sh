@@ -27,10 +27,10 @@
 # SUCH DAMAGE.
 #
 
-# Run the tools/uma/smrstress test by Jeffrey Roberson <jeff@frebsd.org>
+# Run the tools/uma/smrstress test by Jeffrey Roberson <jeff@freebsd.org>
 
 # "panic: vm_page_assert_xbusied: page 0xf... not exclusive busy" seen
-# https://people.frebsd.org/~pho/stress/log/jeff146.txt
+# https://people.freebsd.org/~pho/stress/log/jeff146.txt
 # Fixed by r357392
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

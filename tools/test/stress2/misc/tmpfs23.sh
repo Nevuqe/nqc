@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2021 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # General protection fault seen:
-# https://people.frebsd.org/~pho/stress/log/log0020.txt
+# https://people.freebsd.org/~pho/stress/log/log0020.txt
 
 # Test scenario suggestion by kib@
 

@@ -17,7 +17,7 @@ enterprises
       6		BEGEMOT-IP-MIB		IP objects
       100	BEGEMOT-ILMID		snmpd ILMID module
       101	BEGEMOT-ATM		snmpd ATM module
-      200	BEGEMOT-PF		snmpd PF module (phillip@frebsd.org)
+      200	BEGEMOT-PF		snmpd PF module (phillip@freebsd.org)
       201	BEGEMOT-NTP		snmpd NTP module
       202	BEGEMOT-HOSTRES		snmpd HOSTRES module private stuff
       203	regexData		bsnmp-regex (Nate Nielsen <nielsen@memberwebs.com>)

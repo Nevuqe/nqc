@@ -1,7 +1,7 @@
 /*	$OpenBSD: ieee80211_amrr.c,v 1.1 2006/06/17 19:07:19 damien Exp $	*/
 
 /*-
- * Copyright (c) 2010 Rui Paulo <rpaulo@frebsd.org>
+ * Copyright (c) 2010 Rui Paulo <rpaulo@freebsd.org>
  * Copyright (c) 2006
  *	Damien Bergamini <damien.bergamini@free.fr>
  *

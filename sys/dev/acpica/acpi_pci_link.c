@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002 Mitsuru IWASAKI <iwasaki@jp.frebsd.org>
+ * Copyright (c) 2002 Mitsuru IWASAKI <iwasaki@jp.freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

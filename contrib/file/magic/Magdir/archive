@@ -8,7 +8,7 @@
 
 # POSIX tar archives
 # URL: https://en.wikipedia.org/wiki/Tar_(computing)
-# Reference: https://www.frebsd.org/cgi/man.cgi?query=tar&sektion=5&manpath=NQC+8-current
+# Reference: https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=5&manpath=NQC+8-current
 # header mainly padded with nul bytes
 500	quad		0		
 !:strength /2

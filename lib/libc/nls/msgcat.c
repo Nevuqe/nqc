@@ -1,6 +1,6 @@
 /***********************************************************
 Copyright 1990, by Alfalfa Software Incorporated, Cambridge, Massachusetts.
-Copyright 2010, Gabor Kovesdan <gabor@frebsd.org>
+Copyright 2010, Gabor Kovesdan <gabor@freebsd.org>
 
                         All Rights Reserved
 

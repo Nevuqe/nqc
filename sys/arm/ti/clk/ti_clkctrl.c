@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright 2016 Michal Meloun <mmel@frebsd.org>
+ * Copyright 2016 Michal Meloun <mmel@freebsd.org>
  *
  * Copyright (c) 2020 Oskar Holmlund <oskar.holmlund@ohdata.se>
  *

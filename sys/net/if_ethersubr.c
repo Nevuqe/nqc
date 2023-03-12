@@ -1440,7 +1440,7 @@ ether_8021q_frame(struct mbuf **mp, struct ifnet *ife, struct ifnet *p,
 }
 
 /*
- * Allocate an address from the FreBSD Foundation OUI.  This uses a
+ * Allocate an address from the FreeBSD Foundation OUI.  This uses a
  * cryptographic hash function on the containing jail's name, UUID and the
  * interface name to attempt to provide a unique but stable address.
  * Pseudo-interfaces which require a MAC address should use this function to

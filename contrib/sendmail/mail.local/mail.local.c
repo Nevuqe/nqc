@@ -83,7 +83,7 @@ SM_IDSTR(id, "@(#)$Id: mail.local.c,v 8.257 2013-11-22 20:51:51 ca Exp $")
 	/*
 	**  Override path to mail store at run time (using -p).
 	**  From: Eugene Grosbein of Svyaz Service JSC
-	**  See: http://www.frebsd.org/cgi/query-pr.cgi?pr=bin/114195
+	**  See: http://www.freebsd.org/cgi/query-pr.cgi?pr=bin/114195
 	**  NOTE: Update man page before adding this to a release.
 	*/
 #endif /* _FFR_SPOOL_PATH */

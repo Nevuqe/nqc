@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008-2013 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008-2013 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,8 +27,8 @@
 #
 
 # panic: vn_finished_write: neg cnt
-# http://people.frebsd.org/~pho/stress/log/kostik500.txt
-# http://people.frebsd.org/~pho/stress/log/nfs6.txt
+# http://people.freebsd.org/~pho/stress/log/kostik500.txt
+# http://people.freebsd.org/~pho/stress/log/nfs6.txt
 
 . ../default.cfg
 

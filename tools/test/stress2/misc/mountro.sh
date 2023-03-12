@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008-2011 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008-2011 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Page fault seen: https://people.frebsd.org/~pho/stress/log/mountro.txt
+# Page fault seen: https://people.freebsd.org/~pho/stress/log/mountro.txt
 # Fixed by r346031
 
 . ../default.cfg

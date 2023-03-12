@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Jean-S�bastien P�dron <dumbbell@frebsd.org>
+# Copyright (c) 2021 Jean-S�bastien P�dron <dumbbell@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # "Written file doesn't match memory buffer" seen on main-n244961-e6bb49f12ca
-# https://reviews.frebsd.org/D28811
+# https://reviews.freebsd.org/D28811
 
 . ../default.cfg
 kldstat -v | grep -q zfs.ko  || { kldload zfs.ko ||

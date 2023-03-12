@@ -4,7 +4,7 @@
  *
  * Qlogic ISP SCSI Host Adapter NQC Wrapper Definitions
  *
- * Copyright (c) 2009-2020 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2009-2020 Alexander Motin <mav@freebsd.org>
  * Copyright (c) 1997-2008 by Matthew Jacob
  * All rights reserved.
  *

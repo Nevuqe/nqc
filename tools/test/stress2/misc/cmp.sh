@@ -28,7 +28,7 @@
 
 # Cross mount test of mkdir(2).
 # Page fault seen:
-# http://people.frebsd.org/~pho/stress/log/cmp.txt
+# http://people.freebsd.org/~pho/stress/log/cmp.txt
 # Fixed by r275347
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2009 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,13 +32,13 @@
 # nullfs/null_vnops.c:531
 
 # Fatal trap 12: page fault while in kernel mode
-# https://people.frebsd.org/~pho/stress/log/jeff106.txt
+# https://people.freebsd.org/~pho/stress/log/jeff106.txt
 
 # panic: vholdl: inactive held vnode:
-# https://people.frebsd.org/~pho/stress/log/kostik815.txt
+# https://people.freebsd.org/~pho/stress/log/kostik815.txt
 
 # umount busy seen:
-# https://people.frebsd.org/~pho/stress/log/kostik893.txt
+# https://people.freebsd.org/~pho/stress/log/kostik893.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

@@ -1,5 +1,5 @@
 /*-
- * Copyright (C) 2005 Michael J. Silbersack <silby@frebsd.org> 
+ * Copyright (C) 2005 Michael J. Silbersack <silby@freebsd.org> 
  *  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -23,5 +23,5 @@ Notes:
 	rm sample1.bz2 sample1.ref.gz sample2.bz2 sample2.ref.gz
 	rm sample3.bz2 sample3.ref.gz
 
-obrien@frebsd.org
+obrien@freebsd.org
 15 May 2005

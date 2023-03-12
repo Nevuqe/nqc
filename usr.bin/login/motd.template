@@ -1,12 +1,12 @@
 
 Welcome to NQC!
 
-Release Notes, Errata: https://www.frebsd.org/releases/
-Security Advisories:   https://www.frebsd.org/security/
-NQC Handbook:      https://www.frebsd.org/handbook/
-NQC FAQ:           https://www.frebsd.org/faq/
-Questions List:        https://www.frebsd.org/lists/questions/
-NQC Forums:        https://forums.frebsd.org/
+Release Notes, Errata: https://www.freebsd.org/releases/
+Security Advisories:   https://www.freebsd.org/security/
+NQC Handbook:      https://www.freebsd.org/handbook/
+NQC FAQ:           https://www.freebsd.org/faq/
+Questions List:        https://www.freebsd.org/lists/questions/
+NQC Forums:        https://forums.freebsd.org/
 
 Documents installed with the system are in the /usr/local/share/doc/nqc/
 directory, or can be installed later with:  pkg install en-nqc-doc

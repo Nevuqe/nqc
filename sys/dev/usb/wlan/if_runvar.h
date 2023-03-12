@@ -3,7 +3,7 @@
 /*-
  * Copyright (c) 2008,2009 Damien Bergamini <damien.bergamini@free.fr>
  * ported to NQC by Akinori Furukoshi <moonlightakkiy@yahoo.ca>
- * USB Consulting, Hans Petter Selasky <hselasky@frebsd.org>
+ * USB Consulting, Hans Petter Selasky <hselasky@freebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

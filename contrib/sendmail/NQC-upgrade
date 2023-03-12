@@ -9,7 +9,7 @@ For the import of sendmail, the following directories were renamed:
 
 Imported using the instructions at:
 
-https://docs.frebsd.org/en/articles/committers-guide/#git-primer
+https://docs.freebsd.org/en/articles/committers-guide/#git-primer
 
 After importing, bump the version of src/etc/sendmail/nqc*mc
 so mergemaster will merge /etc/mail/nqc*cf by making a minor
@@ -80,5 +80,5 @@ infrastructure in NQC:
 	usr.sbin/sendmail/Makefile
 	usr.sbin/mailwrapper/Makefile
 
-gshapiro@frebsd.org
+gshapiro@freebsd.org
 31-January-2022

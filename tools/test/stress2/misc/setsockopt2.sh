@@ -28,7 +28,7 @@
 #
 
 # "panic: Assertion in_epoch(net_epoch_preempt) failed at raw_ip6.c:742"
-# https://people.frebsd.org/~pho/stress/log/setsockopt2.txt
+# https://people.freebsd.org/~pho/stress/log/setsockopt2.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

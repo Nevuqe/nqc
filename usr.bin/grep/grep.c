@@ -6,7 +6,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 James Howard and Dag-Erling Coïdan Smørgrav
- * Copyright (C) 2008-2009 Gabor Kovesdan <gabor@frebsd.org>
+ * Copyright (C) 2008-2009 Gabor Kovesdan <gabor@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

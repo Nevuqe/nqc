@@ -48,7 +48,7 @@ The
 .UX
 Programmer's Reference Manual
 .R
-for the NQC system as distributed by the FreBSD Project.
+for the NQC system as distributed by the FreeBSD Project.
 .SH
 Documents of Historical Interest
 .IP

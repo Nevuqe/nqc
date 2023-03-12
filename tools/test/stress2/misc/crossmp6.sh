@@ -28,7 +28,7 @@
 
 # Copy of crossmp2.sh: NFS test, with lockf(1) added.
 # "panic: vinvalbuf: dirty bufs" seen.
-# https://people.frebsd.org/~pho/stress/log/crossmp6.txt
+# https://people.freebsd.org/~pho/stress/log/crossmp6.txt
 # Fixed by r283968.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999 Luoqi Chen <luoqi@frebsd.org>
+ * Copyright (c) 1999 Luoqi Chen <luoqi@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2009-2010 Weongyo Jeong <weongyo@frebsd.org>
+ * Copyright (c) 2009-2010 Weongyo Jeong <weongyo@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

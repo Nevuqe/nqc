@@ -3,8 +3,8 @@
  * Copyright (C) 2015-2021 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
  * Copyright (C) 2019-2021 Matt Dunwoodie <ncon@noconroy.net>
  * Copyright (c) 2019-2020 Rubicon Communications, LLC (Netgate)
- * Copyright (c) 2021 Kyle Evans <kevans@frebsd.org>
- * Copyright (c) 2022 The FreBSD Foundation
+ * Copyright (c) 2021 Kyle Evans <kevans@freebsd.org>
+ * Copyright (c) 2022 The FreeBSD Foundation
  */
 
 #include "opt_inet.h"

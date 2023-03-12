@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2009, 2014 The FreBSD Foundation
+ * Copyright (c) 2009, 2014 The FreeBSD Foundation
  *
  * This software was developed by Ed Schouten under sponsorship from the
- * FreBSD Foundation.
+ * FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

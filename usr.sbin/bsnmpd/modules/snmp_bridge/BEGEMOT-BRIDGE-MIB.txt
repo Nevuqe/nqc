@@ -1,5 +1,5 @@
 --
--- Copyright (C) 2006 Shteryana Shopova <syrinx@frebsd.org>
+-- Copyright (C) 2006 Shteryana Shopova <syrinx@freebsd.org>
 -- All rights reserved.
 --
 -- Redistribution and use in source and binary forms, with or without
@@ -53,7 +53,7 @@ begemotBridge MODULE-IDENTITY
 
 	     Fax:	+359 2 687 180
 
-	     E-Mail:	syrinx@frebsd.org"
+	     E-Mail:	syrinx@freebsd.org"
     DESCRIPTION
 	    "The Begemot MIB for managing bridge interfaces."
     REVISION     "201612170000Z"

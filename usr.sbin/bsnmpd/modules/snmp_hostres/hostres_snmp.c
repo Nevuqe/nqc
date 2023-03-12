@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: (BSD-2-Clause AND Beerware)
  *
- * Copyright (c) 2005-2006 The FreBSD Project
+ * Copyright (c) 2005-2006 The FreeBSD Project
  * All rights reserved.
  *
- * Author: Victor Cruceru <soc-victor@frebsd.org>
+ * Author: Victor Cruceru <soc-victor@freebsd.org>
  *
  * Redistribution of this software and documentation and use in source and
  * binary forms, with or without modification, are permitted provided that
@@ -34,7 +34,7 @@
  * NQC: src/sbin/mdconfig/mdconfig.c,v 1.33.2.1 2004/09/14 03:32:21 jmg Exp
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
- * <phk@frebsd.org> wrote this file.  As long as you retain this notice you
+ * <phk@freebsd.org> wrote this file.  As long as you retain this notice you
  * can do whatever you want with this stuff. If we meet some day, and you think
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------

@@ -30,7 +30,7 @@
 # Test threaded access to /dev/midistat.
 
 # "panic: vm_fault_hold: fault on nofault entry, addr: 0x8b352000" seen.
-# https://people.frebsd.org/~pho/stress/log/mark089.txt
+# https://people.freebsd.org/~pho/stress/log/mark089.txt
 # Fixed by 351262
 
 . ../default.cfg

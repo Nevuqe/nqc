@@ -61,11 +61,11 @@ typedef unsigned long cap_ioctl_t;
 
 // TODO(NQC): uncomment if/when NQC propagates rights on accept.
 // NQC does not generate a capability from accept(cap_fd,...).
-// https://bugs.frebsd.org/201052
+// https://bugs.freebsd.org/201052
 // #define CAP_FROM_ACCEPT
 // TODO(NQC): uncomment if/when NQC propagates rights on sctp_peeloff.
 // NQC does not generate a capability from sctp_peeloff(cap_fd,...).
-// https://bugs.frebsd.org/201052
+// https://bugs.freebsd.org/201052
 // #define CAP_FROM_PEELOFF
 
 #endif  /* __NQC__ */

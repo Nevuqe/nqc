@@ -30,7 +30,7 @@
 # Broken by r254304.
 
 # "panic: page 0xfffffe00070e7d30 is neither wired nor queued":
-# https://people.frebsd.org/~pho/stress/log/swappedout-3.txt
+# https://people.freebsd.org/~pho/stress/log/swappedout-3.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

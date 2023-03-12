@@ -23,15 +23,15 @@
  * PURPOSE.
  *
  * Copyright (c) 2001 Theo de Raadt
- * Copyright (c) 2014-2021 The FreBSD Foundation
+ * Copyright (c) 2014-2021 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by John-Mark Gurney
- * under sponsorship of the FreBSD Foundation and
+ * under sponsorship of the FreeBSD Foundation and
  * Rubicon Communications, LLC (Netgate).
  *
  * Portions of this software were developed by Ararat River
- * Consulting, LLC under sponsorship of the FreBSD Foundation.
+ * Consulting, LLC under sponsorship of the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

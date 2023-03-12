@@ -28,10 +28,10 @@
 #
 
 # "panic: Bad tailq NEXT(0xfffff815a589e238->tqh_last) != NULL" seen.
-# https://people.frebsd.org/~pho/stress/log/kevent14.txt
+# https://people.freebsd.org/~pho/stress/log/kevent14.txt
 # Fixed by r340734.
 
-# Test scenario by: Mark Johnston <markj@frebsd.org>
+# Test scenario by: Mark Johnston <markj@freebsd.org>
 
 cat > /tmp/kevent14.c <<EOF
 #include <sys/event.h>

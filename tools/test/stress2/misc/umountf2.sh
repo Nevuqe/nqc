@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,11 +26,11 @@
 # SUCH DAMAGE.
 #
 
-# Test scenario by kris@frebsd.org
+# Test scenario by kris@freebsd.org
 
 # Test problems with "umount -f and fsx. Results in a "KDB: enter: watchdog timeout"
 
-# http://people.frebsd.org/~pho/stress/log/kostik745.txt
+# http://people.freebsd.org/~pho/stress/log/kostik745.txt
 # Fixed by r275743
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

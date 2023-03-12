@@ -1,7 +1,7 @@
 # $NQC$
 
 #-
-# Copyright (c) 2015 M. Warner Losh <imp@frebsd.org>
+# Copyright (c) 2015 M. Warner Losh <imp@freebsd.org>
 # Copyright (c) 2010-2011 iXsystems, Inc.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -257,7 +257,7 @@ create_diskimage_mbr ( ) (
 	fi
 
 	out=${NANO_DISKIMGDIR}/_.disk.image.${NANO_NAME}${fmt}
-	# below depends on https://reviews.frebsd.org/D4403 not yet in the tree
+	# below depends on https://reviews.freebsd.org/D4403 not yet in the tree
 	# but there's problems: it marks all partitions as active, so you have to
 	# boot off partition 3 or 2 by hand if you're playing around with this WIP
 	case ${NANO_LAYOUT} in

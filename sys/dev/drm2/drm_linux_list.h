@@ -1,5 +1,5 @@
 /* drm_linux_list.h -- linux list functions for the BSDs.
- * Created: Mon Apr 7 14:30:16 1999 by anholt@frebsd.org
+ * Created: Mon Apr 7 14:30:16 1999 by anholt@freebsd.org
  */
 /*-
  * Copyright 2003 Eric Anholt
@@ -25,7 +25,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  *
  * Authors:
- *    Eric Anholt <anholt@frebsd.org>
+ *    Eric Anholt <anholt@freebsd.org>
  *
  */
 

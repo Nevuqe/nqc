@@ -30,7 +30,7 @@
 
 # "panic: vnode_pager_generic_getpages: sector size 8192 too large" seen
 # with an 8k sector size:
-# https://people.frebsd.org/~pho/stress/log/gnop2.txt
+# https://people.freebsd.org/~pho/stress/log/gnop2.txt
 # Fixed by r307626
 
 . ../default.cfg

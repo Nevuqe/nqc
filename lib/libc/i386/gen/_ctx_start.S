@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2001 Daniel Eischen <deischen@frebsd.org>
+ * Copyright (c) 2001 Daniel Eischen <deischen@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

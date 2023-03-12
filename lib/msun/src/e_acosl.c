@@ -17,7 +17,7 @@ __NQCID("$NQC$");
 
 /*
  * See comments in e_acos.c.
- * Converted to long double by David Schultz <das@frebsd.org>.
+ * Converted to long double by David Schultz <das@freebsd.org>.
  */
 
 #include <float.h>

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2002-2004 Marko Zec <zec@fer.hr>
  * Copyright (c) 2009 University of Zagreb
- * Copyright (c) 2009 FreBSD Foundation
+ * Copyright (c) 2009 FreeBSD Foundation
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

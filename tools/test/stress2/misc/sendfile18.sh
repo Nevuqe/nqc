@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Mark Johnston <markj@frebsd.org>
+# Copyright (c) 2020 Mark Johnston <markj@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # "Fatal trap 9: general protection fault while in kernel mode" seen:
-# https://people.frebsd.org/~pho/stress/log/sendfile15-4.txt
+# https://people.freebsd.org/~pho/stress/log/sendfile15-4.txt
 
 # Mark wrote:
 # It took me some time but I managed to get a repro.  Here is what I did:

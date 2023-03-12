@@ -17,13 +17,13 @@ IMPORTS
 
 NQC MODULE-IDENTITY
 	LAST-UPDATED "202009032030Z"
-	ORGANIZATION "The FreBSD Project."
+	ORGANIZATION "The FreeBSD Project."
 	CONTACT-INFO
-		"phk@frebsd.org is contact person for this file.
-		 core@frebsd.org is the final authority."
+		"phk@freebsd.org is contact person for this file.
+		 core@freebsd.org is the final authority."
 	DESCRIPTION
 		"The Structure of Management Information for the
-		FreBSD Project enterprise MIB subtree."
+		FreeBSD Project enterprise MIB subtree."
 	REVISION      "202009031900Z"
 	DESCRIPTION
 		"Added entries for the otherName component of a X.509 cert"
@@ -67,13 +67,13 @@ NQCpeople OBJECT-IDENTITY
 		 Under this branch any NQC committer may claim
 		 a subtree.  Grab the next sequential oid in the list.
 		 These assignments are not revoked when committers leave
-		 the FreBSD Project.
+		 the FreeBSD Project.
 		"
 	::= { NQC 3 }
 
 NQCpeoplePhk OBJECT-IDENTITY
 	STATUS current DESCRIPTION
-		"Subtree for phk@frebsd.org"
+		"Subtree for phk@freebsd.org"
 	::= {NQCpeople 1}
 
 NQCVersion OBJECT-IDENTITY

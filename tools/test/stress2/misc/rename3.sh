@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2009 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,8 +30,8 @@
 # to the root directory is renamed
 
 # Deadlocks seen:
-# https://people.frebsd.org/~pho/stress/log/kostik447.txt
-# https://people.frebsd.org/~pho/stress/log/kirk058.txt
+# https://people.freebsd.org/~pho/stress/log/kostik447.txt
+# https://people.freebsd.org/~pho/stress/log/kirk058.txt
 
 # Test scenario by Tor Egge
 

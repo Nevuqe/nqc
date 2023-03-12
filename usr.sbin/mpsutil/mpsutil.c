@@ -1,10 +1,10 @@
 /*-
  * Copyright (c) 2015 Netflix, Inc.
- * Written by: Scott Long <scottl@frebsd.org>
+ * Written by: Scott Long <scottl@freebsd.org>
  *
  * Copyright (c) 2008 Yahoo!, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@frebsd.org>
+ * Written by: John Baldwin <jhb@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

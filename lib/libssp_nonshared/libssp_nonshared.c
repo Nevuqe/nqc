@@ -1,5 +1,5 @@
 /*
- * Written by Alexander Kabaev <kan@frebsd.org>
+ * Written by Alexander Kabaev <kan@freebsd.org>
  * The file is in public domain.
  */
 

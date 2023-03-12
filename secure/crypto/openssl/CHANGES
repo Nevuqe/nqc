@@ -5660,7 +5660,7 @@
      [Rob Austein <sra@hactrn.net>]
 
   *) Add support for XMPP STARTTLS in s_client.
-     [Philip Paeps <philip@frebsd.org>]
+     [Philip Paeps <philip@freebsd.org>]
 
   *) Change the server-side SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG behavior
      to ensure that even with this option, only ciphersuites in the
@@ -10110,7 +10110,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Fix for asn1_GetSequence() for indefinite length constructed data.
      If SEQUENCE is length is indefinite just set c->slen to the total
      amount of data available.
-     [Steve Henson, reported by shige@frebsd.org]
+     [Steve Henson, reported by shige@freebsd.org]
      [This change does not apply to 0.9.7.]
 
   *) Change bctest to avoid here-documents inside command substitution
@@ -11498,7 +11498,7 @@ des-cbc           3624.96k     5258.21k     5530.91k     5624.30k     5628.26k
   *) Add missing #ifndefs that caused missing symbols when building libssl
      as a shared library without RSA.  Use #ifndef NO_SSL2 instead of
      NO_RSA in ssl/s2*.c.
-     [Kris Kennaway <kris@hub.frebsd.org>, modified by Ulf Möller]
+     [Kris Kennaway <kris@hub.freebsd.org>, modified by Ulf Möller]
 
   *) Precautions against using the PRNG uninitialized: RAND_bytes() now
      has a return value which indicates the quality of the random data

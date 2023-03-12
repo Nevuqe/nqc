@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997, 1998, 1999, 2002 The NetBSD Foundation, Inc.
- * Copyright 2013 John-Mark Gurney <jmg@frebsd.org>
+ * Copyright 2013 John-Mark Gurney <jmg@freebsd.org>
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation

@@ -3,15 +3,15 @@
  *
  * Copyright (c) 2003 Silicon Graphics International Corp.
  * Copyright (c) 2009-2011 Spectra Logic Corporation
- * Copyright (c) 2012,2021 The FreBSD Foundation
- * Copyright (c) 2014-2021 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2012,2021 The FreeBSD Foundation
+ * Copyright (c) 2014-2021 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
- * Portions of this software were developed by Ka Ho Ng <khng@frebsd.org>
- * under sponsorship from the FreBSD Foundation.
+ * Portions of this software were developed by Ka Ho Ng <khng@freebsd.org>
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -43,7 +43,7 @@
 /*
  * CAM Target Layer driver backend for block devices.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 #include <sys/cdefs.h>
 __NQCID("$NQC$");

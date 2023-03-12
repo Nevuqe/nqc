@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2021 The FreBSD Foundation
+ * Copyright (c) 2021 The FreeBSD Foundation
  *
- * This software was developed by Ka Ho Ng <khng@frebsd.org>
- * under sponsorship from the FreBSD Foundation.
+ * This software was developed by Ka Ho Ng <khng@freebsd.org>
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

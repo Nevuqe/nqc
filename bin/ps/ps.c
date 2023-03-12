@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  * ------+---------+---------+-------- + --------+---------+---------+---------*
- * Copyright (c) 2004  - Garance Alistair Drosehn <gad@frebsd.org>.
+ * Copyright (c) 2004  - Garance Alistair Drosehn <gad@freebsd.org>.
  * All rights reserved.
  *
  * Significant modifications made to bring `ps' options somewhat closer

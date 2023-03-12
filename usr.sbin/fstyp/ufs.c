@@ -1,11 +1,11 @@
 /*-
  * Copyright (c) 2002, 2003 Gordon Tetlow
- * Copyright (c) 2006 Pawel Jakub Dawidek <pjd@frebsd.org>
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2006 Pawel Jakub Dawidek <pjd@freebsd.org>
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Edward Tomasz Napierala under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

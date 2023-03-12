@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2022 Jason Harmening <jah@frebsd.org>
+# Copyright (c) 2022 Jason Harmening <jah@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

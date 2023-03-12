@@ -28,10 +28,10 @@
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
-# Test scenario by Mark Johnston <markj@frebsd.org>
+# Test scenario by Mark Johnston <markj@freebsd.org>
 
 # Page fault seen:
-# https://people.frebsd.org/~pho/stress/log/graid1_3.txt
+# https://people.freebsd.org/~pho/stress/log/graid1_3.txt
 
 . ../default.cfg
 

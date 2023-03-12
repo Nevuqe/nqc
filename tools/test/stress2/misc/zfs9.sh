@@ -30,7 +30,7 @@
 # Simple zfs raidz test scenario
 
 # Deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/zfs9.txt
+# https://people.freebsd.org/~pho/stress/log/zfs9.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `uname -m` = "i386" ] && exit 0

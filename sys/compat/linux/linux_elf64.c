@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2021 Edward Tomasz Napierala <trasz@frebsd.org>
+ * Copyright (c) 2021 Edward Tomasz Napierala <trasz@freebsd.org>
  * Copyright (c) 2002 Doug Rabson
  * All rights reserved.
  *

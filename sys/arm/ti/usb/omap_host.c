@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Oleksandr Tymoshenko <gonzo@frebsd.org>
+ * Copyright (c) 2015 Oleksandr Tymoshenko <gonzo@freebsd.org>
  * Copyright (c) 2011 Ben Gray <ben.r.gray@gmail.com>.
  * All rights reserved.
  *

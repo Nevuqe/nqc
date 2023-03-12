@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Joe Marcus Clarke <marcus@frebsd.org>
+ * Author: Joe Marcus Clarke <marcus@freebsd.org>
  *
  * $NQC$
  */

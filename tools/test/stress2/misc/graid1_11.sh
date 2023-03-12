@@ -2,8 +2,8 @@
 
 # g_mirror: don't fail reads while losing next-to-last disk
 
-# Fixed by https://cgit.frebsd.org/src/commit/?id=5d5f44623eb3d121d528060d131ee5d6bcd63489
-# Test scenario by: Andriy Gapon <avg@frebsd.org>
+# Fixed by https://cgit.freebsd.org/src/commit/?id=5d5f44623eb3d121d528060d131ee5d6bcd63489
+# Test scenario by: Andriy Gapon <avg@freebsd.org>
 
 set -u
 

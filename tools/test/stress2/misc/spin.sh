@@ -31,7 +31,7 @@
 # Demonstrate starvation: Thread stuck in "ufs" for minutes.
 # Only seen with >= 16 CPUs.
 # Not a problem with 4BSD.
-# http://people.frebsd.org/~pho/stress/log/spin.txt
+# http://people.freebsd.org/~pho/stress/log/spin.txt
 # Fixed by r273966.
 
 . ../default.cfg

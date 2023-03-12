@@ -29,11 +29,11 @@
 # Missing wakeup in the bufobj_wwait().
 
 # Snapshot of WiP work.
-# http://people.frebsd.org/~pho/stress/log/mmap15.txt
+# http://people.freebsd.org/~pho/stress/log/mmap15.txt
 # Not fixed
 
 # panic: invalid size
-# http://people.frebsd.org/~pho/stress/log/kostik738.txt
+# http://people.freebsd.org/~pho/stress/log/kostik738.txt
 # Fixed in r274878
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

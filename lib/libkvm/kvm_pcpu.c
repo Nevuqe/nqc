@@ -1,14 +1,14 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2013 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2013 Gleb Smirnoff <glebius@freebsd.org>
  * Copyright (c) 2010 Juniper Networks, Inc.
  * Copyright (c) 2009 Robert N. M. Watson
- * Copyright (c) 2009 Bjoern A. Zeeb <bz@frebsd.org>
+ * Copyright (c) 2009 Bjoern A. Zeeb <bz@freebsd.org>
  * Copyright (c) 2008 Yahoo!, Inc.
  * All rights reserved.
  *
- * Written by: John Baldwin <jhb@frebsd.org>
+ * Written by: John Baldwin <jhb@freebsd.org>
  *
  * This software was developed by Robert N. M. Watson under contract
  * to Juniper Networks, Inc.

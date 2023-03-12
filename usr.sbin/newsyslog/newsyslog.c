@@ -1,7 +1,7 @@
 /*-
  * ------+---------+---------+-------- + --------+---------+---------+---------*
  * This file includes significant modifications done by:
- * Copyright (c) 2003, 2004  - Garance Alistair Drosehn <gad@frebsd.org>.
+ * Copyright (c) 2003, 2004  - Garance Alistair Drosehn <gad@freebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

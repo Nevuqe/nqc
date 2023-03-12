@@ -35,7 +35,7 @@
 # Fixed in r275744.
 
 # Deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/pcatch.txt
+# https://people.freebsd.org/~pho/stress/log/pcatch.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ -z "$DEBUG" ] && exit 0 # Waiting for fix

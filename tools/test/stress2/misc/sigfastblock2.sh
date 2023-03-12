@@ -29,7 +29,7 @@
 
 # The test scenario is from:
 # Bug 246385 - SIGCHLD dropped if generated while blocked in sigfastblock
-# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=246385
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=246385
 # Fixed by r360940
 
 . ../default.cfg

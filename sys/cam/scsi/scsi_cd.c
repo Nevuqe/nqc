@@ -209,7 +209,7 @@ struct cd_quirk_entry {
  * to get rid of the informative diagnostic message is not acceptable.  All
  * 10_BYTE_ONLY quirks must be documented in full in a PR (which should be
  * referenced in a comment along with the quirk) , and must be approved by
- * ken@frebsd.org.  Any quirks added that don't adhere to this policy may
+ * ken@freebsd.org.  Any quirks added that don't adhere to this policy may
  * be removed until the submitter can explain why they are needed.
  * 10_BYTE_ONLY quirks will be removed (as they will no longer be necessary)
  * when the CAM_NEW_TRAN_CODE work is done.

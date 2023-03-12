@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 1999 Takanori Watanabe <takawata@jp.frebsd.org>
- * Copyright (c) 1999 Mitsuru IWASAKI <iwasaki@frebsd.org>
+ * Copyright (c) 1999 Takanori Watanabe <takawata@jp.freebsd.org>
+ * Copyright (c) 1999 Mitsuru IWASAKI <iwasaki@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

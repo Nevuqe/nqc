@@ -3074,7 +3074,7 @@ bc_num_printNum(BcNum* restrict n, BcBigDig base, size_t len,
 		return;
 	}
 
-	// This function uses an algorithm that Stefan Esser <se@frebsd.org> came
+	// This function uses an algorithm that Stefan Esser <se@freebsd.org> came
 	// up with to print the integer part of a number. What it does is convert
 	// intp into a number of the specified base, but it does it directly,
 	// instead of just doing a series of divisions and printing the remainders

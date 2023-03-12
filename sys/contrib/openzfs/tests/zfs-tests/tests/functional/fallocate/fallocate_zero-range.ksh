@@ -22,7 +22,7 @@
 
 #
 # Copyright (c) 2020 by Lawrence Livermore National Security, LLC.
-# Copyright (c) 2021 by The FreBSD Foundation.
+# Copyright (c) 2021 by The FreeBSD Foundation.
 # Copyright (c) 2022 by Delphix. All rights reserved.
 #
 

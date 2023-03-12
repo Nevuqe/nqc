@@ -3,7 +3,7 @@
  *
  * APM (Advanced Power Management) Event Dispatcher
  *
- * Copyright (c) 1999 Mitsuru IWASAKI <iwasaki@frebsd.org>
+ * Copyright (c) 1999 Mitsuru IWASAKI <iwasaki@freebsd.org>
  * Copyright (c) 1999 KOIE Hidetaka <koie@suri.co.jp>
  * All rights reserved.
  *

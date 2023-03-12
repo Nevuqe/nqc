@@ -31,7 +31,7 @@
 # Run all tests from testcases on a 2g swap backed MD with UFS SU fs.
 
 # "panic: SACK scoreboard must not be empty" seen:
-# https://people.frebsd.org/~pho/stress/log/full.txt
+# https://people.freebsd.org/~pho/stress/log/full.txt
 # Fixed by r310547.
 
 . ../default.cfg

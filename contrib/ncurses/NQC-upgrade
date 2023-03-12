@@ -15,7 +15,7 @@ check if there are any new bits that we don't want.
 The instructions for importing new release and merging to HEAD can be found
 at NQC wiki:
 
-	http://wiki.frebsd.org/SubversionPrimer/VendorImports
+	http://wiki.freebsd.org/SubversionPrimer/VendorImports
 
 The version tag can be obtained from contrib/ncurses/dist.mk.
 
@@ -47,5 +47,5 @@ ncurses/tinfo/lib_termcap.c
 ncurses/tinfo/read_termcap.c
   This is not used. We have our own src/lib/ncurses/termcap.c
 
-rafan@frebsd.org
+rafan@freebsd.org
 15-Nov-2008

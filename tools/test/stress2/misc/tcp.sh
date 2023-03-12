@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2013 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,10 +27,10 @@
 #
 
 # "panic: tcp_do_segment: TCPS_LISTEN" seen:
-# http://people.frebsd.org/~pho/stress/log/tcp.txt
+# http://people.freebsd.org/~pho/stress/log/tcp.txt
 
 # "panic: m_uiotombuf: progress != total" seen:
-# https://people.frebsd.org/~pho/stress/log/gleb010.txt
+# https://people.freebsd.org/~pho/stress/log/gleb010.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

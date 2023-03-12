@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001 Jake Burkholder <jake@frebsd.org>
+ * Copyright (c) 2001 Jake Burkholder <jake@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

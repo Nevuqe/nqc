@@ -276,7 +276,7 @@ ATF_TC_BODY(qdivq_s64q, tc)
 	int error;
 
 	if (atf_tc_get_config_var_as_bool_wd(tc, "ci", false))
-		atf_tc_skip("https://bugs.frebsd.org/240219");
+		atf_tc_skip("https://bugs.freebsd.org/240219");
 
 
 	srandomdev();

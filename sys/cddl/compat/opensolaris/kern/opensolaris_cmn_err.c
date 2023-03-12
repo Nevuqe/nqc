@@ -21,8 +21,8 @@
  * $NQC$
  */
 /*
- * Copyright 2007 John Birrell <jb@frebsd.org>. All rights reserved.
- * Copyright 2012 Martin Matuska <mm@frebsd.org>. All rights reserved.
+ * Copyright 2007 John Birrell <jb@freebsd.org>. All rights reserved.
+ * Copyright 2012 Martin Matuska <mm@freebsd.org>. All rights reserved.
  */
 
 #include <sys/assfail.h>

@@ -27,10 +27,10 @@
 #
 
 # Watchdog fired:
-# https://people.frebsd.org/~pho/stress/log/mark013.txt
+# https://people.freebsd.org/~pho/stress/log/mark013.txt
 # Fixed by: r327213
 
-# watchdogd: https://people.frebsd.org/~pho/stress/log/kostik1245.txt
+# watchdogd: https://people.freebsd.org/~pho/stress/log/kostik1245.txt
 
 . ../default.cfg
 

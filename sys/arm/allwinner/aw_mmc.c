@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2018 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2018 Emmanuel Vadot <manu@freebsd.org>
  * Copyright (c) 2013 Alexander Fedorov
  * All rights reserved.
  *

@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013  Zhixiang Yu <zcore@frebsd.org>
- * Copyright (c) 2015-2016 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2013  Zhixiang Yu <zcore@freebsd.org>
+ * Copyright (c) 2015-2016 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

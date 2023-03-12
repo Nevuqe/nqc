@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Test scenario by Mark Johnston <markj@frebsd.org>
+# Test scenario by Mark Johnston <markj@freebsd.org>
 # "physwr DL /tmp/graid1_2 /dev/mirror/test" seen.
 # Fixed by r307691.
 

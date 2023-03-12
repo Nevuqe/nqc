@@ -29,11 +29,11 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: Bad link elm 0xfffff8015ea20000 prev->next != elm" seen:
-# https://people.frebsd.org/~pho/stress/log/mjguzik005.txt
+# https://people.freebsd.org/~pho/stress/log/mjguzik005.txt
 # Fixed by r309067.
 
 # Watchdog fired:
-# https://people.frebsd.org/~pho/stress/log/log0083.txt
+# https://people.freebsd.org/~pho/stress/log/log0083.txt
 
 oldmx=`sysctl -n kern.maxvnodes`
 trap "sysctl kern.maxvnodes=$oldmx > /dev/null" EXIT SIGINT

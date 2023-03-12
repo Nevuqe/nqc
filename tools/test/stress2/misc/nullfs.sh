@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2008 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,8 +29,8 @@
 # Stress test by performing parallel calls to mount and umount. Alternate
 # between forced and non-forced unmounts.
 
-# https://people.frebsd.org/~pho/stress/log/kostik169.txt
-# https://people.frebsd.org/~pho/stress/log/kostik487.txt
+# https://people.freebsd.org/~pho/stress/log/kostik169.txt
+# https://people.freebsd.org/~pho/stress/log/kostik487.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2012 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,10 +28,10 @@
 
 # Variation of the datamove2.sh, using TMPFS
 # Deadlock seen
-# https://people.frebsd.org/~pho/stress/log/datamove4.txt
+# https://people.freebsd.org/~pho/stress/log/datamove4.txt
 
 # panic: elf32_putnote: Note type 10 changed as we read it (2236 > 2220)...
-# https://people.frebsd.org/~pho/stress/log/datamove4-2.txt
+# https://people.freebsd.org/~pho/stress/log/datamove4-2.txt
 # Fixed by r288944.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
@@ -59,7 +59,7 @@ rm -rf /tmp/datamove4
 exit 0
 EOF
 /*-
- * Copyright (c) 2006, Stephan Uphoff <ups@frebsd.org>
+ * Copyright (c) 2006, Stephan Uphoff <ups@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

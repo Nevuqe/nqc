@@ -29,7 +29,7 @@
 
 # fcntl(2) fuzz
 # "umount: unmount of /mnt failed: Device busy" seen:
-# https://people.frebsd.org/~pho/stress/log/fcntl2.txt
+# https://people.freebsd.org/~pho/stress/log/fcntl2.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

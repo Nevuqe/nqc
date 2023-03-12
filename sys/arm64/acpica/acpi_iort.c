@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2018 Marvell International Ltd.
  *
- * Author: Jayachandran C Nair <jchandra@frebsd.org>
+ * Author: Jayachandran C Nair <jchandra@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

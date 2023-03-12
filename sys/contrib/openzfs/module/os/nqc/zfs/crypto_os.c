@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2005-2010 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2005-2010 Pawel Jakub Dawidek <pjd@freebsd.org>
  * Copyright (c) 2018 Sean Eric Fagan <sef@ixsystems.com>
  * All rights reserved.
  *

@@ -20,7 +20,7 @@
  */
 
 /*
- * Copyright 2017 Li-Wen Hsu <lwhsu@frebsd.org>
+ * Copyright 2017 Li-Wen Hsu <lwhsu@freebsd.org>
  */
 
 #include <signal.h>

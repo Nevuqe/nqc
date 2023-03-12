@@ -5,7 +5,7 @@
  * All rights reserved.
  *
  * This software was developed by Julien Ridoux at the University of Melbourne
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

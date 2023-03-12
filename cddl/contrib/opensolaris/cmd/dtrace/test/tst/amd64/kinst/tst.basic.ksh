@@ -11,7 +11,7 @@
 #
 
 #
-# Copyright (c) 2022 Mark Johnston <markj@frebsd.org>
+# Copyright (c) 2022 Mark Johnston <markj@freebsd.org>
 #
 
 script()

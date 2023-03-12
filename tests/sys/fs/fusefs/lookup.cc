@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreBSD Foundation
+ * Copyright (c) 2019 The FreeBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -229,7 +229,7 @@ TEST_F(Lookup, dotdot_entry_cache_timeout)
 
 /*
  * Lookup ".." for a vnode with no valid parent nid
- * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=259974
+ * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259974
  * Since the file system is not exportable, we have no choice but to return an
  * error.
  */
@@ -278,7 +278,7 @@ TEST_F(Lookup, dotdot_no_parent_nid)
 
 /*
  * A daemon that returns an illegal error value should be handled gracefully.
- * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263220
+ * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263220
  */
 TEST_F(Lookup, ejustreturn)
 {
@@ -492,7 +492,7 @@ TEST_F(Lookup, subdir)
 /*
  * The server returns two different vtypes for the same nodeid.  This is
  * technically allowed if the entry's cache has already expired.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=258022
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=258022
  */
 TEST_F(Lookup, vtype_conflict)
 {
@@ -591,7 +591,7 @@ TEST_F(LookupExportable, dotdot_entry_cache_timeout)
 
 /*
  * Lookup ".." for a vnode with no valid parent nid
- * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=259974
+ * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259974
  * Since the file system is exportable, we should resolve the problem by
  * sending a FUSE_LOOKUP for "..".
  */

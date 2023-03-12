@@ -27,7 +27,7 @@
 #
 
 # "panic: pmap active 0xfffff80121ec04b8" seen:
-# http://people.frebsd.org/~pho/stress/log/kostik656.txt
+# http://people.freebsd.org/~pho/stress/log/kostik656.txt
 # Fixed in r263878.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

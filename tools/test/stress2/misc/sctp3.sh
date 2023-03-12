@@ -3,7 +3,7 @@
 # Based on https://gist.github.com/zonque/7d03568eab14a2bb57cb by
 # Daniel Mack github@zonque.org
 
-# Modified version of sctp.sh by Michael Tuexen <tuexen@frebsd.org>:
+# Modified version of sctp.sh by Michael Tuexen <tuexen@freebsd.org>:
 # Basically it is the first test without calling sctp_recvmsg() on
 # the server side and the required cleanups to avoid unused variables.
 # This program triggers pretty quickly the "Queues are not empty when

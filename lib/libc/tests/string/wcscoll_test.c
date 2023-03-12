@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2016 Baptiste Daroussin <bapt@freebsd.org>
  * Copyright 2016 Tom Lane <tgl@sss.pgh.pa.us>
  * Copyright 2017 Nexenta Systems, Inc.
  * All rights reserved.

@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2012 Ganbold Tsagaankhuu <ganbold@frebsd.org>
- * Copyright (c) 2015-2016 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2012 Ganbold Tsagaankhuu <ganbold@freebsd.org>
+ * Copyright (c) 2015-2016 Emmanuel Vadot <manu@freebsd.org>
  * All rights reserved.
  *
  * This code is derived from software written for Brini by Mark Brinicombe

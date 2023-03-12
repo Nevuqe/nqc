@@ -1,5 +1,5 @@
 #-
-# Copyright (c) 2001 by Thomas Moestl <tmm@frebsd.org>.
+# Copyright (c) 2001 by Thomas Moestl <tmm@freebsd.org>.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

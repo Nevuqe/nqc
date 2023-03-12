@@ -29,11 +29,11 @@
 # Parallel mount and umount of file systems. Nullfs version.
 
 # "panic: Lock (lockmgr) null not locked @ kern/vfs_default.c:523." seen.
-# http://people.frebsd.org/~pho/stress/log/kostik698.txt
+# http://people.freebsd.org/~pho/stress/log/kostik698.txt
 # Fixed by r269708.
 
-# Not fixed: https://people.frebsd.org/~pho/stress/log/kostik798.txt
-# https://people.frebsd.org/~pho/stress/log/kostik856.txt
+# Not fixed: https://people.freebsd.org/~pho/stress/log/kostik798.txt
+# https://people.freebsd.org/~pho/stress/log/kostik856.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

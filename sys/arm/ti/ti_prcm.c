@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 Damjan Marion <dmarion@frebsd.org>
+ * Copyright (c) 2012 Damjan Marion <dmarion@freebsd.org>
  * All rights reserved.
  *
  * Copyright (c) 2020 Oskar Holmlund <oskar.holmlund@ohdata.se>
@@ -282,7 +282,7 @@ MODULE_VERSION(ti_prcm, 1);
 MODULE_DEPEND(ti_prcm, ti_scm, 1, 1, 1);
 
 /* From sys/arm/ti/am335x/am335x_prcm.c
- * Copyright (c) 2012 Damjan Marion <dmarion@frebsd.org>
+ * Copyright (c) 2012 Damjan Marion <dmarion@freebsd.org>
  */
 #define PRM_DEVICE_OFFSET		0xF00
 #define AM335x_PRM_RSTCTRL		(PRM_DEVICE_OFFSET + 0x00)

@@ -4,13 +4,13 @@
  * Copyright 2013 Garrett D'Amore <garrett@damore.org>
  * Copyright 2010 Nexenta Systems, Inc.  All rights reserved.
  * Copyright (c) 2004 Tim J. Robbins. All rights reserved.
- * Copyright (c) 2003 David Xu <davidxu@frebsd.org>
+ * Copyright (c) 2003 David Xu <davidxu@freebsd.org>
  * All rights reserved.
  *
- * Copyright (c) 2011 The FreBSD Foundation
+ * Copyright (c) 2011 The FreeBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2021 Dmitry Chagin <dchagin@frebsd.org>
+ * Copyright (c) 2009-2021 Dmitry Chagin <dchagin@freebsd.org>
  * Copyright (c) 2008 Roman Divacky
  *
  * Redistribution and use in source and binary forms, with or without

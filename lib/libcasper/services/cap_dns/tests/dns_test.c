@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 The FreBSD Foundation
+ * Copyright (c) 2013 The FreeBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Pawel Jakub Dawidek under sponsorship from
- * the FreBSD Foundation.
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -262,12 +262,12 @@ runtest(cap_channel_t *capdns)
 
 	hintsp = &hints;
 
-	if (getaddrinfo("frebsd.org", "25", hintsp, &ais) != 0) {
+	if (getaddrinfo("freebsd.org", "25", hintsp, &ais) != 0) {
 		fprintf(stderr,
 		    "Unable to issue [system] getaddrinfo() for AF_UNSPEC: %s\n",
 		    gai_strerror(errno));
 	}
-	if (cap_getaddrinfo(capdns, "frebsd.org", "25", hintsp, &aic) == 0) {
+	if (cap_getaddrinfo(capdns, "freebsd.org", "25", hintsp, &aic) == 0) {
 		if (addrinfo_compare(ais, aic))
 			result |= GETADDRINFO_AF_UNSPEC;
 		freeaddrinfo(ais);
@@ -275,12 +275,12 @@ runtest(cap_channel_t *capdns)
 	}
 
 	hints.ai_family = AF_INET;
-	if (getaddrinfo("frebsd.org", "25", hintsp, &ais) != 0) {
+	if (getaddrinfo("freebsd.org", "25", hintsp, &ais) != 0) {
 		fprintf(stderr,
 		    "Unable to issue [system] getaddrinfo() for AF_UNSPEC: %s\n",
 		    gai_strerror(errno));
 	}
-	if (cap_getaddrinfo(capdns, "frebsd.org", "25", hintsp, &aic) == 0) {
+	if (cap_getaddrinfo(capdns, "freebsd.org", "25", hintsp, &aic) == 0) {
 		if (addrinfo_compare(ais, aic))
 			result |= GETADDRINFO_AF_INET;
 		freeaddrinfo(ais);
@@ -288,12 +288,12 @@ runtest(cap_channel_t *capdns)
 	}
 
 	hints.ai_family = AF_INET6;
-	if (getaddrinfo("frebsd.org", "25", hintsp, &ais) != 0) {
+	if (getaddrinfo("freebsd.org", "25", hintsp, &ais) != 0) {
 		fprintf(stderr,
 		    "Unable to issue [system] getaddrinfo() for AF_UNSPEC: %s\n",
 		    gai_strerror(errno));
 	}
-	if (cap_getaddrinfo(capdns, "frebsd.org", "25", hintsp, &aic) == 0) {
+	if (cap_getaddrinfo(capdns, "freebsd.org", "25", hintsp, &aic) == 0) {
 		if (addrinfo_compare(ais, aic))
 			result |= GETADDRINFO_AF_INET6;
 		freeaddrinfo(ais);

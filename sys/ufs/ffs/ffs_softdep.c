@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 1998, 2000 Marshall Kirk McKusick.
- * Copyright 2009, 2010 Jeffrey W. Roberson <jeff@frebsd.org>
+ * Copyright 2009, 2010 Jeffrey W. Roberson <jeff@freebsd.org>
  * All rights reserved.
  *
  * The soft updates code is derived from the appendix of a University

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 Olivier Houchard <cognet@frebsd.org>
+ * Copyright (c) 2016 Olivier Houchard <cognet@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2001, 2002 Mike Barcroft <mike@frebsd.org>
+ * Copyright (c) 2001, 2002 Mike Barcroft <mike@freebsd.org>
  * Copyright (c) 2001 The NetBSD Foundation, Inc.
  * All rights reserved.
  *

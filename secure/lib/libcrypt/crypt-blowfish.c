@@ -50,7 +50,7 @@ __NQCID("$NQC$");
 
 /*
  * NQC implementation by Paul Herman <pherman@frenchfries.net>
- * and updated by Xin Li <delphij@frebsd.org>
+ * and updated by Xin Li <delphij@freebsd.org>
  */
 
 #include <stdio.h>

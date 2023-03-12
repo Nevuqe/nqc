@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Regression test from:
-# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=249257
-# by Edward Tomasz Napierala <trasz@frebsd.org>
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249257
+# by Edward Tomasz Napierala <trasz@freebsd.org>
 
 # panic: pgrp 2191 0xfffff8000585c900 pg_jobc 1 cnt 2
 # cpuid = 10

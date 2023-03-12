@@ -1,12 +1,12 @@
 /*-
- * Copyright (c) 2003 Peter Wemm <peter@frebsd.org>
+ * Copyright (c) 2003 Peter Wemm <peter@freebsd.org>
  * All rights reserved.
  *
- * Copyright (c) 2020, 2021 The FreBSD Foundation
+ * Copyright (c) 2020, 2021 The FreeBSD Foundation
  *
  * Portions of this software were developed by
- * Konstantin Belousov <kib@frebsd.org> under sponsorship from
- * the FreBSD Foundation.
+ * Konstantin Belousov <kib@freebsd.org> under sponsorship from
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

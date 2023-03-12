@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2002-2019 Jeffrey Roberson <jeff@frebsd.org>
- * Copyright (c) 2004, 2005 Bosko Milekic <bmilekic@frebsd.org>
+ * Copyright (c) 2002-2019 Jeffrey Roberson <jeff@freebsd.org>
+ * Copyright (c) 2004, 2005 Bosko Milekic <bmilekic@freebsd.org>
  * Copyright (c) 2004-2006 Robert N. M. Watson
  * All rights reserved.
  *

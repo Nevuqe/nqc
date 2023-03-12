@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002 Mike Barcroft <mike@frebsd.org>
+ * Copyright (c) 2002 Mike Barcroft <mike@freebsd.org>
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
  *

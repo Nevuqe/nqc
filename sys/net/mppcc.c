@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2002-2004 Jan Dubiec <jdx@slackware.pl>
- * Copyright (c) 2007 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2007 Alexander Motin <mav@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

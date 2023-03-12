@@ -55,7 +55,7 @@ sub_FlashDevice () {
 		esac
 		;;
 	integral)
-		# Source: mich@frebsd.org
+		# Source: mich@freebsd.org
 		case $a2 in
 		256|256mb)
 			NANO_MEDIASIZE=`expr 259596288 / 512`
@@ -69,7 +69,7 @@ sub_FlashDevice () {
 		esac
 		;;
 	kodak)
-		# Source: mwlucas@frebsd.org
+		# Source: mwlucas@freebsd.org
 		case $a2 in
 		64|64mb)
 			NANO_MEDIASIZE=`expr 64487424 / 512`
@@ -83,7 +83,7 @@ sub_FlashDevice () {
 		esac
 		;;
 	memorycorp)
-		# Source: simon@frebsd.org
+		# Source: simon@freebsd.org
 		case $a2 in
 		512|512mb)
 			# MC512CFLS2

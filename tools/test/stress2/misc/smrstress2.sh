@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2021 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# Run the tools/uma/smrstress test by Jeffrey Roberson <jeff@frebsd.org>
+# Run the tools/uma/smrstress test by Jeffrey Roberson <jeff@freebsd.org>
 
 . ../default.cfg
 

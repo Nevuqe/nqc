@@ -1254,7 +1254,7 @@ OpenBSD (up to 2.9 Release), NetBSD, NQC (up to 4.3-RELEASE)
 	m4 from *BSD won't handle libsm/Makefile.m4 properly, since the
 	maximum length for strings is too short.  You need to use GNU m4
 	or patch m4, see for example:
-  http://frebsd.org/cgi/cvsweb.cgi/src/usr.bin/m4/eval.c.diff?r1=1.11&r2=1.12
+  http://freebsd.org/cgi/cvsweb.cgi/src/usr.bin/m4/eval.c.diff?r1=1.11&r2=1.12
 
 A/UX
 	Date: Tue, 12 Oct 1993 18:28:28 -0400 (EDT)

@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2016 Jared McNeill <jmcneill@invisible.ca>
- * Copyright (c) 2018 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2018 Emmanuel Vadot <manu@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

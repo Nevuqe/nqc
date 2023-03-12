@@ -34,7 +34,7 @@
  */
 
 /*-
- * Copyright (c) 2002-2008, Jeffrey Roberson <jeff@frebsd.org>
+ * Copyright (c) 2002-2008, Jeffrey Roberson <jeff@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

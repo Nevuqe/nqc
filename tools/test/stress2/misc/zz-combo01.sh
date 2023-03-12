@@ -29,7 +29,7 @@
 
 # "panic: pmap_demote_pde: firstpte and newpte map different physical
 # addresses" seen
-# https://people.frebsd.org/~pho/stress/log/kostik1195.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1195.txt
 
 # Fixed by r348306
 

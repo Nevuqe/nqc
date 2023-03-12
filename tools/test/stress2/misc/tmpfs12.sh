@@ -30,11 +30,11 @@
 
 # Problems seen:
 # panic: cache_enter: Doomed vnode used as src
-#     http://people.frebsd.org/~pho/stress/log/kostik676.txt
+#     http://people.freebsd.org/~pho/stress/log/kostik676.txt
 # panic: Bad link elm 0xfffff800b384e828 next->prev != elm
-#     http://people.frebsd.org/~pho/stress/log/kostik677.txt
+#     http://people.freebsd.org/~pho/stress/log/kostik677.txt
 # panic: unrhdr has 1 allocations
-#     http://people.frebsd.org/~pho/stress/log/kostik678.txt
+#     http://people.freebsd.org/~pho/stress/log/kostik678.txt
 # Fixed in r268605 - r268617 and r268766.
 
 [ $((`sysctl -n hw.usermem` / 1024 / 1024 / 1024)) -lt 6 ] && exit 0

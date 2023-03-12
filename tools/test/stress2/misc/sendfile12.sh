@@ -32,7 +32,7 @@
 
 # sendfile(2) using SF_NOCACHE and a mmap'ed file with touched pages.
 # "panic: vm_page_free_toq: freeing mapped page 0xc49e53bc" seen:
-# https://people.frebsd.org/~pho/stress/log/sendfile12.txt
+# https://people.freebsd.org/~pho/stress/log/sendfile12.txt
 
 . ../default.cfg
 

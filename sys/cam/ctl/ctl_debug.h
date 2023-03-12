@@ -35,7 +35,7 @@
 /*
  * CAM Target Layer debugging interface.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #ifndef	_CTL_DEBUG_H_

@@ -1,6 +1,6 @@
 /*
- * Initially written by Yar Tikhiy <yar@frebsd.org> in PR 76398.
- * Bug fixes and instrumentation by kib@frebsd.org.
+ * Initially written by Yar Tikhiy <yar@freebsd.org> in PR 76398.
+ * Bug fixes and instrumentation by kib@freebsd.org.
  */
 
 #include <sys/types.h>

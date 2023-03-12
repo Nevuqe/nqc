@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2015
- * 	Alexander V. Chernikov <melifaro@frebsd.org>
+ * 	Alexander V. Chernikov <melifaro@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

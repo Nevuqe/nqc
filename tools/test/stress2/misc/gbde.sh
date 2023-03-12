@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2012 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # "panic: bio_driver1 used by the consumer (geom ffs.md5.bde)" seen
-# http://people.frebsd.org/~pho/stress/log/gbde.txt
+# http://people.freebsd.org/~pho/stress/log/gbde.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

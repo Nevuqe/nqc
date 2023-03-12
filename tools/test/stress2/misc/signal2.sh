@@ -2,7 +2,7 @@
 
 # Test scenario from:
 # Bug 265889 - sys.kern.basic_signal.trap_signal_test crashes bhyve in i386 VM 
-# Test scenario by: Li-Wen Hsu <lwhsu@frebsd.org>
+# Test scenario by: Li-Wen Hsu <lwhsu@freebsd.org>
 
 cat > /tmp/signal2.c <<EOF
 #include <stdio.h>

@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreBSD Foundation
+ * Copyright (c) 2019 The FreeBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreBSD Foundation.
+ * from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -87,7 +87,7 @@ virtual void SetUp() {
  *
  * There should never be a FUSE_ACCESS sent for this operation, except for
  * search permissions on the parent directory.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=245689
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=245689
  */
 TEST_F(Access, chmod)
 {
@@ -119,7 +119,7 @@ TEST_F(Access, chmod)
  *
  * There should never be a FUSE_ACCESS sent for this operation, except for
  * search permissions on the parent directory.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=245689
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=245689
  */
 TEST_F(Access, create)
 {
@@ -199,7 +199,7 @@ TEST_F(RofsAccess, erofs)
  *
  * There should never be a FUSE_ACCESS sent for this operation, except for
  * search permissions on the parent directory.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=245689
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=245689
  */
 TEST_F(Access, Getxattr)
 {
@@ -240,7 +240,7 @@ TEST_F(Access, ok)
  *
  * There should never be a FUSE_ACCESS sent for this operation, except for
  * search permissions on the parent directory.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=245689
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=245689
  */
 TEST_F(Access, unlink)
 {
@@ -263,7 +263,7 @@ TEST_F(Access, unlink)
  *
  * There should never be a FUSE_ACCESS sent for this operation, except for
  * search permissions on the parent directory.
- * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=245689
+ * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=245689
  */
 TEST_F(Access, unlink_sticky_directory)
 {

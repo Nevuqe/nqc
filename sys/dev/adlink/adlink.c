@@ -30,7 +30,7 @@
  *
  * This is a device driver or the Adlink 9812 and 9810 ADC cards, mainly
  * intended to support Software Defined Radio reception of timesignals
- * in the VLF band.  See http://phk.frebsd.dk/loran-c
+ * in the VLF band.  See http://phk.freebsd.dk/loran-c
  *
  * The driver is configured with ioctls which define a ringbuffer with
  * a given number of chunks in it.  The a control structure and the

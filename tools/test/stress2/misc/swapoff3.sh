@@ -28,7 +28,7 @@
 #
 
 # "panic: Swapdev not found" seen:
-# https://people.frebsd.org/~pho/stress/log/swapoff3.txt
+# https://people.freebsd.org/~pho/stress/log/swapoff3.txt
 # Fixed by r358024-6
 
 . ../default.cfg

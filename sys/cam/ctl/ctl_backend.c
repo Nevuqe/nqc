@@ -34,7 +34,7 @@
 /*
  * CTL backend driver registration routines
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #include <sys/cdefs.h>

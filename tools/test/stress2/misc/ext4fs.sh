@@ -30,7 +30,7 @@
 # Simple ext4 test.
 
 # "panic: buf_vlist_add:  Preallocated nodes insufficient" seen:
-# https://people.frebsd.org/~pho/stress/log/mjguzik036.txt
+# https://people.freebsd.org/~pho/stress/log/mjguzik036.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

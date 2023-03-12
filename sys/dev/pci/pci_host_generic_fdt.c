@@ -1,13 +1,13 @@
 /*-
  * Copyright (c) 2015 Ruslan Bukin <br@bsdpad.com>
- * Copyright (c) 2014,2016 The FreBSD Foundation
+ * Copyright (c) 2014,2016 The FreeBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Andrew Turner under
- * the sponsorship of the FreBSD Foundation.
+ * the sponsorship of the FreeBSD Foundation.
  *
  * This software was developed by Semihalf under
- * the sponsorship of the FreBSD Foundation.
+ * the sponsorship of the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

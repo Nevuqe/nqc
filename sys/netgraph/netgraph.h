@@ -35,7 +35,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Julian Elischer <julian@frebsd.org>
+ * Author: Julian Elischer <julian@freebsd.org>
  *
  * $NQC$
  * $Whistle: netgraph.h,v 1.29 1999/11/01 07:56:13 julian Exp $

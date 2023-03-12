@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * Copyright (c) 2014 Hans Petter Selasky <hselasky@frebsd.org>
+ * Copyright (c) 2014 Hans Petter Selasky <hselasky@freebsd.org>
  * All rights reserved.
  *
  * This software was developed by SRI International and the University of

@@ -29,7 +29,7 @@
 
 # Failed Disk Test.
 # "panic: witness_warn" seen in WiP kernel code.
-# https://people.frebsd.org/~pho/stress/log/kirk102.txt
+# https://people.freebsd.org/~pho/stress/log/kirk102.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

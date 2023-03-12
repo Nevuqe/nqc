@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2015 Dimitry Andric <dim@frebsd.org>
- * Copyright (c) 2018 Alex Richardson <arichardson@frebsd.org>
+ * Copyright (c) 2015 Dimitry Andric <dim@freebsd.org>
+ * Copyright (c) 2018 Alex Richardson <arichardson@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

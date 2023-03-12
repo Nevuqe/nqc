@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2022 Peter Holm <pho@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,7 +31,7 @@
 
 # panic: wrong length 4098 for sectorsize 512
 # NQC 14.0-CURRENT #0 main-n255602-51adf913e8815: Fri May 13 07:55:32 CEST 2022
-# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
+# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
 
 . ../default.cfg
 

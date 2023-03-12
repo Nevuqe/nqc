@@ -35,7 +35,7 @@
  * CTL frontend to CAM SIM interface.  This allows access to CTL LUNs via
  * the da(4) and pass(4) drivers from inside the system.
  *
- * Author: Ken Merry <ken@frebsd.org>
+ * Author: Ken Merry <ken@freebsd.org>
  */
 
 #include <sys/cdefs.h>

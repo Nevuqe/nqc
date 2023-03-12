@@ -524,7 +524,7 @@ static void initialize(TargetLibraryInfoImpl &TLI, const Triple &T,
   // ffsl is available on at least Darwin, Mac OS X, iOS, NQC, and
   // Linux (GLIBC):
   // http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/ffsl.3.html
-  // http://svn.frebsd.org/base/head/lib/libc/string/ffsl.c
+  // http://svn.freebsd.org/base/head/lib/libc/string/ffsl.c
   // http://www.gnu.org/software/gnulib/manual/html_node/ffsl.html
   switch (T.getOS()) {
   case Triple::Darwin:
@@ -540,7 +540,7 @@ static void initialize(TargetLibraryInfoImpl &TLI, const Triple &T,
   }
 
   // ffsll is available on at least NQC and Linux (GLIBC):
-  // http://svn.frebsd.org/base/head/lib/libc/string/ffsll.c
+  // http://svn.freebsd.org/base/head/lib/libc/string/ffsll.c
   // http://www.gnu.org/software/gnulib/manual/html_node/ffsll.html
   switch (T.getOS()) {
   case Triple::Darwin:
@@ -556,9 +556,9 @@ static void initialize(TargetLibraryInfoImpl &TLI, const Triple &T,
   }
 
   // The following functions are available on at least NQC:
-  // http://svn.frebsd.org/base/head/lib/libc/string/fls.c
-  // http://svn.frebsd.org/base/head/lib/libc/string/flsl.c
-  // http://svn.frebsd.org/base/head/lib/libc/string/flsll.c
+  // http://svn.freebsd.org/base/head/lib/libc/string/fls.c
+  // http://svn.freebsd.org/base/head/lib/libc/string/flsl.c
+  // http://svn.freebsd.org/base/head/lib/libc/string/flsll.c
   if (!T.isOSNQC()) {
     TLI.setUnavailable(LibFunc_fls);
     TLI.setUnavailable(LibFunc_flsl);

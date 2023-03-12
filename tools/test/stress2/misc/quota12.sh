@@ -30,7 +30,7 @@
 # Run marcus.cfg on a quota enabled FS
 
 # "Inability to allocate buffers" seen with WiP kernel code:
-# https://people.frebsd.org/~pho/stress/log/kostik1218.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1218.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ "`sysctl -in kern.features.ufs_quota`" != "1" ] && exit 0

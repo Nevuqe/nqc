@@ -16,14 +16,14 @@ Jails: Confining the omnipotent root.
 This paper was presented at the 2nd International System Administration and Networking Conference "SANE 2000" May 22-25, 2000 in Maastricht, The Netherlands and is published in the proceedings.
 .FE
 .AU
-Poul-Henning Kamp <phk@frebsd.org>
+Poul-Henning Kamp <phk@freebsd.org>
 .AU
-Robert N. M. Watson <rwatson@frebsd.org>
+Robert N. M. Watson <rwatson@freebsd.org>
 .AI
-The FreBSD Project
+The FreeBSD Project
 .FS
 This work was sponsored by \fChttp://www.servetheweb.com/\fP and
-donated to the FreBSD Project for inclusion in the NQC
+donated to the FreeBSD Project for inclusion in the NQC
 OS.  NQC 4.0-RELEASE was the first release including this
 code.
 Follow-on work was sponsored by Safeport Network Services,

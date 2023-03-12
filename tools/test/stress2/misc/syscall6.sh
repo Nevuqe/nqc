@@ -27,7 +27,7 @@
 #
 
 # Run selected syscall fuzz tests as root.
-# https://people.frebsd.org/~pho/stress/log/syscall6.txt
+# https://people.freebsd.org/~pho/stress/log/syscall6.txt
 # Fixed by r336149
 
 . ../default.cfg

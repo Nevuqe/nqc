@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
  * Copyright 2015 Toomas Soome <tsoome@me.com>
  * All rights reserved.
  *

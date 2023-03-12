@@ -1,7 +1,7 @@
 #
 # $NQC$
 #
-# Copyright (c) Andriy Gapon <avg@frebsd.org>
+# Copyright (c) Andriy Gapon <avg@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

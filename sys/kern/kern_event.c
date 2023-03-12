@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999,2000,2001 Jonathan Lemon <jlemon@frebsd.org>
- * Copyright 2004 John-Mark Gurney <jmg@frebsd.org>
+ * Copyright (c) 1999,2000,2001 Jonathan Lemon <jlemon@freebsd.org>
+ * Copyright 2004 John-Mark Gurney <jmg@freebsd.org>
  * Copyright (c) 2009 Apple, Inc.
  * All rights reserved.
  *

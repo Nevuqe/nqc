@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # Copyright (c) 2008 Ben Rockwood <benr@cuddletech.com>,
-# Copyright (c) 2010 Martin Matuska <mm@frebsd.org>,
+# Copyright (c) 2010 Martin Matuska <mm@freebsd.org>,
 # Copyright (c) 2010-2011 Jason J. Hellenthal <jhell@DataIX.net>,
 # Copyright (c) 2017 Scot W. Stevenson <scot.stevenson@gmail.com>
 # All rights reserved.

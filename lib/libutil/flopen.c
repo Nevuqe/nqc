@@ -43,7 +43,7 @@ __NQCID("$NQC$");
  * Reliably open and lock a file.
  *
  * Please do not modify this code without first reading the revision history
- * and discussing your changes with <des@frebsd.org>.  Don't be fooled by the
+ * and discussing your changes with <des@freebsd.org>.  Don't be fooled by the
  * code's apparent simplicity; there would be no need for this function if it
  * was easy to get right.
  */

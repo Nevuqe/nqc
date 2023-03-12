@@ -5,7 +5,7 @@ of atf into head.  These notes are built on the instructions in
 the NQC Subversion Primer that detail how to deal with vendor
 branches and you are supposed to follow those:
 
-	http://www.frebsd.org/doc/en/articles/committers-guide/subversion-primer.html
+	http://www.freebsd.org/doc/en/articles/committers-guide/subversion-primer.html
 
 The ATF source code is hosted on GitHub:
 
@@ -17,7 +17,7 @@ To merge the vendor branch into head do something like this:
 
 	cd .../base/head/contrib/atf
 	svn merge --accept=postpone \
-	    svn+ssh://svn.frebsd.org/base/vendor/atf/dist .
+	    svn+ssh://svn.freebsd.org/base/vendor/atf/dist .
 	svn remove --force $(cat NQC-Xlist)
 
 and resolve any conflicts that may arise at this point.

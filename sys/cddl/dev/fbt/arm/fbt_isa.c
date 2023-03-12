@@ -18,9 +18,9 @@
  *
  * CDDL HEADER END
  *
- * Portions Copyright 2006-2008 John Birrell jb@frebsd.org
- * Portions Copyright 2013 Justin Hibbits jhibbits@frebsd.org
- * Portions Copyright 2013 Howard Su howardsu@frebsd.org
+ * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
+ * Portions Copyright 2013 Justin Hibbits jhibbits@freebsd.org
+ * Portions Copyright 2013 Howard Su howardsu@freebsd.org
  *
  * $NQC$
  *

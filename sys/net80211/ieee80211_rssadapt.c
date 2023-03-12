@@ -3,7 +3,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2010 Rui Paulo <rpaulo@frebsd.org>
+ * Copyright (c) 2010 Rui Paulo <rpaulo@freebsd.org>
  * Copyright (c) 2003, 2004 David Young.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or

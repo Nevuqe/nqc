@@ -6,7 +6,7 @@
  *  Copyright (c) 2007 Ulf Lilleengen
  *  All rights reserved.
  *
- * Portions of this software were developed for the FreBSD Project
+ * Portions of this software were developed for the FreeBSD Project
  * by Chris Jones thanks to the support of Google's Summer of Code
  * program and mentoring by Lukas Ertl.
  *

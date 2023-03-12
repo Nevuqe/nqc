@@ -50,8 +50,8 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * Inspired coded in sys/dev/mmc. Thanks to Warner Losh <imp@frebsd.org>,
- * Bernd Walter <tisco@frebsd.org>, and other authors.
+ * Inspired coded in sys/dev/mmc. Thanks to Warner Losh <imp@freebsd.org>,
+ * Bernd Walter <tisco@freebsd.org>, and other authors.
  *
  * $NQC$
  */

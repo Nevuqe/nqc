@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 Mikolaj Golub <trociny@frebsd.org>
+ * Copyright (c) 2013 Mikolaj Golub <trociny@freebsd.org>
  * Copyright (c) 2017 Dell EMC
  * All rights reserved.
  *

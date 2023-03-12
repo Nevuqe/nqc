@@ -4,7 +4,7 @@
  * Copyright (c) 2004-2006
  *      Damien Bergamini <damien.bergamini@free.fr>. All rights reserved.
  * Copyright (c) 2006 Sam Leffler, Errno Consulting
- * Copyright (c) 2007 Andrew Thompson <thompsa@frebsd.org>
+ * Copyright (c) 2007 Andrew Thompson <thompsa@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

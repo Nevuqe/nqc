@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # A regression test for seekdir/telldir
-# submitted by julian@frebsd.org
-# https://reviews.frebsd.org/D2410.
+# submitted by julian@freebsd.org
+# https://reviews.freebsd.org/D2410.
 # Fixed by r282485
 
 . ../default.cfg

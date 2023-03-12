@@ -27,7 +27,7 @@
 #
 
 # Out of VM deadlock seen. Introduced by r285808. Variation of oovm.sh
-# https://people.frebsd.org/~pho/stress/log/oovm2.txt
+# https://people.freebsd.org/~pho/stress/log/oovm2.txt
 
 # Fixed by r290047 and <alc's PQ_LAUNDRY patch>
 

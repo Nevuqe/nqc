@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (c) 2002 Andre Oppermann, Internet Business Solutions AG
- * Copyright (c) 2021 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2021 Gleb Smirnoff <glebius@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

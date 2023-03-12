@@ -27,7 +27,7 @@
 #
 
 # Threaded version of unix_socket_detach.sh by
-# Mark Johnston <markj@frebsd.org>
+# Mark Johnston <markj@freebsd.org>
 
 # "panic: __rw_wlock_hard: recursing but non-recursive rw unp_link_rwlock @
 #  ../../../kern/uipc_usrreq.c:655" seen.

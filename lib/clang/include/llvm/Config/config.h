@@ -9,7 +9,7 @@
 #include "llvm/Config/llvm-config.h"
 
 /* Bug report URL. */
-#define BUG_REPORT_URL "https://bugs.frebsd.org/submit/"
+#define BUG_REPORT_URL "https://bugs.freebsd.org/submit/"
 
 /* Define to 1 to enable backtraces, and to 0 otherwise. */
 #define ENABLE_BACKTRACES 1
@@ -347,7 +347,7 @@
 #endif
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://bugs.frebsd.org/submit/"
+#define PACKAGE_BUGREPORT "https://bugs.freebsd.org/submit/"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "LLVM"

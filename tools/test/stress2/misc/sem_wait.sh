@@ -28,7 +28,7 @@
 #
 
 # "panic: vm_page_free_prep: freeing mapped page 0x657936c" seen.
-# https://people.frebsd.org/~pho/stress/log/sem_wait.txt
+# https://people.freebsd.org/~pho/stress/log/sem_wait.txt
 # Fixed by r350005
 
 . ../default.cfg

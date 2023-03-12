@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2004 Stefan Farfeleder <stefanf@frebsd.org>
+ * Copyright (c) 2004 Stefan Farfeleder <stefanf@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

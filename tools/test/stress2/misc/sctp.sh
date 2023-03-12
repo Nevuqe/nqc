@@ -4,7 +4,7 @@
 # Daniel Mack github@zonque.org
 
 # "panic: general protection fault" seen:
-# https://people.frebsd.org/~pho/stress/log/sctp.txt
+# https://people.freebsd.org/~pho/stress/log/sctp.txt
 # Fixed by r350626
 
 kldstat -v | grep -q sctp || kldload sctp.ko

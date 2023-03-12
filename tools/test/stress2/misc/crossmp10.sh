@@ -28,7 +28,7 @@
 
 # ext2fs parallel mount & umount test scenario
 # "panic: vm_fault_hold: fault on nofault entry" seen.
-# https://people.frebsd.org/~pho/stress/log/crossmp10.txt
+# https://people.freebsd.org/~pho/stress/log/crossmp10.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ -z "`which mke2fs`" ] && echo "mke2fs not found" && exit 0

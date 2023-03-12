@@ -20,7 +20,7 @@
 # Stopped at      78043(%rip)
 # db> x/s version
 # NQC 14.0-CURRENT #0 n255820-4682ac697ce9b: Fri May 27 07:06:21 CEST 2022
-# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
+# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
 # db> 
 
 

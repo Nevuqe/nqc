@@ -5,9 +5,9 @@
 ##  Rewritten in September 2011 by Matthias Andree to heed untrust
 ##
 
-##  Copyright (c) 2011, 2013 Matthias Andree <mandree@frebsd.org>
+##  Copyright (c) 2011, 2013 Matthias Andree <mandree@freebsd.org>
 ##  All rights reserved.
-##  Copyright (c) 2018, Allan Jude <allanjude@frebsd.org>
+##  Copyright (c) 2018, Allan Jude <allanjude@freebsd.org>
 ##
 ##  Redistribution and use in source and binary forms, with or without
 ##  modification, are permitted provided that the following conditions are

@@ -16,10 +16,10 @@ NQC-Xlist.
 The instructions for importing new release and merging to HEAD can be found
 at NQC wiki:
 
-	http://wiki.frebsd.org/SubversionPrimer/VendorImports
+	http://wiki.freebsd.org/SubversionPrimer/VendorImports
 
 To make local changes to libarchive, simply patch and commit to the trunk
 branch (aka HEAD).  Never make local changes on the vendor branch.
 
-mm@frebsd.org
+mm@freebsd.org
 27-July-2012

@@ -78,7 +78,7 @@ static const struct libusb_version libusb_version = {
 	.micro = 0,
 	.nano = 2016,
 	.rc = "",
-	.describe = "https://www.frebsd.org"
+	.describe = "https://www.freebsd.org"
 };
 
 const struct libusb_version *

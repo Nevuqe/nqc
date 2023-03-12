@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006, 2011, 2016-2017 Robert N. M. Watson
- * Copyright 2020 The FreBSD Foundation
+ * Copyright 2020 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by BAE Systems, the University of
@@ -11,7 +11,7 @@
  * Computing (TC) research program.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2012 Peter Holm <pho@freebsd.org>
 # Copyright (c) 2019 Dell EMC Isilon
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 # Currently fails for NFS
 
 # Page fault seen:
-# https://people.frebsd.org/~pho/stress/log/mountu.txt
+# https://people.freebsd.org/~pho/stress/log/mountu.txt
 # Fixed by: r285039.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

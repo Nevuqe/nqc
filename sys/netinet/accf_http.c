@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Paycounter, Inc.
- * Author: Alfred Perlstein <alfred@paycounter.com>, <alfred@frebsd.org>
+ * Author: Alfred Perlstein <alfred@paycounter.com>, <alfred@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

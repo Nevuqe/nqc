@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Regression test for D33416 vm_fault: Fix vm_fault_populate()'s handling of VM_FAULT_WIRE
-# Bug report: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=260347
+# Bug report: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=260347
 
 # Test scenario by: martin
 

@@ -30,7 +30,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: flush_newblk_dep: Bad newblk 0xfffff8015fd9e800" seen:
-# https://people.frebsd.org/~pho/stress/log/rename15.txt
+# https://people.freebsd.org/~pho/stress/log/rename15.txt
 
 . ../default.cfg
 

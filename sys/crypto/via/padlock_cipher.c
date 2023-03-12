@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005-2006 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2005-2006 Pawel Jakub Dawidek <pjd@freebsd.org>
  * Copyright (c) 2004 Mark R V Murray
  * All rights reserved.
  *

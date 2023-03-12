@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2001 Eduardo Horvath.
- * Copyright (c) 2008 Marius Strobl <marius@frebsd.org>
+ * Copyright (c) 2008 Marius Strobl <marius@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

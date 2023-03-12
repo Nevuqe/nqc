@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2017 Baptiste Daroussin <bapt@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

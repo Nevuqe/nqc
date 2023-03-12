@@ -1,5 +1,5 @@
 /*-
- * Copyright (C) 2016 Bryan Drewery <bdrewery@frebsd.org>
+ * Copyright (C) 2016 Bryan Drewery <bdrewery@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

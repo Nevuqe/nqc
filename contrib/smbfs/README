@@ -50,4 +50,4 @@ IOZONE: auto-test mode
 	1       4096    871543              919299
 	1       8192    900790              1024562
 
-Author: Boris Popov <bp@frebsd.org>
+Author: Boris Popov <bp@freebsd.org>

@@ -27,10 +27,10 @@
 #
 
 # "panic: _PC_ASYNC_IO should not get here" seen:
-# https://people.frebsd.org/~pho/stress/log/pathconf2.txt
+# https://people.freebsd.org/~pho/stress/log/pathconf2.txt
 # Fixed by r320900
 
-# Test scenario by: Ngie Cooper <ngie@frebsd.org>
+# Test scenario by: Ngie Cooper <ngie@freebsd.org>
 
 getconf _POSIX_ASYNC_IO /usr/src/ > /dev/null
 

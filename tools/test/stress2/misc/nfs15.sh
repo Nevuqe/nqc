@@ -38,11 +38,11 @@
 
 # See also pthread9.sh
 
-# https://people.frebsd.org/~pho/stress/log/kostik897.txt
+# https://people.freebsd.org/~pho/stress/log/kostik897.txt
 # Fixed in r302013.
 
 # "panic: mutex sleepq chain not owned at subr_sleepqueue.c:1009" seen:
-# https://people.frebsd.org/~pho/stress/log/kostik914.txt
+# https://people.freebsd.org/~pho/stress/log/kostik914.txt
 # Fixed in r302328.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

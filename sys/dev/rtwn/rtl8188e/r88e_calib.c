@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016-2019 Andriy Voskoboinyk <avos@frebsd.org>
+ * Copyright (c) 2016-2019 Andriy Voskoboinyk <avos@freebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

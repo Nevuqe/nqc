@@ -880,7 +880,7 @@
 	* install-mk (MK_VERSION): 20160602
 	* meta.autodep.mk: when passing META_FILES to gendirdeps.mk
 	  do not apply :T to META_XTRAS
-	  patch from Bryan Drewery at frebsd.org.
+	  patch from Bryan Drewery at freebsd.org.
 
 2016-05-30  Simon J. Gerraty  <sjg@bad.crufty.net>
 

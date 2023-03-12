@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017-2018 Yandex LLC
- * Copyright (c) 2017-2018 Andrey V. Elsukov <ae@frebsd.org>
+ * Copyright (c) 2017-2018 Andrey V. Elsukov <ae@freebsd.org>
  * Copyright (c) 2002 Luigi Rizzo, Universita` di Pisa
  *
  * Redistribution and use in source and binary forms, with or without

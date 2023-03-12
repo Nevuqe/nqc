@@ -129,7 +129,7 @@ if [ -t 0 ]; then
 	# If install is a tty, use distextract as normal
 	bsdinstall distextract
 else
-	# Otherwise, we need to use tar (see https://reviews.frebsd.org/D10736)
+	# Otherwise, we need to use tar (see https://reviews.freebsd.org/D10736)
 	for set in $DISTRIBUTIONS; do
 		f_dprintf "Extracting $BSDINSTALL_DISTDIR/$set"
 		# XXX: The below fails if any mountpoints are FAT, due to

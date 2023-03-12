@@ -1,9 +1,9 @@
 /*-
  * Copyright (c) 2007-2008
  *	Swinburne University of Technology, Melbourne, Australia
- * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@frebsd.org>
+ * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@freebsd.org>
  * Copyright (c) 2014 Midori Kato <katoon@sfc.wide.ad.jp>
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

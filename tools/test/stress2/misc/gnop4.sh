@@ -31,7 +31,7 @@
 # A 8k sector size test using buildworld.
 
 # "panic: DI already started" seen:
-# https://people.frebsd.org/~pho/stress/log/kostik1017.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1017.txt
 # Fixed by r322175
 
 . ../default.cfg

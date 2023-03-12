@@ -30,9 +30,9 @@
 
 # "panic: softdep_deallocate_dependencies: dangling deps" seen.
 # "panic: softdep_write_inodeblock: indirect pointer #0 mismatch" seen.
-# http://people.frebsd.org/~pho/stress/log/dangling.txt
-# http://people.frebsd.org/~pho/stress/log/dangling2.txt
-# https://people.frebsd.org/~pho/stress/log/kostik1101.txt
+# http://people.freebsd.org/~pho/stress/log/dangling.txt
+# http://people.freebsd.org/~pho/stress/log/dangling2.txt
+# https://people.freebsd.org/~pho/stress/log/kostik1101.txt
 
 # Test scenario seems optimized for 4 CPUs.
 

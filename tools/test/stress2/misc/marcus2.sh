@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
+# Copyright (c) 2013 Peter Holm <pho@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 # Copy of marcus.sh, but with maximum load.
 
 # "panic: vm_radix_remove: invalid key found" seen.
-# watchdog fired: https://people.frebsd.org/~pho/stress/log/marcus2.txt
+# watchdog fired: https://people.freebsd.org/~pho/stress/log/marcus2.txt
 
 . ../default.cfg
 

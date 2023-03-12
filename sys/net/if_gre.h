@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
- * Copyright (c) 2014 Andrey V. Elsukov <ae@frebsd.org>
+ * Copyright (c) 2014 Andrey V. Elsukov <ae@freebsd.org>
  * All rights reserved
  *
  * This code is derived from software contributed to The NetBSD Foundation

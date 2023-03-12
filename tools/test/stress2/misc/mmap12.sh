@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_map_protect: inaccessible wired map entry" seen:
-# http://people.frebsd.org/~pho/stress/log/mmap11.txt
+# http://people.freebsd.org/~pho/stress/log/mmap11.txt
 # Fixed in r266780.
 
 # Test scenario by: Mark Johnston markj@

@@ -1,9 +1,9 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009, Nathan Whitehorn <nwhitehorn@frebsd.org>
- * Copyright (c) 2013, Luiz Otavio O Souza <loos@frebsd.org>
- * Copyright (c) 2013 The FreBSD Foundation
+ * Copyright (c) 2009, Nathan Whitehorn <nwhitehorn@freebsd.org>
+ * Copyright (c) 2013, Luiz Otavio O Souza <loos@freebsd.org>
+ * Copyright (c) 2013 The FreeBSD Foundation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

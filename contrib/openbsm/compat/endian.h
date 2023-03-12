@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002 Thomas Moestl <tmm@frebsd.org>
+ * Copyright (c) 2002 Thomas Moestl <tmm@freebsd.org>
  * Copyright (c) 2005 Robert N. M. Watson
  * All rights reserved.
  *

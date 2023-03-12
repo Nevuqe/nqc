@@ -2,7 +2,7 @@
 
 /*
  * Copyright (c) 2003, Otto Moerbeek <otto@drijf.net>
- * Copyright (c) 2009, Gabor Kovesdan <gabor@frebsd.org>
+ * Copyright (c) 2009, Gabor Kovesdan <gabor@freebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

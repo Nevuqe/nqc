@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-# Copyright (c) 1997 Wolfram Schneider <wosch@frebsd.org>. Berlin.
+# Copyright (c) 1997 Wolfram Schneider <wosch@freebsd.org>. Berlin.
 # All rights reserved.
 #
 # rename sgml/html generated file names to human readable file names

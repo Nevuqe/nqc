@@ -29,7 +29,7 @@
 # fdatasync(2) fuzz.
 
 # Deadlock seen:
-# https://people.frebsd.org/~pho/stress/log/fdatasync.txt
+# https://people.freebsd.org/~pho/stress/log/fdatasync.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

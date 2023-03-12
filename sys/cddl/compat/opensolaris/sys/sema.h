@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007 John Birrell <jb@frebsd.org>
+ * Copyright (C) 2007 John Birrell <jb@freebsd.org>
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without

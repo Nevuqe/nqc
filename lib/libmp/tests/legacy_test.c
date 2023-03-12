@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2006, Simon L. Nielsen <simon@frebsd.org>
+ * Copyright (c) 2006, Simon L. Nielsen <simon@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

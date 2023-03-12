@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2000-2001 by Coleman Kane <cokane@frebsd.org>
+ * Copyright (c) 2000-2001 by Coleman Kane <cokane@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

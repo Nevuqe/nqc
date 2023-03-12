@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=227041
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=227041
 
 # panic: [pmc,2749] (ri21, rc1) waiting too long for pmc to be free
 # cpuid = 23

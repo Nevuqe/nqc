@@ -1,10 +1,10 @@
 /*-
  * ichsmb_pci.c
  *
- * Author: Archie Cobbs <archie@frebsd.org>
+ * Author: Archie Cobbs <archie@freebsd.org>
  * Copyright (c) 2000 Whistle Communications, Inc.
  * All rights reserved.
- * Author: Archie Cobbs <archie@frebsd.org>
+ * Author: Archie Cobbs <archie@freebsd.org>
  *
  * Subject to the following obligations and disclaimer of warranty, use and
  * redistribution of this software, in source or object code forms, with or

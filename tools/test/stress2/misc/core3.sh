@@ -28,12 +28,12 @@
 
 # Test multiple (parallel) core dumps and mount / umount.
 # mount(8) stuck in "ufs" or "tmpfs".
-# http://people.frebsd.org/~pho/stress/log/kostik724.txt
+# http://people.freebsd.org/~pho/stress/log/kostik724.txt
 # Fixed by r272535.
 # On i386 pgrep(1) loops. Fixed by r272566.
 
 # "Sleeping on "pmapdi" with the following non-sleepable locks held:"
-# https://people.frebsd.org/~pho/stress/log/kostik883.txt
+# https://people.freebsd.org/~pho/stress/log/kostik883.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

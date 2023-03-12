@@ -20,5 +20,5 @@
 # expansion ended with a space, make read a single byte from the memory beyond
 # the expanded line's terminating '\0'.
 #
-# https://bugs.frebsd.org/265119
+# https://bugs.freebsd.org/265119
 one-target ${:U }

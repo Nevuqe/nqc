@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2006 Peter Wemm
- * Copyright (c) 2015 The FreBSD Foundation
+ * Copyright (c) 2015 The FreeBSD Foundation
  * All rights reserved.
  * Copyright (c) 2019 Mitchell Horne
  *

@@ -31,8 +31,8 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Authors: Julian Elischer <julian@frebsd.org>
- *          Archie Cobbs <archie@frebsd.org>
+ * Authors: Julian Elischer <julian@freebsd.org>
+ *          Archie Cobbs <archie@freebsd.org>
  *
  * $NQC$
  * $Whistle: ng_base.c,v 1.39 1999/01/28 23:54:53 julian Exp $

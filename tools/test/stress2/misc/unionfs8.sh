@@ -30,7 +30,7 @@
 # unionfs(8) test with a cd9660 file system
 
 # "panic: unionfs_noderem: vnode 0xfffffe014f9259c8 locked recursively" seen
-# https://people.frebsd.org/~pho/stress/log/log0233.txt
+# https://people.freebsd.org/~pho/stress/log/log0233.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ -z "`type mkisofs 2>/dev/null`" ] &&

@@ -31,7 +31,7 @@
 # A 8k sector size test.
 # "panic: run 8 0xfffff80ff3d1e040 invalid" seen during fix development.
 
-# OOM: https://people.frebsd.org/~pho/stress/log/gnop3.txt
+# OOM: https://people.freebsd.org/~pho/stress/log/gnop3.txt
 
 . ../default.cfg
 

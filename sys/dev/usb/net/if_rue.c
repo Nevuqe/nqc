@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2001-2003, Shunsuke Akiyama <akiyama@frebsd.org>.
+ * Copyright (c) 2001-2003, Shunsuke Akiyama <akiyama@freebsd.org>.
  * Copyright (c) 1997, 1998, 1999, 2000 Bill Paul <wpaul@ee.columbia.edu>.
  * All rights reserved.
  *

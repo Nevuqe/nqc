@@ -28,7 +28,7 @@
 
 # A fuzz test using random file descriptors with random seeks.
 # "panic: Assertion (cookie & TMPFS_DIRCOOKIE_MASK) == cookie failed":
-# https://people.frebsd.org/~pho/stress/log/kostik922.txt
+# https://people.freebsd.org/~pho/stress/log/kostik922.txt
 # Fixed by r303916.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -1,6 +1,6 @@
-\ Copyright (c) 2003 Scott Long <scottl@frebsd.org>
+\ Copyright (c) 2003 Scott Long <scottl@freebsd.org>
 \ Copyright (c) 2003 Aleksander Fafula <alex@fafula.com>
-\ Copyright (c) 2006-2015 Devin Teske <dteske@frebsd.org>
+\ Copyright (c) 2006-2015 Devin Teske <dteske@freebsd.org>
 \ All rights reserved.
 \ 
 \ Redistribution and use in source and binary forms, with or without

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 Mikolaj Golub <trociny@frebsd.org>
+ * Copyright (c) 2013 Mikolaj Golub <trociny@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

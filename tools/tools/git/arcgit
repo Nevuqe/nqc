@@ -103,7 +103,7 @@ create_review()
 	cat - <<EOF | git commit --allow-empty -F -
 squash! $headline
 
-Differential Revision:	https://reviews.frebsd.org/$phab_id
+Differential Revision:	https://reviews.freebsd.org/$phab_id
 Reviewed by:
 EOF
 }

@@ -66,7 +66,7 @@ __NQCID("$NQC$");
 
 #ifdef _FREEFALL_CONFIG
 /*
- * Disable RPC exponential back-off for frebsd.org systems.
+ * Disable RPC exponential back-off for freebsd.org systems.
  */
 #define	RPC_MAX_BACKOFF		1 /* second */
 #else

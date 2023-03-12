@@ -5,12 +5,12 @@
  * Copyright (c) 1993 The Regents of the University of California.
  * All rights reserved.
  *
- * Copyright (c) 2018 The FreBSD Foundation
+ * Copyright (c) 2018 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by
- * Konstantin Belousov <kib@frebsd.org> under sponsorship from
- * the FreBSD Foundation.
+ * Konstantin Belousov <kib@freebsd.org> under sponsorship from
+ * the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

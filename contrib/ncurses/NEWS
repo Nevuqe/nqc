@@ -8469,7 +8469,7 @@ it is not possible to add this information.
 	+ change several sed scripts to avoid using "\+" since it is not a BRE
 	  (basic regular expression).  One instance caused terminfo.5 to be
 	  misformatted on NQC (report by Kazuo Horikawa
-	  <horikawa@frebsd.org> (see NQC docs/46709)).
+	  <horikawa@freebsd.org> (see NQC docs/46709)).
 	+ correct misspelled 'wint_t' in curs_get_wch.3x (Michael Elkins).
 
 20030105

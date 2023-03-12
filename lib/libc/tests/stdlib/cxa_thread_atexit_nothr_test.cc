@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2016 Mahdi Mokhtari <mokhi64@gmail.com>
- * Copyright (c) 2016 The FreBSD Foundation
+ * Copyright (c) 2016 The FreeBSD Foundation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

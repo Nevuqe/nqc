@@ -30,7 +30,7 @@
 # "mdconfig -o force" test scenario.  Simplification of force7.sh
 
 # panic: buf_alloc: BUF_LOCK on free buf 0xfffffe0038652410: 16.
-# https://people.frebsd.org/~pho/stress/log/log0270.txt
+# https://people.freebsd.org/~pho/stress/log/log0270.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

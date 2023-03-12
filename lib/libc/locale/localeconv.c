@@ -1,14 +1,14 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2001 Alexey Zelkin <phantom@frebsd.org>
+ * Copyright (c) 2001 Alexey Zelkin <phantom@freebsd.org>
  * Copyright (c) 1991, 1993
  *	The Regents of the University of California.  All rights reserved.
  *
- * Copyright (c) 2011 The FreBSD Foundation
+ * Copyright (c) 2011 The FreeBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

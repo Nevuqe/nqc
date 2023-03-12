@@ -1,11 +1,11 @@
 /*-
  * Copyright (c) 2017 Chelsio Communications, Inc.
- * Copyright (c) 2021 The FreBSD Foundation
+ * Copyright (c) 2021 The FreeBSD Foundation
  * All rights reserved.
- * Written by: John Baldwin <jhb@frebsd.org>
+ * Written by: John Baldwin <jhb@freebsd.org>
  *
  * Portions of this software were developed by Ararat River
- * Consulting, LLC under sponsorship of the FreBSD Foundation.
+ * Consulting, LLC under sponsorship of the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1,6 +1,6 @@
 #!/usr/local/bin/python
 
-# Copyright (c) 2002-2003, 2009, Jeffrey Roberson <jeff@frebsd.org>
+# Copyright (c) 2002-2003, 2009, Jeffrey Roberson <jeff@freebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

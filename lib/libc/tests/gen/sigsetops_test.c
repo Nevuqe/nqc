@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 Kyle Evans <kevans@frebsd.org>
+ * Copyright (c) 2019 Kyle Evans <kevans@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

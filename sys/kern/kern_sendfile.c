@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2013-2015 Gleb Smirnoff <glebius@frebsd.org>
+ * Copyright (c) 2013-2015 Gleb Smirnoff <glebius@freebsd.org>
  * Copyright (c) 1998, David Greenman. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

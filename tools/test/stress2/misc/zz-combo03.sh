@@ -30,7 +30,7 @@
 # vnlru deadlock seen in rename12.sh.
 # Introduced by r351825, reverted by r351882
 
-# https://people.frebsd.org/~pho/stress/log/zz-combo03.txt
+# https://people.freebsd.org/~pho/stress/log/zz-combo03.txt
 
 cd ../misc
 for i in crossmp8.sh rename12.sh; do

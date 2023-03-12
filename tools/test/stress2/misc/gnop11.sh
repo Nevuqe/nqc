@@ -28,7 +28,7 @@
 #
 
 # 'panic: Lock (lockmgr) ufs not locked @ kern/kern_lock.c:1271' seen:
-# https://people.frebsd.org/~pho/stress/log/gnop8.txt
+# https://people.freebsd.org/~pho/stress/log/gnop8.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

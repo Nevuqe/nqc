@@ -1,8 +1,8 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2007 Eric Anderson <anderson@frebsd.org>
- * Copyright (c) 2007 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2007 Eric Anderson <anderson@freebsd.org>
+ * Copyright (c) 2007 Pawel Jakub Dawidek <pjd@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

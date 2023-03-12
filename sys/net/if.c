@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2010 Bjoern A. Zeeb <bz@frebsd.org>
+ * Copyright (c) 2010 Bjoern A. Zeeb <bz@freebsd.org>
  * Copyright (c) 1980, 1986, 1993
  *	The Regents of the University of California.  All rights reserved.
  *

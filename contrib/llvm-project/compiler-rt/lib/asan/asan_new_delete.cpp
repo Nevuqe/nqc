@@ -49,7 +49,7 @@ COMMENT_EXPORT("??_V@YAXPAX@Z")                   // operator delete[]
 using namespace __asan;
 
 // NQC prior v9.2 have wrong definition of 'size_t'.
-// http://svnweb.frebsd.org/base?view=revision&revision=232261
+// http://svnweb.freebsd.org/base?view=revision&revision=232261
 #if SANITIZER_NQC && SANITIZER_WORDSIZE == 32
 #include <sys/param.h>
 #if __NQC_version <= 902001  // v9.2

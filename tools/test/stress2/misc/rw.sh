@@ -32,7 +32,7 @@
 
 # Out of VM seen:
 # 100135                   D       vmwait   0xffffffff81d1a348 [CAM taskq]
-# https://people.frebsd.org/~pho/stress/log/rw.txt
+# https://people.freebsd.org/~pho/stress/log/rw.txt
 
 . ../default.cfg
 

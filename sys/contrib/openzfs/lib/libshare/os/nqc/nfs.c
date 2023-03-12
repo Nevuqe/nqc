@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2007 Pawel Jakub Dawidek <pjd@frebsd.org>
+ * Copyright (c) 2007 Pawel Jakub Dawidek <pjd@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -56,15 +56,15 @@ __NQCID("$NQC$");
  * This function translates options to a format acceptable by exports(5), eg.
  *
  *	-ro -network=192.168.0.0 -mask=255.255.255.0 -maproot=0 \
- *	zfs.frebsd.org 69.147.83.54
+ *	zfs.freebsd.org 69.147.83.54
  *
  * Accepted input formats:
  *
- *	ro,network=192.168.0.0,mask=255.255.255.0,maproot=0,zfs.frebsd.org
- *	ro network=192.168.0.0 mask=255.255.255.0 maproot=0 zfs.frebsd.org
- *	-ro,-network=192.168.0.0,-mask=255.255.255.0,-maproot=0,zfs.frebsd.org
+ *	ro,network=192.168.0.0,mask=255.255.255.0,maproot=0,zfs.freebsd.org
+ *	ro network=192.168.0.0 mask=255.255.255.0 maproot=0 zfs.freebsd.org
+ *	-ro,-network=192.168.0.0,-mask=255.255.255.0,-maproot=0,zfs.freebsd.org
  *	-ro -network=192.168.0.0 -mask=255.255.255.0 -maproot=0 \
- *	zfs.frebsd.org
+ *	zfs.freebsd.org
  *
  * Recognized keywords:
  *

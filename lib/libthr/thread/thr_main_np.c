@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Alfred Perlstein
- * Author: Alfred Perlstein <alfred@frebsd.org>
+ * Author: Alfred Perlstein <alfred@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

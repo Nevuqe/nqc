@@ -17,7 +17,7 @@
 
 	64bit HC counters in the IF-MIB by polling the OS periodically.
 
-	Fix link traps to be more RFC conform (thanks to glebius@frebsd.org)
+	Fix link traps to be more RFC conform (thanks to glebius@freebsd.org)
 
 	Add fallback definition for SA_SIZE() to support.h.
 
@@ -33,7 +33,7 @@
 	minutes. In the meantime process message from the routing socket
 	to update the table.
 
-	Lot of man-page fixes from ru@frebsd.org.
+	Lot of man-page fixes from ru@freebsd.org.
 
 	Fixes to command line macros and macro redefinition.
 
@@ -64,12 +64,12 @@
 	lib/snmpclient: Add snmp_parse_server().
 
 1.9
-	tcpwrapper support from glebius@frebsd.org.
+	tcpwrapper support from glebius@freebsd.org.
 
 	crude interface to NTP: snmp_ntp
 
 1.8
-	many man page fixes from ru@frebsd.org and tobez@frebsd.org
+	many man page fixes from ru@freebsd.org and tobez@freebsd.org
 
 	snmpd/main.c: fix a problem which resulted in the daemon exiting
 	when a local socket was closed.

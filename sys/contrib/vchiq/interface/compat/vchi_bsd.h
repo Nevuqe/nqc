@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2010 Max Khon <fjoe@frebsd.org>
+ * Copyright (c) 2010 Max Khon <fjoe@freebsd.org>
  * Copyright (c) 2012 Oleksandr Tymoshenko <gonzo@bluezbox.com>
  * Copyright (c) 2013 Jared D. McNeill <jmcneill@invisible.ca>
  * All rights reserved.

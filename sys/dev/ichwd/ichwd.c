@@ -32,7 +32,7 @@
  * Intel ICH Watchdog Timer (WDT) driver
  *
  * Originally developed by Wm. Daryl Hawkins of Texas A&M
- * Heavily modified by <des@frebsd.org>
+ * Heavily modified by <des@freebsd.org>
  *
  * This is a tricky one.  The ICH WDT can't be treated as a regular PCI
  * device as it's actually an integrated function of the ICH LPC interface

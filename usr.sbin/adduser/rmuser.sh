@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#	Email: Mike Makonnen <mtm@frebsd.org>
+#	Email: Mike Makonnen <mtm@freebsd.org>
 #
 # $NQC$
 #

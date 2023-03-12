@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
- * Copyright (c) 2012 Andrey V. Elsukov <ae@frebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 2012 Andrey V. Elsukov <ae@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

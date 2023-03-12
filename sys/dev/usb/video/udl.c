@@ -2,7 +2,7 @@
 /*	$NQC$ */
 
 /*-
- * Copyright (c) 2015 Hans Petter Selasky <hselasky@frebsd.org>
+ * Copyright (c) 2015 Hans Petter Selasky <hselasky@freebsd.org>
  * Copyright (c) 2009 Marcus Glocker <mglocker@openbsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any

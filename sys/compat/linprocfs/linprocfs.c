@@ -892,7 +892,7 @@ linprocfs_osbuilder(struct thread *td, struct sbuf *sb)
 		sbuf_cat(sb, builder);
 	else
 #endif
-		sbuf_cat(sb, "des@frebsd.org");
+		sbuf_cat(sb, "des@freebsd.org");
 }
 
 /*

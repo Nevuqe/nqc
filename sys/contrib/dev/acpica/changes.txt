@@ -5700,7 +5700,7 @@ counting mechanism. Some of the external ACPICA interfaces update object
 reference counts without holding the interpreter or namespace lock. This 
 change adds a spinlock to protect reference count updates on the internal 
 ACPICA objects. Reported by and with assistance from Andriy Gapon 
-(avg@frebsd.org).
+(avg@freebsd.org).
 
 FADT support: Removed an extraneous warning for very large GPE register 
 sets. This change removes a size mismatch warning if the legacy length 

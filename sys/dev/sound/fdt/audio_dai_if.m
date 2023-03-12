@@ -1,5 +1,5 @@
 #-
-# Copyright (c) 2019 Oleksandr Tymoshenko <gonzo@frebsd.org>
+# Copyright (c) 2019 Oleksandr Tymoshenko <gonzo@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

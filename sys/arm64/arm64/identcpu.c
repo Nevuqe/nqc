@@ -1,10 +1,10 @@
 /*-
  * Copyright (c) 2014 Andrew Turner
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Semihalf
- * under sponsorship of the FreBSD Foundation.
+ * under sponsorship of the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

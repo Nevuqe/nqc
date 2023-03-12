@@ -2,7 +2,7 @@
  * Copyright (c) 2002 Tim J. Robbins
  * All rights reserved.
  *
- * Copyright (c) 2013 Ed Schouten <ed@frebsd.org>
+ * Copyright (c) 2013 Ed Schouten <ed@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -128,7 +128,7 @@ ATF_TC_BODY(c16rtomb_utf_8_test, tc)
 {
 
 	if (atf_tc_get_config_var_as_bool_wd(tc, "ci", false))
-		atf_tc_skip("https://bugs.frebsd.org/265871");
+		atf_tc_skip("https://bugs.freebsd.org/265871");
 
 	require_lc_ctype("en_US.UTF-8");
 

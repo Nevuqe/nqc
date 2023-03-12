@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# Pipe test scenario from https://reviews.frebsd.org/D23993
+# Pipe test scenario from https://reviews.freebsd.org/D23993
 # https://gist.github.com/kostikbel/b2844258b7fba6e8ce3ccd8ef9422e5a
 
 . ../default.cfg

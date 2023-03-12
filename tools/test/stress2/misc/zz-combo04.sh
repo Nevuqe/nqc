@@ -29,7 +29,7 @@
 
 # "panic: vm_page_dequeue: queued unlocked page
 # 0xfffffe00295e8800" seen with WiP code.
-# https://people.frebsd.org/~pho/stress/log/zz-combo04.txt
+# https://people.freebsd.org/~pho/stress/log/zz-combo04.txt
 
 for i in `jot 2`; do
 	./nullfs5.sh

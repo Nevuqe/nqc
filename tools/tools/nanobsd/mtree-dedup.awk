@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
 
 #
-# Copyright (c) 2015 M. Warner Losh <imp@frebsd.org>
+# Copyright (c) 2015 M. Warner Losh <imp@freebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

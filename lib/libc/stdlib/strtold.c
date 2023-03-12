@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2011 The FreBSD Foundation
+ * Copyright (C) 2011 The FreeBSD Foundation
  *
  * This software was developed by David Chisnall under sponsorship from the
- * FreBSD Foundation.
+ * FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

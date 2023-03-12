@@ -30,7 +30,7 @@
 
 # Copy of mkfifo2c.sh, but with a SU file system and async mount
 # "panic: ufsdirhash_newblk: bad offset" seen from openat()
-# https://people.frebsd.org/~pho/stress/log/mkfifo2d.txt
+# https://people.freebsd.org/~pho/stress/log/mkfifo2d.txt
 # Fixed by r305601.
 
 . ../default.cfg

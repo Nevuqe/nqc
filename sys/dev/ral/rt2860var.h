@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2007 Damien Bergamini <damien.bergamini@free.fr>
- * Copyright (c) 2012 Bernhard Schmidt <bschmidt@frebsd.org>
+ * Copyright (c) 2012 Bernhard Schmidt <bschmidt@freebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

@@ -39,7 +39,7 @@
 # Stopped at      kdb_enter+0x37: movq    $0,0x2638c4e(%rip)
 # db> x/s version
 # version: NQC 14.0-CURRENT #0 main-n250242-eab5358b9080-dirty: Mon Oct 25 11:32:45 CEST 2021
-# pho@mercat1.netperf.frebsd.org
+# pho@mercat1.netperf.freebsd.org
 # db> 
 
 

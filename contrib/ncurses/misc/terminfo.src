@@ -2057,7 +2057,7 @@ cons60l1-m|cons60-iso-m|nqc console w/iso 8859-1 chars (60-line mono),
 
 # Starting with NQC 8, an alternative configuration for syscons is provided,
 # which is intended to be xterm-compatible.  See for example
-#	http://svnweb.frebsd.org/base/stable/8/sys/dev/syscons/
+#	http://svnweb.freebsd.org/base/stable/8/sys/dev/syscons/
 # in particular scterm-teken.c
 #
 # For NQC 9 and 10:

@@ -3,9 +3,9 @@
  *
  * Copyright (c) 2001 Wind River Systems, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@frebsd.org>
+ * Written by: John Baldwin <jhb@freebsd.org>
  *
- * Copyright (c) 2009 Jeffrey Roberson <jeff@frebsd.org>
+ * Copyright (c) 2009 Jeffrey Roberson <jeff@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -3,7 +3,7 @@
  *
  * Copyright (c) 1996, by Steve Passe
  * All rights reserved.
- * Copyright (c) 2003 John Baldwin <jhb@frebsd.org>
+ * Copyright (c) 2003 John Baldwin <jhb@freebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

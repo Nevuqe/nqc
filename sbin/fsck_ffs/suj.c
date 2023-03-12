@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright 2009, 2010 Jeffrey W. Roberson <jeff@frebsd.org>
+ * Copyright 2009, 2010 Jeffrey W. Roberson <jeff@freebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,13 +1,13 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005-2009 Ariff Abdullah <ariff@frebsd.org>
- * Copyright (c) 2001 Cameron Grant <cg@frebsd.org>
- * Copyright (c) 2020 The FreBSD Foundation
+ * Copyright (c) 2005-2009 Ariff Abdullah <ariff@freebsd.org>
+ * Copyright (c) 2001 Cameron Grant <cg@freebsd.org>
+ * Copyright (c) 2020 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Ka Ho Ng
- * under sponsorship from the FreBSD Foundation.
+ * under sponsorship from the FreeBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

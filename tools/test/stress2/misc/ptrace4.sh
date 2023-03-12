@@ -29,7 +29,7 @@
 # ptrace(2) test scenario
 
 # Test program can not be killed:
-# https://people.frebsd.org/~pho/stress/log/kostik836.txt
+# https://people.freebsd.org/~pho/stress/log/kostik836.txt
 # Fixed by r289660.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

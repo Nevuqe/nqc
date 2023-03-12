@@ -1,13 +1,13 @@
 /*-
  * Copyright (C) 2008 Damien Miller <djm@mindrot.org>
- * Copyright (c) 2010 Konstantin Belousov <kib@frebsd.org>
+ * Copyright (c) 2010 Konstantin Belousov <kib@freebsd.org>
  * Copyright (c) 2010-2011 Pawel Jakub Dawidek <pawel@dawidek.net>
- * Copyright 2012-2013 John-Mark Gurney <jmg@frebsd.org>
- * Copyright (c) 2014 The FreBSD Foundation
+ * Copyright 2012-2013 John-Mark Gurney <jmg@freebsd.org>
+ * Copyright (c) 2014 The FreeBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by John-Mark Gurney
- * under sponsorship of the FreBSD Foundation and
+ * under sponsorship of the FreeBSD Foundation and
  * Rubicon Communications, LLC (Netgate).
  * 
  * Redistribution and use in source and binary forms, with or without

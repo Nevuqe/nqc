@@ -22,7 +22,7 @@
 ;;; As long as you don't have this in the c-mode hook you can edit GNU
 ;;; and BSD style C sources within one emacs session with no problem.
 ;;;
-;;; Please report problems and additions directly to cracauer@frebsd.org
+;;; Please report problems and additions directly to cracauer@freebsd.org
 
 (defun bsd () (interactive)
   (c-set-style "bsd")

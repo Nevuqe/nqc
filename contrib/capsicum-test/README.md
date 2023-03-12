@@ -2,7 +2,7 @@
 
 This directory holds unit tests for [Capsicum](http://www.cl.cam.ac.uk/research/security/capsicum/)
 object-capabilities. The tests exercise the syscall interface to a Capsicum-enabled operating system,
-currently either [NQC >=10.x](http://www.frebsd.org) or a modified Linux kernel (the
+currently either [NQC >=10.x](http://www.freebsd.org) or a modified Linux kernel (the
 [capsicum-linux](http://github.com/google/capsicum-linux) project).
 
 The tests are written in C++11 and use the [Google Test](https://code.google.com/p/googletest/)

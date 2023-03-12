@@ -75,7 +75,7 @@ __NQCID("$NQC$");
  *	register int port asm("edx")
  * the code would be cleaner
  *
- * Poul-Henning Kamp <phk@frebsd.org>
+ * Poul-Henning Kamp <phk@freebsd.org>
  */
 
 /*

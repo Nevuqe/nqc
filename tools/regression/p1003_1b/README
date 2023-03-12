@@ -11,4 +11,4 @@ p1003_1b yield: Check that yielding runs the expected process.
 As of today "p1003_1b yield" doesn't work.  I have a minimal set
 of patches I'm waiting for approval to commit.
 
-Peter dufault@frebsd.org
+Peter dufault@freebsd.org

@@ -33,7 +33,7 @@
 # Fixed by r341510.
 
 # 'panic: invalid counts on struct mount' seen:
-# https://people.frebsd.org/~pho/stress/log/fsck-4.txt
+# https://people.freebsd.org/~pho/stress/log/fsck-4.txt
 
 # "panic: softdep_load_inodeblock: negative i_effnlink" seen.
 
