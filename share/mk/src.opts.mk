@@ -351,13 +351,9 @@ __DEFAULT_YES_OPTIONS+=OPENMP
 __DEFAULT_NO_OPTIONS+=OPENMP
 .endif
 
+# Broken on 32-bit arm, kernel module compile errors
 .if ${__T:Marm*} != ""
 BROKEN_OPTIONS+= OFED
-.endif
-
-
-.if ${__T} == "powerpc"
-BROKEN_OPTIONS+= ZFS
 .endif
 
 .include <bsd.mkopt.mk>
@@ -419,6 +415,7 @@ MK_KERBEROS:=	no
 MK_KERBEROS_SUPPORT:=	no
 MK_LDNS:=	no
 MK_PKGBOOTSTRAP:=	no
+MK_LOADER_ZFS:=	no
 MK_ZFS:=	no
 .endif
 

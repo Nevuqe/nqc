@@ -635,6 +635,10 @@ _if_cgem=	if_cgem
 SUBDIR+=	tests
 .endif
 
+.if ${MK_ZFS} != "no" || defined(ALL_MODULES)
+SUBDIR+=	zfs
+.endif
+
 .if ${MK_SOURCELESS_UCODE} != "no"
 _cxgb=		cxgb
 .endif
