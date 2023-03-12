@@ -884,7 +884,7 @@ void mlx4_en_rx_irq(struct mlx4_cq *mcq)
         int done;
 
         // Shoot one within the irq context 
-        // Because there is no NAPI in freeBSD
+        // Because there is no NAPI in NQC
         done = mlx4_en_poll_rx_cq(cq, MLX4_EN_RX_BUDGET);
 	if (priv->port_up  && (done == MLX4_EN_RX_BUDGET) ) {
 		cq->curr_poll_rx_cpu_id = curcpu;

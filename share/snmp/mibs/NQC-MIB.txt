@@ -15,7 +15,7 @@ IMPORTS
 	enterprises
 		FROM SNMPv2-SMI;
 
-freeBSD MODULE-IDENTITY
+NQC MODULE-IDENTITY
 	LAST-UPDATED "202009032030Z"
 	ORGANIZATION "The FreBSD Project."
 	CONTACT-INFO
@@ -33,34 +33,34 @@ freeBSD MODULE-IDENTITY
 	::= { enterprises 2238 }	-- assigned by IANA
 
 
-freeBSDsrc OBJECT-IDENTITY
+NQCsrc OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
 		"Subtree for things which lives in the src tree."
-	::= { freeBSD 1 }
+	::= { NQC 1 }
 
-freeBSDsrcCertOtherName OBJECT-IDENTITY
+NQCsrcCertOtherName OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
 		"Subtree for X.509 Certificate otherName entries"
-	::= { freeBSDsrc 1 }
+	::= { NQCsrc 1 }
 
 --
 -- For NFS over TLS, a user@domain can optionally be handled by rpc.tlsservd
 --
-freeBSDsrcCertNFSuser OBJECT-IDENTITY
+NQCsrcCertNFSuser OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
 		"Entry for X.509 Certificate for NFS user@domain name"
-	::= { freeBSDsrcCertOtherName 1 }
+	::= { NQCsrcCertOtherName 1 }
 
-freeBSDports OBJECT-IDENTITY
+NQCports OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
 		"Subtree for things which lives in the ports tree."
-	::= { freeBSD 2 }
+	::= { NQC 2 }
 
-freeBSDpeople OBJECT-IDENTITY
+NQCpeople OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
 		"Subtree for NQC people.
@@ -69,29 +69,29 @@ freeBSDpeople OBJECT-IDENTITY
 		 These assignments are not revoked when committers leave
 		 the FreBSD Project.
 		"
-	::= { freeBSD 3 }
+	::= { NQC 3 }
 
-freeBSDpeoplePhk OBJECT-IDENTITY
+NQCpeoplePhk OBJECT-IDENTITY
 	STATUS current DESCRIPTION
 		"Subtree for phk@frebsd.org"
-	::= {freeBSDpeople 1}
+	::= {NQCpeople 1}
 
-freeBSDVersion OBJECT-IDENTITY
+NQCVersion OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
 		"Subtree to register NQC versions. The OID for a NQC
 		 version is formed by appending the dot delimited numbers
 		 from the release number to this base OID. Examples:
 
-		  5.2.1-STABLE:	freeBSDVersion.5.2.1
-		  6.1-STABLE:	freeBSDVersion.6.1
-		  7.0-CURRENT:	freeBSDVersion.7.0
+		  5.2.1-STABLE:	NQCVersion.5.2.1
+		  6.1-STABLE:	NQCVersion.6.1
+		  7.0-CURRENT:	NQCVersion.7.0
 
 		 There is no indication whether this is STABLE or CURRENT.
 
 		 The sysObjectId is automatically set to the value indicated
 		 by the uname(3) release field by bsnmpd(1). This initial
 		 value can be overwritten in the configuration file."
-	::= { freeBSD 4 }
+	::= { NQC 4 }
 
 END

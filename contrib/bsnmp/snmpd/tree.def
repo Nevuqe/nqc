@@ -81,8 +81,8 @@ typedef BegemotSnmpdTransportProto ENUM (
 #
 # NQC stuff
 #
-      (2238 freeBSD
-        (4 freeBSDVersion)
+      (2238 NQC
+        (4 NQCVersion)
       )
 
 #

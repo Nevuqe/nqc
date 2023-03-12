@@ -9193,7 +9193,7 @@
 	    and lameness.
 	  * check if no AA bit for non-forwarder, and thus lame zone.
 	    In response to error report by Richard Doty for mail.opusnet.com.
-	- fixup unput warning from lexer on freeBSD.
+	- fixup unput warning from lexer on NQC.
 	- bug#183. pidfile, rundir, and chroot configure options. Also the
 	  example.conf and manual pages get the configured defaults.
 	  You can use: (or accept the defaults to /usr/local/etc/unbound/)

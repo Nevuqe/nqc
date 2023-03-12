@@ -724,7 +724,7 @@ May 25, 2000:
 	changed HAT to NCHARS-2.  thanks again to santiago vila.
 
 	changed maketab.c to ignore apparently out of range definitions
-	instead of halting; new freeBSD generates one.  thanks to
+	instead of halting; new NQC generates one.  thanks to
 	jon snader <jsnader@ix.netcom.com> for pointing out the problem.
 
 May 2, 2000:

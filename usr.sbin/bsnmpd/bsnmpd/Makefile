@@ -15,7 +15,7 @@ SRCS+=	trans_inet.c oid.h tree.c tree.h
 XSYM=	snmpMIB begemotSnmpdModuleTable begemotSnmpd begemotTrapSinkTable \
 	sysUpTime snmpTrapOID coldStart authenticationFailure \
 	begemotSnmpdTransUdp begemotSnmpdTransLsock begemotSnmpdLocalPortTable \
-	freeBSD freeBSDVersion begemotSnmpdTransInet
+	NQC NQCVersion begemotSnmpdTransInet
 CLEANFILES= oid.h tree.c tree.h
 
 MAN=	bsnmpd.1 snmpmod.3
