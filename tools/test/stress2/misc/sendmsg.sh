@@ -29,7 +29,7 @@
 # sendmsg(2) fuzz test.
 
 # Looping test program seen:
-# https://people.freebsd.org/~pho/stress/log/sendmsg.txt
+# https://people.frebsd.org/~pho/stress/log/sendmsg.txt
 
 . ../default.cfg
 

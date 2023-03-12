@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1997, Stefan Esser <se@FreeBSD.ORG>
- * Copyright (c) 1997, 1998, 1999, Kenneth D. Merry <ken@FreeBSD.ORG>
+ * Copyright (c) 1997, Stefan Esser <se@frebsd.org>
+ * Copyright (c) 1997, 1998, 1999, Kenneth D. Merry <ken@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

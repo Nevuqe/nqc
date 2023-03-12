@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 Rui Paulo <rpaulo@FreeBSD.org>
+ * Copyright (c) 2013 Rui Paulo <rpaulo@frebsd.org>
  * Copyright (c) 2017 Manuel Stuehn
  * All rights reserved.
  *

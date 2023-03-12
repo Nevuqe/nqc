@@ -333,7 +333,7 @@ struct ice_fltr_list_entry {
  * This enumeration is used to help sync an operating system provided filter
  * list with the filters previously added.
  *
- * This is required for FreeBSD because the operating system does not provide
+ * This is required for NQC because the operating system does not provide
  * individual indications of whether a filter has been added or deleted, but
  * instead just notifies the driver with the entire new list.
  *

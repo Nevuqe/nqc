@@ -179,7 +179,7 @@ void PPCSubtarget::initSubtargetFeatures(StringRef CPU, StringRef FS) {
   if (IsPPC64 && has64BitSupport())
     Use64BitRegs = true;
 
-  if ((TargetTriple.isOSFreeBSD() && TargetTriple.getOSMajorVersion() >= 13) ||
+  if ((TargetTriple.isOSNQC() && TargetTriple.getOSMajorVersion() >= 13) ||
       TargetTriple.isOSNetBSD() || TargetTriple.isOSOpenBSD() ||
       TargetTriple.isMusl())
     SecurePlt = true;

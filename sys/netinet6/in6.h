@@ -76,7 +76,7 @@
  * has the table of implementation/integration differences.
  */
 #define __KAME__
-#define __KAME_VERSION		"FreeBSD"
+#define __KAME_VERSION		"NQC"
 
 /*
  * IPv6 port allocation rules should mirror the IPv4 rules and are controlled

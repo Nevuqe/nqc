@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel ioat device code"
+PROJECT_NAME           = "NQC kernel ioat device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_ioat/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

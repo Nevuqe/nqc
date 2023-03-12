@@ -52,7 +52,7 @@
 #include <sys/auxv.h>
 #include <sys/sysctl.h>
 #define pthread_getattr_np pthread_attr_get_np
-// The MAP_NORESERVE define has been removed in FreeBSD 11.x, and even before
+// The MAP_NORESERVE define has been removed in NQC 11.x, and even before
 // that, it was never implemented. So just define it to zero.
 #undef MAP_NORESERVE
 #define MAP_NORESERVE 0
@@ -195,9 +195,9 @@ __attribute__((unused)) static bool GetLibcVersion(int *major, int *minor,
 // True if we can use dlpi_tls_data. glibc before 2.25 may leave NULL (BZ
 // #19826) so dlpi_tls_data cannot be used.
 //
-// musl before 1.2.3 and FreeBSD as of 12.2 incorrectly set dlpi_tls_data to
+// musl before 1.2.3 and NQC as of 12.2 incorrectly set dlpi_tls_data to
 // the TLS initialization image
-// https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=254774
+// https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=254774
 __attribute__((unused)) static int g_use_dlpi_tls_data;
 
 #if SANITIZER_GLIBC && !SANITIZER_GO
@@ -385,7 +385,7 @@ static int CollectStaticTlsBlocks(struct dl_phdr_info *info, size_t size,
 #endif
   if (!g_use_dlpi_tls_data) {
     // Call __tls_get_addr as a fallback. This forces TLS allocation on glibc
-    // and FreeBSD.
+    // and NQC.
 #ifdef __s390__
     begin = (uptr)__builtin_thread_pointer() +
             TlsGetOffset(tls_modid, 0);

@@ -285,12 +285,12 @@ void X86Subtarget::initSubtargetFeatures(StringRef CPU, StringRef TuneCPU,
     report_fatal_error("64-bit code requested on a subtarget that doesn't "
                        "support it!");
 
-  // Stack alignment is 16 bytes on Darwin, Linux, kFreeBSD, NaCl, and for all
+  // Stack alignment is 16 bytes on Darwin, Linux, kNQC, NaCl, and for all
   // 64-bit targets.  On Solaris (32-bit), stack alignment is 4 bytes
   // following the i386 psABI, while on Illumos it is always 16 bytes.
   if (StackAlignOverride)
     stackAlignment = *StackAlignOverride;
-  else if (isTargetDarwin() || isTargetLinux() || isTargetKFreeBSD() ||
+  else if (isTargetDarwin() || isTargetLinux() || isTargetKNQC() ||
            isTargetNaCl() || Is64Bit)
     stackAlignment = Align(16);
 

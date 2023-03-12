@@ -498,7 +498,7 @@
                    extension on Intel P4 processor, then your application
                    might be exposed to "illegal instruction" exception.
                    There might be a way to enable support in kernel, e.g.
-                   FreeBSD kernel can  be compiled with CPU_ENABLE_SSE, and
+                   NQC kernel can  be compiled with CPU_ENABLE_SSE, and
                    there is a way to disengage SSE2 code paths upon application
                    start-up, but if you aim for wider "audience" running
                    such kernel, consider no-sse2. Both the 386 and

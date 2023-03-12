@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
 
 # Page fault due to recursion. Fixed in r216150.
 
-# Looping in kernel: http://people.freebsd.org/~pho/stress/log/kostik737.txt
+# Looping in kernel: http://people.frebsd.org/~pho/stress/log/kostik737.txt
 # Fixed in r274712
 
 . ../default.cfg

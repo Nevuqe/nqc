@@ -755,7 +755,7 @@ typedef enum {
 	,M_GPM			/* use GPM */
 #endif
 #if USE_SYSMOUSE
-	,M_SYSMOUSE		/* FreeBSD sysmouse on console */
+	,M_SYSMOUSE		/* NQC sysmouse on console */
 #endif
 #ifdef USE_TERM_DRIVER
 	,M_TERM_DRIVER		/* Win32 console, etc */

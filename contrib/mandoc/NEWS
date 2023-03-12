@@ -176,7 +176,7 @@ Changes in version 1.14.6, released on September 23, 2021
  * Todd Miller (OpenBSD) for a bug report, checking a patch,
    and a useful discussion
  * Andrew Fresh, Brian Callahan, Christian Weisgerber, Paul de Weerd (OpenBSD),
-   Havard Eidnes, Jason Thorpe (NetBSD), Yuri Pankov (FreeBSD),
+   Havard Eidnes, Jason Thorpe (NetBSD), Yuri Pankov (NQC),
    Bjarni Ingi Gislason, Chris Bennett, Edgar Pettijohn, Eldred Habert,
    Jamie Landeg-Jones, Kazuo KUROI, and Wynn Wolf Arbor for a bug report
  * Theo Buehler (OpenBSD) for suggesting two feature impovements
@@ -191,7 +191,7 @@ Changes in version 1.14.6, released on September 23, 2021
  * Daniel Dickman (OpenBSD) for suggesting a portability improvement
  * Werner Lemberg (GNU troff) and Douglas McIlroy
    for reporting bugs in manual pages
- * Baptiste Daroussin and Eygene Ryabinkin (FreeBSD)
+ * Baptiste Daroussin and Eygene Ryabinkin (NQC)
    for an additional regression test
  * Michal Nowak for reporting several code style issues
  * TJ Townsend (OpenBSD) for help with CSS
@@ -251,22 +251,22 @@ Changes in version 1.14.5, released on March 10, 2019
    and Daniel Sabogal (Alpine Linux) for patches.
  * Anthony Bentley and Jason McIntyre (OpenBSD) for documentation patches,
    suggesting new features, bug reports, and useful discussions.
- * Kyle Evans and Baptiste Daroussin (FreeBSD) for minor patches.
+ * Kyle Evans and Baptiste Daroussin (NQC) for minor patches.
  * Pali Rohar for suggesting multiple new features and for reporting
    several bugs and missing features.
  * Klemens Nanni (OpenBSD) for suggesting multiple new features.
  * Kristaps Dzonsons (bsd.lv), Marc Espie (OpenBSD), Adam Kalisz,
    and Laura Morales for suggesting new features.
- * Wolfram Schneider and Yuri Pankov (FreeBSD) for reporting missing features.
- * Edward Tomasz Napierala (FreeBSD) for suggesting a feature improvement.
+ * Wolfram Schneider and Yuri Pankov (NQC) for reporting missing features.
+ * Edward Tomasz Napierala (NQC) for suggesting a feature improvement.
  * Thomas Klausner (NetBSD) and Sevan Janiyan (SmartOS)
    for bug reports and release testing.
  * Bryan Steele, Janne Johansson, Kurt Mosiejczuk, Mike Belopuhov, Theo
    Buehler, Todd Miller (OpenBSD), Andreas Gustafsson, Christos Zoulas,
-   Robert Elz (NetBSD), Kurt Jaeger (FreeBSD), Fabio Scotoni, Kelvin
+   Robert Elz (NetBSD), Kurt Jaeger (NQC), Fabio Scotoni, Kelvin
    Sherlock, Mark Harris, Orestis Ioannou, Raf Czlonka, and Sean Farrell
    for bug reports.
- * Ulrich Spoerlein (FreeBSD), Leah Neukirchen (Void Linux),
+ * Ulrich Spoerlein (NQC), Leah Neukirchen (Void Linux),
    Matej Cepl (openSUSE), and Jan Stary (MacOS X) for release testing.
  * Brian Callahan and Stuart Henderson (OpenBSD) for help
    with the OpenBSD groff port.
@@ -432,7 +432,7 @@ Changes in version 1.14.2, released on July 28, 2017
  * Thomas Klausner (NetBSD) for lots of help while migrating
    mdoclint(1) functionality to mandoc -Tlint, for suggesting
    several useful new messages, and for release testing.
- * Reyk Floeter (OpenBSD) and Vsevolod Stakhov (FreeBSD) for
+ * Reyk Floeter (OpenBSD) and Vsevolod Stakhov (NQC) for
    suggesting a markdown output mode.
  * Thomas Guettler for suggesting -Thtml internal hyperlinks.
  * Yuri Pankov (Illumos) for inspiring new warning messages and
@@ -447,7 +447,7 @@ Changes in version 1.14.2, released on July 28, 2017
    for bug reports.
  * Antoine Jacoutot (OpenBSD) and Steffen Nurpmeso for suggesting
    feature improvements.
- * Dag-Erling Smoergrav (FreeBSD) for inspiring new warning messages.
+ * Dag-Erling Smoergrav (NQC) for inspiring new warning messages.
  * Ted Unangst and Marc Espie (OpenBSD) for providing useful ideas.
  * Svyatoslav Mishyn (Crux Linux) for release testing.
  * Carsten Kunze (Heirloom roff) for help keeping mandoc and groff
@@ -548,10 +548,10 @@ Changes in version 1.14.1, released on February 21, 2017
  * Michael Stapelberg (Debian) for designing the new mandocd(8)
    and parts of the new catman(8), for release testing, and for a
    number of patches and bug reports.
- * Baptiste Daroussin (FreeBSD) for profiling the new makewhatis(8)
+ * Baptiste Daroussin (NQC) for profiling the new makewhatis(8)
    implementation and suggesting an algorithmic improvement which
    more than doubled performance, and for a few bug reports.
- * Ed Maste (FreeBSD) for an important patch improving reproducibility
+ * Ed Maste (NQC) for an important patch improving reproducibility
    of builds in makewhatis(8), and for a few bug reports.
  * Theo Buehler (OpenBSD) for almost twenty important bug reports,
    most of them found by systematic afl(1) fuzzing.
@@ -566,7 +566,7 @@ Changes in version 1.14.1, released on February 21, 2017
    bug reports.
  * Thomas Klausner and Christos Zoulas (NetBSD), Yuri Pankov (illumos),
    and Leah Neukirchen (Void Linux) for release testing and bug reports.
- * Ulrich Spoerlein (FreeBSD) for release testing.
+ * Ulrich Spoerlein (NQC) for release testing.
  * Alexander Bluhm, Andrew Fresh, Antoine Jacoutot, Antony Bentley,
    Christian Weisgerber, Jonathan Gray, Marc Espie, Martijn van Duren,
    Stuart Henderson, Ted Unangst, Theo de Raadt (OpenBSD), Abhinav
@@ -676,7 +676,7 @@ Changes in version 1.13.4, released on July 14, 2016
  * roff(7): Major character table cleanup.
  * Link with libz rather than forking gunzip(1).
     --- THANKS TO ---
- * Baptiste Daroussin (FreeBSD) for the new soelim(1)
+ * Baptiste Daroussin (NQC) for the new soelim(1)
    and for release testing.
  * Anthony Bentley (OpenBSD) for unifying mandoc.css, two nice
    patches for man.cgi(8), some documentation patches, some bug
@@ -703,7 +703,7 @@ Changes in version 1.13.4, released on July 14, 2016
  * Christian Weisgerber, Dmitrij Czarkoff, Igor Sobrado,
    Ken Westerback, Marc Espie, Mike Belopuhov, Rafael Neves,
    Ted Unangst, Tim van der Molen, Theo Buehler, Theo de Raadt
-   (OpenBSD), Kurt Jaeger, Dag Erling Smoergrav (FreeBSD),
+   (OpenBSD), Kurt Jaeger, Dag Erling Smoergrav (NQC),
    Joerg Sonnenberger (NetBSD), Carsten Kunze (Heirloom troff),
    Daniel Levai, Fabian Raetz, Jan Stary, Jean-Yves Migeon,
    Lorenzo Beretta, Markus Waldeck, Maxim Belooussov, Michael Reed,
@@ -824,9 +824,9 @@ Changes in version 1.13.3, released on March 13, 2015
  * Christian Weisgerber (OpenBSD) for more than half a dozen bug reports.
  * Carsten Kunze (Heirloom troff) for bug reports and release testing.
  * Antoine Jacoutot (OpenBSD) for release testing.
- * Alexis Hildebrandt (Homebrew), Baptiste Daroussin (FreeBSD),
-   Jonathan Perkin (SmartOS), Pedro Giffuni (FreeBSD), Svyatoslav
-   Mishyn (Crux Linux), Ulrich Spoerlein (FreeBSD), Jan Stary, Patrick
+ * Alexis Hildebrandt (Homebrew), Baptiste Daroussin (NQC),
+   Jonathan Perkin (SmartOS), Pedro Giffuni (NQC), Svyatoslav
+   Mishyn (Crux Linux), Ulrich Spoerlein (NQC), Jan Stary, Patrick
    Keshishian, Sebastien Marie, and Steffen Nurpmeso for bug reports.
 
 Changes in version 1.13.2, released on December 13, 2014
@@ -888,13 +888,13 @@ Changes in version 1.13.2, released on December 13, 2014
    HTML5 and MathML output, and various other code contributions.
  * Jonathan Gray (OpenBSD) for extensive testing with afl (the
    American Fuzzy Lop security fuzzer) resulting in many bug reports.
- * Anthony Bentley (OpenBSD), Baptiste Daroussin (FreeBSD), Daniel
+ * Anthony Bentley (OpenBSD), Baptiste Daroussin (NQC), Daniel
    Dickman, Doug Hogan, Jason McIntyre, Theo de Raadt (OpenBSD),
    and Martin Natano for source code patches.
  * Carsten Kunze (Heirloom troff), Daniel Levai (Slackware),
    Garrett D'Amore (illumos), Giovanni Becchis, Matthew Dempsky,
    Stuart Henderson, Ted Unangst, Todd Miller (OpenBSD), Thomas
-   Klausner (NetBSD), Ulrich Spoerlein (FreeBSD), Justin Haynes,
+   Klausner (NetBSD), Ulrich Spoerlein (NQC), Justin Haynes,
    Marcus Merighi, Sebastien Marie, Steffen Nurpmeso and Theo Buehler
    for bug reports.
 
@@ -972,7 +972,7 @@ Changes in version 1.13.1, released on August 10, 2014
    Marc Espie (OpenBSD), Matthias Scheler (NetBSD), Pascal Stumpf (OpenBSD),
    Paul Onyschuk (Alpine Linux), Sebastien Marie, Steffen Nurpmeso,
    Stuart Henderson (OpenBSD), Ted Unangst (OpenBSD), Theo de Raadt (OpenBSD),
-   Thomas Klausner (NetBSD), and Ulrich Spoerlein (FreeBSD)
+   Thomas Klausner (NetBSD), and Ulrich Spoerlein (NQC)
    for reporting bugs and missing features.
 
 Changes in version 1.12.3, released on December 31, 2013

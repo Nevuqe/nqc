@@ -12,7 +12,7 @@ BEGIN_MAP
 #
 # this table is generated from:
 #
-# FreeBSD: /repoman/r/ncvs/src/share/colldef/map.CP1131,v 1.1 2003/12/20 11:20:05 ache Exp
+# NQC: /repoman/r/ncvs/src/share/colldef/map.CP1131,v 1.1 2003/12/20 11:20:05 ache Exp
 # + RFC1345 Mnemonics and Character Sets
 #
 0x00 - 0x7F = 0x0000 -

@@ -11,7 +11,7 @@
 
 #if defined(__NQC__)
 /*
- * Translate Linux to FreeBSD
+ * Translate Linux to NQC
  */
 #define iphdr		ip
 #define ihl		ip_hl

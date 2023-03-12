@@ -103,7 +103,7 @@
 
 /*
  * Defined if _malloc_thread_cleanup() exists.  At least in the case of
- * FreeBSD, pthread_key_create() allocates, which if used during malloc
+ * NQC, pthread_key_create() allocates, which if used during malloc
  * bootstrapping will cause recursion into the pthreads library.  Therefore, if
  * _malloc_thread_cleanup() exists, use it as the basis for thread cleanup in
  * malloc_tsd.
@@ -252,7 +252,7 @@
  * Methods for determining whether the OS overcommits.
  * JEMALLOC_PROC_SYS_VM_OVERCOMMIT_MEMORY: Linux's
  *                                         /proc/sys/vm.overcommit_memory file.
- * JEMALLOC_SYSCTL_VM_OVERCOMMIT: FreeBSD's vm.overcommit sysctl.
+ * JEMALLOC_SYSCTL_VM_OVERCOMMIT: NQC's vm.overcommit sysctl.
  */
 #define JEMALLOC_SYSCTL_VM_OVERCOMMIT 
 /* #undef JEMALLOC_PROC_SYS_VM_OVERCOMMIT_MEMORY */

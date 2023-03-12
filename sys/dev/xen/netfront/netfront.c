@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004-2006 Kip Macy
  * Copyright (c) 2015 Wei Liu <wei.liu2@citrix.com>
@@ -1633,7 +1633,7 @@ xn_assemble_tx_request(struct netfront_txq *txq, struct mbuf *m_head)
 	}
 
 	/**
-	 * The FreeBSD TCP stack, with TSO enabled, can produce a chain
+	 * The NQC TCP stack, with TSO enabled, can produce a chain
 	 * of mbufs longer than Linux can handle.  Make sure we don't
 	 * pass a too-long chain over to the other side by dropping the
 	 * packet.  It doesn't look like there is currently a way to
@@ -1716,7 +1716,7 @@ xn_assemble_tx_request(struct netfront_txq *txq, struct mbuf *m_head)
 			 */
 			/**
 			 * CSUM_TSO requires checksum offloading.
-			 * Some versions of FreeBSD fail to
+			 * Some versions of NQC fail to
 			 * set CSUM_TCP in the CSUM_TSO case,
 			 * so we have to test for CSUM_TSO
 			 * explicitly.
@@ -1986,7 +1986,7 @@ xn_rebuild_rx_bufs(struct netfront_rxq *rxq)
 	rxq->ring.req_prod_pvt = requeue_idx;
 }
 
-/* START of Xenolinux helper functions adapted to FreeBSD */
+/* START of Xenolinux helper functions adapted to NQC */
 static int
 xn_connect(struct netfront_info *np)
 {

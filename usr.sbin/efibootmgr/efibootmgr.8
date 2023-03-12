@@ -213,16 +213,16 @@ the EFI partition mounted under
 .Pa /boot/efi ,
 mark the method active, using
 the given loader and label the method
-.Qq FreeBSD-11 :
+.Qq NQC-11 :
 .Pp
-.Dl efibootmgr -a -c -l /boot/efi/EFI/freebsd/loader.efi -L FreeBSD-11
+.Dl efibootmgr -a -c -l /boot/efi/EFI/freebsd/loader.efi -L NQC-11
 .Pp
 This will result in the next available bootnum being assigned to a
 new UEFI boot variable, and given the label
-.Qq FreeBSD-11
+.Qq NQC-11
 such as:
 .Pp
-.Dl Boot0009 FreeBSD-11
+.Dl Boot0009 NQC-11
 .Pp
 Note newly created boot entries are, by default, created inactive, hence
 the reason

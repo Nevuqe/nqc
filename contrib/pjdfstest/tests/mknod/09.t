@@ -10,7 +10,7 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:UFS)
+NQC:UFS)
 	echo "1..30"
 	;;
 *)
@@ -43,7 +43,7 @@ expect 0 unlink ${n0}/${n1}
 expect 0 chflags ${n0} none
 
 case "${os}:${fs}" in
-FreeBSD:UFS)
+NQC:UFS)
 	expect 0 chflags ${n0} UF_IMMUTABLE
 	expect EPERM mknod ${n0}/${n1} f 0644 0 0
 	expect 0 chflags ${n0} none

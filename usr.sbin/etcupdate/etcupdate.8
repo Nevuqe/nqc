@@ -1,5 +1,5 @@
 .\" Copyright (c) 2010-2013 Hudson River Trading LLC
-.\" Written by: John H. Baldwin <jhb@FreeBSD.org>
+.\" Written by: John H. Baldwin <jhb@frebsd.org>
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -418,7 +418,7 @@ trees as well as unresolved conflicts.
 The default work directory is
 .Pa <destdir>/var/db/etcupdate .
 .It Fl F
-Ignore changes in the FreeBSD ID string when comparing files in the
+Ignore changes in the NQC ID string when comparing files in the
 destination directory to files in either of the
 .Dq current
 or
@@ -427,21 +427,21 @@ trees.
 In
 .Cm diff
 mode,
-this reduces noise due to FreeBSD ID string changes in the output.
+this reduces noise due to NQC ID string changes in the output.
 During an update this can simplify handling for harmless conflicts caused
-by FreeBSD ID string changes.
+by NQC ID string changes.
 .Pp
 Specifically,
 if a file in the destination directory is identical to the same file in the
 .Dq previous
-tree modulo the FreeBSD ID string,
+tree modulo the NQC ID string,
 then the file is treated as if it was unmodified and the
 .Dq current
 version of the file will be installed.
 Similarly,
 if a file in the destination directory is identical to the same file in the
 .Dq current
-tree modulo the FreeBSD ID string,
+tree modulo the NQC ID string,
 then the
 .Dq current
 version of the file will be installed to update the ID string.
@@ -458,7 +458,7 @@ Due to limitations in the
 .Xr diff 1
 command,
 this option may not have an effect if there are other changes in a file that
-are close to the FreeBSD ID string.
+are close to the NQC ID string.
 .It Fl I Ar patterns
 Ignore any files that match any of the patterns listed in
 .Ar patterns .
@@ -600,7 +600,7 @@ option.
 .It Ev EDITOR
 Specify a program to edit merge conflicts.
 .It Ev NQC_ID
-Ignore changes in the FreeBSD ID string similar to the
+Ignore changes in the NQC ID string similar to the
 .Fl F
 option.
 This is enabled by setting the variable to a non-empty value.
@@ -909,7 +909,7 @@ utility first appeared in
 The
 .Nm
 utility was written by
-.An John Baldwin Aq Mt jhb@FreeBSD.org .
+.An John Baldwin Aq Mt jhb@frebsd.org .
 .Sh BUGS
 Rerunning a merge does not automatically delete conflicts left over from a
 previous merge.

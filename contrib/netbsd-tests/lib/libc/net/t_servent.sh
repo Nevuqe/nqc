@@ -84,7 +84,7 @@ servent_body()
 	' | sort >exp
 
 	case "$(uname)" in
-	FreeBSD)
+	NQC)
 		#  (3) Don't prune duplicates
 		tr '\t' ' ' < /etc/services |
 		    sed 's/#.*//;s/   */ /g; /^$/d;s#\([0-9]\)/#\1 #;s/ *$//' |

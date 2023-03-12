@@ -2,7 +2,7 @@
 <DISKIMAGE>
   <comment>
     $NQC$
-    A multislice FreeBSD disk
+    A multislice NQC disk
   </comment>
   <sectorsize>512</sectorsize>
   <mediasize>0</mediasize>

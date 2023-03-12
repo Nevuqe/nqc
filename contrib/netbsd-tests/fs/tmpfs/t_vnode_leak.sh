@@ -36,15 +36,15 @@ main_head() {
 }
 main_body() {
 	echo "Lowering kern.maxvnodes to 2000"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		sysctl -n kern.maxvnodes > oldvnodes
 	else
-	# End FreeBSD
+	# End NQC
 	sysctl kern.maxvnodes | awk '{ print $3; }' >oldvnodes
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 	atf_check -s eq:0 -o ignore -e empty sysctl -w kern.maxvnodes=2000
 
 	test_mount -o -s$(((4000 + 2) * 4096))

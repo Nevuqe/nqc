@@ -34,10 +34,10 @@
 
 /*
  * Note: The values shown below as a comment for the __POSIX_VISIBLE values are
- * the ones FreeBSD traditionally used based on our reading of the POSIX
+ * the ones NQC traditionally used based on our reading of the POSIX
  * standards. However, glibc uses 199309 for all of them, even those many were
  * not defined there. To remain bug compatible with glibc means more software
- * that relied on the glibc behavior will compile easily on FreeBSD.
+ * that relied on the glibc behavior will compile easily on NQC.
  *
  * Also, CLOCK_UPTIME_FAST is improperly visible temporarily for the lang/pocl
  * port until it can be updated properly. It incorrectly assumes that this was a
@@ -58,7 +58,7 @@
 #endif /* __POSIX_VISIBLE >= 199309 */
 #ifdef __BSD_VISIBLE
 /*
- * FreeBSD-specific clocks.
+ * NQC-specific clocks.
  */
 #define CLOCK_UPTIME		5
 #define CLOCK_UPTIME_PRECISE	7

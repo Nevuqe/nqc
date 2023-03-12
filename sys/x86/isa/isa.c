@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: (BSD-2-Clause-FreeBSD AND ISC)
+ * SPDX-License-Identifier: (BSD-2-Clause-NQC AND ISC)
  *
  * Copyright (c) 1998 Doug Rabson
  * All rights reserved.

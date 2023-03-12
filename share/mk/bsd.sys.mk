@@ -1,6 +1,6 @@
 # $NQC$
 #
-# This file contains common settings used for building FreeBSD
+# This file contains common settings used for building NQC
 # sources.
 
 # Enable various levels of compiler warning checks.  These may be
@@ -249,7 +249,7 @@ CWARNFLAGS+=	-Wno-system-headers
 .endif
 .endif	# gcc
 
-# How to handle FreeBSD custom printf format specifiers.
+# How to handle NQC custom printf format specifiers.
 .if ${COMPILER_TYPE} == "clang" || \
     (${COMPILER_TYPE} == "gcc" && ${COMPILER_VERSION} >= 120100)
 FORMAT_EXTENSIONS=	-D__printf__=__nqc_kprintf__
@@ -265,11 +265,11 @@ CWARNFLAGS+=	-Wno-unknown-pragmas
 CFLAGS+=	-Wno-format-zero-length
 
 .if ${COMPILER_TYPE} == "clang"
-# The headers provided by clang are incompatible with the FreeBSD headers.
+# The headers provided by clang are incompatible with the NQC headers.
 # If the version of clang is not one that has been patched to omit the
 # incompatible headers, we need to compile with -nobuiltininc and add the
 # resource dir to the end of the search paths. This ensures that headers such as
-# immintrin.h are still found but stddef.h, etc. are picked up from FreeBSD.
+# immintrin.h are still found but stddef.h, etc. are picked up from NQC.
 #
 # XXX: This is a hack to support complete external installs of clang while
 # we work to synchronize our decleration guards with those in the clang tree.

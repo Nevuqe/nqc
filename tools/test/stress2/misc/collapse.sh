@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2020 Jeffrey Roberson <jeff@FreeBSD.org>
+# Copyright (c) 2020 Jeffrey Roberson <jeff@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 . ../default.cfg
 
 # "panic: freeing mapped page 0xfffffe000aa73910" seen:
-# https://people.freebsd.org/~pho/stress/log/collapse.txt
+# https://people.frebsd.org/~pho/stress/log/collapse.txt
 
 odir=`pwd`
 cd /tmp

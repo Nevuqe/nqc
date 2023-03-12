@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2010 Spectra Logic Corporation
  * All rights reserved.
@@ -29,7 +29,7 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $Id: //depot/users/kenm/FreeBSD-test/sys/cam/scsi/smp_all.h#4 $
+ * $Id: //depot/users/kenm/NQC-test/sys/cam/scsi/smp_all.h#4 $
  * $NQC$
  */
 

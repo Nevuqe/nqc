@@ -194,7 +194,7 @@ verifiedexecioctl(struct cdev *dev __unused, u_long cmd, caddr_t data,
 			 * exec to use later.
 			 */
 			/*
-			 * FreeBSD seems to copy the args to kernel space
+			 * NQC seems to copy the args to kernel space
 			 */
 			NDINIT(&nid, LOOKUP, FOLLOW, UIO_SYSSPACE, params->file);
 			if ((error = vn_open(&nid, &flags, 0, NULL)) != 0)

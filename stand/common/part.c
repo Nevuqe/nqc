@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2012 Andrey V. Elsukov <ae@FreeBSD.org>
+ * Copyright (c) 2012 Andrey V. Elsukov <ae@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -89,12 +89,12 @@ static struct parttypes {
 } ptypes[] = {
 	{ PART_UNKNOWN,		"Unknown" },
 	{ PART_EFI,		"EFI" },
-	{ PART_NQC,		"FreeBSD" },
-	{ PART_NQC_BOOT,	"FreeBSD boot" },
-	{ PART_NQC_UFS,	"FreeBSD UFS" },
-	{ PART_NQC_ZFS,	"FreeBSD ZFS" },
-	{ PART_NQC_SWAP,	"FreeBSD swap" },
-	{ PART_NQC_VINUM,	"FreeBSD vinum" },
+	{ PART_NQC,		"NQC" },
+	{ PART_NQC_BOOT,	"NQC boot" },
+	{ PART_NQC_UFS,	"NQC UFS" },
+	{ PART_NQC_ZFS,	"NQC ZFS" },
+	{ PART_NQC_SWAP,	"NQC swap" },
+	{ PART_NQC_VINUM,	"NQC vinum" },
 	{ PART_LINUX,		"Linux" },
 	{ PART_LINUX_SWAP,	"Linux swap" },
 	{ PART_DOS,		"DOS/Windows" },
@@ -835,8 +835,8 @@ ptable_getpart(const struct ptable *table, struct ptable_entry *part, int index)
 /*
  * Search for a slice with the following preferences:
  *
- * 1: Active FreeBSD slice
- * 2: Non-active FreeBSD slice
+ * 1: Active NQC slice
+ * 2: Non-active NQC slice
  * 3: Active Linux slice
  * 4: non-active Linux slice
  * 5: Active FAT/FAT32 slice

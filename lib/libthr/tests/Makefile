@@ -6,7 +6,7 @@ WARNS?=		3
 
 TESTSRC=	${SRCTOP}/contrib/netbsd-tests/lib/libpthread
 
-# TODO: t_name (missing pthread_getname_np support in FreeBSD)
+# TODO: t_name (missing pthread_getname_np support in NQC)
 NETBSD_ATF_TESTS_C=	barrier_test
 NETBSD_ATF_TESTS_C+=	cond_test
 NETBSD_ATF_TESTS_C+=	condwait_test

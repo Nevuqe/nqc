@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) HighPoint Technologies, Inc.
  * All rights reserved.
@@ -30,7 +30,7 @@
 #include <dev/hptrr/hptrr_config.h>
 /* $Id: os_bsd.h,v 1.18 2006/04/11 08:19:02 gmm Exp $
  *
- * HighPoint RAID Driver for FreeBSD
+ * HighPoint RAID Driver for NQC
  * Copyright (C) 2005 HighPoint Technologies, Inc. All Rights Reserved.
  */
 

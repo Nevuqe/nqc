@@ -318,7 +318,7 @@ INTERCEPTOR(char *, stpcpy, char *dest, const char *src) {
 INTERCEPTOR(char *, strdup, char *src) {
   ENSURE_MSAN_INITED();
   GET_STORE_STACK_TRACE;
-  // On FreeBSD strdup() leverages strlen().
+  // On NQC strdup() leverages strlen().
   InterceptorScope interceptor_scope;
   SIZE_T n = internal_strlen(src);
   CHECK_UNPOISONED_STRING(src + n, 0);

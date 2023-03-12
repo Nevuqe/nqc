@@ -1,4 +1,4 @@
-# FreeBSD system call object files.
+# NQC system call object files.
 # DO NOT EDIT-- this file is automatically @generated.
 # $NQC$
 MIASM =  \

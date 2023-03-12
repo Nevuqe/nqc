@@ -3,7 +3,7 @@
 #
 # From <rea-fbsd@codelabs.ru>
 # ZFS dump header has the following structure (as per zfs_ioctl.h
-# in FreeBSD with drr_type is set to DRR_BEGIN)
+# in NQC with drr_type is set to DRR_BEGIN)
 #
 #   enum {
 #	DRR_BEGIN, DRR_OBJECT, DRR_FREEOBJECTS,

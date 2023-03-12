@@ -3092,7 +3092,7 @@ nfsv4_filesavail(struct statfs *fs, struct mount *mp)
 #ifdef QUOTA
 	/*
 	 * This is old OpenBSD code that does not build
-	 * for FreeBSD.  I do not know if doing this is
+	 * for NQC.  I do not know if doing this is
 	 * useful, so I will just leave the code here.
 	 */
 	p = curthread();

@@ -53,7 +53,7 @@ function cleanup
 log_assert "ZED should be able to handle multiple faulted devices"
 log_onexit cleanup
 
-# Events not supported on FreeBSD
+# Events not supported on NQC
 if ! is_nqc; then
 	# Clear events from previous runs
 	zed_events_drain

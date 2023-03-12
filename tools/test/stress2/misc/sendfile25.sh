@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -29,7 +29,7 @@
 
 # sendfile(2) test with disk read errors
 # "panic: vm_page_readahead_finish: 0xfffffe000d88d758 is invalid" seen:
-# https://people.freebsd.org/~pho/stress/log/sendfile25.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile25.txt
 
 # Test scenario suggestion by chs@
 # Fixed by

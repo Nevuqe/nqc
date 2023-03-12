@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel IICBUS device code"
+PROJECT_NAME           = "NQC kernel IICBUS device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_iicbus/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

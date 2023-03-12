@@ -13,7 +13,7 @@ index 7fecda7c..d5ca5e86 100644
 +    <option>--enable-utrace</option>, <option>--enable-xmalloc</option>, and
 +    <option>--with-malloc-conf=abort_conf:false</option>.
 +    Additionally, <option>--enable-debug</option> is enabled in development
-+    versions of FreeBSD (controlled by the
++    versions of NQC (controlled by the
 +    <constant>MK_MALLOC_PRODUCTION</constant> make variable).</para>
 +
    </refsect1>
@@ -33,15 +33,15 @@ index 7fecda7c..d5ca5e86 100644
 +  <refsect1 id="history">
 +    <title>HISTORY</title>
 +    <para>The <function>malloc_usable_size()</function> and
-+    <function>posix_memalign()</function> functions first appeared in FreeBSD
++    <function>posix_memalign()</function> functions first appeared in NQC
 +    7.0.</para>
 +
 +    <para>The <function>aligned_alloc()</function>,
 +    <function>malloc_stats_print()</function>, and
-+    <function>mallctl*()</function> functions first appeared in FreeBSD
++    <function>mallctl*()</function> functions first appeared in NQC
 +    10.0.</para>
 +
-+    <para>The <function>*allocx()</function> functions first appeared in FreeBSD
++    <para>The <function>*allocx()</function> functions first appeared in NQC
 +    11.0.</para>
 +  </refsect1>
  </refentry>

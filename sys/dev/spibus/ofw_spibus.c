@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009, Nathan Whitehorn <nwhitehorn@FreeBSD.org>
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2009, Nathan Whitehorn <nwhitehorn@frebsd.org>
+ * Copyright (c) 2013 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Oleksandr Rybalko
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

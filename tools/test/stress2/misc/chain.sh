@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Jeremy <peterj@FreeBSD.org>
+# Copyright (c) 2021 Peter Jeremy <peterj@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,10 +27,10 @@
 # SUCH DAMAGE.
 #
 # Unkillable process in "vm map (user)" seen.
-# https://people.freebsd.org/~pho/stress/log/kostik1070.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1070.txt
 # Fixed by: r327468
 
-# OOM killing: https://people.freebsd.org/~pho/stress/log/chain.txt
+# OOM killing: https://people.frebsd.org/~pho/stress/log/chain.txt
 
 if [ ! -f /usr/local/include/libmill.h -o \
     ! -x /usr/local/lib/libmill.so ]; then

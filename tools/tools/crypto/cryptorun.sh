@@ -17,7 +17,7 @@
 threads=1
 size=256
 iterations=1000000
-crypto="/tank/users/gnn/Repos/svn/FreeBSD.HEAD/tools/tools/crypto/cryptotest"
+crypto="/tank/users/gnn/Repos/svn/NQC.HEAD/tools/tools/crypto/cryptotest"
 max_threads=$2
 max_size=$3 
 

@@ -1,6 +1,6 @@
 # $NQC$
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Orange Business Services
 #
@@ -126,7 +126,7 @@ defer_body()
 	pfsynct_init
 
 	if [ "$(atf_config_get ci false)" = "true" ]; then
-		atf_skip "Skip know failing test (likely related to https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=260460)"
+		atf_skip "Skip know failing test (likely related to https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=260460)"
 	fi
 
 	epair_sync=$(vnet_mkepair)

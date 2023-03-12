@@ -1,10 +1,10 @@
 /*-
- * Copyright (c) 2016 The FreeBSD Foundation
+ * Copyright (c) 2016 The FreBSD Foundation
  * Copyright (c) 2020 Ampere Computing
  * All rights reserved.
  *
  * This software was developed by Andrew Turner under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -29,10 +29,10 @@
  *
  * This file is derived from aesni_wrap.c:
  * Copyright (C) 2008 Damien Miller <djm@mindrot.org>
- * Copyright (c) 2010 Konstantin Belousov <kib@FreeBSD.org>
+ * Copyright (c) 2010 Konstantin Belousov <kib@frebsd.org>
  * Copyright (c) 2010-2011 Pawel Jakub Dawidek <pawel@dawidek.net>
- * Copyright 2012-2013 John-Mark Gurney <jmg@FreeBSD.org>
- * Copyright (c) 2014 The FreeBSD Foundation
+ * Copyright 2012-2013 John-Mark Gurney <jmg@frebsd.org>
+ * Copyright (c) 2014 The FreBSD Foundation
  */
 
 /*

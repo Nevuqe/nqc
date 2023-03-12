@@ -1155,7 +1155,7 @@ MallocChecker::performKernelMalloc(const CallEvent &Call, CheckerContext &C,
   llvm::Triple::OSType OS = Ctx.getTargetInfo().getTriple().getOS();
 
   if (!KernelZeroFlagVal) {
-    if (OS == llvm::Triple::FreeBSD)
+    if (OS == llvm::Triple::NQC)
       KernelZeroFlagVal = 0x0100;
     else if (OS == llvm::Triple::NetBSD)
       KernelZeroFlagVal = 0x0002;
@@ -1174,7 +1174,7 @@ MallocChecker::performKernelMalloc(const CallEvent &Call, CheckerContext &C,
   }
 
   // We treat the last argument as the flags argument, and callers fall-back to
-  // normal malloc on a None return. This works for the FreeBSD kernel malloc
+  // normal malloc on a None return. This works for the NQC kernel malloc
   // as well as Linux kmalloc.
   if (Call.getNumArgs() < 2)
     return None;

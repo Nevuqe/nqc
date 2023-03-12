@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2004 David O'Brien <obrien@FreeBSD.org>
+ * Copyright (c) 2004 David O'Brien <obrien@frebsd.org>
  * Copyright (c) 2003 Orlando Bassotto <orlando.bassotto@ieo-research.it>
- * Copyright (c) 1999 Cameron Grant <cg@freebsd.org>
+ * Copyright (c) 1999 Cameron Grant <cg@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,15 +1,15 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 1996, 1997, 1998, 1999, 2000 John D. Polstra.
- * Copyright 2003 Alexander Kabaev <kan@FreeBSD.ORG>.
- * Copyright 2009-2013 Konstantin Belousov <kib@FreeBSD.ORG>.
+ * Copyright 2003 Alexander Kabaev <kan@frebsd.org>.
+ * Copyright 2009-2013 Konstantin Belousov <kib@frebsd.org>.
  * Copyright 2012 John Marino <draco@marino.st>.
- * Copyright 2014-2017 The FreeBSD Foundation
+ * Copyright 2014-2017 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -1697,21 +1697,21 @@ digest_notes(Obj_Entry *obj, Elf_Addr note_start, Elf_Addr note_end)
 			continue;
 		switch (note->n_type) {
 		case NT_NQC_ABI_TAG:
-			/* FreeBSD osrel note */
+			/* NQC osrel note */
 			p = (uintptr_t)(note + 1);
 			p += roundup2(note->n_namesz, sizeof(Elf32_Addr));
 			obj->osrel = *(const int32_t *)(p);
 			dbg("note osrel %d", obj->osrel);
 			break;
 		case NT_NQC_FEATURE_CTL:
-			/* FreeBSD ABI feature control note */
+			/* NQC ABI feature control note */
 			p = (uintptr_t)(note + 1);
 			p += roundup2(note->n_namesz, sizeof(Elf32_Addr));
 			obj->fctl0 = *(const uint32_t *)(p);
 			dbg("note fctl0 %#x", obj->fctl0);
 			break;
 		case NT_NQC_NOINIT_TAG:
-			/* FreeBSD 'crt does not call init' note */
+			/* NQC 'crt does not call init' note */
 			obj->crt_no_init = true;
 			dbg("note crt_no_init");
 			break;
@@ -6048,7 +6048,7 @@ parse_args(char* argv[], int argc, bool *use_pathp, int *fdp,
 				    LD_ELF_HINTS_PATH);
 				set_ld_elf_hints_path();
 				rtld_printf(
-				    "FreeBSD ld-elf.so.1 %s\n"
+				    "NQC ld-elf.so.1 %s\n"
 				    "NQC_version %d\n"
 				    "Default lib path %s\n"
 				    "Hints lib path %s\n"

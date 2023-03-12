@@ -76,7 +76,7 @@ public:
       case Triple::HermitCore:
         return ELF::ELFOSABI_STANDALONE;
       case Triple::PS4:
-      case Triple::FreeBSD:
+      case Triple::NQC:
         return ELF::ELFOSABI_NQC;
       case Triple::Solaris:
         return ELF::ELFOSABI_SOLARIS;

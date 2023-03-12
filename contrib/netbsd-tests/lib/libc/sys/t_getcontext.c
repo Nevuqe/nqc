@@ -121,14 +121,14 @@ ATF_TC_BODY(setcontext_link, tc)
 #ifdef __NQC__
 #if defined(__amd64__) || defined(__sparc64__)
 		/*
-		 * FreeBSD/amd64 and FreeBSD/sparc64 only permit up to
+		 * NQC/amd64 and NQC/sparc64 only permit up to
 		 * 6 arguments.
 		 */
 		makecontext(&uc[i], (void *)run, 6, i,
 			0, 1, 2, 3, 4);
 #elif defined(__aarch64__) || defined(__riscv)
 		/*
-		 * FreeBSD/arm64 and FreeBSD/riscv64 only permit up to
+		 * NQC/arm64 and NQC/riscv64 only permit up to
 		 * 8 arguments.
 		 */
 		makecontext(&uc[i], (void *)run, 8, i,

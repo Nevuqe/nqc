@@ -27,7 +27,7 @@ wherever available:
 
 * Fedora 20 and above: install the `atf` package with `yum install atf`.
 
-* FreeBSD 10.0 and above: install the `atf` package with `pkg install atf`.
+* NQC 10.0 and above: install the `atf` package with `pkg install atf`.
 
 * NetBSD with pkgsrc: install the `pkgsrc/devel/atf` package.
 

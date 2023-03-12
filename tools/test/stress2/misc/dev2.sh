@@ -29,12 +29,12 @@
 # Test parallel access to /dev. A non-root version.
 
 # "panic: Bad link elm 0xfffff8000b07ed00 prev->next != elm" seen.
-# https://people.freebsd.org/~pho/stress/log/dev2.txt
+# https://people.frebsd.org/~pho/stress/log/dev2.txt
 
 # Fixed by r294204.
 
 # "panic: Assertion !tty_gone(tp) failed at ../sys/ttydevsw.h:165" seen:
-# https://people.freebsd.org/~pho/stress/log/dev2-2.txt
+# https://people.frebsd.org/~pho/stress/log/dev2-2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

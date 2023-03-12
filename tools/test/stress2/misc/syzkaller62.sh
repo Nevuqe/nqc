@@ -22,13 +22,13 @@
 # sys_exit() at sys_exit+0xd/frame 0xfffffe01401e7e00
 # amd64_syscall() at amd64_syscall+0x145/frame 0xfffffe01401e7f30
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe01401e7f30
-# --- syscall (1, FreeBSD ELF64, sys_exit), rip = 0x82301d16a, rsp = 0x8209bf628, rbp = 0x8209bf640 ---
+# --- syscall (1, NQC ELF64, sys_exit), rip = 0x82301d16a, rsp = 0x8209bf628, rbp = 0x8209bf640 ---
 # KDB: enter: panic
 # [ thread pid 2876 tid 100222 ]
 # Stopped at      x32: movq    $0,0x12a1323(%rip)
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #0 main-n257506-eed634d113d-dirty: Thu Aug 18 13:56:53 CEST 2022
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO\012
+# version: NQC 14.0-CURRENT #0 main-n257506-eed634d113d-dirty: Thu Aug 18 13:56:53 CEST 2022
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO\012
 # db> 
 
 . ../default.cfg

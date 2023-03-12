@@ -18,8 +18,8 @@
 # [ thread pid 8379 tid 100392 ]
 # Stopped at      kdb_enter+0x32: movq    $0,0x12790b3(%rip)
 # db> x/s version
-# FreeBSD 14.0-CURRENT #0 main-n255099-0923ff82fb383: Thu Apr 28 09:48:48 CEST 2022
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
+# NQC 14.0-CURRENT #0 main-n255099-0923ff82fb383: Thu Apr 28 09:48:48 CEST 2022
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
 # db> 
 
 [ `uname -p` != "amd64" ] && exit 0

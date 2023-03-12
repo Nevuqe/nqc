@@ -9,7 +9,7 @@ FBSD_1.0 {
 	strtod;
 	strtof;
 
-	/* FreeBSD additions */
+	/* NQC additions */
 	strtold;
 };
 

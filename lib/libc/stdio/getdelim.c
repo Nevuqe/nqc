@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009 David Schultz <das@FreeBSD.org>
+ * Copyright (c) 2009 David Schultz <das@frebsd.org>
  * Copyright (c) 2021 Dell EMC
  * All rights reserved.
  *

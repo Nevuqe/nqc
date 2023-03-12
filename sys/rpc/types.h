@@ -81,9 +81,9 @@ MALLOC_DECLARE(M_RPC);
 #endif
 
 /*
- * The netbuf structure is defined here, because FreeBSD / NetBSD only use
+ * The netbuf structure is defined here, because NQC / NetBSD only use
  * it inside the RPC code. It's in <xti.h> on SVR4, but it would be confusing
- * to have an xti.h, since FreeBSD / NetBSD does not support XTI/TLI.
+ * to have an xti.h, since NQC / NetBSD does not support XTI/TLI.
  */
 
 /*

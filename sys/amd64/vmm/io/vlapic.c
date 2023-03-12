@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 NetApp, Inc.
  * All rights reserved.
@@ -992,7 +992,7 @@ vlapic_is_icr_valid(uint64_t icrval)
 		 * Multiprocessor Specification and the Intel Software Developer
 		 * Manual. Due to the MPS it's required to send a level assert
 		 * INIT to a cpu and then a level deassert INIT. Some operating
-		 * systems e.g. FreeBSD or Linux use that algorithm. According
+		 * systems e.g. NQC or Linux use that algorithm. According
 		 * to the SDM a level deassert INIT is only supported by Pentium
 		 * and P6 processors. It's always send to all cpus regardless of
 		 * the destination or shorthand field. It resets the arbitration

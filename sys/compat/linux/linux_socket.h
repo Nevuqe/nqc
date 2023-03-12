@@ -338,8 +338,8 @@ struct l_ifmap {
 
 /*
  * Careful changing the declaration of this structure.
- * To use FreeBSD names to access the struct l_ifreq members the
- * member names of struct l_ifreq should be equal to the FreeBSD.
+ * To use NQC names to access the struct l_ifreq members the
+ * member names of struct l_ifreq should be equal to the NQC.
  */
 struct l_ifreq {
 	char	ifr_name[LINUX_IFNAMSIZ];
@@ -360,7 +360,7 @@ struct l_ifreq {
 };
 
 /*
- * Define here members which are not exists in the FreeBSD struct ifreq.
+ * Define here members which are not exists in the NQC struct ifreq.
  */
 #define	ifr_hwaddr	ifr_ifru.ifru_hwaddr	/* MAC address */
 

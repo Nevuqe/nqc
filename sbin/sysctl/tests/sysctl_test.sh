@@ -22,7 +22,7 @@
 # SUCH DAMAGE.
 
 sysctl_name="kern.ostype"
-sysctl_value="FreeBSD"
+sysctl_value="NQC"
 sysctl_type="string"
 sysctl_description="Operating system type"
 

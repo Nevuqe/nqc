@@ -129,7 +129,7 @@ expect 02755 stat ${n0} mode
 expect 0 -u 65535 -g 65535 chmod ${n0} 0755
 expect 0755 stat ${n0} mode
 
-todo FreeBSD "S_ISGID should be removed and chmod(2) should success and FreeBSD returns EPERM."
+todo NQC "S_ISGID should be removed and chmod(2) should success and NQC returns EPERM."
 expect 0 -u 65535 -g 65534 chmod ${n0} 02755
 expect 0755 stat ${n0} mode
 

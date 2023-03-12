@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003 Juli Mallett.  All rights reserved.
  *
- * This software was written by Juli Mallett <jmallett@FreeBSD.org> for the
- * FreeBSD project.  Redistribution and use in source and binary forms, with
+ * This software was written by Juli Mallett <jmallett@frebsd.org> for the
+ * FreBSD Project.  Redistribution and use in source and binary forms, with
  * or without modification, are permitted provided that the following
  * conditions are met:
  *

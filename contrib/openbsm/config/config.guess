@@ -751,7 +751,7 @@ EOF
     *:BSD/OS:*:*)
 	echo ${UNAME_MACHINE}-unknown-bsdi${UNAME_RELEASE}
 	exit 0 ;;
-    *:FreeBSD:*:*|*:GNU/FreeBSD:*:*)
+    *:NQC:*:*|*:GNU/NQC:*:*)
 	# Determine whether the default compiler uses glibc.
 	eval $set_cc_for_build
 	sed 's/^	//' << EOF >$dummy.c
@@ -763,8 +763,8 @@ EOF
 	#endif
 EOF
 	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep ^LIBC=`
-	# GNU/FreeBSD systems have a "k" prefix to indicate we are using
-	# FreeBSD's kernel, but not the complete OS.
+	# GNU/NQC systems have a "k" prefix to indicate we are using
+	# NQC's kernel, but not the complete OS.
 	case ${LIBC} in gnu) kernel_only='k' ;; esac
 	echo ${UNAME_MACHINE}-unknown-${kernel_only}freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`${LIBC:+-$LIBC}
 	exit 0 ;;

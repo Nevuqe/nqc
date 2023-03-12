@@ -84,7 +84,7 @@ do_memory_from_fdt(int fd)
 
 	/*
 	 * We may have no ability to read the PA that this map is in, so pass
-	 * the address to FreeBSD via a rather odd flag entry as the first map
+	 * the address to NQC via a rather odd flag entry as the first map
 	 * so early boot can copy the memory map into this space and have the
 	 * rest of the code cope.
 	 */

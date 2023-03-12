@@ -14,10 +14,10 @@
  */
 
 /*
- * FreeBSD exposes additional file attributes via ls -o and chflags.
+ * NQC exposes additional file attributes via ls -o and chflags.
  * Under Linux, we provide ZFS_IOC_[GS]ETDOSFLAGS ioctl()s.
  *
- * This application is equivalent to FreeBSD chflags.
+ * This application is equivalent to NQC chflags.
  */
 
 #include <err.h>

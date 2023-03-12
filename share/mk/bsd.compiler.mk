@@ -219,7 +219,7 @@ ${X_}COMPILER_FEATURES=	apple-clang
 .if !defined(${X_}COMPILER_NQC_VERSION)
 ${X_}COMPILER_NQC_VERSION!=	{ echo "__NQC_cc_version" | ${${cc}:N${CCACHE_BIN}} -E - 2>/dev/null || echo __NQC_cc_version; } | sed -n '$$p'
 # If we get a literal "__NQC_cc_version" back then the compiler
-# is a non-FreeBSD build that doesn't support it or some other error
+# is a non-NQC build that doesn't support it or some other error
 # occurred.
 .if ${${X_}COMPILER_NQC_VERSION} == "__NQC_cc_version"
 ${X_}COMPILER_NQC_VERSION=	unknown
@@ -244,13 +244,13 @@ ${X_}COMPILER_FEATURES+=	retpoline init-all
 # PR257638 lld fails with BE compressed debug.  Fixed in main but external tool
 # chains will initially not have the fix.  For now limit the feature to LE
 # targets.
-# When compiling bootstrap tools on non-FreeBSD, the various MACHINE variables
-# for the host can be missing or not match FreeBSD's naming (e.g. Linux/amd64
+# When compiling bootstrap tools on non-NQC, the various MACHINE variables
+# for the host can be missing or not match NQC's naming (e.g. Linux/amd64
 # reports as MACHINE=x86_64 MACHINE_ARCH=x86_64), causing TARGET_ENDIANNESS to
 # be undefined; be conservative and default to off until we turn this on by
 # default everywhere.
 .include <bsd.endian.mk>
-.if (${.MAKE.OS} == "FreeBSD" || defined(TARGET_ENDIANNESS)) && \
+.if (${.MAKE.OS} == "NQC" || defined(TARGET_ENDIANNESS)) && \
     ${TARGET_ENDIANNESS} == "1234"
 ${X_}COMPILER_FEATURES+=	compressed-debug
 .endif

@@ -4,7 +4,7 @@
 # https://web.cs.wpi.edu/~claypool/courses/4514-B99/samples/multicast.c
 
 # Kernel page fault seen with WiP branch:
-# https://people.freebsd.org/~pho/stress/log/kip036.txt
+# https://people.frebsd.org/~pho/stress/log/kip036.txt
 
 . ../default.cfg
 

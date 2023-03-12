@@ -211,7 +211,7 @@ AC_ARG_WITH(sandbox-capsicum,
 # ac_lbl_capsicum_function_not_seen to yes.
 #
 # We don't check cap_rights_init(), as it's a macro, wrapping another
-# function, in at least some versions of FreeBSD, and AC_CHECK_FUNCS()
+# function, in at least some versions of NQC, and AC_CHECK_FUNCS()
 # doesn't handle that.
 #
 # All of the ones we check for must be available in order to enable

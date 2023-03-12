@@ -21,7 +21,7 @@ ZSTD_SRC+=	zstd_double_fast.c zstd_fast.c zstd_lazy.c zstd_ldm.c
 SRCS+=		${ZFS_SRC} ${ZSTD_SRC}
 
 #
-# Any file that needs the FreeBSD overrides that are in
+# Any file that needs the NQC overrides that are in
 # include/os/freebssd/spl/XXX needs to have these added to
 # CFLAGS_EARLY.file.c. In general, we try to build out of the OpenZFS tree
 # unaltered. There's a problem, though, that since we're building for a
@@ -39,7 +39,7 @@ ZFS_EARLY=	-I${ZFSSRC}/spl					\
 #
 # For all files, though, we prepend the sys/ccompile.h file to the build which
 # has a bunch of defines that are present in OpenSolaris / Illumos, but missing
-# from FreeBSD.
+# from NQC.
 #
 .for i in ${ZFS_SRC} ${ZSTD_SRC}
 CFLAGS.$i+=	-include ${ZFSOSINC}/spl/sys/ccompile.h -Wformat -Wall -I${OZFS}/include \

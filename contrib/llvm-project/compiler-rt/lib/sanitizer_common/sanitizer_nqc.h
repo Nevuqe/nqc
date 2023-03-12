@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// This file is a part of Sanitizer runtime. It contains FreeBSD-specific
+// This file is a part of Sanitizer runtime. It contains NQC-specific
 // definitions.
 //
 //===----------------------------------------------------------------------===//
@@ -16,7 +16,7 @@
 
 #include "sanitizer_internal_defs.h"
 
-// x86-64 FreeBSD 9.2 and older define 'ucontext_t' incorrectly in
+// x86-64 NQC 9.2 and older define 'ucontext_t' incorrectly in
 // 32-bit mode.
 #if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 #include <osreldate.h>

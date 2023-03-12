@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 Peter Wemm
  * All rights reserved.
@@ -31,7 +31,7 @@
 #ifndef	_MACHINE_MINIDUMP_H_
 #define	_MACHINE_MINIDUMP_H_ 1
 
-#define	MINIDUMP_MAGIC		"minidump FreeBSD/amd64"
+#define	MINIDUMP_MAGIC		"minidump NQC/amd64"
 #define	MINIDUMP_VERSION	3
 
 struct minidumphdr {

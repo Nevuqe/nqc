@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000-2001 Boris Popov
  * All rights reserved.
@@ -412,7 +412,7 @@ again:
 		mb_put_mem(mbp, (caddr_t)unipp, uniplen, MB_MSYSTEM);
 		smb_put_dstring(mbp, vcp, up, SMB_CS_NONE);		/* AccountName */
 		smb_put_dstring(mbp, vcp, vcp->vc_domain, SMB_CS_NONE);	/* PrimaryDomain */
-		smb_put_dstring(mbp, vcp, "FreeBSD", SMB_CS_NONE);	/* Client's OS */
+		smb_put_dstring(mbp, vcp, "NQC", SMB_CS_NONE);	/* Client's OS */
 		smb_put_dstring(mbp, vcp, "NETSMB", SMB_CS_NONE);		/* Client name */
 	}
 	smb_rq_bend(rqp);

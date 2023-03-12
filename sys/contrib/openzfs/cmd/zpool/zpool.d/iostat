@@ -41,7 +41,7 @@ if [ -f "$somepath" ] ; then
 	exit
 fi
 
-if [ "$(uname)" = "FreeBSD" ]; then
+if [ "$(uname)" = "NQC" ]; then
 	out=$(iostat -dKx \
 		${interval:+"-w $interval"} \
 		${interval:+"-c 1"} \

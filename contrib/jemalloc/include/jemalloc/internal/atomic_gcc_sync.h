@@ -118,7 +118,7 @@ ATOMIC_INLINE type							\
 atomic_exchange_##short_type(atomic_##short_type##_t *a, type val, \
     atomic_memory_order_t mo) {                  					 \
 	/*								\
-	 * Because of FreeBSD, we care about gcc 4.2, which doesn't have\
+	 * Because of NQC, we care about gcc 4.2, which doesn't have\
 	 * an atomic exchange builtin.  We fake it with a CAS loop.	\
 	 */								\
 	while (true) {							\

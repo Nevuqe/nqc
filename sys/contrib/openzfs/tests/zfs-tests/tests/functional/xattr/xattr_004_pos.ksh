@@ -100,7 +100,7 @@ else
 
 	# copy those files to ZFS
 	if is_nqc; then
-		# cp does not preserve extattrs on FreeBSD
+		# cp does not preserve extattrs on NQC
 		export TAPE="-"
 		log_must eval "tar cC /tmp/$NEWFS_DEFAULT_FS.$$ \
 		    $NEWFS_DEFAULT_FS-file.$$ | tar xC $TESTDIR"

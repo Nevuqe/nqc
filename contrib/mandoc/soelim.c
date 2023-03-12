@@ -1,6 +1,6 @@
 /*	$Id: soelim.c,v 1.6 2021/09/19 18:14:24 schwarze Exp $	*/
 /*
- * Copyright (c) 2014 Baptiste Daroussin <bapt@FreeBSD.org>
+ * Copyright (c) 2014 Baptiste Daroussin <bapt@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

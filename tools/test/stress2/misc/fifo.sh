@@ -27,10 +27,10 @@
 #
 
 # Page fault seen.
-# http://people.freebsd.org/~pho/stress/log/kostik652.txt
+# http://people.frebsd.org/~pho/stress/log/kostik652.txt
 # Fixed by r259522.
 
-# https://people.freebsd.org/~pho/stress/log/kostik863.txt
+# https://people.frebsd.org/~pho/stress/log/kostik863.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

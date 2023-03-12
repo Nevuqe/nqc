@@ -312,7 +312,7 @@ static const struct flash_spec flash_5709 = {
 };
 
 /****************************************************************************/
-/* FreeBSD device entry points.                                             */
+/* NQC device entry points.                                             */
 /****************************************************************************/
 static int  bce_probe			(device_t);
 static int  bce_attach			(device_t);
@@ -484,7 +484,7 @@ static void bce_pulse				(void *);
 static void bce_add_sysctls		(struct bce_softc *);
 
 /****************************************************************************/
-/* FreeBSD device dispatch table.                                           */
+/* NQC device dispatch table.                                           */
 /****************************************************************************/
 static device_method_t bce_methods[] = {
 	/* Device interface (device_if.h) */

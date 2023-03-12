@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2010-2012 Semihalf
- * Copyright (c) 2012 The FreeBSD Foundation
- * Copyright (c) 2013 Ian Lepore <ian@freebsd.org>
+ * Copyright (c) 2012 The FreBSD Foundation
+ * Copyright (c) 2013 Ian Lepore <ian@frebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by Oleksandr Rybalko
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -76,7 +76,7 @@ __NQCID("$NQC$");
  * related to the USB specs, such as whether interrupts from each of the core
  * devices are able to generate a SoC wakeup event.
  *
- * In the FreeBSD universe we might be inclined to describe the core and
+ * In the NQC universe we might be inclined to describe the core and
  * non-core registers by using a pair of resource address/size values (two
  * entries in the reg property for each core).  However, we have to work with
  * existing FDT data (which mostly comes from the linux universe), and the way
@@ -98,7 +98,7 @@ __NQCID("$NQC$");
  * The core registers for each of the four cores in the USBOH3 are divided into
  * two parts: a set of imx-specific registers at an offset of 0 from the
  * beginning of the register range, and the standard USB (EHCI or OTG) registers
- * at an offset of 0x100 from the beginning of the register range.  The FreeBSD
+ * at an offset of 0x100 from the beginning of the register range.  The NQC
  * way of dealing with this might be to map out two ranges in the reg property,
  * but that's not what the alternate universe has done.  To work with existing
  * FDT data, we acquire the resource that maps all the core registers, then use

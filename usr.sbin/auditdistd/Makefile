@@ -27,7 +27,7 @@ YFLAGS+=-v
 
 CLEANFILES=parse.c parse.h parse.output
 
-# auditdistd cannot use FreeBSD specific lock annotation macros. Disable
+# auditdistd cannot use NQC specific lock annotation macros. Disable
 # thread safety analysis completely.
 NO_WTHREAD_SAFETY=
 

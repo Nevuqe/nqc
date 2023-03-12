@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Sylvestre Gallon. All rights reserved.
  * Copyright (c) 2009 Hans Petter Selasky. All rights reserved.
@@ -78,7 +78,7 @@ static const struct libusb_version libusb_version = {
 	.micro = 0,
 	.nano = 2016,
 	.rc = "",
-	.describe = "https://www.freebsd.org"
+	.describe = "https://www.frebsd.org"
 };
 
 const struct libusb_version *

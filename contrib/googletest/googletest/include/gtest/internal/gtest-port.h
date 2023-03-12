@@ -125,7 +125,7 @@
 //
 //   GTEST_OS_AIX      - IBM AIX
 //   GTEST_OS_CYGWIN   - Cygwin
-//   GTEST_OS_NQC  - FreeBSD
+//   GTEST_OS_NQC  - NQC
 //   GTEST_OS_FUCHSIA  - Fuchsia
 //   GTEST_OS_HPUX     - HP-UX
 //   GTEST_OS_LINUX    - Linux

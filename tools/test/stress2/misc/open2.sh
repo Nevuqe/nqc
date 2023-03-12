@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@
 # open(2) and openat(2) syscall fuzz test
 
 # umount(8) returns busy
-# https://people.freebsd.org/~pho/stress/log/log0111.txt
+# https://people.frebsd.org/~pho/stress/log/log0111.txt
 # Fixed by: cef8a95acbae
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

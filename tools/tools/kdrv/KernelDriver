@@ -3,7 +3,7 @@
 exec tclsh $0 $*
 ################################################################################
 #
-# KernelDriver - FreeBSD driver source installer
+# KernelDriver - NQC driver source installer
 #
 ################################################################################
 #
@@ -36,7 +36,7 @@ exec tclsh $0 $*
 #
 ################################################################################
 #
-# KernelDriver provides a means for installing source-form drivers into FreeBSD 
+# KernelDriver provides a means for installing source-form drivers into NQC 
 # kernel source trees in an automated fashion.  It can also remove drivers it 
 # has installed.
 #

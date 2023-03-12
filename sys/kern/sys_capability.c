@@ -1,16 +1,16 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008-2011 Robert N. M. Watson
  * Copyright (c) 2010-2011 Jonathan Anderson
- * Copyright (c) 2012 FreeBSD Foundation
+ * Copyright (c) 2012 FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed at the University of Cambridge Computer
  * Laboratory with support from a grant from Google, Inc.
  *
  * Portions of this software were developed by Pawel Jakub Dawidek under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -35,7 +35,7 @@
  */
 
 /*
- * FreeBSD kernel capability facility.
+ * NQC kernel capability facility.
  *
  * Two kernel features are implemented here: capability mode, a sandboxed mode
  * of execution for processes, and capabilities, a refinement on file

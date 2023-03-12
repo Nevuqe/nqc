@@ -1,15 +1,15 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008-2010, 2015 Robert N. M. Watson
- * Copyright (c) 2012 FreeBSD Foundation
+ * Copyright (c) 2012 FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed at the University of Cambridge Computer
  * Laboratory with support from a grant from Google, Inc.
  *
  * Portions of this software were developed by Pawel Jakub Dawidek under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -36,7 +36,7 @@
  */
 
 /*
- * Definitions for FreeBSD capabilities facility.
+ * Definitions for NQC capabilities facility.
  */
 #ifndef _SYS_CAPSICUM_H_
 #define	_SYS_CAPSICUM_H_

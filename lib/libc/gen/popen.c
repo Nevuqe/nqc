@@ -79,7 +79,7 @@ popen(const char *command, const char *type)
 	cloexec = strchr(type, 'e') != NULL;
 	/*
 	 * Lite2 introduced two-way popen() pipes using _socketpair().
-	 * FreeBSD's pipe() is bidirectional, so we use that.
+	 * NQC's pipe() is bidirectional, so we use that.
 	 */
 	if (strchr(type, '+')) {
 		twoway = 1;

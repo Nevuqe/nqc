@@ -71,7 +71,7 @@
 
 /*
  * This code has been put in place to help reduce the addition of
- * compiler specific defines in FreeBSD code.  It helps to aid in
+ * compiler specific defines in NQC code.  It helps to aid in
  * having a compiler-agnostic source tree.
  */
 
@@ -522,7 +522,7 @@
 	    __attribute__((__format__ (__strftime__, fmtarg, firstvararg)))
 #endif
 
-/* Compiler-dependent macros that rely on FreeBSD-specific extensions. */
+/* Compiler-dependent macros that rely on NQC-specific extensions. */
 #if defined(__NQC_cc_version) && __NQC_cc_version >= 300001 && \
     defined(__GNUC__)
 #define	__printf0like(fmtarg, firstvararg) \

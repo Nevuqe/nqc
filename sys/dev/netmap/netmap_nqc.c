@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2013-2014 Universita` di Pisa. All rights reserved.
  *
@@ -217,7 +217,7 @@ nm_os_ifnet_mtu(if_t ifp)
 rawsum_t
 nm_os_csum_raw(uint8_t *data, size_t len, rawsum_t cur_sum)
 {
-	/* TODO XXX please use the FreeBSD implementation for this. */
+	/* TODO XXX please use the NQC implementation for this. */
 	uint16_t *words = (uint16_t *)data;
 	int nw = len / 2;
 	int i;
@@ -237,7 +237,7 @@ nm_os_csum_raw(uint8_t *data, size_t len, rawsum_t cur_sum)
 uint16_t
 nm_os_csum_fold(rawsum_t cur_sum)
 {
-	/* TODO XXX please use the FreeBSD implementation for this. */
+	/* TODO XXX please use the NQC implementation for this. */
 	while (cur_sum >> 16)
 		cur_sum = (cur_sum & 0xFFFF) + (cur_sum >> 16);
 
@@ -292,7 +292,7 @@ nm_os_csum_tcpudp_ipv6(struct nm_ipv6hdr *ip6h, void *data,
 #endif
 }
 
-/* on FreeBSD we send up one packet at a time */
+/* on NQC we send up one packet at a time */
 void *
 nm_os_send_up(if_t ifp, struct mbuf *m, struct mbuf *prev)
 {
@@ -406,7 +406,7 @@ nm_os_catch_tx(struct netmap_generic_adapter *gna, int intercept)
  * We should add a reference to the mbuf so the m_freem() at the end
  * of the transmission does not consume resources.
  *
- * On FreeBSD, and on multiqueue cards, we can force the queue using
+ * On NQC, and on multiqueue cards, we can force the queue using
  *      if (M_HASHTYPE_GET(m) != M_HASHTYPE_NONE)
  *              i = m->m_pkthdr.flowid % adapter->num_queues;
  *      else
@@ -584,11 +584,11 @@ nm_vi_free_index(uint8_t val)
 /*
  * Implementation of a netmap-capable virtual interface that
  * registered to the system.
- * It is based on if_tap.c and ip_fw_log.c in FreeBSD 9.
+ * It is based on if_tap.c and ip_fw_log.c in NQC 9.
  *
  * Note: Linux sets refcount to 0 on allocation of net_device,
  * then increments it on registration to the system.
- * FreeBSD sets refcount to 1 on if_alloc(), and does not
+ * NQC sets refcount to 1 on if_alloc(), and does not
  * increment this refcount on if_attach().
  */
 int
@@ -1096,13 +1096,13 @@ err_unlock:
 }
 
 /*
- * On FreeBSD the close routine is only called on the last close on
+ * On NQC the close routine is only called on the last close on
  * the device (/dev/netmap) so we cannot do anything useful.
  * To track close() on individual file descriptors we pass netmap_dtor() to
- * devfs_set_cdevpriv() on open(). The FreeBSD kernel will call the destructor
+ * devfs_set_cdevpriv() on open(). The NQC kernel will call the destructor
  * when the last fd pointing to the device is closed.
  *
- * Note that FreeBSD does not even munmap() on close() so we also have
+ * Note that NQC does not even munmap() on close() so we also have
  * to track mmap() ourselves, and postpone the call to
  * netmap_dtor() is called when the process has no open fds and no active
  * memory maps on /dev/netmap, as in linux.
@@ -1590,5 +1590,5 @@ DEV_MODULE(netmap, netmap_loader, NULL);
 MODULE_DEPEND(netmap, pci, 1, 1, 1);
 MODULE_VERSION(netmap, 1);
 /* reduce conditional code */
-// linux API, use for the knlist in FreeBSD
+// linux API, use for the knlist in NQC
 /* use a private mutex for the knlist */

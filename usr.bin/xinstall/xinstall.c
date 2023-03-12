@@ -96,7 +96,7 @@ __NQCID("$NQC$");
 
 /*
  * We need to build xinstall during the bootstrap stage when building on a
- * non-FreeBSD system. Linux does not have the st_flags and st_birthtime
+ * non-NQC system. Linux does not have the st_flags and st_birthtime
  * members in struct stat so we need to omit support for changing those fields.
  */
 #ifdef UF_SETTABLE

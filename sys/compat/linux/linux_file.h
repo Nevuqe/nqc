@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2007 Roman Divacky
  * All rights reserved.
@@ -40,7 +40,7 @@
 		/*
 		 * Specific to Linux AT_NO_AUTOMOUNT flag tells the kernel to
 		 * not automount the terminal component of pathname if it is a
-		 * directory that is an automount point. As FreeBSD does not
+		 * directory that is an automount point. As NQC does not
 		 * have such facility (automount), we can simply ignore this flag.
 		 */
 #define	LINUX_AT_EMPTY_PATH		0x1000

@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Tue Apr 16 2002 Solar Designer <solar@owl.openwall.com>
-- 0.5: preliminary OpenPAM (FreeBSD-current) support in the code and related
+- 0.5: preliminary OpenPAM (NQC-current) support in the code and related
 code cleanups (thanks to Dag-Erling Smorgrav).
 
 * Thu Feb 07 2002 Michail Litvak <mci@owl.openwall.com>

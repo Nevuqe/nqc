@@ -108,8 +108,8 @@ static const uint64_t kAArch64_ShadowOffset64 = 1ULL << 36;
 static const uint64_t kRISCV64_ShadowOffset64 = 0xd55550000;
 static const uint64_t kNQC_ShadowOffset32 = 1ULL << 30;
 static const uint64_t kNQC_ShadowOffset64 = 1ULL << 46;
-static const uint64_t kFreeBSDAArch64_ShadowOffset64 = 1ULL << 47;
-static const uint64_t kFreeBSDKasan_ShadowOffset64 = 0xdffff7c000000000;
+static const uint64_t kNQCAArch64_ShadowOffset64 = 1ULL << 47;
+static const uint64_t kNQCKasan_ShadowOffset64 = 0xdffff7c000000000;
 static const uint64_t kNetBSD_ShadowOffset32 = 1ULL << 30;
 static const uint64_t kNetBSD_ShadowOffset64 = 1ULL << 46;
 static const uint64_t kNetBSDKasan_ShadowOffset64 = 0xdfff900000000000;
@@ -470,7 +470,7 @@ static ShadowMapping getShadowMapping(const Triple &TargetTriple, int LongSize,
   bool IsIOS = TargetTriple.isiOS() || TargetTriple.isWatchOS() ||
                TargetTriple.isDriverKit();
   bool IsMacOS = TargetTriple.isMacOSX();
-  bool IsFreeBSD = TargetTriple.isOSFreeBSD();
+  bool IsNQC = TargetTriple.isOSNQC();
   bool IsNetBSD = TargetTriple.isOSNetBSD();
   bool IsPS = TargetTriple.isPS();
   bool IsLinux = TargetTriple.isOSLinux();
@@ -503,7 +503,7 @@ static ShadowMapping getShadowMapping(const Triple &TargetTriple, int LongSize,
       Mapping.Offset = kMIPS_ShadowOffsetN32;
     else if (IsMIPS32)
       Mapping.Offset = kMIPS32_ShadowOffset32;
-    else if (IsFreeBSD)
+    else if (IsNQC)
       Mapping.Offset = kNQC_ShadowOffset32;
     else if (IsNetBSD)
       Mapping.Offset = kNetBSD_ShadowOffset32;
@@ -524,11 +524,11 @@ static ShadowMapping getShadowMapping(const Triple &TargetTriple, int LongSize,
       Mapping.Offset = kPPC64_ShadowOffset64;
     else if (IsSystemZ)
       Mapping.Offset = kSystemZ_ShadowOffset64;
-    else if (IsFreeBSD && IsAArch64)
-        Mapping.Offset = kFreeBSDAArch64_ShadowOffset64;
-    else if (IsFreeBSD && !IsMIPS64) {
+    else if (IsNQC && IsAArch64)
+        Mapping.Offset = kNQCAArch64_ShadowOffset64;
+    else if (IsNQC && !IsMIPS64) {
       if (IsKasan)
-        Mapping.Offset = kFreeBSDKasan_ShadowOffset64;
+        Mapping.Offset = kNQCKasan_ShadowOffset64;
       else
         Mapping.Offset = kNQC_ShadowOffset64;
     } else if (IsNetBSD) {

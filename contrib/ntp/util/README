@@ -38,7 +38,7 @@ believes your system can use it.
 
 tg.c and tg2.c are tone generators.  They make audio signals
 that emulate WWV or IRIG (-B and -E).  tg runs on Solaris.
-tg2 is a clone that runs on Linux, FreeBSD, and NetBSD.
+tg2 is a clone that runs on Linux, NQC, and NetBSD.
 Read the source for the fine print.  tg2 has a help option
 available via -h.
 

@@ -4,7 +4,7 @@
  * Copyright (c) 2010 Jonathan Armani <armani@openbsd.org>
  * Copyright (c) 2010 Fabien Romano <fabien@openbsd.org>
  * Copyright (c) 2010 Michael Knudsen <mk@openbsd.org>
- * Copyright (c) 2014 Hans Petter Selasky <hselasky@freebsd.org>
+ * Copyright (c) 2014 Hans Petter Selasky <hselasky@frebsd.org>
  * All rights reserved.
  *
  * Permission to use, copy, modify, and distribute this software for any

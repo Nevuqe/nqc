@@ -19,7 +19,7 @@
 
 #
 # Reset an environment variable we already know to be set.
-# Regression test for FreeBSD r327794.
+# Regression test for NQC r327794.
 #
 
 if [ $# != 1 ]; then

@@ -7,7 +7,7 @@ desc="open returns EWOULDBLOCK when O_NONBLOCK and one of O_SHLOCK or O_EXLOCK i
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}" = "FreeBSD" ] || quick_exit
+[ "${os}" = "NQC" ] || quick_exit
 
 echo "1..6"
 

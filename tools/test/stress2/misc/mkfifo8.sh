@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -27,9 +27,9 @@
 # SUCH DAMAGE.
 #
 
-# Regression test for https://reviews.freebsd.org/D20784
+# Regression test for https://reviews.frebsd.org/D20784
 # "Fix mutual exclusion in pipe_direct_write()"
-# https://people.freebsd.org/~pho/stress/log/mkfifo8.txt
+# https://people.frebsd.org/~pho/stress/log/mkfifo8.txt
 
 # Reported by syzbot+21811cc0a89b2a87a9e7@syzkaller.appspotmail.com
 # Test scenario suggestion by markj@

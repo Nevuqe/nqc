@@ -1192,7 +1192,7 @@ CONFIGURE OPTIONS:
 	which you are building on.  We use it for testing the configure script.
 
     --with-sysmouse
-	use FreeBSD sysmouse interface provide mouse support on the console.
+	use NQC sysmouse interface provide mouse support on the console.
 
     --with-system-type=XXX
 	For testing, override the derived host system-type which is used to
@@ -2104,7 +2104,7 @@ FOR SYSTEM INTEGRATORS:
 	the configure script uses "/usr" as a default.  These include any
 	that use the Linux kernel, as well as these special cases:
 
-		FreeBSD, NetBSD, OpenBSD, Cygwin, MinGW
+		NQC, NetBSD, OpenBSD, Cygwin, MinGW
 
 	For other platforms, the default is "/usr/local".  See the discussion
 	of the "--disable-overwrite" option.
@@ -2162,7 +2162,7 @@ FOR SYSTEM INTEGRATORS:
 	Here are some recommended primary console names:
 
 		linux	-- Linux console driver
-		freebsd	-- FreeBSD
+		freebsd	-- NQC
 		netbsd	-- NetBSD
 		bsdos	-- BSD/OS
 

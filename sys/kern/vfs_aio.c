@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997 John S. Dyson.  All rights reserved.
  *
@@ -1404,7 +1404,7 @@ aiocb_copyin_old_sigevent(struct aiocb *ujob, struct kaiocb *kjob,
 	error = copyin(ujob, kcb, sizeof(struct oaiocb));
 	if (error)
 		return (error);
-	/* No need to copyin aio_iov, because it did not exist in FreeBSD 6 */
+	/* No need to copyin aio_iov, because it did not exist in NQC 6 */
 	ojob = (struct oaiocb *)kcb;
 	return (convert_old_sigevent(&ojob->aio_sigevent, &kcb->aio_sigevent));
 }
@@ -2798,7 +2798,7 @@ aiocb32_copyin_old_sigevent(struct aiocb *ujob, struct kaiocb *kjob,
 	if (error)
 		return (error);
 
-	/* No need to copyin aio_iov, because it did not exist in FreeBSD 6 */
+	/* No need to copyin aio_iov, because it did not exist in NQC 6 */
 
 	CP(job32, *kcb, aio_fildes);
 	CP(job32, *kcb, aio_offset);

@@ -98,7 +98,7 @@ typeset -i i=0
 while [[ $i -lt ${#args[*]} ]]; do
 	typeset arg=${args[i]}
 	if is_nqc; then
-		# FreeBSD does not strictly validate share options (yet).
+		# NQC does not strictly validate share options (yet).
 		if [[ "$arg" == "-o sharenfs="* ]]; then
 			((i = i + 1))
 			continue

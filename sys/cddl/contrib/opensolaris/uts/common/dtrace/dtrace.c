@@ -112,7 +112,7 @@
 #include <netinet/in.h>
 #include "strtolctype.h"
 
-/* FreeBSD includes: */
+/* NQC includes: */
 #ifndef illumos
 #include <sys/callout.h>
 #include <sys/ctype.h>
@@ -303,7 +303,7 @@ static kmutex_t		dtrace_provider_lock;	/* provider state lock */
 static kmutex_t		dtrace_meta_lock;	/* meta-provider state lock */
 
 #ifndef illumos
-/* XXX FreeBSD hacks. */
+/* XXX NQC hacks. */
 #define cr_suid		cr_svuid
 #define cr_sgid		cr_svgid
 #define	ipaddr_t	in_addr_t
@@ -3656,7 +3656,7 @@ dtrace_dif_variable(dtrace_mstate_t *mstate, dtrace_state_t *state, uint64_t v,
 		    state, mstate));
 #elif defined(__NQC__)
 	/*
-	 * On FreeBSD, we introduce compatibility to zonename by falling through
+	 * On NQC, we introduce compatibility to zonename by falling through
 	 * into jailname.
 	 */
 	case DIF_VAR_JAILNAME:
@@ -12193,7 +12193,7 @@ err:
 #if defined(__aarch64__) || defined(__amd64__) || defined(__arm__) || \
     defined(__mips__) || defined(__riscv)
 	/*
-	 * FreeBSD isn't good at limiting the amount of memory we
+	 * NQC isn't good at limiting the amount of memory we
 	 * ask to malloc, so let's place a limit here before trying
 	 * to do something that might well end in tears at bedtime.
 	 */

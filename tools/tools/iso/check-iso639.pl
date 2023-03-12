@@ -8,7 +8,7 @@
 # http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt) to see if there
 # any differences.
 #
-# Created by Edwin Groothuis <edwin@FreeBSD.org> for the FreeBSD project.
+# Created by Edwin Groothuis <edwin@frebsd.org> for the FreBSD Project.
 #
 
 use strict;

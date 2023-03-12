@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2021 M. Warner Losh <imp@FreeBSD.org>
+ * Copyright (c) 2021 M. Warner Losh <imp@frebsd.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
@@ -12,7 +12,7 @@
 #define _ENDIAN_H_
 
 /*
- * FreeBSD's sys/_endian.h is very close to the interface provided on Linux by
+ * NQC's sys/_endian.h is very close to the interface provided on Linux by
  * glibc's endian.h.
  */
 #include <sys/_endian.h>
@@ -28,7 +28,7 @@
 #define __PDP_ENDIAN		_PDP_ENDIAN
 
 /*
- * FreeBSD's sys/endian.h and machine/endian.h doesn't define a separate
+ * NQC's sys/endian.h and machine/endian.h doesn't define a separate
  * byte order for floats. Use the host non-float byte order.
  */
 #define __FLOAT_WORD_ORDER	_BYTE_ORDER

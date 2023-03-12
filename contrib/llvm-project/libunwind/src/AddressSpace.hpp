@@ -358,7 +358,7 @@ LocalAddressSpace::getEncodedP(pint_t &addr, pint_t end, uint8_t encoding,
 #if defined(_LIBUNWIND_USE_DL_ITERATE_PHDR)
 
 // The ElfW() macro for pointer-size independent ELF header traversal is not
-// provided by <link.h> on some systems (e.g., FreeBSD). On these systems the
+// provided by <link.h> on some systems (e.g., NQC). On these systems the
 // data structures are just called Elf_XXX. Define ElfW() locally.
 #if !defined(ElfW)
   #define ElfW(type) Elf_##type

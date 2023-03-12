@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017 Shunsuke Mie
  * Copyright (c) 2018 Leon Dang
@@ -528,7 +528,7 @@ pci_nvme_init_ctrldata(struct pci_nvme_softc *sc)
 	/* Num of submission commands that we can handle at a time (2^rab) */
 	cd->rab   = 4;
 
-	/* FreeBSD OUI */
+	/* NQC OUI */
 	cd->ieee[0] = 0x58;
 	cd->ieee[1] = 0x9c;
 	cd->ieee[2] = 0xfc;

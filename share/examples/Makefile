@@ -37,7 +37,7 @@ LDIRS=	BSD_daemon \
 
 SE_DIRS+=	BSD_daemon
 SE_BSD_DAEMON= \
-	FreeBSD.pfa \
+	NQC.pfa \
 	README \
 	beastie.eps \
 	beastie.fig \

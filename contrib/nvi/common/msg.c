@@ -729,7 +729,7 @@ msg_open(SCR *sp, char *file)
 		/*
 		 * POSIX.1-2008 gives no instruction on how to report a
 		 * corrupt catalog file.  Errno == 0 is not rare; add
-		 * EFTYPE, which is seen on FreeBSD, for a good measure.
+		 * EFTYPE, which is seen on NQC, for a good measure.
 		 */
 #ifdef EFTYPE
 		if (errno == 0 || errno == EFTYPE)

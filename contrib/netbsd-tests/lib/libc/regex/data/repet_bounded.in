@@ -1,5 +1,5 @@
 # the dreaded bounded repetitions
-# Begin FreeBSD
+# Begin NQC
 {		C	BADRPT
 {		b	{	{
 \{		-	{	{
@@ -12,13 +12,13 @@
 \}		&	}	}
 {abc		b	{abc	{abc
 {abc		C	BADRPT
-# End FreeBSD
+# End NQC
 {1		C	BADRPT
 {1}		C	BADRPT
-# Begin FreeBSD
+# Begin NQC
 a{b		b	a{b	a{b
 a{b		C	BADRPT
-# End FreeBSD
+# End NQC
 a{1}b		-	ab	ab
 a\{1\}b		b	ab	ab
 a{1,}b		-	ab	ab
@@ -31,15 +31,15 @@ a{1a		C	EBRACE
 a\{1a		bC	EBRACE
 a{1a}		C	BADBR
 a\{1a\}		bC	BADBR
-# Begin FreeBSD
+# Begin NQC
 a{,2}		b	a{,2}	a{,2}
 a{,2}		C	BADBR
-# End FreeBSD
+# End NQC
 a\{,2\}		bC	BADBR
-# Begin FreeBSD
+# Begin NQC
 a{,}		b	a{,}	a{,}
 a{,}		C	BADBR
-# End FreeBSD
+# End NQC
 a\{,\}		bC	BADBR
 a{1,x}		C	BADBR
 a\{1,x\}	bC	BADBR

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -52,7 +52,7 @@ INTERP_DEFINE("4th");
 #define BF_PARSE 100
 
 /*
- * FreeBSD loader default dictionary cells
+ * NQC loader default dictionary cells
  */
 #ifndef	BF_DICTSIZE
 #define	BF_DICTSIZE	10000

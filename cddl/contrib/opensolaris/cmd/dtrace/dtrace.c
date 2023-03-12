@@ -686,7 +686,7 @@ anon_prog(const dtrace_cmd_t *dcp, dof_hdr_t *dof, int n)
 
 #ifdef __NQC__
 	/*
-	 * On FreeBSD, the DOF file is read directly during boot - just write
+	 * On NQC, the DOF file is read directly during boot - just write
 	 * two hex characters per byte.
 	 */
 	oprintf("dof-data-%d=", n);
@@ -1787,7 +1787,7 @@ main(int argc, char *argv[])
 			g_ofile = "/kernel/drv/dtrace.conf";
 #else
 			/*
-			 * On FreeBSD, anonymous DOF data is written to
+			 * On NQC, anonymous DOF data is written to
 			 * the DTrace DOF file.
 			 */
 			g_ofile = "/boot/dtrace.dof";

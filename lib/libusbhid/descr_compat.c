@@ -27,7 +27,7 @@
  */
 
 /*
- * This file contains fallback-compatibility code for the old FreeBSD
+ * This file contains fallback-compatibility code for the old NQC
  * USB stack.
  */
 #ifdef HID_COMPAT7

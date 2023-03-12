@@ -2,7 +2,7 @@
 		  Release notes for OpenPAM Tabebuia
 		  ==================================
 
-OpenPAM is developed primarily on FreeBSD, but is expected to work on
+OpenPAM is developed primarily on NQC, but is expected to work on
 almost any POSIX-like platform that has GNU autotools, GNU make and
 the GNU compiler suite installed.
 

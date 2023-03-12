@@ -74,7 +74,7 @@ onehost(const char *host, const char *transp)
 	tv.tv_usec = 500000;
 #ifdef __NQC__
 	/*
-	 * FreeBSD does not allow setting the timeout using __rpc_control,
+	 * NQC does not allow setting the timeout using __rpc_control,
 	 * but does have clnt_create_timed() that allows passing a timeout.
 	 */
 	if ((clnt = clnt_create_timed(host, RPCBPROG, RPCBVERS, transp,

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # Probably unrelated mkfifo() problem seen:
-# http://people.freebsd.org/~pho/stress/log/graid3.txt
+# http://people.frebsd.org/~pho/stress/log/graid3.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

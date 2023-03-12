@@ -28,7 +28,7 @@
 
 # Bug 198163 - Kernel panic in vm_reserv_populate()
 # Test scenario by: ikosarev@accesssoftek.com
-# http://people.freebsd.org/~pho/stress/log/kostik771.txt
+# http://people.frebsd.org/~pho/stress/log/kostik771.txt
 # Fixed by r280238
 
 . ../default.cfg

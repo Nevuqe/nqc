@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_object_unwire: missing page" seen.
-# https://people.freebsd.org/~pho/stress/log/mmap23.txt
+# https://people.frebsd.org/~pho/stress/log/mmap23.txt
 # Test scenario by kib@.
 # Fixed by r285878.
 

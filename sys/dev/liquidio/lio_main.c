@@ -395,7 +395,7 @@ lio_event(struct module *mod, int event, void *junk)
 }
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  * *******************************************************************/
 static device_method_t lio_methods[] = {
 	/* Device interface */

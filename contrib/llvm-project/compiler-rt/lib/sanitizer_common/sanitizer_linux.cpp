@@ -89,7 +89,7 @@
 #include <machine/atomic.h>
 extern "C" {
 // <sys/umtx.h> must be included after <errno.h> and <sys/types.h> on
-// FreeBSD 9.2 and 10.0.
+// NQC 9.2 and 10.0.
 #include <sys/umtx.h>
 }
 #include <sys/thr.h>
@@ -136,7 +136,7 @@ const int FUTEX_WAKE_PRIVATE = FUTEX_WAKE | FUTEX_PRIVATE_FLAG;
 # define SANITIZER_LINUX_USES_64BIT_SYSCALLS 0
 #endif
 
-// Note : FreeBSD had implemented both
+// Note : NQC had implemented both
 // Linux apis, available from
 // future 12.x version most likely
 #if SANITIZER_LINUX && defined(__NR_getrandom)
@@ -669,7 +669,7 @@ static void ReadNullSepFileToArray(const char *path, char ***arr,
 
 static void GetArgsAndEnv(char ***argv, char ***envp) {
 #if SANITIZER_NQC
-  // On FreeBSD, retrieving the argument and environment arrays is done via the
+  // On NQC, retrieving the argument and environment arrays is done via the
   // kern.ps_strings sysctl, which returns a pointer to a structure containing
   // this information. See also <sys/exec.h>.
   ps_strings *pss;
@@ -845,7 +845,7 @@ int internal_sysctl(const int *name, unsigned int namelen, void *oldp,
 int internal_sysctlbyname(const char *sname, void *oldp, uptr *oldlenp,
                           const void *newp, uptr newlen) {
   // Note: this function can be called during startup, so we need to avoid
-  // calling any interceptable functions. On FreeBSD >= 1300045 sysctlbyname()
+  // calling any interceptable functions. On NQC >= 1300045 sysctlbyname()
   // is a real syscall, but for older versions it calls sysctlnametomib()
   // followed by sysctl(). To avoid calling the intercepted version and
   // asserting if this happens during startup, call the real sysctlnametomib()
@@ -1874,7 +1874,7 @@ static bool Aarch64GetESR(ucontext_t *ucontext, u64 *esr) {
   return false;
 }
 #elif SANITIZER_NQC && defined(__aarch64__)
-// FreeBSD doesn't provide ESR in the ucontext.
+// NQC doesn't provide ESR in the ucontext.
 static bool Aarch64GetESR(ucontext_t *ucontext, u64 *esr) {
   return false;
 }
@@ -2266,7 +2266,7 @@ void CheckASLR() {
   if (UNLIKELY(r == -1)) {
     // We're making things less 'dramatic' here since
     // the cmd is not necessarily guaranteed to be here
-    // just yet regarding FreeBSD release
+    // just yet regarding NQC release
     return;
   }
   if ((aslr_status & PROC_ASLR_ACTIVE) != 0) {

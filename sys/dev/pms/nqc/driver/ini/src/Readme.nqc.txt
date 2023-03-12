@@ -1,7 +1,7 @@
 
 "Readme.freebsd.txt"    PMC-Sierra, Inc.   05/01/2013
 
-              PMC-Sierra SPCv/SPCve/SPCv+ TISA FreeBSD Initiator Driver
+              PMC-Sierra SPCv/SPCve/SPCv+ TISA NQC Initiator Driver
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Date:                 06/01/2014
@@ -20,7 +20,7 @@ SPCv Host Driver ver. 1.2.0 for Rev C chip
    Tisa/discovery/src
    Tisa/sat/api
    Tisa/sat/src
-   - FreeBSD related source tree -
+   - NQC related source tree -
    Tisa/tisa/api
    freebsd/common
    freebsd/ini
@@ -49,7 +49,7 @@ SPCv Host Driver ver. 1.2.0 for Rev C chip
 
 5. Description
 --------------
-  1. This driver has been built and tested on FreeBSD 9.0 amd64
+  1. This driver has been built and tested on NQC 9.0 amd64
 
 
 6. Additional Notes

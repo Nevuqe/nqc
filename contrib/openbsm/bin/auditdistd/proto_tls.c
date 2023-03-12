@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Pawel Jakub Dawidek under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -375,7 +375,7 @@ tls_exec_client(const char *user, int startfd, const char *srcaddr,
 	SSL_library_init();
 
 	/*
-	 * TODO: On FreeBSD we could move this below sandbox() once libc and
+	 * TODO: On NQC we could move this below sandbox() once libc and
 	 *       libcrypto use sysctl kern.arandom to obtain random data
 	 *       instead of /dev/urandom and friends.
 	 */

@@ -50,7 +50,7 @@ export ITERS=10
 export NUMFILES=10000
 
 if is_nqc; then
-	log_unsupported "Not applicable on FreeBSD"
+	log_unsupported "Not applicable on NQC"
 fi
 
 # Detect and make sure this test must be executed on a multi-process system

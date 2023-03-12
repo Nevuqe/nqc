@@ -658,7 +658,7 @@ struct iwl_mvm_reorder_buf_entry {
 __aligned(roundup2(sizeof(struct _iwl_mvm_reorder_buf_entry), 32))
 #elif !defined(__CHECKER__)
 /* sparse doesn't like this construct: "bad integer constant expression" */
-/* clang on FreeBSD: error: 'aligned' attribute requires integer constant */
+/* clang on NQC: error: 'aligned' attribute requires integer constant */
 __aligned(roundup_pow_of_two(sizeof(struct _iwl_mvm_reorder_buf_entry)))
 #endif
 ;

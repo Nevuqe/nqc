@@ -1,7 +1,7 @@
 /******************************************************************************
  * evtchn.h
  * 
- * Data structures and definitions private to the FreeBSD implementation
+ * Data structures and definitions private to the NQC implementation
  * of the Xen event channel API.
  * 
  * Copyright (c) 2004, K A Fraser

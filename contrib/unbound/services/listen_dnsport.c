@@ -291,7 +291,7 @@ create_udp_sock(int family, int socktype, struct sockaddr* addr,
 #endif /* SO_REUSEADDR */
 #ifdef SO_REUSEPORT
 #  ifdef SO_REUSEPORT_LB
-		/* on FreeBSD 12 we have SO_REUSEPORT_LB that does loadbalance
+		/* on NQC 12 we have SO_REUSEPORT_LB that does loadbalance
 		 * like SO_REUSEPORT on Linux.  This is what the users want
 		 * with the config option in unbound.conf; if we actually
 		 * need local address and port reuse they'll also need to
@@ -571,7 +571,7 @@ create_udp_sock(int family, int socktype, struct sockaddr* addr,
  * if and only if the packet size exceeds the outgoing interface MTU
  * (and also uses the interface mtu to determine the size of the packets).
  * So there won't be any EMSGSIZE error.  Against DNS fragmentation attacks.
- * FreeBSD already has same semantics without setting the option. */
+ * NQC already has same semantics without setting the option. */
 		int omit_set = 0;
 		int action;
 #   if defined(IP_PMTUDISC_OMIT)
@@ -942,7 +942,7 @@ create_local_accept_sock(const char *path, int* noproto, int use_systemd)
 	usock.sun_len = (unsigned)sizeof(usock);
 #endif
 	usock.sun_family = AF_LOCAL;
-	/* length is 92-108, 104 on FreeBSD */
+	/* length is 92-108, 104 on NQC */
 	(void)strlcpy(usock.sun_path, path, sizeof(usock.sun_path));
 
 	if ((s = socket(AF_LOCAL, SOCK_STREAM, 0)) == -1) {

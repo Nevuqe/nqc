@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel ixl device code"
+PROJECT_NAME           = "NQC kernel ixl device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_ixl/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -313,7 +313,7 @@ linux_mremap(struct thread *td, struct linux_mremap_args *args)
 
 	/*
 	 * Check for the page alignment.
-	 * Linux defines PAGE_MASK to be FreeBSD ~PAGE_MASK.
+	 * Linux defines PAGE_MASK to be NQC ~PAGE_MASK.
 	 */
 	if (args->addr & PAGE_MASK) {
 		td->td_retval[0] = 0;
@@ -1744,7 +1744,7 @@ linux_prctl(struct thread *td, struct linux_prctl_args *args)
 	 * - There are some semantics around ownership of process-related files
 	 *   in the /proc namespace.
 	 *
-	 * In FreeBSD, we can (and by default, do) disable setuid coredump
+	 * In NQC, we can (and by default, do) disable setuid coredump
 	 * system-wide with 'sugid_coredump.'  We control tracability on a
 	 * per-process basis with the procctl PROC_TRACE (=> P2_NOTRACE flag).
 	 * By happy coincidence, P2_NOTRACE also prevents coredumping.  So the
@@ -2069,8 +2069,8 @@ linux_prlimit64(struct thread *td, struct linux_prlimit64_args *args)
 
 	if (args->new != NULL) {
 		/*
-		 * Note. Unlike FreeBSD where rlim is signed 64-bit Linux
-		 * rlim is unsigned 64-bit. FreeBSD treats negative limits
+		 * Note. Unlike NQC where rlim is signed 64-bit Linux
+		 * rlim is unsigned 64-bit. NQC treats negative limits
 		 * as INFINITY so we do not need a conversion even.
 		 */
 		error = copyin(args->new, &nrlim, sizeof(nrlim));

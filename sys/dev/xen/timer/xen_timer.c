@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Adrian Chadd
  * Copyright (c) 2012 Spectra Logic Corporation
@@ -78,7 +78,7 @@ __NQCID("$NQC$");
 
 /*
  * The real resolution of the PV clock is 1ns, but the highest
- * resolution that FreeBSD supports is 1us, so just use that.
+ * resolution that NQC supports is 1us, so just use that.
  */
 #define	XENCLOCK_RESOLUTION		1
 
@@ -125,7 +125,7 @@ xentimer_probe(device_t dev)
 	 *   each VCPU's timer information and the Xen wallclock time.
 	 * - The hypervisor must say its PV clock is "safe" to use.
 	 * - The hypervisor must support VCPUOP hypercalls.
-	 * - The maximum number of CPUs supported by FreeBSD must not exceed
+	 * - The maximum number of CPUs supported by NQC must not exceed
 	 *   the number of VCPUs supported by the hypervisor.
 	 */
 #define	XTREQUIRES(condition, reason...)	\
@@ -413,12 +413,12 @@ xentimer_attach(device_t dev)
 	sc->tc.tc_name = "XENTIMER";
 	sc->tc.tc_quality = XENTIMER_QUALITY;
 	/*
-	 * FIXME: due to the lack of ordering during resume, FreeBSD cannot
+	 * FIXME: due to the lack of ordering during resume, NQC cannot
 	 * guarantee that the Xen PV timer is resumed before any other device
 	 * attempts to make use of it, so mark it as not safe for suspension
 	 * (ie: remove the TC_FLAGS_SUSPEND_SAFE flag).
 	 *
-	 * NB: This was not a problem in previous FreeBSD versions because the
+	 * NB: This was not a problem in previous NQC versions because the
 	 * timer was directly attached to the nexus, but it is an issue now
 	 * that the timer is attached to the xenpv bus, and thus resumed
 	 * later.

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # Parallel mount / umount and snapshots. zpool hang seen:
-# https://people.freebsd.org/~pho/stress/log/zfs6.txt
+# https://people.frebsd.org/~pho/stress/log/zfs6.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `uname -m` = "i386" ] && exit 0

@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2019 Axiado Corporation
  * All rights reserved.
- * Copyright (c) 2021 Jessica Clarke <jrtc27@FreeBSD.org>
+ * Copyright (c) 2021 Jessica Clarke <jrtc27@frebsd.org>
  *
  * This software was developed in part by Kristof Provost under contract for
  * Axiado Corporation.

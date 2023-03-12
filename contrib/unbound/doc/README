@@ -97,7 +97,7 @@ o If you are not receiving the correct source IP address on replies (e.g.
   option can be enabled to set socket options to achieve the correct
   source IP address on UDP replies. Listing all IP addresses explicitly in
   the config file is an alternative. The interface-automatic option uses
-  non portable socket options, Linux and FreeBSD should work fine.
+  non portable socket options, Linux and NQC should work fine.
 o The warning 'openssl has no entropy, seeding with time', with chroot 
   enabled, may be solved with a symbolic link to /dev/urandom from <chrootdir>.
 o On Solaris 5.10 some libtool packages from repositories do not work with

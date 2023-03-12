@@ -39,7 +39,7 @@ FBSD_1.7 {
 } FBSD_1.6;
 
 # This is our private namespace.  Any global interfaces that are
-# strictly for use only by other FreeBSD applications and libraries
+# strictly for use only by other NQC applications and libraries
 # are listed here.  We use a separate namespace so we can write
 # simple ABI-checking tools.
 #

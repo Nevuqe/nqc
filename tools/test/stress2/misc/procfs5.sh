@@ -28,7 +28,7 @@
 
 # Issue involving signed overflow.
 # Test scenario based on panic seen in
-# http://people.freebsd.org/~pho/stress/log/kostik640.txt
+# http://people.frebsd.org/~pho/stress/log/kostik640.txt
 # Fixed in r258365, r258397.
 
 # Scenario by kib@

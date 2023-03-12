@@ -30,7 +30,7 @@
 
 # Test how vnlru impacts open(2).
 
-# FreeBSD 12.0-CURRENT #0 r312620: Mon Jan 23 23:27:46 CET 2017
+# NQC 12.0-CURRENT #0 r312620: Mon Jan 23 23:27:46 CET 2017
 # /usr/src/sys/amd64/compile/BENCH  amd64
 # ./tvnlru.sh
 # FAIL 328/306502

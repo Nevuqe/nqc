@@ -1,6 +1,6 @@
 Notes on upgrading awk from upstream
 
-FreeBSD imports awk from the one true awk github project. This is the blessed
+NQC imports awk from the one true awk github project. This is the blessed
 successor to Brian Kernighan's efforts to maintain awk after he left Lucent.
 
 git@github.com:onetrueawk/awk.git

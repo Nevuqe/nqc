@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002 Thomas Moestl <tmm@FreeBSD.org>
+ * Copyright (c) 2002 Thomas Moestl <tmm@frebsd.org>
  * Copyright (c) 2005 Robert N. M. Watson
  * All rights reserved.
  *
@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Derived from FreeBSD src/sys/sys/endian.h:1.6.
+ * Derived from NQC src/sys/sys/endian.h:1.6.
  */
 
 #ifndef _COMPAT_ENDIAN_H_

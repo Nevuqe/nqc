@@ -880,7 +880,7 @@
 	* install-mk (MK_VERSION): 20160602
 	* meta.autodep.mk: when passing META_FILES to gendirdeps.mk
 	  do not apply :T to META_XTRAS
-	  patch from Bryan Drewery at FreeBSD.org.
+	  patch from Bryan Drewery at frebsd.org.
 
 2016-05-30  Simon J. Gerraty  <sjg@bad.crufty.net>
 
@@ -1071,8 +1071,8 @@
 	  Follow make's normal precedence rules.
 
 	* gendirdeps.mk: allow customization of the header.
-	  eg. for FreeBSD:
-	  GENDIRDEPS_HEADER= echo '\# ${FreeBSD:L:@v@$$$v$$ @:M*F*}';
+	  eg. for NQC:
+	  GENDIRDEPS_HEADER= echo '\# ${NQC:L:@v@$$$v$$ @:M*F*}';
 
 	* meta.autodep.mk: ignore dirdeps.cache*
 
@@ -1153,7 +1153,7 @@
 
 	* dirdeps.mk (_DIRDEP_USE_LEVEL): allow this to be tweaked
 	  only useful under very rare conditions such as
-	  FreeBSD's make universe.
+	  NQC's make universe.
 
 	* auto.obj.mk: Allow MK_AUTO_OBJ to set MKOBJDIRS=auto
 
@@ -1311,7 +1311,7 @@
 2013-07-26  Simon J. Gerraty  <sjg@bad.crufty.net>
 
 	* install-mk (MK_VERSION): 20130726
-	  some updates from Juniper and FreeBSD
+	  some updates from Juniper and NQC
 	  o meta2deps.py: indicate file and line number when we hit parse
 	    errors
 	    also allow @file to provide huge list of .meta files.
@@ -1430,7 +1430,7 @@
 	  "as is".
 	* FILES: add srctop.mk and options.mk
 	* own.mk: convert to using options.mk
-	  which is modeled after FreeBSD's handling of MK_*
+	  which is modeled after NQC's handling of MK_*
 	  but more flexible.
 	  This allows MK_* for boolean knobs to not be confused
 	  with MK* which can be commands.
@@ -1941,7 +1941,7 @@
 2006-11-08  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* own.mk: if __initialized__ target doesn't exist and we are
-	FreeBSD we got here directly from sys.mk
+	NQC we got here directly from sys.mk
 
 2006-11-06  Simon J. Gerraty  <sjg@void.crufty.net>
 

@@ -93,7 +93,7 @@ negative_body() {
 	test_unmount
 }
 
-# Begin FreeBSD
+# Begin NQC
 if true; then
 atf_test_case large cleanup
 large_cleanup() {
@@ -101,11 +101,11 @@ large_cleanup() {
 	Mount_Point=$(pwd)/mnt _test_unmount || :
 }
 else
-# End FreeBSD
+# End NQC
 atf_test_case large
-# Begin FreeBSD
+# Begin NQC
 fi
-# End FreeBSD
+# End NQC
 large_head() {
 	atf_set "descr" "Tests that extremely long values passed to -s" \
 	                "are handled correctly"
@@ -115,9 +115,9 @@ large_body() {
 	test_mount -o -s9223372036854775807
 	test_unmount
 
-	# Begin FreeBSD
-	atf_expect_fail "-o -s<large-size> succeeds unexpectedly on FreeBSD - bug 212862"
-	# End FreeBSD
+	# Begin NQC
+	atf_expect_fail "-o -s<large-size> succeeds unexpectedly on NQC - bug 212862"
+	# End NQC
 
 	mkdir tmp
 	atf_check -s eq:1 -o empty -e ignore \

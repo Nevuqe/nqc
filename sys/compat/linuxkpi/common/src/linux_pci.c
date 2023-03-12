@@ -1,10 +1,10 @@
 /*-
  * Copyright (c) 2015-2016 Mellanox Technologies, Ltd.
  * All rights reserved.
- * Copyright (c) 2020-2022 The FreeBSD Foundation
+ * Copyright (c) 2020-2022 The FreBSD Foundation
  *
  * Portions of this software were developed by Björn Zeeb
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -835,7 +835,7 @@ pci_request_region(struct pci_dev *pdev, int bar, const char *res_name)
 	/*
 	 * It seems there is an implicit devres tracking on these if the device
 	 * is managed; otherwise the resources are not automatiaclly freed on
-	 * FreeBSD/LinuxKPI tough they should be/are expected to be by Linux
+	 * NQC/LinuxKPI tough they should be/are expected to be by Linux
 	 * drivers.
 	 */
 	dr = lkpi_pci_devres_find(pdev);

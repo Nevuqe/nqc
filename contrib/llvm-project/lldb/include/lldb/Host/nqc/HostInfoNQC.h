@@ -1,4 +1,4 @@
-//===-- HostInfoFreeBSD.h ---------------------------------------*- C++ -*-===//
+//===-- HostInfoNQC.h ---------------------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -15,7 +15,7 @@
 
 namespace lldb_private {
 
-class HostInfoFreeBSD : public HostInfoPosix {
+class HostInfoNQC : public HostInfoPosix {
 public:
   static llvm::VersionTuple GetOSVersion();
   static llvm::Optional<std::string> GetOSBuildString();

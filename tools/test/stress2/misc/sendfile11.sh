@@ -30,7 +30,7 @@
 
 # sendfile(2) && block size > page size:
 # panic: vnode_pager_generic_getpages: sector size 8192 too large
-# https://people.freebsd.org/~pho/stress/log/sendfile11.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile11.txt
 
 . ../default.cfg
 

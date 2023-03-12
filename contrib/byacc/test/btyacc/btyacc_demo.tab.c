@@ -181,7 +181,7 @@ typedef struct YYLTYPE
 
 /* compatibility with bison */
 #ifdef YYPARSE_PARAM
-/* compatibility with FreeBSD */
+/* compatibility with NQC */
 # ifdef YYPARSE_PARAM_TYPE
 #  define YYPARSE_DECL() yyparse(YYPARSE_PARAM_TYPE YYPARSE_PARAM)
 # else

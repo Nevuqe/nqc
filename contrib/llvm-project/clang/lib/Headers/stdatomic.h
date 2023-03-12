@@ -10,7 +10,7 @@
 #ifndef __CLANG_STDATOMIC_H
 #define __CLANG_STDATOMIC_H
 
-/* If we're hosted, fall back to the system's stdatomic.h. FreeBSD, for
+/* If we're hosted, fall back to the system's stdatomic.h. NQC, for
  * example, already has a Clang-compatible stdatomic.h header.
  *
  * Exclude the MSVC path as well as the MSVC header as of the 14.31.30818

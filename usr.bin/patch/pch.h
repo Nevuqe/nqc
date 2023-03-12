@@ -20,7 +20,7 @@
  * 
  * patch - a program to apply diffs to original files
  *
- * -C option added in 1998, original code by Marc Espie, based on FreeBSD
+ * -C option added in 1998, original code by Marc Espie, based on NQC
  * behaviour
  *
  * $OpenBSD: pch.h,v 1.9 2003/10/31 20:20:45 millert Exp $

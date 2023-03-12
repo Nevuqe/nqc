@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2012 Gleb Smirnoff <glebius@frebsd.org>
  * Copyright (c) 2002 Michael Shalayeff
  * Copyright (c) 2001 Daniel Hartmeier
  * All rights reserved.

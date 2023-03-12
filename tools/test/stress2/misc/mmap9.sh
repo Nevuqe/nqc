@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_map_protect: object 0xca6869c0 overcharged" seen:
-# http://people.freebsd.org/~pho/stress/log/mmap9.txt
+# http://people.frebsd.org/~pho/stress/log/mmap9.txt
 # Fixed in r265843
 
 # Test scenario by: Mark Johnston markj@

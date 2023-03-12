@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -33,7 +33,7 @@
 # causes hang
 
 # panic: handle_workitem_remove: bad dir delta
-# https://people.freebsd.org/~pho/stress/log/log0121.txt
+# https://people.frebsd.org/~pho/stress/log/log0121.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

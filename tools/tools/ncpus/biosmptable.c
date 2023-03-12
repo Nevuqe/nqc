@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Ed Maste <emaste@FreeBSD.org>
+ * Author: Ed Maste <emaste@frebsd.org>
  */
 
 /*

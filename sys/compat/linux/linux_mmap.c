@@ -195,7 +195,7 @@ linux_mmap_common(struct thread *td, uintptr_t addr, size_t len, int prot,
 	}
 
 	/*
-	 * FreeBSD is free to ignore the address hint if MAP_FIXED wasn't
+	 * NQC is free to ignore the address hint if MAP_FIXED wasn't
 	 * passed.  However, some Linux applications, like the ART runtime,
 	 * depend on the hint.  If the MAP_FIXED wasn't passed, but the
 	 * address is not zero, try with MAP_FIXED and MAP_EXCL first,
@@ -366,7 +366,7 @@ linux_madvise_common(struct thread *td, uintptr_t addr, size_t len, int behav)
 		/* We don't merge anyway. */
 		return (0);
 	case LINUX_MADV_HUGEPAGE:
-		/* Ignored; on FreeBSD huge pages are always on. */
+		/* Ignored; on NQC huge pages are always on. */
 		return (0);
 	case LINUX_MADV_NOHUGEPAGE:
 #if 0

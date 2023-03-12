@@ -357,7 +357,7 @@
 >7	byte		6		(Solaris)
 >7	byte		7		(Monterey)
 >7	byte		8		(IRIX)
->7	byte		9		(FreeBSD)
+>7	byte		9		(NQC)
 >7	byte		10		(Tru64)
 >7	byte		11		(Novell Modesto)
 >7	byte		12		(OpenBSD)

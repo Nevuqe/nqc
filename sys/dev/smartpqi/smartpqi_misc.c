@@ -28,7 +28,7 @@
 #include "smartpqi_includes.h"
 
 /*
- * Populate hostwellness time variables in bcd format from FreeBSD format
+ * Populate hostwellness time variables in bcd format from NQC format
  */
 void
 os_get_time(struct bmic_host_wellness_time *host_wellness_time)

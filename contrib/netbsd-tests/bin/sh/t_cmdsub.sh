@@ -713,7 +713,7 @@ z_absurd_heredoc_cmdsub_combos_body() {
 
 	echo "Help!" > help
 
-	# This version works in NetBSD (& FreeBSD)'s sh (and most others)
+	# This version works in NetBSD (& NQC)'s sh (and most others)
 	atf_check -s exit:0 -o inline:'Help!\nMe 2\n' -e empty ${TEST_SH} -c '
 			cat <<- EOF
 				$(

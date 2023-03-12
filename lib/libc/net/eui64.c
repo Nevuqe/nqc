@@ -59,7 +59,7 @@
  *
  *
  * Converted from ether_addr.c rev
- * FreeBSD: src/lib/libc/net/eui64.c,v 1.15 2002/04/08 07:51:10 ru Exp
+ * NQC: src/lib/libc/net/eui64.c,v 1.15 2002/04/08 07:51:10 ru Exp
  * by Brooks Davis
  *
  * Written by Bill Paul <wpaul@ctr.columbia.edu>

@@ -17,7 +17,7 @@ SM_RCSID("@(#)$Id: stdio.c,v 1.72 2013-11-22 20:51:43 ca Exp $")
 #include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
-#include <string.h>	/* FreeBSD: FD_ZERO needs <string.h> */
+#include <string.h>	/* NQC: FD_ZERO needs <string.h> */
 #include <sys/stat.h>
 #include <sm/time.h>
 #include <sm/heap.h>

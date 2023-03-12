@@ -15,7 +15,7 @@
 #include "lldb/Utility/RegisterValue.h"
 #include "lldb/Utility/Status.h"
 
-#include "Plugins/Process/FreeBSD/NativeProcessFreeBSD.h"
+#include "Plugins/Process/NQC/NativeProcessNQC.h"
 // for register enum definitions
 #include "Plugins/Process/Utility/RegisterContextPOSIX_powerpc.h"
 
@@ -64,8 +64,8 @@ static const RegisterSet g_reg_sets_powerpc[k_num_register_sets] = {
      g_fpr_regnums},
 };
 
-NativeRegisterContextFreeBSD *
-NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
+NativeRegisterContextNQC *
+NativeRegisterContextNQC::CreateHostNativeRegisterContextNQC(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
   return new NativeRegisterContextNQC_powerpc(target_arch, native_thread);
 }
@@ -133,10 +133,10 @@ uint32_t NativeRegisterContextNQC_powerpc::GetUserRegisterCount() const {
 Status NativeRegisterContextNQC_powerpc::ReadRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
                                                m_reg_data.data());
   case FPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
                                                m_reg_data.data() + sizeof(reg));
   }
   llvm_unreachable("NativeRegisterContextNQC_powerpc::ReadRegisterSet");
@@ -145,10 +145,10 @@ Status NativeRegisterContextNQC_powerpc::ReadRegisterSet(RegSetKind set) {
 Status NativeRegisterContextNQC_powerpc::WriteRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
                                                m_reg_data.data());
   case FPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
                                                m_reg_data.data() + sizeof(reg));
   }
   llvm_unreachable("NativeRegisterContextNQC_powerpc::WriteRegisterSet");
@@ -282,7 +282,7 @@ Status NativeRegisterContextNQC_powerpc::WriteAllRegisterValues(
 }
 
 llvm::Error NativeRegisterContextNQC_powerpc::CopyHardwareWatchpointsFrom(
-    NativeRegisterContextFreeBSD &source) {
+    NativeRegisterContextNQC &source) {
   return llvm::Error::success();
 }
 

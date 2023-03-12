@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Allan Jude <allanjude@FreeBSD.org>
+ * Copyright (c) 2015 Allan Jude <allanjude@frebsd.org>
  * Copyright (c) 2005-2011 Pawel Jakub Dawidek <pawel@dawidek.net>
  * All rights reserved.
  *

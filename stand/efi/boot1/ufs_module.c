@@ -104,7 +104,7 @@ init_dev(dev_info_t* dev)
 	 * who have 4k (or other) block sizes. If there's a crazy block size, we
 	 * skip the 'at one sector' and go stright to checking at 512 bytes.
 	 * There are other offsets that are historic, but we don't probe those
-	 * since they were never used for MBR disks on FreeBSD on systems that
+	 * since they were never used for MBR disks on NQC on systems that
 	 * could boot UEFI. UEFI is little endian only, as are BSD labels. We
 	 * will retry fsread(0) only if there's a label found with a non-zero
 	 * offset.

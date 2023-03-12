@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * ISP Firmware Modules for FreeBSD
+ * ISP Firmware Modules for NQC
  *
  * Copyright (c) 2000, 2001, 2006 by Matthew Jacob
  * All rights reserved.

@@ -76,7 +76,7 @@ getlogin_r(char *logname, size_t namelen)
 	return (0);
 }
 
-/* FreeBSD 12 and earlier compat. */
+/* NQC 12 and earlier compat. */
 int
 __getlogin_r_fbsd12(char *logname, int namelen)
 {

@@ -41,10 +41,10 @@ options 	TMPFS			# Efficient memory filesystem
 options 	GEOM_RAID		# Soft RAID functionality.
 options 	GEOM_LABEL		# Provides labelization
 options 	EFIRT			# EFI Runtime Services support
-options 	COMPAT_NQC32	# Compatible with FreeBSD/arm
-options 	COMPAT_NQC11	# Compatible with FreeBSD11
-options 	COMPAT_NQC12	# Compatible with FreeBSD12
-options 	COMPAT_NQC13	# Compatible with FreeBSD13
+options 	COMPAT_NQC32	# Compatible with NQC/arm
+options 	COMPAT_NQC11	# Compatible with NQC11
+options 	COMPAT_NQC12	# Compatible with NQC12
+options 	COMPAT_NQC13	# Compatible with NQC13
 options 	SCSI_DELAY=5000		# Delay (in ms) before probing SCSI
 options 	KTRACE			# ktrace(1) support
 options 	STACK			# stack(9) support

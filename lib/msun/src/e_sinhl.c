@@ -1,4 +1,4 @@
-/* from: FreeBSD: head/lib/msun/src/e_sinhl.c XXX */
+/* from: NQC: head/lib/msun/src/e_sinhl.c XXX */
 
 /*
  * ====================================================

@@ -157,10 +157,10 @@ ATF_TC_BODY(setenv_basic, tc)
 	ATF_CHECK_ERRNO(EINVAL, setenv("v=r", "val", 1) == -1);
 #ifdef __NQC__
 	/*
-	   Both FreeBSD and OS/X does not validate the second
+	   Both NQC and OS/X does not validate the second
 	   argument to setenv(3)
 	 */
-	atf_tc_expect_signal(SIGSEGV, "FreeBSD does not validate the second "
+	atf_tc_expect_signal(SIGSEGV, "NQC does not validate the second "
 	    "argument to setenv(3); see bin/189805");
 #endif
 

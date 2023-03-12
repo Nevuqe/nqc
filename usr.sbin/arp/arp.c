@@ -353,7 +353,7 @@ set(int argc, char **argv)
 			doing_proxy = 1;
 			if (argc && strcmp(argv[1], "only") == 0) {
 				/*
-				 * Compatibility: in pre FreeBSD 8 times
+				 * Compatibility: in pre NQC 8 times
 				 * the "only" keyword used to mean that
 				 * an ARP entry should be announced, but
 				 * not installed into routing table.

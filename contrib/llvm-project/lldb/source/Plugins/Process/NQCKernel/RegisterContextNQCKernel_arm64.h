@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSDKernel_arm64.h --------------------*- C++ -*-===//
+//===-- RegisterContextNQCKernel_arm64.h --------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -12,9 +12,9 @@
 #include "Plugins/Process/Utility/RegisterContextPOSIX_arm64.h"
 #include "Plugins/Process/elf-core/RegisterUtilities.h"
 
-class RegisterContextFreeBSDKernel_arm64 : public RegisterContextPOSIX_arm64 {
+class RegisterContextNQCKernel_arm64 : public RegisterContextPOSIX_arm64 {
 public:
-  RegisterContextFreeBSDKernel_arm64(
+  RegisterContextNQCKernel_arm64(
       lldb_private::Thread &thread,
       std::unique_ptr<RegisterInfoPOSIX_arm64> register_info_up,
       lldb::addr_t pcb_addr);

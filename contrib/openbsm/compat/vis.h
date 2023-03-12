@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Defived from FreeBSD head/lib/libc/gen/vis.c 165903, head/include/vis.h
+ * Defived from NQC head/lib/libc/gen/vis.c 165903, head/include/vis.h
  * 203964.
  */
 

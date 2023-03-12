@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 Ben Gray <ben.r.gray@gmail.com>.
- * Copyright (c) 2014 Luiz Otavio O Souza <loos@FreeBSD.org>.
+ * Copyright (c) 2014 Luiz Otavio O Souza <loos@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

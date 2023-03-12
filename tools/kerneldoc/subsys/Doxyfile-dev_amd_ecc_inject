@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel amd_ecc_inject device code"
+PROJECT_NAME           = "NQC kernel amd_ecc_inject device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_amd_ecc_inject/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -5,7 +5,7 @@
  * Copyright (c) 2001 Doug Rabson
  * Copyright (c) 1994-1996 Søren Schmidt
  * All rights reserved.
- * Copyright (c) 2022 Dmitry Chagin <dchagin@FreeBSD.org>
+ * Copyright (c) 2022 Dmitry Chagin <dchagin@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 Adrian Chadd <adrian@FreeBSD.org>
+ * Copyright (c) 2012 Adrian Chadd <adrian@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -963,7 +963,7 @@ ath_edma_tx_processq(struct ath_softc *sc, int dosched)
 		 * do a separate HAL call to populate that information.
 		 *
 		 * The same problem exists with ts_longretry.
-		 * The FreeBSD HAL corrects ts_longretry in the HAL layer;
+		 * The NQC HAL corrects ts_longretry in the HAL layer;
 		 * the AR9380 HAL currently doesn't.  So until the HAL
 		 * is imported and this can be added, we correct for it
 		 * here.

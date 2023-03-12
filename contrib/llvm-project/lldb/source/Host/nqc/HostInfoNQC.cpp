@@ -1,4 +1,4 @@
-//===-- HostInfoFreeBSD.cpp -----------------------------------------------===//
+//===-- HostInfoNQC.cpp -----------------------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "lldb/Host/freebsd/HostInfoFreeBSD.h"
+#include "lldb/Host/freebsd/HostInfoNQC.h"
 #include "llvm/Support/FormatVariadic.h"
 #include <cstdio>
 #include <cstring>
@@ -17,7 +17,7 @@
 
 using namespace lldb_private;
 
-llvm::VersionTuple HostInfoFreeBSD::GetOSVersion() {
+llvm::VersionTuple HostInfoNQC::GetOSVersion() {
   struct utsname un;
 
   ::memset(&un, 0, sizeof(utsname));
@@ -30,7 +30,7 @@ llvm::VersionTuple HostInfoFreeBSD::GetOSVersion() {
   return llvm::VersionTuple();
 }
 
-llvm::Optional<std::string> HostInfoFreeBSD::GetOSBuildString() {
+llvm::Optional<std::string> HostInfoNQC::GetOSBuildString() {
   int mib[2] = {CTL_KERN, KERN_OSREV};
   uint32_t osrev = 0;
   size_t osrev_len = sizeof(osrev);
@@ -41,7 +41,7 @@ llvm::Optional<std::string> HostInfoFreeBSD::GetOSBuildString() {
   return llvm::None;
 }
 
-FileSpec HostInfoFreeBSD::GetProgramFileSpec() {
+FileSpec HostInfoNQC::GetProgramFileSpec() {
   static FileSpec g_program_filespec;
   if (!g_program_filespec) {
     int exe_path_mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, getpid()};

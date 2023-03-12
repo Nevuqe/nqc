@@ -198,7 +198,7 @@ _nc_db_close(DB * db)
  *
  * Returns 0 on success.
  *
- * FIXME:  the FreeBSD cap_mkdb program assumes the database could have
+ * FIXME:  the NQC cap_mkdb program assumes the database could have
  * duplicates.  There appears to be no good reason for that (review/fix).
  */
 NCURSES_EXPORT(int)

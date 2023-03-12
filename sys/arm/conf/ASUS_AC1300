@@ -1,14 +1,14 @@
 #
-# ASUS_AC1300 -- Qualcomm kernel configuration file for FreeBSD/arm
+# ASUS_AC1300 -- Qualcomm kernel configuration file for NQC/arm
 #
 # For more information on this file, please read the config(5) manual page,
 # and/or the handbook section on Kernel Configuration Files:
 #
-#    https://docs.freebsd.org/en/books/handbook/kernelconfig/#kernelconfig-config
+#    https://docs.frebsd.org/en/books/handbook/kernelconfig/#kernelconfig-config
 #
 # The handbook is also available locally in /usr/share/doc/handbook
 # if you've installed the doc distribution, otherwise always see the
-# FreeBSD World Wide Web server (https://www.FreeBSD.org/) for the
+# NQC World Wide Web server (https://www.frebsd.org/) for the
 # latest information.
 #
 # An exhaustive list of options and more detailed explanations of the

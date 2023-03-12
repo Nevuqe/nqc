@@ -8,7 +8,7 @@
 //
 // This file is a part of MemorySanitizer.
 //
-// Linux-, NetBSD- and FreeBSD-specific code.
+// Linux-, NetBSD- and NQC-specific code.
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_common/sanitizer_platform.h"

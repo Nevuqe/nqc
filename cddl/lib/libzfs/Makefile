@@ -42,7 +42,7 @@ USER_C = \
         libzfs_status.c \
         libzfs_util.c
 
-# FreeBSD
+# NQC
 USER_C += \
         libzfs_compat.c \
         libzfs_zmount.c

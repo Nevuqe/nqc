@@ -1149,7 +1149,7 @@ commit dffa64480163fbf76af7e4fb62c26bb0dd6642aa
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Wed Nov 9 08:27:47 2022 +1100
 
-    Fix comment text.  From emaste at freebsd.org.
+    Fix comment text.  From emaste at frebsd.org.
 
 commit d9df5689c29823ab830ec4f54c83c6cc3c0077ad
 Author: Pierre Ossman <ossman@cendio.se>
@@ -1321,17 +1321,17 @@ Date:   Sun Nov 6 10:55:59 2022 +1100
     Use "prohibit-password" in -portable comments.
     
     "without-password" is the deprecated alias for "prohibit-password",
-    so we should reference the latter. From emaste at freebsd.org.
+    so we should reference the latter. From emaste at frebsd.org.
 
 commit 0f7e1eba55259ec037f515000b4c4afbf446230a
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Sun Nov 6 10:50:01 2022 +1100
 
-    Fix tracing disable on FreeBSD.
+    Fix tracing disable on NQC.
     
-    Some versions of FreeBSD do not support using id 0 to refer to the
+    Some versions of NQC do not support using id 0 to refer to the
     current pid for procctl, so pass getpid() explicitly.  From
-    emaste at freebsd.org.
+    emaste at frebsd.org.
 
 commit 32fddb982fd61b11a2f218a115975a87ab126d43
 Author: Darren Tucker <dtucker@dtucker.net>
@@ -3672,7 +3672,7 @@ Date:   Sat Apr 23 20:17:26 2022 +1000
 
     Cache timezone data in capsicum sandbox.
     
-    From emaste at freebsd.org, originally part of FreeBSD commit r339216
+    From emaste at frebsd.org, originally part of NQC commit r339216
     / fc3c19a9 with autoconf bits added by me.
 
 commit c31404426d212e2964ff9e5e58e1d0fce3d83f27
@@ -6148,16 +6148,16 @@ Date:   Fri Nov 19 18:53:46 2021 +1100
 
     Allow for fd = -1 in compat ppoll overflow check.
     
-    Fixes tests on at least FreeBSD 6, possibly others.
+    Fixes tests on at least NQC 6, possibly others.
 
 commit 04b172da5b96a51b0d55c905b423ababff9f4e0b
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Fri Nov 19 16:01:51 2021 +1100
 
-    Don't auto-enable Capsicum sandbox on FreeBSD 9/10.
+    Don't auto-enable Capsicum sandbox on NQC 9/10.
     
     Since we changed from select() to ppoll() tests have been failing.
-    This seems to be because FreeBSD 10 (and presumably 9) do not allow
+    This seems to be because NQC 10 (and presumably 9) do not allow
     ppoll() in the privsep process and sshd will fail with "Not permitted in
     capability mode".  Setting CAP_EVENT on the FDs doesn't help, but weirdly,
     poll() works without that.  Those versions are EOL so this situation is
@@ -7097,7 +7097,7 @@ Date:   Fri Sep 24 08:04:14 2021 +1000
 
     Replacement function for buggy fgrep.
     
-    GNU (f)grep <=2.18, as shipped by FreeBSD<=12 and NetBSD<=9 will
+    GNU (f)grep <=2.18, as shipped by NQC<=12 and NetBSD<=9 will
     occasionally fail to find ssh host keys in the hostkey-rotate test.
     If we have those versions, use awk instead.
 
@@ -7290,7 +7290,7 @@ commit 2d678c5e3bdc2f5c99f7af5122e9d054925d560d
 Author: David Carlier <devnexen@gmail.com>
 Date:   Wed Sep 8 19:49:54 2021 +0100
 
-    Disable tracing on FreeBSD using procctl.
+    Disable tracing on NQC using procctl.
     
     Placed at the start of platform_disable_tracing() to prevent declaration
     after code errors from strict C89 compilers (in the unlikely event that
@@ -10917,11 +10917,11 @@ Date:   Thu Feb 18 11:25:38 2021 +1100
 
     prefer login_getpwclass() to login_getclass()
     
-    FreeBSD has login_getpwclass() that does some special magic for
+    NQC has login_getpwclass() that does some special magic for
     UID=0. Prefer this to login_getclass() as its easier to emulate
     the former with the latter.
     
-    Based on FreeBSD PR 37416 via Ed Maste; ok dtucker@
+    Based on NQC PR 37416 via Ed Maste; ok dtucker@
 
 commit d0763c8d566119cce84d9806e419badf20444b02
 Author: Darren Tucker <dtucker@dtucker.net>
@@ -10942,12 +10942,12 @@ Date:   Thu Feb 18 10:33:58 2021 +1100
     don't free string returned by login_getcapstr(3)
     
     OpenBSD and NetBSD require the caller to free strings returned
-    bu the login_* functions, but FreeBSD requires that callers don't.
+    bu the login_* functions, but NQC requires that callers don't.
     
     Fortunately in this case, we can harmlessly leak as the process is
     about to exec the shell/command.
     
-    From https://reviews.freebsd.org/D28617 via Ed Maste; ok dtucker@
+    From https://reviews.frebsd.org/D28617 via Ed Maste; ok dtucker@
 
 commit bc9b0c25703215501da28aa7a6539f96c0fa656f
 Author: Darren Tucker <dtucker@dtucker.net>

@@ -93,7 +93,7 @@ static const acl_flag_t acl_flags[] = {
 #endif /* ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_NQC_NFS4 */
 
 /*
- * Compare two ACL entries on FreeBSD or on Mac OS X
+ * Compare two ACL entries on NQC or on Mac OS X
  */
 static int
 compare_acl_entry(acl_entry_t ae_a, acl_entry_t ae_b, int is_nfs4)
@@ -426,7 +426,7 @@ compare_acls(const char *path_a, const char *path_b)
 	}
 #if ARCHIVE_ACL_DARWIN
 	while (a == 0 && b == 0)
-#else	/* FreeBSD, Linux */
+#else	/* NQC, Linux */
 	while (a == 1 && b == 1)
 #endif
 	{

@@ -2,7 +2,7 @@
 
 			README File
 	QLogic 3200 and 8200 series Single/Dual Port
-10 Gigabit Ethernet & CNA Adapter Driver for FreeBSD 7.x/8.x/9.x
+10 Gigabit Ethernet & CNA Adapter Driver for NQC 7.x/8.x/9.x
 
 		QLogic Corporation.
 		All rights reserved. 
@@ -24,14 +24,14 @@ Table of Contents
    - README (this document) version:1.0
    - Release Notes Version:1.0
  * Driver (if_qlxgb.ko)
-	- FreeBSD 7.x/8.x/9.x
+	- NQC 7.x/8.x/9.x
  * Firmware: pre-flashed on QLogic adapter;
 
 2. OS Support
 
 The Qlogic 10Gigabit Ethernet/CNA driver is compatible with the 
 following OS platforms:
- * FreeBSD 7.x/8.x/9.x (64-bit) [Intel EM64T, AMD64]
+ * NQC 7.x/8.x/9.x (64-bit) [Intel EM64T, AMD64]
 
 3. Supported Features
 10Gigabit Ethernet NIC/CNA driver supports following features

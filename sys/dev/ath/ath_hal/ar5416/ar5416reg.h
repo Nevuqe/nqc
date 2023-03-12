@@ -671,7 +671,7 @@
 
 /*
  * These are from ath9k/Atheros and assume an AR_SREV version mask
- * of 0x07, rather than 0x0F which is being used in the FreeBSD HAL.
+ * of 0x07, rather than 0x0F which is being used in the NQC HAL.
  * Thus, don't use these values as they're incorrect here; use
  * AR_SREV_REVISION_OWL_{10,20,22}.
  */

@@ -28,7 +28,7 @@
 
 # 'WARNING: A device driver has set "memattr" inconsistently.' seen on
 # console.
-# https://people.freebsd.org/~pho/stress/log/mmap27.txt
+# https://people.frebsd.org/~pho/stress/log/mmap27.txt
 # Fixed by r298891.
 
 . ../default.cfg

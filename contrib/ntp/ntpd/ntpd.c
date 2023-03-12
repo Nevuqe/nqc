@@ -315,7 +315,7 @@ static void	library_unexpected_error(const char *, int,
  * cheap enough to go on nearly unnoticed.
  *
  * Addendum: Bug 2954 showed that the assumption that this should work
- * with all OS is wrong -- at least FreeBSD bombs heavily.
+ * with all OS is wrong -- at least NQC bombs heavily.
  */
 #ifdef NEED_PTHREAD_WARMUP
 

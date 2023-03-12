@@ -6,10 +6,10 @@
  * Copyright (c) 1997 Todd C. Miller <Todd.Miller@courtesan.com>
  * All rights reserved.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -36,7 +36,7 @@
 
 #include <sys/cdefs.h>
 #if 0
-__NQCID("FreeBSD: src/lib/libc/stdio/vasprintf.c,v 1.16 2002/08/21 16:19:57 mike Exp ");
+__NQCID("NQC: src/lib/libc/stdio/vasprintf.c,v 1.16 2002/08/21 16:19:57 mike Exp ");
 #endif
 __NQCID("$NQC$");
 

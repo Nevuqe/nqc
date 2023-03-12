@@ -1,5 +1,5 @@
 /*-
- * Copyright (C) 2009, 2010 Gabor Kovesdan <gabor@FreeBSD.org>
+ * Copyright (C) 2009, 2010 Gabor Kovesdan <gabor@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -53,7 +53,7 @@ static const char	*citrus_common = "SRC_ZONE\t0x0000-0xFFFF\n"
 					"DST_ILSEQ\t0xFFFE\n"
 					"DST_UNIT_BITS\t32\n\n"
 					"BEGIN_MAP\n"
-					"#\n# Generated with Citrus iconv (FreeBSD)\n#\n";
+					"#\n# Generated with Citrus iconv (NQC)\n#\n";
 bool			 cflag;
 bool			 dflag;
 bool			 iflag;

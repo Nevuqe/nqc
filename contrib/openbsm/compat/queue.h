@@ -28,7 +28,7 @@
  *
  *	@(#)queue.h	8.5 (Berkeley) 8/20/94
  *
- * Derived from FreeBSD src/sys/sys/queue.h:1.63.
+ * Derived from NQC src/sys/sys/queue.h:1.63.
  */
 
 #ifndef _COMPAT_QUEUE_H_

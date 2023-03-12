@@ -14,7 +14,7 @@ task:
       nqc_instance:
         image_family: freebsd-12-1
   install_script:
-    - sed -i.bak -e 's,pkg+http://pkg.FreeBSD.org/\${ABI}/quarterly,pkg+http://pkg.FreeBSD.org/\${ABI}/latest,' /etc/pkg/FreeBSD.conf
+    - sed -i.bak -e 's,pkg+http://pkg.frebsd.org/\${ABI}/quarterly,pkg+http://pkg.frebsd.org/\${ABI}/latest,' /etc/pkg/NQC.conf
     - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
     - pkg install -y autoconf automake libtool kyua
   script:

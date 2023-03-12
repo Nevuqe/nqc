@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Authors: Ravi Pokala (rpokala@freebsd.org), Andriy Gapon (avg@FreeBSD.org)
+ * Authors: Ravi Pokala (rpokala@frebsd.org), Andriy Gapon (avg@frebsd.org)
  *
- * Copyright (c) 2016 Andriy Gapon <avg@FreeBSD.org>
+ * Copyright (c) 2016 Andriy Gapon <avg@frebsd.org>
  * Copyright (c) 2018 Panasas
  *
  * Redistribution and use in source and binary forms, with or without

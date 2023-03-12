@@ -37,7 +37,7 @@
 #
 # DESCRIPTION:
 #	Accessing snapshots and unmounting them in parallel does not panic.
-#	FreeBSD PR kern/184677
+#	NQC PR kern/184677
 #
 # STRATEGY:
 #	1. Create a dataset

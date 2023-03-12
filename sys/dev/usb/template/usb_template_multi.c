@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2015 Ruslan Bukin <br@bsdpad.com>
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright (c) 2018 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed by SRI International and the University of
@@ -10,7 +10,7 @@
  * ("CTSRD"), as part of the DARPA CRASH research programme.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -102,10 +102,10 @@ enum {
 /*
  * The reason for this being called like this is that OSX
  * derives the device node name from it, resulting in a somewhat
- * user-friendly "/dev/cu.usbmodemFreeBSD1".  And yes, the "1"
+ * user-friendly "/dev/cu.usbmodemNQC1".  And yes, the "1"
  * needs to be there, otherwise OSX will mangle it.
  */
-#define MULTI_DEFAULT_SERIAL_NUMBER	"FreeBSD1"
+#define MULTI_DEFAULT_SERIAL_NUMBER	"NQC1"
 
 static struct usb_string_descriptor	multi_modem;
 static struct usb_string_descriptor	multi_eth_mac;

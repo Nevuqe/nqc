@@ -103,9 +103,9 @@ set -A props \
 	compression	gzip		compression	gzip-$((RANDOM%9 + 1)) \
 	copies		$((RANDOM%3 +1))
 
-# Add a few extra properties not supported on FreeBSD, if applicable.  The
+# Add a few extra properties not supported on NQC, if applicable.  The
 # currently unsupported list is in the source in libzfs_dataset.c.
-if [[ $os_name != "FreeBSD" ]]; then
+if [[ $os_name != "NQC" ]]; then
 	set +A props \
 		devices		on	devices		off		\
 		zoned		on	zoned		off		\

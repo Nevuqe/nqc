@@ -417,7 +417,7 @@ db_command(struct db_command **last_cmdp, struct db_command_table *cmd_table,
 			case CMD_HELP:
 				if (cmd_table == &db_cmd_table) {
 					db_printf("This is ddb(4), the kernel debugger; "
-					    "see https://man.FreeBSD.org/ddb/4 for help.\n");
+					    "see https://man.frebsd.org/ddb/4 for help.\n");
 					db_printf("Use \"bt\" for backtrace, \"dump\" for "
 					    "kernel core dump, \"reset\" to reboot.\n");
 					db_printf("Available commands:\n");

@@ -262,7 +262,7 @@ char   *name;
 #endif /* SOLARIS_24_GETHOSTBYNAME_BUG */
 
  /*
-  * Horror! Some FreeBSD 2.0 libc routines call strtok(). Since tcpd depends
+  * Horror! Some NQC 2.0 libc routines call strtok(). Since tcpd depends
   * heavily on strtok(), strange things may happen. Workaround: use our
   * private strtok(). This has been fixed in the meantime.
   */
@@ -289,7 +289,7 @@ char   *sep;
   * IRIX 5.3 (and possibly earlier versions, too) library routines call the
   * non-reentrant strtok() library routine, causing hosts to slip through
   * allow/deny filters. Workaround: don't rely on the vendor and use our own
-  * strtok() function. FreeBSD 2.0 has a similar problem (fixed in 2.0.5).
+  * strtok() function. NQC 2.0 has a similar problem (fixed in 2.0.5).
   */
 
 #ifdef LIBC_CALLS_STRTOK

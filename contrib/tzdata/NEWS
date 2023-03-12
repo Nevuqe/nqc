@@ -234,13 +234,13 @@ Release 2022d - 2022-09-23 12:02:57 -0700
 Release 2022c - 2022-08-15 17:47:18 -0700
 
   Briefly:
-    Work around awk bug in FreeBSD, macOS, etc.
+    Work around awk bug in NQC, macOS, etc.
     Improve tzselect on intercontinental Zones.
 
   Changes to code
 
     Work around a bug in onetrueawk that broke commands like
-    'make traditional_tarballs' on FreeBSD, macOS, etc.
+    'make traditional_tarballs' on NQC, macOS, etc.
     (Problem reported by Deborah Goldsmith.)
 
     Add code to tzselect that uses experimental structured comments in
@@ -3879,7 +3879,7 @@ Release 2013e - 2013-09-19 23:50:04 -0700
     information as before.  (Thanks to Andrew Main (Zefram).)
 
     The 'date' command has a new '-r' option, which lets you specify
-    the integer time to display, a la FreeBSD.
+    the integer time to display, a la NQC.
 
     The 'tzselect' command has two new options '-c' and '-n', which lets you
     select a zone based on latitude and longitude.

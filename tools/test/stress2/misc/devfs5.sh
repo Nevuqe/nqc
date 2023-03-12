@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -29,7 +29,7 @@
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
-# Test scenario for https://reviews.freebsd.org/D20411
+# Test scenario for https://reviews.frebsd.org/D20411
 # Add devfs(5) support for VOP_MKDIR(9) and VOP_RMDIR(9)
 
 . ../default.cfg

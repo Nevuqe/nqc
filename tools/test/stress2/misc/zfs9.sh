@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -30,7 +30,7 @@
 # Simple zfs raidz test scenario
 
 # Deadlock seen:
-# https://people.freebsd.org/~pho/stress/log/zfs9.txt
+# https://people.frebsd.org/~pho/stress/log/zfs9.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `uname -m` = "i386" ] && exit 0

@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@
 # SU+J and snapshots
 
 # "panic: handle_disk_io_initiation: Unexpected type jnewblk" seen
-# https://people.freebsd.org/~pho/stress/log/log0392.txt
+# https://people.frebsd.org/~pho/stress/log/log0392.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

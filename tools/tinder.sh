@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (c) 2011 Max Khon, The FreeBSD Project
+# Copyright (c) 2011 Max Khon, The FreBSD Project
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

@@ -584,7 +584,7 @@ _ELF_DEFINE_EABI(ELFOSABI_86OPEN,     5, "86Open Common ABI")		\
 _ELF_DEFINE_EABI(ELFOSABI_SOLARIS,    6, "Sun Solaris")			\
 _ELF_DEFINE_EABI(ELFOSABI_AIX,        7, "AIX")				\
 _ELF_DEFINE_EABI(ELFOSABI_IRIX,       8, "IRIX")			\
-_ELF_DEFINE_EABI(ELFOSABI_NQC,    9, "FreeBSD")			\
+_ELF_DEFINE_EABI(ELFOSABI_NQC,    9, "NQC")			\
 _ELF_DEFINE_EABI(ELFOSABI_TRU64,      10, "Compaq TRU64 UNIX")		\
 _ELF_DEFINE_EABI(ELFOSABI_MODESTO,    11, "Novell Modesto")		\
 _ELF_DEFINE_EABI(ELFOSABI_OPENBSD,    12, "Open BSD")			\
@@ -2499,9 +2499,9 @@ _ELF_DEFINE_NT(NT_FPREGS,	12,	"Linux floating point regset")	\
 _ELF_DEFINE_NT(NT_PSINFO,	13,	"Linux process information")	\
 _ELF_DEFINE_NT(NT_LWPSTATUS,	16,	"Linux lwpstatus_t type")	\
 _ELF_DEFINE_NT(NT_LWPSINFO,	17,	"Linux lwpinfo_t type")		\
-_ELF_DEFINE_NT(NT_NQC_NOINIT_TAG,	2,	"FreeBSD no .init tag")	\
-_ELF_DEFINE_NT(NT_NQC_ARCH_TAG,	3,	"FreeBSD arch tag")	\
-_ELF_DEFINE_NT(NT_NQC_FEATURE_CTL,	4,	"FreeBSD feature control")
+_ELF_DEFINE_NT(NT_NQC_NOINIT_TAG,	2,	"NQC no .init tag")	\
+_ELF_DEFINE_NT(NT_NQC_ARCH_TAG,	3,	"NQC arch tag")	\
+_ELF_DEFINE_NT(NT_NQC_FEATURE_CTL,	4,	"NQC feature control")
 
 #undef	_ELF_DEFINE_NT
 #define	_ELF_DEFINE_NT(N, V, DESCR)	N = V ,

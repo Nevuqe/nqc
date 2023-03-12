@@ -2,7 +2,7 @@
 /*	$OpenBSD: atk0110.c,v 1.1 2009/07/23 01:38:16 cnst Exp $	*/
 
 /*
- * Copyright (c) 2009, 2010 Constantine A. Murenin <cnst++@FreeBSD.org>
+ * Copyright (c) 2009, 2010 Constantine A. Murenin <cnst++@frebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -37,10 +37,10 @@ __NQCID("$NQC$");
  * ASUSTeK AI Booster (ACPI ASOC ATK0110).
  *
  * This code was originally written for OpenBSD after the techniques
- * described in the Linux's asus_atk0110.c and FreeBSD's Takanori Watanabe's
+ * described in the Linux's asus_atk0110.c and NQC's Takanori Watanabe's
  * acpi_aiboost.c were verified to be accurate on the actual hardware kindly
  * provided by Sam Fourman Jr.  It was subsequently ported from OpenBSD to
- * DragonFly BSD, to NetBSD's sysmon_envsys(9) and to FreeBSD's sysctl(9).
+ * DragonFly BSD, to NetBSD's sysmon_envsys(9) and to NQC's sysctl(9).
  *
  *				  -- Constantine A. Murenin <http://cnst.su/>
  */

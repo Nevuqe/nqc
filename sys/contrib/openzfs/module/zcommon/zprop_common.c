@@ -79,7 +79,7 @@ zfs_mod_supported_prop(const char *name, zfs_type_t type,
  * always supports all the properties. libzfs needs to query the running
  * module, via sysfs, to determine which properties are supported.
  *
- * The equivalent _can_ be done on FreeBSD by way of the sysctl
+ * The equivalent _can_ be done on NQC by way of the sysctl
  * tree, but this has not been done yet.
  */
 #if defined(_KERNEL) || defined(LIB_ZPOOL_BUILD) || defined(__NQC__)

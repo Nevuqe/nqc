@@ -1,5 +1,5 @@
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Rob Wing
 #
@@ -90,12 +90,12 @@ libbe_create_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(atf_get_srcdir)

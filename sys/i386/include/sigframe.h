@@ -46,7 +46,7 @@ struct osigframe {
 	register_t	sf_signum;
 
 	/*
-	 * Either 'int' for old-style FreeBSD handler or 'siginfo_t *'
+	 * Either 'int' for old-style NQC handler or 'siginfo_t *'
 	 * pointing to sf_siginfo for SA_SIGINFO handlers.
 	 */
 	register_t	sf_arg2;
@@ -74,7 +74,7 @@ struct osigframe {
 };
 #endif
 #ifdef COMPAT_NQC4
-/* FreeBSD 4.x */
+/* NQC 4.x */
 struct freebsd4_sigframe {
 	register_t	sf_signum;
 	register_t	sf_siginfo;	/* code or pointer to sf_si */

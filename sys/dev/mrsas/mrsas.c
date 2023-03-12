@@ -30,10 +30,10 @@
  *
  * The views and conclusions contained in the software and documentation are
  * those of the authors and should not be interpreted as representing
- * official policies,either expressed or implied, of the FreeBSD Project.
+ * official policies,either expressed or implied, of the FreBSD Project.
  *
  * Send feedback to: <megaraidfbsd@avagotech.com> Mail to: AVAGO TECHNOLOGIES 1621
- * Barber Lane, Milpitas, CA 95035 ATTN: MegaRaid FreeBSD
+ * Barber Lane, Milpitas, CA 95035 ATTN: MegaRaid NQC
  *
  */
 
@@ -356,7 +356,7 @@ mrsas_probe(device_t dev)
 
 	if ((id = mrsas_find_ident(dev)) != NULL) {
 		if (first_ctrl) {
-			printf("AVAGO MegaRAID SAS FreeBSD mrsas driver version: %s\n",
+			printf("AVAGO MegaRAID SAS NQC mrsas driver version: %s\n",
 			    MRSAS_VERSION);
 			first_ctrl = 0;
 		}

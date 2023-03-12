@@ -1,6 +1,6 @@
 .Dd June 23 2020
 .Dt NTP_KEYS 5mdoc File Formats
-.Os FreeBSD 11.2-RELEASE_SI
+.Os NQC 11.2-RELEASE_SI
 .\"  EDIT THIS FILE WITH CAUTION  (ntp.mdoc)
 .\"
 .\"  It has been AutoGen-ed  June 23, 2020 at 02:20:28 AM by AutoGen 5.18.5
@@ -168,7 +168,7 @@ This program is released under the terms of the NTP license, <http://ntp.org/lic
 .Sh "BUGS"
 Please send bug reports to: http://bugs.ntp.org, bugs@ntp.org
 .Sh NOTES
-This document was derived from FreeBSD.
+This document was derived from NQC.
 .Pp
 This manual page was \fIAutoGen\fP\-erated from the \fBntp.keys\fP
 option definitions.

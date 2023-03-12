@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 Emmanuel Vadot <manu@FreeBSD.Org>
- * Copyright (c) 2021-2022 Bjoern A. Zeeb <bz@FreeBSD.ORG>
+ * Copyright (c) 2019 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2021-2022 Bjoern A. Zeeb <bz@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

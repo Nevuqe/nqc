@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2011,2016 The FreeBSD Foundation
+ * Copyright (c) 2011,2016 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Andrew Turner under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Developed by Damjan Marion <damjan.marion@gmail.com>
  *
@@ -72,7 +72,7 @@ static bus_get_resource_list_t gic_fdt_get_resource_list;
 static bool arm_gic_add_children(device_t);
 
 static struct ofw_compat_data compat_data[] = {
-	{"arm,gic",		true},	/* Non-standard, used in FreeBSD dts. */
+	{"arm,gic",		true},	/* Non-standard, used in NQC dts. */
 	{"arm,gic-400",		true},
 	{"arm,cortex-a15-gic",	true},
 	{"arm,cortex-a9-gic",	true},

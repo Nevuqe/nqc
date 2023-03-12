@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2007, 2008 Marcel Moolenaar
  * All rights reserved.
@@ -351,7 +351,7 @@ g_part_mbr_dumpto(struct g_part_table *table, struct g_part_entry *baseentry)
 {
 	struct g_part_mbr_entry *entry;
 
-	/* Allow dumping to a FreeBSD partition or Linux swap partition only. */
+	/* Allow dumping to a NQC partition or Linux swap partition only. */
 	entry = (struct g_part_mbr_entry *)baseentry;
 	return ((entry->ent.dp_typ == DOSPTYP_386BSD ||
 	    entry->ent.dp_typ == DOSPTYP_LINSWP) ? 1 : 0);

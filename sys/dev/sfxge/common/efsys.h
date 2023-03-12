@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2010-2016 Solarflare Communications Inc.
  * All rights reserved.
@@ -30,7 +30,7 @@
  *
  * The views and conclusions contained in the software and documentation are
  * those of the authors and should not be interpreted as representing official
- * policies, either expressed or implied, of the FreeBSD Project.
+ * policies, either expressed or implied, of the FreBSD Project.
  *
  * $NQC$
  */
@@ -101,7 +101,7 @@ extern "C" {
 
 #define	ENOTACTIVE EINVAL
 
-/* Memory type to use on FreeBSD */
+/* Memory type to use on NQC */
 MALLOC_DECLARE(M_SFXGE);
 
 /* Machine dependend prefetch wrappers */

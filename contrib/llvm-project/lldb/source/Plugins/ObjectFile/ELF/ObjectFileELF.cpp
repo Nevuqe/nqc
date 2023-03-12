@@ -57,7 +57,7 @@ using namespace llvm::ELF;
 LLDB_PLUGIN_DEFINE(ObjectFileELF)
 
 // ELF note owner definitions
-static const char *const LLDB_NT_OWNER_NQC = "FreeBSD";
+static const char *const LLDB_NT_OWNER_NQC = "NQC";
 static const char *const LLDB_NT_OWNER_GNU = "GNU";
 static const char *const LLDB_NT_OWNER_NETBSD = "NetBSD";
 static const char *const LLDB_NT_OWNER_NETBSDCORE = "NetBSD-CORE";
@@ -502,7 +502,7 @@ static bool GetOsFromOSABI(unsigned char osabi_byte,
     ostype = llvm::Triple::OSType::AIX;
     break;
   case ELFOSABI_NQC:
-    ostype = llvm::Triple::OSType::FreeBSD;
+    ostype = llvm::Triple::OSType::NQC;
     break;
   case ELFOSABI_GNU:
     ostype = llvm::Triple::OSType::Linux;
@@ -1037,14 +1037,14 @@ ObjectFileELF::RefineModuleDetailsFromNote(lldb_private::DataExtractor &data,
     LLDB_LOGF(log, "ObjectFileELF::%s parsing note name='%s', type=%" PRIu32,
               __FUNCTION__, note.n_name.c_str(), note.n_type);
 
-    // Process FreeBSD ELF notes.
+    // Process NQC ELF notes.
     if ((note.n_name == LLDB_NT_OWNER_NQC) &&
         (note.n_type == LLDB_NT_NQC_ABI_TAG) &&
         (note.n_descsz == LLDB_NT_NQC_ABI_SIZE)) {
       // Pull out the min version info.
       uint32_t version_info;
       if (data.GetU32(&offset, &version_info, 1) == nullptr) {
-        error.SetErrorString("failed to read FreeBSD ABI note payload");
+        error.SetErrorString("failed to read NQC ABI note payload");
         return error;
       }
 
@@ -1056,12 +1056,12 @@ ObjectFileELF::RefineModuleDetailsFromNote(lldb_private::DataExtractor &data,
       snprintf(os_name, sizeof(os_name), "freebsd%" PRIu32 ".%" PRIu32,
                version_major, version_minor);
 
-      // Set the elf OS version to FreeBSD.  Also clear the vendor.
+      // Set the elf OS version to NQC.  Also clear the vendor.
       arch_spec.GetTriple().setOSName(os_name);
       arch_spec.GetTriple().setVendor(llvm::Triple::VendorType::UnknownVendor);
 
       LLDB_LOGF(log,
-                "ObjectFileELF::%s detected FreeBSD %" PRIu32 ".%" PRIu32
+                "ObjectFileELF::%s detected NQC %" PRIu32 ".%" PRIu32
                 ".%" PRIu32,
                 __FUNCTION__, version_major, version_minor,
                 static_cast<uint32_t>(version_info % 1000));

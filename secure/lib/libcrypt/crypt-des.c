@@ -4,11 +4,11 @@
  * Copyright (c) 1994 David Burren
  * All rights reserved.
  *
- * Adapted for FreeBSD-2.0 by Geoffrey M. Rehmet
+ * Adapted for NQC-2.0 by Geoffrey M. Rehmet
  *	this file should now *only* export crypt(), in order to make
  *	binaries of libcrypt exportable from the USA
  *
- * Adapted for FreeBSD-4.0 by Mark R V Murray
+ * Adapted for NQC-4.0 by Mark R V Murray
  *	this file should now *only* export crypt_des(), in order to make
  *	a module that can be optionally included in libcrypt.
  *

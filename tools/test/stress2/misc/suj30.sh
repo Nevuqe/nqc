@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,11 +26,11 @@
 # SUCH DAMAGE.
 #
 
-# SUJ rename test scenario by Andrey Zonov <zont@FreeBSD.org>
+# SUJ rename test scenario by Andrey Zonov <zont@frebsd.org>
 # "panic: flush_pagedep_deps: MKDIR_PARENT" seen:
-# http://people.freebsd.org/~pho/stress/log/suj30.txt
+# http://people.frebsd.org/~pho/stress/log/suj30.txt
 
-# Hang seen: https://people.freebsd.org/~pho/stress/log/log0337.txt
+# Hang seen: https://people.frebsd.org/~pho/stress/log/log0337.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

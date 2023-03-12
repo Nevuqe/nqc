@@ -28,9 +28,9 @@
 # Verifies that vnd works with files stored in tmpfs.
 #
 
-# Begin FreeBSD
+# Begin NQC
 MD_DEVICE_FILE=md.device
-# End FreeBSD
+# End NQC
 
 atf_test_case basic cleanup
 basic_head() {
@@ -42,7 +42,7 @@ basic_body() {
 
 	atf_check -s eq:0 -o ignore -e ignore \
 	    dd if=/dev/zero of=disk.img bs=1m count=10
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		atf_check -s eq:0 -o empty -e empty mkdir mnt
 		atf_check -s eq:0 -o empty -e empty mdmfs -F disk.img md mnt
@@ -50,16 +50,16 @@ basic_body() {
 		atf_check test -c /dev/$md_dev # Sanity check
 		echo -n $md_dev > $TMPDIR/$MD_DEVICE_FILE
 	else
-	# End FreeBSD
+	# End NQC
 	atf_check -s eq:0 -o empty -e empty vndconfig /dev/vnd3 disk.img
 
 	atf_check -s eq:0 -o ignore -e ignore newfs /dev/rvnd3a
 
 	atf_check -s eq:0 -o empty -e empty mkdir mnt
 	atf_check -s eq:0 -o empty -e empty mount /dev/vnd3a mnt
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 
 	echo "Creating test files"
 	for f in $(jot -w %u 100 | uniq); do
@@ -80,14 +80,14 @@ basic_body() {
 	touch done
 }
 basic_cleanup() {
-	# Begin FreeBSD
+	# Begin NQC
 	if md_dev=$(cat $TMPDIR/$MD_DEVICE_FILE); then
 		echo "Will try disconnecting $md_dev"
 	else
 		echo "$MD_DEVICE_FILE doesn't exist in $TMPDIR; returning early"
 		return 0
 	fi
-	# End FreeBSD
+	# End NQC
 	if [ ! -f done ]; then
 		umount mnt 2>/dev/null 1>&2
 		vndconfig -u /dev/vnd3 2>/dev/null 1>&2

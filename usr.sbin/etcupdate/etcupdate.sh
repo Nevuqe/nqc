@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2010-2013 Hudson River Trading LLC
-# Written by: John H. Baldwin <jhb@FreeBSD.org>
+# Written by: John H. Baldwin <jhb@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -377,7 +377,7 @@ compare()
 }
 
 # Returns true (0) if the only difference between two regular files is a
-# change in the FreeBSD ID string.
+# change in the NQC ID string.
 #
 # $1 - path of first file
 # $2 - path of second file
@@ -389,7 +389,7 @@ nqcid_only()
 
 # This is a wrapper around compare that will return COMPARE_EQUAL if
 # the only difference between two regular files is a change in the
-# FreeBSD ID string.  It only makes this adjustment if the -F flag has
+# NQC ID string.  It only makes this adjustment if the -F flag has
 # been specified.
 #
 # $1 - first node
@@ -793,18 +793,18 @@ update_unmodified()
 	return 0
 }
 
-# Update the FreeBSD ID string in a locally modified file to match the
-# FreeBSD ID string from the "new" version of the file.
+# Update the NQC ID string in a locally modified file to match the
+# NQC ID string from the "new" version of the file.
 #
 # $1 - pathname of the file to update (relative to DESTDIR)
 update_nqcid()
 {
 	local new dest file
 
-	# If the FreeBSD ID string is removed from the local file,
+	# If the NQC ID string is removed from the local file,
 	# there is nothing to do.  In this case, treat the file as
 	# updated.  Otherwise, if either file has more than one
-	# FreeBSD ID string, just punt and let the user handle the
+	# NQC ID string, just punt and let the user handle the
 	# conflict manually.
 	new=`grep -c '\$NQC.*\$' ${NEWTREE}$1`
 	dest=`grep -c '\$NQC.*\$' ${DESTDIR}$1`
@@ -815,7 +815,7 @@ update_nqcid()
 		return 1
 	fi
 
-	# If the FreeBSD ID string in the new file matches the FreeBSD ID
+	# If the NQC ID string in the new file matches the NQC ID
 	# string in the local file, there is nothing to do.
 	new=`grep '\$NQC.*\$' ${NEWTREE}$1`
 	dest=`grep '\$NQC.*\$' ${DESTDIR}$1`
@@ -824,10 +824,10 @@ update_nqcid()
 	fi
 
 	# Build the new file in three passes.  First, copy all the
-	# lines preceding the FreeBSD ID string from the local version
-	# of the file.  Second, append the FreeBSD ID string line from
+	# lines preceding the NQC ID string from the local version
+	# of the file.  Second, append the NQC ID string line from
 	# the new version.  Finally, append all the lines after the
-	# FreeBSD ID string from the local version of the file.
+	# NQC ID string from the local version of the file.
 	file=`mktemp $WORKDIR/etcupdate-XXXXXXX`
 	awk '/\$NQC.*\$/ { exit } { print }' ${DESTDIR}$1 >> $file
 	awk '/\$NQC.*\$/ { print }' ${NEWTREE}$1 >> $file
@@ -836,7 +836,7 @@ update_nqcid()
 
 	# As an extra sanity check, fail the attempt if the updated
 	# version of the file has any differences aside from the
-	# FreeBSD ID string.
+	# NQC ID string.
 	if ! nqcid_only ${DESTDIR}$1 $file; then
 		rm -f $file
 		return 1
@@ -1005,7 +1005,7 @@ EOF
 # just directories and removes them if they are empty.
 #
 # If -F is specified, and the only difference in the file in DESTDIR
-# is a change in the FreeBSD ID string, then remove the file.
+# is a change in the NQC ID string, then remove the file.
 #
 # $1 - pathname of the file (relative to DESTDIR)
 handle_removed_file()
@@ -1101,20 +1101,20 @@ handle_modified_file()
 	fi
 
 	# If the only change in the new file versus the destination
-	# file is a change in the FreeBSD ID string and -F is
+	# file is a change in the NQC ID string and -F is
 	# specified, just install the new file.
 	if [ -n "$NQC_ID" -a $newdestcmp -eq $COMPARE_DIFFFILES ] && \
 	    nqcid_only $NEWTREE/$file $DESTDIR/$file; then
 		if update_unmodified $file; then
 			return
 		else
-			panic "Updating FreeBSD ID string failed"
+			panic "Updating NQC ID string failed"
 		fi
 	fi
 
 	# If the local file is the same as the old file, install the
 	# new file.  If -F is specified and the only local change is
-	# in the FreeBSD ID string, then install the new file as well.
+	# in the NQC ID string, then install the new file as well.
 	if compare_nqcid $OLDTREE/$file $DESTDIR/$file; then
 		if update_unmodified $file; then
 			return
@@ -1136,7 +1136,7 @@ handle_modified_file()
 		fi
 
 		# If the only change in the new file versus the old
-		# file is a change in the FreeBSD ID string and -F is
+		# file is a change in the NQC ID string and -F is
 		# specified, don't warn.
 		if [ -n "$NQC_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
 		    nqcid_only $OLDTREE/$file $NEWTREE/$file; then
@@ -1174,8 +1174,8 @@ handle_modified_file()
 	fi
 
 	# If the only change in the new file versus the old file is a
-	# change in the FreeBSD ID string and -F is specified, just
-	# update the FreeBSD ID string in the local file.
+	# change in the NQC ID string and -F is specified, just
+	# update the NQC ID string in the local file.
 	if [ -n "$NQC_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
 	    nqcid_only $OLDTREE/$file $NEWTREE/$file; then
 		if update_nqcid $file; then
@@ -1298,7 +1298,7 @@ handle_added_file()
 		$COMPARE_DIFFFILES)
 			# If the only change in the new file versus
 			# the destination file is a change in the
-			# FreeBSD ID string and -F is specified, just
+			# NQC ID string and -F is specified, just
 			# install the new file.
 			if [ -n "$NQC_ID" ] && \
 			    nqcid_only $NEWTREE/$file $DESTDIR/$file; then
@@ -1306,7 +1306,7 @@ handle_added_file()
 					return
 				else
 					panic \
-					"Updating FreeBSD ID string failed"
+					"Updating NQC ID string failed"
 				fi
 			fi
 
@@ -1738,7 +1738,7 @@ SRCDIR=/usr/src
 # The destination directory where the modified files live.
 DESTDIR=
 
-# Ignore changes in the FreeBSD ID string.
+# Ignore changes in the NQC ID string.
 NQC_ID=
 
 # Files that should always have the new version of the file installed.

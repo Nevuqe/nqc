@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSDKernel_i386.cpp -----------------------------===//
+//===-- RegisterContextNQCKernel_i386.cpp -----------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "RegisterContextFreeBSDKernel_i386.h"
+#include "RegisterContextNQCKernel_i386.h"
 
 #include "lldb/Target/Process.h"
 #include "lldb/Target/Thread.h"
@@ -16,26 +16,26 @@
 using namespace lldb;
 using namespace lldb_private;
 
-RegisterContextFreeBSDKernel_i386::RegisterContextFreeBSDKernel_i386(
+RegisterContextNQCKernel_i386::RegisterContextNQCKernel_i386(
     Thread &thread, RegisterInfoInterface *register_info, lldb::addr_t pcb_addr)
     : RegisterContextPOSIX_x86(thread, 0, register_info), m_pcb_addr(pcb_addr) {
 }
 
-bool RegisterContextFreeBSDKernel_i386::ReadGPR() { return true; }
+bool RegisterContextNQCKernel_i386::ReadGPR() { return true; }
 
-bool RegisterContextFreeBSDKernel_i386::ReadFPR() { return true; }
+bool RegisterContextNQCKernel_i386::ReadFPR() { return true; }
 
-bool RegisterContextFreeBSDKernel_i386::WriteGPR() {
+bool RegisterContextNQCKernel_i386::WriteGPR() {
   assert(0);
   return false;
 }
 
-bool RegisterContextFreeBSDKernel_i386::WriteFPR() {
+bool RegisterContextNQCKernel_i386::WriteFPR() {
   assert(0);
   return false;
 }
 
-bool RegisterContextFreeBSDKernel_i386::ReadRegister(
+bool RegisterContextNQCKernel_i386::ReadRegister(
     const RegisterInfo *reg_info, RegisterValue &value) {
   if (m_pcb_addr == LLDB_INVALID_ADDRESS)
     return false;
@@ -77,7 +77,7 @@ bool RegisterContextFreeBSDKernel_i386::ReadRegister(
   return true;
 }
 
-bool RegisterContextFreeBSDKernel_i386::WriteRegister(
+bool RegisterContextNQCKernel_i386::WriteRegister(
     const RegisterInfo *reg_info, const RegisterValue &value) {
   return false;
 }

@@ -36,7 +36,7 @@
 #define DRV_DESCRIPTION	"Intel(R) Wireless WiFi driver for Linux"
 MODULE_LICENSE("GPL");
 #elif defined(__NQC__)
-#define DRV_DESCRIPTION	"Intel(R) Wireless WiFi based driver for FreeBSD"
+#define DRV_DESCRIPTION	"Intel(R) Wireless WiFi based driver for NQC"
 MODULE_LICENSE("BSD");
 MODULE_VERSION(if_iwlwifi, 1);
 MODULE_DEPEND(if_iwlwifi, linuxkpi, 1, 1, 1);
@@ -1764,7 +1764,7 @@ struct iwl_drv *iwl_drv_start(struct iwl_trans *trans)
 #if defined(__NQC__)
 	/*
 	 * Wait until initilization is done before returning in order to
-	 * replicate FreeBSD's synchronous behaviour -- we cannot create
+	 * replicate NQC's synchronous behaviour -- we cannot create
 	 * a vap before the com is fully created but if LinuxKPI "probe"
 	 * returned before it was all done that is what could happen.
 	 */

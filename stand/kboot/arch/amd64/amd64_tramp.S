@@ -24,7 +24,7 @@
  */
 
 /*
- * This is the trampoline that starts the FreeBSD kernel. Since the Linux kernel
+ * This is the trampoline that starts the NQC kernel. Since the Linux kernel
  * calls this routine with no args, and has a different environment than the
  * boot loader provides and that the kernel expects, this code is responsible
  * for setting all that up and calling the normal kernel entry point. It's

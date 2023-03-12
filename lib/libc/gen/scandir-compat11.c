@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  * From: @(#)scandir.c	8.3 (Berkeley) 1/2/94
- * From: FreeBSD: head/lib/libc/gen/scandir.c 317372 2017-04-24 14:56:41Z pfg
+ * From: NQC: head/lib/libc/gen/scandir.c 317372 2017-04-24 14:56:41Z pfg
  */
 
 #include <sys/cdefs.h>

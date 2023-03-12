@@ -30,7 +30,7 @@
 # inode but will be placed in its own data fragment.
 
 # "panic: softdep_deallocate_dependencies: dangling deps" seen with SU:
-# https://people.freebsd.org/~pho/stress/log/symlink4.txt
+# https://people.frebsd.org/~pho/stress/log/symlink4.txt
 # Fixed by r327821
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

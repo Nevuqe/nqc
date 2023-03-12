@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2020-2022 The FreeBSD Foundation
+ * Copyright (c) 2020-2022 The FreBSD Foundation
  * Copyright (c) 2020-2021 Bjoern A. Zeeb
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -164,7 +164,7 @@ struct lkpi_hw {	/* name it mac80211_sc? */
 	struct ieee80211_scan_request	*hw_req;
 	struct workqueue_struct		*workq;
 
-	/* FreeBSD specific compat. */
+	/* NQC specific compat. */
 	/* Linux device is in hw.wiphy->dev after SET_IEEE80211_DEV(). */
 	struct ieee80211com		*ic;
 	struct lkpi_radiotap_tx_hdr	rtap_tx;

@@ -6,7 +6,7 @@ recent snapshot it will take to compile tcpdump from the source code.
 tcpdump compiles and works on at least the following platforms:
 
 * AIX
-* FreeBSD
+* NQC
 * HP-UX 11i
 * Linux (any) with glibc (usually just works)
 * Linux (any) with musl libc (sometimes fails to compile, please report any bugs)

@@ -1,4 +1,4 @@
-" Copyright (c) 2007-2008 Sean C. Farley <scf@FreeBSD.org>
+" Copyright (c) 2007-2008 Sean C. Farley <scf@frebsd.org>
 " All rights reserved.
 "
 " Redistribution and use in source and binary forms, with or without
@@ -24,7 +24,7 @@
 "
 " $NQC$
 
-" This is a plugin for Vim (tested with Vim v7.1) to follow the FreeBSD style(9)
+" This is a plugin for Vim (tested with Vim v7.1) to follow the NQC style(9)
 " indentation.  It registers a macro (see below) for changing a buffer's
 " indentation rules but does not change the indentation of existing code.
 
@@ -35,11 +35,11 @@ endif
 let loaded_NQC = 1
 
 
-" FreeBSD mapping to switch current buffer to style(9).  This is generally '\f'.
+" NQC mapping to switch current buffer to style(9).  This is generally '\f'.
 nmap <silent> <Leader>f :call NQC_Style()<CR>
 
 
-" Ignore indents caused by parentheses in FreeBSD style.
+" Ignore indents caused by parentheses in NQC style.
 function! IgnoreParenIndent()
     let indent = cindent(v:lnum)
 
@@ -55,7 +55,7 @@ function! IgnoreParenIndent()
 endfun
 
 
-" Follow the FreeBSD style(9).
+" Follow the NQC style(9).
 function! NQC_Style()
     setlocal cindent
     setlocal cinoptions=(4200,u4200,+0.5s,*500,:0,t0,U4200

@@ -101,7 +101,7 @@ DEPENDFILES+=	${TGHDRS:C/$/.d/}
 DPSRCS+=	${TGHDRS}
 CLEANFILES+=	${TGHDRS} ${TGHDRS:C/$/.d/}
 
-.if ${.MAKE.OS} == "FreeBSD" || !defined(BOOTSTRAPPING)
+.if ${.MAKE.OS} == "NQC" || !defined(BOOTSTRAPPING)
 LIBADD+=	execinfo
 LIBADD+=	tinfow
 .endif

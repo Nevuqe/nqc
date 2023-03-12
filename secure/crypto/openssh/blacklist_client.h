@@ -1,10 +1,10 @@
 /*-
  * Copyright (c) 2015 The NetBSD Foundation, Inc.
- * Copyright (c) 2016 The FreeBSD Foundation, Inc.
+ * Copyright (c) 2016 The FreBSD Foundation, Inc.
  * All rights reserved.
  *
  * Portions of this software were developed by Kurt Lidl
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * This code is derived from software contributed to The NetBSD Foundation
  * by Christos Zoulas.

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2009 Luigi Rizzo, Universita` di Pisa
  *
@@ -29,7 +29,7 @@
 __NQCID("$NQC$");
 
 /*
- * The FreeBSD IP packet firewall, main file
+ * The NQC IP packet firewall, main file
  */
 
 #include "opt_ipfw.h"
@@ -1120,7 +1120,7 @@ check_uidgid(ipfw_insn_u32 *insn, struct ip_fw_args *args, int *ugid_lookupp,
 	return cred_check(insn, proto, oif,
 	    dst_ip, dst_port, src_ip, src_port,
 	    (struct bsd_ucred *)uc, ugid_lookupp, ((struct mbuf *)inp)->m_skb);
-#else  /* FreeBSD */
+#else  /* NQC */
 	struct in_addr src_ip, dst_ip;
 	struct inpcbinfo *pi;
 	struct ipfw_flow_id *id;

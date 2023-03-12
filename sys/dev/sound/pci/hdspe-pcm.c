@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012-2021 Ruslan Bukin <br@bsdpad.com>
  * All rights reserved.
@@ -27,7 +27,7 @@
  */
 
 /*
- * RME HDSPe driver for FreeBSD (pcm-part).
+ * RME HDSPe driver for NQC (pcm-part).
  * Supported cards: AIO, RayDAT.
  */
 

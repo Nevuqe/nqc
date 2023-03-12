@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -29,7 +29,7 @@
 
 # "panic: caller failed to provide space -546873344 at address 0x20a00000"
 # seen.
-# https://people.freebsd.org/~pho/stress/log/indir_trunc.txt
+# https://people.frebsd.org/~pho/stress/log/indir_trunc.txt
 # Fixed by r348968
 
 # Test scenario inspired by:

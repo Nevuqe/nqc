@@ -220,7 +220,7 @@ noparent:		mtree_err("no parent node");
 				 */
 			/*
 			 * Allow a bare "." root node by forcing it to
-			 * type=dir for compatibility with FreeBSD.
+			 * type=dir for compatibility with NQC.
 			 */
 			if (strcmp(centry->name, ".") == 0 && centry->type == 0)
 				centry->type = F_DIR;

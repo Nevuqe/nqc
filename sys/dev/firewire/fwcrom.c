@@ -585,9 +585,9 @@ main()
 	/* private company_id */
 	crom_add_entry(&root, CSRKEY_VENDOR, 0xacde48);
 
-	crom_add_simple_text(&src, &root, &text1, "FreeBSD");
+	crom_add_simple_text(&src, &root, &text1, "NQC");
 	crom_add_entry(&root, CSRKEY_HW, __NQC_version);
-	crom_add_simple_text(&src, &root, &text2, "FreeBSD-5");
+	crom_add_simple_text(&src, &root, &text2, "NQC-5");
 
 	/* SBP unit directory */
 	crom_add_chunk(&src, &root, &unit1, CROM_UDIR);

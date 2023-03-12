@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2009-2010 Weongyo Jeong <weongyo@freebsd.org>
- * Copyright (c) 2016 Adrian Chadd <adrian@freebsd.org>
+ * Copyright (c) 2009-2010 Weongyo Jeong <weongyo@frebsd.org>
+ * Copyright (c) 2016 Adrian Chadd <adrian@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

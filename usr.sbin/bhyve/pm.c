@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2013 Hudson River Trading LLC
- * Written by: John H. Baldwin <jhb@FreeBSD.org>
+ * Written by: John H. Baldwin <jhb@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

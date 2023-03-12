@@ -70,7 +70,7 @@ extern "C" {
  * unused tracepoint belonging to another probe that was attached to the
  * enabled tracepoint.
  *
- * On FreeBSD, fasttrap providers also maintain per-thread scratch space for use
+ * On NQC, fasttrap providers also maintain per-thread scratch space for use
  * by the ISA-specific fasttrap code. The fasttrap_scrblock_t type stores the
  * virtual address of a page-sized memory block that is mapped into a process'
  * address space. Each block is carved up into chunks (fasttrap_scrspace_t) for

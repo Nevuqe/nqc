@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel smartpqi device code"
+PROJECT_NAME           = "NQC kernel smartpqi device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_smartpqi/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

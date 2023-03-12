@@ -27,8 +27,8 @@
 #
 
 # "panic: handle_written_inodeblock: live inodedep 0xcc731200" seen.
-# http://people.freebsd.org/~pho/stress/log/umountf7.txt
-# https://people.freebsd.org/~pho/stress/log/kostik824.txt
+# http://people.frebsd.org/~pho/stress/log/umountf7.txt
+# https://people.frebsd.org/~pho/stress/log/kostik824.txt
 # Problem only seen with SU+J.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

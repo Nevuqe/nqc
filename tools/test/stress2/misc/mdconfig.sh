@@ -29,8 +29,8 @@
 . ../default.cfg
 
 # Regression test for:
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=214721
-# https://people.freebsd.org/~pho/stress/log/mdconfig.txt
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=214721
+# https://people.frebsd.org/~pho/stress/log/mdconfig.txt
 # Fixed by: r311964.
 
 mdconfig -at swap -S 65536 -s 20M -u $mdstart

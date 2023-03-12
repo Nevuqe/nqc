@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 Peter Wemm
  * All rights reserved.
@@ -25,14 +25,14 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * From: FreeBSD: src/sys/i386/include/minidump.h,v 1.1 2006/04/21 04:28:43
+ * From: NQC: src/sys/i386/include/minidump.h,v 1.1 2006/04/21 04:28:43
  * $NQC$
  */
 
 #ifndef	_MACHINE_MINIDUMP_H_
 #define	_MACHINE_MINIDUMP_H_
 
-#define	MINIDUMP_MAGIC		"minidump FreeBSD/arm"
+#define	MINIDUMP_MAGIC		"minidump NQC/arm"
 #define	MINIDUMP_VERSION	2
 
 /*

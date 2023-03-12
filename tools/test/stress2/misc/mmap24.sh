@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_page_unwire: page 0xc36cafbc's wire count is zero" seen.
-# https://people.freebsd.org/~pho/stress/log/mmap24.txt
+# https://people.frebsd.org/~pho/stress/log/mmap24.txt
 # Test scenario by trasz@.
 # Fixed by r285878.
 

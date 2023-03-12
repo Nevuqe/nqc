@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -45,7 +45,7 @@
 #include <endian.h>
 #endif
 
-/* Linux uses a double underscore, FreeBSD a single one */
+/* Linux uses a double underscore, NQC a single one */
 #define _LITTLE_ENDIAN __LITTLE_ENDIAN
 #define _BIG_ENDIAN __BIG_ENDIAN
 #define _BYTE_ORDER __BYTE_ORDER

@@ -18,8 +18,8 @@
  **********************************************************************/
 
 /*
- * Adapted from the original sources for FreeBSD and timecounters by:
- * Poul-Henning Kamp <phk@FreeBSD.org>.
+ * Adapted from the original sources for NQC and timecounters by:
+ * Poul-Henning Kamp <phk@frebsd.org>.
  *
  * The 32bit version of the "LP" macros seems a bit past its "sell by" 
  * date so I have retained only the 64bit version and included it directly

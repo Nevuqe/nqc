@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 1998 Doug Rabson
- * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@FreeBSD.org>
+ * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

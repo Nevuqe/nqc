@@ -1,4 +1,4 @@
-# Make `routed` for FreeBSD
+# Make `routed` for NQC
 # $NQC$
 
 PACKAGE=runtime

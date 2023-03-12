@@ -34,7 +34,7 @@
  * THE USE OF THIS SOFTWARE, EVEN IF PACKET DESIGN IS ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  * 
- * Author: Archie Cobbs <archie@freebsd.org>
+ * Author: Archie Cobbs <archie@frebsd.org>
  *
  * $NQC$
  */

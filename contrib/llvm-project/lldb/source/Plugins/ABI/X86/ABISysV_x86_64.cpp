@@ -90,7 +90,7 @@ ABISysV_x86_64::CreateInstance(lldb::ProcessSP process_sp, const ArchSpec &arch)
         return ABISP();
       }
     case llvm::Triple::OSType::Darwin:
-    case llvm::Triple::OSType::FreeBSD:
+    case llvm::Triple::OSType::NQC:
     case llvm::Triple::OSType::Linux:
     case llvm::Triple::OSType::MacOSX:
     case llvm::Triple::OSType::NetBSD:

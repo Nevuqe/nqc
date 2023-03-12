@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2004 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2004 Pawel Jakub Dawidek <pjd@frebsd.org>
  * Copyright (c) 2006 Tobias Reifenberger
  * All rights reserved.
  *

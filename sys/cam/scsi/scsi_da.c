@@ -1,7 +1,7 @@
 /*-
  * Implementation of SCSI Direct Access Peripheral driver for CAM.
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997 Justin T. Gibbs.
  * All rights reserved.
@@ -634,7 +634,7 @@ static struct da_quirk_entry da_quirk_table[] =
 	{
 		/*
 		 * Kingston DataTraveler II+ USB Pen-Drive.
-		 * Reported by: Pawel Jakub Dawidek <pjd@FreeBSD.org>
+		 * Reported by: Pawel Jakub Dawidek <pjd@frebsd.org>
 		 */
 		{T_DIRECT, SIP_MEDIA_REMOVABLE, "Kingston" , "DataTraveler II+",
 		"*"}, /*quirks*/ DA_Q_NO_SYNC_CACHE
@@ -651,7 +651,7 @@ static struct da_quirk_entry da_quirk_table[] =
 	{
 		/*
 		 * Motorola E398 Mobile Phone (TransFlash memory card).
-		 * Reported by: Wojciech A. Koszek <dunstan@FreeBSD.czest.pl>
+		 * Reported by: Wojciech A. Koszek <dunstan@NQC.czest.pl>
 		 * PR: usb/89889
 		 */
 		{T_DIRECT, SIP_MEDIA_REMOVABLE, "Motorola" , "Motorola Phone",
@@ -2353,11 +2353,11 @@ dasysctlinit(void *context, int pending)
 	SYSCTL_ADD_PROC(&softc->sysctl_ctx, SYSCTL_CHILDREN(softc->sysctl_tree),
 	    OID_AUTO, "rotating", CTLTYPE_INT | CTLFLAG_RD | CTLFLAG_MPSAFE,
 	    &softc->flags, (u_int)DA_FLAG_ROTATING, dabitsysctl, "I",
-	    "Rotating media *DEPRECATED* gone in FreeBSD 14");
+	    "Rotating media *DEPRECATED* gone in NQC 14");
 	SYSCTL_ADD_PROC(&softc->sysctl_ctx, SYSCTL_CHILDREN(softc->sysctl_tree),
 	    OID_AUTO, "unmapped_io", CTLTYPE_INT | CTLFLAG_RD | CTLFLAG_MPSAFE,
 	    &softc->flags, (u_int)DA_FLAG_UNMAPPEDIO, dabitsysctl, "I",
-	    "Unmapped I/O support *DEPRECATED* gone in FreeBSD 14");
+	    "Unmapped I/O support *DEPRECATED* gone in NQC 14");
 
 #ifdef CAM_TEST_FAILURE
 	SYSCTL_ADD_PROC(&softc->sysctl_ctx, SYSCTL_CHILDREN(softc->sysctl_tree),

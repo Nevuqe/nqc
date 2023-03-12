@@ -28,7 +28,7 @@
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
-# mv <nullfs src> <origin src> removes the file. This is OK on FreeBSD.
+# mv <nullfs src> <origin src> removes the file. This is OK on NQC.
 # This is handled on Linux with "mount --bind".
 
 . ../default.cfg

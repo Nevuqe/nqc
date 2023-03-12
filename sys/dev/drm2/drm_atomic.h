@@ -2,12 +2,12 @@
  * \file drm_atomic.h
  * Atomic operations used in the DRM which may or may not be provided by the OS.
  * 
- * \author Eric Anholt <anholt@FreeBSD.org>
+ * \author Eric Anholt <anholt@frebsd.org>
  */
 
 /*-
  * Copyright 2004 Eric Anholt
- * Copyright 2013 Jung-uk Kim <jkim@FreeBSD.org>
+ * Copyright 2013 Jung-uk Kim <jkim@frebsd.org>
  * All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a

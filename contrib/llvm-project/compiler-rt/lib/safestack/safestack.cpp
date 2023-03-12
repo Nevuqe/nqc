@@ -29,7 +29,7 @@ using namespace safestack;
 // the same mechanism as currently being used by the traditional stack
 // protector pass to store the stack guard (see getStackCookieLocation()
 // function above). Doing so requires changing the tcbhead_t struct in glibc
-// on Linux and tcb struct in libc on FreeBSD.
+// on Linux and tcb struct in libc on NQC.
 //
 // For now, store it in a thread-local variable.
 extern "C" {

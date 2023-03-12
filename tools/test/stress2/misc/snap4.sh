@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008, 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008, 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
 # Test with snapshot file unlinked before unmount.
 
 # "panic: snapacct_ufs2: bad block" seen:
-# https://people.freebsd.org/~pho/stress/log/snap4.txt
+# https://people.frebsd.org/~pho/stress/log/snap4.txt
 
 . ../default.cfg
 

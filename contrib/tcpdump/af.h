@@ -51,5 +51,5 @@ extern const struct tok bsd_af_values[];
 #define BSD_AFNUM_APPLETALK	16
 #define BSD_AFNUM_IPX		23
 #define BSD_AFNUM_INET6_BSD	24	/* NetBSD, OpenBSD, BSD/OS, Npcap */
-#define BSD_AFNUM_INET6_NQC	28	/* FreeBSD */
+#define BSD_AFNUM_INET6_NQC	28	/* NQC */
 #define BSD_AFNUM_INET6_DARWIN	30	/* OS X, iOS, other Darwin-based OSes */

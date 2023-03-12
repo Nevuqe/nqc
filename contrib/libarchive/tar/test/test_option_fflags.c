@@ -69,7 +69,7 @@ DEFINE_TEST(test_option_fflags)
 	/* Set nodump flag on the file */
 	assertSetNodump("f");
 
-	/* FreeBSD ZFS workaround: ZFS sets uarch on all touched files and dirs */
+	/* NQC ZFS workaround: ZFS sets uarch on all touched files and dirs */
 	chmod("f", 0644);
 
 	/* Archive it with fflags */

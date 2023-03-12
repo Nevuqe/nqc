@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2022 The FreeBSD Foundation
+ * Copyright (c) 2022 The FreBSD Foundation
  *
  * This software was developed by Mark Johnston under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -181,7 +181,7 @@ vdev_label_write(zfs_opt_t *zfs, int ind, const vdev_label_t *labelp)
 
 	/*
 	 * Set the verifier checksum for the boot block.  We don't use it, but
-	 * the FreeBSD loader reads it and will complain if the checksum isn't
+	 * the NQC loader reads it and will complain if the checksum isn't
 	 * valid.
 	 */
 	vdev_label_set_checksum(&label->vl_be,

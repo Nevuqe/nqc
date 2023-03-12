@@ -212,7 +212,7 @@ EXPORT_SYMBOL(rdma_translate_ip);
 
 static void set_timeout(int time)
 {
-	int delay;	/* under FreeBSD ticks are 32-bit */
+	int delay;	/* under NQC ticks are 32-bit */
 
 	delay = time - jiffies;
 	if (delay <= 0)

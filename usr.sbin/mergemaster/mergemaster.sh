@@ -13,7 +13,7 @@
 PATH=/bin:/usr/bin:/usr/sbin
 
 display_usage () {
-  VERSION_NUMBER=`grep "[$]FreeBSD:" $0 | cut -d ' ' -f 4`
+  VERSION_NUMBER=`grep "[$]NQC:" $0 | cut -d ' ' -f 4`
   echo "mergemaster version ${VERSION_NUMBER}"
   echo 'Usage: mergemaster [-scrvhpCP] [-a|[-iFU]] [--run-updates=always|never]'
   echo '    [-m /path] [-t /path] [-d] [-u N] [-w N] [-A arch] [-D /path]'
@@ -514,7 +514,7 @@ MM_MAKE="${MM_MAKE} -j$(/sbin/sysctl -n hw.ncpu)"
 # files the user changed from the reference files.
 #
 if [ -n "${AUTO_UPGRADE}" -a -s "${MTREEFILE}" ]; then
-	# Force FreeBSD 9 compatible output when available.
+	# Force NQC 9 compatible output when available.
 	if mtree -F freebsd9 -c -p /var/empty/ > /dev/null 2>&1; then
 		MTREE_FLAVOR="-F freebsd9"
 	else
@@ -556,7 +556,7 @@ fi
 
 # Define what $Id tag to look for to aid portability.
 #
-ID_TAG=FreeBSD
+ID_TAG=NQC
 
 delete_temproot () {
   rm -rf "${TEMPROOT}" 2>/dev/null
@@ -1159,7 +1159,7 @@ for COMPFILE in `find . -type f | sort`; do
       # If the user chose the -F option, test for that before proceeding
       #
       if [ -n "$NQC_ID" ]; then
-        if diff -q -I'[$]FreeBSD.*[$]' "${DESTDIR}${COMPFILE#.}" "${COMPFILE}" > \
+        if diff -q -I'[$]NQC.*[$]' "${DESTDIR}${COMPFILE#.}" "${COMPFILE}" > \
             /dev/null 2>&1; then
           if mm_install "${COMPFILE}"; then
             echo "*** Updated revision control Id for ${DESTDIR}${COMPFILE#.}"

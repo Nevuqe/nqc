@@ -40,8 +40,8 @@ EOF
 	ASSUME_ALWAYS_YES=true INSTALL_AS_USER=true pkg \
 	    -o ABI_FILE=$OBJTOP/bin/sh/sh \
 	    -C ${ROOTDIR}/pkg.conf -r ${ROOTDIR} install \
-	    FreeBSD-kernel-generic FreeBSD-bootloader \
-	    FreeBSD-clibs FreeBSD-runtime
+	    NQC-kernel-generic NQC-bootloader \
+	    NQC-clibs NQC-runtime
 
 	# Put loader in standard EFI location.
 	mv ${ROOTDIR}/boot/loader.efi ${ROOTDIR}/efi/boot/$EFIBOOT

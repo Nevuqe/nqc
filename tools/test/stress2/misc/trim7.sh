@@ -28,7 +28,7 @@
 
 # "panic: Lock Per-Filesystem Softdep Lock not exclusively locked @
 #  ../../../ufs/ffs/ffs_softdep.c:1950" seen.
-# https://people.freebsd.org/~pho/stress/log/trim7.txt
+# https://people.frebsd.org/~pho/stress/log/trim7.txt
 # Fixed by: r297206.
 
 # Test scenario by: Nick Evans <nevans@talkpoint.com>

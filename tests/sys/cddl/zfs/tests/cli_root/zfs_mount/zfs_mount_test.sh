@@ -142,7 +142,7 @@ zfs_mount_005_pos_head()
 }
 zfs_mount_005_pos_body()
 {
-	[[ `uname -s` = "FreeBSD" ]] && atf_skip "Unlike Illumos, FreeBSD allows the behavior the prohibition of which is tested by this testcase"
+	[[ `uname -s` = "NQC" ]] && atf_skip "Unlike Illumos, NQC allows the behavior the prohibition of which is tested by this testcase"
 	. $(atf_get_srcdir)/../../../include/default.cfg
 	. $(atf_get_srcdir)/zfs_mount.kshlib
 	. $(atf_get_srcdir)/zfs_mount.cfg
@@ -169,7 +169,7 @@ zfs_mount_006_pos_head()
 }
 zfs_mount_006_pos_body()
 {
-	[[ `uname -s` = "FreeBSD" ]] && atf_skip "Unlike Illumos, FreeBSD allows the behavior the prohibition of which is tested by this testcase"
+	[[ `uname -s` = "NQC" ]] && atf_skip "Unlike Illumos, NQC allows the behavior the prohibition of which is tested by this testcase"
 	. $(atf_get_srcdir)/../../../include/default.cfg
 	. $(atf_get_srcdir)/zfs_mount.kshlib
 	. $(atf_get_srcdir)/zfs_mount.cfg
@@ -279,7 +279,7 @@ zfs_mount_010_neg_head()
 }
 zfs_mount_010_neg_body()
 {
-	[[ `uname -s` = "FreeBSD" ]] && atf_skip "Unlike Illumos, FreeBSD allows the behavior the prohibition of which is tested by this testcase"
+	[[ `uname -s` = "NQC" ]] && atf_skip "Unlike Illumos, NQC allows the behavior the prohibition of which is tested by this testcase"
 	. $(atf_get_srcdir)/../../../include/default.cfg
 	. $(atf_get_srcdir)/zfs_mount.kshlib
 	. $(atf_get_srcdir)/zfs_mount.cfg

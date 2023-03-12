@@ -10,11 +10,11 @@
  */
 
 /*
- * Copyright 2017 Mark Johnston <markj@FreeBSD.org>
+ * Copyright 2017 Mark Johnston <markj@frebsd.org>
  */
 
 /*
- * A regression test for FreeBSD r322773. 100^9 fits in 64 bits, but
+ * A regression test for NQC r322773. 100^9 fits in 64 bits, but
  * llquantize() will create buckets up to 100^{10}, which does not fit.
  */
 

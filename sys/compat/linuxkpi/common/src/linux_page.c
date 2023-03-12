@@ -395,7 +395,7 @@ lkpi_io_mapping_map_user(struct io_mapping *iomap,
 }
 
 /*
- * Although FreeBSD version of unmap_mapping_range has semantics and types of
+ * Although NQC version of unmap_mapping_range has semantics and types of
  * parameters compatible with Linux version, the values passed in are different
  * @obj should match to vm_private_data field of vm_area_struct returned by
  *      mmap file operation handler, see linux_file_mmap_single() sources

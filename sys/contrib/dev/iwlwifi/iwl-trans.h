@@ -209,7 +209,7 @@ enum iwl_error_event_table_status {
  * @data: array of chunks that composes the data of the host command
  * @resp_pkt: response packet, if %CMD_WANT_SKB was set
  * @_rx_page_order: (internally used to free response packet);
- *      FreeBSD uses _page instead.
+ *      NQC uses _page instead.
  * @_rx_page_addr: (internally used to free response packet)
  * @flags: can be CMD_*
  * @len: array of the lengths of the chunks in data

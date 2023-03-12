@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2009 Sam Leffler, Errno Consulting
  * All rights reserved.
@@ -418,7 +418,7 @@ struct ath_tx_radiotap_header {
 #define DFS_PARAM_HEIGHT	3
 #define DFS_PARAM_PRSSI		4
 #define DFS_PARAM_INBAND	5
-#define DFS_PARAM_NOL		6	/* XXX not used in FreeBSD */
+#define DFS_PARAM_NOL		6	/* XXX not used in NQC */
 #define DFS_PARAM_RELSTEP_EN	7
 #define DFS_PARAM_RELSTEP	8
 #define DFS_PARAM_RELPWR_EN	9
@@ -428,7 +428,7 @@ struct ath_tx_radiotap_header {
 #define DFS_PARAM_BLOCKRADAR	13
 #define DFS_PARAM_MAXRSSI_EN	14
 
-/* FreeBSD-specific start at 32 */
+/* NQC-specific start at 32 */
 #define	DFS_PARAM_ENABLE	32
 #define	DFS_PARAM_EN_EXTCH	33
 

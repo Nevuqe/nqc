@@ -193,7 +193,7 @@ Linux)
 	NEWFS_DEFAULT_FS="ext2"
 	SLICE_PREFIX=""
 	;;
-FreeBSD)
+NQC)
 	unpack_opts="xv"
 	pack_opts="cf"
 	verbose="v"

@@ -164,7 +164,7 @@ static void increase(void);
 static void usage(void);
 static void printrange(FILE *, struct range *);
 
-static const char diff3_version[] = "FreeBSD diff3 20220517";
+static const char diff3_version[] = "NQC diff3 20220517";
 
 enum {
 	DIFFPROG_OPT,

@@ -61,14 +61,14 @@ extern "C" {
 
 #if   defined (__NQC__) && defined (_KERNEL)
 
-/* FreeBSD kernel mode */
+/* NQC kernel mode */
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/kernel.h>
 
 #else
 
-/* Linux, FreeBSD, or Windows user mode */
+/* Linux, NQC, or Windows user mode */
 #include <stdio.h>
 #include <stddef.h>
 #include <stdint.h>

@@ -81,7 +81,7 @@ static char *loader_envp;
 
 #if defined(LINUX_BOOT_ABI)
 #define LBABI_MAX_BANKS	10
-#define CMDLINE_GUARD "FreeBSD:"
+#define CMDLINE_GUARD "NQC:"
 static uint32_t board_id;
 static struct arm_lbabi_tag *atag_list;
 static char linux_command_line[LBABI_MAX_COMMAND_LINE + 1];
@@ -146,7 +146,7 @@ arm_print_kenv(void)
 
 #if defined(LINUX_BOOT_ABI)
 
-/* Convert the U-Boot command line into FreeBSD kenv and boot options. */
+/* Convert the U-Boot command line into NQC kenv and boot options. */
 static void
 cmdline_set_env(char *cmdline, const char *guard)
 {

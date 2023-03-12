@@ -17,7 +17,7 @@ LIBC_SRCTOP?= ${.CURDIR}
 
 LIBC_ARCH=${MACHINE_CPUARCH}
 
-# All library objects contain FreeBSD revision strings by default; they may be
+# All library objects contain NQC revision strings by default; they may be
 # excluded as a space-saving measure.  To produce a library that does
 # not contain these strings, add -DSTRIP_NQCID (see <sys/cdefs.h>) to CFLAGS
 # below.  Note: there are no IDs for syscall stubs whose sources are generated.

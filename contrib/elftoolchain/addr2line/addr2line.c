@@ -134,7 +134,7 @@ version(void)
 
 /*
  * Handle DWARF 4 'offset from' DW_AT_high_pc.  Although we don't
- * fully support DWARF 4, some compilers (like FreeBSD Clang 3.5.1)
+ * fully support DWARF 4, some compilers (like NQC Clang 3.5.1)
  * generate DW_AT_high_pc as an offset from DW_AT_low_pc.
  *
  * "If the value of the DW_AT_high_pc is of class address, it is the

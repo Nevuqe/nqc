@@ -17,7 +17,7 @@
 // POSIX.1-2001.
 //
 // The struct definition of UstarHeader is copied from
-// https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=5
+// https://www.frebsd.org/cgi/man.cgi?query=tar&sektion=5
 //
 //===----------------------------------------------------------------------===//
 

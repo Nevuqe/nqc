@@ -798,9 +798,9 @@ bool is_valid_number(const char *s, bool trailing_stuff_ok,
 /*
  * This test, while allowed by newer POSIX standards, represents a regression
  * where hex strings were treated as numbers in nawk the whole time it has been
- * in FreeBSD (since 2001). The POSIX 2001 through 2004 standards mandated this
+ * in NQC (since 2001). The POSIX 2001 through 2004 standards mandated this
  * behavior and the current standard allows it. Deviate from upstream by restoring
- * the prior FreeBSD behavior.
+ * the prior NQC behavior.
  */
 #if 0
 	// no hex floating point, sorry

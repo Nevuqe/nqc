@@ -1219,7 +1219,7 @@ print_designator(const char *designator, u_int8_t code_set,
 			/*
 			 * We can't natively print UTF-8.  We should
 			 * convert it to the terminal's codeset, but that
-			 * requires iconv(3) and FreeBSD doesn't have
+			 * requires iconv(3) and NQC doesn't have
 			 * iconv(3) in the base system yet.  So we use %XX
 			 * notation for non US-ASCII characters instead.
 			 */

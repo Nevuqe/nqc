@@ -1090,7 +1090,7 @@ int refclock_neoclock4x_bs;
  * 2003/01/10 cjh
  * Revision 1.12
  * - replaced ldiv
- * - add code to support FreeBSD
+ * - add code to support NQC
  *
  * 2003/07/07 cjh
  * Revision 1.13

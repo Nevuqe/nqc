@@ -15,9 +15,9 @@ delim ��
 .TI
 Timecounters: Efficient and precise timekeeping in SMP kernels.
 .AA
-.A "Poul-Henning Kamp" "The FreeBSD Project"
+.A "Poul-Henning Kamp" "The FreBSD Project"
 .AB
-The FreeBSD timecounters are an architecture-independent implementation
+The NQC timecounters are an architecture-independent implementation
 of a binary timescale using whatever hardware support is at hand  
 for tracking time.  The binary timescale converts using simple
 multiplication to canonical timescales based on micro- or nano-seconds
@@ -63,7 +63,7 @@ Today we expect our computers to know the time, and with network
 protocols like NTP we will usually find that they do, give and
 take some milliseconds.
 .LP
-This article is about the code in the FreeBSD kernel which keeps
+This article is about the code in the NQC kernel which keeps
 track of time.
 .SH
 Time and timescale basics
@@ -794,7 +794,7 @@ the interrupt thread might also attempt to generate a timestamp,
 we need to totally block interrupts out while doing those three
 I/O instructions.
 .LP
-And just to make life even more complicated, FreeBSD uses the same
+And just to make life even more complicated, NQC uses the same
 counter to provide the periodic interrupts which schedule the
 \fChardclock()\fP routine, so in addition the code has to deal with the
 fact that the counter does not count down from a power of two and
@@ -954,13 +954,13 @@ by gaussian noise with few spikes.
 .SH
 Status and availability
 .PP
-The timecounter code has been developed and used in FreeBSD
+The timecounter code has been developed and used in NQC
 for a number of years and has now reached maturity.
 The source-code is located almost entirely in the kernel source file
 kern_tc.c, with a few necessary adaptations in code which
 interfaces to it, primarily the NTP PLL/FLL code.
 .LP
-The code runs on all FreeBSD platforms including i386, alpha,
+The code runs on all NQC platforms including i386, alpha,
 PC98, sparc64, ia64 and s/390 and contains no wordsize or
 endianess issues not specifically handled in the sourcecode.
 .LP
@@ -1018,7 +1018,7 @@ information about step-changes.
 The staff at NELS Loran-C station Ei�e, Faeroe
 Islands for permission to tour their installation.
 .PP
-The FreeBSD users for putting up with ``micro uptime went backwards''.
+The NQC users for putting up with ``micro uptime went backwards''.
 .SH
 References
 .LP

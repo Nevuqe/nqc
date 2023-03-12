@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2007 Marvell Semiconductor, Inc.
  * Copyright (c) 2007 Sam Leffler, Errno Consulting
- * Copyright (c) 2008 Weongyo Jeong <weongyo@freebsd.org>
+ * Copyright (c) 2008 Weongyo Jeong <weongyo@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

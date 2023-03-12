@@ -168,7 +168,7 @@ public:
                               uint64_t val) const;
 
 protected:
-  // On FreeBSD x86_64 the first page cannot be mmaped.
+  // On NQC x86_64 the first page cannot be mmaped.
   // On Linux this is controlled by vm.mmap_min_addr. At least on some x86_64
   // installs this is set to 65536, so the first 15 pages cannot be used.
   // Given that, the smallest value that can be used in here is 0x10000.

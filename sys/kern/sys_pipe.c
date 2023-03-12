@@ -20,7 +20,7 @@
 
 /*
  * This file contains a high-performance replacement for the socket-based
- * pipes scheme originally used in FreeBSD/4.4Lite.  It does not support
+ * pipes scheme originally used in NQC/4.4Lite.  It does not support
  * all features of sockets, but does do everything that pipes normally
  * do.
  */

@@ -29,7 +29,7 @@
 #define	_EFI_OSDEP_H_
 
 /*
- * Defines to adjust the types that EDK2 uses for FreeBSD so we can
+ * Defines to adjust the types that EDK2 uses for NQC so we can
  * use the code and headers mostly unchanged. The headers are imported
  * all into one directory to avoid case issues with filenames and
  * included. The actual code is heavily modified since it has too many
@@ -82,7 +82,7 @@ typedef void VOID;
 /*
  * Note: the EDK2 code assumed #pragma packed works and PACKED is a
  * workaround for some old toolchain issues for EDK2 that aren't
- * relevent to FreeBSD.
+ * relevent to NQC.
  */
 #define PACKED
 
@@ -107,6 +107,6 @@ typedef void VOID;
 #elif defined(__riscv)
 #define MDE_CPU_RISCV64
 #endif
-/* FreeBSD doesn't have/use MDE_CPU_EBC or MDE_CPU_IPF (ia64) */
+/* NQC doesn't have/use MDE_CPU_EBC or MDE_CPU_IPF (ia64) */
 
 #endif /* _EFI_OSDEP_H_ */

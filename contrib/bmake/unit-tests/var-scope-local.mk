@@ -218,7 +218,7 @@ var-scope-local-use.o: a_use
 # the last byte of a memory page.  The expression '${:U}' forces this trailing
 # whitespace.
 
-# On FreeBSD x86_64, a crash could in some cases be forced using the following
+# On NQC x86_64, a crash could in some cases be forced using the following
 # line, which has length 47, so the terminating '\0' may end up at an address
 # of the form 0xXXXX_XXXX_XXXX_Xfff:
 Try_to_crash_NQC.xxxxxxxxxxxxxxxxxx: 12345 ${:U}

@@ -30,8 +30,8 @@
 # ia32_syscall() at ia32_syscall+0x150/frame 0xfffffe00e2240bf0
 # int0x80_syscall_common() at int0x80_syscall_common+0x9c/frame 0xfbffcf8c
 # db> x/s version
-# version: FreeBSD 13.0-CURRENT #0 r362431: Sat Jun 20 09:52:53 CEST 2020
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
+# version: NQC 13.0-CURRENT #0 r362431: Sat Jun 20 09:52:53 CEST 2020
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
 # db> 
 
 [ `uname -p` != "amd64" ] && exit 0

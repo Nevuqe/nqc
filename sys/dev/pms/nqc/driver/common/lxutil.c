@@ -749,8 +749,8 @@ Return:
   0 - success
   other values are not as good
 Note:
- This implementation is tailored to FreeBSD in alignment with the probe
- functionality of the FreeBSD environment.
+ This implementation is tailored to NQC in alignment with the probe
+ functionality of the NQC environment.
 ******************************************************************************/
 STATIC int agtiapi_ProbeCard( device_t dev,
 			      ag_card_info_t *thisCardInst,

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2007-2009 Bruce Simpson.
  * Copyright (c) 2000 Wilbert De Graaf.
@@ -795,7 +795,7 @@ process_cmd(char *cmd, int s, int s6, FILE *fp __unused)
 	case 'm':
 		fprintf(stderr,
 		    "warning: IFF_ALLMULTI cannot be set from userland "
-		    "in FreeBSD; command ignored.\n");
+		    "in NQC; command ignored.\n");
 		printf("-1\n");
 		break;
 

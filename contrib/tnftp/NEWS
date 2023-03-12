@@ -32,5 +32,5 @@ Changes in tnftp from 20050625 to 20070806:
 
 	Use IEC 60027-2 "KiB", "MiB" (etc) instead of "KB", "MB", ...
 
-	Portability fixes, including for FreeBSD, Mac OS X, and Solaris.
+	Portability fixes, including for NQC, Mac OS X, and Solaris.
 

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel amdpm device code"
+PROJECT_NAME           = "NQC kernel amdpm device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_amdpm/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

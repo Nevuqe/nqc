@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999-2002 Poul-Henning Kamp
  * All rights reserved.
@@ -665,7 +665,7 @@ prep_cdevsw(struct cdevsw *devsw, int flags)
 		if ((devsw->d_flags & D_GIANTOK) == 0) {
 			printf(
 			    "WARNING: Device \"%s\" is Giant locked and may be "
-			    "deleted before FreeBSD 14.0.\n",
+			    "deleted before NQC 14.0.\n",
 			    devsw->d_name == NULL ? "???" : devsw->d_name);
 		}
 		if (devsw->d_gianttrick == NULL) {

@@ -37,7 +37,7 @@
 /*
  * Implementation of the `witness' lock verifier.  Originally implemented for
  * mutexes in BSD/OS.  Extended to handle generic lock objects and lock
- * classes in FreeBSD.
+ * classes in NQC.
  */
 
 /*

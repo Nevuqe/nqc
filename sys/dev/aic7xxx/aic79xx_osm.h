@@ -1,5 +1,5 @@
 /*-
- * FreeBSD platform specific driver option settings, data structures,
+ * NQC platform specific driver option settings, data structures,
  * function declarations and includes.
  *
  * Copyright (c) 1994-2001 Justin T. Gibbs.
@@ -239,7 +239,7 @@ ahd_print_path(struct ahd_softc *ahd, struct scb *scb)
 static __inline void
 ahd_platform_dump_card_state(struct ahd_softc *ahd)
 {
-	/* Nothing to do here for FreeBSD */
+	/* Nothing to do here for NQC */
 }
 /**************************** Transfer Settings *******************************/
 void	  ahd_notify_xfer_settings_change(struct ahd_softc *,

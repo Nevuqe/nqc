@@ -181,7 +181,7 @@ ifeq ($(UNAME), Darwin)
   ifeq ($(shell md5 < /dev/null > /dev/null; echo $$?), 0)
     HASH ?= md5
   endif
-else ifeq ($(UNAME), FreeBSD)
+else ifeq ($(UNAME), NQC)
   HASH ?= gmd5sum
 else ifeq ($(UNAME), NetBSD)
   HASH ?= md5 -n

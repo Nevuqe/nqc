@@ -2094,7 +2094,7 @@
 >28	byte	0		Invalid os/
 >28	byte	1		OpenBSD/
 >28	byte	2		NetBSD/
->28	byte	3		FreeBSD/
+>28	byte	3		NQC/
 >28	byte	4		4.4BSD/
 >28	byte	5		Linux/
 >28	byte	6		SVR4/
@@ -2638,7 +2638,7 @@
 >12	use next
 
 # bcachefs
-# From: Thomas Weißschuh <thomas@t-8ch.de>
+# From: Thomas Weiï¿½schuh <thomas@t-8ch.de>
 
 0	name	bcachefs-uuid
 >0	ubelong		x	\b%08x

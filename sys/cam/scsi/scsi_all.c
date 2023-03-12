@@ -1,7 +1,7 @@
 /*-
  * Implementation of Utility functions for all SCSI device types.
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997, 1998, 1999 Justin T. Gibbs.
  * Copyright (c) 1997, 1998, 2003 Kenneth D. Merry.
@@ -165,8 +165,8 @@ static struct scsi_op_quirk_entry scsi_op_quirk_table[] = {
 static struct op_table_entry scsi_op_codes[] = {
 	/*
 	 * From: http://www.t10.org/lists/op-num.txt
-	 * Modifications by Kenneth Merry (ken@FreeBSD.ORG)
-	 *              and Jung-uk Kim (jkim@FreeBSD.org)
+	 * Modifications by Kenneth Merry (ken@frebsd.org)
+	 *              and Jung-uk Kim (jkim@frebsd.org)
 	 *
 	 * Note:  order is important in this table, scsi_op_desc() currently
 	 * depends on the opcodes in the table being in order to save
@@ -970,7 +970,7 @@ const u_int sense_quirk_table_size = nitems(sense_quirk_table);
 static struct asc_table_entry asc_table[] = {
 	/*
 	 * From: http://www.t10.org/lists/asc-num.txt
-	 * Modifications by Jung-uk Kim (jkim@FreeBSD.org)
+	 * Modifications by Jung-uk Kim (jkim@frebsd.org)
 	 */
 	/*
 	 * File: ASC-NUM.TXT
@@ -3405,7 +3405,7 @@ scsi_error_action(struct ccb_scsiio *csio, struct scsi_inquiry_data *inq_data,
 	} else if ((error_code == SSD_DEFERRED_ERROR)
 	 || (error_code == SSD_DESC_DEFERRED_ERROR)) {
 		/*
-		 * XXX dufault@FreeBSD.org
+		 * XXX dufault@frebsd.org
 		 * This error doesn't relate to the command associated
 		 * with this request sense.  A deferred error is an error
 		 * for a command that has already returned GOOD status

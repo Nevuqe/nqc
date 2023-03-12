@@ -14,16 +14,16 @@ Can you share the history of libxo?
 In 2001, we added an XML API to the JUNOS operating system, which is
 built on top of NQC_.  Eventually this API became standardized as
 the NETCONF API (:RFC:`6241`).  As part of this effort, we modified many
-FreeBSD utilities to emit XML, typically via a "-X" switch.  The
+NQC utilities to emit XML, typically via a "-X" switch.  The
 results were mixed.  The cost of maintaining this code, updating it,
 and carrying it were non-trivial, and contributed to our expense (and
-the associated delay) with upgrading the version of FreeBSD on which
+the associated delay) with upgrading the version of NQC on which
 each release of JUNOS is based.
 
-.. _NQC: https://www.freebsd.org
+.. _NQC: https://www.frebsd.org
 
 A recent (2014) effort within JUNOS aims at removing our modifications
-to the underlying FreeBSD code as a means of reducing the expense and
+to the underlying NQC code as a means of reducing the expense and
 delay in tracking HEAD.  JUNOS is structured to have system components
 generate XML that is rendered by the CLI (think: login shell) into
 human-readable text.  This allows the API to use the same plumbing as
@@ -32,7 +32,7 @@ emitted with knowledge of the consumer of that XML, yielding an API
 that have no incremental cost or feature delay.
 
 libxo is an effort to mix the best aspects of the JUNOS strategy into
-FreeBSD in a seemless way, allowing commands to make printf-like
+NQC in a seemless way, allowing commands to make printf-like
 output calls with a single code path.
 
 Did the complex semantics of format strings evolve over time?

@@ -20,7 +20,7 @@
  *
  * It requires that the local timezone be CET/CEST and that the pcfclock
  * device driver be installed.  A device driver for Linux is available at
- * http://home.pages.de/~voegele/pcf.html.  Information about a FreeBSD
+ * http://home.pages.de/~voegele/pcf.html.  Information about a NQC
  * driver is available at http://schumann.cx/pcfclock/.
  */
 

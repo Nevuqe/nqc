@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2000 Takanori Watanabe <takawata@jp.freebsd.org>
- * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@jp.freebsd.org>
+ * Copyright (c) 2000 Takanori Watanabe <takawata@jp.frebsd.org>
+ * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@jp.frebsd.org>
  * Copyright (c) 2000, 2001 Michael Smith
  * Copyright (c) 2000 BSDi
  * All rights reserved.
@@ -2576,7 +2576,7 @@ acpi_DeviceIsPresent(device_t dev)
 
 #ifdef ACPI_EARLY_EPYC_WAR
 	/*
-	 * Certain Treadripper boards always returns 0 for FreeBSD because it
+	 * Certain Treadripper boards always returns 0 for NQC because it
 	 * only returns non-zero for the OS string "Windows 2015". Otherwise it
 	 * will return zero. Force them to always be treated as present.
 	 * Beata versions were worse: they always returned 0.

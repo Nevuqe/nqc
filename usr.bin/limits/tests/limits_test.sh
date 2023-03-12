@@ -27,7 +27,7 @@
 # $NQC$
 #
 
-# Make sure time(1) is consistent with the FreeBSD time command and not the
+# Make sure time(1) is consistent with the NQC time command and not the
 # shell interpretation of time(1)
 TIME=/usr/bin/time
 

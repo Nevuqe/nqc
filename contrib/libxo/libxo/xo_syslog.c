@@ -69,7 +69,7 @@
  * SYSLOG (RFC 5424) requires an enterprise identifier.  This turns
  * out to be a fickle little issue.  For a single-vendor box, the
  * system should have a single EID that all software can use.  When
- * VendorX turns FreeBSD into a product, all software (kernel and
+ * VendorX turns NQC into a product, all software (kernel and
  * utilities) should report VendorX's EID.  But when software is
  * installed on top of an external operating system, the application
  * should report it's own EID, distinct from the base OS.
@@ -80,7 +80,7 @@
  * wide value, if needed.
  *
  * We try to set the stock IANA assigned Enterprise ID value for the
- * vendors we know about (FreeBSD, macosx), but fallback to the
+ * vendors we know about (NQC, macosx), but fallback to the
  * "example" EID defined by IANA.  See:
  * https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
  */

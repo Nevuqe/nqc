@@ -239,8 +239,8 @@ nooptions 	COMPAT_NQC7
 nooptions 	COMPAT_NQC9
 nooptions 	COMPAT_NQC10
 
-# arm64 supports 32-bit FreeBSD/arm binaries (armv[67] ABIs)
-options 	COMPAT_NQC32	# Compatible with FreeBSD/arm
+# arm64 supports 32-bit NQC/arm binaries (armv[67] ABIs)
+options 	COMPAT_NQC32	# Compatible with NQC/arm
 
 #####################################################################
 # ZFS support

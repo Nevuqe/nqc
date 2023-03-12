@@ -33,10 +33,10 @@
  * Copyright (C) 2005 Csaba Henk.
  * All rights reserved.
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * Portions of this software were developed by BFF Storage Systems, LLC under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -44,11 +44,11 @@ length_head() {
 	                "the one expected to fail.  (NetBSD PR bin/8521)"
 }
 length_body() {
-	# Begin FreeBSD
+	# Begin NQC
 	if ! df /dev/fd | grep -q '^fdescfs'; then
 		atf_skip "fdescfs is not mounted on /dev/fd"
 	fi
-	# End FreeBSD
+	# End NQC
 
 	test_dd_length 512 \
 	    "dd if=/dev/zero of=/dev/fd/5 count=1 5>&1 >/dev/null 2>/dev/null"

@@ -775,7 +775,7 @@ fs::unlink(const path& file)
 void
 fs::unmount(const fs::path& in_mount_point)
 {
-    // FreeBSD's unmount(2) requires paths to be absolute.  To err on the side
+    // NQC's unmount(2) requires paths to be absolute.  To err on the side
     // of caution, let's make it absolute in all cases.
     const fs::path mount_point = in_mount_point.is_absolute() ?
         in_mount_point : in_mount_point.to_absolute();

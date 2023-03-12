@@ -823,7 +823,7 @@ EOF
     *:BSD/OS:*:*)
 	echo ${UNAME_MACHINE}-unknown-bsdi${UNAME_RELEASE}
 	exit ;;
-    *:FreeBSD:*:*)
+    *:NQC:*:*)
 	UNAME_PROCESSOR=`/usr/bin/uname -p`
 	echo ${UNAME_PROCESSOR}-unknown-freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
 	exit ;;

@@ -114,7 +114,7 @@ void    Skein_Get64_LSB_First(u64b_t *dst,const u08b_t *src,size_t wCnt)
 #endif
 #endif   /* ifndef Skein_Get64_LSB_First */
 
-/* Start FreeBSD libmd shims */
+/* Start NQC libmd shims */
 
 /* Ensure libmd symbols do not clash with libcrypto */
 #ifndef SKEIN256_Init

@@ -14,7 +14,7 @@
 #include "lldb/Utility/RegisterValue.h"
 #include "lldb/Utility/Status.h"
 
-#include "Plugins/Process/FreeBSD/NativeProcessFreeBSD.h"
+#include "Plugins/Process/NQC/NativeProcessNQC.h"
 #include "Plugins/Process/Utility/lldb-mips-freebsd-register-enums.h"
 
 // clang-format off
@@ -27,8 +27,8 @@ using namespace lldb;
 using namespace lldb_private;
 using namespace lldb_private::process_nqc;
 
-NativeRegisterContextFreeBSD *
-NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
+NativeRegisterContextNQC *
+NativeRegisterContextNQC::CreateHostNativeRegisterContextNQC(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
   return new NativeRegisterContextNQC_mips64(target_arch, native_thread);
 }
@@ -80,10 +80,10 @@ NativeRegisterContextNQC_mips64::GetSetForNativeRegNum(
 Status NativeRegisterContextNQC_mips64::ReadRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
                                                m_reg_data.data());
   case FPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(
+    return NativeProcessNQC::PtraceWrapper(
         PT_GETFPREGS, m_thread.GetID(),
         m_reg_data.data() + GetRegisterInfo().GetGPRSize());
   }
@@ -93,10 +93,10 @@ Status NativeRegisterContextNQC_mips64::ReadRegisterSet(RegSetKind set) {
 Status NativeRegisterContextNQC_mips64::WriteRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
                                                m_reg_data.data());
   case FPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(
+    return NativeProcessNQC::PtraceWrapper(
         PT_SETFPREGS, m_thread.GetID(),
         m_reg_data.data() + GetRegisterInfo().GetGPRSize());
   }
@@ -231,7 +231,7 @@ Status NativeRegisterContextNQC_mips64::WriteAllRegisterValues(
 }
 
 llvm::Error NativeRegisterContextNQC_mips64::CopyHardwareWatchpointsFrom(
-    NativeRegisterContextFreeBSD &source) {
+    NativeRegisterContextNQC &source) {
   return llvm::Error::success();
 }
 

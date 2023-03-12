@@ -1,9 +1,9 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2009 Oleksandr Tymoshenko <gonzo@freebsd.org>
+ * Copyright (c) 2009 Oleksandr Tymoshenko <gonzo@frebsd.org>
  * Copyright (c) 2010 Luiz Otavio O Souza
- * Copyright (c) 2019 Ian Lepore <ian@freebsd.org>
+ * Copyright (c) 2019 Ian Lepore <ian@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

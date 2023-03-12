@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -37,6 +37,6 @@
  */
 #pragma once
 
-/* Ensure that we use the FreeBSD version of the db functions */
+/* Ensure that we use the NQC version of the db functions */
 #define dbopen __nqc_dbopen
 #include_next <db.h>

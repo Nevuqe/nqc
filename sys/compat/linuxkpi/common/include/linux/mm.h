@@ -49,7 +49,7 @@
 
 /*
  * Make sure our LinuxKPI defined virtual memory flags don't conflict
- * with the ones defined by FreeBSD:
+ * with the ones defined by NQC:
  */
 CTASSERT((VM_PROT_ALL & -(1 << 8)) == 0);
 
@@ -57,7 +57,7 @@ CTASSERT((VM_PROT_ALL & -(1 << 8)) == 0);
 #define	VM_WRITE		VM_PROT_WRITE
 #define	VM_EXEC			VM_PROT_EXECUTE
 
-#define	VM_PFNINTERNAL		(1 << 8)	/* FreeBSD private flag to vm_insert_pfn() */
+#define	VM_PFNINTERNAL		(1 << 8)	/* NQC private flag to vm_insert_pfn() */
 #define	VM_MIXEDMAP		(1 << 9)
 #define	VM_NORESERVE		(1 << 10)
 #define	VM_PFNMAP		(1 << 11)

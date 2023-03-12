@@ -1,10 +1,10 @@
 /*
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2002 Adrian Chadd <adrian@FreeBSD.org>.
+ * Copyright (c) 2002 Adrian Chadd <adrian@frebsd.org>.
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Marshall
+ * This software was developed for the FreBSD Project by Marshall
  * Kirk McKusick and Network Associates Laboratories, the Security
  * Research Division of Network Associates, Inc. under DARPA/SPAWAR
  * contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA CHATS
@@ -60,7 +60,7 @@ __NQCID("$NQC$");
 
 /*
  * This is a bit of a quick hack to do parallel IO testing through POSIX AIO.
- * Its specifically designed to work under FreeBSD and its derivatives;
+ * Its specifically designed to work under NQC and its derivatives;
  * note how I cheat by using aio_waitcomplete().
  *
  * TODO:

@@ -2,8 +2,8 @@
 
 /*
  * Copyright (c) 2005, 2006 Reyk Floeter <reyk@openbsd.org>
- * Copyright (c) 2007 Andrew Thompson <thompsa@FreeBSD.org>
- * Copyright (c) 2014, 2016 Marcelo Araujo <araujo@FreeBSD.org>
+ * Copyright (c) 2007 Andrew Thompson <thompsa@frebsd.org>
+ * Copyright (c) 2014, 2016 Marcelo Araujo <araujo@frebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

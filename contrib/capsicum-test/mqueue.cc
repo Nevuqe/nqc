@@ -30,7 +30,7 @@ void seen_it_done_it(int) {
 
 FORK_TEST_ON_MQ(PosixMqueue, CapModeIfMqOpenAvailable, "/cap_mq") {
   int mq = mq_open_("/cap_mq", O_RDWR|O_CREAT, 0644, NULL);
-  // On FreeBSD, turn on message queue support with:
+  // On NQC, turn on message queue support with:
   //  - 'kldload mqueuefs'
   //  - 'options P1003_1B_MQUEUE' in kernel build config.
   if (mq < 0 && errno == ENOSYS) {

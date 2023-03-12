@@ -1,4 +1,4 @@
-//===-- ThreadFreeBSDKernel.h ------------------------------------- C++ -*-===//
+//===-- ThreadNQCKernel.h ------------------------------------- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -11,12 +11,12 @@
 
 #include "lldb/Target/Thread.h"
 
-class ThreadFreeBSDKernel : public lldb_private::Thread {
+class ThreadNQCKernel : public lldb_private::Thread {
 public:
-  ThreadFreeBSDKernel(lldb_private::Process &process, lldb::tid_t tid,
+  ThreadNQCKernel(lldb_private::Process &process, lldb::tid_t tid,
                       lldb::addr_t pcb_addr, std::string thread_name);
 
-  ~ThreadFreeBSDKernel() override;
+  ~ThreadNQCKernel() override;
 
   void RefreshStateAfterStop() override;
 

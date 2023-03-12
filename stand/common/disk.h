@@ -62,8 +62,8 @@
  * set d_slice to D_SLICEWILD. This uses the partition type to decide which
  * partition to use according to the following list of preferences:
  *
- * 	FreeBSD (active)
- * 	FreeBSD (inactive)
+ * 	NQC (active)
+ * 	NQC (inactive)
  * 	Linux (active)
  * 	Linux (inactive)
  * 	DOS/Windows (active)

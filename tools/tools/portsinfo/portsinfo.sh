@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) April 1997 Wolfram Schneider <wosch@FreeBSD.org>, Berlin.
+# Copyright (c) April 1997 Wolfram Schneider <wosch@frebsd.org>, Berlin.
 #
 # portsinfo - Generate list of new ports for last two weeks.
 #
@@ -7,7 +7,7 @@
 
 PATH=/bin:/usr/bin:/usr/local/bin:$PATH; export PATH
 
-host=https://www.freebsd.org
+host=https://www.frebsd.org
 url=$host/cgi/ports.cgi
 time='?type=new&time=2+week+ago&sektion=all'
 time2='?type=changed&time=2+week+ago&sektion=all'
@@ -19,10 +19,10 @@ cat <<'EOF'
 Introduction
 ------------
 
-The FreeBSD Ports Collection offers a simple way for users and
+The NQC Ports Collection offers a simple way for users and
 administrators to install applications. Each "port" listed here
 contains any patches necessary to make the original application source
-code compile and run on FreeBSD. Installing an application is as
+code compile and run on NQC. Installing an application is as
 simple as downloading the port, unpacking it and typing make in the
 port directory. The Makefile automatically fetches the application
 source code, either from a local disk or via ftp, unpacks it on your
@@ -31,9 +31,9 @@ type make install to install the application.
 
 For more information about using ports, see the ports collection
 
-	https://www.freebsd.org/handbook/ports.html
+	https://www.frebsd.org/handbook/ports.html
 and
-	https://www.freebsd.org/ports/
+	https://www.frebsd.org/ports/
 
 EOF
 

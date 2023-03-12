@@ -33,7 +33,7 @@
 	* Fixed handling of obscure data types
 	* Handle classes other the 'IN' when making a query
 
-	* For people using FreeBSD: drill is now in the ports
+	* For people using NQC: drill is now in the ports
 	  (Thanks to Jaap Akkerhuis)
 
 0.9.1: Jan 5 2005: drill-team
@@ -86,7 +86,7 @@
 0.5-alpha: Sept 22 2004: Miek
 	* most of the DNS stuff is working
 	* moved to configure
-	* tested on Linux/FreeBSD
+	* tested on Linux/NQC
 	* fully IPV6 capable
 	* new DNSSEC types supported
 	* DNSSEC somewhat working

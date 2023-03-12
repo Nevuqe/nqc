@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004 Texas A&M University
  * All rights reserved.
@@ -32,7 +32,7 @@
  * Intel ICH Watchdog Timer (WDT) driver
  *
  * Originally developed by Wm. Daryl Hawkins of Texas A&M
- * Heavily modified by <des@FreeBSD.org>
+ * Heavily modified by <des@frebsd.org>
  *
  * This is a tricky one.  The ICH WDT can't be treated as a regular PCI
  * device as it's actually an integrated function of the ICH LPC interface

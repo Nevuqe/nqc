@@ -27,7 +27,7 @@
 #
 
 # Regression test for r236822.
-# http://people.freebsd.org/~pho/stress/log/fdgrowtable.txt
+# http://people.frebsd.org/~pho/stress/log/fdgrowtable.txt
 # Fixed in r256210.
 
 . ../default.cfg

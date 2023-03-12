@@ -26,7 +26,7 @@
 #
 
 # The -S flag in NetBSD sort enables non-stable sorting order. This flag
-# doesn't exist in FreeBSD sort, and instead indicates buffer size, so all
+# doesn't exist in NQC sort, and instead indicates buffer size, so all
 # instances of this flag should be removed.
 #
 # For tests that expect exact output, but where some lines may compare
@@ -327,7 +327,7 @@ a	2
 a	1
 EOF
 
-	# On FreeBSD, key options override global options,
+	# On NQC, key options override global options,
 	# so r is required as an option for the second key.
 	atf_check -o file:out sort -r -k1,1 -k2nr in
 }
@@ -937,7 +937,7 @@ plus_rflag_invalid_head()
 }
 plus_rflag_invalid_body()
 {
-	atf_expect_fail "-R flag not available on FreeBSD"
+	atf_expect_fail "-R flag not available on NQC"
 
 	(
 	    echo 'z b m f'

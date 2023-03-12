@@ -1,11 +1,11 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2006 Rice University
  * Copyright (c) 2007-2008 Alan L. Cox <alc@cs.rice.edu>
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Alan L. Cox,
+ * This software was developed for the FreBSD Project by Alan L. Cox,
  * Olivier Crameri, Peter Druschel, Sitaram Iyer, and Juan Navarro.
  *
  * Redistribution and use in source and binary forms, with or without

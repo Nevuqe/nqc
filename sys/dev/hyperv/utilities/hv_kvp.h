@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2014,2016 Microsoft Corp.
  * All rights reserved.
@@ -31,7 +31,7 @@
 #ifndef _KVP_H
 #define _KVP_H
 /*
- * An implementation of HyperV key value pair (KVP) functionality for FreeBSD
+ * An implementation of HyperV key value pair (KVP) functionality for NQC
  *
  */
 
@@ -65,7 +65,7 @@
 
 
 /*
- * In FreeBSD, we implement the KVP functionality in two components:
+ * In NQC, we implement the KVP functionality in two components:
  * 1) The kernel component which is packaged as part of the hv_utils driver
  * is responsible for communicating with the host and responsible for
  * implementing the host/guest protocol. 2) A user level daemon that is

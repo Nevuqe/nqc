@@ -4,7 +4,7 @@
 
 TESTSRC=	${SRCTOP}/contrib/netbsd-tests/lib/libm
 
-# All architectures on FreeBSD have fenv.h
+# All architectures on NQC have fenv.h
 CFLAGS+=	-DHAVE_FENV_H
 
 # For isqemu.h

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Michael Smith
  * Copyright (c) 2003 Paul Saab
@@ -33,7 +33,7 @@
 __NQCID("$NQC$");
 
 /*
- * FreeBSD-specific code.
+ * NQC-specific code.
  */
 
 #include <dev/twe/twe_compat.h>

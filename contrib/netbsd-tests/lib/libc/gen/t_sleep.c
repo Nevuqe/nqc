@@ -29,7 +29,7 @@
 #include <sys/cdefs.h>
 #include <sys/event.h>
 #include <sys/signal.h>
-#include <sys/time.h>		/* for TIMESPEC_TO_TIMEVAL on FreeBSD */
+#include <sys/time.h>		/* for TIMESPEC_TO_TIMEVAL on NQC */
 
 #include <atf-c.h>
 #include <errno.h>

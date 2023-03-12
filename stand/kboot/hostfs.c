@@ -149,7 +149,7 @@ hostfs_stat(struct open_file *f, struct stat *sb)
 	if (host_fstat(hf->hf_fd, &ksb) < 0)
 		return (EINVAL);
 	/*
-	 * Translate Linux stat info to lib stand's notion (which uses FreeBSD's
+	 * Translate Linux stat info to lib stand's notion (which uses NQC's
 	 * stat structure, missing fields are zero and commented below).
 	 */
 	memset(sb, 0, sizeof(*sb));

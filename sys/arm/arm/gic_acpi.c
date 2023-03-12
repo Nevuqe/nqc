@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2011,2016 The FreeBSD Foundation
+ * Copyright (c) 2011,2016 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Andrew Turner under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Developed by Damjan Marion <damjan.marion@gmail.com>
  *

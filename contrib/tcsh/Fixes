@@ -135,7 +135,7 @@
   9. make rmstar interruptible on linux
   8. Get rid of pret_t and make the printf functions return the number of
      characters printed as the system ones do.
-  7. Parse a FreeBSD compat $LSCOLORS. What to do when both LSCOLORS and
+  7. Parse a NQC compat $LSCOLORS. What to do when both LSCOLORS and
      LS_COLORS are set. I am not documenting this until we decide.
   6. V6.18.01 - 20120214
   5. fix interruptible wait again
@@ -149,7 +149,7 @@
 102. Make gethost use definitions for x __x__ and __x automatically.
 101. More utmp fixes
 100. V6.17.10 - 20120105
- 99. Add more FreeBSD/NetBSD machines
+ 99. Add more NQC/NetBSD machines
  98. Add portability wrapper for gencat
  97. Fix warning for write in SYSMALLOC systems.
  96. V6.17.09 - 20120102
@@ -159,7 +159,7 @@
  92. Remove - from gencat
  91. Provide support for malloc_usable_size() so that linux works again
      without SYSMALLOC
- 90. Add support for FreeBSD's utmpx.
+ 90. Add support for NQC's utmpx.
  89. V6.17.07 - 20111227
  88. Fix debian bug #645238: tcsh segfaults when prompt includes %j and
      there are more than 10 jobs.
@@ -290,7 +290,7 @@
  15. Fix memory trashing bug introduced in 10.
  14. V6.16.01 - 20090624
  13. add missing sigemptyset in goodbye()
- 12. add rlimit swapsize from FreeBSD.
+ 12. add rlimit swapsize from NQC.
  11. restore behavior where a[n-] never prints an error.
  10. always save the whole command, not just the first 80 chars of it.
   9. fix short2str/short2qstr length adjustment in wide chars
@@ -391,7 +391,7 @@
      short_strings.patch. (Miloslav Trmac)
  45. config-catalogs.patch: Autodetect catalog support (#14). (Miloslav Trmac)
  44. auth.patch: Handle false positives in getauthid() detection,
-     IIRC on FreeBSD. (Miloslav Trmac)
+     IIRC on NQC. (Miloslav Trmac)
  43. crypt.patch: Autodetect whether <crypt.h> is available. (Miloslav Trmac)
  42. sigint.patch: Block SIGINT while waiting on children.
      This is necessary, but I'll still have to look on the older
@@ -531,7 +531,7 @@
      breaks SIGHUP. (Corinna Vinschen)
   8. Make sure terminal size change takes effect immediately.
   7. Obey $printexitvalue for builtins.
-  6. FreeBSD PR/66420: Allow history parsing to be special so that it
+  6. NQC PR/66420: Allow history parsing to be special so that it
      can handle inline # characters (Oliver Eikemeier)
   5. new termname builtin from (Andrew Stevenson)
   4. if ($var =~ *[^0-9]*) echo not numeric, fix (Andrew Stevenson)
@@ -597,8 +597,8 @@
      Chen)
  49. Make $ignoreeof agree with the man page (Matias Moreno Meringer)
  48. Fix argument passing in tc.prompt.c expdollar (Nelson Beebe)
- 47. Completion fixes from FreeBSD (Mark Peek)
- 46. FreeBSD's sbsize limit (Mark Peek)
+ 47. Completion fixes from NQC (Mark Peek)
+ 46. NQC's sbsize limit (Mark Peek)
  45. Fix repeat 3 repeat 2 echo foo
  44. Fix I/O redirection in scripts (Ian D Allen)
  43. Fix ` \\\n ` evaluation (Jean-Luc Leger)
@@ -632,7 +632,7 @@
      (Martin Kraemer)
  17. Make -shell invocations always treated as a login shell.
  16. V6.11.01 - 20020308
- 15. Fixes to polish nls locale (Pawe³ Niewiadomski)
+ 15. Fixes to polish nls locale (Paweï¿½ Niewiadomski)
  14. russian locale fixes (Alexey Dokuchaev)
  13. document door support (Shaen)
  12. tcsh euc handling extensions (Alexey Zelkin)
@@ -656,7 +656,7 @@
  38. make c_insert not static so that it can be used from win32 (amol)
  37. Fix rmstar not to corrupt memory when we say no. (Mark Peek)
  36. V6.10.02 - 20010806
- 35. polish nls locale (Pawe³ Niewiadomski))
+ 35. polish nls locale (Paweï¿½ Niewiadomski))
  34. Fix a tcsetattr race running background jobs as the last line on an xterm
      window (Andrew Brown)
  33. jobcmd alias (Greg Parker)
@@ -676,9 +676,9 @@
  20. Check the return value of setpriority (Dima Dorfman)
  19. Avoid constructing paths with // on DomainOS (Nickolai Zeldovich)
  18. Russian translation (Ilmar S. Habibulin)
- 17. Fix hostdefs for alpha support in FreeBSD (Andrey A. Chernov)
+ 17. Fix hostdefs for alpha support in NQC (Andrey A. Chernov)
  16. Add door support in colorls (Shaen)
- 15. Add BSD_STYLE_COLORLS for FreeBSD (Anand)
+ 15. Add BSD_STYLE_COLORLS for NQC (Anand)
  14. MAXHOSTNAMELEN needs to be 256 (Kris Kennaway)
  13. Document stty -tabs problems on compaq (Nelson H. F. Beebe)
  12. Fix broken comment, and new versions of config.guess and config.sub
@@ -781,7 +781,7 @@
  48. V6.08.05 - 19990511
  47. In some system, when a builtin fails immediately after we start
      tcsh and before we print any messages, NLS messages fail (some
-     descriptor might be closed) [FreeBSD, HP/UX?]. So we force reading
+     descriptor might be closed) [NQC, HP/UX?]. So we force reading
      the NLS catalogs in errinit() (Yoshiyuki Sakakibara)
  46. typos in ja/set1 and ja/set29 (Yoshiyuki Sakakibara)
  45. "dspmbyte autoset trap" support to HP-UX 10.20. (Yoshiyuki Sakakibara)
@@ -1001,7 +1001,7 @@ V6.07.02, 10/27/96
      <rwgk@laplace.csb.yale.edu>
  17. Greek nls messages. Aggelos P. Varvitsiotis <avarvit@cc.ece.ntua.gr>
  16. Imakefile linux and libcrypt fixes. Jonathan Kamens  <jik@cam.ov.com>
- 15. FreeBSD fixes Jukka Ukkonen <jau@jau.csc.fi>
+ 15. NQC fixes Jukka Ukkonen <jau@jau.csc.fi>
  14. Expand the environment space for path Steve Kelem <steve.kelem@xilinx.com>
  13. Don't overwrite the environment randomly Steve Kelem
      <steve.kelem@xilinx.com>

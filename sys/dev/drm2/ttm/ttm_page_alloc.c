@@ -25,11 +25,11 @@
  *          Pauli Nieminen <suokkos@gmail.com>
  */
 /*
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * <kib@FreeBSD.org> under sponsorship from the FreeBSD Foundation.
+ * <kib@frebsd.org> under sponsorship from the FreBSD Foundation.
  */
 
 /* simple list based uncached page pool

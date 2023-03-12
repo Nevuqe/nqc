@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_page_unwire: page 0xc36cce48's wire count is zero" seen.
-# https://people.freebsd.org/~pho/stress/log/kostik820.txt
+# https://people.frebsd.org/~pho/stress/log/kostik820.txt
 # Fixed by r285878.
 
 # Variation of mmap25.sh:

@@ -3,15 +3,15 @@
  *
  * DESCRIPTION:
  * Originally written for BSD4.4 system by Christos Zoulas.
- * Ported to FreeBSD 2.x by Steven Wallace && Wolfram Schneider
+ * Ported to NQC 2.x by Steven Wallace && Wolfram Schneider
  * Order support hacked in from top-3.5beta6/machine/m_aix41.c
  *   by Monte Mitzelfelt (for latest top see http://www.groupsys.com/topinfo/)
  *
  * AUTHOR:  Christos Zoulas <christos@ee.cornell.edu>
- *          Steven Wallace  <swallace@FreeBSD.org>
- *          Wolfram Schneider <wosch@FreeBSD.org>
+ *          Steven Wallace  <swallace@frebsd.org>
+ *          Wolfram Schneider <wosch@frebsd.org>
  *          Thomas Moestl <tmoestl@gmx.net>
- *          Eitan Adler <eadler@FreeBSD.org>
+ *          Eitan Adler <eadler@frebsd.org>
  *
  * $NQC$
  */

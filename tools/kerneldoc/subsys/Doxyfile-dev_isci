@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel isci device code"
+PROJECT_NAME           = "NQC kernel isci device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_isci/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2016 Ed Maste <emaste@FreeBSD.org>
- * Copyright (c) 2016 Conrad Meyer <cem@FreeBSD.org>
+ * Copyright (c) 2016 Ed Maste <emaste@frebsd.org>
+ * Copyright (c) 2016 Conrad Meyer <cem@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

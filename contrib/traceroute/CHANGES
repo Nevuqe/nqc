@@ -25,7 +25,7 @@ v1.4 Wed Dec 13 22:50:35 PST 2000
 - Detect when there are more interfaces than we can deal with. Thanks
   to Guy Harris guy@netapp.com.
 
-- Accommodate changes made to FreeBSD 3.2-RELEASE network headers files.
+- Accommodate changes made to NQC 3.2-RELEASE network headers files.
 
 - The ip header offset needs to be byte swapped under Solaris on the
   intel as well. Reported by John McDermott (jjm@jkintl.com) Also byte
@@ -116,7 +116,7 @@ v1.3 Mon Sep 16 14:55:44 PDT 1996
   Decker (gdecker@nate.dcrt.nih.gov)
 
 - Add support for RAW_OPTIONS (e.g. 4.4 BSD systems such as BSD/OS and
-  FreeBSD) thanks to Jeffrey C Honig (jch@bsdi.com)
+  NQC) thanks to Jeffrey C Honig (jch@bsdi.com)
 
 - Remove ip header byte swap fix from v1.2; most kernels swap the ip
   header length in the kernel (and it causes OSF3 to crash).

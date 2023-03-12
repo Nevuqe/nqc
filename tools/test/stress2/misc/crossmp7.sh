@@ -29,11 +29,11 @@
 # Parallel mount and umount of zfs file systems.
 
 # Page fault seen:
-# https://people.freebsd.org/~pho/stress/log/avg002.txt
+# https://people.frebsd.org/~pho/stress/log/avg002.txt
 # Fixed by r309090.
 
 # Page fault seen:
-# https://people.freebsd.org/~pho/stress/log/crossmp7.txt
+# https://people.frebsd.org/~pho/stress/log/crossmp7.txt
 # Fixed by r352437.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

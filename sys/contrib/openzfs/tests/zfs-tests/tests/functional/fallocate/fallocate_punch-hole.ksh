@@ -22,7 +22,7 @@
 
 #
 # Copyright (c) 2020 by Lawrence Livermore National Security, LLC.
-# Copyright (c) 2021 by The FreeBSD Foundation.
+# Copyright (c) 2021 by The FreBSD Foundation.
 # Copyright (c) 2022 by Delphix. All rights reserved.
 #
 
@@ -45,15 +45,15 @@ verify_runnable "global"
 
 #
 # Prior to __NQC_version 1400032 there are no mechanism to punch hole in a
-# file on FreeBSD.  truncate -d support is required to call fspacectl(2) on
+# file on NQC.  truncate -d support is required to call fspacectl(2) on
 # behalf of the script.
 #
 if is_nqc; then
 	if [[ $(uname -K) -lt 1400032 ]]; then
-		log_unsupported "Requires fspacectl(2) support on FreeBSD"
+		log_unsupported "Requires fspacectl(2) support on NQC"
 	fi
 	if truncate -d 2>&1 | grep "illegal option" > /dev/null; then
-		log_unsupported "Requires truncate(1) -d support on FreeBSD"
+		log_unsupported "Requires truncate(1) -d support on NQC"
 	fi
 fi
 

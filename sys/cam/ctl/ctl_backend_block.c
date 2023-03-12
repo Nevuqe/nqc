@@ -1,17 +1,17 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003 Silicon Graphics International Corp.
  * Copyright (c) 2009-2011 Spectra Logic Corporation
- * Copyright (c) 2012,2021 The FreeBSD Foundation
- * Copyright (c) 2014-2021 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2012,2021 The FreBSD Foundation
+ * Copyright (c) 2014-2021 Alexander Motin <mav@frebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
- * Portions of this software were developed by Ka Ho Ng <khng@FreeBSD.org>
- * under sponsorship from the FreeBSD Foundation.
+ * Portions of this software were developed by Ka Ho Ng <khng@frebsd.org>
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -38,12 +38,12 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_backend_block.c#5 $
+ * $Id: //depot/users/kenm/NQC-test2/sys/cam/ctl/ctl_backend_block.c#5 $
  */
 /*
  * CAM Target Layer driver backend for block devices.
  *
- * Author: Ken Merry <ken@FreeBSD.org>
+ * Author: Ken Merry <ken@frebsd.org>
  */
 #include <sys/cdefs.h>
 __NQCID("$NQC$");

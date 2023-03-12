@@ -27,7 +27,7 @@
 # $NQC$
 #
 ##
-# Install a boot environment using the current FreeBSD source tree.
+# Install a boot environment using the current NQC source tree.
 # Requires a fully built world & kernel.
 #
 # Non-base tools required: pkg
@@ -170,10 +170,10 @@ trap 'errx "Interrupt caught"' HUP INT TERM
 
 [ "$(whoami)" != "root" ] && errx "Must be run as root"
 
-[ ! -f "Makefile.inc1" ] && errx "Must be in FreeBSD source tree"
+[ ! -f "Makefile.inc1" ] && errx "Must be in NQC source tree"
 srcdir=$(pwd)
 objdir=$(make -V .OBJDIR 2>/dev/null)
-[ ! -d "${objdir}" ] && errx "Must have built FreeBSD from source tree"
+[ ! -d "${objdir}" ] && errx "Must have built NQC from source tree"
 
 ## Constants
 ETCUPDATE_CMD="${srcdir}/usr.sbin/etcupdate/etcupdate.sh"
@@ -199,7 +199,7 @@ else
 fi
 
 commit_ver=$(${objdir}/bin/nqc-version/nqc-version -u 2>/dev/null)
-[ -z "${commit_ver}" ] && errx "Unable to determine FreeBSD version"
+[ -z "${commit_ver}" ] && errx "Unable to determine NQC version"
 
 BENAME="${commit_ver}-${commit_ts}"
 

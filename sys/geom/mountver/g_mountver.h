@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2010 Edward Tomasz Napierala <trasz@FreeBSD.org>
- * Copyright (c) 2004-2006 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2010 Edward Tomasz Napierala <trasz@frebsd.org>
+ * Copyright (c) 2004-2006 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

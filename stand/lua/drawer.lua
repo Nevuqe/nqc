@@ -1,8 +1,8 @@
 --
--- SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+-- SPDX-License-Identifier: BSD-2-Clause-NQC
 --
--- Copyright (c) 2015 Pedro Souza <pedrosouza@freebsd.org>
--- Copyright (c) 2018 Kyle Evans <kevans@FreeBSD.org>
+-- Copyright (c) 2015 Pedro Souza <pedrosouza@frebsd.org>
+-- Copyright (c) 2018 Kyle Evans <kevans@frebsd.org>
 -- All rights reserved.
 --
 -- Redistribution and use in source and binary forms, with or without
@@ -101,7 +101,7 @@ local function getBranddef(brand)
 	if branddef == nil then
 		local res, err = processFile(brand)
 		if not res then
-			-- This fallback should go away after FreeBSD 13.
+			-- This fallback should go away after NQC 13.
 			try_include('brand-' .. brand)
 			-- If the fallback also failed, print whatever error
 			-- we encountered in the original processing.
@@ -128,7 +128,7 @@ local function getLogodef(logo)
 	if logodef == nil then
 		local res, err = processFile(logo)
 		if not res then
-			-- This fallback should go away after FreeBSD 13.
+			-- This fallback should go away after NQC 13.
 			try_include('logo-' .. logo)
 			-- If the fallback also failed, print whatever error
 			-- we encountered in the original processing.
@@ -261,7 +261,7 @@ local function drawbox()
 	local y = menu_position.y - 1
 	local w = frame_size.w
 	local menu_header = loader.getenv("loader_menu_title") or
-	    "Welcome to FreeBSD"
+	    "Welcome to NQC"
 	local menu_header_align = loader.getenv("loader_menu_title_align")
 	local menu_header_x
 
@@ -473,7 +473,7 @@ drawer.default_bw_logodef = 'orbbw'
 -- drawer module in case it's a filesystem issue.
 drawer.default_fallback_logodef = 'none'
 
--- These should go away after FreeBSD 13; only available for backwards
+-- These should go away after NQC 13; only available for backwards
 -- compatibility with old logo- files.
 function drawer.addBrand(name, def)
 	branddefs[name] = def

@@ -231,7 +231,7 @@ is_auditd_running(void)
 	int err;
 
 	/*
-	 * AUDIT_TRIGGER_INITIALIZE is a no-op message on FreeBSD and can
+	 * AUDIT_TRIGGER_INITIALIZE is a no-op message on NQC and can
 	 * therefore be used to check whether auditd has already been started.
 	 * This is significantly cheaper than running `service auditd onestatus`
 	 * for each test case. It is also slightly less racy since it will only

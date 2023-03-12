@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016-2017 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2016-2017 Alexander Motin <mav@frebsd.org>
  * Copyright (C) 2013 Intel Corporation
  * Copyright (C) 2015 EMC Corporation
  * All rights reserved.

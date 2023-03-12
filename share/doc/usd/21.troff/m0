@@ -61,7 +61,7 @@ Murray Hill, New Jersey 07974
 .ft B
 .ps +1
 NOTE: This document in its current form describes the \fItroff\fP\| program
-supplied with 4.4BSD.  The \fIgroff\fP\| program supplied with FreeBSD has a
+supplied with 4.4BSD.  The \fIgroff\fP\| program supplied with NQC has a
 number of additional features and a couple of small incompatibilities.  See
 \fIgroff(1)\fP\| for more details.
 .ps

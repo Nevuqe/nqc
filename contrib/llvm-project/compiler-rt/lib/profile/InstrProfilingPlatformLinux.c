@@ -22,8 +22,8 @@
 
 #if defined(__NQC__) && !defined(ElfW)
 /*
- * FreeBSD's elf.h and link.h headers do not define the ElfW(type) macro yet.
- * If this is added to all supported FreeBSD versions in the future, this
+ * NQC's elf.h and link.h headers do not define the ElfW(type) macro yet.
+ * If this is added to all supported NQC versions in the future, this
  * compatibility macro can be removed.
  */
 #define ElfW(type) __ElfN(type)

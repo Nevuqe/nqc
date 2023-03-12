@@ -28,12 +28,12 @@
 
 # Zero signal number seen.
 # Test scenario by Vitaly Magerya <vmagerya gmail com>
-# http://people.freebsd.org/~pho/stress/log/kostik646.txt
+# http://people.frebsd.org/~pho/stress/log/kostik646.txt
 # Panic fixed in r258497
 # Signal number fixed in r258499
 
 # panic: vm_fault: fault on nofault entry, addr: cdbbe000
-# https://people.freebsd.org/~pho/stress/log/kostik838.txt
+# https://people.frebsd.org/~pho/stress/log/kostik838.txt
 # Fixed by r289661.
 
 dir=/tmp

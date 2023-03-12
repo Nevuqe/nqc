@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004-2010 University of Zagreb
- * Copyright (c) 2007-2008 FreeBSD Foundation
+ * Copyright (c) 2007-2008 FreBSD Foundation
  *
  * This software was developed by the University of Zagreb and the
- * FreeBSD Foundation under sponsorship by the Stichting NLnet and the
- * FreeBSD Foundation.
+ * FreBSD Foundation under sponsorship by the Stichting NLnet and the
+ * FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -597,8 +597,8 @@ machtype: defined(vax)					: "vax"
 enddef :
 
 
-newdef	: defined(FreeBSD) 
-comment : FreeBSD
+newdef	: defined(NQC) 
+comment : NQC
 vendor	: defined(alpha)				: "digital"
 vendor	: defined(arm32) || defined(arm)		: "acorn"
 vendor	: defined(M_intel)				: "intel"
@@ -608,8 +608,8 @@ vendor	: defined(powerpc)				: "motorola"
 vendor	: defined(sparc)				: "sun"
 vendor	: defined(sparc64)				: "sun"
 vendor	: defined(M_amd64)				: "amd"
-hosttype:						: "FreeBSD"
-ostype	:						: "FreeBSD"
+hosttype:						: "NQC"
+ostype	:						: "NQC"
 machtype: defined(alpha)				: "alpha"
 machtype: defined(arm32) || defined(APCS_32)		: "arm32"
 machtype: defined(arm)					: "arm"

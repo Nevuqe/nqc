@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017 Chelsio Communications, Inc.
- * Copyright (c) 2017 Conrad Meyer <cem@FreeBSD.org>
+ * Copyright (c) 2017 Conrad Meyer <cem@frebsd.org>
  * All rights reserved.
- * Largely borrowed from ccr(4), Written by: John Baldwin <jhb@FreeBSD.org>
+ * Largely borrowed from ccr(4), Written by: John Baldwin <jhb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

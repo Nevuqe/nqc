@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2001 Jake Burkholder <jake@FreeBSD.org>
+ * Copyright (c) 2001 Jake Burkholder <jake@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

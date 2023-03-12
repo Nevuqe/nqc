@@ -11,7 +11,7 @@
 
 #include <unwind.h>
 /*
- * XXX On FreeBSD, this file is compiled into three libraries:
+ * XXX On NQC, this file is compiled into three libraries:
  *   - libcompiler_rt
  *   - libgcc_eh
  *   - libgcc_s
@@ -23,7 +23,7 @@
  * Neither (seemingly redundant) variant of unwind.h needs the redefinitions
  * provided in the "helpful" header below, and libcxxrt's unwind-arm.h provides
  * *no* useful distinguishing macros, so just forcibly disable the helper
- * header on FreeBSD.
+ * header on NQC.
  */
 #if defined(__arm__) && !defined(__ARM_DWARF_EH__) &&                          \
     !defined(__USING_SJLJ_EXCEPTIONS__) && !defined(__NQC__)

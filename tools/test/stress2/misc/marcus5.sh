@@ -31,7 +31,7 @@
 
 # Copy of marcus4.sh, but with a md(4) disk.
 # "panic: userret: Returning with SU cleanup request not handled" seen:
-# https://people.freebsd.org/~pho/stress/log/marcus5.txt
+# https://people.frebsd.org/~pho/stress/log/marcus5.txt
 # Fixed by r292541.
 
 . ../default.cfg

@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2001 Eduardo Horvath.
  * Copyright (c) 2001-2003 Thomas Moestl
- * Copyright (c) 2007 Marius Strobl <marius@FreeBSD.org>
+ * Copyright (c) 2007 Marius Strobl <marius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

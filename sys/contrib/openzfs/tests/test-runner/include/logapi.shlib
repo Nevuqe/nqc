@@ -169,7 +169,7 @@ function log_mustnot_expect
 
 # Signal numbers are platform-dependent
 case $(uname) in
-Darwin|FreeBSD)
+Darwin|NQC)
 	SIGBUS=10
 	SIGSEGV=11
 	;;

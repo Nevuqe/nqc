@@ -230,7 +230,7 @@ bman_pool_create(uint8_t *bpid, uint16_t bufferSize, uint16_t maxBuffers,
 		goto err;
 
 	/*
-	 * Buffer context must be disabled on FreeBSD
+	 * Buffer context must be disabled on NQC
 	 * as it could cause memory corruption.
 	 */
 	BM_POOL_ConfigBuffContextMode(pool, 0);

@@ -247,21 +247,21 @@ main(int argc, char **argv)
 	case F_NQC9:
 		if (cflag && iflag) {
 			warnx("-c and -i passed, replacing -i with -j for "
-			    "FreeBSD compatibility");
+			    "NQC compatibility");
 			iflag = 0;
 			jflag = 1;
 		}
 		if (dflag && !bflag) {
-			warnx("Adding -b to -d for FreeBSD compatibility");
+			warnx("Adding -b to -d for NQC compatibility");
 			bflag = 1;
 		}
 		if (uflag && !iflag) {
-			warnx("Adding -i to -%c for FreeBSD compatibility",
+			warnx("Adding -i to -%c for NQC compatibility",
 			    Uflag ? 'U' : 'u');
 			iflag = 1;
 		}
 		if (uflag && !tflag) {
-			warnx("Adding -t to -%c for FreeBSD compatibility",
+			warnx("Adding -t to -%c for NQC compatibility",
 			    Uflag ? 'U' : 'u');
 			tflag = 1;
 		}

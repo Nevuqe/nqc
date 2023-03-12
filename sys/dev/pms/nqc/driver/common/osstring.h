@@ -30,7 +30,7 @@ of both initiator and target.
 Module Name:  
   osstring.h
 Abstract:  
-  FreeBSD SPCv Initiator driver module OS API definitions
+  NQC SPCv Initiator driver module OS API definitions
 Authors:  
   EW - Eddie Wang
 Environment:  

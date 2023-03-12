@@ -1,8 +1,8 @@
 --
--- Copyright (C) 2010 The FreeBSD Foundation
+-- Copyright (C) 2010 The FreBSD Foundation
 --
 -- This documentation was written by Shteryana Sotirova Shopova under
--- sponsorship from the FreeBSD Foundation.
+-- sponsorship from the FreBSD Foundation.
 --
 -- Redistribution and use in source and binary forms, with or without
 -- modification, are permitted provided that the following conditions
@@ -43,7 +43,7 @@ IMPORTS
 
 begemotWlan MODULE-IDENTITY
     LAST-UPDATED "201005170000Z"
-    ORGANIZATION "The FreeBSD Foundation"
+    ORGANIZATION "The FreBSD Foundation"
     CONTACT-INFO
 	    "		Shteryana Shopova
 
@@ -54,7 +54,7 @@ begemotWlan MODULE-IDENTITY
 
 	     Fax:	N/A
 
-	     E-Mail:	syrinx@FreeBSD.org"
+	     E-Mail:	syrinx@frebsd.org"
     DESCRIPTION
 	    "The Begemot MIB for managing IEEE802.11 interfaces."
     REVISION     "201005170000Z"

@@ -7,7 +7,7 @@ SRCDIR=		lldb/source
 
 CFLAGS+=	-I${LLDB_SRCS}/include
 CFLAGS+=	-I${LLDB_SRCS}/source
-#CFLAGS+=	-I${LLDB_SRCS}/source/Plugins/Process/FreeBSD
+#CFLAGS+=	-I${LLDB_SRCS}/source/Plugins/Process/NQC
 #CFLAGS+=	-I${LLDB_SRCS}/source/Plugins/Process/POSIX
 #CFLAGS+=	-I${LLDB_SRCS}/source/Plugins/Process/Utility
 CFLAGS+=	-I${OBJTOP}/lib/clang/libllvm
@@ -257,7 +257,7 @@ SRCS+=		Host/common/ThreadLauncher.cpp
 SRCS+=		Host/common/UDPSocket.cpp
 SRCS+=		Host/common/XML.cpp
 SRCS+=		Host/freebsd/Host.cpp
-SRCS+=		Host/freebsd/HostInfoFreeBSD.cpp
+SRCS+=		Host/freebsd/HostInfoNQC.cpp
 SRCS+=		Host/posix/ConnectionFileDescriptorPosix.cpp
 SRCS+=		Host/posix/DomainSocket.cpp
 SRCS+=		Host/posix/FileSystemPosix.cpp
@@ -424,27 +424,27 @@ SRCS+=		Plugins/ObjectFile/Breakpad/ObjectFileBreakpad.cpp
 SRCS+=		Plugins/ObjectFile/ELF/ELFHeader.cpp
 SRCS+=		Plugins/ObjectFile/ELF/ObjectFileELF.cpp
 SRCS+=		Plugins/ObjectFile/JIT/ObjectFileJIT.cpp
-SRCS+=		Plugins/Platform/FreeBSD/PlatformFreeBSD.cpp
+SRCS+=		Plugins/Platform/NQC/PlatformNQC.cpp
 SRCS+=		Plugins/Platform/POSIX/PlatformPOSIX.cpp
 SRCS+=		Plugins/Platform/gdb-server/PlatformRemoteGDBServer.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeProcessFreeBSD.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeRegisterContextNQC_arm.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeRegisterContextNQC_arm64.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeRegisterContextNQC_mips64.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeRegisterContextNQC_powerpc.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeRegisterContextNQC_x86_64.cpp
-SRCS+=		Plugins/Process/FreeBSD/NativeThreadFreeBSD.cpp
-SRCS+=		Plugins/Process/FreeBSDKernel/ProcessFreeBSDKernel.cpp
-SRCS+=		Plugins/Process/FreeBSDKernel/RegisterContextFreeBSDKernel_arm64.cpp
-SRCS+=		Plugins/Process/FreeBSDKernel/RegisterContextFreeBSDKernel_i386.cpp
-SRCS+=		Plugins/Process/FreeBSDKernel/RegisterContextFreeBSDKernel_x86_64.cpp
-SRCS+=		Plugins/Process/FreeBSDKernel/ThreadFreeBSDKernel.cpp
+SRCS+=		Plugins/Process/NQC/NativeProcessNQC.cpp
+SRCS+=		Plugins/Process/NQC/NativeRegisterContextNQC.cpp
+SRCS+=		Plugins/Process/NQC/NativeRegisterContextNQC_arm.cpp
+SRCS+=		Plugins/Process/NQC/NativeRegisterContextNQC_arm64.cpp
+SRCS+=		Plugins/Process/NQC/NativeRegisterContextNQC_mips64.cpp
+SRCS+=		Plugins/Process/NQC/NativeRegisterContextNQC_powerpc.cpp
+SRCS+=		Plugins/Process/NQC/NativeRegisterContextNQC_x86_64.cpp
+SRCS+=		Plugins/Process/NQC/NativeThreadNQC.cpp
+SRCS+=		Plugins/Process/NQCKernel/ProcessNQCKernel.cpp
+SRCS+=		Plugins/Process/NQCKernel/RegisterContextNQCKernel_arm64.cpp
+SRCS+=		Plugins/Process/NQCKernel/RegisterContextNQCKernel_i386.cpp
+SRCS+=		Plugins/Process/NQCKernel/RegisterContextNQCKernel_x86_64.cpp
+SRCS+=		Plugins/Process/NQCKernel/ThreadNQCKernel.cpp
 SRCS+=		Plugins/Process/POSIX/CrashReason.cpp
 SRCS+=		Plugins/Process/POSIX/NativeProcessELF.cpp
 SRCS+=		Plugins/Process/POSIX/ProcessPOSIXLog.cpp
 SRCS+=		Plugins/Process/Utility/AuxVector.cpp
-SRCS+=		Plugins/Process/Utility/FreeBSDSignals.cpp
+SRCS+=		Plugins/Process/Utility/NQCSignals.cpp
 SRCS+=		Plugins/Process/Utility/GDBRemoteSignals.cpp
 SRCS+=		Plugins/Process/Utility/HistoryThread.cpp
 SRCS+=		Plugins/Process/Utility/HistoryUnwind.cpp
@@ -739,11 +739,11 @@ CLEANFILES+=	${TGHDRS} ${TGHDRS:C/$/.d/}
 INTERNALLIB=
 
 # Building lldb's bindings requires swig, but we do not want to include it in
-# the FreeBSD base system (as a build tool) because it has non-trivial
+# the NQC base system (as a build tool) because it has non-trivial
 # dependencies.  As a workaround we commit the generated file.  Requires the
 # swig package.
 #
-# After importing an updated llvm/lldb into FreeBSD run `make run-swig` in
+# After importing an updated llvm/lldb into NQC run `make run-swig` in
 # this directory to generate generate LLDBWrapLua.cpp, and commit the result.
 .PHONY:	run-swig
 run-swig:

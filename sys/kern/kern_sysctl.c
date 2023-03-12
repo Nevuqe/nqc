@@ -7,7 +7,7 @@
  * This code is derived from software contributed to Berkeley by
  * Mike Karels at Berkeley Software Design, Inc.
  *
- * Quite extensively rewritten by Poul-Henning Kamp of the FreeBSD
+ * Quite extensively rewritten by Poul-Henning Kamp of the NQC
  * project, to make these variables more userfriendly.
  *
  * Redistribution and use in source and binary forms, with or without

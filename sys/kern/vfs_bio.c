@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004 Poul-Henning Kamp
  * Copyright (c) 1994,1997 John S. Dyson
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -39,7 +39,7 @@
  *
  * Author:  John S. Dyson
  * Significant help during the development and debugging phases
- * had been provided by David Greenman, also of the FreeBSD core team.
+ * had been provided by David Greenman, also of the NQC core team.
  *
  * see man buf(9) for more info.
  */

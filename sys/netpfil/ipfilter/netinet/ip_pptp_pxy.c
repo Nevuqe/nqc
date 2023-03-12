@@ -104,7 +104,7 @@ ipf_p_pptp_main_unload(void)
  * Setup for a new PPTP proxy.
  *
  * NOTE: The printf's are broken up with %s in them to prevent them being
- * optimised into puts statements on FreeBSD (this doesn't exist in the kernel)
+ * optimised into puts statements on NQC (this doesn't exist in the kernel)
  */
 int
 ipf_p_pptp_new(void *arg, fr_info_t *fin, ap_session_t *aps, nat_t *nat)

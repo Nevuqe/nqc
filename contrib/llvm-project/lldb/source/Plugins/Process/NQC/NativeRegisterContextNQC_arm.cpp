@@ -14,7 +14,7 @@
 #include "lldb/Utility/RegisterValue.h"
 #include "lldb/Utility/Status.h"
 
-#include "Plugins/Process/FreeBSD/NativeProcessFreeBSD.h"
+#include "Plugins/Process/NQC/NativeProcessNQC.h"
 #include "Plugins/Process/Utility/RegisterInfoPOSIX_arm.h"
 
 // clang-format off
@@ -27,8 +27,8 @@ using namespace lldb;
 using namespace lldb_private;
 using namespace lldb_private::process_nqc;
 
-NativeRegisterContextFreeBSD *
-NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
+NativeRegisterContextNQC *
+NativeRegisterContextNQC::CreateHostNativeRegisterContextNQC(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
   return new NativeRegisterContextNQC_arm(target_arch, native_thread);
 }
@@ -62,10 +62,10 @@ uint32_t NativeRegisterContextNQC_arm::GetUserRegisterCount() const {
 Status NativeRegisterContextNQC_arm::ReadRegisterSet(uint32_t set) {
   switch (set) {
   case RegisterInfoPOSIX_arm::GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
                                                m_reg_data.data());
   case RegisterInfoPOSIX_arm::FPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(
+    return NativeProcessNQC::PtraceWrapper(
         PT_GETVFPREGS, m_thread.GetID(),
         m_reg_data.data() + sizeof(RegisterInfoPOSIX_arm::GPR));
   }
@@ -75,10 +75,10 @@ Status NativeRegisterContextNQC_arm::ReadRegisterSet(uint32_t set) {
 Status NativeRegisterContextNQC_arm::WriteRegisterSet(uint32_t set) {
   switch (set) {
   case RegisterInfoPOSIX_arm::GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
                                                m_reg_data.data());
   case RegisterInfoPOSIX_arm::FPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(
+    return NativeProcessNQC::PtraceWrapper(
         PT_SETVFPREGS, m_thread.GetID(),
         m_reg_data.data() + sizeof(RegisterInfoPOSIX_arm::GPR));
   }
@@ -195,7 +195,7 @@ Status NativeRegisterContextNQC_arm::WriteAllRegisterValues(
 }
 
 llvm::Error NativeRegisterContextNQC_arm::CopyHardwareWatchpointsFrom(
-    NativeRegisterContextFreeBSD &source) {
+    NativeRegisterContextNQC &source) {
   return llvm::Error::success();
 }
 

@@ -39,7 +39,7 @@
 /*
  * Taken from sys/xdr/xdr_mem.c.
  *
- * FreeBSD's userland XDR doesn't implement control method (only the kernel),
+ * NQC's userland XDR doesn't implement control method (only the kernel),
  * but OpenSolaris nvpair still depend on it, so we have to implement it here.
  */
 static __inline bool_t

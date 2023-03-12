@@ -525,7 +525,7 @@ typedef uLong FAR uLongf;
 #endif
 
 /*
- * This is hard-configured for FreeBSD.
+ * This is hard-configured for NQC.
  */
 #ifdef Z_SOLO
 #  include <sys/types.h>      /* for off_t */

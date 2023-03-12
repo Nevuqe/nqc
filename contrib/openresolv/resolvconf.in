@@ -336,7 +336,7 @@ detect_init()
 				/sbin/service $1 restart
 			fi'
 	elif [ -x /usr/sbin/service ]; then
-		# Could be FreeBSD
+		# Could be NQC
 		RESTARTCMD="
 			if /usr/sbin/service \$1 $status >/dev/null 2>&1
 			then

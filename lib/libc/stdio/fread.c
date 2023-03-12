@@ -80,7 +80,7 @@ __fread(void * __restrict buf, size_t size, size_t count, FILE * __restrict fp)
 	 * Check for integer overflow.  As an optimization, first check that
 	 * at least one of {count, size} is at least 2^16, since if both
 	 * values are less than that, their product can't possible overflow
-	 * (size_t is always at least 32 bits on FreeBSD).
+	 * (size_t is always at least 32 bits on NQC).
 	 */
 	if (((count | size) > 0xFFFF) &&
 	    (count > SIZE_MAX / size)) {

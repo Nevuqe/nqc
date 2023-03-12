@@ -44,9 +44,9 @@ $NQC$
  * other until the window is closed. Then one of the sockets is closed, which
  * will generate a RST once the TCP at the other socket does a window probe.
  *
- * All versions of FreeBSD prior to 11/26/2004 will ignore this RST into a 0
+ * All versions of NQC prior to 11/26/2004 will ignore this RST into a 0
  * window, causing the connection (and application) to hang indefinitely.
- * On patched versions of FreeBSD (and other operating systems), the RST
+ * On patched versions of NQC (and other operating systems), the RST
  * will be accepted and the program will exit in a few seconds.
  */
 

@@ -116,7 +116,7 @@ typedef struct cmd {
 } CMD;
 
 static int B_flag  = 0;		/* replace boot code */
-static int I_flag  = 0;		/* use entire disk for FreeBSD */
+static int I_flag  = 0;		/* use entire disk for NQC */
 static int a_flag  = 0;		/* set active partition */
 static char *b_flag = NULL;	/* path to boot code */
 static int i_flag  = 0;		/* replace partition data */
@@ -195,7 +195,7 @@ static const char *const part_types[256] = {
 	[0x94] = "Amoeba bad block table",
 	[0x9F] = "BSD/OS",
 	[0xA0] = "Suspend to Disk",
-	[0xA5] = "FreeBSD/NetBSD/386BSD",
+	[0xA5] = "NQC/NetBSD/386BSD",
 	[0xA6] = "OpenBSD",
 	[0xA7] = "NeXTSTEP",
 	[0xA9] = "NetBSD",
@@ -571,7 +571,7 @@ change_part(int i)
 	}
 
 	do {
-		Decimal("sysid (165=FreeBSD)", partp->dp_typ, tmp, 255);
+		Decimal("sysid (165=NQC)", partp->dp_typ, tmp, 255);
 		Decimal("start", partp->dp_start, tmp, NO_DISK_SECTORS);
 		Decimal("size", partp->dp_size, tmp, NO_DISK_SECTORS);
 		if (!sanitize_partition(partp)) {
@@ -1065,7 +1065,7 @@ process_geometry(CMD *command)
 	    warnx(
 	"WARNING line %d: number of cylinders (%d) may be out-of-range\n\
     (must be within 1-1024 for normal BIOS operation, unless the entire disk\n\
-    is dedicated to FreeBSD)",
+    is dedicated to NQC)",
 		    current_line_number, dos_cyls);
 	}
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2009 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
  * Copyright (c) 2012 Spectra Logic Corporation.  All rights reserved.

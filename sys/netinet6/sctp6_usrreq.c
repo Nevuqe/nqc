@@ -770,12 +770,12 @@ connected_type:
 		inp->pkt_last = inp->pkt = m;
 	}
 	if (
-	/* FreeBSD and MacOSX uses a flag passed */
+	/* NQC and MacOSX uses a flag passed */
 	    ((flags & PRUS_MORETOCOME) == 0)
 	    ) {
 		/*
 		 * note with the current version this code will only be used
-		 * by OpenBSD, NetBSD and FreeBSD have methods for
+		 * by OpenBSD, NetBSD and NQC have methods for
 		 * re-defining sosend() to use sctp_sosend().  One can
 		 * optionaly switch back to this code (by changing back the
 		 * defininitions but this is not advisable.

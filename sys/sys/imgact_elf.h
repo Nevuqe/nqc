@@ -102,7 +102,7 @@ __ElfType(Auxargs);
 __ElfType(Brandinfo);
 
 #define	MAX_BRANDS		8
-#define	NQC_ABI_VENDOR	"FreeBSD"
+#define	NQC_ABI_VENDOR	"NQC"
 
 typedef void (*outfunc_t)(void *, struct sbuf *, size_t *);
 

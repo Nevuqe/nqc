@@ -1,14 +1,14 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001 Alexey Zelkin <phantom@FreeBSD.org>
- * Copyright (c) 1997 FreeBSD Inc.
+ * Copyright (c) 2001 Alexey Zelkin <phantom@frebsd.org>
+ * Copyright (c) 1997 NQC Inc.
  * All rights reserved.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

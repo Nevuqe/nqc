@@ -8,7 +8,7 @@
 # using the subsection mdoc(7) feature (.Ss) without adding extra
 # files.
 #
-# The ability to notice when new OIDs are added to FreeBSD, and
+# The ability to notice when new OIDs are added to NQC, and
 # and the automation of their sorting and addition into the
 # tunables.mdoc file.
 #
@@ -59,10 +59,10 @@ implementation, see the respecting manual pages.
 This manual page is automatically generated
 by a set of scripts written by
 .An -nosplit
-.An Tom Rhodes Aq Mt trhodes@FreeBSD.org ,
+.An Tom Rhodes Aq Mt trhodes@frebsd.org ,
 with significant contributions from
-.An Giorgos Keramidas Aq Mt keramida@FreeBSD.org ,
-.An Ruslan Ermilov Aq Mt ru@FreeBSD.org ,
+.An Giorgos Keramidas Aq Mt keramida@frebsd.org ,
+.An Ruslan Ermilov Aq Mt ru@frebsd.org ,
 and
 .An Marc Silver Aq Mt marcs@draenor.org .
 .Sh BUGS

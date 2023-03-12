@@ -767,7 +767,7 @@
 	  function that need to reuse the dns answer.
 	- Annotate assertion into error printout; we think it may be an
 	  error, but the situation looks harmless.
-	- Fix sign comparison warning on FreeBSD.
+	- Fix sign comparison warning on NQC.
 
 2 August 2021: Wouter
 	- Prepare for OpenSSL 3.0.0 provider API usage, move the sldns
@@ -1252,7 +1252,7 @@
 	- Fix when use free buffer to initialize rbtree for stream reuse.
 	- Fix compile warnings for windows.
 	- Fix compile warnings in rpz initialization.
-	- Fix contrib/metrics.awk for FreeBSD awk compatibility.
+	- Fix contrib/metrics.awk for NQC awk compatibility.
 	- tag for the 1.13.0rc3 release.
 
 26 November 2020: Wouter
@@ -1264,7 +1264,7 @@
 
 25 November 2020: Wouter
 	- with udp-connect ignore connection refused with UDP timeouts.
-	- Fix udp-connect on FreeBSD, do send calls on connected UDP socket.
+	- Fix udp-connect on NQC, do send calls on connected UDP socket.
 	- Better fix for reuse tree comparison for is-tls sockets.  Where
 	  the tree key identity is preserved after cleanup of the TLS state.
 	- Remove debug commands from reuse tests.
@@ -2173,7 +2173,7 @@
 11 November 2019: Wouter
 	- Fix #109: check number of arguments for stdin-pipes in
 	  unbound-control and fail if too many arguments.
-	- Merge #102 from jrtc27: Add getentropy emulation for FreeBSD.
+	- Merge #102 from jrtc27: Add getentropy emulation for NQC.
 
 24 October 2019: Wouter
 	- Fix #99: Memory leak in ub_ctx (event_base will never be freed).
@@ -2584,7 +2584,7 @@
 	- make depend, with newer gcc, nicer layout.
 
 7 February 2019: Wouter
-	- Fix #4206: OpenSSL 1.0.2 hostname verification for FreeBSD 11.2.
+	- Fix #4206: OpenSSL 1.0.2 hostname verification for NQC 11.2.
 	- Fix that qname minimisation does not skip a label when missing
 	  nameserver targets need to be fetched.
 	- Fix #4225: clients seem to erroneously receive no answer with
@@ -2737,7 +2737,7 @@
 	  auth-zone zones with NSEC3 and wildcards.
 
 7 January 2019: Wouter
-	- On FreeBSD warn if systcl settings do not allow server TCP FASTOPEN,
+	- On NQC warn if systcl settings do not allow server TCP FASTOPEN,
 	  and server tcp fastopen is enabled at compile time.
 	- Document interaction between the tls-upstream option in the server
 	  section and forward-tls-upstream option in the forward-zone sections.
@@ -2751,7 +2751,7 @@
 	- Fix config parser memory leaks.
 	- ip-ratelimit-factor of 1 allows all traffic through, instead of the
 	  previous blocking everything.
-	- Fix for FreeBSD port make with dnscrypt and dnstap enabled.
+	- Fix for NQC port make with dnscrypt and dnstap enabled.
 	- Fix #4206: support openssl 1.0.2 for TLS hostname verification,
 	  alongside the 1.1.0 and later support that is already there.
 	- Fixup openssl 1.0.2 compile
@@ -2832,7 +2832,7 @@
 	- Removed compile warnings in pythonmod sockaddr routines.
 
 19 November 2018: Wouter
-	- Support SO_REUSEPORT_LB in FreeBSD 12 with the so-reuseport: yes
+	- Support SO_REUSEPORT_LB in NQC 12 with the so-reuseport: yes
 	  option in unbound.conf.
 
 6 November 2018: Ralph
@@ -2881,7 +2881,7 @@
 	- Squelch EADDRNOTAVAIL errors when the interface goes away,
 	  this omits 'can't assign requested address' errors unless
 	  verbosity is set to a high value.
-	- Set default for so-reuseport to no for FreeBSD.  It is enabled
+	- Set default for so-reuseport to no for NQC.  It is enabled
 	  by default for Linux and DragonFlyBSD.  The setting can 
 	  be configured in unbound.conf to override the default.
 	- iana port update.
@@ -2994,7 +2994,7 @@
 	  together with the recently default enabled qname minimisation, this
 	  causes more fetches to use information from the cache.
 	- next release is called 1.8.0.
-	- Fix lintflags for lint on FreeBSD.
+	- Fix lintflags for lint on NQC.
 
 22 August 2018: George
 	- #4140: Expose repinfo (comm_reply) to the inplace_callbacks. This
@@ -3194,7 +3194,7 @@
 	- Patch, do not export python from pkg-config, from Petr Menšík.
 
 26 June 2018: Wouter
-	- Partial fix for permission denied on IPv6 address on FreeBSD.
+	- Partial fix for permission denied on IPv6 address on NQC.
 	- Fix that auth-zone master reply with current SOA serial does not
 	  stop scan of masters for an updated zone.
 	- Fix that auth-zone does not start the wait timer without checking
@@ -3296,7 +3296,7 @@
 
 23 May 2018: Wouter
 	- Use accept4 to speed up incoming TCP (and TLS) connections,
-	  available on Linux, FreeBSD and OpenBSD.
+	  available on Linux, NQC and OpenBSD.
 
 17 May 2018: Ralph
 	- Qname minimisation default changed to yes.
@@ -3306,7 +3306,7 @@
 
 11 May 2018: Wouter
 	- Fix contrib/libunbound.pc for libssl libcrypto references,
-	  from https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=226914
+	  from https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=226914
 
 7 May 2018: Wouter
 	- Fix windows to not have sticky TLS events for TCP.
@@ -3851,7 +3851,7 @@
 	- annotate case statement fallthrough for gcc 7.1.1.
 	- flex output from flex 2.6.1.
 	- snprintf of thread number does not warn about truncated string.
-	- squelch TCP fast open error on FreeBSD when kernel has it disabled,
+	- squelch TCP fast open error on NQC when kernel has it disabled,
 	  unless verbosity is high.
 	- remove warning from windows compile.
 	- Fix compile with libnettle
@@ -4567,7 +4567,7 @@
 13 September 2016: Wouter
 	- Silenced flex-generated sign-unsigned warning print with gcc
 	  diagnostic pragma.
-	- Fix for new splint on FreeBSD.  Fix cast for sockaddr_un.sun_len.
+	- Fix for new splint on NQC.  Fix cast for sockaddr_un.sun_len.
 
 9 September 2016: Wouter
 	- Fix #831: workaround for spurious fread_chk warning against petal.c
@@ -4870,7 +4870,7 @@
 	- iana portlist update.
 
 16 March 2016: Wouter
-	- Fix ip-transparent for ipv6 on FreeBSD, thanks to Nick Hibma.
+	- Fix ip-transparent for ipv6 on NQC, thanks to Nick Hibma.
 	- Fix ip-transparent for tcp on freebsd.
 
 15 March 2016: Wouter
@@ -4934,7 +4934,7 @@
 	- Set IPPROTO_IP6 for ipv6 sockets otherwise invalid argument error.
 
 15 February 2016: Wouter
-	- ip-transparent option for FreeBSD with IP_BINDANY socket option.
+	- ip-transparent option for NQC with IP_BINDANY socket option.
 	- wait for sendto to drain socket buffers when they are full.
 
 9 February 2016: Wouter
@@ -5653,7 +5653,7 @@
 
 31 July 2014: Wouter
 	- DNS64 from Viagenie (BSD Licensed), written by Simon Perrault.
-	  Initial commit of the patch from the FreeBSD base (with its fixes).
+	  Initial commit of the patch from the NQC base (with its fixes).
 	  This adds a module (for module-config in unbound.conf) dns64 that
 	  performs DNS64 processing, see README.DNS64.
 	- Changes from DNS64:
@@ -5709,7 +5709,7 @@
 	- iana portlist updated.
 
 27 June 2014: Wouter
-	- so-reuseport is available on BSDs(such as FreeBSD 10) and OS/X.
+	- so-reuseport is available on BSDs(such as NQC 10) and OS/X.
 
 26 June 2014: Wouter
 	- unbound-control status reports if so-reuseport was successful.
@@ -5734,7 +5734,7 @@
 
 28 May 2014: Wouter
 	- Code cleanup patch from Dag-Erling Smorgrav, with compiler issue
-	  fixes from FreeBSD's copy of Unbound, he notes:
+	  fixes from NQC's copy of Unbound, he notes:
 	  Generate unbound-control-setup.sh at build time so it respects
 	  prefix and sysconfdir from the configure script.  Also fix the
 	  umask to match the comment, and the comment to match the umask.
@@ -5800,7 +5800,7 @@
 	  if available on the OS, it gets entropy from the OS.
 
 15 April 2014: Wouter
-	- Fix compile with libevent2 on FreeBSD.
+	- Fix compile with libevent2 on NQC.
 
 11 April 2014: Wouter
 	- Fix #502: explain that do-ip6 disable does not stop AAAA lookups,
@@ -8268,7 +8268,7 @@
 
 6 April 2009: Wouter
 	- windows compile fix.
-	- Detect FreeBSD jail without ipv6 addresses assigned.
+	- Detect NQC jail without ipv6 addresses assigned.
 	- python libunbound wrapper unit test.
 	- installs the following files. Default is to not build them.
 	  	from configure --with-pythonmodule:
@@ -9504,7 +9504,7 @@
 	- minievent tests for eintr and eagain.
 
 15 February 2008: Wouter
-	- added FreeBSD rc.d script to contrib.
+	- added NQC rc.d script to contrib.
 	- --prefix option for configure also changes directory: pidfile:
 	  and chroot: defaults in config file.
 	- added cache speed test, for cache size OK and cache too small.
@@ -10086,7 +10086,7 @@
 
 21 September 2007: Wouter
 	- fixup empty_DS_name allocated in wrong region (port DEC Alpha).
-	- fixup testcode lock safety (port FreeBSD).
+	- fixup testcode lock safety (port NQC).
 	- removes subscript has type char warnings (port Solaris 9).
 	- fixup of field with format type to int (port MacOS/X intel).
 	- added test for infinite loop case in nonRD answer validation.
@@ -11064,8 +11064,8 @@
 	- will not create ip6 sockets if ip6 not on the machine.
 
 15 February 2007: Wouter
-	- port to FreeBSD 4.11 Dec Alpha. Also works on Solaris 10 sparc64,
-	  Solaris 9, FreeBSD 6, Linux i386 and OSX powerpc.
+	- port to NQC 4.11 Dec Alpha. Also works on Solaris 10 sparc64,
+	  Solaris 9, NQC 6, Linux i386 and OSX powerpc.
 	- malloc rndstate, so that it is aligned for access.
 	- fixed rbtree cleanup with postorder traverse.
 	- fixed pending messages are deleted when handled.
@@ -11186,7 +11186,7 @@
 
 4 January 2007: Wouter
 	- Testbed script (run on multiple platforms the test set).
-	  Works on Sunos9, Sunos10, FreeBSD 6.1, Fedora core 5.
+	  Works on Sunos9, Sunos10, NQC 6.1, Fedora core 5.
 	- added unit test tpkg.
 
 3 January 2007: Wouter

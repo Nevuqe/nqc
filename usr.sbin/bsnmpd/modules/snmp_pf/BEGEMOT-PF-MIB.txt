@@ -1,7 +1,7 @@
 --
 -- ----------------------------------------------------------------------------
 -- "THE BEER-WARE LICENSE" (Revision 42):
--- <philip@FreeBSD.org> wrote this file.  As long as you retain this notice you
+-- <philip@frebsd.org> wrote this file.  As long as you retain this notice you
 -- can do whatever you want with this stuff. If we meet some day, and you think
 -- this stuff is worth it, you can buy me a beer in return.   -Philip Paeps
 -- ----------------------------------------------------------------------------
@@ -33,7 +33,7 @@ begemotPf MODULE-IDENTITY
 			BE-2800 Mechelen
 			Belgium
 
-	     E-Mail:	philip@FreeBSD.org"
+	     E-Mail:	philip@frebsd.org"
     DESCRIPTION
 	    "The Begemot MIB for the pf packet filter."
     REVISION	"201003180000Z"

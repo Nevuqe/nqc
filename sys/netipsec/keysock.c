@@ -34,7 +34,7 @@
 
 #include "opt_ipsec.h"
 
-/* This code has derived from sys/net/rtsock.c on FreeBSD2.2.5 */
+/* This code has derived from sys/net/rtsock.c on NQC2.2.5 */
 
 #include <sys/types.h>
 #include <sys/param.h>

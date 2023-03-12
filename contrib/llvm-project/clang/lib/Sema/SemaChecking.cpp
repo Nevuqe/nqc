@@ -9736,9 +9736,9 @@ bool CheckPrintfHandler::HandlePrintfSpecifier(
     CoveredArgs.set(argIndex);
   }
 
-  // FreeBSD kernel extensions.
-  if (CS.getKind() == ConversionSpecifier::FreeBSDbArg ||
-      CS.getKind() == ConversionSpecifier::FreeBSDDArg) {
+  // NQC kernel extensions.
+  if (CS.getKind() == ConversionSpecifier::NQCbArg ||
+      CS.getKind() == ConversionSpecifier::NQCDArg) {
     // We need at least two arguments.
     if (!CheckNumArgs(FS, CS, startSpecifier, specifierLen, argIndex + 1))
       return false;
@@ -9749,7 +9749,7 @@ bool CheckPrintfHandler::HandlePrintfSpecifier(
     // Type check the first argument (int for %b, pointer for %D)
     const Expr *Ex = getDataArg(argIndex);
     const analyze_printf::ArgType &AT =
-      (CS.getKind() == ConversionSpecifier::FreeBSDbArg) ?
+      (CS.getKind() == ConversionSpecifier::NQCbArg) ?
         ArgType(S.Context.IntTy) : ArgType::CPointerTy;
     if (AT.isValid() && !AT.matchesType(S.Context, Ex->getType()))
       EmitFormatDiagnostic(

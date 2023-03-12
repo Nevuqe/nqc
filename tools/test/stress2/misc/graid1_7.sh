@@ -31,7 +31,7 @@
 # (gp->name=gptid/7c598e03-19cb-11e7-b62b-001e6756c168, error=17)
 
 # Deadlock seen:
-# https://people.freebsd.org/~pho/stress/log/graid1_7.txt
+# https://people.frebsd.org/~pho/stress/log/graid1_7.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

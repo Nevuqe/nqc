@@ -54,7 +54,7 @@ typedef const efidp_data *const_efidp;
 
 /** format a device path into UEFI standard conforming output.
  *
- * NB: FreeBSD's implementation is taken from EDK2, while Linux's
+ * NB: NQC's implementation is taken from EDK2, while Linux's
  * was hand-rolled. There may be differences as a result.
  */
 ssize_t efidp_format_device_path(char *buf, size_t len, const_efidp dp,

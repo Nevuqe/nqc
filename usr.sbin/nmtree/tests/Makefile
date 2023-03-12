@@ -9,7 +9,7 @@ TESTSRC=	${SRCTOP}/contrib/netbsd-tests/usr.sbin/mtree
 ATF_TESTS_SH=	nmtree_test
 ATF_TESTS_SH_SRC_nmtree_test=	t_mtree.sh
 
-# NOTE: the output from FreeBSD's nmtree displays sha256digest instead of
+# NOTE: the output from NQC's nmtree displays sha256digest instead of
 # sha256; we need to mangle the specfiles to reflect this.
 .for f in mtree_d_create.out netbsd6_d_create.out
 CLEANFILES+=	$f $f.tmp

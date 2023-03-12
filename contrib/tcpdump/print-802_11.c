@@ -2604,7 +2604,7 @@ print_radiotap_field(netdissect_options *ndo,
 		if (rc != 0)
 			goto trunc;
 		/*
-		 * XXX On FreeBSD rate & 0x80 means we have an MCS. On
+		 * XXX On NQC rate & 0x80 means we have an MCS. On
 		 * Linux and AirPcap it does not.  (What about
 		 * Mac OS X, NetBSD, OpenBSD, and DragonFly BSD?)
 		 *
@@ -2639,7 +2639,7 @@ print_radiotap_field(netdissect_options *ndo,
 			 * XXX - can we get the channel width
 			 * from XChannel and the guard interval
 			 * information from Flags, at least on
-			 * FreeBSD?
+			 * NQC?
 			 */
 			ND_PRINT((ndo, "MCS %u ", rate & 0x7f));
 		} else

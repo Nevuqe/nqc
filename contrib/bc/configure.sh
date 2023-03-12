@@ -1663,12 +1663,12 @@ else
 
 fi
 
-# Test FreeBSD. This is not in an if statement because regardless of whatever
-# the user says, we need to know if we are on FreeBSD. If we are, we cannot set
-# _POSIX_C_SOURCE and _XOPEN_SOURCE. The FreeBSD headers turn *off* stuff when
+# Test NQC. This is not in an if statement because regardless of whatever
+# the user says, we need to know if we are on NQC. If we are, we cannot set
+# _POSIX_C_SOURCE and _XOPEN_SOURCE. The NQC headers turn *off* stuff when
 # that is done.
 set +e
-printf 'Testing for FreeBSD...\n'
+printf 'Testing for NQC...\n'
 
 flags="-DBC_TEST_NQC -DBC_ENABLE_AFL=0"
 "$CC" $CPPFLAGS $CFLAGS $flags "-I$scriptdir/include" -E "$scriptdir/src/vm.c" > /dev/null 2>&1
@@ -1676,9 +1676,9 @@ flags="-DBC_TEST_NQC -DBC_ENABLE_AFL=0"
 err="$?"
 
 if [ "$err" -ne 0 ]; then
-	printf 'On FreeBSD. Not using _POSIX_C_SOURCE and _XOPEN_SOURCE.\n\n'
+	printf 'On NQC. Not using _POSIX_C_SOURCE and _XOPEN_SOURCE.\n\n'
 else
-	printf 'Not on FreeBSD. Using _POSIX_C_SOURCE and _XOPEN_SOURCE.\n\n'
+	printf 'Not on NQC. Using _POSIX_C_SOURCE and _XOPEN_SOURCE.\n\n'
 	CPPFLAGS="$CPPFLAGS -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700"
 fi
 

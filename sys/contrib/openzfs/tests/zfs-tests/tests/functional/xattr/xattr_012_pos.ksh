@@ -70,7 +70,7 @@ fi
 FS_SIZE=$(get_prop used $TESTPOOL/$TESTFS)
 
 if is_nqc; then
-	# FreeBSD setextattr has awful scaling with respect to input size.
+	# NQC setextattr has awful scaling with respect to input size.
 	# It reallocs after every 1024 bytes. For now we'll just break up
 	# the 200MB into 10 20MB attributes, but this test could be revisited
 	# if someone cared about large extattrs and improves setextattr -i.

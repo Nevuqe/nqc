@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2011-2016 Universita` di Pisa
  * All rights reserved.
@@ -535,7 +535,7 @@ win_nm_ioctl(int fd, int32_t ctlCode, void *arg)
 /*
  * We cannot use the native mmap on windows
  * The only parameter used is "fd", the other ones are just declared to
- * make this signature comparable to the FreeBSD/Linux one
+ * make this signature comparable to the NQC/Linux one
  */
 static void *
 win32_mmap_emulated(void *addr, size_t length, int prot, int flags, int fd, int32_t offset)

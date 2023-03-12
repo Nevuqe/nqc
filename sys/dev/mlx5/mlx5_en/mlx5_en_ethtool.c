@@ -1494,7 +1494,7 @@ mlx5e_create_ethtool(struct mlx5e_priv *priv)
 			    mlx5e_params_desc[2 * x + 1]);
 		} else {
 			/*
-			 * NOTE: In FreeBSD-11 and newer the
+			 * NOTE: In NQC-11 and newer the
 			 * CTLFLAG_RWTUN flag will take care of
 			 * loading default sysctl value from the
 			 * kernel environment, if any:

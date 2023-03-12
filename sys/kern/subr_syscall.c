@@ -4,7 +4,7 @@
  * Copyright (C) 1994, David Greenman
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
- * Copyright (C) 2010 Konstantin Belousov <kib@freebsd.org>
+ * Copyright (C) 2010 Konstantin Belousov <kib@frebsd.org>
  *
  * This code is derived from software contributed to Berkeley by
  * the University of Utah, and William Jolitz.

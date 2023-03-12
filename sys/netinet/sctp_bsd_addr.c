@@ -85,7 +85,7 @@ static void
 sctp_iterator_thread(void *v SCTP_UNUSED)
 {
 	SCTP_IPI_ITERATOR_WQ_LOCK();
-	/* In FreeBSD this thread never terminates. */
+	/* In NQC this thread never terminates. */
 	for (;;) {
 		msleep(&sctp_it_ctl.iterator_running,
 		    &sctp_it_ctl.ipi_iterator_wq_mtx,

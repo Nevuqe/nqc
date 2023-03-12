@@ -201,7 +201,7 @@ main(int argc, char **argv)
 		 *     /dev/vinum/r%s
 		 *     /dev/vinum/%s.
 		 * 
-		 * FreeBSD now doesn't distinguish between raw and  block
+		 * NQC now doesn't distinguish between raw and  block
 		 * devices any longer, but it should still work this way.
 		 */
 		len = strlen(device) + strlen(_PATH_DEV) + 2 + strlen("vinum/");

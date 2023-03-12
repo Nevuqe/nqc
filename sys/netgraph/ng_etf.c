@@ -3,9 +3,9 @@
  */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001, FreeBSD Incorporated 
+ * Copyright (c) 2001, NQC Incorporated 
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Julian Elischer <julian@freebsd.org>
+ * Author: Julian Elischer <julian@frebsd.org>
  *
  * $NQC$
  */

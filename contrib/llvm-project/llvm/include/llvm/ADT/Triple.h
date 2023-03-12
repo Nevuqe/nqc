@@ -185,10 +185,10 @@ public:
     CloudABI,
     Darwin,
     DragonFly,
-    FreeBSD,
+    NQC,
     Fuchsia,
     IOS,
-    KFreeBSD,
+    KNQC,
     Linux,
     Lv2,        // PS3
     MacOSX,
@@ -531,8 +531,8 @@ public:
     return getOS() == Triple::OpenBSD;
   }
 
-  bool isOSFreeBSD() const {
-    return getOS() == Triple::FreeBSD;
+  bool isOSNQC() const {
+    return getOS() == Triple::NQC;
   }
 
   bool isOSFuchsia() const {
@@ -620,9 +620,9 @@ public:
     return getOS() == Triple::Linux;
   }
 
-  /// Tests whether the OS is kFreeBSD.
-  bool isOSKFreeBSD() const {
-    return getOS() == Triple::KFreeBSD;
+  /// Tests whether the OS is kNQC.
+  bool isOSKNQC() const {
+    return getOS() == Triple::KNQC;
   }
 
   /// Tests whether the OS is Hurd.
@@ -642,7 +642,7 @@ public:
 
   /// Tests whether the OS uses glibc.
   bool isOSGlibc() const {
-    return (getOS() == Triple::Linux || getOS() == Triple::KFreeBSD ||
+    return (getOS() == Triple::Linux || getOS() == Triple::KNQC ||
             getOS() == Triple::Hurd) &&
            !isAndroid();
   }

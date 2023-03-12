@@ -28,7 +28,7 @@
 
 # Variation of nfs15.sh, using lockd(8).
 # "panic: Failed to register NFS lock locally - error=11" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik897.txt
+# https://people.frebsd.org/~pho/stress/log/kostik897.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

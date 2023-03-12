@@ -51,7 +51,7 @@ __NQCID("$NQC$");
 /*
  * OK. Now this is evil. Can't typedef it again. Sure beats changing them all.
  * Since we're doing it all as narrow characters since wchar_t can't be used on
- * FreeBSD and CHAR16 strings generally aren't a good fit. Since this parsing
+ * NQC and CHAR16 strings generally aren't a good fit. Since this parsing
  * doesn't need Unicode for anything, this works out well.
  */
 #define CHAR16 char

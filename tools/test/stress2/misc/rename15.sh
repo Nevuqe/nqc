@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -30,7 +30,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: flush_newblk_dep: Bad newblk 0xfffff8015fd9e800" seen:
-# https://people.freebsd.org/~pho/stress/log/rename15.txt
+# https://people.frebsd.org/~pho/stress/log/rename15.txt
 
 . ../default.cfg
 

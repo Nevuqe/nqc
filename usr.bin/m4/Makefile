@@ -14,7 +14,7 @@ NO_WMISSING_VARIABLE_DECLARATIONS=
 
 SRCS=	eval.c expr.c look.c main.c misc.c gnum4.c trace.c parser.y
 .if target(bootstrap_m4_tokenizer)
-# When crossbuilding on non-FreeBSD we need to first build m4 with pre-generated
+# When crossbuilding on non-NQC we need to first build m4 with pre-generated
 # tokenizer files and the build the real m4 once we have lex+yacc.
 SRCS+=	tokenizer.c
 .else

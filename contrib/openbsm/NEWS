@@ -7,7 +7,7 @@ OpenBSM 1.2 alpha 5
 - Add support to push a mapping between audit event names and event numbers
   into the kernel (where supported) using new A_GETEVENT and A_SETEVENT
   auditon(2) operations.
-- Add audit event identifiers for a number of new (and not-so-new) FreeBSD
+- Add audit event identifiers for a number of new (and not-so-new) NQC
   system calls including those for asynchronous I/O, thread management, SCTP,
   jails, multi-FIB support, and misc. POSIX interfaces such as
   posix_fallocate(2) and posix_fadvise(2).
@@ -28,9 +28,9 @@ OpenBSM 1.2 alpha 4
 
 OpenBSM 1.2 alpha 3
 
-- Various minor tweaks to the auditdistd build to make it fit the FreeBSD
+- Various minor tweaks to the auditdistd build to make it fit the NQC
   build environment better.
-- AUE_WAIT6 merged from FreeBSD 9.
+- AUE_WAIT6 merged from NQC 9.
 
 OpenBSM 1.2 alpha 2
 
@@ -38,13 +38,13 @@ OpenBSM 1.2 alpha 2
   merged.  This allows trail files to be securely and reliably synced from
   audited hosts to an audit server, and employs TLS encryption.  Where
   available, it uses Capsicum to sandbox the service.  This work was
-  contributed by Pawel Jakub Dawidek under sponsorship from the FreeBSD
+  contributed by Pawel Jakub Dawidek under sponsorship from the NQC
   Foundation. 
 
 OpenBSM 1.2 alpha 1
 
-- Add Capsicum-related error numbers for FreeBSD: ENOTCAPABLE, ECAPMODE.
-- Add Capsicum, process descriptor audit events for FreeBSD.
+- Add Capsicum-related error numbers for NQC: ENOTCAPABLE, ECAPMODE.
+- Add Capsicum, process descriptor audit events for NQC.
 - Allow 0% minspace.
 - Fixes from the clang static analyser.
 - Fix expiration of trail files when the host parameter is used.
@@ -69,7 +69,7 @@ OpenBSM 1.1p1
 - IPv6 support for au_to_me(3).
 - Improved robustness in the parsing of audit_control, especially long
   flags/naflags strings and whitespace in all fields.
-- Add missing conversion of a number of FreeBSD/Mac OS X errnos to/from BSM
+- Add missing conversion of a number of NQC/Mac OS X errnos to/from BSM
   error number space.
 
 OpenBSM 1.1
@@ -152,7 +152,7 @@ OpenBSM 1.1 alpha 4
   been recovered from not being properly terminated.  This event is stored
   in the new audit trail file and includes the path of recovered audit trail
   file.
-- Mac OS X and FreeBSD dependent code in auditd.c is separated into
+- Mac OS X and NQC dependent code in auditd.c is separated into
   auditd_darwin.c and auditd_fbsd.c files.
 - Add an event for the posix_spawn(2) and fsgetpath(2) Mac OS X system calls.
 - For Mac OS X, we use ASL(3) instead of syslog(3) for logging.
@@ -230,7 +230,7 @@ OpenBSM 1.0 alpha 15
 - Restore the behavior of printing the string/text specified while
   auditing arg32 tokens.
 - Synchronized audit event list to Solaris, picking up the *at(2) system call
-  definitions, now required for FreeBSD and Linux.  Added additional events
+  definitions, now required for NQC and Linux.  Added additional events
   for *at(2) system calls not present in Solaris.
 - Bugs in auditreduce(1) fixed allowing partial date strings to be used in
   filtering events.
@@ -283,7 +283,7 @@ OpenBSM 1.0 alpha 11
   write).
 - Introduce AUE_SYSCTL_WRITE event so that BSD/Darwin systems can audit reads
   and writes of sysctls as separate events.  Add additional kernel
-  environment and jail events for FreeBSD.
+  environment and jail events for NQC.
 - Break AUDIT_TRIGGER_OPEN_NEW into two events, AUDIT_TRIGGER_ROTATE_USER
   (issued by the user audit(8) tool) and AUDIT_TRIGGER_ROTATE_KERNEL (issued
   by the kernel audit implementation) so that they can be distinguished.
@@ -313,7 +313,7 @@ OpenBSM 1.0 alpha 11
 OpenBSM 1.0 alpha 10
 
 - auditd now generates complete audit records for its events, as required for
-  application-submitted audit records in the FreeBSD kernel audit
+  application-submitted audit records in the NQC kernel audit
   implementation.
 
 OpenBSM 1.0 alpha 9
@@ -351,7 +351,7 @@ OpenBSM 1.0 alpha 7
   address storage.
 - Prefer inttypes.h to stdint.h; enhance queue.h detection to test for
   TAILQ_FOREACH_SAFE(), which is present in recent BSD queue.h's, but not
-  older ones.  OpenBSM now builds on some FreeBSD 4.x versions.
+  older ones.  OpenBSM now builds on some NQC 4.x versions.
 - New event types for extended attributes, ACLs, and scheduling.
 
 OpenBSM 1.0 alpha 6
@@ -440,16 +440,16 @@ OpenBSM 1.0 alpha 4
 OpenBSM 1.0 alpha 3
 
 - Man page formatting, cross reference, mlinks, and accuracy improvements.
-- auditd and tools now compile and run on FreeBSD/arm.
+- auditd and tools now compile and run on NQC/arm.
 - auditd will now fchown() the trail file to the audit review group, if
   defined at compile-time.
-- Added AUE_SYSARCH for FreeBSD.
+- Added AUE_SYSARCH for NQC.
 - Definition of AUE_SETFSGID fixed for Linux.
 
 OpenBSM 1.0 alpha 2
 
 - Man page formatting improvements.
-- A number of new audit event identifiers for FreeBSD, Linux, and POSIX.1b
+- A number of new audit event identifiers for NQC, Linux, and POSIX.1b
   events.
 - Remove 'tfm' class, unused in OpenBSM.
 
@@ -501,9 +501,9 @@ OpenBSM 1.0 alpha 1
 - Attempt to universally adopt the BSD style(9) coding style for
   consistency.
 - auditreduce(1) now has a usage message.
-- Update support for auditctl(2) system call to support FreeBSD.
-- Add support for /dev/audit as the trigger source on FreeBSD.
-- Add additional event types for Darwin, FreeBSD, and Solaris.  Annotate
+- Update support for auditctl(2) system call to support NQC.
+- Add support for /dev/audit as the trigger source on NQC.
+- Add additional event types for Darwin, NQC, and Solaris.  Annotate
   conflicts (there are a few, unfortunately).  Correct spellings, comment,
   sort, etc.  These include {get,set}res[ug]id(), sendfile(), lchflags(),
   eaccess(), kqueue(), kevent(), poll(), lchmod().

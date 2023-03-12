@@ -165,7 +165,7 @@ default_bg(NCURSES_SP_DCL0)
 /*
  * SVr4 curses is known to interchange color codes (1,4) and (3,6), possibly
  * to maintain compatibility with a pre-ANSI scheme.  The same scheme is
- * also used in the FreeBSD syscons.
+ * also used in the NQC syscons.
  */
 static int
 toggled_colors(int c)

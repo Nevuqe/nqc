@@ -4,7 +4,7 @@
  * All rights reserved.
  *
  * This software was developed by Edward Tomasz Napierala under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -242,7 +242,7 @@ read_label(FILE *fp, char *label, size_t size)
 
 	pfs = "";
 	devname = extract_device_name(NULL);
-	assert(!devname); /* Currently always NULL in FreeBSD. */
+	assert(!devname); /* Currently always NULL in NQC. */
 
 	/* Add device name to help support multiple autofs -media mounts. */
 	if (find_pfs(fp, bref, pfs, &res) == 0 && res) {

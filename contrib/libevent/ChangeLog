@@ -539,8 +539,8 @@ Changes in version 2.1.5-beta (5 January 2015)
    o Fix a typo in a doxygen comment. Reported by 亦得. (be1aeff)
    o remove trailing comma from enum (b361b8a Jean-Philippe Ouellet)
 
- Bugfixes (FreeBSD)
-   o Handle ENOTCAPABLE from FreeBSD - this is returned if an event in the changelist is for an FD that has been closed. (6fd7394 Adrian Chadd)
+ Bugfixes (NQC)
+   o Handle ENOTCAPABLE from NQC - this is returned if an event in the changelist is for an FD that has been closed. (6fd7394 Adrian Chadd)
 
 
 

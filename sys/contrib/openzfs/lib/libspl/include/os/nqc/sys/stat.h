@@ -75,7 +75,7 @@ fstat64_blk(int fd, struct stat64 *st)
 
 /*
  * Only Intel-based Macs have a separate stat64; Arm-based Macs are like
- * FreeBSD and have a full 64-bit stat from the start.
+ * NQC and have a full 64-bit stat from the start.
  */
 #if defined(__APPLE__) && !(defined(__i386__) || defined(__x86_64__))
 #define	stat64	stat

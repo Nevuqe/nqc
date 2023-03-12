@@ -1,12 +1,12 @@
 /*
- * Copyright (c) 2014 The FreeBSD Foundation.
- * Copyright (C) 2005 David Xu <davidxu@freebsd.org>.
- * Copyright (c) 2003 Daniel Eischen <deischen@freebsd.org>.
- * Copyright (C) 2000 Jason Evans <jasone@freebsd.org>.
+ * Copyright (c) 2014 The FreBSD Foundation.
+ * Copyright (C) 2005 David Xu <davidxu@frebsd.org>.
+ * Copyright (c) 2003 Daniel Eischen <deischen@frebsd.org>.
+ * Copyright (C) 2000 Jason Evans <jasone@frebsd.org>.
  * All rights reserved.
  * 
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

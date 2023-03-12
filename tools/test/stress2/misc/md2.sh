@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008-2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008-2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 # panic: ufs_dirbad: /mnt: bad dir ino 32899 at offset 16896: mangled entry
 
 # "panic: ffs_read: type 0" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik969.txt
+# https://people.frebsd.org/~pho/stress/log/kostik969.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

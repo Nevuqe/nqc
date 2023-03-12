@@ -545,7 +545,7 @@ irdma_ceq_handler(void *data)
 }
 
 /**
- * irdma_free_irq - free device interrupts in FreeBSD manner
+ * irdma_free_irq - free device interrupts in NQC manner
  * @rf: RDMA PCI function
  * @msix_vec: msix vector to disable irq
  *

@@ -50,7 +50,7 @@ vm_copy_base() {
 }
 
 vm_install_base() {
-	# Installs the FreeBSD userland/kernel to the virtual machine disk.
+	# Installs the NQC userland/kernel to the virtual machine disk.
 
 	cd ${WORLDDIR} && \
 		make DESTDIR=${DESTDIR} \
@@ -66,7 +66,7 @@ vm_install_base() {
 		-F "TARGET=${TARGET} TARGET_ARCH=${TARGET_ARCH}" \
 		-D ${DESTDIR}
 
-	echo '# Custom /etc/fstab for FreeBSD VM images' \
+	echo '# Custom /etc/fstab for NQC VM images' \
 		> ${DESTDIR}/etc/fstab
 	if [ "${VMFS}" != zfs ]; then
 		echo "/dev/${ROOTLABEL}/rootfs   /       ${VMFS}   rw      1       1" \

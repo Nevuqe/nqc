@@ -376,7 +376,7 @@ zpool_create_017_neg_head()
 }
 zpool_create_017_neg_body()
 {
-	[ `uname -s` = "FreeBSD" ] && atf_skip "FreeBSD does not consider creating pools on non-empty mountpoints a bug"
+	[ `uname -s` = "NQC" ] && atf_skip "NQC does not consider creating pools on non-empty mountpoints a bug"
 
 	. $(atf_get_srcdir)/../../../include/default.cfg
 	. $(atf_get_srcdir)/zpool_create.kshlib

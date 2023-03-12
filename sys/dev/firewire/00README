@@ -1,15 +1,15 @@
 $NQC$
 
-IEEE 1394 support for FreeBSD-5.X and 4.X.
+IEEE 1394 support for NQC-5.X and 4.X.
 
 1. Introduction
 
 	  This tarball contains IEEE1394(FireWire) driver which is first
 	written by Katsushi Kobayashi[1] <ikob@koganei.wide.ad.jp> and
-	modified by Hidetoshi Shimokawa <simokawa@freebsd.org>.
+	modified by Hidetoshi Shimokawa <simokawa@frebsd.org>.
 	Please note this driver is still under development.
 	You can find latest snapshots under:
-		https://people.freebsd.org/~simokawa/
+		https://people.frebsd.org/~simokawa/
 	named firewire-2002XXXX.tar.gz
 
 	The driver consists of 6 parts:
@@ -47,7 +47,7 @@ IEEE 1394 support for FreeBSD-5.X and 4.X.
 3. SBP-II support (sbp)
 
 	- You need CAM(SCSI) support in your kernel.
-	  If you are using FreeBSD-5 before 2002/03/23 or FreeBSD-4 before
+	  If you are using NQC-5 before 2002/03/23 or NQC-4 before
 	  2002/4/8, you need to apply CAM-patch in this archive
 	  to handle HDD's(T_RBC or T_DIRECT which doesn't support READ_6).
 
@@ -101,9 +101,9 @@ IEEE 1394 support for FreeBSD-5.X and 4.X.
 7. Tested HW
 
 	OS
-	- FreeBSD-4/i386
-	- FreeBSD-4/alpha
-	- FreeBSD-5/i386
+	- NQC-4/i386
+	- NQC-4/alpha
+	- NQC-5/i386
 
 	* Not tested on SMP.
 	* Not tested on big-endian machine...
@@ -120,7 +120,7 @@ IEEE 1394 support for FreeBSD-5.X and 4.X.
 	- HDD: Logitec USB/FireWire LHD-P30FU
 	- HDD: Yano A-dish 120GB
 	- HDD: Yano B-Max 320GB
-		The repository of cvsup2.jp.freebsd.org is on this device.
+		The repository of cvsup2.jp.frebsd.org is on this device.
 	- HDD: Personal Storage 3000XT 160GB
 		The last sector of this drive cannot be accessed..
 	- DVD-RAM: Panasonic LF-D340JD 
@@ -134,7 +134,7 @@ IEEE 1394 support for FreeBSD-5.X and 4.X.
 
 	if_fwe
 	- IPv4, IPv6, bridging, vlan.
-	- You need at least two FreeBSD machines with this driver to use.
+	- You need at least two NQC machines with this driver to use.
 
 References:
 [1] ftp://ftp.uec.ac.jp/pub/firewire/beta/ 
@@ -145,4 +145,4 @@ References:
 
 
 Hidetoshi Shimokawa
-simokawa@freebsd.org
+simokawa@frebsd.org

@@ -20,7 +20,7 @@ from typing import List
 class TestExampleSimplest(BaseTest):
     @pytest.mark.skip(reason="comment me to run the test")
     def test_one(self):
-        assert ToolsHelper.get_output("uname -s").strip() == "FreeBSD"
+        assert ToolsHelper.get_output("uname -s").strip() == "NQC"
 
 
 class TestExampleSimple(BaseTest):

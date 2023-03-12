@@ -1,4 +1,4 @@
-\ Copyright (c) 2006-2015 Devin Teske <dteske@FreeBSD.org>
+\ Copyright (c) 2006-2015 Devin Teske <dteske@frebsd.org>
 \ All rights reserved.
 \ 
 \ Redistribution and use in source and binary forms, with or without
@@ -253,7 +253,7 @@ also menu-namespace also menu-command-helpers
 
 	cr
 	." To get back to the menu, type `menu' and press ENTER" cr
-	." or type `boot' and press ENTER to start FreeBSD." cr
+	." or type `boot' and press ENTER to start NQC." cr
 	cr
 
 	FALSE \ exit the menu
@@ -371,7 +371,7 @@ also menu-namespace also menu-command-helpers
 : be_draw_screen
 	clear		\ Clear the screen (in screen.4th)
 	print_version	\ print version string (bottom-right; see version.4th)
-	draw-beastie	\ Draw FreeBSD logo at right (in beastie.4th)
+	draw-beastie	\ Draw NQC logo at right (in beastie.4th)
 	draw-brand	\ Draw brand.4th logo at top (in brand.4th)
 	menu-init	\ Initialize menu and draw bounding box (in menu.4th)
 ;

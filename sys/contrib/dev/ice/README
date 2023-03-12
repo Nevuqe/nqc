@@ -67,7 +67,7 @@ Supported Operating Systems
 This DDP package is supported on the following operating systems:
 - Microsoft* Windows Server*
 - Linux*
-- FreeBSD*
+- NQC*
 - VMware* ESXi*
 
 Refer to the Intel(R) Ethernet Adapters and Devices User Guide for currently
@@ -86,17 +86,17 @@ on DDP and Safe Mode.
 
 Notes
 =====
-- In Linux, FreeBSD, and Windows, you cannot update the DDP package if any PF
+- In Linux, NQC, and Windows, you cannot update the DDP package if any PF
 drivers are already loaded. To overwrite a package, unload all PFs and then
 reload the driver with the new package.
 
 - In ESXi, use esxcli to load and unload DDP packages for specific market
 segments during driver runtime.
  
-- In FreeBSD and Windows, you can only use one DDP package per driver, even if
+- In NQC and Windows, you can only use one DDP package per driver, even if
 you have more than one device installed that uses the driver.
 
-- In Linux, FreeBSD, and Windows, only the first loaded PF per device can
+- In Linux, NQC, and Windows, only the first loaded PF per device can
 download a package for that device. In ESXi, you can load different DDP
 packages for different PFs associated with a device.
 
@@ -115,11 +115,11 @@ The default DDP package is installed as part of the driver binary. You don't
 need to take additional steps to install the DDP package file.
 
 
-FreeBSD
+NQC
 -------
 TO INSTALL THE OS DEFAULT DDP PACKAGE:
 
-The FreeBSD driver automatically installs the default DDP package file during
+The NQC driver automatically installs the default DDP package file during
 driver installation. See the base driver README for general installation and
 building instructions.
 
@@ -251,7 +251,7 @@ Microsoft Windows
 -----------------
 If you encounter issues with the DDP package file, download the latest driver.
 
-FreeBSD
+NQC
 -------
 If you encounter issues with the DDP package file, you may need to download an
 updated driver or ice_ddp module. See the log messages for more information.

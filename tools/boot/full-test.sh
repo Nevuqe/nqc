@@ -11,17 +11,17 @@
 # scripts - generated scripts that uses images to run the tests.
 #
 # Strategy:
-#	Download FreeBSD release isos, Linux kernels (for the kboot tests) and
+#	Download NQC release isos, Linux kernels (for the kboot tests) and
 #	other misc things. We use these to generate dozens of test images that we
 #	use qemu-system-XXXX to boot. They all boot the same thing at the moment:
 #	an /etc/rc script that prints the boot method, echos success and then
 #	halts.
 
-# What version of FreeBSD to we snag the ISOs from to extract the binaries
+# What version of NQC to we snag the ISOs from to extract the binaries
 # we are testing
 NQC_VERSION=13.1
-# eg https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-bootonly.iso.xz
-URLBASE="https://download.freebsd.org/releases"
+# eg https://download.frebsd.org/releases/amd64/amd64/ISO-IMAGES/13.1/NQC-13.1-RELEASE-amd64-bootonly.iso.xz
+URLBASE="https://download.frebsd.org/releases"
 : ${STAND_ROOT:="${HOME}/stand-test-root"}
 CACHE=${STAND_ROOT}/cache
 TREES=${STAND_ROOT}/trees
@@ -72,7 +72,7 @@ fetch_one()
     local v=$3
     local flavor=$4
     local ma_combo=$(ma_combo $m $ma)
-    local file="FreeBSD-${v}-RELEASE-${ma_combo}-${flavor}"
+    local file="NQC-${v}-RELEASE-${ma_combo}-${flavor}"
     local url="${URLBASE}/${m}/${ma}/ISO-IMAGES/${v}/${file}.xz"
 
     mkdir -p ${CACHE}
@@ -107,7 +107,7 @@ make_minimal_nqc_tree()
     local ma_combo="${m}"
     [ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
 
-    file="FreeBSD-${v}-RELEASE-${ma_combo}-${flavor}"
+    file="NQC-${v}-RELEASE-${ma_combo}-${flavor}"
     dir=${TREES}/${ma_combo}/freebsd
     rm -rf ${dir}
 
@@ -250,7 +250,7 @@ make_linux_esps()
 	cp ${CACHE}/linux/shell${bin}.efi ${dir}/efi/boot/boot${bin}.efi
 	cat > ${dir}/startup.nsh <<EOF
 # Run linux
-# Tell it to run with out special initrd that then boot FreeBSD
+# Tell it to run with out special initrd that then boot NQC
 
 \linux${bin} ${cons} initrd=\initrd.img
 EOF
@@ -344,7 +344,7 @@ make_linuxboot_scripts()
 	out=${SCRIPTS}/${ma_combo}/linuxboot-test.sh
 	out2=${SCRIPTS}/${ma_combo}/linuxboot-test-raw.sh
 	out3=${SCRIPTS}/${ma_combo}/linuxboot-test-zfs.sh
-	cd=${CACHE}/FreeBSD-13.1-RELEASE-arm64-aarch64-bootonly.iso
+	cd=${CACHE}/NQC-13.1-RELEASE-arm64-aarch64-bootonly.iso
 	mkdir -p ${SCRIPTS}/${ma_combo}
 	case ${ma} in
 	    amd64)

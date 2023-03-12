@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2009	Simon L. Nielsen <simon@FreeBSD.org>,
- * 			Bjoern A. Zeeb <bz@FreeBSD.org>
+ * Copyright (c) 2009	Simon L. Nielsen <simon@frebsd.org>,
+ * 			Bjoern A. Zeeb <bz@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

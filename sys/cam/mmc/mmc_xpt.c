@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2013,2014 Ilya Bakulin <ilya@bakulin.de>
  * All rights reserved.
@@ -1226,7 +1226,7 @@ mmc_path_inq(struct ccb_pathinq *cpi, const char *hba,
 	cpi->max_lun = 0;
 	cpi->initiator_id = 1;
 	cpi->maxio = maxio;
-	strncpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+	strncpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 	strncpy(cpi->hba_vid, hba, HBA_IDLEN);
 	strncpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 	cpi->unit_number = cam_sim_unit(sim);

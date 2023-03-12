@@ -2,7 +2,7 @@
  * Copyright (c) 2009 Oleksandr Tymoshenko.  All rights reserved.
  * Copyright (c) 2017 Ruslan Bukin <br@bsdpad.com>
  * Copyright (c) 2018 Ian Lepore.  All rights reserved.
- * Copyright (c) 2006 M. Warner Losh <imp@FreeBSD.org>
+ * Copyright (c) 2006 M. Warner Losh <imp@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory under DARPA/AFRL contract FA8750-10-C-0237

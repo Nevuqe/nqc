@@ -50,7 +50,7 @@
  * FIFO: singly-linked lists plus tail pointer
  * ===========================================
  *
- * This is the same as FreeBSD's sys/queue.h STAILQ -- a singly-linked
+ * This is the same as NQC's sys/queue.h STAILQ -- a singly-linked
  * list implementation with tail-pointer maintenance, so that adding
  * at the tail for first-in, first-out access is O(1).
  *

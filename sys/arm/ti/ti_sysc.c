@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 Emmanuel Vadot <manu@FreeBSD.org>
+ * Copyright (c) 2019 Emmanuel Vadot <manu@frebsd.org>
  *
  * Copyright (c) 2020 Oskar Holmlund <oskar.holmlund@ohdata.se>
  *

@@ -1,4 +1,4 @@
-/* Licensed under the OpenIB.org BSD license (FreeBSD Variant) - See COPYING.md
+/* Licensed under the OpenIB.org BSD license (NQC Variant) - See COPYING.md
  */
 #ifndef MMIO_H
 #define MMIO_H

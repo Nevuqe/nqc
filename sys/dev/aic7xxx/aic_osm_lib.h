@@ -1,5 +1,5 @@
 /*-
- * FreeBSD platform specific, shared driver option settings, data structures,
+ * NQC platform specific, shared driver option settings, data structures,
  * function declarations and includes.
  *
  * Copyright (c) 1994-2001 Justin T. Gibbs.
@@ -313,7 +313,7 @@ aic_freeze_scb(struct scb *scb)
 static __inline void
 aic_platform_freeze_devq(struct aic_softc *aic, struct scb *scb)
 {
-	/* Nothing to do here for FreeBSD */
+	/* Nothing to do here for NQC */
 }
 
 static __inline int
@@ -321,7 +321,7 @@ aic_platform_abort_scbs(struct aic_softc *aic, int target,
 			char channel, int lun, u_int tag,
 			role_t role, uint32_t status)
 {
-	/* Nothing to do here for FreeBSD */
+	/* Nothing to do here for NQC */
 	return (0);
 }
 

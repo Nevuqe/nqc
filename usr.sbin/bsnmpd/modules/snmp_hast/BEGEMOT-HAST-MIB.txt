@@ -1,5 +1,5 @@
 --
--- Copyright (c) 2013 Mikolaj Golub <trociny@FreeBSD.org>
+-- Copyright (c) 2013 Mikolaj Golub <trociny@frebsd.org>
 -- All rights reserved.
 --
 -- Redistribution and use in source and binary forms, with or without
@@ -41,7 +41,7 @@ IMPORTS
 
 begemotHast MODULE-IDENTITY
     LAST-UPDATED "201304130000Z"
-    ORGANIZATION "FreeBSD"
+    ORGANIZATION "NQC"
     CONTACT-INFO
 	    "		Mikolaj Golub
 
@@ -51,7 +51,7 @@ begemotHast MODULE-IDENTITY
 
 	     Fax:	N/A
 
-	     E-Mail:	trociny@FreeBSD.org"
+	     E-Mail:	trociny@frebsd.org"
     DESCRIPTION
 	    "The Begemot MIB for managing HAST."
     REVISION     "201304130000Z"

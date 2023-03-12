@@ -46,7 +46,7 @@ function trim_in_progress
 }
 
 if is_nqc; then
-	log_unsupported "FreeBSD has no hole punching mechanism for the time being."
+	log_unsupported "NQC has no hole punching mechanism for the time being."
 fi
 
 typeset -r FILE_VDEV="$TESTDIR/file_vdev"

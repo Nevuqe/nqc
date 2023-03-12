@@ -1,12 +1,12 @@
 #!/usr/local/bin/python3
 #
-# Copyright (c) 2014 The FreeBSD Foundation
+# Copyright (c) 2014 The FreBSD Foundation
 # Copyright 2014 John-Mark Gurney
 # All rights reserved.
 # Copyright 2019 Enji Cooper
 #
 # This software was developed by John-Mark Gurney under
-# the sponsorship from the FreeBSD Foundation.
+# the sponsorship from the FreBSD Foundation.
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
 # are met:

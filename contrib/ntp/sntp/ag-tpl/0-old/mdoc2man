@@ -58,7 +58,7 @@ Mdoc::def_macro( '.Sx', sub { mapwords {"\\fI$_\\f[]"} @_ } );
 Mdoc::def_macro( '.Xr', sub { "\\fC".(shift)."\\fR(".(shift).")\\f[]", @_ } );
 Mdoc::def_macro( '.Fn', sub { "\\f\\*[B-Font]".(shift)."\\fR()\\f[]" } );
 Mdoc::def_macro( '.Fn', sub { "\\fB".(shift)."\\fR()\\f[]" } );
-Mdoc::def_macro( '.Fx', sub { "FreeBSD", @_ } );
+Mdoc::def_macro( '.Fx', sub { "NQC", @_ } );
 Mdoc::def_macro( '.Ux', sub { "UNIX", @_ } );
 
 Mdoc::def_macro( '.No', sub { ".NOP", map { ($_, ns) } @_ } );

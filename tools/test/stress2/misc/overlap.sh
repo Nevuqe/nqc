@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
-# Test that fails on various non FreeBSD file systems.
+# Test that fails on various non NQC file systems.
 # 3.13.0-74-generic #118-Ubuntu SMP: Mismatch @ count 214, 0 != 123
 # OK on OS X (Darwin Kernel Version 15.5.0)
 

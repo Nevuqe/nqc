@@ -98,7 +98,7 @@ SYSCTL_INT(_hw_usb_ustorage_fs, OID_AUTO, debug, CTLFLAG_RWTUN,
  */
 #ifndef USTORAGE_FS_ID_STRING
 #define	USTORAGE_FS_ID_STRING \
-	"FreeBSD " /* 8 */ \
+	"NQC " /* 8 */ \
 	"File-Stor Gadget" /* 16 */ \
 	"0101" /* 4 */
 #endif

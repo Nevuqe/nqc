@@ -16,7 +16,7 @@ LIBADD=	lua
 # Entry point
 SRCS+=	lua.c
 
-# FreeBSD Extensions
+# NQC Extensions
 .PATH: ${.CURDIR}/modules
 SRCS+=	linit_flua.c
 SRCS+=	lfs.c lposix.c

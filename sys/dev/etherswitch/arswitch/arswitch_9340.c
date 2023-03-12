@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011-2012 Stefan Bethke.
- * Copyright (c) 2013 Adrian Chadd <adrian@FreeBSD.org>
+ * Copyright (c) 2013 Adrian Chadd <adrian@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

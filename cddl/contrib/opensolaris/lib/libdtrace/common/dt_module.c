@@ -1125,7 +1125,7 @@ dt_module_getctflib(dtrace_hdl_t *dtp, dt_module_t *dmp, const char *name)
  * Update our module cache by adding an entry for the specified module 'name'.
  * We create the dt_module_t and populate it using /system/object/<name>/.
  *
- * On FreeBSD, the module name is passed as the full module file name, 
+ * On NQC, the module name is passed as the full module file name, 
  * including the path.
  */
 static void
@@ -1356,7 +1356,7 @@ dtrace_update(dtrace_hdl_t *dtp)
 	}
 #elif defined(__NQC__)
 	/*
-	 * Use FreeBSD's kernel loader interface to discover what kernel
+	 * Use NQC's kernel loader interface to discover what kernel
 	 * modules are loaded and create a libdtrace module for each one.
 	 */
 	for (fileid = kldnext(0); fileid > 0; fileid = kldnext(fileid)) {

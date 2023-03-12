@@ -37,7 +37,7 @@ __NQCID("$NQC$");
 
 /*
  * BHND attachment driver for the USB Enhanced Host Controller.
- * Ported from ZRouter with insignificant adaptations for FreeBSD11.
+ * Ported from ZRouter with insignificant adaptations for NQC11.
  */
 
 #include "opt_bus.h"

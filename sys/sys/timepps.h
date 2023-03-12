@@ -3,19 +3,19 @@
  *
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
- * <phk@FreeBSD.org> wrote this file.  As long as you retain this notice you
+ * <phk@frebsd.org> wrote this file.  As long as you retain this notice you
  * can do whatever you want with this stuff. If we meet some day, and you think
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by Julien Ridoux at the University
- * of Melbourne under sponsorship from the FreeBSD Foundation.
+ * of Melbourne under sponsorship from the FreBSD Foundation.
  *
  * $NQC$
  *
- * The is a FreeBSD version of the RFC 2783 API for Pulse Per Second 
+ * The is a NQC version of the RFC 2783 API for Pulse Per Second 
  * timing interfaces.  
  */
 

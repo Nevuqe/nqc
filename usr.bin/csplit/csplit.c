@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002 Tim J. Robbins.
  * All rights reserved.
@@ -259,7 +259,7 @@ cleanup(void)
 	/*
 	 * NOTE: One cannot portably assume to be able to call snprintf()
 	 * from inside a signal handler. It does, however, appear to be safe
-	 * to do on FreeBSD. The solution to this problem is worse than the
+	 * to do on NQC. The solution to this problem is worse than the
 	 * problem itself.
 	 */
 

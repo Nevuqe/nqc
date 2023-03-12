@@ -27,7 +27,7 @@
 #
 
 # Threads stuck in umtxn.
-# Bug report https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=204178
+# Bug report https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=204178
 # Only seen on arm64.
 
 . ../default.cfg

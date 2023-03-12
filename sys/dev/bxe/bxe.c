@@ -187,7 +187,7 @@ MALLOC_DECLARE(M_BXE_ILT);
 MALLOC_DEFINE(M_BXE_ILT, "bxe_ilt", "bxe ILT pointer");
 
 /*
- * FreeBSD device entry points.
+ * NQC device entry points.
  */
 static int bxe_probe(device_t);
 static int bxe_attach(device_t);
@@ -196,7 +196,7 @@ static int bxe_shutdown(device_t);
 
 
 /*
- * FreeBSD KLD module/device interface event handler method.
+ * NQC KLD module/device interface event handler method.
  */
 static device_method_t bxe_methods[] = {
     /* Device interface (device_if.h) */
@@ -211,7 +211,7 @@ static device_method_t bxe_methods[] = {
 };
 
 /*
- * FreeBSD KLD Module data declaration
+ * NQC KLD Module data declaration
  */
 static driver_t bxe_driver = {
     "bxe",                   /* module name */
@@ -2281,7 +2281,7 @@ storm_memset_eq_prod(struct bxe_softc *sc,
  * RAMROD_CMD_ID_ETH_UPDATE
  *   Used to update the state of the leading connection, usually to udpate
  *   the RSS indirection table.  Completes on the RCQ of the leading
- *   connection. (Not currently used under FreeBSD until OS support becomes
+ *   connection. (Not currently used under NQC until OS support becomes
  *   available.)
  *
  * RAMROD_CMD_ID_ETH_HALT
@@ -2306,7 +2306,7 @@ storm_memset_eq_prod(struct bxe_softc *sc,
  * RAMROD_CMD_ID_ETH_FORWARD_SETUP
  *   Used for connection offload.  Completes on the RCQ of the multi-queue
  *   RSS connection that is being offloaded.  (Not currently used under
- *   FreeBSD.)
+ *   NQC.)
  *
  * There can only be one command pending per function.
  *
@@ -2478,7 +2478,7 @@ bxe_sp_post(struct bxe_softc *sc,
  */
 
 /*
- * FreeBSD Device probe function.
+ * NQC Device probe function.
  *
  * Compares the device found to the driver's list of supported devices and
  * reports back to the bsd loader whether this is the right driver for the device.
@@ -4776,7 +4776,7 @@ bxe_dump_mbuf(struct bxe_softc *sc,
  * Checks to ensure the 13 bd sliding window is >= MSS for TSO.
  * Check that (13 total bds - 3 bds) = 10 bd window >= MSS.
  * The window: 3 bds are = 1 for headers BD + 2 for parse BD and last BD
- * The headers comes in a separate bd in FreeBSD so 13-3=10.
+ * The headers comes in a separate bd in NQC so 13-3=10.
  * Returns: 0 if OK to send, 1 if packet needs further defragmentation
  */
 static int
@@ -4795,9 +4795,9 @@ bxe_chktso_window(struct bxe_softc  *sc,
     lso_mss = htole16(m->m_pkthdr.tso_segsz);
 
     /*
-     * Total header lengths Eth+IP+TCP in first FreeBSD mbuf so calculate the
+     * Total header lengths Eth+IP+TCP in first NQC mbuf so calculate the
      * first window sum of data while skipping the first assuming it is the
-     * header in FreeBSD.
+     * header in NQC.
      */
     for (frag_idx = 1; (frag_idx <= wnd_size); frag_idx++) {
         wnd_sum += htole16(segs[frag_idx].ds_len);
@@ -12088,7 +12088,7 @@ bxe_set_mc_list(struct bxe_softc *sc)
     rc = ecore_config_mcast(sc, &rparam, ECORE_MCAST_CMD_DEL);
     if (rc < 0) {
         BLOGE(sc, "Failed to clear multicast configuration: %d\n", rc);
-        /* Manual backport parts of FreeBSD upstream r284470. */
+        /* Manual backport parts of NQC upstream r284470. */
         BXE_MCAST_UNLOCK(sc);
         return (rc);
     }
@@ -16271,7 +16271,7 @@ bxe_attach(device_t dev)
     /* get phy settings from shmem and 'and' against admin settings */
     bxe_get_phy_info(sc);
 
-    /* initialize the FreeBSD ifnet interface */
+    /* initialize the NQC ifnet interface */
     if (bxe_init_ifnet(sc) != 0) {
         bxe_release_mutexes(sc);
         bxe_deallocate_bars(sc);
@@ -16461,7 +16461,7 @@ bxe_detach(device_t dev)
     /* Release the PCIe BAR mapped memory */
     bxe_deallocate_bars(sc);
 
-    /* Release the FreeBSD interface. */
+    /* Release the NQC interface. */
     if (sc->ifp != NULL) {
         if_free(sc->ifp);
     }

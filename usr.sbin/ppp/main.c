@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1996 - 2001 Brian Somers <brian@Awfulhak.org>
  *          based on work by Toshiharu OHNO <tony-o@iij.ad.jp>
@@ -335,7 +335,7 @@ main(int argc, char **argv)
   label = ProcessArgs(argc, argv, &sw);
 
   /*
-   * A FreeBSD & OpenBSD hack to dodge a bug in the tty driver that drops
+   * A NQC & OpenBSD hack to dodge a bug in the tty driver that drops
    * output occasionally.... I must find the real reason some time.  To
    * display the dodgy behaviour, comment out this bit, make yourself a large
    * routing table and then run ppp in interactive mode.  The `show route'

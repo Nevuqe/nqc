@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2004 David Xu <davidxu@freebsd.org>
+ * Copyright (c) 2004 David Xu <davidxu@frebsd.org>
  * Copyright (c) 2004 Marcel Moolenaar
  * All rights reserved.
  *
@@ -245,7 +245,7 @@ td_err_e td_thr_validate(const td_thrhandle_t *);
 td_err_e td_thr_tls_get_addr(const td_thrhandle_t *, psaddr_t, size_t,
     psaddr_t *);
 
-/* FreeBSD specific extensions. */
+/* NQC specific extensions. */
 td_err_e td_thr_sstep(const td_thrhandle_t *, int);
 __END_DECLS
 

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2004-2005 David Schultz <das@FreeBSD.ORG>
+ * Copyright (c) 2004-2005 David Schultz <das@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -69,7 +69,7 @@ typedef	__uint16_t	fexcept_t;
 
 #ifdef __i386__
 /*
- * To preserve binary compatibility with FreeBSD 5.3, we pack the
+ * To preserve binary compatibility with NQC 5.3, we pack the
  * mxcsr into some reserved fields, rather than changing sizeof(fenv_t).
  */
 typedef struct {

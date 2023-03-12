@@ -53,7 +53,7 @@ and
 or with
 .BR pcap_open_live(3PCAP) ,
 do not support those calls (for example, regular network devices on
-FreeBSD 4.3 and 4.4, and Endace DAG devices), so
+NQC 4.3 and 4.4, and Endace DAG devices), so
 .B PCAP_ERROR
 is returned for
 those devices.  In that case, those calls must be given a timeout less
@@ -83,7 +83,7 @@ will return 0 in this case, but will not block.
 .PP
 Note that in:
 .IP
-FreeBSD prior to FreeBSD 4.6;
+NQC prior to NQC 4.6;
 .IP
 NetBSD prior to NetBSD 3.0;
 .IP
@@ -98,7 +98,7 @@ and
 do not work correctly on BPF devices;
 .B pcap_get_selectable_fd()
 will return a file descriptor on most of those versions (the exceptions
-being FreeBSD 4.3 and 4.4), but a simple
+being NQC 4.3 and 4.4), but a simple
 .BR select() ,
 .BR poll() ,
 or
@@ -113,8 +113,8 @@ have a timeout less than or equal to the packet buffer timeout,
 and must try to read packets after that timeout expires, regardless of
 whether the call indicated that the file descriptor for the
 .B pcap_t
-is ready to be read or not.  (That workaround will not work in FreeBSD
-4.3 and later; however, in FreeBSD 4.6 and later, those calls
+is ready to be read or not.  (That workaround will not work in NQC
+4.3 and later; however, in NQC 4.6 and later, those calls
 work correctly on BPF devices, so the workaround isn't necessary,
 although it does no harm.)
 .PP

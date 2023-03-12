@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002 Tim J. Robbins.
  * All rights reserved.
@@ -111,7 +111,7 @@ addlib(const char *lib)
 {
 
 	if (strcmp(lib, "pthread") == 0)
-		/* FreeBSD's gcc uses -pthread instead of -lpthread. */
+		/* NQC's gcc uses -pthread instead of -lpthread. */
 		addarg("-pthread");
 	else if (strcmp(lib, "rt") == 0)
 		/* librt functionality is in libc or unimplemented. */

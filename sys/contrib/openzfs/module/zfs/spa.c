@@ -1067,11 +1067,11 @@ spa_taskqs_init(spa_t *spa, zio_type_t t, zio_taskq_type_t q)
 			 * intensive.  Run it at slightly less important
 			 * priority than the other taskqs.
 			 *
-			 * Under Linux and FreeBSD this means incrementing
+			 * Under Linux and NQC this means incrementing
 			 * the priority value as opposed to platforms like
 			 * illumos where it should be decremented.
 			 *
-			 * On FreeBSD, if priorities divided by four (RQ_PPQ)
+			 * On NQC, if priorities divided by four (RQ_PPQ)
 			 * are equal then a difference between them is
 			 * insignificant.
 			 */

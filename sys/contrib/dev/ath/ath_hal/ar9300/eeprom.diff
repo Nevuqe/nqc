@@ -180,13 +180,13 @@ index 2fe5506..628026f 100644
 +
 +    /*
 +     * The atheros HAL passes in this buffer anyway, and we copy things
-+     * into it.  However, the FreeBSD driver doesn't supply this
++     * into it.  However, the NQC driver doesn't supply this
 +     * particular memory.  So, let's just assume attach/detach will
 +     * provide us with a 16 kilobyte buffer for now, and hope the whole
 +     * OTP path works.
 +     */
 +    if (! ahp->ah_cal_mem) {
-+        ath_hal_printf(ah, "%s: FreeBSD: ah_cal_mem isn't set\n", __func__);
++        ath_hal_printf(ah, "%s: NQC: ah_cal_mem isn't set\n", __func__);
 +        return -1;
 +    }
 +
@@ -256,7 +256,7 @@ index 2fe5506..628026f 100644
          }
      }
  
-+    /* XXX FreeBSD? */
++    /* XXX NQC? */
 +    AH9300(ah)->calibration_data_try = calibration_data_otp;
 +    AH9300(ah)->calibration_data_try_address = 0x2ff;
 +

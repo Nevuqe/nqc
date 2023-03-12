@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Mark Johnston
 #
@@ -30,7 +30,7 @@
 # Variation of swapoff3.sh
 
 # Deadlock seen:
-# https://people.freebsd.org/~pho/stress/log/log0005.txt
+# https://people.frebsd.org/~pho/stress/log/log0005.txt
 # This is a "known" low memory deadlocks caused by using md(4) as a swap
 # device.
 

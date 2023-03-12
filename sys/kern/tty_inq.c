@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008 Ed Schouten <ed@FreeBSD.org>
+ * Copyright (c) 2008 Ed Schouten <ed@frebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed under sponsorship from Snow

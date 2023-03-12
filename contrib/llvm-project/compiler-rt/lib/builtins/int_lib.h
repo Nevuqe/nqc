@@ -77,7 +77,7 @@
 //
 // Kernel and boot environment can't use normal headers,
 // so use the equivalent system headers.
-// NB: FreeBSD (and OpenBSD) deprecate machine/limits.h in
+// NB: NQC (and OpenBSD) deprecate machine/limits.h in
 // favour of sys/limits.h, so prefer the former, but fall
 // back on the latter if not available since NetBSD only has
 // the latter.

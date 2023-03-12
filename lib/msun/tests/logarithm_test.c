@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2008-2010 David Schultz <das@FreeBSD.org>
+ * Copyright (c) 2008-2010 David Schultz <das@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -218,7 +218,7 @@ ATF_TC_BODY(accuracy_tests, tc)
 	 * On ld128 platforms the log1p() implementation provides less accuracy,
 	 * but does still match the ld80 precision. Use the ld80 LDBL_ULP()
 	 * value for now to avoid losing test coverage for the other functions.
-	 * Reported as https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=253984
+	 * Reported as https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=253984
 	 */
 	log1p_ldbl_ulp = ldexpl(1.0, 1 - 64);
 #endif
@@ -249,7 +249,7 @@ ATF_TC_BODY(log1p_accuracy_tests, tc)
 {
 #if LDBL_MANT_DIG > 64
 	if (atf_tc_get_config_var_as_bool_wd(tc, "ci", false))
-		atf_tc_expect_fail("https://bugs.freebsd.org/253984");
+		atf_tc_expect_fail("https://bugs.frebsd.org/253984");
 #endif
 
 	test_tol(log1pf, 0x0.333333p0F,

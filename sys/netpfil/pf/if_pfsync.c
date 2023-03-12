@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: (BSD-2-Clause-FreeBSD AND ISC)
+ * SPDX-License-Identifier: (BSD-2-Clause-NQC AND ISC)
  *
  * Copyright (c) 2002 Michael Shalayeff
- * Copyright (c) 2012 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2012 Gleb Smirnoff <glebius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

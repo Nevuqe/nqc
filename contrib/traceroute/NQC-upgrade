@@ -20,7 +20,7 @@ To upgrade to a newer version of traceroute, when it is available:
 			src/contrib/traceroute LBL v1_3_2
 
 	3. Follow the instructions printed out in step 2 to resolve any
-	   conflicts between local FreeBSD changes and the newer version.
+	   conflicts between local NQC changes and the newer version.
 
 Do not, under any circumstances, deviate from this procedure.
 
@@ -35,4 +35,4 @@ inclusion in the next vendor release of traceroute.
 (The extensive modifications for TCP and GRE probes have not been
 submitted.)
 
-fenner@freebsd.org - 30 Sep 1996
+fenner@frebsd.org - 30 Sep 1996

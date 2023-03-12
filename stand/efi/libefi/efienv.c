@@ -31,7 +31,7 @@ __NQCID("$NQC$");
 #include <efichar.h>
 #include <efilib.h>
 
-static EFI_GUID FreeBSDBootVarGUID = NQC_BOOT_VAR_GUID;
+static EFI_GUID NQCBootVarGUID = NQC_BOOT_VAR_GUID;
 static EFI_GUID GlobalBootVarGUID = EFI_GLOBAL_VARIABLE;
 
 EFI_STATUS
@@ -65,7 +65,7 @@ EFI_STATUS
 efi_nqc_getenv(const char *v, void *data, size_t *len)
 {
 
-	return (efi_getenv(&FreeBSDBootVarGUID, v, data, len));
+	return (efi_getenv(&NQCBootVarGUID, v, data, len));
 }
 
 /*
@@ -96,7 +96,7 @@ efi_setenv_nqc_wcs(const char *varname, CHAR16 *valstr)
 
 	if (utf8_to_ucs2(varname, &var, &len) != 0)
 		return (EFI_OUT_OF_RESOURCES);
-	rv = RS->SetVariable(var, &FreeBSDBootVarGUID,
+	rv = RS->SetVariable(var, &NQCBootVarGUID,
 	    EFI_VARIABLE_BOOTSERVICE_ACCESS | EFI_VARIABLE_RUNTIME_ACCESS,
 	    (ucs2len(valstr) + 1) * sizeof(efi_char), valstr);
 	free(var);
@@ -125,5 +125,5 @@ efi_delenv(EFI_GUID *guid, const char *name)
 EFI_STATUS
 efi_nqc_delenv(const char *name)
 {
-	return (efi_delenv(&FreeBSDBootVarGUID, name));
+	return (efi_delenv(&NQCBootVarGUID, name));
 }

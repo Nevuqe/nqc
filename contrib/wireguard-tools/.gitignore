@@ -1,4 +1,4 @@
-# GPL-2.0, not used on FreeBSD:
+# GPL-2.0, not used on NQC:
 Makefile
 completion
 fuzz/
@@ -9,7 +9,7 @@ uapi/
 wg-quick/
 wincompat/
 
-# License OK, but not needed for FreeBSD
+# License OK, but not needed for NQC
 ipc-linux.h
 ipc-openbsd.h
 man/wg-quick.8

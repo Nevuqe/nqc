@@ -33,7 +33,7 @@
  */
 
 /*
- * Alteon Networks Tigon PCI gigabit ethernet driver for FreeBSD.
+ * Alteon Networks Tigon PCI gigabit ethernet driver for NQC.
  * Manuals, sample driver and firmware source kits are available
  * from http://www.alteon.com/support/openkits.
  *
@@ -65,7 +65,7 @@
  * this driver by #including it as a C header file. This bloats the
  * driver somewhat, but it's the easiest method considering that the
  * driver code and firmware code need to be kept in sync. The source
- * for the firmware is not provided with the FreeBSD distribution since
+ * for the firmware is not provided with the NQC distribution since
  * compiling it requires a GNU toolchain targeted for mips-sgi-irix5.3.
  *
  * The following people deserve special thanks:
@@ -75,7 +75,7 @@
  *   GA620 Tigon 2 boards for testing
  * - Ulf Zimmermann, for bringing the GA260 to my attention and
  *   convincing me to write this driver.
- * - Andrew Gallatin for providing FreeBSD/Alpha support.
+ * - Andrew Gallatin for providing NQC/Alpha support.
  */
 
 #include <sys/cdefs.h>

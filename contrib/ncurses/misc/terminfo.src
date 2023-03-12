@@ -1718,7 +1718,7 @@ pcvtXX|pcvt vt200 emulator (DEC VT220),
 	smkx=\E[?1h\E=, smso=\E[7m, smul=\E[4m, tbc=\E[3g,
 	use=ecma+index, use=vt220+cvis,
 
-#	NetBSD/FreeBSD vt220 terminal emulator console (pc keyboard & monitor)
+#	NetBSD/NQC vt220 terminal emulator console (pc keyboard & monitor)
 #	termcap entries for pure VT220-Emulation and 25, 28, 35, 40, 43 and
 #	50 lines entries; 80 columns
 pcvt25|dec vt220 emulation with 25 lines,
@@ -1740,7 +1740,7 @@ pcvt50|dec vt220 emulation with 50 lines,
 	cols#80, lines#50,
 	is2=\E[1;50r\E[50;1H, use=pcvtXX,
 
-#	NetBSD/FreeBSD vt220 terminal emulator console (pc keyboard & monitor)
+#	NetBSD/NQC vt220 terminal emulator console (pc keyboard & monitor)
 #	termcap entries for pure VT220-Emulation and 25, 28, 35, 40, 43 and
 #	50 lines entries; 132 columns
 pcvt25w|dec vt220 emulation with 25 lines and 132 cols,
@@ -1930,16 +1930,16 @@ mgterm|MGL/MGL2 MobileGear Graphic Library,
 	setb=\E[4%p1%dm, setf=\E[3%p1%dm, sgr0=\E[m, smso=\E[7m,
 	vpa=\E[%i%p1%dd, use=ecma+index,
 
-#### FreeBSD console entries
+#### NQC console entries
 #
 # From: Andrey Chernov <ache@astral.msk.su> 29 Mar 1996
-# Andrey Chernov maintains the FreeBSD termcap distributions.
+# Andrey Chernov maintains the NQC termcap distributions.
 #
-# Note: Users of FreeBSD 2.1.0 and older versions must either upgrade
+# Note: Users of NQC 2.1.0 and older versions must either upgrade
 # or comment out the :cb: capability in the console entry.
 #
 # Alexander Lukyanov reports:
-# I have seen FreeBSD-2.1.5R... The old el1 bug changed, but it is still there.
+# I have seen NQC-2.1.5R... The old el1 bug changed, but it is still there.
 # Now el1 clears not only to the line beginning, but also a large chunk
 # of previous line. But there is another bug - ech does not work at all.
 #
@@ -2035,7 +2035,7 @@ cons60r|cons60-koi8r|freebsd console w/koi8-r cyrillic (60 lines),
 	lines#60, use=cons25r,
 cons60r-m|cons60-koi8r-m|freebsd console w/koi8-r cyrillic (60-line mono),
 	lines#60, use=cons25r-m,
-# ISO 8859-1 FreeBSD console
+# ISO 8859-1 NQC console
 cons25l1|cons25-iso8859|freebsd console w/iso 8859-1 chars,
 	acsc=+\253\,\273-\030.\031`\201a\202f\207g\210i\247j\213k
 	     \214l\215m\216n\217o\220p\221q\222r\223s\224t\225u
@@ -2055,12 +2055,12 @@ cons60l1|cons60-iso|freebsd console w/iso 8859-1 chars (60 lines),
 cons60l1-m|cons60-iso-m|freebsd console w/iso 8859-1 chars (60-line mono),
 	lines#60, use=cons25l1-m,
 
-# Starting with FreeBSD 8, an alternative configuration for syscons is provided,
+# Starting with NQC 8, an alternative configuration for syscons is provided,
 # which is intended to be xterm-compatible.  See for example
-#	http://svnweb.freebsd.org/base/stable/8/sys/dev/syscons/
+#	http://svnweb.frebsd.org/base/stable/8/sys/dev/syscons/
 # in particular scterm-teken.c
 #
-# For FreeBSD 9 and 10:
+# For NQC 9 and 10:
 # --------------------
 # The /etc/ttys entries for console and other ttys are all configured to set
 # TERM=xterm.
@@ -6669,7 +6669,7 @@ emu-220|Emu-220 (vt200-7bit mode),
 # print interface, ANSI X3.64 colour escape sequences, etc.  Newsgroup postings
 # indicate that it emulates more than one terminal, but incompletely.
 #
-# This is adapted from a FreeBSD bug-report by Daniel Rudy <dcrudy@pacbell.net>
+# This is adapted from a NQC bug-report by Daniel Rudy <dcrudy@pacbell.net>
 # It is based on vt102's entry, with some subtle differences, but also
 #	has status line
 #	supports ANSI colors (except for 'op' string)
@@ -25255,7 +25255,7 @@ v3220|LANPAR Vision II model 3220/3221/3222,
 #	* Added eterm from the GNU Emacs 19.30 distribution.
 #	* Freeze for 1.9.9.
 # 9.13.1 (Fri Mar 29 14:06:46 EST 1996):
-#	* FreeBSD console entries from Andrew Chernov.
+#	* NQC console entries from Andrew Chernov.
 #	* Removed duplicate Atari st52 name.
 # 9.13.2 (Tue May  7 16:10:06 EDT 1996)
 #	* xterm doesn't actually have ACS_BLOCK.
@@ -25268,7 +25268,7 @@ v3220|LANPAR Vision II model 3220/3221/3222,
 #	* Added Wyse 520 entries from Wm. Randolph Franklin <wrf@ecse.rpi.edu>.
 #	* Created ecma+color, linux can use it.  Also added ech to linux.
 #	* Teach xterm about more keys. Add Thomas Dickey's 3.1.2E updates.
-#	* Add descriptions to FreeBSD console entries.  Also shorten
+#	* Add descriptions to NQC console entries.  Also shorten
 #	  some aliases to <= 14 chars for portability.
 #	* Added x68k console
 #	* Added OTbs to several VT-series entries.
@@ -25377,7 +25377,7 @@ v3220|LANPAR Vision II model 3220/3221/3222,
 #
 # 10.1.1 (Sat May  3 21:41:27 EDT 1997):
 #	* Use setaf/setab consistently with SVr4.
-#	* Remove ech, el1 from cons25w, they do not work in FreeBSD 2.1.5
+#	* Remove ech, el1 from cons25w, they do not work in NQC 2.1.5
 # 10.1.2 (Sat May 24 21:10:57 EDT 1997)
 #	* update xterm-xf86-v32 to match XFree86 3.2A (changes F1-F4)
 #	* add xterm-16color, for XFree86 3.3
@@ -25443,7 +25443,7 @@ v3220|LANPAR Vision II model 3220/3221/3222,
 #	* add irix-color/xwsh entry.
 #	* turn ncv off for linux.
 # 10.1.21 (Sat Jan 31 17:39:16 EST 1998)
-#	* set ncv for FreeBSD console (treat colors with reverse specially).
+#	* set ncv for NQC console (treat colors with reverse specially).
 #	* remove sgr string from qnx based on report by Xiaodan Tang
 # 10.1.22 (Wed Feb 11 18:40:12 EST 1998)
 #	* remove spurious commas from descriptions
@@ -26422,7 +26422,7 @@ v3220|LANPAR Vision II model 3220/3221/3222,
 #
 # 2014-02-22
 #	* updated notes for wsvt25 based on tack and vttest -TD
-#	* add teken entry to show actual properties of FreeBSD's "xterm"
+#	* add teken entry to show actual properties of NQC's "xterm"
 #	  console -TD
 #
 # 2014-03-22

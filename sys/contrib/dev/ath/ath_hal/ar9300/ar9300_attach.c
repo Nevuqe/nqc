@@ -652,7 +652,7 @@ ar9300_attach(u_int16_t devid, HAL_SOFTC sc, HAL_BUS_TAG st,
     ahpriv = AH_PRIVATE(ah);
 //    AH_PRIVATE(ah)->ah_bustype = bustype;
 
-    /* FreeBSD: to make OTP work for now, provide this.. */
+    /* NQC: to make OTP work for now, provide this.. */
     AH9300(ah)->ah_cal_mem = ath_hal_malloc(HOST_CALDATA_SIZE);
     if (AH9300(ah)->ah_cal_mem == NULL) {
         ath_hal_printf(ah, "%s: caldata malloc failed!\n", __func__);
@@ -666,7 +666,7 @@ ar9300_attach(u_int16_t devid, HAL_SOFTC sc, HAL_BUS_TAG st,
     if (eepromdata != NULL)
         OS_MEMCPY(AH9300(ah)->ah_cal_mem, eepromdata, HOST_CALDATA_SIZE);
 
-    /* XXX FreeBSD: enable RX mitigation */
+    /* XXX NQC: enable RX mitigation */
     ah->ah_config.ath_hal_intr_mitigation_rx = 1;
 
     /* interrupt mitigation */
@@ -1681,7 +1681,7 @@ ar9300_attach(u_int16_t devid, HAL_SOFTC sc, HAL_BUS_TAG st,
     else if (AR_SREV_JUPITER_20_OR_LATER(ah)) {
         /* Jupiter: new INI format (pre, core, post arrays per subsystem) */
 
-        /* FreeBSD: just override the registers for jupiter 2.1 */
+        /* NQC: just override the registers for jupiter 2.1 */
         /* XXX TODO: refactor this stuff out; reinit all the 2.1 registers */
 
         /* mac */
@@ -2526,7 +2526,7 @@ ar9300_new_state(u_int16_t devid, HAL_SOFTC sc,
     /* stub everything first */
     ar9300_set_stub_functions(ah);
 
-    /* setup the FreeBSD HAL methods */
+    /* setup the NQC HAL methods */
     ar9300_attach_nqc_ops(ah);
 
     /* These are private to this particular file, so .. */
@@ -2557,7 +2557,7 @@ ar9300_new_state(u_int16_t devid, HAL_SOFTC sc,
 //    ath_hal_factory_defaults(AH_PRIVATE(ah), hal_conf_parm);
     ar9300_config_defaults_nqc(ah, ah_config);
 
-    /* XXX FreeBSD: cal is always in EEPROM */
+    /* XXX NQC: cal is always in EEPROM */
 #if 0
     if (!hal_conf_parm->calInFlash) {
         AH_PRIVATE(ah)->ah_flags |= AH_USE_EEPROM;
@@ -2574,7 +2574,7 @@ ar9300_new_state(u_int16_t devid, HAL_SOFTC sc,
     }
 #endif
 
-    /* XXX FreeBSD - for now, just supports EEPROM reading */
+    /* XXX NQC - for now, just supports EEPROM reading */
     ahp->ah_priv.ah_eepromRead = ar9300_eeprom_read_word;
 
     AH_PRIVATE(ah)->ah_powerLimit = MAX_RATE_POWER;
@@ -2719,7 +2719,7 @@ ar9300_fill_capability_info(struct ath_hal *ah)
     eeval = ar9300_eeprom_get(ahp, EEP_OP_MODE);
 
     /*
-     * XXX FreeBSD specific: for now, set ath_hal_ht_enable to 1,
+     * XXX NQC specific: for now, set ath_hal_ht_enable to 1,
      * or we won't have 11n support.
      */
     ah->ah_config.ath_hal_ht_enable = 1;
@@ -2748,7 +2748,7 @@ ar9300_fill_capability_info(struct ath_hal *ah)
 #define owl_get_ntxchains(_txchainmask) \
     (((_txchainmask >> 2) & 1) + ((_txchainmask >> 1) & 1) + (_txchainmask & 1))
 
-    /* FreeBSD: Update number of TX/RX streams */
+    /* NQC: Update number of TX/RX streams */
     p_cap->halTxStreams = owl_get_ntxchains(p_cap->halTxChainMask);
     p_cap->halRxStreams = owl_get_ntxchains(p_cap->halRxChainMask);
 
@@ -2982,7 +2982,7 @@ ar9300_fill_capability_info(struct ath_hal *ah)
      */
     p_cap->halIsrRacSupport = AH_TRUE;
 
-    /* XXX FreeBSD won't support TKIP and WEP aggregation */
+    /* XXX NQC won't support TKIP and WEP aggregation */
 #if 0
     p_cap->hal_wep_tkip_aggr_support = AH_TRUE;
     p_cap->hal_wep_tkip_aggr_num_tx_delim = 10;    /* TBD */
@@ -2991,7 +2991,7 @@ ar9300_fill_capability_info(struct ath_hal *ah)
 #endif
 
     /*
-     * XXX FreeBSD won't need these; but eventually add them
+     * XXX NQC won't need these; but eventually add them
      * and add the WARs - AGGR extra delim WAR is useful to know
      * about.
      */
@@ -3054,7 +3054,7 @@ ar9300_fill_capability_info(struct ath_hal *ah)
 #endif /* ATH_ANT_DIV_COMB */
 
     /*
-     * FreeBSD: enable LNA mixing if the chip is Hornet or Poseidon.
+     * NQC: enable LNA mixing if the chip is Hornet or Poseidon.
      */
     if (AR_SREV_HORNET(ah) || AR_SREV_POSEIDON_11_OR_LATER(ah)) {
         p_cap->halRxUsingLnaMixing = AH_TRUE;
@@ -3098,7 +3098,7 @@ ar9300_get_chip_power_limits(struct ath_hal *ah, HAL_CHANNEL *chans,
     return ahp->ah_rf_hal.get_chip_power_lim(ah, chans, nchans);
 }
 #endif
-/* XXX FreeBSD */
+/* XXX NQC */
 
 static HAL_BOOL
 ar9300_get_chip_power_limits(struct ath_hal *ah,
@@ -3318,7 +3318,7 @@ ar9300_set_immunity(struct ath_hal *ah, HAL_BOOL enable)
     }
 }
 
-/* XXX FreeBSD: I'm not sure how to implement this.. */
+/* XXX NQC: I'm not sure how to implement this.. */
 #if 0
 int
 ar9300_get_cal_intervals(struct ath_hal *ah, HAL_CALIBRATION_TIMER **timerp,
@@ -3603,13 +3603,13 @@ void ar9300_rx_gain_table_apply(struct ath_hal *ah)
             INIT_INI_ARRAY(&ahp->ah_ini_modes_rxgain,
                 ar9485_common_wo_xlna_rx_gain_poseidon1_1,
                 ARRAY_LENGTH(ar9485_common_wo_xlna_rx_gain_poseidon1_1), 2);
-            /* XXX FreeBSD: this needs to be revisited!! */
+            /* XXX NQC: this needs to be revisited!! */
             xlan_gpio_cfg = ah->ah_config.ath_hal_ext_lna_ctl_gpio;
             if (xlan_gpio_cfg) {
                 for (i = 0; i < 32; i++) {
                     if (xlan_gpio_cfg & (1 << i)) {
                         /*
-                         * XXX FreeBSD: definitely make sure this
+                         * XXX NQC: definitely make sure this
                          * results in the correct value being written
                          * to the hardware, or weird crap is very likely
                          * to occur!

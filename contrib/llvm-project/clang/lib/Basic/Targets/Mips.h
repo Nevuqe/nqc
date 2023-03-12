@@ -77,7 +77,7 @@ public:
 
     CPU = ABI == "o32" ? "mips32r2" : "mips64r2";
 
-    CanUseBSDABICalls = Triple.isOSFreeBSD() ||
+    CanUseBSDABICalls = Triple.isOSNQC() ||
                         Triple.isOSOpenBSD();
   }
 
@@ -131,7 +131,7 @@ public:
   void setN32N64ABITypes() {
     LongDoubleWidth = LongDoubleAlign = 128;
     LongDoubleFormat = &llvm::APFloat::IEEEquad();
-    if (getTriple().isOSFreeBSD()) {
+    if (getTriple().isOSNQC()) {
       LongDoubleWidth = LongDoubleAlign = 64;
       LongDoubleFormat = &llvm::APFloat::IEEEdouble();
     }

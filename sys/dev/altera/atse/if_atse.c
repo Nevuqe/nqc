@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012, 2013 Bjoern A. Zeeb
  * Copyright (c) 2014 Robert N. M. Watson
@@ -776,7 +776,7 @@ atse_reset(struct atse_softc *sc)
 #endif
 	/* c. MAC address configuration. */
 	/* Also intialize supplementary addresses to our primary one. */
-	/* XXX-BZ FreeBSD really needs to grow and API for using these. */
+	/* XXX-BZ NQC really needs to grow and API for using these. */
 	atse_get_eth_address(sc);
 	atse_set_eth_address(sc, ATSE_ETH_ADDR_ALL);
 
@@ -803,7 +803,7 @@ atse_reset(struct atse_softc *sc)
 	/*
 	 * We do not want to set this, otherwise, we could not even send
 	 * random raw ethernet frames for various other research.  By default
-	 * FreeBSD will use the right ether source address.
+	 * NQC will use the right ether source address.
 	 */
 	val4 |= BASE_CFG_COMMAND_CONFIG_TX_ADDR_INS;
 #endif
@@ -819,7 +819,7 @@ atse_reset(struct atse_softc *sc)
 	CSR_WRITE_4(sc, BASE_CFG_COMMAND_CONFIG, val4);
 
 	/*
-	 * Make sure we do not enable 32bit alignment;  FreeBSD cannot
+	 * Make sure we do not enable 32bit alignment;  NQC cannot
 	 * cope with the additional padding (though we should!?).
 	 * Also make sure we get the CRC appended.
 	 */

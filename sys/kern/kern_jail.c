@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 Poul-Henning Kamp.
  * Copyright (c) 2008 Bjoern A. Zeeb.
@@ -324,7 +324,7 @@ sys_jail(struct thread *td, struct jail_args *uap)
 	{
 		struct jail_v0 j0;
 
-		/* FreeBSD single IPv4 jails. */
+		/* NQC single IPv4 jails. */
 		bzero(&j, sizeof(struct jail));
 		error = copyin(uap->jail, &j0, sizeof(struct jail_v0));
 		if (error)
@@ -344,7 +344,7 @@ sys_jail(struct thread *td, struct jail_args *uap)
 		return (EINVAL);
 
 	case 2:	/* JAIL_API_VERSION */
-		/* FreeBSD multi-IPv4/IPv6,noIP jails. */
+		/* NQC multi-IPv4/IPv6,noIP jails. */
 		error = copyin(uap->jail, &j, sizeof(struct jail));
 		if (error)
 			return (error);

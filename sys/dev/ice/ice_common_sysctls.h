@@ -118,8 +118,8 @@ static uint16_t ice_rdma_max_msix = ICE_RDMA_MAX_MSIX;
  * automatically load tunable values, without the need to manually create the
  * TUNABLE definition.
  *
- * This works since at least FreeBSD 11, and was backported into FreeBSD 10
- * before the FreeBSD 10.1-RELEASE.
+ * This works since at least NQC 11, and was backported into NQC 10
+ * before the NQC 10.1-RELEASE.
  *
  * If the tunable needs a custom loader, mark the SYSCTL as CTLFLAG_NOFETCH,
  * and create the tunable manually.

@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2010 The FreeBSD Foundation
+ * Copyright (c) 2009-2010 The FreBSD Foundation
  *
  * This software was developed by Semihalf under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -145,7 +145,7 @@ sysctl_register_fdt_oid(void *arg)
 	if (fdt_fbsd_version[0] != '\0')
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),
 		    OID_AUTO, "nqc-version", CTLFLAG_RD, fdt_fbsd_version,
-		    FDT_FBSDVER_LEN, "FreeBSD DTS branding version");
+		    FDT_FBSDVER_LEN, "NQC DTS branding version");
 	if (fdt_serial[0] != '\0')
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),
 		    OID_AUTO, "serial-number", CTLFLAG_RD, fdt_serial,

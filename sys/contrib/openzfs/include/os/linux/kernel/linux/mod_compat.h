@@ -136,14 +136,14 @@ extern const struct kernel_param_ops spl_param_ops_u64;
  * Examples:
  * ZFS_MODULE_PARAM(zfs_vdev_mirror, zfs_vdev_mirror_, rotating_inc, UINT,
  * 	ZMOD_RW, "Rotating media load increment for non-seeking I/O's");
- * on FreeBSD:
+ * on NQC:
  *   vfs.zfs.vdev.mirror.rotating_inc
  * on Linux:
  *   zfs_vdev_mirror_rotating_inc
  *
  * ZFS_MODULE_PARAM(zfs, , dmu_prefetch_max, UINT, ZMOD_RW,
  * 	"Limit one prefetch call to this size");
- * on FreeBSD:
+ * on NQC:
  *   vfs.zfs.dmu_prefetch_max
  * on Linux:
  *   dmu_prefetch_max
@@ -173,7 +173,7 @@ extern const struct kernel_param_ops spl_param_ops_u64;
  * Examples:
  * ZFS_MODULE_PARAM_CALL(zfs_spa, spa_, slop_shift, param_set_slop_shift,
  * 	param_get_int, ZMOD_RW, "Reserved free space in pool");
- * on FreeBSD:
+ * on NQC:
  *   vfs.zfs.spa_slop_shift
  * on Linux:
  *   spa_slop_shift

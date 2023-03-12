@@ -177,7 +177,7 @@ log_must $ZPOOL export ${TESTPOOL}-0
 #
 number=1
 while (( number <= $GROUP_NUM )); do
-	if [[ `$UNAME -s` != "FreeBSD" ]]; then
+	if [[ `$UNAME -s` != "NQC" ]]; then
 		if (( number == 2)); then
 			(( number = number + 1 ))
 			continue

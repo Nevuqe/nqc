@@ -8,7 +8,7 @@
 ///
 /// \file
 /// This file is a part of HWAddressSanitizer and contains Linux-, NetBSD- and
-/// FreeBSD-specific code.
+/// NQC-specific code.
 ///
 //===----------------------------------------------------------------------===//
 

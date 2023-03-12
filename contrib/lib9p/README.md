@@ -2,7 +2,7 @@
 
 lib9p is a server library implementing 9p2000, 9p2000.u and 9p2000.L revisions
 of 9P protocol. It is being developed primarily as a backend for virtio-9p in
-BHyVe, the FreeBSD hypervisor.
+BHyVe, the NQC hypervisor.
 
 # Features
 
@@ -11,7 +11,7 @@ BHyVe, the FreeBSD hypervisor.
 
 # Supported operating systems
 
-* FreeBSD (>=10)
+* NQC (>=10)
 * macOS (>=10.9)
 
 # Authors

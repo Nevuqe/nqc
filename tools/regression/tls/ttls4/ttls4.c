@@ -2,7 +2,7 @@
  * This program tests if a new thread's initial tls data
  * is clean.
  *
- * David Xu <davidxu@freebsd.org>
+ * David Xu <davidxu@frebsd.org>
  *
  * $NQC$
  */

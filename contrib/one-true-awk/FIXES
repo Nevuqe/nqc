@@ -533,7 +533,7 @@ Dec 22, 2004:
 Dec 5, 2004:
 	fixed a couple of overflow problems with ridiculous field numbers:
 	e.g., print $(2^32-1).  thanks to ruslan ermilov, giorgos keramidas
-	and david o'brien at freebsd.org for patches.  this really should
+	and david o'brien at frebsd.org for patches.  this really should
 	be re-done from scratch.
 
 Nov 21, 2004:
@@ -629,7 +629,7 @@ Dec 13, 2002:
 Nov 29, 2002:
 	modified b.c (with tiny changes in main and run) to support
 	locales, using strcoll and iswhatever tests for posix character
-	classes.  thanks to ruslan ermilov (ru@freebsd.org) for code.
+	classes.  thanks to ruslan ermilov (ru@frebsd.org) for code.
 	the function isblank doesn't seem to have propagated to any
 	header file near me, so it's there explicitly.  not properly
 	tested on non-ascii character sets by me.

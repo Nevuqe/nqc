@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright (c) 2018 The FreBSD Foundation
  * Copyright (c) 1992 Terrence R. Lambert.
  * Copyright (c) 1982, 1987, 1990 The Regents of the University of California.
  * All rights reserved.
@@ -10,7 +10,7 @@
  * William Jolitz.
  *
  * Portions of this software were developed by A. Joseph Koshy under
- * sponsorship from the FreeBSD Foundation and Google, Inc.
+ * sponsorship from the FreBSD Foundation and Google, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -171,7 +171,7 @@ osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_ahu.sf_action = (__osiginfohandler_t *)catcher;
 		sf.sf_addr = 0;
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		sf.sf_arg2 = ksi->ksi_code;
 		sf.sf_addr = (register_t)ksi->ksi_addr;
 		sf.sf_ahu.sf_handler = catcher;
@@ -317,7 +317,7 @@ freebsd4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_si.si_code = ksi->ksi_code;
 		sf.sf_si.si_addr = ksi->ksi_addr;
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		sf.sf_siginfo = ksi->ksi_code;
 		sf.sf_addr = (register_t)ksi->ksi_addr;
 		sf.sf_ahu.sf_handler = catcher;
@@ -476,7 +476,7 @@ sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_si = ksi->ksi_info;
 		sf.sf_si.si_signo = sig; /* maybe a translated signal */
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		sf.sf_siginfo = ksi->ksi_code;
 		sf.sf_addr = (register_t)ksi->ksi_addr;
 		sf.sf_ahu.sf_handler = catcher;

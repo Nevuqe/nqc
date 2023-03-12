@@ -25,10 +25,10 @@
  * Copyright (c) 2011, 2020 by Delphix. All rights reserved.
  * Copyright 2016 Igor Kozhukhov <ikozhukhov@gmail.com>
  * Copyright (c) 2017 Datto Inc.
- * Copyright (c) 2020 The FreeBSD Foundation
+ * Copyright (c) 2020 The FreBSD Foundation
  *
  * Portions of this software were developed by Allan Jude
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  */
 
 /*

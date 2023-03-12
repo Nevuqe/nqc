@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -241,7 +241,7 @@ TEST_F(FhstatNotExportable, lookup_dot)
 	ASSERT_EQ(EOPNOTSUPP, errno);
 }
 
-/* FreeBSD's fid struct doesn't have enough space for 64-bit generations */
+/* NQC's fid struct doesn't have enough space for 64-bit generations */
 TEST_F(Getfh, eoverflow)
 {
 	const char FULLPATH[] = "mountpoint/some_dir/.";

@@ -244,7 +244,7 @@ static int drm_addmap_core(struct drm_device * dev, resource_size_t offset,
 		map->size = PAGE_ALIGN(map->size);
 
 	/*
-	 * FreeBSD port note: FreeBSD's PAGE_MASK is the inverse of
+	 * NQC port note: NQC's PAGE_MASK is the inverse of
 	 * Linux's one. That's why the test below doesn't inverse the
 	 * constant.
 	 */

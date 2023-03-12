@@ -44,7 +44,7 @@
 
 /*
  * A zero bootinfo field often means that there is no info available.
- * Assumes booting with a boot loader from FreeBSD 2.1 or newer and
+ * Assumes booting with a boot loader from NQC 2.1 or newer and
  * that bi_size is always valid when bi_version == 1.
  */
 struct bootinfo {

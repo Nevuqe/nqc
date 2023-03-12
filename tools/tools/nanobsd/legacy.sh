@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Copyright (c) 2005 Poul-Henning Kamp All rights reserved.
-# Copyright (c) 2016 M. Warner Losh <imp@FreeBSD.org>
+# Copyright (c) 2016 M. Warner Losh <imp@frebsd.org>
 #
 #
 # Redistribution and use in source and binary forms, with or without

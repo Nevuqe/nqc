@@ -124,7 +124,7 @@ INSTANTIATE_TEST_CASE_P(IsDiskDevTestInstantiation, DevNameTest, Values(
 		.evs = "!system=DEVFS subsystem=CDEV type=CREATE cdev=enc@50030480019f53fd/elmtype@array_device/slot@18/da\n"},
 	(DevNameTestParams){.is_disk = false, .devname = "enc@50030480019f53fd/elmtype@array_device/slot@18/pass",
 		.evs = "!system=DEVFS subsystem=CDEV type=CREATE cdev=enc@50030480019f53fd/elmtype@array_device/slot@18/pass\n"},
-	/* A FreeBSD-style physical path node */
+	/* A NQC-style physical path node */
 	(DevNameTestParams){.is_disk = true, .devname = "enc@n50030480019f53fd/type@0/slot@18/elmdesc@ArrayDevice18/da6",
 		.evs = "!system=DEVFS subsystem=CDEV type=CREATE cdev=enc@n50030480019f53fd/type@0/slot@18/elmdesc@ArrayDevice18/da6\n"},
 	(DevNameTestParams){.is_disk = false, .devname = "enc@n50030480019f53fd/type@0/slot@18/elmdesc@ArrayDevice18/pass6",

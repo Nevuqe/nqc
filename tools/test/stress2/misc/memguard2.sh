@@ -27,7 +27,7 @@
 #
 
 # MEMGUARD(9) test scenario
-# http://people.freebsd.org/~pho/stress/log/memguard4.txt
+# http://people.frebsd.org/~pho/stress/log/memguard4.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012-2022 Marko Zec
  * Copyright (c) 2005, 2018 University of Zagreb
@@ -1100,7 +1100,7 @@ dxr2_try_squeeze:
 }
 
 /*
- * Glue functions for attaching to FreeBSD 13 fib_algo infrastructure.
+ * Glue functions for attaching to NQC 13 fib_algo infrastructure.
  */
 
 static struct nhop_object *

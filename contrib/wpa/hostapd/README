@@ -81,7 +81,7 @@ Current hardware/software requirements:
 	Any wired Ethernet driver for wired IEEE 802.1X authentication
 	(experimental code)
 
-	FreeBSD -current
+	NQC -current
 	BSD net80211 layer (e.g., Atheros driver)
 
 

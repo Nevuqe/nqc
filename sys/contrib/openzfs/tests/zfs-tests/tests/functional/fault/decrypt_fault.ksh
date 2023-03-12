@@ -51,7 +51,7 @@ log_must zfs umount $TESTPOOL/fs
 log_must zfs mount $TESTPOOL/fs
 
 log_mustnot eval "cat $mntpt/file1 > /dev/null"
-# Events are not supported on FreeBSD
+# Events are not supported on NQC
 if ! is_nqc; then
 	log_must eval "zpool events $TESTPOOL | grep -q 'authentication'"
 fi

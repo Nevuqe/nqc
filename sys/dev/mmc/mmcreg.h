@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2006 M. Warner Losh <imp@FreeBSD.org>
- * Copyright (c) 2017 Marius Strobl <marius@FreeBSD.org>
- * Copyright (c) 2015-2016 Ilya Bakulin <kibab@FreeBSD.org>
+ * Copyright (c) 2006 M. Warner Losh <imp@frebsd.org>
+ * Copyright (c) 2017 Marius Strobl <marius@frebsd.org>
+ * Copyright (c) 2015-2016 Ilya Bakulin <kibab@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

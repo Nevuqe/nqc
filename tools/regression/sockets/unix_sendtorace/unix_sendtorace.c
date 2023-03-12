@@ -32,7 +32,7 @@
  * a kernel panic, this test simply completes or doesn't.
  *
  * XXX: Despite implementing support for sendto() on stream sockets with
- * implied connect, the appropriate flag isn't set in the FreeBSD kernel so
+ * implied connect, the appropriate flag isn't set in the NQC kernel so
  * it does not work.  For now, don't call the stream test.
  */
 

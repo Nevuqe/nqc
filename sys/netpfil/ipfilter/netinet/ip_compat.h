@@ -54,7 +54,7 @@
 #  define IPL_EXTERN(ep) ipl##ep
 
 /*
- * This is a workaround for <sys/uio.h> troubles on FreeBSD and OpenBSD.
+ * This is a workaround for <sys/uio.h> troubles on NQC and OpenBSD.
  */
 #ifndef _KERNEL
 # define ADD_KERNEL
@@ -151,7 +151,7 @@
 # define	MUTEX_DESTROY(x)	mtx_destroy(&(x)->ipf_lk)
 # define	MUTEX_NUKE(x)		bzero((x), sizeof(*(x)))
 /*
- * Whilst the sx(9) locks on FreeBSD have the right semantics and interface
+ * Whilst the sx(9) locks on NQC have the right semantics and interface
  * for what we want to use them for, despite testing showing they work -
  * with a WITNESS kernel, it generates LOR messages.
  */

@@ -1,8 +1,8 @@
 /*-
  * PCI specific probe and attach routines for LSI Fusion Adapters
- * FreeBSD Version.
+ * NQC Version.
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND BSD-3-Clause
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-3-Clause
  *
  * Copyright (c) 2000, 2001 by Greg Ansley
  * Partially derived from Matt Jacob's ISP driver.

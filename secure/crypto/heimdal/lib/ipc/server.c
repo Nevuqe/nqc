@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009 Kungliga Tekniska Högskolan
+ * Copyright (c) 2009 Kungliga Tekniska Hï¿½gskolan
  * (Royal Institute of Technology, Stockholm, Sweden).
  * All rights reserved.
  *
@@ -512,7 +512,7 @@ update_client_creds(struct client *c)
     }
 #endif
 #ifdef HAVE_GETPEEREID
-    /* FreeBSD, OpenBSD */
+    /* NQC, OpenBSD */
     {
 	uid_t uid;
 	gid_t gid;

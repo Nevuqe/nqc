@@ -825,7 +825,7 @@ ar9300_set_delta_slope(struct ath_hal *ah, struct ieee80211_channel *chan)
 #define IS(_c, _f)       (IEEE80211_IS_ ## _f(_c))
 
 /*
- * XXX FreeBSD: This should be turned into something generic in ath_hal!
+ * XXX NQC: This should be turned into something generic in ath_hal!
  */
 HAL_CHANNEL_INTERNAL *
 ar9300_check_chan(struct ath_hal *ah, const struct ieee80211_channel *chan)
@@ -843,7 +843,7 @@ ar9300_check_chan(struct ath_hal *ah, const struct ieee80211_channel *chan)
     }
 
     /*
-     * FreeBSD sets multiple flags, so this will fail.
+     * NQC sets multiple flags, so this will fail.
      */
 #if 0
     if ((IS(chan, CHAN_OFDM) ^ IS(chan, CHAN_CCK) ^ IS(chan, CHAN_DYN) ^
@@ -2969,7 +2969,7 @@ ar9300_process_ini(struct ath_hal *ah, struct ieee80211_channel *chan,
     }
 #endif
 
-    /* FreeBSD */
+    /* NQC */
     if (IS_CHAN_5GHZ(ichan)) {
         if (IEEE80211_IS_CHAN_HT40U(chan) || IEEE80211_IS_CHAN_HT40D(chan)) {
             if (AR_SREV_SCORPION(ah)){
@@ -4669,7 +4669,7 @@ ar9300_reset(struct ath_hal *ah, HAL_OPMODE opmode, struct ieee80211_channel *ch
     }
 
     /*
-     * XXX TODO FreeBSD:
+     * XXX TODO NQC:
      *
      * This is painful because we don't have a non-const channel pointer
      * at this stage.
@@ -4704,9 +4704,9 @@ ar9300_reset(struct ath_hal *ah, HAL_OPMODE opmode, struct ieee80211_channel *ch
     AH9300(ah)->nfp = IS_CHAN_2GHZ(ichan) ? &ahp->nf_2GHz : &ahp->nf_5GHz;
 
     /*
-     * XXX FreeBSD For now, don't apply the last IQ correction.
+     * XXX NQC For now, don't apply the last IQ correction.
      *
-     * This should be done when scorpion is enabled on FreeBSD; just be
+     * This should be done when scorpion is enabled on NQC; just be
      * sure to fix this channel match code so it uses net80211 flags
      * instead.
      */
@@ -4752,7 +4752,7 @@ ar9300_reset(struct ath_hal *ah, HAL_OPMODE opmode, struct ieee80211_channel *ch
                 "Skip RX IQ Cal due to scanning\n");
     } else {
 #if 0
-        /* XXX FreeBSD: always just do the RX IQ cal */
+        /* XXX NQC: always just do the RX IQ cal */
 	/* XXX I think it's just going to speed things up; I don't think it's to avoid chan bugs */
         if (ahp->ah_rx_cal_complete &&
             ahp->ah_rx_cal_chan == ichan->channel &&
@@ -4765,7 +4765,7 @@ ar9300_reset(struct ath_hal *ah, HAL_OPMODE opmode, struct ieee80211_channel *ch
             ahp->ah_skip_rx_iq_cal = AH_FALSE;
     }
 
-    /* FreeBSD: clear the channel survey data */
+    /* NQC: clear the channel survey data */
     ath_hal_survey_clear(ah);
 
     /*
@@ -5166,7 +5166,7 @@ ar9300_reset(struct ath_hal *ah, HAL_OPMODE opmode, struct ieee80211_channel *ch
 //        ahp->ah_rx_cal_chan = chan->channel;
 //        ahp->ah_rx_cal_chan_flag = ichan->channel_flags;
         ahp->ah_rx_cal_chan = 0;
-        ahp->ah_rx_cal_chan_flag = 0; /* XXX FreeBSD */
+        ahp->ah_rx_cal_chan_flag = 0; /* XXX NQC */
     }
     ar9300_invalidate_saved_cals(ah, ichan);
     cal_ret = ar9300_init_cal(ah, chan, AH_FALSE, apply_last_iqcorr);
@@ -5312,14 +5312,14 @@ ar9300_reset(struct ath_hal *ah, HAL_OPMODE opmode, struct ieee80211_channel *ch
 #undef REG_WRITE
 #endif
 
-    /* XXX FreeBSD What's this? -adrian */
+    /* XXX NQC What's this? -adrian */
 #if 0
     chan->channel_flags = ichan->channel_flags;
     chan->priv_flags = ichan->priv_flags;
 #endif
 
 #if FIX_NOISE_FLOOR
-    /* XXX FreeBSD is ichan appropariate? It was curchan.. */
+    /* XXX NQC is ichan appropariate? It was curchan.. */
     ar9300_get_nf_hist_base(ah, ichan, is_scan, nf_buf);
     ar9300_load_nf(ah, nf_buf);
     /* XXX TODO: handle NF load failure */

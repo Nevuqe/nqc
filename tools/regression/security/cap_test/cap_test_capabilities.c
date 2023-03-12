@@ -1,11 +1,11 @@
 /*-
  * Copyright (c) 2009-2011 Robert N. M. Watson
  * Copyright (c) 2011 Jonathan Anderson
- * Copyright (c) 2012 FreeBSD Foundation
+ * Copyright (c) 2012 FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Pawel Jakub Dawidek under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

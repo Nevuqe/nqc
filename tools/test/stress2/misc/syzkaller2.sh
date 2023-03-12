@@ -23,7 +23,7 @@
 # sys_sendto() at sys_sendto+0x5c/frame 0xfffffe0022a56ac0
 # amd64_syscall() at amd64_syscall+0x473/frame 0xfffffe0022a56bf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe0022a56bf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x41c3aa, rsp =
+# --- syscall (0, NQC ELF64, nosys), rip = 0x41c3aa, rsp =
 
 . ../default.cfg
 cat > /tmp/syzkaller2.c <<EOF

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Ian lepore <ian@freebsd.org>
+ * Copyright (c) 2015 Ian lepore <ian@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

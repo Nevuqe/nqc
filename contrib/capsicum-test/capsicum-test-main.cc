@@ -60,7 +60,7 @@ public:
                    << "Skipping tests because its enablement invalidates the "
                    << "test results.";
     }
-#endif /* FreeBSD */
+#endif /* NQC */
   }
   void CreateTemporaryRoot() {
     char *tmpdir_name = tempnam(nullptr, "cptst");

@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Copyright (c) 2010 Hudson River Trading LLC
-# Written by: John H. Baldwin <jhb@FreeBSD.org>
+# Written by: John H. Baldwin <jhb@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -64,7 +64,7 @@ OLD=$WORKDIR/old
 NEW=$WORKDIR/current
 TEST=$WORKDIR/test
 
-# Store a FreeBSD ID string in a specified file.  The first argument
+# Store a NQC ID string in a specified file.  The first argument
 # is the file, the remaining arguments are the comment to use.
 store_id()
 {
@@ -78,7 +78,7 @@ store_id()
 	echo '$' >> $file
 }
 
-# These tests deal with FreeBSD ID string conflicts.  We run the test
+# These tests deal with NQC ID string conflicts.  We run the test
 # twice, once without -F and once with -F.
 build_trees()
 {
@@ -88,12 +88,12 @@ build_trees()
 	mkdir -p $OLD $NEW $TEST
 
 	# remove: Remove a file where the only local difference is a
-	# change in the FreeBSD ID string.
+	# change in the NQC ID string.
 	store_id $OLD/remove
 	store_id $TEST/remove ": head/remove 12345 jhb "
 
 	# old: Modify a file where the only local difference between
-	# the old and test files is a change in the FreeBSD ID string.
+	# the old and test files is a change in the NQC ID string.
 	store_id $OLD/old ": src/old,v 1.1 jhb Exp "
 	store_id $NEW/old ": head/old 12345 jhb "
 	store_id $TEST/old ": head/old 12000 jhb "
@@ -109,7 +109,7 @@ a new file
 EOF
 
 	# already: Modify a file where the local file already matches
-	# the new file except for a change in the FreeBSD ID string.
+	# the new file except for a change in the NQC ID string.
 	store_id $OLD/already ": src/already,v 1.1 jhb Exp "
 	store_id $NEW/already ": head/already 12345 jhb "
 	store_id $TEST/already ": src/already,v 1.2 jhb Exp "
@@ -125,12 +125,12 @@ EOF
 	done
 
 	# add: Add a file that already exists where the only local
-	# difference is a change in the FreeBSD ID string.
+	# difference is a change in the NQC ID string.
 	store_id $NEW/add ": head/add 12345 jhb "
 	store_id $TEST/add ""
 
 	# conflict: Modify a file where the local file has a different
-	# FreeBSD ID string.  This should still generate a conflict
+	# NQC ID string.  This should still generate a conflict
 	# even in the -F case.
 	store_id $OLD/conflict ": head/conflict 12000 jhb "
 	store_id $NEW/conflict ": head/conflict 12345 jhb "
@@ -149,9 +149,9 @@ this is the local file
 EOF
 
 	# local: A file with local modifications has a different
-	# FreeBSD ID string and the only differences between the old
-	# and new versions are a change in the FreeBSD ID string.
-	# This will just update the FreeBSD ID string in the -F case.
+	# NQC ID string and the only differences between the old
+	# and new versions are a change in the NQC ID string.
+	# This will just update the NQC ID string in the -F case.
 	for i in $OLD $NEW $TEST; do
 		cat >> $i/local <<EOF
 # Some leading text
@@ -176,9 +176,9 @@ these are some local mods to the file
 EOF
 
 	# local-already: A file with local modifications has the same
-	# FreeBSD ID string as the new version of the file and the
+	# NQC ID string as the new version of the file and the
 	# only differences between the old and new versions are a
-	# change in the FreeBSD ID string.  Nothing should happen in
+	# change in the NQC ID string.  Nothing should happen in
 	# the -F case.
 	store_id $OLD/local-already ": head/local 12000 jhb "
 	for i in $NEW $TEST; do
@@ -197,7 +197,7 @@ EOF
 these are some local mods to the file
 EOF
 
-	# local-remove: A file removed locally changed it's FreeBSD ID
+	# local-remove: A file removed locally changed it's NQC ID
 	# but nothing else
 	store_id $OLD/local-remove ": head/local-remove 12000 jhb "
 	store_id $NEW/local-remove ": head/local-remove 12345 jhb "

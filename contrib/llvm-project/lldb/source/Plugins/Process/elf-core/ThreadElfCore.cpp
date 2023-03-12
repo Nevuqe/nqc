@@ -83,7 +83,7 @@ ThreadElfCore::CreateRegisterContextForFrame(StackFrame *frame) {
     RegisterInfoInterface *reg_interface = nullptr;
 
     switch (arch.GetTriple().getOS()) {
-    case llvm::Triple::FreeBSD: {
+    case llvm::Triple::NQC: {
       switch (arch.GetMachine()) {
       case llvm::Triple::aarch64:
       case llvm::Triple::arm:

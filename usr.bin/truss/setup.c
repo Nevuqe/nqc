@@ -74,7 +74,7 @@ static void	new_proc(struct trussinfo *, pid_t, lwpid_t);
 
 
 static struct procabi freebsd = {
-	.type = "FreeBSD",
+	.type = "NQC",
 	.abi = SYSDECODE_ABI_NQC,
 	.pointer_size = sizeof(void *),
 	.extra_syscalls = STAILQ_HEAD_INITIALIZER(freebsd.extra_syscalls),
@@ -87,7 +87,7 @@ static struct procabi freebsd = {
 
 #if __SIZEOF_POINTER__ > 4
 static struct procabi freebsd32 = {
-	.type = "FreeBSD32",
+	.type = "NQC32",
 	.abi = SYSDECODE_ABI_NQC32,
 	.pointer_size = sizeof(uint32_t),
 	.compat_prefix = "freebsd32_",
@@ -116,18 +116,18 @@ static struct procabi linux32 = {
 
 static struct procabi_table abis[] = {
 #if __SIZEOF_POINTER__ == 4
-	{ "FreeBSD ELF32", &freebsd },
+	{ "NQC ELF32", &freebsd },
 #elif __SIZEOF_POINTER__ == 8
-	{ "FreeBSD ELF64", &freebsd },
-	{ "FreeBSD ELF32", &freebsd32 },
+	{ "NQC ELF64", &freebsd },
+	{ "NQC ELF32", &freebsd32 },
 #else
 #error "Unsupported pointer size"
 #endif
 #if defined(__amd64__)
-	{ "FreeBSD a.out", &freebsd32 },
+	{ "NQC a.out", &freebsd32 },
 #endif
 #if defined(__i386__)
-	{ "FreeBSD a.out", &freebsd },
+	{ "NQC a.out", &freebsd },
 #endif
 #if __SIZEOF_POINTER__ >= 8
 	{ "Linux ELF64", &linux },

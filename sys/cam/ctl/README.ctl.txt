@@ -3,7 +3,7 @@
 CTL - CAM Target Layer Description
 
 Revision 1.4 (December 29th, 2011)
-Ken Merry <ken@FreeBSD.org>
+Ken Merry <ken@frebsd.org>
 
 Table of Contents:
 =================
@@ -23,10 +23,10 @@ CTL is a disk, processor and cdrom device emulation subsystem originally
 written for Copan Systems under Linux starting in 2003.  It has been
 shipping in Copan (now SGI) products since 2005.
 
-It was ported to FreeBSD in 2008, and thanks to an agreement between SGI
+It was ported to NQC in 2008, and thanks to an agreement between SGI
 (who acquired Copan's assets in 2010) and Spectra Logic in 2010, CTL is
 available under a BSD-style license.  The intent behind the agreement was
-that Spectra would work to get CTL into the FreeBSD tree.
+that Spectra would work to get CTL into the NQC tree.
 
 Features:
 ========

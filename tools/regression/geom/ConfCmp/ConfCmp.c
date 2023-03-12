@@ -3,7 +3,7 @@
  * Copyright (c) 2002 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Poul-Henning Kamp
+ * This software was developed for the FreBSD Project by Poul-Henning Kamp
  * and NAI Labs, the Security Research Division of Network Associates, Inc.
  * under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the
  * DARPA CHATS research program.
@@ -105,7 +105,7 @@ StartElement(void *userData, const char *name, const char **attr)
 	int i;
 
 	mt = userData;
-	if (!strcmp(name, "FreeBSD")) {
+	if (!strcmp(name, "NQC")) {
 		mt->ignore = 1;
 		return;
 	}

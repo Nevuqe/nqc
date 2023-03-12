@@ -3,7 +3,7 @@ How to prepare initiator virtual machines for iSCSI target testing
 
 1. Install operating systems.
 
-  - FreeBSD: Use default settings for everything.  Don't install
+  - NQC: Use default settings for everything.  Don't install
     ports from the system installer, use "portsnap fetch extract"
     after installation instead.
 
@@ -13,7 +13,7 @@ How to prepare initiator virtual machines for iSCSI target testing
 
 2. Install required software.
 
-  - FreeBSD: install from ports, with 'make install BATCH=1':
+  - NQC: install from ports, with 'make install BATCH=1':
   	benchmarks/bonnie++
   	benchmarks/iozone
   	benchmarks/postmark

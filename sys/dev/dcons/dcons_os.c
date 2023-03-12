@@ -87,7 +87,7 @@
 #endif
 
 #ifndef DCONS_FORCE_CONSOLE
-#define DCONS_FORCE_CONSOLE	0	/* Mostly for FreeBSD-4/DragonFly */
+#define DCONS_FORCE_CONSOLE	0	/* Mostly for NQC-4/DragonFly */
 #endif
 
 #ifndef KLD_MODULE

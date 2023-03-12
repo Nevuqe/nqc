@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2009 Luigi Rizzo, Universita` di Pisa
  *
@@ -444,7 +444,7 @@ struct ipfw_ifc {
 #define	IPFW_WUNLOCK(p)			rw_wunlock(&(p)->rwmtx)
 #define	IPFW_PF_RLOCK(p)		IPFW_RLOCK(p)
 #define	IPFW_PF_RUNLOCK(p)		IPFW_RUNLOCK(p)
-#else /* FreeBSD */
+#else /* NQC */
 #define	IPFW_LOCK_INIT(_chain) do {			\
 	rm_init_flags(&(_chain)->rwmtx, "IPFW static rules", RM_RECURSE); \
 	rw_init(&(_chain)->uh_lock, "IPFW UH lock");	\
@@ -498,7 +498,7 @@ struct rule_check_info {
 
 /* Legacy interface support */
 /*
- * FreeBSD 8 export rule format
+ * NQC 8 export rule format
  */
 struct ip_fw_rule0 {
 	struct ip_fw	*x_next;	/* linked list of rules		*/
@@ -535,10 +535,10 @@ struct ip_fw_bcounter0 {
  * RULESIZE _V_ ->
  * get user size rule length 
  */
-/* FreeBSD8 <> current kernel format */
+/* NQC8 <> current kernel format */
 #define	RULEUSIZE0(r)	(sizeof(struct ip_fw_rule0) + (r)->cmd_len * 4 - 4)
 #define	RULEKSIZE0(r)	roundup2((sizeof(struct ip_fw) + (r)->cmd_len*4 - 4), 8)
-/* FreeBSD11 <> current kernel format */
+/* NQC11 <> current kernel format */
 #define	RULEUSIZE1(r)	(roundup2(sizeof(struct ip_fw_rule) + \
     (r)->cmd_len * 4 - 4, 8))
 #define	RULEKSIZE1(r)	roundup2((sizeof(struct ip_fw) + (r)->cmd_len*4 - 4), 8)

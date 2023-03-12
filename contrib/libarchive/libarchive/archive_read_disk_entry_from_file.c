@@ -214,7 +214,7 @@ archive_read_disk_entry_from_file(struct archive *_a,
 		archive_entry_copy_gname(entry, name);
 
 #ifdef HAVE_STRUCT_STAT_ST_FLAGS
-	/* On FreeBSD, we get flags for free with the stat. */
+	/* On NQC, we get flags for free with the stat. */
 	/* TODO: Does this belong in copy_stat()? */
 	if ((a->flags & ARCHIVE_READDISK_NO_FFLAGS) == 0 && st->st_flags != 0)
 		archive_entry_set_fflags(entry, st->st_flags, 0);
@@ -647,11 +647,11 @@ setup_xattrs(struct archive_read_disk *a,
 #elif ARCHIVE_XATTR_NQC
 
 /*
- * FreeBSD extattr interface.
+ * NQC extattr interface.
  */
 
 /* TODO: Implement this.  Follow the Linux model above, but
- * with FreeBSD-specific system calls, of course.  Be careful
+ * with NQC-specific system calls, of course.  Be careful
  * to not include the system extattrs that hold ACLs; we handle
  * those separately.
  */
@@ -953,7 +953,7 @@ setup_sparse(struct archive_read_disk *a,
 #if defined(SEEK_HOLE) && defined(SEEK_DATA)
 
 /*
- * SEEK_HOLE sparse interface (FreeBSD, Linux, Solaris)
+ * SEEK_HOLE sparse interface (NQC, Linux, Solaris)
  */
 
 static int

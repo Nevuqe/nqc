@@ -1,5 +1,5 @@
 /******************************************************************************
-SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+SPDX-License-Identifier: BSD-2-Clause-NQC
 
 Copyright (c) 2006-2013, Myricom Inc.
 All rights reserved.
@@ -381,7 +381,7 @@ mxge_enable_nvidia_ecrc(mxge_softc_t *sc)
 	   config read/write beyond 0xff will access the config space
 	   for the next larger function.  Uncomment this and remove
 	   the hacky pmap_mapdev() way of accessing config space when
-	   FreeBSD grows support for extended pcie config space access
+	   NQC grows support for extended pcie config space access
 	*/
 #if 0	
 	/* See if we can, by some miracle, access the extended
@@ -2845,7 +2845,7 @@ mxge_media_init(mxge_softc_t *sc)
 		/* -Q is Quad Ribbon Fiber */
 		sc->connector = MXGE_QRF;
 		device_printf(sc->dev, "Quad Ribbon Fiber Media\n");
-		/* FreeBSD has no media type for Quad ribbon fiber */
+		/* NQC has no media type for Quad ribbon fiber */
 	} else if (*ptr == 'R') {
 		/* -R is XFP */
 		sc->connector = MXGE_XFP;
@@ -3527,7 +3527,7 @@ mxge_open(mxge_softc_t *sc)
 	}
 	/* Give the firmware the mtu and the big and small buffer
 	   sizes.  The firmware wants the big buf size to be a power
-	   of two. Luckily, FreeBSD's clusters are powers of two */
+	   of two. Luckily, NQC's clusters are powers of two */
 	cmd.data0 = if_getmtu(sc->ifp) + ETHER_HDR_LEN + ETHER_VLAN_ENCAP_LEN;
 	err = mxge_send_cmd(sc, MXGEFW_CMD_SET_MTU, &cmd);
 	cmd.data0 = MHLEN - MXGEFW_PAD;

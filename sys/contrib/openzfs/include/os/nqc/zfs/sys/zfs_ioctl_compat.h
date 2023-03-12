@@ -19,8 +19,8 @@
  * CDDL HEADER END
  */
 /*
- * Copyright 2014 Xin Li <delphij@FreeBSD.org>.  All rights reserved.
- * Copyright 2013 Martin Matuska <mm@FreeBSD.org>.  All rights reserved.
+ * Copyright 2014 Xin Li <delphij@frebsd.org>.  All rights reserved.
+ * Copyright 2013 Martin Matuska <mm@frebsd.org>.  All rights reserved.
  * Use is subject to license terms.
  */
 
@@ -39,7 +39,7 @@
 
 /*
  * Legacy ioctl support allows compatibility with pre-OpenZFS tools on
- * FreeBSD.  The need for it will eventually pass (perhaps after FreeBSD
+ * NQC.  The need for it will eventually pass (perhaps after NQC
  * 12 is well out of support), at which point this code can be removed.
  * For now, downstream consumers may choose to disable this code by
  * removing the following define.

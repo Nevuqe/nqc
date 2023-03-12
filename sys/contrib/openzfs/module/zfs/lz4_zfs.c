@@ -865,7 +865,7 @@ real_LZ4_compress(const char *source, char *dest, int isize, int osize)
 
 #ifdef __NQC__
 /*
- * FreeBSD has 4, 8 and 16 KB malloc zones which can be used here.
+ * NQC has 4, 8 and 16 KB malloc zones which can be used here.
  * Should struct refTables get resized this may need to be revisited, hence
  * compiler-time asserts.
  */

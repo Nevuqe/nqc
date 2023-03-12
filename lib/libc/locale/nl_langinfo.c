@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001, 2003 Alexey Zelkin <phantom@FreeBSD.org>
+ * Copyright (c) 2001, 2003 Alexey Zelkin <phantom@frebsd.org>
  * All rights reserved.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -193,7 +193,7 @@ nl_langinfo_l(nl_item item, locale_t loc)
 			}
 		}
 		break;
-	case D_MD_ORDER:        /* FreeBSD local extension */
+	case D_MD_ORDER:        /* NQC local extension */
 		ret = (char *) __get_current_time_locale(loc)->md_order;
 		break;
 	default:

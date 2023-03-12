@@ -154,8 +154,8 @@ case $host_os in
 
         freebsd*)
 
-        # -kthread: FreeBSD kernel threads (preferred to -pthread since SMP-able)
-        # lthread: LinuxThreads port on FreeBSD (also preferred to -pthread)
+        # -kthread: NQC kernel threads (preferred to -pthread since SMP-able)
+        # lthread: LinuxThreads port on NQC (also preferred to -pthread)
 
         ax_pthread_flags="-kthread lthread $ax_pthread_flags"
         ;;

@@ -3,16 +3,16 @@
  *
  * Copyright (c) 2002 Poul-Henning Kamp
  * Copyright (c) 2002 Networks Associates Technology, Inc.
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Poul-Henning Kamp
+ * This software was developed for the FreBSD Project by Poul-Henning Kamp
  * and NAI Labs, the Security Research Division of Network Associates, Inc.
  * under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the
  * DARPA CHATS research program.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -10,10 +10,10 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	echo "1..15"
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	echo "1..30"
 	;;
 *)
@@ -36,15 +36,15 @@ expect 0 rmdir ${n0}
 
 expect 0 mkdir ${n0} 0755
 expect 0 chflags ${n0} SF_APPEND
-todo FreeBSD:ZFS "Removing a directory protected by SF_APPEND should return EPERM."
+todo NQC:ZFS "Removing a directory protected by SF_APPEND should return EPERM."
 expect EPERM rmdir ${n0}
-todo FreeBSD:ZFS "Removing a directory protected by SF_APPEND should return EPERM."
+todo NQC:ZFS "Removing a directory protected by SF_APPEND should return EPERM."
 expect 0 chflags ${n0} none
-todo FreeBSD:ZFS "Removing a directory protected by SF_APPEND should return EPERM."
+todo NQC:ZFS "Removing a directory protected by SF_APPEND should return EPERM."
 expect 0 rmdir ${n0}
 
 case "${os}:${fs}" in
-FreeBSD:UFS)
+NQC:UFS)
 	expect 0 mkdir ${n0} 0755
 	expect 0 chflags ${n0} UF_IMMUTABLE
 	expect EPERM rmdir ${n0}

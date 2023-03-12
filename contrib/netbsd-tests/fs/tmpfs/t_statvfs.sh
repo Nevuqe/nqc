@@ -38,15 +38,15 @@ values_head() {
 values_body() {
 	test_mount -o -s10M
 
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		pagesize=$(sysctl -n hw.pagesize)
 	else
-	# End FreeBSD
+	# End NQC
 	pagesize=$(sysctl hw.pagesize | cut -d ' ' -f 3)
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 	eval $($(atf_get_srcdir)/h_tools statvfs .)
 	[ ${pagesize} -eq ${f_bsize} ] || \
 	    atf_fail "Invalid bsize"

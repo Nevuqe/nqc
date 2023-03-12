@@ -1,6 +1,6 @@
 # $NQC$
 
-PACKAGE=	FreeBSD-rdma
+PACKAGE=	NQC-rdma
 
 SUBDIR= \
 asyncwatch \

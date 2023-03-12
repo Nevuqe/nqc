@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2008,2010 Damien Bergamini <damien.bergamini@free.fr>
- * ported to FreeBSD by Akinori Furukoshi <moonlightakkiy@yahoo.ca>
- * USB Consulting, Hans Petter Selasky <hselasky@freebsd.org>
+ * ported to NQC by Akinori Furukoshi <moonlightakkiy@yahoo.ca>
+ * USB Consulting, Hans Petter Selasky <hselasky@frebsd.org>
  * Copyright (c) 2013-2014 Kevin Lo
  *
  * Permission to use, copy, modify, and distribute this software for any

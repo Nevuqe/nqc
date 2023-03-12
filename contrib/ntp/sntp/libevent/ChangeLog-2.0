@@ -1059,7 +1059,7 @@ Changes in 2.0.3-alpha (20 Nov 2009):
  o The event_base_new() and event_base_new_with_config() functions now never call exit() on failure.  For backward "compatibility", event_init() still does, but more consistently.
  o Remove compat/sys/_time.h.  It interfered with system headers on HPUX, and its functionality has been subsumed by event2/util.h and util-internal.h.
  o Add a new bufferevent_socket_connect_hostname() to encapsulate the resolve-then-connect operation.
- o Build kqueue.c correctly on GNU/kFreeBSD platforms. Patch pulled upstream from Debian.
+ o Build kqueue.c correctly on GNU/kNQC platforms. Patch pulled upstream from Debian.
  o Alternative queue-based timeout algorithm for programs that use a large number of timeouts with the same value.
  o New event_base_config option to disable the timeval cache entirely.
  o Make EV_PERSIST timeouts more accurate: schedule the next event based on the scheduled time of the previous event, not based on the current time.
@@ -1072,7 +1072,7 @@ Changes in 2.0.3-alpha (20 Nov 2009):
  o Add an evdns_getaddrinfo() function to provide a nonblocking getaddrinfo using evdns, so programs can perform useful hostname lookup.
  o Finally expose the IOCP-based bufferevent backend.  It passes its unit tests, but probably still has some bugs remaining.  Code by Nick Mathewson and Christopher Davis.
  o Numerous other bugfixes.
- o On FreeBSD and other OSes, connect can return ECONREFUSED immediately; instead of failing the function call, pretend with faileld in the callback.
+ o On NQC and other OSes, connect can return ECONREFUSED immediately; instead of failing the function call, pretend with faileld in the callback.
  o Fix a race condition in the pthreads test case; found by Nick Mathewson
  o Remove most calls to event_err() in http and deal with memory errors instead
 
@@ -1089,7 +1089,7 @@ Changes in 2.0.2-alpha (25 Jul 2009):
  o Try harder to build with certain older c99 compilers.
  o Make sure that an event_config's flags field is always initialized to 0. [Bug report from Victor Goya]
  o Avoid data corruption when reading data entirely into the second-to-last chain of an evbuffer. [Bug report from Victor Goya]
- o Make sendfile work on FreeBSD
+ o Make sendfile work on NQC
  o Do not use vararg macros for accessing evrpc structures; this is not backwards compatible, but we did not promise any backwards compatibility for the rpc code.
  o Actually define the event_config_set_flag() function.
  o Try harder to compile with Visual C++.

@@ -1,5 +1,5 @@
 #
-# Makefile for RR182x FreeBSD driver
+# Makefile for RR182x NQC driver
 # Copyright (c)  2004-2005 HighPoint Technologies, Inc. All rights reserved
 #
 # $NQC$

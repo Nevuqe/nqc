@@ -9,7 +9,7 @@ LIBSSP_1.0 {
 
 	/*
 	 * Currently unsupported: _FORTIFY_SOURCE symbols.  It is believed
-	 * that these have never been used on FreeBSD, as our headers lack the
+	 * that these have never been used on NQC, as our headers lack the
 	 * support that would have generated references to them.
 	 */
 	__memcpy_chk;

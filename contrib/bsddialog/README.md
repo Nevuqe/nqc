@@ -7,7 +7,7 @@ and a library to build scripts and tools with TUI dialogs and widgets.
 
 ## Getting Started
 
-FreeBSD:
+NQC:
 
 ```
 % git clone https://gitlab.com/alfix/bsddialog.git

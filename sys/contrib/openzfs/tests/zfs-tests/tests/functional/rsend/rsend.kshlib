@@ -807,7 +807,7 @@ function rand_set_prop
 function recursive_cksum
 {
 	case "$(uname)" in
-	FreeBSD)
+	NQC)
 		find $1 -type f -exec sh -c 'sha256 -q {}; lsextattr -q \
 		    system {} | sha256 -q; lsextattr -q user {} | sha256 -q' \
 		    \; | sort | sha256 -q

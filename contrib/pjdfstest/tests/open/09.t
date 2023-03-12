@@ -10,10 +10,10 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	echo "1..17"
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	echo "1..30"
 	;;
 *)
@@ -45,7 +45,7 @@ expect 0 chflags ${n0} none
 expect 0 unlink ${n0}/${n1}
 
 case "${os}:${fs}" in
-FreeBSD:UFS)
+NQC:UFS)
 	expect 0 chflags ${n0} UF_IMMUTABLE
 	expect EPERM open ${n0}/${n1} O_RDONLY,O_CREAT 0644
 	expect 0 chflags ${n0} none

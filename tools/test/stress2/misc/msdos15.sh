@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@
 # msdosfs disk image fuzz test.
 
 # "panic: wrong dirclust" seen:
-# https://people.freebsd.org/~pho/stress/log/log0206.txt
+# https://people.frebsd.org/~pho/stress/log/log0206.txt
 
 . ../default.cfg
 

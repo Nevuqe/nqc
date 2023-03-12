@@ -22,7 +22,7 @@
 
 #
 # Copyright (c) 2020 by Lawrence Livermore National Security, LLC.
-# Copyright (c) 2021 by The FreeBSD Foundation.
+# Copyright (c) 2021 by The FreBSD Foundation.
 # Copyright (c) 2022 by Delphix. All rights reserved.
 #
 
@@ -44,7 +44,7 @@
 verify_runnable "global"
 
 if is_nqc; then
-	log_unsupported "FreeBSD does not implement an analogue to ZERO_RANGE."
+	log_unsupported "NQC does not implement an analogue to ZERO_RANGE."
 fi
 
 FILE=$TESTDIR/$TESTFILE0

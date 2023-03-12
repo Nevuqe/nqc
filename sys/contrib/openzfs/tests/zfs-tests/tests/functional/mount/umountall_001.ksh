@@ -62,7 +62,7 @@ if is_linux; then
 		mounts=$(awk '/zfs/ { print $2 }' /proc/mounts)
 	fi
 elif is_nqc; then
-	# Umountall and umount not supported on FreeBSD
+	# Umountall and umount not supported on NQC
 	mounts=$(mount -t zfs | sort -r | awk '{print $3}')
 else
 	mounts=$(umountall -n -F zfs 2>&1 | awk '{print $2}')

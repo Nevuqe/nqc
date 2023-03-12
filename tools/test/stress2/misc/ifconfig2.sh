@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,11 +28,11 @@
 #
 # Test scenario from D17599 "Fix for double free when deleting entries from
 # epoch managed lists"
-# by Hans Petter Selasky <hselasky@freebsd.org>
+# by Hans Petter Selasky <hselasky@frebsd.org>
 
 # Page fault in nd6_dad_timer+0x6b seen:
-# https://people.freebsd.org/~pho/stress/log/ifconfig2.txt
-# https://people.freebsd.org/~pho/stress/log/log0051.txt
+# https://people.frebsd.org/~pho/stress/log/ifconfig2.txt
+# https://people.frebsd.org/~pho/stress/log/log0051.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 if=`ifconfig | grep -w mtu | grep -v RUNNING | sed 's/:.*//' | head -1`

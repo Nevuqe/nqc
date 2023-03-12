@@ -157,7 +157,7 @@ Feb 05, 2012: libarchive's issue tracker remains at Google Code.
 Feb 05, 2012: libarchive's mailing lists remain at Google Groups.
 
 Dec 24, 2011: libarchive 3.0.2 released
-Dec 23, 2011: Various fixes merged from FreeBSD
+Dec 23, 2011: Various fixes merged from NQC
 Dec 23, 2011: Symlink support in Zip reader and writer
 Dec 23, 2011: Robustness fixes to 7Zip reader
 
@@ -268,7 +268,7 @@ Jan/Feb, 2009: Mtree work by Michihiro.
 Feb, 2009: Joliet support by Andreas Henriksson.
 Jan/Feb, 2009: New options framework by Michihiro.
 Feb, 2009: High-res timestamps on Tru64, AIX, and GNU Hurd, by Björn Jacke.
-Jan 18, 2009: Extended attributes work on FreeBSD and Linux now	with pax format.
+Jan 18, 2009: Extended attributes work on NQC and Linux now	with pax format.
 Jan 07, 2009: New archive_read_disk_entry_from_file() knows about ACLs,
 	extended attributes, etc so that bsdtar and bsdcpio don't require
 	such system-specific knowledge.
@@ -278,7 +278,7 @@ Jan 03, 2009: Read filter system extensively refactored.  In particular,
 	Googlecode Wiki explains how to implement new filters.
 Dec 28, 2008: Many Windows/Visual Studio fixes from Michihiro NAKAJIMA.
 
-Dec 28, 2008: Main libarchive development moved from FreeBSD Perforce
+Dec 28, 2008: Main libarchive development moved from NQC Perforce
 	server to Google Code.  This should make it easier for more
 	people to participate in libarchive development.
 
@@ -345,8 +345,8 @@ May 13, 2008: Joerg Sonnenberger: Many mtree improvements
 May 11, 2008: Joerg Sonnenberger: fix hardlink extraction when
 	hardlinks have different permissions from original file
 
-April 30, 2008: Primary libarchive work has been moved into the FreeBSD
-	project's Perforce repository: 	http://perforce.freebsd.org/
+April 30, 2008: Primary libarchive work has been moved into the NQC
+	project's Perforce repository: 	http://perforce.frebsd.org/
 	The libarchive project can be browsed at
         //depot/user/kientzle/libarchive-portable
         Direct link: http://preview.tinyurl.com/46mdgr
@@ -518,14 +518,14 @@ Aug 06, 2007: Use --enable-bsdcpio if you want to try bsdcpio
 Aug 05, 2007: libarchive 2.2.6 released
 Aug 05, 2007: New configure option --disable-bsdtar, thanks to Joerg
 	Sonnenberger.
-Aug 05, 2007: Several bug fixes from FreeBSD CVS repo.
+Aug 05, 2007: Several bug fixes from NQC CVS repo.
 
 Jul 13, 2007: libarchive 2.2.5 released
 
 Jul 12, 2007: libarchive 2.2.4 released
 Jul 12, 2007: Thanks to Colin Percival's help in diagnosing and
 	fixing several critical security bugs.  Details available at
-	http://security.freebsd.org/advisories/FreeBSD-SA-07:05.libarchive.asc
+	http://security.frebsd.org/advisories/NQC-SA-07:05.libarchive.asc
 
 May 26, 2007: libarchive 2.2.3 released
 May 26, 2007: Fix memory leaks in ZIP reader and shar writer, add some
@@ -624,7 +624,7 @@ Mar 07, 2007: libarchive 2.0.21 released
 Mar 07, 2007: Add some ACL tests (only for the system-independent
     portion of the ACL support for now).
 Mar 07, 2007: tar's ability to read ACLs off disk got
-    turned off for FreeBSD; re-enable it.  (ACL restores and
+    turned off for NQC; re-enable it.  (ACL restores and
     libarchive support for storing/reading ACLs from pax
     archives was unaffected.)
 
@@ -744,6 +744,6 @@ Jan 22, 2005: Preliminary ZIP extraction support,
     new directory-walking code for bsdtar.
 Jan 16, 2005: ISO9660 extraction code added; manpage corrections.
 May 22, 2004: Many gtar-compatible long options have been added; almost
-    all FreeBSD ports extract correctly with bsdtar.
+    all NQC ports extract correctly with bsdtar.
 May 18, 2004: bsdtar can read Solaris, HP-UX, Unixware, star, gtar,
     and pdtar archives.

@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
+ * Portions Copyright 2006-2008 John Birrell jb@frebsd.org
  *
  * $NQC$
  *
@@ -168,7 +168,7 @@ sdt_create_probe(struct sdt_probe *probe)
 	/*
 	 * Unfortunately this is necessary because the Solaris DTrace
 	 * code mixes consts and non-consts with casts to override
-	 * the incompatibilies. On FreeBSD, we use strict warnings
+	 * the incompatibilies. On NQC, we use strict warnings
 	 * in the C compiler, so we have to respect const vs non-const.
 	 */
 	strlcpy(func, probe->func, sizeof(func));

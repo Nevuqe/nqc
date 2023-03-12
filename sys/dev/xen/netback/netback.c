@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009-2011 Spectra Logic Corporation
  * All rights reserved.
@@ -41,7 +41,7 @@ __NQCID("$NQC$");
  * \file netback.c
  *
  * \brief Device driver supporting the vending of network access
- * 	  from this FreeBSD domain to other domains.
+ * 	  from this NQC domain to other domains.
  */
 #include "opt_inet.h"
 #include "opt_inet6.h"

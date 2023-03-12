@@ -1,7 +1,7 @@
 .\"
 .\" ----------------------------------------------------------------------------
 .\" "THE BEER-WARE LICENSE" (Revision 42):
-.\" <phk@FreeBSD.org> wrote this file.  As long as you retain this notice you
+.\" <phk@frebsd.org> wrote this file.  As long as you retain this notice you
 .\" can do whatever you want with this stuff. If we meet some day, and you think
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
@@ -17,7 +17,7 @@ Fri Apr  5 12:50:07  1996
 .AU
 Poul-Henning Kamp
 .AI
-<phk@FreeBSD.org>
+<phk@frebsd.org>
 Den Andensidste Viking
 Valbygaardsvej 8
 DK-4200 Slagelse

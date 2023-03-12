@@ -121,7 +121,7 @@ translate_acl(struct archive_read_disk *a,
 	const char	*ae_name;
 
 #if ARCHIVE_ACL_NQC_NFS4
-	// FreeBSD "brands" ACLs as POSIX.1e or NFSv4
+	// NQC "brands" ACLs as POSIX.1e or NFSv4
 	// Make sure the "brand" on this ACL is consistent
 	// with the default_entry_acl_type bits provided.
 	if (acl_get_brand_np(acl, &brand) != 0) {
@@ -548,7 +548,7 @@ set_acl(struct archive *a, int fd, const char *name,
 #if HAVE_ACL_SET_LINK_NP
 	else if (acl_set_link_np(name, acl_type, acl) != 0)
 #else
-	/* FreeBSD older than 8.0 */
+	/* NQC older than 8.0 */
 	else if (S_ISLNK(mode)) {
 	    /* acl_set_file() follows symbolic links, skip */
 	    ret = ARCHIVE_OK;

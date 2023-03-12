@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009, 2016 Robert N. M. Watson
  * All rights reserved.
@@ -35,7 +35,7 @@
  */
 
 /*-
- * FreeBSD process descriptor facility.
+ * NQC process descriptor facility.
  *
  * Some processes are represented by a file descriptor, which will be used in
  * preference to signaling and pids for the purposes of process management,

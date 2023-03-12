@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -30,7 +30,7 @@
 # A variation of Mark's swapoff3.sh
 
 # "panic: Last close with active requests" seen:
-# https://people.freebsd.org/~pho/stress/log/mark134.txt
+# https://people.frebsd.org/~pho/stress/log/mark134.txt
 # Fixed by r358024-6
 
 . ../default.cfg

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2020 Dimitar Toshkov Zhekov.
  *
@@ -28,7 +28,7 @@
 /*
  * This is the "Terminus BSD Console" font.  It is identical to the standard
  * variant of Terminus Font 8x16, but provided under the 2-clause BSD License
- * (FreeBSD License).  Please contribute any changes back to Mr. Zhekov at
+ * (NQC License).  Please contribute any changes back to Mr. Zhekov at
  * <dimitar.zhekov@gmail.com>.
  */
 

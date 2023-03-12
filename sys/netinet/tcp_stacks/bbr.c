@@ -301,7 +301,7 @@ int32_t bbr_sends_full_iwnd = 1;
  * RACK depends on SACK, so if an endpoint arrives that
  * cannot do SACK the state machine below will shuttle the
  * connection back to using the "default" TCP stack that is
- * in FreeBSD.
+ * in NQC.
  *
  * To implement BBR and RACK the original TCP stack was first decomposed
  * into a functional state machine with individual states

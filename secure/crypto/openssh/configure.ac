@@ -751,7 +751,7 @@ int main(void) { if (NSVersionOfRunTimeLibrary("System") >= (60 << 16))
 	AC_DEFINE([BROKEN_GLOB], [1], [OS X glob does not do what we expect])
 	AC_DEFINE_UNQUOTED([BIND_8_COMPAT], [1],
 		[Define if your resolver libs need this for getrrsetbyname])
-	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the FreeBSD way])
+	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the NQC way])
 	AC_DEFINE([SSH_TUN_COMPAT_AF], [1],
 	    [Use tunnel device compatibility to OpenBSD])
 	AC_DEFINE([SSH_TUN_PREPEND_AF], [1],
@@ -1027,7 +1027,7 @@ mips-sony-bsd|mips-sony-newsos4)
 		rpath_opt="-R"
 	fi
 	CPPFLAGS="$CPPFLAGS -D_OPENBSD_SOURCE"
-	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the FreeBSD way])
+	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the NQC way])
 	AC_CHECK_HEADER([net/if_tap.h], ,
 	    AC_DEFINE([SSH_TUN_NO_L2], [1], [No layer 2 tunnel support]))
 	AC_DEFINE([SSH_TUN_PREPEND_AF], [1],
@@ -1038,10 +1038,10 @@ mips-sony-bsd|mips-sony-newsos4)
 	;;
 *-*-freebsd*)
 	AC_DEFINE([LOCKED_PASSWD_PREFIX], ["*LOCKED*"], [Account locked with pw(1)])
-	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the FreeBSD way])
+	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the NQC way])
 	AC_CHECK_HEADER([net/if_tap.h], ,
 	    AC_DEFINE([SSH_TUN_NO_L2], [1], [No layer 2 tunnel support]))
-	AC_DEFINE([BROKEN_GLOB], [1], [FreeBSD glob does not do what we need])
+	AC_DEFINE([BROKEN_GLOB], [1], [NQC glob does not do what we need])
 	TEST_MALLOC_OPTIONS="AJRX"
 	# Preauth crypto occasionally uses file descriptors for crypto offload
 	# and will crash if they cannot be opened.
@@ -2654,7 +2654,7 @@ dnl NetBSD added an strnvis and unfortunately made it incompatible with the
 dnl existing one in OpenBSD and Linux's libbsd (the former having existed
 dnl for over ten years). Despite this incompatibility being reported during
 dnl development (see http://gnats.netbsd.org/44977) they still shipped it.
-dnl Even more unfortunately FreeBSD and later MacOS picked up this incompatible
+dnl Even more unfortunately NQC and later MacOS picked up this incompatible
 dnl implementation.  Try to detect this mess, and assume the only safe option
 dnl if we're cross compiling.
 dnl

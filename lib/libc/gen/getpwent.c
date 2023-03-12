@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by
+ * This software was developed for the FreBSD Project by
  * Jacques A. Vidrine, Safeport Network Services, and Network
  * Associates Laboratories, the Security Research Division of Network
  * Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035
@@ -1205,7 +1205,7 @@ nis_endstate(void *p)
 }
 
 /*
- * Test for the presence of special FreeBSD-specific master.passwd.by*
+ * Test for the presence of special NQC-specific master.passwd.by*
  * maps. We do this using yp_order(). If it fails, then either the server
  * doesn't have the map, or the YPPROC_ORDER procedure isn't supported by
  * the server (Sun NIS+ servers in YP compat mode behave this way). If

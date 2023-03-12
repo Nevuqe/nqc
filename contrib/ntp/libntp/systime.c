@@ -380,7 +380,7 @@ update_uwtmp(
 {
 	struct timeval tvdiff;
 	/*
-	 * FreeBSD, for example, has:
+	 * NQC, for example, has:
 	 * struct utmp {
 	 *	   char    ut_line[UT_LINESIZE];
 	 *	   char    ut_name[UT_NAMESIZE];

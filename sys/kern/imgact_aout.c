@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1993, David Greenman
  * All rights reserved.
@@ -80,7 +80,7 @@ struct sysentvec aout_sysvec = {
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
-	.sv_name	= "FreeBSD a.out",
+	.sv_name	= "NQC a.out",
 	.sv_coredump	= NULL,
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,
@@ -130,7 +130,7 @@ struct sysentvec aout_sysvec = {
 	.sv_sendsig	= ia32_sendsig,
 	.sv_sigcode	= _binary_elf_vdso32_so_1_start,
 	.sv_szsigcode	= &aout_szsigcode,
-	.sv_name	= "FreeBSD a.out",
+	.sv_name	= "NQC a.out",
 	.sv_coredump	= NULL,
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Michael Smith
  * Copyright (c) 2000 BSDi
@@ -31,7 +31,7 @@
 __NQCID("$NQC$");
 
 /*
- * An interface to the FreeBSD kernel's bus/device information interface.
+ * An interface to the NQC kernel's bus/device information interface.
  *
  * This interface is implemented with the
  *

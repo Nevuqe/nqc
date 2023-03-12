@@ -27,9 +27,9 @@
 #
 
 # Page fault seen:
-# https://people.freebsd.org/~pho/stress/log/pmc2.txt
+# https://people.frebsd.org/~pho/stress/log/pmc2.txt
 
-# https://people.freebsd.org/~pho/stress/log/mmacy004.txt
+# https://people.frebsd.org/~pho/stress/log/mmacy004.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

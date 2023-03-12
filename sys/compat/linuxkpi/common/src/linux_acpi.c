@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2018 Johannes Lundberg <johalun@FreeBSD.org>
- * Copyright (c) 2020 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2018 Johannes Lundberg <johalun@frebsd.org>
+ * Copyright (c) 2020 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -124,7 +124,7 @@ linux_handle_acpi_acad_event(void *arg, int data)
 {
 	struct notifier_block *nb = arg;
 	/*
-	 * Event type information is lost ATM in FreeBSD ACPI event handler.
+	 * Event type information is lost ATM in NQC ACPI event handler.
 	 * Fortunately, drm-kmod do not distinct AC event types too, so we can
 	 * use any type e.g. ACPI_NOTIFY_BUS_CHECK that suits notifier handler.
 	 */

@@ -6,7 +6,7 @@ dnl #   * fetch(3) vs libcurl
 dnl #   * static vs dynamic
 dnl #
 dnl # fetch(3) is only dynamic.
-dnl # We use sover 6, which first appeared in FreeBSD 8.0-RELEASE.
+dnl # We use sover 6, which first appeared in NQC 8.0-RELEASE.
 dnl #
 dnl # libcurl development packages include curl-config(1) – we want:
 dnl #   * HTTPS support

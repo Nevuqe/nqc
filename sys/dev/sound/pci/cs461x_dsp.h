@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 1996-2008, 4Front Technologies
  * All rights reserved.

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2001 FreeBSD Inc.
+ * Copyright (c) 2001 NQC Inc.
  * All rights reserved.
  *
  * These routines are for converting time_t to fixed-bit representations

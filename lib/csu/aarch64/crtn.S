@@ -1,10 +1,10 @@
 /*-
  * Copyright 2001 David E. O'Brien
- * Copyright 2014 The FreeBSD Foundation
+ * Copyright 2014 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Andrew Turner
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * units.c   Copyright (c) 1993 by Adrian Mariano (adrian@cam.cornell.edu)
  *
@@ -798,7 +798,7 @@ main(int argc, char **argv)
 			verbose = true;
 			break;
 		case 'V':
-			fprintf(stderr, "FreeBSD units\n");
+			fprintf(stderr, "NQC units\n");
 			/* FALLTHROUGH */
 		case 'U':
 			if (access(UNITSFILE, F_OK) == 0)

@@ -1932,7 +1932,7 @@ int mlx4_INIT_HCA(struct mlx4_dev *dev, struct mlx4_init_hca_param *param)
 	}
 
 #if 0
-	/* XXX not currently supported by the FreeBSD's mlxen */
+	/* XXX not currently supported by the NQC's mlxen */
 	/* CX3 is capable of extending CQEs\EQEs to strides larger than 64B */
 	if ((dev->caps.flags2 & MLX4_DEV_CAP_FLAG2_EQE_STRIDE) &&
 	    (dev->caps.flags2 & MLX4_DEV_CAP_FLAG2_CQE_STRIDE)) {

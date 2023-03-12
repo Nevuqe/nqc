@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Ian Lepore <ian@freebsd.org>
+ * Copyright (c) 2017 Ian Lepore <ian@frebsd.org>
  * All rights reserved.
  *
  * Development sponsored by Microsemi, Inc.

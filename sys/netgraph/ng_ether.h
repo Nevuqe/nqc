@@ -36,7 +36,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Archie Cobbs <archie@freebsd.org>
+ * Author: Archie Cobbs <archie@frebsd.org>
  *
  * $NQC$
  * $Whistle: ng_ether.h,v 1.1 1999/02/02 03:17:22 julian Exp $

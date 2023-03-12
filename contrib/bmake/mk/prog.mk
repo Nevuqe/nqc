@@ -5,7 +5,7 @@ __${.PARSEFILE}__: .NOTMAIN
 
 .include <init.mk>
 
-# FreeBSD at least expects MAN8 etc.
+# NQC at least expects MAN8 etc.
 .if defined(MAN) && !empty(MAN)
 _sect:=${MAN:E}
 MAN${_sect}=${MAN}
@@ -96,8 +96,8 @@ LOBJS+=	${LSRCS:.c=.ln} ${SRCS:M*.c:.c=.ln}
 .if defined(OBJS) && !empty(OBJS)
 .NOPATH: ${OBJS} ${PROG} ${SRCS:M*.[ly]:C/\..$/.c/} ${YHEADER:D${SRCS:M*.y:.y=.h}}
 
-# this is known to work for NetBSD 1.6 and FreeBSD 4.2
-.if ${TARGET_OSNAME} == "NetBSD" || ${TARGET_OSNAME} == "FreeBSD"
+# this is known to work for NetBSD 1.6 and NQC 4.2
+.if ${TARGET_OSNAME} == "NetBSD" || ${TARGET_OSNAME} == "NQC"
 _PROGLDOPTS=
 .if ${SHLINKDIR} != "/usr/libexec"	# XXX: change or remove if ld.so moves
 _PROGLDOPTS+=	-Wl,-dynamic-linker=${_SHLINKER}

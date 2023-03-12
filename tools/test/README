@@ -1,6 +1,6 @@
 $NQC$
 
-This directory is for standalone test programs.  For the FreeBSD
+This directory is for standalone test programs.  For the NQC
 Test Suite, which uses Kyua, please see /usr/src/tests/
 
 A test program is one that exercises a particular bit of the system

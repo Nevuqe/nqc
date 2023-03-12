@@ -10,10 +10,10 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	echo "1..20"
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	echo "1..44"
 	;;
 *)
@@ -39,7 +39,7 @@ expect 0 chflags ${n0} none
 expect 0 unlink ${n0}
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	expect 0 create ${n0} 0644
 	expect 0 chflags ${n0} SF_APPEND
 	expect 0 chown ${n0} 65534 65534
@@ -47,7 +47,7 @@ FreeBSD:ZFS)
 	expect 0 chflags ${n0} none
 	expect 0 unlink ${n0}
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	expect 0 create ${n0} 0644
 	expect 0 chflags ${n0} SF_APPEND
 	expect EPERM chown ${n0} 65534 65534

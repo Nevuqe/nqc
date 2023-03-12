@@ -2,11 +2,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (c) 1995-1998 John Birrell <jb@cimlogic.com.au>
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright (c) 2018 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -31,7 +31,7 @@ Here's some reasons:
   mounted
   *  Works with other init systems than Debians' out of the box
   *  Available as a 2 clause
-  [BSD license](http://www.freebsd.org/copyright/freebsd-license.html)
+  [BSD license](http://www.frebsd.org/copyright/freebsd-license.html)
   *  Prefer configs via IF_METRIC for dynamic ordering
   *  Configures zones for local resolvers other than libc
 

@@ -6,13 +6,13 @@
  * This software is provided ``AS IS'' without any warranties of any kind.
  */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003-2005 McAfee, Inc.
  * Copyright (c) 2016-2017 Robert N. M. Watson
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project in part by McAfee
+ * This software was developed for the FreBSD Project in part by McAfee
  * Research, the Security Research Division of McAfee, Inc under DARPA/SPAWAR
  * contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA CHATS research
  * program.

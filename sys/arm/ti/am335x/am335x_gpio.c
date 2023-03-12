@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2012 Damjan Marion <dmarion@FreeBSD.org>
- * Copyright (c) 2014 Andrew Turner <andrew@FreeBSD.org>
+ * Copyright (c) 2012 Damjan Marion <dmarion@frebsd.org>
+ * Copyright (c) 2014 Andrew Turner <andrew@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

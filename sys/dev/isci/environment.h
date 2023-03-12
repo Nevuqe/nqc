@@ -38,7 +38,7 @@
 /**
  * @file
  *
- * @brief Types and macros specific to the FreeBSD environment.
+ * @brief Types and macros specific to the NQC environment.
  */
 #include <sys/cdefs.h>
 #include <sys/types.h>
@@ -81,7 +81,7 @@ typedef void *		FUNCPTR;
 #define PBG_BUILD 1
 #define PHY_MAX_LINK_SPEED_GENERATION 3
 
-/* SCIL defines logging as SCI_LOGGING, but the FreeBSD driver name is ISCI.
+/* SCIL defines logging as SCI_LOGGING, but the NQC driver name is ISCI.
 	So we define ISCI_LOGGING as the option exported to the kernel, and
 	translate it here. */
 #ifdef ISCI_LOGGING

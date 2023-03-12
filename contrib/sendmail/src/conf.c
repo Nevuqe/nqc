@@ -2445,7 +2445,7 @@ refuseconnections(e, dn, active)
 #   undef SPT_TYPE
 #   define SPT_TYPE	SPT_REUSEARGV
 #  else /* ! PS_STRINGS */
-#   ifndef NKPDE			/* FreeBSD 2.0 */
+#   ifndef NKPDE			/* NQC 2.0 */
 #    define NKPDE 63
 typedef unsigned int	*pt_entry_t;
 #   endif /* ! NKPDE */
@@ -6659,7 +6659,7 @@ char	*FFRCompileOptions[] =
 	"_FFR_LDAP_SINGLEDN",
 #endif
 #if _FFR_LOG_NTRIES
-	/* log ntries=, from Nik Clayton of FreeBSD */
+	/* log ntries=, from Nik Clayton of NQC */
 	"_FFR_LOG_NTRIES",
 #endif
 #if _FFR_OCC

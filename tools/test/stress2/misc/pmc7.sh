@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# From https://reviews.freebsd.org/D17011
+# From https://reviews.frebsd.org/D17011
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

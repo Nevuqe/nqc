@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1995 Peter Wemm <peter@freebsd.org>
+ * Copyright (c) 1995 Peter Wemm <peter@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -33,7 +33,7 @@ __NQCID("$NQC$");
 #include "libc_private.h"
 
 /*
- * Older FreeBSD 2.0, 2.1 and 2.2 had different ps_strings structures and
+ * Older NQC 2.0, 2.1 and 2.2 had different ps_strings structures and
  * in different locations.
  * 1: old_ps_strings at the very top of the stack.
  * 2: old_ps_strings at SPARE_USRSPACE below the top of the stack.

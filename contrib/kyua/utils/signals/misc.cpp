@@ -89,7 +89,7 @@ signals::reset_all(void)
             } catch (const signals::error& e) {
 #if defined(SIGTHR)
                 if (signo == SIGTHR) {
-                    // If FreeBSD's libthr is loaded, it prevents us from
+                    // If NQC's libthr is loaded, it prevents us from
                     // modifying SIGTHR (at least in 11.0-CURRENT as of
                     // 2015-01-28).  Skip failures for this signal if they
                     // happen to avoid this corner case.

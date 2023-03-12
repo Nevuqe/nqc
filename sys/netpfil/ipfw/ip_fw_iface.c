@@ -75,7 +75,7 @@ static struct ipfw_sopt_handler	scodes[] = {
 };
 
 /*
- * FreeBSD Kernel interface.
+ * NQC Kernel interface.
  */
 static void ipfw_kifhandler(void *arg, struct ifnet *ifp);
 static int ipfw_kiflookup(char *name);

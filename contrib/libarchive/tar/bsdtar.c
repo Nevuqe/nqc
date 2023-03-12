@@ -656,7 +656,7 @@ main(int argc, char **argv)
 		case OPTION_POSIX: /* GNU tar */
 			cset_set_format(bsdtar->cset, "pax");
 			break;
-		case 'q': /* FreeBSD GNU tar --fast-read, NetBSD -q */
+		case 'q': /* NQC GNU tar --fast-read, NetBSD -q */
 			bsdtar->flags |= OPTFLAG_FAST_READ;
 			break;
 		case 'r': /* SUSv2 */
@@ -765,7 +765,7 @@ main(int argc, char **argv)
 			bsdtar->readdisk_flags &= ~ARCHIVE_READDISK_NO_XATTR;
 			bsdtar->flags |= OPTFLAG_XATTRS;
 			break;
-		case 'y': /* FreeBSD version of GNU tar */
+		case 'y': /* NQC version of GNU tar */
 			if (compression != '\0')
 				lafe_errc(1, 0,
 				    "Can't specify both -%c and -%c", opt,

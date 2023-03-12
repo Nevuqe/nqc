@@ -7,7 +7,7 @@ desc="mkdir returns ENOSPC if there are no free inodes on the file system on whi
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 
 echo "1..3"
 

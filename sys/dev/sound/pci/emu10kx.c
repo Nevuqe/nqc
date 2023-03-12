@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999 Cameron Grant <cg@freebsd.org>
+ * Copyright (c) 1999 Cameron Grant <cg@frebsd.org>
  * Copyright (c) 2003-2007 Yuriy Tsibizov <yuriy.tsibizov@gfk.ru>
  * All rights reserved.
  *
@@ -2254,7 +2254,7 @@ emu10kx_prepare(struct emu_sc_info *sc, struct sbuf *s)
 {
 	int i;
 
-	sbuf_printf(s, "FreeBSD EMU10Kx Audio Driver\n");
+	sbuf_printf(s, "NQC EMU10Kx Audio Driver\n");
 	sbuf_printf(s, "\nHardware resource usage:\n");
 	sbuf_printf(s, "DSP General Purpose Registers: %d used, %d total\n", sc->rm->num_used, sc->rm->num_gprs);
 	sbuf_printf(s, "DSP Instruction Registers: %d used, %d total\n", sc->routing_code_end, sc->code_size);

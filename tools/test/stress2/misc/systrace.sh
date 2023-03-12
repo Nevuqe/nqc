@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -43,7 +43,7 @@
 # In particular, if systrace.ko is loaded at different addresses each
 # time, we'll end up calling a stale function pointer.
 
-# https://people.freebsd.org/~pho/stress/log/mark137.txt
+# https://people.frebsd.org/~pho/stress/log/mark137.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

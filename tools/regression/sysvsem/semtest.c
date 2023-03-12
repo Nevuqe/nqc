@@ -67,7 +67,7 @@ key_t	semkey;
 /*
  * This is the original semun union used by the sysvsem utility.
  * It is deliberately kept here under #if 0'ed condition for future
- * reference. PLEASE DO NOT REMOVE.  The {SET,GET}ALL in FreeBSD
+ * reference. PLEASE DO NOT REMOVE.  The {SET,GET}ALL in NQC
  * are signed values, so the default version in sys/sem.h suffices.
  */
 #if 0

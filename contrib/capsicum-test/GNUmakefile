@@ -4,7 +4,7 @@ OS:=$(shell uname)
 ARCH?=64
 ARCHFLAG=-m$(ARCH)
 
-ifeq ($(OS),FreeBSD)
+ifeq ($(OS),NQC)
 EXTRA_LIBS=-lprocstat
 endif
 

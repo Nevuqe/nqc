@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Mark Johnston
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: Swapdev not found" seen:
-# https://people.freebsd.org/~pho/stress/log/swapoff3.txt
+# https://people.frebsd.org/~pho/stress/log/swapoff3.txt
 # Fixed by r358024-6
 
 . ../default.cfg

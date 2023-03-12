@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2019-2021 Netflix, Inc
  *
@@ -96,7 +96,7 @@ static struct options {
 
 /*
  * Argument names and short names selected to match the nvme-cli program
- * so vendor-siupplied formulas work out of the box on FreeBSD with a simple
+ * so vendor-siupplied formulas work out of the box on NQC with a simple
  * s/nvme/nvmecontrol/.
  */
 #define ARG(l, s, t, opt, addr, desc) { l, s, t, &opt.addr, desc }
@@ -129,7 +129,7 @@ static struct opts opts[] = {
 	ARG("input-file",	'i',	arg_path,	opt, ifn,
 	    "Input file to send (default stdin)"),
 	ARG("namespace-id",	'n',	arg_uint32,	opt, nsid,
-	    "Namespace id (ignored on FreeBSD)"),
+	    "Namespace id (ignored on NQC)"),
 	ARG("prefill",		'p',	arg_uint8,	opt, prefill,
 	    "Value to prefill payload with"),
 	ARG("rsvd",		'R',	arg_uint16,	opt, rsvd,
@@ -183,7 +183,7 @@ passthru(const struct cmd *f, int argc, char *argv[])
 	}
 #else
 	if (opt.metadata_len != 0)
-		errx(EX_UNAVAILABLE, "metadata not supported on FreeBSD");
+		errx(EX_UNAVAILABLE, "metadata not supported on NQC");
 #endif
 	if (opt.data_len) {
 		if (posix_memalign(&data, getpagesize(), opt.data_len)) {

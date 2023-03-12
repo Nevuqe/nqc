@@ -27,7 +27,7 @@
 #
 
 # "panic: Assertion ttyinq_getsize(&tp->t_inq) == 0 failed" seen.
-# https://people.freebsd.org/~pho/stress/log/posix_openpt.txt
+# https://people.frebsd.org/~pho/stress/log/posix_openpt.txt
 # Test scenario by brde@
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

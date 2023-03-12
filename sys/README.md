@@ -1,7 +1,7 @@
 NQC Kernel Source:
 ----------------------
 
-This directory contains the source files and build glue that make up the FreeBSD
+This directory contains the source files and build glue that make up the NQC
 kernel and its modules, including both original and contributed software.
 
 Kernel configuration files are located in the `conf/` subdirectory of each
@@ -19,7 +19,7 @@ Source Roadmap:
 | cam | Common Access Method storage subsystem - `cam(4)` and `ctl(4)` |
 | cddl | CDDL-licensed optional sources such as DTrace |
 | conf | kernel build glue |
-| compat | Linux compatibility layer, FreeBSD 32-bit compatibility |
+| compat | Linux compatibility layer, NQC 32-bit compatibility |
 | contrib | 3rd-party imported software such as OpenZFS |
 | crypto | crypto drivers |
 | ddb | interactive kernel debugger - `ddb(4)` |

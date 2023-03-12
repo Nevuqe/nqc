@@ -30,9 +30,9 @@
 
 # Test scenario for the change of a global SU lock to a per filesystem lock.
 # "panic: softdep_write_inodeblock: indirect pointer #0 mismatch ..." seen.
-# http://people.freebsd.org/~pho/stress/log/kirk063.txt
+# http://people.frebsd.org/~pho/stress/log/kirk063.txt
 
-# https://people.freebsd.org/~pho/stress/log/kirk080.txt
+# https://people.frebsd.org/~pho/stress/log/kirk080.txt
 
 . ../default.cfg
 

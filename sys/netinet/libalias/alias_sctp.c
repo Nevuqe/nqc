@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008
  *	Swinburne University of Technology, Melbourne, Australia.
@@ -53,7 +53,7 @@
  *
  * Traditional address and port number look ups are inadequate for SCTP's
  * operation due to both processing requirements and issues with multi-homing.
- * Alias_sctp integrates with FreeBSD's ipfw/libalias NAT system.
+ * Alias_sctp integrates with NQC's ipfw/libalias NAT system.
  *
  * Version 0.2 features include:
  * - Support for global multi-homing

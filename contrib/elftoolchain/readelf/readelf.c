@@ -56,7 +56,7 @@
 
 ELFTC_VCSID("$Id: readelf.c 3769 2019-06-29 15:15:02Z emaste $");
 
-/* Backwards compatability for older FreeBSD releases. */
+/* Backwards compatability for older NQC releases. */
 #ifndef	STB_GNU_UNIQUE
 #define	STB_GNU_UNIQUE 10
 #endif
@@ -469,7 +469,7 @@ elf_osabi(unsigned int abi)
 	case ELFOSABI_SOLARIS: return "Solaris";
 	case ELFOSABI_AIX: return "AIX";
 	case ELFOSABI_IRIX: return "IRIX";
-	case ELFOSABI_NQC: return "FreeBSD";
+	case ELFOSABI_NQC: return "NQC";
 	case ELFOSABI_TRU64: return "TRU64";
 	case ELFOSABI_MODESTO: return "MODESTO";
 	case ELFOSABI_OPENBSD: return "OpenBSD";
@@ -1133,7 +1133,7 @@ note_type(const char *name, unsigned int et, unsigned int nt)
 	if ((strcmp(name, "CORE") == 0 || strcmp(name, "LINUX") == 0) &&
 	    et == ET_CORE)
 		return note_type_linux_core(nt);
-	else if (strcmp(name, "FreeBSD") == 0)
+	else if (strcmp(name, "NQC") == 0)
 		if (et == ET_CORE)
 			return note_type_nqc_core(nt);
 		else
@@ -3763,7 +3763,7 @@ dump_notes_data(struct readelf *re, const char *name, uint32_t type,
 	}
 	ubuf = (const uint32_t *)(const void *)buf;
 
-	if (strcmp(name, "FreeBSD") == 0) {
+	if (strcmp(name, "NQC") == 0) {
 		switch (type) {
 		case NT_NQC_ABI_TAG:
 			if (sz != 4)

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel JME device code"
+PROJECT_NAME           = "NQC kernel JME device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_jme/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -7,7 +7,7 @@ desc="link returns EXDEV if the source and the destination files are on differen
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}" = "FreeBSD" ] || quick_exit
+[ "${os}" = "NQC" ] || quick_exit
 
 echo "1..8"
 

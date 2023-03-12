@@ -53,18 +53,18 @@
 __NQCID("$NQC$");
 
 /*
- * SysKonnect SK-NET gigabit ethernet driver for FreeBSD. Supports
+ * SysKonnect SK-NET gigabit ethernet driver for NQC. Supports
  * the SK-984x series adapters, both single port and dual port.
  * References:
  * 	The XaQti XMAC II datasheet,
- *  https://www.freebsd.org/~wpaul/SysKonnect/xmacii_datasheet_rev_c_9-29.pdf
+ *  https://www.frebsd.org/~wpaul/SysKonnect/xmacii_datasheet_rev_c_9-29.pdf
  *	The SysKonnect GEnesis manual, http://www.syskonnect.com
  *
  * Note: XaQti has been acquired by Vitesse, and Vitesse does not have the
- * XMAC II datasheet online. I have put my copy at people.freebsd.org as a
+ * XMAC II datasheet online. I have put my copy at people.frebsd.org as a
  * convenience to others until Vitesse corrects this problem:
  *
- * https://people.freebsd.org/~wpaul/SysKonnect/xmacii_datasheet_rev_c_9-29.pdf
+ * https://people.frebsd.org/~wpaul/SysKonnect/xmacii_datasheet_rev_c_9-29.pdf
  *
  * Written by Bill Paul <wpaul@ee.columbia.edu>
  * Department of Electrical Engineering
@@ -2574,7 +2574,7 @@ skc_resume(device_t dev)
  * As nomral IP header size is 20 bytes I can't expect it would give an
  * increase in throughput. However it seems it doesn't hurt performance in
  * my testing. If there is a more detailed information for checksum secret
- * of the hardware in question please contact yongari@FreeBSD.org to add
+ * of the hardware in question please contact yongari@frebsd.org to add
  * TCP/UDP checksum offload support.
  */
 static __inline void

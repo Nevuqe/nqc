@@ -27,11 +27,11 @@
 #
 
 # Copy of graid1.sh with fail points added.
-# https://people.freebsd.org/~pho/stress/log/mark015.txt
+# https://people.frebsd.org/~pho/stress/log/mark015.txt
 # Fixed by r327779
 
 # Problem also seen with non SU:
-# https://people.freebsd.org/~pho/stress/log/numa027.txt
+# https://people.frebsd.org/~pho/stress/log/numa027.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

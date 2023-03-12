@@ -52,7 +52,7 @@ __NQCID("$NQC$");
 #include "extern.h"
 #include "pathnames.h"
 
-#define BC_VER		"1.1-FreeBSD"
+#define BC_VER		"1.1-NQC"
 #define END_NODE	((ssize_t) -1)
 #define CONST_STRING	((ssize_t) -2)
 #define ALLOC_STRING	((ssize_t) -3)

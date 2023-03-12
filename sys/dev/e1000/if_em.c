@@ -364,7 +364,7 @@ static void	em_flush_desc_rings(struct e1000_softc *);
 
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 static device_method_t em_methods[] = {
 	/* Device interface */

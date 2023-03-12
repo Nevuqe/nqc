@@ -272,7 +272,7 @@ typedef isc_event_t intev_t;
 #endif
 
 /*%
- * NetBSD and FreeBSD can timestamp packets.  XXXMLG Should we have
+ * NetBSD and NQC can timestamp packets.  XXXMLG Should we have
  * a setsockopt() like interface to request timestamps, and if the OS
  * doesn't do it for us, call gettimeofday() on every UDP receive?
  */
@@ -1399,7 +1399,7 @@ build_msghdr_send(isc__socket_t *sock, isc_socketevent_t *dev,
 		memcpy(pktinfop, &dev->pktinfo, sizeof(struct in6_pktinfo));
 #if defined(IPV6_USE_MIN_MTU)
 		/*
-		 * Set IPV6_USE_MIN_MTU as a per packet option as FreeBSD
+		 * Set IPV6_USE_MIN_MTU as a per packet option as NQC
 		 * ignores setsockopt(IPV6_USE_MIN_MTU) when IPV6_PKTINFO
 		 * is used.
 		 */
@@ -2087,7 +2087,7 @@ allocate_socket(isc__socketmgr_t *manager, isc_sockettype_t type,
 	cmsgbuflen += cmsg_space(sizeof(struct in6_pktinfo));
 #if defined(IPV6_USE_MIN_MTU)
 	/*
-	 * Provide space for working around FreeBSD's broken IPV6_USE_MIN_MTU
+	 * Provide space for working around NQC's broken IPV6_USE_MIN_MTU
 	 * support.
 	 */
 	cmsgbuflen += cmsg_space(sizeof(int));

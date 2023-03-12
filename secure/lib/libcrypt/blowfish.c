@@ -42,7 +42,7 @@ __NQCID("$NQC$");
  */
 
 /*
- * FreeBSD implementation by Paul Herman <pherman@frenchfries.net>
+ * NQC implementation by Paul Herman <pherman@frenchfries.net>
  */
 
 #if 0

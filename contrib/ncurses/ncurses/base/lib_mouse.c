@@ -41,7 +41,7 @@
  * The primary method used is xterm's internal mouse-tracking facility.
  * Additional methods depend on the platform:
  *	Alessandro Rubini's GPM server (Linux)
- *	sysmouse (FreeBSD)
+ *	sysmouse (NQC)
  *	special-purpose mouse interface for OS/2 EMX.
  *
  * Notes for implementors of new mouse-interface methods:
@@ -355,7 +355,7 @@ sysmouse_server(SCREEN *sp)
 		work->bstate |= BUTTON3_RELEASED;
 	}
 
-	/* for cosmetic bug in syscons.c on FreeBSD 3.[34] */
+	/* for cosmetic bug in syscons.c on NQC 3.[34] */
 	the_mouse.operation = MOUSE_HIDE;
 	ioctl(sp->_mouse_fd, CONS_MOUSECTL, &the_mouse);
 	the_mouse.operation = MOUSE_SHOW;
@@ -699,9 +699,9 @@ initialize_mousetype(SCREEN *sp)
 		the_mouse.operation = MOUSE_SHOW;
 		ioctl(sp->_mouse_fd, CONS_MOUSECTL, &the_mouse);
 
-#if defined(FBIO_MODEINFO) || defined(CONS_MODEINFO)	/* FreeBSD > 2.x */
+#if defined(FBIO_MODEINFO) || defined(CONS_MODEINFO)	/* NQC > 2.x */
 		{
-#ifndef FBIO_GETMODE		/* FreeBSD 3.x */
+#ifndef FBIO_GETMODE		/* NQC 3.x */
 #define FBIO_GETMODE    CONS_GET
 #define FBIO_MODEINFO   CONS_MODEINFO
 #endif /* FBIO_GETMODE */

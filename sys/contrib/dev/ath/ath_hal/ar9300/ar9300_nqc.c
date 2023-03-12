@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, 2013 Adrian Chadd <adrian@FreeBSD.org>.
+ * Copyright (c) 2012, 2013 Adrian Chadd <adrian@frebsd.org>.
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -577,11 +577,11 @@ ar9300_config_pcie_nqc(struct ath_hal *ah, HAL_BOOL restore,
 }
 
 /*
- * This is a copy from ar9300_eeprom_get(), purely because the FreeBSD
+ * This is a copy from ar9300_eeprom_get(), purely because the NQC
  * API is very silly and inconsistent.
  *
  * The AR93xx HAL doesn't call the eepromGetFlag() function, so this
- * only occurs for FreeBSD code.
+ * only occurs for NQC code.
  *
  * When I fix this particular API, I'll undo this.
  */
@@ -643,7 +643,7 @@ void
 ar9300_config_defaults_nqc(struct ath_hal *ah, HAL_OPS_CONFIG *ah_config)
 {
 
-	/* Until FreeBSD's HAL does this by default - just copy */
+	/* Until NQC's HAL does this by default - just copy */
 	OS_MEMCPY(&ah->ah_config, ah_config, sizeof(HAL_OPS_CONFIG));
 	ah->ah_config.ath_hal_enable_ani = AH_TRUE;
 }
@@ -700,7 +700,7 @@ ar9300_reset_cal_valid_nqc(struct ath_hal *ah,
 
 
 /*
- * FreeBSD will just pass in the descriptor value as 'pa'.
+ * NQC will just pass in the descriptor value as 'pa'.
  * The Atheros HAL treats 'pa' as the physical address of the RX
  * descriptor and 'bufaddr' as the physical address of the RX buffer.
  * I'm not sure why they didn't collapse them - the AR9300 RX descriptor
@@ -791,7 +791,7 @@ ar9300_nqc_fill_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 	const struct ar9300_txc *ads = AR9300TXC_CONST(ds0);
 
 	/*
-	 * FreeBSD's HAL doesn't pass the keytype to fill_tx_desc();
+	 * NQC's HAL doesn't pass the keytype to fill_tx_desc();
 	 * it's copied as part of the descriptor chaining.
 	 *
 	 * So, extract it from ds0.
@@ -910,7 +910,7 @@ ar9300_nqc_get_mib_cycle_counts(struct ath_hal *ah,
 }
 
 /*
- * Clear multicast filter by index - from FreeBSD ar5212_recv.c
+ * Clear multicast filter by index - from NQC ar5212_recv.c
  */
 static HAL_BOOL
 ar9300ClrMulticastFilterIndex(struct ath_hal *ah, uint32_t ix)
@@ -930,7 +930,7 @@ ar9300ClrMulticastFilterIndex(struct ath_hal *ah, uint32_t ix)
 }
 
 /*
- * Set multicast filter by index - from FreeBSD ar5212_recv.c
+ * Set multicast filter by index - from NQC ar5212_recv.c
  */
 static HAL_BOOL
 ar9300SetMulticastFilterIndex(struct ath_hal *ah, uint32_t ix)

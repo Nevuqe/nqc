@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright 2012 Konstantin Belousov <kib@FreeBSD.ORG>.
- * Copyright 2016 The FreeBSD Foundation.
+ * Copyright 2012 Konstantin Belousov <kib@frebsd.org>.
+ * Copyright 2016 The FreBSD Foundation.
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

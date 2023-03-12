@@ -82,7 +82,7 @@ zfs_003_neg_head()
 }
 zfs_003_neg_body()
 {
-	atf_skip "FreeBSD does not allow /dev/zfs to be renamed"
+	atf_skip "NQC does not allow /dev/zfs to be renamed"
 	. $(atf_get_srcdir)/../../../include/default.cfg
 	. $(atf_get_srcdir)/zfs_malformed.cfg
 

@@ -57,7 +57,7 @@ hpux_ncpus(void) {
 #endif /* __hpux */
 
 #if defined(HAVE_SYS_SYSCTL_H) && defined(HAVE_SYSCTLBYNAME)
-#include <sys/types.h>  /* for FreeBSD */
+#include <sys/types.h>  /* for NQC */
 #include <sys/param.h>  /* for NetBSD */
 #include <sys/sysctl.h>
 

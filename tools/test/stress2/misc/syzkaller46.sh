@@ -33,13 +33,13 @@
 # kern_kevent_generic() at kern_kevent_gene6/frame 0xfffffesys_kevent() at sys_kevent+0x1e1/frame 0xfffffe01d8689d30
 # amd64_syscall() at amd64_syscall+0x31e/frame 0xfffffe01d8689f30
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe01d8689f30
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x8003adafa, rsp = 0x7fffffffe648, rbp = 0x7fffffffe670 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x8003adafa, rsp = 0x7fffffffe648, rbp = 0x7fffffffe670 ---
 # KDB: enter: panic
 # [ thread pid 3050 tid 100263 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x2638c4e(%rip)
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #0 main-n250242-eab5358b9080-dirty: Mon Oct 25 11:32:45 CEST 2021
-# pho@mercat1.netperf.freebsd.org
+# version: NQC 14.0-CURRENT #0 main-n250242-eab5358b9080-dirty: Mon Oct 25 11:32:45 CEST 2021
+# pho@mercat1.netperf.frebsd.org
 # db> 
 
 

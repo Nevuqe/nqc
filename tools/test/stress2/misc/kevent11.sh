@@ -27,7 +27,7 @@
 #
 
 # Variation of kevent5.sh
-# OOM seen: https://people.freebsd.org/~pho/stress/log/mark018.txt
+# OOM seen: https://people.frebsd.org/~pho/stress/log/mark018.txt
 
 . ../default.cfg
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

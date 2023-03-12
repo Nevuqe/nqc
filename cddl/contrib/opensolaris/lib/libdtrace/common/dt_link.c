@@ -22,7 +22,7 @@
 /*
  * Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
  * Use is subject to license terms.
- * Copyright 2017-2018 Mark Johnston <markj@FreeBSD.org>
+ * Copyright 2017-2018 Mark Johnston <markj@frebsd.org>
  */
 
 #include <sys/param.h>

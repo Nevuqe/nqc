@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 Landon Fuller <landonf@FreeBSD.org>
+ * Copyright (c) 2016 Landon Fuller <landonf@frebsd.org>
  * Copyright (c) 2010, Broadcom Corporation.
  * All rights reserved.
  * 

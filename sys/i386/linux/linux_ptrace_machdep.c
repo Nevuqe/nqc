@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Alexander Kabaev
  * All rights reserved.
@@ -47,7 +47,7 @@ __NQCID("$NQC$");
 #include <compat/linux/linux_signal.h>
 
 /*
- *   Linux ptrace requests numbers. Mostly identical to FreeBSD,
+ *   Linux ptrace requests numbers. Mostly identical to NQC,
  *   except for MD ones and PT_ATTACH/PT_DETACH.
  */
 #define	PTRACE_TRACEME		0
@@ -111,9 +111,9 @@ struct linux_pt_reg {
 };
 
 /*
- *   Translate i386 ptrace registers between Linux and FreeBSD formats.
+ *   Translate i386 ptrace registers between Linux and NQC formats.
  *   The translation is pretty straighforward, for all registers, but
- *   orig_eax on Linux side and r_trapno and r_err in FreeBSD
+ *   orig_eax on Linux side and r_trapno and r_err in NQC
  */
 static void
 map_regs_to_linux(struct reg *bsd_r, struct linux_pt_reg *linux_r)
@@ -288,7 +288,7 @@ linux_ptrace(struct thread *td, struct linux_ptrace_args *uap)
 		error = kern_ptrace(td, PT_ATTACH, pid, addr, uap->data);
 		break;
 	case PTRACE_GETREGS:
-		/* Linux is using data where FreeBSD is using addr */
+		/* Linux is using data where NQC is using addr */
 		error = kern_ptrace(td, PT_GETREGS, pid, &u.bsd_reg, 0);
 		if (error == 0) {
 			map_regs_to_linux(&u.bsd_reg, &r.reg);
@@ -297,7 +297,7 @@ linux_ptrace(struct thread *td, struct linux_ptrace_args *uap)
 		}
 		break;
 	case PTRACE_SETREGS:
-		/* Linux is using data where FreeBSD is using addr */
+		/* Linux is using data where NQC is using addr */
 		error = copyin((void *)uap->data, &r.reg, sizeof(r.reg));
 		if (error == 0) {
 			map_regs_from_linux(&u.bsd_reg, &r.reg);
@@ -305,7 +305,7 @@ linux_ptrace(struct thread *td, struct linux_ptrace_args *uap)
 		}
 		break;
 	case PTRACE_GETFPREGS:
-		/* Linux is using data where FreeBSD is using addr */
+		/* Linux is using data where NQC is using addr */
 		error = kern_ptrace(td, PT_GETFPREGS, pid, &u.bsd_fpreg, 0);
 		if (error == 0) {
 			map_fpregs_to_linux(&u.bsd_fpreg, &r.fpreg);
@@ -314,7 +314,7 @@ linux_ptrace(struct thread *td, struct linux_ptrace_args *uap)
 		}
 		break;
 	case PTRACE_SETFPREGS:
-		/* Linux is using data where FreeBSD is using addr */
+		/* Linux is using data where NQC is using addr */
 		error = copyin((void *)uap->data, &r.fpreg, sizeof(r.fpreg));
 		if (error == 0) {
 			map_fpregs_from_linux(&u.bsd_fpreg, &r.fpreg);

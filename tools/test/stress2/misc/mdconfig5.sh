@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2022 Peter Holm
 #
@@ -31,7 +31,7 @@
 
 # Bug 257557 Garbage on disk (or USB memory stick) can cause GEOM taste ffs_sbget() to crash.
 # "panic: wrong length 4352 for sectorsize 512" seen:
-# https://people.freebsd.org/~pho/stress/log/log0159.txt
+# https://people.frebsd.org/~pho/stress/log/log0159.txt
 
 . ../default.cfg
 

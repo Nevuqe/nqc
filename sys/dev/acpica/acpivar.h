@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@jp.freebsd.org>
- * Copyright (c) 2000 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 2000 Mitsuru IWASAKI <iwasaki@jp.frebsd.org>
+ * Copyright (c) 2000 Michael Smith <msmith@frebsd.org>
  * Copyright (c) 2000 BSDi
  * All rights reserved.
  *

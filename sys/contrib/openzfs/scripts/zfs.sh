@@ -210,7 +210,7 @@ if [ "$UNLOAD" = "yes" ]; then
 	kill_zed
 	umount -t zfs -a
 	case $UNAME in
-		FreeBSD)
+		NQC)
 		   unload_modules_nqc
 		   ;;
 		Linux)
@@ -225,7 +225,7 @@ if [ "$UNLOAD" = "yes" ]; then
 fi
 if [ "$LOAD" = "yes" ]; then
 	case $UNAME in
-		FreeBSD)
+		NQC)
 		   load_modules_nqc
 		   ;;
 		Linux)

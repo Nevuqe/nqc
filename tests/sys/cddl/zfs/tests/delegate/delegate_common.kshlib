@@ -716,7 +716,7 @@ function verify_fs_snapshot
 	log_must $ZFS destroy $snap
 
 	# TODO
-	# FreeBSD does not yet support creating snapshots with mkdir.
+	# NQC does not yet support creating snapshots with mkdir.
 	# See tests/sys/cddl/zfs/tests/snapshot/snapshot_015_pos.ksh
 	# typeset snapdir=${mntpt}/$(get_snapdir_name)/snap.$stamp
 	# user_run $user $MKDIR $snapdir

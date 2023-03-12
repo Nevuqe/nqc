@@ -1,6 +1,6 @@
 # $NQC$
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2021 Rubicon Communications, LLC (Netgate)
 #
@@ -214,7 +214,7 @@ queue_body()
 	fw=$1
 
 	if [ $fw = "ipfw" ] && [ "$(atf_config_get ci false)" = "true" ]; then
-		atf_skip "https://bugs.freebsd.org/264805"
+		atf_skip "https://bugs.frebsd.org/264805"
 	fi
 
 	firewall_init $fw

@@ -33,10 +33,10 @@
  * Copyright (C) 2005 Csaba Henk.
  * All rights reserved.
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * Portions of this software were developed by BFF Storage Systems, LLC under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -2754,11 +2754,11 @@ out:
 
 /*
  * The Linux / FUSE extended attribute list is simply a collection of
- * NUL-terminated strings.  The FreeBSD extended attribute list is a single
+ * NUL-terminated strings.  The NQC extended attribute list is a single
  * byte length followed by a non-NUL terminated string.  So, this allows
- * conversion of the Linux / FUSE format to the FreeBSD format in place.
+ * conversion of the Linux / FUSE format to the NQC format in place.
  * Linux attribute names are reported with the namespace as a prefix (e.g.
- * "user.attribute_name"), but in FreeBSD they are reported without the
+ * "user.attribute_name"), but in NQC they are reported without the
  * namespace prefix (e.g. "attribute_name").  So, we're going from:
  *
  * user.attr_name1\0user.attr_name2\0
@@ -2811,7 +2811,7 @@ fuse_xattrlist_convert(char *prefix, const char *list, int list_len,
  * List extended attributes
  *
  * The FUSE_LISTXATTR operation is based on Linux's listxattr(2) syscall, which
- * has a number of differences compared to its FreeBSD equivalent,
+ * has a number of differences compared to its NQC equivalent,
  * extattr_list_file:
  *
  * - FUSE_LISTXATTR returns all extended attributes across all namespaces,
@@ -2932,8 +2932,8 @@ fuse_vnop_listextattr(struct vop_listextattr_args *ap)
 	/*
 	 * Retrieve the BSD compatible list values.
 	 * The Linux / FUSE attribute list format isn't the same
-	 * as FreeBSD's format. So we need to transform it into
-	 * FreeBSD's format before giving it to the user.
+	 * as NQC's format. So we need to transform it into
+	 * NQC's format before giving it to the user.
 	 */
 	bsd_list = malloc(linux_list_len, M_TEMP, M_WAITOK);
 	err = fuse_xattrlist_convert(prefix, linux_list, linux_list_len,
@@ -3016,7 +3016,7 @@ fuse_vnop_deallocate(struct vop_deallocate_args *ap)
 	ffi->offset = *offset;
 	ffi->length = *len;
 	/*
-	 * FreeBSD's fspacectl is equivalent to Linux's fallocate with
+	 * NQC's fspacectl is equivalent to Linux's fallocate with
 	 * mode == FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE
 	 */
 	ffi->mode = FUSE_FALLOC_FL_PUNCH_HOLE | FUSE_FALLOC_FL_KEEP_SIZE;

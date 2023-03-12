@@ -44,7 +44,7 @@ get_revision_string()
     v="unknown:unknown"
     if [ -d CVS ]; then     # Look for CVS (NetBSD).
         v="cvs:unknown"
-    elif [ -d .svn ]; then  # An SVN checkout (SourceForge or FreeBSD).
+    elif [ -d .svn ]; then  # An SVN checkout (SourceForge or NQC).
         svnversion="$(svnversion 2>/dev/null)"
         if [ -n "${svnversion}" ]; then
             v="svn:${svnversion}"

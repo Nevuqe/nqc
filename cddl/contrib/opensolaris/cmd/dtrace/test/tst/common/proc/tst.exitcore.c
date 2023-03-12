@@ -20,7 +20,7 @@
  */
 
 /*
- * Copyright 2017 Mark Johnston <markj@FreeBSD.org>
+ * Copyright 2017 Mark Johnston <markj@frebsd.org>
  */
 
 #include <unistd.h>

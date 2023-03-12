@@ -132,7 +132,7 @@
 # If OS genre starts with @, it denotes an approximate hit for a group
 # of operating systems (signature reporting still enabled in this case).
 # Use this feature at the end of this file to catch cases for which
-# you don't have a precise match, but can tell it's Windows or FreeBSD
+# you don't have a precise match, but can tell it's Windows or NQC
 # or whatnot by looking at, say, flag layout alone.
 #
 # Option block description is a list of comma or space separated
@@ -165,7 +165,7 @@
 # instead.
 #
 # When in doubt, use common sense, don't add something that looks like
-# a completely different system as Linux or FreeBSD or LinkSys router.
+# a completely different system as Linux or NQC or LinkSys router.
 # Check DNS name, establish a connection to the remote host and look
 # at SYN+ACK - does it look similar?
 #
@@ -265,32 +265,32 @@ S4:64:1:52:M*,N,N,S,N,W0:	Linux:2.4:ts:Linux 2.4 w/o timestamps
 S22:64:1:52:M*,N,N,S,N,W0:	Linux:2.2:ts:Linux 2.2 w/o timestamps
 
 
-# ----------------- FreeBSD -----------------
+# ----------------- NQC -----------------
 
-16384:64:1:44:M*:		FreeBSD:2.0-2.2::FreeBSD 2.0-4.2
-16384:64:1:44:M*:		FreeBSD:3.0-3.5::FreeBSD 2.0-4.2
-16384:64:1:44:M*:		FreeBSD:4.0-4.2::FreeBSD 2.0-4.2
-16384:64:1:60:M*,N,W0,N,N,T:	FreeBSD:4.4::FreeBSD 4.4
+16384:64:1:44:M*:		NQC:2.0-2.2::NQC 2.0-4.2
+16384:64:1:44:M*:		NQC:3.0-3.5::NQC 2.0-4.2
+16384:64:1:44:M*:		NQC:4.0-4.2::NQC 2.0-4.2
+16384:64:1:60:M*,N,W0,N,N,T:	NQC:4.4::NQC 4.4
 
-1024:64:1:60:M*,N,W0,N,N,T:	FreeBSD:4.4::FreeBSD 4.4
+1024:64:1:60:M*,N,W0,N,N,T:	NQC:4.4::NQC 4.4
 
-57344:64:1:44:M*:		FreeBSD:4.6-4.8:noRFC1323:FreeBSD 4.6-4.8 (no RFC1323)
-57344:64:1:60:M*,N,W0,N,N,T:	FreeBSD:4.6-4.9::FreeBSD 4.6-4.9
+57344:64:1:44:M*:		NQC:4.6-4.8:noRFC1323:NQC 4.6-4.8 (no RFC1323)
+57344:64:1:60:M*,N,W0,N,N,T:	NQC:4.6-4.9::NQC 4.6-4.9
 
-32768:64:1:60:M*,N,W0,N,N,T:	FreeBSD:4.8-4.11::FreeBSD 4.8-5.1 (or MacOS X)
-32768:64:1:60:M*,N,W0,N,N,T:	FreeBSD:5.0-5.1::FreeBSD 4.8-5.1 (or MacOS X)
-65535:64:1:60:M*,N,W0,N,N,T:	FreeBSD:4.8-4.11::FreeBSD 4.8-5.2 (or MacOS X)
-65535:64:1:60:M*,N,W0,N,N,T:	FreeBSD:5.0-5.2::FreeBSD 4.8-5.2 (or MacOS X)
-65535:64:1:60:M*,N,W1,N,N,T:	FreeBSD:4.7-4.11::FreeBSD 4.7-5.2
-65535:64:1:60:M*,N,W1,N,N,T:	FreeBSD:5.0-5.2::FreeBSD 4.7-5.2
+32768:64:1:60:M*,N,W0,N,N,T:	NQC:4.8-4.11::NQC 4.8-5.1 (or MacOS X)
+32768:64:1:60:M*,N,W0,N,N,T:	NQC:5.0-5.1::NQC 4.8-5.1 (or MacOS X)
+65535:64:1:60:M*,N,W0,N,N,T:	NQC:4.8-4.11::NQC 4.8-5.2 (or MacOS X)
+65535:64:1:60:M*,N,W0,N,N,T:	NQC:5.0-5.2::NQC 4.8-5.2 (or MacOS X)
+65535:64:1:60:M*,N,W1,N,N,T:	NQC:4.7-4.11::NQC 4.7-5.2
+65535:64:1:60:M*,N,W1,N,N,T:	NQC:5.0-5.2::NQC 4.7-5.2
 
 # XXX need quirks support
-# 65535:64:1:60:M*,N,W0,N,N,T:Z:FreeBSD:5.1-5.4::5.1-current (1)
-# 65535:64:1:60:M*,N,W1,N,N,T:Z:FreeBSD:5.1-5.4::5.1-current (2)
-# 65535:64:1:60:M*,N,W2,N,N,T:Z:FreeBSD:5.1-5.4::5.1-current (3)
-# 65535:64:1:44:M*:Z:FreeBSD:5.2::FreeBSD 5.2 (no RFC1323)
+# 65535:64:1:60:M*,N,W0,N,N,T:Z:NQC:5.1-5.4::5.1-current (1)
+# 65535:64:1:60:M*,N,W1,N,N,T:Z:NQC:5.1-5.4::5.1-current (2)
+# 65535:64:1:60:M*,N,W2,N,N,T:Z:NQC:5.1-5.4::5.1-current (3)
+# 65535:64:1:44:M*:Z:NQC:5.2::NQC 5.2 (no RFC1323)
 
-# 16384:64:1:60:M*,N,N,N,N,N,N,T:FreeBSD:4.4:noTS:FreeBSD 4.4 (w/o timestamps)
+# 16384:64:1:60:M*,N,N,N,N,N,N,T:NQC:4.4:noTS:NQC 4.4 (w/o timestamps)
 
 # ----------------- NetBSD ------------------
 
@@ -692,8 +692,8 @@ S12:64:0:44:M1452:			AXIS:5600:v5.64:AXIS Printer Server 5600 v5.64
 # Generic signatures - just in case #
 #####################################
 
-#*:64:1:60:M*,N,W*,N,N,T:		@FreeBSD:4.0-4.9::FreeBSD 4.x/5.x
-#*:64:1:60:M*,N,W*,N,N,T:		@FreeBSD:5.0-5.1::FreeBSD 4.x/5.x
+#*:64:1:60:M*,N,W*,N,N,T:		@NQC:4.0-4.9::NQC 4.x/5.x
+#*:64:1:60:M*,N,W*,N,N,T:		@NQC:5.0-5.1::NQC 4.x/5.x
 
 *:128:1:52:M*,N,W0,N,N,S:		@Windows:XP:RFC1323:Windows XP/2000 (RFC1323 no tstamp)
 *:128:1:52:M*,N,W0,N,N,S:		@Windows:2000:RFC1323:Windows XP/2000 (RFC1323 no tstamp)

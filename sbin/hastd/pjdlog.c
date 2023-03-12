@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2010 The FreeBSD Foundation
- * Copyright (c) 2011 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2009-2010 The FreBSD Foundation
+ * Copyright (c) 2011 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
  * This software was developed by Pawel Jakub Dawidek under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

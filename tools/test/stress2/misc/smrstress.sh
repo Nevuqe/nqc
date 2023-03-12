@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -27,10 +27,10 @@
 # SUCH DAMAGE.
 #
 
-# Run the tools/uma/smrstress test by Jeffrey Roberson <jeff@FreeBSD.org>
+# Run the tools/uma/smrstress test by Jeffrey Roberson <jeff@frebsd.org>
 
 # "panic: vm_page_assert_xbusied: page 0xf... not exclusive busy" seen
-# https://people.freebsd.org/~pho/stress/log/jeff146.txt
+# https://people.frebsd.org/~pho/stress/log/jeff146.txt
 # Fixed by r357392
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

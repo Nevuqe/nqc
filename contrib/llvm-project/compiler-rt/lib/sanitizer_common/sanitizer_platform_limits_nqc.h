@@ -8,7 +8,7 @@
 //
 // This file is a part of Sanitizer common code.
 //
-// Sizes and layouts of platform-specific FreeBSD data structures.
+// Sizes and layouts of platform-specific NQC data structures.
 //===----------------------------------------------------------------------===//
 
 #ifndef SANITIZER_PLATFORM_LIMITS_NQC_H
@@ -252,7 +252,7 @@ struct __sanitizer_dirent {
   // more fields that we don't care about
 };
 
-// 'clock_t' is 32 bits wide on x64 FreeBSD
+// 'clock_t' is 32 bits wide on x64 NQC
 typedef int __sanitizer_clock_t;
 typedef int __sanitizer_clockid_t;
 

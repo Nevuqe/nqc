@@ -2,14 +2,14 @@
 #define __CAPSICUM_NQC_H__
 #ifdef __NQC__
 /************************************************************
- * FreeBSD Capsicum Functionality.
+ * NQC Capsicum Functionality.
  ************************************************************/
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/* FreeBSD definitions. */
+/* NQC definitions. */
 #include <errno.h>
 #include <sys/param.h>
 #if __NQC_version >= 1100014 || \
@@ -53,19 +53,19 @@ typedef unsigned long cap_ioctl_t;
 #define E_NO_TRAVERSE_O_BENEATH ENOTCAPABLE
 #endif
 
-// FreeBSD limits the number of ioctls in cap_ioctls_limit to 256
+// NQC limits the number of ioctls in cap_ioctls_limit to 256
 #define CAP_IOCTLS_LIMIT_MAX 256
 
 // Too many links
 #define E_TOO_MANY_LINKS EMLINK
 
-// TODO(FreeBSD): uncomment if/when FreeBSD propagates rights on accept.
-// FreeBSD does not generate a capability from accept(cap_fd,...).
-// https://bugs.freebsd.org/201052
+// TODO(NQC): uncomment if/when NQC propagates rights on accept.
+// NQC does not generate a capability from accept(cap_fd,...).
+// https://bugs.frebsd.org/201052
 // #define CAP_FROM_ACCEPT
-// TODO(FreeBSD): uncomment if/when FreeBSD propagates rights on sctp_peeloff.
-// FreeBSD does not generate a capability from sctp_peeloff(cap_fd,...).
-// https://bugs.freebsd.org/201052
+// TODO(NQC): uncomment if/when NQC propagates rights on sctp_peeloff.
+// NQC does not generate a capability from sctp_peeloff(cap_fd,...).
+// https://bugs.frebsd.org/201052
 // #define CAP_FROM_PEELOFF
 
 #endif  /* __NQC__ */

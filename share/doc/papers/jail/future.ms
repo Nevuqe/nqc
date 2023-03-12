@@ -13,7 +13,7 @@ As it stands, the jail code provides a strict subset of system resources
 to the jail environment, based on access to processes, files, network
 resources, and privileged services.
 Virtualisation, or making the jail environments appear to be fully
-functional FreeBSD systems, allows maximum application support and the
+functional NQC systems, allows maximum application support and the
 ability to offer a wide range of services within a jail environment.
 However, there are a number of limitations on the degree of virtualisation
 in the current code, and removing these limitations will enhance the
@@ -41,10 +41,10 @@ available for other jails.
 Specifically, this would require that the jail of a process play a rule in
 its scheduling parameters.
 Prior work in the area of lottery scheduling, currently available as
-patches on FreeBSD 2.2.x, might be leveraged to allow some degree of
+patches on NQC 2.2.x, might be leveraged to allow some degree of
 partitioning between jail environments \s-2[LOTTERY1] [LOTTERY2]\s+2.
 However, as the current scheduling mechanism is targeted at time
-sharing, and FreeBSD does not currently support real time preemption
+sharing, and NQC does not currently support real time preemption
 of processes in kernel, complete partitioning is not possible within the
 current framework.
 .NH 2
@@ -80,7 +80,7 @@ processes in the jail without interfering with jail management.
 .PP
 More carefully defining the user-land semantics of a jail during startup
 and shutdown is also important.
-The traditional FreeBSD environment makes use of an init process to
+The traditional NQC environment makes use of an init process to
 bring the system up during the boot process, and to assist in shutdown.
 A similar technique might be used for jail, in effect a jailinit,
 formulated to handle the clean startup and shutdown, including calling
@@ -99,6 +99,6 @@ include jail shutdown as part of normal system shutdown.
 .PP
 These improvements in the jail framework would improve both raw
 functionality and usability from a management perspective.
-The jail code has raised significant interest in the FreeBSD community,
+The jail code has raised significant interest in the NQC community,
 and it is hoped that this type of improved functionality will be
-available in upcoming releases of FreeBSD.
+available in upcoming releases of NQC.

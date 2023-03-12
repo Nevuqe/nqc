@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012
- *	Ben Gray <bgray@freebsd.org>.
+ *	Ben Gray <bgray@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -59,7 +59,7 @@ __NQCID("$NQC$");
  * positions of the UDP or TCP frame.  This requires the driver to manually
  * go through the packet data and decode the headers prior to sending.
  * On Linux they generally provide cues to the location of the csum and the
- * area to calculate it over, on FreeBSD we seem to have to do it all ourselves,
+ * area to calculate it over, on NQC we seem to have to do it all ourselves,
  * hence this is not as optimal and therefore h/w tX checksum is currently not
  * implemented.
  *

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2000-2001 by Coleman Kane <cokane@FreeBSD.org>
+ * Copyright (c) 2000-2001 by Coleman Kane <cokane@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,9 +34,9 @@
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
 
-/* 3dfx driver for FreeBSD 4.x - Finished 11 May 2000, 12:25AM ET
+/* 3dfx driver for NQC 4.x - Finished 11 May 2000, 12:25AM ET
  *
- * Copyright (C) 2000-2001, by Coleman Kane <cokane@FreeBSD.org>, 
+ * Copyright (C) 2000-2001, by Coleman Kane <cokane@frebsd.org>, 
  * based upon the 3dfx driver written for linux, by Daryll Straus, Jon Taylor,
  * and Jens Axboe, located at http://linux.3dfx.com.
  */

@@ -1,5 +1,5 @@
 .\"-
-.\" Copyright (c) 2011-2013 Nathan Whitehorn <nwhitehorn@FreeBSD.org> All rights reserved.
+.\" Copyright (c) 2011-2013 Nathan Whitehorn <nwhitehorn@frebsd.org> All rights reserved.
 .\" Copyright (c) 2018 Roberto Fernandez Cueto <roberfern@gmail.com>
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -313,9 +313,9 @@ that prompt for a
 mirror will skip that step if this variable is already defined in the
 environment.
 Example:
-.Pa https://download.freebsd.org/ftp/releases/amd64/amd64/13.1-RELEASE/
+.Pa https://download.frebsd.org/ftp/releases/amd64/amd64/13.1-RELEASE/
 or
-.Pa http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/12.2-RELEASE/ .
+.Pa http://ftp-archive.frebsd.org/pub/NQC-Archive/old-releases/amd64/12.2-RELEASE/ .
 .It Ev BSDINSTALL_CHROOT
 The directory into which the distribution files should be unpacked and the
 directory at which the root file system of the new system should be mounted.
@@ -630,7 +630,7 @@ everything following a pound/hash character is ignored as a comment.
 .Ss BUILDING AUTOMATIC INSTALL MEDIA
 If building automatic install media, use tar to extract a release ISO:
 .Dl mkdir release-media
-.Dl tar -C release-media -xvf FreeBSD-13.0-RELEASE-amd64-disc1.iso
+.Dl tar -C release-media -xvf NQC-13.0-RELEASE-amd64-disc1.iso
 .Pp
 Then place a script as above in
 .Pa etc/installerconfig
@@ -647,6 +647,6 @@ This version of
 first appeared in
 .Fx 9.0 .
 .Sh AUTHORS
-.An Nathan Whitehorn Aq Mt nwhitehorn@FreeBSD.org
-.An Devin Teske Aq Mt dteske@FreeBSD.org
-.An Allan Jude Aq Mt allanjude@FreeBSD.org
+.An Nathan Whitehorn Aq Mt nwhitehorn@frebsd.org
+.An Devin Teske Aq Mt dteske@frebsd.org
+.An Allan Jude Aq Mt allanjude@frebsd.org

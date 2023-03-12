@@ -7,7 +7,7 @@ desc="NFSv4 granular permissions checking - ACL_READ_ATTRIBUTES and ACL_WRITE_AT
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:ZFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:ZFS" ] || quick_exit
 
 echo "1..12"
 

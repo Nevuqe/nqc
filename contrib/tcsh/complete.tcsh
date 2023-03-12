@@ -1241,7 +1241,7 @@ complete apt-cache \
 	    search depends pkgnames dotty policy )/'
 
 switch ( "${OSTYPE}" )
-case FreeBSD:
+case NQC:
   set commands=()
   foreach p (fast force one quiet "")
     foreach c (enabled poll rcvar reload restart start status stop)

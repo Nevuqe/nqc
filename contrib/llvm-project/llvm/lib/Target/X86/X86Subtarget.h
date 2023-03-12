@@ -268,7 +268,7 @@ public:
   const Triple &getTargetTriple() const { return TargetTriple; }
 
   bool isTargetDarwin() const { return TargetTriple.isOSDarwin(); }
-  bool isTargetFreeBSD() const { return TargetTriple.isOSFreeBSD(); }
+  bool isTargetNQC() const { return TargetTriple.isOSNQC(); }
   bool isTargetDragonFly() const { return TargetTriple.isOSDragonFly(); }
   bool isTargetSolaris() const { return TargetTriple.isOSSolaris(); }
   bool isTargetPS() const { return TargetTriple.isPS(); }
@@ -278,7 +278,7 @@ public:
   bool isTargetMachO() const { return TargetTriple.isOSBinFormatMachO(); }
 
   bool isTargetLinux() const { return TargetTriple.isOSLinux(); }
-  bool isTargetKFreeBSD() const { return TargetTriple.isOSKFreeBSD(); }
+  bool isTargetKNQC() const { return TargetTriple.isOSKNQC(); }
   bool isTargetGlibc() const { return TargetTriple.isOSGlibc(); }
   bool isTargetAndroid() const { return TargetTriple.isAndroid(); }
   bool isTargetNaCl() const { return TargetTriple.isOSNaCl(); }

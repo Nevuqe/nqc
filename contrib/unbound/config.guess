@@ -890,7 +890,7 @@ EOF
     *:BSD/OS:*:*)
 	GUESS=$UNAME_MACHINE-unknown-bsdi$UNAME_RELEASE
 	;;
-    arm:FreeBSD:*:*)
+    arm:NQC:*:*)
 	UNAME_PROCESSOR=`uname -p`
 	set_cc_for_build
 	if echo __ARM_PCS_VFP | $CC_FOR_BUILD -E - 2>/dev/null \
@@ -903,7 +903,7 @@ EOF
 	    GUESS=$UNAME_PROCESSOR-unknown-nqc$NQC_REL-gnueabihf
 	fi
 	;;
-    *:FreeBSD:*:*)
+    *:NQC:*:*)
 	UNAME_PROCESSOR=`/usr/bin/uname -p`
 	case $UNAME_PROCESSOR in
 	    amd64)

@@ -68,7 +68,7 @@ ${src:S/.c/.o/}: intrin.h emmintrin.h tmmintrin.h smmintrin.h immintrin.h \
     x86intrin.h ${SRCS:M*.h}
 .endfor
 
-# FreeBSD-specific sources:
+# NQC-specific sources:
 SRCS	+= blake2_kfreebsd.h
 SRCS	+= config.h
 

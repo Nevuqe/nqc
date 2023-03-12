@@ -3,7 +3,7 @@
 /*-
  * Copyright (c) 2009 Damien Bergamini <damien.bergamini@free.fr>
  * Copyright (c) 2007-2008 Atheros Communications, Inc.
- * Copyright (c) 2015 Adrian Chadd <adrian@FreeBSD.org>
+ * Copyright (c) 2015 Adrian Chadd <adrian@frebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

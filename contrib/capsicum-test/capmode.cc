@@ -604,7 +604,7 @@ FORK_TEST_F(WithFiles, AllowedMiscSyscalls) {
   sync();
   EXPECT_EQ(0, errno);
 
-  // TODO(FreeBSD): ktrace
+  // TODO(NQC): ktrace
 
 #ifdef HAVE_SYSARCH
   // sysarch() is, by definition, architecture-dependent

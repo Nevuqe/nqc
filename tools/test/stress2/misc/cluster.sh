@@ -29,7 +29,7 @@
 # Open four (sparse) files for random read and write.
 
 # "panic: softdep_deallocate_dependencies: dangling deps" seen:
-# https://people.freebsd.org/~pho/stress/log/kirk075.txt
+# https://people.frebsd.org/~pho/stress/log/kirk075.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

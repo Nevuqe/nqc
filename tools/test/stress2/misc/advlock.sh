@@ -41,8 +41,8 @@
 # ETXTBUSY even though the other process that held a write lock has closed
 # the file and released the lock.
 
-# https://people.freebsd.org/~pho/stress/log/kostik859.txt
-# https://people.freebsd.org/~pho/stress/log/kostik860.txt
+# https://people.frebsd.org/~pho/stress/log/kostik859.txt
+# https://people.frebsd.org/~pho/stress/log/kostik860.txt
 
 # Fixed by r294204.
 

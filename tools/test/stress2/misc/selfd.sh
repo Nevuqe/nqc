@@ -27,7 +27,7 @@
 #
 
 # selfd regression test attempt for r285310. Not reproduced.
-# Watchdog fired seen: https://people.freebsd.org/~pho/stress/log/selfd.txt
+# Watchdog fired seen: https://people.frebsd.org/~pho/stress/log/selfd.txt
 
 . ../default.cfg
 

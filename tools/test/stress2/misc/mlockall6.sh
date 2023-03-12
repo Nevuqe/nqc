@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: Lock (rw) vm object not locked @ vm/vm_page.c:1013" seen:
-# https://people.freebsd.org/~pho/stress/log/mlockall6-2.txt
+# https://people.frebsd.org/~pho/stress/log/mlockall6-2.txt
 
 . ../default.cfg
 

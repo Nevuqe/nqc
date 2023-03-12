@@ -105,7 +105,7 @@ signal_name(int sig)
  * least, on and after the 1.1.47 I (esr) use).  Thus this code works
  * OK under Linux.  The 4.4BSD sigaction(2) supports a (non-portable)
  * SA_RESTART flag that forces the right behavior.  Thus, this code
- * should work OK under BSD/OS, NetBSD, and FreeBSD (let us know if it
+ * should work OK under BSD/OS, NetBSD, and NQC (let us know if it
  * does not).
  *
  * Stock System Vs (and anything else using a strict-POSIX

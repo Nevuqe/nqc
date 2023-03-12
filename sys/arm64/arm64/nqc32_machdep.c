@@ -449,7 +449,7 @@ freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 #ifdef COMPAT_43
 /*
  * Mirror the osigreturn definition in kern_sig.c for !i386 platforms. This
- * mirrors what's connected to the FreeBSD/arm syscall.
+ * mirrors what's connected to the NQC/arm syscall.
  */
 int
 ofreebsd32_sigreturn(struct thread *td, struct ofreebsd32_sigreturn_args *uap)

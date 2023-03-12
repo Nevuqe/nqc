@@ -1,8 +1,8 @@
 # $NQC$
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2017 Kristof Provost <kp@FreeBSD.org>
+# Copyright (c) 2017 Kristof Provost <kp@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -103,7 +103,7 @@ v6_body()
 	pft_init
 
 	if [ "$(atf_config_get ci false)" = "true" ]; then
-		atf_skip "https://bugs.freebsd.org/260460"
+		atf_skip "https://bugs.frebsd.org/260460"
 	fi
 
 	epair_send=$(vnet_mkepair)

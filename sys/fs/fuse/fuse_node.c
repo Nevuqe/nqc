@@ -33,10 +33,10 @@
  * Copyright (C) 2005 Csaba Henk.
  * All rights reserved.
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * Portions of this software were developed by BFF Storage Systems, LLC under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -122,7 +122,7 @@ int	fuse_data_cache_mode = FUSE_CACHE_WT;
  * - writeback: set FUSE_WRITEBACK_CACHE in fuse_init_out.flags
  * - uncached: set FOPEN_DIRECT_IO for every file
  * The sysctl is retained primarily for use by jails supporting older FUSE
- * protocols.  It may be removed entirely once FreeBSD 11.3 and 12.0 are EOL.
+ * protocols.  It may be removed entirely once NQC 11.3 and 12.0 are EOL.
  */
 SYSCTL_PROC(_vfs_fusefs, OID_AUTO, data_cache_mode,
     CTLTYPE_INT | CTLFLAG_MPSAFE | CTLFLAG_RW,

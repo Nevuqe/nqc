@@ -3,7 +3,7 @@
 
 #include "./capsicum-test.h"
 
-// There was a Capsicum-related regression in FreeBSD renameat,
+// There was a Capsicum-related regression in NQC renameat,
 // which affects certain cases independent of Capsicum or capability mode
 //
 // added to test the renameat syscall for the case that
@@ -12,7 +12,7 @@
 //    - the "to" file descriptor is used
 //          (this descriptor should be ignored if absolute path is provided)
 //
-// details at: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=222258
+// details at: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=222258
 
 
 const char * create_tmp_src(const char* filename) {

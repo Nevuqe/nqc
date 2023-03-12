@@ -48,7 +48,7 @@ The
 .UX
 Programmer's Reference Manual
 .R
-for the FreeBSD system as distributed by the FreeBSD Project.
+for the NQC system as distributed by the FreBSD Project.
 .SH
 Documents of Historical Interest
 .IP
@@ -103,7 +103,7 @@ contains a tutorial introduction and many examples.
 .tl 'Berkeley Pascal User\'s Manual''PSD:7'
 .QP
 An implementation of this language popular for learning to program.  
-(Not provided in FreeBSD.)
+(Not provided in NQC.)
 .sp
 .IP
 .tl 'A Portable Fortran 77 Compiler''PSD:8'
@@ -111,13 +111,13 @@ An implementation of this language popular for learning to program.
 A revised version of the document which originally appeared in
 Volume 2b of the Bell Labs documentation;
 this version reflects the work done at Berkeley.
-(Not provided in FreeBSD.)
+(Not provided in NQC.)
 .sp
 .IP
 .tl 'Introduction to the f77 I/O Library''PSD:9'
 .QP
 A description of the revised input/output library for Fortran 77, 
-reflecting work carried out at Berkeley.  (Not provided in FreeBSD.)
+reflecting work carried out at Berkeley.  (Not provided in NQC.)
 
 .SH
 Programming Tools
@@ -132,7 +132,7 @@ How to debug programs using the source level \fIgdb\fP debugger
 .tl 'A Tutorial Introduction to ADB''PSD:11'
 .QP
 How to debug programs using the assembly-language level \fIadb\fP debugger.
-(Not provided in FreeBSD.)
+(Not provided in NQC.)
 .sp
 .IP
 .tl 'Make \- A Program for Maintaining Computer Programs''PSD:12'

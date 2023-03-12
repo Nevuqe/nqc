@@ -3070,4 +3070,4 @@ These should be obtained via secure directory
 services when they become universally available.
 @node ntp.conf Notes
 @subsection ntp.conf Notes
-This document was derived from FreeBSD.
+This document was derived from NQC.

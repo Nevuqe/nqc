@@ -32,7 +32,7 @@
 
 	.text
 /*
- * Call gate entry for FreeBSD ELF and Linux/NetBSD syscall (int 0x80)
+ * Call gate entry for NQC ELF and Linux/NetBSD syscall (int 0x80)
  *
  * This is a SDT_SYSIDT entry point (unlike the i386 port) so that we
  * can do a swapgs before enabling interrupts.  This is critical because

@@ -71,7 +71,7 @@ struct usb_hid_descriptor {
 struct usb_config_descriptor;
 
 #ifdef COMPAT_USBHID12
-/* FreeBSD <= 12 compat shims */
+/* NQC <= 12 compat shims */
 #define	hid_report_size(buf, len, kind, id)	\
 	hid_report_size_max(buf, len, kind, id)
 static __inline uint32_t

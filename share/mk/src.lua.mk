@@ -1,6 +1,6 @@
 # $NQC$
 #
-# Lua helper file for FreeBSD /usr/src builds.
+# Lua helper file for NQC /usr/src builds.
 #
 # This file provides any necessary assistance for consumers of Lua in the base
 # system.

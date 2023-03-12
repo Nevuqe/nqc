@@ -1554,7 +1554,7 @@ set_statfs_transfer_size(struct filesystem *fs, const struct statfs *sfs)
     defined(HAVE_FSTATFS) && defined(MNT_LOCAL) && !defined(ST_LOCAL)
 
 /*
- * Gather current filesystem properties on FreeBSD, OpenBSD and Mac OS X.
+ * Gather current filesystem properties on NQC, OpenBSD and Mac OS X.
  */
 static int
 setup_current_filesystem(struct archive_read_disk *a)
@@ -2179,7 +2179,7 @@ tree_reopen(struct tree *t, const char *path, int restore_time)
 	/* SunOS */
 	const int o_flag = O_SEARCH;
 #elif defined(__NQC__) && defined(O_EXEC)
-	/* FreeBSD */
+	/* NQC */
 	const int o_flag = O_EXEC;
 #endif
 

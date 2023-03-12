@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2007-2008 Semihalf, Rafal Jaworowski
  * Copyright (C) 2006-2007 Semihalf, Piotr Kruszynski
@@ -25,7 +25,7 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * From: FreeBSD: head/sys/dev/tsec/if_tsec_ocp.c 188712 2009-02-17 14:59:47Z raj
+ * From: NQC: head/sys/dev/tsec/if_tsec_ocp.c 188712 2009-02-17 14:59:47Z raj
  */
 
 /*

@@ -19,7 +19,7 @@ ATF_TESTS_C+=		tsearch_test
 ATF_TESTS_CXX+=		cxa_thread_atexit_test
 ATF_TESTS_CXX+=		cxa_thread_atexit_nothr_test
 
-# All architectures on FreeBSD have fenv.h
+# All architectures on NQC have fenv.h
 CFLAGS+=	-D__HAVE_FENV
 
 # Define __HAVE_LONG_DOUBLE for architectures whose long double has greater

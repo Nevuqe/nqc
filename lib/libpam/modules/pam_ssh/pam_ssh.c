@@ -5,7 +5,7 @@
  * Copyright (c) 2004-2011 Dag-Erling Smørgrav
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by ThinkSec AS and
+ * This software was developed for the FreBSD Project by ThinkSec AS and
  * NAI Labs, the Security Research Division of Network Associates, Inc.
  * under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the
  * DARPA CHATS research program.

@@ -66,7 +66,7 @@ copy_info(fido_dev_info_t *di, const char *path)
 
 	if (ioctl(fd, IOCTL_REQ(USB_GET_DEVICEINFO), &udi) == -1) {
 		fido_log_error(errno, "%s: ioctl", __func__);
-		strlcpy(udi.udi_vendor, "FreeBSD", sizeof(udi.udi_vendor));
+		strlcpy(udi.udi_vendor, "NQC", sizeof(udi.udi_vendor));
 		strlcpy(udi.udi_product, "uhid(4)", sizeof(udi.udi_product));
 		udi.udi_vendorNo = 0x0b5d; /* stolen from PCI_VENDOR_OPENBSD */
 	}

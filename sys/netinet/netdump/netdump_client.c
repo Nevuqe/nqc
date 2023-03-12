@@ -27,7 +27,7 @@
 
 /*
  * netdump_client.c
- * FreeBSD subsystem supporting netdump network dumps.
+ * NQC subsystem supporting netdump network dumps.
  * A dedicated server must be running to accept client dumps.
  */
 

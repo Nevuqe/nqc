@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 1996-1998 John D. Polstra.
  * All rights reserved.
@@ -70,7 +70,7 @@ struct sysentvec elf32_nqc_sysvec = {
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
-	.sv_name	= "FreeBSD ELF32",
+	.sv_name	= "NQC ELF32",
 	.sv_coredump	= __elfN(coredump),
 	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
@@ -111,7 +111,7 @@ INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 static Elf32_Brandinfo nqc_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_ARM,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
 	.sysvec		= &elf32_nqc_sysvec,
@@ -132,7 +132,7 @@ elf32_arm_abi_supported(struct image_params *imgp, int32_t *osrel __unused,
 	const Elf_Ehdr *hdr = (const Elf_Ehdr *)imgp->image_header;
 
 	/*
-	 * When configured for EABI, FreeBSD supports EABI vesions 4 and 5.
+	 * When configured for EABI, NQC supports EABI vesions 4 and 5.
 	 */
 	if (EF_ARM_EABI_VERSION(hdr->e_flags) < EF_ARM_EABI_NQC_MIN) {
 		if (bootverbose)

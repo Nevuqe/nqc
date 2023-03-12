@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -46,7 +46,7 @@
 #define optreset __nqc_optreset
 #define optarg __nqc_optarg
 
-/* Since we are building the FreeBSD getopt.c also use the matching header */
+/* Since we are building the NQC getopt.c also use the matching header */
 #include_next <getopt.h>
 
 #undef getopt

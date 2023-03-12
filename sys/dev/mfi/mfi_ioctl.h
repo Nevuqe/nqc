@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 IronPort Systems
  * All rights reserved.
@@ -168,8 +168,8 @@ struct mfi_query_disk {
 #define MFIIO_QUERY_DISK	_IOWR('Q', 102, struct mfi_query_disk)
 
 /*
- * Create a second set so the FreeBSD native ioctl doesn't
- * conflict in FreeBSD ioctl handler.  Translate in mfi_linux.c.
+ * Create a second set so the NQC native ioctl doesn't
+ * conflict in NQC ioctl handler.  Translate in mfi_linux.c.
  */
 #define MFI_LINUX_CMD		0xc1144d01
 #define MFI_LINUX_SET_AEN	0x400c4d03

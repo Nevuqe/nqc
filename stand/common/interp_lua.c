@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2011 Wojciech A. Koszek <wkoszek@FreeBSD.org>
- * Copyright (c) 2014 Pedro Souza <pedrosouza@freebsd.org>
+ * Copyright (c) 2011 Wojciech A. Koszek <wkoszek@frebsd.org>
+ * Copyright (c) 2014 Pedro Souza <pedrosouza@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

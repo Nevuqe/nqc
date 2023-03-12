@@ -74,7 +74,7 @@ _v=	${_ld_version:M[1-9]*.[0-9]*:[1]}
 _ld_version:=${_ld_version:[*]:C/^.* LLD /LLD /:[@]}
 ${X_}LINKER_TYPE=	lld
 _v=	${_ld_version:[2]}
-.if ${_ld_version:[3]} == "(FreeBSD"
+.if ${_ld_version:[3]} == "(NQC"
 ${X_}LINKER_NQC_VERSION:=	${_ld_version:[4]:C/.*-([^-]*)\)/\1/}
 .else
 ${X_}LINKER_NQC_VERSION=	0

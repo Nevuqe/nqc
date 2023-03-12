@@ -30,7 +30,7 @@
  * $NQC$
  */
 /*
- * Parts of this program are derived from the original FreeBSD iostat
+ * Parts of this program are derived from the original NQC iostat
  * program:
  */
 /*-

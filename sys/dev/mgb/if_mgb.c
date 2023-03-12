@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2019 The FreeBSD Foundation, Inc.
+ * Copyright (c) 2019 The FreBSD Foundation, Inc.
  *
  * This driver was written by Gerald ND Aryeetey <gndaryee@uwaterloo.ca>
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -180,7 +180,7 @@ static int				mgb_fct_control(struct mgb_softc *,
 					    int, int, enum mgb_fct_cmd);
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 
 static device_method_t mgb_methods[] = {

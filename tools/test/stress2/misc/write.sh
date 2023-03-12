@@ -46,7 +46,7 @@
 #         dev label/tmp
 
 # Deadlock seen:
-# https://people.freebsd.org/~pho/stress/log/write.txt
+# https://people.frebsd.org/~pho/stress/log/write.txt
 
 . ../default.cfg
 

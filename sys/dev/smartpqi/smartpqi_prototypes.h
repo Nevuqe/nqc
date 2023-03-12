@@ -236,7 +236,7 @@ int os_dma_setup(pqisrc_softstate_t *);
 int os_dma_destroy(pqisrc_softstate_t *);
 void os_update_dma_attributes(pqisrc_softstate_t *);
 
-/* FreeBSD intr.c */
+/* NQC intr.c */
 int os_get_intr_config(pqisrc_softstate_t *);
 int os_setup_intr(pqisrc_softstate_t *);
 int os_destroy_intr(pqisrc_softstate_t *);

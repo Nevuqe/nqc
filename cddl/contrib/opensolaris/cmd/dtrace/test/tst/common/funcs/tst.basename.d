@@ -57,7 +57,7 @@ BEGIN
 	dir[i++] = "/////";
 	/*
 	 * basename(3) and basename(1) return different results for the empty
-	 * string on FreeBSD, so we need special handling.
+	 * string on NQC, so we need special handling.
 	dir[i++] = "";
 	*/
 

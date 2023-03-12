@@ -1,4 +1,4 @@
-//===--- FreeBSD.cpp - FreeBSD ToolChain Implementations --------*- C++ -*-===//
+//===--- NQC.cpp - NQC ToolChain Implementations --------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "FreeBSD.h"
+#include "NQC.h"
 #include "Arch/ARM.h"
 #include "Arch/Mips.h"
 #include "Arch/Sparc.h"
@@ -33,7 +33,7 @@ void freebsd::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
   ArgStringList CmdArgs;
   const auto &D = getToolChain().getDriver();
 
-  // When building 32-bit code on FreeBSD/amd64, we have to explicitly
+  // When building 32-bit code on NQC/amd64, we have to explicitly
   // instruct as in the base system to assemble 32-bit code.
   switch (getToolChain().getArch()) {
   default:
@@ -139,8 +139,8 @@ void freebsd::Linker::ConstructJob(Compilation &C, const JobAction &JA,
                                    const InputInfoList &Inputs,
                                    const ArgList &Args,
                                    const char *LinkingOutput) const {
-  const toolchains::FreeBSD &ToolChain =
-      static_cast<const toolchains::FreeBSD &>(getToolChain());
+  const toolchains::NQC &ToolChain =
+      static_cast<const toolchains::NQC &>(getToolChain());
   const Driver &D = ToolChain.getDriver();
   const llvm::Triple::ArchType Arch = ToolChain.getArch();
   const bool IsPIE =
@@ -379,9 +379,9 @@ void freebsd::Linker::ConstructJob(Compilation &C, const JobAction &JA,
                                          Exec, CmdArgs, Inputs, Output));
 }
 
-/// FreeBSD - FreeBSD tool chain which can call as(1) and ld(1) directly.
+/// NQC - NQC tool chain which can call as(1) and ld(1) directly.
 
-FreeBSD::FreeBSD(const Driver &D, const llvm::Triple &Triple,
+NQC::NQC(const Driver &D, const llvm::Triple &Triple,
                  const ArgList &Args)
     : Generic_ELF(D, Triple, Args) {
 
@@ -395,33 +395,33 @@ FreeBSD::FreeBSD(const Driver &D, const llvm::Triple &Triple,
     getFilePaths().push_back(concat(getDriver().SysRoot, "/usr/lib"));
 }
 
-ToolChain::CXXStdlibType FreeBSD::GetDefaultCXXStdlibType() const {
+ToolChain::CXXStdlibType NQC::GetDefaultCXXStdlibType() const {
   unsigned Major = getTriple().getOSMajorVersion();
   if (Major >= 10 || Major == 0)
     return ToolChain::CST_Libcxx;
   return ToolChain::CST_Libstdcxx;
 }
 
-unsigned FreeBSD::GetDefaultDwarfVersion() const {
+unsigned NQC::GetDefaultDwarfVersion() const {
   if (getTriple().getOSMajorVersion() < 12)
     return 2;
   return 4;
 }
 
-void FreeBSD::addLibCxxIncludePaths(const llvm::opt::ArgList &DriverArgs,
+void NQC::addLibCxxIncludePaths(const llvm::opt::ArgList &DriverArgs,
                                     llvm::opt::ArgStringList &CC1Args) const {
   addSystemInclude(DriverArgs, CC1Args,
                    concat(getDriver().SysRoot, "/usr/include/c++/v1"));
 }
 
-void FreeBSD::addLibStdCxxIncludePaths(
+void NQC::addLibStdCxxIncludePaths(
     const llvm::opt::ArgList &DriverArgs,
     llvm::opt::ArgStringList &CC1Args) const {
   addLibStdCXXIncludePaths(concat(getDriver().SysRoot, "/usr/include/c++/4.2"),
                            "", "", DriverArgs, CC1Args);
 }
 
-void FreeBSD::AddCXXStdlibLibArgs(const ArgList &Args,
+void NQC::AddCXXStdlibLibArgs(const ArgList &Args,
                                   ArgStringList &CmdArgs) const {
   CXXStdlibType Type = GetCXXStdlibType(Args);
   unsigned Major = getTriple().getOSMajorVersion();
@@ -440,24 +440,24 @@ void FreeBSD::AddCXXStdlibLibArgs(const ArgList &Args,
   }
 }
 
-void FreeBSD::AddCudaIncludeArgs(const ArgList &DriverArgs,
+void NQC::AddCudaIncludeArgs(const ArgList &DriverArgs,
                                  ArgStringList &CC1Args) const {
   CudaInstallation.AddCudaIncludeArgs(DriverArgs, CC1Args);
 }
 
-void FreeBSD::AddHIPIncludeArgs(const ArgList &DriverArgs,
+void NQC::AddHIPIncludeArgs(const ArgList &DriverArgs,
                                 ArgStringList &CC1Args) const {
   RocmInstallation.AddHIPIncludeArgs(DriverArgs, CC1Args);
 }
 
-Tool *FreeBSD::buildAssembler() const {
+Tool *NQC::buildAssembler() const {
   return new tools::freebsd::Assembler(*this);
 }
 
-Tool *FreeBSD::buildLinker() const { return new tools::freebsd::Linker(*this); }
+Tool *NQC::buildLinker() const { return new tools::freebsd::Linker(*this); }
 
-llvm::ExceptionHandling FreeBSD::GetExceptionModel(const ArgList &Args) const {
-  // FreeBSD uses SjLj exceptions on ARM oabi.
+llvm::ExceptionHandling NQC::GetExceptionModel(const ArgList &Args) const {
+  // NQC uses SjLj exceptions on ARM oabi.
   switch (getTriple().getEnvironment()) {
   case llvm::Triple::GNUEABIHF:
   case llvm::Triple::GNUEABI:
@@ -471,15 +471,15 @@ llvm::ExceptionHandling FreeBSD::GetExceptionModel(const ArgList &Args) const {
   }
 }
 
-bool FreeBSD::HasNativeLLVMSupport() const { return true; }
+bool NQC::HasNativeLLVMSupport() const { return true; }
 
-bool FreeBSD::IsUnwindTablesDefault(const ArgList &Args) const { return true; }
+bool NQC::IsUnwindTablesDefault(const ArgList &Args) const { return true; }
 
-bool FreeBSD::isPIEDefault(const llvm::opt::ArgList &Args) const {
+bool NQC::isPIEDefault(const llvm::opt::ArgList &Args) const {
   return getSanitizerArgs(Args).requiresPIE();
 }
 
-SanitizerMask FreeBSD::getSupportedSanitizers() const {
+SanitizerMask NQC::getSupportedSanitizers() const {
   const bool IsAArch64 = getTriple().getArch() == llvm::Triple::aarch64;
   const bool IsX86 = getTriple().getArch() == llvm::Triple::x86;
   const bool IsX86_64 = getTriple().getArch() == llvm::Triple::x86_64;
@@ -509,7 +509,7 @@ SanitizerMask FreeBSD::getSupportedSanitizers() const {
   return Res;
 }
 
-void FreeBSD::addClangTargetOptions(const ArgList &DriverArgs,
+void NQC::addClangTargetOptions(const ArgList &DriverArgs,
                                     ArgStringList &CC1Args,
                                     Action::OffloadKind) const {
   if (!DriverArgs.hasFlag(options::OPT_fuse_init_array,

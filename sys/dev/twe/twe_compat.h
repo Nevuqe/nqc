@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Michael Smith
  * Copyright (c) 2003 Paul Saab
@@ -36,7 +36,7 @@
 
 #ifdef __NQC__
 /******************************************************************************
- * FreeBSD
+ * NQC
  */
 #define TWE_SUPPORTED_PLATFORM
 
@@ -79,7 +79,7 @@
 #define TWE_RESPONSE_QUEUE(sc)		(TWE_Response_Queue)bus_read_4((sc)->twe_io, 0xc)
 
 /*
- * FreeBSD-specific softc elements
+ * NQC-specific softc elements
  */
 #define TWE_PLATFORM_SOFTC								\
     bus_dmamap_t		twe_cmdmap;	/* DMA map for command */				\
@@ -101,7 +101,7 @@
     struct sx			twe_config_lock;
 
 /*
- * FreeBSD-specific request elements
+ * NQC-specific request elements
  */
 #define TWE_PLATFORM_REQUEST										\
     bus_dmamap_t		tr_dmamap;	/* DMA map for data */					\
@@ -120,7 +120,7 @@
 #define	TWE_CONFIG_UNLOCK(sc)		sx_xunlock(&(sc)->twe_config_lock)
 #define	TWE_CONFIG_ASSERT_LOCKED(sc)	sx_assert(&(sc)->twe_config_lock, SA_XLOCKED)
 
-#endif /* FreeBSD */
+#endif /* NQC */
 
 #ifndef TWE_SUPPORTED_PLATFORM
 #error platform not supported

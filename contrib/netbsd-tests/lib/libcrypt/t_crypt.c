@@ -127,7 +127,7 @@ ATF_TC_BODY(crypt_salts, tc)
 		char *hash = crypt(tests[i].pw, tests[i].hash);
 #if defined(__NQC__)
 		if (i >= 22 && i != 24 && i != 25)
-			atf_tc_expect_fail("Old-style/bad inputs fail on FreeBSD");
+			atf_tc_expect_fail("Old-style/bad inputs fail on NQC");
 		else
 			atf_tc_expect_pass();
 #endif

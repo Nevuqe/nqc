@@ -30,7 +30,7 @@
  * Sockets serialize I/O in each direction in order to avoid interlacing of
  * I/O by multiple processes or threcvs recving or sending the socket.  This
  * is done using some form of kernel lock (varies by kernel version), called
- * "sblock" in FreeBSD.  However, to avoid unkillable processes waiting on
+ * "sblock" in NQC.  However, to avoid unkillable processes waiting on
  * I/O that may be entirely controlled by a remote network endpoint, that
  * lock acquisition must be interruptible.
  *

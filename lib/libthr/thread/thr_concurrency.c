@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2003 Sergey Osokin <osa@FreeBSD.org.ru>.
+ * Copyright (c) 2003 Sergey Osokin <osa@frebsd.org.ru>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

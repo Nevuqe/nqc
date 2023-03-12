@@ -1,15 +1,15 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
  * All Rights Reserved.
  * Copyright (c) 1998 Robert Nordier
  * All Rights Reserved.
- * Copyright (c) 2009, Oleksandr Tymoshenko <gonzo@FreeBSD.org>
+ * Copyright (c) 2009, Oleksandr Tymoshenko <gonzo@frebsd.org>
  * All rights reserved.
  * Copyright (c) 2014 Roger Pau Monné <roger.pau@citrix.com>
  * All Rights Reserved.
- * Copyright (c) 2018 Kyle Evans <kevans@FreeBSD.org>
+ * Copyright (c) 2018 Kyle Evans <kevans@frebsd.org>
  * Copyright (c) 2018 Netflix, Inc.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -53,7 +53,7 @@ TEST_METADATA+= required_user="root"
 # TODO: it would be nice to be able to run them in parallel with other non-audit
 # tests using some internal form of synchronization.
 # TODO: In addititon to test failures, running in parallel can trigger a kernel
-# panic: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=253616
+# panic: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=253616
 TEST_METADATA+= is_exclusive="true"
 TEST_METADATA+=	required_files="/etc/rc.d/auditd /dev/auditpipe"
 

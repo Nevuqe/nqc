@@ -127,7 +127,7 @@ static int      ixv_msix_que(void *);
 static int      ixv_msix_mbx(void *);
 
 /************************************************************************
- * FreeBSD Device Interface Entry Points
+ * NQC Device Interface Entry Points
  ************************************************************************/
 static device_method_t ixv_methods[] = {
 	/* Device interface */

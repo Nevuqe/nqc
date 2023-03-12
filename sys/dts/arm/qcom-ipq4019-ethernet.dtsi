@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2022 Adrian Chadd <adrian@FreeBSD.org>.
+ * Copyright (c) 2022 Adrian Chadd <adrian@frebsd.org>.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -92,7 +92,7 @@
 			 * and controls whether to allocate a full PAGE_SIZE
 			 * page entry per RX buffer or not.
 			 *
-			 * For now it's parsed but ignored by FreeBSD.
+			 * For now it's parsed but ignored by NQC.
 			 */
 			qcom,page-mode = <0>;
 
@@ -102,7 +102,7 @@
 			 * If qcom,page_mode is set to 1 then this is ignored.
 			 *
 			 * Again, this is currently parsed but ignored by
-			 * FreeBSD.
+			 * NQC.
 			 */
 			qcom,rx_head_buf_size = <1540>;
 
@@ -112,7 +112,7 @@
 			 * a gmac interface should be considered link
 			 * up or down.
 			 *
-			 * It currently isn't supported by FreeBSD.
+			 * It currently isn't supported by NQC.
 			 */
 			qcom,mdio_supported;
 			qcom,poll_required = <1>;
@@ -226,7 +226,7 @@
 				 * logical link status for WAN events to tie
 				 * things like dhclient to.
 				 *
-				 * For now it's unsupported in FreeBSD.
+				 * For now it's unsupported in NQC.
 				 */
 				qcom,phy_mdio_addr = <4>;
 				qcom,poll_required = <1>;

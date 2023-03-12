@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * mpboot.s:	FreeBSD machine support for the Intel MP Spec
+ * mpboot.s:	NQC machine support for the Intel MP Spec
  *		multiprocessor systems.
  *
  * $NQC$

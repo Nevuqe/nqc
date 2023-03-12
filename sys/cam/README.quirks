@@ -1,12 +1,12 @@
 /* $NQC$ */
 
-                     FreeBSD Quirk Guidelines
+                     NQC Quirk Guidelines
 
                   Nate Lawson - njl at freebsd org
 
 0. Introduction
 
-FreeBSD drivers make every attempt possible to support the standards
+NQC drivers make every attempt possible to support the standards
 behind hardware. Where possible and not in conflict with the standard,
 they also attempt to work around hardware which doesn't strictly
 conform. However, some devices have flaws which can't be worked
@@ -58,7 +58,7 @@ help. The types of things a quirk can fix are:
   o DA_Q_NO_6_BYTE - The RBC spec (see Links below) does not allow
   for 6-byte READ/WRITE commands. Some manufacturers took that too
   literally and crash when receiving 6-byte commands. This quirk
-  causes FreeBSD to only send 10-byte commands. Since the CAM subsystem
+  causes NQC to only send 10-byte commands. Since the CAM subsystem
   has been modified to not send 6-byte commands to USB, 1394, and
   other transports that don't support SBC, this quirk should be very
   rare.
@@ -199,7 +199,7 @@ Here are some examples of well-formed PRs:
 I will review your submission, respond with comments, and once the
 quirk is deemed necessary and ready for committing, I'll commit it,
 referencing the PR. (Again, all quirks must be submitted as PRs).
-Questions? Email njl AT freebsd.org.
+Questions? Email njl AT frebsd.org.
 
 5. Note to Committers
 

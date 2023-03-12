@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -30,7 +30,7 @@
 # Test based on scenario by Babcia Padlina
 
 # "panic: mutex pipe mutex not owned at sys_pipe.c:1769" seen:
-# https://people.freebsd.org/~pho/stress/log/kevent13.txt
+# https://people.frebsd.org/~pho/stress/log/kevent13.txt
 # Fixed by r235640.
 
 . ../default.cfg

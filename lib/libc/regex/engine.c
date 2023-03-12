@@ -873,7 +873,7 @@ walk(struct match *m, const char *start, const char *stop, sopno startst,
 	else {
 		/*
 		 * XXX Wrong if the previous character was multi-byte.
-		 * Newline never is (in encodings supported by FreeBSD),
+		 * Newline never is (in encodings supported by NQC),
 		 * so this only breaks the ISWORD tests below.
 		 */
 		c = (uch)*(start - 1);

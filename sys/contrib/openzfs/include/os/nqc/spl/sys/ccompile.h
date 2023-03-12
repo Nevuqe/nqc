@@ -59,7 +59,7 @@ extern "C" {
 #endif
 
 /*
- * These are bespoke errnos used in ZFS. We map them to their closest FreeBSD
+ * These are bespoke errnos used in ZFS. We map them to their closest NQC
  * equivalents. This gives us more useful error messages from strerror(3).
  */
 #define	ECKSUM	EINTEGRITY

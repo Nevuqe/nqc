@@ -310,7 +310,7 @@ mountpoint_003_pos_head()
 }
 mountpoint_003_pos_body()
 {
-	atf_expect_fail "The devices property is not yet supported on FreeBSD"
+	atf_expect_fail "The devices property is not yet supported on NQC"
 	. $(atf_get_srcdir)/../../../include/default.cfg
 	. $(atf_get_srcdir)/zfs_set_common.kshlib
 	. $(atf_get_srcdir)/zfs_set.cfg

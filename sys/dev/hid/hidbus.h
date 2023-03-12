@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2019 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -48,7 +48,7 @@ HIDBUS_ACCESSOR(lock,		LOCK,		struct mtx *)
 /*
  * The following structure is used when looking up an HID driver for
  * an HID device. It is inspired by the structure called "usb_device_id".
- * which is originated in Linux and ported to FreeBSD.
+ * which is originated in Linux and ported to NQC.
  */
 struct hid_device_id {
 

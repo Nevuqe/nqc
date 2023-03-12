@@ -1,5 +1,5 @@
 /*-
- * Copyright 2014 Luiz Otavio O Souza <loos@freebsd.org>
+ * Copyright 2014 Luiz Otavio O Souza <loos@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

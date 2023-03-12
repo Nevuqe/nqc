@@ -64,7 +64,7 @@ static bool hasBcmp(const Triple &TT) {
     return TT.isGNUEnvironment() || TT.isMusl();
   // Both NetBSD and OpenBSD are planning to remove the function. Windows does
   // not have it.
-  return TT.isOSFreeBSD() || TT.isOSSolaris();
+  return TT.isOSNQC() || TT.isOSSolaris();
 }
 
 static bool isCallingConvCCompatible(CallingConv::ID CC, StringRef TT,
@@ -521,10 +521,10 @@ static void initialize(TargetLibraryInfoImpl &TLI, const Triple &T,
     TLI.setUnavailable(LibFunc_exp10l);
   }
 
-  // ffsl is available on at least Darwin, Mac OS X, iOS, FreeBSD, and
+  // ffsl is available on at least Darwin, Mac OS X, iOS, NQC, and
   // Linux (GLIBC):
   // http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/ffsl.3.html
-  // http://svn.freebsd.org/base/head/lib/libc/string/ffsl.c
+  // http://svn.frebsd.org/base/head/lib/libc/string/ffsl.c
   // http://www.gnu.org/software/gnulib/manual/html_node/ffsl.html
   switch (T.getOS()) {
   case Triple::Darwin:
@@ -532,15 +532,15 @@ static void initialize(TargetLibraryInfoImpl &TLI, const Triple &T,
   case Triple::IOS:
   case Triple::TvOS:
   case Triple::WatchOS:
-  case Triple::FreeBSD:
+  case Triple::NQC:
   case Triple::Linux:
     break;
   default:
     TLI.setUnavailable(LibFunc_ffsl);
   }
 
-  // ffsll is available on at least FreeBSD and Linux (GLIBC):
-  // http://svn.freebsd.org/base/head/lib/libc/string/ffsll.c
+  // ffsll is available on at least NQC and Linux (GLIBC):
+  // http://svn.frebsd.org/base/head/lib/libc/string/ffsll.c
   // http://www.gnu.org/software/gnulib/manual/html_node/ffsll.html
   switch (T.getOS()) {
   case Triple::Darwin:
@@ -548,18 +548,18 @@ static void initialize(TargetLibraryInfoImpl &TLI, const Triple &T,
   case Triple::IOS:
   case Triple::TvOS:
   case Triple::WatchOS:
-  case Triple::FreeBSD:
+  case Triple::NQC:
   case Triple::Linux:
     break;
   default:
     TLI.setUnavailable(LibFunc_ffsll);
   }
 
-  // The following functions are available on at least FreeBSD:
-  // http://svn.freebsd.org/base/head/lib/libc/string/fls.c
-  // http://svn.freebsd.org/base/head/lib/libc/string/flsl.c
-  // http://svn.freebsd.org/base/head/lib/libc/string/flsll.c
-  if (!T.isOSFreeBSD()) {
+  // The following functions are available on at least NQC:
+  // http://svn.frebsd.org/base/head/lib/libc/string/fls.c
+  // http://svn.frebsd.org/base/head/lib/libc/string/flsl.c
+  // http://svn.frebsd.org/base/head/lib/libc/string/flsll.c
+  if (!T.isOSNQC()) {
     TLI.setUnavailable(LibFunc_fls);
     TLI.setUnavailable(LibFunc_flsl);
     TLI.setUnavailable(LibFunc_flsll);

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 Andriy Voskoboinyk <avos@FreeBSD.org>
+ * Copyright (c) 2016 Andriy Voskoboinyk <avos@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

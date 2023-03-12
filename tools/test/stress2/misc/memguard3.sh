@@ -28,7 +28,7 @@
 
 # MEMGUARD(9) test scenario using "frequency".
 # "panic: __rw_wlock_hard: recursing but non-recursive rw kmem vm object"
-# seen. http://people.freebsd.org/~pho/stress/log/memguard5.txt
+# seen. http://people.frebsd.org/~pho/stress/log/memguard5.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

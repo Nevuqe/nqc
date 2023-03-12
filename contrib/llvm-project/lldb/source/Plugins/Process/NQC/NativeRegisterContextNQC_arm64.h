@@ -17,7 +17,7 @@
 #include <machine/reg.h>
 // clang-format on
 
-#include "Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.h"
+#include "Plugins/Process/NQC/NativeRegisterContextNQC.h"
 #include "Plugins/Process/Utility/NativeRegisterContextDBReg_arm64.h"
 #include "Plugins/Process/Utility/RegisterInfoPOSIX_arm64.h"
 
@@ -30,10 +30,10 @@
 namespace lldb_private {
 namespace process_nqc {
 
-class NativeProcessFreeBSD;
+class NativeProcessNQC;
 
 class NativeRegisterContextNQC_arm64
-    : public NativeRegisterContextFreeBSD,
+    : public NativeRegisterContextNQC,
       public NativeRegisterContextDBReg_arm64 {
 public:
   NativeRegisterContextNQC_arm64(const ArchSpec &target_arch,
@@ -56,10 +56,10 @@ public:
   Status WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
 
   llvm::Error
-  CopyHardwareWatchpointsFrom(NativeRegisterContextFreeBSD &source) override;
+  CopyHardwareWatchpointsFrom(NativeRegisterContextNQC &source) override;
 
 private:
-  // Due to alignment, FreeBSD reg/fpreg are a few bytes larger than
+  // Due to alignment, NQC reg/fpreg are a few bytes larger than
   // LLDB's GPR/FPU structs.  However, all fields have matching offsets
   // and sizes, so we do not have to worry about these (and we have
   // a unittest to assert that).

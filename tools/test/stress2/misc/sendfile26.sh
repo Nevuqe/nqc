@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Jean-S�bastien P�dron <dumbbell@FreeBSD.org>
+# Copyright (c) 2021 Jean-S�bastien P�dron <dumbbell@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # "Written file doesn't match memory buffer" seen on main-n244961-e6bb49f12ca
-# https://reviews.freebsd.org/D28811
+# https://reviews.frebsd.org/D28811
 
 . ../default.cfg
 kldstat -v | grep -q zfs.ko  || { kldload zfs.ko ||
@@ -258,7 +258,7 @@ main(int argc, char *argv[])
 	pthread_join(sender, NULL);
 
 	/* Now that both threads terminated, we check the content of the
-	 * written file. The bug on ZFS on FreeBSD is that some portions of the
+	 * written file. The bug on ZFS on NQC is that some portions of the
 	 * file contains zeros instead of the expected 0xff bytes. */
 	ret = check_file(buffer, 0);
 	free(buffer);

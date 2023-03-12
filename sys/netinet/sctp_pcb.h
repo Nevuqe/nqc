@@ -415,7 +415,7 @@ struct sctp_inpcb {
 	 * These three are here for the sosend_dgram
 	 * (pkt, pkt_last and control).
 	 * routine. However, I don't think anyone in
-	 * the current FreeBSD kernel calls this. So
+	 * the current NQC kernel calls this. So
 	 * they are candidates with sctp_sendm for
 	 * de-supporting.
 	 */

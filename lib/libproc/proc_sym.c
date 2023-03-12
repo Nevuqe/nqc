@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2016-2017 Mark Johnston <markj@FreeBSD.org>
- * Copyright (c) 2010 The FreeBSD Foundation
- * Copyright (c) 2008 John Birrell (jb@freebsd.org)
+ * Copyright (c) 2016-2017 Mark Johnston <markj@frebsd.org>
+ * Copyright (c) 2010 The FreBSD Foundation
+ * Copyright (c) 2008 John Birrell (jb@frebsd.org)
  * All rights reserved.
  *
  * Portions of this software were developed by Rui Paulo under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

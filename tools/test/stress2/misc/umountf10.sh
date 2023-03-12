@@ -27,7 +27,7 @@
 #
 
 # Demonstrate deadlock
-# https://people.freebsd.org/~pho/stress/log/umountf10.txt
+# https://people.frebsd.org/~pho/stress/log/umountf10.txt
 
 # Test scenario suggestion by: kib
 # Fixed in r308618.

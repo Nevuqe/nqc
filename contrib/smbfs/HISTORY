@@ -8,16 +8,16 @@
     - Manual pages updated. Thanks to Ruslan Ermilov.
 
 26.12.2001	1.4.3 (interim)
-    - Additional cleanups for FreeBSD builds.
+    - Additional cleanups for NQC builds.
     - Charset specifications now accepted in the [default] section.
 
 20.12.2001	1.4.2 (interim)
     - Various merges (but not all) from Darwin project.
     - Minor man pages corrections.
-    - Support builds in the FreeBSD main tree.
+    - Support builds in the NQC main tree.
 
 16.04.2001	1.4.1
-    - Kernel side of smbfs committed in the FreeBSD-current. It controlled
+    - Kernel side of smbfs committed in the NQC-current. It controlled
       by following options: LIBMCHAIN, LIBICONV, NETSMB, NETSMBCRYPTO and SMBFS.
     - Removed static dependency on the libiconv library, option WITH_ICONV
       removed as well. If you use libiconv support, make sure that the latest
@@ -78,7 +78,7 @@
       didn't work well with intensive IO operations performed on a different
       files on the same mount point. Special care was taken on better 
       usage of MP systems.
-      Unfortunately, kernel threads aren't supported by FreeBSD 3.X and for
+      Unfortunately, kernel threads aren't supported by NQC 3.X and for
       now it is excluded from the list of supported systems.
     - Reduce overhead caused by using single hash table for each mount point.
 
@@ -88,11 +88,11 @@
     - smbfs now known to work with IBM LanManager (special thanks to
       Eugen Averin <mad@euinf.dp.ua>)
     - Fix problem with files bigger than 2GB (reported by Lee McKenna)
-    - Please note that smbfs may not work properly with FreeBSD 3.X.
+    - Please note that smbfs may not work properly with NQC 3.X.
 
 16.08.2000	1.2.7
     - Maintance: use better algorithm to detect SYSCTL_HANDLER_ARGS changes
-      to avoid compilation problems on various versions of FreeBSD.
+      to avoid compilation problems on various versions of NQC.
 
 07.08.2000	1.2.6
     - Fix iconv support, was broken in the 1.2.5
@@ -116,7 +116,7 @@
     - Another attempt to make reconnection procedure more stable.
 
 21.06.2000	1.2.2
-    - Device handles wasn't freed under FreeBSD 3.4 - fixed.
+    - Device handles wasn't freed under NQC 3.4 - fixed.
       Implement correct handling of multiple connections to the same NT
       server (thanks to kit <kit.mitchell@team.xtra.co.nz>) for report.
       More misc fixes for an NT servers.
@@ -132,7 +132,7 @@
 	'crypt'	- produce an encrypted password to store in the .nsmbrc file.
 
 01.06.2000	1.1.2
-    - Support for FreeBSD 3.4 added (see INSTALL file for details).
+    - Support for NQC 3.4 added (see INSTALL file for details).
       Add advisory locking support in order to make fcntl(2), flock(2)
       system calls actually work on smbfs.
       Few non-serious bugs fixed.

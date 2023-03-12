@@ -54,7 +54,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$Citrus: xpg4dl/FreeBSD/lib/libc/locale/euctw.c,v 1.13 2001/06/21 01:51:44 yamt Exp $
+ *	$Citrus: xpg4dl/NQC/lib/libc/locale/euctw.c,v 1.13 2001/06/21 01:51:44 yamt Exp $
  */
 
 #include <sys/cdefs.h>

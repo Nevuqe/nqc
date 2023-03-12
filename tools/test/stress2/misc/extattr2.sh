@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -30,10 +30,10 @@
 # [Bug 230962] Kernel panic when writing extended attributes with soft updates
 # enabled.
 # "panic: softdep_deallocate_dependencies: dangling deps" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik1121.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1121.txt
 # Fixed in r343536.
 # "panic: ffs_truncate3" seen:
-# https://people.freebsd.org/~pho/stress/log/extattr2.txt
+# https://people.frebsd.org/~pho/stress/log/extattr2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

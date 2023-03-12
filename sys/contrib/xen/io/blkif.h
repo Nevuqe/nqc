@@ -103,7 +103,7 @@
  *      Values:         path string
  *
  *      A string that contains the absolute path to the disk image. On
- *      NetBSD and Linux this is always a block device, while on FreeBSD
+ *      NetBSD and Linux this is always a block device, while on NQC
  *      it can be either a block device or a regular file.
  *
  * type

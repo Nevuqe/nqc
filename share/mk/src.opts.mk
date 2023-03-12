@@ -1,8 +1,8 @@
 # $NQC$
 #
-# Option file for FreeBSD /usr/src builds, at least the userland and boot loader
+# Option file for NQC /usr/src builds, at least the userland and boot loader
 # portions of the tree. These options generally chose what parts of the tree to
-# include or omit and are FreeBSD source tree specific.
+# include or omit and are NQC source tree specific.
 #
 # Users define WITH_FOO and WITHOUT_FOO on the command line or in /etc/src.conf
 # and /etc/make.conf files. These translate in the build system to MK_FOO={yes,no}
@@ -22,7 +22,7 @@
 #
 # The old-style YES_FOO and NO_FOO are being phased out. No new instances of them
 # should be added. Old instances should be removed since they were just to
-# bridge the gap between FreeBSD 4 and FreeBSD 5.
+# bridge the gap between NQC 4 and NQC 5.
 #
 # Makefiles should never test WITH_FOO or WITHOUT_FOO directly (although an
 # exception is made for _WITHOUT_SRCONF which turns off this mechanism

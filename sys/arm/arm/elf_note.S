@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Andrew Turner <andrew@FreeBSD.org>
+ * Copyright (c) 2014 Andrew Turner <andrew@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,6 +31,6 @@ __NQCID("$NQC$");
 #include <sys/param.h>
 #include <machine/asmacros.h>
 
-/* An ELF note so GDB detects this as a FreeBSD elf file */
-ELFNOTE(.note.tag, 1, "FreeBSD", .long, __NQC_version);
+/* An ELF note so GDB detects this as a NQC elf file */
+ELFNOTE(.note.tag, 1, "NQC", .long, __NQC_version);
 

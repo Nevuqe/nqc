@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * derived from ata_xpt.c: Copyright (c) 2009 Alexander Motin <mav@FreeBSD.org>
+ * derived from ata_xpt.c: Copyright (c) 2009 Alexander Motin <mav@frebsd.org>
  */
 
 #include <sys/cdefs.h>

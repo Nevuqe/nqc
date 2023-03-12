@@ -1,8 +1,8 @@
 # $NQC$
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Kristof Provost <kp@FreeBSD.org>
+# Copyright (c) 2020 Kristof Provost <kp@frebsd.org>
 # Copyright (c) 2023 Kajetan Staszkiewicz <vegeta@tuxpowered.net>
 #
 # Redistribution and use in source and binary forms, with or without

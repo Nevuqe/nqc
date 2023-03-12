@@ -1,6 +1,6 @@
 # $NQC$
 #
-# Author: Harti Brandt <harti@freebsd.org>
+# Author: Harti Brandt <harti@frebsd.org>
 
 MOD=	netgraph
 SRCS=	snmp_netgraph.c

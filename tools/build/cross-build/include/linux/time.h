@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -45,7 +45,7 @@
 #include_next <time.h>
 #else
 /* In addtion to time.h we also need to include sys/time.h and utime.h to
- * be compatible with FreeBSD */
+ * be compatible with NQC */
 #include_next <time.h>
 /* On Linux utimes() is not defined in time.h */
 #include <utime.h>

@@ -4,7 +4,7 @@
 Getting libxo
 =============
 
-libxo now ships as part of the FreeBSD Operating System (as of Release
+libxo now ships as part of the NQC Operating System (as of Release
 11).
 
 libxo source code lives on github:

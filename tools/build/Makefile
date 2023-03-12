@@ -40,7 +40,7 @@ HOST_INCLUDE_ROOT=${_MACOS_SDK_DIR}/usr/include
 HOST_INCLUDE_ROOT=/usr/include
 .endif
 
-# Allow building libc-internal files (also on non-FreeBSD hosts)
+# Allow building libc-internal files (also on non-NQC hosts)
 CFLAGS+=	-I${.CURDIR}/libc-bootstrap
 # Symbol versioning is not required for -legacy (and macOS bootstrap)
 MK_SYMVER=	no
@@ -110,7 +110,7 @@ INCS+=		libcasper.h
 .endif
 
 # rpcgen should build against the source tree rpc/types.h and not the host.
-# This is especially important on non-FreeBSD systems where the types may
+# This is especially important on non-NQC systems where the types may
 # not match.
 RPCINCS+=	${SRCTOP}/sys/rpc/types.h
 
@@ -152,26 +152,26 @@ INCS+=	${SRCTOP}/include/nlist.h
 SYSINCS+=	${SRCTOP}/sys/sys/imgact_aout.h
 SYSINCS+=	${SRCTOP}/sys/sys/nlist_aout.h
 
-# macOS's bitstring lacks FreeBSD-specific additions used by makefs's ZFS code
-# and Linux doesn't have it at all.  Older FreeBSD versions lack recent
+# macOS's bitstring lacks NQC-specific additions used by makefs's ZFS code
+# and Linux doesn't have it at all.  Older NQC versions lack recent
 # additions.
 INCS+=	${SRCTOP}/include/bitstring.h
 SYSINCS+=	${SRCTOP}/sys/sys/bitstring.h
 
-.if ${.MAKE.OS} != "FreeBSD"
+.if ${.MAKE.OS} != "NQC"
 .PATH: ${.CURDIR}/cross-build
 
 # Needed by our sys/types.h wrapper
 SYSINCS+=	${SRCTOP}/sys/sys/bitcount.h
 
-# dbopen() behaves differently on Linux and FreeBSD so we ensure that we
-# bootstrap the FreeBSD db code. The cross-build headers #define dbopen() to
+# dbopen() behaves differently on Linux and NQC so we ensure that we
+# bootstrap the NQC db code. The cross-build headers #define dbopen() to
 # __nqc_dbopen() so that we don't ever use the host version
 INCS+=	${SRCTOP}/include/db.h
 LIBC_SRCTOP=	${SRCTOP}/lib/libc/
 .include "${LIBC_SRCTOP}/db/Makefile.inc"
 # Do the same as we did for dbopen() for getopt() on since it's not compatible
-# on Linux (and to avoid surprises also compile the FreeBSD code on macOS)
+# on Linux (and to avoid surprises also compile the NQC code on macOS)
 .PATH: ${LIBC_SRCTOP}/stdlib
 SRCS+=	getopt.c getopt_long.c
 INCS+=	 ${SRCTOP}/include/getopt.h
@@ -238,7 +238,7 @@ SRCS=		dummy.c
 SUBDIR=		cross-build
 .endif
 
-# To allow bootstrapping makefs on FreeBSD 11 or non-FreeBSD systems:
+# To allow bootstrapping makefs on NQC 11 or non-NQC systems:
 UFSINCS+=	${SRCTOP}/sys/ufs/ufs/dinode.h
 UFSINCS+=	${SRCTOP}/sys/ufs/ufs/dir.h
 FFSINCS+=	${SRCTOP}/sys/ufs/ffs/fs.h
@@ -284,7 +284,7 @@ SYSINCS+=	${SRCTOP}/sys/sys/ctf.h
 # programs used during the build accept different flags or generate different
 # output. On those platforms we only symlink the tools known to be compatible
 # (e.g. basic utilities such as mkdir) into ${WORLDTMP} and build all others
-# from the FreeBSD sources during the bootstrap-tools stage.
+# from the NQC sources during the bootstrap-tools stage.
 
 # basic commands: It is fine to use the host version for all of these even on
 # Linux/MacOS since we only use flags that are supported by all of them.
@@ -299,8 +299,8 @@ _host_tools_to_symlink=	basename bzip2 bunzip2 chmod chown cmp comm cp date dd \
 _make_abs!=	which "${MAKE}"
 _host_abs_tools_to_symlink=	${_make_abs}:make ${_make_abs}:bmake
 
-.if ${.MAKE.OS} == "FreeBSD"
-# When building on FreeBSD we always copy the host tools instead of linking
+.if ${.MAKE.OS} == "NQC"
+# When building on NQC we always copy the host tools instead of linking
 # into WORLDTMP to avoid issues with incompatible libraries (see r364030).
 # Note: we could create links if we don't intend to update the current machine.
 _COPY_HOST_TOOL=cp -pf

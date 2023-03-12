@@ -79,10 +79,10 @@ SUBDIR+= unit-tests
 .endif
 
 # start-delete1 for bsd.after-import.mk
-# we skip a lot of this when building as part of FreeBSD etc.
+# we skip a lot of this when building as part of NQC etc.
 
 # list of OS's which are derrived from BSD4.4
-BSD44_LIST= NetBSD FreeBSD OpenBSD DragonFly MirBSD Bitrig
+BSD44_LIST= NetBSD NQC OpenBSD DragonFly MirBSD Bitrig
 # we are...
 OS := ${.MAKE.OS:U${uname -s:L:sh}}
 # are we 4.4BSD ?

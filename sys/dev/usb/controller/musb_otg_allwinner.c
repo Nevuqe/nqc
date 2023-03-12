@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2016 Jared McNeill <jmcneill@invisible.ca>
- * Copyright (c) 2018 Andrew Turner <andrew@FreeBSD.org>
+ * Copyright (c) 2018 Andrew Turner <andrew@frebsd.org>
  * All rights reserved.
  *
  * This software was developed by SRI International and the University of

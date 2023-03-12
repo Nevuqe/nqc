@@ -17,7 +17,7 @@ crypto		Test and exercise tools related to the crypto framework
 cxgbetool	A tool for the cxgbe(4) driver.
 cxgbtool	A tool for the cxgb(4) driver.
 drm		Tools specific to the DRM/KMS device drivers.
-editing		Editor modes and the like to help editing FreeBSD code.
+editing		Editor modes and the like to help editing NQC code.
 epfe 		Extract printing filter examples from printing.sgml.
 ether_reflect	An Ethernet packet reflector for low level testing.
 find-sb		Scan a disk for possible filesystem superblocks.

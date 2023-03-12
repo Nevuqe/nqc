@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2004, 2005 Philip Paeps <philip@FreeBSD.org>
+ * Copyright (c) 2004, 2005 Philip Paeps <philip@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@ __NQCID("$NQC$");
  * Currently should support most features, but could use some more testing.
  * Particularly the display-switching stuff is a bit hairy.  If you have an
  * Asus laptop which doesn't appear to be supported, or strange things happen
- * when using this driver, please report to <acpi@FreeBSD.org>.
+ * when using this driver, please report to <acpi@frebsd.org>.
  */
 
 #include "opt_acpi.h"

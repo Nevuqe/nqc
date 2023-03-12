@@ -115,7 +115,7 @@ std::unique_ptr<MipsAbiFlagsSection<ELFT>> MipsAbiFlagsSection<ELFT>::create() {
 
     std::string filename = toString(sec->file);
     const size_t size = sec->rawData.size();
-    // Older version of BFD (such as the default FreeBSD linker) concatenate
+    // Older version of BFD (such as the default NQC linker) concatenate
     // .MIPS.abiflags instead of merging. To allow for this case (or potential
     // zero padding) we ignore everything after the first Elf_Mips_ABIFlags
     if (size < sizeof(Elf_Mips_ABIFlags)) {

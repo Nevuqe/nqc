@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: vm_map_entry_set_vnode_text: wrong object type, ..." seen:
-# https://people.freebsd.org/~pho/stress/log/kostik1205.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1205.txt
 # Fixed by r348701
 
 # Test scenario suggestion by kib@

@@ -34,16 +34,16 @@ h_pass()
 h_fail()
 {
 	echo "Executing command [ $2$1 ]"
-	# Begin FreeBSD
+	# Begin NQC
 	ulimit -c 0
 	if true; then
 		eval $2 atf_check -s signal -o ignore -e ignore $1
 	else
-	# End FreeBSD
+	# End NQC
 	eval $2 atf_check -s signal:6 -o ignore -e ignore $1
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case sprintf
@@ -56,15 +56,15 @@ sprintf_body()
 	prog="$(atf_get_srcdir)/h_sprintf"
 
 	h_pass "$prog ok"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 0123456789ab"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 0123456789"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case vsprintf
@@ -77,15 +77,15 @@ vsprintf_body()
 	prog="$(atf_get_srcdir)/h_vsprintf"
 
 	h_pass "$prog ok"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 0123456789ab"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 0123456789"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case snprintf
@@ -98,15 +98,15 @@ snprintf_body()
 	prog="$(atf_get_srcdir)/h_snprintf"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case vsnprintf
@@ -119,15 +119,15 @@ vsnprintf_body()
 	prog="$(atf_get_srcdir)/h_vsnprintf"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case gets
@@ -140,15 +140,15 @@ gets_body()
 	prog="$(atf_get_srcdir)/h_gets"
 
 	h_pass "$prog" "echo ok |"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog" "echo 0123456789ab |"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog" "echo 0123456789 |"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case fgets
@@ -161,15 +161,15 @@ fgets_body()
 	prog="$(atf_get_srcdir)/h_fgets"
 
 	h_pass "$prog 10" "echo ok |"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13" "echo 0123456789abc |"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11" "echo busted |"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case memcpy
@@ -182,15 +182,15 @@ memcpy_body()
 	prog="$(atf_get_srcdir)/h_memcpy"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case memmove
@@ -203,15 +203,15 @@ memmove_body()
 	prog="$(atf_get_srcdir)/h_memmove"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case memset
@@ -224,15 +224,15 @@ memset_body()
 	prog="$(atf_get_srcdir)/h_memset"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case strcpy
@@ -245,15 +245,15 @@ strcpy_body()
 	prog="$(atf_get_srcdir)/h_strcpy"
 
 	h_pass "$prog 0123456"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 0123456789ab"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 0123456789"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case stpcpy
@@ -266,15 +266,15 @@ stpcpy_body()
 	prog="$(atf_get_srcdir)/h_stpcpy"
 
 	h_pass "$prog 0123456"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 0123456789ab"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 0123456789"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case strcat
@@ -300,15 +300,15 @@ strncpy_body()
 	prog="$(atf_get_srcdir)/h_strncpy"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case stpncpy
@@ -321,15 +321,15 @@ stpncpy_body()
 	prog="$(atf_get_srcdir)/h_stpncpy"
 
 	h_pass "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 13"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 11"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case strncat
@@ -341,16 +341,16 @@ strncat_body()
 {
 	prog="$(atf_get_srcdir)/h_strncat"
 
-	# Begin FreeBSD
+	# Begin NQC
 	h_pass "$prog 8"
 	if true; then
 		h_fail "$prog 11"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 9"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case raw
@@ -361,20 +361,20 @@ raw_head()
 raw_body()
 {
 	prog="$(atf_get_srcdir)/h_raw"
-	# Begin FreeBSD
+	# Begin NQC
 	[ -x $prog ] || atf_skip "$prog is missing; skipping testcase"
-	# End FreeBSD
+	# End NQC
 
 	h_pass "$prog 9"
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_fail "$prog 12"
 	else
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 10"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case read
@@ -386,18 +386,18 @@ read_body()
 {
 	prog="$(atf_get_srcdir)/h_read"
 
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 	MAX_PATH=$(getconf _XOPEN_PATH_MAX) || atf_fail "getconf failed"
 	h_pass "$prog $MAX_PATH" "echo foo |"
 	h_fail "$prog $(( $MAX_PATH + 15 ))" "echo bar |"
 	else
-	# End FreeBSD
+	# End NQC
 	h_pass "$prog 1024" "echo foo |"
 	h_fail "$prog 1025" "echo bar |"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case readlink
@@ -409,17 +409,17 @@ readlink_body()
 {
 	prog="$(atf_get_srcdir)/h_readlink"
 
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		h_pass "$prog 512"
 		h_fail "$prog 523"
 	else
-	# End FreeBSD
+	# End NQC
 	h_pass "$prog 1024"
 	h_fail "$prog 1025"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case getcwd
@@ -432,13 +432,13 @@ getcwd_body()
 	prog="$(atf_get_srcdir)/h_getcwd"
 
 	h_pass "$prog 1024"
-	# Begin FreeBSD
+	# Begin NQC
 	if false; then
-	# End FreeBSD
+	# End NQC
 	h_fail "$prog 1025"
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 atf_init_test_cases()

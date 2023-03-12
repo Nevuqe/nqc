@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: BSD-2-Clause
  *
  * Copyright (c) 2002 Citrus Project,
- * Copyright (c) 2010 Gabor Kovesdan <gabor@FreeBSD.org>,
+ * Copyright (c) 2010 Gabor Kovesdan <gabor@frebsd.org>,
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

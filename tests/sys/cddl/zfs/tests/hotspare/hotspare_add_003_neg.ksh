@@ -126,7 +126,7 @@ while (( i < ${#arg[*]} )); do
 done
 
 #	- a dump device,
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=241070
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=241070
 # When that bug is fixed, add $dump_dev to $arg and remove this block.
 log_must $ZPOOL add $TESTPOOL spare ${dump_dev}
 log_must $ZPOOL remove $TESTPOOL ${dump_dev}

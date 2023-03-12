@@ -6,20 +6,20 @@
 #define __SYSCALLS_H__
 
 /************************************************************
- * FreeBSD
+ * NQC
  ************************************************************/
 #ifdef __NQC__
 
-/* Map umount2 (Linux) syscall to unmount (FreeBSD) syscall */
+/* Map umount2 (Linux) syscall to unmount (NQC) syscall */
 #define umount2(T, F) unmount(T, F)
 
-/* Map sighandler_y (Linux) to sig_t (FreeBSD) */
+/* Map sighandler_y (Linux) to sig_t (NQC) */
 #define sighandler_t sig_t
 
 /* profil(2) has a first argument of char* */
 #define profil_arg1_t char
 
-/* FreeBSD has getdents(2) available */
+/* NQC has getdents(2) available */
 #include <sys/types.h>
 #include <dirent.h>
 inline int getdents_(unsigned int fd, void *dirp, unsigned int count) {
@@ -31,7 +31,7 @@ inline int mincore_(void *addr, size_t length, unsigned char *vec) {
 }
 #define getpid_ getpid
 
-/* Map Linux-style sendfile to FreeBSD sendfile */
+/* Map Linux-style sendfile to NQC sendfile */
 #include <sys/socket.h>
 #include <sys/uio.h>
 inline ssize_t sendfile_(int out_fd, int in_fd, off_t *offset, size_t count) {
@@ -73,7 +73,7 @@ inline int fremovexattr_(int fd, const char *name) {
   return extattr_delete_fd(fd, EXTATTR_NAMESPACE_USER, name);
 }
 
-/* mq_* functions are wrappers in FreeBSD so go through to underlying syscalls */
+/* mq_* functions are wrappers in NQC so go through to underlying syscalls */
 #include <sys/syscall.h>
 extern "C" {
 extern int __sys_kmq_notify(int, const struct sigevent *);
@@ -127,12 +127,12 @@ inline long ptrace_(int request, pid_t pid, void *addr, void *data) {
 #define HAVE_PSELECT
 #define HAVE_SCTP
 
-/* FreeBSD only allows root to call mlock[all]/munlock[all] */
+/* NQC only allows root to call mlock[all]/munlock[all] */
 #define MLOCK_REQUIRES_ROOT 1
-/* FreeBSD effectively only allows root to call sched_setscheduler */
+/* NQC effectively only allows root to call sched_setscheduler */
 #define SCHED_SETSCHEDULER_REQUIRES_ROOT 1
 
-#endif  /* FreeBSD */
+#endif  /* NQC */
 
 /************************************************************
  * Linux

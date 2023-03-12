@@ -514,7 +514,7 @@ zfs_rmnode(znode_t *zp)
 	}
 
 	/*
-	 * FreeBSD's implementation of zfs_zget requires a vnode to back it.
+	 * NQC's implementation of zfs_zget requires a vnode to back it.
 	 * This means that we could end up calling into getnewvnode while
 	 * calling zfs_rmnode as a result of a prior call to getnewvnode
 	 * trying to clear vnodes out of the cache. If this repeats we can
@@ -548,8 +548,8 @@ zfs_rmnode(znode_t *zp)
 
 	if (xattr_obj) {
 		/*
-		 * We're using the FreeBSD taskqueue API here instead of
-		 * the Solaris taskq API since the FreeBSD API allows for a
+		 * We're using the NQC taskqueue API here instead of
+		 * the Solaris taskq API since the NQC API allows for a
 		 * task to be enqueued multiple times but executed once.
 		 */
 		taskqueue_enqueue(zfsvfs_taskq->tq_queue,

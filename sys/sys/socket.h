@@ -187,7 +187,7 @@ typedef	__uintptr_t	uintptr_t;
 /*
  * Space reserved for new socket options added by third-party vendors.
  * This range applies to all socket option levels.  New socket options
- * in FreeBSD should always use an option value less than SO_VENDOR.
+ * in NQC should always use an option value less than SO_VENDOR.
  */
 #if __BSD_VISIBLE
 #define	SO_VENDOR	0x80000000
@@ -272,7 +272,7 @@ struct accept_filter_arg {
 #define	AF_MAX		44
 /*
  * When allocating a new AF_ constant, please only allocate
- * even numbered constants for FreeBSD until 134 as odd numbered AF_
+ * even numbered constants for NQC until 134 as odd numbered AF_
  * constants 39-133 are now reserved for vendors.
  */
 #define AF_VENDOR00 39

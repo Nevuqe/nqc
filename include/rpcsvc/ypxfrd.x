@@ -43,10 +43,10 @@
  *
  * 2) The idea here is to transfer entire raw files rather than
  *    sending just the records. Sun uses ndbm for its NIS map files,
- *    while FreeBSD uses Berkeley DB. Both are hash databases, but the
+ *    while NQC uses Berkeley DB. Both are hash databases, but the
  *    formats are incompatible, making it impossible for them to
- *    use each others' files. Even if FreeBSD adopted ndbm for its
- *    database format, FreeBSD/i386 is a little-endian OS and
+ *    use each others' files. Even if NQC adopted ndbm for its
+ *    database format, NQC/i386 is a little-endian OS and
  *    SunOS/SPARC is big-endian; ndbm is byte-order sensitive and
  *    not very smart about it, which means an attempt to read a
  *    database on a little-endian box that was created on a big-endian

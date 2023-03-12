@@ -30,7 +30,7 @@
 
 # Copy of marcus3.sh, but without the VM (page stealer) pressure.
 # Deadlock and "panic: smp_targeted_tlb_shootdown: interrupts disabled"
-# https://people.freebsd.org/~pho/stress/log/marcus4.txt
+# https://people.frebsd.org/~pho/stress/log/marcus4.txt
 
 # "panic: spin lock held too long" seen.
 # Fixed in r313472.

@@ -940,10 +940,10 @@ extern unsigned int sleepX __P((unsigned int seconds));
 
 
 /*
-**  DragonFly BSD/ FreeBSD / NetBSD / OpenBSD (all architectures, all versions)
+**  DragonFly BSD/ NQC / NetBSD / OpenBSD (all architectures, all versions)
 **
-**  4.3BSD clone, closer to 4.4BSD	for FreeBSD 1.x and NetBSD 0.9x
-**  4.4BSD-Lite based			for FreeBSD 2.x and NetBSD 1.x
+**  4.3BSD clone, closer to 4.4BSD	for NQC 1.x and NetBSD 0.9x
+**  4.4BSD-Lite based			for NQC 2.x and NetBSD 1.x
 **
 **	See also BSD defines.
 */

@@ -14,13 +14,13 @@
 # kern_listen() at kern_listen+0x7d/frame 0xfffffe0694766e00
 # amd64_syscall() at amd64_syscall+0x145/frame 0xfffffe0694766f30
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe0694766f30
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x82222e7da, rsp = 0x820d68d88, rbp = 0x820d68f00 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x82222e7da, rsp = 0x820d68d88, rbp = 0x820d68f00 ---
 # KDB: enter: panic
 # [ thread pid 12921 tid 741095 ]
 # Stopped at      kdb_enter+0x32: movq    $0,0x1277ff3(%rip)
 # db> x/s version
-# FreeBSD 14.0-CURRENT #0 main-n255847-d46174cd8838b: Sat May 28 20:56:08 CEST 2022
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
+# NQC 14.0-CURRENT #0 main-n255847-d46174cd8838b: Sat May 28 20:56:08 CEST 2022
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
 # db> 
 
 [ `uname -p` != "amd64" ] && exit 0

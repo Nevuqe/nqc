@@ -13,7 +13,7 @@ So to make a Linux initrd:
 	-m 256m -nographic \
 	-monitor telnet::4444,server,nowait -serial stdio \
 	-append "console=ttyS0"
-    (though you may need more than 256M of ram to actually boot FreeBSD and do
+    (though you may need more than 256M of ram to actually boot NQC and do
      anything interesting with it and the serial console to stdio bit hasn't
      been the most stable recipe lately).
 

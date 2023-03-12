@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002 Thomas Moestl <tmm@FreeBSD.org>
+ * Copyright (c) 2002 Thomas Moestl <tmm@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,7 +25,7 @@
  *
  * $NQC$
  *
- * Borrowed from FreeBSD's <sys/endian.h>
+ * Borrowed from NQC's <sys/endian.h>
  */
 
 #ifndef ARCHIVE_ENDIAN_H_INCLUDED

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	from: FreeBSD: src/sys/boot/sparc64/loader/metadata.c,v 1.6
+ *	from: NQC: src/sys/boot/sparc64/loader/metadata.c,v 1.6
  */
 
 #include <sys/cdefs.h>

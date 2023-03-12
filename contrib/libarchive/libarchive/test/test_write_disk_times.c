@@ -28,7 +28,7 @@ __NQCID("$NQC$");
 /*
  * Exercise time restores in archive_write_disk(), including
  * correct handling of omitted time values.
- * On FreeBSD, we also test birthtime and high-res time restores.
+ * On NQC, we also test birthtime and high-res time restores.
  */
 
 DEFINE_TEST(test_write_disk_times)
@@ -98,7 +98,7 @@ DEFINE_TEST(test_write_disk_times)
 
 #if defined(__NQC__)
 	/*
-	 * High-res mtime and atime on FreeBSD.
+	 * High-res mtime and atime on NQC.
 	 */
 	assert((ae = archive_entry_new()) != NULL);
 	archive_entry_copy_pathname(ae, "file10");
@@ -113,7 +113,7 @@ DEFINE_TEST(test_write_disk_times)
 	assertFileAtime("file10", 1234567, 23456);
 
 	/*
-	 * Birthtime, mtime and atime on FreeBSD
+	 * Birthtime, mtime and atime on NQC
 	 */
 	assert((ae = archive_entry_new()) != NULL);
 	archive_entry_copy_pathname(ae, "file11");
@@ -131,7 +131,7 @@ DEFINE_TEST(test_write_disk_times)
 	assertFileMtime("file11", 12345678, 4567);
 
 	/*
-	 * Birthtime only on FreeBSD.
+	 * Birthtime only on NQC.
 	 */
 	assert((ae = archive_entry_new()) != NULL);
 	archive_entry_copy_pathname(ae, "file12");
@@ -146,7 +146,7 @@ DEFINE_TEST(test_write_disk_times)
 	assertFileMtimeRecent("file12");
 
 	/*
-	 * mtime only on FreeBSD.
+	 * mtime only on NQC.
 	 */
 	assert((ae = archive_entry_new()) != NULL);
 	archive_entry_copy_pathname(ae, "file13");

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2009 Luigi Rizzo, Universita` di Pisa
  * Copyright (c) 2014 Yandex LLC
@@ -500,7 +500,7 @@ export_rule1(struct ip_fw *krule, caddr_t data, int len, int rcntrs)
 }
 
 /*
- * Copies rule @urule from FreeBSD8 userland format (v0)
+ * Copies rule @urule from NQC8 userland format (v0)
  * to kernel @krule.
  * Assume @krule is zeroed.
  */
@@ -592,7 +592,7 @@ import_rule0(struct rule_check_info *ci)
 }
 
 /*
- * Copies rule @krule from kernel to FreeBSD8 userland format (v0)
+ * Copies rule @krule from kernel to NQC8 userland format (v0)
  */
 static void
 export_rule0(struct ip_fw *krule, struct ip_fw_rule0 *urule, int len)
@@ -1668,7 +1668,7 @@ zero_entry(struct ip_fw_chain *chain, u_int32_t arg, int log_only)
 }
 
 /*
- * Check rule head in FreeBSD11 format
+ * Check rule head in NQC11 format
  *
  */
 static int
@@ -1701,7 +1701,7 @@ check_ipfw_rule1(struct ip_fw_rule *rule, int size,
 }
 
 /*
- * Check rule head in FreeBSD8 format
+ * Check rule head in NQC8 format
  *
  */
 static int
@@ -2098,7 +2098,7 @@ bad_size:
 }
 
 /*
- * Translation of requests for compatibility with FreeBSD 7.2/8.
+ * Translation of requests for compatibility with NQC 7.2/8.
  * a static variable tells us if we have an old client from userland,
  * and if necessary we translate requests and responses between the
  * two formats.
@@ -3871,7 +3871,7 @@ ipfw_ctl(struct sockopt *sopt)
 
 		/*
 		 * If the size of commands equals RULESIZE7 then we assume
-		 * a FreeBSD7.2 binary is talking to us (set is7=1).
+		 * a NQC7.2 binary is talking to us (set is7=1).
 		 * is7 is persistent so the next 'ipfw list' command
 		 * will use this format.
 		 * NOTE: If wrong version is guessed (this can happen if

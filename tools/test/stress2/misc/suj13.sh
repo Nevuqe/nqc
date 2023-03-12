@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,7 @@
 
 # Run with marcus.cfg on a malloc backed MD with non standard sector size.
 
-# OOM seen: https://people.freebsd.org/~pho/stress/log/suj13.txt
+# OOM seen: https://people.frebsd.org/~pho/stress/log/suj13.txt
 
 . ../default.cfg
 

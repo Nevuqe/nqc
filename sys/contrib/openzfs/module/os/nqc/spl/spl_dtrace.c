@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 The FreeBSD Project.
+ * Copyright 2014 The FreBSD Project.
  * All rights reserved.
  *
  * This software was developed by Steven Hartland.

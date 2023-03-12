@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # "panic: smp_tlb_shootdown: interrupts disabled" seen.
-# http://people.freebsd.org/~pho/stress/log/freebsd4_sigreturn.txt
+# http://people.frebsd.org/~pho/stress/log/freebsd4_sigreturn.txt
 # Fixed in r251033.
 
 . ../default.cfg

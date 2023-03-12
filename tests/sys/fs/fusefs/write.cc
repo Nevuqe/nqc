@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -233,7 +233,7 @@ void sigxfsz_handler(int __unused sig) {
 }
 
 /* AIO writes need to set the header's pid field correctly */
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236379 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236379 */
 TEST_F(AioWrite, DISABLED_aio_write)
 {
 	const char FULLPATH[] = "mountpoint/some_file.txt";
@@ -464,7 +464,7 @@ TEST_F(Write, indirect_io_long_write)
 /*
  * Don't crash if the server returns a write that can't be represented as a
  * signed 32 bit number.  Regression test for
- * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263263
+ * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263263
  */
 TEST_F(Write, indirect_io_very_long_write)
 {
@@ -582,7 +582,7 @@ TEST_P(WriteRlimitFsize, rlimit_fsize)
 /*
  * When crossing the RLIMIT_FSIZE boundary, writes should be truncated, not
  * aborted.
- * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=164793
+ * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=164793
  */
 TEST_P(WriteRlimitFsize, rlimit_fsize_truncate)
 {
@@ -653,7 +653,7 @@ TEST_F(Write, eof_during_rmw)
 /*
  * VOP_STRATEGY should not query the server for the file's size, even if its
  * cached attributes have expired.
- * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=256937
+ * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=256937
  */
 TEST_P(WriteEofDuringVnopStrategy, eof_during_vop_strategy)
 {
@@ -732,7 +732,7 @@ INSTANTIATE_TEST_CASE_P(W, WriteEofDuringVnopStrategy,
  * If the kernel cannot be sure which uid, gid, or pid was responsible for a
  * write, then it must set the FUSE_WRITE_CACHE bit
  */
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236378 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236378 */
 TEST_F(Write, mmap)
 {
 	const char FULLPATH[] = "mountpoint/some_file.txt";
@@ -1009,7 +1009,7 @@ TEST_F(WriteCluster, clustering)
  */
 /*
  * Regression test for bug 238585
- * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=238565
+ * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=238565
  */
 TEST_F(WriteCluster, cluster_write_err)
 {
@@ -1170,7 +1170,7 @@ TEST_F(WriteBack, direct_io)
  * still use the cache, though.
  *
  * Regression test for bug 247276
- * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=247276
+ * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=247276
  */
 TEST_F(WriteBack, mmap_direct_io)
 {

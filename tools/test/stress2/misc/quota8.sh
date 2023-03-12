@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 
 # "Fatal double fault" seen when compiling selected files
 # with "-O0" on i386:
-# https://people.freebsd.org/~pho/stress/log/quota8.txt
+# https://people.frebsd.org/~pho/stress/log/quota8.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ "`sysctl -in kern.features.ufs_quota`" != "1" ] && exit 0

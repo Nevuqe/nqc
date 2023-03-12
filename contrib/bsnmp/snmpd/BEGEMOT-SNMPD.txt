@@ -7,7 +7,7 @@
 --	Hartmut Brandt.
 --	All rights reserved.
 --
--- Author: Harti Brandt <harti@freebsd.org>
+-- Author: Harti Brandt <harti@frebsd.org>
 --
 -- Redistribution and use in source and binary forms, with or without
 -- modification, are permitted provided that the following conditions
@@ -60,7 +60,7 @@ begemotSnmpd MODULE-IDENTITY
 
 	     Fax:	+49 30 3463 7352
 
-	     E-mail:	harti@freebsd.org"
+	     E-mail:	harti@frebsd.org"
     DESCRIPTION
 	    "The MIB module for the Begemot SNMP daemon."
     REVISION	"201808080000Z"
@@ -87,10 +87,10 @@ SectionName ::= TEXTUAL-CONVENTION
 --
 begemotSnmpdAgent	OBJECT IDENTIFIER ::= { begemotSnmpdDefs 1 }
 
-begemotSnmpdAgentFreeBSD OBJECT-IDENTITY
+begemotSnmpdAgentNQC OBJECT-IDENTITY
     STATUS	current
     DESCRIPTION
-	    "Identifies the agent as running on FreeBSD."
+	    "Identifies the agent as running on NQC."
     ::= { begemotSnmpdAgent 1 }
 
 -- --------------------------------------------------------------------------

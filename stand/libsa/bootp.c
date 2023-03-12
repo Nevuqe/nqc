@@ -109,7 +109,7 @@ bootp_fill_request(unsigned char *bp_vend)
 	bp_vend[12] = 8;
 	/* len of the first user class */
 	bp_vend[13] = 7;
-	bcopy("FreeBSD", &bp_vend[14], 7);
+	bcopy("NQC", &bp_vend[14], 7);
 	bp_vend[21] = TAG_PARAM_REQ;
 	bp_vend[22] = 7;
 	bp_vend[23] = TAG_ROOTPATH;
@@ -494,8 +494,8 @@ struct dhcp_opt {
 };
 
 static struct dhcp_opt vndr_opt[] = { /* Vendor Specific Options */
-#if DHCP_ENV == DHCP_ENV_NQC /* FreeBSD table in the original code */
-	{0,	0,	"FreeBSD"},		/* prefix */
+#if DHCP_ENV == DHCP_ENV_NQC /* NQC table in the original code */
+	{0,	0,	"NQC"},		/* prefix */
 	{1,	__TXT,	"kernel"},
 	{2,	__TXT,	"kernelname"},
 	{3,	__TXT,	"kernel_options"},

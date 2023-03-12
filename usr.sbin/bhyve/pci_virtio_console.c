@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2016 iXsystems Inc.
  * All rights reserved.
  *
- * This software was developed by Jakub Klama <jceel@FreeBSD.org>
+ * This software was developed by Jakub Klama <jceel@frebsd.org>
  * under sponsorship from iXsystems Inc.
  *
  * Redistribution and use in source and binary forms, with or without

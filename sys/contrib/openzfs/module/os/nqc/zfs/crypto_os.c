@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2005-2010 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2005-2010 Pawel Jakub Dawidek <pjd@frebsd.org>
  * Copyright (c) 2018 Sean Eric Fagan <sef@ixsystems.com>
  * All rights reserved.
  *
@@ -311,7 +311,7 @@ nqc_crypt_newsession(nqc_crypt_session_t *sessp,
 	}
 
 	/*
-	 * Disable the use of hardware drivers on FreeBSD 13 and later since
+	 * Disable the use of hardware drivers on NQC 13 and later since
 	 * common crypto offload drivers impose constraints on AES-GCM AAD
 	 * lengths that make them unusable for ZFS, and we currently do not have
 	 * a mechanism to fall back to a software driver for requests not
@@ -322,7 +322,7 @@ nqc_crypt_newsession(nqc_crypt_session_t *sessp,
 	 * hardware drivers.
 	 */
 	error = crypto_newsession(&sessp->fs_sid, &csp, CRYPTOCAP_F_SOFTWARE);
-	mtx_init(&sessp->fs_lock, "FreeBSD Cryptographic Session Lock",
+	mtx_init(&sessp->fs_lock, "NQC Cryptographic Session Lock",
 	    NULL, MTX_DEF);
 	crypt_sessions++;
 bad:
@@ -487,7 +487,7 @@ nqc_crypt_newsession(nqc_crypt_session_t *sessp,
 		goto bad;
 	}
 	sessp->fs_sid = sid;
-	mtx_init(&sessp->fs_lock, "FreeBSD Cryptographic Session Lock",
+	mtx_init(&sessp->fs_lock, "NQC Cryptographic Session Lock",
 	    NULL, MTX_DEF);
 	crypt_sessions++;
 bad:

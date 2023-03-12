@@ -27,8 +27,8 @@
 #
 
 # Out of VM deadlock seen. Introduced by r285808.
-# https://people.freebsd.org/~pho/stress/log/oovm.txt
-# https://people.freebsd.org/~pho/stress/log/oovm-2.txt
+# https://people.frebsd.org/~pho/stress/log/oovm.txt
+# https://people.frebsd.org/~pho/stress/log/oovm-2.txt
 
 # Fixed by r290047 and <alc's PQ_LAUNDRY patch>
 

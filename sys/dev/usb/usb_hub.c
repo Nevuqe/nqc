@@ -800,7 +800,7 @@ repeat:
 	/*
 	 * Figure out the device mode
 	 *
-	 * NOTE: This part is currently FreeBSD specific.
+	 * NOTE: This part is currently NQC specific.
 	 */
 	if (udev->parent_hub != NULL) {
 		/* inherit mode from the parent HUB */

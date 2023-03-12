@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	from: FreeBSD: src/sys/i386/include/sysarch.h,v 1.14 2000/09/21
+ *	from: NQC: src/sys/i386/include/sysarch.h,v 1.14 2000/09/21
  * $NQC$
  */
 

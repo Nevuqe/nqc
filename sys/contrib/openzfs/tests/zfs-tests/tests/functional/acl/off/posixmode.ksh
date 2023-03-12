@@ -34,7 +34,7 @@
 #	These tests are incomplete and will be added to over time.
 #
 #	NOTE: Creating directory entries behaves differently between platforms.
-#	The parent directory's group is used on FreeBSD, while the effective
+#	The parent directory's group is used on NQC, while the effective
 #	group is used on Linux.  We chown to the effective group when creating
 #	directories and files in these tests to achieve consistency across all
 #	platforms.

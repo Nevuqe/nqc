@@ -9,8 +9,8 @@
 # 1) The test is broken (usually because it assumes it's running on Solaris and
 #    the test encodes some sort of Solarisism).
 # 2) The functionality being tested is buggy (often but not always the result
-#    of a FreeBSD-specific bug).
-# 3) The test relies on DTrace functionality that's not yet available in FreeBSD
+#    of a NQC-specific bug).
+# 3) The test relies on DTrace functionality that's not yet available in NQC
 #    (e.g. tests for a specific SDT provider that we don't have).
 #
 # An end goal is to remove this file, concentrating first on instances of
@@ -129,7 +129,7 @@ exclude EXFAIL common/usdt/tst.andpid.ksh
 # Depends on java.
 exclude SKIP common/drops/drp.DTRACEDROP_STKSTROVERFLOW.d
 
-# Interrupt priority isn't relevant on FreeBSD.
+# Interrupt priority isn't relevant on NQC.
 exclude SKIP common/builtinvar/tst.ipl.d
 exclude SKIP common/builtinvar/tst.ipl1.d
 
@@ -160,7 +160,7 @@ exclude EXFAIL common/pid/tst.provregex4.ksh
 exclude EXFAIL common/pragma/err.invalidlibdep.ksh
 
 # This test checks for a leading tab on a line before #define. That is illegal
-# on Solaris, but the clang pre-processor on FreeBSD is happy with code like
+# on Solaris, but the clang pre-processor on NQC is happy with code like
 # that.
 exclude EXFAIL common/preprocessor/err.D_PRAGCTL_INVAL.tabdefine.d
 
@@ -177,7 +177,7 @@ exclude SKIP common/safety/tst.rw.d
 # Depends on some implementation details of the runtime linker.
 exclude EXFAIL common/vars/tst.ucaller.ksh
 
-# These rely on process attributes that FreeBSD doesn't carry.
+# These rely on process attributes that NQC doesn't carry.
 exclude EXFAIL common/scripting/tst.projid.ksh
 exclude EXFAIL common/scripting/tst.taskid.ksh
 
@@ -209,5 +209,5 @@ exclude EXFAIL common/usdt/tst.user.ksh
 # Triggers a lock assertion by using the raise() action from a profile probe.
 exclude SKIP common/ustack/tst.spin.ksh
 
-# https://bugs.freebsd.org/237641
+# https://bugs.frebsd.org/237641
 exclude SKIPCI common/misc/tst.dynopt.d

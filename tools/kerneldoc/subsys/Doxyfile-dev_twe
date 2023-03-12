@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel TWE device code"
+PROJECT_NAME           = "NQC kernel TWE device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_twe/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

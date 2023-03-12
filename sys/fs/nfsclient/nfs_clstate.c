@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Rick Macklem, University of Guelph
  * All rights reserved.
@@ -2042,10 +2042,10 @@ nfscl_umount(struct nfsmount *nmp, NFSPROC_T *p, struct nfscldeleghead *dhp)
 	 * mutex for NFSLOCKCLSTATE(), so it is "m" for the following
 	 * explanation, courtesy of Alan Cox.
 	 * What follows is a snippet from Alan Cox's email at:
-	 * https://docs.FreeBSD.org/cgi/mid.cgi?BANLkTikR3d65zPHo9==08ZfJ2vmqZucEvw
+	 * https://docs.frebsd.org/cgi/mid.cgi?BANLkTikR3d65zPHo9==08ZfJ2vmqZucEvw
 	 * 
 	 * 1. Set MNTK_UNMOUNTF
-	 * 2. Acquire a standard FreeBSD mutex "m".
+	 * 2. Acquire a standard NQC mutex "m".
 	 * 3. Update some data structures.
 	 * 4. Release mutex "m".
 	 * 

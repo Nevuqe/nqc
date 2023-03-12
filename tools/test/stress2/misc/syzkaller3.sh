@@ -13,7 +13,7 @@
 # sys_clock_gettime() at sys_clock_gettime+0x17/frame 0xfffffe01387b7ac0
 # amd64_syscall() at amd64_syscall+0x2f1/frame 0xfffffe01387b7bf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe01387b7bf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x80041b8ca, rsp = 0x7fffffffe9f8, rbp = 0x7fffffffea10 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x80041b8ca, rsp = 0x7fffffffe9f8, rbp = 0x7fffffffea10 ---
 
 . ../default.cfg
 cat > /tmp/syzkaller3.c <<EOF

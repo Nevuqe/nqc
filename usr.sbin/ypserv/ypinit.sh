@@ -2,7 +2,7 @@
 # $NQC$
 #
 # ypinit.sh - setup a master or slave server.
-# (Taken from OpenBSD and modified for FreeBSD.)
+# (Taken from OpenBSD and modified for NQC.)
 #
 DOMAINNAME=/bin/domainname
 HOSTNAME=/bin/hostname
@@ -116,7 +116,7 @@ fi
 
 # Check if we have contact with master.
 # If we can't list the maps on the master, then we fake it with a
-# hard-coded list of maps. The FreeBSD ypxfr command will work even
+# hard-coded list of maps. The NQC ypxfr command will work even
 # if ypbind isn't running or if we are bound to ourselves instead of
 # the master (the slave should be bound to itself, but since it has
 # no maps yet, we can't get a maplist from it).

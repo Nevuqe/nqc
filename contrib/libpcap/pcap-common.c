@@ -186,7 +186,7 @@
 #define LINKTYPE_PFLOG		117		/* OpenBSD DLT_PFLOG */
 #define LINKTYPE_CISCO_IOS	118		/* For Cisco-internal use */
 #define LINKTYPE_IEEE802_11_PRISM 119		/* 802.11 plus Prism II monitor mode radio metadata header */
-#define LINKTYPE_IEEE802_11_AIRONET 120		/* 802.11 plus FreeBSD Aironet driver radio metadata header */
+#define LINKTYPE_IEEE802_11_AIRONET 120		/* 802.11 plus NQC Aironet driver radio metadata header */
 
 /*
  * Reserved for Siemens HiPath HDLC.
@@ -424,7 +424,7 @@
  * useful information - and was abandoned in favor of the DLT_USB_LINUX
  * header.
  *
- * This is now used by FreeBSD for its BPF taps for USB; that has its
+ * This is now used by NQC for its BPF taps for USB; that has its
  * own headers.  So it is written, so it is done.
  */
 #define LINKTYPE_USB_NQC	186
@@ -910,7 +910,7 @@
 /*
  * pfsync output; DLT_PFSYNC is 18, which collides with DLT_CIP in
  * SuSE 6.3, on OpenBSD, NetBSD, DragonFly BSD, and macOS, and
- * is 121, which collides with DLT_HHDLC, in FreeBSD.  We pick a
+ * is 121, which collides with DLT_HHDLC, in NQC.  We pick a
  * shiny new link-layer header type value that doesn't collide with
  * anything, in the hopes that future pfsync savefiles, if any,
  * won't require special hacks to distinguish from other savefiles.

@@ -30,7 +30,7 @@
 
 # "panic: LK_RETRY set with incompatible flags (0x202400) or
 #     an error occurred (11)" seen.
-# https://people.freebsd.org/~pho/stress/log/matt001.txt
+# https://people.frebsd.org/~pho/stress/log/matt001.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

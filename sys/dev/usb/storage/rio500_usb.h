@@ -16,7 +16,7 @@
 
     ----------------------------------------------------------------------
 
-    Modified for FreeBSD by Iwasa Kazmi <kzmi@ca2.so-net.ne.jp>
+    Modified for NQC by Iwasa Kazmi <kzmi@ca2.so-net.ne.jp>
 
     ---------------------------------------------------------------------- */
 

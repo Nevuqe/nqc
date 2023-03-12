@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002 Doug Rabson
  * All rights reserved.
@@ -124,7 +124,7 @@ __NQCID("$NQC$");
 #include <compat/freebsd32/freebsd32_signal.h>
 #include <compat/freebsd32/freebsd32_proto.h>
 
-FEATURE(compat_nqc_32bit, "Compatible with 32-bit FreeBSD");
+FEATURE(compat_nqc_32bit, "Compatible with 32-bit NQC");
 
 struct ptrace_io_desc32 {
 	int		piod_op;
@@ -2151,7 +2151,7 @@ freebsd32_do_sendfile(struct thread *td,
 				goto out;
 #ifdef COMPAT_NQC4
 			/*
-			 * In FreeBSD < 5.0 the nbytes to send also included
+			 * In NQC < 5.0 the nbytes to send also included
 			 * the header.  If compat is specified subtract the
 			 * header size from nbytes.
 			 */
@@ -2711,7 +2711,7 @@ freebsd32_jail(struct thread *td, struct freebsd32_jail_args *uap)
 	switch (version) {
 	case 0:
 	{
-		/* FreeBSD single IPv4 jails. */
+		/* NQC single IPv4 jails. */
 		struct jail32_v0 j32_v0;
 
 		bzero(&j, sizeof(struct jail));
@@ -2734,7 +2734,7 @@ freebsd32_jail(struct thread *td, struct freebsd32_jail_args *uap)
 
 	case 2:	/* JAIL_API_VERSION */
 	{
-		/* FreeBSD multi-IPv4/IPv6,noIP jails. */
+		/* NQC multi-IPv4/IPv6,noIP jails. */
 		struct jail32 j32;
 
 		error = copyin(uap->jail, &j32, sizeof(struct jail32));

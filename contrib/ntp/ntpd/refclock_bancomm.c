@@ -34,7 +34,7 @@
  *		where u is the id (usually 0) of the entry in /dev (/dev/stfp0)
  *	
  *		and M is one of the following modes: 
- *		1		: FreeBSD PCI 635/637.
+ *		1		: NQC PCI 635/637.
  *		2		: Linux or Windows PCI 635/637.
  *		3		: Solaris PCI 635/637
  *		not specified, or other number: 

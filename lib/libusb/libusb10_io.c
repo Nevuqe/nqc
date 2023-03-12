@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Sylvestre Gallon. All rights reserved.
  *

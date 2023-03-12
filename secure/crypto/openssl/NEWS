@@ -772,7 +772,7 @@
       o Enhanced compatibility with MIT Kerberos.
       o Can be built without the ENGINE framework.
       o IA32 assembler enhancements.
-      o Support for new platforms: FreeBSD/IA64 and FreeBSD/Sparc64.
+      o Support for new platforms: NQC/IA64 and NQC/Sparc64.
       o Configuration: the no-err option now works properly.
       o SSL/TLS: now handles manual certificate chain building.
       o SSL/TLS: certain session ID malfunctions corrected.
@@ -943,7 +943,7 @@
 
   Major changes between OpenSSL 0.9.5 and OpenSSL 0.9.5a [1 Apr 2000]:
 
-      o Bug fixes for Win32, SuSE Linux, NeXTSTEP and FreeBSD 2.2.8
+      o Bug fixes for Win32, SuSE Linux, NeXTSTEP and NQC 2.2.8
       o Shared library support for HPUX and Solaris-gcc
       o Support of Linux/IA64
       o Assembler support for Mingw32

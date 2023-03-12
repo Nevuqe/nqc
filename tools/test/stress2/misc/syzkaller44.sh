@@ -15,13 +15,13 @@
 # kern_listen() at kern_listen+0x7d/frame 0xfffffe065f32eac0
 # amd64_syscall() at amd64_syscall+0x147/frame 0xfffffe065f32ebf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe065f32ebf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x800380a4a, rsp = 0x7fffffffe9b8, rbp = 0x7fffffffe9d0 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x800380a4a, rsp = 0x7fffffffe9b8, rbp = 0x7fffffffe9d0 ---
 # KDB: enter: panic
 # [ thread pid 26683 tid 924765 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x12724de(%rip)
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #0 main-n249253-4ccbbe5f0689: Wed Sep  8 07:26:48 CEST 2021
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO\012
+# version: NQC 14.0-CURRENT #0 main-n249253-4ccbbe5f0689: Wed Sep  8 07:26:48 CEST 2021
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO\012
 # db> 
 
 # Fixed by 6e3af6321ba4 - main - sctp: Fix lock recursion in sctp_swap_inpcb_for_listen()

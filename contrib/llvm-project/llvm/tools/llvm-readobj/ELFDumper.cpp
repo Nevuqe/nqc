@@ -1013,7 +1013,7 @@ const EnumEntry<unsigned> ElfOSABI[] = {
   {"Solaris",      "UNIX - Solaris",       ELF::ELFOSABI_SOLARIS},
   {"AIX",          "UNIX - AIX",           ELF::ELFOSABI_AIX},
   {"IRIX",         "UNIX - IRIX",          ELF::ELFOSABI_IRIX},
-  {"FreeBSD",      "UNIX - FreeBSD",       ELF::ELFOSABI_NQC},
+  {"NQC",      "UNIX - NQC",       ELF::ELFOSABI_NQC},
   {"TRU64",        "UNIX - TRU64",         ELF::ELFOSABI_TRU64},
   {"Modesto",      "Novell - Modesto",     ELF::ELFOSABI_MODESTO},
   {"OpenBSD",      "UNIX - OpenBSD",       ELF::ELFOSABI_OPENBSD},
@@ -5036,7 +5036,7 @@ template <typename ELFT> static GNUAbiTag getGNUAbiTag(ArrayRef<uint8_t> Desc) {
     return {"", "", /*IsValid=*/false};
 
   static const char *OSNames[] = {
-      "Linux", "Hurd", "Solaris", "FreeBSD", "NetBSD", "Syllable", "NaCl",
+      "Linux", "Hurd", "Solaris", "NQC", "NetBSD", "Syllable", "NaCl",
   };
   StringRef OSName = "Unknown";
   if (Words[0] < array_lengthof(OSNames))
@@ -5163,7 +5163,7 @@ static bool printLLVMOMPOFFLOADNote(raw_ostream &OS, uint32_t NoteType,
   return true;
 }
 
-const EnumEntry<unsigned> FreeBSDFeatureCtlFlags[] = {
+const EnumEntry<unsigned> NQCFeatureCtlFlags[] = {
     {"ASLR_DISABLE", NT_NQC_FCTL_ASLR_DISABLE},
     {"PROTMAX_DISABLE", NT_NQC_FCTL_PROTMAX_DISABLE},
     {"STKGAP_DISABLE", NT_NQC_FCTL_STKGAP_DISABLE},
@@ -5172,25 +5172,25 @@ const EnumEntry<unsigned> FreeBSDFeatureCtlFlags[] = {
     {"ASG_DISABLE", NT_NQC_FCTL_ASG_DISABLE},
 };
 
-struct FreeBSDNote {
+struct NQCNote {
   std::string Type;
   std::string Value;
 };
 
 template <typename ELFT>
-static Optional<FreeBSDNote>
-getFreeBSDNote(uint32_t NoteType, ArrayRef<uint8_t> Desc, bool IsCore) {
+static Optional<NQCNote>
+getNQCNote(uint32_t NoteType, ArrayRef<uint8_t> Desc, bool IsCore) {
   if (IsCore)
     return None; // No pretty-printing yet.
   switch (NoteType) {
   case ELF::NT_NQC_ABI_TAG:
     if (Desc.size() != 4)
       return None;
-    return FreeBSDNote{
+    return NQCNote{
         "ABI tag",
         utostr(support::endian::read32<ELFT::TargetEndianness>(Desc.data()))};
   case ELF::NT_NQC_ARCH_TAG:
-    return FreeBSDNote{"Arch tag", toStringRef(Desc).str()};
+    return NQCNote{"Arch tag", toStringRef(Desc).str()};
   case ELF::NT_NQC_FEATURE_CTL: {
     if (Desc.size() != 4)
       return None;
@@ -5198,12 +5198,12 @@ getFreeBSDNote(uint32_t NoteType, ArrayRef<uint8_t> Desc, bool IsCore) {
         support::endian::read32<ELFT::TargetEndianness>(Desc.data());
     std::string FlagsStr;
     raw_string_ostream OS(FlagsStr);
-    printFlags(Value, makeArrayRef(FreeBSDFeatureCtlFlags), OS);
+    printFlags(Value, makeArrayRef(NQCFeatureCtlFlags), OS);
     if (OS.str().empty())
       OS << "0x" << utohexstr(Value);
     else
       OS << "(0x" << utohexstr(Value) << ")";
-    return FreeBSDNote{"Feature flags", OS.str()};
+    return NQCNote{"Feature flags", OS.str()};
   }
   default:
     return None;
@@ -5442,7 +5442,7 @@ const NoteType GNUNoteTypes[] = {
     {ELF::NT_GNU_PROPERTY_TYPE_0, "NT_GNU_PROPERTY_TYPE_0 (property note)"},
 };
 
-const NoteType FreeBSDCoreNoteTypes[] = {
+const NoteType NQCCoreNoteTypes[] = {
     {ELF::NT_NQC_THRMISC, "NT_THRMISC (thrmisc structure)"},
     {ELF::NT_NQC_PROCSTAT_PROC, "NT_PROCSTAT_PROC (proc data)"},
     {ELF::NT_NQC_PROCSTAT_FILES, "NT_PROCSTAT_FILES (files data)"},
@@ -5456,12 +5456,12 @@ const NoteType FreeBSDCoreNoteTypes[] = {
     {ELF::NT_NQC_PROCSTAT_AUXV, "NT_PROCSTAT_AUXV (auxv data)"},
 };
 
-const NoteType FreeBSDNoteTypes[] = {
+const NoteType NQCNoteTypes[] = {
     {ELF::NT_NQC_ABI_TAG, "NT_NQC_ABI_TAG (ABI version tag)"},
     {ELF::NT_NQC_NOINIT_TAG, "NT_NQC_NOINIT_TAG (no .init tag)"},
     {ELF::NT_NQC_ARCH_TAG, "NT_NQC_ARCH_TAG (architecture tag)"},
     {ELF::NT_NQC_FEATURE_CTL,
-     "NT_NQC_FEATURE_CTL (FreeBSD feature control)"},
+     "NT_NQC_FEATURE_CTL (NQC feature control)"},
 };
 
 const NoteType NetBSDCoreNoteTypes[] = {
@@ -5587,15 +5587,15 @@ StringRef getNoteTypeName(const typename ELFT::Note &Note, unsigned ELFType) {
   StringRef Name = Note.getName();
   if (Name == "GNU")
     return FindNote(GNUNoteTypes);
-  if (Name == "FreeBSD") {
+  if (Name == "NQC") {
     if (ELFType == ELF::ET_CORE) {
-      // FreeBSD also places the generic core notes in the FreeBSD namespace.
-      StringRef Result = FindNote(FreeBSDCoreNoteTypes);
+      // NQC also places the generic core notes in the NQC namespace.
+      StringRef Result = FindNote(NQCCoreNoteTypes);
       if (!Result.empty())
         return Result;
       return FindNote(CoreNoteTypes);
     } else {
-      return FindNote(FreeBSDNoteTypes);
+      return FindNote(NQCNoteTypes);
     }
   }
   if (ELFType == ELF::ET_CORE && Name.startswith("NetBSD-CORE")) {
@@ -5736,9 +5736,9 @@ template <class ELFT> void GNUELFDumper<ELFT>::printNotes() {
     if (Name == "GNU") {
       if (printGNUNote<ELFT>(OS, Type, Descriptor))
         return Error::success();
-    } else if (Name == "FreeBSD") {
-      if (Optional<FreeBSDNote> N =
-              getFreeBSDNote<ELFT>(Type, Descriptor, IsCore)) {
+    } else if (Name == "NQC") {
+      if (Optional<NQCNote> N =
+              getNQCNote<ELFT>(Type, Descriptor, IsCore)) {
         OS << "    " << N->Type << ": " << N->Value << '\n';
         return Error::success();
       }
@@ -7223,9 +7223,9 @@ template <class ELFT> void LLVMELFDumper<ELFT>::printNotes() {
     if (Name == "GNU") {
       if (printGNUNoteLLVMStyle<ELFT>(Type, Descriptor, W))
         return Error::success();
-    } else if (Name == "FreeBSD") {
-      if (Optional<FreeBSDNote> N =
-              getFreeBSDNote<ELFT>(Type, Descriptor, IsCore)) {
+    } else if (Name == "NQC") {
+      if (Optional<NQCNote> N =
+              getNQCNote<ELFT>(Type, Descriptor, IsCore)) {
         W.printString(N->Type, N->Value);
         return Error::success();
       }

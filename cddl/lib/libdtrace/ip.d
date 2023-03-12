@@ -22,7 +22,7 @@
  */
 /*
  * Copyright (c) 2007, 2010, Oracle and/or its affiliates. All rights reserved.
- * Copyright (c) 2013 Mark Johnston <markj@freebsd.org>
+ * Copyright (c) 2013 Mark Johnston <markj@frebsd.org>
  */
 
 #pragma D depends_on module kernel

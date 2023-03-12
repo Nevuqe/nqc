@@ -1,11 +1,11 @@
 /*-
  * Copyright (c) 2014 EMC Corp.
  * Author: Conrad Meyer <conrad.meyer@isilon.com>
- * Copyright (c) 2015 The FreeBSD Foundation.
+ * Copyright (c) 2015 The FreBSD Foundation.
  * All rights reserved.
  *
  * Portions of this software were developed by Andrew Turner
- * under sponsorship from the FreeBSD Foundation
+ * under sponsorship from the FreBSD Foundation
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

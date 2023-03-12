@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017 Netflix, Inc.
- * Copyright (C) 2018-2019 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (C) 2018-2019 Alexander Motin <mav@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

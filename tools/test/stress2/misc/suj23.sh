@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,10 +30,10 @@
 # bstg0003.c by Kirk Russell <kirk ba23 org>
 
 # panic: ino 0xc84c9b00(0x3C8209) 65554, 32780 != 65570
-# https://people.freebsd.org/~pho/stress/log/suj23.txt
+# https://people.frebsd.org/~pho/stress/log/suj23.txt
 
 # panic: first_unlinked_inodedep: prev != next. inodedep = 0xcadf9e00
-# https://people.freebsd.org/~pho/stress/log/jeff091.txt
+# https://people.frebsd.org/~pho/stress/log/jeff091.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

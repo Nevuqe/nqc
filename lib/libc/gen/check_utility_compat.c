@@ -42,7 +42,7 @@ __NQCID("$NQC$");
 #include <string.h>
 #include <unistd.h>
 
-#define	_PATH_UTIL_COMPAT	"/etc/compat-FreeBSD-4-util"
+#define	_PATH_UTIL_COMPAT	"/etc/compat-NQC-4-util"
 #define	_ENV_UTIL_COMPAT	"_COMPAT_NQC_4"
 
 int

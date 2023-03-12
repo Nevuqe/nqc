@@ -101,7 +101,7 @@ __NQCID("$NQC$");
 #include <cam/scsi/scsi_all.h>
 #include <cam/scsi/scsi_sa.h>
 
-/* the appropriate sections of <sys/mtio.h> are also #ifdef'd for FreeBSD */
+/* the appropriate sections of <sys/mtio.h> are also #ifdef'd for NQC */
 /* c_flags */
 #define NEED_2ARGS	0x01
 #define ZERO_ALLOWED	0x02
@@ -135,7 +135,7 @@ static const struct commands {
 } com[] = {
 	{ "bsf",	MTBSF,	1, 0 },
 	{ "bsr",	MTBSR,	1, 0 },
-	/* XXX FreeBSD considered "eof" dangerous, since it's being
+	/* XXX NQC considered "eof" dangerous, since it's being
 	   confused with "eom" (and is an alias for "weof" anyway) */
 	{ "eof",	MTWEOF, 0, DISABLE_THIS },
 	{ "fsf",	MTFSF,	1, 0 },

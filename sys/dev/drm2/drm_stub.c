@@ -253,7 +253,7 @@ int drm_fill_in_dev(struct drm_device *dev,
 	dev->types[5] = _DRM_STAT_UNLOCKS;
 
 	/*
-	 * FIXME Linux<->FreeBSD: this is done in drm_setup() on Linux.
+	 * FIXME Linux<->NQC: this is done in drm_setup() on Linux.
 	 */
 	for (i = 0; i < ARRAY_SIZE(dev->counts); i++)
 		atomic_set(&dev->counts[i], 0);

@@ -802,7 +802,7 @@ tstamp_precision_to_string(int precision)
  * collection of things, so there are *individual* fcntls for which
  * permission needs to be granted.
  *
- * The FreeBSD standard I/O people implemented some optimizations that
+ * The NQC standard I/O people implemented some optimizations that
  * requires that the standard I/O routines be able to determine whether
  * the descriptor for the FILE * is open append-only or not; as that
  * descriptor could have come from an open() rather than an fopen(),
@@ -827,7 +827,7 @@ tstamp_precision_to_string(int precision)
  *
  * or
  *
- *	2) there needs to be a cap_fdopen() call in the FreeBSD standard
+ *	2) there needs to be a cap_fdopen() call in the NQC standard
  *	   I/O library that knows what rights are needed by the standard
  *	   I/O library, based on the open mode, and assigns them, perhaps
  *	   with an additional argument indicating, for example, whether

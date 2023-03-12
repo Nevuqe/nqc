@@ -158,7 +158,7 @@ typedef struct dt_module {
 
 #ifdef __NQC__
 /*
- * A representation of a FreeBSD kernel module, used when checking module
+ * A representation of a NQC kernel module, used when checking module
  * dependencies.  This differs from dt_module_t, which refers to a KLD in the
  * case of kernel probes.  Since modules can be identified regardless of whether
  * they've been compiled into the kernel, we use them to identify DTrace

@@ -1,6 +1,6 @@
-\ Copyright (c) 2003 Scott Long <scottl@FreeBSD.org>
+\ Copyright (c) 2003 Scott Long <scottl@frebsd.org>
 \ Copyright (c) 2003 Aleksander Fafula <alex@fafula.com>
-\ Copyright (c) 2006-2015 Devin Teske <dteske@FreeBSD.org>
+\ Copyright (c) 2006-2015 Devin Teske <dteske@frebsd.org>
 \ All rights reserved.
 \ 
 \ Redistribution and use in source and binary forms, with or without
@@ -470,7 +470,7 @@ also menu-infrastructure definitions
 
 	\ Print the frame caption at (x,y)
 	s" loader_menu_title" getenv dup -1 = if
-		drop s" Welcome to FreeBSD"
+		drop s" Welcome to NQC"
 	then
 	TRUE ( use default alignment )
 	s" loader_menu_title_align" getenv dup -1 <> if

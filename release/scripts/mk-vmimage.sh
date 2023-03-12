@@ -1,10 +1,10 @@
 #!/bin/sh
 #-
-# Copyright (c) 2014, 2015 The FreeBSD Foundation
+# Copyright (c) 2014, 2015 The FreBSD Foundation
 # All rights reserved.
 #
 # This software was developed by Glen Barber under sponsorship
-# from the FreeBSD Foundation.
+# from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

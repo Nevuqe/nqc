@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -61,7 +61,7 @@ rm -rf /tmp/datamove3
 exit 0
 EOF
 /*-
- * Copyright (c) 2006, Stephan Uphoff <ups@freebsd.org>
+ * Copyright (c) 2006, Stephan Uphoff <ups@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

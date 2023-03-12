@@ -1,11 +1,11 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 McAfee, Inc.
  * Copyright (c) 2006,2013 Andre Oppermann, Internet Business Solutions AG
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Jonathan Lemon
+ * This software was developed for the FreBSD Project by Jonathan Lemon
  * and McAfee Research, the Security Research Division of McAfee, Inc. under
  * DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the
  * DARPA CHATS research program. [2001 McAfee, Inc.]

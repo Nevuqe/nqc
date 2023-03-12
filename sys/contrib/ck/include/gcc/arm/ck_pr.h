@@ -58,7 +58,7 @@ ck_pr_stall(void)
 #define CK_ISB __asm __volatile("isb" : : "r" (0) : "memory")
 #define CK_DMB __asm __volatile("dmb" : : "r" (0) : "memory")
 #define CK_DSB __asm __volatile("dsb" : : "r" (0) : "memory")
-/* FreeBSD's toolchain doesn't accept dmb st, so use the opcode instead */
+/* NQC's toolchain doesn't accept dmb st, so use the opcode instead */
 #ifdef __NQC__
 #define CK_DMB_ST __asm __volatile(".word 0xf57ff05e" : : "r" (0) : "memory")
 #else

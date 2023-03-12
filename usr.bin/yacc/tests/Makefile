@@ -7,7 +7,7 @@ TEST_DIR=	${SRCTOP}/contrib/byacc/test
 .PATH: ${TEST_DIR} ${TEST_DIR}/yacc
 
 PLAIN_TESTS_SH=	yacc_tests
-# NOTE: due to caveats with how permissions are handled on FreeBSD
+# NOTE: due to caveats with how permissions are handled on NQC
 # with root, this must be run as a non-privileged user; otherwise
 # the testcases will fail unexpectedly.
 TEST_METADATA.yacc_tests+=	required_user="unprivileged"

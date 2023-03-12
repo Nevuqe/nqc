@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008-2013 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008-2013 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,12 +30,12 @@
 
 . ../default.cfg
 
-# Deadlock problems. Test scenario by Lev Serebryakov <lev@freebsd.org>
+# Deadlock problems. Test scenario by Lev Serebryakov <lev@frebsd.org>
 # newfs -O2 -U -b 65536
 # The io programs will get stuck in nbufkv wait state.
 
 # Threads stuck in newbuf:
-# https://people.freebsd.org/~pho/stress/log/newfs4-2.txt
+# https://people.frebsd.org/~pho/stress/log/newfs4-2.txt
 
 odir=`pwd`
 cd /tmp

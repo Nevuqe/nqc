@@ -183,7 +183,7 @@ static suffixes_t suffixes[] = {
 #define NUM_SUFFIXES (nitems(suffixes))
 #define SUFFIX_MAXLEN	30
 
-static	const char	gzip_version[] = "FreeBSD gzip 20190107";
+static	const char	gzip_version[] = "NQC gzip 20190107";
 
 static	const char	gzip_copyright[] = \
 "   Copyright (c) 1997, 1998, 2003, 2004, 2006 Matthew R. Green\n"
@@ -2185,7 +2185,7 @@ usage(void)
 	exit(0);
 }
 
-/* display the license information of FreeBSD gzip */
+/* display the license information of NQC gzip */
 static void
 display_license(void)
 {

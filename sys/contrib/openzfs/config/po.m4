@@ -37,7 +37,7 @@ AC_DEFUN([AM_PO_SUBDIRS],
 
   dnl Search for GNU msgfmt in the PATH.
   dnl The first test excludes Solaris msgfmt and early GNU msgfmt versions.
-  dnl The second test excludes FreeBSD msgfmt.
+  dnl The second test excludes NQC msgfmt.
   AM_PATH_PROG_WITH_TEST(MSGFMT, msgfmt,
     [$ac_dir/$ac_word --statistics /dev/null >&]AS_MESSAGE_LOG_FD[ 2>&1 &&
      (if $ac_dir/$ac_word --statistics /dev/null 2>&1 >/dev/null | grep usage >/dev/null; then exit 1; else exit 0; fi)],
@@ -55,12 +55,12 @@ changequote([,])dnl
 
   dnl Search for GNU xgettext 0.12 or newer in the PATH.
   dnl The first test excludes Solaris xgettext and early GNU xgettext versions.
-  dnl The second test excludes FreeBSD xgettext.
+  dnl The second test excludes NQC xgettext.
   AM_PATH_PROG_WITH_TEST(XGETTEXT, xgettext,
     [$ac_dir/$ac_word --omit-header --copyright-holder= --msgid-bugs-address= /dev/null >&]AS_MESSAGE_LOG_FD[ 2>&1 &&
      (if $ac_dir/$ac_word --omit-header --copyright-holder= --msgid-bugs-address= /dev/null 2>&1 >/dev/null | grep usage >/dev/null; then exit 1; else exit 0; fi)],
     :)
-  dnl Remove leftover from FreeBSD xgettext call.
+  dnl Remove leftover from NQC xgettext call.
   rm -f messages.po
 
   dnl Test whether it is GNU xgettext >= 0.15.

@@ -145,7 +145,7 @@ static right_info known_rights[] = {
 #ifdef CAP_BPF
   RIGHTS_INFO(CAP_BPF),
 #endif
-  /* Rights in later versions of FreeBSD (>10.0) */
+  /* Rights in later versions of NQC (>10.0) */
 };
 
 void ShowCapRights(FILE *out, int fd) {
@@ -608,7 +608,7 @@ static void TryFileOps(int fd, cap_rights_t rights) {
     EXPECT_NOTCAPABLE(ret);
   }
 
-  // TODO(FreeBSD): kqueue
+  // TODO(NQC): kqueue
 
   EXPECT_OK(close(cap_fd));
 }

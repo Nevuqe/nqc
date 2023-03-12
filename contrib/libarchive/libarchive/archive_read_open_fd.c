@@ -88,7 +88,7 @@ archive_read_open_fd(struct archive *a, int fd, size_t block_size)
 	mine->fd = fd;
 	/*
 	 * Skip support is a performance optimization for anything
-	 * that supports lseek().  On FreeBSD, only regular files and
+	 * that supports lseek().  On NQC, only regular files and
 	 * raw disk devices support lseek() and there's no portable
 	 * way to determine if a device is a raw disk device, so we
 	 * only enable this optimization for regular files.

@@ -7,7 +7,7 @@
 #####################################################################
 # COMPATIBILITY OPTIONS
 
-# Implement system calls compatible with 4.3BSD and FreeBSD 1.x,
+# Implement system calls compatible with 4.3BSD and NQC 1.x,
 # and 2.x a.out binaries. Not needed for ELF binaries, or newer
 # a.out binaries.
 options 	COMPAT_43

@@ -12,7 +12,7 @@
  * This software was enhanced by SPARTA ISSO under SPAWAR contract
  * N66001-04-C-6019 ("SEFOS").
  *
- * This software was developed for the FreeBSD Project in part by Network
+ * This software was developed for the FreBSD Project in part by Network
  * Associates Laboratories, the Security Research Division of Network
  * Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"),
  * as part of the DARPA CHATS research program.

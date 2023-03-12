@@ -2624,7 +2624,7 @@ INTERCEPTOR_WITH_SUFFIX(int, wait, int *status) {
     COMMON_INTERCEPTOR_WRITE_RANGE(ctx, status, sizeof(*status));
   return res;
 }
-// On FreeBSD id_t is always 64-bit wide.
+// On NQC id_t is always 64-bit wide.
 #if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 INTERCEPTOR_WITH_SUFFIX(int, waitid, int idtype, long long id, void *infop,
                         int options) {
@@ -5470,7 +5470,7 @@ INTERCEPTOR(SSIZE_T, __getdelim, char **lineptr, SIZE_T *n, int delim,
             void *stream)
 GETDELIM_INTERCEPTOR_IMPL(__getdelim)
 
-// There's no __getdelim() on FreeBSD so we supply the getdelim() interceptor
+// There's no __getdelim() on NQC so we supply the getdelim() interceptor
 // with its own body.
 INTERCEPTOR(SSIZE_T, getdelim, char **lineptr, SIZE_T *n, int delim,
             void *stream)
@@ -10300,7 +10300,7 @@ INTERCEPTOR(void, qsort, void *base, SIZE_T nmemb, SIZE_T size,
   bool already_wrapped = compar == wrapped_qsort_compar;
   if (already_wrapped) {
     // This case should only happen if the qsort() implementation calls itself
-    // using a preemptible function call (e.g. the FreeBSD libc version).
+    // using a preemptible function call (e.g. the NQC libc version).
     // Check that the size and comparator arguments are as expected.
     CHECK_NE(compar, qsort_compar);
     CHECK_EQ(qsort_size, size);
@@ -10416,7 +10416,7 @@ INTERCEPTOR(int, uname, struct utsname *utsname) {
 #endif
 
 #if SANITIZER_INTERCEPT___XUNAME
-// FreeBSD's <sys/utsname.h> define uname() as
+// NQC's <sys/utsname.h> define uname() as
 // static __inline int uname(struct utsname *name) {
 //   return __xuname(SYS_NMLN, (void*)name);
 // }

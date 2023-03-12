@@ -440,7 +440,7 @@
 
 2001-06-19  Assar Westerlund  <assar@sics.se>
 
-	* ftpd/popen.c, ftpd/ftpd.c: try to handle GLOB_MAXPATH (FreeBSD)
+	* ftpd/popen.c, ftpd/ftpd.c: try to handle GLOB_MAXPATH (NQC)
 
 2001-04-19  Johan Danielsson  <joda@pdc.kth.se>
 

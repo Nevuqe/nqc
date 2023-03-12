@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,13 +28,13 @@
 #
 
 # "panic: handle_workitem_remove: DIRCHG and worklist not empty." seen:
-# https://people.freebsd.org/~pho/stress/log/rename14.txt
+# https://people.frebsd.org/~pho/stress/log/rename14.txt
 # Fixed by r356714
 
-# Based on a syzkaller scenario reported by tuexen@freebsd.org
+# Based on a syzkaller scenario reported by tuexen@frebsd.org
 
 # "panic: journal_jremref: Lost inodedep":
-# https://people.freebsd.org/~pho/stress/log/log0279.txt
+# https://people.frebsd.org/~pho/stress/log/log0279.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

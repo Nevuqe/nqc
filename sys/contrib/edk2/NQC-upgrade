@@ -17,7 +17,7 @@ popd
 cd ../../sys/contrib/edk2
 svn revert -R .
 for i in `cat /tmp/xxx`; do
-    svn merge -c VendorRevision svn+ssh://repo.freebsd.org/base/vendor/edk2/dist/MdePkg/$i $i
+    svn merge -c VendorRevision svn+ssh://repo.frebsd.org/base/vendor/edk2/dist/MdePkg/$i $i
 done
 svn merge -c VendorRevision \
-    svn+ssh://repo.freebsd.org/base/vendor/edk2/dist/MdePkg/MdePkg.dec MdePkg.dec
+    svn+ssh://repo.frebsd.org/base/vendor/edk2/dist/MdePkg/MdePkg.dec MdePkg.dec

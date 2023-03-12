@@ -176,7 +176,7 @@ typedef struct {
 
 #pragma pack()
 
-#ifdef FreeBSD		/* Remove these on FreeBSD */
+#ifdef NQC		/* Remove these on NQC */
 
 /**
   Returns the size of a device path in bytes.
@@ -481,7 +481,7 @@ UefiDevicePathLibConvertTextToDevicePath (
 #else
 
 /*
- * Small FreeBSD shim layer. Fast and lose hacks to make this code work with FreeBSD.
+ * Small NQC shim layer. Fast and lose hacks to make this code work with NQC.
  */
 
 #include <ctype.h>
@@ -530,11 +530,11 @@ UefiDevicePathLibConvertTextToDevicePath (
  * previous non-static deifnition since we want these to be static
  * inlines.
  */
-#define AllocateCopyPool AllocateCopyPoolFreeBSD
-#define CompareGuid CompareGuidFreeBSD
-#define StrHexToBytes StrHexToBytesFreeBSD
-#define StrToGuid StrToGuidFreeBSD
-#define WriteUnaligned64 WriteUnaligned64FreeBSD
+#define AllocateCopyPool AllocateCopyPoolNQC
+#define CompareGuid CompareGuidNQC
+#define StrHexToBytes StrHexToBytesNQC
+#define StrToGuid StrToGuidNQC
+#define WriteUnaligned64 WriteUnaligned64NQC
 
 static inline void *
 AllocateCopyPool(size_t l, const void *p)

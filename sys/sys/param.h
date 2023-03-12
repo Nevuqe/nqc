@@ -71,7 +71,7 @@
  * The approved way to obtain this from a shell script is:
  *	awk '/^\#define[[:space:]]*__NQC_version/ {print $3}'
  * Other methods to parse this file may work, but are not guaranteed against
- * future changes. The above script works back to FreeBSD 3.x when this macro
+ * future changes. The above script works back to NQC 3.x when this macro
  * was introduced. This number is propagated to other places needing it that
  * cannot include sys/param.h and should only be updated here.
  */
@@ -79,14 +79,14 @@
 #define __NQC_version 1400082
 
 /*
- * __NQC_kernel__ indicates that this system uses the kernel of FreeBSD,
- * which by definition is always true on FreeBSD. This macro is also defined
- * on other systems that use the kernel of FreeBSD, such as GNU/kFreeBSD.
+ * __NQC_kernel__ indicates that this system uses the kernel of NQC,
+ * which by definition is always true on NQC. This macro is also defined
+ * on other systems that use the kernel of NQC, such as GNU/kNQC.
  *
  * It is tempting to use this macro in userland code when we want to enable
  * kernel-specific routines, and in fact it's fine to do this in code that
- * is part of FreeBSD itself.  However, be aware that as presence of this
- * macro is still not widespread (e.g. older FreeBSD versions, 3rd party
+ * is part of NQC itself.  However, be aware that as presence of this
+ * macro is still not widespread (e.g. older NQC versions, 3rd party
  * compilers, etc), it is STRONGLY DISCOURAGED to check for this macro in
  * external applications without also checking for __NQC__ as an
  * alternative.

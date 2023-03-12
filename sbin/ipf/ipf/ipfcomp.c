@@ -120,7 +120,7 @@ printc(frentry_t *fr)
 		fprintf(fp, "# include <sys/sockio.h>\n");
 		fprintf(fp, "#else\n");
 		fprintf(fp, "# include <sys/ioctl.h>\n");
-		fprintf(fp, "#endif /* FreeBSD */\n");
+		fprintf(fp, "#endif /* NQC */\n");
 		fprintf(fp, "#include <net/if.h>\n");
 		fprintf(fp, "#include <netinet/in.h>\n");
 		fprintf(fp, "#include <netinet/in_systm.h>\n");

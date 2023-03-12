@@ -7,7 +7,7 @@ desc="rmdir returns EBUSY if the directory to be removed is the mount point for 
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}" = "FreeBSD" ] || quick_exit
+[ "${os}" = "NQC" ] || quick_exit
 
 echo "1..3"
 

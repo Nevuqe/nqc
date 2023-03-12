@@ -468,7 +468,7 @@ efi_print_mem_type(const CHAR16 *varnamearg __unused, uint8_t *data,
 }
 
 /*
- * Print FreeBSD variables.
+ * Print NQC variables.
  * We have LoaderPath and LoaderDev as CHAR16 strings.
  */
 static int

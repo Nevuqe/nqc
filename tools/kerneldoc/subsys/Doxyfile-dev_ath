@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel ATH device code"
+PROJECT_NAME           = "NQC kernel ATH device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_ath/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

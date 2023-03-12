@@ -56,7 +56,7 @@ __NQCID("$NQC$");
 #define DEBUG 0
 
 /*
- * NOTE: On FreeBSD and Solaris, this test needs ZFS.
+ * NOTE: On NQC and Solaris, this test needs ZFS.
  * You may perform this test as
  * 'TMPDIR=<a directory on the ZFS> libarchive_test'.
  */
@@ -218,7 +218,7 @@ is_sparse_supported(const char *path)
 #if defined(_PC_MIN_HOLE_SIZE)
 
 /*
- * FreeBSD and Solaris can detect 'hole' of a sparse file
+ * NQC and Solaris can detect 'hole' of a sparse file
  * through lseek(HOLE) on ZFS. (UFS does not support yet)
  */
 

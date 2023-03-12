@@ -1,4 +1,4 @@
-FreeBSD apmd Package Release Notes (19990711 version)
+NQC apmd Package Release Notes (19990711 version)
 
 1. What is "apmd"?
 ==================
@@ -202,12 +202,12 @@ However, we're still looking around for interesting new features and
 ideas, so if you have any thoughts, please let us know. 
 Documentation is also sparse, and the manpage have just written.  
 If you wish to collaborate on this work, please e-mail me:
-iwasaki@freebsd.org.
+iwasaki@frebsd.org.
 
 
 June 1, 1999
-Created by: iwasaki@FreeBSD.org
-Edited by: jkh@FreeBSD.org
+Created by: iwasaki@frebsd.org
+Edited by: jkh@frebsd.org
            nick@foobar.org
 
 $NQC$

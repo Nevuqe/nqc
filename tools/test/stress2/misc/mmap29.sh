@@ -3,7 +3,7 @@
 # Test scenario by: David Cross <dcrosstech@gmail.com>
 
 # "panic: softdep_deallocate_dependencies: dangling deps" seen.
-# https://people.freebsd.org/~pho/stress/log/mmap29.txt
+# https://people.frebsd.org/~pho/stress/log/mmap29.txt
 # Fixed by: r302567.
 
 . ../default.cfg

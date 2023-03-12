@@ -111,11 +111,11 @@ void __xray_init() XRAY_NEVER_INSTRUMENT {
 #endif
 }
 
-// FIXME: Make check-xray tests work on FreeBSD without
+// FIXME: Make check-xray tests work on NQC without
 // SANITIZER_CAN_USE_PREINIT_ARRAY.
 // See sanitizer_internal_defs.h where the macro is defined.
 // Calling unresolved PLT functions in .preinit_array can lead to deadlock on
-// FreeBSD but here it seems benign.
+// NQC but here it seems benign.
 #if !defined(XRAY_NO_PREINIT) &&                                               \
     (SANITIZER_CAN_USE_PREINIT_ARRAY || SANITIZER_NQC)
 // Only add the preinit array initialization if the sanitizers can.

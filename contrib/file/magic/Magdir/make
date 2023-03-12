@@ -7,7 +7,7 @@
 !:mime	text/x-makefile
 !:strength -15
 # Update: Joerg Jenderek
-# Reference: https://www.freebsd.org/cgi/man.cgi?make(1)
+# Reference: https://www.frebsd.org/cgi/man.cgi?make(1)
 # exclude grub-core\lib\libgcrypt\mpi\Makefile.am with "#BEGIN_ASM_LIST"
 # by additional escaping point character
 # exclude MS Windows help file CoNtenT with ":include FOOBAR.CNT"

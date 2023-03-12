@@ -40,7 +40,7 @@
 # DESCRIPTION:
 #
 # Setting bootfs on a pool which was configured with the whole disk
-# (i.e. EFI) will succeed.  This is only supported on FreeBSD, not Solaris.
+# (i.e. EFI) will succeed.  This is only supported on NQC, not Solaris.
 #
 # STRATEGY:
 # 1. create a pool with a whole disk

@@ -1,4 +1,4 @@
-//===-- NativeProcessFreeBSD.h -------------------------------- -*- C++ -*-===//
+//===-- NativeProcessNQC.h -------------------------------- -*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -16,18 +16,18 @@
 #include "lldb/Utility/ArchSpec.h"
 #include "lldb/Utility/FileSpec.h"
 
-#include "NativeThreadFreeBSD.h"
+#include "NativeThreadNQC.h"
 
 namespace lldb_private {
 namespace process_nqc {
-/// \class NativeProcessFreeBSD
+/// \class NativeProcessNQC
 /// Manages communication with the inferior (debugee) process.
 ///
 /// Upon construction, this class prepares and launches an inferior process
 /// for debugging.
 ///
 /// Changes in the inferior process state are broadcasted.
-class NativeProcessFreeBSD : public NativeProcessELF,
+class NativeProcessNQC : public NativeProcessELF,
                              private NativeProcessSoftwareSingleStep {
 public:
   class Factory : public NativeProcessProtocol::Factory {
@@ -105,12 +105,12 @@ private:
   std::vector<std::pair<MemoryRegionInfo, FileSpec>> m_mem_region_cache;
 
   // Private Instance Methods
-  NativeProcessFreeBSD(::pid_t pid, int terminal_fd, NativeDelegate &delegate,
+  NativeProcessNQC(::pid_t pid, int terminal_fd, NativeDelegate &delegate,
                        const ArchSpec &arch, MainLoop &mainloop);
 
   bool HasThreadNoLock(lldb::tid_t thread_id);
 
-  NativeThreadFreeBSD &AddThread(lldb::tid_t thread_id);
+  NativeThreadNQC &AddThread(lldb::tid_t thread_id);
   void RemoveThread(lldb::tid_t thread_id);
 
   void MonitorCallback(lldb::pid_t pid, int signal);
@@ -119,7 +119,7 @@ private:
   void MonitorSIGTRAP(lldb::pid_t pid);
   void MonitorSignal(lldb::pid_t pid, int signal);
   void MonitorClone(::pid_t child_pid, bool is_vfork,
-                    NativeThreadFreeBSD &parent_thread);
+                    NativeThreadNQC &parent_thread);
 
   Status PopulateMemoryRegionCache();
   void SigchldHandler();

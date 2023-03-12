@@ -45,7 +45,7 @@
  * - MD5, SHA1 and SHA2 in libc: without _ after algorithm name
  * - OpenBSD 4.4 and earlier have SHA2 in libc with _ after algorithm name
  *
- * DragonFly and FreeBSD:
+ * DragonFly and NQC:
  * - MD5 libmd: without _ after algorithm name
  * - SHA1, SHA256 and SHA512 in libmd: with _ after algorithm name
  *

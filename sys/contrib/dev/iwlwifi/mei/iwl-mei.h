@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2022 The FreeBSD Foundation
+ * Copyright (c) 2022 The FreBSD Foundation
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -62,7 +62,7 @@ struct iwl_mei_ops {
 };
 
 #if IS_ENABLED(CONFIG_IWLMEI)
-#error No MEI support in FreeBSD currently
+#error No MEI support in NQC currently
 #else
 
 static __inline void

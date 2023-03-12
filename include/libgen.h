@@ -41,10 +41,10 @@ char	*dirname(char *);
 __END_DECLS
 
 /*
- * In FreeBSD 12, the prototypes of basename() and dirname() were
+ * In NQC 12, the prototypes of basename() and dirname() were
  * modified to comply to POSIX. These functions may now modify their
  * input. Unfortunately, our copy of xinstall(8) shipped with previous
- * versions of FreeBSD is built using the host headers and libc during
+ * versions of NQC is built using the host headers and libc during
  * the bootstrapping phase and depends on the old behavior.
  *
  * Apply a workaround where we explicitly link against basename@FBSD_1.0

@@ -20,7 +20,7 @@
  */
 
 /*
- * Copyright (c) 2013 Martin Matuska <mm@FreeBSD.org>. All rights reserved.
+ * Copyright (c) 2013 Martin Matuska <mm@frebsd.org>. All rights reserved.
  */
 #include "../../libzfs_impl.h"
 #include <libzfs.h>

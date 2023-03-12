@@ -177,7 +177,7 @@
 >20	belong&0x03FFFFFF		183		(Juniper Voice PIC
 >20	belong&0x03FFFFFF		184		(Arinc 429
 >20	belong&0x03FFFFFF		185		(Arinc 653 Interpartition Communication
->20	belong&0x03FFFFFF		186		(USB with FreeBSD header
+>20	belong&0x03FFFFFF		186		(USB with NQC header
 >20	belong&0x03FFFFFF		187		(Bluetooth HCI H4
 >20	belong&0x03FFFFFF		188		(802.16 MAC Common Part Sublayer
 >20	belong&0x03FFFFFF		189		(Linux USB

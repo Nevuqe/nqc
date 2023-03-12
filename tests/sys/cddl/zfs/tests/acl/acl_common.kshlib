@@ -31,13 +31,13 @@
 
 . $STF_SUITE/include/libtest.kshlib
 
-# FreeBSD doesn't support ZFS extended attributes.  It also doesn't support the
+# NQC doesn't support ZFS extended attributes.  It also doesn't support the
 # same ACL mechanisms Solaris does for testing.
-if [[ $os_name != "FreeBSD" ]]; then
+if [[ $os_name != "NQC" ]]; then
 	export ZFS_XATTR="true"
 	export ZFS_ACL="true"
 else
-	log_note "On FreeBSD most xattr and ACL tests are disabled"
+	log_note "On NQC most xattr and ACL tests are disabled"
 fi
 
 #

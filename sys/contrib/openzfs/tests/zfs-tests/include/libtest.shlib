@@ -27,7 +27,7 @@
 # Copyright (c) 2017, Lawrence Livermore National Security LLC.
 # Copyright (c) 2017, Datto Inc. All rights reserved.
 # Copyright (c) 2017, Open-E Inc. All rights reserved.
-# Copyright (c) 2021, The FreeBSD Foundation.
+# Copyright (c) 2021, The FreBSD Foundation.
 # Use is subject to license terms.
 #
 
@@ -94,13 +94,13 @@ function is_illumos
 	[ "$UNAME" = "illumos" ]
 }
 
-# Determine if this is a FreeBSD test system
+# Determine if this is a NQC test system
 #
-# Return 0 if platform FreeBSD, 1 if otherwise
+# Return 0 if platform NQC, 1 if otherwise
 
 function is_nqc
 {
-	[ "$UNAME" = "FreeBSD" ]
+	[ "$UNAME" = "NQC" ]
 }
 
 # Determine if this is a 32-bit system
@@ -834,7 +834,7 @@ function set_partition
 		blockdev --rereadpt $disk 2>/dev/null
 		block_device_wait $disk
 		;;
-	FreeBSD)
+	NQC)
 		if [[ -z $size || -z $disk ]]; then
 			log_fail "The size or disk name is unspecified."
 		fi
@@ -946,7 +946,7 @@ function get_endslice #<disk> <slice>
 			awk "/part${slice}/"' {sub(/cyl/, "", $3); print $3}')
 		((endcyl = (endcyl + 1)))
 		;;
-	FreeBSD)
+	NQC)
 		disk=${disk#/dev/zvol/}
 		disk=${disk%p*}
 		slice=$((slice + 1))
@@ -1110,7 +1110,7 @@ function datasetnonexists
 	return 0
 }
 
-# FreeBSD breaks exports(5) at whitespace and doesn't process escapes
+# NQC breaks exports(5) at whitespace and doesn't process escapes
 # Solaris just breaks
 #
 # cf. https://github.com/openzfs/zfs/pull/13165#issuecomment-1059845807
@@ -1179,7 +1179,7 @@ function is_shared
 	fi
 
 	case "$UNAME" in
-	FreeBSD)	is_shared_nqc "$fs"	;;
+	NQC)	is_shared_nqc "$fs"	;;
 	Linux)		is_shared_linux "$fs"	;;
 	*)		is_shared_illumos "$fs"	;;
 	esac
@@ -1247,7 +1247,7 @@ function is_exported
 	fi
 
 	case "$UNAME" in
-	FreeBSD)	is_exported_nqc "$fs"	;;
+	NQC)	is_exported_nqc "$fs"	;;
 	Linux)		is_exported_linux "$fs"	;;
 	*)		is_exported_illumos "$fs"	;;
 	esac
@@ -1317,7 +1317,7 @@ function share_nfs #fs
 	Linux)
 		log_must exportfs "*:$fs"
 		;;
-	FreeBSD)
+	NQC)
 		typeset mountd
 		read -r mountd < /var/run/mountd.pid
 		log_must eval "printf '%s\t\n' \"$fs\" >> /etc/zfs/exports"
@@ -1344,7 +1344,7 @@ function unshare_nfs #fs
 	Linux)
 		log_must exportfs -u "*:$fs"
 		;;
-	FreeBSD)
+	NQC)
 		typeset mountd
 		read -r mountd < /var/run/mountd.pid
 		awk -v fs="${fs//\\/\\\\}" '$1 != fs' /etc/zfs/exports > /etc/zfs/exports.$$
@@ -1368,7 +1368,7 @@ function showshares_nfs
 	Linux)
 		exportfs -v
 		;;
-	FreeBSD)
+	NQC)
 		showmount
 		;;
 	*)
@@ -1383,7 +1383,7 @@ function check_nfs
 	Linux)
 		exportfs -s
 		;;
-	FreeBSD)
+	NQC)
 		showmount -e
 		;;
 	*)
@@ -2339,7 +2339,7 @@ function add_user #<group_name> <user_name> <basedir>
 	fi
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		add_user_nqc "$group" "$user" "$basedir"
 		;;
 	Linux)
@@ -2369,7 +2369,7 @@ function del_user #<logname> <basedir>
 	fi
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		del_user_nqc "$user"
 		;;
 	Linux)
@@ -2399,7 +2399,7 @@ function add_group #<group_name>
 	fi
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		add_group_nqc "$group"
 		;;
 	Linux)
@@ -2427,7 +2427,7 @@ function del_group #<group_name>
 	fi
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		del_group_nqc "$group"
 		;;
 	Linux)
@@ -3199,7 +3199,7 @@ function is_swap_inuse
 	Linux)
 		swapon -s | grep -wq $(readlink -f $device)
 		;;
-	FreeBSD)
+	NQC)
 		swapctl -l | grep -wq $device
 		;;
 	*)
@@ -3220,7 +3220,7 @@ function swap_setup
 		log_must eval "mkswap $swapdev > /dev/null 2>&1"
 		log_must swapon $swapdev
 		;;
-	FreeBSD)
+	NQC)
 		log_must swapctl -a $swapdev
 		;;
 	*)
@@ -3299,7 +3299,7 @@ function set_tunable_impl
 		typeset zfs_tunables="/sys/module/zfs/parameters"
 		echo "$value" >"$zfs_tunables/$tunable"
 		;;
-	FreeBSD)
+	NQC)
 		sysctl vfs.zfs.$tunable=$value
 		;;
 	SunOS)
@@ -3349,7 +3349,7 @@ function get_tunable_impl
 		typeset zfs_tunables="/sys/module/$module/parameters"
 		cat $zfs_tunables/$tunable
 		;;
-	FreeBSD)
+	NQC)
 		sysctl -n vfs.zfs.$tunable
 		;;
 	SunOS)
@@ -3375,7 +3375,7 @@ function md5digest
 	typeset file=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		md5 -q $file
 		;;
 	*)
@@ -3395,7 +3395,7 @@ function sha256digest
 	typeset file=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		sha256 -q $file
 		;;
 	*)
@@ -3409,7 +3409,7 @@ function sha256digest
 function new_fs #<args>
 {
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		newfs "$@"
 		;;
 	*)
@@ -3423,7 +3423,7 @@ function stat_size #<path>
 	typeset path=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		stat -f %z "$path"
 		;;
 	*)
@@ -3437,7 +3437,7 @@ function stat_mtime #<path>
 	typeset path=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		stat -f %m "$path"
 		;;
 	*)
@@ -3451,7 +3451,7 @@ function stat_ctime #<path>
 	typeset path=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		stat -f %c "$path"
 		;;
 	*)
@@ -3465,7 +3465,7 @@ function stat_crtime #<path>
 	typeset path=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		stat -f %B "$path"
 		;;
 	*)
@@ -3524,7 +3524,7 @@ function get_xattr # name path
 	typeset path=$2
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		getextattr -qq user "${name}" "${path}"
 		;;
 	*)
@@ -3540,7 +3540,7 @@ function set_xattr # name value path
 	typeset path=$3
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		setextattr user "${name}" "${value}" "${path}"
 		;;
 	*)
@@ -3555,7 +3555,7 @@ function set_xattr_stdin # name value
 	typeset path=$2
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		setextattr -i user "${name}" "${path}"
 		;;
 	*)
@@ -3570,7 +3570,7 @@ function rm_xattr # name path
 	typeset path=$2
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		rmextattr -q user "${name}" "${path}"
 		;;
 	*)
@@ -3584,7 +3584,7 @@ function ls_xattr # path
 	typeset path=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		lsextattr -qq user "${path}"
 		;;
 	*)
@@ -3599,7 +3599,7 @@ function kstat # stat flags?
 	typeset flags=${2-"-n"}
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		sysctl $flags kstat.zfs.misc.$stat
 		;;
 	Linux)
@@ -3616,7 +3616,7 @@ function get_arcstat # stat
 	typeset stat=$1
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		kstat arcstats.$stat
 		;;
 	Linux)
@@ -3635,7 +3635,7 @@ function punch_hole # offset length file
 	typeset file=$3
 
 	case "$UNAME" in
-	FreeBSD)
+	NQC)
 		truncate -d -o $offset -l $length "$file"
 		;;
 	Linux)
@@ -3818,7 +3818,7 @@ function push_coredump_pattern # dir
 		echo "$1/core.%e" >/proc/sys/kernel/core_pattern &&
 		    echo 0 >/proc/sys/kernel/core_uses_pid
 		;;
-	FreeBSD)
+	NQC)
 		sysctl -n kern.corefile
 		sysctl kern.corefile="$1/core.%N" >/dev/null
 		;;
@@ -3842,7 +3842,7 @@ function pop_coredump_pattern
 		echo "$pat" >/proc/sys/kernel/core_pattern &&
 		    echo "$pid" >/proc/sys/kernel/core_uses_pid
 		;;
-	FreeBSD)
+	NQC)
 		sysctl kern.corefile="$(<"$1")" >/dev/null
 		;;
 	esac

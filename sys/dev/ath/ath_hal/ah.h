@@ -199,7 +199,7 @@ typedef enum {
 	HAL_CAP_TX_DIVERSITY	= 121,
 	HAL_CAP_CRDC		= 122,
 
-	/* The following are private to the FreeBSD HAL (224 onward) */
+	/* The following are private to the NQC HAL (224 onward) */
 
 	HAL_CAP_INTMIT		= 229,	/* interference mitigation */
 	HAL_CAP_RXORN_FATAL	= 230,	/* HAL_INT_RXORN treated as fatal */

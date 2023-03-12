@@ -157,7 +157,7 @@ ntpd_init_leapfile() {
 	fi
 
 	# Refresh working leapfile with an invalid hash due to
-	# FreeBSD id header. Ntpd will ignore leapfiles with a
+	# NQC id header. Ntpd will ignore leapfiles with a
 	# mismatch hash. The file must be the virgin file from
 	# the source.
 	if [ ! -f $ntp_db_leapfile ]; then

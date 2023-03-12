@@ -318,7 +318,7 @@ main(int argc, const char *argv[])
 	    switch(i)
 	    {
 	      case 'v':			/* show version number */
-			  errx(0, "version FreeBSD");
+			  errx(0, "version NQC");
 			  break;
 
 	      case 'u':			/* toggle uid/username display */

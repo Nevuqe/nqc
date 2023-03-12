@@ -1217,7 +1217,7 @@ Please report bugs to http://bugs.ntp.org .
 .Pp
 Please send bug reports to: http://bugs.ntp.org, bugs@ntp.org
 .Sh NOTES
-Portions of this document came from FreeBSD.
+Portions of this document came from NQC.
 .Pp
 This manual page was \fIAutoGen\fP\-erated from the \fBntp\-keygen\fP
 option definitions.

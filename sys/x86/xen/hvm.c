@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008, 2013 Citrix Systems, Inc.
  * Copyright (c) 2012 Spectra Logic Corporation
@@ -461,7 +461,7 @@ xen_hvm_cpu_init(void)
 		 * Setup the per-vpcu event channel upcall vector. This is only
 		 * required when using the new HVMOP_set_evtchn_upcall_vector
 		 * hypercall, which allows using a different vector for each
-		 * vCPU. Note that FreeBSD uses the same vector for all vCPUs
+		 * vCPU. Note that NQC uses the same vector for all vCPUs
 		 * because it's not dynamically allocated.
 		 */
 		rc = set_percpu_callback(PCPU_GET(vcpu_id));

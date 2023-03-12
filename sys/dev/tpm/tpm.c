@@ -190,7 +190,7 @@ int tpm_legacy_end(struct tpm_softc *, int, int);
 
 
 /*
- * FreeBSD specific code for probing and attaching TPM to device tree.
+ * NQC specific code for probing and attaching TPM to device tree.
  */
 #if 0
 static void

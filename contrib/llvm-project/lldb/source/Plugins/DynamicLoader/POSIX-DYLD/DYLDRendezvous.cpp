@@ -431,7 +431,7 @@ bool DYLDRendezvous::SOEntryIsMainExecutable(const SOEntry &entry) {
 
   auto triple = m_process->GetTarget().GetArchitecture().GetTriple();
   switch (triple.getOS()) {
-  case llvm::Triple::FreeBSD:
+  case llvm::Triple::NQC:
   case llvm::Triple::NetBSD:
     return entry.file_spec == m_exe_file_spec;
   case llvm::Triple::Linux:
@@ -552,11 +552,11 @@ bool DYLDRendezvous::ReadSOEntryFromMemory(lldb::addr_t addr, SOEntry &entry) {
   if (!(addr = ReadPointer(addr, &entry.base_addr)))
     return false;
 
-  // mips adds an extra load offset field to the link map struct on FreeBSD and
+  // mips adds an extra load offset field to the link map struct on NQC and
   // NetBSD (need to validate other OSes).
-  // http://svnweb.freebsd.org/base/head/sys/sys/link_elf.h?revision=217153&view=markup#l57
+  // http://svnweb.frebsd.org/base/head/sys/sys/link_elf.h?revision=217153&view=markup#l57
   const ArchSpec &arch = m_process->GetTarget().GetArchitecture();
-  if ((arch.GetTriple().getOS() == llvm::Triple::FreeBSD ||
+  if ((arch.GetTriple().getOS() == llvm::Triple::NQC ||
        arch.GetTriple().getOS() == llvm::Triple::NetBSD) &&
       arch.IsMIPS()) {
     addr_t mips_l_offs;

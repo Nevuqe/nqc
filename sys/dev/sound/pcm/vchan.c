@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2006-2009 Ariff Abdullah <ariff@FreeBSD.org>
- * Copyright (c) 2001 Cameron Grant <cg@FreeBSD.org>
+ * Copyright (c) 2006-2009 Ariff Abdullah <ariff@frebsd.org>
+ * Copyright (c) 2001 Cameron Grant <cg@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

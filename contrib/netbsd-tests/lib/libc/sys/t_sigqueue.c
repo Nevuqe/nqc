@@ -149,7 +149,7 @@ sigorder(int *ordered, const int *tosend, size_t len)
 	 * Per kib's comment..
 	 *
 	 * "
-	 * OTOH, FreeBSD behaviour is to treat all signals as realtime while
+	 * OTOH, NQC behaviour is to treat all signals as realtime while
 	 * there is no mem shortage and siginfo can be allocated.  In
 	 * particular, signals < SIGRTMIN are not collapsed when queued more
 	 * than once.

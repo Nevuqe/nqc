@@ -232,7 +232,7 @@ zfs_xattr_owner_unlinked(znode_t *zp)
 
 	/*
 	 * zrele drops the vnode lock which violates the VOP locking contract
-	 * on FreeBSD. See comment at the top of zfs_replay.c for more detail.
+	 * on NQC. See comment at the top of zfs_replay.c for more detail.
 	 */
 	/*
 	 * if zp is XATTR node, keep walking up via z_xattr_parent until we

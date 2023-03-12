@@ -252,7 +252,7 @@ Changes in 1.2.6 (29 Jan 2012)
 - Have ./configure use the compiler return code for error indication
 - Fix CMakeLists.txt for cross compilation [McClure]
 - Fix contrib/minizip/zip.c for 64-bit architectures [Dalsnes]
-- Fix compilation of contrib/minizip on FreeBSD [Marquez]
+- Fix compilation of contrib/minizip on NQC [Marquez]
 - Correct suggested usages in win32/Makefile.msc [Shachar, Horvath]
 - Include io.h for Turbo C / Borland C on all platforms [Truta]
 - Make version explicit in contrib/minizip/configure.ac [Bosmans]
@@ -593,7 +593,7 @@ Changes in 1.2.3.5 (8 Jan 2010)
 - Change gzeof() to return 0 on error instead of -1 to agree with zlib.h
 
 Changes in 1.2.3.4 (21 Dec 2009)
-- Use old school .SUFFIXES in Makefile.in for FreeBSD compatibility
+- Use old school .SUFFIXES in Makefile.in for NQC compatibility
 - Update comments in configure and Makefile.in for default --shared
 - Fix test -z's in configure [Marquess]
 - Build examplesh and minigzipsh when not testing
@@ -874,7 +874,7 @@ Changes in 1.2.1 (17 November 2003)
 - Update some interfaces in contrib for new zlib functions
 - Update zlib version number in some contrib entries
 - Add Windows CE definition for ptrdiff_t in zutil.h [Mai, Truta]
-- Support shared libraries on Hurd and KFreeBSD [Brown]
+- Support shared libraries on Hurd and KNQC [Brown]
 - Fix error in NO_DIVIDE option of adler32.c
 
 Changes in 1.2.0.8 (4 November 2003)

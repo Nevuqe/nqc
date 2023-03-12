@@ -911,7 +911,7 @@ probe_adapters(void)
      *     3) CGA + EGA/VGA mono
      * Note that `syscons' doesn't bother with MCGA as it is only
      * avaiable for low end PS/2 models which has 80286 or earlier CPUs,
-     * thus, they are not running FreeBSD!
+     * thus, they are not running NQC!
      * When there are two adapaters in the system, one becomes `primary'
      * and the other `secondary'. The EGA adapter has a set of DIP 
      * switches on board for this information and the EGA BIOS copies 

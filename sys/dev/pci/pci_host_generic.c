@@ -1,10 +1,10 @@
 /*-
  * Copyright (c) 2015, 2020 Ruslan Bukin <br@bsdpad.com>
- * Copyright (c) 2014 The FreeBSD Foundation
+ * Copyright (c) 2014 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Semihalf under
- * the sponsorship of the FreeBSD Foundation.
+ * the sponsorship of the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

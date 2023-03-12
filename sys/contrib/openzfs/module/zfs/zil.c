@@ -94,7 +94,7 @@ static uint_t zfs_commit_timeout_pct = 5;
 
 /*
  * Minimal time we care to delay commit waiting for more ZIL records.
- * At least FreeBSD kernel can't sleep for less than 2us at its best.
+ * At least NQC kernel can't sleep for less than 2us at its best.
  * So requests to sleep for less then 5us is a waste of CPU time with
  * a risk of significant log latency increase due to oversleep.
  */

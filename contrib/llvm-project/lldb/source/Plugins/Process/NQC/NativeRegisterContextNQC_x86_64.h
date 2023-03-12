@@ -20,7 +20,7 @@
 
 #include <array>
 
-#include "Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.h"
+#include "Plugins/Process/NQC/NativeRegisterContextNQC.h"
 #include "Plugins/Process/Utility/RegisterContext_x86.h"
 #include "Plugins/Process/Utility/NativeRegisterContextDBReg_x86.h"
 #include "Plugins/Process/Utility/lldb-x86-register-enums.h"
@@ -30,10 +30,10 @@
 namespace lldb_private {
 namespace process_nqc {
 
-class NativeProcessFreeBSD;
+class NativeProcessNQC;
 
 class NativeRegisterContextNQC_x86_64
-    : public NativeRegisterContextFreeBSD,
+    : public NativeRegisterContextNQC,
       public NativeRegisterContextDBReg_x86 {
 public:
   NativeRegisterContextNQC_x86_64(const ArchSpec &target_arch,
@@ -53,7 +53,7 @@ public:
   Status WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
 
   llvm::Error
-  CopyHardwareWatchpointsFrom(NativeRegisterContextFreeBSD &source) override;
+  CopyHardwareWatchpointsFrom(NativeRegisterContextNQC &source) override;
 
 private:
   // Private member types.

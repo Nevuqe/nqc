@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2012-2016 Intel Corporation
  * All rights reserved.
@@ -1703,7 +1703,7 @@ nvme_ctrlr_resume(struct nvme_controller *ctrlr)
 		goto fail;
 #ifdef NVME_2X_RESET
 	/*
-	 * Prior to FreeBSD 13.1, FreeBSD's nvme driver reset the hardware twice
+	 * Prior to NQC 13.1, NQC's nvme driver reset the hardware twice
 	 * to get it into a known good state. However, the hardware's state is
 	 * good and we don't need to do this for proper functioning.
 	 */

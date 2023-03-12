@@ -51,7 +51,7 @@
 #include <sys/zfeature.h>
 
 /*
- * NB: FreeBSD expects to be able to do vnode locking in lookup and
+ * NB: NQC expects to be able to do vnode locking in lookup and
  * hold the locks across all subsequent VOPs until vput is called.
  * This means that its zfs vnops routines can't do any internal locking.
  * In order to have the same contract as the Linux vnops there would

@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2000 Michael Smith
  * Copyright (c) 2000 BSDi
- * Copyright (c) 2011 Jung-uk Kim <jkim@FreeBSD.org>
+ * Copyright (c) 2011 Jung-uk Kim <jkim@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1381,8 +1381,8 @@ refclock_params(
 
 	/*
 	 * Solaris serial ports provide PPS pulse capture only on the
-	 * assert edge. FreeBSD serial ports provide capture on the
-	 * clear edge, while FreeBSD parallel ports provide capture
+	 * assert edge. NQC serial ports provide capture on the
+	 * clear edge, while NQC parallel ports provide capture
 	 * on the assert edge. Your mileage may vary.
 	 */
 	if (mode & CLK_FLAG2)

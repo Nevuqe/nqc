@@ -7,7 +7,7 @@ desc="link returns ENOSPC if the directory in which the entry for the new link i
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 
 echo "1..4"
 

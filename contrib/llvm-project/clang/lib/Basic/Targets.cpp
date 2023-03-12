@@ -141,8 +141,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
     switch (os) {
     case llvm::Triple::CloudABI:
       return new CloudABITargetInfo<AArch64leTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<AArch64leTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<AArch64leTargetInfo>(Triple, Opts);
     case llvm::Triple::Fuchsia:
       return new FuchsiaTargetInfo<AArch64leTargetInfo>(Triple, Opts);
     case llvm::Triple::Linux:
@@ -165,8 +165,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
 
   case llvm::Triple::aarch64_be:
     switch (os) {
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<AArch64beTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<AArch64beTargetInfo>(Triple, Opts);
     case llvm::Triple::Fuchsia:
       return new FuchsiaTargetInfo<AArch64beTargetInfo>(Triple, Opts);
     case llvm::Triple::Linux:
@@ -187,8 +187,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new CloudABITargetInfo<ARMleTargetInfo>(Triple, Opts);
     case llvm::Triple::Linux:
       return new LinuxTargetInfo<ARMleTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<ARMleTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<ARMleTargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<ARMleTargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -221,8 +221,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
     switch (os) {
     case llvm::Triple::Linux:
       return new LinuxTargetInfo<ARMbeTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<ARMbeTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<ARMbeTargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<ARMbeTargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -250,8 +250,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new LinuxTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::RTEMS:
       return new RTEMSTargetInfo<MipsTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
     default:
@@ -264,8 +264,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new LinuxTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::RTEMS:
       return new RTEMSTargetInfo<MipsTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::NaCl:
@@ -280,8 +280,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new LinuxTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::RTEMS:
       return new RTEMSTargetInfo<MipsTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -296,8 +296,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new LinuxTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::RTEMS:
       return new RTEMSTargetInfo<MipsTargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<MipsTargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -333,8 +333,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
     switch (os) {
     case llvm::Triple::Linux:
       return new LinuxTargetInfo<PPC32TargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<PPC32TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<PPC32TargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<PPC32TargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -351,8 +351,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
     switch (os) {
     case llvm::Triple::Linux:
       return new LinuxTargetInfo<PPC32TargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<PPC32TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<PPC32TargetInfo>(Triple, Opts);
     default:
       return new PPC32TargetInfo(Triple, Opts);
     }
@@ -365,8 +365,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new LinuxTargetInfo<PPC64TargetInfo>(Triple, Opts);
     case llvm::Triple::Lv2:
       return new PS3PPUTargetInfo<PPC64TargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<PPC64TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<PPC64TargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<PPC64TargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -381,8 +381,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
     switch (os) {
     case llvm::Triple::Linux:
       return new LinuxTargetInfo<PPC64TargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<PPC64TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<PPC64TargetInfo>(Triple, Opts);
     case llvm::Triple::NetBSD:
       return new NetBSDTargetInfo<PPC64TargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
@@ -403,8 +403,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
   case llvm::Triple::riscv32:
     // TODO: add cases for NetBSD, RTEMS once tested.
     switch (os) {
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<RISCV32TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<RISCV32TargetInfo>(Triple, Opts);
     case llvm::Triple::Linux:
       return new LinuxTargetInfo<RISCV32TargetInfo>(Triple, Opts);
     default:
@@ -414,8 +414,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
   case llvm::Triple::riscv64:
     // TODO: add cases for NetBSD, RTEMS once tested.
     switch (os) {
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<RISCV64TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<RISCV64TargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
       return new OpenBSDTargetInfo<RISCV64TargetInfo>(Triple, Opts);
     case llvm::Triple::Fuchsia:
@@ -463,8 +463,8 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new NetBSDTargetInfo<SparcV9TargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
       return new OpenBSDTargetInfo<SparcV9TargetInfo>(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<SparcV9TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<SparcV9TargetInfo>(Triple, Opts);
     default:
       return new SparcV9TargetInfo(Triple, Opts);
     }
@@ -508,12 +508,12 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new NetBSDI386TargetInfo(Triple, Opts);
     case llvm::Triple::OpenBSD:
       return new OpenBSDI386TargetInfo(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<X86_32TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<X86_32TargetInfo>(Triple, Opts);
     case llvm::Triple::Fuchsia:
       return new FuchsiaTargetInfo<X86_32TargetInfo>(Triple, Opts);
-    case llvm::Triple::KFreeBSD:
-      return new KFreeBSDTargetInfo<X86_32TargetInfo>(Triple, Opts);
+    case llvm::Triple::KNQC:
+      return new KNQCTargetInfo<X86_32TargetInfo>(Triple, Opts);
     case llvm::Triple::Minix:
       return new MinixTargetInfo<X86_32TargetInfo>(Triple, Opts);
     case llvm::Triple::Solaris:
@@ -567,12 +567,12 @@ TargetInfo *AllocateTarget(const llvm::Triple &Triple,
       return new NetBSDTargetInfo<X86_64TargetInfo>(Triple, Opts);
     case llvm::Triple::OpenBSD:
       return new OpenBSDX86_64TargetInfo(Triple, Opts);
-    case llvm::Triple::FreeBSD:
-      return new FreeBSDTargetInfo<X86_64TargetInfo>(Triple, Opts);
+    case llvm::Triple::NQC:
+      return new NQCTargetInfo<X86_64TargetInfo>(Triple, Opts);
     case llvm::Triple::Fuchsia:
       return new FuchsiaTargetInfo<X86_64TargetInfo>(Triple, Opts);
-    case llvm::Triple::KFreeBSD:
-      return new KFreeBSDTargetInfo<X86_64TargetInfo>(Triple, Opts);
+    case llvm::Triple::KNQC:
+      return new KNQCTargetInfo<X86_64TargetInfo>(Triple, Opts);
     case llvm::Triple::Solaris:
       return new SolarisTargetInfo<X86_64TargetInfo>(Triple, Opts);
     case llvm::Triple::Win32: {

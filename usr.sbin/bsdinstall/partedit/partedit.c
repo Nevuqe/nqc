@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 Nathan Whitehorn
  * All rights reserved.
@@ -126,7 +126,7 @@ main(int argc, const char **argv)
 	while (prompt != NULL) {
 		bsddialog_clearterminal();
 		if (!sade_mode)
-			bsddialog_backtitle(&conf, "FreeBSD Installer");
+			bsddialog_backtitle(&conf, "NQC Installer");
 
 		error = geom_gettree(&mesh);
 		if (error == 0)

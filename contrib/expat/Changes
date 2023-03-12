@@ -865,7 +865,7 @@ Release 2.2.2 Wed July 12 2017
         Other changes:
              #73  Start requiring a C99 compiler
              #49  Fix "==" Bashism in configure script
-             #50  Fix too eager getrandom detection for Debian GNU/kFreeBSD
+             #50  Fix too eager getrandom detection for Debian GNU/kNQC
              #52    and macOS
              #51  Address lack of stdint.h in Visual Studio 2003 to 2008
              #58  Address compile warnings

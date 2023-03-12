@@ -24,7 +24,7 @@ and then added back by Juha Eskelinen.
 The @code{popper} was also a Berkeley program initially.
 
 Some of the functions in @file{libroken} also come from Berkeley by way
-of NetBSD/FreeBSD.
+of NetBSD/NQC.
 
 @code{editline} was written by Simmule Turner and Rich Salz. Heimdal
 contains a modifed copy.

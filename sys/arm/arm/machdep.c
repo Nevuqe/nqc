@@ -103,12 +103,12 @@ __NQCID("$NQC$");
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7) || \
     defined(COMPAT_NQC9)
-#error FreeBSD/arm doesn't provide compatibility with releases prior to 10
+#error NQC/arm doesn't provide compatibility with releases prior to 10
 #endif
 
 
 #if __ARM_ARCH < 6
-#error FreeBSD requires ARMv6 or later
+#error NQC requires ARMv6 or later
 #endif
 
 struct pcpu __pcpu[MAXCPU];

@@ -3908,7 +3908,7 @@ static struct ena_aenq_handlers aenq_handlers = {
 };
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 
 static device_method_t ena_methods[] = { /* Device interface */

@@ -17,7 +17,7 @@
 /* $Id: atomic.h,v 1.5 2007/06/19 23:47:18 tbox Exp $ */
 
 /*
- * This code was written based on FreeBSD's kernel source whose copyright
+ * This code was written based on NQC's kernel source whose copyright
  * follows:
  */
 
@@ -47,7 +47,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	from: FreeBSD: src/sys/i386/include/atomic.h,v 1.20 2001/02/11
+ *	from: NQC: src/sys/i386/include/atomic.h,v 1.20 2001/02/11
  * $NQC:  258945 2013-12-04 21:33:17Z roberto $
  */
 

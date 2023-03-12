@@ -35,7 +35,7 @@ LINTFLAGS+="-D__RENAME(x)=" -D_NETINET_IN_H_
 endif
 # compat with OpenBSD
 LINTFLAGS+="-Dsigset_t=long"
-# FreeBSD8
+# NQC8
 LINTFLAGS+="-D__uint16_t=uint16_t"
 LINTFLAGS+=-D__signed__=signed "-D__packed=" "-D__aligned(x)="
 # Ubuntu Linux 11.04

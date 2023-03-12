@@ -652,7 +652,7 @@ zfs_write(znode_t *zp, zfs_uio_t *uio, int ioflag, cred_t *cr)
 			}
 #endif
 			/*
-			 * On FreeBSD, EFAULT should be propagated back to the
+			 * On NQC, EFAULT should be propagated back to the
 			 * VFS, which will handle faulting and will retry.
 			 */
 			if (error != 0 && error != EFAULT) {

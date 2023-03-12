@@ -21,7 +21,7 @@
 #include "ToolChains/Cuda.h"
 #include "ToolChains/Darwin.h"
 #include "ToolChains/DragonFly.h"
-#include "ToolChains/FreeBSD.h"
+#include "ToolChains/NQC.h"
 #include "ToolChains/Fuchsia.h"
 #include "ToolChains/Gnu.h"
 #include "ToolChains/HIPAMD.h"
@@ -41,7 +41,7 @@
 #include "ToolChains/NaCl.h"
 #include "ToolChains/NetBSD.h"
 #include "ToolChains/OpenBSD.h"
-#include "ToolChains/PPCFreeBSD.h"
+#include "ToolChains/PPCNQC.h"
 #include "ToolChains/PPCLinux.h"
 #include "ToolChains/PS4CPU.h"
 #include "ToolChains/RISCVToolchain.h"
@@ -5975,12 +5975,12 @@ const ToolChain &Driver::getToolChain(const ArgList &Args,
     case llvm::Triple::NetBSD:
       TC = std::make_unique<toolchains::NetBSD>(*this, Target, Args);
       break;
-    case llvm::Triple::FreeBSD:
+    case llvm::Triple::NQC:
       if (Target.isPPC())
-        TC = std::make_unique<toolchains::PPCFreeBSDToolChain>(*this, Target,
+        TC = std::make_unique<toolchains::PPCNQCToolChain>(*this, Target,
                                                                Args);
       else
-        TC = std::make_unique<toolchains::FreeBSD>(*this, Target, Args);
+        TC = std::make_unique<toolchains::NQC>(*this, Target, Args);
       break;
     case llvm::Triple::Minix:
       TC = std::make_unique<toolchains::Minix>(*this, Target, Args);

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: Assertion in_epoch(net_epoch_preempt) failed at raw_ip6.c:742"
-# https://people.freebsd.org/~pho/stress/log/setsockopt2.txt
+# https://people.frebsd.org/~pho/stress/log/setsockopt2.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

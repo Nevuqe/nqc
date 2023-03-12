@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2020 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2009-2020 Alexander Motin <mav@frebsd.org>
  * Copyright (c) 1997-2009 by Matthew Jacob
  * All rights reserved.
  *
@@ -28,7 +28,7 @@
  */
 
 /*
- * Platform (FreeBSD) dependent common attachment code for Qlogic adapters.
+ * Platform (NQC) dependent common attachment code for Qlogic adapters.
  */
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
@@ -2774,7 +2774,7 @@ isp_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->xport_specific.fc.bitrate = fcp->isp_gbspeed * 1000;
 		cpi->protocol = PROTO_SCSI;
 		cpi->protocol_version = SCSI_REV_2;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "Qlogic", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);

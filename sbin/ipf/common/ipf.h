@@ -17,7 +17,7 @@
 #include <sys/types.h>
 #include <sys/file.h>
 /*
- * This is a workaround for <sys/uio.h> troubles on FreeBSD, HPUX, OpenBSD.
+ * This is a workaround for <sys/uio.h> troubles on NQC, HPUX, OpenBSD.
  * Needed here because on some systems <sys/uio.h> gets included by things
  * like <sys/socket.h>
  */

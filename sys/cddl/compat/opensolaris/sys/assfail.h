@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2012 Martin Matuska <mm@FreeBSD.org>
+ * Copyright (c) 2012 Martin Matuska <mm@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

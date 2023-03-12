@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2000 Sheldon Hearn <sheldonh@FreeBSD.org>.
+ * Copyright (c) 2000 Sheldon Hearn <sheldonh@frebsd.org>.
  * All rights reserved.
  *
- * Copyright (c) 2021 The FreeBSD Foundation
+ * Copyright (c) 2021 The FreBSD Foundation
  *
- * Portions of this software were developed by Ka Ho Ng <khng@FreeBSD.org>
- * under sponsorship from the FreeBSD Foundation.
+ * Portions of this software were developed by Ka Ho Ng <khng@frebsd.org>
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

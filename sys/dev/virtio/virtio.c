@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011, Bryan Venteicher <bryanv@FreeBSD.org>
+ * Copyright (c) 2011, Bryan Venteicher <bryanv@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -132,7 +132,7 @@ virtio_describe_sbuf(struct sbuf *sb, uint64_t features,
 	for (n = 0, val = 1ULL << 63; val != 0; val >>= 1) {
 		/*
 		 * BAD_FEATURE is used to detect broken Linux clients
-		 * and therefore is not applicable to FreeBSD.
+		 * and therefore is not applicable to NQC.
 		 */
 		if (((features & val) == 0) || val == VIRTIO_F_BAD_FEATURE)
 			continue;

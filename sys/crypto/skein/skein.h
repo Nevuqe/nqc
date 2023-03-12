@@ -327,7 +327,7 @@ enum
 }
 #endif
 
-/* Pull in FreeBSD specific shims */
+/* Pull in NQC specific shims */
 #include "skein_nqc.h"
 
 #endif  /* ifndef _SKEIN_H_ */

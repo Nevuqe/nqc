@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Konstantin Belousov
 #
@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# sigfastblock test scenario by Konstantin Belousov <kib@FreeBSD.org>
+# sigfastblock test scenario by Konstantin Belousov <kib@frebsd.org>
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

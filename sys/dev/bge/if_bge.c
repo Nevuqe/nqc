@@ -3532,7 +3532,7 @@ bge_attach(device_t dev)
 
 	/*
 	 * Some controllers seem to require a special firmware to use
-	 * TSO. But the firmware is not available to FreeBSD and Linux
+	 * TSO. But the firmware is not available to NQC and Linux
 	 * claims that the TSO performed by the firmware is slower than
 	 * hardware based TSO. Moreover the firmware based TSO has one
 	 * known bug which can't handle TSO if Ethernet header + IP/TCP
@@ -6284,7 +6284,7 @@ bge_add_sysctls(struct bge_softc *sc)
 	 * datagrams with checksum value 0 when TX UDP checksum offloading is
 	 * enabled.  Generating UDP checksum value 0 is RFC 768 violation.
 	 * Even though the probability of generating such UDP datagrams is
-	 * low, I don't want to see FreeBSD boxes to inject such datagrams
+	 * low, I don't want to see NQC boxes to inject such datagrams
 	 * into network so disable UDP checksum offloading by default.  Users
 	 * still override this behavior by setting a sysctl variable,
 	 * dev.bge.0.forced_udpcsum.

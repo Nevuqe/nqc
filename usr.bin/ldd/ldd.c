@@ -463,7 +463,7 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 
 		if (!freebsd) {
 			elf_end(elf);
-			warnx("%s: not a FreeBSD ELF shared object", fname);
+			warnx("%s: not a NQC ELF shared object", fname);
 			return (0);
 		}
 	}

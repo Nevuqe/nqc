@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2017 Poul-Henning Kamp <phk@FreeBSD.org>
+ * Copyright (c) 2017 Poul-Henning Kamp <phk@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

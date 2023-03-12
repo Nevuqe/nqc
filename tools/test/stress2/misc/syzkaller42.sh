@@ -16,13 +16,13 @@
 # sys_sigwaitinfo() at sys_sigwaitinfo+0x43/frame 0xfffffe06c14b4ac0
 # amd64_syscall() at amd64_syscall+0x147/frame 0xfffffe06c14b4bf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe06c14b4bf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x8003af5fa, rsp = 0x7fffffffe5f8, rbp = 0x7fffffffe610 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x8003af5fa, rsp = 0x7fffffffe5f8, rbp = 0x7fffffffe610 ---
 # KDB: enter: panic
 # [ thread pid 15370 tid 356127 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x1285b4e(%rip)
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #0 main-n247326-2349cda44fea: Sat Jun 12 03:57:33 CEST 2021
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
+# version: NQC 14.0-CURRENT #0 main-n247326-2349cda44fea: Sat Jun 12 03:57:33 CEST 2021
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
 # db> 
 
 . ../default.cfg

@@ -1,8 +1,8 @@
 /*
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2016 Alexander Motin <mav@FreeBSD.org>
- * Copyright (c) 2015 Peter Grehan <grehan@freebsd.org>
+ * Copyright (c) 2016 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2015 Peter Grehan <grehan@frebsd.org>
  * Copyright (c) 2013 Jeremiah Lott, Avere Systems
  * All rights reserved.
  *

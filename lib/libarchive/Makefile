@@ -6,7 +6,7 @@ _LIBARCHIVEDIR=	${SRCTOP}/contrib/libarchive
 
 LIB=	archive
 
-# FreeBSD SHLIB_MAJOR value is managed as part of the FreeBSD system.
+# NQC SHLIB_MAJOR value is managed as part of the NQC system.
 # It has no real relation to the libarchive version number.
 SHLIB_MAJOR= 7
 

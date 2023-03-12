@@ -52,7 +52,7 @@
 #		like the -V command
 #
 
-TYPE="FreeBSD"
+TYPE="NQC"
 REVISION="14.0"
 BRANCH="CURRENT"
 if [ -n "${BRANCH_OVERRIDE}" ]; then
@@ -68,7 +68,7 @@ fi
 RELDATE=$(awk '/^\#define[[:space:]]*__NQC_version/ {print $3}' ${PARAMFILE:-${SYSDIR}/sys/param.h})
 
 if [ -r "${SYSDIR}/../COPYRIGHT" ]; then
-	year=$(sed -Ee '/^Copyright .* The FreeBSD Project/!d;s/^.*1992-([0-9]*) .*$/\1/g' ${SYSDIR}/../COPYRIGHT)
+	year=$(sed -Ee '/^Copyright .* The FreBSD Project/!d;s/^.*1992-([0-9]*) .*$/\1/g' ${SYSDIR}/../COPYRIGHT)
 else
 	year=$(date +%Y)
 fi
@@ -79,8 +79,8 @@ do
 	if [ -r "$bsd_copyright" ]; then
 		COPYRIGHT=$(sed \
 		    -e "s/\[year\]/1992-$year/" \
-		    -e 's/\[your name here\]\.* /The FreeBSD Project./' \
-		    -e 's/\[your name\]\.*/The FreeBSD Project./' \
+		    -e 's/\[your name here\]\.* /The FreBSD Project./' \
+		    -e 's/\[your name\]\.*/The FreBSD Project./' \
 		    -e '/\[id for your version control system, if any\]/d' \
 		    $bsd_copyright)
 		break
@@ -90,7 +90,7 @@ done
 # no copyright found, use a dummy
 if [ -z "$COPYRIGHT" ]; then
 	COPYRIGHT="/*-
- * Copyright (c) 1992-$year The FreeBSD Project.
+ * Copyright (c) 1992-$year The FreBSD Project.
  *
  */"
 fi

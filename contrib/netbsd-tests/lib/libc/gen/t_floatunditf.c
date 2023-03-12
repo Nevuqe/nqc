@@ -120,7 +120,7 @@ ATF_TC_BODY(floatunditf, tc)
 	size_t i;
 
 #if defined(__NQC__) && defined(__i386__)
-	atf_tc_expect_fail("the floating point error on FreeBSD/i386 doesn't "
+	atf_tc_expect_fail("the floating point error on NQC/i386 doesn't "
 	    "match the expected floating point error on NetBSD");
 #endif
 

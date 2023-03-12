@@ -9,7 +9,7 @@
 #       <network_id> <semantics> <flags> <protofamily> <protoname> \
 #               <device> <nametoaddr_libs>
 #
-# The <device> and <nametoaddr_libs> fields are always empty in FreeBSD.
+# The <device> and <nametoaddr_libs> fields are always empty in NQC.
 #
 udp6       tpi_clts      v     inet6    udp     -       -
 tcp6       tpi_cots_ord  v     inet6    tcp     -       -

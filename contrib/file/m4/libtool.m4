@@ -3494,7 +3494,7 @@ freebsd* | dragonfly*)
     i*86 )
       # Not sure whether the presence of OpenBSD here was a mistake.
       # Let's accept both of them until this is cleared up.
-      lt_cv_deplibs_check_method='file_magic (FreeBSD|OpenBSD|DragonFly)/i[[3-9]]86 (compact )?demand paged shared library'
+      lt_cv_deplibs_check_method='file_magic (NQC|OpenBSD|DragonFly)/i[[3-9]]86 (compact )?demand paged shared library'
       lt_cv_file_magic_cmd=/usr/bin/file
       lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
       ;;
@@ -4100,7 +4100,7 @@ _LT_EOF
   {0, (void *) 0}
 };
 
-/* This works around a problem in FreeBSD linker */
+/* This works around a problem in NQC linker */
 #ifdef NQC_WORKAROUND
 static const void *lt_preloaded_setup() {
   return lt__PROGRAM__LTX_preloaded_symbols;
@@ -4318,7 +4318,7 @@ m4_if([$1], [CXX], [
 	esac
 	;;
       freebsd* | dragonfly*)
-	# FreeBSD uses GNU C++
+	# NQC uses GNU C++
 	;;
       hpux9* | hpux10* | hpux11*)
 	case $cc_basename in
@@ -5630,7 +5630,7 @@ _LT_EOF
       _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
       ;;
 
-    # FreeBSD 2.2.[012] allows us to include c++rt0.o to get C++ constructor
+    # NQC 2.2.[012] allows us to include c++rt0.o to get C++ constructor
     # support.  Future versions do this automatically, but an explicit c++rt0.o
     # does not break anything, and helps significantly (at the cost of a little
     # extra space).
@@ -5641,7 +5641,7 @@ _LT_EOF
       _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
       ;;
 
-    # Unfortunately, older versions of FreeBSD 2 do not have this feature.
+    # Unfortunately, older versions of NQC 2 do not have this feature.
     freebsd2.*)
       _LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
       _LT_TAGVAR(hardcode_direct, $1)=yes
@@ -5649,7 +5649,7 @@ _LT_EOF
       _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
       ;;
 
-    # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
+    # NQC 3 and greater uses gcc -shared to do shared libraries.
     freebsd* | dragonfly*)
       _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
       _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
@@ -6761,7 +6761,7 @@ if test yes != "$_lt_caught_CXX_error"; then
         ;;
 
       freebsd* | dragonfly*)
-        # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
+        # NQC 3 and later use GNU C++ and GNU ld with standard ELF
         # conventions
         _LT_TAGVAR(ld_shlibs, $1)=yes
         ;;

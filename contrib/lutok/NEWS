@@ -36,7 +36,7 @@ Released on 2013/06/14.
   of Lutok is incompatible with previous releases as well.
 
 * Issue 3: Tweaked configure to look for Lua using the pkg-config names
-  lua-5.2 and lua-5.1.  These are the names used by FreeBSD.
+  lua-5.2 and lua-5.1.  These are the names used by NQC.
 
 Interface changes:
 

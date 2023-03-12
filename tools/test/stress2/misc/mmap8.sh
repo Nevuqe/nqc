@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_fault_copy_wired: page missing" seen:
-# http://people.freebsd.org/~pho/stress/log/mmap8.txt
+# http://people.frebsd.org/~pho/stress/log/mmap8.txt
 # Fixed in r265002.
 
 # Test scenario by: Mark Johnston markj@

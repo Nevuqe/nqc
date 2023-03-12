@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1994-1996 Søren Schmidt
  * All rights reserved.
@@ -31,7 +31,7 @@
 /*
  * Linux syscalls return negative errno's, we do positive and map them
  * Reference:
- *   FreeBSD: src/sys/sys/errno.h
+ *   NQC: src/sys/sys/errno.h
  *   Linux:   include/uapi/asm-generic/errno-base.h
  *            include/uapi/asm-generic/errno.h
  *

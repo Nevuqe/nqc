@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2017 Mark Johnston <markj@FreeBSD.org>
- * Copyright (c) 2020 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2017 Mark Johnston <markj@frebsd.org>
+ * Copyright (c) 2020 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -33,7 +33,7 @@
 #define _LINUXKPI_ACPI_ACPI_H_
 
 /*
- * FreeBSD import of ACPICA has a typedef for BOOLEAN which conflicts with
+ * NQC import of ACPICA has a typedef for BOOLEAN which conflicts with
  * amdgpu driver. Workaround it on preprocessor level.
  */
 #define	ACPI_USE_SYSTEM_INTTYPES

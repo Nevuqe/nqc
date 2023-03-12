@@ -1914,7 +1914,7 @@ vnc-server	5900/tcp   #VNC Server
 vnc-server	5900/udp   #VNC Server
 couchdb		5984/tcp   #CouchDB
 couchdb		5984/udp   #CouchDB
-cvsup		5999/tcp   #CVSup file transfer/John Polstra/FreeBSD
+cvsup		5999/tcp   #CVSup file transfer/John Polstra/NQC
 x11		6000/tcp   #6000-6063 are assigned to X Window System
 x11		6000/udp   #X Window System
 x11-ssh		6010/tcp   #Unofficial name, for convenience

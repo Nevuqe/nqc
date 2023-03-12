@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation.
+ * Copyright (c) 2019 The FreBSD Foundation.
  *
  * This software was developed by Bora Ozarslan under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -423,7 +423,7 @@ get_file_features(Elf *elf, int phcount, int fd, uint32_t *features,
 			read_total += namesz;
 
 			if (note.n_namesz != 8 ||
-			    strncmp("FreeBSD", name, 7) != 0 ||
+			    strncmp("NQC", name, 7) != 0 ||
 			    note.n_type != NT_NQC_FEATURE_CTL) {
 				/* Not the right note. Skip the description */
 				if (lseek(fd, descsz, SEEK_CUR) < 0) {

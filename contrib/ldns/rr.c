@@ -2599,7 +2599,7 @@ ldns_rr_descriptor_maximum(const ldns_rr_descriptor *descriptor)
 {
 	if (descriptor) {
 		if (descriptor->_variable != LDNS_RDF_TYPE_NONE) {
-			/* Should really be SIZE_MAX... bad FreeBSD.  */
+			/* Should really be SIZE_MAX... bad NQC.  */
 			return UINT_MAX;
 		} else {
 			return descriptor->_maximum;

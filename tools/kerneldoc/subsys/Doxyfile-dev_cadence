@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel cadence device code"
+PROJECT_NAME           = "NQC kernel cadence device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_cadence/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

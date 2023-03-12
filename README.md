@@ -1,8 +1,8 @@
 What is NQC?
 ============
 
-Nevuqe Core (NQC) is an operating system that is based on the FreeBSD operating system. This means that it
-leverages the features and functionality of FreeBSD to provide a stable and secure environment for running
+Nevuqe Core (NQC) is an operating system that is based on the NQC operating system. This means that it
+leverages the features and functionality of NQC to provide a stable and secure environment for running
 various applications and services.
 
 For more information and resources on NQC, you can visit the Nevuqe developer site at [developer.nevuqe.com](https://developer.nevuqe.com).

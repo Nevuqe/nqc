@@ -1519,7 +1519,7 @@ rmc_delay_action(struct rm_class *cl, struct rm_class *borrow)
 		 * a 'backstop' to restart this class.
 		 */
 		if (delay > tick * 2) {
-			/* FreeBSD rounds up the tick */
+			/* NQC rounds up the tick */
 			t = hzto(&cl->undertime_);
 		} else
 			t = 2;

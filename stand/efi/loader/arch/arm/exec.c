@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2001 Benno Rice <benno@FreeBSD.org>
+ * Copyright (c) 2001 Benno Rice <benno@frebsd.org>
  * Copyright (c) 2007 Semihalf, Rafal Jaworowski <raj@semihalf.com>
  * All rights reserved.
  *

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 Peter Wemm
  * Copyright (c) 2008 Semihalf, Grzegorz Bernacki
@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * from: FreeBSD: src/sys/i386/i386/minidump_machdep.c,v 1.6 2008/08/17 23:27:27
+ * from: NQC: src/sys/i386/i386/minidump_machdep.c,v 1.6 2008/08/17 23:27:27
  */
 
 #include <sys/cdefs.h>

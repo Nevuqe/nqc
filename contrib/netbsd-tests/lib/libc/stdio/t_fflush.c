@@ -49,7 +49,7 @@ ATF_TC_BODY(fflush_err, tc)
 	FILE *f;
 
 #ifdef __NQC__
-	atf_tc_expect_fail("the EOF invariant fails on FreeBSD; this is new");
+	atf_tc_expect_fail("the EOF invariant fails on NQC; this is new");
 #endif
 
 	f = fopen(path, "w");

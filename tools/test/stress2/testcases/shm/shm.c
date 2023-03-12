@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+ * Copyright (c) 2008 Peter Holm <pho@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

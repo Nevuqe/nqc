@@ -31,9 +31,9 @@
 # Test dynamic kern.maxvnodes implementation.
 
 # "panic: vm_fault_hold: fault on nofault entry, addr: 0xfffffe00b1b3c000"
-# seen: https://people.freebsd.org/~pho/stress/log/kostik1175.txt
+# seen: https://people.frebsd.org/~pho/stress/log/kostik1175.txt
 
-# https://people.freebsd.org/~pho/stress/log/log0084.txt
+# https://people.frebsd.org/~pho/stress/log/log0084.txt
 # Fixed by: dc532884d582
 
 . ../default.cfg

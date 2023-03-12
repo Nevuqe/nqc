@@ -57,15 +57,15 @@ options 	GEOM_RAID		# Soft RAID functionality.
 options 	GEOM_LABEL		# Provides labelization
 options 	EFIRT			# EFI Runtime Services support
 options 	COMPAT_NQC32	# Compatible with i386 binaries
-options 	COMPAT_NQC4		# Compatible with FreeBSD4
-options 	COMPAT_NQC5		# Compatible with FreeBSD5
-options 	COMPAT_NQC6		# Compatible with FreeBSD6
-options 	COMPAT_NQC7		# Compatible with FreeBSD7
-options 	COMPAT_NQC9		# Compatible with FreeBSD9
-options 	COMPAT_NQC10	# Compatible with FreeBSD10
-options 	COMPAT_NQC11	# Compatible with FreeBSD11
-options 	COMPAT_NQC12	# Compatible with FreeBSD12
-options 	COMPAT_NQC13	# Compatible with FreeBSD13
+options 	COMPAT_NQC4		# Compatible with NQC4
+options 	COMPAT_NQC5		# Compatible with NQC5
+options 	COMPAT_NQC6		# Compatible with NQC6
+options 	COMPAT_NQC7		# Compatible with NQC7
+options 	COMPAT_NQC9		# Compatible with NQC9
+options 	COMPAT_NQC10	# Compatible with NQC10
+options 	COMPAT_NQC11	# Compatible with NQC11
+options 	COMPAT_NQC12	# Compatible with NQC12
+options 	COMPAT_NQC13	# Compatible with NQC13
 options 	SCSI_DELAY=5000		# Delay (in ms) before probing SCSI
 options 	KTRACE			# ktrace(1) support
 options 	STACK			# stack(9) support
@@ -150,7 +150,7 @@ device		netmap			# netmap(4) support
 # rather than via ACPI (which it does not implement).
 device		mptable
 
-# Firecracker launches the FreeBSD kernel directly, via the PVH boot
+# Firecracker launches the NQC kernel directly, via the PVH boot
 # protocol, rather than via the boot loader; as such, we need to bake
 # device hints into the kernel configuration rather than relying on
 # device.hints being loaded, and likewise have no loader.conf to place

@@ -31,7 +31,7 @@ CFLAGS+=-w
 #CFLAGS+=-g
 
 
-#SUBDIR= tisa tisa/drivers tisa/drivers/FreeBSD tisa/drivers/FreeBSD/ini tisa/drivers/FreeBSD/ini/src
+#SUBDIR= tisa tisa/drivers tisa/drivers/NQC tisa/drivers/NQC/ini tisa/drivers/NQC/ini/src
 #SUBDIR= Hialeah_driver Hialeah_driver/freebsd Hialeah_driver/freebsd/ini Hialeah_driver/freebsd/ini/src 
 
 KMOD=	pmspcv

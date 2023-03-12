@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 Neel Natu <neel@freebsd.org>
+ * Copyright (c) 2013 Neel Natu <neel@frebsd.org>
  * Copyright (c) 2013 Tycho Nightingale <tycho.nightingale@pluribusnetworks.com>
  * All rights reserved.
  *

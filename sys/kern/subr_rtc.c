@@ -4,7 +4,7 @@
  * Copyright (c) 1988 University of Utah.
  * Copyright (c) 1982, 1990, 1993
  *	The Regents of the University of California.
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
@@ -12,7 +12,7 @@
  * Science Department.
  *
  * Portions of this software were developed by Julien Ridoux at the University
- * of Melbourne under sponsorship from the FreeBSD Foundation.
+ * of Melbourne under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

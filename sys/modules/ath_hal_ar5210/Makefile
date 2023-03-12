@@ -33,7 +33,7 @@
 
 KMOD=	ath_hal_ar5210
 
-# FreeBSD module loading pieces
+# NQC module loading pieces
 .PATH:	${SRCTOP}/sys/dev/ath/
 SRCS=	ah_osdep_ar5210.c
 

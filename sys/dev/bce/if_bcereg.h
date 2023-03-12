@@ -31,7 +31,7 @@
 #define _BCEREG_H_DEFINED
 
 /****************************************************************************/
-/* Conversion to FreeBSD type definitions.                                  */
+/* Conversion to NQC type definitions.                                  */
 /****************************************************************************/
 #define u64 uint64_t
 #define u32 uint32_t

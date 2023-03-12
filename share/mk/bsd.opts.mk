@@ -23,7 +23,7 @@
 #
 # The old-style YES_FOO and NO_FOO are being phased out. No new instances of them
 # should be added. Old instances should be removed since they were just to
-# bridge the gap between FreeBSD 4 and FreeBSD 5.
+# bridge the gap between NQC 4 and NQC 5.
 #
 # Makefiles should never test WITH_FOO or WITHOUT_FOO directly (although an
 # exception is made for _WITHOUT_SRCONF which turns off this mechanism
@@ -116,7 +116,7 @@ __DEFAULT_YES_OPTIONS+=PIE
 # Supported NO_* options (if defined, MK_* will be forced to "no",
 # regardless of user's setting).
 #
-# These are transitional and will disappaer in the FreeBSD 12.
+# These are transitional and will disappaer in the NQC 12.
 #
 .for var in \
     CTF \

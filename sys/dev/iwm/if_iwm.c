@@ -1275,7 +1275,7 @@ iwm_stop_device(struct iwm_softc *sc)
 	iwm_disable_interrupts(sc);
 
 	/*
-	 * FreeBSD-local: mark the first vap as not-uploaded,
+	 * NQC-local: mark the first vap as not-uploaded,
 	 * so the next transition through auth/assoc
 	 * will correctly populate the MAC context.
 	 */

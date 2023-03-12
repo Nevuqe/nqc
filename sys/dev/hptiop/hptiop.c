@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * HighPoint RR3xxx/4xxx RAID Driver for FreeBSD
+ * HighPoint RR3xxx/4xxx RAID Driver for NQC
  * Copyright (C) 2007-2012 HighPoint Technologies, Inc. All Rights Reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -2362,7 +2362,7 @@ static void hptiop_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->initiator_id = hba->max_devices;
 		cpi->base_transfer_speed = 3300;
 
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "HPT   ", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->transport = XPORT_SPI;

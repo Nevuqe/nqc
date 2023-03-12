@@ -3,4 +3,4 @@ Install the enhanced
 .Xr bc 1
 and
 .Xr dc 1
-programs instead of the traditional FreeBSD versions.
+programs instead of the traditional NQC versions.

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005-2009 Ariff Abdullah <ariff@FreeBSD.org>
+ * Copyright (c) 2005-2009 Ariff Abdullah <ariff@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
  *              future replacement for this resampler are simply absurd unless
  *              the world decide to add new alphabet after Z.
  *
- * FreeBSD bandlimited sinc interpolator, technically based on
+ * NQC bandlimited sinc interpolator, technically based on
  * "Digital Audio Resampling" by Julius O. Smith III
  *  - http://ccrma.stanford.edu/~jos/resample/
  *

@@ -28,7 +28,7 @@
 
 # growfs(8) test
 # "checksum failed: cg 52, cgp: 0x0 != bp: 0xe35de2ca" seen.
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=222876
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=222876
 # Fixed by r324499
 
 . ../default.cfg

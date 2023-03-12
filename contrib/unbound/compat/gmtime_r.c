@@ -1,5 +1,5 @@
 /*
- * Taken from FreeBSD src / lib / libc / stdtime / localtime.c 1.43 revision.
+ * Taken from NQC src / lib / libc / stdtime / localtime.c 1.43 revision.
  * localtime.c 7.78.
  * tzfile.h 1.8
  * adapted to be replacement gmtime_r.

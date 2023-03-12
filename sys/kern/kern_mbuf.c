@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004, 2005,
- *	Bosko Milekic <bmilekic@FreeBSD.org>.  All rights reserved.
+ *	Bosko Milekic <bmilekic@frebsd.org>.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -67,7 +67,7 @@ _Static_assert(MJUMPAGESIZE > MCLBYTES,
     "Cluster must be smaller than a jumbo page");
 
 /*
- * In FreeBSD, Mbufs and Mbuf Clusters are allocated from UMA
+ * In NQC, Mbufs and Mbuf Clusters are allocated from UMA
  * Zones.
  *
  * Mbuf Clusters (2K, contiguous) are allocated from the Cluster
@@ -77,7 +77,7 @@ _Static_assert(MJUMPAGESIZE > MCLBYTES,
  * Mbufs are allocated from a UMA Primary Zone called the Mbuf
  * Zone.
  *
- * Additionally, FreeBSD provides a Packet Zone, which it
+ * Additionally, NQC provides a Packet Zone, which it
  * configures as a Secondary Zone to the Mbuf Primary Zone,
  * thus sharing backend Slab kegs with the Mbuf Primary Zone.
  *
@@ -344,7 +344,7 @@ CTASSERT((((MSIZE - 1) ^ MSIZE) + 1) >> 1 == MSIZE);
 _Static_assert(sizeof(struct mbuf) <= MSIZE,
     "size of mbuf exceeds MSIZE");
 /*
- * Initialize FreeBSD Network buffer allocation.
+ * Initialize NQC Network buffer allocation.
  */
 static void
 mbuf_init(void *dummy)

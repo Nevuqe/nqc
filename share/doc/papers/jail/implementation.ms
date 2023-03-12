@@ -2,16 +2,16 @@
 .\" $NQC$
 .\"
 .NH
-Implementation jail in the FreeBSD kernel.
+Implementation jail in the NQC kernel.
 .NH 2
 The jail(2) system call, allocation, refcounting and deallocation of
 \fCstruct prison\fP.
 .PP
 The jail(2) system call is implemented as a non-optional system call
-in FreeBSD.  Other system calls are controlled by compile time options
+in NQC.  Other system calls are controlled by compile time options
 in the kernel configuration file, but due to the minute footprint of
 the jail implementation, it was decided to make it a standard
-facility in FreeBSD.
+facility in NQC.
 .PP
 The implementation of the system call is straightforward:  a data structure
 is allocated and populated with the arguments provided.  The data structure
@@ -59,7 +59,7 @@ all the previous checks and additionally checks the jail aspect of the access.
 The check is implemented such that access fails if the origin process is jailed
 but the target process is not in the same jail.
 .PP
-Process visibility is provided through two mechanisms in FreeBSD,
+Process visibility is provided through two mechanisms in NQC,
 the \fCprocfs\fP file system and a sub-tree of the \fCsysctl\fP tree.
 Both of these were modified to report only the processes in the same
 jail to a jailed process.
@@ -99,11 +99,11 @@ This item proved to be the simplest but most tedious to implement.
 Tedious because a manual review of all places where the kernel allowed
 the super user special powers were called for,
 simple because very few places were required to let a jailed root through.
-Of the approximately 260 checks in the FreeBSD 4.0 kernel, only
+Of the approximately 260 checks in the NQC 4.0 kernel, only
 about 35 will let a jailed root through.
 .PP
 Since the default is for jailed roots to not receive privilege, new
-code or drivers in the FreeBSD kernel are automatically jail-aware: they
+code or drivers in the NQC kernel are automatically jail-aware: they
 will refuse jailed roots privilege.
 The other part of this protection comes from the fact that a jailed
 root cannot create new device nodes with the mknod(2) systemcall, so

@@ -7,7 +7,7 @@
 //===----------------------------------------------------------------------===//
 //
 // Information about the process mappings
-// (FreeBSD and NetBSD-specific parts).
+// (NQC and NetBSD-specific parts).
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_platform.h"
@@ -29,7 +29,7 @@
 
 #include <limits.h>
 
-// Fix 'kinfo_vmentry' definition on FreeBSD prior v9.2 in 32-bit mode.
+// Fix 'kinfo_vmentry' definition on NQC prior v9.2 in 32-bit mode.
 #if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32)
 #include <osreldate.h>
 #if __NQC_version <= 902001 // v9.2

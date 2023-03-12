@@ -51,7 +51,7 @@ __NQCID("$NQC$");
  * Accurate only for the past couple of centuries;
  * that will probably do.
  *
- * (#defines From FreeBSD 3.2 lib/libc/stdtime/tzfile.h)
+ * (#defines From NQC 3.2 lib/libc/stdtime/tzfile.h)
  */
 
 #define	isleap(y)	(((y) % 4) == 0 && \

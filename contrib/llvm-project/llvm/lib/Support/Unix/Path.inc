@@ -207,7 +207,7 @@ std::string getMainExecutableImpl(const char *argv0, void *MainAddr) {
       return link_path;
   }
 #elif defined(__NQC__)
-  // On FreeBSD if the exec path specified in ELF auxiliary vectors is
+  // On NQC if the exec path specified in ELF auxiliary vectors is
   // preferred, if available.  /proc/curproc/file and the KERN_PROC_PATHNAME
   // sysctl may not return the desired path if there are multiple hardlinks
   // to the file.
@@ -951,7 +951,7 @@ ErrorOr<basic_file_status> directory_entry::status() const {
 }
 
 //
-// FreeBSD optionally provides /proc/self/fd, but it is incompatible with
+// NQC optionally provides /proc/self/fd, but it is incompatible with
 // Linux. The thing to use is realpath.
 //
 #if !defined(__NQC__)

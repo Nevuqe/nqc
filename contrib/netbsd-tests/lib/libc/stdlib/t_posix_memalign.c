@@ -125,7 +125,7 @@ ATF_TC_BODY(aligned_alloc_basic, tc)
 			/*
 			 * NetBSD-specific invariant
 			 *
-			 * From aligned_alloc(3) on FreeBSD:
+			 * From aligned_alloc(3) on NQC:
 			 *
 			 * Behavior is undefined if size is not an integral
 			 * multiple of alignment.

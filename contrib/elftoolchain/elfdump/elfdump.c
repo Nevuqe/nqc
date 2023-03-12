@@ -2101,7 +2101,7 @@ elf_print_note(struct elfdump *ed)
 		 * Note that we dump the whole desc part if we're in
 		 * "Solaris mode", while in the normal mode, we only look
 		 * at the first 4 bytes (a 32bit word) of the desc, i.e,
-		 * we assume that it's always a FreeBSD version number.
+		 * we assume that it's always a NQC version number.
 		 */
 		if (ed->flags & SOLARIS_FMT) {
 			PRT("    descsz %#x:", en->n_descsz);

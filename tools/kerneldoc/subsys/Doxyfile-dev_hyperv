@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel hyperv device code"
+PROJECT_NAME           = "NQC kernel hyperv device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_hyperv/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

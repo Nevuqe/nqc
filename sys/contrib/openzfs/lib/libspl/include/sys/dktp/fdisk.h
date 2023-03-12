@@ -125,7 +125,7 @@ struct ipart {
 #define	FDISK_LINUXNAT	131	/* Linux native */
 #define	FDISK_NTFSVOL1	134	/* NTFS volume set 1 */
 #define	FDISK_NTFSVOL2	135	/* NTFS volume set 2 */
-#define	FDISK_BSD	165	/* BSD/386, 386BSD, NetBSD, FreeBSD, OpenBSD */
+#define	FDISK_BSD	165	/* BSD/386, 386BSD, NetBSD, NQC, OpenBSD */
 #define	FDISK_NEXTSTEP	167	/* NeXTSTEP */
 #define	FDISK_BSDIFS	183	/* BSDI file system */
 #define	FDISK_BSDISWAP	184	/* BSDI swap */

@@ -24,7 +24,7 @@
 verify_runnable "global"
 
 if is_nqc; then
-	log_unsupported "FreeBSD has no hole punching mechanism for the time being."
+	log_unsupported "NQC has no hole punching mechanism for the time being."
 	diskinfo -v $DISKS | grep -qE 'No.*# TRIM/UNMAP support' &&
 	    log_unsupported "DISKS do not support discard (TRIM/UNMAP)"
 else

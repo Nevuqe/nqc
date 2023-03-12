@@ -2135,7 +2135,7 @@ done
 # config.log.  We remove comments because anyway the quotes in there
 # would cause problems or look ugly.
 # WARNING: Use '\'' to represent an apostrophe within the trap.
-# WARNING: Do not start the trap code with a newline, due to a FreeBSD 4.0 bug.
+# WARNING: Do not start the trap code with a newline, due to a NQC 4.0 bug.
 trap 'exit_status=$?
   # Save into config.log some information that might help in debugging.
   {
@@ -4574,7 +4574,7 @@ fi
 # ac_lbl_capsicum_function_not_seen to yes.
 #
 # We don't check cap_rights_init(), as it's a macro, wrapping another
-# function, in at least some versions of FreeBSD, and AC_CHECK_FUNCS()
+# function, in at least some versions of NQC, and AC_CHECK_FUNCS()
 # doesn't handle that.
 #
 # All of the ones we check for must be available in order to enable

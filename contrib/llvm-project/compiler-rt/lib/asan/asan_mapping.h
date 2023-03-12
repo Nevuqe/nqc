@@ -121,14 +121,14 @@
 // || `[0x400000000000, 0x47ffffffffff]` || LowShadow  ||
 // || `[0x000000000000, 0x3fffffffffff]` || LowMem     ||
 //
-// Shadow mapping on FreeBSD/x86-64 with SHADOW_OFFSET == 0x400000000000:
+// Shadow mapping on NQC/x86-64 with SHADOW_OFFSET == 0x400000000000:
 // || `[0x500000000000, 0x7fffffffffff]` || HighMem    ||
 // || `[0x4a0000000000, 0x4fffffffffff]` || HighShadow ||
 // || `[0x480000000000, 0x49ffffffffff]` || ShadowGap  ||
 // || `[0x400000000000, 0x47ffffffffff]` || LowShadow  ||
 // || `[0x000000000000, 0x3fffffffffff]` || LowMem     ||
 //
-// Shadow mapping on FreeBSD/i386 with SHADOW_OFFSET == 0x40000000:
+// Shadow mapping on NQC/i386 with SHADOW_OFFSET == 0x40000000:
 // || `[0x60000000, 0xffffffff]` || HighMem    ||
 // || `[0x4c000000, 0x5fffffff]` || HighShadow ||
 // || `[0x48000000, 0x4bffffff]` || ShadowGap  ||

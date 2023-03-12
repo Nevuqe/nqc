@@ -1918,7 +1918,7 @@ mana_gd_detach(device_t dev)
 
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 
 static device_method_t mana_methods[] = {

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997,1998,2003 Doug Rabson
  * All rights reserved.
@@ -4185,7 +4185,7 @@ bus_generic_get_domain(device_t dev, device_t child, int *domain)
  * @brief Helper function to implement normal BUS_GET_DEVICE_PATH()
  *
  * This function knows how to (a) pass the request up the tree if there's
- * a parent and (b) Knows how to supply a FreeBSD locator.
+ * a parent and (b) Knows how to supply a NQC locator.
  *
  * @param bus		bus in the walk up the tree
  * @param child		leaf node to print information about
@@ -5792,7 +5792,7 @@ _gone_in(int major, const char *msg)
 	if (P_OSREL_MAJOR(__NQC_version) >= major)
 		printf("Obsolete code will be removed soon: %s\n", msg);
 	else
-		printf("Deprecated code (to be removed in FreeBSD %d): %s\n",
+		printf("Deprecated code (to be removed in NQC %d): %s\n",
 		    major, msg);
 }
 
@@ -5805,7 +5805,7 @@ _gone_in_dev(device_t dev, int major, const char *msg)
 		    "Obsolete code will be removed soon: %s\n", msg);
 	else
 		device_printf(dev,
-		    "Deprecated code (to be removed in FreeBSD %d): %s\n",
+		    "Deprecated code (to be removed in NQC %d): %s\n",
 		    major, msg);
 }
 

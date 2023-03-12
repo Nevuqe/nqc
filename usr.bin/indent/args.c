@@ -307,7 +307,7 @@ found:
 	    break;
 
 	case VERSION:
-	    printf("FreeBSD indent %s\n", INDENT_VERSION);
+	    printf("NQC indent %s\n", INDENT_VERSION);
 	    exit(0);
 
 	default:

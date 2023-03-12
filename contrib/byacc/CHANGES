@@ -993,7 +993,7 @@
 	change max-table-size to correspond with switch of YYINT from short to int
 
 	* defs.h:
-	change default for MAXTABLE to INT_MAX, like the FreeBSD port.
+	change default for MAXTABLE to INT_MAX, like the NQC port.
 	that requires changing some types to eliminate type-mismatches.
 
 	* configure: regen
@@ -2762,7 +2762,7 @@
 
 	* main.c, reader.c, defs.h:
 	use calloc in get_line() when allocating line to ensure it is fully initialized,
-	fixes a later uninitialized value in copy_param() (FreeBSD #193499).
+	fixes a later uninitialized value in copy_param() (NQC #193499).
 
 2014-09-17  Thomas E. Dickey  <dickey@invisible-island.net>
 
@@ -3502,7 +3502,7 @@
 
 	* btyaccpar.skel: RCS_BASE
 
-	* yaccpar.skel: comment-out yysccsid[], for FreeBSD build-issues
+	* yaccpar.skel: comment-out yysccsid[], for NQC build-issues
 	remove GCC_UNUSED to reduce name-pollution as well as being simpler
 
 	* main.c:
@@ -4231,19 +4231,19 @@
 	regen
 
 	* skeleton.c:
-	Increase default stack-size to match FreeBSD version noted as from
+	Increase default stack-size to match NQC version noted as from
 	"BSD 4.4 Lite Usr.bin Sources".  See
 
-		http://svnweb.freebsd.org/base/vendor/CSRG/dist/usr.bin/yacc/
-		http://svnweb.freebsd.org/base/head/usr.bin/yacc/
-		http://svnweb.freebsd.org/base/vendor/byacc/
+		http://svnweb.frebsd.org/base/vendor/CSRG/dist/usr.bin/yacc/
+		http://svnweb.frebsd.org/base/head/usr.bin/yacc/
+		http://svnweb.frebsd.org/base/vendor/byacc/
 
 	The original 1.9 sources (on which I based development) used 500 for
 	stacksize; the BSD Lite sources (a year or two later) used 10000.
 
 	This is a change to default values; the YYMAXDEPTH and YYSTACKSIZE
 	symbols have "always" been overridable by applications, but rarely
-	needed to do this.  RedHat began using the FreeBSD source in 2000,
+	needed to do this.  RedHat began using the NQC source in 2000,
 	and switched to this source in 2007 using the 20050813 snapshot.
 
 	RedHat #743343 misattributed the change in default stacksize to
@@ -5220,7 +5220,7 @@
 	add YYPARSE_PARAM and YYPARSE_PARAM_TYPE
 
 	* skeleton.c:
-	add YYPARSE_PARAM (bison) and YYPARSE_PARAM_TYPE (FreeBSD) features.
+	add YYPARSE_PARAM (bison) and YYPARSE_PARAM_TYPE (NQC) features.
 
 	* main.c, defs.h, output.c, skeleton.c, symtab.c, error.c, reader.c:
 	fixes for gcc -Wwrite-strings
@@ -5409,7 +5409,7 @@
 	* skeleton.c:
 	delete yynewerror (no one uses it any more, and it just makes compiler warnings)
 
-	* skeleton.c: adapt yygrowstack() and related definitions from FreeBSD
+	* skeleton.c: adapt yygrowstack() and related definitions from NQC
 
 	* test/run_test.sh:
 	filter out lines with YYPATCH, since that will change with each update
@@ -5448,7 +5448,7 @@
 	* main.c: add -o option, to work with scripts that assume bison.
 	simplify create_file_names() with a macro.
 	simplify done() with a macro.
-	adapt fix from FreeBSD for signal race, e.g., if done() is interrupted by
+	adapt fix from NQC for signal race, e.g., if done() is interrupted by
 	onintr(), do not flush output via exit(), but use _exit() instead.
 
 	* defs.h: remove unnecessary externs for main.c
@@ -5458,7 +5458,7 @@
 	* graph.c: remove unused parameter
 
 	* mkpar.c, defs.h, reader.c:
-	add support for "%expect", a bison feature from FreeBSD sources
+	add support for "%expect", a bison feature from NQC sources
 
 	* lr0.c, reader.c, main.c, skeleton.c, graph.c, symtab.c, closure.c,
 	  mkpar.c, lalr.c, error.c, warshall.c, verbose.c, output.c:

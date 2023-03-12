@@ -41,7 +41,7 @@ function cleanup
 }
 
 if is_nqc; then
-	log_unsupported "FreeBSD has no hole punching mechanism for the time being."
+	log_unsupported "NQC has no hole punching mechanism for the time being."
 fi
 
 typeset trim12_pid trim3_pid

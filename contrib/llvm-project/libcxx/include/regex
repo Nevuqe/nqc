@@ -1169,7 +1169,7 @@ regex_traits<_CharT>::imbue(locale_type __l)
     return __r;
 }
 
-// transform_primary is very FreeBSD-specific
+// transform_primary is very NQC-specific
 
 template <class _CharT>
 template <class _ForwardIterator>
@@ -1217,7 +1217,7 @@ regex_traits<_CharT>::__transform_primary(_ForwardIterator __f,
 }
 #endif
 
-// lookup_collatename is very FreeBSD-specific
+// lookup_collatename is very NQC-specific
 
 _LIBCPP_FUNC_VIS string __get_collation_name(const char* __s);
 

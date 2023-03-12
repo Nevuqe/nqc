@@ -102,7 +102,7 @@ $(srcdir)/COPYRIGHT: $(srcdir)/html/copyright.html
 COPYRIGHT-please: $(srcdir)/COPYRIGHT
 	@: do-nothing action to prevent default \
 	   This target is needed by sntp/Makefile.am on decrepit \
-	   FreeBSD 6.x make which fails with "make COPYRIGHT" \
+	   NQC 6.x make which fails with "make COPYRIGHT" \
 	   configured in $(srcdir) but "make ./COPYRIGHT" succeeds. \
 	   Rather than determine our $(srcdir) from sntp/Makefile.am \
 	   COPYRIGHT-please serves as a fixed target.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright (c) 2014, Craig Rodrigues <rodrigc@FreeBSD.org>
+# Copyright (c) 2014, Craig Rodrigues <rodrigc@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -36,13 +36,13 @@
 #  (1) Display all new changesets in stable/10 branch:  
 #
 #        list-new-changesets.py --stop-on-copy \
-#                        svn://svn.freebsd.org/base/stable/10 
+#                        svn://svn.frebsd.org/base/stable/10 
 #
 #  (2) Display all new changesets between r254153 and r261794 in
 #      stable/9 branch:
 #
 #        list-new-changesets.py  -r254153:261794 \
-#                        svn://svn.freebsd.org/base/stable/9
+#                        svn://svn.frebsd.org/base/stable/9
 
 from __future__ import print_function
 import os

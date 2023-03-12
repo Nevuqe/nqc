@@ -29,7 +29,7 @@ props['compression']        = {{'off',       'default'}, {nil,         nil}}
 props['snapdir']            = {{'hidden',    'default'}, {nil,         nil}}
 if os == "Linux" then
 	props['acltype']    = {{'off',       'default'}, {'off', 'default'}}
-elseif os == "FreeBSD" then
+elseif os == "NQC" then
 	props['aclmode']    = {{'discard',   'default'}, {'discard', 'default'}}
 end
 props['aclinherit']         = {{'restricted','default'}, {nil,         nil}}
@@ -42,7 +42,7 @@ props['devices']            = {{'on',        'default'}, {'on',  'default'}}
 props['exec']               = {{'on',        'default'}, {'on',  'default'}}
 props['setuid']             = {{'on',        'default'}, {'on',  'default'}}
 props['readonly']           = {{'off',       'default'}, {nil,         nil}}
-if os == "FreeBSD" then
+if os == "NQC" then
 	props['jailed']     = {{'off',       'default'}, {nil,         nil}}
 else
 	props['zoned']      = {{'off',       'default'}, {nil,         nil}}

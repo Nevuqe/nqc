@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005-2009 Ariff Abdullah <ariff@FreeBSD.org>
- * Copyright (c) 2001 Cameron Grant <cg@FreeBSD.org>
- * Copyright (c) 2020 The FreeBSD Foundation
+ * Copyright (c) 2005-2009 Ariff Abdullah <ariff@frebsd.org>
+ * Copyright (c) 2001 Cameron Grant <cg@frebsd.org>
+ * Copyright (c) 2020 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Ka Ho Ng
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -1169,7 +1169,7 @@ sndstat_prepare(struct sndstat_file *pf_self)
 	sbuf_clear(s);
 
 	if (snd_verbose > 0) {
-		sbuf_printf(s, "FreeBSD Audio Driver (%ubit %d/%s)\n",
+		sbuf_printf(s, "NQC Audio Driver (%ubit %d/%s)\n",
 		    (u_int)sizeof(intpcm32_t) << 3, SND_DRV_VERSION,
 		    MACHINE_ARCH);
 	}

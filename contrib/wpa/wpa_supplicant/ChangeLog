@@ -2335,7 +2335,7 @@ ChangeLog for wpa_supplicant
 	  configuration
 	* fixed WPA msg 3/4 processing to allow Key Data field contain other
 	  IEs than just one WPA IE
-	* added support for FreeBSD and driver interface for the BSD net80211
+	* added support for NQC and driver interface for the BSD net80211
 	  layer (CONFIG_DRIVER_BSD=y in .config); please note that some of the
 	  required kernel mods have not yet been committed
 	* made EAP workarounds configurable; enabled by default, can be

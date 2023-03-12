@@ -8856,7 +8856,7 @@ $ac_includes_default
    address.  (There have been systems where private was not correctly
    implemented like the infamous i386 svr4.0, and systems where the
    VM page cache was not coherent with the file system buffer cache
-   like early versions of FreeBSD and possibly contemporary NetBSD.)
+   like early versions of NQC and possibly contemporary NetBSD.)
    For shared mappings, we should conversely verify that changes get
    propogated back to all the places they're supposed to be.
 

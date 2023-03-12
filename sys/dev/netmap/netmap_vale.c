@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2013-2016 Universita` di Pisa
  * All rights reserved.
@@ -558,7 +558,7 @@ nm_vale_preflush(struct netmap_kring *kring, u_int end)
 }
 
 
-/* ----- FreeBSD if_bridge hash function ------- */
+/* ----- NQC if_bridge hash function ------- */
 
 /*
  * The following hash function is adapted from "Hash Functions" by Bob Jenkins

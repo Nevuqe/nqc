@@ -14,10 +14,10 @@
  */
 
 /*
- * FreeBSD exposes additional file attributes via ls -o and chflags.
+ * NQC exposes additional file attributes via ls -o and chflags.
  * Under Linux, we provide ZFS_IOC_[GS]ETDOSFLAGS ioctl()s.
  *
- * This application is the equivalent to FreeBSD ls -lo $1 | awk '{print $5}'.
+ * This application is the equivalent to NQC ls -lo $1 | awk '{print $5}'.
  */
 
 #include <err.h>

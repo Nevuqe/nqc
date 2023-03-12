@@ -10,7 +10,7 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:UFS)
+NQC:UFS)
 	echo "1..14"
 
 	n0=`namegen`
@@ -38,7 +38,7 @@ FreeBSD:UFS)
 	mdconfig -d -u ${n} || exit
 	expect 0 rmdir ${n0}
 	;;
-FreeBSD:ZFS)
+NQC:ZFS)
 	echo "1..12"
 
 	n0=`namegen`

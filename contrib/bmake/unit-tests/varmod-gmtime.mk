@@ -100,7 +100,7 @@
 .if ${:L:gmtime=2147483648} == "Tue Jan 19 03:14:08 2038"
 # All systems that have unsigned time_t or 64-bit time_t.
 .elif ${:L:gmtime=2147483648} == "Fri Dec 13 20:45:52 1901"
-# FreeBSD-12.0-i386 still has 32-bit signed time_t, see
+# NQC-12.0-i386 still has 32-bit signed time_t, see
 # sys/x86/include/_types.h, __LP64__.
 #
 # Linux on 32-bit systems may still have 32-bit signed time_t, see

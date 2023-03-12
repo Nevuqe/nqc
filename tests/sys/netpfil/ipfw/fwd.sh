@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Gleb Smirnoff <glebius@FreeBSD.org>
+# Copyright (c) 2022 Gleb Smirnoff <glebius@frebsd.org>
 # Copyright (c) 2022 Pavel Polyakov <bsd@kobyla.org>
 #
 # Redistribution and use in source and binary forms, with or without

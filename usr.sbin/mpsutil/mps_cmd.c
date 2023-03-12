@@ -1,12 +1,12 @@
 /*-
- * Copyright (c) 2015 Baptiste Daroussin <bapt@FreeBSD.org>
+ * Copyright (c) 2015 Baptiste Daroussin <bapt@frebsd.org>
  *
  * Copyright (c) 2015 Netflix, Inc.
- * Written by: Scott Long <scottl@freebsd.org>
+ * Written by: Scott Long <scottl@frebsd.org>
  *
  * Copyright (c) 2008 Yahoo!, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@FreeBSD.org>
+ * Written by: John Baldwin <jhb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

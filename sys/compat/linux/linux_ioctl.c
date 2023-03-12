@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1994-1995 Søren Schmidt
  * All rights reserved.
@@ -1770,7 +1770,7 @@ linux_ioctl_sound(struct thread *td, struct linux_ioctl_args *args)
 			struct linux_old_mixer_info info;
 			bzero(&info, sizeof(info));
 			strncpy(info.id, "OSS", sizeof(info.id) - 1);
-			strncpy(info.name, "FreeBSD OSS Mixer", sizeof(info.name) - 1);
+			strncpy(info.name, "NQC OSS Mixer", sizeof(info.name) - 1);
 			copyout(&info, (void *)args->arg, sizeof(info));
 			return (0);
 		}
@@ -2291,7 +2291,7 @@ linux_ioctl_socket_ifreq(struct thread *td, int fd, u_int cmd,
 
 	/*
 	 * The size of Linux enum ifr_ifru is bigger than
-	 * the FreeBSD size due to the struct ifmap.
+	 * the NQC size due to the struct ifmap.
 	 */
 	ifrusiz = (sizeof(lifr) > sizeof(bifr) ? sizeof(bifr) :
 	    sizeof(lifr)) - offsetof(struct l_ifreq, ifr_ifru);
@@ -2735,7 +2735,7 @@ linux_v4l_cliplist_copy(struct l_video_window *lvw, struct video_window *vw)
 	 *	clipping bitmap.  Some Linux apps, however, appear to
 	 *	leave cliplist and clips uninitialized.  In any case,
 	 *	the cliplist is not used by pwc(4), at the time of
-	 *	writing, FreeBSD's only V4L driver.  When a driver
+	 *	writing, NQC's only V4L driver.  When a driver
 	 *	that uses the cliplist is developed, this code may
 	 *	need re-examiniation.
 	 */
@@ -3428,10 +3428,10 @@ linux_ioctl_fbsd_usb(struct thread *td, struct linux_ioctl_args *args)
 /*
  * Some evdev ioctls must be translated.
  *  - EVIOCGMTSLOTS is a IOC_READ ioctl on Linux although it has input data
- *    (must be IOC_INOUT on FreeBSD).
+ *    (must be IOC_INOUT on NQC).
  *  - On Linux, EVIOCGRAB, EVIOCREVOKE and EVIOCRMFF are defined as _IOW with
  *    an int argument. You don't pass an int pointer to the ioctl(), however,
- *    but just the int directly. On FreeBSD, they are defined as _IOWINT for
+ *    but just the int directly. On NQC, they are defined as _IOWINT for
  *    this to work.
  */
 static int

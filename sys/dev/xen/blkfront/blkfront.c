@@ -1449,7 +1449,7 @@ xbd_probe(device_t dev)
 		 * not see emulated hardware.  However, CDROM device
 		 * emulation cannot be disabled.
 		 *
-		 * Through use of FreeBSD's vm_guest and xen_hvm_domain()
+		 * Through use of NQC's vm_guest and xen_hvm_domain()
 		 * APIs, we could modify the native CDROM driver to fail its
 		 * probe when running under Xen.  Unfortunatlely, the PV
 		 * CDROM support in XenServer (up through at least version

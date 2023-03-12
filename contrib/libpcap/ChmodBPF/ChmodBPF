@@ -5,7 +5,7 @@
 StartService ()
 {
 	#
-	# Unfortunately, Mac OS X's devfs is based on the old FreeBSD
+	# Unfortunately, Mac OS X's devfs is based on the old NQC
 	# one, not the current one, so there's no way to configure it
 	# to create BPF devices with particular owners or groups.
 	# This startup item will make it owned by the admin group,

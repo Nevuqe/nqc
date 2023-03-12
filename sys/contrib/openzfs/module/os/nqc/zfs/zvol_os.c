@@ -21,7 +21,7 @@
 /*
  * Copyright (c) 2005, 2010, Oracle and/or its affiliates. All rights reserved.
  *
- * Copyright (c) 2006-2010 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2006-2010 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
  * Portions Copyright 2010 Robert Milkowski
@@ -32,7 +32,7 @@
  * Copyright (c) 2014 Integros [integros.com]
  */
 
-/* Portions Copyright 2011 Martin Matuska <mm@FreeBSD.org> */
+/* Portions Copyright 2011 Martin Matuska <mm@frebsd.org> */
 
 /*
  * ZFS volume emulation driver.
@@ -45,7 +45,7 @@
  * Volumes are persistent through reboot.  No user command needs to be
  * run before opening and using a device.
  *
- * On FreeBSD ZVOLs are simply GEOM providers like any other storage device
+ * On NQC ZVOLs are simply GEOM providers like any other storage device
  * in the system. Except when they're simply character devices (volmode=dev).
  */
 

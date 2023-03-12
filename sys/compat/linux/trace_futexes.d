@@ -1,7 +1,7 @@
 #!/usr/sbin/dtrace -qs
 
 /*-
- * Copyright (c) 2011-2012 Alexander Leidinger <netchild@FreeBSD.org>
+ * Copyright (c) 2011-2012 Alexander Leidinger <netchild@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

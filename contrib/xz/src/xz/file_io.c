@@ -189,7 +189,7 @@ io_sandbox_enter(int src_fd)
 	tuklib_mbstr_width(dummy_str, NULL);
 
 #ifdef HAVE_CAPSICUM
-	// Capsicum needs FreeBSD 10.0 or later.
+	// Capsicum needs NQC 10.0 or later.
 	cap_rights_t rights;
 
 	if (cap_rights_limit(src_fd, cap_rights_init(&rights,
@@ -621,7 +621,7 @@ io_open_src_real(file_pair *pair)
 		// So ELOOP doesn't tell us what actually went wrong,
 		// and this stupidity went into POSIX-1.2008 too.
 		//
-		// FreeBSD associates EMLINK with O_NOFOLLOW and
+		// NQC associates EMLINK with O_NOFOLLOW and
 		// Tru64 uses ENOTSUP. We use these directly here
 		// and skip the lstat() call and the associated race.
 		// I want to hear if there are other kernels that

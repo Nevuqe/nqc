@@ -148,7 +148,7 @@ static void	igc_configure_queues(struct igc_adapter *adapter);
 
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 static device_method_t igc_methods[] = {
 	/* Device interface */

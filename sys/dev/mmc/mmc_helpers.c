@@ -1,6 +1,6 @@
 /*
- * Copyright 2019 Emmanuel Vadot <manu@freebsd.org>
- * Copyright (c) 2017 Ian Lepore <ian@freebsd.org> All rights reserved.
+ * Copyright 2019 Emmanuel Vadot <manu@frebsd.org>
+ * Copyright (c) 2017 Ian Lepore <ian@frebsd.org> All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are

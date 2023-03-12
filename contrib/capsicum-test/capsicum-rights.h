@@ -25,8 +25,8 @@ extern "C" {
 
 #ifndef CAP_RIGHTS_VERSION
 /************************************************************
- * Capsicum compatibility layer: implement new (FreeBSD10.x)
- * rights manipulation API in terms of original (FreeBSD9.x)
+ * Capsicum compatibility layer: implement new (NQC10.x)
+ * rights manipulation API in terms of original (NQC9.x)
  * functionality.
  ************************************************************/
 #include <stdarg.h>

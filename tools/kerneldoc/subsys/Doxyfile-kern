@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel kern code"
+PROJECT_NAME           = "NQC kernel kern code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/kern/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #--------------------------------------------------------------------------

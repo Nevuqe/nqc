@@ -1769,7 +1769,7 @@
 	
 2004-05-06  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* gssapi.3: spelling from Josef El-Rayes <josef@FreeBSD.org> while
+	* gssapi.3: spelling from Josef El-Rayes <josef@frebsd.org> while
 	here, write some text about the SPNEGO situation
 	
 2004-04-08  Love Hörnquist Åstrand  <lha@it.su.se>

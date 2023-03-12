@@ -18,7 +18,7 @@ CLEANFILES=	bsdxml.h bsdxml_external.h
 WARNS?=		2
 
 # OK, so it is not entirely unadulterated: we amend the COPYING to
-# point people to the right place and use FreeBSD-style include guards.
+# point people to the right place and use NQC-style include guards.
 # We also want to point it at the new bsdxml_external.h rather than the
 # old expat_external.h file.
 bsdxml.h: expat.h

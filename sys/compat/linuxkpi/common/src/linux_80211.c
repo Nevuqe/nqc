@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2020-2022 The FreeBSD Foundation
+ * Copyright (c) 2020-2022 The FreBSD Foundation
  * Copyright (c) 2020-2022 Bjoern A. Zeeb
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -3096,7 +3096,7 @@ lkpi_80211_txq_tx_one(struct lkpi_sta *lsta, struct mbuf *m)
 	 * net80211 should handle hw->extra_tx_headroom.
 	 * Though for as long as we are copying we don't mind.
 	 * XXX-BZ rtw88 asks for too much headroom for ipv6+tcp:
-	 * https://lists.freebsd.org/archives/freebsd-transport/2022-February/000012.html
+	 * https://lists.frebsd.org/archives/freebsd-transport/2022-February/000012.html
 	 */
 	skb = dev_alloc_skb(hw->extra_tx_headroom + m->m_pkthdr.len);
 	if (skb == NULL) {
@@ -3995,7 +3995,7 @@ no_trace_beacons:
 	rx_stats.c_ieee = ieee80211_mhz2ieee(rx_stats.c_freq, rx_stats.c_band);
 
 	/* XXX (*sta_statistics)() to get to some of that? */
-	/* XXX-BZ dump the FreeBSD version of rx_stats as well! */
+	/* XXX-BZ dump the NQC version of rx_stats as well! */
 
 	lhw = HW_TO_LHW(hw);
 	ic = lhw->ic;

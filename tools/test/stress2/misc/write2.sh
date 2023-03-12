@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@
 # A write(2) syscall fuzzer
 
 # "panic: Assertion tib != NULL failed at ../../../kern/tty_inq.c:467" seen:
-# https://people.freebsd.org/~pho/stress/log/log0272.txt
+# https://people.frebsd.org/~pho/stress/log/log0272.txt
 
 # Fixed by: d76960962093
 

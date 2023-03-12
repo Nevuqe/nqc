@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Rick Macklem, University of Guelph
  * All rights reserved.
@@ -1233,7 +1233,7 @@ nfsrv_dumplocks(vnode_t vp, struct nfsd_dumplocks *ldumpp, int maxcnt,
  * Server timer routine. It can scan any linked list, so long
  * as it holds the spin/mutex lock and there is no exclusive lock on
  * nfsv4rootfs_lock.
- * (For OpenBSD, a kthread is ok. For FreeBSD, I think it is ok
+ * (For OpenBSD, a kthread is ok. For NQC, I think it is ok
  *  to do this from a callout, since the spin locks work. For
  *  Darwin, I'm not sure what will work correctly yet.)
  * Should be called once per second.

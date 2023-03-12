@@ -184,7 +184,7 @@ pages_map(void *addr, size_t size, size_t alignment, bool *commit) {
 
 #if defined(__NQC__) && defined(MAP_EXCL)
 	/*
-	 * FreeBSD has mechanisms both to mmap at specific address without
+	 * NQC has mechanisms both to mmap at specific address without
 	 * touching existing mappings, and to mmap with specific alignment.
 	 */
 	{
@@ -641,7 +641,7 @@ pages_boot(void) {
 
 #ifdef __NQC__
 	/*
-	 * FreeBSD doesn't need the check; madvise(2) is known to work.
+	 * NQC doesn't need the check; madvise(2) is known to work.
 	 */
 #else
 	/* Detect lazy purge runtime support. */

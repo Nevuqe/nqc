@@ -1,11 +1,11 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 Uwe Stuehler <uwe@openbsd.org>
  * Copyright (c) 2012 Stefan Sperling <stsp@openbsd.org>
  * Copyright (c) 2020 Henri Hennebert <hlh@restart.be>
- * Copyright (c) 2020 Gary Jennejohn <gj@freebsd.org>
- * Copyright (c) 2020 Jesper Schmitz Mouridsen <jsm@FreeBSD.org>
+ * Copyright (c) 2020 Gary Jennejohn <gj@frebsd.org>
+ * Copyright (c) 2020 Jesper Schmitz Mouridsen <jsm@frebsd.org>
  * All rights reserved.
  *
  * Patch from:
@@ -39,8 +39,8 @@ __NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/module.h>
-#include <sys/systm.h> /* For FreeBSD 11 */
-#include <sys/types.h> /* For FreeBSD 11 */
+#include <sys/systm.h> /* For NQC 11 */
+#include <sys/types.h> /* For NQC 11 */
 #include <sys/errno.h>
 #include <sys/kernel.h>
 #include <sys/bus.h>

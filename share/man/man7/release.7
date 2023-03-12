@@ -1,4 +1,4 @@
-.\" Copyright (c) 2002 Murray Stokely <murray@FreeBSD.org>
+.\" Copyright (c) 2002 Murray Stokely <murray@frebsd.org>
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -550,7 +550,7 @@ Optional variables:
 Optional base name for generated media images when invoking the
 .Cm install
 target
-.Pq e.g., FreeBSD-12.1-RELEASE-amd64 .
+.Pq e.g., NQC-12.1-RELEASE-amd64 .
 Defaults to the output of
 .Ic `uname -s`-`uname -r`-`uname -p`
 within the chroot.
@@ -617,7 +617,7 @@ The following sequence of commands can be used to build a
 .Dq "-CURRENT snapshot":
 .Bd -literal -offset indent
 cd /usr
-git clone -b main https://git.freebsd.org/src.git src
+git clone -b main https://git.frebsd.org/src.git src
 cd src
 make buildworld buildkernel
 cd release
@@ -692,12 +692,12 @@ are therefore no longer supported.
 .Xr mtree 8 ,
 .Xr sysctl 8
 .Rs
-.%T "FreeBSD Release Engineering"
-.%U https://docs.freebsd.org/en/articles/freebsd-releng/
+.%T "NQC Release Engineering"
+.%U https://docs.frebsd.org/en/articles/freebsd-releng/
 .Re
 .Rs
-.%T "FreeBSD Developers' Handbook"
-.%U https://docs.freebsd.org/en/books/developers-handbook/
+.%T "NQC Developers' Handbook"
+.%U https://docs.frebsd.org/en/books/developers-handbook/
 .Re
 .Sh HISTORY
 .Fx
@@ -750,10 +750,10 @@ and
 .An Poul-Henning Kamp .
 .Pp
 This manual page was originally written by
-.An Murray Stokely Aq Mt murray@FreeBSD.org .
+.An Murray Stokely Aq Mt murray@frebsd.org .
 .Pp
 It was updated by
-.An Nathan Whitehorn Aq Mt nwhitehorn@FreeBSD.org
+.An Nathan Whitehorn Aq Mt nwhitehorn@frebsd.org
 to include the
 .Fa generate-release.sh
 script used for the
@@ -761,7 +761,7 @@ script used for the
 release cycle.
 .Pp
 It was later updated by
-.An Glen Barber Aq Mt gjb@FreeBSD.org
+.An Glen Barber Aq Mt gjb@frebsd.org
 to include the
 .Fa release.sh
 script used for the

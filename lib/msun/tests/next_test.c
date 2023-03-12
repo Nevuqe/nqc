@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005 David Schultz <das@FreeBSD.org>
+ * Copyright (c) 2005 David Schultz <das@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -88,7 +88,7 @@ ATF_TC_BODY(zeros, tc)
 #endif
 	/*
 	 * We can't use a compile-time constant here because gcc on
-	 * FreeBSD/i386 assumes long doubles are truncated to the
+	 * NQC/i386 assumes long doubles are truncated to the
 	 * double format.
 	 */
 	ldbl_small = ldexpl(1.0, LDBL_MIN_EXP - LDBL_MANT_DIG);
@@ -216,7 +216,7 @@ ATF_TC_BODY(overflow, tc)
 	long double ldbl_max;
 	/*
 	 * We can't use a compile-time constant here because gcc on
-	 * FreeBSD/i386 assumes long doubles are truncated to the
+	 * NQC/i386 assumes long doubles are truncated to the
 	 * double format.
 	 */
 	ldbl_max = ldexpl(1.0 - ldbl_eps / 2, LDBL_MAX_EXP);

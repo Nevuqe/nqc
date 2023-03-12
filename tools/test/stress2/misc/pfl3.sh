@@ -30,9 +30,9 @@
 
 # Start pfl.sh and "umount -f" the two mount points in use.
 # "panic: handle_written_inodeblock: live inodedep" seen.
-# http://people.freebsd.org/~pho/stress/log/pfl3.txt
+# http://people.frebsd.org/~pho/stress/log/pfl3.txt
 
-# Not seen on  FreeBSD 14.0-CURRENT #0 main-n244671-b3c6fe663bb
+# Not seen on  NQC 14.0-CURRENT #0 main-n244671-b3c6fe663bb
 
 . ../default.cfg
 

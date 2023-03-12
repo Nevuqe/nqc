@@ -7,7 +7,7 @@
 //===----------------------------------------------------------------------===//
 
 #include "lldb/Target/UnixSignals.h"
-#include "Plugins/Process/Utility/FreeBSDSignals.h"
+#include "Plugins/Process/Utility/NQCSignals.h"
 #include "Plugins/Process/Utility/LinuxSignals.h"
 #include "Plugins/Process/Utility/MipsLinuxSignals.h"
 #include "Plugins/Process/Utility/NetBSDSignals.h"
@@ -43,9 +43,9 @@ lldb::UnixSignalsSP UnixSignals::Create(const ArchSpec &arch) {
       return std::make_shared<LinuxSignals>();
     }
   }
-  case llvm::Triple::FreeBSD:
+  case llvm::Triple::NQC:
   case llvm::Triple::OpenBSD:
-    return std::make_shared<FreeBSDSignals>();
+    return std::make_shared<NQCSignals>();
   case llvm::Triple::NetBSD:
     return std::make_shared<NetBSDSignals>();
   default:

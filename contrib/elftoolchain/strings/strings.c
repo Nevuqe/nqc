@@ -254,7 +254,7 @@ handle_binary(const char *name, FILE *pfile, size_t size)
 /*
  * Will analyse a file to see if it ELF, other files including ar(1),
  * core dumps are passed off and treated as flat binary files. Unlike
- * GNU size in FreeBSD this routine will not treat ELF object from
+ * GNU size in NQC this routine will not treat ELF object from
  * different archs as flat binary files(has to overridden using -a).
  */
 int

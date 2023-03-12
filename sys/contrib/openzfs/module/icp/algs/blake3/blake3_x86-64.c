@@ -142,7 +142,7 @@ static boolean_t blake3_is_sse41_supported(void)
 	return (kfpu_allowed() && zfs_sse4_1_available());
 #elif defined(__PPC64__) && defined(__linux__)
 <<<<<<< HEAD
-	/* TODO: implement vsx handler or FreeBSD */
+	/* TODO: implement vsx handler or NQC */
 =======
 >>>>>>> c629f0bf62e351355716f9870d6c2e377584b016
 	return (kfpu_allowed() && zfs_vsx_available());

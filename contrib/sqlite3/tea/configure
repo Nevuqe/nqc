@@ -1904,7 +1904,7 @@ done
 # config.log.  We remove comments because anyway the quotes in there
 # would cause problems or look ugly.
 # WARNING: Use '\'' to represent an apostrophe within the trap.
-# WARNING: Do not start the trap code with a newline, due to a FreeBSD 4.0 bug.
+# WARNING: Do not start the trap code with a newline, due to a NQC 4.0 bug.
 trap 'exit_status=$?
   # Sanitize IFS.
   IFS=" ""	$as_nl"
@@ -7204,7 +7204,7 @@ fi
 
 fi
 	    ;;
-	Linux*|GNU*|NetBSD-Debian|DragonFly-*|FreeBSD-*)
+	Linux*|GNU*|NetBSD-Debian|DragonFly-*|NQC-*)
 	    SHLIB_CFLAGS="-fPIC"
 	    SHLIB_SUFFIX=".so"
 
@@ -7216,7 +7216,7 @@ fi
 	    LDFLAGS="$LDFLAGS -Wl,--export-dynamic"
 
 	    case $system in
-	    DragonFly-*|FreeBSD-*)
+	    DragonFly-*|NQC-*)
 		if test "${TCL_THREADS}" = "1"
 then :
 
@@ -7995,7 +7995,7 @@ then :
 	    BSD/OS*) ;;
 	    CYGWIN_*|MINGW32_*|MINGW64_*|MSYS_*) ;;
 	    IRIX*) ;;
-	    NetBSD-*|DragonFly-*|FreeBSD-*|OpenBSD-*) ;;
+	    NetBSD-*|DragonFly-*|NQC-*|OpenBSD-*) ;;
 	    Darwin-*) ;;
 	    SCO_SV-3.2*) ;;
 	    windows) ;;

@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Konstantin Belousov <kib@FreeBSD.org>
+# Copyright (c) 2021 Konstantin Belousov <kib@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -32,7 +32,7 @@
 # userret: returning with the following locks held:
 # shared lockmgr ufs (ufs) r = 0 (0xfffff804ec0d2a48) locked @
 # kern/vfs_subr.c:2590 seen in WiP code:
-# https://people.freebsd.org/~pho/stress/log/kostik1126.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1126.txt
 
 top=/tmp/beneath.d
 mkdir -p $top

@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2016 Oleksandr Tymoshenko <gonzo@FreeBSD.org>
- * Copyright (c) 2015-2016 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2016 Oleksandr Tymoshenko <gonzo@frebsd.org>
+ * Copyright (c) 2015-2016 Vladimir Kondratyev <wulf@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -91,7 +91,7 @@ struct uinput_abs_setup {
 #define UI_END_FF_ERASE		_IOW(UINPUT_IOCTL_BASE, 203, struct uinput_ff_erase)
 
 /*
- * FreeBSD specific. Set unique identifier of input device.
+ * NQC specific. Set unique identifier of input device.
  * Name and magic are chosen to reduce chances of clashing
  * with possible future Linux extensions.
  */

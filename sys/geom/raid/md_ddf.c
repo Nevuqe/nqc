@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2012 Alexander Motin <mav@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -631,7 +631,7 @@ ddf_meta_create(struct g_raid_disk *disk, struct ddf_meta *sample)
 		}
 	} else {
 		SET32(meta, hdr->Signature, DDF_HEADER_SIGNATURE);
-		snprintf(meta->hdr->DDF_Header_GUID, 25, "FreeBSD %08x%08x",
+		snprintf(meta->hdr->DDF_Header_GUID, 25, "NQC %08x%08x",
 		    (u_int)(ts.tv_sec - DECADE), arc4random());
 		memcpy(meta->hdr->DDF_rev, "02.00.00", 8);
 		SET32(meta, hdr->TimeStamp, (ts.tv_sec - DECADE));
@@ -694,8 +694,8 @@ ddf_meta_create(struct g_raid_disk *disk, struct ddf_meta *sample)
 	meta->cdr = malloc(size, M_MD_DDF, M_WAITOK);
 	memset(meta->cdr, 0xff, size);
 	SET32(meta, cdr->Signature, DDF_CONTROLLER_DATA_SIGNATURE);
-	memcpy(meta->cdr->Controller_GUID, "FreeBSD GEOM RAID SERIAL", 24);
-	memcpy(meta->cdr->Product_ID, "FreeBSD GEOMRAID", 16);
+	memcpy(meta->cdr->Controller_GUID, "NQC GEOM RAID SERIAL", 24);
+	memcpy(meta->cdr->Product_ID, "NQC GEOMRAID", 16);
 
 	/* Physical Drive Records. */
 	size = GET32(meta, hdr->pdr_length) * ss;
@@ -858,7 +858,7 @@ ddf_vol_meta_create(struct ddf_vol_meta *meta, struct ddf_meta *sample)
 	memset(meta->vde, 0xff, sizeof(struct ddf_vd_entry));
 	getnanotime(&ts);
 	clock_ts_to_ct(&ts, &ct);
-	snprintf(meta->vde->VD_GUID, 25, "FreeBSD%04d%02d%02d%08x%01x",
+	snprintf(meta->vde->VD_GUID, 25, "NQC%04d%02d%02d%08x%01x",
 	    ct.year, ct.mon, ct.day,
 	    arc4random(), arc4random() & 0xf);
 	size = GET16(sample, hdr->Configuration_Record_Length) * ss;

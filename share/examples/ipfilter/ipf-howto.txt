@@ -360,7 +360,7 @@ other machine is simple: It has more than one interface.
      Every  packet  you  receive comes from a network inter-
 face; every packet you transmit goes out  a  network  inter-
 face.   Say  your  machine has 3 interfaces, lo0 (loopback),
-xl0 (3com ethernet),  and  tun0  (FreeBSD's  generic  tunnel
+xl0 (3com ethernet),  and  tun0  (NQC's  generic  tunnel
 interface  that PPP uses), but you don't want packets coming
 in on the tun0 interface?
 
@@ -2588,7 +2588,7 @@ typically used to connect separate buildings, switch network
 speeds,  and extend maximum wire lengths.  Hubs and switches
 are common bridges, sometimes they're just 2 ported  devices
 called   repeaters.   Recent  versions  of  Linux,  OpenBSD,
-NetBSD, and FreeBSD include code to convert $1000  PCs  into
+NetBSD, and NQC include code to convert $1000  PCs  into
 $10  bridges,  too!  What all bridges tend to have in common
 is that though they  sit  in  the  middle  of  a  connection
 between two machines, the two machines don't know the bridge

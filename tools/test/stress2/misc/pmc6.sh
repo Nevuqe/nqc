@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -29,7 +29,7 @@
 
 # Test scenario from:
 # [Bug 230985] pmcstat triggers assertion "pmcval outside of expected range"
-# by markj@FreeBSD.org
+# by markj@frebsd.org
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 kldstat -v | grep -q hwpmc  || { kldload hwpmc; loaded=1; }

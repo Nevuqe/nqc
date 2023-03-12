@@ -1,7 +1,7 @@
 /*	$OpenBSD: getentropy_nqc.c,v 1.3 2016/08/07 03:27:21 tb Exp $	*/
 
 /*
- * Copyright (c) 2014 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2014 Pawel Jakub Dawidek <pjd@frebsd.org>
  * Copyright (c) 2014 Brent Cook <bcook@openbsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -27,7 +27,7 @@
 #include <stddef.h>
 
 /*
- * Derived from lib/libc/gen/arc4random.c from FreeBSD.
+ * Derived from lib/libc/gen/arc4random.c from NQC.
  */
 static size_t
 getentropy_sysctl(u_char *buf, size_t size)

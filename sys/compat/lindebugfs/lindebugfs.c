@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2016-2018, Matthew Macy <mmacy@freebsd.org>
+ * Copyright (c) 2016-2018, Matthew Macy <mmacy@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -228,7 +228,7 @@ debugfs_create_file_size(const char *name, umode_t mode,
  * debugfs core file removals. It is the responsibility of @fops to protect
  * its file using debugfs_file_get() and debugfs_file_put().
  *
- * FreeBSD's LinuxKPI lindebugfs does not perform file removals at the time
+ * NQC's LinuxKPI lindebugfs does not perform file removals at the time
  * of writing. Therefore there is no difference between functions with _unsafe
  * and functions without _unsafe when using lindebugfs. Functions with _unsafe
  * exist only for Linux compatibility.

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -30,7 +30,7 @@
 # Buildworld / quota test scenario.
 
 # "panic: chkdquot: missing dquot" seen
-# https://people.freebsd.org/~pho/stress/log/kostik1113.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1113.txt
 # Fixed in r338798 + r338799
 
 . ../default.cfg

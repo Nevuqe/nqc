@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2001-2003, Shunsuke Akiyama <akiyama@FreeBSD.org>.
+ * Copyright (c) 2001-2003, Shunsuke Akiyama <akiyama@frebsd.org>.
  * Copyright (c) 1997, 1998, 1999, 2000 Bill Paul <wpaul@ee.columbia.edu>.
  * All rights reserved.
  *
@@ -25,7 +25,7 @@
  * SUCH DAMAGE.
  */
 /*-
- * SPDX-License-Identifier: BSD-4-Clause AND BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-4-Clause AND BSD-2-Clause-NQC
  *
  * Copyright (c) 1997, 1998, 1999, 2000
  *	Bill Paul <wpaul@ee.columbia.edu>.  All rights reserved.

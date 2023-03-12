@@ -286,7 +286,7 @@ drv_dobeepflash(TERMINAL_CONTROL_BLOCK * TCB, int beepFlag)
 /*
  * SVr4 curses is known to interchange color codes (1,4) and (3,6), possibly
  * to maintain compatibility with a pre-ANSI scheme.  The same scheme is
- * also used in the FreeBSD syscons.
+ * also used in the NQC syscons.
  */
 static int
 toggled_colors(int c)

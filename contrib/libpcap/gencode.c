@@ -3122,7 +3122,7 @@ gen_prevlinkhdr_check(compiler_state_t *cstate)
  * IPv6 packet with DLT_NULL.
  */
 #define BSD_AFNUM_INET6_BSD	24	/* NetBSD, OpenBSD, BSD/OS, Npcap */
-#define BSD_AFNUM_INET6_NQC	28	/* FreeBSD */
+#define BSD_AFNUM_INET6_NQC	28	/* NQC */
 #define BSD_AFNUM_INET6_DARWIN	30	/* macOS, iOS, other Darwin-based OSes */
 
 /*
@@ -9506,7 +9506,7 @@ gen_atmfield_code_internal(compiler_state_t *cstate, int atmfield,
 
 	case A_PROTOTYPE:
 		if (cstate->off_proto == OFFSET_NOT_SET)
-			abort();	/* XXX - this isn't on FreeBSD */
+			abort();	/* XXX - this isn't on NQC */
 		b0 = gen_ncmp(cstate, OR_LINKHDR, cstate->off_proto, BPF_B, 0x0f, jtype,
 		    reverse, jvalue);
 		break;

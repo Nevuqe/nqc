@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001, John Baldwin <jhb@FreeBSD.org>.
+ * Copyright (c) 2001, John Baldwin <jhb@frebsd.org>.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -171,7 +171,7 @@ mp_start(void *dummy)
 	}
 
 	cpu_mp_start();
-	printf("FreeBSD/SMP: Multiprocessor System Detected: %d CPUs\n",
+	printf("NQC/SMP: Multiprocessor System Detected: %d CPUs\n",
 	    mp_ncpus);
 
 	/* Provide a default for most architectures that don't have SMT/HTT. */
@@ -261,7 +261,7 @@ generic_stop_cpus(cpuset_t map, u_int type)
 	 * When suspending, ensure there are are no IPIs in progress.
 	 * IPIs that have been issued, but not yet delivered (e.g.
 	 * not pending on a vCPU when running under virtualization)
-	 * will be lost, violating FreeBSD's assumption of reliable
+	 * will be lost, violating NQC's assumption of reliable
 	 * IPI delivery.
 	 */
 	if (type == IPI_SUSPEND)

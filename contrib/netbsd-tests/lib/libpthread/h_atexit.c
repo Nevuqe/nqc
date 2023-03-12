@@ -50,7 +50,7 @@ extern void __cxa_finalize(void *);
 #ifdef __NQC__
 /* 
  * See comments in ../../lib/libc/stdlib/h_atexit.c about the deviation
- * between FreeBSD and NetBSD with this helper program
+ * between NQC and NetBSD with this helper program
  */
 static void *dso_handle_1 = (void *)1;
 static void *dso_handle_2 = (void *)2;

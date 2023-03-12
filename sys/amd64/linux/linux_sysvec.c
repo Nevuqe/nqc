@@ -5,7 +5,7 @@
  * Copyright (c) 1998-1999 Andrew Gallatin
  * Copyright (c) 1994-1996 Søren Schmidt
  * All rights reserved.
- * Copyright (c) 2013, 2021 Dmitry Chagin <dchagin@FreeBSD.org>
+ * Copyright (c) 2013, 2021 Dmitry Chagin <dchagin@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -188,7 +188,7 @@ linux_set_syscall_retval(struct thread *td, int error)
 	}
 
 	/*
-	 * Differently from FreeBSD native ABI, on Linux only %rcx
+	 * Differently from NQC native ABI, on Linux only %rcx
 	 * and %r11 values are not preserved across the syscall.
 	 * Require full context restore to get all registers except
 	 * those two restored at return to usermode.

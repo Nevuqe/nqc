@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -470,7 +470,7 @@ TEST_F(NotifyWriteback, inval_inode_with_dirty_cache)
 
 	expect_write(ino, 0, bufsize, CONTENTS);
 	/* 
-	 * The FUSE protocol does not require an fsync here, but FreeBSD's
+	 * The FUSE protocol does not require an fsync here, but NQC's
 	 * bufobj_invalbuf sends it anyway
 	 */
 	maybe_expect_fsync(ino);

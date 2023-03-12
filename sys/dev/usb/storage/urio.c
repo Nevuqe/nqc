@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Iwasa Kazmi
  * All rights reserved.
@@ -38,7 +38,7 @@ __NQCID("$NQC$");
  * 2000/3/07  use two bulk-pipe handles for read and write (Dirk)
  * 2000/3/06  change major number(143), and copyright header
  *            some fix for 4.0 (Dirk)
- * 2000/3/05  codes for FreeBSD 4.x - CURRENT (Thanks to Dirk-Willem van Gulik)
+ * 2000/3/05  codes for NQC 4.x - CURRENT (Thanks to Dirk-Willem van Gulik)
  * 2000/3/01  remove retry code from urioioctl()
  *            change method of bulk transfer (no interrupt)
  * 2000/2/28  small fixes for new rio_usb.h

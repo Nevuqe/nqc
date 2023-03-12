@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel CFI device code"
+PROJECT_NAME           = "NQC kernel CFI device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_cfi/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

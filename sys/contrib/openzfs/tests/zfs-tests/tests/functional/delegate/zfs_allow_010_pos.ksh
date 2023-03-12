@@ -92,11 +92,11 @@ elif is_nqc; then
 #				Results in	Results in
 #		Permission	Filesystem	Volume
 #
-# Removed for FreeBSD
+# Removed for NQC
 # - jailed	- jailing requires superuser privileges
 # - sharenfs	- sharing requires superuser privileges
 # - share	- sharing requires superuser privileges
-# - xattr	- Not supported on FreeBSD
+# - xattr	- Not supported on NQC
 #
 set -A perms	create		true		false	\
 		snapshot	true		true	\

@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (c) 1990 The Regents of the University of California.
- * Copyright (c) 2010 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2010 Alexander Motin <mav@frebsd.org>
  * All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by

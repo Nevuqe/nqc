@@ -1194,7 +1194,7 @@ bool FormatEntity::Format(const Entry &entry, Stream &s,
             llvm::Triple::OSType ostype = arch.IsValid()
                                               ? arch.GetTriple().getOS()
                                               : llvm::Triple::UnknownOS;
-            if ((ostype == llvm::Triple::FreeBSD) ||
+            if ((ostype == llvm::Triple::NQC) ||
                 (ostype == llvm::Triple::Linux) ||
                 (ostype == llvm::Triple::NetBSD)) {
               format = "%" PRIu64;

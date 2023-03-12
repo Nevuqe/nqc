@@ -82,7 +82,7 @@ exit 0
 EOF
 /*
  * NOTE: This must be run with the current working directory on a local UFS
- * disk partition, to demonstrate a FreeBSD namecache bug. I have never seen
+ * disk partition, to demonstrate a NQC namecache bug. I have never seen
  * this bug happen with an NFS partition.
  */
 

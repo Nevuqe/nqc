@@ -1,4 +1,4 @@
-\ Copyright (c) 2006-2015 Devin Teske <dteske@FreeBSD.org>
+\ Copyright (c) 2006-2015 Devin Teske <dteske@frebsd.org>
 \ All rights reserved.
 \ 
 \ Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 	1+ \ increase y for next time we're called
 ;
 
-: brand ( x y -- ) \ "FreeBSD" [wide] logo in B/W (7 rows x 42 columns)
+: brand ( x y -- ) \ "NQC" [wide] logo in B/W (7 rows x 42 columns)
 
 	framebuffer? if
 		s" term-putimage" sfind if

@@ -120,7 +120,7 @@
  *
  *   Everything here should work OK even on nasty 16-bit
  *   machines and nice 64-bit ones. However, it's only really
- *   been tested on my FreeBSD machine. Your mileage may vary.
+ *   been tested on my NQC machine. Your mileage may vary.
  */
 
 /* Copyright (c) 1997 Gareth McCaughan. All rights reserved.

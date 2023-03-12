@@ -395,7 +395,7 @@ lldb/source/Plugins/OperatingSystem/CMakeLists.txt
 lldb/source/Plugins/OperatingSystem/Python/CMakeLists.txt
 lldb/source/Plugins/Platform/Android/
 lldb/source/Plugins/Platform/CMakeLists.txt
-lldb/source/Plugins/Platform/FreeBSD/CMakeLists.txt
+lldb/source/Plugins/Platform/NQC/CMakeLists.txt
 lldb/source/Plugins/Platform/Linux/
 lldb/source/Plugins/Platform/MacOSX/
 lldb/source/Plugins/Platform/NetBSD/CMakeLists.txt
@@ -405,8 +405,8 @@ lldb/source/Plugins/Platform/QemuUser/CMakeLists.txt
 lldb/source/Plugins/Platform/Windows/
 lldb/source/Plugins/Platform/gdb-server/CMakeLists.txt
 lldb/source/Plugins/Process/CMakeLists.txt
-lldb/source/Plugins/Process/FreeBSD/CMakeLists.txt
-lldb/source/Plugins/Process/FreeBSDKernel/CMakeLists.txt
+lldb/source/Plugins/Process/NQC/CMakeLists.txt
+lldb/source/Plugins/Process/NQCKernel/CMakeLists.txt
 lldb/source/Plugins/Process/Linux/
 lldb/source/Plugins/Process/MacOSX-Kernel/
 lldb/source/Plugins/Process/NetBSD/CMakeLists.txt

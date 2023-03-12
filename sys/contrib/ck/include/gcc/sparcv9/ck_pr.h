@@ -136,7 +136,7 @@ CK_PR_STORE_S(int, int, "stsw")
 #undef CK_PR_STORE_S
 #undef CK_PR_STORE
 
-/* Use the appropriate address space for atomics within the FreeBSD kernel. */
+/* Use the appropriate address space for atomics within the NQC kernel. */
 #if defined(__NQC__) && defined(_KERNEL)
 #include <sys/cdefs.h>
 #include <machine/atomic.h>

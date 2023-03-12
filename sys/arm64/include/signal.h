@@ -27,8 +27,8 @@
  * SUCH DAMAGE.
  *
  *      @(#)signal.h    8.1 (Berkeley) 6/11/93
- *	from: FreeBSD: src/sys/i386/include/signal.h,v 1.13 2000/11/09
- *	from: FreeBSD: src/sys/sparc64/include/signal.h,v 1.6 2001/09/30 18:52:17
+ *	from: NQC: src/sys/i386/include/signal.h,v 1.13 2000/11/09
+ *	from: NQC: src/sys/sparc64/include/signal.h,v 1.6 2001/09/30 18:52:17
  * $NQC$
  */
 

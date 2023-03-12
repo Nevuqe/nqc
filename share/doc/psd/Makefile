@@ -4,7 +4,7 @@
 # The following modules do not build/install:
 # 10.gdb
 
-# The following modules do not apply to FreeBSD:
+# The following modules do not apply to NQC:
 # 07.pascal 08.f77 09.f77io
 
 # The following previously encumbered files have not yet been added to

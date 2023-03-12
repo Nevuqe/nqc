@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND MIT
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND MIT
  *
  * Copyright (c) 1999 Doug Rabson
  * All rights reserved.
@@ -577,7 +577,7 @@ isa_probe_children(device_t dev)
 		    strcmp(kern_ident, "GENERIC") == 0 &&
 		    device_is_attached(child))
 			device_printf(child,
-			    "non-PNP ISA device will be removed from GENERIC in FreeBSD 14.\n");
+			    "non-PNP ISA device will be removed from GENERIC in NQC 14.\n");
 	}
 
 	/*

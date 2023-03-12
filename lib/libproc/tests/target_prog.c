@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Mark Johnston <markj@FreeBSD.org>
+ * Copyright (c) 2014 Mark Johnston <markj@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

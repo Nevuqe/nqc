@@ -377,7 +377,7 @@ ia32_osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_ah = (uintptr_t)catcher;
 		sf.sf_addr = 0;
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		sf.sf_arg2 = ksi->ksi_code;
 		sf.sf_addr = (register_t)ksi->ksi_addr;
 		sf.sf_ah = (uintptr_t)catcher;
@@ -516,7 +516,7 @@ freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_si = siginfo;
 		sf.sf_si.si_signo = sig;
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		sf.sf_siginfo = siginfo.si_code;
 		sf.sf_addr = (u_int32_t)siginfo.si_addr;
 		sf.sf_ah = (u_int32_t)(uintptr_t)catcher;
@@ -647,7 +647,7 @@ ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_si = siginfo;
 		sf.sf_si.si_signo = sig;
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		sf.sf_siginfo = siginfo.si_code;
 		sf.sf_addr = (u_int32_t)siginfo.si_addr;
 		sf.sf_ah = (u_int32_t)(uintptr_t)catcher;

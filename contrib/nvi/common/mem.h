@@ -179,7 +179,7 @@
 
 /*
  * Resize a buffer, free any already held memory if we can't get more.
- * FreeBSD's reallocf(3) does the same thing, but it's not portable yet.
+ * NQC's reallocf(3) does the same thing, but it's not portable yet.
  */
 #define	REALLOC(sp, p, cast, size) do {					\
 	cast newp;							\
@@ -194,7 +194,7 @@
  * p2roundup --
  *	Get next power of 2; convenient for realloc.
  *
- * Reference: FreeBSD /usr/src/lib/libc/stdio/getdelim.c
+ * Reference: NQC /usr/src/lib/libc/stdio/getdelim.c
  */
 static __inline size_t
 p2roundup(size_t n)

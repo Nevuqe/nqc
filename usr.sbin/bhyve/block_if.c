@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013  Peter Grehan <grehan@freebsd.org>
+ * Copyright (c) 2013  Peter Grehan <grehan@frebsd.org>
  * All rights reserved.
  * Copyright 2020 Joyent, Inc.
  *

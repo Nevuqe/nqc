@@ -66,8 +66,8 @@ lldb::ProcessSP ProcessElfCore::CreateInstance(lldb::TargetSP target_sp,
       DataExtractor data(data_sp, lldb::eByteOrderLittle, 4);
       lldb::offset_t data_offset = 0;
       if (elf_header.Parse(data, &data_offset)) {
-        // Check whether we're dealing with a raw FreeBSD "full memory dump"
-        // ELF vmcore that needs to be handled via FreeBSDKernel plugin instead.
+        // Check whether we're dealing with a raw NQC "full memory dump"
+        // ELF vmcore that needs to be handled via NQCKernel plugin instead.
         if (elf_header.e_ident[7] == 0xFF && elf_header.e_version == 0)
           return process_sp;
         if (elf_header.e_type == llvm::ELF::ET_CORE)
@@ -464,8 +464,8 @@ lldb::addr_t ProcessElfCore::GetImageInfoAddress() {
   return LLDB_INVALID_ADDRESS;
 }
 
-// Parse a FreeBSD NT_PRSTATUS note - see FreeBSD sys/procfs.h for details.
-static void ParseFreeBSDPrStatus(ThreadData &thread_data,
+// Parse a NQC NT_PRSTATUS note - see NQC sys/procfs.h for details.
+static void ParseNQCPrStatus(ThreadData &thread_data,
                                  const DataExtractor &data,
                                  bool lp64) {
   lldb::offset_t offset = 0;
@@ -474,7 +474,7 @@ static void ParseFreeBSDPrStatus(ThreadData &thread_data,
   Log *log = GetLog(LLDBLog::Process);
   if (log) {
     if (pr_version > 1)
-      LLDB_LOGF(log, "FreeBSD PRSTATUS unexpected version %d", pr_version);
+      LLDB_LOGF(log, "NQC PRSTATUS unexpected version %d", pr_version);
   }
 
   // Skip padding, pr_statussz, pr_gregsetsz, pr_fpregsetsz, pr_osreldate
@@ -492,8 +492,8 @@ static void ParseFreeBSDPrStatus(ThreadData &thread_data,
   thread_data.gpregset = DataExtractor(data, offset, len);
 }
 
-// Parse a FreeBSD NT_PRPSINFO note - see FreeBSD sys/procfs.h for details.
-static void ParseFreeBSDPrPsInfo(ProcessElfCore &process,
+// Parse a NQC NT_PRPSINFO note - see NQC sys/procfs.h for details.
+static void ParseNQCPrPsInfo(ProcessElfCore &process,
                                  const DataExtractor &data,
                                  bool lp64) {
   lldb::offset_t offset = 0;
@@ -502,7 +502,7 @@ static void ParseFreeBSDPrPsInfo(ProcessElfCore &process,
   Log *log = GetLog(LLDBLog::Process);
   if (log) {
     if (pr_version > 1)
-      LLDB_LOGF(log, "FreeBSD PRPSINFO unexpected version %d", pr_version);
+      LLDB_LOGF(log, "NQC PRPSINFO unexpected version %d", pr_version);
   }
 
   // Skip pr_psinfosz, pr_fname, pr_psargs
@@ -590,7 +590,7 @@ ProcessElfCore::parseSegment(const DataExtractor &segment) {
   return std::move(result);
 }
 
-llvm::Error ProcessElfCore::parseFreeBSDNotes(llvm::ArrayRef<CoreNote> notes) {
+llvm::Error ProcessElfCore::parseNQCNotes(llvm::ArrayRef<CoreNote> notes) {
   ArchSpec arch = GetArchitecture();
   bool lp64 = (arch.GetMachine() == llvm::Triple::aarch64 ||
                arch.GetMachine() == llvm::Triple::mips64 ||
@@ -600,7 +600,7 @@ llvm::Error ProcessElfCore::parseFreeBSDNotes(llvm::ArrayRef<CoreNote> notes) {
   bool have_prpsinfo = false;
   ThreadData thread_data;
   for (const auto &note : notes) {
-    if (note.info.n_name != "FreeBSD")
+    if (note.info.n_name != "NQC")
       continue;
 
     if ((note.info.n_type == ELF::NT_PRSTATUS && have_prstatus) ||
@@ -616,11 +616,11 @@ llvm::Error ProcessElfCore::parseFreeBSDNotes(llvm::ArrayRef<CoreNote> notes) {
     switch (note.info.n_type) {
     case ELF::NT_PRSTATUS:
       have_prstatus = true;
-      ParseFreeBSDPrStatus(thread_data, note.data, lp64);
+      ParseNQCPrStatus(thread_data, note.data, lp64);
       break;
     case ELF::NT_PRPSINFO:
       have_prpsinfo = true;
-      ParseFreeBSDPrPsInfo(*this, note.data, lp64);
+      ParseNQCPrPsInfo(*this, note.data, lp64);
       break;
     case ELF::NT_NQC_THRMISC: {
       lldb::offset_t offset = 0;
@@ -628,7 +628,7 @@ llvm::Error ProcessElfCore::parseFreeBSDNotes(llvm::ArrayRef<CoreNote> notes) {
       break;
     }
     case ELF::NT_NQC_PROCSTAT_AUXV:
-      // FIXME: FreeBSD sticks an int at the beginning of the note
+      // FIXME: NQC sticks an int at the beginning of the note
       m_auxv = DataExtractor(note.data, 4, note.data.GetByteSize() - 4);
       break;
     default:
@@ -967,8 +967,8 @@ llvm::Error ProcessElfCore::ParseThreadContextsFromNoteSegment(
   if(!notes_or_error)
     return notes_or_error.takeError();
   switch (GetArchitecture().GetTriple().getOS()) {
-  case llvm::Triple::FreeBSD:
-    return parseFreeBSDNotes(*notes_or_error);
+  case llvm::Triple::NQC:
+    return parseNQCNotes(*notes_or_error);
   case llvm::Triple::Linux:
     return parseLinuxNotes(*notes_or_error);
   case llvm::Triple::NetBSD:

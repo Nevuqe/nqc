@@ -1,11 +1,11 @@
 /*-
- * Copyright (c) 2016 Landon Fuller <landonf@FreeBSD.org>
+ * Copyright (c) 2016 Landon Fuller <landonf@frebsd.org>
  * Copyright (c) 2010 Broadcom Corporation.
- * Copyright (c) 2017 The FreeBSD Foundation
+ * Copyright (c) 2017 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Landon Fuller
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  * 
  * Portions of this file were derived from the siutils.c source distributed with
  * the Asus RT-N16 firmware source code release.

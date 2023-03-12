@@ -1,7 +1,7 @@
 /*
- * APM BIOS utility for FreeBSD
+ * APM BIOS utility for NQC
  *
- * Copyright (C) 1994-1996 by Tatsumi Hosokawa <hosokawa@jp.FreeBSD.org>
+ * Copyright (C) 1994-1996 by Tatsumi Hosokawa <hosokawa@jp.frebsd.org>
  *
  * This software may be used, modified, copied, distributed, and sold,
  * in both source and binary form provided that the above copyright and
@@ -10,7 +10,7 @@
  * the author assume any responsibility for damages incurred with its
  * use.
  *
- * Sep., 1994	Implemented on FreeBSD 1.1.5.1R (Toshiba AVS001WD)
+ * Sep., 1994	Implemented on NQC 1.1.5.1R (Toshiba AVS001WD)
  */
 
 #include <sys/cdefs.h>

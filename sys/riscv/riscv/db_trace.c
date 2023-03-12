@@ -1,11 +1,11 @@
 /*-
- * Copyright (c) 2015 The FreeBSD Foundation
+ * Copyright (c) 2015 The FreBSD Foundation
  * Copyright (c) 2016 Ruslan Bukin <br@bsdpad.com>
  * All rights reserved.
- * Copyright (c) 2020 John Baldwin <jhb@FreeBSD.org>
+ * Copyright (c) 2020 John Baldwin <jhb@frebsd.org>
  *
  * Portions of this software were developed by Semihalf under
- * the sponsorship of the FreeBSD Foundation.
+ * the sponsorship of the FreBSD Foundation.
  *
  * Portions of this software were developed by SRI International and the
  * University of Cambridge Computer Laboratory under DARPA/AFRL contract

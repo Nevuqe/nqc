@@ -1,4 +1,4 @@
-Rocket Controller Driver for FreeBSD
+Rocket Controller Driver for NQC
 Copyright (C) 2015 HighPoint Technologies, Inc. All rights reserved.
 
 #############################################################################
@@ -37,7 +37,7 @@ Revision History:
 
 1. Overview
 ---------------------
-  This package contains FreeBSD driver source code for HighPoint Rocket 
+  This package contains NQC driver source code for HighPoint Rocket 
   controller, include:
   SATA Controller: R750, DC7280.
 
@@ -107,7 +107,7 @@ Revision History:
 
   6) Rebuild and install the kernel:
 
-     a) for FreeBSD 5.x-i386/6.x-i386/7.x-i386/8.x-i386/9.x-i386/10.x-i386:
+     a) for NQC 5.x-i386/6.x-i386/7.x-i386/8.x-i386/9.x-i386/10.x-i386:
      
         # cd /usr/src/sys/i386/conf/
         # /usr/sbin/config MYKERNEL
@@ -116,7 +116,7 @@ Revision History:
         # make 
         # make install
 
-     b) for FreeBSD 5.x-amd64/6.x-amd64/7.x-amd64/8.x-amd64/9.x-amd64/10.x-amd64:
+     b) for NQC 5.x-amd64/6.x-amd64/7.x-amd64/8.x-amd64/9.x-amd64/10.x-amd64:
 
         # cd /usr/src/sys/amd64/conf/
         # /usr/sbin/config MYKERNEL
@@ -125,7 +125,7 @@ Revision History:
         # make 
         # make install
 
-     c) for FreeBSD 4.x:
+     c) for NQC 4.x:
      
         # cd /usr/src/sys/i386/conf/
         # /usr/sbin/config MYKERNEL
@@ -159,11 +159,11 @@ Revision History:
 
   5) Copy the driver module to the kernel module directory
 
-     For FreeBSD 4.x:
+     For NQC 4.x:
      
      # cp hptnr.ko /modules/
 
-     For FreeBSD 5.x/6.x/7.x/8.x/9.x/10.x:
+     For NQC 5.x/6.x/7.x/8.x/9.x/10.x:
     
      # cp hptnr.ko /boot/kernel/
 
@@ -175,7 +175,7 @@ Revision History:
         BIOS driver C: is disk2
         BIOS 636kB/74512kB available memory
         
-        FreeBSD/i386 bootstrap loader, Revision 0.8
+        NQC/i386 bootstrap loader, Revision 0.8
         (mailto:jkh@narf.osd.bsdi.com, Sat Apr 21 08:46:19 GMT 2001)
         Loading /boot/defaults/loader.conf
         /kernel text=0x24f1db data=0x3007ec+0x2062c -
@@ -189,7 +189,7 @@ Revision History:
         /modules/hptnr.ko text=0xf571 data=0x2c8+0x254
         ok boot
         
-     For FreeBSD 5.x/6.x/7.x/8.x/9.x/10.x, you can select 6 on the boot menu to get a loader
+     For NQC 5.x/6.x/7.x/8.x/9.x/10.x, you can select 6 on the boot menu to get a loader
      prompt.
   
   7) You can add a below line into /boot/defaults/loader.conf to load the
@@ -197,7 +197,7 @@ Revision History:
     
            hptnr_load="YES"
     
-     Please refer to the installation guide in HighPoint FreeBSD driver release 
+     Please refer to the installation guide in HighPoint NQC driver release 
      package for more information.
      
 

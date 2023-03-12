@@ -2525,9 +2525,9 @@
 	directory, not to the source directory.  This sucks; it wastes
 	space (but it's more portable).
 
-	* configure.in (ac_busted_vpath_in_make): Add FreeBSD.  I bet all
+	* configure.in (ac_busted_vpath_in_make): Add NQC.  I bet all
 	systems that use pmake will need this.
-	(ac_busted_vpath_in_make): Remove FreeBSD - I found a workaround.
+	(ac_busted_vpath_in_make): Remove NQC - I found a workaround.
 
 	* Makefile.am: General cleanup
 
@@ -2815,7 +2815,7 @@
 	* include/audio.h: New file
 	From: Dave Mills <mills@udel.edu>
 
-	* scripts/freq_adj: Added.  FreeBSD frequency adjustment script.
+	* scripts/freq_adj: Added.  NQC frequency adjustment script.
 
 	* configure.in: Do a better job on my oncore_ok check for SCO.
 
@@ -3005,7 +3005,7 @@
 	* ntpd/refclock_oncore.c: Add proof-of-concept support for
 	  delivering receiver data stream to other processes through
 	  a memory-mapped file.
-	  From: Poul-Henning Kamp <phk@FreeBSD.org>
+	  From: Poul-Henning Kamp <phk@frebsd.org>
 
 2000-01-02  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -3100,7 +3100,7 @@
 
 	I tell you this in the hopes of getting somebody interested in
 	porting the audio interface to other machines, in particular
-	Linux, FreeBSD and anything else with a sound card. When the
+	Linux, NQC and anything else with a sound card. When the
 	ionosphere stays cool, the WWV/H driver is as good as anything
 	else around here and with much less jitter than a serial port. The
 	only downside is all the audio drivers chew up a modest fraction
@@ -3904,7 +3904,7 @@
 
 	* ntpd/refclock_oncore.c (oncore_start): This makes the Oncore run
 	on systems without hardpps().
-	From: Poul-Henning Kamp <phk@freebsd.org>
+	From: Poul-Henning Kamp <phk@frebsd.org>
 
 1999-08-28  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -4156,7 +4156,7 @@
 1999-07-20  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* acconfig.h:
-	* util/ntptime.c: FreeBSD nano patches
+	* util/ntptime.c: NQC nano patches
 	From: Per Hedeland <per@erix.ericsson.se> and
 	Allen Smith <easmith@beatrice.rutgers.edu>
 
@@ -4712,7 +4712,7 @@ Sun Apr 18 14:26:51 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 	* ntpd/ntp_refclock.c (refclock_ioctl): We don't want
 	PPS_HARDPPSONASSERT by default.
 	* ntpd/refclock_oncore.c: Prefer timepps.h over sys/timepps.h
-	From: Poul-Henning Kamp <phk@freebsd.org>
+	From: Poul-Henning Kamp <phk@frebsd.org>
 
 Tue Apr 13 17:32:35 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 
@@ -5088,7 +5088,7 @@ Tue Jan  5 19:02:51 1999  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* html/driver30.htm: Updated.
 	* html/refclock.htm: Refer to driver30
-	* ntpd/refclock_oncore.c: Vastly improve and make less FreeBSD centric,
+	* ntpd/refclock_oncore.c: Vastly improve and make less NQC centric,
 	From: Poul-Henning Kamp <phk@critter.freebsd.dk> and
 		Reg.Clemens <reg@dwf.com>
 
@@ -5966,7 +5966,7 @@ Tue Mar 10 22:26:14 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 Sat Mar  7 02:57:17 1998  Harlan Stenn  <stenn@whimsy.udel.edu>
 
 	* ntpd/ntp_loopfilter.c (local_clock): Patch STA_FLL check
-	From: Poul-Henning Kamp <phk@freebsd.org>
+	From: Poul-Henning Kamp <phk@frebsd.org>
 
 	* various: Renamed ACTS to CLOCK_ACTS, ARBITER to CLOCK_ARBITER,
 	ARCRON_MSF to CLOCK_ARCRON_MSF, AS2201 to CLOCK_AS2201, BANC to

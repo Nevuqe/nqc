@@ -29,7 +29,7 @@
 # The core file vnode is unreferenced before notification is sent.
 
 # Problem reported by sbruno@
-# http://people.freebsd.org/~pho/stress/log/core5.txt
+# http://people.frebsd.org/~pho/stress/log/core5.txt
 # Fixed by r279237.
 
 # 20150714 Slowdown seen with core5 waiting in vlruwk.

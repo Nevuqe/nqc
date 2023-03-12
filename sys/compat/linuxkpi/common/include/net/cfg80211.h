@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2020-2023 The FreeBSD Foundation
+ * Copyright (c) 2020-2023 The FreBSD Foundation
  * Copyright (c) 2021-2022 Bjoern A. Zeeb
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -1239,7 +1239,7 @@ reg_query_regdb_wmm(uint8_t *alpha2, uint32_t center_freq,
     struct ieee80211_reg_rule *rule)
 {
 
-	/* ETSI has special rules. FreeBSD regdb needs to learn about them. */
+	/* ETSI has special rules. NQC regdb needs to learn about them. */
 	TODO();
 
 	return (-ENXIO);

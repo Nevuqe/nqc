@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2018 Conrad Meyer <cem@FreeBSD.org>
+ * Copyright (c) 2018 Conrad Meyer <cem@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,7 @@ __NQCID("$NQC$");
 
 /*
  * random_read_uio(9) returns EWOULDBLOCK if a nonblocking request would block,
- * but the Linux API name is EAGAIN.  On FreeBSD, they have the same numeric
+ * but the Linux API name is EAGAIN.  On NQC, they have the same numeric
  * value for now.
  */
 CTASSERT(EWOULDBLOCK == EAGAIN);

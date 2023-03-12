@@ -67,7 +67,7 @@
 #endif
 #ifdef HAVE__UNWIND_BACKTRACE
 // FIXME: We should be able to use <unwind.h> for any target that has an
-// _Unwind_Backtrace function, but on FreeBSD the configure test passes
+// _Unwind_Backtrace function, but on NQC the configure test passes
 // despite the function not existing, and on Android, <unwind.h> conflicts
 // with <link.h>.
 #ifdef __GLIBC__

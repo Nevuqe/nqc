@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,11 +26,11 @@
 # SUCH DAMAGE.
 #
 
-# Deadlock seen: http://people.freebsd.org/~pho/stress/log/gjournal3.txt
+# Deadlock seen: http://people.frebsd.org/~pho/stress/log/gjournal3.txt
 # Fixed in r244925
 
 # panic: Bio not on queue
-# https://people.freebsd.org/~pho/stress/log/gjournal3-2.txt
+# https://people.frebsd.org/~pho/stress/log/gjournal3-2.txt
 
 # kib@ wrote:
 # gjournal is good for exposing the suspension problems.  The frequency
@@ -40,7 +40,7 @@
 # makes it easier to see the issues.
 
 # gjournal / ffs snapshot suspension deadlock:
-# https://people.freebsd.org/~pho/stress/log/gjournal3-4.txt
+# https://people.frebsd.org/~pho/stress/log/gjournal3-4.txt
 # Originally reported as  kern/164252.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

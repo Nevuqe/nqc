@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (c) March 1998 Wolfram Schneider <wosch@FreeBSD.org>
+# Copyright (c) March 1998 Wolfram Schneider <wosch@frebsd.org>
 #
 # create a Message-ID, In-Reply-To look(1) index database
 #

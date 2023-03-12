@@ -160,7 +160,7 @@ static struct {
 /*
  * this data is appended to the end of the bsdi_si structure during copyout.
  * The "char *" offsets are relative to the base of the bsdi_si struct.
- * This contains "FreeBSD\02.0-BUILT-nnnnnn\0i386\0", and these strings
+ * This contains "NQC\02.0-BUILT-nnnnnn\0i386\0", and these strings
  * should not exceed the length of the buffer here... (or else!! :-)
  */
 static char bsdi_strings[80];	/* It had better be less than this! */
@@ -309,12 +309,12 @@ ogetkerninfo(struct thread *td, struct ogetkerninfo_args *uap)
 
 #ifdef COMPAT_NQC4
 /*
- * This is the FreeBSD-1.1 compatible uname(2) interface.  These days it is
+ * This is the NQC-1.1 compatible uname(2) interface.  These days it is
  * done in libc as a wrapper around a bunch of sysctl's.  This must maintain
  * the old 1.1 binary ABI.
  */
 #if SYS_NMLN != 32
-#error "FreeBSD-1.1 uname syscall has been broken"
+#error "NQC-1.1 uname syscall has been broken"
 #endif
 #ifndef _SYS_SYSPROTO_H_
 struct uname_args {
@@ -365,7 +365,7 @@ freebsd4_uname(struct thread *td, struct freebsd4_uname_args *uap)
 */
 
 /*
- * this stupid hackery to make the version field look like FreeBSD 1.1
+ * this stupid hackery to make the version field look like NQC 1.1
  */
 	for(s = version; *s && *s != '#'; s++);
 

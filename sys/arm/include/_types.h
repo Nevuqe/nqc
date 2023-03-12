@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2002 Mike Barcroft <mike@FreeBSD.org>
+ * Copyright (c) 2002 Mike Barcroft <mike@frebsd.org>
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
  *

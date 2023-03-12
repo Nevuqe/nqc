@@ -35,7 +35,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Julian Elisher <julian@freebsd.org>
+ * Author: Julian Elisher <julian@frebsd.org>
  *
  * $NQC$
  * $Whistle: ng_hole.c,v 1.10 1999/11/01 09:24:51 julian Exp $

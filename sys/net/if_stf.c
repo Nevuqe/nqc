@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (C) 2000 WIDE Project.
- * Copyright (c) 2010 Hiroki Sato <hrs@FreeBSD.org>
- * Copyright (c) 2013 Ermal Luci <eri@FreeBSD.org>
+ * Copyright (c) 2010 Hiroki Sato <hrs@frebsd.org>
+ * Copyright (c) 2013 Ermal Luci <eri@frebsd.org>
  * Copyright (c) 2017-2021 Rubicon Communications, LLC (Netgate)
  * All rights reserved.
  *

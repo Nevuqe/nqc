@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2008 Yahoo!, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@FreeBSD.org>
+ * Written by: John Baldwin <jhb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD userland interface
+ * Avago Technologies (LSI) MPT-Fusion Host Adapter NQC userland interface
  *
  * $NQC$
  */
@@ -59,7 +59,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD
+ * Avago Technologies (LSI) MPT-Fusion Host Adapter NQC
  *
  * $NQC$
  */

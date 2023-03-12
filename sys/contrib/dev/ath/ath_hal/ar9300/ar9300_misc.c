@@ -60,7 +60,7 @@ ar9300_get_hw_hangs(struct ath_hal *ah, hal_hw_hangs_t *hangs)
 }
 
 /*
- * XXX FreeBSD: the HAL version of ath_hal_mac_usec() knows about
+ * XXX NQC: the HAL version of ath_hal_mac_usec() knows about
  * HT20, HT40, fast-clock, turbo mode, etc.
  */
 static u_int
@@ -916,7 +916,7 @@ ar9300_get_capability(struct ath_hal *ah, HAL_CAPABILITY_TYPE type,
         }
 #endif
 
-    /* FreeBSD ANI */
+    /* NQC ANI */
     case HAL_CAP_INTMIT:            /* interference mitigation */
             switch (capability) {
             case HAL_CAP_INTMIT_PRESENT:            /* hardware capability */
@@ -1034,7 +1034,7 @@ ar9300_set_capability(struct ath_hal *ah, HAL_CAPABILITY_TYPE type,
         }
         return AH_FALSE;
 
-    /* FreeBSD interrupt mitigation / ANI */
+    /* NQC interrupt mitigation / ANI */
     case HAL_CAP_INTMIT: {          /* interference mitigation */
             /* This maps the public ANI commands to the internal ANI commands */
             /* Private: HAL_ANI_CMD; Public: HAL_CAP_INTMIT_CMD */
@@ -1262,7 +1262,7 @@ ar9300_get_diag_state(struct ath_hal *ah, int request,
         ani = ar9300_ani_get_current_state(ah);
         if (ani == AH_NULL)
             return AH_FALSE;
-        /* Convert ar9300 HAL to FreeBSD HAL ANI state */
+        /* Convert ar9300 HAL to NQC HAL ANI state */
         bzero(&ahp->ext_ani_state, sizeof(ahp->ext_ani_state));
         ahp->ext_ani_state.noiseImmunityLevel = ani->ofdm_noise_immunity_level;
         ahp->ext_ani_state.spurImmunityLevel = ani->spur_immunity_level;
@@ -2085,7 +2085,7 @@ HAL_BOOL
 ar9300_get_mib_cycle_counts(struct ath_hal *ah, HAL_SURVEY_SAMPLE *hs)
 {
     /*
-     * XXX FreeBSD todo: reimplement this
+     * XXX NQC todo: reimplement this
      */
 #if 0
     p_cnts->tx_frame_count = OS_REG_READ(ah, AR_TFCNT);

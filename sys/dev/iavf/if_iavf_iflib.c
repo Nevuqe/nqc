@@ -101,7 +101,7 @@ static int	iavf_setup_vc_tq(struct iavf_sc *sc);
 static int	iavf_vc_sleep_wait(struct iavf_sc *sc, u32 op);
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 
 /**

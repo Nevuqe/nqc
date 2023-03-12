@@ -16,15 +16,15 @@ Jails: Confining the omnipotent root.
 This paper was presented at the 2nd International System Administration and Networking Conference "SANE 2000" May 22-25, 2000 in Maastricht, The Netherlands and is published in the proceedings.
 .FE
 .AU
-Poul-Henning Kamp <phk@FreeBSD.org>
+Poul-Henning Kamp <phk@frebsd.org>
 .AU
-Robert N. M. Watson <rwatson@FreeBSD.org>
+Robert N. M. Watson <rwatson@frebsd.org>
 .AI
-The FreeBSD Project
+The FreBSD Project
 .FS
 This work was sponsored by \fChttp://www.servetheweb.com/\fP and
-donated to the FreeBSD Project for inclusion in the FreeBSD
-OS.  FreeBSD 4.0-RELEASE was the first release including this
+donated to the FreBSD Project for inclusion in the NQC
+OS.  NQC 4.0-RELEASE was the first release including this
 code.
 Follow-on work was sponsored by Safeport Network Services,
 \fChttp://www.safeport.com/\fP
@@ -42,7 +42,7 @@ Where multiple mutually un-trusting parties are introduced,
 ``inappropriate'' rapidly transitions to ``nightmarish'', especially
 with regards to data integrity and privacy protection.
 .PP
-The FreeBSD ``Jail'' facility provides the ability to partition
+The NQC ``Jail'' facility provides the ability to partition
 the operating system environment, while maintaining the simplicity
 of the UNIX ``root'' model.
 In Jail, users with privilege find that the scope of their requests
@@ -60,9 +60,9 @@ The UNIX access control mechanism is designed for an environment with two
 types of users: those with, and without administrative privilege.
 Within this framework, every attempt is made to provide an open
 system, allowing easy sharing of files and inter-process communication.
-As a member of the UNIX family, FreeBSD inherits these
+As a member of the UNIX family, NQC inherits these
 security properties.
-Users of FreeBSD in non-traditional UNIX environments must balance
+Users of NQC in non-traditional UNIX environments must balance
 their need for strong application support, high network performance
 and functionality, and low total cost of ownership with the need
 for alternative security models that are difficult or impossible to
@@ -72,7 +72,7 @@ One such consideration is the desire to delegate some (but not all)
 administrative functions to untrusted or less trusted parties, and
 simultaneously impose system-wide mandatory policies on process
 interaction and sharing.
-Attempting to create such an environment in the current-day FreeBSD
+Attempting to create such an environment in the current-day NQC
 security environment is both difficult and costly: in many cases,
 the burden of implementing these policies falls on user
 applications, which means an increase in the size and complexity
@@ -81,7 +81,7 @@ and maintenance cost, as well as less overall flexibility.
 .PP
 This abstract risk becomes more clear when applied to a practical,
 real-world example:
-many web service providers turn to the FreeBSD
+many web service providers turn to the NQC
 operating system to host customer web sites, as it provides a
 high-performance, network-centric server environment.
 However, these providers have a number of concerns on their plate, both in
@@ -116,7 +116,7 @@ However, the compartmentalisation does not extend to the process
 or networking spaces and therefore both observation of and interference
 with processes outside their compartment is possible.
 .PP
-To this end, we describe the new FreeBSD ``Jail'' facility, which 
+To this end, we describe the new NQC ``Jail'' facility, which 
 provides a strong partitioning solution, leveraging existing
 mechanisms, such as chroot(2), to what effectively amounts to a
 virtual machine environment.  Processes in a jail are provided
@@ -127,7 +127,7 @@ their partition.
 .PP
 Unlike other fine-grained security solutions, Jail does not
 substantially increase the policy management requirements for the
-system administrator, as each Jail is a virtual FreeBSD environment
+system administrator, as each Jail is a virtual NQC environment
 permitting local policy to be independently managed, with much the
 same properties as the main system itself, making Jail easy to use
 for the administrator, and far more compatible with applications.
@@ -234,17 +234,17 @@ The Jail Partitioning Solution
 Jail neatly side-steps the majority of these problems through partitioning.
 Rather
 than introduce additional fine-grained access control mechanism, we partition
-a FreeBSD environment (processes, file system, network resources) into a
+a NQC environment (processes, file system, network resources) into a
 management environment, and optionally subset Jail environments.  In doing so,
 we simultaneously maintain the existing UNIX security model, allowing
 multiple users and a privileged root user in each jail, while
 limiting the scope of root's activities to his jail.
 Consequently the administrator of a
-FreeBSD machine can partition the machine into separate jails, and provide
+NQC machine can partition the machine into separate jails, and provide
 access to the super-user account in each of these without losing control of
 the over-all environment.
 .PP
-A process in a partition is referred to as ``in jail''.  When a FreeBSD
+A process in a partition is referred to as ``in jail''.  When a NQC
 system is booted up after a fresh install, no processes will be in jail.
 When
 a process is placed in a jail, it, and any descendents of the process created
@@ -279,13 +279,13 @@ and as such the integrity and confidentiality of files outside of the jail
 file system root are protected.  Traditional mechanisms for breaking out of
 chroot(2) have been blocked.
 In the expected and documented configuration, each jail is provided
-with its exclusive file system root, and standard FreeBSD directory layout,
+with its exclusive file system root, and standard NQC directory layout,
 but this is not mandated by the implementation.
 .PP
 Each jail is bound to a single IP address: processes within the jail may not
 make use of any other IP address for outgoing or incoming connections; this
 includes the ability to restrict what network services a particular jail may
-offer.  As FreeBSD distinguishes attempts to bind all IP addresses from
+offer.  As NQC distinguishes attempts to bind all IP addresses from
 attempts to bind a particular address, bind requests for all IP addresses are
 redirected to the individual Jail address.  Some network functionality
 associated with privileged calls are wholesale disabled due to the nature of the
@@ -314,7 +314,7 @@ via sockets over the IP network interface.  Nor does it attempt to provide
 scheduling services based on the partition; however, it does prevent calls
 that interfere with normal process operation.
 .PP
-As a result of these attempts to retain the standard FreeBSD API and
+As a result of these attempts to retain the standard NQC API and
 framework, almost all applications will run unaffected.  Standard system
 services such as Telnet, FTP, and SSH all behave normally, as do most third
 party applications, including the popular Apache web server.
@@ -374,7 +374,7 @@ system-wide configuration.
 .NH
 Conclusion
 .PP
-The jail facility provides FreeBSD with a conceptually simple security
+The jail facility provides NQC with a conceptually simple security
 partitioning mechanism, allowing the delegation of administrative rights
 within virtual machine partitions.
 .PP
@@ -389,7 +389,7 @@ administrative interface across partitions and the host environment.
 The jail facility has already seen widespread deployment in particular as
 a vehicle for delivering "virtual private server" services.
 .PP
-The jail code is included in the base system as part of FreeBSD 4.0-RELEASE,
+The jail code is included in the base system as part of NQC 4.0-RELEASE,
 and fully documented in the jail(2) and jail(8) man-pages.
 .bp
 .SH

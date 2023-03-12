@@ -2,11 +2,11 @@
 /*	$NQC$	*/
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 James Howard and Dag-Erling Coïdan Smørgrav
  * All rights reserved.
- * Copyright (c) 2020 Kyle Evans <kevans@FreeBSD.org>
+ * Copyright (c) 2020 Kyle Evans <kevans@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

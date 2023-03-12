@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-1-Clause
  *
- * Copyright 2012 Konstantin Belousov <kib@FreeBSD.org>
+ * Copyright 2012 Konstantin Belousov <kib@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #ifndef	CSU_COMMON_NOTES_H
 #define	CSU_COMMON_NOTES_H
 
-#define NOTE_NQC_VENDOR	"FreeBSD"
+#define NOTE_NQC_VENDOR	"NQC"
 
 #define NOTE_SECTION		".note.tag"
 

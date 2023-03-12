@@ -20,13 +20,13 @@
 # sys_thr_new() at sys_thr_new+0x15a/framd30
 # amd64_syscall() at amd64_syscall+0x31e/frame 0xfffffe01f7614f30
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe01f7614f30
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x8003afafa, rsp = 0x7fffdfffdf58, rbp = 0x7fffdfffdf70 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x8003afafa, rsp = 0x7fffdfffdf58, rbp = 0x7fffdfffdf70 ---
 # KDB: enter: panic
 # [ thread pid 69407 tid 100937 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x2638c4e(%rip)
 # db> x/s version
-# version:  FreeBSD 14.0-CURRENT #0 main-n250242-eab5358b9080-dirty: Mon Oct 25 11:32:45 CEST 2021
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO-KASAN
+# version:  NQC 14.0-CURRENT #0 main-n250242-eab5358b9080-dirty: Mon Oct 25 11:32:45 CEST 2021
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO-KASAN
 # db> 
 
 [ `uname -p` != "amd64" ] && exit 0

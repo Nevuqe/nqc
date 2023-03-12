@@ -20,7 +20,7 @@ UDP_TUNNEL_PORT=4028
 
 # Create the interface node ``ng0'' if it doesn't exist already,
 # otherwise just make sure it's not connected to anything.
-# In FreeBSD, interfaces cannot be removed so it might already
+# In NQC, interfaces cannot be removed so it might already
 # be there from before.
 #
 if ifconfig ng0 >/dev/null 2>&1; then

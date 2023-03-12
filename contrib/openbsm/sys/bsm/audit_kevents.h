@@ -383,7 +383,7 @@
 
 /*
  * Audit event identifiers added as part of OpenBSM, generally corresponding
- * to events in FreeBSD, Darwin, and Linux that were not present in Solaris.
+ * to events in NQC, Darwin, and Linux that were not present in Solaris.
  * These often duplicate events added to the Solaris set by Darwin, but use
  * event identifiers in a higher range in order to avoid colliding with
  * future Solaris additions.
@@ -447,28 +447,28 @@
 #define	AUE_COPYFILE		43051	/* Darwin-specific. */
 
 /*
- * Events added to OpenBSM for FreeBSD and Linux; may also be used by Darwin
+ * Events added to OpenBSM for NQC and Linux; may also be used by Darwin
  * in the future.
  */
 #define	AUE_LUTIMES		43052
-#define	AUE_LCHFLAGS		43053	/* FreeBSD-specific. */
+#define	AUE_LCHFLAGS		43053	/* NQC-specific. */
 #define	AUE_SENDFILE		43054	/* BSD/Linux-specific. */
 #define	AUE_USELIB		43055	/* Linux-specific. */
 #define	AUE_GETRESUID		43056
 #define	AUE_SETRESUID		43057
 #define	AUE_GETRESGID		43058
 #define	AUE_SETRESGID		43059
-#define	AUE_WAIT4		43060	/* FreeBSD-specific. */
-#define	AUE_LGETFH		43061	/* FreeBSD-specific. */
-#define	AUE_FHSTATFS		43062	/* FreeBSD-specific. */
-#define	AUE_FHOPEN		43063	/* FreeBSD-specific. */
-#define	AUE_FHSTAT		43064	/* FreeBSD-specific. */
-#define	AUE_JAIL		43065	/* FreeBSD-specific. */
-#define	AUE_EACCESS		43066	/* FreeBSD-specific. */
-#define	AUE_KQUEUE		43067	/* FreeBSD-specific. */
-#define	AUE_KEVENT		43068	/* FreeBSD-specific. */
+#define	AUE_WAIT4		43060	/* NQC-specific. */
+#define	AUE_LGETFH		43061	/* NQC-specific. */
+#define	AUE_FHSTATFS		43062	/* NQC-specific. */
+#define	AUE_FHOPEN		43063	/* NQC-specific. */
+#define	AUE_FHSTAT		43064	/* NQC-specific. */
+#define	AUE_JAIL		43065	/* NQC-specific. */
+#define	AUE_EACCESS		43066	/* NQC-specific. */
+#define	AUE_KQUEUE		43067	/* NQC-specific. */
+#define	AUE_KEVENT		43068	/* NQC-specific. */
 #define	AUE_FSYNC		43069
-#define	AUE_NMOUNT		43070	/* FreeBSD-specific. */
+#define	AUE_NMOUNT		43070	/* NQC-specific. */
 #define	AUE_BDFLUSH		43071	/* Linux-specific. */
 #define	AUE_SETFSUID		43072	/* Linux-specific. */
 #define	AUE_SETFSGID		43073	/* Linux-specific. */
@@ -476,81 +476,81 @@
 #define	AUE_SCHED_GETSCHEDULER	43075	/* POSIX.1b. */
 #define	AUE_SCHED_SETSCHEDULER	43076	/* POSIX.1b. */
 #define	AUE_PRCTL		43077	/* Linux-specific. */
-#define	AUE_GETCWD		43078	/* FreeBSD/Linux-specific. */
+#define	AUE_GETCWD		43078	/* NQC/Linux-specific. */
 #define	AUE_CAPGET		43079	/* Linux-specific. */
 #define	AUE_CAPSET		43080	/* Linux-specific. */
 #define	AUE_PIVOT_ROOT		43081	/* Linux-specific. */
-#define	AUE_RTPRIO		43082	/* FreeBSD-specific. */
+#define	AUE_RTPRIO		43082	/* NQC-specific. */
 #define	AUE_SCHED_GETPARAM	43083	/* POSIX.1b. */
 #define	AUE_SCHED_SETPARAM	43084	/* POSIX.1b. */
 #define	AUE_SCHED_GET_PRIORITY_MAX	43085	/* POSIX.1b. */
 #define	AUE_SCHED_GET_PRIORITY_MIN	43086	/* POSIX.1b. */
 #define	AUE_SCHED_RR_GET_INTERVAL	43087	/* POSIX.1b. */
-#define	AUE_ACL_GET_FILE	43088	/* FreeBSD. */
-#define	AUE_ACL_SET_FILE	43089	/* FreeBSD. */
-#define	AUE_ACL_GET_FD		43090	/* FreeBSD. */
-#define	AUE_ACL_SET_FD		43091	/* FreeBSD. */
-#define	AUE_ACL_DELETE_FILE	43092	/* FreeBSD. */
-#define	AUE_ACL_DELETE_FD	43093	/* FreeBSD. */
-#define	AUE_ACL_CHECK_FILE	43094	/* FreeBSD. */
-#define	AUE_ACL_CHECK_FD	43095	/* FreeBSD. */
-#define	AUE_ACL_GET_LINK	43096	/* FreeBSD. */
-#define	AUE_ACL_SET_LINK	43097	/* FreeBSD. */
-#define	AUE_ACL_DELETE_LINK	43098	/* FreeBSD. */
-#define	AUE_ACL_CHECK_LINK	43099	/* FreeBSD. */
-#define	AUE_SYSARCH		43100	/* FreeBSD. */
-#define	AUE_EXTATTRCTL		43101	/* FreeBSD. */
-#define	AUE_EXTATTR_GET_FILE	43102	/* FreeBSD. */
-#define	AUE_EXTATTR_SET_FILE	43103	/* FreeBSD. */
-#define	AUE_EXTATTR_LIST_FILE	43104	/* FreeBSD. */
-#define	AUE_EXTATTR_DELETE_FILE	43105	/* FreeBSD. */
-#define	AUE_EXTATTR_GET_FD	43106	/* FreeBSD. */
-#define	AUE_EXTATTR_SET_FD	43107	/* FreeBSD. */
-#define	AUE_EXTATTR_LIST_FD	43108	/* FreeBSD. */
-#define	AUE_EXTATTR_DELETE_FD	43109	/* FreeBSD. */
-#define	AUE_EXTATTR_GET_LINK	43110	/* FreeBSD. */
-#define	AUE_EXTATTR_SET_LINK	43111	/* FreeBSD. */
-#define	AUE_EXTATTR_LIST_LINK	43112	/* FreeBSD. */
-#define	AUE_EXTATTR_DELETE_LINK	43113	/* FreeBSD. */
-#define	AUE_KENV		43114	/* FreeBSD. */
-#define	AUE_JAIL_ATTACH		43115	/* FreeBSD. */
-#define	AUE_SYSCTL_WRITE	43116	/* FreeBSD. */
+#define	AUE_ACL_GET_FILE	43088	/* NQC. */
+#define	AUE_ACL_SET_FILE	43089	/* NQC. */
+#define	AUE_ACL_GET_FD		43090	/* NQC. */
+#define	AUE_ACL_SET_FD		43091	/* NQC. */
+#define	AUE_ACL_DELETE_FILE	43092	/* NQC. */
+#define	AUE_ACL_DELETE_FD	43093	/* NQC. */
+#define	AUE_ACL_CHECK_FILE	43094	/* NQC. */
+#define	AUE_ACL_CHECK_FD	43095	/* NQC. */
+#define	AUE_ACL_GET_LINK	43096	/* NQC. */
+#define	AUE_ACL_SET_LINK	43097	/* NQC. */
+#define	AUE_ACL_DELETE_LINK	43098	/* NQC. */
+#define	AUE_ACL_CHECK_LINK	43099	/* NQC. */
+#define	AUE_SYSARCH		43100	/* NQC. */
+#define	AUE_EXTATTRCTL		43101	/* NQC. */
+#define	AUE_EXTATTR_GET_FILE	43102	/* NQC. */
+#define	AUE_EXTATTR_SET_FILE	43103	/* NQC. */
+#define	AUE_EXTATTR_LIST_FILE	43104	/* NQC. */
+#define	AUE_EXTATTR_DELETE_FILE	43105	/* NQC. */
+#define	AUE_EXTATTR_GET_FD	43106	/* NQC. */
+#define	AUE_EXTATTR_SET_FD	43107	/* NQC. */
+#define	AUE_EXTATTR_LIST_FD	43108	/* NQC. */
+#define	AUE_EXTATTR_DELETE_FD	43109	/* NQC. */
+#define	AUE_EXTATTR_GET_LINK	43110	/* NQC. */
+#define	AUE_EXTATTR_SET_LINK	43111	/* NQC. */
+#define	AUE_EXTATTR_LIST_LINK	43112	/* NQC. */
+#define	AUE_EXTATTR_DELETE_LINK	43113	/* NQC. */
+#define	AUE_KENV		43114	/* NQC. */
+#define	AUE_JAIL_ATTACH		43115	/* NQC. */
+#define	AUE_SYSCTL_WRITE	43116	/* NQC. */
 #define	AUE_IOPERM		43117	/* Linux. */
 #define	AUE_READDIR		43118	/* Linux. */
 #define	AUE_IOPL		43119	/* Linux. */
 #define	AUE_VM86		43120	/* Linux. */
-#define	AUE_MAC_GET_PROC	43121	/* FreeBSD/Darwin. */
-#define	AUE_MAC_SET_PROC	43122	/* FreeBSD/Darwin. */
-#define	AUE_MAC_GET_FD		43123	/* FreeBSD/Darwin. */
-#define	AUE_MAC_GET_FILE	43124	/* FreeBSD/Darwin. */
-#define	AUE_MAC_SET_FD		43125	/* FreeBSD/Darwin. */
-#define	AUE_MAC_SET_FILE	43126	/* FreeBSD/Darwin. */
-#define	AUE_MAC_SYSCALL		43127	/* FreeBSD. */
-#define	AUE_MAC_GET_PID		43128	/* FreeBSD/Darwin. */
-#define	AUE_MAC_GET_LINK	43129	/* FreeBSD/Darwin. */
-#define	AUE_MAC_SET_LINK	43130	/* FreeBSD/Darwin. */
-#define	AUE_MAC_EXECVE		43131	/* FreeBSD/Darwin. */
-#define	AUE_GETPATH_FROMFD	43132	/* FreeBSD. */
-#define	AUE_GETPATH_FROMADDR	43133	/* FreeBSD. */
-#define	AUE_MQ_OPEN		43134	/* FreeBSD. */
-#define	AUE_MQ_SETATTR		43135	/* FreeBSD. */
-#define	AUE_MQ_TIMEDRECEIVE	43136	/* FreeBSD. */
-#define	AUE_MQ_TIMEDSEND	43137	/* FreeBSD. */
-#define	AUE_MQ_NOTIFY		43138	/* FreeBSD. */
-#define	AUE_MQ_UNLINK		43139	/* FreeBSD. */
-#define	AUE_LISTEN		43140	/* FreeBSD/Darwin/Linux. */
-#define	AUE_MLOCKALL		43141	/* FreeBSD. */
-#define	AUE_MUNLOCKALL		43142	/* FreeBSD. */
-#define	AUE_CLOSEFROM		43143	/* FreeBSD. */
-#define	AUE_FEXECVE		43144	/* FreeBSD. */
-#define	AUE_FACCESSAT		43145	/* FreeBSD. */
-#define	AUE_FCHMODAT		43146	/* FreeBSD. */
-#define	AUE_LINKAT		43147	/* FreeBSD. */
-#define	AUE_MKDIRAT		43148	/* FreeBSD. */
-#define	AUE_MKFIFOAT		43149	/* FreeBSD. */
-#define	AUE_MKNODAT		43150	/* FreeBSD. */
-#define	AUE_READLINKAT		43151	/* FreeBSD. */
-#define	AUE_SYMLINKAT		43152	/* FreeBSD. */
+#define	AUE_MAC_GET_PROC	43121	/* NQC/Darwin. */
+#define	AUE_MAC_SET_PROC	43122	/* NQC/Darwin. */
+#define	AUE_MAC_GET_FD		43123	/* NQC/Darwin. */
+#define	AUE_MAC_GET_FILE	43124	/* NQC/Darwin. */
+#define	AUE_MAC_SET_FD		43125	/* NQC/Darwin. */
+#define	AUE_MAC_SET_FILE	43126	/* NQC/Darwin. */
+#define	AUE_MAC_SYSCALL		43127	/* NQC. */
+#define	AUE_MAC_GET_PID		43128	/* NQC/Darwin. */
+#define	AUE_MAC_GET_LINK	43129	/* NQC/Darwin. */
+#define	AUE_MAC_SET_LINK	43130	/* NQC/Darwin. */
+#define	AUE_MAC_EXECVE		43131	/* NQC/Darwin. */
+#define	AUE_GETPATH_FROMFD	43132	/* NQC. */
+#define	AUE_GETPATH_FROMADDR	43133	/* NQC. */
+#define	AUE_MQ_OPEN		43134	/* NQC. */
+#define	AUE_MQ_SETATTR		43135	/* NQC. */
+#define	AUE_MQ_TIMEDRECEIVE	43136	/* NQC. */
+#define	AUE_MQ_TIMEDSEND	43137	/* NQC. */
+#define	AUE_MQ_NOTIFY		43138	/* NQC. */
+#define	AUE_MQ_UNLINK		43139	/* NQC. */
+#define	AUE_LISTEN		43140	/* NQC/Darwin/Linux. */
+#define	AUE_MLOCKALL		43141	/* NQC. */
+#define	AUE_MUNLOCKALL		43142	/* NQC. */
+#define	AUE_CLOSEFROM		43143	/* NQC. */
+#define	AUE_FEXECVE		43144	/* NQC. */
+#define	AUE_FACCESSAT		43145	/* NQC. */
+#define	AUE_FCHMODAT		43146	/* NQC. */
+#define	AUE_LINKAT		43147	/* NQC. */
+#define	AUE_MKDIRAT		43148	/* NQC. */
+#define	AUE_MKFIFOAT		43149	/* NQC. */
+#define	AUE_MKNODAT		43150	/* NQC. */
+#define	AUE_READLINKAT		43151	/* NQC. */
+#define	AUE_SYMLINKAT		43152	/* NQC. */
 #define	AUE_MAC_GETFSSTAT	43153	/* Darwin. */
 #define	AUE_MAC_GET_MOUNT	43154	/* Darwin. */
 #define	AUE_MAC_GET_LCID	43155	/* Darwin. */
@@ -582,8 +582,8 @@
 #define	AUE_OPEN_EXTENDED_RWTC	43181	/* Darwin. */
 #define	AUE_STAT_EXTENDED	43182	/* Darwin. */
 #define	AUE_UMASK_EXTENDED	43183	/* Darwin. */
-#define	AUE_OPENAT		43184	/* FreeBSD. */
-#define	AUE_POSIX_OPENPT	43185	/* FreeBSD. */
+#define	AUE_OPENAT		43184	/* NQC. */
+#define	AUE_POSIX_OPENPT	43185	/* NQC. */
 #define	AUE_CAP_NEW		43186	/* TrustedBSD. */
 #define	AUE_CAP_RIGHTS_GET	43187	/* TrustedBSD. */
 #define	AUE_CAP_GETRIGHTS	AUE_CAP_RIGHTS_GET
@@ -591,16 +591,16 @@
 #define	AUE_CAP_GETMODE		43189	/* TrustedBSD. */
 #define	AUE_POSIX_SPAWN		43190	/* Darwin. */
 #define	AUE_FSGETPATH		43191	/* Darwin. */
-#define	AUE_PREAD		43192	/* Darwin/FreeBSD. */
-#define	AUE_PWRITE		43193	/* Darwin/FreeBSD. */
+#define	AUE_PREAD		43192	/* Darwin/NQC. */
+#define	AUE_PWRITE		43193	/* Darwin/NQC. */
 #define	AUE_FSCTL		43194	/* Darwin. */
 #define	AUE_FFSCTL		43195	/* Darwin. */
-#define	AUE_LPATHCONF		43196	/* FreeBSD. */
-#define	AUE_PDFORK		43197	/* FreeBSD. */
-#define	AUE_PDKILL		43198	/* FreeBSD. */
-#define	AUE_PDGETPID		43199	/* FreeBSD. */
-#define	AUE_PDWAIT		43200	/* FreeBSD. */
-#define	AUE_WAIT6		43201	/* FreeBSD. */
+#define	AUE_LPATHCONF		43196	/* NQC. */
+#define	AUE_PDFORK		43197	/* NQC. */
+#define	AUE_PDKILL		43198	/* NQC. */
+#define	AUE_PDGETPID		43199	/* NQC. */
+#define	AUE_PDWAIT		43200	/* NQC. */
+#define	AUE_WAIT6		43201	/* NQC. */
 #define	AUE_CAP_RIGHTS_LIMIT	43202	/* TrustedBSD. */
 #define	AUE_CAP_IOCTLS_LIMIT	43203	/* TrustedBSD. */
 #define	AUE_CAP_IOCTLS_GET	43204	/* TrustedBSD. */
@@ -608,59 +608,59 @@
 #define	AUE_CAP_FCNTLS_GET	43206	/* TrustedBSD. */
 #define	AUE_BINDAT		43207	/* TrustedBSD. */
 #define	AUE_CONNECTAT		43208	/* TrustedBSD. */
-#define	AUE_CHFLAGSAT		43209	/* FreeBSD-specific. */
-#define	AUE_PREADV		43210	/* FreeBSD-specific. */
-#define	AUE_PWRITEV		43211	/* FreeBSD-specific. */
-#define	AUE_POSIX_FALLOCATE	43212	/* FreeBSD-specific. */
-#define	AUE_AIO_MLOCK		43213	/* FreeBSD-specific. */
-#define	AUE_PROCCTL		43214	/* FreeBSD-specific. */
-#define	AUE_AIO_READ		43215	/* FreeBSD-specific. */
-#define	AUE_AIO_WRITE		43216	/* FreeBSD-specific. */
-#define	AUE_AIO_RETURN		43217	/* FreeBSD-specific. */
-#define	AUE_AIO_SUSPEND		43218	/* FreeBSD-specific. */
-#define	AUE_AIO_CANCEL		43219	/* FreeBSD-specific. */
-#define	AUE_AIO_ERROR		43220	/* FreeBSD-specific. */
-#define	AUE_AIO_WAITCOMPLETE	43221	/* FreeBSD-specific. */
-#define	AUE_AIO_FSYNC		43222	/* FreeBSD-specific. */
-#define	AUE_THR_CREATE		43223	/* FreeBSD-specific. */
-#define	AUE_THR_NEW		43224	/* FreeBSD-specific. */
-#define	AUE_THR_EXIT		43225	/* FreeBSD-specific. */
-#define	AUE_THR_KILL		43226	/* FreeBSD-specific. */
-#define	AUE_THR_KILL2		43227	/* FreeBSD-specific. */
-#define	AUE_SETFIB		43228	/* FreeBSD-specific. */
-#define	AUE_LIO_LISTIO		43229	/* FreeBSD-specific. */
-#define	AUE_SETUGID		43230	/* FreeBSD-specific. */
-#define	AUE_SCTP_PEELOFF	43231	/* FreeBSD-specific. */
-#define	AUE_SCTP_GENERIC_SENDMSG	43232	/* FreeBSD-specific. */
-#define	AUE_SCTP_GENERIC_RECVMSG	43233	/* FreeBSD-specific. */
-#define	AUE_JAIL_GET		43234	/* FreeBSD-specific. */
-#define	AUE_JAIL_SET		43235	/* FreeBSD-specific. */
-#define	AUE_JAIL_REMOVE		43236	/* FreeBSD-specific. */
-#define	AUE_GETLOGINCLASS	43237	/* FreeBSD-specific. */
-#define	AUE_SETLOGINCLASS	43238	/* FreeBSD-specific. */
-#define	AUE_POSIX_FADVISE	43239	/* FreeBSD-specific. */
-#define	AUE_SCTP_GENERIC_SENDMSG_IOV	43240	/* FreeBSD-specific. */
-#define	AUE_ABORT2		43241	/* FreeBSD-specific. */
-#define	AUE_SEMTIMEDWAIT	43242	/* FreeBSD-specific. */
-#define	AUE_SEMDESTROY		43243	/* FreeBSD-specific. */
-#define	AUE_SEMGETVALUE		43244	/* FreeBSD-specific. */
-#define	AUE_SEMINIT		43245	/* FreeBSD-specific. */
-#define	AUE_SEMPOST		43246	/* FreeBSD-specific. */
-#define	AUE_SEMTRYWAIT		43247	/* FreeBSD-specific. */
-#define	AUE_SEMWAIT		43258	/* FreeBSD-specific. */
+#define	AUE_CHFLAGSAT		43209	/* NQC-specific. */
+#define	AUE_PREADV		43210	/* NQC-specific. */
+#define	AUE_PWRITEV		43211	/* NQC-specific. */
+#define	AUE_POSIX_FALLOCATE	43212	/* NQC-specific. */
+#define	AUE_AIO_MLOCK		43213	/* NQC-specific. */
+#define	AUE_PROCCTL		43214	/* NQC-specific. */
+#define	AUE_AIO_READ		43215	/* NQC-specific. */
+#define	AUE_AIO_WRITE		43216	/* NQC-specific. */
+#define	AUE_AIO_RETURN		43217	/* NQC-specific. */
+#define	AUE_AIO_SUSPEND		43218	/* NQC-specific. */
+#define	AUE_AIO_CANCEL		43219	/* NQC-specific. */
+#define	AUE_AIO_ERROR		43220	/* NQC-specific. */
+#define	AUE_AIO_WAITCOMPLETE	43221	/* NQC-specific. */
+#define	AUE_AIO_FSYNC		43222	/* NQC-specific. */
+#define	AUE_THR_CREATE		43223	/* NQC-specific. */
+#define	AUE_THR_NEW		43224	/* NQC-specific. */
+#define	AUE_THR_EXIT		43225	/* NQC-specific. */
+#define	AUE_THR_KILL		43226	/* NQC-specific. */
+#define	AUE_THR_KILL2		43227	/* NQC-specific. */
+#define	AUE_SETFIB		43228	/* NQC-specific. */
+#define	AUE_LIO_LISTIO		43229	/* NQC-specific. */
+#define	AUE_SETUGID		43230	/* NQC-specific. */
+#define	AUE_SCTP_PEELOFF	43231	/* NQC-specific. */
+#define	AUE_SCTP_GENERIC_SENDMSG	43232	/* NQC-specific. */
+#define	AUE_SCTP_GENERIC_RECVMSG	43233	/* NQC-specific. */
+#define	AUE_JAIL_GET		43234	/* NQC-specific. */
+#define	AUE_JAIL_SET		43235	/* NQC-specific. */
+#define	AUE_JAIL_REMOVE		43236	/* NQC-specific. */
+#define	AUE_GETLOGINCLASS	43237	/* NQC-specific. */
+#define	AUE_SETLOGINCLASS	43238	/* NQC-specific. */
+#define	AUE_POSIX_FADVISE	43239	/* NQC-specific. */
+#define	AUE_SCTP_GENERIC_SENDMSG_IOV	43240	/* NQC-specific. */
+#define	AUE_ABORT2		43241	/* NQC-specific. */
+#define	AUE_SEMTIMEDWAIT	43242	/* NQC-specific. */
+#define	AUE_SEMDESTROY		43243	/* NQC-specific. */
+#define	AUE_SEMGETVALUE		43244	/* NQC-specific. */
+#define	AUE_SEMINIT		43245	/* NQC-specific. */
+#define	AUE_SEMPOST		43246	/* NQC-specific. */
+#define	AUE_SEMTRYWAIT		43247	/* NQC-specific. */
+#define	AUE_SEMWAIT		43258	/* NQC-specific. */
 #define	AUE_FGETUUID		43259	/* CADETS. */
 #define	AUE_GETUUID		43260	/* CADETS. */
 #define	AUE_LGETUUID		43261	/* CADETS. */
-#define	AUE_EXECVEAT		43262	/* FreeBSD/Linux. */
-#define	AUE_SHMRENAME		43263	/* FreeBSD-specific. */
-#define	AUE_REALPATHAT		43264	/* FreeBSD-specific. */
-#define	AUE_CLOSERANGE		43265	/* FreeBSD-specific. */
+#define	AUE_EXECVEAT		43262	/* NQC/Linux. */
+#define	AUE_SHMRENAME		43263	/* NQC-specific. */
+#define	AUE_REALPATHAT		43264	/* NQC-specific. */
+#define	AUE_CLOSERANGE		43265	/* NQC-specific. */
 
 /*
  * Darwin BSM uses a number of AUE_O_* definitions, which are aliased to the
  * normal Solaris BSM identifiers.  _O_ refers to it being an old, or compat
  * interface.  In most cases, Darwin has never implemented these system calls
- * but picked up the fields in their system call table from their FreeBSD
+ * but picked up the fields in their system call table from their NQC
  * import.  Happily, these have different names than the AUE_O* definitions
  * in Solaris BSM.
  */

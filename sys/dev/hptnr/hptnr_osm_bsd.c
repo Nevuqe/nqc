@@ -1,8 +1,8 @@
 /* $Id: osm_bsd.c,v 1.36 2010/05/11 03:12:11 lcn Exp $ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * HighPoint RAID Driver for FreeBSD
+ * HighPoint RAID Driver for NQC
  * Copyright (C) 2005-2011 HighPoint Technologies, Inc.
  * All rights reserved.
  *
@@ -1136,7 +1136,7 @@ static void hpt_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->initiator_id = osm_max_targets;
 		cpi->base_transfer_speed = 3300;
 
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "HPT   ", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->transport = XPORT_SPI;

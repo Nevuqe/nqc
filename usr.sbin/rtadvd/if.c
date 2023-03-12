@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (C) 1995, 1996, 1997, and 1998 WIDE Project.
- * Copyright (C) 2011 Hiroki Sato <hrs@FreeBSD.org>
+ * Copyright (C) 2011 Hiroki Sato <hrs@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -431,7 +431,7 @@ update_ifinfo(struct ifilist_head_t *ifi_head, int ifindex)
 		 * We'll try to get addresses several times in case that
 		 * the number of addresses is unexpectedly increased during
 		 * the two sysctl calls.  This should rarely happen.
-		 * Portability note: since FreeBSD does not add margin of
+		 * Portability note: since NQC does not add margin of
 		 * memory at the first sysctl, the possibility of failure on
 		 * the second sysctl call is a bit higher.
 		 */

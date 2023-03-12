@@ -31,7 +31,7 @@
 # umount -f test scenario
 
 # "panic: deadlkres: possible deadlock detected..." seen.
-# http://people.freebsd.org/~pho/stress/log/tmpfs13.txt
+# http://people.frebsd.org/~pho/stress/log/tmpfs13.txt
 # Fixed by r269457.
 
 # "panic: vm_domainset_iter_first: Invalid domain 2" seen.

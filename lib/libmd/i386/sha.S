@@ -38,7 +38,7 @@
 #ifndef OK
 You need to define one of
 ELF - elf systems - linux-elf, NetBSD and DG-UX
-OUT - a.out systems - linux-a.out and FreeBSD
+OUT - a.out systems - linux-a.out and NQC
 SOL - solaris systems, which are elf with strange comment lines
 BSDI - a.out with a very primative version of as.
 #endif

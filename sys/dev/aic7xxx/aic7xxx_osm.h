@@ -1,5 +1,5 @@
 /*-
- * FreeBSD platform specific driver option settings, data structures,
+ * NQC platform specific driver option settings, data structures,
  * function declarations and includes.
  *
  * Copyright (c) 1994-2001 Justin T. Gibbs.
@@ -212,7 +212,7 @@ static __inline int
 aic7770_map_int(struct ahc_softc *ahc, int irq)
 {
 	/*
-	 * The IRQ is unused in the FreeBSD
+	 * The IRQ is unused in the NQC
 	 * implementation since the ISA attachment
 	 * registers the IRQ with newbus before
 	 * the core is called.
@@ -233,7 +233,7 @@ ahc_print_path(struct ahc_softc *ahc, struct scb *scb)
 static __inline void
 ahc_platform_dump_card_state(struct ahc_softc *ahc)
 {
-	/* Nothing to do here for FreeBSD */
+	/* Nothing to do here for NQC */
 }
 /**************************** Transfer Settings *******************************/
 void	  ahc_notify_xfer_settings_change(struct ahc_softc *,

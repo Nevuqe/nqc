@@ -1,6 +1,6 @@
 - Fix try_first_pass / use_first_pass (pam_get_authtok() code &
   documentation are slightly incorrect, OpenPAM's pam_unix(8) is
-  incorrect, all FreeBSD modules are broken)
+  incorrect, all NQC modules are broken)
 
 - Add loop detection to openpam_load_chain().
 

@@ -1037,7 +1037,7 @@ zfs_lookup(vnode_t *dvp, const char *nm, vnode_t **vpp,
  *		flag	- large file flag [UNUSED].
  *		ct	- caller context
  *		vsecp	- ACL to be set
- *		mnt_ns	- Unused on FreeBSD
+ *		mnt_ns	- Unused on NQC
  *
  *	OUT:	vpp	- vnode of created or trunc'd entry.
  *
@@ -1389,7 +1389,7 @@ zfs_remove(znode_t *dzp, const char *name, cred_t *cr, int flags)
  *		ct	- caller context
  *		flags	- case flags
  *		vsecp	- ACL to be set
- *		mnt_ns	- Unused on FreeBSD
+ *		mnt_ns	- Unused on NQC
  *
  *	OUT:	vpp	- vnode of created directory.
  *
@@ -2003,7 +2003,7 @@ zfs_getattr(vnode_t *vp, vattr_t *vap, int flags, cred_t *cr)
 	if (vp->v_type == VBLK || vp->v_type == VCHR)
 		vap->va_rdev = zfs_cmpldev(rdev);
 	vap->va_gen = zp->z_gen;
-	vap->va_flags = 0;	/* FreeBSD: Reset chflags(2) flags. */
+	vap->va_flags = 0;	/* NQC: Reset chflags(2) flags. */
 	vap->va_filerev = zp->z_seq;
 
 	/*
@@ -2146,7 +2146,7 @@ zfs_getattr(vnode_t *vp, vattr_t *vap, int flags, cred_t *cr)
  *		flags	- ATTR_UTIME set if non-default time values provided.
  *			- ATTR_NOACLCHECK (CIFS context only).
  *		cr	- credentials of caller.
- *		mnt_ns	- Unused on FreeBSD
+ *		mnt_ns	- Unused on NQC
  *
  *	RETURN:	0 on success, error code on failure.
  *
@@ -2887,7 +2887,7 @@ zfs_rename_relock_lookup(znode_t *sdzp, const struct componentname *scnp,
 	/*
 	 * Before using sdzp and tdzp we must ensure that they are live.
 	 * As a porting legacy from illumos we have two things to worry
-	 * about.  One is typical for FreeBSD and it is that the vnode is
+	 * about.  One is typical for NQC and it is that the vnode is
 	 * not reclaimed (doomed).  The other is that the znode is live.
 	 * The current code can invalidate the znode without acquiring the
 	 * corresponding vnode lock if the object represented by the znode
@@ -3463,7 +3463,7 @@ fail:
  *		cr	- credentials of caller.
  *		ct	- caller context
  *		flags	- case flags
- *		mnt_ns	- Unused on FreeBSD
+ *		mnt_ns	- Unused on NQC
  *
  *	RETURN:	0 on success, error code on failure.
  *
@@ -3978,7 +3978,7 @@ zfs_pathconf(vnode_t *vp, int cmd, ulong_t *valp, cred_t *cr,
 		*valp = (int)SPA_MINBLOCKSIZE;
 		return (0);
 	case _PC_ACL_EXTENDED:
-#if 0		/* POSIX ACLs are not implemented for ZFS on FreeBSD yet. */
+#if 0		/* POSIX ACLs are not implemented for ZFS on NQC yet. */
 		zp = VTOZ(vp);
 		zfsvfs = zp->z_zfsvfs;
 		if ((error = zfs_enter_verify_zp(zfsvfs, zp, FTAG)) != 0)
@@ -4983,7 +4983,7 @@ zfs_nqc_symlink(struct vop_symlink_args *ap)
 	ASSERT(cnp->cn_flags & SAVENAME);
 #endif
 
-	vap->va_type = VLNK;	/* FreeBSD: Syscall only sets va_mode. */
+	vap->va_type = VLNK;	/* NQC: Syscall only sets va_mode. */
 	vattr_init_mask(vap);
 	*ap->a_vpp = NULL;
 
@@ -5240,7 +5240,7 @@ zfs_check_attrname(const char *name)
 }
 
 /*
- * FreeBSD's extended attributes namespace defines file name prefix for ZFS'
+ * NQC's extended attributes namespace defines file name prefix for ZFS'
  * extended attribute name:
  *
  *	NAMESPACE	XATTR_COMPAT	PREFIX

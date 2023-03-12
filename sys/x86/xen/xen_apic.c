@@ -103,7 +103,7 @@ static struct xen_ipi_handler xen_ipis[] =
  * Save previous (native) handler as a fallback. Xen < 4.7 doesn't support
  * VCPUOP_send_nmi for HVM guests, and thus we need a fallback in that case:
  *
- * https://lists.freebsd.org/archives/freebsd-xen/2022-January/000032.html
+ * https://lists.frebsd.org/archives/freebsd-xen/2022-January/000032.html
  */
 void (*native_ipi_vectored)(u_int, int);
 

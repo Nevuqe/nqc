@@ -12,7 +12,7 @@
 
 set -e
 
-if [ "$(uname -s)" = "FreeBSD" ]; then
+if [ "$(uname -s)" = "NQC" ]; then
 	PATH=/bin:/usr/bin:/sbin:/usr/sbin
 	export PATH
 fi

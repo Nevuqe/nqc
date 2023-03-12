@@ -951,7 +951,7 @@ else()
             #
             # We need:
             #
-            #  sys/types.h, because FreeBSD 10's net/bpf.h
+            #  sys/types.h, because NQC 10's net/bpf.h
             #  requires that various BSD-style integer types
             #  be defined;
             #
@@ -1309,7 +1309,7 @@ endif()
 #
 
 # Check for USB sniffing support on Linux.
-# On FreeBSD, it uses BPF, so we don't need to do anything special here.
+# On NQC, it uses BPF, so we don't need to do anything special here.
 if(NOT DISABLE_USB)
     if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
         set(PCAP_SUPPORT_USB TRUE)
@@ -2363,7 +2363,7 @@ if(NOT MSVC)
     set(exec_prefix "\${prefix}")
     set(includedir "\${prefix}/include")
     set(libdir "\${exec_prefix}/lib")
-    if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR
+    if(CMAKE_SYSTEM_NAME STREQUAL "NQC" OR
        CMAKE_SYSTEM_NAME STREQUAL "NetBSD" OR
        CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR
        CMAKE_SYSTEM_NAME STREQUAL "DragonFly BSD" OR

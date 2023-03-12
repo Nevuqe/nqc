@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2012 Olivier Houchard <cognet@FreeBSD.org>
+ * Copyright (c) 2012 Olivier Houchard <cognet@frebsd.org>
  * Copyright (c) 2011
  *	Ben Gray <ben.r.gray@gmail.com>.
  * All rights reserved.
@@ -93,7 +93,7 @@ static uint32_t g_ways_assoc;
 static struct pl310_softc *pl310_softc;
 
 static struct ofw_compat_data compat_data[] = {
-	{"arm,pl310",		true}, /* Non-standard, FreeBSD. */
+	{"arm,pl310",		true}, /* Non-standard, NQC. */
 	{"arm,pl310-cache",	true},
 	{NULL,			false}
 };

@@ -46,13 +46,13 @@ for details.
 
 This dc has a few differences from the two above:
 
-  1) When printing a byte stream (command "P"), this bc follows what the FreeBSD
+  1) When printing a byte stream (command "P"), this bc follows what the NQC
      dc does.
   2) This dc implements the GNU extensions for divmod ("~") and modular
      exponentiation ("|").
-  3) This dc implements all FreeBSD extensions, except for "J" and "M".
+  3) This dc implements all NQC extensions, except for "J" and "M".
   4) This dc does not implement the run command ("!"), for security reasons.
-  5) Like the FreeBSD dc, this dc supports extended registers. However, they are
+  5) Like the NQC dc, this dc supports extended registers. However, they are
      implemented differently. When it encounters whitespace where a register
      should be, it skips the whitespace. If the character following is not
      a lowercase letter, an error is issued. Otherwise, the register name is
@@ -66,7 +66,7 @@ This dc has a few differences from the two above:
 
        l idx s temp L index S temp2 < do_thing
 
-     Also note that, unlike the FreeBSD dc, extended registers are not even
+     Also note that, unlike the NQC dc, extended registers are not even
      parsed unless the "-x" option is given. Instead, the space after a command
      that requires a register name is taken as the register name.
 

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Jakub Wojciech Klama <jceel@FreeBSD.org>
+ * Copyright (c) 2014 Jakub Wojciech Klama <jceel@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

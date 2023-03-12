@@ -28,7 +28,7 @@
 
 # Test of unmapped unaligned i/o over the vnode-backed md(4) volume.
 # "panic: vm_fault: fault on nofault entry, addr: fffffe07f302c000" seen.
-# https://people.freebsd.org/~pho/stress/log/md8.txt
+# https://people.frebsd.org/~pho/stress/log/md8.txt
 # Fixed in r292128.
 
 # Test scenario by kib@

@@ -159,7 +159,7 @@ struct so_debug {
 /*
  * Version returned to crt0 from ld.so
  */
-#define LDSO_VERSION_NONE	0	/* FreeBSD2.0, 2.0.5 */
+#define LDSO_VERSION_NONE	0	/* NQC2.0, 2.0.5 */
 #define LDSO_VERSION_HAS_DLEXIT	1	/* includes dlexit in ld_entry */
 #define LDSO_VERSION_HAS_DLSYM3	2	/* includes 3-argument dlsym */
 #define LDSO_VERSION_HAS_DLADDR	3	/* includes dladdr in ld_entry */

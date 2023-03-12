@@ -1,6 +1,6 @@
 /*
  * This program, created 2002-10-03 by Garrett A. Wollman
- * <wollman@FreeBSD.org>, is in the public domain.  Use at your own risk.
+ * <wollman@frebsd.org>, is in the public domain.  Use at your own risk.
  *
  * $NQC$
  */

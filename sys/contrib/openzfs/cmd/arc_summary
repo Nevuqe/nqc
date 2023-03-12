@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # Copyright (c) 2008 Ben Rockwood <benr@cuddletech.com>,
-# Copyright (c) 2010 Martin Matuska <mm@FreeBSD.org>,
+# Copyright (c) 2010 Martin Matuska <mm@frebsd.org>,
 # Copyright (c) 2010-2011 Jason J. Hellenthal <jhell@DataIX.net>,
 # Copyright (c) 2017 Scot W. Stevenson <scot.stevenson@gmail.com>
 # All rights reserved.
@@ -87,7 +87,7 @@ ARGS = parser.parse_args()
 
 
 if sys.platform.startswith('freebsd'):
-    # Requires py36-sysctl on FreeBSD
+    # Requires py36-sysctl on NQC
     import sysctl
 
     VDEV_CACHE_SIZE = 'vdev.cache_size'
@@ -118,7 +118,7 @@ if sys.platform.startswith('freebsd'):
         return get_params('vfs.zfs.vdev')
 
     def get_version_impl(request):
-        # FreeBSD reports versions for zpl and spa instead of zfs and spl.
+        # NQC reports versions for zpl and spa instead of zfs and spl.
         name = {'zfs': 'zpl',
                 'spl': 'spa'}[request]
         mib = 'vfs.zfs.version.{}'.format(name)
@@ -868,7 +868,7 @@ def section_spl(*_):
     """
 
     if sys.platform.startswith('freebsd'):
-        # No SPL support in FreeBSD
+        # No SPL support in NQC
         return
 
     spls = get_spl_params()

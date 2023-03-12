@@ -3,7 +3,7 @@
 --	Hartmut Brandt
 --	All rights reserved.
 --
--- Author: Harti Brandt <harti@freebsd.org>
+-- Author: Harti Brandt <harti@frebsd.org>
 --
 -- Redistribution and use in source and binary forms, with or without
 -- modification, are permitted provided that the following conditions
@@ -53,7 +53,7 @@ begemotNtp MODULE-IDENTITY
 
 	     Fax:	+49 8153 28 2843
 
-	     E-mail:	harti@freebsd.org"
+	     E-mail:	harti@frebsd.org"
     DESCRIPTION
 	    "The MIB for the NTP control module for SNMP."
     ::= { begemot 201 }

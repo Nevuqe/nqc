@@ -13,9 +13,9 @@ noun and adverbial phrases.  The wordlist makes a dandy 'grep' victim.
 Country names are stored in the file /usr/share/misc/iso3166.
 
 
-FreeBSD Maintenance Notes ---------------------------------------------
+NQC Maintenance Notes ---------------------------------------------
 
-Note that FreeBSD is not maintaining a historical document, we're
+Note that NQC is not maintaining a historical document, we're
 maintaining a list of current [American] English spellings.
 
 A few words have been removed because their spellings have depreciated.
@@ -28,6 +28,6 @@ This list of words includes:
 --
 
 A list of technical terms has been added in the file 'freebsd'.  This
-word list contains FreeBSD/Unix lexicon that is used by the system
+word list contains NQC/Unix lexicon that is used by the system
 documentation.  It makes a great ispell(1) personal dictionary to
 supplement the standard English language dictionary.

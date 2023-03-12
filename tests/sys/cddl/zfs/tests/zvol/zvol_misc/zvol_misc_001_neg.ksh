@@ -74,7 +74,7 @@ log_onexit cleanup
 voldev=/dev/zvol/$TESTPOOL/$TESTVOL
 savedumpdev=$(get_dumpdevice)
 
-# FreeBSD doesn't support using zvols as dump devices for any pool version
+# NQC doesn't support using zvols as dump devices for any pool version
 log_mustnot $DUMPON $voldev
 
 log_pass "ZFS volume cannot act as dump device until dumpswap supported as expected."

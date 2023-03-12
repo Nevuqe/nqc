@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # A regression test for short AES mode reads
-# https://people.freebsd.org/~pho/stress/log/fsck-2.txt
+# https://people.frebsd.org/~pho/stress/log/fsck-2.txt
 # Fixed by r349176
 
 for i in `jot 1024 1`; do

@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: softdep_deallocate_dependencies: dangling deps" seen:
-# http://people.freebsd.org/~pho/stress/log/sigxcpu7.txt
+# http://people.frebsd.org/~pho/stress/log/sigxcpu7.txt
 
 . ../default.cfg
 

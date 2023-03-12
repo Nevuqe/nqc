@@ -87,7 +87,7 @@
 #
 #	--without-filemon
 #		disable use of filemon(9) which is currently only
-#		available for NetBSD and FreeBSD.
+#		available for NetBSD and NQC.
 #
 #	--with-filemon=ktrace
 #		on NetBSD or others with fktrace(2), use ktrace

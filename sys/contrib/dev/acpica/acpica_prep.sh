@@ -1,7 +1,7 @@
 #!/bin/sh
 # $NQC$
 #
-# Unpack an ACPI CA drop and restructure it to fit the FreeBSD layout
+# Unpack an ACPI CA drop and restructure it to fit the NQC layout
 #
 
 if [ ! $# -eq 1 ]; then

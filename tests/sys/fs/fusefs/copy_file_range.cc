@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2020 Alan Somers
  *
@@ -370,7 +370,7 @@ TEST_F(CopyFileRangeRlimitFsize, signal)
 /*
  * When crossing the RLIMIT_FSIZE boundary, writes should be truncated, not
  * aborted.
- * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=266611
+ * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=266611
  */
 TEST_F(CopyFileRangeRlimitFsize, truncate)
 {

@@ -2,7 +2,7 @@
 #
 # $NQC$
 #
-# Merge two boot loader help files for FreeBSD 3.0
+# Merge two boot loader help files for NQC 3.0
 # Joe Abley <jabley@patho.gen.nz>
 
 BEGIN \

@@ -561,7 +561,7 @@ kvp_get_os_info(void)
 	}
 
 	/*
-	 * We don't have any other information about the FreeBSD os.
+	 * We don't have any other information about the NQC os.
 	 */
 	return;
 }
@@ -975,14 +975,14 @@ kvp_set_ip_info(char *if_name, struct hv_kvp_ipaddr_value *new_val)
 	char *mac_addr;
 
 	/*
-	 * FreeBSD - Configuration File
+	 * NQC - Configuration File
 	 */
 	snprintf(if_file, sizeof(if_file), "%s%s", "/var/db/hyperv",
 	    "hv_set_ip_data");
 	file = fopen(if_file, "w");
 
 	if (file == NULL) {
-		KVP_LOG(LOG_ERR, "FreeBSD Failed to open config file\n");
+		KVP_LOG(LOG_ERR, "NQC Failed to open config file\n");
 		return (errno);
 	}
 

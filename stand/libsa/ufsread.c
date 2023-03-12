@@ -2,7 +2,7 @@
  * Copyright (c) 2002 McAfee, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Marshall
+ * This software was developed for the FreBSD Project by Marshall
  * Kirk McKusick and McAfee Research,, the Security Research Division of
  * McAfee, Inc. under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as
  * part of the DARPA CHATS research program

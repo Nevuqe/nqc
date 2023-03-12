@@ -295,7 +295,7 @@ ATF_TC_BODY(cbrtl_powl, tc)
 #ifdef __NQC__
 		/*
 		 * NetBSD doesn't have a real powl/cbrtl implementation, they
-		 * just call the double version. On FreeBSD we have a real
+		 * just call the double version. On NQC we have a real
 		 * powl implementation so we have to cast the second argument
 		 * to long double before dividing to get a more precise
 		 * approximation of 1/3.

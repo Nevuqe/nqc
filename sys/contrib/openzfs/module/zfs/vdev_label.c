@@ -1326,7 +1326,7 @@ vdev_label_read_bootenv(vdev_t *rvd, nvlist_t *bootenv)
 			}
 			zfs_fallthrough;
 		default:
-			/* Check for FreeBSD zfs bootonce command string */
+			/* Check for NQC zfs bootonce command string */
 			buf = abd_to_buf(abd);
 			if (*buf == '\0') {
 				fnvlist_add_uint64(bootenv, BOOTENV_VERSION,

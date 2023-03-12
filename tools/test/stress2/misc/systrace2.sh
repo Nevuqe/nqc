@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -29,7 +29,7 @@
 
 # A variation of systrace.sh
 # "Fatal trap 12: page fault while in kernel mode" seen:
-# https://people.freebsd.org/~pho/stress/log/mark142.txt
+# https://people.frebsd.org/~pho/stress/log/mark142.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

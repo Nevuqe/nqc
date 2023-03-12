@@ -73,7 +73,7 @@ else
 	shift
 fi
 
-# Just skip tests that are problematic on FreeBSD. These tests can cause FreeBSD
+# Just skip tests that are problematic on NQC. These tests can cause NQC
 # to kill bc from memory exhaustion because of overcommit.
 if [ "$d" = "bc" ] && [ "$problematic" -eq 0 ]; then
 	if [ "$t" = "33.txt" ]; then

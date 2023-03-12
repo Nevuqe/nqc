@@ -59,7 +59,7 @@ D: OpenMP Tools Interface, Archer tool
 
 N: Alp Toker
 E: alp@nuanti.com
-D: Making build work for FreeBSD.
+D: Making build work for NQC.
 
 N: Cheng Wang
 D: Contributor to testsuite from OpenUH

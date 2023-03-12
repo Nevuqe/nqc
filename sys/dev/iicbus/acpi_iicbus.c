@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019-2020 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2019-2020 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -412,7 +412,7 @@ acpi_iicbus_parse_resources_cb(ACPI_RESOURCE *res, void *context)
 	case ACPI_RESOURCE_TYPE_GPIO:
 		if (res->Data.Gpio.ConnectionType ==
 		    ACPI_RESOURCE_GPIO_TYPE_INT) {
-			/* Not supported by FreeBSD yet */
+			/* Not supported by NQC yet */
 			gpio_pin = res->Data.Gpio.PinTable[0];
 			if (bootverbose)
 				printf("  GPIO IRQ pin:      %d\n", gpio_pin);

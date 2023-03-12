@@ -53,7 +53,7 @@ FBSD_1.6 {
 
 /*
  *
- * FreeBSD private ABI
+ * NQC private ABI
  *
  */
 FBSDprivate_1.0 {

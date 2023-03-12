@@ -180,7 +180,7 @@ pretty_print = True
 
 
 if sys.platform.startswith('freebsd'):
-    # Requires py-sysctl on FreeBSD
+    # Requires py-sysctl on NQC
     import sysctl
 
     def kstat_update():

@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -223,7 +223,7 @@ static void* read1(void* arg) {
  * An interrupt operation that gets received after the original command is
  * complete should generate an EAGAIN response.
  */
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236530 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236530 */
 TEST_F(Intr, already_complete)
 {
 	uint64_t ino = 42;
@@ -366,7 +366,7 @@ TEST_F(Intr, enosys)
  * A FUSE filesystem is legally allowed to ignore INTERRUPT operations, and
  * complete the original operation whenever it damn well pleases.
  */
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236530 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236530 */
 TEST_F(Intr, ignore)
 {
 	uint64_t ino = 42;
@@ -548,7 +548,7 @@ TEST_F(Intr, in_kernel_nonrestartable)
  * in response to the _original_ operation.  The kernel should ultimately
  * return EINTR to userspace
  */
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236530 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236530 */
 TEST_F(Intr, in_progress)
 {
 	pthread_t self;
@@ -752,7 +752,7 @@ TEST_F(Intr, priority)
  * EAGAINed, then the kernel requeues it, and the second time around it
  * successfully interrupts the original
  */
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236530 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236530 */
 TEST_F(Intr, too_soon)
 {
 	Sequence seq;

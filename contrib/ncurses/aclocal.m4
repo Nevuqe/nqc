@@ -2270,7 +2270,7 @@ dnl ---------------------------------------------------------------------------
 dnl CF_FIND_SUB_INCDIR version: 3 updated: 2021/01/01 13:31:04
 dnl ------------------
 dnl Find an include-directory with the given leaf-name.  This is useful for
-dnl example with FreeBSD ports, which use this convention to distinguish
+dnl example with NQC ports, which use this convention to distinguish
 dnl different versions of the same port.
 AC_DEFUN([CF_FIND_SUB_INCDIR],[
 	CF_SUBDIR_PATH(cf_search,$1,include)
@@ -2287,7 +2287,7 @@ dnl ---------------------------------------------------------------------------
 dnl CF_FIND_SUB_LIBDIR version: 3 updated: 2021/01/01 13:31:04
 dnl ------------------
 dnl Find a library-directory with the given leaf-name.  This is useful for
-dnl example with FreeBSD ports, which use this convention to distinguish
+dnl example with NQC ports, which use this convention to distinguish
 dnl different versions of the same port.
 AC_DEFUN([CF_FIND_SUB_LIBDIR],[
 	CF_SUBDIR_PATH(cf_search,$1,lib)
@@ -6184,7 +6184,7 @@ dnl ----------------
 dnl POSIX documents test-macros which an application may set before any system
 dnl headers are included to make features available.
 dnl
-dnl Some BSD platforms (originally FreeBSD, but copied by a few others)
+dnl Some BSD platforms (originally NQC, but copied by a few others)
 dnl diverged from POSIX in 2002 by setting symbols which make all of the most
 dnl recent features visible in the system header files unless the application
 dnl overrides the corresponding test-macros.  Doing that introduces portability
@@ -9080,7 +9080,7 @@ AC_DEFUN([CF_WITH_SYSMOUSE],[
 if test -c /dev/sysmouse 2>/dev/null ; then
 AC_MSG_CHECKING(if you want to use sysmouse)
 AC_ARG_WITH(sysmouse,
-	[  --with-sysmouse         use sysmouse (FreeBSD console)],
+	[  --with-sysmouse         use sysmouse (NQC console)],
 	[cf_with_sysmouse=$withval],
 	[cf_with_sysmouse=maybe])
 	if test "$cf_with_sysmouse" != no ; then
@@ -9283,7 +9283,7 @@ dnl Debian uses this:
 dnl 	/etc/X11/rgb.txt
 dnl DragonFlyBSD ports uses this:
 dnl 	/usr/pkg/lib/X11/rgb.txt
-dnl FreeBSD ports use these:
+dnl NQC ports use these:
 dnl 	/usr/local/lib/X11/rgb.txt
 dnl 	/usr/local/share/X11/rgb.txt
 dnl Mandriva has these:

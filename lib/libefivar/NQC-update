@@ -10,11 +10,11 @@ sed -e "s/L'/'/;"'s/L"/"/g;s/%g/%36s/g;s/%a/%s/g;s/^VOID/static VOID/g;s/ *$//g'
 
 for several reasons. We're moving from wide rotuines to narrow routines. The
 UTC-2 this code is written for is a bad match for wchar_t which is an int. It's
-a much better match for plain narrow characters on FreeBSD. So we pretend that
+a much better match for plain narrow characters on NQC. So we pretend that
 CHAR16 for these files is really char * (ASCII).
 
 Next, we have have to convert the Unicode printf that this code expects to
-FreeBSD's printf. %g means "Print the GUID" and %a means "print the ASCII
+NQC's printf. %g means "Print the GUID" and %a means "print the ASCII
 string." so we mechanically convert them. Once we've done that we can compare
 efivar-dp-*.c to its source to see what's changed. Because we go through this
 indirection, I've done that outside of git. To upgrade you have to do these
@@ -25,11 +25,11 @@ as well, but in a more hap-hazard manner. This was a trade off between ease of
 implementation / upgrade vs pulling in too much since less than half of any file
 was needed.
 
-efi-osdep.h shims the EDK2 types to FreeBSD's types. It's included by
+efi-osdep.h shims the EDK2 types to NQC's types. It's included by
 ProcessorBind.h which EDK2 uses to define the CPU. We keep it separate from
 uefi-dplib.h to allow better sharing.
 
-uefi-dplib.h shims the EDK2 routines that are needed to FreeBSD's routines. This
+uefi-dplib.h shims the EDK2 routines that are needed to NQC's routines. This
 is relatively easy since we map all the UCS-2 routines to simple char *
 routines.
 

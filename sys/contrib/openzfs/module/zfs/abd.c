@@ -547,7 +547,7 @@ abd_get_offset_impl(abd_t *abd, abd_t *sabd, size_t off, size_t size)
  * Like abd_get_offset_size(), but memory for the abd_t is provided by the
  * caller.  Using this routine can improve performance by avoiding the cost
  * of allocating memory for the abd_t struct, and updating the abd stats.
- * Usually, the provided abd is returned, but in some circumstances (FreeBSD,
+ * Usually, the provided abd is returned, but in some circumstances (NQC,
  * if sabd is scatter and size is more than 2 pages) a new abd_t may need to
  * be allocated.  Therefore callers should be careful to use the returned
  * abd_t*.

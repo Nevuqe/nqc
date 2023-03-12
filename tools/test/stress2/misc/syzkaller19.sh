@@ -17,12 +17,12 @@
 # sys_sys_exit() at sys_sys_exit+0xd/frame 0xfffffe013e99dad0
 # amd64_syscall() at amd64_syscall+0x159/frame 0xfffffe013e99dbf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe013e99dbf0
-# --- syscall (1, FreeBSD ELF64, sys_sys_exit), rip = 0x8004513da, rsp = 0x7fffffffe548, rbp = 0x7fffffffe560 ---
+# --- syscall (1, NQC ELF64, sys_sys_exit), rip = 0x8004513da, rsp = 0x7fffffffe548, rbp = 0x7fffffffe560 ---
 # KDB: enter: panic
 # [ thread pid 86998 tid 100362 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x10c3a16(%rip)
 # db> x/s version
-# version:FreeBSD 13.0-CURRENT #2 r362887+d0cb7ae7cb9-c248258(mlnx3): Sat
+# version:NQC 13.0-CURRENT #2 r362887+d0cb7ae7cb9-c248258(mlnx3): Sat
 # Jul  4 10:28:49 CEST 2020 pho@t2.osted.lan:/var/tmp/deviant2/sys/amd64/compile/PHO
 # db>
 

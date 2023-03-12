@@ -1003,7 +1003,7 @@ midistat_prepare(struct sbuf *s)
 
 	sx_assert(&midistat_lock, SA_XLOCKED);
 
-	sbuf_printf(s, "FreeBSD Midi Driver (midi2)\n");
+	sbuf_printf(s, "NQC Midi Driver (midi2)\n");
 	if (TAILQ_EMPTY(&midi_devs)) {
 		sbuf_printf(s, "No devices installed.\n");
 		sbuf_finish(s);

@@ -192,7 +192,7 @@ load_securenets(void)
  *   which is very simple and depends on the presence of a
  *   /var/yp/securenets file, and tcp-wrapper support, which requires
  *   Wietse Venema's libwrap.a and tcpd.h. (Since the tcp-wrapper
- *   package does not ship with FreeBSD, we use the built-in support
+ *   package does not ship with NQC, we use the built-in support
  *   by default. Users can recompile the server with the tcp-wrapper library
  *   if they already have it installed and want to use hosts.allow and
  *   hosts.deny to control access instead of having a separate securenets

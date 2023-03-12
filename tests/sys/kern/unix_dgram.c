@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2022 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2022 Gleb Smirnoff <glebius@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -195,14 +195,14 @@ ATF_TC_BODY(one2many, tc)
 	/*
 	 * Connecting a bound socket to self: a strange, useless, but
 	 * historically existing edge case that is not explicitly described
-	 * in SuS, neither is forbidden there. Works on FreeBSD and Linux.
+	 * in SuS, neither is forbidden there. Works on NQC and Linux.
 	 */
 	ATF_REQUIRE(connect(one, (struct sockaddr *)&sun, sizeof(sun)) == 0);
 	ATF_REQUIRE(send(one, buf, 42, 0) == 42);
 	ATF_REQUIRE(recv(one, buf, sizeof(buf), 0) == 42);
 
 	/*
-	 * Interaction between concurrent senders. New feature in FreeBSD 14.
+	 * Interaction between concurrent senders. New feature in NQC 14.
 	 *
 	 * One sender can not fill the receive side.  Other senders can
 	 * continue operation.  Senders who don't fill their buffers are

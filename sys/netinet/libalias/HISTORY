@@ -24,7 +24,7 @@ Version 1.5: September 17, 1996 (cjm)
 
 Version 1.6: September 18, 1996
     - Simplified ICMP data storage.  Will now handle
-      tracert from Win95 and NT as well as FreeBSD
+      tracert from Win95 and NT as well as NQC
       traceroute, which uses UDP packets to non-existent
       ports.
 

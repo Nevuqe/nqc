@@ -27,7 +27,7 @@
 #
 
 # "panic: _PC_ASYNC_IO should not get here" seen:
-# https://people.freebsd.org/~pho/stress/log/pathconf.txt
+# https://people.frebsd.org/~pho/stress/log/pathconf.txt
 # Fixed by r320900
 
 . ../default.cfg

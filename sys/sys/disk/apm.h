@@ -57,12 +57,12 @@ struct apm_ent {
 #define	APM_ENT_TYPE_SELF		"Apple_partition_map"
 #define	APM_ENT_TYPE_UNUSED		"Apple_Free"
 
-#define	APM_ENT_TYPE_NQC		"FreeBSD"
-#define	APM_ENT_TYPE_NQC_NANDFS	"FreeBSD-nandfs"
-#define	APM_ENT_TYPE_NQC_SWAP	"FreeBSD-swap"
-#define	APM_ENT_TYPE_NQC_UFS	"FreeBSD-UFS"
-#define	APM_ENT_TYPE_NQC_VINUM	"FreeBSD-Vinum"
-#define	APM_ENT_TYPE_NQC_ZFS	"FreeBSD-ZFS"
+#define	APM_ENT_TYPE_NQC		"NQC"
+#define	APM_ENT_TYPE_NQC_NANDFS	"NQC-nandfs"
+#define	APM_ENT_TYPE_NQC_SWAP	"NQC-swap"
+#define	APM_ENT_TYPE_NQC_UFS	"NQC-UFS"
+#define	APM_ENT_TYPE_NQC_VINUM	"NQC-Vinum"
+#define	APM_ENT_TYPE_NQC_ZFS	"NQC-ZFS"
 
 #define	APM_ENT_TYPE_APPLE_BOOT		"Apple_Bootstrap"
 #define	APM_ENT_TYPE_APPLE_HFS		"Apple_HFS"

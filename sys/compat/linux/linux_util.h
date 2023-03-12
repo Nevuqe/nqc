@@ -151,7 +151,7 @@ void	linux_free_get_char_devices(char *string);
 		static int seen = 0;			\
 							\
 		if (seen == 0 && linux_debug >= 2) {			\
-			linux_msg(curthread, "%s is not tested, please report on emulation@FreeBSD.org how it works", _what);	\
+			linux_msg(curthread, "%s is not tested, please report on emulation@frebsd.org how it works", _what);	\
 							\
 			if (linux_debug < 3)		\
 				seen = 1;		\

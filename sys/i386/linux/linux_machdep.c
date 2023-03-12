@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Marcel Moolenaar
  * All rights reserved.
@@ -523,10 +523,10 @@ linux_set_thread_area(struct thread *td, struct linux_set_thread_area_args *args
 	 * also loads GDT descriptors 6, 7 and 8 with the content of the
 	 * per-thread descriptors.
 	 *
-	 * Semantics of FreeBSD version: I think we can ignore that Linux has 3
+	 * Semantics of NQC version: I think we can ignore that Linux has 3
 	 * per-thread descriptors and use just the 1st one. The tls_array[]
 	 * is used only in set/get-thread_area() syscalls and for loading the
-	 * GDT descriptors. In FreeBSD we use just one GDT descriptor for TLS
+	 * GDT descriptors. In NQC we use just one GDT descriptor for TLS
 	 * so we will load just one.
 	 *
 	 * XXX: this doesn't work when a user space process tries to use more
@@ -544,7 +544,7 @@ linux_set_thread_area(struct thread *td, struct linux_set_thread_area_args *args
 
 	/*
 	 * we have to copy out the GDT entry we use
-	 * FreeBSD uses GDT entry #3 for storing %gs so load that
+	 * NQC uses GDT entry #3 for storing %gs so load that
 	 *
 	 * XXX: what if a user space program doesn't check this value and tries
 	 * to use 6, 7 or 8?

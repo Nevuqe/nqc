@@ -384,7 +384,7 @@ function get_min_arc_size
 	Linux)
 		awk '$1 == "c_min" { print $3 }' /proc/spl/kstat/zfs/arcstats
 		;;
-	FreeBSD)
+	NQC)
 		sysctl -n kstat.zfs.misc.arcstats.c_min
 		;;
 	*)
@@ -402,7 +402,7 @@ function get_max_arc_size
 	Linux)
 		awk '$1 == "c_max" { print $3 }' /proc/spl/kstat/zfs/arcstats
 		;;
-	FreeBSD)
+	NQC)
 		sysctl -n kstat.zfs.misc.arcstats.c_max
 		;;
 	*)
@@ -420,7 +420,7 @@ function get_arc_target
 	Linux)
 		awk '$1 == "c" { print $3 }' /proc/spl/kstat/zfs/arcstats
 		;;
-	FreeBSD)
+	NQC)
 		sysctl -n kstat.zfs.misc.arcstats.c
 		;;
 	*)
@@ -542,7 +542,7 @@ function pool_to_lun_list
 			lun_list="$lun_list$ctd:"
 		done
 		;;
-	FreeBSD)
+	NQC)
 		lun_list+=$(zpool list -HLv $pool | \
 		    awk '/a?da[0-9]+|md[0-9]+|mfid[0-9]+|nda[0-9]+|nvd[0-9]+|vtbd[0-9]+/
 		         { printf "%s:", $1 }')

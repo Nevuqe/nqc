@@ -35,7 +35,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Julian Elischer <julian@freebsd.org>
+ * Author: Julian Elischer <julian@frebsd.org>
  *
  * $NQC$
  * $Whistle: ng_socket.c,v 1.28 1999/11/01 09:24:52 julian Exp $

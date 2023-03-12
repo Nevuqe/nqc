@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 The FreeBSD Foundation
+ * Copyright (c) 2012 The FreBSD Foundation
  *
  * This software was developed by Edward Tomasz Napierala under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -2602,7 +2602,7 @@ iscsi_action(struct cam_sim *sim, union ccb *ccb)
 		 */
 		cpi->max_lun = 255;
 		cpi->initiator_id = ~0;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "iSCSI", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);

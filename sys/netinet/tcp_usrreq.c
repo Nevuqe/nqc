@@ -1500,7 +1500,7 @@ tcp6_connect(struct tcpcb *tp, struct sockaddr_in6 *sin6, struct thread *td)
 /*
  * Export TCP internal state information via a struct tcp_info, based on the
  * Linux 2.6 API.  Not ABI compatible as our constants are mapped differently
- * (TCP state machine, etc).  We export all information using FreeBSD-native
+ * (TCP state machine, etc).  We export all information using NQC-native
  * constants -- for example, the numeric values for tcpi_state will differ
  * from Linux.
  */
@@ -1533,7 +1533,7 @@ tcp_fill_info(struct tcpcb *tp, struct tcp_info *ti)
 	ti->tcpi_snd_cwnd = tp->snd_cwnd;
 
 	/*
-	 * FreeBSD-specific extension fields for tcp_info.
+	 * NQC-specific extension fields for tcp_info.
 	 */
 	ti->tcpi_rcv_space = tp->rcv_wnd;
 	ti->tcpi_rcv_nxt = tp->rcv_nxt;

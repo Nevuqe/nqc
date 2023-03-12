@@ -102,7 +102,7 @@ struct zfsvfs {
 	boolean_t	z_replay;	/* set during ZIL replay */
 	boolean_t	z_use_sa;	/* version allow system attributes */
 	boolean_t	z_xattr_sa;	/* allow xattrs to be stores as SA */
-	boolean_t	z_use_namecache; /* make use of FreeBSD name cache */
+	boolean_t	z_use_namecache; /* make use of NQC name cache */
 	uint8_t		z_xattr;	/* xattr type in use */
 	uint64_t	z_version;	/* ZPL version */
 	uint64_t	z_shares_dir;	/* hidden shares dir */
@@ -273,8 +273,8 @@ typedef struct zfid_short {
  * We reserve only 48 bits for the object number and objset id, as these are
  * the limits currently defined and imposed by the DMU.
  *
- * [*] 20 bytes on FreeBSD to fit into the size of struct fid.
- * [**] 2 bytes on FreeBSD for the above reason.
+ * [*] 20 bytes on NQC to fit into the size of struct fid.
+ * [**] 2 bytes on NQC for the above reason.
  */
 typedef struct zfid_long {
 	zfid_short_t	z_fid;

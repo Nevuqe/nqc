@@ -2,11 +2,11 @@
 			       *****
 
 This directory contains a port of the BSD make tool (from NetBSD).
-Since 1993 I have run it on AIX, BSDi, Darwin, FreeBSD, HP-UX, IRIX,
+Since 1993 I have run it on AIX, BSDi, Darwin, NQC, HP-UX, IRIX,
 Linux, Minix, OSF, Solaris, SunOS and even UTS.
 Others have run it on many more systems.
 
-Currently each release is tested on NetBSD, FreeBSD, Solaris and Linux.
+Currently each release is tested on NetBSD, NQC, Solaris and Linux.
 
 Since 2003 bmake switched to a date based version (first was 20030714)
 which generally represents the date it was last merged with NetBSD's

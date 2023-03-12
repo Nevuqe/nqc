@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This work was supported by Innovate UK project 105694, "Digital Security by
  * Design (DSbD) Technology Platform Prototype".

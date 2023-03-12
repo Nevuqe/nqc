@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel MVS device code"
+PROJECT_NAME           = "NQC kernel MVS device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_mvs/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

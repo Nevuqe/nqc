@@ -25,7 +25,7 @@ D: Android support and test runner improvements.
 
 N: Dimitry Andric
 E: dimitry@andric.com
-D: Visibility fixes, minor FreeBSD portability patches.
+D: Visibility fixes, minor NQC portability patches.
 
 N: Holger Arnold
 E: holgerar@gmail.com
@@ -36,7 +36,7 @@ D: Ported floating-point to_chars from MSVC to libc++.
 
 N: David Chisnall
 E: theraven at theravensnest dot org
-D: FreeBSD and Solaris ports, libcxxrt support, some atomics work.
+D: NQC and Solaris ports, libcxxrt support, some atomics work.
 
 N: Marshall Clow
 E: mclow.lists@gmail.com

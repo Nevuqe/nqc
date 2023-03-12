@@ -174,7 +174,7 @@ mlx5e_lro_update_hdr(struct mbuf *mb, struct mlx5_cqe64 *cqe)
 		th->th_win = cqe->lro_tcp_win;
 
 		/*
-		 * FreeBSD handles only 32bit aligned timestamp right after
+		 * NQC handles only 32bit aligned timestamp right after
 		 * the TCP hdr
 		 * +--------+--------+--------+--------+
 		 * |   NOP  |  NOP   |  TSopt |   10   |

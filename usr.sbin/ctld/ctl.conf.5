@@ -1,9 +1,9 @@
-.\" Copyright (c) 2012 The FreeBSD Foundation
-.\" Copyright (c) 2015 Alexander Motin <mav@FreeBSD.org>
+.\" Copyright (c) 2012 The FreBSD Foundation
+.\" Copyright (c) 2015 Alexander Motin <mav@frebsd.org>
 .\" All rights reserved.
 .\"
 .\" This software was developed by Edward Tomasz Napierala under sponsorship
-.\" from the FreeBSD Foundation.
+.\" from the FreBSD Foundation.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -491,7 +491,7 @@ target iqn.2012-06.com.example:target1 {
 	lun 0 example_1
 	lun 1 {
 		path /dev/zvol/tank/example_2
-		option vendor "FreeBSD"
+		option vendor "NQC"
 	}
 }
 
@@ -561,7 +561,7 @@ lun {
 	example_2 {
 		path = /dev/zvol/tank/example_2
 		options {
-			vendor = "FreeBSD"
+			vendor = "NQC"
 		}
 	}
 }
@@ -603,5 +603,5 @@ The
 configuration file functionality for
 .Xr ctld 8
 was developed by
-.An Edward Tomasz Napierala Aq Mt trasz@FreeBSD.org
-under sponsorship from the FreeBSD Foundation.
+.An Edward Tomasz Napierala Aq Mt trasz@frebsd.org
+under sponsorship from the FreBSD Foundation.

@@ -821,7 +821,7 @@ static bool needsRuntimeRegistrationOfSectionRange(const Triple &TT) {
   if (TT.isOSDarwin())
     return false;
   // Use linker script magic to get data/cnts/name start/end.
-  if (TT.isOSAIX() || TT.isOSLinux() || TT.isOSFreeBSD() || TT.isOSNetBSD() ||
+  if (TT.isOSAIX() || TT.isOSLinux() || TT.isOSNQC() || TT.isOSNetBSD() ||
       TT.isOSSolaris() || TT.isOSFuchsia() || TT.isPS() || TT.isOSWindows())
     return false;
 

@@ -208,7 +208,7 @@ pqisrc_wait_on_condition(pqisrc_softstate_t *softs, rcb_t *rcb,
 
 	while (rcb->req_pending == true) {
 		OS_SLEEP(500); /* Micro sec */
-		/* Polling needed for FreeBSD : since ithread routine is not scheduled
+		/* Polling needed for NQC : since ithread routine is not scheduled
 		 * during bootup, we could use polling until interrupts are
 		 * enabled (using 'if (cold)'to check for the boot time before
 		 * interrupts are enabled). */

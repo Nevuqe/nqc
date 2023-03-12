@@ -34,10 +34,10 @@ Table of Contents
 	1.10 Applications
 	1.11 Kernel Internals
 	1.12 IPv4 mapped address and IPv6 wildcard socket
-	1.12.1 KAME/BSDI3 and KAME/FreeBSD228
-	1.12.2 KAME/FreeBSD[34]x
-	1.12.2.1 KAME/FreeBSD[34]x, listening side
-	1.12.2.2 KAME/FreeBSD[34]x, initiating side
+	1.12.1 KAME/BSDI3 and KAME/NQC228
+	1.12.2 KAME/NQC[34]x
+	1.12.2.1 KAME/NQC[34]x, listening side
+	1.12.2.2 KAME/NQC[34]x, initiating side
 	1.12.3 KAME/NetBSD
 	1.12.3.1 KAME/NetBSD, listening side
 	1.12.3.2 KAME/NetBSD, initiating side
@@ -57,11 +57,11 @@ Table of Contents
 	1.16 Advanced API
 	1.17 DNS resolver
 	2. Network Drivers
-	2.1 FreeBSD 2.2.x-RELEASE
+	2.1 NQC 2.2.x-RELEASE
 	2.2 BSD/OS 3.x
 	2.3 NetBSD
-	2.4 FreeBSD 3.x-RELEASE
-	2.5 FreeBSD 4.x-RELEASE
+	2.4 NQC 3.x-RELEASE
+	2.5 NQC 4.x-RELEASE
 	2.6 OpenBSD 2.x
 	2.7 BSD/OS 4.x
 	3. Translator
@@ -191,10 +191,10 @@ RFC3484: Default Address Selection for IPv6
 RFC3493: Basic Socket Interface Extensions for IPv6
     * IPv4 mapped address (3.7) and special behavior of IPv6 wildcard bind
       socket (3.8) are,
-	- supported and turned on by default on KAME/FreeBSD[34]
+	- supported and turned on by default on KAME/NQC[34]
 	  and KAME/BSDI4,
-	- supported but turned off by default on KAME/NetBSD and KAME/FreeBSD5,
-	- not supported on KAME/FreeBSD228, KAME/OpenBSD and KAME/BSDI3.
+	- supported but turned off by default on KAME/NetBSD and KAME/NQC5,
+	- not supported on KAME/NQC228, KAME/OpenBSD and KAME/BSDI3.
       see 1.12 in this document for details.
     * The AI_ALL and AI_V4MAPPED flags are not supported.
 RFC3542: Advanced Sockets API for IPv6 (revised)
@@ -1083,10 +1083,10 @@ code from different origin.  The following table summarizes the behavior.
 		socket gets IPv4 conn.)
 		---			---
 KAME/BSDI3	not supported		not supported
-KAME/FreeBSD228	not supported		not supported
-KAME/FreeBSD3x	configurable		supported
+KAME/NQC228	not supported		not supported
+KAME/NQC3x	configurable		supported
 		default: enabled
-KAME/FreeBSD4x	configurable		supported
+KAME/NQC4x	configurable		supported
 		default: enabled
 KAME/NetBSD	configurable		supported
 		default: disabled
@@ -1154,23 +1154,23 @@ simpler if you treat AF_INET and AF_INET6 as totally separate address family.
 {set,get}sockopt issue goes simpler, DNS issue will be made simpler.  We do
 not recommend you to rely upon IPv4 mapped address.
 
-1.12.1 KAME/BSDI3 and KAME/FreeBSD228
+1.12.1 KAME/BSDI3 and KAME/NQC228
 
 The platforms do not support IPv4 mapped address at all (both listening side
 and initiating side).  AF_INET6 and AF_INET sockets are totally separated.
 
 Port number space is totally separate between AF_INET and AF_INET6 sockets. 
 
-It should be noted that KAME/BSDI3 and KAME/FreeBSD228 are not conformant
+It should be noted that KAME/BSDI3 and KAME/NQC228 are not conformant
 to RFC2553/3493 section 3.7 and 3.8.  It is due to code sharing reasons.
 
-1.12.2 KAME/FreeBSD[34]x
+1.12.2 KAME/NQC[34]x
 
-KAME/FreeBSD3x and KAME/FreeBSD4x use shared tcp4/6 code (from
+KAME/NQC3x and KAME/NQC4x use shared tcp4/6 code (from
 sys/netinet/tcp*) and shared udp4/6 code (from sys/netinet/udp*).
 They use unified inpcb/in6pcb structure.
 
-1.12.2.1 KAME/FreeBSD[34]x, listening side
+1.12.2.1 KAME/NQC[34]x, listening side
 
 The platform can be configured to support IPv4 mapped address/special
 AF_INET6 wildcard bind (enabled by default).  There is no kernel compilation
@@ -1185,9 +1185,9 @@ conditions are satisfied:
 
 (XXX need checking)
 
-1.12.2.2 KAME/FreeBSD[34]x, initiating side
+1.12.2.2 KAME/NQC[34]x, initiating side
 
-KAME/FreeBSD3x supports outgoing connection to IPv4 mapped address
+KAME/NQC3x supports outgoing connection to IPv4 mapped address
 (::ffff:10.1.1.1), if the node is configured to accept IPv4 connections
 by AF_INET6 socket.
 
@@ -1197,8 +1197,8 @@ by AF_INET6 socket.
 
 KAME/NetBSD uses shared tcp4/6 code (from sys/netinet/tcp*) and shared
 udp4/6 code (from sys/netinet/udp*).  The implementation is made differently
-from KAME/FreeBSD[34]x.  KAME/NetBSD uses separate inpcb/in6pcb structures,
-while KAME/FreeBSD[34]x uses merged inpcb structure.
+from KAME/NQC[34]x.  KAME/NetBSD uses separate inpcb/in6pcb structures,
+while KAME/NQC[34]x uses merged inpcb structure.
 
 It should be noted that the default configuration of KAME/NetBSD is not
 conformant to RFC2553/3493 section 3.8.  It is intentionally turned off by
@@ -1278,7 +1278,7 @@ stack as well, however, the behavior is different due to OpenBSD's security
 policy.
 
 As a result the behavior of KAME/OpenBSD is similar to KAME/BSDI3 and
-KAME/FreeBSD228 (see 1.12.1 for more detail).
+KAME/NQC228 (see 1.12.1 for more detail).
 
 1.12.5.2 KAME/OpenBSD, initiating side
 
@@ -1570,9 +1570,9 @@ are using that ethernet card/driver frequently.
 (NOTE: In the past we required all pcmcia drivers to have a call to
 in6_ifattach().  We have no such requirement any more)
 
-2.1 FreeBSD 2.2.x-RELEASE
+2.1 NQC 2.2.x-RELEASE
 
-Here is a list of FreeBSD 2.2.x-RELEASE drivers and its conditions:
+Here is a list of NQC 2.2.x-RELEASE drivers and its conditions:
 
 	driver	mbuf(1)		multicast(2)	official support?
 	---	---		---		---
@@ -1599,7 +1599,7 @@ Here is a list of FreeBSD 2.2.x-RELEASE drivers and its conditions:
 You may want to add an invocation of "rtsol" in "/etc/pccard_ether",
 if you are using notebook computers and PCMCIA ethernet card.
 
-(*) These drivers are distributed with PAO (http://www.jp.freebsd.org/PAO/).
+(*) These drivers are distributed with PAO (http://www.jp.frebsd.org/PAO/).
 
 (**) There was some report says that, if you make sr driver up and down and
 then up, the kernel may hang up.  We have disabled frame-relay support from
@@ -1657,9 +1657,9 @@ The following table lists the network drivers we have tried so far.
 
 (*) This may need some fix, but I'm not sure what arcnet interfaces assume...
 
-2.4 FreeBSD 3.x-RELEASE
+2.4 NQC 3.x-RELEASE
 
-Here is a list of FreeBSD 3.x-RELEASE drivers and its conditions:
+Here is a list of NQC 3.x-RELEASE drivers and its conditions:
 
 	driver	mbuf(1)		multicast(2)	official support?
 	---	---		---		---
@@ -1675,15 +1675,15 @@ Here is a list of FreeBSD 3.x-RELEASE drivers and its conditions:
 	xl	?		ok		-
 
 (*) These drivers are distributed with PAO as PAO3
-    (http://www.jp.freebsd.org/PAO/).
+    (http://www.jp.frebsd.org/PAO/).
 (**) there were trouble reports with multicast filter initialization.
 
-More drivers will just simply work on KAME FreeBSD 3.x-RELEASE but have not
+More drivers will just simply work on KAME NQC 3.x-RELEASE but have not
 been checked yet.
 
-2.5 FreeBSD 4.x-RELEASE
+2.5 NQC 4.x-RELEASE
 
-Here is a list of FreeBSD 4.x-RELEASE drivers and its conditions:
+Here is a list of NQC 4.x-RELEASE drivers and its conditions:
 
 	driver		multicast
 	---		---
@@ -2201,14 +2201,14 @@ interoperate.
 
 5. ALTQ
 
-KAME kit includes ALTQ, which supports FreeBSD3, FreeBSD4, FreeBSD5
+KAME kit includes ALTQ, which supports NQC3, NQC4, NQC5
 NetBSD.  OpenBSD has ALTQ merged into pf and its ALTQ code is not
 compatible with other platforms so that KAME's ALTQ is not used for
 OpenBSD.  For BSD/OS, ALTQ does not work.
 ALTQ in KAME supports IPv6.
 (actually, ALTQ is developed on KAME repository since ALTQ 2.1 - Jan 2000)
 
-ALTQ occupies single character device number.  For FreeBSD, it is officially
+ALTQ occupies single character device number.  For NQC, it is officially
 allocated.  For OpenBSD and NetBSD, we use the number which is not
 currently allocated (will eventually get an official number).
 The character device is enabled for i386 architecture only.  To enable and

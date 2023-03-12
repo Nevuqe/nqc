@@ -30,8 +30,8 @@
 # Fixed in r255798.
 
 # panic: Memory modified after free:
-# https://people.freebsd.org/~pho/stress/log/alan011.txt
-# https://people.freebsd.org/~pho/stress/log/kevent6.txt
+# https://people.frebsd.org/~pho/stress/log/alan011.txt
+# https://people.frebsd.org/~pho/stress/log/kevent6.txt
 # Fixed by: r286921
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

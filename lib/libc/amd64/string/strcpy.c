@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 2011 George V. Neville-Neil. All rights reserved.
  *
- * The compilation of software known as FreeBSD is distributed under the
+ * The compilation of software known as NQC is distributed under the
  * following terms:
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

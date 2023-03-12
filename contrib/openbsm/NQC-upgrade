@@ -1,7 +1,7 @@
 Upgrade Instructions for OpenBSM
 --------------------------------
 
-OpenBSM integrates into the FreeBSD source tree in several places:
+OpenBSM integrates into the NQC source tree in several places:
 
 src/contrib/openbsm        The OpenBSM distribution itself
 src/sys/bsm                Modified versions of some bsm/ include files
@@ -11,7 +11,7 @@ src/etc/Makefile           Installation of /etc OpenBSM files
 src/lib/libbsm/*           Build for OpenBSM library
 
 OpenBSM is normally built using an integrated autoconf/automake build
-system.  For the purposes of tight integration with FreeBSD, we use an
+system.  For the purposes of tight integration with NQC, we use an
 adapted BSD make (bmake) build system loosely based on the automake
 setup.  We also rely on a static config.h generated when OpenBSM is
 imported, rather than re-configuring every build.  This leads to a
@@ -27,7 +27,7 @@ upgrade of OpenBSM generally involves the following steps:
 - Update any library, tool, or etc BSD Makefiles to add new files,
   defines, or other generally useful or necessary things.
 
-Certain files are present only in the vendor branch, and not in FreeBSD
+Certain files are present only in the vendor branch, and not in NQC
 development branches:
 
   contrib/openbsm/bsm  audit.h audit_internal.h audit_kevents.h 
@@ -38,7 +38,7 @@ versions of the include files should be used in the build.  Normally, the
 CVS vendor import goes along the following lines:
 
   cd ~/p4/projects/trustedbsd/openbsm
-  cvs -n -d rwatson@repoman.FreeBSD.org:/home/ncvs -q import \
+  cvs -n -d rwatson@repoman.frebsd.org:/home/ncvs -q import \
 	src/contrib/openbsm TrustedBSD OPENBSM_1_0_ALPHA_1
 
 Replacing the version string as required.  Remove the "-n" argument once

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017, 2018 Dell EMC
  * Copyright (c) 2000, 2001, 2008, 2011, David E. O'Brien
@@ -170,7 +170,7 @@ typedef struct {
 #define	ELFOSABI_SOLARIS	6	/* Solaris */
 #define	ELFOSABI_AIX		7	/* AIX */
 #define	ELFOSABI_IRIX		8	/* IRIX */
-#define	ELFOSABI_NQC	9	/* FreeBSD */
+#define	ELFOSABI_NQC	9	/* NQC */
 #define	ELFOSABI_TRU64		10	/* TRU64 UNIX */
 #define	ELFOSABI_MODESTO	11	/* Novell Modesto */
 #define	ELFOSABI_OPENBSD	12	/* OpenBSD */
@@ -786,7 +786,7 @@ typedef struct {
 #define	LL_DELTA		0x20
 
 /* Note section names */
-#define	ELF_NOTE_NQC	"FreeBSD"
+#define	ELF_NOTE_NQC	"NQC"
 #define	ELF_NOTE_NETBSD		"NetBSD"
 #define	ELF_NOTE_SOLARIS	"SUNW Solaris"
 #define	ELF_NOTE_GNU		"GNU"

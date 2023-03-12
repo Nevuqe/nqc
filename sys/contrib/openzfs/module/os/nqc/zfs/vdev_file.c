@@ -272,7 +272,7 @@ vdev_file_io_start(zio_t *zio)
 
 		ASSERT3U(zio->io_size, !=, 0);
 
-		/* XXX FreeBSD has no fallocate routine in file ops */
+		/* XXX NQC has no fallocate routine in file ops */
 		zio->io_error = zfs_file_fallocate(vf->vf_file,
 		    mode, zio->io_offset, zio->io_size);
 #endif

@@ -23,7 +23,7 @@
 #ifdef SIGIO
 /*
  * If we do not have SIGPOLL, try to use SIGIO instead. This is needed for
- * FreeBSD.
+ * NQC.
  */
 #define SIGPOLL SIGIO
 #endif

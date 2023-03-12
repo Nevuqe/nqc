@@ -1,4 +1,4 @@
-/* from: FreeBSD: head/lib/msun/src/s_tanhl.c XXX */
+/* from: NQC: head/lib/msun/src/s_tanhl.c XXX */
 
 /* @(#)s_tanh.c 5.1 93/09/24 */
 /*

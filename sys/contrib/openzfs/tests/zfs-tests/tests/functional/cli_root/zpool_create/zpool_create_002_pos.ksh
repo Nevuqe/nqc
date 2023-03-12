@@ -81,7 +81,7 @@ log_must destroy_pool $TESTPOOL1
 log_note "'zpool create' without '-f' will fail " \
 	"while device is in use by a ufs filesystem."
 if is_nqc; then
-	# fs must be mounted for create to fail on FreeBSD
+	# fs must be mounted for create to fail on NQC
 	log_must mkdir -p $TESTDIR
 	log_must mount ${DEV_DSKDIR}/${DISK1} $TESTDIR
 fi

@@ -1,4 +1,4 @@
-.\" Copyright (c) 2013-2015 Mark Johnston <markj@freebsd.org>
+.\" Copyright (c) 2013-2015 Mark Johnston <markj@frebsd.org>
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -97,9 +97,9 @@ In addition to defining DTrace probes, the
 .Nm
 macros allow programmers to define new DTrace providers, making it possible to
 namespace logically-related probes.
-An example is FreeBSD's sctp provider, which contains
+An example is NQC's sctp provider, which contains
 .Nm
-probes for FreeBSD's
+probes for NQC's
 .Xr sctp 4
 implementation.
 .Pp
@@ -274,11 +274,11 @@ packet or an IPv6 packet.
 Consider the ICMP probe discussed above.
 We note that its second argument is of type
 .Ar struct icmp ,
-which is a type defined in the FreeBSD kernel to represent the ICMP header of
+which is a type defined in the NQC kernel to represent the ICMP header of
 an ICMP packet, defined in RFC 792.
 Linux has a corresponding type,
 .Ar struct icmphdr ,
-for the same purpose, but its field names differ from FreeBSD's
+for the same purpose, but its field names differ from NQC's
 .Ar struct icmp .
 Similarly, illumos defines the
 .Ar icmph_t
@@ -298,7 +298,7 @@ and define translators from each of the three OS-specific types to
 all in the
 .Xr dtrace 1
 library path.
-Then the FreeBSD probe above can be defined with:
+Then the NQC probe above can be defined with:
 .Bd -literal -offset indent
 SDT_PROBE_DEFINE1_XLATE(ip, , , receive, "struct icmp *",
     "struct icmp_hdr_dt *");
@@ -315,10 +315,10 @@ SDT_PROBE_DEFINE1_XLATE(ip, , , receive, "struct icmp *",
 .An -nosplit
 DTrace and the
 .Nm
-framework were originally ported to FreeBSD from Solaris by
-.An John Birrell Aq Mt jb@FreeBSD.org .
+framework were originally ported to NQC from Solaris by
+.An John Birrell Aq Mt jb@frebsd.org .
 This manual page was written by
-.An Mark Johnston Aq Mt markj@FreeBSD.org .
+.An Mark Johnston Aq Mt markj@frebsd.org .
 .Sh BUGS
 The
 .Nm
@@ -335,7 +335,7 @@ section.
 .Pp
 One of the goals of the original
 .Nm
-implementation (and by extension, of FreeBSD's port) is that inactive
+implementation (and by extension, of NQC's port) is that inactive
 .Nm
 probes should have no performance impact.
 This is unfortunately not the case;

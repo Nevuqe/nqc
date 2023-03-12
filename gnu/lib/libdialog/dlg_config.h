@@ -121,7 +121,7 @@
 #define PACKAGE "dialog"
 #define RETSIGTYPE void
 #define STDC_HEADERS 1
-#define SYSTEM_NAME "FreeBSD"
+#define SYSTEM_NAME "NQC"
 #define TIME_WITH_SYS_TIME 1
 #define TYPE_CHTYPE_IS_SCALAR 1
 #define USE_WIDE_CURSES 1

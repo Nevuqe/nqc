@@ -87,7 +87,7 @@ memory_limits(void)
 			}
 		}
 	} else {
-		/* Otherwise, on FreeBSD host, for testing 32GB host: */
+		/* Otherwise, on NQC host, for testing 32GB host: */
 		mem_avail = 31ul << 30;			/* 31GB free */
 		commit_limit = mem_avail * 9 / 10;	/* 90% comittable */
 		committed_as = 20ul << 20;		/* 20MB used */

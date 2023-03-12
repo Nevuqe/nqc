@@ -27,7 +27,7 @@
 #
 
 # Looping thread seen:
-# https://people.freebsd.org/~pho/stress/log/kostik850.txt
+# https://people.frebsd.org/~pho/stress/log/kostik850.txt
 # Fixed by r292326.
 
 . ../default.cfg

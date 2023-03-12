@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Silicon Graphics International Corp.
  * All rights reserved.
@@ -29,13 +29,13 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_frontend_cam_sim.c#4 $
+ * $Id: //depot/users/kenm/NQC-test2/sys/cam/ctl/ctl_frontend_cam_sim.c#4 $
  */
 /*
  * CTL frontend to CAM SIM interface.  This allows access to CTL LUNs via
  * the da(4) and pass(4) drivers from inside the system.
  *
- * Author: Ken Merry <ken@FreeBSD.org>
+ * Author: Ken Merry <ken@frebsd.org>
  */
 
 #include <sys/cdefs.h>
@@ -761,8 +761,8 @@ cfcs_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->hpath_id = 0;
 		cpi->initiator_id = 1;
 
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
-		strlcpy(cpi->hba_vid, "FreeBSD", HBA_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
+		strlcpy(cpi->hba_vid, "NQC", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = 0;
 		cpi->bus_id = 0;

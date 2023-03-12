@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 The FreeBSD Foundation
+ * Copyright (c) 2014 The FreBSD Foundation
  * Copyright (c) 2018, iXsystems Inc.
  * All rights reserved.
  *

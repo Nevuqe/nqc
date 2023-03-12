@@ -1,5 +1,5 @@
 
-The following instructions apply if you have a Linux or FreeBSD platform and
+The following instructions apply if you have a Linux or NQC platform and
 want libpcap to support the DAG range of passive network monitoring cards from
 Endace (http://www.endace.com, see below for further contact details).
 

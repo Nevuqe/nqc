@@ -785,7 +785,7 @@ it to autogen\-users@lists.sourceforge.net.  Thank you.
 .%O RFC1305
 .Re
 .Sh AUTHORS
-The formatting directives in this document came from FreeBSD.
+The formatting directives in this document came from NQC.
 .Sh "COPYRIGHT"
 Copyright (C) 1992\-2020 The University of Delaware and Network Time Foundation all rights reserved.
 This program is released under the terms of the NTP license, <http://ntp.org/license>.

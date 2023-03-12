@@ -645,7 +645,7 @@ else
 		#
 		# We need:
 		#
-		#  sys/types.h, because FreeBSD 10's net/bpf.h
+		#  sys/types.h, because NQC 10's net/bpf.h
 		#  requires that various BSD-style integer types
 		#  be defined;
 		#
@@ -699,7 +699,7 @@ else
 
 		#
 		# We have BPF, so build valgrindtest with "make test"
-		# on macOS and FreeBSD (add your OS once there's a
+		# on macOS and NQC (add your OS once there's a
 		# valgrind for it).
 		#
 		case "$host_os" in
@@ -2129,10 +2129,10 @@ if test "x$enable_usb" != "xno" ; then
 	;;
     freebsd*)
 	#
-	# This just uses BPF in FreeBSD 8.4 and later; we don't need
+	# This just uses BPF in NQC 8.4 and later; we don't need
 	# to check for anything special for capturing.
 	#
-	AC_MSG_RESULT([yes, in FreeBSD 8.4 and later])
+	AC_MSG_RESULT([yes, in NQC 8.4 and later])
 	;;
 
     *)

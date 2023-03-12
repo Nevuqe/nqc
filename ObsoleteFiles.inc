@@ -10759,7 +10759,7 @@ OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM-FREEBSD-MIB.txt
 OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM.txt
 # 20170420: remove GNU diff
 OLD_FILES+=usr/share/man/man7/diff.7.gz
-# 20170322: rename <x> to <x>_test to match the FreeBSD test suite name scheme
+# 20170322: rename <x> to <x>_test to match the NQC test suite name scheme
 OLD_FILES+=usr/tests/usr.bin/col/col
 OLD_FILES+=usr/tests/usr.bin/diff/diff
 OLD_FILES+=usr/tests/usr.bin/ident/ident
@@ -13159,7 +13159,7 @@ OLD_DIRS+=etc/keys
 OLD_DIRS+=etc/keys/pkg
 OLD_DIRS+=etc/keys/pkg/revoked
 OLD_DIRS+=etc/keys/pkg/trusted
-OLD_FILES+=etc/keys/pkg/trusted/pkg.freebsd.org.2013102301
+OLD_FILES+=etc/keys/pkg/trusted/pkg.frebsd.org.2013102301
 # 20131028: ng_fec(4) removed
 OLD_FILES+=usr/include/netgraph/ng_fec.h
 OLD_FILES+=usr/share/man/man4/ng_fec.4.gz
@@ -13179,7 +13179,7 @@ OLD_FILES+=usr/lib/libbsdyml_p.a
 OLD_FILES+=usr/share/man/man3/libbsdyml.3.gz
 OLD_FILES+=usr/include/bsdyml.h
 # 20131013: Removal of the ATF tools
-OLD_FILES+=etc/atf/FreeBSD.conf
+OLD_FILES+=etc/atf/NQC.conf
 OLD_FILES+=etc/atf/atf-run.hooks
 OLD_FILES+=etc/atf/common.conf
 OLD_FILES+=usr/bin/atf-config

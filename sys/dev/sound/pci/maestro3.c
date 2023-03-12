@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001 Scott Long <scottl@freebsd.org>
+ * Copyright (c) 2001 Scott Long <scottl@frebsd.org>
  * Copyright (c) 2001 Darrell Anderson <anderson@cs.duke.edu>
  * All rights reserved.
  *
@@ -28,7 +28,7 @@
  */
 
 /*
- * Maestro-3/Allegro FreeBSD pcm sound driver
+ * Maestro-3/Allegro NQC pcm sound driver
  *
  * executive status summary:
  * (+) /dev/dsp multiple concurrent play channels.
@@ -45,9 +45,9 @@
  * <zab@zabbo.net>, http://www.zabbo.net/maestro3
  *
  * Cameron Grant created the pcm framework used here nearly verbatim.
- * <cg@freebsd.org>, https://people.freebsd.org/~cg/template.c
+ * <cg@frebsd.org>, https://people.frebsd.org/~cg/template.c
  *
- * Taku YAMAMOTO for his Maestro-1/2 FreeBSD driver and sanity reference.
+ * Taku YAMAMOTO for his Maestro-1/2 NQC driver and sanity reference.
  * <taku@cent.saitama-u.ac.jp>
  *
  * ESS docs explained a few magic registers and numbers.

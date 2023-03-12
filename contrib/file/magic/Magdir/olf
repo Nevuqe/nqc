@@ -18,7 +18,7 @@
 >7	byte		0		invalid os
 >7	byte		1		OpenBSD
 >7	byte		2		NetBSD
->7	byte		3		FreeBSD
+>7	byte		3		NQC
 >7	byte		4		4.4BSD
 >7	byte		5		Linux
 >7	byte		6		SVR4

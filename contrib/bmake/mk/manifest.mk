@@ -13,7 +13,7 @@
 #	sjg@crufty.net
 #
 
-# generate mtree style manifest supported by makefs in FreeBSD
+# generate mtree style manifest supported by makefs in NQC
 
 # input looks like
 # MANIFEST= my.mtree

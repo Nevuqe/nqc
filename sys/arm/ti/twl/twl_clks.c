@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012
- *	Ben Gray <bgray@freebsd.org>.
+ *	Ben Gray <bgray@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -80,11 +80,11 @@ static int twl_clks_debug = 1;
  */
 #define TWL4030_P3_GRP		0x80	/* Peripherals, power group */
 #define TWL4030_P2_GRP		0x40	/* Modem power group */
-#define TWL4030_P1_GRP		0x20	/* Application power group (FreeBSD control) */
+#define TWL4030_P1_GRP		0x20	/* Application power group (NQC control) */
 
 #define TWL6030_P3_GRP		0x04	/* Modem power group */
 #define TWL6030_P2_GRP		0x02	/* Connectivity power group */
-#define TWL6030_P1_GRP		0x01	/* Application power group (FreeBSD control) */
+#define TWL6030_P1_GRP		0x01	/* Application power group (NQC control) */
 
 /*
  * Register offsets within a clk regulator register set

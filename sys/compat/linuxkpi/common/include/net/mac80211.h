@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2020-2022 The FreeBSD Foundation
+ * Copyright (c) 2020-2022 The FreBSD Foundation
  * Copyright (c) 2020-2022 Bjoern A. Zeeb
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -1262,7 +1262,7 @@ ieee80211_is_beacon(__le16 fc)
 	__le16 v;
 
 	/*
-	 * For as much as I get it this comes in LE and unlike FreeBSD
+	 * For as much as I get it this comes in LE and unlike NQC
 	 * where we get the entire frame header and u8[], here we get the
 	 * 9.2.4.1 Frame Control field only. Mask and compare.
 	 */

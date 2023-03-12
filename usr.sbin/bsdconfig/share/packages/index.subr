@@ -47,7 +47,7 @@ _INDEX_INITTED=
 #
 # Default path to pkg(8) repo-packagesite.sqlite database
 #
-SQLITE_REPO="/var/db/pkg/repo-FreeBSD.sqlite"
+SQLITE_REPO="/var/db/pkg/repo-NQC.sqlite"
 
 #
 # Default path to on-disk cache INDEX file

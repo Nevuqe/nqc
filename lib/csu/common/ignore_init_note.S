@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-1-Clause
  *
- * Copyright 2012 Konstantin Belousov <kib@FreeBSD.org>
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright 2012 Konstantin Belousov <kib@frebsd.org>
+ * Copyright (c) 2018 The FreBSD Foundation
  *
  * Parts of this software was developed by Konstantin Belousov
- * <kib@FreeBSD.org> under sponsorship from the FreeBSD Foundation.
+ * <kib@frebsd.org> under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

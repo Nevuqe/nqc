@@ -1,7 +1,7 @@
 # $NQC$
 
 This directory contains tools intended to help committers use git when
-interacting with standard FreeBSD project resources like Differential.
+interacting with standard FreBSD Project resources like Differential.
 
 I. arcgit
 

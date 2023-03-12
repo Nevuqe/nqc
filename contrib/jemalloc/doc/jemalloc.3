@@ -42,7 +42,7 @@ The following configuration options are enabled in libc\*(Aqs built\-in jemalloc
 \fB\-\-enable\-xmalloc\fR, and
 \fB\-\-with\-malloc\-conf=abort_conf:false\fR\&. Additionally,
 \fB\-\-enable\-debug\fR
-is enabled in development versions of FreeBSD (controlled by the
+is enabled in development versions of NQC (controlled by the
 \fBMK_MALLOC_PRODUCTION\fR
 make variable)\&.
 .SH "SYNOPSIS"
@@ -2526,17 +2526,17 @@ The
 malloc_usable_size()
 and
 posix_memalign()
-functions first appeared in FreeBSD 7\&.0\&.
+functions first appeared in NQC 7\&.0\&.
 .PP
 The
 aligned_alloc(),
 malloc_stats_print(), and
 mallctl*()
-functions first appeared in FreeBSD 10\&.0\&.
+functions first appeared in NQC 10\&.0\&.
 .PP
 The
 *allocx()
-functions first appeared in FreeBSD 11\&.0\&.
+functions first appeared in NQC 11\&.0\&.
 .SH "AUTHOR"
 .PP
 \fBJason Evans\fR

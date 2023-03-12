@@ -1,5 +1,5 @@
 .\"
-.\" Copyright (C) 2022 Alexander Chernikov <melifaro@FreeBSD.org>.
+.\" Copyright (C) 2022 Alexander Chernikov <melifaro@frebsd.org>.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -170,9 +170,9 @@ RTA_VIA		IPv6 nexthop address for IPv4 route
 RTA_KNH_ID	Kernel-specific index of the nexthop
 .Ed
 .It Dv RTA_KNH_ID
-(uint32_t) (FreeBSD-specific) Auto-allocated kernel index of the nexthop.
+(uint32_t) (NQC-specific) Auto-allocated kernel index of the nexthop.
 .It Dv RTA_RTFLAGS
-(uint32_t) (FreeBSD-specific) rtsock route flags.
+(uint32_t) (NQC-specific) rtsock route flags.
 .It Dv RTA_TABLE
 (uint32_t) Fib number of the route.
 Default route table is
@@ -536,6 +536,6 @@ protocol family appeared in
 .Sh AUTHORS
 The netlink was implementated by
 .An -nosplit
-.An Alexander Chernikov Aq Mt melifaro@FreeBSD.org .
+.An Alexander Chernikov Aq Mt melifaro@frebsd.org .
 It was derived from the Google Summer of Code 2021 project by
 .An Ng Peng Nam Sean .

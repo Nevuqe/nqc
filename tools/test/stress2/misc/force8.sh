@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2021 Peter Holm
 #
@@ -34,7 +34,7 @@
 
 # Seen with WiP kernel code:
 # panic: refcount 0xfffffe015105bdfc wraparound
-# https://people.freebsd.org/~pho/stress/log/log0154.txt
+# https://people.frebsd.org/~pho/stress/log/log0154.txt
 
 . ../default.cfg
 

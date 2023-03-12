@@ -106,7 +106,7 @@ main(int argc, char *argv[])
 			 * In System V the -h option causes chmod to change
 			 * the mode of the symbolic link. 4.4BSD's symbolic
 			 * links didn't have modes, so it was an undocumented
-			 * noop.  In FreeBSD 3.0, lchmod(2) is introduced and
+			 * noop.  In NQC 3.0, lchmod(2) is introduced and
 			 * this option does real work.
 			 */
 			hflag = 1;

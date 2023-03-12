@@ -1,4 +1,4 @@
-//===-- FreeBSDSignals.h ----------------------------------------*- C++ -*-===//
+//===-- NQCSignals.h ----------------------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -13,10 +13,10 @@
 
 namespace lldb_private {
 
-/// FreeBSD specific set of Unix signals.
-class FreeBSDSignals : public UnixSignals {
+/// NQC specific set of Unix signals.
+class NQCSignals : public UnixSignals {
 public:
-  FreeBSDSignals();
+  NQCSignals();
 
 private:
   void Reset() override;

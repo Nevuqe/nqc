@@ -1334,7 +1334,7 @@ assertion_file_time(const char *file, int line,
 	switch (type) {
 	case 'a': filet_nsec = st.st_atimespec.tv_nsec; break;
 	case 'b': filet = st.st_birthtime;
-		/* FreeBSD filesystems that don't support birthtime
+		/* NQC filesystems that don't support birthtime
 		 * (e.g., UFS1) always return -1 here. */
 		if (filet == -1) {
 			return (1);
@@ -1344,7 +1344,7 @@ assertion_file_time(const char *file, int line,
 	default: fprintf(stderr, "INTERNAL: Bad type %c for file time", type);
 		exit(1);
 	}
-	/* FreeBSD generally only stores to microsecond res, so round. */
+	/* NQC generally only stores to microsecond res, so round. */
 	filet_nsec = (filet_nsec / 1000) * 1000;
 	nsec = (nsec / 1000) * 1000;
 #else
@@ -1863,7 +1863,7 @@ assertion_utimes(const char *file, int line,
 		mt = st.st_mtime;
 #if defined(__NQC__)
 		mt_nsec = st.st_mtimespec.tv_nsec;
-		/* FreeBSD generally only stores to microsecond res, so round. */
+		/* NQC generally only stores to microsecond res, so round. */
 		mt_nsec = (mt_nsec / 1000) * 1000;
 #endif
 	}
@@ -1871,7 +1871,7 @@ assertion_utimes(const char *file, int line,
 		at = st.st_atime;
 #if defined(__NQC__)
 		at_nsec = st.st_atimespec.tv_nsec;
-		/* FreeBSD generally only stores to microsecond res, so round. */
+		/* NQC generally only stores to microsecond res, so round. */
 		at_nsec = (at_nsec / 1000) * 1000;
 #endif
 	}

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel libkern code"
+PROJECT_NAME           = "NQC kernel libkern code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/libkern/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #--------------------------------------------------------------------------

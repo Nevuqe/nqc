@@ -37,7 +37,7 @@
 __NQCID("$NQC$");
 
 /*
- * Level 1 LXT1001 gigabit ethernet driver for FreeBSD. Public
+ * Level 1 LXT1001 gigabit ethernet driver for NQC. Public
  * documentation not available, but ask me nicely.
  *
  * The Level 1 chip is used on some D-Link, SMC and Addtron NICs.

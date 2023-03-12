@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2007 Hans Petter Selasky. All rights reserved.
  *
@@ -1343,7 +1343,7 @@ usb_temp_setup(struct usb_device *udev,
 	uts->buf = usbd_alloc_config_desc(udev, uts->size);
 	/*
 	 * Allow malloc() to return NULL regardless of M_WAITOK flag.
-	 * This helps when porting the software to non-FreeBSD
+	 * This helps when porting the software to non-NQC
 	 * systems.
 	 */
 	if (uts->buf == NULL) {

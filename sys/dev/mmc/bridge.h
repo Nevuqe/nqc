@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2006 M. Warner Losh <imp@FreeBSD.org>
+ * Copyright (c) 2006 M. Warner Losh <imp@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -62,7 +62,7 @@
  * This file defines interfaces for the mmc bridge.  The names chosen
  * are similar to or the same as the names used in Linux to allow for
  * easy porting of what Linux calls mmc host drivers.  I use the
- * FreeBSD terminology of bridge and bus for consistency with other
+ * NQC terminology of bridge and bus for consistency with other
  * drivers in the system.  This file corresponds roughly to the Linux
  * linux/mmc/host.h file.
  *

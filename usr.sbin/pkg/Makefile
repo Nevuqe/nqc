@@ -17,7 +17,7 @@ PKGCONFBRANCH?=	latest
 .  endif
 . endif
 .endif
-PKGCONF?=	FreeBSD.conf.${PKGCONFBRANCH}
+PKGCONF?=	NQC.conf.${PKGCONFBRANCH}
 CONFS=		${PKGCONF}
 CONFSNAME_${PKGCONF}=	${PKGCONF:C/\.conf.+$/.conf/}
 CONFSDIR=	/etc/pkg

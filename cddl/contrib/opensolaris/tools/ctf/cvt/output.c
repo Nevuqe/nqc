@@ -585,7 +585,7 @@ write_file(Elf *src, const char *srcname, Elf *dst, const char *dstname,
 		bcopy(sdata, ddata, sizeof (Elf_Data));
 #else
 		/*
-		 * FreeBSD's Elf_Data has private fields which the
+		 * NQC's Elf_Data has private fields which the
 		 * elf_* routines manage. Simply copying the 
 		 * entire structure corrupts the data. So we need
 		 * to copy the public fields explictly.

@@ -52,8 +52,8 @@ UNAME=$(uname)
 RERUN=""
 KMEMLEAK=""
 
-# Override some defaults if on FreeBSD
-if [ "$UNAME" = "FreeBSD" ] ; then
+# Override some defaults if on NQC
+if [ "$UNAME" = "NQC" ] ; then
 	TESTFAIL_CALLBACKS=${TESTFAIL_CALLBACKS:-"$ZFS_DMESG"}
 	LOSETUP=/sbin/mdconfig
 	DMSETUP=/sbin/gpart
@@ -121,7 +121,7 @@ cleanup() {
 
 
 	if [ "$LOOPBACK" = "yes" ]; then
-		if [ "$UNAME" = "FreeBSD" ] ; then
+		if [ "$UNAME" = "NQC" ] ; then
 			cleanup_nqc_loopback
 		else
 			cleanup_linux_loopback
@@ -145,7 +145,7 @@ trap cleanup EXIT
 #
 cleanup_all() {
 	TEST_POOLS=$(ASAN_OPTIONS=detect_leaks=false "$ZPOOL" list -Ho name | grep testpool)
-	if [ "$UNAME" = "FreeBSD" ] ; then
+	if [ "$UNAME" = "NQC" ] ; then
 		TEST_LOOPBACKS=$(sudo "${LOSETUP}" -l)
 	else
 		TEST_LOOPBACKS=$("${LOSETUP}" -a | awk -F: '/file-vdev/ {print $1}')
@@ -160,7 +160,7 @@ cleanup_all() {
 		sudo env ASAN_OPTIONS=detect_leaks=false "$ZPOOL" destroy "${TEST_POOL}"
 	done
 
-	if [ "$UNAME" != "FreeBSD" ] ; then
+	if [ "$UNAME" != "NQC" ] ; then
 		msg "Removing all dm(s):   $(sudo "${DMSETUP}" ls |
 		    grep loop | tr '\n' ' ')"
 		sudo "${DMSETUP}" remove_all
@@ -169,7 +169,7 @@ cleanup_all() {
 	# shellcheck disable=2116,2086
 	msg "Removing loopback(s): $(echo ${TEST_LOOPBACKS})"
 	for TEST_LOOPBACK in $TEST_LOOPBACKS; do
-		if [ "$UNAME" = "FreeBSD" ] ; then
+		if [ "$UNAME" = "NQC" ] ; then
 			sudo "${LOSETUP}" -d -u "${TEST_LOOPBACK}"
 		else
 			sudo "${LOSETUP}" -d "${TEST_LOOPBACK}"
@@ -241,7 +241,7 @@ create_links() {
 constrain_path() {
 	. "$STF_SUITE/include/commands.cfg"
 
-	# On FreeBSD, base system zfs utils are in /sbin and OpenZFS utils
+	# On NQC, base system zfs utils are in /sbin and OpenZFS utils
 	# install to /usr/local/sbin. To avoid testing the wrong utils we
 	# need /usr/local to come before / in the path search order.
 	SYSTEM_DIRS="/usr/local/bin /usr/local/sbin"
@@ -280,7 +280,7 @@ constrain_path() {
 
 	# Standard system utilities
 	SYSTEM_FILES="$SYSTEM_FILES_COMMON"
-	if [ "$UNAME" = "FreeBSD" ] ; then
+	if [ "$UNAME" = "NQC" ] ; then
 		SYSTEM_FILES="$SYSTEM_FILES $SYSTEM_FILES_NQC"
 	else
 		SYSTEM_FILES="$SYSTEM_FILES $SYSTEM_FILES_LINUX"
@@ -293,7 +293,7 @@ constrain_path() {
 		ln -fs /sbin/mkfs.ext4 "$STF_PATH/newfs"
 		ln -fs "$STF_PATH/gzip" "$STF_PATH/compress"
 		ln -fs "$STF_PATH/gunzip" "$STF_PATH/uncompress"
-	elif [ "$UNAME" = "FreeBSD" ] ; then
+	elif [ "$UNAME" = "NQC" ] ; then
 		ln -fs /usr/local/bin/ksh93 "$STF_PATH/ksh"
 	fi
 }
@@ -514,7 +514,7 @@ constrain_path
 #
 # Check if ksh exists
 #
-if [ "$UNAME" = "FreeBSD" ]; then
+if [ "$UNAME" = "NQC" ]; then
 	sudo ln -fs /usr/local/bin/ksh93 /bin/ksh
 fi
 [ -e "$STF_PATH/ksh" ] || fail "This test suite requires ksh."
@@ -590,7 +590,7 @@ if [ -z "${DISKS}" ]; then
 		test -x "$LOSETUP" || fail "$LOSETUP utility must be installed"
 
 		for TEST_FILE in ${FILES}; do
-			if [ "$UNAME" = "FreeBSD" ] ; then
+			if [ "$UNAME" = "NQC" ] ; then
 				MDDEVICE=$(sudo "${LOSETUP}" -a -t vnode -f "${TEST_FILE}")
 				if [ -z "$MDDEVICE" ] ; then
 					fail "Failed: ${TEST_FILE} -> loopback"
@@ -665,7 +665,7 @@ export __ZFS_POOL_EXCLUDE
 export TESTFAIL_CALLBACKS
 
 mktemp_file() {
-	if [ "$UNAME" = "FreeBSD" ]; then
+	if [ "$UNAME" = "NQC" ]; then
 		mktemp -u "${FILEDIR}/$1.XXXXXX"
 	else
 		mktemp -ut "$1.XXXXXX" -p "$FILEDIR"

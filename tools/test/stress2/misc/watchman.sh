@@ -3,7 +3,7 @@
 # Bug 214923 - kqueue hangs with busy loop
 # Test scenario by: Jihyun Yu <yjh0502@gmail.com>
 
-# https://people.freebsd.org/~pho/stress/log/watchman.txt
+# https://people.frebsd.org/~pho/stress/log/watchman.txt
 # Fixed by: r310302
 
 . ../default.cfg

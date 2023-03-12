@@ -91,7 +91,7 @@ struct pccard_product {
  * Note: There's no cis3 or cis4 reported for NOMATCH / pnpinfo events for
  * pccard.  It's unclear if we actually need that for automatic loading or
  * not.  These strings are informative, according to the standard.  Some Linux
- * drivers match on them, for example.  However, FreeBSD's hardware probing is a
+ * drivers match on them, for example.  However, NQC's hardware probing is a
  * little different than Linux, so it turns out we don't need them.  Some cards
  * use CIS3 or CIS4 for a textual representation of the MAC address.  In short,
  * belief that all the entries in Linux don't actually need to be separate there

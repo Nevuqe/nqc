@@ -1538,7 +1538,7 @@ static int wpa_driver_bsd_capa(struct bsd_driver_data *drv)
 #else
 	/*
 	 * XXX
-	 * FreeBSD exports hardware cryptocaps.  These have no meaning for wpa
+	 * NQC exports hardware cryptocaps.  These have no meaning for wpa
 	 * since net80211 performs software crypto.
 	 */
 

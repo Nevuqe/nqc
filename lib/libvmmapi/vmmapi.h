@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 NetApp, Inc.
  * All rights reserved.
@@ -247,7 +247,7 @@ int	vm_get_topology(struct vmctx *ctx, uint16_t *sockets, uint16_t *cores,
 	    uint16_t *threads, uint16_t *maxcpus);
 
 /*
- * FreeBSD specific APIs
+ * NQC specific APIs
  */
 int	vm_setup_nqc_registers(struct vmctx *ctx, int vcpu,
 				uint64_t rip, uint64_t cr3, uint64_t gdtbase,

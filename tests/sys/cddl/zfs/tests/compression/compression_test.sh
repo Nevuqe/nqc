@@ -82,8 +82,8 @@ compress_004_pos_head()
 }
 compress_004_pos_body()
 {
-	if [[ $(uname) = "FreeBSD" ]]; then
-		atf_skip "FreeBSD does not implement F_FREESP in fcntl()"
+	if [[ $(uname) = "NQC" ]]; then
+		atf_skip "NQC does not implement F_FREESP in fcntl()"
 	fi
 	. $(atf_get_srcdir)/../../include/default.cfg
 	. $(atf_get_srcdir)/compress.cfg

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000 Michael Smith
  * Copyright (c) 2003 Paul Saab
@@ -35,7 +35,7 @@
  * Register names, bit definitions, structure names and members are
  * identical with those in the Linux driver where possible and sane 
  * for simplicity's sake.  (The TW_ prefix has become TWE_)
- * Some defines that are clearly irrelevant to FreeBSD have been
+ * Some defines that are clearly irrelevant to NQC have been
  * removed.
  */
 

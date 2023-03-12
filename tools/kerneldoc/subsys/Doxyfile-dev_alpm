@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel alpm device code"
+PROJECT_NAME           = "NQC kernel alpm device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_alpm/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

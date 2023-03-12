@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2020 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2020 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -62,7 +62,7 @@ struct hidraw_devinfo {
 	int16_t		product;
 };
 
-/* FreeBSD uhid(4)-compatible ioctl interface */
+/* NQC uhid(4)-compatible ioctl interface */
 #define	HIDRAW_GET_REPORT_DESC	_IOWR('U', 21, struct hidraw_gen_descriptor)
 #define	HIDRAW_SET_IMMED	_IOW ('U', 22, int)
 #define	HIDRAW_GET_REPORT	_IOWR('U', 23, struct hidraw_gen_descriptor)

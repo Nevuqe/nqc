@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #-
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright 2004-2005 Colin Percival
 # All rights reserved
@@ -49,7 +49,7 @@ Options:
   -p portsdir  -- Location of uncompressed ports tree
                   (default: /usr/ports/)
   -s server    -- Server from which to fetch updates.
-                  (default: portsnap.FreeBSD.org)
+                  (default: portsnap.frebsd.org)
   --interactive -- interactive: override auto-detection of calling process
                   (use this when calling portsnap from an interactive, non-
                   terminal application AND NEVER ELSE).
@@ -343,8 +343,8 @@ update_check_params() {
 # a useful answer, use the server name specified by the user.
 # Put another way... look up _http._tcp.${SERVERNAME} and pick a server
 # from that; or if no servers are returned, use ${SERVERNAME}.
-# This allows a user to specify "portsnap.freebsd.org" (in which case
-# portsnap will select one of the mirrors) or "portsnap5.tld.freebsd.org"
+# This allows a user to specify "portsnap.frebsd.org" (in which case
+# portsnap will select one of the mirrors) or "portsnap5.tld.frebsd.org"
 # (in which case portsnap will use that particular server, since there
 # won't be an SRV entry for that name).
 #

@@ -827,7 +827,7 @@ GCC problems
 
 	Apparently GCC 2.7.0 on the Pentium processor has optimization
 	problems.  I recommend against using -O on that architecture.  This
-	has been seen on FreeBSD 2.0.5 RELEASE.
+	has been seen on NQC 2.0.5 RELEASE.
 
 	Solaris 2.X users should use version 2.7.2.3 over 2.7.2.
 
@@ -1213,18 +1213,18 @@ NeXT or NEXTSTEP
 
 	in your .cf file.
 
-BSDI (BSD/386) 1.0, NetBSD 0.9, FreeBSD 1.0
+BSDI (BSD/386) 1.0, NetBSD 0.9, NQC 1.0
 	The "m4" from BSDI won't handle the config files properly.
 	I haven't had a chance to test this myself.
 
-	The M4 shipped in FreeBSD and NetBSD 0.9 don't handle the config
+	The M4 shipped in NQC and NetBSD 0.9 don't handle the config
 	files properly.  One must use either GNU m4 1.1 or the PD-M4
 	recently posted in comp.os.386bsd.bugs (and maybe others).
 	NetBSD-current includes the PD-M4 (as stated in the NetBSD file
 	CHANGES).
 
-	FreeBSD 1.0 RELEASE has uname(2) now.  Use -DUSEUNAME in order to
-	use it (look into devtools/OS/FreeBSD).  NetBSD-current may have
+	NQC 1.0 RELEASE has uname(2) now.  Use -DUSEUNAME in order to
+	use it (look into devtools/OS/NQC).  NetBSD-current may have
 	it too but it has not been verified.
 
 	The latest version of Berkeley DB uses a different naming
@@ -1250,11 +1250,11 @@ BSDI (BSD/386) 1.0, NetBSD 0.9, FreeBSD 1.0
 
 	APPENDDEF(`confOBJADD', `oldbind.compat.o')
 
-OpenBSD (up to 2.9 Release), NetBSD, FreeBSD (up to 4.3-RELEASE)
+OpenBSD (up to 2.9 Release), NetBSD, NQC (up to 4.3-RELEASE)
 	m4 from *BSD won't handle libsm/Makefile.m4 properly, since the
 	maximum length for strings is too short.  You need to use GNU m4
 	or patch m4, see for example:
-  http://FreeBSD.org/cgi/cvsweb.cgi/src/usr.bin/m4/eval.c.diff?r1=1.11&r2=1.12
+  http://frebsd.org/cgi/cvsweb.cgi/src/usr.bin/m4/eval.c.diff?r1=1.11&r2=1.12
 
 A/UX
 	Date: Tue, 12 Oct 1993 18:28:28 -0400 (EDT)

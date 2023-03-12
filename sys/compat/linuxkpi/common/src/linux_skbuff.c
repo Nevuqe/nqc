@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2020-2022 The FreeBSD Foundation
+ * Copyright (c) 2020-2022 The FreBSD Foundation
  * Copyright (c) 2021-2022 Bjoern A. Zeeb
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -32,7 +32,7 @@
 /*
  * NOTE: this socket buffer compatibility code is highly EXPERIMENTAL.
  *       Do not rely on the internals of this implementation.  They are highly
- *       likely to change as we will improve the integration to FreeBSD mbufs.
+ *       likely to change as we will improve the integration to NQC mbufs.
  */
 
 #include <sys/cdefs.h>

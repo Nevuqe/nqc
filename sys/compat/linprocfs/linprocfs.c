@@ -482,7 +482,7 @@ _mtab_helper(const struct pfs_node *pn, const struct statfs *sp,
 
 	if (strcmp(*fstype, "autofs") == 0) {
 		/*
-		 * FreeBSD uses eg "map -hosts", whereas Linux
+		 * NQC uses eg "map -hosts", whereas Linux
 		 * expects just "-hosts".
 		 */
 		if (strncmp(*mntfrom, "map ", 4) == 0)
@@ -892,7 +892,7 @@ linprocfs_osbuilder(struct thread *td, struct sbuf *sb)
 		sbuf_cat(sb, builder);
 	else
 #endif
-		sbuf_cat(sb, "des@freebsd.org");
+		sbuf_cat(sb, "des@frebsd.org");
 }
 
 /*
@@ -996,7 +996,7 @@ linprocfs_doprocstat(PFS_FILL_ARGS)
 		state = 'R';
 
 		if (ratelimit == 0) {
-			printf("linprocfs: don't know how to handle unknown FreeBSD state %d/%zd, mapping to R\n",
+			printf("linprocfs: don't know how to handle unknown NQC state %d/%zd, mapping to R\n",
 			    kp.ki_stat, sizeof(linux_state));
 			++ratelimit;
 		}
@@ -1149,12 +1149,12 @@ linprocfs_doprocstatus(PFS_FILL_ARGS)
 	sbuf_printf(sb, "Uid:\t%d\t%d\t%d\t%d\n", p->p_ucred->cr_ruid,
 						p->p_ucred->cr_uid,
 						p->p_ucred->cr_svuid,
-						/* FreeBSD doesn't have fsuid */
+						/* NQC doesn't have fsuid */
 						p->p_ucred->cr_uid);
 	sbuf_printf(sb, "Gid:\t%d\t%d\t%d\t%d\n", p->p_ucred->cr_rgid,
 						p->p_ucred->cr_gid,
 						p->p_ucred->cr_svgid,
-						/* FreeBSD doesn't have fsgid */
+						/* NQC doesn't have fsgid */
 						p->p_ucred->cr_gid);
 	sbuf_cat(sb, "Groups:\t");
 	for (i = 0; i < p->p_ucred->cr_ngroups; i++)
@@ -1403,7 +1403,7 @@ linprocfs_doprocmaps(PFS_FILL_ARGS)
 			} else if (SV_PROC_ABI(p) == SV_ABI_LINUX) {
 				/*
 				 * sv_shared_page_base pointed out to the
-				 * FreeBSD sharedpage, PAGE_SIZE is a size
+				 * NQC sharedpage, PAGE_SIZE is a size
 				 * of it. The vDSO page is above.
 				 */
 				if (e_start == p->p_sysent->sv_shared_page_base +

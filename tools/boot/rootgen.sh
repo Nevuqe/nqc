@@ -549,7 +549,7 @@ mk_geli_mbr_zfs_both() {
 
 qser="-monitor telnet::4444,server,nowait -serial stdio -nographic"
 
-# https://wiki.freebsd.org/QemuRecipes
+# https://wiki.frebsd.org/QemuRecipes
 # aarch64
 qemu_aarch64_uefi()
 {
@@ -561,7 +561,7 @@ qemu_aarch64_uefi()
         -drive if=none,file=${img},id=hd0 \
         -device virtio-blk-device,drive=hd0" > $sh
     chmod 755 $sh
-# https://wiki.freebsd.org/arm64/QEMU also has
+# https://wiki.frebsd.org/arm64/QEMU also has
 #       -device virtio-net-device,netdev=net0
 #       -netdev user,id=net0
 }

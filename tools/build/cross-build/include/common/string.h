@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -45,7 +45,7 @@
 
 #include_next <string.h>
 /*
- * FreeBSD string.h #includes strings.h and all libmd code depends on
+ * NQC string.h #includes strings.h and all libmd code depends on
  * string.h providing explicit_bzero.
  */
 #include <strings.h>

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -51,7 +51,7 @@ rm -f revoke
 
 exit
 EOF
-/* By Martin Blapp, <mb@imp.ch> <mbr@FreeBSD.org> */
+/* By Martin Blapp, <mb@imp.ch> <mbr@frebsd.org> */
 
 #include <stdlib.h>
 #include <stdio.h>

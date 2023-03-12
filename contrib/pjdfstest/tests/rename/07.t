@@ -10,12 +10,12 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	flags1="SF_IMMUTABLE SF_APPEND"
 	flags2="SF_NOUNLINK"
 	echo "1..128"
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	flags1="SF_IMMUTABLE SF_APPEND UF_IMMUTABLE UF_APPEND"
 	flags2="SF_NOUNLINK UF_NOUNLINK"
 	echo "1..212"
@@ -35,9 +35,9 @@ for type in regular dir fifo block char socket symlink; do
 	for flag in ${flags1}; do
 		expect 0 chflags ${n0} ${flag}
 		expect ${flag} stat ${n0} flags
-		[ "${flag}" = "SF_APPEND" ] && todo FreeBSD:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
+		[ "${flag}" = "SF_APPEND" ] && todo NQC:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
 		expect EPERM rename ${n0}/${n1} ${n2}
-		[ "${flag}" = "SF_APPEND" ] && todo FreeBSD:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
+		[ "${flag}" = "SF_APPEND" ] && todo NQC:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
 		expect ENOENT rename ${n2} ${n0}/${n1}
 	done
 	expect 0 chflags ${n0} none

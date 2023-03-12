@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2014 Tycho Nightingale <tycho.nightingale@pluribusnetworks.com>
  * All rights reserved.
@@ -379,7 +379,7 @@ static int smbios_type1_initializer(const struct smbios_structure *template_entr
     uint16_t *n);
 
 static const struct smbios_string smbios_type1_strings[] = {
-	{ "system.manufacturer", "FreeBSD" },	     /* manufacturer string */
+	{ "system.manufacturer", "NQC" },	     /* manufacturer string */
 	{ "system.product_name", "BHYVE" },	     /* product string */
 	{ "system.version", "1.0" },		     /* version string */
 	{ "system.serial_number", "None" },	     /* serial number string */
@@ -403,7 +403,7 @@ static const struct smbios_table_type2 smbios_type2_template = {
 };
 
 static const struct smbios_string smbios_type2_strings[] = {
-	{ "board.manufacturer", "FreeBSD" },	/* manufacturer string */
+	{ "board.manufacturer", "NQC" },	/* manufacturer string */
 	{ "board.product_name", "BHYVE" },	/* product name string */
 	{ "board.version", "1.0" },		/* version string */
 	{ "board.serial_number", "None" },	/* serial number string */
@@ -432,7 +432,7 @@ static const struct smbios_table_type3 smbios_type3_template = {
 };
 
 static const struct smbios_string smbios_type3_strings[] = {
-	{ "chassis.manufacturer", "FreeBSD" },	/* manufacturer string */
+	{ "chassis.manufacturer", "NQC" },	/* manufacturer string */
 	{ "chassis.version", "1.0" },		/* version string */
 	{ "chassis.serial_number", "None" },	/* serial number string */
 	{ "chassis.asset_tag", "None" },	/* asset tag string */

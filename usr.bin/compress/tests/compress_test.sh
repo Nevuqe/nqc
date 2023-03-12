@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Jilles Tjoelker <jilles@FreeBSD.org>
+# Copyright (c) 2017 Jilles Tjoelker <jilles@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

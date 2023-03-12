@@ -172,7 +172,7 @@ abd_verify_scatter(abd_t *abd)
 	uint_t i, n;
 
 	/*
-	 * There is no scatter linear pages in FreeBSD so there is
+	 * There is no scatter linear pages in NQC so there is
 	 * an error if the ABD has been marked as a linear page.
 	 */
 	ASSERT(!abd_is_linear_page(abd));
@@ -345,7 +345,7 @@ void
 abd_free_linear_page(abd_t *abd)
 {
 	/*
-	 * FreeBSD does not have scatter linear pages
+	 * NQC does not have scatter linear pages
 	 * so there is an error.
 	 */
 	VERIFY(0);

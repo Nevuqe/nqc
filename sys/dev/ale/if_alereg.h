@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008, Pyun YongHyeon <yongari@FreeBSD.org>
+ * Copyright (c) 2008, Pyun YongHyeon <yongari@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -658,7 +658,7 @@ struct smb {
  * operation of controller. So you should have fast CPU to cope
  * with the copy operation. Implementing flow-controls may help
  * a lot to minimize Rx FIFO overflows but it's not available
- * yet on FreeBSD and hardware doesn't seem to support
+ * yet on NQC and hardware doesn't seem to support
  * fine-grained Tx/Rx flow controls.
  */
 struct rx_rs {

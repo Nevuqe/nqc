@@ -27,7 +27,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * The split of ipcs.c into ipcs.c and ipc.c to accommodate the
- * changes in ipcrm.c was done by Edwin Groothuis <edwin@FreeBSD.org>
+ * changes in ipcrm.c was done by Edwin Groothuis <edwin@frebsd.org>
  */
 
 #include <sys/cdefs.h>

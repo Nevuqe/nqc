@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1998 Michael Smith (msmith@freebsd.org)
+ * Copyright (c) 1998 Michael Smith (msmith@frebsd.org)
  * Copyright (c) 1997 Kazutaka YOKOTA (yokota@zodiac.mech.utsunomiya-u.ac.jp)
  * All rights reserved.
  *

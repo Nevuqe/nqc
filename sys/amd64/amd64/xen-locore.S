@@ -1,7 +1,7 @@
 /*-
- * Copyright (c) 2003 Peter Wemm <peter@FreeBSD.org>
+ * Copyright (c) 2003 Peter Wemm <peter@frebsd.org>
  * Copyright (c) 2011-2012 Spectra Logic Corporation
- * Copyright (c) 2013 Roger Pau Monne <royger@FreeBSD.org>
+ * Copyright (c) 2013 Roger Pau Monne <royger@frebsd.org>
  * All rights reserved.
  *
  * This software was developed by Cherry G. Mathew <cherry@zyx.in>
@@ -49,7 +49,7 @@
 #define	GDT_DATA	0x10
 
 .section __xen_guest
-	ELFNOTE(Xen, XEN_ELFNOTE_GUEST_OS,       .asciz, "FreeBSD")
+	ELFNOTE(Xen, XEN_ELFNOTE_GUEST_OS,       .asciz, "NQC")
 	ELFNOTE(Xen, XEN_ELFNOTE_GUEST_VERSION,  .asciz, __XSTRING(__NQC_version))
 	ELFNOTE(Xen, XEN_ELFNOTE_XEN_VERSION,    .asciz, "xen-3.0")
 	ELFNOTE(Xen, XEN_ELFNOTE_VIRT_BASE,      .quad,  KERNBASE)

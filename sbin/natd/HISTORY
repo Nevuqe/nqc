@@ -104,7 +104,7 @@
 	- Changes to manual page by
 	  Brian Somers <brian@awfulhak.org> integrated.
 	- Checksum for incoming packets is always recalculated
-	  for FreeBSD 2.2 and never recalculated for newer
+	  for NQC 2.2 and never recalculated for newer
 	  versions. This should fix the problem with wrong
  	  checksum of fragmented packets.
 	- Buffer space problem found by Sergio Lenzi <lenzi@bsi.com.br>
@@ -120,7 +120,7 @@
 
 * Version 1.11
 
-	- Code cleanup work done in FreeBSD-current development merged.
+	- Code cleanup work done in NQC-current development merged.
 	- Port numbers are now unsigned as they should always have been.
 
 * Version 1.12
@@ -134,7 +134,7 @@
 	- Upgrade to libalias 3.0 which gives:
 	- Transparent proxy support.
 	- permanent_link is now obsolete, use redirect_port instead.
-	- Drop support for early FreeBSD 2.2 versions
+	- Drop support for early NQC 2.2 versions
 	- If separate input & output sockets are being used
 	  use them to find out packet direction instead of
 	  normal mechanism. This can be handy in complex environments

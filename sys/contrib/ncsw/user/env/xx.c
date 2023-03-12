@@ -562,7 +562,7 @@ XX_IpcRegisterMsgHandler(char addr[XX_IPC_MAX_ADDR_NAME_LENGTH],
 
 	/*
 	 * This function returns fake E_OK status and does nothing
-	 * as NetCommSW IPC is not used by FreeBSD drivers.
+	 * as NetCommSW IPC is not used by NQC drivers.
 	 */
 	return (E_OK);
 }
@@ -572,7 +572,7 @@ XX_IpcUnregisterMsgHandler(char addr[XX_IPC_MAX_ADDR_NAME_LENGTH])
 {
 	/*
 	 * This function returns fake E_OK status and does nothing
-	 * as NetCommSW IPC is not used by FreeBSD drivers.
+	 * as NetCommSW IPC is not used by NQC drivers.
 	 */
 	return (E_OK);
 }

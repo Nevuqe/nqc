@@ -53,7 +53,7 @@ log_onexit cleanup
 function recursive_cksum
 {
 	case "$(uname)" in
-	FreeBSD)
+	NQC)
 		find $1 -type f -exec sha256 -q {} + | \
 		    sort | sha256digest
 		;;

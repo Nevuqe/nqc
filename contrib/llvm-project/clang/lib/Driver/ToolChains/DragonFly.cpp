@@ -22,7 +22,7 @@ using namespace llvm::opt;
 /// DragonFly Tools
 
 // For now, DragonFly Assemble does just about the same as for
-// FreeBSD, but this may change soon.
+// NQC, but this may change soon.
 void dragonfly::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
                                         const InputInfo &Output,
                                         const InputInfoList &Inputs,

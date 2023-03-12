@@ -258,7 +258,7 @@ mrsas_cam_detach(struct mrsas_softc *sc)
  *
  * This function processes CAM subsystem requests. The type of request is stored
  * in ccb->ccb_h.func_code.  The preprocessor #ifdef is necessary because
- * ccb->cpi.maxio is not supported for FreeBSD version 7.4 or earlier.
+ * ccb->cpi.maxio is not supported for NQC version 7.4 or earlier.
  */
 static void
 mrsas_action(struct cam_sim *sim, union ccb *ccb)
@@ -347,7 +347,7 @@ mrsas_action(struct cam_sim *sim, union ccb *ccb)
 			ccb->cpi.bus_id = cam_sim_bus(sim);
 			ccb->cpi.initiator_id = MRSAS_SCSI_INITIATOR_ID;
 			ccb->cpi.base_transfer_speed = 150000;
-			strlcpy(ccb->cpi.sim_vid, "FreeBSD", SIM_IDLEN);
+			strlcpy(ccb->cpi.sim_vid, "NQC", SIM_IDLEN);
 			strlcpy(ccb->cpi.hba_vid, "AVAGO", HBA_IDLEN);
 			strlcpy(ccb->cpi.dev_name, cam_sim_name(sim), DEV_IDLEN);
 			ccb->cpi.transport = XPORT_SPI;
@@ -1723,8 +1723,8 @@ mrsas_cam_poll(struct cam_sim *sim)
  * mrsas_bus_scan:	Perform bus scan
  * input:			Adapter instance soft state
  *
- * This mrsas_bus_scan function is needed for FreeBSD 7.x.  Also, it should not
- * be called in FreeBSD 8.x and later versions, where the bus scan is
+ * This mrsas_bus_scan function is needed for NQC 7.x.  Also, it should not
+ * be called in NQC 8.x and later versions, where the bus scan is
  * automatic.
  */
 int

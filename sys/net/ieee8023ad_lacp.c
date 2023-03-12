@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
  *
  * Copyright (c)2005 YAMAMOTO Takashi,
- * Copyright (c)2008 Andrew Thompson <thompsa@FreeBSD.org>
+ * Copyright (c)2008 Andrew Thompson <thompsa@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

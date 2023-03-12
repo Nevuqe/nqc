@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Derived from FreeBSD head/lib/libutil/flopen.c r193591
+ * Derived from NQC head/lib/libutil/flopen.c r193591
  */
 
 #include <sys/file.h>

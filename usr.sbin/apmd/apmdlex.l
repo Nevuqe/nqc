@@ -1,10 +1,10 @@
 %{
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * APM (Advanced Power Management) Event Dispatcher
  *
- * Copyright (c) 1999 Mitsuru IWASAKI <iwasaki@FreeBSD.org>
+ * Copyright (c) 1999 Mitsuru IWASAKI <iwasaki@frebsd.org>
  * Copyright (c) 1999 KOIE Hidetaka <koie@suri.co.jp>
  * All rights reserved.
  *

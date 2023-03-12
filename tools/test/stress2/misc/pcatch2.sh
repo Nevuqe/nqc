@@ -27,7 +27,7 @@
 #
 
 # Process stuck in "suspfs":
-# https://people.freebsd.org/~pho/stress/log/kostik944.txt
+# https://people.frebsd.org/~pho/stress/log/kostik944.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ -z "$DEBUG" ] && exit 0 # Waiting for fix

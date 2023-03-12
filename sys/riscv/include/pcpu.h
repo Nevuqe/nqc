@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1999 Luoqi Chen <luoqi@freebsd.org>
+ * Copyright (c) 1999 Luoqi Chen <luoqi@frebsd.org>
  * Copyright (c) 2015-2016 Ruslan Bukin <br@bsdpad.com>
  * All rights reserved.
  *
@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	from: FreeBSD: src/sys/i386/include/globaldata.h,v 1.27 2001/04/27
+ *	from: NQC: src/sys/i386/include/globaldata.h,v 1.27 2001/04/27
  * $NQC$
  */
 

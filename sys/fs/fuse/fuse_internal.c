@@ -33,10 +33,10 @@
  * Copyright (C) 2005 Csaba Henk.
  * All rights reserved.
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * Portions of this software were developed by BFF Storage Systems, LLC under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -1101,9 +1101,9 @@ fuse_internal_send_init(struct fuse_data *data, struct thread *td)
 	 * Unsupported features:
 	 * FUSE_FILE_OPS: No known FUSE server or client supports it
 	 * FUSE_ATOMIC_O_TRUNC: our VFS cannot support it
-	 * FUSE_DONT_MASK: unlike Linux, FreeBSD always applies the umask, even
+	 * FUSE_DONT_MASK: unlike Linux, NQC always applies the umask, even
 	 *	when default ACLs are in use.
-	 * FUSE_SPLICE_WRITE, FUSE_SPLICE_MOVE, FUSE_SPLICE_READ: FreeBSD
+	 * FUSE_SPLICE_WRITE, FUSE_SPLICE_MOVE, FUSE_SPLICE_READ: NQC
 	 *	doesn't have splice(2).
 	 * FUSE_FLOCK_LOCKS: not yet implemented
 	 * FUSE_HAS_IOCTL_DIR: not yet implemented
@@ -1253,7 +1253,7 @@ out:
 }
 
 /*
- * FreeBSD clears the SUID and SGID bits on any write by a non-root user.
+ * NQC clears the SUID and SGID bits on any write by a non-root user.
  */
 void
 fuse_internal_clear_suid_on_write(struct vnode *vp, struct ucred *cred,

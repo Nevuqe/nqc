@@ -427,7 +427,7 @@ gdtoa.tgz:
   strtod.c: unless prevented by -DNO_FENV_H, include C99's fenv.h
 and with hex input, get the current rounding mode from fegetround().
 With decimal input, strtod honors the rounding mode automatically.
-Thanks to David Schultz (das at FreeBSD dot ORG) for pointing
+Thanks to David Schultz (das at NQC dot ORG) for pointing
   strtodg.c: fix a bug with handling numbers very near the largest
 possible one, which were sometimes incorrectly converted to Infinity.
 Thanks to Edward Moy (emoy at apple dot com) for pointing this out.

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2018 Google LLC
  * All rights reserved.
@@ -41,7 +41,7 @@ __NQCID("$NQC$");
  *  - arc4random_stir()
  *  - arc4random_addrandom()
  *
- * On FreeBSD, for backward ABI compatibility, we provide two wrapper which
+ * On NQC, for backward ABI compatibility, we provide two wrapper which
  * logs this event and returns.
  */
 

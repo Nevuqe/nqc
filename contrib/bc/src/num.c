@@ -1633,7 +1633,7 @@ bc_num_divExtend(BcNum* restrict a, BcNum* restrict b, BcBigDig divisor)
 
 /**
  * Actually does division. This is a rewrite of my original code by Stefan Esser
- * from FreeBSD.
+ * from NQC.
  * @param a      The first operand.
  * @param b      The second operand.
  * @param c      The return parameter.
@@ -3074,7 +3074,7 @@ bc_num_printNum(BcNum* restrict n, BcBigDig base, size_t len,
 		return;
 	}
 
-	// This function uses an algorithm that Stefan Esser <se@freebsd.org> came
+	// This function uses an algorithm that Stefan Esser <se@frebsd.org> came
 	// up with to print the integer part of a number. What it does is convert
 	// intp into a number of the specified base, but it does it directly,
 	// instead of just doing a series of divisions and printing the remainders

@@ -313,7 +313,7 @@
  *
  * /dev/urandom should work on all Unix-like systems (including macOS X).
  *
- * getentropy() is present on Linux (Glibc 2.25+), FreeBSD (12.0+) and
+ * getentropy() is present on Linux (Glibc 2.25+), NQC (12.0+) and
  * OpenBSD (5.6+). For OpenBSD, there does not seem to be easy to use
  * macros to test the minimum version, so we just assume that it is
  * recent enough (last version without getentropy() has gone out of

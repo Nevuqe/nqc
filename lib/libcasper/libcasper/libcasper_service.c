@@ -1,13 +1,13 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 The FreeBSD Foundation
- * Copyright (c) 2015 Mariusz Zaborski <oshogbo@FreeBSD.org>
+ * Copyright (c) 2012 The FreBSD Foundation
+ * Copyright (c) 2015 Mariusz Zaborski <oshogbo@frebsd.org>
  * Copyright (c) 2017 Robert N. M. Watson
  * All rights reserved.
  *
  * This software was developed by Pawel Jakub Dawidek under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory under DARPA/AFRL contract (FA8750-10-C-0237)

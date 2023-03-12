@@ -30,7 +30,7 @@
 
 /*
  * Define LIBELF_{ARCH,BYTEORDER,CLASS} based on the machine architecture.
- * See also: <machine/elf.h> on FreeBSD.
+ * See also: <machine/elf.h> on NQC.
  */
 
 #if	defined(__amd64__)
@@ -149,7 +149,7 @@
  * `__linux__' is defined in an environment runs the Linux kernel and glibc.
  * `__GNU__' is defined in an environment runs a GNU kernel (Hurd) and glibc.
  * `__GLIBC__' is defined for an environment that runs glibc over a non-GNU
- *     kernel such as GNU/kFreeBSD.
+ *     kernel such as GNU/kNQC.
  */
 
 #if defined(__linux__) || defined(__GNU__) || defined(__GLIBC__)

@@ -1,8 +1,8 @@
 #!/bin/sh
 #-
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2018 Allan Jude <allanjude@freebsd.org>
+# Copyright 2018 Allan Jude <allanjude@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted providing that the following conditions 

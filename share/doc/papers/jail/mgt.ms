@@ -7,7 +7,7 @@ Managing Jails and the Jail File System Environment
 Creating a Jail Environment
 .PP
 While the jail(2) call could be used in a number of ways, the expected
-configuration creates a complete FreeBSD installation for each jail.
+configuration creates a complete NQC installation for each jail.
 This includes copies of all relevant system binaries, data files, and its
 own \fC/etc\fP directory.
 Such a configuration maximises the independence of various jails,
@@ -20,7 +20,7 @@ environment: the host environment, and the jail environment.
 The host environment is the real operating system environment, which is
 used to configure interfaces, and start up the jails.
 There are then one or more jail environments, effectively virtual
-FreeBSD machines.
+NQC machines.
 When configuring Jail for use, it is necessary to configure both the
 host and jail environments to prevent overlap.
 .PP
@@ -48,13 +48,13 @@ In some situations, this can actually be the desirable behaviour.
 .PP
 The jail environments must also be custom-configured.
 This consists of building and installing a miniature version of the
-FreeBSD file system tree off of a subdirectory in the host environment,
+NQC file system tree off of a subdirectory in the host environment,
 usually \fC/usr/jail\fP, or \fC/data/jail\fP, with a subdirectory per jail.
 Appropriate instructions for generating this tree are included in the
 jail(8) man page, but generally this process may be automated using the
-FreeBSD build environment.
+NQC build environment.
 .PP
-One notable difference from the default FreeBSD install is that only
+One notable difference from the default NQC install is that only
 a limited set of device nodes should be created.
 .PP
 To improve storage efficiency, a fair number of the binaries in the system tree
@@ -87,7 +87,7 @@ unable to access the network.
 .PP
 The startup configuration of the jail environment may be configured so
 as to quell warnings from services that cannot run in the jail.
-Also, any per-system configuration required for a normal FreeBSD system
+Also, any per-system configuration required for a normal NQC system
 is also required for each jailbox.
 Typically, this includes:
 .IP "" 5n
@@ -134,7 +134,7 @@ debug processes from within the jail is desired.
 A few warnings are generated for sysctl's that are not permitted
 to be set within the jail, but the end result is a set of processes
 in an isolated process environment, bound to a single IP address.
-Normal procedures for accessing a FreeBSD machine apply: telneting in
+Normal procedures for accessing a NQC machine apply: telneting in
 through the network reveals a telnet prompt, login, and shell.
 .DS
 .ft C
@@ -157,7 +157,7 @@ It is immediately obvious that the environment is within a jailbox: there
 is no init process, no kernel daemons, and a J flag is present beside all
 processes indicating the presence of a jail.
 .PP
-As with any FreeBSD system, accounts may be created and deleted,
+As with any NQC system, accounts may be created and deleted,
 mail is delivered, logs are generated, packages may be added, and the
 system may be hacked into if configured incorrectly, or running a buggy
 version of a piece of software.
@@ -169,7 +169,7 @@ Jail management is an interesting prospect, as there are two perspectives
 from which a jail environment may be administered: from within the jail,
 and from the host environment.
 From within the jail, as described above, the process is remarkably similar
-to any regular FreeBSD install, although certain actions are prohibited,
+to any regular NQC install, although certain actions are prohibited,
 such as mounting file systems, modifying system kernel properties, etc.
 The only area that really differs are that of shutting
 the system down: the processes within the jail may deliver signals 
@@ -212,5 +212,5 @@ possible to place connectivity and bandwidth limitations on individual
 jails, restricting services that may be consumed or offered.
 .PP
 Management of jails is an area that will see further improvement in
-future versions of FreeBSD.  Some of these potential improvements are
+future versions of NQC.  Some of these potential improvements are
 discussed later in this paper.

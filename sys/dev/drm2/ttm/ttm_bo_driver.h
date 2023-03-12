@@ -403,7 +403,7 @@ struct ttm_bo_driver {
 	 *
 	 * @bo: Pointer to a buffer object.
 	 * @filp: Pointer to a struct file trying to access the object.
-	 * FreeBSD: use devfs_get_cdevpriv etc.
+	 * NQC: use devfs_get_cdevpriv etc.
 	 *
 	 * Called from the map / write / read methods to verify that the
 	 * caller is permitted to access the buffer object.

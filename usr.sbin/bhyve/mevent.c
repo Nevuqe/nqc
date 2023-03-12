@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 NetApp, Inc.
  * All rights reserved.
@@ -29,7 +29,7 @@
  */
 
 /*
- * Micro event library for FreeBSD, designed for a single i/o thread
+ * Micro event library for NQC, designed for a single i/o thread
  * using kqueue, and having events be persistent by default.
  */
 

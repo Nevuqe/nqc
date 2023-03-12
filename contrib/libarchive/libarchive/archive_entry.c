@@ -1733,23 +1733,23 @@ _archive_entry_acl_text_l(struct archive_entry *entry, int flags,
  */
 
 /*
- * Supported file flags on FreeBSD and Mac OS:
+ * Supported file flags on NQC and Mac OS:
  * sappnd,sappend		SF_APPEND
  * arch,archived		SF_ARCHIVED
  * schg,schange,simmutable	SF_IMMUTABLE
- * sunlnk,sunlink		SF_NOUNLINK	(FreeBSD only)
+ * sunlnk,sunlink		SF_NOUNLINK	(NQC only)
  * uappnd,uappend		UF_APPEND
  * compressed			UF_COMPRESSED	(Mac OS only)
  * hidden,uhidden		UF_HIDDEN
  * uchg,uchange,uimmutable	UF_IMMUTABLE
  * nodump			UF_NODUMP
- * uunlnk,uunlink		UF_NOUNLINK	(FreeBSD only)
- * offline,uoffline		UF_OFFLINE	(FreeBSD only)
+ * uunlnk,uunlink		UF_NOUNLINK	(NQC only)
+ * offline,uoffline		UF_OFFLINE	(NQC only)
  * opaque			UF_OPAQUE
- * rdonly,urdonly,readonly	UF_READONLY	(FreeBSD only)
- * reparse,ureparse		UF_REPARSE	(FreeBSD only)
- * sparse,usparse		UF_SPARSE	(FreeBSD only)
- * system,usystem		UF_SYSTEM	(FreeBSD only)
+ * rdonly,urdonly,readonly	UF_READONLY	(NQC only)
+ * reparse,ureparse		UF_REPARSE	(NQC only)
+ * sparse,usparse		UF_SPARSE	(NQC only)
+ * system,usystem		UF_SYSTEM	(NQC only)
  *
  * See chflags(2) for more information
  *
@@ -1771,7 +1771,7 @@ _archive_entry_acl_text_l(struct archive_entry *entry, int flags,
  *
  * See ioctl_iflags(2) for more information
  *
- * Equivalent file flags supported on FreeBSD / Mac OS and Linux:
+ * Equivalent file flags supported on NQC / Mac OS and Linux:
  * SF_APPEND		FS_APPEND_FL		sappnd
  * SF_IMMUTABLE		FS_IMMUTABLE_FL		schg
  * UF_NODUMP		FS_NODUMP_FL		nodump

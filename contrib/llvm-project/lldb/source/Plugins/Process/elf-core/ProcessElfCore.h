@@ -170,7 +170,7 @@ private:
 
   llvm::Expected<std::vector<lldb_private::CoreNote>>
   parseSegment(const lldb_private::DataExtractor &segment);
-  llvm::Error parseFreeBSDNotes(llvm::ArrayRef<lldb_private::CoreNote> notes);
+  llvm::Error parseNQCNotes(llvm::ArrayRef<lldb_private::CoreNote> notes);
   llvm::Error parseNetBSDNotes(llvm::ArrayRef<lldb_private::CoreNote> notes);
   llvm::Error parseOpenBSDNotes(llvm::ArrayRef<lldb_private::CoreNote> notes);
   llvm::Error parseLinuxNotes(llvm::ArrayRef<lldb_private::CoreNote> notes);

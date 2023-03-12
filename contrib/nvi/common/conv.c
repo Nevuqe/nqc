@@ -326,7 +326,7 @@ conv_init(SCR *orig, SCR *sp)
 
 		/*
 		 * XXX
-		 * This hack fixes the libncursesw issue on FreeBSD.
+		 * This hack fixes the libncursesw issue on NQC.
 		 */
 		if (!strcmp(ctype, "ko_KR.CP949"))
 			setlocale(LC_CTYPE, "ko_KR.eucKR");

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1998 Doug Rabson <dfr@freebsd.org>
+ * Copyright (c) 1998 Doug Rabson <dfr@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2010 The FreeBSD Foundation
+ * Copyright (c) 2009-2010 The FreBSD Foundation
  * Copyright (c) 2011 Pawel Jakub Dawidek <pawel@dawidek.net>
  * All rights reserved.
  *
  * This software was developed by Pawel Jakub Dawidek under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -136,7 +136,7 @@ tcp_addr(const char *addr, int defport, struct sockaddr_storage *sap)
 	/*
 	 * Extract optional port.
 	 * There are three cases to consider.
-	 * 1. hostname with port, eg. freefall.freebsd.org:8457
+	 * 1. hostname with port, eg. freefall.frebsd.org:8457
 	 * 2. IPv4 address with port, eg. 192.168.0.101:8457
 	 * 3. IPv6 address with port, eg. [fe80::1]:8457
 	 * We discover IPv6 address by checking for two colons and if port is

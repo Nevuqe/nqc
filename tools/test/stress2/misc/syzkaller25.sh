@@ -28,12 +28,12 @@
 # sys_connect() at sys_connect+0x75/frame 0xfffffe01026e4ad0
 # amd64_syscall() at amd64_syscall+0x14e/frame 0xfffffe01026e4bf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe01026e4bf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x8003b0a1a, rsp = 0x7fffdfffdbb8, rbp = 0x7fffdfffdf90 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x8003b0a1a, rsp = 0x7fffdfffdbb8, rbp = 0x7fffdfffdf90 ---
 # KDB: enter: panic
 # [ thread pid 45836 tid 101772 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x10ac846(%rip)
 # db> x/s version
-# version: FreeBSD 13.0-CURRENT #0 r366401: Sat Oct  3 19:00:37 CEST 2020
+# version: NQC 13.0-CURRENT #0 r366401: Sat Oct  3 19:00:37 CEST 2020
 # pho@t2.osted.lan:/usr/src/sys/amd64/compile/PHO
 # db>
 

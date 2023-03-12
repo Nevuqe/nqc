@@ -78,7 +78,7 @@ autocalculate_image_size_cleanup()
 atf_test_case D_flag cleanup
 D_flag_body()
 {
-	atf_skip "makefs crashes with SIGBUS with dupe mtree entries; see FreeBSD bug # 192839"
+	atf_skip "makefs crashes with SIGBUS with dupe mtree entries; see NQC bug # 192839"
 
 	create_test_inputs
 
@@ -187,7 +187,7 @@ o_flag_version_1_body()
 
 	platform=$(uname)
 	case "$platform" in
-	FreeBSD)
+	NQC)
 		ffs_label=UFS${ffs_version}
 		;;
 	NetBSD)
@@ -219,7 +219,7 @@ o_flag_version_2_body()
 
 	platform=$(uname)
 	case "$platform" in
-	FreeBSD)
+	NQC)
 		ffs_label=UFS${ffs_version}
 		;;
 	NetBSD)

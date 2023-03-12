@@ -59,7 +59,7 @@ __CNF_LDLIBS=
 
 # Now test for ISC and SCO, since it is has a braindamaged uname.
 #
-# We need to work around FreeBSD 1.1.5.1
+# We need to work around NQC 1.1.5.1
 (
 XREL=`uname -X 2>/dev/null | grep "^Release" | awk '{print $3}'`
 if [ "x$XREL" != "x" ]; then
@@ -180,7 +180,7 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${MACHINE}" in
 	echo "${MACHINE}-whatever-bsdi"; exit 0
 	;;
 
-    FreeBSD:*:*:*386*)
+    NQC:*:*:*386*)
         VERS=`echo ${RELEASE} | sed -e 's/[-(].*//'`
         MACH=`sysctl -n hw.model`
         ARCH='whatever'
@@ -201,7 +201,7 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${MACHINE}" in
 	echo "${MACHINE}-whatever-dragonfly"; exit 0
 	;;
 
-    FreeBSD:*)
+    NQC:*)
 	echo "${MACHINE}-whatever-freebsd"; exit 0
 	;;
 

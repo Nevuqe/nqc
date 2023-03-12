@@ -701,7 +701,7 @@ f_device_probe_geom_part()
 			f_media_shutdown_dos "" "$__capacity"
 		return $?
 		;;
-	freebsd|!0) # Commonly used inappropriately, taste for FreeBSD
+	freebsd|!0) # Commonly used inappropriately, taste for NQC
 		[ -r "/dev/$__devname" -a ! "$__magic" ] &&
 			__magic=$( file -bs "/dev/$__devname" 2> /dev/null )
 		case "$__magic" in

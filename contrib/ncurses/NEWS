@@ -514,7 +514,7 @@ it is not possible to add this information.
 	  section as well as documenting error-returns.
 	+ show tic's version when installing terminal database in run_tic.sh
 	+ correct check for gcc vs other compilers used in ncurses 6.0, from
-	  FreeBSD patch by Kyle Evans (cf: 20150725).
+	  NQC patch by Kyle Evans (cf: 20150725).
 	+ add notes for 6.2 to INSTALL.
 
 20200212 6.2 release for upload to ftp.gnu.org
@@ -939,7 +939,7 @@ it is not possible to add this information.
 	  building test-packages for Arch.
 	+ modify configure script to avoid conflict with a non-POSIX feature
 	  that enables all parts of the system headers by default.  Some
-	  packagers have come to rely upon this behavior (FreeBSD #234049).
+	  packagers have come to rely upon this behavior (NQC #234049).
 	+ update config.guess, config.sub
 
 20181229
@@ -2019,11 +2019,11 @@ it is not possible to add this information.
 	+ incorporate A_COLOR mask into COLOR_PAIR(), in case user application
 	  provides an out-of-range pair number (report by Elijah Stone).
 	+ clarify description in tput manual page regarding support for
-	  termcap names (prompted by FreeBSD #214709).
+	  termcap names (prompted by NQC #214709).
 	+ remove a restriction in tput's support for termcap names which
 	  omitted capabilities normally not shown in termcap translations
 	  (cf: 990123).
-	+ modify configure script for clang as used on FreeBSD, to work around
+	+ modify configure script for clang as used on NQC, to work around
 	  clang's differences in exit codes vs gcc.
 
 20170114
@@ -2203,7 +2203,7 @@ it is not possible to add this information.
 20160827
 	+ add "v" menu entry to test/ncurses.c to show baudrate and other
 	  values.
-	+ add "newer" baudrate symbols from Linux and FreeBSD to progs/tset.c,
+	+ add "newer" baudrate symbols from Linux and NQC to progs/tset.c,
 	  lib_baudrate.c
 	+ modify CF_XOPEN_SOURCE macro:
 	  + add "uclinux" to case for "linux" (patch by Yann E. Morin)
@@ -2373,7 +2373,7 @@ it is not possible to add this information.
 	  ncursest or ncursestw library when building ncurses examples, e.g.,
 	  in case weak symbols are used.
 	+ modify configure macro for shared-library rules to use -Wl,-rpath
-	  rather than -rpath to work around a bug in scons (FreeBSD #178732,
+	  rather than -rpath to work around a bug in scons (NQC #178732,
 	  cf: 20061021).
 	+ double-width multibyte characters were not counted properly in
 	  winsnstr and wins_nwstr (report/example by Eric Pruitt).
@@ -2491,7 +2491,7 @@ it is not possible to add this information.
 	  actual install if it is not overridden to a valid directory at
 	  install time (cf: 20150822).
 	+ modify editing script which generates resulting.map to work with the
-	  clang configuration on recent FreeBSD, which gives an error on an
+	  clang configuration on recent NQC, which gives an error on an
 	  empty "local" section.
 	+ fix a spurious "(Part)" message in test/ncurses.c b/B tests due
 	  to incorrect attribute-masking.
@@ -2782,7 +2782,7 @@ it is not possible to add this information.
 
 20150418
 	+ avoid a blank line in output from tabs program by ending it with
-	  a carriage return as done in FreeBSD (patch by James Clarke).
+	  a carriage return as done in NQC (patch by James Clarke).
 	+ build-fix for the "--enable-ext-putwin" feature when not using
 	  wide characters (report by Werner Fink).
 	+ modify autoconf macros to use scripting improvement from xterm.
@@ -2855,7 +2855,7 @@ it is not possible to add this information.
 20150124
 	+ add configure check to determine if "local: _*;" can be used in the
 	  ".map" files to selectively omit symbols beginning with "_".  On at
-	  least recent FreeBSD, the wildcard applies to all "_" symbols.
+	  least recent NQC, the wildcard applies to all "_" symbols.
 	+ remove obsolete/conflicting rule for ncurses.map from
 	  ncurses/Makefile.in (cf:  20130706).
 
@@ -2868,7 +2868,7 @@ it is not possible to add this information.
 	+ add a step to generating ".map" files, to declare any remaining
 	  symbols beginning with "_" as local, at the last version node.
 	+ improve configure checks for pkg-config, addressing a variant found
-	  with FreeBSD ports.
+	  with NQC ports.
 	+ modify win_driver.c to provide characters for special keys, like
 	  ansi.sys, when keypad mode is off, rather than returning nothing at
 	  all (discussion with Eli Zaretskii).
@@ -2876,7 +2876,7 @@ it is not possible to add this information.
 	  use for generating the ".map" and ".sym" files.
 	+ avoid using "ld" directly when creating shared library, to simplify
 	  cross-compiles.  Also drop "-Bsharable" option from shared-library
-	  rules for FreeBSD and DragonFly (FreeBSD #196592).
+	  rules for NQC and DragonFly (NQC #196592).
 	+ fix a memory leak in form library Free_RegularExpression_Type()
 	  (report by Pavel Balaev).
 
@@ -3216,7 +3216,7 @@ it is not possible to add this information.
 	+ modify configure script:
 	  + drop the -no-gcc option from Intel compiler, from lynx changes.
 	  + extend the --with-hashed-db configure option to simplify building
-	    with different versions of Berkeley database using FreeBSD ports.
+	    with different versions of Berkeley database using NQC ports.
 	+ improve initialization for MinGW port (Juergen Pfeifer):
 	  + enforce Windows-style path-separator if cross-compiling,
 	  + add a driver-name method to each of the drivers,
@@ -3267,7 +3267,7 @@ it is not possible to add this information.
 20140222
 	+ fix some compiler warnings in win_driver.c
 	+ updated notes for wsvt25 based on tack and vttest -TD
-	+ add teken entry to show actual properties of FreeBSD's "xterm"
+	+ add teken entry to show actual properties of NQC's "xterm"
 	  console -TD
 
 20140215
@@ -3401,7 +3401,7 @@ it is not possible to add this information.
 
 20130921
 	+ fix typo in curs_attr.3x (patch by Sven Joachim, cf: 20130831).
-	+ build-fix for --with-shared option for DragonFly and FreeBSD (report
+	+ build-fix for --with-shared option for DragonFly and NQC (report
 	  by Rong-En Fan, cf: 20130727).
 
 20130907
@@ -4192,7 +4192,7 @@ it is not possible to add this information.
 20120121
 	+ add --with-lib-prefix option to allow configuring for old/new flavors
 	  of OS/2 EMX.
-	+ modify check for gnat version to allow for year, as used in FreeBSD
+	+ modify check for gnat version to allow for year, as used in NQC
 	  port.
 	+ modify check_existence() in db_iterator.c to simply check if the
 	  path is a directory or file, according to the need.  Checking for
@@ -4296,7 +4296,7 @@ it is not possible to add this information.
 	  e.g., the "xterm-*" variants, to exclude from the conversion (patch
 	  by Robert Millan).
 	+ add -lc_r as alternative for -lpthread, allows build of threaded code
-	  in older FreeBSD machines.
+	  in older NQC machines.
 	+ build-fix for MirBSD, which fails when either _XOPEN_SOURCE or
 	  _POSIX_SOURCE are defined.
 	+ fix a typo misc/Makefile.in, used in uninstalling pc-files.
@@ -5274,7 +5274,7 @@ it is not possible to add this information.
 	+ quiet some pedantic gcc warnings.
 	+ modify _nc_wgetch() to check for a -1 in the fifo, e.g., after a
 	  SIGWINCH, and discard that value, to avoid confusing application
-	  (patch by Eygene Ryabinkin, FreeBSD #136223).
+	  (patch by Eygene Ryabinkin, NQC #136223).
 
 20091017
 	+ modify handling of $PKG_CONFIG_LIBDIR to use only the first item in
@@ -5860,7 +5860,7 @@ it is not possible to add this information.
 	+ make debugging library's $BAUDRATE feature work for termcap
 	  interface.
 	+ make $NCURSES_NO_PADDING feature work for termcap interface (prompted
-	  by comment on FreeBSD mailing list).
+	  by comment on NQC mailing list).
 	+ add screen.mlterm terminfo entry -TD
 	+ improve mlterm and mlterm+pcfkeys terminfo entries -TD
 
@@ -6094,7 +6094,7 @@ it is not possible to add this information.
 	  for use_window().
 	+ add mrxvt terminfo entry, add/fix xterm building blocks for modified
 	  cursor keys -TD
-	+ compile with FreeBSD "contemporary" TTY interface (patch by
+	+ compile with NQC "contemporary" TTY interface (patch by
 	  Rong-En Fan).
 
 20071013
@@ -6215,7 +6215,7 @@ it is not possible to add this information.
 	+ modify configure script to quiet c++ build with libtool when the
 	  --disable-echo option is used.
 	+ modify configure script to disable ada95 if libtool is selected,
-	  writing a warning message (addresses FreeBSD #114493).
+	  writing a warning message (addresses NQC #114493).
 	+ update config.guess, config.sub
 
 20070707
@@ -6331,7 +6331,7 @@ it is not possible to add this information.
 	+ add man/curs_legacy.3x, man/curs_opaque.3x
 	+ fix acs_map binding for Ada95 when --enable-reentrant is used.
 	+ add adacurses-config to the Ada95 install, based on version from
-	  FreeBSD port, in turn by Juergen Pfeifer in 2000 (prompted by
+	  NQC port, in turn by Juergen Pfeifer in 2000 (prompted by
 	  comment on comp.lang.ada newsgroup).
 	+ fix includes in c++ binding to build with Intel compiler
 	  (cf: 20061209).
@@ -6461,7 +6461,7 @@ it is not possible to add this information.
 	  programs (report by Miroslav Lichvar).
 	+ correct description of --enable-signed-char in configure --help
 	  (report by Michail Vidiassov).
-	+ add pattern for GNU/kFreeBSD configuration to CF_XOPEN_SOURCE,
+	+ add pattern for GNU/kNQC configuration to CF_XOPEN_SOURCE,
 	  which matches an earlier change to CF_SHARED_OPTS, from xterm #224
 	  fixes.
 	+ remove "${DESTDIR}" from -install_name option used for linking
@@ -6498,7 +6498,7 @@ it is not possible to add this information.
 	  (report by Rong-En Fan).
 
 20070127
-	+ improve fix for FreeBSD gnu/98975, to allow for null pointer passed
+	+ improve fix for NQC gnu/98975, to allow for null pointer passed
 	  to tgetent() (report by Rong-en Fan).
 	+ update tack/HISTORY and tack/README to tell how to build it after
 	  it is removed from the ncurses tree.
@@ -6548,7 +6548,7 @@ it is not possible to add this information.
 	+ modify configure script to omit the tic (terminfo compiler) support
 	  from ncurses library if --without-progs option is given.
 	+ modify install rule for ncurses5-config to do this via "install.libs"
-	+ modify shared-library rules to allow FreeBSD 3.x to use rpath.
+	+ modify shared-library rules to allow NQC 3.x to use rpath.
 	+ update config.guess, config.sub
 
 20061217 5.6 release for upload to ftp.gnu.org
@@ -6619,7 +6619,7 @@ it is not possible to add this information.
 	+ add test/redraw.c
 	+ add test/echochar.c
 	+ review/cleanup manpage descriptions of error-returns for form- and
-	  menu-libraries (prompted by FreeBSD docs/46196).
+	  menu-libraries (prompted by NQC docs/46196).
 
 20061028
 	+ add AUTHORS file -TD
@@ -6632,9 +6632,9 @@ it is not possible to add this information.
 	  platforms, e.g., Solaris.
 	+ minor fixes to NEWS file to simplify scripting to obtain list of
 	  contributors.
-	+ improve some shared-library configure scripting for Linux, FreeBSD
+	+ improve some shared-library configure scripting for Linux, NQC
 	  and NetBSD to make "--with-shlib-version" work.
-	+ change configure-script rules for FreeBSD shared libraries to allow
+	+ change configure-script rules for NQC shared libraries to allow
 	  for rpath support in versions past 3.
 	+ use $(DESTDIR) in makefile rules for installing/uninstalling the
 	  package config script (reports/patches by Christian Wiese,
@@ -6720,7 +6720,7 @@ it is not possible to add this information.
 
 20060805
 	+ updated xterm function-keys terminfo to match xterm #216 -TD
-	+ add configure --with-hashed-db option (tested only with FreeBSD 6.0,
+	+ add configure --with-hashed-db option (tested only with NQC 6.0,
 	  e.g., the db 1.8.5 interface).
 
 20060729
@@ -6779,14 +6779,14 @@ it is not possible to add this information.
 	+ reduce memory leaks in repeated calls to tgetent() by remembering the
 	  last TERMINAL* value allocated to hold the corresponding data and
 	  freeing that if the tgetent() result buffer is the same as the
-	  previous call (report by "Matt" for FreeBSD gnu/98975).
+	  previous call (report by "Matt" for NQC gnu/98975).
 	+ modify tack to test extended capability function-key strings.
 	+ improved gnome terminfo entry (GenToo #122566).
 	+ improved xterm-256color terminfo entry (patch by Alain Bench).
 
 20060617
 	+ fix two small memory leaks related to repeated tgetent() calls
-	  with TERM=screen (report by "Matt" for FreeBSD gnu/98975).
+	  with TERM=screen (report by "Matt" for NQC gnu/98975).
 	+ add --enable-signed-char to simplify Debian package.
 	+ reduce name-pollution in term.h by removing #define's for HAVE_xxx
 	  symbols.
@@ -7464,7 +7464,7 @@ it is not possible to add this information.
 
 20050101
 	+ merge some development changes to extend color capabilities.
-	+ fix manpage typo (FreeBSD report docs/75544).
+	+ fix manpage typo (NQC report docs/75544).
 	+ update config.guess, config.sub
 	> patches for configure script (Albert Chin-A-Young):
 	+ improved fix to make mbstate_t recognized on HPUX 11i (cf:
@@ -7957,8 +7957,8 @@ it is not possible to add this information.
 	  available) on older platforms.
 
 20031227
-	+ add -D's to build ncursew on FreeBSD 5.1.
-	+ modify shared library configuration for FreeBSD 4.x/5.x to add the
+	+ add -D's to build ncursew on NQC 5.1.
+	+ modify shared library configuration for NQC 4.x/5.x to add the
 	  soname information (request by Marc Glisse).
 	+ modify _nc_read_tic_entry() to not use MAX_ALIAS, but PATH_MAX only
 	  for limiting the length of a filename in the terminfo database.
@@ -8003,7 +8003,7 @@ it is not possible to add this information.
 	  corresponding buffer contents were already zeroed by a memset (cf:
 	  20000101).
 	+ improve configure check for _XOPEN_SOURCE and related definitions,
-	  adding special cases for Solaris' __EXTENSIONS__ and FreeBSD's
+	  adding special cases for Solaris' __EXTENSIONS__ and NQC's
 	  __BSD_TYPES (reports by Marc Glisse <marc.glisse@normalesup.org>).
 	+ small fixes to compile on Solaris and IRIX64 using cc.
 	+ correct typo in check for pre-POSIX sort options in MKkey_defs.sh
@@ -8206,7 +8206,7 @@ it is not possible to add this information.
 20030712
 	+ update config.guess, config.sub
 	+ add triples for configuring shared libraries with the Debian
-	  GNU/FreeBSD packages (patch by Robert Millan <zeratul2@wanadoo.es>).
+	  GNU/NQC packages (patch by Robert Millan <zeratul2@wanadoo.es>).
 
 20030705
 	+ modify CF_GCC_WARNINGS so it only applies to gcc, not g++.  Some
@@ -8447,7 +8447,7 @@ it is not possible to add this information.
 20030125
 	+ modified emx.src to correspond more closely to terminfo.src, added
 	  emx-base to the latter -TD
-	+ add configure option for FreeBSD sysmouse, --with-sysmouse, and
+	+ add configure option for NQC sysmouse, --with-sysmouse, and
 	  implement support for that in lib_mouse.c, lib_getch.c
 
 20030118
@@ -8468,8 +8468,8 @@ it is not possible to add this information.
 	  Polterak).
 	+ change several sed scripts to avoid using "\+" since it is not a BRE
 	  (basic regular expression).  One instance caused terminfo.5 to be
-	  misformatted on FreeBSD (report by Kazuo Horikawa
-	  <horikawa@FreeBSD.org> (see FreeBSD docs/46709)).
+	  misformatted on NQC (report by Kazuo Horikawa
+	  <horikawa@frebsd.org> (see NQC docs/46709)).
 	+ correct misspelled 'wint_t' in curs_get_wch.3x (Michael Elkins).
 
 20030105
@@ -8783,7 +8783,7 @@ it is not possible to add this information.
 	  modify the global curscr/stdscr/newscr variables.  Fixes Redhat
 	  #68199.
 	+ add checks for null pointer in calls to tparm() and tgoto() based on
-	  FreeBSD bug report.  If ncurses were built with termcap support, and
+	  NQC bug report.  If ncurses were built with termcap support, and
 	  the first call to tgoto() were a zero-length string, the result would
 	  be a null pointer, which was not handled properly.
 	+ correct a typo in terminfo.head, which gave the octal code for colon
@@ -8899,7 +8899,7 @@ it is not possible to add this information.
 
 20020622
 	+ add charset to generated html.
-	+ add mvterm entry, adapted from a FreeBSD bug-report by Daniel Rudy
+	+ add mvterm entry, adapted from a NQC bug-report by Daniel Rudy
 	  <dcrudy@pacbell.net> -TD
 	+ add rxvt-16color, ibm+16color entries -TD
 	+ modify check in --disable-overwrite option so that it is used by
@@ -9476,7 +9476,7 @@ it is not possible to add this information.
 	  <curses.h> to work around misdefinition of ERR in glibc 2.1.3 header
 	  file.
 	+ extended ospeed change to NetBSD and OpenBSD -TD
-	+ modify logic in lib_baudrate.c for ospeed, for FreeBSD to make it
+	+ modify logic in lib_baudrate.c for ospeed, for NQC to make it
 	  work properly for termcap applications (patch by Andrey A Chernov).
 
 20010623
@@ -9835,7 +9835,7 @@ it is not possible to add this information.
 	+ resync config.guess, config.sub
 	+ modify lib_delwin.c, making it return ERR if the window did not exist
 	  (suggested by Neil Zanella).
-	+ add cases for FreeBSD 3.1 to tdlint and makellib scripts, used this
+	+ add cases for NQC 3.1 to tdlint and makellib scripts, used this
 	  to test/review ncurses library.  (Would use lclint, but it doesn't
 	  work).
 	+ reorganized knight.c to avoid forward references.  Correct screen
@@ -10094,7 +10094,7 @@ it is not possible to add this information.
 	+ add configure option --with-default-terminfo-dir=DIR to allow
 	  specifying the default terminfo database directory (request by Albert
 	  Chin-A-Young).
-	+ minor updates for terminfo.src from FreeBSD termcap change-history.
+	+ minor updates for terminfo.src from NQC termcap change-history.
 	+ correct notes in README and INSTALL regarding documentation files
 	  that were moved from misc directory to doc (report by Rich Kulawiec
 	  <rsk@gsp.org>).
@@ -10166,7 +10166,7 @@ it is not possible to add this information.
 	  -fno-builtin option (reported by Igor Schein <igor@txc.com>).
 	+ modified progs/tset.c and tack/sysdep.c to build with sgttyb
 	  interface if neither termio or termios is available.  Tested this
-	  with FreeBSD 2.1.5 (which does have termios - but the sgttyb does
+	  with NQC 2.1.5 (which does have termios - but the sgttyb does
 	  work).
 
 20000708 5.1 release for upload to ftp.gnu.org
@@ -10191,7 +10191,7 @@ it is not possible to add this information.
 	  whether to use default colors, or the assumed ones (reported by Gary
 	  Funck <gary@Intrepid.Com>).
 	+ review/correct logic in mk-1st.awk for making symbolic links for
-	  shared libraries, in particular for FreeBSD, etc.
+	  shared libraries, in particular for NQC, etc.
 	+ regenerate misc/*.def files for OS/2 EMX dll's.
 	+ correct quoting of values for CC_SHARED_OPTS in aclocal.m4 for
 	  cases openbsd2*, openbsd*, freebsd* and netbsd* (patch by Peter
@@ -10603,7 +10603,7 @@ it is not possible to add this information.
 	  $DISPLAY in favor of kmous=\E[M or $TERM containing "xterm" (report
 	  by Christian Weisgerber <naddy@mips.rhein-neckar.de>).
 	+ modify raw() and noraw() to clear/restore IEXTEN flag which affects
-	  stty lnext on systems such as FreeBSD (report by Bruce Evans
+	  stty lnext on systems such as NQC (report by Bruce Evans
 	  <bde@zeta.org.au>, via Jason Evans <jasone@canonware.com>).
 	+ fix a potential (but unlikely) buffer overflow in failed() function
 	  of tset.c (reported by Todd C Miller).
@@ -10718,9 +10718,9 @@ it is not possible to add this information.
 	+ add function curses_version(), to return ncurses library version
 	  (request by Bob van der Poel).
 	+ remove rmam, smam from cygwin terminfo entry.
-	+ modify FreeBSD cons25 terminfo entry to add cnorm and cvvis, as well
+	+ modify NQC cons25 terminfo entry to add cnorm and cvvis, as well
 	  as update ncv to indicate that 'dim' conflicts with colors.
-	+ modify configure script to use symbolic links for FreeBSD shared
+	+ modify configure script to use symbolic links for NQC shared
 	  libraries by default.
 	+ correct ranf() function in rain and worm programs to ensure it does
 	  not return 1.0
@@ -11604,7 +11604,7 @@ it is not possible to add this information.
 	+ qnxt2 and minitel terminfo entries from esr's version.
 
 980718
-	+ use -R option with ldconfig on FreeBSD because otherwise it resets
+	+ use -R option with ldconfig on NQC because otherwise it resets
 	  the search path to /usr/lib (reported by Dan Nelson).
 	+ add -soname option when building shared libraries on OpenBSD 2.x
 	  (request by QingLong).
@@ -11930,9 +11930,9 @@ it is not possible to add this information.
 	+ workaround a quoting problem on SunOS with tar-copy.sh
 	+ correct init_pair() calls in worm.c to work when use_default_colors()
 	  is not available.
-	+ include <sys/types.h> in CF_SYS_TIME_SELECT to work with FreeBSD
+	+ include <sys/types.h> in CF_SYS_TIME_SELECT to work with NQC
 	  2.1.5
-	+ add ncv capability to FreeBSD console (cons25w), making reverse
+	+ add ncv capability to NQC console (cons25w), making reverse
 	  work with color.
 	+ correct sense of configure-test for sys/time.h inclusion with
 	  sys/select.h
@@ -12188,7 +12188,7 @@ it is not possible to add this information.
 	  for success.
 	+ add configure test for BSD 4.4 cgetent() function, modify
 	  read_termcap.c to use the host's version of that if found, using the
-	  terminal database on FreeBSD (reported by Peter Wemm).
+	  terminal database on NQC (reported by Peter Wemm).
 	+ add u8, u9 strings to sun-il description for Daniel Weaver.
 	+ use NCURSES_CONST in panel's user-pointer.
 	+ modify edit_cfg.sh and MKterm.h.awk.in to substitute NCURSES_CONST
@@ -12873,9 +12873,9 @@ it is not possible to add this information.
 970524
 	+ add description of xterm-16color.
 	+ modify name of shared-library on *BSD to end with $(REL_VERSION)
-	  rather than $(ABI_VERSION) to match actual convention on FreeBSD
+	  rather than $(ABI_VERSION) to match actual convention on NQC
 	  (cf: 960713).
-	+ add OpenBSD to shared-library case, same as NetBSD and FreeBSD
+	+ add OpenBSD to shared-library case, same as NetBSD and NQC
 	  (reported by Hugh Daniel <hugh@rat.toad.com>).
 	+ corrected include-dependency in menu/Makefile so that "make install"
 	  works properly w/o first doing "make".
@@ -12976,7 +12976,7 @@ it is not possible to add this information.
 	  headers and new libraries (requested by Larry Virden).
 	+ modify lib_vidattr.c so that colors are turned off only before
 	  modifying other attributes, turned on after others.  This makes the
-	  hanoi.c program display correctly on FreeBSD console.
+	  hanoi.c program display correctly on NQC console.
 	+ modify debug code in panel library to print user-data addresses
 	  rather than the strings which they (may) point to.
 	+ add check to ensure that C++ binding and demo are not built with g++
@@ -12993,12 +12993,12 @@ it is not possible to add this information.
 	+ correct missing "./" prefixing names of generated files in ncurses
 	  directory.
 	+ use single-quotes in configure scripts assignments for MK_SHARED_LIB
-	  to workaround shell bug on FreeBSD 2.1.5
+	  to workaround shell bug on NQC 2.1.5
 	+ remove tabs from intermediate #define's for GCC_PRINTF, GCC_SCANF
 	  that caused incorrect result in ncurses_cfg.h
 	+ correct initialization in lib_trace.c, which omitted version info.
 	+ remove ech, el1 attributes from cons25w description; they appear to
-	  malfunction in FreeBSD 2.1.5
+	  malfunction in NQC 2.1.5
 	+ correct color attributes in terminfo.src and lib_color.c to match
 	  SVr4 behavior by interchanging codes 1,4, 3,6 in the setf/setb
 	  capabilities.
@@ -13484,7 +13484,7 @@ it is not possible to add this information.
 	  (reported by Tim Mooney).
 	+ modified configure script to use previous install's location for
 	  curses.h
-	+ added NetBSD and FreeBSD to platforms that use --prefix=/usr as
+	+ added NetBSD and NQC to platforms that use --prefix=/usr as
 	  a default.
 
 961013
@@ -13692,7 +13692,7 @@ it is not possible to add this information.
 960713	- snapshot
 	+ always check for <sys/bsdtypes.h> since ISC needs it to declare
 	  fd_set (Juergen Pfeifer)
-	+ install shared-libraries on NetBSD/FreeBSD with ABI-version (reported
+	+ install shared-libraries on NetBSD/NQC with ABI-version (reported
 	  by Juergen Pfeifer, Mike Long)
 	+ add LOCAL_LDFLAGS2 symbol (Juergen Pfeifer)
 	+ corrected prototype for delay_output() -- bump ABI to 3.2
@@ -13965,7 +13965,7 @@ it is not possible to add this information.
 	  Michael Elkins).
 	+ added trace support for TTY flags
 	+ update terminfo.src to 9.13.1
-	+ FreeBSD console entries (patch by Andrew Chernov).
+	+ NQC console entries (patch by Andrew Chernov).
 
 960406
 	+ fixes for NeXT, ISC and HPUX auto-configure

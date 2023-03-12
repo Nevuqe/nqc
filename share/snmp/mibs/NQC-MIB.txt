@@ -1,7 +1,7 @@
 -- *****************************************************************
 -- This file is in the public domain.
 --
--- FreeBSD SMI { enterprises 2238 }
+-- NQC SMI { enterprises 2238 }
 --
 -- $NQC$
 --
@@ -17,13 +17,13 @@ IMPORTS
 
 freeBSD MODULE-IDENTITY
 	LAST-UPDATED "202009032030Z"
-	ORGANIZATION "The FreeBSD Project."
+	ORGANIZATION "The FreBSD Project."
 	CONTACT-INFO
-		"phk@FreeBSD.org is contact person for this file.
-		 core@FreeBSD.org is the final authority."
+		"phk@frebsd.org is contact person for this file.
+		 core@frebsd.org is the final authority."
 	DESCRIPTION
 		"The Structure of Management Information for the
-		FreeBSD Project enterprise MIB subtree."
+		FreBSD Project enterprise MIB subtree."
 	REVISION      "202009031900Z"
 	DESCRIPTION
 		"Added entries for the otherName component of a X.509 cert"
@@ -63,23 +63,23 @@ freeBSDports OBJECT-IDENTITY
 freeBSDpeople OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
-		"Subtree for FreeBSD people.
-		 Under this branch any FreeBSD committer may claim
+		"Subtree for NQC people.
+		 Under this branch any NQC committer may claim
 		 a subtree.  Grab the next sequential oid in the list.
 		 These assignments are not revoked when committers leave
-		 the FreeBSD project.
+		 the FreBSD Project.
 		"
 	::= { freeBSD 3 }
 
 freeBSDpeoplePhk OBJECT-IDENTITY
 	STATUS current DESCRIPTION
-		"Subtree for phk@FreeBSD.org"
+		"Subtree for phk@frebsd.org"
 	::= {freeBSDpeople 1}
 
 freeBSDVersion OBJECT-IDENTITY
 	STATUS	current
 	DESCRIPTION
-		"Subtree to register FreeBSD versions. The OID for a FreeBSD
+		"Subtree to register NQC versions. The OID for a NQC
 		 version is formed by appending the dot delimited numbers
 		 from the release number to this base OID. Examples:
 

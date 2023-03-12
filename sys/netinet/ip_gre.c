@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
  *
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
- * Copyright (c) 2014, 2018 Andrey V. Elsukov <ae@FreeBSD.org>
+ * Copyright (c) 2014, 2018 Andrey V. Elsukov <ae@frebsd.org>
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation

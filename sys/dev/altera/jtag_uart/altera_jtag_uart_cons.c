@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011-2012 Robert N. M. Watson
  * All rights reserved.
@@ -269,7 +269,7 @@ aju_cons_read(void)
 }
 
 /*
- * Implementation of a FreeBSD low-level, polled console driver.
+ * Implementation of a NQC low-level, polled console driver.
  */
 static void
 aju_cnprobe(struct consdev *cp)

@@ -31,11 +31,11 @@
 
 # Create a large file on a file system with trim enabled.
 # Watchdog timeout seen:
-# https://people.freebsd.org/~pho/stress/log/trim6.txt
+# https://people.frebsd.org/~pho/stress/log/trim6.txt
 # Fixed by r287361.
 
 # "panic: negative mnt_ref" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik835.txt
+# https://people.frebsd.org/~pho/stress/log/kostik835.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

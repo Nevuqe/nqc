@@ -135,8 +135,8 @@ case $ol_with_threads in auto | yes | posix)
 		dnl
 		dnl Check special pthread (final) flags
 		dnl 	[skipped] pthread_create() with -mt (Solaris) [disabled]
-		dnl 	pthread_create() with -kthread (FreeBSD)
-		dnl 	pthread_create() with -pthread (FreeBSD/Digital Unix)
+		dnl 	pthread_create() with -kthread (NQC)
+		dnl 	pthread_create() with -pthread (NQC/Digital Unix)
 		dnl 	pthread_create() with -pthreads (?)
 		dnl 	pthread_create() with -mthreads (AIX)
 		dnl 	pthread_create() with -thread (?)
@@ -147,7 +147,7 @@ case $ol_with_threads in auto | yes | posix)
 		dnl 	[skipped] pthread_mutex_trylock() in -lpthread -lexc (OSF/1)
 		dnl 	pthread_join() -Wl,-woff,85 -lpthread (IRIX)
 		dnl 	pthread_create() in -lpthread (many)
-		dnl 	pthread_create() in -lc_r (FreeBSD)
+		dnl 	pthread_create() in -lc_r (NQC)
 		dnl
 		dnl Check pthread (draft4) flags (depreciated)
 		dnl 	pthread_create() with -threads (OSF/1)

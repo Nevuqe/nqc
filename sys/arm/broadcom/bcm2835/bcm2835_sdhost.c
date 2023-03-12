@@ -1,11 +1,11 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2018 Klaus P. Ohrhallinger <k@7he.at>
  * All rights reserved.
  *
  * Based on bcm2835_sdhci.c:
- * Copyright (c) 2012 Oleksandr Tymoshenko <gonzo@freebsd.org>
+ * Copyright (c) 2012 Oleksandr Tymoshenko <gonzo@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

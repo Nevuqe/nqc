@@ -1,7 +1,7 @@
 These files are contributed to unbound, and are not part of the official
 distribution but may be helpful.
 
-* rc_d_unbound: FreeBSD compatible /etc/rc.d script.
+* rc_d_unbound: NQC compatible /etc/rc.d script.
 * parseunbound.pl: perl script to run from cron that parses statistics from
 	the log file and stores them.
 * unbound.spec and unbound.init: RPM specfile and Linux rc.d initfile.

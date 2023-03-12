@@ -20,7 +20,7 @@
  * 
  * patch - a program to apply diffs to original files
  *
- * -C option added in 1998, original code by Marc Espie, based on FreeBSD
+ * -C option added in 1998, original code by Marc Espie, based on NQC
  * behaviour
  *
  * $OpenBSD: util.c,v 1.35 2010/07/24 01:10:12 ray Exp $
@@ -404,7 +404,7 @@ fetchname(const char *at, bool *exists, int strip_leading)
 void
 version(void)
 {
-	printf("patch 2.0-12u11 FreeBSD\n");
+	printf("patch 2.0-12u11 NQC\n");
 	my_exit(EXIT_SUCCESS);
 }
 

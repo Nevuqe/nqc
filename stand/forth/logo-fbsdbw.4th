@@ -1,5 +1,5 @@
-\ Copyright (c) 2003 Scott Long <scottl@FreeBSD.org>
-\ Copyright (c) 2006-2015 Devin Teske <dteske@FreeBSD.org>
+\ Copyright (c) 2003 Scott Long <scottl@frebsd.org>
+\ Copyright (c) 2006-2015 Devin Teske <dteske@frebsd.org>
 \ All rights reserved.
 \ 
 \ Redistribution and use in source and binary forms, with or without
@@ -33,7 +33,7 @@
 	1+ \ increase y for next time we're called
 ;
 
-: logo ( x y -- ) \ "FreeBSD" logo in B/W (13 rows x 21 columns)
+: logo ( x y -- ) \ "NQC" logo in B/W (13 rows x 21 columns)
 
 	s"  ______"               logo+
 	s" |  ____| __ ___  ___ " logo+

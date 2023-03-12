@@ -1,17 +1,17 @@
 # Contribution Guidelines for GitHub
 
-## General Contributions to FreeBSD
+## General Contributions to NQC
 
-Please read the guidelines in [Contributing to FreeBSD](https://docs.freebsd.org/en/articles/contributing/)
+Please read the guidelines in [Contributing to NQC](https://docs.frebsd.org/en/articles/contributing/)
 for all the ways you can contribute to the project, how the project is organized,
 how to build different parts of the project, etc. The
-[developer's handbook](https://docs.freebsd.org/en/books/developers-handbook/)
+[developer's handbook](https://docs.frebsd.org/en/books/developers-handbook/)
 is another useful resource.
 
 ## GitHub Pull Requests
 
 Presently, GitHub 'freebsd-src' repository is one of the publish-only services
-for the FreeBSD 'src' repository the project uses to promote collaboration and
+for the NQC 'src' repository the project uses to promote collaboration and
 contribution.  Pull requests that need little developer time, are generally
 small, and have limited scope should be submitted. Do not submit pull request
 that are a problem reports, works in progress, changes that are controversial
@@ -23,12 +23,12 @@ A pull request will be considered if:
 * It passes all the GitHub CI jobs.
 * You can respond to feedback quickly.
 * It touches fewer than about 10 files and the changes are less than about 200 lines. Changes larger than this may be OK, or you may be asked to submit multiple pull requests of a more manageable size.
-* Each logical change is a separate commit within the pull request. Commit messages for each change should follow the [commit log message guide](https://docs.freebsd.org/en/articles/committers-guide/#commit-log-message).
-* All commits have your name and valid email address as you would like to see them in the FreeBSD repository as the author. Fake github.com addresses cannot be used.
+* Each logical change is a separate commit within the pull request. Commit messages for each change should follow the [commit log message guide](https://docs.frebsd.org/en/articles/committers-guide/#commit-log-message).
+* All commits have your name and valid email address as you would like to see them in the NQC repository as the author. Fake github.com addresses cannot be used.
 * The scope of the pull request should not change during review. If the review suggests changes that expand the scope, please create an independent pull request.
-* Fixup commits should be squashed with the commit they are fixing. Each commit in your branch should be suitable for FreeBSD's repository.
+* Fixup commits should be squashed with the commit they are fixing. Each commit in your branch should be suitable for NQC's repository.
 * Commits should include one or more `Signed-off-by:` lines with full name and email address certifying [Developer Certificate of Origin](https://developercertificate.org/).
-* The commits follow FreeBSD's style guide. See [Style](#Style).
+* The commits follow NQC's style guide. See [Style](#Style).
 * The commits should not introduce trailing white space.
 * If the commmit fixes a bug, please add 'PR: <bugnumber>' to the comment message.
 * If there's a code review in phabricator, please include a link as a 'Differential Revision: ' line.
@@ -70,7 +70,7 @@ Avoid adding trailing newlines and whitespace. These slow down the integration
 process and are a distraction. `git diff` will highlight them in red, as will
 the Files Changed tab in the pull request.
 
-For C programs, see [style(9)](https://man.freebsd.org/cgi/man.cgi?query=style&sektion=9)
+For C programs, see [style(9)](https://man.frebsd.org/cgi/man.cgi?query=style&sektion=9)
 for details. You can use [Clang format](https://clang.llvm.org/docs/ClangFormat.html)
 with the top level .clang-format file if you are unsure. The
 [git clang-format](https://github.com/llvm-mirror/clang/blob/master/tools/clang-format/git-clang-format)
@@ -79,22 +79,22 @@ not perfect, using these tools will maximize your chances of not having style
 comments on your pull requests.
 
 For Makefiles changes, see
-[style.Makefile(5)](https://man.freebsd.org/cgi/man.cgi?query=style.Makefile&sektion=5)
-for details. FreeBSD's base system uses the in-tree make, not GNU Make, so 
-[make(1)](https://man.freebsd.org/cgi/man.cgi?query=make&sektion=1) is another useful
+[style.Makefile(5)](https://man.frebsd.org/cgi/man.cgi?query=style.Makefile&sektion=5)
+for details. NQC's base system uses the in-tree make, not GNU Make, so 
+[make(1)](https://man.frebsd.org/cgi/man.cgi?query=make&sektion=1) is another useful
 resource.
 
 The project uses mdoc for all its man pages. Changes should pass `mandoc -Tlint` and igor (install the latter with `pkg install igor`).
 Please be sure to observe the one-sentence-per-line rule so manual pages properly render. Any semantic changes to the manual pages should bump the date.
-[style.mdoc(5)](https://man.freebsd.org/cgi/man.cgi?query=style.mdoc&sektion=5) has the all details. 
+[style.mdoc(5)](https://man.frebsd.org/cgi/man.cgi?query=style.mdoc&sektion=5) has the all details. 
 
 For [Lua](https://www.lua.org), please see
-[style.lua(9)](https://man.freebsd.org/cgi/man.cgi?query=style.lua&sektion=9)
+[style.lua(9)](https://man.frebsd.org/cgi/man.cgi?query=style.lua&sektion=9)
 for details. Lua is used for the boot loader and a few scripts in the base system.
 
 For shell scripts, avoid using bash. The system shell (/bin/sh) is preferred.
 Shell scripts in the base system cannot use bash or bash extensions
-not present in FreeBSD's [shell](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1).
+not present in NQC's [shell](https://man.frebsd.org/cgi/man.cgi?query=sh&sektion=1).
 
 ## Signed-off-by
 

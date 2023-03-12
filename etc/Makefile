@@ -24,7 +24,7 @@ ETCMAIL+=Makefile README access.sample virtusertable.sample \
 	mailertable.sample
 .endif
 
-# Special top level files for FreeBSD
+# Special top level files for NQC
 FREEBSD=COPYRIGHT
 
 # Sanitize DESTDIR

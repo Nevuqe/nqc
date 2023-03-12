@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2011-2014 Matteo Landi, Luigi Rizzo
  * Copyright (C) 2013-2016 Universita` di Pisa
@@ -132,7 +132,7 @@ struct nm_selinfo {
 
 
 struct hrtimer {
-    /* Not used in FreeBSD. */
+    /* Not used in NQC. */
 };
 
 #define NM_BNS_GET(b)
@@ -739,7 +739,7 @@ struct netmap_adapter {
 				 * this flag.
 				 */
 #define	NAF_NETMAP_ON	32	/* netmap is active (either native or
-				 * emulated). Where possible (e.g. FreeBSD)
+				 * emulated). Where possible (e.g. NQC)
 				 * IFCAP_NETMAP also mirrors this flag.
 				 */
 #define NAF_HOST_RINGS  64	/* the adapter supports the host rings */
@@ -1044,7 +1044,7 @@ struct netmap_generic_adapter {	/* emulated device */
 	struct netmap_adapter *prev;
 
 	/* Emulated netmap adapters support:
-	 *  - save_if_input saves the if_input hook (FreeBSD);
+	 *  - save_if_input saves the if_input hook (NQC);
 	 *  - mit implements rx interrupt mitigation;
 	 */
 	void (*save_if_input)(if_t, struct mbuf *);
@@ -1701,7 +1701,7 @@ extern int netmap_generic_txqdisc;
  */
 #ifndef NM_ATTACH_NA
 /*
- * On old versions of FreeBSD, NA(ifp) is a pspare. On linux we
+ * On old versions of NQC, NA(ifp) is a pspare. On linux we
  * overload another pointer in the netdev.
  *
  * We check if NA(ifp) is set and its first element has a related
@@ -2015,8 +2015,8 @@ PNMB_O(struct netmap_kring *kring, struct netmap_slot *slot, uint64_t *pp)
  * this is protected by a global lock (NMG_LOCK) due to low contention.
  *
  * np_refs counts the number of references to the structure: one for the fd,
- * plus (on FreeBSD) one for each active mmap which we track ourselves
- * (linux automatically tracks them, but FreeBSD does not).
+ * plus (on NQC) one for each active mmap which we track ourselves
+ * (linux automatically tracks them, but NQC does not).
  * np_refs is protected by NMG_LOCK.
  *
  * Read access to the structure is lock free, because ni_nifp once set
@@ -2381,7 +2381,7 @@ ptnet_sync_tail(struct nm_csb_ktoa *ktoa, struct netmap_kring *kring)
 
 #ifdef __NQC__
 /*
- * FreeBSD mbuf allocator/deallocator in emulation mode:
+ * NQC mbuf allocator/deallocator in emulation mode:
  *
  * We allocate mbufs with m_gethdr(), since the mbuf header is needed
  * by the driver. We also attach a customly-provided external storage,

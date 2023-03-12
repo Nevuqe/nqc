@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 Maksym Sobolyev <sobomax@FreeBSD.org>
+ * Copyright (c) 2016 Maksym Sobolyev <sobomax@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 1996-1998 John D. Polstra.
  * All rights reserved.
@@ -64,7 +64,7 @@ struct sysentvec elf64_nqc_sysvec_la48 = {
 	.sv_sigcode	= _binary_elf_vdso_so_1_start,
 	.sv_szsigcode	= (int *)&_binary_elf_vdso_so_1_size,
 	.sv_sigcodeoff	= VDSO_SIGCODE_OFFSET,
-	.sv_name	= "FreeBSD ELF64",
+	.sv_name	= "NQC ELF64",
 	.sv_coredump	= __elfN(coredump),
 	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
@@ -107,7 +107,7 @@ struct sysentvec elf64_nqc_sysvec_la57 = {
 	.sv_sigcode	= _binary_elf_vdso_so_1_start,
 	.sv_szsigcode	= (int *)&_binary_elf_vdso_so_1_size,
 	.sv_sigcodeoff	= VDSO_SIGCODE_OFFSET,
-	.sv_name	= "FreeBSD ELF64",
+	.sv_name	= "NQC ELF64",
 	.sv_coredump	= __elfN(coredump),
 	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
@@ -183,7 +183,7 @@ nqc_brand_info_la57_img_compat(struct image_params *imgp,
 static Elf64_Brandinfo nqc_brand_info_la48 = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
 	.sysvec		= &elf64_nqc_sysvec_la48,
@@ -195,7 +195,7 @@ static Elf64_Brandinfo nqc_brand_info_la48 = {
 static Elf64_Brandinfo nqc_brand_info_la57 = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
 	.sysvec		= &elf64_nqc_sysvec_la57,
@@ -222,7 +222,7 @@ SYSINIT(elf64, SI_SUB_EXEC, SI_ORDER_FIRST,
 static Elf64_Brandinfo nqc_brand_oinfo = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/usr/libexec/ld-elf.so.1",
 	.sysvec		= &elf64_nqc_sysvec_la48,
@@ -237,7 +237,7 @@ SYSINIT(oelf64, SI_SUB_EXEC, SI_ORDER_ANY,
 static Elf64_Brandinfo knqc_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_X86_64,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld-kfreebsd-x86-64.so.1",
 	.sysvec		= &elf64_nqc_sysvec_la48,

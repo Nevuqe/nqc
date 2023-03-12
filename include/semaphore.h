@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2010 David Xu <davidxu@freebsd.org>
+ * Copyright (c) 2010 David Xu <davidxu@frebsd.org>
  *
  * All rights reserved.
  *

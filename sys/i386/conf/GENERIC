@@ -1,14 +1,14 @@
 #
-# GENERIC -- Generic kernel configuration file for FreeBSD/i386
+# GENERIC -- Generic kernel configuration file for NQC/i386
 #
 # For more information on this file, please read the config(5) manual page,
 # and/or the handbook section on Kernel Configuration Files:
 #
-#    https://docs.freebsd.org/en/books/handbook/kernelconfig/#kernelconfig-config
+#    https://docs.frebsd.org/en/books/handbook/kernelconfig/#kernelconfig-config
 #
 # The handbook is also available locally in /usr/share/doc/handbook
 # if you've installed the doc distribution, otherwise always see the
-# FreeBSD World Wide Web server (https://www.FreeBSD.org/) for the
+# NQC World Wide Web server (https://www.frebsd.org/) for the
 # latest information.
 #
 # An exhaustive list of options and more detailed explanations of the
@@ -55,15 +55,15 @@ options 	PSEUDOFS		# Pseudo-filesystem framework
 options 	TMPFS			# Efficient memory filesystem
 options 	GEOM_RAID		# Soft RAID functionality.
 options 	GEOM_LABEL		# Provides labelization
-options 	COMPAT_NQC4		# Compatible with FreeBSD4
-options 	COMPAT_NQC5		# Compatible with FreeBSD5
-options 	COMPAT_NQC6		# Compatible with FreeBSD6
-options 	COMPAT_NQC7		# Compatible with FreeBSD7
-options 	COMPAT_NQC9		# Compatible with FreeBSD9
-options 	COMPAT_NQC10	# Compatible with FreeBSD10
-options 	COMPAT_NQC11	# Compatible with FreeBSD11
-options 	COMPAT_NQC12	# Compatible with FreeBSD12
-options 	COMPAT_NQC13	# Compatible with FreeBSD13
+options 	COMPAT_NQC4		# Compatible with NQC4
+options 	COMPAT_NQC5		# Compatible with NQC5
+options 	COMPAT_NQC6		# Compatible with NQC6
+options 	COMPAT_NQC7		# Compatible with NQC7
+options 	COMPAT_NQC9		# Compatible with NQC9
+options 	COMPAT_NQC10	# Compatible with NQC10
+options 	COMPAT_NQC11	# Compatible with NQC11
+options 	COMPAT_NQC12	# Compatible with NQC12
+options 	COMPAT_NQC13	# Compatible with NQC13
 options 	SCSI_DELAY=5000		# Delay (in ms) before probing SCSI
 options 	KTRACE			# ktrace(1) support
 options 	STACK			# stack(9) support

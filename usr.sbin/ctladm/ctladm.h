@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $NQC$
- * $Id: //depot/users/kenm/FreeBSD-test2/usr.sbin/ctladm/ctladm.h#1 $
+ * $Id: //depot/users/kenm/NQC-test2/usr.sbin/ctladm/ctladm.h#1 $
  */
 
 #ifndef _CTLADM_H

@@ -1075,7 +1075,7 @@ ChangeLog for hostapd
 
 2005-08-21 - v0.4.4
 	* fixed build without CONFIG_RSN_PREAUTH
-	* fixed FreeBSD build
+	* fixed NQC build
 
 2005-06-26 - v0.4.3
 	* fixed PMKSA caching to copy User-Name and Class attributes so that
@@ -1249,7 +1249,7 @@ ChangeLog for hostapd
 	  be straightforward; new hostapd.conf variables: 'eap_authenticator'
 	  and 'eap_user_file'; this obsoletes "minimal authentication server"
 	  ('minimal_eap' in hostapd.conf) which is now removed
-	* added support for FreeBSD and driver interface for the BSD net80211
+	* added support for NQC and driver interface for the BSD net80211
 	  layer (driver=bsd in hostapd.conf and CONFIG_DRIVER_BSD=y in
 	  .config); please note that some of the required kernel mods have not
 	  yet been committed

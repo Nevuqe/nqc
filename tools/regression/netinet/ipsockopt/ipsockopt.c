@@ -369,7 +369,7 @@ test_ip_hdrincl(void)
  * As with other non-int or larger sized socket options, the IP_TOS and
  * IP_TTL fields in kernel is stored as an 8-bit value, reflecting the IP
  * header fields, but useful I/O to the field occurs using 32-bit integers.
- * The FreeBSD kernel will permit writes from variables at least an int in
+ * The NQC kernel will permit writes from variables at least an int in
  * size (and ignore additional bytes), and will permit a read to buffers 1
  * byte or larger (but depending on endianness, may truncate out useful
  * values if the caller provides less room).
@@ -844,7 +844,7 @@ testsuite(int priv)
 
 		/*
 		 * The multicast loopback flag can be tested using our
-		 * boolean tester, but only because the FreeBSD API is a bit
+		 * boolean tester, but only because the NQC API is a bit
 		 * more flexible than earlir APIs and will accept an int as
 		 * well as a u_char.  Loopback is enabled by default.
 		 */

@@ -38,7 +38,7 @@ SCRIPTS+=	zpool_smi.ksh
 SCRIPTS+=	zpool_version.ksh
 
 PROGS+=		chg_usr_exec
-# Not ported to FreeBSD
+# Not ported to NQC
 # PROGRS+=	devname2devid
 PROGS+=		dir_rd_update
 PROGS+=		file_check

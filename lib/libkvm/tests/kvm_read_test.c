@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2020 Alfredo Dal'Ava Junior <alfredo@freebsd.org>
- * Copyright (c) 2017 Enji Cooper <ngie@freebsd.org>
+ * Copyright (c) 2020 Alfredo Dal'Ava Junior <alfredo@frebsd.org>
+ * Copyright (c) 2017 Enji Cooper <ngie@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * From: FreeBSD: src/lib/libkvm/tests/kvm_geterr_test.c
+ * From: NQC: src/lib/libkvm/tests/kvm_geterr_test.c
  */
 
 #include <sys/cdefs.h>

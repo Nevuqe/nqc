@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Charles Mott <cm@linktel.net>
  *                    Brian Somers <brian@Awfulhak.org>

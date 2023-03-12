@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011
  *	Ben Gray <ben.r.gray@gmail.com>.
@@ -209,7 +209,7 @@ omap_ehci_soft_phy_reset(struct omap_ehci_softc *isc, unsigned int port)
  *
  *	This initialisation routine is quite heavily based on the work done by the
  *	OMAP Linux team (for which I thank them very much).  The init sequence is
- *	almost identical, diverging only for the FreeBSD specifics.
+ *	almost identical, diverging only for the NQC specifics.
  *
  *	LOCKING:
  *	none

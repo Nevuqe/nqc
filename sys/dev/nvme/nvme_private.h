@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2012-2014 Intel Corporation
  * All rights reserved.
@@ -97,7 +97,7 @@ MALLOC_DECLARE(M_NVME);
 #define NVME_MAX_AER_LOG_SIZE		(4096)
 
 /*
- * Define CACHE_LINE_SIZE here for older FreeBSD versions that do not define
+ * Define CACHE_LINE_SIZE here for older NQC versions that do not define
  *  it.
  */
 #ifndef CACHE_LINE_SIZE

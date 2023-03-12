@@ -179,7 +179,7 @@ CTASSERT(sizeof(struct disklabel) == 148 + BSD_NPARTS_MIN * 16);
 #define	FS_UDF		24		/* UDF */
 #define	FS_EFS		26		/* SGI's Extent File system */
 #define	FS_ZFS		27		/* Sun's ZFS */
-#define	FS_NANDFS	30		/* FreeBSD nandfs (NiLFS derived) */
+#define	FS_NANDFS	30		/* NQC nandfs (NiLFS derived) */
 
 /*
  * flags shared by various drives:

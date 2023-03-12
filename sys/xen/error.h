@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Roger Pau Monné <royger@FreeBSD.org>.
+ * Copyright (c) 2014 Roger Pau Monné <royger@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

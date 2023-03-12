@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Implementation of Utility functions for all SCSI device types.
  *
@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_scsi_all.c#2 $
+ * $Id: //depot/users/kenm/NQC-test2/sys/cam/ctl/ctl_scsi_all.c#2 $
  */
 
 #include <sys/param.h>

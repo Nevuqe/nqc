@@ -129,7 +129,7 @@ function setup_snap_env
 				fi
 				if is_nqc && [[ $dtst == $VOL ]]; then
 					# Though sync does start a fs sync on
-					# FreeBSD, it does not wait for it to
+					# NQC, it does not wait for it to
 					# finish.  We can force a blocking sync
 					# by updating the fs mount instead.
 					# Otherwise, the snapshot might occur

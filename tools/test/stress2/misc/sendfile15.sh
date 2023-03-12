@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -30,13 +30,13 @@
 # sendfile() over socket pairs test.
 
 # Page fault in unp_dispose+0x90 seen:
-# https://people.freebsd.org/~pho/stress/log/sendfile15.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile15.txt
 
 # "panic: bad pte va 800657000 pte 0" seen:
-# https://people.freebsd.org/~pho/stress/log/sendfile15-2.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile15-2.txt
 
 # "panic: vm_page_free_prep 0xfffff817e0efac10 PG_ZERO 87 ...":
-# https://people.freebsd.org/~pho/stress/log/sendfile15-2.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile15-2.txt
 # Note that r334783 seems to alleviate the problem.
 
 . ../default.cfg

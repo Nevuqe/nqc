@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1994-1996 Søren Schmidt
  * Copyright (c) 2006 Roman Divacky
  * All rights reserved.
- * Copyright (c) 2013 Dmitry Chagin <dchagin@FreeBSD.org>
+ * Copyright (c) 2013 Dmitry Chagin <dchagin@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -268,7 +268,7 @@ linux_common_execve(struct thread *td, struct image_args *eargs)
 
 	/*
 	 * In a case of transition from Linux binary execing to
-	 * FreeBSD binary we destroy Linux emuldata thread & proc entries.
+	 * NQC binary we destroy Linux emuldata thread & proc entries.
 	 */
 	if (SV_CURPROC_ABI() != SV_ABI_LINUX) {
 		PROC_LOCK(p);

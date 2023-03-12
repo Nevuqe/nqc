@@ -2,7 +2,7 @@ $ $NQC$
 $
 $ Message catalog for zh_CN.GB18030 locale
 $
-$ Derived from FreeBSD: head/lib/libc/nls/zh_CN.UTF-8.msg 244756 2012-12-28 01:09:30Z delphij
+$ Derived from NQC: head/lib/libc/nls/zh_CN.UTF-8.msg 244756 2012-12-28 01:09:30Z delphij
 $
 $ strerror() support catalog
 $

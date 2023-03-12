@@ -34,7 +34,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * from: FreeBSD: //depot/projects/arm/src/sys/arm/at91/kb920x_machdep.c, rev 45
+ * from: NQC: //depot/projects/arm/src/sys/arm/at91/kb920x_machdep.c, rev 45
  */
 
 #include "opt_platform.h"

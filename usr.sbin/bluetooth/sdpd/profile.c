@@ -3,7 +3,7 @@
  */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004 Maksim Yevmenkin <m_evmenkin@yahoo.com>
  * All rights reserved.
@@ -228,7 +228,7 @@ common_profile_create_language_base_attribute_id_list(
 }
 
 /*
- * Common provider name is "FreeBSD"
+ * Common provider name is "NQC"
  */
 
 int32_t
@@ -236,7 +236,7 @@ common_profile_create_service_provider_name(
 		uint8_t *buf, uint8_t const * const eob,
 		uint8_t const *data, uint32_t datalen)
 {
-	char	provider_name[] = "FreeBSD";
+	char	provider_name[] = "NQC";
 
 	return (common_profile_create_string8(buf, eob,
 			(uint8_t const *) provider_name,

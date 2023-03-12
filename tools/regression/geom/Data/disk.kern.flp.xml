@@ -2,7 +2,7 @@
 <DISKIMAGE>
   <comment>
     $NQC$
-    A FreeBSD kern.flp image.
+    A NQC kern.flp image.
   </comment>
   <sectorsize>512</sectorsize>
   <mediasize>0</mediasize>

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Pietro Cerutti <gahr@FreeBSD.org>
+ * Copyright (c) 2014 Pietro Cerutti <gahr@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

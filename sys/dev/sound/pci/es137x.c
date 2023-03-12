@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND BSD-4-Clause
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-4-Clause
  *
  * Copyright (c) 1999 Russell Cattelan <cattelan@thebarn.com>
  * Copyright (c) 1998 Joachim Kuebart <joachim.kuebart@gmx.net>
@@ -28,7 +28,7 @@
  */
 
 /*-
- * Copyright (c) 1999 Cameron Grant <cg@freebsd.org>
+ * Copyright (c) 1999 Cameron Grant <cg@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1345,7 +1345,7 @@ es_pci_probe(device_t dev)
 			device_set_desc(dev, "AudioPCI ES1371-?");
 			device_printf(dev,
 			    "unknown revision %d -- please report to "
-			    "freebsd-multimedia@freebsd.org\n",
+			    "freebsd-multimedia@frebsd.org\n",
 			    pci_get_revid(dev));
 			return (BUS_PROBE_DEFAULT);
 		}
@@ -1353,7 +1353,7 @@ es_pci_probe(device_t dev)
 		device_set_desc(dev, "Strange AudioPCI ES1371-? (vid=3274)");
 		device_printf(dev,
 		    "unknown revision %d -- please report to "
-		    "freebsd-multimedia@freebsd.org\n", pci_get_revid(dev));
+		    "freebsd-multimedia@frebsd.org\n", pci_get_revid(dev));
 		return (BUS_PROBE_DEFAULT);
 	case CT4730_PCI_ID:
 		switch(pci_get_revid(dev)) {
@@ -1365,7 +1365,7 @@ es_pci_probe(device_t dev)
 			device_set_desc(dev, "Creative SB AudioPCI CT4730-?");
 			device_printf(dev,
 			    "unknown revision %d -- please report to "
-			    "freebsd-multimedia@freebsd.org\n",
+			    "freebsd-multimedia@frebsd.org\n",
 			    pci_get_revid(dev));
 			return (BUS_PROBE_DEFAULT);
 		}
@@ -1384,7 +1384,7 @@ es_pci_probe(device_t dev)
 			device_set_desc(dev, "Creative CT5880-?");
 			device_printf(dev,
 			    "unknown revision %d -- please report to "
-			    "freebsd-multimedia@freebsd.org\n",
+			    "freebsd-multimedia@frebsd.org\n",
 			    pci_get_revid(dev));
 			return (BUS_PROBE_DEFAULT);
 		}

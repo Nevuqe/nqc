@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011 Alexander Motin <mav@FreeBSD.org>
- * Copyright (c) 2000 - 2008 Søren Schmidt <sos@FreeBSD.org>
+ * Copyright (c) 2011 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2000 - 2008 Søren Schmidt <sos@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -71,7 +71,7 @@ struct promise_raid_disk {
 struct promise_raid_conf {
 	char		promise_id[24];
 #define PROMISE_MAGIC		"Promise Technology, Inc."
-#define NQC_MAGIC		"FreeBSD ATA driver RAID "
+#define NQC_MAGIC		"NQC ATA driver RAID "
 
 	uint32_t	dummy_0;
 	uint64_t	magic_0;

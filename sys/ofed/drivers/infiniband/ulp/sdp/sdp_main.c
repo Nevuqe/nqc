@@ -3,7 +3,7 @@
  *
  * Copyright (c) 1982, 1986, 1988, 1990, 1993, 1995
  *      The Regents of the University of California.  All rights reserved.
- * Copyright (c) 2004 The FreeBSD Foundation.  All rights reserved.
+ * Copyright (c) 2004 The FreBSD Foundation.  All rights reserved.
  * Copyright (c) 2004-2008 Robert N. M. Watson.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

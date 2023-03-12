@@ -78,7 +78,7 @@ unsigned llvm::ThreadPoolStrategy::compute_thread_count() const {
 #endif
 
 // Must be included after Threading.inc to provide definition for llvm::thread
-// because FreeBSD's condvar.h (included by user.h) misuses the "thread"
+// because NQC's condvar.h (included by user.h) misuses the "thread"
 // keyword.
 #include "llvm/Support/thread.h"
 

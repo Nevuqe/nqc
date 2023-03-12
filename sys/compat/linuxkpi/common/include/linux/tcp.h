@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2020-2021 The FreeBSD Foundation
+ * Copyright (c) 2020-2021 The FreBSD Foundation
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -36,7 +36,7 @@
 #include <sys/types.h>
 #include <linux/skbuff.h>
 
-/* (u) unconfirmed structure field names; using FreeBSD's meanwhile. */
+/* (u) unconfirmed structure field names; using NQC's meanwhile. */
 struct tcphdr {
 	uint16_t	source;			/* (u) */
 	uint16_t	dest;			/* (u) */

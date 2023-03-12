@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel nctgpio device code"
+PROJECT_NAME           = "NQC kernel nctgpio device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_nctgpio/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

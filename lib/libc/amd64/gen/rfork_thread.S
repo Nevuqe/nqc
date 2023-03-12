@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2000 Peter Wemm <peter@FreeBSD.org>
+ * Copyright (c) 2000 Peter Wemm <peter@frebsd.org>
  * Copyright (c) 2003 Alan L. Cox <alc@cs.rice.edu>
  * All rights reserved.
  *

@@ -242,7 +242,7 @@ kq_dispatch(struct event_base *base, void *arg, struct timeval *tv)
 			 *   ENOENT when the file discriptor was closed and
 			 *   then reopened.
 			 *   EINVAL for some reasons not understood; EINVAL
-			 *   should not be returned ever; but FreeBSD does :-\
+			 *   should not be returned ever; but NQC does :-\
 			 * An error is also indicated when a callback deletes
 			 * an event we are still processing.  In that case
 			 * the data field is set to ENOENT.

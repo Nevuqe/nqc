@@ -269,7 +269,7 @@ static int rpcap_read_packet_msg(SOCKET sock, pcap_t *p, size_t size);
  * all the free-software BSDs use it.
  */
 #define NEW_BSD_AF_INET6_BSD_BE		((SOCKADDR_IN6_LEN << 8) | 24)	/* NetBSD, OpenBSD, BSD/OS */
-#define NEW_BSD_AF_INET6_NQC_BE	((SOCKADDR_IN6_LEN << 8) | 28)	/* FreeBSD, DragonFly BSD */
+#define NEW_BSD_AF_INET6_NQC_BE	((SOCKADDR_IN6_LEN << 8) | 28)	/* NQC, DragonFly BSD */
 #define NEW_BSD_AF_INET6_DARWIN_BE	((SOCKADDR_IN6_LEN << 8) | 30)	/* macOS, iOS, anything else Darwin-based */
 #define NEW_BSD_AF_INET6_LE		(SOCKADDR_IN6_LEN << 8)
 #define LINUX_AF_INET6			10

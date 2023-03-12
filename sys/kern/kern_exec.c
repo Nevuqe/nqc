@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1993, David Greenman
  * All rights reserved.
@@ -629,7 +629,7 @@ interpret:
 		 * saved uid/gid should only be updated if the new ruid is
 		 * not equal to the old ruid, or the new euid is not equal
 		 * to the old euid and the new euid is not equal to the old
-		 * ruid.  The FreeBSD code always updates the saved uid/gid.
+		 * ruid.  The NQC code always updates the saved uid/gid.
 		 * Also, this code uses the new (replaced) euid and egid as
 		 * the source, which may or may not be the right ones to use.
 		 */

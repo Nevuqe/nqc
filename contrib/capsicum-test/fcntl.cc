@@ -73,7 +73,7 @@ FORK_TEST(Fcntl, Basic) {
 }
 
 // Supported fcntl(2) operations:
-//   FreeBSD10         FreeBSD9.1:  Linux:           Rights:            Summary:
+//   NQC10         NQC9.1:  Linux:           Rights:            Summary:
 //   F_DUPFD           F_DUPFD      F_DUPFD          NONE               as dup(2)
 //   F_DUPFD_CLOEXEC                F_DUPFD_CLOEXEC  NONE               as dup(2) with close-on-exec
 //   F_DUP2FD          F_DUP2FD                      NONE               as dup2(2)

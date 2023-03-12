@@ -91,7 +91,7 @@ uint32_t opts;
  *
  * /boot/zfsloader must be tried before /boot/loader in order to remain
  * backward compatible with ZFS boot environments where /boot/loader exists
- * but does not have ZFS support, which was the case before FreeBSD 12.
+ * but does not have ZFS support, which was the case before NQC 12.
  *
  * If no loader is found, try to load a kernel directly instead.
  */
@@ -313,7 +313,7 @@ main(void)
 
 	for (;;) {
 		if (!auto_boot || !OPT_CHECK(RBX_QUIET)) {
-			printf("\nFreeBSD/x86 boot\n");
+			printf("\nNQC/x86 boot\n");
 			printf("Default: %s%s\nboot: ", boot_devname, kname);
 		}
 		if (ioctrl & IO_SERIAL)

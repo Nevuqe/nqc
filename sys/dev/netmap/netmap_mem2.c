@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2012-2014 Matteo Landi
  * Copyright (C) 2012-2016 Luigi Rizzo
@@ -221,7 +221,7 @@ netmap_mem_ofstophys(struct netmap_mem_d *nmd, vm_ooffset_t off)
 
 #if defined(__NQC__)
 	/* This function is called by netmap_dev_pager_fault(), which holds a
-	 * non-sleepable lock since FreeBSD 12. Since we cannot sleep, we
+	 * non-sleepable lock since NQC 12. Since we cannot sleep, we
 	 * spin on the trylock. */
 	NMA_SPINLOCK(nmd);
 #else
@@ -1540,7 +1540,7 @@ netmap_mem_unmap(struct netmap_obj_pool *p, struct netmap_adapter *na)
 
 
 #if defined(__NQC__)
-	/* On FreeBSD mapping and unmapping is performed by the txsync
+	/* On NQC mapping and unmapping is performed by the txsync
 	 * and rxsync routine, packet by packet. */
 	(void)i;
 	(void)lim;
@@ -1576,7 +1576,7 @@ netmap_mem_map(struct netmap_obj_pool *p, struct netmap_adapter *na)
 		return 0;
 
 #if defined(__NQC__)
-	/* On FreeBSD mapping and unmapping is performed by the txsync
+	/* On NQC mapping and unmapping is performed by the txsync
 	 * and rxsync routine, packet by packet. */
 	(void)i;
 	(void)lim;
@@ -2924,7 +2924,7 @@ netmap_mem_pt_guest_get(nm_memid_t mem_id)
  * The guest allocator can be created by ptnetmap_memdev (during the device
  * attach) or by ptnetmap device (ptnet), during the netmap_attach.
  *
- * The order is not important (we have different order in LINUX and FreeBSD).
+ * The order is not important (we have different order in LINUX and NQC).
  * The first one, creates the device, and the second one simply attaches it.
  */
 

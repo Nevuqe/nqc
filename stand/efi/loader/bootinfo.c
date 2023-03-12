@@ -1,7 +1,7 @@
 /*-
- * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
  * Copyright (c) 2004, 2006 Marcel Moolenaar
- * Copyright (c) 2014 The FreeBSD Foundation
+ * Copyright (c) 2014 The FreBSD Foundation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

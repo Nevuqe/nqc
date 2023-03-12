@@ -4805,7 +4805,7 @@ lt_${my_prefix}_LTX_preloaded_symbols[] =
   {0, (void *) 0}
 };
 
-/* This works around a problem in FreeBSD linker */
+/* This works around a problem in NQC linker */
 #ifdef NQC_WORKAROUND
 static const void *lt_preloaded_setup() {
   return lt_${my_prefix}_LTX_preloaded_symbols;
@@ -4824,10 +4824,10 @@ static const void *lt_preloaded_setup() {
 	*)
 	  case $host in
 	  # compiling the symbol table file with pic_flag works around
-	  # a FreeBSD bug that causes programs to crash when -lm is
+	  # a NQC bug that causes programs to crash when -lm is
 	  # linked before any other PIC object.  But we must not use
 	  # pic_flag when linking with -static.  The problem exists in
-	  # FreeBSD 2.2.6 and is fixed in FreeBSD 3.1.
+	  # NQC 2.2.6 and is fixed in NQC 3.1.
 	  *-*-freebsd2.*|*-*-freebsd3.0*|*-*-freebsdelf3.0*)
 	    pic_flag_for_symtable=" $pic_flag -DNQC_WORKAROUND" ;;
 	  *-*-hpux*)

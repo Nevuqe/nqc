@@ -710,9 +710,9 @@ ATF_TC_BODY(sendto_recvfrom, tc)
 
 #ifdef TEST_SEQ_PACKET_SOURCE_ADDRESS
 	/*
-	 * FreeBSD does not currently provide the source address for SEQ_PACKET
+	 * NQC does not currently provide the source address for SEQ_PACKET
 	 * AF_UNIX sockets, and POSIX does not require it, so these two checks
-	 * are disabled.  If FreeBSD gains that feature in the future, then
+	 * are disabled.  If NQC gains that feature in the future, then
 	 * these checks may be reenabled
 	 */
 	ATF_CHECK_EQ(PF_LOCAL, from.ss_family);

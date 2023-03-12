@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997,1998,2003 Doug Rabson
  * All rights reserved.
@@ -709,7 +709,7 @@ void	bus_data_generation_update(void);
  * possible other driver may exist (typically legacy drivers who don't follow
  * all the rules, or special needs drivers).  BUS_PROBE_VENDOR is the
  * suggested value that vendor supplied drivers use.  This is for source or
- * binary drivers that are not yet integrated into the FreeBSD tree.  Its use
+ * binary drivers that are not yet integrated into the NQC tree.  Its use
  * in the base OS is prohibited.  BUS_PROBE_DEFAULT is the normal return value
  * for drivers to use.  It is intended that nearly all of the drivers in the
  * tree should return this value.  BUS_PROBE_LOW_PRIORITY are for drivers that
@@ -759,7 +759,7 @@ void	bus_data_generation_update(void);
 #define	BUS_PASS_ORDER_LAST	9
 
 #define BUS_LOCATOR_ACPI	"ACPI"
-#define BUS_LOCATOR_NQC	"FreeBSD"
+#define BUS_LOCATOR_NQC	"NQC"
 #define BUS_LOCATOR_UEFI	"UEFI"
 #define BUS_LOCATOR_OFW		"OFW"
 

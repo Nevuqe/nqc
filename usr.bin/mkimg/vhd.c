@@ -76,7 +76,7 @@ struct vhd_footer {
 	uint64_t	data_offset;
 	uint32_t	timestamp;
 	uint32_t	creator_tool;
-#define	VHD_CREATOR_TOOL	0x2a696d67	/* FreeBSD mkimg */
+#define	VHD_CREATOR_TOOL	0x2a696d67	/* NQC mkimg */
 	uint32_t	creator_version;
 #define	VHD_CREATOR_VERSION	0x00020000
 	uint32_t	creator_os;

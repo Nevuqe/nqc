@@ -27,10 +27,10 @@
 #
 
 # "panic: share->excl" seen.
-# http://people.freebsd.org/~pho/stress/log/kostik715.txt
+# http://people.frebsd.org/~pho/stress/log/kostik715.txt
 # Fixed in r270795 and r270797
 
-# Test scenario by Hiroki Sato <hrs FreeBSD org>
+# Test scenario by Hiroki Sato <hrs NQC org>
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ "`sysctl -in kern.features.ufs_quota`" != "1" ] && exit 0

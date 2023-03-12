@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1992, 1993, 1995
  *	The Regents of the University of California.  All rights reserved.
@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)kernfs_vfsops.c	8.10 (Berkeley) 5/14/95
- * From: FreeBSD: src/sys/miscfs/kernfs/kernfs_vfsops.c 1.36
+ * From: NQC: src/sys/miscfs/kernfs/kernfs_vfsops.c 1.36
  *
  * $NQC$
  */

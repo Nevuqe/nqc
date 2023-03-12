@@ -1761,13 +1761,13 @@ dtrace_freopen(dtrace_hdl_t *dtp, FILE *fp, void *fmtdata,
 #else	/* !illumos */
 	/*
 	 * The 'standard output' (which is not necessarily stdout)
-	 * treatment on FreeBSD is implemented differently than on
-	 * Solaris because FreeBSD's freopen() will attempt to re-use
+	 * treatment on NQC is implemented differently than on
+	 * Solaris because NQC's freopen() will attempt to re-use
 	 * the current file descriptor, causing the previous file to
 	 * be closed and thereby preventing it from be re-activated
 	 * later.
 	 *
-	 * For FreeBSD we use the concept of setting an output file
+	 * For NQC we use the concept of setting an output file
 	 * pointer in the DTrace handle if a dtrace_freopen() has 
 	 * enabled another output file and we leave the caller's
 	 * file pointer untouched. If it was actually stdout, then
@@ -1802,7 +1802,7 @@ dtrace_freopen(dtrace_hdl_t *dtp, FILE *fp, void *fmtdata,
 
 		/*
 		 * At this point, to re-active the original output file,
-		 * on FreeBSD we only code the current file that this
+		 * on NQC we only code the current file that this
 		 * function opened previously.
 		 */
 		(void) fclose(dtp->dt_freopen_fp);

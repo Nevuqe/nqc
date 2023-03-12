@@ -1,4 +1,4 @@
-//===-- PlatformFreeBSD.h ---------------------------------------*- C++ -*-===//
+//===-- PlatformNQC.h ---------------------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -15,9 +15,9 @@
 namespace lldb_private {
 namespace platform_nqc {
 
-class PlatformFreeBSD : public PlatformPOSIX {
+class PlatformNQC : public PlatformPOSIX {
 public:
-  PlatformFreeBSD(bool is_host);
+  PlatformNQC(bool is_host);
 
   static void Initialize();
 

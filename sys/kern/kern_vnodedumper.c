@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2021-2022 Juniper Networks
  *
- * This software was developed by Mitchell Horne <mhorne@FreeBSD.org>
+ * This software was developed by Mitchell Horne <mhorne@frebsd.org>
  * under sponsorship from Juniper Networks and Klara Systems.
  *
  * Redistribution and use in source and binary forms, with or without

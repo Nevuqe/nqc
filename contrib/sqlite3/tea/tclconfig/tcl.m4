@@ -1500,7 +1500,7 @@ AC_DEFUN([TEA_CONFIG_CFLAGS], [
 	        ])
 	    ])
 	    ;;
-	Linux*|GNU*|NetBSD-Debian|DragonFly-*|FreeBSD-*)
+	Linux*|GNU*|NetBSD-Debian|DragonFly-*|NQC-*)
 	    SHLIB_CFLAGS="-fPIC"
 	    SHLIB_SUFFIX=".so"
 
@@ -1512,7 +1512,7 @@ AC_DEFUN([TEA_CONFIG_CFLAGS], [
 	    LDFLAGS="$LDFLAGS -Wl,--export-dynamic"
 
 	    case $system in
-	    DragonFly-*|FreeBSD-*)
+	    DragonFly-*|NQC-*)
 		AS_IF([test "${TCL_THREADS}" = "1"], [
 		    # The -pthread needs to go in the LDFLAGS, not LIBS
 		    LIBS=`echo $LIBS | sed s/-pthread//`
@@ -1929,7 +1929,7 @@ dnl # preprocessing tests use only CPPFLAGS.
 	    BSD/OS*) ;;
 	    CYGWIN_*|MINGW32_*|MINGW64_*|MSYS_*) ;;
 	    IRIX*) ;;
-	    NetBSD-*|DragonFly-*|FreeBSD-*|OpenBSD-*) ;;
+	    NetBSD-*|DragonFly-*|NQC-*|OpenBSD-*) ;;
 	    Darwin-*) ;;
 	    SCO_SV-3.2*) ;;
 	    windows) ;;

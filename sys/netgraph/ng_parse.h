@@ -35,7 +35,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Archie Cobbs <archie@freebsd.org>
+ * Author: Archie Cobbs <archie@frebsd.org>
  *
  * $Whistle: ng_parse.h,v 1.2 1999/11/29 01:43:48 archie Exp $
  * $NQC$

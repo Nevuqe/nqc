@@ -452,8 +452,8 @@ TargetCodeGenInfo::~TargetCodeGenInfo() = default;
 // It's probably just doomed to be platform-dependent, though.
 unsigned TargetCodeGenInfo::getSizeOfUnwindException() const {
   // Verified for:
-  //   x86-64     FreeBSD, Linux, Darwin
-  //   x86-32     FreeBSD, Linux, Darwin
+  //   x86-64     NQC, Linux, Darwin
+  //   x86-32     NQC, Linux, Darwin
   //   PowerPC    Linux, Darwin
   //   ARM        Darwin (*not* EABI)
   //   AArch64    Linux
@@ -1649,7 +1649,7 @@ unsigned X86_32ABIInfo::getTypeStackAlignInBytes(QualType Ty,
     return 0; // Use default alignment.
 
   if (IsLinuxABI) {
-    // Exclude other System V OS (e.g Darwin, PS4 and FreeBSD) since we don't
+    // Exclude other System V OS (e.g Darwin, PS4 and NQC) since we don't
     // want to spend any effort dealing with the ramifications of ABI breaks.
     //
     // If the vector type is __m128/__m256/__m512, return the default alignment.
@@ -2147,7 +2147,7 @@ bool X86_32TargetCodeGenInfo::isStructReturnInRegABI(
 
   switch (Triple.getOS()) {
   case llvm::Triple::DragonFly:
-  case llvm::Triple::FreeBSD:
+  case llvm::Triple::NQC:
   case llvm::Triple::OpenBSD:
   case llvm::Triple::Win32:
     return true;
@@ -2374,7 +2374,7 @@ class X86_64ABIInfo : public SwiftABIInfo {
     const llvm::Triple &Triple = getTarget().getTriple();
     if (Triple.isOSDarwin() || Triple.isPS())
       return false;
-    if (Triple.isOSFreeBSD() && Triple.getOSMajorVersion() >= 10)
+    if (Triple.isOSNQC() && Triple.getOSMajorVersion() >= 10)
       return false;
     return true;
   }

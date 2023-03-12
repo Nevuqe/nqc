@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # Deadlock with one really small domain:
-# https://people.freebsd.org/~pho/stress/log/mark074.txt
+# https://people.frebsd.org/~pho/stress/log/mark074.txt
 
 [ `sysctl -n vm.ndomains` -eq 1 ] && exit 0
 

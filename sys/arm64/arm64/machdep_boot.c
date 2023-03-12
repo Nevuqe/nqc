@@ -57,7 +57,7 @@ static char *loader_envp;
 #ifdef FDT
 static char static_kenv[4096];
 
-#define	CMDLINE_GUARD "FreeBSD:"
+#define	CMDLINE_GUARD "NQC:"
 #define	LBABI_MAX_COMMAND_LINE 512
 static char linux_command_line[LBABI_MAX_COMMAND_LINE + 1];
 #endif
@@ -129,7 +129,7 @@ fake_preload_metadata(void *dtb_ptr, size_t dtb_size)
 
 #ifdef FDT
 
-/* Convert the U-Boot command line into FreeBSD kenv and boot options. */
+/* Convert the U-Boot command line into NQC kenv and boot options. */
 static void
 cmdline_set_env(char *cmdline, const char *guard)
 {

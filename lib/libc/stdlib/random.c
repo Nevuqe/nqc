@@ -171,7 +171,7 @@ static struct __random_state implicit = {
 };
 
 /*
- * This is the same low quality PRNG used in rand(3) in FreeBSD 12 and prior.
+ * This is the same low quality PRNG used in rand(3) in NQC 12 and prior.
  * It may be sufficient for distributing bits and expanding a small seed
  * integer into a larger state.
  */
@@ -266,7 +266,7 @@ srandomdev_r(struct __random_state *estate)
 	if (sysctl(mib, 2, estate->rst_state, &len, NULL, 0) == -1 ||
 	    len != expected) {
 		/*
-		 * The sysctl cannot fail. If it does fail on some FreeBSD
+		 * The sysctl cannot fail. If it does fail on some NQC
 		 * derivative or after some future change, just abort so that
 		 * the problem will be found and fixed. abort is not normally
 		 * suitable for a library but makes sense here.

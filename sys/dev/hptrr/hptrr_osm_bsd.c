@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) HighPoint Technologies, Inc.
  * All rights reserved.
@@ -32,7 +32,7 @@ __NQCID("$NQC$");
 #include <dev/hptrr/hptrr_config.h>
 /* $Id: osm_bsd.c,v 1.27 2007/11/22 07:35:49 gmm Exp $
  *
- * HighPoint RAID Driver for FreeBSD
+ * HighPoint RAID Driver for NQC
  * Copyright (C) 2005 HighPoint Technologies, Inc. All Rights Reserved.
  */
 #include <dev/hptrr/os_bsd.h>
@@ -784,7 +784,7 @@ static void hpt_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->initiator_id = osm_max_targets;
 		cpi->base_transfer_speed = 3300;
 
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "HPT   ", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->transport = XPORT_SPI;

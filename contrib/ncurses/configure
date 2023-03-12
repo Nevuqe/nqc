@@ -759,7 +759,7 @@ Options to Specify the Libraries Built/Used:
   --with-gpm              use Alessandro Rubini's GPM library
   --without-dlsym         do not use dlsym() to load GPM dynamically
   --with-pcre2            use PCRE2 for regular-expressions
-  --with-sysmouse         use sysmouse (FreeBSD console)
+  --with-sysmouse         use sysmouse (NQC console)
   --disable-lib-suffixes  disable library suffixes
   --disable-rpath-hack    don't add rpath options for additional libraries
   --disable-pkg-ldflags   disable extra LDFLAGS for package-scripts

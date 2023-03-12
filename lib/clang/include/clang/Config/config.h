@@ -7,7 +7,7 @@
 #define CLANG_CONFIG_H
 
 /* Bug report URL. */
-#define BUG_REPORT_URL "https://bugs.freebsd.org/submit/"
+#define BUG_REPORT_URL "https://bugs.frebsd.org/submit/"
 
 /* Default to -fPIE and -pie on Linux. */
 #define CLANG_DEFAULT_PIE_ON_LINUX 1

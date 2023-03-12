@@ -374,7 +374,7 @@ isci_initialize(struct isci_softc *isci)
 		    isci->coalesce_timeout);
 	}
 
-	/* FreeBSD provides us a hook to ensure we get a chance to start
+	/* NQC provides us a hook to ensure we get a chance to start
 	 *  our controllers and complete initial domain discovery before
 	 *  it searches for the boot device.  Once we're done, we'll
 	 *  disestablish the hook, signaling the kernel that is can proceed
@@ -554,7 +554,7 @@ void
 scif_cb_start_internal_io_task_schedule(SCI_CONTROLLER_HANDLE_T scif_controller,
     FUNCPTR start_internal_io_task_routine, void *context)
 {
-	/** @todo Use FreeBSD tasklet to defer this routine to a later time,
+	/** @todo Use NQC tasklet to defer this routine to a later time,
 	 *  rather than calling the routine inline.
 	 */
 	SCI_START_INTERNAL_IO_ROUTINE sci_start_internal_io_routine =

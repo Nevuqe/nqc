@@ -3,10 +3,10 @@
 /*	$NQC$	*/
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 James Howard and Dag-Erling Coïdan Smørgrav
- * Copyright (c) 2008-2009 Gabor Kovesdan <gabor@FreeBSD.org>
+ * Copyright (c) 2008-2009 Gabor Kovesdan <gabor@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -40,7 +40,7 @@
 
 extern const char		*errstr[];
 
-#define	VERSION		"2.6.0-FreeBSD"
+#define	VERSION		"2.6.0-NQC"
 
 #define	GREP_FIXED	0
 #define	GREP_BASIC	1

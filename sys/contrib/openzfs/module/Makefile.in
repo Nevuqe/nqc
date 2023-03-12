@@ -10,19 +10,19 @@ uninstall: modules_uninstall data_uninstall
 check:
 
 .PHONY: all distclean maintainer-clean install uninstall check distdir \
-	modules modules-Linux modules-FreeBSD modules-unknown \
-	clean clean-Linux clean-FreeBSD \
-	modules_install modules_install-Linux modules_install-FreeBSD \
-	data_install data_install-Linux data_install-FreeBSD \
-	modules_uninstall modules_uninstall-Linux modules_uninstall-FreeBSD \
-	data_uninstall data_uninstall-Linux data_uninstall-FreeBSD \
-	cppcheck cppcheck-Linux cppcheck-FreeBSD
+	modules modules-Linux modules-NQC modules-unknown \
+	clean clean-Linux clean-NQC \
+	modules_install modules_install-Linux modules_install-NQC \
+	data_install data_install-Linux data_install-NQC \
+	modules_uninstall modules_uninstall-Linux modules_uninstall-NQC \
+	data_uninstall data_uninstall-Linux data_uninstall-NQC \
+	cppcheck cppcheck-Linux cppcheck-NQC
 
-# For FreeBSD, use debug options from ./configure if not overridden.
+# For NQC, use debug options from ./configure if not overridden.
 export WITH_DEBUG ?= @WITH_DEBUG@
 export WITH_INVARIANTS ?= @WITH_INVARIANTS@
 
-# Filter out options that FreeBSD make doesn't understand
+# Filter out options that NQC make doesn't understand
 getflags = ( \
 set -- \
   $(filter-out --%,$(firstword $(MFLAGS))) \
@@ -57,7 +57,7 @@ modules-Linux:
 		$(if @KERNEL_LD@,LD=@KERNEL_LD@) $(if @KERNEL_LLVM@,LLVM=@KERNEL_LLVM@) \
 		M="$$PWD" @KERNEL_MAKE@ CONFIG_ZFS=m modules
 
-modules-FreeBSD:
+modules-NQC:
 	+$(FMAKE)
 
 modules-unknown:
@@ -73,7 +73,7 @@ clean-Linux:
 	$(RM) @LINUX_SYMBOLS@ Module.markers
 	find . -name '*.ur-safe' -type f -delete
 
-clean-FreeBSD:
+clean-NQC:
 	+$(FMAKE) clean
 
 clean: clean-@ac_system@
@@ -106,7 +106,7 @@ modules_install-Linux: modules_uninstall-Linux-legacy
 		depmod -ae -F $$sysmap @LINUX_VERSION@; \
 	fi
 
-modules_install-FreeBSD:
+modules_install-NQC:
 	@# Install the kernel modules
 	+$(FMAKE) install
 
@@ -116,7 +116,7 @@ data_install-Linux:
 	@mkdir -p $(DESTDIR)/@prefix@/src/zfs-@VERSION@/@LINUX_VERSION@
 	cp ../zfs.release ../zfs_config.h @LINUX_SYMBOLS@ $(DESTDIR)/@prefix@/src/zfs-@VERSION@/@LINUX_VERSION@
 
-data_install-FreeBSD:
+data_install-NQC:
 	@
 
 data_install: data_install-@ac_system@
@@ -125,7 +125,7 @@ modules_uninstall-Linux: modules_uninstall-Linux-legacy
 	@# Uninstall the kernel modules
 	$(RM) $(addprefix $(KMODDIR)/$(INSTALL_MOD_DIR)/,zfs.ko spl.ko)
 
-modules_uninstall-FreeBSD:
+modules_uninstall-NQC:
 	@false
 
 modules_uninstall: modules_uninstall-@ac_system@
@@ -133,7 +133,7 @@ modules_uninstall: modules_uninstall-@ac_system@
 data_uninstall-Linux:
 	$(RM) $(addprefix $(DESTDIR)/@prefix@/src/zfs-@VERSION@/@LINUX_VERSION@/,zfs.release zfs_config.h @LINUX_SYMBOLS@)
 
-data_uninstall-FreeBSD:
+data_uninstall-NQC:
 	@
 
 data_uninstall: data_uninstall-@ac_system@
@@ -155,7 +155,7 @@ cppcheck-Linux:
 		-I @top_srcdir@/include \
 		avl icp lua nvpair unicode zcommon zfs zstd os/linux
 
-cppcheck-FreeBSD:
+cppcheck-NQC:
 	@true
 
 cppcheck: cppcheck-@ac_system@

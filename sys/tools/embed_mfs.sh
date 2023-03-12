@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (C) 2008 The FreeBSD Project. All rights reserved.
+# Copyright (C) 2008 The FreBSD Project. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

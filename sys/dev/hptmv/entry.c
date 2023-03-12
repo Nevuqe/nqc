@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004-2005 HighPoint Technologies, Inc.
  * All rights reserved.
@@ -2316,7 +2316,7 @@ hpt_action(struct cam_sim *sim, union ccb *ccb)
 
 			cpi->bus_id = cam_sim_bus(sim);
 			cpi->base_transfer_speed = 3300;
-			strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+			strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 			strlcpy(cpi->hba_vid, "HPT   ", HBA_IDLEN);
 			strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 			cpi->unit_number = cam_sim_unit(sim);

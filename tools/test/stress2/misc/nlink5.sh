@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2022 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2022 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# https://reviews.freebsd.org/D35514
+# https://reviews.frebsd.org/D35514
 # Rename dir a/b to c/d
 
 # Test scenario suggestion by kib

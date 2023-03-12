@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-4-Clause
  *
  * Copyright (c) 2017 Dell EMC
- * Copyright (c) 2009 Stanislav Sedov <stas@FreeBSD.org>
+ * Copyright (c) 2009 Stanislav Sedov <stas@frebsd.org>
  * Copyright (c) 1988, 1993
  *      The Regents of the University of California.  All rights reserved.
  *
@@ -2386,7 +2386,7 @@ procstat_getosrel(struct procstat *procstat, struct kinfo_proc *kp, int *osrelp)
 #if __ELF_WORD_SIZE == 64
 static const char *elf32_sv_names[] = {
 	"Linux ELF32",
-	"FreeBSD ELF32",
+	"NQC ELF32",
 };
 
 static int

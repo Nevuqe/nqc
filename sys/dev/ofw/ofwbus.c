@@ -1,7 +1,7 @@
 /*-
  * Copyright 1998 Massachusetts Institute of Technology
- * Copyright 2001 by Thomas Moestl <tmm@FreeBSD.org>.
- * Copyright 2006 by Marius Strobl <marius@FreeBSD.org>.
+ * Copyright 2001 by Thomas Moestl <tmm@frebsd.org>.
+ * Copyright 2006 by Marius Strobl <marius@frebsd.org>.
  * All rights reserved.
  *
  * Permission to use, copy, modify, and distribute this software and
@@ -29,7 +29,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * 	from: FreeBSD: src/sys/i386/i386/nexus.c,v 1.43 2001/02/09
+ * 	from: NQC: src/sys/i386/i386/nexus.c,v 1.43 2001/02/09
  */
 
 #include <sys/cdefs.h>

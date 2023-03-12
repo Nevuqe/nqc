@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2012 Hudson River Trading LLC
- * Written by: John H. Baldwin <jhb@FreeBSD.org>
- * Copyright (c) 2015 Allan Jude <allanjude@freebsd.org>
+ * Written by: John H. Baldwin <jhb@frebsd.org>
+ * Copyright (c) 2015 Allan Jude <allanjude@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

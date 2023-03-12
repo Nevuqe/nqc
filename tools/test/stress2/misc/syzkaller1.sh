@@ -16,7 +16,7 @@
 # sys_sys_exit() at sys_sys_exit+0xd/frame 0xfffffe00e5651ac0
 # amd64_syscall() at amd64_syscall+0x2f1/frame 0xfffffe00e5651bf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe00e5651bf0
-# --- syscall (1, FreeBSD ELF64, sys_sys_exit), rip = 0x8003d53ba, rsp = 0x7fffffffe9f8, rbp = 0x7fffffffea10 ---
+# --- syscall (1, NQC ELF64, sys_sys_exit), rip = 0x8003d53ba, rsp = 0x7fffffffe9f8, rbp = 0x7fffffffea10 ---
 
 # Fixed by r357554
 

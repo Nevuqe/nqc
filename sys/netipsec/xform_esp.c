@@ -720,7 +720,7 @@ esp_output(struct mbuf *m, struct secpolicy *sp, struct secasvar *sav,
 	rlen = m->m_pkthdr.len - skip;	/* Raw payload length. */
 	/*
 	 * RFC4303 2.4 Requires 4 byte alignment.
-	 * Old versions of FreeBSD can't decrypt partial blocks encrypted
+	 * Old versions of NQC can't decrypt partial blocks encrypted
 	 * with AES-CTR. Align payload to native_blocksize (16 bytes)
 	 * in order to preserve compatibility.
 	 */

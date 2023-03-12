@@ -27,7 +27,7 @@
 #
 
 # "panic: Assertion !tty_gone(tp) failed at ttydevsw.h:153" seen.
-# https://people.freebsd.org/~pho/stress/log/posix_openpt2.txt
+# https://people.frebsd.org/~pho/stress/log/posix_openpt2.txt
 # Fixed by r312077
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

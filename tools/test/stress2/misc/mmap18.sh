@@ -27,10 +27,10 @@
 #
 
 # Copy of mmap10.sh with core dump disabled.
-# http://people.freebsd.org/~pho/stress/log/kostik711.txt
+# http://people.frebsd.org/~pho/stress/log/kostik711.txt
 
 # panic: vm_fault_copy_entry: main object missing page
-# http://people.freebsd.org/~pho/stress/log/mmap18.txt
+# http://people.frebsd.org/~pho/stress/log/mmap18.txt
 # Fixed by: r316689
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

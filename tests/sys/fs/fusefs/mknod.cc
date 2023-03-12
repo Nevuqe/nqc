@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -140,7 +140,7 @@ void expect_mknod(uint64_t parent_ino, const char* relpath, uint64_t ino,
 
 /* 
  * mknod(2) should be able to create block devices on a FUSE filesystem.  Even
- * though FreeBSD doesn't use block devices, this is useful when copying media
+ * though NQC doesn't use block devices, this is useful when copying media
  * from or preparing media for other operating systems.
  */
 TEST_F(Mknod, blk)
@@ -248,7 +248,7 @@ TEST_F(Mknod, socket)
 /*
  * Nothing bad should happen if the server returns the parent's inode number
  * for the newly created file.  Regression test for bug 263662.
- * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=263662
+ * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=263662
  */
 TEST_F(Mknod, parent_inode)
 {

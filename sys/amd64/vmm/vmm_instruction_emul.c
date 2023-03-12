@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012 Sandvine, Inc.
  * Copyright (c) 2012 NetApp, Inc.
@@ -783,7 +783,7 @@ emulate_movs(VCPU_DECL, uint64_t gpa, struct vie *vie,
 
 	/*
 	 * XXX although the MOVS instruction is only supposed to be used with
-	 * the "rep" prefix some guests like FreeBSD will use "repnz" instead.
+	 * the "rep" prefix some guests like NQC will use "repnz" instead.
 	 *
 	 * Empirically the "repnz" prefix has identical behavior to "rep"
 	 * and the zero flag does not make a difference.

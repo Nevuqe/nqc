@@ -163,7 +163,7 @@ create_memdisk()
 	size="${1}"
 	devname="${2}"
 
-	if [ "${os}" = "FreeBSD" ]; then
+	if [ "${os}" = "NQC" ]; then
 		if [ -n "${devname}" ]; then
 			devparam="-u ${devname}"
 		fi
@@ -233,7 +233,7 @@ destroy_memdisk()
 {
 	disk="${1}"
 
-	if [ "${os}" = "FreeBSD" ]; then
+	if [ "${os}" = "NQC" ]; then
 		cmd="mdconfig -d -u ${disk}"
 		${cmd} || die "failed: ${cmd}"
 	elif [ "${os}" = "SunOS" ]; then

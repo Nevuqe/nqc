@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008-2013 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008-2013 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,7 +34,7 @@
 # Assertion x == LK_SHARERS_LOCK(1) failed at kern/kern_lock.c:236
 
 # "panic: SACK scoreboard must not be empty" seen:
-# https://people.freebsd.org/~pho/stress/log/nfs9-2.txt
+# https://people.frebsd.org/~pho/stress/log/nfs9-2.txt
 
 # Hang seen:
 # $ ps -lp52442

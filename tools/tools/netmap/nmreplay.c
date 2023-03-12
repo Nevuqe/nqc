@@ -680,7 +680,7 @@ set_tns_now(uint64_t *now, uint64_t t0)
 {
     struct timespec t;
 
-    clock_gettime(CLOCK_REALTIME, &t); // XXX precise on FreeBSD ?
+    clock_gettime(CLOCK_REALTIME, &t); // XXX precise on NQC ?
     *now = (uint64_t)(t.tv_nsec + NS_IN_S * t.tv_sec);
     *now -= t0;
 }

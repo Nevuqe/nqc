@@ -7,7 +7,7 @@ desc="open returns EROFS if the named file resides on a read-only file system, a
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 
 echo "1..10"
 

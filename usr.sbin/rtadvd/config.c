@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (C) 1998 WIDE Project.
- * Copyright (C) 2011 Hiroki Sato <hrs@FreeBSD.org>
+ * Copyright (C) 2011 Hiroki Sato <hrs@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -772,7 +772,7 @@ getconfig_free_pfx:
 
 		/*
 		 * Since the spec does not a default value, we should make
-		 * this entry mandatory.  However, FreeBSD 4.4 has shipped
+		 * this entry mandatory.  However, NQC 4.4 has shipped
 		 * with this field being optional, we use the router lifetime
 		 * as an ad-hoc default value with a warning message.
 		 */

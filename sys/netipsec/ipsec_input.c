@@ -18,7 +18,7 @@
  * Copyright (C) 1995, 1996, 1997, 1998, 1999 by John Ioannidis,
  * Angelos D. Keromytis and Niels Provos.
  * Copyright (c) 2001, Angelos D. Keromytis.
- * Copyright (c) 2016 Andrey V. Elsukov <ae@FreeBSD.org>
+ * Copyright (c) 2016 Andrey V. Elsukov <ae@frebsd.org>
  *
  * Permission to use, copy, and modify this software with or without fee
  * is hereby granted, provided that this entire notice is included in

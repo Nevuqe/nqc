@@ -3266,7 +3266,7 @@ nvs_xdr_nvp_##type(XDR *xdrs, ...)		\
 	return (xdr_##type(xdrs, ptr));		\
 }
 
-#else /* FreeBSD, sunrpc */
+#else /* NQC, sunrpc */
 
 #define	NVS_BUILD_XDRPROC_T(type)		\
 static bool_t					\

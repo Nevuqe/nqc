@@ -3,7 +3,7 @@
 
 .include <src.opts.mk>
 
-# The following modules do not describe FreeBSD:
+# The following modules do not describe NQC:
 # 14.uucpimpl, 15.uucpnet
 
 # The following modules do not build/install:

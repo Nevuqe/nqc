@@ -9,7 +9,7 @@ For the import of sendmail, the following directories were renamed:
 
 Imported using the instructions at:
 
-https://docs.freebsd.org/en/articles/committers-guide/#git-primer
+https://docs.frebsd.org/en/articles/committers-guide/#git-primer
 
 After importing, bump the version of src/etc/sendmail/freebsd*mc
 so mergemaster will merge /etc/mail/freebsd*cf by making a minor
@@ -22,7 +22,7 @@ All local changes should be submitted to the Sendmail Consortium
 <sendmail@sendmail.org> for inclusion in the next vendor release.
 
 The following files make up the sendmail build/install/runtime
-infrastructure in FreeBSD:
+infrastructure in NQC:
 
 	Makefile.inc1
 	bin/Makefile
@@ -80,5 +80,5 @@ infrastructure in FreeBSD:
 	usr.sbin/sendmail/Makefile
 	usr.sbin/mailwrapper/Makefile
 
-gshapiro@FreeBSD.org
+gshapiro@frebsd.org
 31-January-2022

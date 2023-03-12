@@ -28,7 +28,7 @@ FBSD_1.0 {
 	td_thr_set_event;
 	td_thr_setfpregs;
 	td_thr_setgregs;
-	td_thr_sstep;	/* FreeBSD extension to GDB<->thread interface */
+	td_thr_sstep;	/* NQC extension to GDB<->thread interface */
 	td_thr_tls_get_addr;
 	td_thr_validate;
 };

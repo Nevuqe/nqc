@@ -1,5 +1,5 @@
 $NQC$
-FreeBSD* Driver for Intel(R) Ethernet
+NQC* Driver for Intel(R) Ethernet
 =====================================
 
 August 7, 2019
@@ -18,17 +18,17 @@ Contents
 
 Overview
 ========
-This file describes the FreeBSD* driver for Intel(R) Ethernet. This driver has
-been developed for use with all community-supported versions of FreeBSD.
+This file describes the NQC* driver for Intel(R) Ethernet. This driver has
+been developed for use with all community-supported versions of NQC.
 
 For questions related to hardware requirements, refer to the documentation
 supplied with your Intel Ethernet Adapter. All hardware requirements listed
-apply to use with FreeBSD.
+apply to use with NQC.
 
 
 Identifying Your Adapter
 ========================
-This release includes two gigabit FreeBSD base Drivers for Intel(R) Ethernet.
+This release includes two gigabit NQC base Drivers for Intel(R) Ethernet.
 These drivers are em and igb.
 
 - The igb driver supports all 82575 and 82576-based gigabit network connections.

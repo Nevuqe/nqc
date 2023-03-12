@@ -1,4 +1,4 @@
-//===--- FreeBSD.h - FreeBSD ToolChain Implementations ----------*- C++ -*-===//
+//===--- NQC.h - NQC ToolChain Implementations ----------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -49,9 +49,9 @@ public:
 
 namespace toolchains {
 
-class LLVM_LIBRARY_VISIBILITY FreeBSD : public Generic_ELF {
+class LLVM_LIBRARY_VISIBILITY NQC : public Generic_ELF {
 public:
-  FreeBSD(const Driver &D, const llvm::Triple &Triple,
+  NQC(const Driver &D, const llvm::Triple &Triple,
           const llvm::opt::ArgList &Args);
   bool HasNativeLLVMSupport() const override;
 
@@ -78,7 +78,7 @@ public:
   SanitizerMask getSupportedSanitizers() const override;
   unsigned GetDefaultDwarfVersion() const override;
   // Until dtrace (via CTF) and LLDB can deal with distributed debug info,
-  // FreeBSD defaults to standalone/full debug info.
+  // NQC defaults to standalone/full debug info.
   bool GetDefaultStandaloneDebug() const override { return true; }
   void
   addClangTargetOptions(const llvm::opt::ArgList &DriverArgs,

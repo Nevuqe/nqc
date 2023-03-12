@@ -28,10 +28,10 @@
 
 # Trigger the two EDEADLK in vm/vm_pageout.c
 # OOVM deadlock seen
-# https://people.freebsd.org/~pho/stress/log/pageout.txt
+# https://people.frebsd.org/~pho/stress/log/pageout.txt
 
 # "panic: handle_written_filepage: not started" seen:
-# https://people.freebsd.org/~pho/stress/log/pageout-2.txt
+# https://people.frebsd.org/~pho/stress/log/pageout-2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

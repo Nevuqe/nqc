@@ -144,7 +144,7 @@ static const wchar_t char_glob[] = L"*?[#";
  */
 #ifdef __NQC__
 /*
- * On FreeBSD including <sys/systm.h> for CTASSERT only works in kernel
+ * On NQC including <sys/systm.h> for CTASSERT only works in kernel
  * mode.
  */
 #ifndef CTASSERT

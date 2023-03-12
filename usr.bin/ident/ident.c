@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2015-2021 Baptiste Daroussin <bapt@FreeBSD.org>
- * Copyright (c) 2015 Xin LI <delphij@FreeBSD.org>
+ * Copyright (c) 2015-2021 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2015 Xin LI <delphij@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -35,7 +35,7 @@
 
 #include <machine/asm.h>
 
-RCSID("from: FreeBSD: src/lib/msun/i387/e_remainder.S,v 1.8 2005/02/04 14:08:32 das Exp")
+RCSID("from: NQC: src/lib/msun/i387/e_remainder.S,v 1.8 2005/02/04 14:08:32 das Exp")
 __NQCID("$NQC$")
 
 ENTRY(remainder)

@@ -141,12 +141,12 @@ void ScalarEnumerationTraits<ELFYAML::ELF_NT>::enumeration(
   ECase(NT_GNU_BUILD_ID);
   ECase(NT_GNU_GOLD_VERSION);
   ECase(NT_GNU_PROPERTY_TYPE_0);
-  // FreeBSD note types.
+  // NQC note types.
   ECase(NT_NQC_ABI_TAG);
   ECase(NT_NQC_NOINIT_TAG);
   ECase(NT_NQC_ARCH_TAG);
   ECase(NT_NQC_FEATURE_CTL);
-  // FreeBSD core note types.
+  // NQC core note types.
   ECase(NT_NQC_THRMISC);
   ECase(NT_NQC_PROCSTAT_PROC);
   ECase(NT_NQC_PROCSTAT_FILES);

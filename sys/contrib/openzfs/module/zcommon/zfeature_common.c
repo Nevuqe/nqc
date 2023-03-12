@@ -305,7 +305,7 @@ zfs_mod_supported_feature(const char *name,
 	 * query the running module, via sysfs, to determine which
 	 * features are supported.
 	 *
-	 * The equivalent _can_ be done on FreeBSD by way of the sysctl
+	 * The equivalent _can_ be done on NQC by way of the sysctl
 	 * tree, but this has not been done yet.  Therefore, we return
 	 * that all features are supported.
 	 */

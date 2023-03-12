@@ -24,11 +24,11 @@ test: ${PROG} gen
 	@./gen | \
 	    LC_ALL=en_US.US-ASCII ./dd conv=${conv} 2>/dev/null | \
 	    LC_ALL=en_US.US-ASCII hexdump -C | \
-	    diff -I FreeBSD - ${.CURDIR}/ref.${conv}
+	    diff -I NQC - ${.CURDIR}/ref.${conv}
 .endfor
 	@${ECHO} "testing sparse file (obs zeroes)"
 	@./gen 189284 | ./dd ibs=16 obs=8 conv=sparse of=obs_zeroes 2> /dev/null
-	@hexdump -C obs_zeroes | diff -I FreeBSD - ${.CURDIR}/ref.obs_zeroes
+	@hexdump -C obs_zeroes | diff -I NQC - ${.CURDIR}/ref.obs_zeroes
 
 	@${ECHO} "testing spase file (all zeroes)"
 	@./dd if=/dev/zero of=1M_zeroes bs=1048576 count=1 2> /dev/null

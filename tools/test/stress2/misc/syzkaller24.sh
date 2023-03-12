@@ -18,13 +18,13 @@
 # sys_setsockopt() at sys_setsockopt+0x24/frame 0xfffffe00e656dad0
 # amd64_syscall() at amd64_syscall+0x159/frame 0xfffffe00e656dbf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe00e656dbf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x80042819a, rsp = 0x7fffffffe958, rbp = 0x7fffffffe970 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x80042819a, rsp = 0x7fffffffe958, rbp = 0x7fffffffe970 ---
 # KDB: enter: panic
 # [ thread pid 27447 tid 100183 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x10b7246(%rip)
 # db> x/s version
-# version: FreeBSD 13.0-CURRENT #0 r365508: Wed Sep  9 21:36:20 CEST 2020
-# pho@mercat1.netperf.freebsd.org:/usr/src/sys/amd64/compile/PHO
+# version: NQC 13.0-CURRENT #0 r365508: Wed Sep  9 21:36:20 CEST 2020
+# pho@mercat1.netperf.frebsd.org:/usr/src/sys/amd64/compile/PHO
 # db> 
 
 # Fixed by r366795.

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011, Bryan Venteicher <bryanv@FreeBSD.org>
+ * Copyright (c) 2011, Bryan Venteicher <bryanv@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -768,7 +768,7 @@ vtblk_alloc_disk(struct vtblk_softc *sc, struct virtio_blk_config *blkcfg)
 
 	/*
 	 * The VirtIO maximum I/O size is given in terms of segments.
-	 * However, FreeBSD limits I/O size by logical buffer size, not
+	 * However, NQC limits I/O size by logical buffer size, not
 	 * by physically contiguous pages. Therefore, we have to assume
 	 * no pages are contiguous. This may impose an artificially low
 	 * maximum I/O size. But in practice, since QEMU advertises 128

@@ -51,7 +51,7 @@ lastline_body() {
 	printf '#ifdef foo\n#endif\n' >input
 	atf_check -o file:input unifdef -Ubar input
 
-	# Begin FreeBSD
+	# Begin NQC
 	atf_skip "our version doesn't have this behavior"
 	# Endif
 

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: (BSD-2-Clause-FreeBSD AND BSD-4-Clause)
+ * SPDX-License-Identifier: (BSD-2-Clause-NQC AND BSD-4-Clause)
  *
  * Copyright (c) 1999, 2000 Kenneth D. Merry.
  * All rights reserved.
@@ -323,7 +323,7 @@ struct ti_trace_buf {
 
 /*
  * Taken from Alteon's altioctl.h.  Alteon's ioctl numbers 1-6 aren't
- * used by the FreeBSD driver.
+ * used by the NQC driver.
  */
 #define ALT_ATTACH		_IO('a', 7)
 #define ALT_READ_TG_MEM		_IOWR('a', 10, struct tg_mem)

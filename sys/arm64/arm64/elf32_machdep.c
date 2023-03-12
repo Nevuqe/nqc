@@ -1,14 +1,14 @@
 /*-
- * Copyright (c) 2014, 2015 The FreeBSD Foundation.
+ * Copyright (c) 2014, 2015 The FreBSD Foundation.
  * Copyright (c) 2014, 2017 Andrew Turner.
  * Copyright (c) 2018 Olivier Houchard
  * All rights reserved.
  *
  * This software was developed by Andrew Turner under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -89,7 +89,7 @@ static struct sysentvec elf32_nqc_sysvec = {
 	.sv_sendsig	= freebsd32_sendsig,
 	.sv_sigcode	= aarch32_sigcode,
 	.sv_szsigcode	= &sz_aarch32_sigcode,
-	.sv_name	= "FreeBSD ELF32",
+	.sv_name	= "NQC ELF32",
 	.sv_coredump	= elf32_coredump,
 	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
@@ -129,7 +129,7 @@ INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 static Elf32_Brandinfo freebsd32_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_ARM,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
 	.sysvec		= &elf32_nqc_sysvec,

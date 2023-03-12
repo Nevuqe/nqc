@@ -159,7 +159,7 @@
 */
 
 /* Avoid clashes with NetBSD by renaming NetBSD's declarations.
-   If defining the 'timezone' variable, avoid a clash with FreeBSD's
+   If defining the 'timezone' variable, avoid a clash with NQC's
    'timezone' function by renaming its declaration.  */
 #define localtime_rz sys_localtime_rz
 #define mktime_z sys_mktime_z

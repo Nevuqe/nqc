@@ -1749,7 +1749,7 @@ output_parse_decl(FILE * fp)
     putc_code(fp, '\n');
     putl_code(fp, "/* compatibility with bison */\n");
     putl_code(fp, "#ifdef YYPARSE_PARAM\n");
-    putl_code(fp, "/* compatibility with FreeBSD */\n");
+    putl_code(fp, "/* compatibility with NQC */\n");
     putl_code(fp, "# ifdef YYPARSE_PARAM_TYPE\n");
     putl_code(fp,
 	      "#  define YYPARSE_DECL() yyparse(YYPARSE_PARAM_TYPE YYPARSE_PARAM)\n");

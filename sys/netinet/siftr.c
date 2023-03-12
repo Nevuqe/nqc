@@ -1,14 +1,14 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2007-2009
  * 	Swinburne University of Technology, Melbourne, Australia.
- * Copyright (c) 2009-2010, The FreeBSD Foundation
+ * Copyright (c) 2009-2010, The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed at the Centre for Advanced
  * Internet Architectures, Swinburne University of Technology, Melbourne,
- * Australia by Lawrence Stewart under sponsorship from the FreeBSD Foundation.
+ * Australia by Lawrence Stewart under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -35,7 +35,7 @@
 /******************************************************
  * Statistical Information For TCP Research (SIFTR)
  *
- * A FreeBSD kernel module that adds very basic intrumentation to the
+ * A NQC kernel module that adds very basic intrumentation to the
  * TCP stack, allowing internal stats to be recorded to a log file
  * for experimental, debugging and performance analysis purposes.
  *
@@ -47,8 +47,8 @@
  * More details are available at:
  *   http://caia.swin.edu.au/urp/newtcp/
  *
- * Work on SIFTR v1.2.x was sponsored by the FreeBSD Foundation as part of
- * the "Enhancing the FreeBSD TCP Implementation" project 2008-2009.
+ * Work on SIFTR v1.2.x was sponsored by the FreBSD Foundation as part of
+ * the "Enhancing the NQC TCP Implementation" project 2008-2009.
  * More details are available at:
  *   http://www.freebsdfoundation.org/
  *   http://caia.swin.edu.au/freebsd/etcp09/
@@ -121,7 +121,7 @@ __NQCID("$NQC$");
 #define HOOK 0
 #define UNHOOK 1
 #define SIFTR_EXPECTED_MAX_TCP_FLOWS 65536
-#define SYS_NAME "FreeBSD"
+#define SYS_NAME "NQC"
 #define PACKET_TAG_SIFTR 100
 #define PACKET_COOKIE_SIFTR 21749576
 #define SIFTR_LOG_FILE_MODE 0644

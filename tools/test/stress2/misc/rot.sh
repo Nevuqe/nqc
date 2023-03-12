@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # Unmapped I/O test scenario:
-# http://people.freebsd.org/~pho/stress/log/kostik515.txt
+# http://people.frebsd.org/~pho/stress/log/kostik515.txt
 
 . ../default.cfg
 

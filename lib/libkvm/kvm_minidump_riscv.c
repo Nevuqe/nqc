@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * From: FreeBSD: src/lib/libkvm/kvm_minidump_amd64.c r261799
+ * From: NQC: src/lib/libkvm/kvm_minidump_amd64.c r261799
  */
 
 #include <sys/cdefs.h>

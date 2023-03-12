@@ -29,7 +29,7 @@
 # syscall fuzz of hwpmc.ko
 
 # Page fault seen:
-# https://people.freebsd.org/~pho/stress/log/hwpmc3-1.txt
+# https://people.frebsd.org/~pho/stress/log/hwpmc3-1.txt
 
 kldstat | grep -q hwpmc || { kldload hwpmc.ko; loaded=1; }
 

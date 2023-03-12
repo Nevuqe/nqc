@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012, Bryan Venteicher <bryanv@FreeBSD.org>
+ * Copyright (c) 2012, Bryan Venteicher <bryanv@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -970,7 +970,7 @@ vtscsi_cam_path_inquiry(struct vtscsi_softc *sc, struct cam_sim *sim,
 	cpi->max_lun = sc->vtscsi_max_lun;
 	cpi->initiator_id = cpi->max_target + 1;
 
-	strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+	strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 	strlcpy(cpi->hba_vid, "VirtIO", HBA_IDLEN);
 	strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 

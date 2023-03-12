@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2006 Kip Macy kmacy@FreeBSD.org
- * Copyright (c) 2006 Kris Kennaway kris@FreeBSD.org
+ * Copyright (c) 2006 Kip Macy kmacy@frebsd.org
+ * Copyright (c) 2006 Kris Kennaway kris@frebsd.org
  * Copyright (c) 2006 Dag-Erling Smorgrav des@des.no
  *
  * Redistribution and use in source and binary forms, with or without

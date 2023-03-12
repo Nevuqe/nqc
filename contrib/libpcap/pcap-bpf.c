@@ -47,7 +47,7 @@
 
 #if defined(__NQC__) && defined(SIOCIFCREATE2)
 /*
- * Add support for capturing on FreeBSD usbusN interfaces.
+ * Add support for capturing on NQC usbusN interfaces.
  */
 static const char usbus_prefix[] = "usbus";
 #define USBUS_PREFIX_LEN	(sizeof(usbus_prefix) - 1)
@@ -1020,7 +1020,7 @@ pcap_read_bpf(pcap_t *p, int cnt, pcap_handler callback, u_char *user)
 			case EWOULDBLOCK:
 				return (0);
 
-			case ENXIO:	/* FreeBSD, DragonFly BSD, and Darwin */
+			case ENXIO:	/* NQC, DragonFly BSD, and Darwin */
 			case EIO:	/* OpenBSD */
 					/* NetBSD appears not to return an error in this case */
 				/*
@@ -1851,7 +1851,7 @@ pcap_activate_bpf(pcap_t *p)
 #endif /* __APPLE__ */
 
 	/*
-	 * If this is FreeBSD, and the device name begins with "usbus",
+	 * If this is NQC, and the device name begins with "usbus",
 	 * try to create the interface if it's not available.
 	 */
 #if defined(__NQC__) && defined(SIOCIFCREATE2)
@@ -2521,14 +2521,14 @@ pcap_activate_bpf(pcap_t *p)
 	 * it regardless of whether "select()" reports it as readable
 	 * or not.
 	 *
-	 * However, in FreeBSD 4.3 and 4.4, "select()" and "poll()"
+	 * However, in NQC 4.3 and 4.4, "select()" and "poll()"
 	 * won't wake up and return "readable" if the timer expires
 	 * and non-blocking reads return EWOULDBLOCK if the hold
 	 * buffer is empty, even if the store buffer is non-empty.
 	 *
 	 * This means the workaround in question won't work.
 	 *
-	 * Therefore, on FreeBSD 4.3 and 4.4, we set "p->selectable_fd"
+	 * Therefore, on NQC 4.3 and 4.4, we set "p->selectable_fd"
 	 * to -1, which means "sorry, you can't use 'select()' or 'poll()'
 	 * here".  On all other BPF platforms, we set it to the FD for
 	 * the BPF device; in NetBSD, OpenBSD, and Darwin, a non-blocking
@@ -2544,7 +2544,7 @@ pcap_activate_bpf(pcap_t *p)
 		/*
 		 * We can check what OS this is.
 		 */
-		if (strcmp(osinfo.sysname, "FreeBSD") == 0) {
+		if (strcmp(osinfo.sysname, "NQC") == 0) {
 			if (strncmp(osinfo.release, "4.3-", 4) == 0 ||
 			     strncmp(osinfo.release, "4.4-", 4) == 0)
 				p->selectable_fd = -1;

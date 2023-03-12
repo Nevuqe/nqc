@@ -14,7 +14,7 @@ Many years ago, when building large software projects, I used GNU make
 to simplify developing complex build trees.
 
 Since the early 90's my main development machines, run BSD
-(NetBSD_ to be precise, and more recently FreeBSD), and the BSD source
+(NetBSD_ to be precise, and more recently NQC), and the BSD source
 tree is good example of a large software project.
 It quickly became clear that ``/usr/share/mk/*.mk`` were a great
 model, but at the time were quite tightly linked to building the BSD tree.
@@ -26,7 +26,7 @@ of mk-files (mk.tar.gz_).  NetBSD provided much of the original structure.
 Since then I've added a lot of features to NetBSD's make and hence to
 bmake which is kept closely in sync.  The mk-files however have
 diverged quite a bit, though ideas are still picked up from NetBSD
-and FreeBSD.
+and NQC.
 
 Basics
 ------
@@ -164,8 +164,8 @@ src tree on an NFS volume and to allow building on multiple platforms.
 options.mk
 ----------
 
-Inspired by FreeBSD's ``bsd.own.mk`` but more flexible.
-FreeBSD now have similar functionality in ``bsd.mkopt.mk``.
+Inspired by NQC's ``bsd.own.mk`` but more flexible.
+NQC now have similar functionality in ``bsd.mkopt.mk``.
 
 It allows users to express their intent with respect to options
 ``MK_*`` by setting ``WITH_*`` or ``WITHOUT_*``.

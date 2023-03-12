@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1998-2010 Luigi Rizzo, Universita` di Pisa
  * Portions Copyright (c) 2000 Akamba Corp.
@@ -79,7 +79,7 @@ enum {
 	DN_CMD_DELETE,		/* subtype + list of entries */
 	DN_CMD_GET,		/* subtype + list of entries */
 	DN_CMD_FLUSH,
-	/* for compatibility with FreeBSD 7.2/8 */
+	/* for compatibility with NQC 7.2/8 */
 	DN_COMPAT_PIPE,
 	DN_COMPAT_QUEUE,
 	DN_GET_COMPAT,

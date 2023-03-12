@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # Bug 235513 - panic: dead bo 0xfffff8000a838b48
-# https://people.freebsd.org/~pho/stress/log/devfs4.txt
+# https://people.frebsd.org/~pho/stress/log/devfs4.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

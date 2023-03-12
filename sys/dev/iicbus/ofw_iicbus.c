@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2009, Nathan Whitehorn <nwhitehorn@FreeBSD.org>
+ * Copyright (c) 2009, Nathan Whitehorn <nwhitehorn@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -155,7 +155,7 @@ ofw_iicbus_attach(device_t dev)
 		if (dinfo == NULL)
 			continue;
 		/*
-		 * FreeBSD drivers expect I2C addresses to be expressed as
+		 * NQC drivers expect I2C addresses to be expressed as
 		 * 8-bit values.  Apple OFW data contains 8-bit values, but
 		 * Linux FDT data contains 7-bit values, so shift them up to
 		 * 8-bit format.

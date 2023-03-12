@@ -813,7 +813,7 @@ skip:
  * The callout mechanism is based on the work of Adam M. Costello and
  * George Varghese, published in a technical report entitled "Redesigning
  * the BSD Callout and Timer Facilities" and modified slightly for inclusion
- * in FreeBSD by Justin T. Gibbs.  The original work on the data structures
+ * in NQC by Justin T. Gibbs.  The original work on the data structures
  * used in this implementation was published by G. Varghese and T. Lauck in
  * the paper "Hashed and Hierarchical Timing Wheels: Data Structures for
  * the Efficient Implementation of a Timer Facility" in the Proceedings of

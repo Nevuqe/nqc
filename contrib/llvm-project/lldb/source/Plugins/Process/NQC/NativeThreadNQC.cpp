@@ -1,4 +1,4 @@
-//===-- NativeThreadFreeBSD.cpp -------------------------------------------===//
+//===-- NativeThreadNQC.cpp -------------------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,10 +6,10 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "NativeThreadFreeBSD.h"
-#include "NativeRegisterContextFreeBSD.h"
+#include "NativeThreadNQC.h"
+#include "NativeRegisterContextNQC.h"
 
-#include "NativeProcessFreeBSD.h"
+#include "NativeProcessNQC.h"
 
 #include "Plugins/Process/POSIX/CrashReason.h"
 #include "Plugins/Process/POSIX/ProcessPOSIXLog.h"
@@ -32,20 +32,20 @@ using namespace lldb;
 using namespace lldb_private;
 using namespace lldb_private::process_nqc;
 
-NativeThreadFreeBSD::NativeThreadFreeBSD(NativeProcessFreeBSD &process,
+NativeThreadNQC::NativeThreadNQC(NativeProcessNQC &process,
                                          lldb::tid_t tid)
     : NativeThreadProtocol(process, tid), m_state(StateType::eStateInvalid),
       m_stop_info(),
       m_reg_context_up(
-          NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
+          NativeRegisterContextNQC::CreateHostNativeRegisterContextNQC(
               process.GetArchitecture(), *this)),
       m_stop_description() {}
 
-Status NativeThreadFreeBSD::Resume() {
-  Status ret = NativeProcessFreeBSD::PtraceWrapper(PT_RESUME, GetID());
+Status NativeThreadNQC::Resume() {
+  Status ret = NativeProcessNQC::PtraceWrapper(PT_RESUME, GetID());
   if (!ret.Success())
     return ret;
-  ret = NativeProcessFreeBSD::PtraceWrapper(PT_CLEARSTEP, GetID());
+  ret = NativeProcessNQC::PtraceWrapper(PT_CLEARSTEP, GetID());
   // we can get EINVAL if the architecture in question does not support
   // hardware single-stepping -- that's fine, we have nothing to clear
   // then
@@ -56,24 +56,24 @@ Status NativeThreadFreeBSD::Resume() {
   return ret;
 }
 
-Status NativeThreadFreeBSD::SingleStep() {
-  Status ret = NativeProcessFreeBSD::PtraceWrapper(PT_RESUME, GetID());
+Status NativeThreadNQC::SingleStep() {
+  Status ret = NativeProcessNQC::PtraceWrapper(PT_RESUME, GetID());
   if (!ret.Success())
     return ret;
-  ret = NativeProcessFreeBSD::PtraceWrapper(PT_SETSTEP, GetID());
+  ret = NativeProcessNQC::PtraceWrapper(PT_SETSTEP, GetID());
   if (ret.Success())
     SetStepping();
   return ret;
 }
 
-Status NativeThreadFreeBSD::Suspend() {
-  Status ret = NativeProcessFreeBSD::PtraceWrapper(PT_SUSPEND, GetID());
+Status NativeThreadNQC::Suspend() {
+  Status ret = NativeProcessNQC::PtraceWrapper(PT_SUSPEND, GetID());
   if (ret.Success())
     SetStopped();
   return ret;
 }
 
-void NativeThreadFreeBSD::SetStoppedBySignal(uint32_t signo,
+void NativeThreadNQC::SetStoppedBySignal(uint32_t signo,
                                              const siginfo_t *info) {
   Log *log = GetLog(POSIXLog::Thread);
   LLDB_LOG(log, "tid = {0} in called with signal {1}", GetID(), signo);
@@ -97,25 +97,25 @@ void NativeThreadFreeBSD::SetStoppedBySignal(uint32_t signo,
   }
 }
 
-void NativeThreadFreeBSD::SetStoppedByBreakpoint() {
+void NativeThreadNQC::SetStoppedByBreakpoint() {
   SetStopped();
   m_stop_info.reason = StopReason::eStopReasonBreakpoint;
   m_stop_info.signo = SIGTRAP;
 }
 
-void NativeThreadFreeBSD::SetStoppedByTrace() {
+void NativeThreadNQC::SetStoppedByTrace() {
   SetStopped();
   m_stop_info.reason = StopReason::eStopReasonTrace;
   m_stop_info.signo = SIGTRAP;
 }
 
-void NativeThreadFreeBSD::SetStoppedByExec() {
+void NativeThreadNQC::SetStoppedByExec() {
   SetStopped();
   m_stop_info.reason = StopReason::eStopReasonExec;
   m_stop_info.signo = SIGTRAP;
 }
 
-void NativeThreadFreeBSD::SetStoppedByWatchpoint(uint32_t wp_index) {
+void NativeThreadNQC::SetStoppedByWatchpoint(uint32_t wp_index) {
   lldbassert(wp_index != LLDB_INVALID_INDEX32 && "wp_index cannot be invalid");
 
   std::ostringstream ostr;
@@ -130,7 +130,7 @@ void NativeThreadFreeBSD::SetStoppedByWatchpoint(uint32_t wp_index) {
   m_stop_info.signo = SIGTRAP;
 }
 
-void NativeThreadFreeBSD::SetStoppedByFork(lldb::pid_t child_pid,
+void NativeThreadNQC::SetStoppedByFork(lldb::pid_t child_pid,
                                            lldb::tid_t child_tid) {
   SetStopped();
 
@@ -140,7 +140,7 @@ void NativeThreadFreeBSD::SetStoppedByFork(lldb::pid_t child_pid,
   m_stop_info.details.fork.child_tid = child_tid;
 }
 
-void NativeThreadFreeBSD::SetStoppedByVFork(lldb::pid_t child_pid,
+void NativeThreadNQC::SetStoppedByVFork(lldb::pid_t child_pid,
                                             lldb::tid_t child_tid) {
   SetStopped();
 
@@ -150,37 +150,37 @@ void NativeThreadFreeBSD::SetStoppedByVFork(lldb::pid_t child_pid,
   m_stop_info.details.fork.child_tid = child_tid;
 }
 
-void NativeThreadFreeBSD::SetStoppedByVForkDone() {
+void NativeThreadNQC::SetStoppedByVForkDone() {
   SetStopped();
 
   m_stop_info.reason = StopReason::eStopReasonVForkDone;
   m_stop_info.signo = SIGTRAP;
 }
 
-void NativeThreadFreeBSD::SetStoppedWithNoReason() {
+void NativeThreadNQC::SetStoppedWithNoReason() {
   SetStopped();
 
   m_stop_info.reason = StopReason::eStopReasonNone;
   m_stop_info.signo = 0;
 }
 
-void NativeThreadFreeBSD::SetStopped() {
+void NativeThreadNQC::SetStopped() {
   const StateType new_state = StateType::eStateStopped;
   m_state = new_state;
   m_stop_description.clear();
 }
 
-void NativeThreadFreeBSD::SetRunning() {
+void NativeThreadNQC::SetRunning() {
   m_state = StateType::eStateRunning;
   m_stop_info.reason = StopReason::eStopReasonNone;
 }
 
-void NativeThreadFreeBSD::SetStepping() {
+void NativeThreadNQC::SetStepping() {
   m_state = StateType::eStateStepping;
   m_stop_info.reason = StopReason::eStopReasonNone;
 }
 
-std::string NativeThreadFreeBSD::GetName() {
+std::string NativeThreadNQC::GetName() {
   Log *log = GetLog(POSIXLog::Thread);
 
   std::vector<struct kinfo_proc> kp;
@@ -212,9 +212,9 @@ std::string NativeThreadFreeBSD::GetName() {
   return "";
 }
 
-lldb::StateType NativeThreadFreeBSD::GetState() { return m_state; }
+lldb::StateType NativeThreadNQC::GetState() { return m_state; }
 
-bool NativeThreadFreeBSD::GetStopReason(ThreadStopInfo &stop_info,
+bool NativeThreadNQC::GetStopReason(ThreadStopInfo &stop_info,
                                         std::string &description) {
   Log *log = GetLog(POSIXLog::Thread);
   description.clear();
@@ -244,12 +244,12 @@ bool NativeThreadFreeBSD::GetStopReason(ThreadStopInfo &stop_info,
   llvm_unreachable("unhandled StateType!");
 }
 
-NativeRegisterContextFreeBSD &NativeThreadFreeBSD::GetRegisterContext() {
+NativeRegisterContextNQC &NativeThreadNQC::GetRegisterContext() {
   assert(m_reg_context_up);
   return *m_reg_context_up;
 }
 
-Status NativeThreadFreeBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
+Status NativeThreadNQC::SetWatchpoint(lldb::addr_t addr, size_t size,
                                           uint32_t watch_flags, bool hardware) {
   assert(m_state == eStateStopped);
   if (!hardware)
@@ -265,7 +265,7 @@ Status NativeThreadFreeBSD::SetWatchpoint(lldb::addr_t addr, size_t size,
   return Status();
 }
 
-Status NativeThreadFreeBSD::RemoveWatchpoint(lldb::addr_t addr) {
+Status NativeThreadNQC::RemoveWatchpoint(lldb::addr_t addr) {
   auto wp = m_watchpoint_index_map.find(addr);
   if (wp == m_watchpoint_index_map.end())
     return Status();
@@ -276,7 +276,7 @@ Status NativeThreadFreeBSD::RemoveWatchpoint(lldb::addr_t addr) {
   return Status("Clearing hardware watchpoint failed.");
 }
 
-Status NativeThreadFreeBSD::SetHardwareBreakpoint(lldb::addr_t addr,
+Status NativeThreadNQC::SetHardwareBreakpoint(lldb::addr_t addr,
                                                   size_t size) {
   assert(m_state == eStateStopped);
   Status error = RemoveHardwareBreakpoint(addr);
@@ -292,7 +292,7 @@ Status NativeThreadFreeBSD::SetHardwareBreakpoint(lldb::addr_t addr,
   return Status();
 }
 
-Status NativeThreadFreeBSD::RemoveHardwareBreakpoint(lldb::addr_t addr) {
+Status NativeThreadNQC::RemoveHardwareBreakpoint(lldb::addr_t addr) {
   auto bp = m_hw_break_index_map.find(addr);
   if (bp == m_hw_break_index_map.end())
     return Status();
@@ -307,7 +307,7 @@ Status NativeThreadFreeBSD::RemoveHardwareBreakpoint(lldb::addr_t addr) {
 }
 
 llvm::Error
-NativeThreadFreeBSD::CopyWatchpointsFrom(NativeThreadFreeBSD &source) {
+NativeThreadNQC::CopyWatchpointsFrom(NativeThreadNQC &source) {
   llvm::Error s = GetRegisterContext().CopyHardwareWatchpointsFrom(
       source.GetRegisterContext());
   if (!s) {
@@ -318,11 +318,11 @@ NativeThreadFreeBSD::CopyWatchpointsFrom(NativeThreadFreeBSD &source) {
 }
 
 llvm::Expected<std::unique_ptr<llvm::MemoryBuffer>>
-NativeThreadFreeBSD::GetSiginfo() const {
+NativeThreadNQC::GetSiginfo() const {
   Log *log = GetLog(POSIXLog::Process);
 
   struct ptrace_lwpinfo info;
-  const auto siginfo_err = NativeProcessFreeBSD::PtraceWrapper(
+  const auto siginfo_err = NativeProcessNQC::PtraceWrapper(
       PT_LWPINFO, GetID(), &info, sizeof(info));
   if (siginfo_err.Fail()) {
     LLDB_LOG(log, "PT_LWPINFO failed {0}", siginfo_err);

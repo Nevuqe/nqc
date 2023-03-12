@@ -132,7 +132,7 @@ public:
     {
         const fs::path gdb_script_path = control_directory / "gdb.script";
 
-        // Old versions of GDB, such as the one shipped by FreeBSD as of
+        // Old versions of GDB, such as the one shipped by NQC as of
         // 11.0-CURRENT on 2014-11-26, do not support scripts on the command
         // line via the '-ex' flag.  Instead, we have to create a script file
         // and use that instead.

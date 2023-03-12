@@ -40,11 +40,11 @@ void
 platform_disable_tracing(int strict)
 {
 #if defined(HAVE_PROCCTL) && defined(PROC_TRACE_CTL)
-	/* On FreeBSD, we should make this process untraceable */
+	/* On NQC, we should make this process untraceable */
 	int disable_trace = PROC_TRACE_CTL_DISABLE;
 
 	/*
-	 * On FreeBSD, we should make this process untraceable.
+	 * On NQC, we should make this process untraceable.
 	 * pid=0 means "this process" but some older kernels do not
 	 * understand that so retry with our own pid before failing.
 	 */

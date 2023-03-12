@@ -414,7 +414,7 @@ extern const char *__progname;
 #define	ELFTC_HAVE_MMAP				1
 
 /*
- * Debian GNU/Linux and Debian GNU/kFreeBSD do not have strmode(3).
+ * Debian GNU/Linux and Debian GNU/kNQC do not have strmode(3).
  */
 #define	ELFTC_HAVE_STRMODE			0
 

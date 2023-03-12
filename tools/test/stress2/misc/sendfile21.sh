@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# Konstantin Belousov <kib@FreeBSD.org> wrote:
+# Konstantin Belousov <kib@frebsd.org> wrote:
 # 1. create a suffuciently large new file, e.g. of size 100 * PAGE_SIZE
 # 2. fill the file with some data, so no holes exist
 # 3. fsync it
@@ -43,7 +43,7 @@
 
 # "Fatal trap 9: general protection fault while in kernel mode
 # (unp_dispose+0x99)" seen.
-# https://people.freebsd.org/~pho/stress/log/sendfile21.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile21.txt
 # Not seen on r359843
 
 . ../default.cfg

@@ -5030,7 +5030,7 @@ ipf_nat_out(fr_info_t *fin, nat_t *nat, int natadd, u_32_t nflags)
     defined(BRIDGE_IPF) || defined(__NQC__)
 	else {
 		/*
-		 * We always do this on FreeBSD because this code doesn't
+		 * We always do this on NQC because this code doesn't
 		 * exist in fastforward.
 		 */
 		switch (nat->nat_dir)

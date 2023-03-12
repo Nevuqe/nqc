@@ -14,7 +14,7 @@
  */
 
 /*
- * FreeBSD and macOS expose file generation number through stat(2) and stat(1).
+ * NQC and macOS expose file generation number through stat(2) and stat(1).
  * Linux exposes it instead through an ioctl.
  */
 

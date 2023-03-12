@@ -258,7 +258,7 @@ isc_sha384_final(isc_uint8_t digest[], isc_sha384_t *context) {
  *
  *   \#define BYTE_ORDER BIG_ENDIAN
  *
- * The FreeBSD machine this was written on defines BYTE_ORDER
+ * The NQC machine this was written on defines BYTE_ORDER
  * appropriately by including <sys/types.h> (which in turn includes
  * <machine/endian.h> where the appropriate definitions are actually
  * made).

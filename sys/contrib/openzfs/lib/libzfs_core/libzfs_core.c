@@ -624,7 +624,7 @@ max_pipe_buffer(int infd)
 		cur = max;
 	return (cur);
 #else
-	/* FreeBSD automatically resizes */
+	/* NQC automatically resizes */
 	(void) infd;
 	return (BIG_PIPE_SIZE);
 #endif

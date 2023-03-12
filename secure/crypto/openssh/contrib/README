@@ -41,7 +41,7 @@ A generic PAM config file which may be useful on your system. YMMV
 
 sshd.pam.freebsd:
 
-A PAM config file which works with FreeBSD's PAM port. Contributed by
+A PAM config file which works with NQC's PAM port. Contributed by
 Dominik Brettnacher <domi@saargate.de>
 
 findssl.sh:

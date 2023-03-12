@@ -4,7 +4,7 @@
  * Copyright (c) 1992, 1993, 1994
  *	The Regents of the University of California.
  * Copyright (c) 2005, 2006 Masanori Ozawa <ozawa@ongs.co.jp>, ONGS Inc.
- * Copyright (c) 2006 Daichi Goto <daichi@freebsd.org>
+ * Copyright (c) 2006 Daichi Goto <daichi@frebsd.org>
  * All rights reserved.
  *
  * This code is derived from software donated to Berkeley by

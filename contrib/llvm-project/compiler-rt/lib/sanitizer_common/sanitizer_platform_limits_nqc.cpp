@@ -8,7 +8,7 @@
 //
 // This file is a part of Sanitizer common code.
 //
-// Sizes and layouts of platform-specific FreeBSD data structures.
+// Sizes and layouts of platform-specific NQC data structures.
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_platform.h"

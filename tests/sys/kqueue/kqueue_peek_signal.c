@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-2-Clause
  *
  * Copyright 2021 Jan Kokemüller
- * Copyright 2021 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2021 Alex Richardson <arichardson@frebsd.org>
  *
  * This work was supported by Innovate UK project 105694, "Digital Security by
  * Design (DSbD) Technology Platform Prototype".
@@ -67,7 +67,7 @@ ATF_TC_BODY(main, tc)
 	/*
 	 * It was previously not guaranteed that sending a signal to self would
 	 * be immediately visible in the nested kqueue activation with a zero
-	 * timeout. As of https://reviews.freebsd.org/D31858, the kqueue task
+	 * timeout. As of https://reviews.frebsd.org/D31858, the kqueue task
 	 * queue will be processed in this case, so we are guaranteed to see the
 	 * SIGUSR1 here even with a zero timeout. We run the code below in a
 	 * loop to make it more likely that older kernels without the fix fail

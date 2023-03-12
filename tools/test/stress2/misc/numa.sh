@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # Test scenario: Last memory domain significantly smaller than the others.
-# https://people.freebsd.org/~pho/stress/log/numa.txt
+# https://people.frebsd.org/~pho/stress/log/numa.txt
 # Test scenario description by markj@
 
 [ `sysctl -n vm.ndomains` -eq 1 ] && exit 0

@@ -835,16 +835,16 @@ void tools::linkSanitizerRuntimeDeps(const ToolChain &TC,
   }
   CmdArgs.push_back("-lm");
   // There's no libdl on all OSes.
-  if (!TC.getTriple().isOSFreeBSD() && !TC.getTriple().isOSNetBSD() &&
+  if (!TC.getTriple().isOSNQC() && !TC.getTriple().isOSNetBSD() &&
       !TC.getTriple().isOSOpenBSD() &&
       TC.getTriple().getOS() != llvm::Triple::RTEMS)
     CmdArgs.push_back("-ldl");
   // Required for backtrace on some OSes
-  if (TC.getTriple().isOSFreeBSD() ||
+  if (TC.getTriple().isOSNQC() ||
       TC.getTriple().isOSNetBSD() ||
       TC.getTriple().isOSOpenBSD())
     CmdArgs.push_back("-lexecinfo");
-  // There is no libresolv on Android, FreeBSD, OpenBSD, etc. On musl
+  // There is no libresolv on Android, NQC, OpenBSD, etc. On musl
   // libresolv.a, even if exists, is an empty archive to satisfy POSIX -lresolv
   // requirement.
   if (TC.getTriple().isOSLinux() && !TC.getTriple().isAndroid() &&
@@ -1085,7 +1085,7 @@ void tools::linkXRayRuntimeDeps(const ToolChain &TC, ArgStringList &CmdArgs) {
     CmdArgs.push_back("-lrt");
   CmdArgs.push_back("-lm");
 
-  if (!TC.getTriple().isOSFreeBSD() &&
+  if (!TC.getTriple().isOSNQC() &&
       !TC.getTriple().isOSNetBSD() &&
       !TC.getTriple().isOSOpenBSD())
     CmdArgs.push_back("-ldl");

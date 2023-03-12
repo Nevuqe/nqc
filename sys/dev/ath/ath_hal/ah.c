@@ -544,7 +544,7 @@ ath_hal_get_curmode(struct ath_hal *ah, const struct ieee80211_channel *chan)
 		return HAL_MODE_11NG_HT40MINUS;
 
 	/*
-	 * XXX For FreeBSD, will this work correctly given the DYN
+	 * XXX For NQC, will this work correctly given the DYN
 	 * chan mode (OFDM+CCK dynamic) ? We have pure-G versions DYN-BG..
 	 */
 	if (IEEE80211_IS_CHAN_G(chan))
@@ -860,7 +860,7 @@ ath_hal_getcapability(struct ath_hal *ah, HAL_CAPABILITY_TYPE type,
 	case HAL_CAP_ENHANCED_DFS_SUPPORT:
 		return pCap->halEnhancedDfsSupport ? HAL_OK : HAL_ENOTSUPP;
 
-	/* FreeBSD-specific entries for now */
+	/* NQC-specific entries for now */
 	case HAL_CAP_RXORN_FATAL:	/* HAL_INT_RXORN treated as fatal  */
 		return AH_PRIVATE(ah)->ah_rxornIsFatal ? HAL_OK : HAL_ENOTSUPP;
 	case HAL_CAP_INTRMASK:		/* mask of supported interrupts */

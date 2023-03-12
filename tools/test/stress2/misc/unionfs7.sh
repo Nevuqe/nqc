@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2021 Peter Holm
 #
@@ -31,7 +31,7 @@
 
 # "unionfs_get_node_status: 0xfffffe018f356770 is not exclusive locked but
 # should be" seen.
-# https://people.freebsd.org/~pho/stress/log/log0202.txt
+# https://people.frebsd.org/~pho/stress/log/log0202.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

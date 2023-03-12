@@ -63,7 +63,7 @@ extern time_t	dumpdate;	/* time that this dump was made */
 extern char	command;	/* opration being performed */
 extern FILE	*terminal;	/* file descriptor for the terminal input */
 extern int	Bcvt;		/* need byte swapping on inodes and dirs */
-extern int	oldinofmt;	/* reading tape with FreeBSD 1 format inodes */
+extern int	oldinofmt;	/* reading tape with NQC 1 format inodes */
 
 /*
  * Each file in the file system is described by one of these entries

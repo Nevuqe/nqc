@@ -13,7 +13,7 @@
 #	sjg@crufty.net
 #
 
-# Inspired by FreeBSD bsd.own.mk, but intentionally simpler and more flexible.
+# Inspired by NQC bsd.own.mk, but intentionally simpler and more flexible.
 
 # Options are normally listed in either OPTIONS_DEFAULT_{YES,NO}
 # We convert these to ${OPTION}/{yes,no} in OPTIONS_DEFAULT_VALUES.

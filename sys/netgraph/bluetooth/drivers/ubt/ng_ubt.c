@@ -3,7 +3,7 @@
  */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001-2009 Maksim Yevmenkin <m_evmenkin@yahoo.com>
  * All rights reserved.
@@ -89,7 +89,7 @@
  *	Access to the outgoing queues, task flags and hook pointer is
  * controlled by the sc_ng_mtx lock. It is an unavoidable evil. Again,
  * sc_ng_mtx should really be a spin lock (and it is very likely to an
- * equivalent of spin lock due to adaptive nature of FreeBSD mutexes).
+ * equivalent of spin lock due to adaptive nature of NQC mutexes).
  *	All USB callbacks accept softc pointer as a private data. USB ensures
  * that this pointer is valid.
  */

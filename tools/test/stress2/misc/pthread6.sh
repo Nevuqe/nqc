@@ -27,7 +27,7 @@
 #
 
 # "panic: pmap active 0xfffff80128cd84b8" seen:
-# http://people.freebsd.org/~pho/stress/log/attilio101.txt
+# http://people.frebsd.org/~pho/stress/log/attilio101.txt
 
 . ../default.cfg
 

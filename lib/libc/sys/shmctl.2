@@ -51,7 +51,7 @@ Fetch the segment's
 storing it in the memory pointed to by
 .Fa buf .
 .\"
-.\" XXX need to make sure that this is correct for FreeBSD
+.\" XXX need to make sure that this is correct for NQC
 .\"
 .It Dv IPC_SET
 Changes the
@@ -86,10 +86,10 @@ variable is set to 0, once the IPC_RMID operation has taken place,
 no further processes will be allowed to attach the segment.
 .\" .It Dv SHM_LOCK
 .\" Locks the segment in memory.  The calling process must have
-.\" superuser privileges. Not implemented in FreeBSD.
+.\" superuser privileges. Not implemented in NQC.
 .\" .It Dv SHM_UNLOCK
 .\" Unlocks the segment from memory.  The calling process must
-.\" have superuser privileges.  Not implemented in FreeBSD.
+.\" have superuser privileges.  Not implemented in NQC.
 .El
 .Pp
 The

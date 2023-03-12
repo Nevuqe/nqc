@@ -275,7 +275,7 @@ zfs_getquota(zfsvfs_t *zfsvfs, uid_t id, int isgroup, struct dqblk64 *dqp)
 	dqp->dqb_ihardlimit = dqp->dqb_isoftlimit = 0;
 	vfs_timestamp(&now);
 	/*
-	 * Setting this to 0 causes FreeBSD quota(8) to print
+	 * Setting this to 0 causes NQC quota(8) to print
 	 * the number of days since the epoch, which isn't
 	 * particularly useful.
 	 */
@@ -939,7 +939,7 @@ zfsvfs_init(zfsvfs_t *zfsvfs, objset_t *os)
 	 * or case folding.  We can also look there if we happen to be
 	 * on a non-normalizing, mixed sensitivity file system IF we
 	 * are looking for the exact name (which is always the case on
-	 * FreeBSD).
+	 * NQC).
 	 */
 	zfsvfs->z_use_namecache = !zfsvfs->z_norm ||
 	    ((zfsvfs->z_case == ZFS_CASE_MIXED) &&
@@ -1195,7 +1195,7 @@ zfs_domount(vfs_t *vfsp, char *osname)
 	vfsp->mnt_kern_flag |= MNTK_EXTENDED_SHARED;
 	/*
 	 * This can cause a loss of coherence between ARC and page cache
-	 * on ZoF - unclear if the problem is in FreeBSD or ZoF
+	 * on ZoF - unclear if the problem is in NQC or ZoF
 	 */
 	vfsp->mnt_kern_flag |= MNTK_NO_IOPF;	/* vn_io_fault can be used */
 	vfsp->mnt_kern_flag |= MNTK_NOMSYNC;
@@ -1818,7 +1818,7 @@ zfs_fhtovp(vfs_t *vfsp, fid_t *fidp, int flags, vnode_t **vpp)
 		return (err);
 
 	/*
-	 * On FreeBSD we can get snapshot's mount point or its parent file
+	 * On NQC we can get snapshot's mount point or its parent file
 	 * system mount point depending if snapshot is already mounted or not.
 	 */
 	if (zfsvfs->z_parent == zfsvfs && fidp->fid_len == LONG_FID_LEN) {

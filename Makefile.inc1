@@ -158,7 +158,7 @@ _t=		${TARGET_ARCH}/${TARGET}
 .endif
 .endfor
 
-.if ${.MAKE.OS} != "FreeBSD"
+.if ${.MAKE.OS} != "NQC"
 CROSSBUILD_HOST=${.MAKE.OS}
 .if ${.MAKE.OS} != "Linux" && ${.MAKE.OS} != "Darwin"
 .warning Unsupported crossbuild system: ${.MAKE.OS}. Build will probably fail!
@@ -527,7 +527,7 @@ SRCRELDATE!=	awk '/^\#define[[:space:]]*__NQC_version/ { print $$3 }' \
 .export SRCRELDATE
 .endif
 .if !defined(VERSION)
-VERSION=	FreeBSD ${_REVISION}-${_BRANCH:C/-p[0-9]+$//} ${TARGET_ARCH} ${SRCRELDATE}
+VERSION=	NQC ${_REVISION}-${_BRANCH:C/-p[0-9]+$//} ${TARGET_ARCH} ${SRCRELDATE}
 .export VERSION
 .endif
 MAJOR_REVISION=	${_REVISION:R}
@@ -557,9 +557,9 @@ SOURCE_DATE_EPOCH=	${TIMEEPOCHNOW:gmtime}
 SOURCE_DATE_EPOCH=	${PKG_TIMESTAMP}
 .endif
 
-PKG_NAME_PREFIX?=	FreeBSD
-PKG_MAINTAINER?=	re@FreeBSD.org
-PKG_WWW?=		https://www.FreeBSD.org
+PKG_NAME_PREFIX?=	NQC
+PKG_MAINTAINER?=	re@frebsd.org
+PKG_WWW?=		https://www.frebsd.org
 .export PKG_NAME_PREFIX
 .export PKG_MAINTAINER
 .export PKG_WWW
@@ -575,8 +575,8 @@ _CPUTYPE!=	MAKEFLAGS= CPUTYPE=${_TARGET_CPUTYPE} ${MAKE} -f /dev/null \
 BUILD_ARCH!=	uname -p
 # On some Linux systems uname -p returns "unknown" so skip this check there.
 # This check only exists to tell people to use TARGET_ARCH instead of
-# MACHINE_ARCH so skipping it when crossbuilding on non-FreeBSD should be fine.
-.if ${MACHINE_ARCH} != ${BUILD_ARCH} && ${.MAKE.OS} == "FreeBSD"
+# MACHINE_ARCH so skipping it when crossbuilding on non-NQC should be fine.
+.if ${MACHINE_ARCH} != ${BUILD_ARCH} && ${.MAKE.OS} == "NQC"
 .error To cross-build, set TARGET_ARCH.
 .endif
 .endif
@@ -598,8 +598,8 @@ STRICTTMPPATH=	${XPATH}:${BPATH}:${UNIVERSE_TOOLCHAIN_PATH}
 # resolved it will be turned on by default.
 BUILD_WITH_STRICT_TMPPATH?=0
 .if defined(CROSSBUILD_HOST)
-# When building on non-FreeBSD we can't rely on the tools in /usr/bin being compatible
-# with what FreeBSD expects. Therefore we only use tools from STRICTTMPPATH
+# When building on non-NQC we can't rely on the tools in /usr/bin being compatible
+# with what NQC expects. Therefore we only use tools from STRICTTMPPATH
 # during the world build stage. We build most tools during the bootstrap-tools
 # phase but symlink host tools that are known to work instead of building them
 BUILD_WITH_STRICT_TMPPATH:=1
@@ -626,8 +626,8 @@ MKTEMP=mktemp
 .endif
 INSTALLTMP!=	${MKTEMP} -d -u -t install
 
-.if ${.MAKE.OS} == "FreeBSD"
-# When building on FreeBSD we always copy the host tools instead of linking
+.if ${.MAKE.OS} == "NQC"
+# When building on NQC we always copy the host tools instead of linking
 # into INSTALLTMP to avoid issues with incompatible libraries (see r364030).
 # Note: we could create links if we don't intend to update the current machine.
 INSTALLTMP_COPY_HOST_TOOL=cp
@@ -1049,7 +1049,7 @@ _worldtmp: .PHONY
 	@mkdir -p ${WORLDTMP}
 	@touch ${WORLDTMP}/${.TARGET}
 # We can't use mtree to create the worldtmp directories since it may not be
-# available on the target system (this happens e.g. when building on non-FreeBSD)
+# available on the target system (this happens e.g. when building on non-NQC)
 	${_+_}cd ${.CURDIR}/tools/build; \
 	    ${MAKE} DIRPRFX=tools/build/ DESTDIR=${WORLDTMP}/legacy installdirs
 # In order to build without inheriting $PATH we need to add symlinks to the host
@@ -2054,8 +2054,8 @@ create-kernel-packages-flavor${flavor:C,^""$,${_default_flavor},}: _pkgbootstrap
 	sed -e "s/%VERSION%/${PKG_VERSION}/" \
 		-e "s/%PKGNAME%/kernel-${INSTALLKERNEL:tl}${flavor}/" \
 		-e "s/%KERNELDIR%/kernel/" \
-		-e "s/%COMMENT%/FreeBSD ${INSTALLKERNEL} kernel ${flavor}/" \
-		-e "s/%DESC%/FreeBSD ${INSTALLKERNEL} kernel ${flavor}/" \
+		-e "s/%COMMENT%/NQC ${INSTALLKERNEL} kernel ${flavor}/" \
+		-e "s/%DESC%/NQC ${INSTALLKERNEL} kernel ${flavor}/" \
 		-e "s/ %VCS_REVISION%/${VCS_REVISION}/" \
 		-e "s/%PKG_NAME_PREFIX%/${PKG_NAME_PREFIX}/" \
 		-e "s/%PKG_MAINTAINER%/${PKG_MAINTAINER}/" \
@@ -2090,8 +2090,8 @@ create-kernel-packages-extra-flavor${flavor:C,^""$,${_default_flavor},}-${_kerne
 	sed -e "s/%VERSION%/${PKG_VERSION}/" \
 		-e "s/%PKGNAME%/kernel-${_kernel:tl}${flavor}/" \
 		-e "s/%KERNELDIR%/kernel.${_kernel}/" \
-		-e "s/%COMMENT%/FreeBSD ${_kernel} kernel ${flavor}/" \
-		-e "s/%DESC%/FreeBSD ${_kernel} kernel ${flavor}/" \
+		-e "s/%COMMENT%/NQC ${_kernel} kernel ${flavor}/" \
+		-e "s/%DESC%/NQC ${_kernel} kernel ${flavor}/" \
 		-e "s/ %VCS_REVISION%/${VCS_REVISION}/" \
 		-e "s/%PKG_NAME_PREFIX%/${PKG_NAME_PREFIX}/" \
 		-e "s/%PKG_MAINTAINER%/${PKG_MAINTAINER}/" \
@@ -2204,7 +2204,7 @@ _bt=		_bootstrap-tools
 # programs used during the build accept different flags or generate different
 # output. On those platforms we only symlink the tools known to be compatible
 # (e.g. basic utilities such as mkdir) into ${WORLDTMP} and build all others
-# from the FreeBSD sources during the bootstrap-tools stage.
+# from the NQC sources during the bootstrap-tools stage.
 # We want to build without the user's $PATH starting in the bootstrap-tools
 # phase so the tools used in that phase (ln, cp, etc) must have already been
 # linked to $WORLDTMP. The tools are listed in the _host_tools_to_symlink
@@ -2215,9 +2215,9 @@ _bt=		_bootstrap-tools
 # If BOOTSTRAP_ALL_TOOLS is set we will build all the required tools from the
 # current source tree. Otherwise we create a symlink to the version found in
 # $PATH during the bootstrap-tools stage.
-# When building on non-FreeBSD systems we can't assume that the host binaries
+# When building on non-NQC systems we can't assume that the host binaries
 # accept compatible flags or produce compatible output. Therefore we force
-# BOOTSTRAP_ALL_TOOLS and just build the FreeBSD version of the binary.
+# BOOTSTRAP_ALL_TOOLS and just build the NQC version of the binary.
 .if defined(CROSSBUILD_HOST)
 BOOTSTRAP_ALL_TOOLS:=	1
 .endif
@@ -2418,17 +2418,17 @@ _basic_bootstrap_tools+=usr.sbin/services_mkdb usr.sbin/pwd_mkdb
 # ldd is required for installcheck (TODO: just always use /usr/bin/ldd instead?)
 .if !defined(CROSSBUILD_HOST)
 # ldd is only needed for updating the running system so we don't need to
-# bootstrap ldd on non-FreeBSD systems
+# bootstrap ldd on non-NQC systems
 _basic_bootstrap_tools+=usr.bin/ldd
 .endif
 # sysctl/chflags are required for installkernel:
 .if !defined(CROSSBUILD_HOST)
 _basic_bootstrap_tools+=bin/chflags
-# Note: sysctl does not bootstrap on FreeBSD < 13 anymore, but that doesn't
+# Note: sysctl does not bootstrap on NQC < 13 anymore, but that doesn't
 # matter since we don't need any of the new features for the build.
 _bootstrap_tools_links+=sysctl
 .else
-# When building on non-FreeBSD, install a fake chflags instead since the
+# When building on non-NQC, install a fake chflags instead since the
 # version from the source tree cannot work. We also don't need sysctl since we
 # are install with -DNO_ROOT.
 _other_bootstrap_tools+=tools/build/cross-build/fake_chflags
@@ -2459,7 +2459,7 @@ ${_bt}-bin/expr: ${_bt_lex_depend} ${_bt}-usr.bin/yacc
 ${_bt}-usr.sbin/config: ${_bt}-usr.bin/file2c ${_bt_lex_depend}
 # Note: no symlink to make/bmake in the !BOOTSTRAP_ALL_TOOLS case here since
 # the links to make/bmake make links will have already have been created in the
-# `make legacy` step. Not adding a link to make is important on non-FreeBSD
+# `make legacy` step. Not adding a link to make is important on non-NQC
 # since "make" will usually point to GNU make there.
 _other_bootstrap_tools+=usr.bin/bmake
 
@@ -2504,7 +2504,7 @@ bootstrap-tools: ${_bt}-links .PHONY
 
 #	Please document (add comment) why something is in 'bootstrap-tools'.
 #	Try to bound the building of the bootstrap-tool to just the
-#	FreeBSD versions that need the tool built at this stage of the build.
+#	NQC versions that need the tool built at this stage of the build.
 .for _tool in \
     ${_clang_tblgen} \
     ${_kerberos5_bootstrap_tools} \
@@ -2642,7 +2642,7 @@ _elftctools=	lib/libelftc \
 		usr.bin/size \
 		usr.bin/strings
 # These are not required by the build, but can be useful for developers who
-# cross-build on a FreeBSD 10 host:
+# cross-build on a NQC 10 host:
 _elftctools+=	usr.bin/addr2line
 .endif
 .elif ${TARGET_ARCH} != ${MACHINE_ARCH} && ${MK_ELFTOOLCHAIN_BOOTSTRAP} != "no"

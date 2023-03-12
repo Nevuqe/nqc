@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005-2009 Ariff Abdullah <ariff@FreeBSD.org>
+ * Copyright (c) 2005-2009 Ariff Abdullah <ariff@frebsd.org>
  * Portions Copyright (c) Ryan Beasley <ryan.beasley@gmail.com> - GSoC 2006
- * Copyright (c) 1999 Cameron Grant <cg@FreeBSD.org>
+ * Copyright (c) 1999 Cameron Grant <cg@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1489,7 +1489,7 @@ mixer_oss_mixerinfo(struct cdev *i_dev, oss_mixerinfo *mi)
 			mi->modify_counter = m->modify_counter;
 			mi->card_number = i;
 			/*
-			 * Currently, FreeBSD assumes 1:1 relationship between
+			 * Currently, NQC assumes 1:1 relationship between
 			 * a pcm and mixer devices, so this is hardcoded to 0.
 			 */
 			mi->port_number = 0;

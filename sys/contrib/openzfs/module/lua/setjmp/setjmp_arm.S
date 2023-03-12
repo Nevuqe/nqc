@@ -1,7 +1,7 @@
 /*-
- * Copyright 2004-2014 Olivier Houchard <cognet@FreeBSD.org>
- * Copyright 2012-2014 Ian Lepore <ian@FreeBSD.org>
- * Copyright 2013-2014 Andrew Turner <andrew@FreeBSD.org>
+ * Copyright 2004-2014 Olivier Houchard <cognet@frebsd.org>
+ * Copyright 2012-2014 Ian Lepore <ian@frebsd.org>
+ * Copyright 2013-2014 Andrew Turner <andrew@frebsd.org>
  * Copyright 2014 Svatopluk Kraus <onwahe@gmail.com>
  * Copyright 2014 Michal Meloun <meloun@miracle.cz>
  * All rights reserved.

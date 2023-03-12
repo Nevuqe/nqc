@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2012 David Schultz <das@FreeBSD.org>
+ * Copyright (c) 2012 David Schultz <das@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -183,7 +183,7 @@ run_tests(void)
 	     1.0 + DBL_EPSILON != 1.0 &&
 	     1.0L + LDBL_EPSILON != 1.0L);
 
-	/* It isn't the compiler's fault if this fails on FreeBSD/i386. */
+	/* It isn't the compiler's fault if this fails on NQC/i386. */
 	vf = FLT_EPSILON;
 	vd = DBL_EPSILON;
 	vld = LDBL_EPSILON;

@@ -50,7 +50,7 @@ test_run() {
 	test_name "Files with uchg flags cannot be removed"
 	touch a || die
 	chflags uchg a || die
-	#Not valid case in FreeBSD
+	#Not valid case in NQC
 	#rm -f a 2>/dev/null && die
 	chflags nouchg a || die
 	rm a || die

@@ -79,7 +79,7 @@
  * - stored in a leaf disk config label (i.e. alongside 'path' NVP)
  * - these strings are currently not used in kernel (i.e. for vdev_disk_open)
  *
- * On FreeBSD we currently just strip devid and phys_path to avoid confusion.
+ * On NQC we currently just strip devid and phys_path to avoid confusion.
  */
 void
 update_vdev_config_dev_strs(nvlist_t *nv)

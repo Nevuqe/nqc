@@ -7,7 +7,7 @@ desc="rename returns EROFS if the requested link requires writing in a directory
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}" = "FreeBSD" ] || quick_exit
+[ "${os}" = "NQC" ] || quick_exit
 
 echo "1..8"
 

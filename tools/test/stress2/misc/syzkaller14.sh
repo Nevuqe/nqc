@@ -16,12 +16,12 @@
 # sys_getsockopt() at sys_getsockopt+0x52/frame 0xfffffe013a91bad0
 # amd64_syscall() at amd64_syscall+0x159/frame 0xfffffe013a91bbf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe013a91bbf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x80045446a, rsp = 0x7fffdffdcf88, rbp = 0x7fffdffdcfc0 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x80045446a, rsp = 0x7fffdffdcf88, rbp = 0x7fffdffdcfc0 ---
 # KDB: enter: panic
 # [ thread pid 5313 tid 101679 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x10c7fa6(%rip)
 # db> x/s version
-# version:        FreeBSD 13.0-CURRENT #0 r361886: Tue Jun  9 08:32:24 CEST 2020\012    pho@t2.osted.lan:/usr/src/sys/amd64/compile/KTLS\012
+# version:        NQC 13.0-CURRENT #0 r361886: Tue Jun  9 08:32:24 CEST 2020\012    pho@t2.osted.lan:/usr/src/sys/amd64/compile/KTLS\012
 # db>
 
 # Reproduced on r361886 with "options KERN_TLS"

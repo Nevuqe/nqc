@@ -10,10 +10,10 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	echo "1..12"
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	echo "1..24"
 	;;
 *)
@@ -28,19 +28,19 @@ expect 0 open ${n0} O_WRONLY,O_APPEND
 expect 0 open ${n0} O_RDWR,O_APPEND
 expect EPERM open ${n0} O_WRONLY
 expect EPERM open ${n0} O_RDWR
-todo FreeBSD:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
+todo NQC:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
 expect EPERM open ${n0} O_RDONLY,O_TRUNC
-todo FreeBSD:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
+todo NQC:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
 expect EPERM open ${n0} O_RDONLY,O_APPEND,O_TRUNC
-todo FreeBSD:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
+todo NQC:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
 expect EPERM open ${n0} O_WRONLY,O_APPEND,O_TRUNC
-todo FreeBSD:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
+todo NQC:ZFS "When fle is protected by SF_APPEND, open(O_TRUNC) should return EPERM."
 expect EPERM open ${n0} O_RDWR,O_APPEND,O_TRUNC
 expect 0 chflags ${n0} none
 expect 0 unlink ${n0}
 
 case "${os}:${fs}" in
-FreeBSD:UFS)
+NQC:UFS)
 	expect 0 create ${n0} 0644
 	expect 0 chflags ${n0} UF_APPEND
 	expect 0 open ${n0} O_WRONLY,O_APPEND

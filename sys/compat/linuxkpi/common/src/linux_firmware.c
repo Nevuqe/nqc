@@ -1,11 +1,11 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2020-2021 The FreeBSD Foundation
+ * Copyright (c) 2020-2021 The FreBSD Foundation
  * Copyright (c) 2022 Bjoern A. Zeeb
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -81,7 +81,7 @@ _linuxkpi_request_firmware(const char *fw_name, const struct linuxkpi_firmware *
 	/*
 	 * Linux can have a path in the firmware which is hard to replicate
 	 * for auto-firmware-module-loading.
-	 * On FreeBSD, depending on what people do, the firmware will either
+	 * On NQC, depending on what people do, the firmware will either
 	 * be called "fw", or "dir_fw", or "modname_dir_fw".  The latter the
 	 * driver author has to deal with herself (requesting the special name).
 	 * We also optionally flatten '/'s and '.'s as some firmware modules do.

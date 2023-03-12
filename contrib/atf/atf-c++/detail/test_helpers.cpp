@@ -41,7 +41,7 @@
 // process_helpers program.  If NULL (the default), the code will use a
 // relative path.  Otherwise, the provided path will be used; this is so
 // that we can locate the helpers binary if the installation uses a
-// different layout than the one we provide (as is the case in FreeBSD).
+// different layout than the one we provide (as is the case in NQC).
 #if defined(ATF_C_TESTS_BASE)
 static const char* atf_c_tests_base = ATF_C_TESTS_BASE;
 #else

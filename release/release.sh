@@ -1,13 +1,13 @@
 #!/bin/sh
 #-
 # Copyright (c) 2020-2021 Rubicon Communications, LLC (netgate.com)
-# Copyright (c) 2013-2019 The FreeBSD Foundation
+# Copyright (c) 2013-2019 The FreBSD Foundation
 # Copyright (c) 2013 Glen Barber
 # Copyright (c) 2011 Nathan Whitehorn
 # All rights reserved.
 #
 # Portions of this software were developed by Glen Barber
-# under sponsorship from the FreeBSD Foundation.
+# under sponsorship from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -73,7 +73,7 @@ env_setup() {
 
 	# The default git checkout server, and branches for src/, doc/,
 	# and ports/.
-	GITROOT="https://git.FreeBSD.org/"
+	GITROOT="https://git.frebsd.org/"
 	SRCBRANCH="main"
 	PORTBRANCH="main"
 	GITSRC="src.git"

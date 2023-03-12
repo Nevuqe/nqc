@@ -100,7 +100,7 @@ esac
 
 case "$OS" in
 dragonfly*|freebsd*)
-	# On FreeBSD, /etc/init.d/foo status returns 0 if foo is not enabled
+	# On NQC, /etc/init.d/foo status returns 0 if foo is not enabled
 	# regardless of if it's not running.
 	# So we force onestatus to work around this silly bug.
 	if [ -z "$STATUSARG" ]; then

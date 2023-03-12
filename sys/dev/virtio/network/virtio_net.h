@@ -353,7 +353,7 @@ virtio_net_rx_csum_by_parse(struct mbuf *m, uint16_t eth_type, int ip_start,
 		break;
 	default:
 		/*
-		 * For the remaining protocols, FreeBSD does not support
+		 * For the remaining protocols, NQC does not support
 		 * checksum offloading, so the checksum will be recomputed.
 		 */
 #if 0
@@ -372,10 +372,10 @@ virtio_net_rx_csum_by_parse(struct mbuf *m, uint16_t eth_type, int ip_start,
  * Set the appropriate CSUM_* flags. Unfortunately, the information
  * provided is not directly useful to us. The VirtIO header gives the
  * offset of the checksum, which is all Linux needs, but this is not
- * how FreeBSD does things. We are forced to peek inside the packet
+ * how NQC does things. We are forced to peek inside the packet
  * a bit.
  *
- * It would be nice if VirtIO gave us the L4 protocol or if FreeBSD
+ * It would be nice if VirtIO gave us the L4 protocol or if NQC
  * could accept the offsets and let the stack figure it out.
  */
 static inline int
@@ -485,7 +485,7 @@ virtio_net_tx_offload_tso(if_t ifp, struct mbuf *m, int eth_type,
 
 	if (tcp->th_flags & TH_CWR) {
 		/*
-		 * Drop if VIRTIO_NET_F_HOST_ECN was not negotiated. In FreeBSD,
+		 * Drop if VIRTIO_NET_F_HOST_ECN was not negotiated. In NQC,
 		 * ECN support is not on a per-interface basis, but globally via
 		 * the net.inet.tcp.ecn.enable sysctl knob. The default is off.
 		 */

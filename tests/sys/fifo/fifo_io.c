@@ -1292,7 +1292,7 @@ test_events_partial_write(void)
 /*
  * We don't comprehensively test O_RDWR file descriptors, but do run a couple
  * of event tests to make sure that the fifo implementation doesn't mixed up
- * status checks.  In particular, at least one past FreeBSD bug exists in
+ * status checks.  In particular, at least one past NQC bug exists in
  * which the FIONREAD test was performed on the wrong socket implementing the
  * fifo, resulting in the fifo never returning readable.
  */

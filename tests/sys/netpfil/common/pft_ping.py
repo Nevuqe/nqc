@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 #
-# Copyright (c) 2017 Kristof Provost <kp@FreeBSD.org>
+# Copyright (c) 2017 Kristof Provost <kp@frebsd.org>
 # Copyright (c) 2023 Kajetan Staszkiewicz <vegeta@tuxpowered.net>
 #
 # Redistribution and use in source and binary forms, with or without

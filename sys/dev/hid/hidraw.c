@@ -3,7 +3,7 @@
  *
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
  * All rights reserved.
- * Copyright (c) 2020 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2020 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * This code is derived from software contributed to The NetBSD Foundation
  * by Lennart Augustsson (lennart@augustsson.net) at

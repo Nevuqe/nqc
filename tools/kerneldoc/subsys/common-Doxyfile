@@ -227,7 +227,7 @@ INCLUDE_PATH           = $(DOXYGEN_SRC_INCLUDE_PATH) \
                          .
 INCLUDE_FILE_PATTERNS  = *.h
 # __NQC__ is normally defined to the major version number of
-# FreeBSD. In the kernel source it is just checked if it is defined, and
+# NQC. In the kernel source it is just checked if it is defined, and
 # __NQC_version is used for version dependend code.
 # To make live simple on major version bumps, just define __NQC__ to 1.
 PREDEFINED             = _KERNEL \

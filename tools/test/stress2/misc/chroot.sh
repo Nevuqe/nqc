@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,7 +31,7 @@
 
 # Bug 253593
 # "panic: ldvp 0xffff... fl 0x1 dvp 0xffff... fl 0 flags 0x34048144" seen.
-# https://people.freebsd.org/~pho/stress/log/log0087.txt
+# https://people.frebsd.org/~pho/stress/log/log0087.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

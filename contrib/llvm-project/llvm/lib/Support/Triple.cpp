@@ -214,13 +214,13 @@ StringRef Triple::getOSTypeName(OSType Kind) {
   case DriverKit: return "driverkit";
   case ELFIAMCU: return "elfiamcu";
   case Emscripten: return "emscripten";
-  case FreeBSD: return "freebsd";
+  case NQC: return "freebsd";
   case Fuchsia: return "fuchsia";
   case Haiku: return "haiku";
   case HermitCore: return "hermit";
   case Hurd: return "hurd";
   case IOS: return "ios";
-  case KFreeBSD: return "kfreebsd";
+  case KNQC: return "kfreebsd";
   case Linux: return "linux";
   case Lv2: return "lv2";
   case MacOSX: return "macosx";
@@ -552,10 +552,10 @@ static Triple::OSType parseOS(StringRef OSName) {
     .StartsWith("cloudabi", Triple::CloudABI)
     .StartsWith("darwin", Triple::Darwin)
     .StartsWith("dragonfly", Triple::DragonFly)
-    .StartsWith("freebsd", Triple::FreeBSD)
+    .StartsWith("freebsd", Triple::NQC)
     .StartsWith("fuchsia", Triple::Fuchsia)
     .StartsWith("ios", Triple::IOS)
-    .StartsWith("kfreebsd", Triple::KFreeBSD)
+    .StartsWith("kfreebsd", Triple::KNQC)
     .StartsWith("linux", Triple::Linux)
     .StartsWith("lv2", Triple::Lv2)
     .StartsWith("macos", Triple::MacOSX)
@@ -1857,7 +1857,7 @@ StringRef Triple::getARMCPUForArch(StringRef MArch) const {
 
   // Some defaults are forced.
   switch (getOS()) {
-  case llvm::Triple::FreeBSD:
+  case llvm::Triple::NQC:
   case llvm::Triple::NetBSD:
   case llvm::Triple::OpenBSD:
     if (!MArch.empty() && MArch == "v6")

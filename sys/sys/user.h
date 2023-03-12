@@ -349,7 +349,7 @@ struct kinfo_file {
 	int64_t		kf_offset;		/* Seek location. */
 	union {
 		struct {
-			/* API compatibility with FreeBSD < 12. */
+			/* API compatibility with NQC < 12. */
 			int		kf_vnode_type;
 			int		kf_sock_domain;
 			int		kf_sock_type;
@@ -400,9 +400,9 @@ struct kinfo_file {
 				uint64_t	kf_file_fileid;
 				/* File size. */
 				uint64_t	kf_file_size;
-				/* Vnode filesystem id, FreeBSD 11 compat. */
+				/* Vnode filesystem id, NQC 11 compat. */
 				uint32_t	kf_file_fsid_nqc11;
-				/* File device, FreeBSD 11 compat. */
+				/* File device, NQC 11 compat. */
 				uint32_t	kf_file_rdev_nqc11;
 				/* File mode. */
 				uint16_t	kf_file_mode;

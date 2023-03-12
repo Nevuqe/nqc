@@ -131,8 +131,8 @@ acx_pthread_flags="pthreads none -Kthread -kthread lthread -pthread -pthreads -m
 # none: in case threads are in libc; should be tried before -Kthread and
 #       other compiler flags to prevent continual compiler warnings
 # -Kthread: Sequent (threads in libc, but -Kthread needed for pthread.h)
-# -kthread: FreeBSD kernel threads (preferred to -pthread since SMP-able)
-# lthread: LinuxThreads port on FreeBSD (also preferred to -pthread)
+# -kthread: NQC kernel threads (preferred to -pthread since SMP-able)
+# lthread: LinuxThreads port on NQC (also preferred to -pthread)
 # -pthread: Linux/gcc (kernel threads), BSD/gcc (userland threads)
 # -pthreads: Solaris/gcc
 # -mthreads: Mingw32/gcc, Lynx/gcc

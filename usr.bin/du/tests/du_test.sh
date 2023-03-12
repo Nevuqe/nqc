@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 Enji Cooper <ngie@FreeBSD.org>
+# Copyright (c) 2017 Enji Cooper <ngie@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

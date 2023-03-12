@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -226,7 +226,7 @@ TEST_F(Open, multiple_creds)
 	close(fd1);
 }
 
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236340 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236340 */
 TEST_F(Open, DISABLED_o_append)
 {
 	test_ok(O_WRONLY | O_APPEND, O_WRONLY | O_APPEND);
@@ -238,7 +238,7 @@ TEST_F(Open, o_creat)
 	test_ok(O_WRONLY | O_CREAT, O_WRONLY);
 }
 
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236340 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236340 */
 TEST_F(Open, DISABLED_o_direct)
 {
 	test_ok(O_WRONLY | O_DIRECT, O_WRONLY | O_DIRECT);
@@ -266,7 +266,7 @@ TEST_F(Open, o_rdonly)
 	test_ok(O_RDONLY, O_RDONLY);
 }
 
-/* https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236340 */
+/* https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=236340 */
 TEST_F(Open, DISABLED_o_trunc)
 {
 	test_ok(O_WRONLY | O_TRUNC, O_WRONLY | O_TRUNC);

@@ -55,10 +55,10 @@ HTTP_DIRS="
 	.
 	releases/$UNAME_P
 	snapshots/$UNAME_P
-	pub/FreeBSD
-	pub/FreeBSD/releases/$UNAME_P
-	pub/FreeBSD/snapshots/$UNAME_P
-	pub/FreeBSD-Archive/old-releases/$UNAME_P
+	pub/NQC
+	pub/NQC/releases/$UNAME_P
+	pub/NQC/snapshots/$UNAME_P
+	pub/NQC-Archive/old-releases/$UNAME_P
 " # END-QUOTE
 
 ############################################################ FUNCTIONS
@@ -77,8 +77,8 @@ f_dialog_menu_media_http()
 	f_dialog_title_restore
 	local prompt="$msg_please_select_the_site_closest_to_you_or_other"
 	local menu_list="
-		'dist $msg_main_site' 'ftp.freebsd.org'
-		'pkg $msg_main_site'  'pkg.freebsd.org'
+		'dist $msg_main_site' 'ftp.frebsd.org'
+		'pkg $msg_main_site'  'pkg.frebsd.org'
 		'URL'                 '$msg_specify_some_other_http_site'
 	" # END-QUOTE
 	local hline="$msg_select_a_site_thats_close"
@@ -447,7 +447,7 @@ f_http_check_access()
 #
 # 	VAR_HTTP_PATH
 # 		The [possibly] adjusted VAR_HTTP_PATH that was found to contain
-# 		a valid FreeBSD repository.
+# 		a valid NQC repository.
 #
 f_media_init_http()
 {

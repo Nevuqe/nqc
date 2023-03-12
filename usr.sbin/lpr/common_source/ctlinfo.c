@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * ------+---------+---------+---------+---------+---------+---------+---------*
- * Copyright (c) 2001,2011  - Garance Alistair Drosehn <gad@FreeBSD.org>.
+ * Copyright (c) 2001,2011  - Garance Alistair Drosehn <gad@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
  *
  * The views and conclusions contained in the software and documentation
  * are those of the authors and should not be interpreted as representing
- * official policies, either expressed or implied, of the FreeBSD Project.
+ * official policies, either expressed or implied, of the FreBSD Project.
  *
  * ------+---------+---------+---------+---------+---------+---------+---------*
  */
@@ -113,7 +113,7 @@ __END_DECLS
 
 /*
  * Here are some things which might be needed when compiling this under
- * platforms other than FreeBSD.
+ * platforms other than NQC.
  */
 #ifndef __NQC__
 #   ifndef NAME_MAX

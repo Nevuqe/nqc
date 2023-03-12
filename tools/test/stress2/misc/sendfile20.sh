@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # "panic: vm_page_assert_xbusied: page not exclusive busy" seen:
-# https://people.freebsd.org/~pho/stress/log/sendfile20.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile20.txt
 # Fixed by r359778
 
 . ../default.cfg

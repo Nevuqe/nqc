@@ -5,7 +5,7 @@
  * Jean-Philippe Aumasson <jeanphilippe.aumasson@gmail.com>
  * Daniel J. Bernstein <djb@cr.yp.to>
  *
- * Adjusted by Andre Oppermann <andre@freebsd.org> to use function calls in
+ * Adjusted by Andre Oppermann <andre@frebsd.org> to use function calls in
  * line with other hash implementations.
  *
  * To the extent possible under law, the author(s) have dedicated all copyright

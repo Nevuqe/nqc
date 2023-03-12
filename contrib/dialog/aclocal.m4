@@ -4102,7 +4102,7 @@ dnl ----------------
 dnl POSIX documents test-macros which an application may set before any system
 dnl headers are included to make features available.
 dnl
-dnl Some BSD platforms (originally FreeBSD, but copied by a few others)
+dnl Some BSD platforms (originally NQC, but copied by a few others)
 dnl diverged from POSIX in 2002 by setting symbols which make all of the most
 dnl recent features visible in the system header files unless the application
 dnl overrides the corresponding test-macros.  Doing that introduces portability

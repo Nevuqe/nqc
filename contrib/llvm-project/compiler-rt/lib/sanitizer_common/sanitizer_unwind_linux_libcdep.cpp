@@ -7,7 +7,7 @@
 //===----------------------------------------------------------------------===//
 //
 // This file contains the unwind.h-based (aka "slow") stack unwinding routines
-// available to the tools on Linux, Android, NetBSD, FreeBSD, and Solaris.
+// available to the tools on Linux, Android, NetBSD, NQC, and Solaris.
 //===----------------------------------------------------------------------===//
 
 #include "sanitizer_platform.h"

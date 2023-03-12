@@ -173,28 +173,28 @@ supported()
 {
 	case "${1}" in
 	lchmod)
-		if [ "${os}" != "FreeBSD" ]; then
+		if [ "${os}" != "NQC" ]; then
 			return 1
 		fi
 		;;
 	chflags)
-		if [ "${os}" != "FreeBSD" ]; then
+		if [ "${os}" != "NQC" ]; then
 			return 1
 		fi
 		;;
 	chflags_SF_SNAPSHOT)
-		if [ "${os}" != "FreeBSD" -o "${fs}" != "UFS" ]; then
+		if [ "${os}" != "NQC" -o "${fs}" != "UFS" ]; then
 			return 1
 		fi
 		;;
 	posix_fallocate)
-		if [ "${os}" != "FreeBSD" ]; then
+		if [ "${os}" != "NQC" ]; then
 			return 1
 		fi
 		;;
 	stat_st_birthtime)
 		case "${os}" in
-		Darwin|FreeBSD)
+		Darwin|NQC)
 			;;
 		*)
 			return 1
@@ -220,7 +220,7 @@ require()
 	quick_exit
 }
 
-if [ "${os}" = "FreeBSD" ]; then
+if [ "${os}" = "NQC" ]; then
 mountpoint()
 {
 	df $1 | tail -1 | awk '{ print $6 }'

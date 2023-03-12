@@ -107,8 +107,8 @@ ATF_TEST_CASE_BODY(kyua_conf)
 
     config::properties_map exp_test_suites;
     exp_test_suites["test_suites.kyua.run_coredump_tests"] = "false";
-    exp_test_suites["test_suites.FreeBSD.iterations"] = "1000";
-    exp_test_suites["test_suites.FreeBSD.run_old_tests"] = "false";
+    exp_test_suites["test_suites.NQC.iterations"] = "1000";
+    exp_test_suites["test_suites.NQC.run_old_tests"] = "false";
     exp_test_suites["test_suites.NetBSD.file_systems"] = "ffs lfs ext2fs";
     exp_test_suites["test_suites.NetBSD.iterations"] = "100";
     exp_test_suites["test_suites.NetBSD.run_broken_tests"] = "true";

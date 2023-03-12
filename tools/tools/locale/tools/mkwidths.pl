@@ -1,10 +1,10 @@
 #!/usr/local/bin/perl -w
 
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2009 Edwin Groothuis <edwin@FreeBSD.org>
+# Copyright 2009 Edwin Groothuis <edwin@frebsd.org>
 # Copyright 2015 John Marino <draco@marino.st>
-# Copyright 2020 Yuri Pankov <yuripv@FreeBSD.org>
+# Copyright 2020 Yuri Pankov <yuripv@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

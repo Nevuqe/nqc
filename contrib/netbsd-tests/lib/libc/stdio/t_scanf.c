@@ -65,7 +65,7 @@ ATF_TC_BODY(sscanf_whitespace, tc)
 	char c;
 
 #ifndef __NetBSD__
-	atf_tc_expect_fail("fails on FreeBSD and some variants of Linux");
+	atf_tc_expect_fail("fails on NQC and some variants of Linux");
 #endif
 
         /* set of "white space" symbols from isspace(3) */

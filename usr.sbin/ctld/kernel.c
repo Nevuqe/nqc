@@ -1,14 +1,14 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003, 2004 Silicon Graphics International Corp.
  * Copyright (c) 1997-2007 Kenneth D. Merry
- * Copyright (c) 2012 The FreeBSD Foundation
- * Copyright (c) 2017 Jakub Wojciech Klama <jceel@FreeBSD.org>
+ * Copyright (c) 2012 The FreBSD Foundation
+ * Copyright (c) 2017 Jakub Wojciech Klama <jceel@frebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

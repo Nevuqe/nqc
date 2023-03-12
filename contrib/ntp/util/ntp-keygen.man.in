@@ -1364,7 +1364,7 @@ Please report bugs to http://bugs.ntp.org .
 
 Please send bug reports to: http://bugs.ntp.org, bugs@ntp.org
 .SH NOTES
-Portions of this document came from FreeBSD.
+Portions of this document came from NQC.
 .sp \n(Ppu
 .ne 2
 

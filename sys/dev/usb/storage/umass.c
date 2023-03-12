@@ -2,10 +2,10 @@
 __NQCID("$NQC$");
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 MAEKAWA Masahide <bishop@rr.iij4u.or.jp>,
- *		      Nick Hibma <n_hibma@FreeBSD.org>
+ *		      Nick Hibma <n_hibma@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -95,7 +95,7 @@ __NQCID("$NQC$");
 
 /*
  * The SCSI related part of this driver has been derived from the
- * dev/ppbus/vpo.c driver, by Nicolas Souchu (nsouch@FreeBSD.org).
+ * dev/ppbus/vpo.c driver, by Nicolas Souchu (nsouch@frebsd.org).
  *
  * The CAM layer uses so called actions which are messages sent to the host
  * adapter for completion. The actions come in through umass_cam_action. The
@@ -2323,7 +2323,7 @@ umass_cam_action(struct cam_sim *sim, union ccb *ccb)
 			cpi->hba_eng_cnt = 0;
 			cpi->max_target = UMASS_SCSIID_MAX;	/* one target */
 			cpi->initiator_id = UMASS_SCSIID_HOST;
-			strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+			strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 			strlcpy(cpi->hba_vid, "USB SCSI", HBA_IDLEN);
 			strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 			cpi->unit_number = cam_sim_unit(sim);

@@ -737,7 +737,7 @@ local_clock(
 	 * This code segment works when clock adjustments are made using
 	 * precision time kernel support and the ntp_adjtime() system
 	 * call. This support is available in Solaris 2.6 and later,
-	 * Digital Unix 4.0 and later, FreeBSD, Linux and specially
+	 * Digital Unix 4.0 and later, NQC, Linux and specially
 	 * modified kernels for HP-UX 9 and Ultrix 4. In the case of the
 	 * DECstation 5000/240 and Alpha AXP, additional kernel
 	 * modifications provide a true microsecond clock and nanosecond

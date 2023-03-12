@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright (c) 2018 The FreBSD Foundation
  *
  * This software was developed by Mark Johnston under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are

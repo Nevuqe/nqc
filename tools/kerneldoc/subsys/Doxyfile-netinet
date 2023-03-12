@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel IPv4 code"
+PROJECT_NAME           = "NQC kernel IPv4 code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/netinet/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #--------------------------------------------------------------------------

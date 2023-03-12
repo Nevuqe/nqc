@@ -28,7 +28,7 @@
 /*
  * Encoding -- determine the character encoding of a text file.
  *
- * Joerg Wunsch <joerg@freebsd.org> wrote the original support for 8-bit
+ * Joerg Wunsch <joerg@frebsd.org> wrote the original support for 8-bit
  * international characters.
  */
 

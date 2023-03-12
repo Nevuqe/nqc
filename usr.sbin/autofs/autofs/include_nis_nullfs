@@ -150,7 +150,7 @@ function proc_mapline(keyfield)
     # map key (i.e., a line). The usual reason for multiple
     # locations is for redundancy using replicated volumes on
     # multiple hosts, so multiple hosts imply fstype=nfs (the
-    # FreeBSD default for automounter maps).
+    # NQC default for automounter maps).
     #
     # Hypothetically there could be a map entry with multiple
     # locations all with host parts matching "me". In that case,

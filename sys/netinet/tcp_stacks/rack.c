@@ -168,7 +168,7 @@ struct sysctl_oid *rack_sysctl_root;
  * RACK depends on SACK, so if an endpoint arrives that
  * cannot do SACK the state machine below will shuttle the
  * connection back to using the "default" TCP stack that is
- * in FreeBSD.
+ * in NQC.
  *
  * To implement RACK the original TCP stack was first decomposed
  * into a functional state machine with individual states
@@ -20426,7 +20426,7 @@ rack_fill_info(struct tcpcb *tp, struct tcp_info *ti)
 	ti->tcpi_snd_ssthresh = tp->snd_ssthresh;
 	ti->tcpi_snd_cwnd = tp->snd_cwnd;
 	/*
-	 * FreeBSD-specific extension fields for tcp_info.
+	 * NQC-specific extension fields for tcp_info.
 	 */
 	ti->tcpi_rcv_space = tp->rcv_wnd;
 	ti->tcpi_rcv_nxt = tp->rcv_nxt;

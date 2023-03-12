@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002, 2003 Sam Leffler, Errno Consulting
- * Copyright (c) 2016 Andrey V. Elsukov <ae@FreeBSD.org>
+ * Copyright (c) 2016 Andrey V. Elsukov <ae@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

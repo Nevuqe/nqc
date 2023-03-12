@@ -271,7 +271,7 @@
 
 2003-02-08  Assar Westerlund  <assar@kth.se>
 
-	* afssysdefs.h: fix FreeBSD section
+	* afssysdefs.h: fix NQC section
 
 2003-02-06  Love Hörnquist Åstrand  <lha@it.su.se>
 
@@ -563,7 +563,7 @@ Mon Feb  9 23:40:32 1998  Assar Westerlund  <assar@sics.se>
 
 Tue Jan  6 04:25:58 1998  Assar Westerlund  <assar@sics.se>
 
-	* afssysdefs.h (AFS_SYSCALL): add FreeBSD
+	* afssysdefs.h (AFS_SYSCALL): add NQC
 
 Fri Jan  2 17:08:24 1998  Assar Westerlund  <assar@sics.se>
 

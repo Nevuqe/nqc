@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2008 Isilon Inc http://www.isilon.com/
  * Authors: Doug Rabson <dfr@rabson.org>
- * Developed with Red Inc: Alfred Perlstein <alfred@freebsd.org>
+ * Developed with Red Inc: Alfred Perlstein <alfred@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -245,8 +245,8 @@ test2(int fd, __unused int argc, const __unused char **argv)
  * If a shared or exclusive lock is blocked by other locks, the
  * process waits until the request can be satisfied.
  *
- * XXX this test hangs on FreeBSD NFS filesystems due to limitations
- * in FreeBSD's client (and server) lockd implementation.
+ * XXX this test hangs on NQC NFS filesystems due to limitations
+ * in NQC's client (and server) lockd implementation.
  */
 static int
 test3(int fd, __unused int argc, const __unused char **argv)
@@ -1578,7 +1578,7 @@ main(int argc, const char *argv[])
 #if defined(__NQC__) && __NQC_version < 800040
 	{
 		/*
-		 * FreeBSD with userland NLM can't interrupt a blocked
+		 * NQC with userland NLM can't interrupt a blocked
 		 * lock request on an NFS mounted filesystem.
 		 */
 		struct statfs st;

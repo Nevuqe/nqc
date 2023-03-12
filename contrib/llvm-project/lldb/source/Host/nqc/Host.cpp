@@ -45,7 +45,7 @@ using namespace lldb;
 using namespace lldb_private;
 
 static bool
-GetFreeBSDProcessArgs(const ProcessInstanceInfoMatch *match_info_ptr,
+GetNQCProcessArgs(const ProcessInstanceInfoMatch *match_info_ptr,
                       ProcessInstanceInfo &process_info) {
   if (!process_info.ProcessIDIsValid())
     return false;
@@ -104,7 +104,7 @@ GetFreeBSDProcessArgs(const ProcessInstanceInfoMatch *match_info_ptr,
   return true;
 }
 
-static bool GetFreeBSDProcessCPUType(ProcessInstanceInfo &process_info) {
+static bool GetNQCProcessCPUType(ProcessInstanceInfo &process_info) {
   if (process_info.ProcessIDIsValid()) {
     process_info.GetArchitecture() =
         HostInfo::GetArchitecture(HostInfo::eArchKindDefault);
@@ -114,7 +114,7 @@ static bool GetFreeBSDProcessCPUType(ProcessInstanceInfo &process_info) {
   return false;
 }
 
-static bool GetFreeBSDProcessUserAndGroup(ProcessInstanceInfo &process_info) {
+static bool GetNQCProcessUserAndGroup(ProcessInstanceInfo &process_info) {
   struct kinfo_proc proc_kinfo;
   size_t proc_kinfo_size;
   const int pid = process_info.GetProcessID();
@@ -193,7 +193,7 @@ uint32_t Host::FindProcessesImpl(const ProcessInstanceInfoMatch &match_info,
         kinfo.ki_flag & P_WEXIT)    // Working on exiting
       continue;
 
-    // Every thread is a process in FreeBSD, but all the threads of a single
+    // Every thread is a process in NQC, but all the threads of a single
     // process have the same pid. Do not store the process info in the result
     // list if a process with given identifier is already registered there.
     bool already_registered = false;
@@ -217,8 +217,8 @@ uint32_t Host::FindProcessesImpl(const ProcessInstanceInfoMatch &match_info,
 
     // Make sure our info matches before we go fetch the name and cpu type
     if (match_info_noname.Matches(process_info) &&
-        GetFreeBSDProcessArgs(&match_info, process_info)) {
-      GetFreeBSDProcessCPUType(process_info);
+        GetNQCProcessArgs(&match_info, process_info)) {
+      GetNQCProcessCPUType(process_info);
       if (match_info.Matches(process_info))
         process_infos.push_back(process_info);
     }
@@ -230,10 +230,10 @@ uint32_t Host::FindProcessesImpl(const ProcessInstanceInfoMatch &match_info,
 bool Host::GetProcessInfo(lldb::pid_t pid, ProcessInstanceInfo &process_info) {
   process_info.SetProcessID(pid);
 
-  if (GetFreeBSDProcessArgs(NULL, process_info)) {
+  if (GetNQCProcessArgs(NULL, process_info)) {
     // should use libprocstat instead of going right into sysctl?
-    GetFreeBSDProcessCPUType(process_info);
-    GetFreeBSDProcessUserAndGroup(process_info);
+    GetNQCProcessCPUType(process_info);
+    GetNQCProcessUserAndGroup(process_info);
     return true;
   }
 

@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004, 2008, 2009 Silicon Graphics International Corp.
- * Copyright (c) 2017 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2017 Alexander Motin <mav@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,12 +30,12 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $Id: //depot/users/kenm/FreeBSD-test2/usr.bin/ctlstat/ctlstat.c#4 $
+ * $Id: //depot/users/kenm/NQC-test2/usr.bin/ctlstat/ctlstat.c#4 $
  */
 /*
  * CAM Target Layer statistics program
  *
- * Authors: Ken Merry <ken@FreeBSD.org>, Will Andrews <will@FreeBSD.org>
+ * Authors: Ken Merry <ken@frebsd.org>, Will Andrews <will@frebsd.org>
  */
 
 #include <sys/cdefs.h>

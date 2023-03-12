@@ -32,7 +32,7 @@
 # mckusick@ suggested using fifos for this test.
 
 # "panic: mtx_lock() of spin mutex  @ ../kern/vfs_subr.c:512" seen.
-# https://people.freebsd.org/~pho/stress/log/crossmp8.txt
+# https://people.frebsd.org/~pho/stress/log/crossmp8.txt
 # Fixed by r291671.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

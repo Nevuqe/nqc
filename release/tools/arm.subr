@@ -1,10 +1,10 @@
 #!/bin/sh
 #-
-# Copyright (c) 2015-2017 The FreeBSD Foundation
+# Copyright (c) 2015-2017 The FreBSD Foundation
 # All rights reserved.
 #
 # Portions of this software were developed by Glen Barber
-# under sponsorship from the FreeBSD Foundation.
+# under sponsorship from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -97,7 +97,7 @@ arm_create_user() {
 	chroot ${CHROOTDIR} /usr/sbin/pw -R ${DESTDIR} \
 		useradd freebsd \
 		-m -M 0755 -w yes -n freebsd -u 1001 -g 1001 -G 0 \
-		-c 'FreeBSD User' -d '/home/freebsd' -s '/bin/csh'
+		-c 'NQC User' -d '/home/freebsd' -s '/bin/csh'
 	chroot ${CHROOTDIR} /usr/sbin/pw -R ${DESTDIR} \
 		usermod root -w yes
 
@@ -199,7 +199,7 @@ arm_install_base() {
 	arm_setup_minimal_loader
 	arm_do_quirk
 
-	echo '# Custom /etc/fstab for FreeBSD embedded images' \
+	echo '# Custom /etc/fstab for NQC embedded images' \
 		> ${CHROOTDIR}/${DESTDIR}/etc/fstab
 	if [ "${PART_SCHEME}" = "GPT" ]; then
 		echo "/dev/ufs/rootfs		/		ufs	rw		1	1" \

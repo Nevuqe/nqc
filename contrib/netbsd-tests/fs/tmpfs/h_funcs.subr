@@ -59,19 +59,19 @@ test_mount() {
 #	Unmounts the file system mounted by test_mount.
 #
 test_unmount() {
-	# Begin FreeBSD
+	# Begin NQC
 	_test_unmount
 	exit_code=$?
 	atf_check_equal "$exit_code" "0"
 	return $exit_code
-	# End FreeBSD
+	# End NQC
 	cd - >/dev/null
 	atf_check -s eq:0 -o empty -e empty umount ${Mount_Point}
 	atf_check -s eq:0 -o empty -e empty rmdir ${Mount_Point}
 	Mount_Point=
 }
 
-# Begin FreeBSD
+# Begin NQC
 _test_unmount() {
 	if [ -z "${Mount_Point}" -o ! -d "${Mount_Point}" ]; then
 		return 0
@@ -82,7 +82,7 @@ _test_unmount() {
 	rmdir ${Mount_Point}
 	Mount_Point=
 }
-# End FreeBSD
+# End NQC
 
 #
 # kqueue_monitor expected_nevents file1 [.. fileN]

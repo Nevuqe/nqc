@@ -3469,7 +3469,7 @@ services when they become universally available.
 
 Please send bug reports to: http://bugs.ntp.org, bugs@ntp.org
 .SH NOTES
-This document was derived from FreeBSD.
+This document was derived from NQC.
 .sp \n(Ppu
 .ne 2
 

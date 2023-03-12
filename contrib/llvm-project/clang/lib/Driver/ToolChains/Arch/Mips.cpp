@@ -51,7 +51,7 @@ void mips::getMipsCPUAndABI(const ArgList &Args, const llvm::Triple &Triple,
 
   // MIPS2 is the default for mips(el)?-unknown-freebsd.
   // MIPS3 is the default for mips64(el)?-unknown-freebsd.
-  if (Triple.isOSFreeBSD()) {
+  if (Triple.isOSNQC()) {
     DefMips32CPU = "mips2";
     DefMips64CPU = "mips3";
   }
@@ -173,8 +173,8 @@ mips::FloatABI mips::getMipsFloatABI(const Driver &D, const ArgList &Args,
 
   // If unspecified, choose the default based on the platform.
   if (ABI == mips::FloatABI::Invalid) {
-    if (Triple.isOSFreeBSD()) {
-      // For FreeBSD, assume "soft" on all flavors of MIPS.
+    if (Triple.isOSNQC()) {
+      // For NQC, assume "soft" on all flavors of MIPS.
       ABI = mips::FloatABI::Soft;
     } else {
       // Assume "hard", because it's a default value used by gcc.

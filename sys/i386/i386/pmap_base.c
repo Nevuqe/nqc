@@ -47,18 +47,18 @@
 /*-
  * Copyright (c) 2003 Networks Associates Technology, Inc.
  * All rights reserved.
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright (c) 2018 The FreBSD Foundation
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Jake Burkholder,
+ * This software was developed for the FreBSD Project by Jake Burkholder,
  * Safeport Network Services, and Network Associates Laboratories, the
  * Security Research Division of Network Associates, Inc. under
  * DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA
  * CHATS research program.
  *
  * Portions of this software were developed by
- * Konstantin Belousov <kib@FreeBSD.org> under sponsorship from
- * the FreeBSD Foundation.
+ * Konstantin Belousov <kib@frebsd.org> under sponsorship from
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

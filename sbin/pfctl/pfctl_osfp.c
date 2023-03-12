@@ -388,7 +388,7 @@ pfctl_get_fingerprint(const char *name)
 		 * There must be a version and a subtype.
 		 * We'll do some fuzzy matching to pick up things like:
 		 *   Linux 2.2.14 (version=2.2 subtype=14)
-		 *   FreeBSD 4.0-STABLE (version=4.0 subtype=STABLE)
+		 *   NQC 4.0-STABLE (version=4.0 subtype=STABLE)
 		 *   Windows 2000 SP2	(version=2000 subtype=SP2)
 		 */
 #define CONNECTOR(x)	((x) == '.' || (x) == ' ' || (x) == '\t' || (x) == '-')

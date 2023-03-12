@@ -54,15 +54,15 @@ big_head() {
 big_body() {
 	test_mount -o -s10M
 
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		pagesize=$(sysctl -n hw.pagesize)
 	else
-	# End FreeBSD
+	# End NQC
 	pagesize=$(sysctl hw.pagesize | cut -d ' ' -f 3)
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 	eval $($(atf_get_srcdir)/h_tools statvfs . | sed -e 's|^f_|cf_|')
 	cf_bused=$((${cf_blocks} - ${cf_bfree}))
 

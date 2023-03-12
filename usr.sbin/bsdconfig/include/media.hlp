@@ -7,12 +7,12 @@ You can install from the following types of media:
             a supported controller (see Hardware Guide).
 
 
-   DOS      A DOS primary partition with the required FreeBSD
+   DOS      A DOS primary partition with the required NQC
             distribution files copied onto it (e.g. C:\FREEBSD\)
 
 
    UFS      Assuming a disk or partition with an existing
-            FreeBSD file system and distribution set on it,
+            NQC file system and distribution set on it,
             get the distribution files from there.
 
 

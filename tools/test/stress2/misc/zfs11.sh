@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,7 +31,7 @@
 #  0  5804  5803   0  52  0 13048  2740 prev->lr DC+   0     0:00.00 tail -F blah
 #  0  5805  5802   0  52  0 12976  2636 pgnslp   DC+   0     0:00.00 dd if=/dev/zero of=blah
 
-# Test scenario by Bryan Drewery <bdrewery@FreeBSD.org>
+# Test scenario by Bryan Drewery <bdrewery@frebsd.org>
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `uname -m` = "i386" ] && exit 0

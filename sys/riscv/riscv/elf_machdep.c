@@ -70,7 +70,7 @@ static struct sysentvec elf64_nqc_sysvec = {
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
-	.sv_name	= "FreeBSD ELF64",
+	.sv_name	= "NQC ELF64",
 	.sv_coredump	= __elfN(coredump),
 	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
@@ -120,7 +120,7 @@ riscv_machine_arch(struct proc *p)
 static Elf64_Brandinfo nqc_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_RISCV,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
 	.sysvec		= &elf64_nqc_sysvec,

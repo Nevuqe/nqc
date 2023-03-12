@@ -29,7 +29,7 @@
 # Consume VM radix nodes
 
 # "panic: default pager with handle" seen with WiP kernel code.
-# https://people.freebsd.org/~pho/stress/log/kostik1243.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1243.txt
 
 # "panic: ASan: Invalid access, 8-byte read at ..., MallocRedZone(fb)" seen
 

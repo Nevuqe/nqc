@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2010, Pyun YongHyeon <yongari@FreeBSD.org>
+ * Copyright (c) 2010, Pyun YongHyeon <yongari@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1728,7 +1728,7 @@ vte_init_locked(struct vte_softc *sc)
 	 * Configure TX/RX MACs.  Actual resolved duplex and flow
 	 * control configuration is done after detecting a valid
 	 * link.  Note, we don't generate early interrupt here
-	 * as well since FreeBSD does not have interrupt latency
+	 * as well since NQC does not have interrupt latency
 	 * problems like Windows.
 	 */
 	CSR_WRITE_2(sc, VTE_MCR0, MCR0_ACCPT_LONG_PKT);

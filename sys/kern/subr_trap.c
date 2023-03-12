@@ -4,13 +4,13 @@
  * Copyright (C) 1994, David Greenman
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
- * Copyright (c) 2007, 2022 The FreeBSD Foundation
+ * Copyright (c) 2007, 2022 The FreBSD Foundation
  *
  * This code is derived from software contributed to Berkeley by
  * the University of Utah, and William Jolitz.
  *
  * Portions of this software were developed by A. Joseph Koshy under
- * sponsorship from the FreeBSD Foundation and Google, Inc.
+ * sponsorship from the FreBSD Foundation and Google, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

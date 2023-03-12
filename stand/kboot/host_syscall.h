@@ -75,7 +75,7 @@ typedef int64_t host_blkcnt_t;
  * Note: Some of these are arch dependent on Linux, but are the same for
  * x86, arm*, and riscv. We should be futureproof, though, since these
  * are the 'generic' values and only older architectures (no longer supported by
- * FreeBSD) vary.
+ * NQC) vary.
  *
  * These are from tools/include/uapi/asm-generic/fcntl.h and use the octal
  * notation. Beware, hex is used in other places creating potential confsion.
@@ -208,9 +208,9 @@ ssize_t host_write(int fd, const void *buf, size_t nbyte);
 	    HOST_MAP_PRIVATE | HOST_MAP_ANONYMOUS, -1, 0);
 
 /*
- * Translate Linux errno to FreeBSD errno. The two system have idenitcal errors
+ * Translate Linux errno to NQC errno. The two system have idenitcal errors
  * for 1-34. After that, they differ. Linux also has errno that don't map
- * exactly to FreeBSD's errno, plus the Linux errno are arch dependent >
+ * exactly to NQC's errno, plus the Linux errno are arch dependent >
  * 34. Since we just need to do this for simple cases, use the simple mapping
  * function where -1 to -34 are translated to 1 to 34 and all others are EINVAL.
  * Pass the linux return value, which will be the -errno.

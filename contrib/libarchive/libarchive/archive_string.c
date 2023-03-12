@@ -409,7 +409,7 @@ archive_wstrappend_wchar(struct archive_wstring *as, wchar_t c)
 
 /*
  * Get the "current character set" name to use with iconv.
- * On FreeBSD, the empty character set name "" chooses
+ * On NQC, the empty character set name "" chooses
  * the correct character encoding for the current locale,
  * so this isn't necessary.
  * But iconv on Mac OS 10.6 doesn't seem to handle this correctly;

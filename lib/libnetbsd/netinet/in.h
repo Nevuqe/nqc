@@ -55,7 +55,7 @@
  * The value IP_PORTRANGE_DEFAULT causes the default behavior.
  *
  * The value IP_PORTRANGE_HIGH is the same as IP_PORTRANGE_DEFAULT,
- * and exists only for FreeBSD compatibility purposes.
+ * and exists only for NQC compatibility purposes.
  *
  * The value IP_PORTRANGE_LOW changes the range to the "low" are
  * that is (by convention) restricted to privileged processes.

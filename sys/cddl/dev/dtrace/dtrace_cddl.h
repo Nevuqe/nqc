@@ -30,7 +30,7 @@
 #define LOCK_LEVEL	10
 
 /*
- * Kernel DTrace extension to 'struct proc' for FreeBSD.
+ * Kernel DTrace extension to 'struct proc' for NQC.
  */
 typedef struct kdtrace_proc {
 	int		p_dtrace_probes;	/* Are there probes for this proc? */
@@ -41,7 +41,7 @@ typedef struct kdtrace_proc {
 } kdtrace_proc_t;
 
 /*
- * Kernel DTrace extension to 'struct thread' for FreeBSD.
+ * Kernel DTrace extension to 'struct thread' for NQC.
  */
 typedef struct kdtrace_thread {
 	uint8_t		td_dtrace_stop;	/* Indicates a DTrace-desired stop */
@@ -92,9 +92,9 @@ typedef struct kdtrace_thread {
 } kdtrace_thread_t;
 
 /*
- * Definitions to reference fields in the FreeBSD DTrace structures defined
+ * Definitions to reference fields in the NQC DTrace structures defined
  * above using the names of fields in similar structures in Solaris. Note 
- * that the separation on FreeBSD is a licensing constraint designed to
+ * that the separation on NQC is a licensing constraint designed to
  * keep the GENERIC kernel BSD licensed.
  */
 #define	t_dtrace_vtime	td_dtrace->td_dtrace_vtime
@@ -135,13 +135,13 @@ typedef struct kdtrace_thread {
 #endif
 
 /*
- * Definitions for fields in struct proc which are named differently in FreeBSD.
+ * Definitions for fields in struct proc which are named differently in NQC.
  */
 #define	p_cred		p_ucred
 #define	p_parent	p_pptr
 
 /*
- * Definitions for fields in struct thread which are named differently in FreeBSD.
+ * Definitions for fields in struct thread which are named differently in NQC.
  */
 #define	t_procp		td_proc
 #define	t_tid		td_tid

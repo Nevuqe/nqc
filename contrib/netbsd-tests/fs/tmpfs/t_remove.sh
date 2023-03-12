@@ -46,27 +46,27 @@ single_body() {
 	test_unmount
 }
 
-# Begin FreeBSD
+# Begin NQC
 if true; then
 atf_test_case uchg cleanup
 uchg_cleanup() {
 	Mount_Point=$(pwd)/mntpt _test_unmount
 }
 else
-# End FreeBSD
+# End NQC
 atf_test_case uchg
-# Begin FreeBSD
+# Begin NQC
 fi
-# End FreeBSD
+# End NQC
 uchg_head() {
 	atf_set "descr" "Checks that files with the uchg flag set cannot" \
 	                "be removed"
 	atf_set "require.user" "root"
 }
 uchg_body() {
-	# Begin FreeBSD
-	atf_expect_fail "this fails on FreeBSD with root - bug 212861"
-	# End FreeBSD
+	# Begin NQC
+	atf_expect_fail "this fails on NQC with root - bug 212861"
+	# End NQC
 
 	test_mount
 

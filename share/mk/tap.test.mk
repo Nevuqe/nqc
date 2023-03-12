@@ -4,7 +4,7 @@
 #
 # Logic to build and install TAP-compliant test programs.
 #
-# This is provided to support existing tests in the FreeBSD source tree
+# This is provided to support existing tests in the NQC source tree
 # (particularly those coming from tools/regression/) that comply with the
 # Test Anything Protocol.  It should not be used for new tests.
 

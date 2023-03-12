@@ -87,7 +87,7 @@ elf64_exec(struct preloaded_file *fp)
 	 * 'hints' method is fragile and does not work when static hints are
 	 * compiled into the kernel. Instead, move to setting different tunables
 	 * that start with acpi. The old 'hints' can be removed before we branch
-	 * for FreeBSD 15.
+	 * for NQC 15.
 	 */
 
 	rsdp = efi_get_table(&acpi20_guid);

@@ -17,7 +17,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. This work was done expressly for inclusion into FreeBSD.  Other use
+ * 3. This work was done expressly for inclusion into NQC.  Other use
  *    is permitted provided this notation is included.
  * 4. Absolutely no warranty of function or purpose is made by the authors.
  * 5. Modifications may be freely made to this file providing the above

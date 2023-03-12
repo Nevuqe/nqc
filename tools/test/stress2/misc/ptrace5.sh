@@ -30,8 +30,8 @@
 # of a signal to the same process.
 
 # "panic: Assertion TD_IS_SLEEPING(td) failed at subr_sleepqueue.c:958".
-# https://people.freebsd.org/~pho/stress/log/ptrace5.txt
-# https://people.freebsd.org/~pho/stress/log/ptrace5-2.txt
+# https://people.frebsd.org/~pho/stress/log/ptrace5.txt
+# https://people.frebsd.org/~pho/stress/log/ptrace5-2.txt
 # Fixed by r303426.
 
 . ../default.cfg

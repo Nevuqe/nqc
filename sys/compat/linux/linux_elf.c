@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2021 Edward Tomasz Napierala <trasz@FreeBSD.org>
+ * Copyright (c) 2021 Edward Tomasz Napierala <trasz@frebsd.org>
  * Copyright (c) 2018 Chuck Tuffli
  * Copyright (c) 2017 Dell EMC
  * Copyright (c) 2000 David O'Brien

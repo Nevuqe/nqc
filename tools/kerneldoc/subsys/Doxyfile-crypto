@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel crypto code"
+PROJECT_NAME           = "NQC kernel crypto code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/crypto/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #--------------------------------------------------------------------------

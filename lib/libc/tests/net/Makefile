@@ -33,7 +33,7 @@ aton_ether_subr.c: gen_ether_subr ${SRCTOP}/sys/net/if_ethersubr.c
 
 .include "../Makefile.netbsd-tests"
 
-# TODO: the testcases needs to be ported to FreeBSD
+# TODO: the testcases needs to be ported to NQC
 #TESTS_SUBDIRS=	getaddrinfo
 ${PACKAGE}FILES+=	hosts
 ${PACKAGE}FILES+=	resolv.conf

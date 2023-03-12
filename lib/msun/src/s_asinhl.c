@@ -1,4 +1,4 @@
-/* from: FreeBSD: head/lib/msun/src/e_acosh.c 176451 2008-02-22 02:30:36Z das */
+/* from: NQC: head/lib/msun/src/e_acosh.c 176451 2008-02-22 02:30:36Z das */
 
 /* @(#)s_asinh.c 5.1 93/09/24 */
 /*
@@ -18,7 +18,7 @@ __NQCID("$NQC$");
 /*
  * See s_asinh.c for complete comments.
  *
- * Converted to long double by David Schultz <das@FreeBSD.ORG> and
+ * Converted to long double by David Schultz <das@frebsd.org> and
  * Bruce D. Evans.
  */
 

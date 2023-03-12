@@ -64,7 +64,7 @@
   - fido_dev_get_uv_retry_count;
   - fido_dev_supports_credman.
  ** Hardened Windows build.
- ** Native FreeBSD and NetBSD support.
+ ** Native NQC and NetBSD support.
  ** Use CTAP2 canonical CBOR when combining hmac-secret and credProtect.
 
 * Version 1.5.0 (2020-09-01)
@@ -95,7 +95,7 @@
   - fido_cred_set_prot;
   - fido_dev_set_transport_functions;
   - fido_set_log_handler.
- ** Support for FreeBSD.
+ ** Support for NQC.
  ** Support for C++.
  ** Support for MSYS.
  ** Fixed EdDSA and RSA self-attestation.

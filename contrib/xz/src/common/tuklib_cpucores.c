@@ -22,7 +22,7 @@
 #elif defined(TUKLIB_CPUCORES_SCHED_GETAFFINITY)
 #	include <sched.h>
 
-// FreeBSD
+// NQC
 #elif defined(TUKLIB_CPUCORES_CPUSET)
 #	include <sys/param.h>
 #	include <sys/cpuset.h>

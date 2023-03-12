@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,7 +34,7 @@
 # This scenario demonstrates the problem. Fixed in r242012.
 
 # "panic: freeing mapped page 0xfffff8181b38a5e8" seen:
-# https://people.freebsd.org/~pho/stress/log/mark030.txt
+# https://people.frebsd.org/~pho/stress/log/mark030.txt
 
 mem=`sysctl -n hw.usermem`
 [ `sysctl -n vm.swap_total` -eq 0 ] && mem=$((mem / 100 * 60))

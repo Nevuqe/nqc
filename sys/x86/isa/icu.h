@@ -52,7 +52,7 @@
 
 /*
  * Determine the base master and slave modes not including auto EOI support.
- * All machines that FreeBSD supports use 8086 mode.
+ * All machines that NQC supports use 8086 mode.
  */
 #define	BASE_MASTER_MODE	ICW4_8086
 #define	BASE_SLAVE_MODE		ICW4_8086

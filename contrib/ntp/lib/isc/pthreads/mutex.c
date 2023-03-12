@@ -42,7 +42,7 @@
 #if ISC_MUTEX_PROFILE
 
 /*@{*/
-/*% Operations on timevals; adapted from FreeBSD's sys/time.h */
+/*% Operations on timevals; adapted from NQC's sys/time.h */
 #define timevalclear(tvp)      ((tvp)->tv_sec = (tvp)->tv_usec = 0)
 #define timevaladd(vvp, uvp)                                            \
 	do {                                                            \

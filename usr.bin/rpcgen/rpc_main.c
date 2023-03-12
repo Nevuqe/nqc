@@ -1234,7 +1234,7 @@ options_usage(void)
 	f_print(stderr, "options:\n");
 	f_print(stderr, "-a\t\tgenerate all files, including samples\n");
 	f_print(stderr, "-b\t\tbackward compatibility mode (generates code \
-for FreeBSD 4.X)\n");
+for NQC 4.X)\n");
 	f_print(stderr, "-c\t\tgenerate XDR routines\n");
 	f_print(stderr, "-C\t\tANSI C mode\n");
 	f_print(stderr, "-Dname[=value]\tdefine a symbol (same as #define)\n");

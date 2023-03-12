@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2015-2017 Landon Fuller <landonf@FreeBSD.org>
- * Copyright (c) 2017 The FreeBSD Foundation
+ * Copyright (c) 2015-2017 Landon Fuller <landonf@frebsd.org>
+ * Copyright (c) 2017 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Landon Fuller
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # VOP_LOOKUP: 0xfffff8014d6fe000 is not locked but should be
-# https://people.freebsd.org/~pho/stress/log/nullfs20.txt
+# https://people.frebsd.org/~pho/stress/log/nullfs20.txt
 
 . ../default.cfg
 

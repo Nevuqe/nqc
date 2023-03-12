@@ -52,7 +52,7 @@ nonexistent_body() {
 		-x "cat /some/name/that/does/not/exist"
 }
 
-# Begin FreeBSD
+# Begin NQC
 atf_test_case b_output
 b_output_head() {
 	atf_set "descr" "Test that cat(1) prints out numbers on non-blank "\
@@ -63,7 +63,7 @@ b_output_body() {
 	atf_check -o file:$(atf_get_srcdir)/d_b_output.out \
 		cat -b $(atf_get_srcdir)/d_b_output.in
 }
-# End FreeBSD
+# End NQC
 
 atf_test_case se_output
 se_output_head() {
@@ -76,7 +76,7 @@ se_output_body() {
 		-x "cat -se $(atf_get_srcdir)/d_se_output.in"
 }
 
-# Begin FreeBSD
+# Begin NQC
 atf_test_case s_output
 s_output_head() {
 	atf_set "descr" "Test that cat(1) squeezes multiple adjacent " \
@@ -110,19 +110,19 @@ vt_output_body() {
 	atf_check -s ignore -o file:$(atf_get_srcdir)/d_vt_output.out \
 		cat -vt $(atf_get_srcdir)/d_vt_output.in
 }
-# End FreeBSD
+# End NQC
 
 atf_init_test_cases()
 {
 	atf_add_test_case align
 	atf_add_test_case nonexistent
-# Begin FreeBSD
+# Begin NQC
 	atf_add_test_case b_output
-# End FreeBSD
+# End NQC
 	atf_add_test_case se_output
-# Begin FreeBSD
+# Begin NQC
 	atf_add_test_case s_output
 	atf_add_test_case e_output
 	atf_add_test_case vt_output
-# End FreeBSD
+# End NQC
 }

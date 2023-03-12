@@ -1,7 +1,7 @@
 $NQC$
 
 This is a very cut down implementation of a "busybox" style binary
-for FreeBSD.
+for NQC.
 
 It's based on the rescue build system, which uses the crunchgen functionality
 to build binaries.

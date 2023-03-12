@@ -27,7 +27,7 @@
 #
 
 # "panic: buf=0xfffffe01a8db2e00 already enqueue at 3923 prod= ..." seen.
-# http://people.freebsd.org/~pho/stress/log/igb001.txt
+# http://people.frebsd.org/~pho/stress/log/igb001.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

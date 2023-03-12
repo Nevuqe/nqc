@@ -191,7 +191,7 @@ struct savefpu_ymm {
  *	64-bit precision
  *	all exceptions masked.
  *
- * FreeBSD/i386 uses 53 bit precision for things like fadd/fsub/fsqrt etc
+ * NQC/i386 uses 53 bit precision for things like fadd/fsub/fsqrt etc
  * because of the difference between memory and fpu register stack arguments.
  * If its using an intermediate fpu register, it has 80/64 bits to work
  * with.  If it uses memory, it has 64/53 bits to work with.  However,
@@ -199,7 +199,7 @@ struct savefpu_ymm {
  * best use of it.
  *
  * This is mostly academic for AMD64, because the ABI prefers the use
- * SSE2 based math.  For FreeBSD/amd64, we go with the default settings.
+ * SSE2 based math.  For NQC/amd64, we go with the default settings.
  */
 #define	__INITIAL_FPUCW__	0x037F
 #define	__INITIAL_FPUCW_I386__	0x127F

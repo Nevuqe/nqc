@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD.h --------------------------*- C++ -*-===//
+//===-- NativeRegisterContextNQC.h --------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -16,24 +16,24 @@
 namespace lldb_private {
 namespace process_nqc {
 
-class NativeProcessFreeBSD;
+class NativeProcessNQC;
 
-class NativeRegisterContextFreeBSD
+class NativeRegisterContextNQC
     : public virtual NativeRegisterContextRegisterInfo {
 public:
   // This function is implemented in the NativeRegisterContextNQC_*
   // subclasses to create a new instance of the host specific
-  // NativeRegisterContextFreeBSD. The implementations can't collide as only one
+  // NativeRegisterContextNQC. The implementations can't collide as only one
   // NativeRegisterContextNQC_* variant should be compiled into the final
   // executable.
-  static NativeRegisterContextFreeBSD *
-  CreateHostNativeRegisterContextFreeBSD(const ArchSpec &target_arch,
+  static NativeRegisterContextNQC *
+  CreateHostNativeRegisterContextNQC(const ArchSpec &target_arch,
                                          NativeThreadProtocol &native_thread);
   virtual llvm::Error
-  CopyHardwareWatchpointsFrom(NativeRegisterContextFreeBSD &source) = 0;
+  CopyHardwareWatchpointsFrom(NativeRegisterContextNQC &source) = 0;
 
 protected:
-  virtual NativeProcessFreeBSD &GetProcess();
+  virtual NativeProcessNQC &GetProcess();
   virtual ::pid_t GetProcessPid();
 };
 

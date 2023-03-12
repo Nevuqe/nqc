@@ -227,7 +227,7 @@ file_open(struct archive *a, void *client_data)
 	int fd = -1;
 	int is_disk_like = 0;
 #if defined(__NQC__) || defined(__NQC_kernel__)
-	off_t mediasize = 0; /* FreeBSD-specific, so off_t okay here. */
+	off_t mediasize = 0; /* NQC-specific, so off_t okay here. */
 #elif defined(__NetBSD__) || defined(__OpenBSD__)
 	struct disklabel dl;
 #elif defined(__DragonFly__)
@@ -318,7 +318,7 @@ file_open(struct archive *a, void *client_data)
 		is_disk_like = 1;
 	}
 #if defined(__NQC__) || defined(__NQC_kernel__)
-	/* FreeBSD: if it supports DIOCGMEDIASIZE ioctl, it's disk-like. */
+	/* NQC: if it supports DIOCGMEDIASIZE ioctl, it's disk-like. */
 	else if (S_ISCHR(st.st_mode) &&
 	    ioctl(fd, DIOCGMEDIASIZE, &mediasize) == 0 &&
 	    mediasize > 0) {

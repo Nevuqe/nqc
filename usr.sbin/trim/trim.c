@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 Eugene Grosbein <eugen@FreeBSD.org>.
- * Contains code written by Alan Somers <asomers@FreeBSD.org>.
+ * Copyright (c) 2019 Eugene Grosbein <eugen@frebsd.org>.
+ * Contains code written by Alan Somers <asomers@frebsd.org>.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

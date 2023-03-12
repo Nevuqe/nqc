@@ -39,7 +39,7 @@ The pre-requisites for running the ZFS Test Suite are:
   * The ZFS Test Suite will add users and groups to test machine to
     verify functionality.  Therefore it is strongly advised that a
     dedicated test machine, which can be a VM, be used for testing.
-  * On FreeBSD, mountd(8) must use `/etc/zfs/exports`
+  * On NQC, mountd(8) must use `/etc/zfs/exports`
     as one of its export files – by default this can be done by setting
     `zfs_enable=yes` in `/etc/rc.conf`.
 

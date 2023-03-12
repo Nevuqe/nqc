@@ -249,7 +249,7 @@ Changes in release 0.8
 
  * New ASN.1 compiler.
 
- * GSS-API mechglue from FreeBSD.
+ * GSS-API mechglue from NQC.
 
  * Updated SPNEGO to support RFC4178.
 

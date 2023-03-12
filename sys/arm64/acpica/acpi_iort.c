@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2018 Marvell International Ltd.
  *
- * Author: Jayachandran C Nair <jchandra@freebsd.org>
+ * Author: Jayachandran C Nair <jchandra@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

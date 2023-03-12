@@ -12,6 +12,6 @@ Many of the tests here are applicable to any file system.  They should be
 refactored to be reusable on any mounted file system, which could also
 remove the need to do the mount/unmount steps in each and every test case.
 
-Possibly take a look at the file system tests in FreeBSD.  They seem to be
+Possibly take a look at the file system tests in NQC.  They seem to be
 much more complete, even though they are written in Perl and therefore not
 directly usable.

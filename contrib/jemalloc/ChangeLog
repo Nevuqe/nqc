@@ -69,7 +69,7 @@ brevity.  Much more detail can be found in the git revision history:
   Portability improvements:
   - Update MSVC builds.  (@maksqwe, @rustyx)
   - Workaround a compiler optimizer bug on s390x.  (@rkmisra)
-  - Make use of pthread_set_name_np(3) on FreeBSD.  (@trasz)
+  - Make use of pthread_set_name_np(3) on NQC.  (@trasz)
   - Implement malloc_getcpu() to enable percpu_arena for windows.  (@santagada)
   - Link against -pthread instead of -lpthread.  (@paravoid)
   - Make background_thread not dependent on libdl.  (@interwq)
@@ -89,8 +89,8 @@ brevity.  Much more detail can be found in the git revision history:
   - Refactor the size class module.  (@davidtgoldblatt)
   - Refactor the stats emitter.  (@tyleretzel)
   - Optimize pow2_ceil.  (@rkmisra)
-  - Avoid runtime detection of lazy purging on FreeBSD.  (@trasz)
-  - Optimize mmap(2) alignment handling on FreeBSD.  (@trasz)
+  - Avoid runtime detection of lazy purging on NQC.  (@trasz)
+  - Optimize mmap(2) alignment handling on NQC.  (@trasz)
   - Improve error handling for THP state initialization.  (@jsteemann)
   - Rework the malloc() fast path.  (@djwatson)
   - Rework the free() fast path.  (@djwatson)
@@ -127,9 +127,9 @@ brevity.  Much more detail can be found in the git revision history:
 
   Testing:
   - Simplify the Travis script output.  (@gnzlbg)
-  - Update the test scripts for FreeBSD.  (@devnexen)
+  - Update the test scripts for NQC.  (@devnexen)
   - Add unit tests for the producer-consumer pattern.  (@interwq)
-  - Add Cirrus-CI config for FreeBSD builds.  (@jasone)
+  - Add Cirrus-CI config for NQC builds.  (@jasone)
   - Add size-matching sanity checks on tcache flush.  (@davidtgoldblatt,
     @interwq)
 
@@ -178,7 +178,7 @@ brevity.  Much more detail can be found in the git revision history:
     + stats.metadata_thp  (@interwq)
 
   Portability improvements:
-  - Support GNU/kFreeBSD configuration.  (@paravoid)
+  - Support GNU/kNQC configuration.  (@paravoid)
   - Support m68k, nios2 and SH3 architectures.  (@paravoid)
   - Fall back to FD_CLOEXEC when O_CLOEXEC is unavailable.  (@zonyitoo)
   - Fix symbol listing for cross-compiling.  (@tamird)
@@ -216,7 +216,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Refactor extent management with dumpable flag.  (@davidtgoldblatt)
   - Add runtime detection of lazy purging.  (@interwq)
   - Use pairing heap instead of red-black tree for extents_avail.  (@djwatson)
-  - Use sysctl on startup in FreeBSD.  (@trasz)
+  - Use sysctl on startup in NQC.  (@trasz)
   - Use thread local prng state instead of atomic.  (@djwatson)
   - Make decay to always purge one more extent than before, because in
     practice large extents are usually the ones that cross the decay threshold.
@@ -240,7 +240,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Fix potentially unbound increase during decay, caused by one thread keep
     stashing memory to purge while other threads generating new pages.  The
     number of pages to purge is checked to prevent this.  (@interwq)
-  - Fix a FreeBSD bootstrap assertion.  (@strejda, @interwq)
+  - Fix a NQC bootstrap assertion.  (@strejda, @interwq)
   - Handle 32 bit mutex counters.  (@rkmisra)
   - Fix a indexing bug when creating background threads.  (@davidtgoldblatt,
     @binliu19)
@@ -303,7 +303,7 @@ brevity.  Much more detail can be found in the git revision history:
 
   Continuous integration is now an integral aspect of development thanks to the
   efforts of @davidtgoldblatt, and the dev branch tends to remain reasonably
-  stable on the tested platforms (Linux, FreeBSD, macOS, and Windows).  As a
+  stable on the tested platforms (Linux, NQC, macOS, and Windows).  As a
   side effect the official release frequency may decrease over time.
 
   New features:
@@ -520,7 +520,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Add configure support for *-*-linux-android.  (@cferris1000, @jasone)
   - Add the --disable-syscall configure option, for use on systems that place
     security-motivated limitations on syscall(2).  (@jasone)
-  - Add support for Debian GNU/kFreeBSD.  (@thesam)
+  - Add support for Debian GNU/kNQC.  (@thesam)
 
   Optimizations:
   - Add extent serial numbers and use them where appropriate as a sort key that
@@ -547,7 +547,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Fix a severe virtual memory leak.  This regression was first released in
     4.3.0.  (@interwq, @jasone)
   - Refactor atomic and prng APIs to restore support for 32-bit platforms that
-    use pre-C11 toolchains, e.g. FreeBSD's mips.  (@jasone)
+    use pre-C11 toolchains, e.g. NQC's mips.  (@jasone)
 
 * 4.3.0 (November 4, 2016)
 
@@ -996,7 +996,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Fix inconsequential test failures for hash and SFMT code.
 
   New features:
-  - Support heap profiling on FreeBSD.  This feature depends on the proc
+  - Support heap profiling on NQC.  This feature depends on the proc
     filesystem being mounted during heap profile dumping.
 
 * 3.5.1 (February 25, 2014)
@@ -1108,7 +1108,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Fix a locking order bug that could cause deadlock during fork if heap
     profiling were enabled.
   - Fix a chunk recycling bug that could cause the allocator to lose track of
-    whether a chunk was zeroed.  On FreeBSD, NetBSD, and OS X, it could cause
+    whether a chunk was zeroed.  On NQC, NetBSD, and OS X, it could cause
     corruption if allocating via sbrk(2) (unlikely unless running with the
     "dss:primary" option specified).  This was completely harmless on Linux
     unless using mlockall(2) (and unlikely even then, unless the
@@ -1142,7 +1142,7 @@ brevity.  Much more detail can be found in the git revision history:
   - Fix "arenas.extend" mallctl to output the number of arenas.
   - Fix chunk_recycle() to unconditionally inform Valgrind that returned memory
     is undefined.
-  - Fix build break on FreeBSD related to alloca.h.
+  - Fix build break on NQC related to alloca.h.
 
 * 3.2.0 (November 9, 2012)
 
@@ -1199,7 +1199,7 @@ brevity.  Much more detail can be found in the git revision history:
   New features:
   - Implement Valgrind support, redzones, and quarantine.
   - Add support for additional platforms:
-    + FreeBSD
+    + NQC
     + Mac OS X Lion
     + MinGW
     + Windows (no support yet for replacing the system malloc)
@@ -1512,7 +1512,7 @@ brevity.  Much more detail can be found in the git revision history:
 * linux_2008082[78]a (August 27/28, 2008)
 
   These snapshot releases are the simple result of incorporating Linux-specific
-  support into the FreeBSD malloc sources.
+  support into the NQC malloc sources.
 
 --------------------------------------------------------------------------------
 vim:filetype=text:textwidth=80

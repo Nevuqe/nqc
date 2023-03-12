@@ -208,7 +208,7 @@
 	
 2005-03-29  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* telnet/telnet.c: From FreeBSD:
+	* telnet/telnet.c: From NQC:
 	
 	Correct a pair of buffer overflows in the telnet(1) command:
 	
@@ -224,7 +224,7 @@
 	user running it.
 	
 	Security: CAN-2005-0468, CAN-2005-0469 Security:
-	FreeBSD-SA-05:01.telnet Security:
+	NQC-SA-05:01.telnet Security:
 	http://www.idefense.com/application/poi/display?id=220&type=vulnerabilities
 	Security:
 	http://www.idefense.com/application/poi/display?id=221&type=vulnerabilities

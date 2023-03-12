@@ -1,7 +1,7 @@
 # $NQC$
 
 #-
-# Copyright (c) 2015 M. Warner Losh <imp@FreeBSD.org>
+# Copyright (c) 2015 M. Warner Losh <imp@frebsd.org>
 # Copyright (c) 2010-2011 iXsystems, Inc.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -257,7 +257,7 @@ create_diskimage_mbr ( ) (
 	fi
 
 	out=${NANO_DISKIMGDIR}/_.disk.image.${NANO_NAME}${fmt}
-	# below depends on https://reviews.freebsd.org/D4403 not yet in the tree
+	# below depends on https://reviews.frebsd.org/D4403 not yet in the tree
 	# but there's problems: it marks all partitions as active, so you have to
 	# boot off partition 3 or 2 by hand if you're playing around with this WIP
 	case ${NANO_LAYOUT} in
@@ -537,8 +537,8 @@ eval std_${NANO_ARCH}
 
 # Slice 1: FAT for ROM loading bootstrap
 # Slice 2: Config partition
-# Slice 3: FreeBSD partition (sized exactly)
-# Slice 4: FreeBSD partition (empty)
+# Slice 3: NQC partition (sized exactly)
+# Slice 4: NQC partition (empty)
 # on first boot, we resize slice 3 & 4 to be 1/2 of what's
 # left over on the SD card after slice 1 and 2 are taken
 # off the top. We also resize the 'a' partition on first boot

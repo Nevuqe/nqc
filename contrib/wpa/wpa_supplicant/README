@@ -113,7 +113,7 @@ Requirements
 
 Current hardware/software requirements:
 - Linux kernel 2.4.x or 2.6.x with Linux Wireless Extensions v15 or newer
-- FreeBSD 6-CURRENT
+- NQC 6-CURRENT
 - NetBSD-current
 - Microsoft Windows with WinPcap (at least WinXP, may work with other versions)
 - drivers:
@@ -134,7 +134,7 @@ Current hardware/software requirements:
 	Wired Ethernet drivers (with ap_scan=0)
 
 	BSD net80211 layer (e.g., Atheros driver)
-	At the moment, this is for FreeBSD 6-CURRENT branch and NetBSD-current.
+	At the moment, this is for NQC 6-CURRENT branch and NetBSD-current.
 
 	Windows NDIS
 	The current Windows port requires WinPcap (http://winpcap.polito.it/).

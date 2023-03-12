@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2020 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2009-2020 Alexander Motin <mav@frebsd.org>
  * Copyright (c) 1997-2008 by Matthew Jacob
  * All rights reserved.
  *
@@ -28,7 +28,7 @@
  */
 /*
  * PCI specific probe and attach routines for Qlogic ISP SCSI adapters.
- * FreeBSD Version.
+ * NQC Version.
  */
 #include <sys/cdefs.h>
 __NQCID("$NQC$");
@@ -249,7 +249,7 @@ isp_pci_probe(device_t dev)
 		return (ENXIO);
 	}
 	if (isp_announced == 0 && bootverbose) {
-		printf("Qlogic ISP Driver, FreeBSD Version %d.%d, "
+		printf("Qlogic ISP Driver, NQC Version %d.%d, "
 		    "Core Version %d.%d\n",
 		    ISP_PLATFORM_VERSION_MAJOR, ISP_PLATFORM_VERSION_MINOR,
 		    ISP_CORE_VERSION_MAJOR, ISP_CORE_VERSION_MINOR);

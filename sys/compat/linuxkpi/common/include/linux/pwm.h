@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2022 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2022 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

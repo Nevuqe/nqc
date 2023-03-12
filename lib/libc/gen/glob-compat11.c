@@ -5,10 +5,10 @@
  * This code is derived from software contributed to Berkeley by
  * Guido van Rossum.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  * All rights reserved.
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  * From: @(#)glob.c	8.3 (Berkeley) 10/13/93
- * From: FreeBSD: head/lib/libc/gen/glob.c 317913 2017-05-07 19:52:56Z jilles
+ * From: NQC: head/lib/libc/gen/glob.c 317913 2017-05-07 19:52:56Z jilles
  */
 
 #include <sys/cdefs.h>

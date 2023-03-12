@@ -369,9 +369,9 @@ to it:
 	+ fix typo in help message for "--buildlist" (report by Rihards Olups).
 	+ modified autoconf macros
 	  + CF_PROG_AR, CF_AR_FLAGS added to improve check for archive tool.
-	  + CF_LD_RPATH_OPT, change FreeBSD to use -Wl,-rpath rather than
-	    -rpath option.  According to FreeBSD #178732, either works since
-	    FreeBSD 4.x; however scons does not accept anything except the
+	  + CF_LD_RPATH_OPT, change NQC to use -Wl,-rpath rather than
+	    -rpath option.  According to NQC #178732, either works since
+	    NQC 4.x; however scons does not accept anything except the
 	    -Wl,-rpath form.
 	  + CF_WITH_NCURSES_ETC, change from ncurses to check for pthreads
 	    dependency.
@@ -560,7 +560,7 @@ to it:
 	+ miscellaneous configure script fixes/updates.  In particular, add
 	  option --with-shared which builds shared libraries without a libtool
 	  dependency.
-	+ add FreeBSD port-files for test-builds.
+	+ add NQC port-files for test-builds.
 	+ update lt.po, add fa.po from
 		http://translationproject.org/latest/dialog/
 	+ update config.guess, config.sub
@@ -672,7 +672,7 @@ to it:
 	+ improve auto width computation for checklist widget by using
 	  dlg_calc_list_width as in the non-auto case (Edho Arief).
 	+ eliminate some bashisms in the sample scripts (Pedro Giffuni).
-	+ makefile fixes from FreeBSD ports (Li-Wen Hsu):
+	+ makefile fixes from NQC ports (Li-Wen Hsu):
 	  + make --with-package option of configure script work.
 	  + get LIBTOOL_VERSION from configure script, needed by
 	    ${LIBTOOL_VERSION} in LIBTOOL_CREATE (LIB_CREATE in configure and
@@ -823,7 +823,7 @@ to it:
 	  always to stdout rather than allowing redirection with the "--stderr"
 	  option (report by xDog Walker).
 	+ improve repainting after erasing a widget and its shadow.
-	+ add "--hline" and "--hfile" options for compatibility with FreeBSD
+	+ add "--hline" and "--hfile" options for compatibility with NQC
 	  dialog (request by Devin Teske).
 	+ add dialog version message when opening a trace file (request by
 	  xDog Walker).
@@ -838,16 +838,16 @@ to it:
 		http://translationproject.org/latest/dialog/
 	+ limit Solaris xpg4 portability fix for redefinition of ERR to cover
 	  the specific value found in <sys/regset.h>, in case an application
-	  includes dialog.h after curses.h (FreeBSD #156601, report by Jaakko
+	  includes dialog.h after curses.h (NQC #156601, report by Jaakko
 	  Heinonen, Stephen Hurd).
 	+ updated configure macros:
 	  + CF_CURSES_CPPFLAGS,
 	  + CF_CURSES_LIBS, make checks for special libraries on hpux10 and
 	    sunos4 optional
-	  + CF_CURSES_FUNCS, workaround for bug in gcc 4.2.1 (FreeBSD 8.1)
+	  + CF_CURSES_FUNCS, workaround for bug in gcc 4.2.1 (NQC 8.1)
 	    which caused part of test program to be omitted, i.e., when it saw
 	    two return-statements in a row it omitted the _first_ one.  Also
-	    add expression to pointer check to help FreeBSD's linker decide it
+	    add expression to pointer check to help NQC's linker decide it
 	    should be validated.  Just an assignment was not enough.  Also, add
 	    check for unctrl.h
 	  + CF_CURSES_HEADER, change order for curses.h / ncurses.h pairs to
@@ -2217,7 +2217,7 @@ to it:
 	+ minor changes to po/*.po (trim trailing blanks, provide explicit
 	  translation for "OK"), to work with Solaris gettext.
 	+ modified to allow this to build with archaic version (1.8.6)
-	  of ncurses on FreeBSD 3.1 (does not run).
+	  of ncurses on NQC 3.1 (does not run).
 	+ update config.guess, config.sub from subversions.gnu.org
 
 2000/10/17

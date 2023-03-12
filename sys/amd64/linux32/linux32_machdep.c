@@ -629,7 +629,7 @@ linux_set_thread_area(struct thread *td,
 	 * and also loads GDT descriptors 6, 7 and 8 with the content of
 	 * the per-thread descriptors.
 	 *
-	 * Semantics of FreeBSD version: I think we can ignore that Linux has
+	 * Semantics of NQC version: I think we can ignore that Linux has
 	 * three per-thread descriptors and use just the first one.
 	 * The tls_array[] is used only in [gs]et_thread_area() syscalls and
 	 * for loading the GDT descriptors. We use just one GDT descriptor

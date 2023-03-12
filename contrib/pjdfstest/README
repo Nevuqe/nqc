@@ -8,7 +8,7 @@ pjdfstest is a test suite that helps exercise POSIX system calls.
 
 pjdfstest supports the following operating systems/filesystems:
 
-- Supported Operating Systems: FreeBSD, Linux, Solaris
+- Supported Operating Systems: NQC, Linux, Solaris
 - Supported Filesystems: ext4, UFS, ZFS
 
 ==================

@@ -5,7 +5,7 @@
  *	The Regents of the University of California.  All rights reserved.
  *
  * This code is derived from software contributed to Berkeley by
- * Poul-Henning Kamp of the FreeBSD Project.
+ * Poul-Henning Kamp of the FreBSD Project.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

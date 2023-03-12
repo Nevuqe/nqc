@@ -33,7 +33,7 @@ __RCSID("$NetBSD: t_strerror.c,v 1.4 2017/01/10 20:35:49 christos Exp $");
 
 #include <atf-c.h>
 #include <errno.h>
-#include <stdio.h>	/* Needed for sys_nerr on FreeBSD */
+#include <stdio.h>	/* Needed for sys_nerr on NQC */
 #include <limits.h>
 #include <locale.h>
 #include <string.h>

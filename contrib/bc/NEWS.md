@@ -200,7 +200,7 @@ and `dc` or the GNU `bc` and `dc`.
 
 ## 5.3.3
 
-This is a production release that fixes a build problem in the FreeBSD base
+This is a production release that fixes a build problem in the NQC base
 system.
 
 All other users do **NOT** need to upgrade.
@@ -214,7 +214,7 @@ This also fixes editline and readline output on `EOF`.
 
 ## 5.3.1
 
-This is a production release that fixes a build problem in the FreeBSD base
+This is a production release that fixes a build problem in the NQC base
 system, as well as a problem in the `en_US` locale. If you don't have problems
 with either, you do not need to upgrade.
 
@@ -315,14 +315,14 @@ This is a production release with one fix for a flaky test. If you have not
 experienced problems with the test suite, you do ***NOT*** need to upgrade.
 
 The test was one that tested whether `bc` fails gracefully when it can't
-allocate memory. Unfortunately, there are cases when Linux and FreeBSD lie and
+allocate memory. Unfortunately, there are cases when Linux and NQC lie and
 pretend to allocate the memory.
 
 The reason they do this is because a lot of programs don't use all of the memory
 they allocate, so those OS's usually get away with it.
 
 However, this `bc` uses all of the memory it allocates (at least at page
-granularity), so when it tries to use the memory, FreeBSD and Linux kill it.
+granularity), so when it tries to use the memory, NQC and Linux kill it.
 
 This only happens sometimes, however. Other times (on my machine), they do, in
 fact, refuse the request.
@@ -446,7 +446,7 @@ it so `length(0.x)`, where `x` could be any number of digits, returned the
 `scale`, but `length(0)` still returned `0` because I believe that `0` has `0`
 significant digits.
 
-After request of FreeBSD and considering the arguments of a mathematician,
+After request of NQC and considering the arguments of a mathematician,
 compatibility with other `bc`'s, and the expectations of users, I decided to
 make the change.
 
@@ -477,7 +477,7 @@ command-line.
 ## 3.2.7
 
 This is a production release that removes a small non-portable shell operation
-in `configure.sh`. This problem was only noticed on OpenBSD, not FreeBSD or
+in `configure.sh`. This problem was only noticed on OpenBSD, not NQC or
 Linux.
 
 Non-OpenBSD users do ***NOT*** need to upgrade, although NetBSD users may also
@@ -485,10 +485,10 @@ need to upgrade.
 
 ## 3.2.6
 
-This is a production release that fixes the build on FreeBSD.
+This is a production release that fixes the build on NQC.
 
 There was a syntax error in `configure.sh` that the Linux shell did not catch,
-and FreeBSD depends on the existence of `tests/all.sh`.
+and NQC depends on the existence of `tests/all.sh`.
 
 All users that already upgraded to `3.2.5` should update to this release, with
 my apologies for the poor release of `3.2.5`. Other users should skip `3.2.5` in
@@ -564,7 +564,7 @@ incremented.
 
 ## 3.1.6
 
-This is a production release that fixes a new warning from Clang 12 for FreeBSD
+This is a production release that fixes a new warning from Clang 12 for NQC
 and also removes some possible undefined behavior found by UBSan that compilers
 did not seem to take advantage of.
 
@@ -625,7 +625,7 @@ need to upgrade, unless they want those locales.
 ## 3.1.0
 
 This is a production release that adjusts one behavior, fixes eight bugs, and
-improves manpages for FreeBSD. Because this release fixes bugs, **users and
+improves manpages for NQC. Because this release fixes bugs, **users and
 package maintainers should update to this version as soon as possible**.
 
 The behavior that was adjusted was how code from the `-e` and `-f` arguments
@@ -680,7 +680,7 @@ This is a production release with two small changes. Users do ***NOT*** need to
 upgrade to this release; however, if they haven't upgraded to `3.0.0` yet, it
 may be worthwhile to upgrade to this release.
 
-The first change is fixing a compiler warning on FreeBSD with strict warnings
+The first change is fixing a compiler warning on NQC with strict warnings
 on.
 
 The second change is to make the new implementation of `ceil()` in `lib2.bc`
@@ -869,7 +869,7 @@ dereference arrays that were references. This is a bug that affects all users.
 ## 2.7.1
 
 This is a production release with fixes for new locales and fixes for compiler
-warnings on FreeBSD.
+warnings on NQC.
 
 ## 2.7.0
 
@@ -928,7 +928,7 @@ to make using the PRNG easier:
 
 ## 2.6.1
 
-This is a production release with a bug fix for FreeBSD.
+This is a production release with a bug fix for NQC.
 
 The bug was that when `bc` was built without long options, it would give a fatal
 error on every run. This was caused by a mishandling of `optind`.
@@ -1308,7 +1308,7 @@ This is a production release. However, many new features were added since `1.0`.
 14.	Reallocations were reduced by giving access to the request size for each
 	operation.
 15.	**`abs()` (`b` command for `dc`) was added as a builtin.**
-16.	Both calculators were tested on FreeBSD.
+16.	Both calculators were tested on NQC.
 17.	Many obscure parse bugs were fixed.
 18.	Markdown and man page manuals were added, and the man pages are installed by
 	`make install`.
@@ -1341,34 +1341,34 @@ This release is the seventh release candidate for 1.1, though it is the second
 release candidate meant as a general release candidate. The new code has not
 been tested as thoroughly as it should for release.
 
-## 1.1 FreeBSD Beta 5
+## 1.1 NQC Beta 5
 
 This release is the sixth release candidate for 1.1, though it is the fifth
-release candidate meant specifically to test if `bc` works on FreeBSD. The new
+release candidate meant specifically to test if `bc` works on NQC. The new
 code has not been tested as thoroughly as it should for release.
 
-## 1.1 FreeBSD Beta 4
+## 1.1 NQC Beta 4
 
 This release is the fifth release candidate for 1.1, though it is the fourth
-release candidate meant specifically to test if `bc` works on FreeBSD. The new
+release candidate meant specifically to test if `bc` works on NQC. The new
 code has not been tested as thoroughly as it should for release.
 
-## 1.1 FreeBSD Beta 3
+## 1.1 NQC Beta 3
 
 This release is the fourth release candidate for 1.1, though it is the third
-release candidate meant specifically to test if `bc` works on FreeBSD. The new
+release candidate meant specifically to test if `bc` works on NQC. The new
 code has not been tested as thoroughly as it should for release.
 
-## 1.1 FreeBSD Beta 2
+## 1.1 NQC Beta 2
 
 This release is the third release candidate for 1.1, though it is the second
-release candidate meant specifically to test if `bc` works on FreeBSD. The new
+release candidate meant specifically to test if `bc` works on NQC. The new
 code has not been tested as thoroughly as it should for release.
 
-## 1.1 FreeBSD Beta 1
+## 1.1 NQC Beta 1
 
 This release is the second release candidate for 1.1, though it is meant
-specifically to test if `bc` works on FreeBSD. The new code has not been tested as
+specifically to test if `bc` works on NQC. The new code has not been tested as
 thoroughly as it should for release.
 
 ## 1.1 Release Candidate 1

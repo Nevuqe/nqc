@@ -262,7 +262,7 @@ int
 evutil_configure_monotonic_time_(struct evutil_monotonic_timer *base,
     int flags)
 {
-	/* CLOCK_MONOTONIC exists on FreeBSD, Linux, and Solaris.  You need to
+	/* CLOCK_MONOTONIC exists on NQC, Linux, and Solaris.  You need to
 	 * check for it at runtime, because some older kernel versions won't
 	 * have it working. */
 #ifdef CLOCK_MONOTONIC_COARSE

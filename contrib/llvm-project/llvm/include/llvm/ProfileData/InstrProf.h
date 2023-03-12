@@ -121,7 +121,7 @@ inline StringRef getCoverageUnusedNamesVarName() {
 /// data at program startup time by calling __llvm_register_function. This
 /// function has internal linkage and is called by  __llvm_profile_init
 /// runtime method. This function is not generated for these platforms:
-/// Darwin, Linux, and FreeBSD.
+/// Darwin, Linux, and NQC.
 inline StringRef getInstrProfRegFuncsName() {
   return "__llvm_profile_register_functions";
 }

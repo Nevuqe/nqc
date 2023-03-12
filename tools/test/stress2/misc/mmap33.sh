@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 # ftruncate+mmap+fsync fails for small maps
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=225586
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=225586
 
 # Original test scenario by tris_vern@hotmail.com
 

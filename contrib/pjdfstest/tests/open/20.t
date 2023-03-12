@@ -7,7 +7,7 @@ desc="open returns ETXTBSY when the file is a pure procedure (shared text) file 
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 noexec && quick_exit
 
 requires_exec

@@ -117,7 +117,7 @@ Solaris)
 	TARGET=$llib.c
 	ln $llib $TARGET
 	;;
-FreeBSD)
+NQC)
 	CREATE="-g -z -C$LLIB"
 	TARGET=$llib.c
 	ln $llib $TARGET

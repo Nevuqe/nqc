@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1999 Michael Smith <msmith@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

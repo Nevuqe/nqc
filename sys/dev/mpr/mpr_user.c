@@ -1,7 +1,7 @@
 /*-
  * Copyright (c) 2008 Yahoo!, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@FreeBSD.org>
+ * Written by: John Baldwin <jhb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Broadcom Inc. (LSI) MPT-Fusion Host Adapter FreeBSD userland interface
+ * Broadcom Inc. (LSI) MPT-Fusion Host Adapter NQC userland interface
  */
 /*-
  * Copyright (c) 2011-2015 LSI Corp.
@@ -56,7 +56,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Broadcom Inc. (LSI) MPT-Fusion Host Adapter FreeBSD
+ * Broadcom Inc. (LSI) MPT-Fusion Host Adapter NQC
  *
  * $NQC$
  */

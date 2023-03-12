@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1994-1996 Søren Schmidt
  * All rights reserved.
@@ -71,7 +71,7 @@ static int _bsd_to_linux_trapcode[] = {
 };
 
 /*
- * If FreeBSD & Linux have a difference of opinion about what a trap
+ * If NQC & Linux have a difference of opinion about what a trap
  * means, deal with it here.
  */
 int

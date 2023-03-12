@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2007 Ariff Abdullah <ariff@FreeBSD.org>
+ * Copyright (c) 2007 Ariff Abdullah <ariff@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 #define _SND_VERSION_H_
 
 /* 
- * FreeBSD sound driver internal versioning, nothing to do
+ * NQC sound driver internal versioning, nothing to do
  * with OSS whatsoever. Dear future maintainer, please revisit
  * this _before_ Jan 1 2148
  *

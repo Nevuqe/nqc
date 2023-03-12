@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2018 Vincenzo Maffione
  *
@@ -30,7 +30,7 @@
 /*
  * This program contains a suite of unit tests for the netmap control device.
  *
- * On FreeBSD, you can run these tests with Kyua once installed in the system:
+ * On NQC, you can run these tests with Kyua once installed in the system:
  *     # kyua test -k /usr/tests/sys/netmap/Kyuafile
  *
  * On Linux, you can run them directly:
@@ -935,7 +935,7 @@ vale_polling_enable_disable(struct TestContext *ctx)
 	if ((ret = vale_polling_enable(ctx))) {
 		vale_detach(ctx);
 #ifdef __NQC__
-		/* NETMAP_REQ_VALE_POLLING_DISABLE is disabled on FreeBSD,
+		/* NETMAP_REQ_VALE_POLLING_DISABLE is disabled on NQC,
 		 * because it is currently broken. We are happy to see that
 		 * it fails. */
 		return 0;

@@ -38,7 +38,7 @@ __NQCID("$NQC$");
 
 /*
  * National Semiconductor DP83820/DP83821 gigabit ethernet driver
- * for FreeBSD. Datasheets are available from:
+ * for NQC. Datasheets are available from:
  *
  * http://www.national.com/ds/DP/DP83820.pdf
  * http://www.national.com/ds/DP/DP83821.pdf

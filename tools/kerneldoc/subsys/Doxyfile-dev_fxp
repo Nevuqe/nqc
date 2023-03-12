@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel FXP device code"
+PROJECT_NAME           = "NQC kernel FXP device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_fxp/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

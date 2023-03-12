@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Charles Mott <cm@linktel.net>
  * All rights reserved.
@@ -73,7 +73,7 @@ __NQCID("$NQC$");
 
     Version 1.6 September 18, 1996 (cjm)
 	Simplified ICMP aliasing scheme.  Should now support
-	traceroute from Win95 as well as FreeBSD.
+	traceroute from Win95 as well as NQC.
 
     Version 1.7 January 9, 1997 (cjm)
 	- Out-of-order fragment handling.
@@ -101,7 +101,7 @@ __NQCID("$NQC$");
 	  PacketAliasOut2() as poorly conceived.
 
     Version 2.3 Dec 1998 (dillon)
-	- Major bounds checking additions, see FreeBSD/CVS
+	- Major bounds checking additions, see NQC/CVS
 
     Version 3.1 May, 2000 (salander)
 	- Added hooks to handle PPTP.

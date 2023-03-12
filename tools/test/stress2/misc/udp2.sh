@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,7 +31,7 @@
 
 # "panic: Assertion *sd->ifsd_cl != NULL failed at iflib.c:2620" seen
 # in WiP code:
-# https://people.freebsd.org/~pho/stress/log/mark163.txt
+# https://people.frebsd.org/~pho/stress/log/mark163.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  *  Copyright (c) 2004 Lukas Ertl
  *  Copyright (c) 2005 Chris Jones
  *  Copyright (c) 2007 Ulf Lilleengen
  *  All rights reserved.
  *
- * Portions of this software were developed for the FreeBSD Project
+ * Portions of this software were developed for the FreBSD Project
  * by Chris Jones thanks to the support of Google's Summer of Code
  * program and mentoring by Lukas Ertl.
  *

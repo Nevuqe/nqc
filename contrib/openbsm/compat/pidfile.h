@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2005 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2005 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Derived from FreeBSD head/lib/libutil/pidfile.c r231938
+ * Derived from NQC head/lib/libutil/pidfile.c r231938
  */
 
 #include <sys/param.h>

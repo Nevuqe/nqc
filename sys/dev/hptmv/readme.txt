@@ -1,4 +1,4 @@
-RocketRAID 18xx Driver for FreeBSD
+RocketRAID 18xx Driver for NQC
 Copyright (C) 2007-2008 HighPoint Technologies, Inc. All rights reserved.
 $NQC$
 
@@ -33,7 +33,7 @@ Revision History:
 
 1. Overview
 ---------------------
-  This package contains FreeBSD driver source code for HighPoint RocketRAID 
+  This package contains NQC driver source code for HighPoint RocketRAID 
   18xx SATA controller.
 
   NO WARRANTY
@@ -104,13 +104,13 @@ Revision History:
           dev/hptmv/entry.c       optional        hptmv
           dev/hptmv/mv.c          optional        hptmv
 
-     Note FreeBSD 5.3/5.4/6.x/7.x i386 already have a built-in RR18xx driver,
+     Note NQC 5.3/5.4/6.x/7.x i386 already have a built-in RR18xx driver,
      you should replace the old configuration lines with the lines listed above.
 
 
   6) Rebuild and install the kernel:
 
-     a) for FreeBSD 5.x/6.x/7.x i386:
+     a) for NQC 5.x/6.x/7.x i386:
      
         # cd /usr/src/sys/i386/conf/
         # /usr/sbin/config MYKERNEL
@@ -119,7 +119,7 @@ Revision History:
         # make 
         # make install
 
-     b) for FreeBSD 5.x/6.x/7.x amd64:
+     b) for NQC 5.x/6.x/7.x amd64:
 
         # cd /usr/src/sys/amd64/conf/
         # /usr/sbin/config MYKERNEL
@@ -128,7 +128,7 @@ Revision History:
         # make 
         # make install
 
-     c) for FreeBSD 4.x:
+     c) for NQC 4.x:
      
         # cd /usr/src/sys/i386/conf/
         # /usr/sbin/config MYKERNEL
@@ -162,11 +162,11 @@ Revision History:
 
   5) Copy the driver module to the kernel module directory
 
-     For FreeBSD 4.x:
+     For NQC 4.x:
      
      # cp hptmv.ko /modules/
 
-     For FreeBSD 5.x/6.x/7.x:
+     For NQC 5.x/6.x/7.x:
     
      # cp hptmv.ko /boot/kernel/
 
@@ -178,7 +178,7 @@ Revision History:
         BIOS driver C: is disk2
         BIOS 636kB/74512kB available memory
         
-        FreeBSD/i386 bootstrap loader, Revision 0.8
+        NQC/i386 bootstrap loader, Revision 0.8
         (mailto:jkh@narf.osd.bsdi.com, Sat Apr 21 08:46:19 GMT 2001)
         Loading /boot/defaults/loader.conf
         /kernel text=0x24f1db data=0x3007ec+0x2062c -
@@ -192,14 +192,14 @@ Revision History:
         /modules/hptmv.ko text=0xf571 data=0x2c8+0x254
         ok boot
         
-     For FreeBSD 5.x/6.x/7.x, you can select 6 on the boot menu to get a loader prompt.
+     For NQC 5.x/6.x/7.x, you can select 6 on the boot menu to get a loader prompt.
   
   7) You can add a below line into /boot/defaults/loader.conf to load the
      driver automatically:
     
            hptmv_load="YES"
     
-     Please refer to the installation guide in HighPoint FreeBSD driver release 
+     Please refer to the installation guide in HighPoint NQC driver release 
      package for more information.
      
 

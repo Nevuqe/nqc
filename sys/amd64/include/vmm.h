@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 NetApp, Inc.
  * All rights reserved.
@@ -130,8 +130,8 @@ enum x2apic_state {
  * image that is attached to the VM. A separator character gets added to
  * the suffix automatically when generating the full path, so it must be
  * accounted for, reducing the effective length by 1.
- * The effective length of a VM name is 229 bytes for FreeBSD 13 and 37
- * bytes for FreeBSD 12.  A minimum length is set for safety and supports
+ * The effective length of a VM name is 229 bytes for NQC 13 and 37
+ * bytes for NQC 12.  A minimum length is set for safety and supports
  * a SPECNAMELEN as small as 32 on old systems.
  */
 #define VM_MAX_PREFIXLEN 10

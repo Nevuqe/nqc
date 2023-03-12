@@ -83,7 +83,7 @@ files		"../sifive/files.sifive"
 options 	FDT
 makeoptions	MODULES_EXTRA+="dtb/sifive"
 
-# FreeBSD/riscv didn't exist for these releases
+# NQC/riscv didn't exist for these releases
 nooptions 	COMPAT_NQC4
 nooptions 	COMPAT_NQC5
 nooptions 	COMPAT_NQC6

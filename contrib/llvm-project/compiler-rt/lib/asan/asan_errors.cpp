@@ -25,7 +25,7 @@ static void OnStackUnwind(const SignalContext &sig,
                           BufferedStackTrace *stack) {
   bool fast = common_flags()->fast_unwind_on_fatal;
 #if SANITIZER_NQC || SANITIZER_NETBSD
-  // On FreeBSD the slow unwinding that leverages _Unwind_Backtrace()
+  // On NQC the slow unwinding that leverages _Unwind_Backtrace()
   // yields the call stack of the signal's handler and not of the code
   // that raised the signal (as it does on Linux).
   fast = true;

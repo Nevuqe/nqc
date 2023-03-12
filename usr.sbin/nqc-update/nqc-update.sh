@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #-
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright 2004-2007 Colin Percival
 # All rights reserved
@@ -51,7 +51,7 @@ Options:
   -k KEY       -- Trust an RSA key with SHA256 hash of KEY
   -r release   -- Target for upgrade (e.g., 11.1-RELEASE)
   -s server    -- Server from which to fetch updates
-                  (default: update.FreeBSD.org)
+                  (default: update.frebsd.org)
   -t address   -- Mail output of cron command, if any, to address
                   (default: root)
   --not-running-from-cron
@@ -62,7 +62,7 @@ Commands:
   fetch        -- Fetch updates from server
   cron         -- Sleep rand(3600) seconds, fetch updates, and send an
                   email if updates were found
-  upgrade      -- Fetch upgrades to FreeBSD version specified via -r option
+  upgrade      -- Fetch upgrades to NQC version specified via -r option
   updatesready -- Check if there are fetched updates ready to install
   install      -- Install downloaded updates or upgrades
   rollback     -- Uninstall most recently installed updates
@@ -161,7 +161,7 @@ config_MailTo () {
 	fi
 }
 
-# Set whether FreeBSD Update is allowed to add files (or directories, or
+# Set whether NQC Update is allowed to add files (or directories, or
 # symlinks) which did not previously exist.
 config_AllowAdd () {
 	if [ -z ${ALLOWADD} ]; then
@@ -181,7 +181,7 @@ config_AllowAdd () {
 	fi
 }
 
-# Set whether FreeBSD Update is allowed to remove files/directories/symlinks.
+# Set whether NQC Update is allowed to remove files/directories/symlinks.
 config_AllowDelete () {
 	if [ -z ${ALLOWDELETE} ]; then
 		case $1 in
@@ -200,7 +200,7 @@ config_AllowDelete () {
 	fi
 }
 
-# Set whether FreeBSD Update should keep existing inode ownership,
+# Set whether NQC Update should keep existing inode ownership,
 # permissions, and flags, in the event that they have been modified locally
 # after the release.
 config_KeepModifiedMetadata () {
@@ -274,7 +274,7 @@ config_MergeChanges () {
 	done
 }
 
-# Work on a FreeBSD installation mounted under $1
+# Work on a NQC installation mounted under $1
 config_BaseDir () {
 	if [ -z ${BASEDIR} ]; then
 		BASEDIR=$1
@@ -304,7 +304,7 @@ config_StrictComponents () {
 	fi
 }
 
-# Upgrade to FreeBSD $1
+# Upgrade to NQC $1
 config_TargetRelease () {
 	if [ -z ${TARGETRELEASE} ]; then
 		TARGETRELEASE=$1
@@ -316,7 +316,7 @@ config_TargetRelease () {
 	fi
 }
 
-# Pretend current release is FreeBSD $1
+# Pretend current release is NQC $1
 config_SourceRelease () {
 	UNAME_r=$1
 	if echo ${UNAME_r} | grep -qE '^[0-9.]+$'; then
@@ -706,8 +706,8 @@ fetchupgrade_check_params () {
 	cd ${WORKDIR} || exit 1
 
 	# Generate release number.  The s/SECURITY/RELEASE/ bit exists
-	# to provide an upgrade path for FreeBSD Update 1.x users, since
-	# the kernels provided by FreeBSD Update 1.x are always labelled
+	# to provide an upgrade path for NQC Update 1.x users, since
+	# the kernels provided by NQC Update 1.x are always labelled
 	# as X.Y-SECURITY.
 	RELNUM=`uname -r |
 	    sed -E 's,-p[0-9]+,,' |
@@ -725,7 +725,7 @@ fetchupgrade_check_params () {
 		cat <<- EOF
 			Cannot upgrade from a version that is not a release
 			(including alpha, beta and release candidates)
-			using `basename $0`. Instead, FreeBSD can be directly
+			using `basename $0`. Instead, NQC can be directly
 			upgraded by source or upgraded to a RELEASE/RELENG version
 			prior to running `basename $0`.
 			Currently running: ${RELNUM}
@@ -1004,8 +1004,8 @@ IDS_check_params () {
 	cd ${WORKDIR} || exit 1
 
 	# Generate release number.  The s/SECURITY/RELEASE/ bit exists
-	# to provide an upgrade path for FreeBSD Update 1.x users, since
-	# the kernels provided by FreeBSD Update 1.x are always labelled
+	# to provide an upgrade path for NQC Update 1.x users, since
+	# the kernels provided by NQC Update 1.x are always labelled
 	# as X.Y-SECURITY.
 	RELNUM=`uname -r |
 	    sed -E 's,-p[0-9]+,,' |
@@ -1054,8 +1054,8 @@ IDS_check_params () {
 # a useful answer, use the server name specified by the user.
 # Put another way... look up _http._tcp.${SERVERNAME} and pick a server
 # from that; or if no servers are returned, use ${SERVERNAME}.
-# This allows a user to specify "portsnap.freebsd.org" (in which case
-# portsnap will select one of the mirrors) or "portsnap5.tld.freebsd.org"
+# This allows a user to specify "portsnap.frebsd.org" (in which case
+# portsnap will select one of the mirrors) or "portsnap5.tld.frebsd.org"
 # (in which case portsnap will use that particular server, since there
 # won't be an SRV entry for that name).
 #
@@ -1120,9 +1120,9 @@ fetch_pick_server () {
 			This may be because upgrading from this platform (${ARCH})
 			or release (${RELNUM}) is unsupported by `basename $0`. Only
 			platforms with Tier 1 support can be upgraded by `basename $0`.
-			See https://www.freebsd.org/platforms/ for more info.
+			See https://www.frebsd.org/platforms/ for more info.
 
-			If unsupported, FreeBSD must be upgraded by source.
+			If unsupported, NQC must be upgraded by source.
 		EOF
 		return 1
 	fi
@@ -1951,7 +1951,7 @@ fetch_files_prepare () {
 		cp "${BASEDIR}/${F}" tmpfile
 		if [ `sha256 -q tmpfile` != ${HASH} ]; then
 			echo
-			echo "File changed while FreeBSD Update running: ${F}"
+			echo "File changed while NQC Update running: ${F}"
 			return 1
 		fi
 
@@ -2324,7 +2324,7 @@ upgrade_guess_components () {
 			cat <<-EOF
 
 WARNING: This system is running a "${KCOMP}" kernel, which is not a
-kernel configuration distributed as part of FreeBSD ${RELNUM}.
+kernel configuration distributed as part of NQC ${RELNUM}.
 This kernel will not be updated: you MUST update the kernel manually
 before running "$0 install".
 			EOF
@@ -2340,12 +2340,12 @@ before running "$0 install".
 		# reduce user confusion, translate "X|Y" back to "X/Y" (as
 		# subcomponents must be listed in the configuration file).
 		echo
-		echo -n "The following components of FreeBSD "
+		echo -n "The following components of NQC "
 		echo "seem to be installed:"
 		tr '|' '/' < comp.present |
 		    fmt -72
 		echo
-		echo -n "The following components of FreeBSD "
+		echo -n "The following components of NQC "
 		echo "do not seem to be installed:"
 		tr '|' '/' < comp.absent |
 		    fmt -72
@@ -2387,8 +2387,8 @@ upgrade_guess_new_kernel () {
 				cat <<-EOF
 
 WARNING: This system is running a "${KCOMP}" kernel, which is not a
-kernel configuration distributed as part of FreeBSD ${RELNUM}.
-As part of upgrading to FreeBSD ${RELNUM}, this kernel will be
+kernel configuration distributed as part of NQC ${RELNUM}.
+As part of upgrading to NQC ${RELNUM}, this kernel will be
 replaced with a "generic" kernel.
 				EOF
 				continuep || return 1
@@ -2584,7 +2584,7 @@ Press Enter to return to editing this file.
 				cat <<-EOF
 
 The following file will be removed, as it no longer exists in
-FreeBSD ${RELNUM}: ${F}
+NQC ${RELNUM}: ${F}
 				EOF
 				continuep < /dev/tty || return 1
 				continue
@@ -2593,8 +2593,8 @@ FreeBSD ${RELNUM}: ${F}
 			# Print changes for the user's approval.
 			cat <<-EOF
 
-The following changes, which occurred between FreeBSD ${OLDRELNUM} and
-FreeBSD ${RELNUM} have been merged into ${F}:
+The following changes, which occurred between NQC ${OLDRELNUM} and
+NQC ${RELNUM} have been merged into ${F}:
 EOF
 			diff -U 5 -L "current version" -L "new version"	\
 			    merge/old/${F} merge/new/${F} || true
@@ -3250,7 +3250,7 @@ rollback_run () {
 IDS_compare () {
 	# Get all the lines which mismatch in something other than file
 	# flags.  We ignore file flags because sysinstall doesn't seem to
-	# set them when it installs FreeBSD; warning about these adds a
+	# set them when it installs NQC; warning about these adds a
 	# very large amount of noise.
 	cut -f 1-5,7-8 -d '|' $1 > $1.noflags
 	sort -k 1,1 -t '|' $1.noflags > $1.sorted

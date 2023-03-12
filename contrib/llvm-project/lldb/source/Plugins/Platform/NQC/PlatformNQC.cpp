@@ -1,4 +1,4 @@
-//===-- PlatformFreeBSD.cpp -----------------------------------------------===//
+//===-- PlatformNQC.cpp -----------------------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "PlatformFreeBSD.h"
+#include "PlatformNQC.h"
 #include "lldb/Host/Config.h"
 
 #include <cstdio>
@@ -31,8 +31,8 @@
 #include "llvm/ADT/Triple.h"
 #include "llvm/Support/Host.h"
 
-// Define these constants from FreeBSD mman.h for use when targeting remote
-// FreeBSD systems even when host has different values.
+// Define these constants from NQC mman.h for use when targeting remote
+// NQC systems even when host has different values.
 #define MAP_PRIVATE 0x0002
 #define MAP_ANON 0x1000
 
@@ -40,12 +40,12 @@ using namespace lldb;
 using namespace lldb_private;
 using namespace lldb_private::platform_nqc;
 
-LLDB_PLUGIN_DEFINE(PlatformFreeBSD)
+LLDB_PLUGIN_DEFINE(PlatformNQC)
 
 static uint32_t g_initialize_count = 0;
 
 
-PlatformSP PlatformFreeBSD::CreateInstance(bool force, const ArchSpec *arch) {
+PlatformSP PlatformNQC::CreateInstance(bool force, const ArchSpec *arch) {
   Log *log = GetLog(LLDBLog::Platform);
   LLDB_LOG(log, "force = {0}, arch=({1}, {2})", force,
            arch ? arch->GetArchitectureName() : "<null>",
@@ -55,7 +55,7 @@ PlatformSP PlatformFreeBSD::CreateInstance(bool force, const ArchSpec *arch) {
   if (!create && arch && arch->IsValid()) {
     const llvm::Triple &triple = arch->GetTriple();
     switch (triple.getOS()) {
-    case llvm::Triple::FreeBSD:
+    case llvm::Triple::NQC:
       create = true;
       break;
 
@@ -72,37 +72,37 @@ PlatformSP PlatformFreeBSD::CreateInstance(bool force, const ArchSpec *arch) {
   }
   LLDB_LOG(log, "create = {0}", create);
   if (create) {
-    return PlatformSP(new PlatformFreeBSD(false));
+    return PlatformSP(new PlatformNQC(false));
   }
   return PlatformSP();
 }
 
-llvm::StringRef PlatformFreeBSD::GetPluginDescriptionStatic(bool is_host) {
+llvm::StringRef PlatformNQC::GetPluginDescriptionStatic(bool is_host) {
   if (is_host)
-    return "Local FreeBSD user platform plug-in.";
-  return "Remote FreeBSD user platform plug-in.";
+    return "Local NQC user platform plug-in.";
+  return "Remote NQC user platform plug-in.";
 }
 
-void PlatformFreeBSD::Initialize() {
+void PlatformNQC::Initialize() {
   Platform::Initialize();
 
   if (g_initialize_count++ == 0) {
 #if defined(__NQC__)
-    PlatformSP default_platform_sp(new PlatformFreeBSD(true));
+    PlatformSP default_platform_sp(new PlatformNQC(true));
     default_platform_sp->SetSystemArchitecture(HostInfo::GetArchitecture());
     Platform::SetHostPlatform(default_platform_sp);
 #endif
     PluginManager::RegisterPlugin(
-        PlatformFreeBSD::GetPluginNameStatic(false),
-        PlatformFreeBSD::GetPluginDescriptionStatic(false),
-        PlatformFreeBSD::CreateInstance, nullptr);
+        PlatformNQC::GetPluginNameStatic(false),
+        PlatformNQC::GetPluginDescriptionStatic(false),
+        PlatformNQC::CreateInstance, nullptr);
   }
 }
 
-void PlatformFreeBSD::Terminate() {
+void PlatformNQC::Terminate() {
   if (g_initialize_count > 0) {
     if (--g_initialize_count == 0) {
-      PluginManager::UnregisterPlugin(PlatformFreeBSD::CreateInstance);
+      PluginManager::UnregisterPlugin(PlatformNQC::CreateInstance);
     }
   }
 
@@ -110,7 +110,7 @@ void PlatformFreeBSD::Terminate() {
 }
 
 /// Default Constructor
-PlatformFreeBSD::PlatformFreeBSD(bool is_host)
+PlatformNQC::PlatformNQC(bool is_host)
     : PlatformPOSIX(is_host) // This is the local host platform
 {
   if (is_host) {
@@ -125,23 +125,23 @@ PlatformFreeBSD::PlatformFreeBSD(bool is_host)
         {llvm::Triple::x86_64, llvm::Triple::x86, llvm::Triple::aarch64,
          llvm::Triple::arm, llvm::Triple::mips64, llvm::Triple::ppc64,
          llvm::Triple::ppc},
-        llvm::Triple::FreeBSD);
+        llvm::Triple::NQC);
   }
 }
 
 std::vector<ArchSpec>
-PlatformFreeBSD::GetSupportedArchitectures(const ArchSpec &process_host_arch) {
+PlatformNQC::GetSupportedArchitectures(const ArchSpec &process_host_arch) {
   if (m_remote_platform_sp)
     return m_remote_platform_sp->GetSupportedArchitectures(process_host_arch);
   return m_supported_architectures;
 }
 
-void PlatformFreeBSD::GetStatus(Stream &strm) {
+void PlatformNQC::GetStatus(Stream &strm) {
   Platform::GetStatus(strm);
 
 #if LLDB_ENABLE_POSIX
   // Display local kernel information only when we are running in host mode.
-  // Otherwise, we would end up printing non-FreeBSD information (when running
+  // Otherwise, we would end up printing non-NQC information (when running
   // on Mac OS for example).
   if (IsHost()) {
     struct utsname un;
@@ -156,7 +156,7 @@ void PlatformFreeBSD::GetStatus(Stream &strm) {
 #endif
 }
 
-bool PlatformFreeBSD::CanDebugProcess() {
+bool PlatformNQC::CanDebugProcess() {
   if (IsHost()) {
     return true;
   } else {
@@ -165,11 +165,11 @@ bool PlatformFreeBSD::CanDebugProcess() {
   }
 }
 
-void PlatformFreeBSD::CalculateTrapHandlerSymbolNames() {
+void PlatformNQC::CalculateTrapHandlerSymbolNames() {
   m_trap_handlers.push_back(ConstString("_sigtramp"));
 }
 
-MmapArgList PlatformFreeBSD::GetMmapArgumentList(const ArchSpec &arch,
+MmapArgList PlatformNQC::GetMmapArgumentList(const ArchSpec &arch,
                                                  addr_t addr, addr_t length,
                                                  unsigned prot, unsigned flags,
                                                  addr_t fd, addr_t offset) {
@@ -186,7 +186,7 @@ MmapArgList PlatformFreeBSD::GetMmapArgumentList(const ArchSpec &arch,
   return args;
 }
 
-CompilerType PlatformFreeBSD::GetSiginfoType(const llvm::Triple &triple) {
+CompilerType PlatformNQC::GetSiginfoType(const llvm::Triple &triple) {
   if (!m_type_system_up)
     m_type_system_up.reset(new TypeSystemClang("siginfo", triple));
   TypeSystemClang *ast = m_type_system_up.get();

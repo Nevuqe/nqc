@@ -1,7 +1,7 @@
 #-
 # Copyright (c) 2007 Yahoo!, Inc.
 # All rights reserved.
-# Written by: John Baldwin <jhb@FreeBSD.org>
+# Written by: John Baldwin <jhb@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,7 +31,7 @@
 #
 # Partly from: src/sys/boot/i386/mbr/mbr.s 1.7
 
-# A 512 byte PMBR boot manager that looks for a FreeBSD boot GPT partition
+# A 512 byte PMBR boot manager that looks for a NQC boot GPT partition
 # and boots it.
 
 		.set LOAD,0x7c00		# Load address
@@ -121,14 +121,14 @@ main.3a:	subl $1, (%si)			# 0x0(%si) = last sec (0-31)
 		movsw				# $lastsec--, copy it to $lba
 		jmp main.2a			# Read the next sector
 #
-# Load a partition table sector from disk and look for a FreeBSD boot
+# Load a partition table sector from disk and look for a NQC boot
 # partition.
 #
 load_part:	movw $GPT_ADDR+GPT_PART_LBA,%si
 		movw $PART_ADDR,%bx
 		call read
 scan:		movw %bx,%si			# Compare partition UUID
-		movw $boot_uuid,%di		#  with FreeBSD boot UUID 
+		movw $boot_uuid,%di		#  with NQC boot UUID 
 		movw $0x10,%cx
 		repe cmpsb
 		jnz next_part			# Didn't match, next partition

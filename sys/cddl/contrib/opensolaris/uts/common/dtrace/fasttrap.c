@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * Portions Copyright 2010 The FreeBSD Foundation
+ * Portions Copyright 2010 The FreBSD Foundation
  *
  * $NQC$
  */
@@ -181,7 +181,7 @@ static volatile uint64_t fasttrap_mod_gen;
 /*
  * When the fasttrap provider is loaded, fasttrap_max is set to either
  * FASTTRAP_MAX_DEFAULT, or the value for fasttrap-max-probes in the
- * fasttrap.conf file (Illumos), or the value provied in the loader.conf (FreeBSD).
+ * fasttrap.conf file (Illumos), or the value provied in the loader.conf (NQC).
  * Each time a probe is created, fasttrap_total is incremented by the number
  * of tracepoints that may be associated with that probe; fasttrap_total is capped
  * at fasttrap_max.
@@ -447,7 +447,7 @@ fasttrap_mod_barrier(uint64_t gen)
 /*
  * This function performs asynchronous cleanup of fasttrap providers. The
  * Solaris implementation of this mechanism use a timeout that's activated in
- * fasttrap_pid_cleanup(), but this doesn't work in FreeBSD: one may sleep while
+ * fasttrap_pid_cleanup(), but this doesn't work in NQC: one may sleep while
  * holding the DTrace mutexes, but it is unsafe to sleep in a callout handler.
  * Thus we use a dedicated process to perform the cleanup when requested.
  */

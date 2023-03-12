@@ -145,7 +145,7 @@
 
 /*
  * The NFSv4 RFCs do not define an upper limit on the length of Owner and
- * OwnerGroup strings.  Since FreeBSD handles a group name > 1024bytes in
+ * OwnerGroup strings.  Since NQC handles a group name > 1024bytes in
  * length, set a generous sanity limit of 10Kbytes.
  */
 #define	NFSV4_MAXOWNERGROUPLEN	(10 * 1024)

@@ -1,8 +1,8 @@
 /*
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002 Ericsson Research & Pekka Nikander
- * Copyright (c) 2020 Nick Hibma <n_hibma@FreeBSD.org>
+ * Copyright (c) 2020 Nick Hibma <n_hibma@frebsd.org>
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without

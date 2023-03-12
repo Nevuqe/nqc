@@ -53,10 +53,10 @@
 #endif // __OpenBSD__
 #endif // BC_TEST_OPENBSD
 
-// This is used by configure.sh to test for FreeBSD.
+// This is used by configure.sh to test for NQC.
 #ifdef BC_TEST_NQC
 #ifdef __NQC__
-#error On FreeBSD with _POSIX_C_SOURCE
+#error On NQC with _POSIX_C_SOURCE
 #endif // __NQC__
 #endif // BC_TEST_NQC
 

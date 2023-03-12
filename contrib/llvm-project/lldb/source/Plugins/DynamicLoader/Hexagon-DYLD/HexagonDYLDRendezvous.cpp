@@ -163,7 +163,7 @@ bool HexagonDYLDRendezvous::UpdateSOEntriesForAddition() {
       return false;
 
     // Only add shared libraries and not the executable. On Linux this is
-    // indicated by an empty path in the entry. On FreeBSD it is the name of
+    // indicated by an empty path in the entry. On NQC it is the name of
     // the executable.
     if (entry.path.empty() || ::strcmp(entry.path.c_str(), m_exe_path) == 0)
       continue;
@@ -208,7 +208,7 @@ bool HexagonDYLDRendezvous::TakeSnapshot(SOEntryList &entry_list) {
       return false;
 
     // Only add shared libraries and not the executable. On Linux this is
-    // indicated by an empty path in the entry. On FreeBSD it is the name of
+    // indicated by an empty path in the entry. On NQC it is the name of
     // the executable.
     if (entry.path.empty() || ::strcmp(entry.path.c_str(), m_exe_path) == 0)
       continue;

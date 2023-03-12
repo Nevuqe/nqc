@@ -71,7 +71,7 @@ AArch64::AArch64() {
   defaultMaxPageSize = 65536;
 
   // Align to the 2 MiB page size (known as a superpage or huge page).
-  // FreeBSD automatically promotes 2 MiB-aligned allocations.
+  // NQC automatically promotes 2 MiB-aligned allocations.
   defaultImageBase = 0x200000;
 
   needsThunks = true;

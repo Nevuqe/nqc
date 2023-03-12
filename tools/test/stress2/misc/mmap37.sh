@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -27,9 +27,9 @@
 # SUCH DAMAGE.
 #
 
-# Regression test for https://reviews.freebsd.org/D20800
+# Regression test for https://reviews.frebsd.org/D20800
 # "Use a consistent snapshot of the fd's rights in fget_mmap()"
-# https://people.freebsd.org/~pho/stress/log/mmap37.txt
+# https://people.frebsd.org/~pho/stress/log/mmap37.txt
 
 # Reported by syzbot+ae359438769fda1840f8@syzkaller.appspotmail.com
 # Test scenario suggestion by markj@

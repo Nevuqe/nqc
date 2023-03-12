@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * SCSI Disk Emulator
  *
@@ -368,7 +368,7 @@ init_inquiry(u_int16_t req_flags, u_int16_t sim_flags)
 	inq->response_format = 2; /* SCSI2 Inquiry Format */
 	inq->additional_length = SHORT_INQUIRY_LENGTH -
 		offsetof(struct scsi_inquiry_data, additional_length);
-	bcopy("FreeBSD ", inq->vendor, SID_VENDOR_SIZE);
+	bcopy("NQC ", inq->vendor, SID_VENDOR_SIZE);
 	bcopy("Emulated Disk   ", inq->product, SID_PRODUCT_SIZE);
 	bcopy("0.1 ", inq->revision, SID_REVISION_SIZE);
 	return (0);

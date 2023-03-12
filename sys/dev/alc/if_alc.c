@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009, Pyun YongHyeon <yongari@FreeBSD.org>
+ * Copyright (c) 2009, Pyun YongHyeon <yongari@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -2725,7 +2725,7 @@ alc_encap(struct alc_softc *sc, struct mbuf **m_head)
 		 * Tx descriptor to perform Tx checksum offloading. TSO
 		 * also requires TCP header offset and modification of
 		 * IP/TCP header. This kind of operation takes many CPU
-		 * cycles on FreeBSD so fast host CPU is required to get
+		 * cycles on NQC so fast host CPU is required to get
 		 * smooth TSO performance.
 		 */
 		struct ether_header *eh;

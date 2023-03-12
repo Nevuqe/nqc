@@ -30,15 +30,15 @@ __NQCID("$NQC$");
 #endif
 
 /*
- * Verify extended attribute restore-to-disk.  This test is FreeBSD-specific.
+ * Verify extended attribute restore-to-disk.  This test is NQC-specific.
  */
 
 DEFINE_TEST(test_extattr_nqc)
 {
 #if !defined(__NQC__)
-	skipping("FreeBSD-specific extattr restore test");
+	skipping("NQC-specific extattr restore test");
 #elif __NQC__ < 5
-	skipping("extattr restore supported only on FreeBSD 5.0 and later");
+	skipping("extattr restore supported only on NQC 5.0 and later");
 #else
 	char buff[64];
 	const char *xname;

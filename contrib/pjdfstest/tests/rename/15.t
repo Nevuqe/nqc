@@ -7,7 +7,7 @@ desc="rename returns EXDEV if the link named by 'to' and the file named by 'from
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}" = "FreeBSD" ] || quick_exit
+[ "${os}" = "NQC" ] || quick_exit
 
 echo "1..23"
 

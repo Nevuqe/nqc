@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 nCircle Network Security, Inc.
  * Copyright (c) 2009 Robert N. M. Watson
- * Copyright (c) 2020 Mariusz Zaborski <oshogbo@FreeBSD.org>
+ * Copyright (c) 2020 Mariusz Zaborski <oshogbo@frebsd.org>
  * All rights reserved.
  *
  * This software was developed by Robert N. M. Watson for the TrustedBSD

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -28,9 +28,9 @@
 #
 
 # This test scenario would trigger an NMI.
-# https://people.freebsd.org/~pho/stress/log/mjguzik022.txt
+# https://people.frebsd.org/~pho/stress/log/mjguzik022.txt
 
-# Test scenario idea by Mark Johnston <markj@freebsd.org>
+# Test scenario idea by Mark Johnston <markj@frebsd.org>
 # Fixed by r357334
 
 ../misc/marcus.sh > /dev/null 2>&1 &

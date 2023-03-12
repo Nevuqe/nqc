@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008 Hans Petter Selasky. All rights reserved.
  *
@@ -100,7 +100,7 @@ static const struct libusb20_device_methods libusb20_ugen20_device_methods = {
 static const char *
 ugen20_get_backend_name(void)
 {
-	return ("FreeBSD UGEN 2.0");
+	return ("NQC UGEN 2.0");
 }
 
 static uint32_t

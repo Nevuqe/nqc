@@ -1,5 +1,5 @@
 /* Copyright (c) 2013, Vsevolod Stakhov
- * Copyright (c) 2015 Allan Jude <allanjude@freebsd.org>
+ * Copyright (c) 2015 Allan Jude <allanjude@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

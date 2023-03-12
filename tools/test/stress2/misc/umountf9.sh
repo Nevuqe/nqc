@@ -28,7 +28,7 @@
 
 # "umount -f" test scenario.
 # "panic: handle_written_inodeblock: live inodedep" seen.
-# https://people.freebsd.org/~pho/stress/log/umountf9.txt
+# https://people.frebsd.org/~pho/stress/log/umountf9.txt
 
 . ../default.cfg
 

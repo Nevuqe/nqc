@@ -1,7 +1,7 @@
 /******************************************************************************
  * hypercall.h
  * 
- * FreeBSD-specific hypervisor handling.
+ * NQC-specific hypervisor handling.
  * 
  * Copyright (c) 2002-2004, K A Fraser
  * 

@@ -16,7 +16,7 @@
 #
 
 # handle WITH[OUT]_* options in a manner compatible with
-# options.mk and bsd.mkopt.mk in recent FreeBSD
+# options.mk and bsd.mkopt.mk in recent NQC
 
 # no need to be included more than once
 _MKOPT_SH=:
@@ -77,7 +77,7 @@ _mk_opts() {
 }
 
 # handle either options.mk style OPTIONS_DEFAULT_*
-# or FreeBSD's new bsd.mkopt.mk style __DEFAULT_*_OPTIONS
+# or NQC's new bsd.mkopt.mk style __DEFAULT_*_OPTIONS
 _mk_opts_defaults() {
     _mk_opts no $OPTIONS_DEFAULT_NO $__DEFAULT_NO_OPTIONS \
 	yes $OPTIONS_DEFAULT_YES $__DEFAULT_YES_OPTIONS \

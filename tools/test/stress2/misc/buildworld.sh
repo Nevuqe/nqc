@@ -27,7 +27,7 @@
 #
 
 # "panic: Invalid page 0xfffff8007f227cf0 on inact queue" seen.
-# https://people.freebsd.org/~pho/stress/log/buildworld.txt
+# https://people.frebsd.org/~pho/stress/log/buildworld.txt
 # Fixed by r289377
 
 . ../default.cfg

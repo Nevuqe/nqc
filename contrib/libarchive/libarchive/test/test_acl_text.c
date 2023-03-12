@@ -433,7 +433,7 @@ DEFINE_TEST(test_acl_to_text)
 	/* POSIX.1e access and default ACLs with appended ID */
 	compare_acl_text(ae, ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID, acltext[1]);
 
-	/* POSIX.1e access acls only, like getfacl(1) on FreeBSD */
+	/* POSIX.1e access acls only, like getfacl(1) on NQC */
 	compare_acl_text(ae, ARCHIVE_ENTRY_ACL_TYPE_ACCESS, acltext[3]);
 
 	/* POSIX.1e access acls separated with comma */
@@ -459,13 +459,13 @@ DEFINE_TEST(test_acl_to_text)
 	/* Write NFSv4 ACLs */
 	assertEntrySetAcls(ae, acls1, sizeof(acls1)/sizeof(acls1[0]));
 
-	/* NFSv4 ACLs like getfacl(1) on FreeBSD */
+	/* NFSv4 ACLs like getfacl(1) on NQC */
 	compare_acl_text(ae, 0, acltext[9]);
 
-	/* NFSv4 ACLs like "getfacl -i" on FreeBSD */
+	/* NFSv4 ACLs like "getfacl -i" on NQC */
 	compare_acl_text(ae, ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID, acltext[10]);
 
-	/* NFSv4 ACLs like "getfacl -i" on FreeBSD with stripped minus chars */
+	/* NFSv4 ACLs like "getfacl -i" on NQC with stripped minus chars */
 	compare_acl_text(ae, ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID |
 	    ARCHIVE_ENTRY_ACL_STYLE_COMPACT, acltext[11]);
 

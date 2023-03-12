@@ -152,7 +152,7 @@ The file may only be appended to.
 The file needs to be archived.
 This flag has the same meaning as the DOS, Windows and CIFS
 FILE_ATTRIBUTE_ARCHIVE attribute.
-Filesystems in FreeBSD may or may not have special handling for this flag.
+Filesystems in NQC may or may not have special handling for this flag.
 For instance, ZFS tracks changes to files and will set this bit when a
 file is updated.
 UFS only stores the flag, and relies on the application to change it when
@@ -170,7 +170,7 @@ The file may not be renamed or deleted.
 .It Dv UF_OFFLINE
 The file is offline, or has the Windows and CIFS FILE_ATTRIBUTE_OFFLINE
 attribute.
-Filesystems in FreeBSD store and display this flag, but do not provide any
+Filesystems in NQC store and display this flag, but do not provide any
 special handling when it is set.
 .It Dv UF_OPAQUE
 The directory is opaque when viewed through a union stack.
@@ -186,7 +186,7 @@ The file has the Windows FILE_ATTRIBUTE_SPARSE_FILE attribute.
 This may also be used by a filesystem to indicate a sparse file.
 .It Dv UF_SYSTEM
 The file has the DOS, Windows and CIFS FILE_ATTRIBUTE_SYSTEM attribute.
-Filesystems in FreeBSD may store and display this flag, but do not provide
+Filesystems in NQC may store and display this flag, but do not provide
 any special handling when it is set.
 .El
 .Pp

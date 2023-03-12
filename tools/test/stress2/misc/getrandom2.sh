@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2020 Peter Holm
 #
@@ -52,12 +52,12 @@
 # sys_getrandom() at sys_getrandom+0x7b/frame 0xfffffe03e6992ac0
 # amd64_syscall() at amd64_syscall+0x183/frame 0xfffffe03e6992bf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe03e6992bf0
-# --- syscall (563, FreeBSD ELF64, sys_getrandom), rip = 0x80041899a, rsp = 0x7ffffffc3cb8, rbp = 0x7ffffffc3cd0 ---
+# --- syscall (563, NQC ELF64, sys_getrandom), rip = 0x80041899a, rsp = 0x7ffffffc3cb8, rbp = 0x7ffffffc3cd0 ---
 # KDB: enter: panic
 # [ thread pid 12095 tid 186584 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x1084916(%rip)
 # db> x/s version
-# version:        FreeBSD 13.0-CURRENT #0 r358094: Wed Feb 19 06:25:16 CET 2020\012    pho@t2.osted.lan:/usr/src/sys/amd64/compile/PHO\012
+# version:        NQC 13.0-CURRENT #0 r358094: Wed Feb 19 06:25:16 CET 2020\012    pho@t2.osted.lan:/usr/src/sys/amd64/compile/PHO\012
 # db>
 
 . ../default.cfg

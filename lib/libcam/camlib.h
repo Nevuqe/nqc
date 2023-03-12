@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: (BSD-2-Clause-FreeBSD AND BSD-4-Clause) 
+ * SPDX-License-Identifier: (BSD-2-Clause-NQC AND BSD-4-Clause) 
  *
  * Copyright (c) 1997, 1998 Kenneth D. Merry.
  * All rights reserved.
@@ -27,7 +27,7 @@
  * $NQC$
  */
 /*
- * Buffer encoding/decoding routines taken from the original FreeBSD SCSI
+ * Buffer encoding/decoding routines taken from the original NQC SCSI
  * library and slightly modified.  The original header file had the following
  * copyright:
  */

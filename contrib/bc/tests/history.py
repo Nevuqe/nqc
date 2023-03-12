@@ -344,7 +344,7 @@ def test_sigint(exe, args, env):
 # @param env   The environment.
 def test_sigtstp(exe, args, env):
 
-	# This test does not work on FreeBSD, so skip.
+	# This test does not work on NQC, so skip.
 	if sys.platform.startswith("freebsd"):
 		sys.exit(0)
 

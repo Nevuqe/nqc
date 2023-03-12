@@ -230,9 +230,9 @@ FAQ
    well with zsh. Zsh is sh and ksh compatible, with many of the
    interactive features of tcsh.
 
-  Why does FreeBSD's tcsh do history browsing differently than I expect?
+  Why does NQC's tcsh do history browsing differently than I expect?
 
-   On FreeBSD, by default, the up arrow is set to history-search-backward,
+   On NQC, by default, the up arrow is set to history-search-backward,
    rather than the default up-history. As a result, if you type (part of)
    a word and press up arrow, you'll see previous commands that match the
    prefix. Pretty useful, actually, although it takes some getting used

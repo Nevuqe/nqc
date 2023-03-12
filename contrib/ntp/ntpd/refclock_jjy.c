@@ -66,12 +66,12 @@
 /*    [Fix]    C-DEX JST2000 ( fukusima@goto.info.waseda.ac.jp )      */
 /*								      */
 /*  2002/07/12							      */
-/*    [Fix]    Portability for FreeBSD ( patched by the user )	      */
+/*    [Fix]    Portability for NQC ( patched by the user )	      */
 /*								      */
 /*  2004/10/31							      */
 /*    [Change] Command send timing for the Tristate Ltd. JJY receiver */
 /*	       JJY-01 ( Firmware version 2.01 )			      */
-/*	       Thanks to Andy Taki for testing under FreeBSD	      */
+/*	       Thanks to Andy Taki for testing under NQC	      */
 /*								      */
 /*  2004/11/28							      */
 /*    [Add]    Support the Echo Keisokuki LT-2000 receiver	      */
@@ -4109,7 +4109,7 @@ modem_init_resp00 ( struct peer *peer, struct refclockproc *pp, struct jjyunit *
 		break ;
 
 	case 4 :
-		/* +MS = Protocol  V22B:1200,2400bpsÅiV.22bis) */
+		/* +MS = Protocol  V22B:1200,2400bpsÔøΩiV.22bis) */
 		pCmd = "AT+MS=V22B\r\n" ;
 		break ;
 

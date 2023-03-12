@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,9 +34,9 @@
 # Problem seen with and without +j
 
 # "panic: ufsdirhash_newblk: bad offset" seen:
-# https://people.freebsd.org/~pho/stress/log/mkfifo2c.txt
-# https://people.freebsd.org/~pho/stress/log/mkfifo2c-2.txt
-# https://people.freebsd.org/~pho/stress/log/kostik932.txt
+# https://people.frebsd.org/~pho/stress/log/mkfifo2c.txt
+# https://people.frebsd.org/~pho/stress/log/mkfifo2c-2.txt
+# https://people.frebsd.org/~pho/stress/log/kostik932.txt
 # Fixed by r305601.
 
 . ../default.cfg

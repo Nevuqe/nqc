@@ -7,7 +7,7 @@
 # $NQC$
 #
 # This script is used by release/Makefile to build the (optional) ISO images
-# for a FreeBSD release.  It is considered architecture dependent since each
+# for a NQC release.  It is considered architecture dependent since each
 # platform has a slightly unique way of making bootable CDs.  This script
 # is also allowed to generate any number of images since that is more of
 # publishing decision than anything else.
@@ -83,7 +83,7 @@ NAME="$1"; shift
 # MAKEFSARG extracted already
 shift
 
-publisher="The FreeBSD Project.  https://www.FreeBSD.org/"
+publisher="The FreBSD Project.  https://www.frebsd.org/"
 echo "/dev/iso9660/$LABEL / cd9660 ro 0 0" > "$BASEBITSDIR/etc/fstab"
 if [ -n "${METALOG}" ]; then
 	metalogfilename=$(mktemp /tmp/metalog.XXXXXX)

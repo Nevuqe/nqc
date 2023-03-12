@@ -29,7 +29,7 @@
 # Parallel mount and umount of file systems
 
 # "panic: userret: Returning with 1 locks held" seen:
-# https://people.freebsd.org/~pho/stress/log/mark165.txt
+# https://people.frebsd.org/~pho/stress/log/mark165.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

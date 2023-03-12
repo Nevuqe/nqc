@@ -1,7 +1,7 @@
 /*-
  * Implementation of the Common Access Method Transport (XPT) layer.
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997, 1998, 1999 Justin T. Gibbs.
  * Copyright (c) 1997, 1998, 1999 Kenneth D. Merry.
@@ -5283,7 +5283,7 @@ xptaction(struct cam_sim *sim, union ccb *work_ccb)
 		cpi->max_target = 0;
 		cpi->max_lun = 0;
 		cpi->initiator_id = 0;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "", HBA_IDLEN);
 		strlcpy(cpi->dev_name, sim->sim_name, DEV_IDLEN);
 		cpi->unit_number = sim->unit_number;

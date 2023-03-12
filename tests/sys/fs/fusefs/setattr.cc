@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -705,7 +705,7 @@ TEST_F(Setattr, utimensat_mtime_only) {
 /*
  * Set a file's mtime and atime to now
  *
- * The design of FreeBSD's VFS does not allow fusefs to set just one of atime
+ * The design of NQC's VFS does not allow fusefs to set just one of atime
  * or mtime to UTIME_NOW; it's both or neither.
  */
 TEST_F(Setattr, utimensat_utime_now) {

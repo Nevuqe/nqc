@@ -49,7 +49,7 @@ ipdivert_ip_output_remote_success_body() {
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/245764"
+		atf_skip "https://bugs.frebsd.org/245764"
 	fi
 
 	ids=65530
@@ -104,7 +104,7 @@ ipdivert_ip_input_local_success_body() {
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/245764"
+		atf_skip "https://bugs.frebsd.org/245764"
 	fi
 
 	ids=65529

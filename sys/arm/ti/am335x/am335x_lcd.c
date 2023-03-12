@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright 2013 Oleksandr Tymoshenko <gonzo@freebsd.org>
+ * Copyright 2013 Oleksandr Tymoshenko <gonzo@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -360,7 +360,7 @@ am335x_read_hdmi_property(device_t dev)
 	sc->sc_hdmi_framer = 0;
 
 	/*
-	 * Old FreeBSD way of referencing to HDMI framer
+	 * Old NQC way of referencing to HDMI framer
 	 */
 	if (OF_getencprop(node, "hdmi", &hdmi_xref, sizeof(hdmi_xref)) != -1) {
 		sc->sc_hdmi_framer = hdmi_xref;

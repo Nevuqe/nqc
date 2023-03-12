@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -29,7 +29,7 @@
 
 # Simple test of kpti (Kernel page-table isolation) enable / disable
 
-# Page fault seen: https://people.freebsd.org/~pho/stress/log/dougm061.txt
+# Page fault seen: https://people.frebsd.org/~pho/stress/log/dougm061.txt
 # Fixed by r354132
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

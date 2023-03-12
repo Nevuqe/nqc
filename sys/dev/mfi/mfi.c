@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND BSD-2-Clause
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-2-Clause
  *
  * Copyright (c) 2006 IronPort Systems
  * All rights reserved.
@@ -2494,7 +2494,7 @@ mfi_std_send_frame(struct mfi_softc *sc, struct mfi_command *cm)
 	 * fetched across the bus.  If a command has more than 8 frames
 	 * then the 3 bits are set to 0x7 and the firmware uses other
 	 * information in the command to determine the total amount to fetch.
-	 * However, FreeBSD doesn't support I/O larger than 128K, so 8 frames
+	 * However, NQC doesn't support I/O larger than 128K, so 8 frames
 	 * is enough for both 32bit and 64bit systems.
 	 */
 	if (cm->cm_extra_frames > 7)

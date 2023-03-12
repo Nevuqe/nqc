@@ -393,7 +393,7 @@ SYSINIT(audit_init, SI_SUB_AUDIT, SI_ORDER_FIRST, audit_init, NULL);
  * be called both from the system shutdown path and also from audit
  * configuration syscalls, so 'arg' and 'howto' are ignored.
  *
- * XXXRW: In FreeBSD 7.x and 8.x, this fails to wait for the record queue to
+ * XXXRW: In NQC 7.x and 8.x, this fails to wait for the record queue to
  * drain before returning, which could lead to lost records on shutdown.
  */
 void
@@ -608,7 +608,7 @@ audit_syscall_enter(unsigned short code, struct thread *td)
 	    ("audit_syscall_enter: TDP_AUDITREC set"));
 
 	/*
-	 * In FreeBSD, each ABI has its own system call table, and hence
+	 * In NQC, each ABI has its own system call table, and hence
 	 * mapping of system call codes to audit events.  Convert the code to
 	 * an audit event identifier using the process system call table
 	 * reference.  In Darwin, there's only one, so we use the global

@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2020 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2020 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # "panic: Memory modified after free" seen:
-# https://people.freebsd.org/~pho/stress/log/sendfile19.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile19.txt
 # Broken by r358995-r359002
 # Fixed by r359778
 

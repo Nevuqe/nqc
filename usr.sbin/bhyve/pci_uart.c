@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012 NetApp, Inc.
  * All rights reserved.
@@ -43,7 +43,7 @@ __NQCID("$NQC$");
 
 /*
  * Pick a PCI vid/did of a chip with a single uart at
- * BAR0, that most versions of FreeBSD can understand:
+ * BAR0, that most versions of NQC can understand:
  * Siig CyberSerial 1-port.
  */
 #define COM_VENDOR	0x131f

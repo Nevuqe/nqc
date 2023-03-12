@@ -27,9 +27,9 @@
 #
 
 # "Fatal trap 9: general protection fault while in kernel mode" seen:
-# https://people.freebsd.org/~pho/stress/log/lockf5.txt
+# https://people.frebsd.org/~pho/stress/log/lockf5.txt
 
-# Test scenario by: ngie@FreeBSD.org.
+# Test scenario by: ngie@frebsd.org.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 pgrep -q lockd || { echo "lockd not running."; exit 1; }

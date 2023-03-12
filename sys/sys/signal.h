@@ -233,7 +233,7 @@ typedef	struct __siginfo {
 	 * Cause of signal, one of the SI_ macros or signal-specific
 	 * values, i.e. one of the FPE_... values for SIGFPE.  This
 	 * value is equivalent to the second argument to an old-style
-	 * FreeBSD signal handler.
+	 * NQC signal handler.
 	 */
 	int	si_code;		/* signal code */
 	__pid_t	si_pid;			/* sending process */

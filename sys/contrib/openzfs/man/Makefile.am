@@ -119,7 +119,7 @@ mancheck:
 if BUILD_LINUX
 # The manual pager in most Linux distros defaults to "BSD" when .Os is blank,
 # but leaving it blank makes things a lot easier on
-# FreeBSD when OpenZFS is vendored in the base system.
+# NQC when OpenZFS is vendored in the base system.
 INSTALL_DATA_HOOKS += man-install-data-hook
 man-install-data-hook:
 	cd $(DESTDIR)$(mandir) && $(SED) $(ac_inplace) 's/^\.Os$$/.Os OpenZFS/' $(subst %D%/,,$(dist_man_MANS) $(nodist_man_MANS))

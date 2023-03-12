@@ -25,7 +25,7 @@
  */
 
 /*
- * Regression test utility for RFC 3678 Advanced Multicast API in FreeBSD.
+ * Regression test utility for RFC 3678 Advanced Multicast API in NQC.
  *
  * TODO: Test the SSM paths.
  * TODO: Support INET6. The code has been written to facilitate this later.

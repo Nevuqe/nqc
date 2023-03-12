@@ -5,8 +5,8 @@
  *	The Regents of the University of California.  All rights reserved.
  * Copyright (c) 2007-2008,2010
  *	Swinburne University of Technology, Melbourne, Australia.
- * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@freebsd.org>
- * Copyright (c) 2010 The FreeBSD Foundation
+ * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@frebsd.org>
+ * Copyright (c) 2010 The FreBSD Foundation
  * Copyright (c) 2010-2011 Juniper Networks, Inc.
  * All rights reserved.
  *
@@ -17,7 +17,7 @@
  *
  * Portions of this software were developed at the Centre for Advanced
  * Internet Architectures, Swinburne University of Technology, Melbourne,
- * Australia by David Hayes under sponsorship from the FreeBSD Foundation.
+ * Australia by David Hayes under sponsorship from the FreBSD Foundation.
  *
  * Portions of this software were developed by Robert N. M. Watson under
  * contract to Juniper Networks, Inc.

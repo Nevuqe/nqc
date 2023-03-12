@@ -75,7 +75,7 @@ static PrintfSpecifierResult ParsePrintfSpecifier(FormatStringHandler &H,
                                                   const LangOptions &LO,
                                                   const TargetInfo &Target,
                                                   bool Warn,
-                                                  bool isFreeBSDKPrintf) {
+                                                  bool isNQCKPrintf) {
 
   using namespace clang::analyze_format_string;
   using namespace clang::analyze_printf;
@@ -317,8 +317,8 @@ static PrintfSpecifierResult ParsePrintfSpecifier(FormatStringHandler &H,
     case 'g': k = ConversionSpecifier::gArg; break;
     case 'i': k = ConversionSpecifier::iArg; break;
     case 'n':
-      // Not handled, but reserved in OpenCL and FreeBSD kernel.
-      if (!LO.OpenCL && !isFreeBSDKPrintf)
+      // Not handled, but reserved in OpenCL and NQC kernel.
+      if (!LO.OpenCL && !isNQCKPrintf)
         k = ConversionSpecifier::nArg;
       break;
     case 'o': k = ConversionSpecifier::oArg; break;
@@ -337,23 +337,23 @@ static PrintfSpecifierResult ParsePrintfSpecifier(FormatStringHandler &H,
     case '@': k = ConversionSpecifier::ObjCObjArg; break;
     // Glibc specific.
     case 'm': k = ConversionSpecifier::PrintErrno; break;
-    // FreeBSD kernel specific.
+    // NQC kernel specific.
     case 'b':
-      if (isFreeBSDKPrintf)
-        k = ConversionSpecifier::FreeBSDbArg; // int followed by char *
+      if (isNQCKPrintf)
+        k = ConversionSpecifier::NQCbArg; // int followed by char *
       break;
     case 'r':
-      if (isFreeBSDKPrintf)
-        k = ConversionSpecifier::FreeBSDrArg; // int
+      if (isNQCKPrintf)
+        k = ConversionSpecifier::NQCrArg; // int
       break;
     case 'y':
-      if (isFreeBSDKPrintf)
-        k = ConversionSpecifier::FreeBSDyArg; // int
+      if (isNQCKPrintf)
+        k = ConversionSpecifier::NQCyArg; // int
       break;
     // Apple-specific.
     case 'D':
-      if (isFreeBSDKPrintf)
-        k = ConversionSpecifier::FreeBSDDArg; // void * followed by char *
+      if (isNQCKPrintf)
+        k = ConversionSpecifier::NQCDArg; // void * followed by char *
       else if (Target.getTriple().isOSDarwin())
         k = ConversionSpecifier::DArg;
       break;
@@ -387,9 +387,9 @@ static PrintfSpecifierResult ParsePrintfSpecifier(FormatStringHandler &H,
   FS.setConversionSpecifier(CS);
   if (CS.consumesDataArgument() && !FS.usesPositionalArg())
     FS.setArgIndex(argIndex++);
-  // FreeBSD kernel specific.
-  if (k == ConversionSpecifier::FreeBSDbArg ||
-      k == ConversionSpecifier::FreeBSDDArg)
+  // NQC kernel specific.
+  if (k == ConversionSpecifier::NQCbArg ||
+      k == ConversionSpecifier::NQCDArg)
     argIndex++;
 
   if (k == ConversionSpecifier::InvalidSpecifier) {
@@ -409,7 +409,7 @@ bool clang::analyze_format_string::ParsePrintfString(FormatStringHandler &H,
                                                      const char *E,
                                                      const LangOptions &LO,
                                                      const TargetInfo &Target,
-                                                     bool isFreeBSDKPrintf) {
+                                                     bool isNQCKPrintf) {
 
   unsigned argIndex = 0;
 
@@ -417,7 +417,7 @@ bool clang::analyze_format_string::ParsePrintfString(FormatStringHandler &H,
   while (I != E) {
     const PrintfSpecifierResult &FSR = ParsePrintfSpecifier(H, I, E, argIndex,
                                                             LO, Target, true,
-                                                            isFreeBSDKPrintf);
+                                                            isNQCKPrintf);
     // Did a fail-stop error of any kind occur when parsing the specifier?
     // If so, don't do any more processing.
     if (FSR.shouldStop())
@@ -950,8 +950,8 @@ bool PrintfSpecifier::hasValidPlusPrefix() const {
   case ConversionSpecifier::GArg:
   case ConversionSpecifier::aArg:
   case ConversionSpecifier::AArg:
-  case ConversionSpecifier::FreeBSDrArg:
-  case ConversionSpecifier::FreeBSDyArg:
+  case ConversionSpecifier::NQCrArg:
+  case ConversionSpecifier::NQCyArg:
     return true;
 
   default:
@@ -977,8 +977,8 @@ bool PrintfSpecifier::hasValidAlternativeForm() const {
   case ConversionSpecifier::FArg:
   case ConversionSpecifier::gArg:
   case ConversionSpecifier::GArg:
-  case ConversionSpecifier::FreeBSDrArg:
-  case ConversionSpecifier::FreeBSDyArg:
+  case ConversionSpecifier::NQCrArg:
+  case ConversionSpecifier::NQCyArg:
     return true;
 
   default:
@@ -1009,8 +1009,8 @@ bool PrintfSpecifier::hasValidLeadingZeros() const {
   case ConversionSpecifier::FArg:
   case ConversionSpecifier::gArg:
   case ConversionSpecifier::GArg:
-  case ConversionSpecifier::FreeBSDrArg:
-  case ConversionSpecifier::FreeBSDyArg:
+  case ConversionSpecifier::NQCrArg:
+  case ConversionSpecifier::NQCyArg:
     return true;
 
   default:
@@ -1035,8 +1035,8 @@ bool PrintfSpecifier::hasValidSpacePrefix() const {
   case ConversionSpecifier::GArg:
   case ConversionSpecifier::aArg:
   case ConversionSpecifier::AArg:
-  case ConversionSpecifier::FreeBSDrArg:
-  case ConversionSpecifier::FreeBSDyArg:
+  case ConversionSpecifier::NQCrArg:
+  case ConversionSpecifier::NQCyArg:
     return true;
 
   default:
@@ -1102,8 +1102,8 @@ bool PrintfSpecifier::hasValidPrecision() const {
   case ConversionSpecifier::gArg:
   case ConversionSpecifier::GArg:
   case ConversionSpecifier::sArg:
-  case ConversionSpecifier::FreeBSDrArg:
-  case ConversionSpecifier::FreeBSDyArg:
+  case ConversionSpecifier::NQCrArg:
+  case ConversionSpecifier::NQCyArg:
   case ConversionSpecifier::PArg:
     return true;
 

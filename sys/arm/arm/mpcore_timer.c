@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  * All rights reserved.
  *
  * Developed by Ben Gray <ben.r.gray@gmail.com>
@@ -138,7 +138,7 @@ static struct timecounter arm_tmr_timecount = {
 #define	TMR_NONE	0
 
 static struct ofw_compat_data compat_data[] = {
-	{"arm,mpcore-timers",		TMR_BOTH}, /* Non-standard, FreeBSD. */
+	{"arm,mpcore-timers",		TMR_BOTH}, /* Non-standard, NQC. */
 	{"arm,cortex-a9-global-timer",	TMR_GBL},
 	{"arm,cortex-a5-global-timer",	TMR_GBL},
 	{"arm,cortex-a9-twd-timer",	TMR_PRV},

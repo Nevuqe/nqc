@@ -27,7 +27,7 @@
 #
 
 # Swap test. Variation of testcases/swap.
-# OOM seen: https://people.freebsd.org/~pho/stress/log/swap.txt
+# OOM seen: https://people.frebsd.org/~pho/stress/log/swap.txt
 
 . ../default.cfg
 

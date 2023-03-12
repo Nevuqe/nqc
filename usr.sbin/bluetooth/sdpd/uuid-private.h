@@ -1,7 +1,7 @@
 /*-
  * uuid-private.h
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2005 Maksim Yevmenkin <m_evmenkin@yahoo.com>
  * All rights reserved.

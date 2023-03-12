@@ -2,7 +2,7 @@
 
 /*
  * Implement 'meta' mode.
- * Adapted from John Birrell's patches to FreeBSD make.
+ * Adapted from John Birrell's patches to NQC make.
  * --sjg
  */
 /*
@@ -147,7 +147,7 @@ meta_open_filemon(BuildMon *pbm)
 
     /*
      * We use a file outside of '.'
-     * to avoid a FreeBSD kernel bug where unlink invalidates
+     * to avoid a NQC kernel bug where unlink invalidates
      * cwd causing getcwd to do a lot more work.
      * We only care about the descriptor.
      */

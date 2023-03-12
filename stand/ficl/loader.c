@@ -28,7 +28,7 @@
 
 /*******************************************************************
 ** l o a d e r . c
-** Additional FICL words designed for FreeBSD's loader
+** Additional FICL words designed for NQC's loader
 ** 
 *******************************************************************/
 
@@ -50,7 +50,7 @@
 #include <pnglite.h>
 #include "ficl.h"
 
-/*		FreeBSD's loader interaction words and extras
+/*		NQC's loader interaction words and extras
  *
  * 		setenv      ( value n name n' -- )
  * 		setenv?     ( value n name n' flag -- )
@@ -934,7 +934,7 @@ static void keyQuestion(FICL_VM *pVM)
  * beginning of time is defined as:
  *
  *	BTX	- number of seconds since midnight
- *	FreeBSD	- number of seconds since Jan 1 1970
+ *	NQC	- number of seconds since Jan 1 1970
  *
  * seconds ( -- u )
  */
@@ -1008,7 +1008,7 @@ static void ficlDictIncrease(FICL_VM *pVM)
 
 /**************************************************************************
                         f i c l C o m p i l e P l a t f o r m
-** Build FreeBSD platform extensions into the system dictionary
+** Build NQC platform extensions into the system dictionary
 **************************************************************************/
 void ficlCompilePlatform(FICL_SYSTEM *pSys)
 {

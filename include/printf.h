@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2005 Poul-Henning Kamp
  * All rights reserved.
@@ -63,7 +63,7 @@ struct printf_info {
 	unsigned	wide;
 	wchar_t		pad;
 
-	/* FreeBSD extensions */
+	/* NQC extensions */
 
 	unsigned	is_quad;
 	unsigned	is_intmax;
@@ -104,7 +104,7 @@ enum {
 typedef int printf_arginfo_function(const struct printf_info *, size_t, int *);
 typedef int printf_function(FILE *, const struct printf_info *, const void *const *);
 
-/* FreeBSD extension */
+/* NQC extension */
 struct __printf_io;
 typedef int printf_render(struct __printf_io *, const struct printf_info *, const void *const *);
 
@@ -123,7 +123,7 @@ extern int __use_xprintf;
 /* GLIBC compat */
 int register_printf_function(int spec, printf_function *render, printf_arginfo_function *arginfo);
 
-/* FreeBSD */
+/* NQC */
 int register_printf_render(int spec, printf_render *render, printf_arginfo_function *arginfo);
 int register_printf_render_std(const char *specs);
 

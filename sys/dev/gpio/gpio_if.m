@@ -1,5 +1,5 @@
 #-
-# Copyright (c) 2009 Oleksandr Tymoshenko <gonzo@freebsd.org>
+# Copyright (c) 2009 Oleksandr Tymoshenko <gonzo@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -56,7 +56,7 @@ CODE {
 			return (GPIO_MAP_GPIOS(device_get_parent(bus), dev,
 			    gparent, gcells, gpios, pin, flags));
 
-		/* If that fails, then assume the FreeBSD defaults. */
+		/* If that fails, then assume the NQC defaults. */
 		*pin = gpios[0];
 		if (gcells == 2 || gcells == 3)
 			*flags = gpios[gcells - 1];

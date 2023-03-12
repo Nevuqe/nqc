@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997 Poul-Henning Kamp
  * All rights reserved.
@@ -75,7 +75,7 @@ __NQCID("$NQC$");
  *	register int port asm("edx")
  * the code would be cleaner
  *
- * Poul-Henning Kamp <phk@freebsd.org>
+ * Poul-Henning Kamp <phk@frebsd.org>
  */
 
 /*

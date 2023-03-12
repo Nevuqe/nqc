@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1999,2000,2001 Jonathan Lemon <jlemon@FreeBSD.org>
+ * Copyright (c) 1999,2000,2001 Jonathan Lemon <jlemon@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -92,7 +92,7 @@ struct kevent {
 };
 
 #if defined(_WANT_NQC11_KEVENT)
-/* Older structure used in FreeBSD 11.x and older. */
+/* Older structure used in NQC 11.x and older. */
 struct freebsd11_kevent {
 	__uintptr_t	ident;		/* identifier for this event */
 	short		filter;		/* filter for event */

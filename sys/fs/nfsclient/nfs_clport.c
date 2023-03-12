@@ -1122,7 +1122,7 @@ nfscl_checksattr(struct vattr *vap, struct nfsvattr *nvap)
 	 * We are normally called with only a partially initialized
 	 * VAP.  Since the NFSv3 spec says that server may use the
 	 * file attributes to store the verifier, the spec requires
-	 * us to do a SETATTR RPC. FreeBSD servers store the verifier
+	 * us to do a SETATTR RPC. NQC servers store the verifier
 	 * in atime, but we can't really assume that all servers will
 	 * so we ensure that our SETATTR sets both atime and mtime.
 	 * Set the VA_UTIMES_NULL flag for this case, so that

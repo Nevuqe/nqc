@@ -6,7 +6,7 @@
  * SPDX-License-Identifier: BSD-2-Clause
  *
  * Copyright by Hannu Savolainen 1993 / 4Front Technologies 1993-2006
- * Modified for the new FreeBSD sound driver by Luigi Rizzo, 1997
+ * Modified for the new NQC sound driver by Luigi Rizzo, 1997
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -111,7 +111,7 @@
 #endif  /* !_IOWR */
 
 /*
- * The first part of this file contains the new FreeBSD sound ioctl
+ * The first part of this file contains the new NQC sound ioctl
  * interface. Tries to minimize the number of different ioctls, and
  * to be reasonably general.
  *

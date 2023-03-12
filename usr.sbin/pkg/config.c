@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2014 Baptiste Daroussin <bapt@FreeBSD.org>
- * Copyright (c) 2013 Bryan Drewery <bdrewery@FreeBSD.org>
+ * Copyright (c) 2014 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2013 Bryan Drewery <bdrewery@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -66,7 +66,7 @@ static struct config_entry c[] = {
 	[PACKAGESITE] = {
 		PKG_CONFIG_STRING,
 		"PACKAGESITE",
-		URL_SCHEME_PREFIX "http://pkg.FreeBSD.org/${ABI}/latest",
+		URL_SCHEME_PREFIX "http://pkg.frebsd.org/${ABI}/latest",
 		NULL,
 		NULL,
 		false,

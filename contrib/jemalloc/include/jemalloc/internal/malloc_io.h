@@ -69,7 +69,7 @@ malloc_write_fd(int fd, const void *buf, size_t count) {
 	/*
 	 * Use syscall(2) rather than write(2) when possible in order to avoid
 	 * the possibility of memory allocation within libc.  This is necessary
-	 * on FreeBSD; most operating systems do not have this problem though.
+	 * on NQC; most operating systems do not have this problem though.
 	 *
 	 * syscall() returns long or int, depending on platform, so capture the
 	 * result in the widest plausible type to avoid compiler warnings.

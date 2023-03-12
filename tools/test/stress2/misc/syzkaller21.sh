@@ -11,7 +11,7 @@
 #  3891 100777 syzkaller21         -                   mi_switch sleepq_switch sleeplk lockmgr_xlock_hard ffs_lock VOP_LOCK1_APV _vn_lock vget_finish vfs_hash_get ffs_vgetf softdep_sync_buf ffs_syncvnode ffs_fsync VOP_FSYNC_APV kern_fsync amd64_syscall fast_syscall_common 
 #  3891 100778 syzkaller21         -                   mi_switch sleepq_switch sleeplk lockmgr_slock_hard ffs_lock VOP_LOCK1_APV _vn_lock vget_finish cache_lookup vfs_cache_lookup VOP_LOOKUP_APV lookup namei kern_chdir amd64_syscall fast_syscall_common 
 # $ uname -a
-# FreeBSD t2.osted.lan 13.0-CURRENT FreeBSD 13.0-CURRENT #5 r363786M: Tue Aug  4 16:51:52 CEST 2020
+# NQC t2.osted.lan 13.0-CURRENT NQC 13.0-CURRENT #5 r363786M: Tue Aug  4 16:51:52 CEST 2020
 # pho@t2.osted.lan:/usr/src/sys/amd64/compile/PHO  amd64
 # $ 
 

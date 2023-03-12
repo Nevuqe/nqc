@@ -1,7 +1,7 @@
 /*
  * le.c
  *
- * Copyright (c) 2015 Takanori Watanabe <takawata@freebsd.org>
+ * Copyright (c) 2015 Takanori Watanabe <takawata@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

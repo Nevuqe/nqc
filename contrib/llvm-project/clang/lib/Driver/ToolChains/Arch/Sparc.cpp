@@ -24,7 +24,7 @@ const char *sparc::getSparcAsmModeForCPU(StringRef Name,
   if (Triple.getArch() == llvm::Triple::sparcv9) {
     const char *DefV9CPU;
 
-    if (Triple.isOSLinux() || Triple.isOSFreeBSD() || Triple.isOSOpenBSD())
+    if (Triple.isOSLinux() || Triple.isOSNQC() || Triple.isOSOpenBSD())
       DefV9CPU = "-Av9a";
     else
       DefV9CPU = "-Av9";

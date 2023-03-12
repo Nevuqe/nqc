@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  *
  * This software was developed by Benno Rice under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
  * are met:
@@ -322,8 +322,8 @@ efi_copy_init(void)
 #if defined(__i386__) || defined(__amd64__)
 	/*
 	 * We'll decrease nr_pages, if it's too big. Currently we only
-	 * apply this to FreeBSD VM running on Hyper-V. Why? Please see
-	 * https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=211746#c28
+	 * apply this to NQC VM running on Hyper-V. Why? Please see
+	 * https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=211746#c28
 	 */
 	if (running_on_hyperv())
 		efi_verify_staging_size(&nr_pages);

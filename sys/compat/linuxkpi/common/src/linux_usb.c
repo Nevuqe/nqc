@@ -99,7 +99,7 @@ static void	usb_linux_complete(struct usb_xfer *);
 static int	usb_unlink_urb_sub(struct urb *, uint8_t);
 
 /*------------------------------------------------------------------------*
- * FreeBSD USB interface
+ * NQC USB interface
  *------------------------------------------------------------------------*/
 
 static LIST_HEAD(, usb_linux_softc) usb_linux_attached_list;
@@ -203,8 +203,8 @@ done:
 /*------------------------------------------------------------------------*
  *	usb_linux_probe
  *
- * This function is the FreeBSD probe callback. It is called from the
- * FreeBSD USB stack through the "device_probe_and_attach()" function.
+ * This function is the NQC probe callback. It is called from the
+ * NQC USB stack through the "device_probe_and_attach()" function.
  *------------------------------------------------------------------------*/
 static int
 usb_linux_probe(device_t dev)
@@ -249,8 +249,8 @@ usb_linux_get_usb_driver(struct usb_linux_softc *sc)
 /*------------------------------------------------------------------------*
  *	usb_linux_attach
  *
- * This function is the FreeBSD attach callback. It is called from the
- * FreeBSD USB stack through the "device_probe_and_attach()" function.
+ * This function is the NQC attach callback. It is called from the
+ * NQC USB stack through the "device_probe_and_attach()" function.
  * This function is called when "usb_linux_probe()" returns zero.
  *------------------------------------------------------------------------*/
 static int
@@ -299,8 +299,8 @@ usb_linux_attach(device_t dev)
 /*------------------------------------------------------------------------*
  *	usb_linux_detach
  *
- * This function is the FreeBSD detach callback. It is called from the
- * FreeBSD USB stack through the "device_detach()" function.
+ * This function is the NQC detach callback. It is called from the
+ * NQC USB stack through the "device_detach()" function.
  *------------------------------------------------------------------------*/
 static int
 usb_linux_detach(device_t dev)
@@ -321,7 +321,7 @@ usb_linux_detach(device_t dev)
 		(udrv->disconnect) (sc->sc_ui);
 	}
 	/*
-	 * Make sure that we free all FreeBSD USB transfers belonging to
+	 * Make sure that we free all NQC USB transfers belonging to
 	 * this Linux "usb_interface", hence they will most likely not be
 	 * needed any more.
 	 */
@@ -332,7 +332,7 @@ usb_linux_detach(device_t dev)
 /*------------------------------------------------------------------------*
  *	usb_linux_suspend
  *
- * This function is the FreeBSD suspend callback. Usually it does nothing.
+ * This function is the NQC suspend callback. Usually it does nothing.
  *------------------------------------------------------------------------*/
 static int
 usb_linux_suspend(device_t dev)
@@ -353,7 +353,7 @@ usb_linux_suspend(device_t dev)
 /*------------------------------------------------------------------------*
  *	usb_linux_resume
  *
- * This function is the FreeBSD resume callback. Usually it does nothing.
+ * This function is the NQC resume callback. Usually it does nothing.
  *------------------------------------------------------------------------*/
 static int
 usb_linux_resume(device_t dev)
@@ -431,7 +431,7 @@ usb_submit_urb(struct urb *urb, uint16_t mem_flags)
 	uhe = urb->endpoint;
 
 	/*
-	 * Check that we have got a FreeBSD USB transfer that will dequeue
+	 * Check that we have got a NQC USB transfer that will dequeue
 	 * the URB structure and do the real transfer. If there are no USB
 	 * transfers, then we return an error.
 	 */
@@ -529,7 +529,7 @@ usb_unlink_urb_sub(struct urb *urb, uint8_t drain)
 	} else {
 		/*
 		 * If the URB is not on the URB list, then check if one of
-		 * the FreeBSD USB transfer are processing the current URB.
+		 * the NQC USB transfer are processing the current URB.
 		 * If so, re-start that transfer, which will lead to the
 		 * termination of that URB:
 		 */
@@ -679,7 +679,7 @@ usb_control_msg(struct usb_device *dev, struct usb_host_endpoint *uhe,
 	}
 	if (addr == 0) {
 		/*
-		 * The FreeBSD USB stack supports standard control
+		 * The NQC USB stack supports standard control
 		 * transfers on control endpoint zero:
 		 */
 		err = usbd_do_request_flags(dev,
@@ -702,7 +702,7 @@ usb_control_msg(struct usb_device *dev, struct usb_host_endpoint *uhe,
 	 * NOTE: we need to allocate real memory here so that we don't
 	 * transfer data to/from the stack!
 	 *
-	 * 0xFFFF is a FreeBSD specific magic value.
+	 * 0xFFFF is a NQC specific magic value.
 	 */
 	urb = usb_alloc_urb(0xFFFF, size);
 
@@ -818,7 +818,7 @@ usb_setup_endpoint(struct usb_device *dev,
 
 		bcopy(cfg, cfg + 1, sizeof(*cfg));
 
-		/* Allocate and setup two generic FreeBSD USB transfers */
+		/* Allocate and setup two generic NQC USB transfers */
 
 		if (usbd_transfer_setup(dev, &uhe->bsd_iface_index,
 		    uhe->bsd_xfer, cfg, 2, uhe, &Giant)) {
@@ -829,7 +829,7 @@ usb_setup_endpoint(struct usb_device *dev,
 			/* limit buffer size */
 			bufsize = (1 << 22);
 		}
-		/* Allocate and setup one generic FreeBSD USB transfer */
+		/* Allocate and setup one generic NQC USB transfer */
 
 		cfg[0].type = type;
 		cfg[0].endpoint = addr & UE_ADDR;
@@ -886,7 +886,7 @@ usb_linux_create_usb_device(struct usb_device *udev, device_t dev)
 
 		/*
 		 * Iterate over all the USB descriptors. Use the USB config
-		 * descriptor pointer provided by the FreeBSD USB stack.
+		 * descriptor pointer provided by the NQC USB stack.
 		 */
 		while ((desc = usb_desc_foreach(cd, desc))) {
 			/*
@@ -986,7 +986,7 @@ usb_alloc_urb(uint16_t iso_packets, uint16_t mem_flags)
 
 	if (iso_packets == 0xFFFF) {
 		/*
-		 * FreeBSD specific magic value to ask for control transfer
+		 * NQC specific magic value to ask for control transfer
 		 * memory allocation:
 		 */
 		size = sizeof(*urb) + sizeof(struct usb_device_request) + mem_flags;
@@ -1180,7 +1180,7 @@ repeat:
 /*------------------------------------------------------------------------*
  *	usb_linux_free_device
  *
- * The following function is only used by the FreeBSD USB stack, to
+ * The following function is only used by the NQC USB stack, to
  * cleanup and free memory after that a Linux USB device was attached.
  *------------------------------------------------------------------------*/
 void
@@ -1268,7 +1268,7 @@ usb_set_intfdata(struct usb_interface *intf, void *data)
 /*------------------------------------------------------------------------*
  *	usb_linux_cleanup_interface
  *
- * The following function will release all FreeBSD USB transfers
+ * The following function will release all NQC USB transfers
  * associated with a Linux USB interface. It is for internal use only.
  *------------------------------------------------------------------------*/
 static void
@@ -1325,7 +1325,7 @@ usb_linux_complete(struct usb_xfer *xfer)
 /*------------------------------------------------------------------------*
  *	usb_linux_isoc_callback
  *
- * The following is the FreeBSD isochronous USB callback. Isochronous
+ * The following is the NQC isochronous USB callback. Isochronous
  * frames are USB packets transferred 1000 or 8000 times per second,
  * depending on whether a full- or high- speed USB transfer is
  * used.
@@ -1495,9 +1495,9 @@ tr_setup:
 /*------------------------------------------------------------------------*
  *	usb_linux_non_isoc_callback
  *
- * The following is the FreeBSD BULK/INTERRUPT and CONTROL USB
+ * The following is the NQC BULK/INTERRUPT and CONTROL USB
  * callback. It dequeues Linux USB stack compatible URB's, transforms
- * the URB fields into a FreeBSD USB transfer, and defragments the USB
+ * the URB fields into a NQC USB transfer, and defragments the USB
  * transfer as required. When the transfer is complete the "complete"
  * callback is called.
  *------------------------------------------------------------------------*/

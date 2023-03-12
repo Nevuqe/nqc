@@ -254,7 +254,7 @@ ar9300_get_chip_power_limits(struct ath_hal *ah, HAL_CHANNEL *chans,
 }
 #endif
 
-/* XXX FreeBSD */
+/* XXX NQC */
 static HAL_BOOL
 ar9300_get_chip_power_limits(struct ath_hal *ah,
     struct ieee80211_channel *chan)

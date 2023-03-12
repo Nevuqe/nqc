@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: ffs_valloc: dup alloc" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik1128.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1128.txt
 
 . ../default.cfg
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
@@ -44,7 +44,7 @@ log=fsck4.sh.log
 
 cd `dirname $diskimage`
 trap "rm -f $diskimage $zimg" EXIT INT
-fetch -q https://people.freebsd.org/~pho/$zimg || exit 0
+fetch -q https://people.frebsd.org/~pho/$zimg || exit 0
 
 m=`md5 < $zimg`
 [ $m != $md5 ] && { echo "md5 diff"; rm $zimg; exit 1; }

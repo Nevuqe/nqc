@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2003 Peter Wemm <peter@FreeBSD.org>
+ * Copyright (c) 2003 Peter Wemm <peter@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -69,7 +69,7 @@ struct vbe_fb {
 };
 
 /*
- * The structure below is used when FreeBSD kernel is booted as a dom0 kernel
+ * The structure below is used when NQC kernel is booted as a dom0 kernel
  * from Xen. In such scenario we need to accommodate the modules and the
  * metadata as a contiguous memory region, so it can be passed as a multiboot
  * module, and some extra information is required which is conveyed from the

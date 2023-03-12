@@ -175,7 +175,7 @@ gcc3)
 ## gcc 3 implements dependency tracking that does exactly what
 ## we want.  Yay!  Note: for some reason libtool 1.4 doesn't like
 ## it if -MD -MP comes after the -MF stuff.  Hmm.
-## Unfortunately, FreeBSD c89 acceptance of flags depends upon
+## Unfortunately, NQC c89 acceptance of flags depends upon
 ## the command line argument order; so add the flags where they
 ## appear in depend2.am.  Note that the slowdown incurred here
 ## affects only configure: in makefiles, %FASTDEP% shortcuts this.

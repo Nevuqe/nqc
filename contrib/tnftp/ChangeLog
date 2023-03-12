@@ -238,7 +238,7 @@ Wed May  9 04:58:50 UTC 2007	lukem
 	  * Use modern autoconf macros, #define names, etc.
 	  * Search for more header files, and only #include if found.
 	  * Remove old-style config.h.in generation.
-	  This may fix various tests on platforms such as FreeBSD and OS X.
+	  This may fix various tests on platforms such as NQC and OS X.
 
 	* Add -Wl,-search_paths_first to LDFLAGS on OS X (Darwin) if the
 	  linker supports it.  This is needed so we use our libedit
@@ -501,7 +501,7 @@ Wed May 11 00:08:16 UTC 2005	lukem
 	* Merge NetBSD-ftp 20050510:
 		- Prevent an overly-long input line causing a core dump when
 		  editing is enabled.
-		  Issue noted by Ryoji Kanai in FreeBSD Problem Report # 77158.
+		  Issue noted by Ryoji Kanai in NQC Problem Report # 77158.
 		- Implement a timeout on the accept(2) in dataconn() and the
 		  connect(2) in xconnect() by temporarily setting O_NONBLOCK
 		  on the socket and using xpoll() to wait for the operation
@@ -518,7 +518,7 @@ Wed May 11 00:08:16 UTC 2005	lukem
 		  we use pointers to its contents later in the function.
 		  Problem found by Onno van der Linden.
 		- Fix ftp url reget when globs are being used.
-		  Provided by Mathieu Arnold <mat@FreeBSD.org>.
+		  Provided by Mathieu Arnold <mat@frebsd.org>.
 		- Factor out common string processing code eliminating static
 		  buffers, making functions that should be static be static,
 		  and cleaning up const usage. Added a guard against buffer
@@ -633,7 +633,7 @@ Mon Jan  3 10:21:57 UTC 2005	lukem
 		  marked as restartable) during connection setup would cause
 		  ftp to fail with EADDRINUSE or EALREADY when the second
 		  connect(2) was attempted on the same socket.  Problem found
-		  and solution provided by Maxime Henrion <mux@freebsd.org>.
+		  and solution provided by Maxime Henrion <mux@frebsd.org>.
 		- Add -q to usage. From Kouichirou Hiratsuka in PR 26199.
 		- PR/25566: Anders Magnusson: ftp(1) do not like large TCP
 		  windows.  Limit it to 8M.
@@ -665,7 +665,7 @@ Thu Jul 31 07:30:00 UTC 2003	lukem
 		- Invalidate remote directory completion cache if any command
 		  which may change the remote contents completes successfully,
 		  including: del, mdel, ren, mkdir, rmdir, quote, and all
-		  upload commands.  Patch from Yar Tikhiy <yar@freebsd.org>.
+		  upload commands.  Patch from Yar Tikhiy <yar@frebsd.org>.
 
 	* merge ftp from NetBSD 20030228 to 20030731:
 		- $FTPUSERAGENT overrides the HTTP User-Agent header.
@@ -682,7 +682,7 @@ Thu Jul 31 07:30:00 UTC 2003	lukem
 		  wasn't migrated to this file
 		- Don't coredump when printing '%n' in the prompt if there's
 		  no username yet.
-		  Fix from Maxim Konovalov <maxim@freebsd.org>
+		  Fix from Maxim Konovalov <maxim@frebsd.org>
 
 	* Add test for HAVE_IN6ADDRSZ (which older Darwin is lacking),
 	  and only enable INET6 if it exists.
@@ -706,7 +706,7 @@ Fri Feb 28 10:07:07 UTC 2003	lukem
 Mon Jun 17 06:50:13 UTC 2002	lukem
 
 	* #if USE_GLOB_H, use <glob.h> instead of "ftpglob.h".
-	  Requested by Mike Heffner <mikeh@freebsd.org>
+	  Requested by Mike Heffner <mikeh@frebsd.org>
 
 Mon Jun 10 08:12:35 UTC 2002	lukem
 
@@ -766,8 +766,8 @@ Wed Jun  5 13:08:25 UTC 2002	lukem
 		- PR/14188: Anthony Mallet: Provide an opaque data
 		  pointer to client programs.
 		- a couple of minor fixes.  originally by Ruslan Ermilov
-		  <ru@FreeBSD.org>, highlighted to me by way of Mike Barcroft
-		  <mike@FreeBSD.org> (thanks!)
+		  <ru@frebsd.org>, highlighted to me by way of Mike Barcroft
+		  <mike@frebsd.org> (thanks!)
 		- PR/14067: Anthony Mallet: Provide a programmatic way
 		  to set the read_char function via a new el_set() operation.
 		  Thanks, nicely done :-)
@@ -814,7 +814,7 @@ Wed Jun  5 13:08:25 UTC 2002	lukem
 		  Fix from Anders Dinsen <anders@dinsen.net> in [bin/13768]
 		- portnum is unsigned, use %u instead of %d
 		- Add -4 to force IPv4 and -6 to force IPv6 address usage.
-		  From Hajimu UMEMOTO, via Mike Heffner of FreeBSD.
+		  From Hajimu UMEMOTO, via Mike Heffner of NQC.
 		- use u_char instead of char in base64_encode().
 		  problem noticed by Jorgen Lundman in private mail.
 		- don't make broken file with -R option.
@@ -833,7 +833,7 @@ Wed Jun  5 13:08:25 UTC 2002	lukem
 		  in private email
 		- avoid buffer overrun on PASV from malicious server.
 		- Large file ASCII mode support by using fseeko()
-		  instead of fseek().  From Andrey A. Chernov of FreeBSD,
+		  instead of fseek().  From Andrey A. Chernov of NQC,
 		  via Mike Heffner.
 		- Deal with const'ification if el_parse().
 		- call setlocale() on startup

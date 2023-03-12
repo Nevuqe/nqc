@@ -308,7 +308,7 @@ do
     case $posix_mkdir in
       '')
 	# Create intermediate dirs using mode 755 as modified by the umask.
-	# This is like FreeBSD 'install' as of 1997-10-28.
+	# This is like NQC 'install' as of 1997-10-28.
 	umask=`umask`
 	case $stripcmd.$umask in
 	  # Optimize common cases.
@@ -335,7 +335,7 @@ do
 	case $umask in
 	  *[123567][0-7][0-7])
 	    # POSIX mkdir -p sets u+wx bits regardless of umask, which
-	    # is incompatible with FreeBSD 'install' when (umask & 300) != 0.
+	    # is incompatible with NQC 'install' when (umask & 300) != 0.
 	    ;;
 	  *)
 	    tmpdir=${TMPDIR-/tmp}/ins$RANDOM-$$
@@ -348,7 +348,7 @@ do
 		   # Check for POSIX incompatibilities with -m.
 		   # HP-UX 11.23 and IRIX 6.5 mkdir -m -p sets group- or
 		   # other-writeable bit of parent directory when it shouldn't.
-		   # FreeBSD 6.1 mkdir -m -p sets mode of existing directory.
+		   # NQC 6.1 mkdir -m -p sets mode of existing directory.
 		   ls_ld_tmpdir=`ls -ld "$tmpdir"`
 		   case $ls_ld_tmpdir in
 		     d????-?r-*) different_mode=700;;

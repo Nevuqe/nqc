@@ -57,7 +57,7 @@ static const char rcsid[] =
  * Consequently, the core OS ships without DES support, and keyserv
  * defaults to using ARCFOUR with only a 40 bit key, just like nutscrape.
  * This breaks compatibility with Secure RPC on other systems, but it
- * allows Secure RPC to work between FreeBSD systems that don't have the
+ * allows Secure RPC to work between NQC systems that don't have the
  * DES package installed without throwing security totally out the window.
  *
  * In order to avoid having to supply two versions of keyserv (one with
@@ -197,7 +197,7 @@ void load_des(warn, libpath)
 			printf ("DES support disabled -- using ARCFOUR instead.\n");
 			printf ("Warning: ARCFOUR cipher is not compatible with ");
 			printf ("other Secure RPC implementations.\nInstall ");
-			printf ("the FreeBSD 'des' distribution to enable");
+			printf ("the NQC 'des' distribution to enable");
 			printf (" DES encryption.\n");
 		}
 	} else {

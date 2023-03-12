@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2005-2006 The FreeBSD Project
+ * Copyright (c) 2005-2006 The FreBSD Project
  * All rights reserved.
  *
- * Author: Shteryana Shopova <syrinx@FreeBSD.org>
+ * Author: Shteryana Shopova <syrinx@frebsd.org>
  *
  * Redistribution of this software and documentation and use in source and
  * binary forms, with or without modification, are permitted provided that
@@ -588,7 +588,7 @@ parse_oid_numeric(struct snmp_value *value, char *val)
 /*
  * Allow OID leaf in both forms:
  * 1) 1.3.6.1.2... ->  in such case call directly the function reading raw OIDs;
- * 2) begemotSnmpdAgentFreeBSD -> lookup the ASN OID corresponding to that.
+ * 2) begemotSnmpdAgentNQC -> lookup the ASN OID corresponding to that.
  */
 static int32_t
 parse_oid_string(struct snmp_toolinfo *snmptoolctx,

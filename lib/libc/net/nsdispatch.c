@@ -34,7 +34,7 @@
  * Copyright (c) 2003 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * Portions of this software were developed for the FreeBSD Project by
+ * Portions of this software were developed for the FreBSD Project by
  * Jacques A. Vidrine, Safeport Network Services, and Network
  * Associates Laboratories, the Security Research Division of Network
  * Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035

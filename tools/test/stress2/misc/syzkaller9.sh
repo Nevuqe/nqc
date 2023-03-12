@@ -33,7 +33,7 @@
 # sys_sendmsg() at sys_sendmsg+0x8b/frame 0xfffffe0015e1dab0
 # amd64_syscall() at amd64_syscall+0x46d/frame 0xfffffe0015e1dbf0
 # fast_syscall_common() at fast_syscall_common+0x101/frame 0xfffffe0015e1dbf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x41c3ea, rsp = 0x7fffffffeb98, rbp = 0x7fffffffebf0 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x41c3ea, rsp = 0x7fffffffeb98, rbp = 0x7fffffffebf0 ---
 
 # Reproduced on r359818
 # Fixed by r359893

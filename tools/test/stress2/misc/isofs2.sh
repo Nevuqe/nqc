@@ -28,7 +28,7 @@
 
 # Run program from isofs file system
 # "panic: userret: returning with the following locks held:"
-# https://people.freebsd.org/~pho/stress/log/isofs2.txt
+# https://people.frebsd.org/~pho/stress/log/isofs2.txt
 # Fixed by: r292772.
 
 [ `id -u ` -ne 0 ] && echo "Must not be root!" && exit 1

@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
  *
  * Copyright (c) 2002 The NetBSD Foundation, Inc.
- * Copyright (c) 2005 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2005 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation

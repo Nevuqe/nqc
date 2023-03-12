@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2014 Juergen Weiss <weiss@uni-mainz.de>
- * Copyright (c) 2014 Ian Lepore <ian@freebsd.org>
+ * Copyright (c) 2014 Ian Lepore <ian@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

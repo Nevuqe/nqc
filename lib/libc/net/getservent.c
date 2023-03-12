@@ -738,7 +738,7 @@ nis_servent(void *retval, void *mdata, va_list ap)
 			 * here. Ideally you're supposed to have both
 			 * a services.byname and a services.byport
 			 * map, but some systems have only
-			 * services.byname. FreeBSD cheats a little by
+			 * services.byname. NQC cheats a little by
 			 * putting the services.byport information in
 			 * the same map as services.byname so that
 			 * either case will work. We allow for both

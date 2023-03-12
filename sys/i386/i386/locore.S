@@ -174,10 +174,10 @@ recover_bootinfo:
 	 * Old disk boot blocks:
 	 *	(*btext)(howto, bootdev, cyloffset, esym);
 	 *	[return address == 0, and can NOT be returned to]
-	 *	[cyloffset was not supported by the FreeBSD boot code
+	 *	[cyloffset was not supported by the NQC boot code
 	 *	 and always passed in as 0]
 	 *	[esym is also known as total in the boot code, and
-	 *	 was never properly supported by the FreeBSD boot code]
+	 *	 was never properly supported by the NQC boot code]
 	 *	This code from 1.x/2.x doesn't supply now-required metadata and
 	 *	likely will fail (we test for it to avoid dereferencing stack
 	 *	garbage here).
@@ -266,7 +266,7 @@ newboot:
 	/*
 	 * Determine the size of the boot loader's copy of the bootinfo
 	 * struct. Copy min(our size, loader's size) into our bootinfo.
-	 * Incompatible with really old boot loaders from FreeBSD 1.x and 2.0.
+	 * Incompatible with really old boot loaders from NQC 1.x and 2.0.
 	 */
 	movl	%ebx,%esi
 	movl	$bootinfo,%edi

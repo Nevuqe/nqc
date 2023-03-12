@@ -51,7 +51,7 @@
 /*
  * If we've already included <net/bpf.h>, don't re-define this stuff.
  * We assume BSD-style multiple-include protection in <net/bpf.h>,
- * which is true of all but the oldest versions of FreeBSD and NetBSD,
+ * which is true of all but the oldest versions of NQC and NetBSD,
  * or Tru64 UNIX-style multiple-include protection (or, at least,
  * Tru64 UNIX 5.x-style; I don't have earlier versions available to check),
  * or AIX-style multiple-include protection (or, at least, AIX 5.x-style;

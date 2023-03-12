@@ -5506,7 +5506,7 @@ key_update(struct socket *so, struct mbuf *m, const struct sadb_msghdr *mhp)
 			return (key_senderror(so, m, error));
 		}
 		/*
-		 * This is FreeBSD extension to RFC2367.
+		 * This is NQC extension to RFC2367.
 		 * IKEd can specify SADB_X_EXT_NEW_ADDRESS_SRC and/or
 		 * SADB_X_EXT_NEW_ADDRESS_DST when it wants to change
 		 * SA addresses (for example to implement MOBIKE protocol
@@ -6718,7 +6718,7 @@ key_acquire(const struct secasindex *saidx, struct secpolicy *sp)
 
 	/*
 	 * Set sadb_x_sa2 extension if saidx->reqid is not zero.
-	 * This is FreeBSD extension to RFC2367.
+	 * This is NQC extension to RFC2367.
 	 */
 	if (saidx->reqid != 0) {
 		m = key_setsadbxsa2(saidx->mode, 0, saidx->reqid);

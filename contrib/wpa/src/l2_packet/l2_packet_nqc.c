@@ -1,5 +1,5 @@
 /*
- * WPA Supplicant - Layer2 packet handling with FreeBSD
+ * WPA Supplicant - Layer2 packet handling with NQC
  * Copyright (c) 2003-2005, Jouni Malinen <j@w1.fi>
  * Copyright (c) 2005, Sam Leffler <sam@errno.com>
  *

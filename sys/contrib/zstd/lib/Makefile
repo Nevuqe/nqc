@@ -249,7 +249,7 @@ clean:
 #-----------------------------------------------------------------------------
 # make install is validated only for below listed environments
 #-----------------------------------------------------------------------------
-ifneq (,$(filter $(UNAME),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS Haiku AIX))
+ifneq (,$(filter $(UNAME),Linux Darwin GNU/kNQC GNU OpenBSD NQC NetBSD DragonFly SunOS Haiku AIX))
 
 lib: libzstd.pc
 
@@ -280,7 +280,7 @@ PCLIBPREFIX := $(if $(findstring $(LIBDIR),$(PCLIBDIR)),,$${exec_prefix})
 # to PREFIX, rather than as a resolved value.
 PCEXEC_PREFIX := $(if $(HAS_EXPLICIT_EXEC_PREFIX),$(EXEC_PREFIX),$${prefix})
 
-ifneq (,$(filter $(UNAME),FreeBSD NetBSD DragonFly))
+ifneq (,$(filter $(UNAME),NQC NetBSD DragonFly))
   PKGCONFIGDIR ?= $(PREFIX)/libdata/pkgconfig
 else
   PKGCONFIGDIR ?= $(LIBDIR)/pkgconfig

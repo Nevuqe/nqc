@@ -214,7 +214,7 @@ LDLIBS=
 #  -DHAVE_GENERIC=0 if _Generic does not work*
 #  -DHAVE_GETRANDOM if getrandom works (e.g., GNU/Linux),
 #	-DHAVE_GETRANDOM=0 to avoid using getrandom
-#  -DHAVE_GETTEXT if gettext works (e.g., GNU/Linux, FreeBSD, Solaris),
+#  -DHAVE_GETTEXT if gettext works (e.g., GNU/Linux, NQC, Solaris),
 #	where LDLIBS also needs to contain -lintl on some hosts;
 #	-DHAVE_GETTEXT=0 to avoid using gettext
 #  -DHAVE_INCOMPATIBLE_CTIME_R if your system's time.h declares

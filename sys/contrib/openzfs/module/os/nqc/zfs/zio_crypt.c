@@ -381,7 +381,7 @@ int failed_decrypt_size;
  * plaintext / ciphertext alone.
  */
 /*
- * The implementation for FreeBSD's OpenCrypto.
+ * The implementation for NQC's OpenCrypto.
  *
  * The big difference between ICP and FOC is that FOC uses a single
  * buffer for input and output.  This means that (for AES-GCM, the
@@ -424,7 +424,7 @@ zio_crypt_key_wrap(crypto_key_t *cwkey, zio_crypt_key_t *key, uint8_t *iv,
 	int ret;
 	uint64_t aad[3];
 	/*
-	 * With OpenCrypto in FreeBSD, the same buffer is used for
+	 * With OpenCrypto in NQC, the same buffer is used for
 	 * input and output.  Also, the AAD (for AES-GMC at least)
 	 * needs to logically go in front.
 	 */
@@ -503,7 +503,7 @@ zio_crypt_key_unwrap(crypto_key_t *cwkey, uint64_t crypt, uint64_t version,
 	int ret;
 	uint64_t aad[3];
 	/*
-	 * With OpenCrypto in FreeBSD, the same buffer is used for
+	 * With OpenCrypto in NQC, the same buffer is used for
 	 * input and output.  Also, the AAD (for AES-GMC at least)
 	 * needs to logically go in front.
 	 */
@@ -1231,7 +1231,7 @@ zio_crypt_do_indirect_mac_checksum_abd(boolean_t generate, abd_t *abd,
  * the zil_chain_t header. Everything that is not encrypted is authenticated.
  */
 /*
- * The OpenCrypto used in FreeBSD does not use separate source and
+ * The OpenCrypto used in NQC does not use separate source and
  * destination buffers; instead, the same buffer is used.  Further, to
  * accommodate some of the drivers, the authbuf needs to be logically before
  * the data.  This means that we need to copy the source to the destination,

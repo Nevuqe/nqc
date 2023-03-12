@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2018, Matthew Macy <mmacy@freebsd.org>
+ * Copyright (c) 2018, Matthew Macy <mmacy@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -101,7 +101,7 @@ void epoch_enter(epoch_t epoch);
 void epoch_exit(epoch_t epoch);
 
 /*
- * Globally recognized epochs in the FreeBSD kernel.
+ * Globally recognized epochs in the NQC kernel.
  */
 /* Network preemptible epoch, declared in sys/net/if.c. */
 extern epoch_t net_epoch_preempt;

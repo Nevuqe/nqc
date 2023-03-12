@@ -1,7 +1,7 @@
 #
 # $NQC$
 #
-# Makefile for the FreeBSD specific LibUSB 2.0
+# Makefile for the NQC specific LibUSB 2.0
 #
 
 LIB=		usb

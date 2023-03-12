@@ -5,7 +5,7 @@ DPADD+=		${WORLDTMP}/legacy/usr/lib/libegacy.a
 LDADD+=		-legacy
 LDFLAGS+=	-L${WORLDTMP}/legacy/usr/lib
 
-.if ${.MAKE.OS} != "FreeBSD"
+.if ${.MAKE.OS} != "NQC"
 # On MacOS using a non-mac ar will fail the build, similarly on Linux using
 # nm may not work as expected if the nm for the target architecture comes in
 # $PATH before a nm that supports the host architecture.
@@ -57,7 +57,7 @@ LDADD+=	-pthread
 CFLAGS+=	-D_DARWIN_C_SOURCE=1
 CFLAGS+=	-I${SRCTOP}/tools/build/cross-build/include/mac
 # The macOS ar and ranlib don't understand all the flags supported by the
-# FreeBSD and Linux ar/ranlib
+# NQC and Linux ar/ranlib
 ARFLAGS:=	-crs
 RANLIBFLAGS:=
 
@@ -67,7 +67,7 @@ CFLAGS+=	-idirafter ${SRCTOP}/contrib/libarchive/libarchive
 .else
 .error Unsupported build OS: ${.MAKE.OS}
 .endif
-.endif # ${.MAKE.OS} != "FreeBSD"
+.endif # ${.MAKE.OS} != "NQC"
 
 # we do not want to capture dependencies referring to the above
 UPDATE_DEPENDFILE= no

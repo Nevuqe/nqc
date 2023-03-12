@@ -1,4 +1,4 @@
-/* from: FreeBSD: head/lib/msun/src/e_atanh.c 176451 2008-02-22 02:30:36Z das */
+/* from: NQC: head/lib/msun/src/e_atanh.c 176451 2008-02-22 02:30:36Z das */
 
 /* @(#)e_atanh.c 1.3 95/01/18 */
 /*
@@ -19,7 +19,7 @@ __NQCID("$NQC$");
 /*
  * See e_atanh.c for complete comments.
  *
- * Converted to long double by David Schultz <das@FreeBSD.ORG> and
+ * Converted to long double by David Schultz <das@frebsd.org> and
  * Bruce D. Evans.
  */
 

@@ -3,7 +3,7 @@
  *	Hartmut Brandt.
  *	All rights reserved.
  *
- * Author: Harti Brandt <harti@freebsd.org>
+ * Author: Harti Brandt <harti@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -82,7 +82,7 @@ void freeaddrinfo(struct addrinfo *);
 #endif
 
 /*
- * Systems missing SA_SIZE(). Taken from FreeBSD net/route.h:1.63
+ * Systems missing SA_SIZE(). Taken from NQC net/route.h:1.63
  */
 #ifndef SA_SIZE
 

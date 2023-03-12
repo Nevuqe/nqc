@@ -1,6 +1,6 @@
 # $NQC$
 #
-# Author: Gleb Smirnoff <glebius@freebsd.org>
+# Author: Gleb Smirnoff <glebius@frebsd.org>
 #
 
 .PATH: ${SRCTOP}/sys/netgraph/netflow

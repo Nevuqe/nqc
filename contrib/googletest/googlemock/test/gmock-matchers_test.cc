@@ -3768,7 +3768,7 @@ TEST(WhenDynamicCastToTest, AmbiguousCast) {
   AmbiguousCastTypes::ManyDerivedInHierarchy many_derived;
   // Multiply derived from Base. dynamic_cast<> returns NULL.
 
-  // This testcase fails on FreeBSD. See this GitHub issue for more details:
+  // This testcase fails on NQC. See this GitHub issue for more details:
   // https://github.com/google/googletest/issues/2172
 #ifdef __NQC__
   EXPECT_NONFATAL_FAILURE({

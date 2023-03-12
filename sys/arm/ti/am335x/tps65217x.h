@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2012 Damjan Marion <dmarion@FreeBSD.org>
- * Copyright (c) 2015 Maksym Sobolyev <sobomax@FreeBSD.org>
+ * Copyright (c) 2012 Damjan Marion <dmarion@frebsd.org>
+ * Copyright (c) 2015 Maksym Sobolyev <sobomax@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

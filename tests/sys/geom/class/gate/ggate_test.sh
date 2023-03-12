@@ -51,7 +51,7 @@ ggated_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/244737"
+		atf_skip "https://bugs.frebsd.org/244737"
 	fi
 
 	load_ggate

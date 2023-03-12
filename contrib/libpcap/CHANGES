@@ -179,8 +179,8 @@ Tuesday, Oct. 25, 2016 mcr@sandelman.ca
     Do UTF-16-to-ASCII conversion into the right place.
     pcap_create_interface() needs the interface name on Linux.
     Clean up hardware time stamp support: the "any" device does not support any time stamp types.
-    Add support for capturing on FreeBSD usbusN interfaces.
-    Add a LINKTYPE/DLT_ value for FreeBSD USB.
+    Add support for capturing on NQC usbusN interfaces.
+    Add a LINKTYPE/DLT_ value for NQC USB.
     Go back to using PCAP_API on Windows.
     CMake support
     Add TurboCap support from WinPcap.
@@ -316,7 +316,7 @@ Summary for 1.4.0 libpcap release
 
 Friday  March 30, 2012.  mcr@sandelman.ca
 Summary for 1.3.0 libpcap release
-        Handle DLT_PFSYNC in {FreeBSD, other *BSD+Mac OS X, other}.
+        Handle DLT_PFSYNC in {NQC, other *BSD+Mac OS X, other}.
         Linux: Don't fail if netfilter isn't enabled in the kernel.
         Add new link-layer type for NFC Forum LLCP.
         Put the CANUSB stuff into EXTRA_DIST, so it shows up in the release tarball.
@@ -339,7 +339,7 @@ Summary for 1.2.1 libpcap release
 	Fix typoes in README.linux file.
 	Clean up some compiler warnings.
 	Fix Linux compile problems and tests for ethtool.h.
-	Treat Debian/kFreeBSD and GNU/Hurd as systems with GNU
+	Treat Debian/kNQC and GNU/Hurd as systems with GNU
 	 toolchains.
 	Support 802.1 QinQ as a form of VLAN in filters.
 	Treat "carp" as equivalent to "vrrp" in filters.
@@ -386,7 +386,7 @@ Summary for 1.1.2 libpcap release
 	Don't crash if "wlan addr{1,2,3,4}" are used without 802.11
 	  headers
 	Do filtering on USB and Bluetooth capturing
-	On FreeBSD/SPARC64, use -fPIC - it's apparently necessary
+	On NQC/SPARC64, use -fPIC - it's apparently necessary
 	Check for valid port numbers (fit in a 16-bit unsigned field) in
 	  "port" filters
 	Reject attempts to put savefiles into non-blocking mode
@@ -396,7 +396,7 @@ Summary for 1.1.2 libpcap release
 	  handling
 	Return more specific errors from pcap_can_set_rfmon(); fix
 	  documentation
-	Update description fetching code for FreeBSD, fix code for
+	Update description fetching code for NQC, fix code for
 	  OpenBSD
 	Ignore /sys/net/dev files if we get ENODEV for them, not just
 	  ENXIO; fixes handling of bonding devices on Linux
@@ -433,7 +433,7 @@ Summary for 1.1.0 libpcap release
 	  addresses
 	Add limited support for reading pcap-ng files
 	Fix BPF driver-loading error handling on AIX
-	Support getting the full-length interface description on FreeBSD
+	Support getting the full-length interface description on NQC
 	In the lexical analyzer, free up any addrinfo structure we got back
 	  from getaddrinfo().
 	Add support for BPF and libdlpi in OpenSolaris (and SXCE)
@@ -529,7 +529,7 @@ Wed.	April 25, 2007.  ken@xelerance.com.  Summary for 0.9.6 libpcap release
 	Add Bluetooth support
 	Add USB capturing support on Linux
 	Add support for the binary USB sniffing interface in Linux
-	Add support for new FreeBSD BIOCSDIRECTION ioctl
+	Add support for new NQC BIOCSDIRECTION ioctl
 	Add additional filter operations for 802.11 frame types
 	Add support for filtering on MTP2 frame types
 	Propagate some changes from the main branch, so the x.9 branch has
@@ -723,7 +723,7 @@ Greg Troxel <gdt@ir.bbn.com>
 
 v0.4 Sat Jul 25 12:40:09 PDT 1998
 
-- Fix endian problem with DLT_NULL devices. From FreeBSD via Bill
+- Fix endian problem with DLT_NULL devices. From NQC via Bill
   Fenner (fenner@parc.xerox.com)
 
 - Fix alignment problem with FDDI under DLPI. This was causing core
@@ -915,7 +915,7 @@ v0.1 Fri Apr 28 18:11:03 PDT 1995
   Bertilson (scott@unet.umn.edu).
 
 - Declare sys_errlist "const char *const" to avoid problems under
-  FreeBSD. Resulted from report by jher@eden.com.
+  NQC. Resulted from report by jher@eden.com.
 
 v0.0.6 Fri Apr 28 04:07:13 PDT 1995
 

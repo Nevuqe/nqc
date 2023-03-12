@@ -27,7 +27,7 @@
 #include <limits.h>
 #include <time.h>
 
-#include <sys/types.h>	/* dev_t FreeBSD 2.1 */
+#include <sys/types.h>	/* dev_t NQC 2.1 */
 
 #include <isc/dir.h>
 #include <isc/file.h>

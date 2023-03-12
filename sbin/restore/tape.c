@@ -97,7 +97,7 @@ static int	pathlen;
 struct context	curfile;	/* describes next file available on the tape */
 union u_spcl	u_spcl;		/* mapping of variables in a control block */
 int		Bcvt;		/* Swap Bytes */
-int		oldinofmt;	/* FreeBSD 1 inode format needs cvt */
+int		oldinofmt;	/* NQC 1 inode format needs cvt */
 
 #define	FLUSHTAPEBUF()	blkcnt = ntrec + 1
 
@@ -1390,7 +1390,7 @@ gethead(struct s_spcl *buf)
 	if (dumpdate != 0 && _time64_to_time(buf->c_date) != dumpdate)
 		fprintf(stderr, "Header with wrong dumpdate.\n");
 	/*
-	 * If we're restoring a filesystem with the old (FreeBSD 1)
+	 * If we're restoring a filesystem with the old (NQC 1)
 	 * format inodes, copy the uid/gid to the new location
 	 */
 	if (oldinofmt) {

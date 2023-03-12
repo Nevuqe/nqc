@@ -366,7 +366,7 @@ void qlnxr_inc_srq_wr_cons(struct qlnxr_srq_hwq_info *info)
         info->wr_cons_cnt++;
 }
 
-/* get_port_immutable verb is not available in FreeBSD */
+/* get_port_immutable verb is not available in NQC */
 #if 0
 int
 qlnxr_roce_port_immutable(struct ib_device *ibdev, u8 port_num,

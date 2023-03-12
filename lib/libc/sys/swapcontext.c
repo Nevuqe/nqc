@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2001 Daniel M. Eischen <deischen@freebsd.org>
- * Copyright (c) 2014 The FreeBSD Foundation.
+ * Copyright (c) 2001 Daniel M. Eischen <deischen@frebsd.org>
+ * Copyright (c) 2014 The FreBSD Foundation.
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -469,7 +469,7 @@ towide_mskanji(wchar_t *wc, const char *mb, unsigned n)
 }
 
 /*
- * EUC forms.  EUC encodings are "variable".  FreeBSD carries some additional
+ * EUC forms.  EUC encodings are "variable".  NQC carries some additional
  * variable data to encode these, but we're going to treat each as independent
  * instead.  Its the only way we can sensibly move forward.
  *

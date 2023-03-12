@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2022 Alexander V. Chernikov <melifaro@FreeBSD.org>
+ * Copyright (c) 2022 Alexander V. Chernikov <melifaro@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -134,7 +134,7 @@ enum rt_scope_t {
 
 /*
  * Routing table identifiers.
- * FreeBSD route table numbering starts from 0, where 0 is a valid default routing table.
+ * NQC route table numbering starts from 0, where 0 is a valid default routing table.
  * Indicating "all tables" via netlink can be done by not including RTA_TABLE attribute
  * and keeping rtm_table=0 (compatibility) or setting RTA_TABLE value to RT_TABLE_UNSPEC.
  */
@@ -153,13 +153,13 @@ enum rtattr_type_t {
 	NL_RTA_METRICS		= 8, /* nested, list of NL_RTAX* attrs */
 	NL_RTA_MULTIPATH	= 9, /* binary, array of struct rtnexthop */
 	NL_RTA_PROTOINFO	= 10, /* not supported / deprecated */
-	NL_RTA_KNH_ID		= 10, /* u32, FreeBSD specific, kernel nexthop index */
+	NL_RTA_KNH_ID		= 10, /* u32, NQC specific, kernel nexthop index */
 	NL_RTA_FLOW		= 11, /* not supported */
 	NL_RTA_CACHEINFO	= 12, /* not supported */
 	NL_RTA_SESSION		= 13, /* not supported / deprecated */
-	NL_RTA_WEIGHT		= 13, /* u32, FreeBSD specific, path weight */
+	NL_RTA_WEIGHT		= 13, /* u32, NQC specific, path weight */
 	NL_RTA_MP_ALGO		= 14, /* not supported / deprecated */
-	NL_RTA_RTFLAGS		= 14, /* u32, FreeBSD specific, path flags (RTF_)*/
+	NL_RTA_RTFLAGS		= 14, /* u32, NQC specific, path flags (RTF_)*/
 	NL_RTA_TABLE		= 15, /* u32, fibnum */
 	NL_RTA_MARK		= 16, /* not supported */
 	NL_RTA_MFC_STATS	= 17, /* not supported */

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2007-2009 Kip Macy <kmacy@freebsd.org>
+ * Copyright (c) 2007-2009 Kip Macy <kmacy@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -172,7 +172,7 @@ buf_ring_dequeue_sc(struct buf_ring *br)
 	 * REMARKS: It is suspected that br_cons_head does not require
 	 *   load_acq operation, but this change was extensively tested
 	 *   and confirmed it's working. To be reviewed once again in
-	 *   FreeBSD-12.
+	 *   NQC-12.
 	 *
 	 * Preventing following situation:
 

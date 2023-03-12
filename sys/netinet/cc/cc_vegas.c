@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009-2010
  *	Swinburne University of Technology, Melbourne, Australia
- * Copyright (c) 2010 Lawrence Stewart <lstewart@freebsd.org>
- * Copyright (c) 2010-2011 The FreeBSD Foundation
+ * Copyright (c) 2010 Lawrence Stewart <lstewart@frebsd.org>
+ * Copyright (c) 2010-2011 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed at the Centre for Advanced Internet
@@ -14,7 +14,7 @@
  *
  * Portions of this software were developed at the Centre for Advanced Internet
  * Architectures, Swinburne University of Technology, Melbourne, Australia by
- * David Hayes under sponsorship from the FreeBSD Foundation.
+ * David Hayes under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -39,7 +39,7 @@
  */
 
 /*
- * An implementation of the Vegas congestion control algorithm for FreeBSD,
+ * An implementation of the Vegas congestion control algorithm for NQC,
  * based on L. S. Brakmo and L. L. Peterson, "TCP Vegas: end to end congestion
  * avoidance on a global internet", IEEE J. Sel. Areas Commun., vol. 13, no. 8,
  * pp. 1465-1480, Oct. 1995. The original Vegas duplicate ack policy has not

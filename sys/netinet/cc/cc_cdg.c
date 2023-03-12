@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009-2013
  * 	Swinburne University of Technology, Melbourne, Australia
@@ -9,7 +9,7 @@
  * Architectures, Swinburne University of Technology, by David Hayes, made
  * possible in part by a gift from The Cisco University Research Program Fund,
  * a corporate advised fund of Silicon Valley Community Foundation. Development
- * and testing were further assisted by a grant from the FreeBSD Foundation.
+ * and testing were further assisted by a grant from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

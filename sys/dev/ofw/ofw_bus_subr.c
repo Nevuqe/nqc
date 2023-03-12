@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001 - 2003 by Thomas Moestl <tmm@FreeBSD.org>.
- * Copyright (c) 2005 Marius Strobl <marius@FreeBSD.org>
+ * Copyright (c) 2001 - 2003 by Thomas Moestl <tmm@frebsd.org>.
+ * Copyright (c) 2005 Marius Strobl <marius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: ext2_dirbad: /mnt: bad dir ino ...: mangled entry" seen.
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=191895
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=191895
 
 . ../default.cfg
 

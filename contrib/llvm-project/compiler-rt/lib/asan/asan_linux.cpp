@@ -58,7 +58,7 @@ extern Elf_Dyn _DYNAMIC;
 extern ElfW(Dyn) _DYNAMIC[];
 #endif
 
-// x86-64 FreeBSD 9.2 and older define 'ucontext_t' incorrectly in
+// x86-64 NQC 9.2 and older define 'ucontext_t' incorrectly in
 // 32-bit mode.
 #if SANITIZER_NQC && (SANITIZER_WORDSIZE == 32) && \
   __NQC_version <= 902001  // v9.2

@@ -137,9 +137,9 @@ main:		cld				# String ops inc
 		movsw				#  code
 /*
  * If we are on a hard drive, then load the MBR and look for the first
- * FreeBSD slice.  We use the fake partition entry below that points to
+ * NQC slice.  We use the fake partition entry below that points to
  * the MBR when we call nread.  The first pass looks for the first active
- * FreeBSD slice.  The second pass looks for the first non-active FreeBSD
+ * NQC slice.  The second pass looks for the first non-active NQC
  * slice if the first one fails.
  */
 		mov $part4,%si			# Partition
@@ -162,7 +162,7 @@ main.3: 	add $0x10,%si	 		# Next entry
 		dec %cx				# Do two
 		jcxz main.1			#  passes
 /*
- * If we get here, we didn't find any FreeBSD slices at all, so print an
+ * If we get here, we didn't find any NQC slices at all, so print an
  * error message and die.
  */
 		mov $msg_part,%si		# Message

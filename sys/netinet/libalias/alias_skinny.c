@@ -1,7 +1,7 @@
 /*-
  * alias_skinny.c
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002, 2003 MarcusCom, Inc.
  * All rights reserved.
@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Joe Marcus Clarke <marcus@FreeBSD.org>
+ * Author: Joe Marcus Clarke <marcus@frebsd.org>
  *
  * $NQC$
  */

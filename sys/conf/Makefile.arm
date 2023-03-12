@@ -3,7 +3,7 @@
 #	from: @(#)Makefile.i386	7.1 5/10/91
 # $NQC$
 #
-# Makefile for FreeBSD
+# Makefile for NQC
 #
 # This makefile is constructed from a machine description:
 #	config machineid

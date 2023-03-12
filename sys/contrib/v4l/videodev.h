@@ -1,7 +1,7 @@
 /*
  * This header comes from linux, but it has no license. The author
- * (Alan Cox @ Redhat) gave explicit permissions to use it in FreeBSD.
- * The FreeBSD vendor branch for v4l gives a more detailed description
+ * (Alan Cox @ Redhat) gave explicit permissions to use it in NQC.
+ * The NQC vendor branch for v4l gives a more detailed description
  * about this in the README.
  *
  * $NQC$

@@ -27,7 +27,7 @@
 #
 
 # Protection fault seen:
-# https://people.freebsd.org/~pho/stress/log/graid0.txt
+# https://people.frebsd.org/~pho/stress/log/graid0.txt
 # Fixed by r327721-23
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

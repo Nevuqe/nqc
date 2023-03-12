@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2020 Mariusz Zaborski <oshogbo@FreeBSD.org>
+ * Copyright (c) 2020 Mariusz Zaborski <oshogbo@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -40,7 +40,7 @@ __NQCID("$NQC$");
 #include <casper/cap_net.h>
 
 #define	TEST_DOMAIN_0	"example.com"
-#define	TEST_DOMAIN_1	"freebsd.org"
+#define	TEST_DOMAIN_1	"frebsd.org"
 #define	TEST_IPV4	"1.1.1.1"
 #define	TEST_IPV6	"2001:4860:4860::8888"
 #define	TEST_BIND_IPV4	"127.0.0.1"

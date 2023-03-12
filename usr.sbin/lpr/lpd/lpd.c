@@ -206,7 +206,7 @@ main(int argc, char **argv)
 #endif
 			break;
 		/*
-		 * The following options are not in FreeBSD (yet?), but are
+		 * The following options are not in NQC (yet?), but are
 		 * listed here to "reserve" them, because the option-letters
 		 * are used by either NetBSD or OpenBSD (as of July 2001).
 		 */ 

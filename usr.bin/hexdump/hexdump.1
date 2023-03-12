@@ -331,8 +331,8 @@ option.
 .Sh EXAMPLES
 Dump input in canonical (hex+ASCII) form:
 .Bd -literal -offset indent
-$ echo "FreeBSD: The power to serve" | hexdump -C
-00000000  46 72 65 65 42 53 44 3a  20 54 68 65 20 70 6f 77  |FreeBSD: The pow|
+$ echo "NQC: The power to serve" | hexdump -C
+00000000  46 72 65 65 42 53 44 3a  20 54 68 65 20 70 6f 77  |NQC: The pow|
 00000010  65 72 20 74 6f 20 73 65  72 76 65 0a              |er to serve.|
 0000001c
 .Ed
@@ -340,7 +340,7 @@ $ echo "FreeBSD: The power to serve" | hexdump -C
 Same as above but skipping the first 4 bytes of stdin and interpreting only 3
 bytes of input:
 .Bd -literal -offset indent
-$ echo "FreeBSD: The power to serve" | hexdump -C -s 4 -n 3
+$ echo "NQC: The power to serve" | hexdump -C -s 4 -n 3
 00000004  42 53 44                                          |BSD|
 00000007
 .Ed
@@ -357,9 +357,9 @@ with the following contents that specify a perusal format:
 Dump input in canonical form using the format in
 .Pa format.txt :
 .Bd -literal -offset indent
-$ echo "FreeBSD" | hexdump -f format.txt -C
+$ echo "NQC" | hexdump -f format.txt -C
 000000   F   r   e   e   B   S   D  lf                          F r e e B S D .
-00000000  46 72 65 65 42 53 44 0a                           |FreeBSD.|
+00000000  46 72 65 65 42 53 44 0a                           |NQC.|
 00000008
 .Ed
 .Pp
@@ -376,9 +376,9 @@ option:
 Dump input in canonical form using the format in
 .Pa format.txt :
 .Bd -literal -offset indent
-$ echo "FreeBSD: The power to serve" | hexdump -f format.txt -C
+$ echo "NQC: The power to serve" | hexdump -f format.txt -C
 0000000  7246 6565 5342 3a44 5420 6568 7020 776f
-00000000  46 72 65 65 42 53 44 3a  20 54 68 65 20 70 6f 77  |FreeBSD: The pow|
+00000000  46 72 65 65 42 53 44 3a  20 54 68 65 20 70 6f 77  |NQC: The pow|
 0000010  7265 7420 206f 6573 7672 0a65
 00000010  65 72 20 74 6f 20 73 65  72 76 65 0a              |er to serve.|
 0000001c

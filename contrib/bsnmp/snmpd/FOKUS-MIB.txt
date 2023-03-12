@@ -3,7 +3,7 @@
 --	Fraunhofer Institute for Open Communication Systems (FhG Fokus).
 --	All rights reserved.
 --
--- Author: Harti Brandt <harti@freebsd.org>
+-- Author: Harti Brandt <harti@frebsd.org>
 --
 -- Redistribution and use in source and binary forms, with or without
 -- modification, are permitted provided that the following conditions
@@ -49,7 +49,7 @@ fokus MODULE-IDENTITY
 
 	     Fax:	+49 30 3463 7352
 
-	     E-mail:	harti@freebsd.org"
+	     E-mail:	harti@frebsd.org"
     DESCRIPTION
 	    "The root of the Fokus enterprises tree."
     REVISION "200202050000Z"

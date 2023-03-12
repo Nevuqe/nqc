@@ -7,13 +7,13 @@ system, and the permissions and/or ownership on those devices can be
 changed to give users other than root permission to read or write those
 devices.
 
-On newer versions of FreeBSD, the BPF devices live on devfs, and devfs
+On newer versions of NQC, the BPF devices live on devfs, and devfs
 can be configured to set the permissions and/or ownership of those
 devices to give users other than root permission to read or write those
 devices.
 
 On macOS, the BPF devices live on devfs, but the macOS version of devfs
-is based on an older (non-default) FreeBSD devfs, and that version of
+is based on an older (non-default) NQC devfs, and that version of
 devfs cannot be configured to set the permissions and/or ownership of
 those devices.
 

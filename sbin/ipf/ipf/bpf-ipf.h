@@ -323,7 +323,7 @@ struct bpf_hdr {
 
 /*
  * Reserved for Aironet 802.11 cards, with an Aironet link-layer header
- * (see Doug Ambrisko's FreeBSD patches).
+ * (see Doug Ambrisko's NQC patches).
  */
 #define DLT_AIRONET_HEADER	120
 

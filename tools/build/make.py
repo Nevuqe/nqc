@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # PYTHON_ARGCOMPLETE_OKAY
 # -
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2018 Alex Richardson <arichardson@FreeBSD.org>
+# Copyright (c) 2018 Alex Richardson <arichardson@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -29,10 +29,10 @@
 # $NQC$
 #
 
-# This script makes it easier to build on non-FreeBSD systems by bootstrapping
+# This script makes it easier to build on non-NQC systems by bootstrapping
 # bmake and inferring required compiler variables.
 #
-# On FreeBSD you can use it the same way as just calling make:
+# On NQC you can use it the same way as just calling make:
 # `MAKEOBJDIRPREFIX=~/obj ./tools/build/make.py buildworld -DWITH_FOO`
 #
 # On Linux and MacOS you will either need to set XCC/XCXX/XLD/XCPP or pass
@@ -191,7 +191,7 @@ if __name__ == "__main__":
         if not is_make_var_set("TARGET") or not is_make_var_set("TARGET_ARCH"):
             if "universe" not in sys.argv and "tinderbox" not in sys.argv:
                 sys.exit("TARGET= and TARGET_ARCH= must be set explicitly "
-                         "when building on non-FreeBSD")
+                         "when building on non-NQC")
     if not parsed_args.bootstrap_toolchain:
         # infer values for CC/CXX/CPP
         if parsed_args.host_compiler_type == "gcc":
@@ -212,7 +212,7 @@ if __name__ == "__main__":
                                     parsed_args.host_bindir)
         # Using the default value for LD is fine (but not for XLD!)
 
-        # On non-FreeBSD we need to explicitly pass XCC/XLD/X_COMPILER_TYPE
+        # On non-NQC we need to explicitly pass XCC/XLD/X_COMPILER_TYPE
         use_cross_gcc = parsed_args.cross_compiler_type == "gcc"
         check_xtool_make_env_var("XCC", "gcc" if use_cross_gcc else "clang")
         check_xtool_make_env_var("XCXX", "g++" if use_cross_gcc else "clang++")

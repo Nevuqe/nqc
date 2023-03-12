@@ -2,10 +2,10 @@
  * Copyright (c) 1989 The Regents of the University of California.
  * All rights reserved.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms are permitted
  * provided that the above copyright notice and this paragraph are
@@ -215,7 +215,7 @@ label:
 				 * are supposed to provide alternate
 				 * representations.
 				 *
-				 * FreeBSD extension
+				 * NQC extension
 				 *      %OB
 				 */
 				if (Ealternative || Oalternative)

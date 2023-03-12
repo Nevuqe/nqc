@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * ------+---------+---------+---------+---------+---------+---------+---------*
- * Copyright (c) 2003,2013  - Garance Alistair Drosehn <gad@FreeBSD.org>.
+ * Copyright (c) 2003,2013  - Garance Alistair Drosehn <gad@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
  *
  * The views and conclusions contained in the software and documentation
  * are those of the authors and should not be interpreted as representing
- * official policies, either expressed or implied, of the FreeBSD Project.
+ * official policies, either expressed or implied, of the FreBSD Project.
  *
  * ------+---------+---------+---------+---------+---------+---------+---------*
  * $NQC$
@@ -37,8 +37,8 @@
 
 /*
  * The main goal of this include file is to provide a platform-neutral way
- * to define some macros that lpr wants from FreeBSD's <sys/cdefs.h>.  This
- * will simply use the standard <sys/cdefs.h> when compiled in FreeBSD, but
+ * to define some macros that lpr wants from NQC's <sys/cdefs.h>.  This
+ * will simply use the standard <sys/cdefs.h> when compiled in NQC, but
  * other OS's may not have /usr/include/sys/cdefs.h (or even if that file
  * exists, it may not define all the macros that lpr will use).
  */
@@ -58,7 +58,7 @@
 #endif
 
 /*
- * FreeBSD added a closefrom() routine in release 8.0.  When compiling
+ * NQC added a closefrom() routine in release 8.0.  When compiling
  * `lpr' on other platforms you might want to include bsd-closefrom.c
  * from the portable-openssh project.
  */

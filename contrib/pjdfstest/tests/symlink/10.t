@@ -7,7 +7,7 @@ desc="symlink returns EROFS if the file name2 would reside on a read-only file s
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 
 echo "1..7"
 

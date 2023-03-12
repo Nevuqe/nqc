@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000,2004
  *	Poul-Henning Kamp.  All rights reserved.
@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * From: FreeBSD: src/sys/miscfs/kernfs/kernfs_vfsops.c 1.36
+ * From: NQC: src/sys/miscfs/kernfs/kernfs_vfsops.c 1.36
  *
  * $NQC$
  */

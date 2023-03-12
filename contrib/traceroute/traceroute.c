@@ -621,7 +621,7 @@ main(int argc, char **argv)
 			break;
 
 		case 'f':
-		case 'M':	/* FreeBSD compat. */
+		case 'M':	/* NQC compat. */
 			first_ttl = str2val(optarg, "first ttl", 1, 255);
 			break;
 

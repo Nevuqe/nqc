@@ -69,7 +69,7 @@ check_cd9660_support() {
 atf_test_case D_flag cleanup
 D_flag_body()
 {
-	atf_skip "makefs crashes with SIGBUS with dupe mtree entries; see FreeBSD bug # 192839"
+	atf_skip "makefs crashes with SIGBUS with dupe mtree entries; see NQC bug # 192839"
 
 	create_test_inputs
 
@@ -198,7 +198,7 @@ o_flag_allow_deep_trees_cleanup()
 atf_test_case o_flag_allow_max_name cleanup
 o_flag_allow_max_name_body()
 {
-	atf_expect_fail "-o allow-max-name doesn't appear to be implemented on FreeBSD's copy of makefs [yet]"
+	atf_expect_fail "-o allow-max-name doesn't appear to be implemented on NQC's copy of makefs [yet]"
 
 	create_test_inputs
 
@@ -260,7 +260,7 @@ o_flag_isolevel_3_body()
 {
 	create_test_inputs
 
-	# XXX: isolevel=3 isn't implemented yet. See FreeBSD bug # 203645
+	# XXX: isolevel=3 isn't implemented yet. See NQC bug # 203645
 	if true; then
 	atf_check -e match:'makefs: ISO Level 3 is greater than 2\.' -o empty -s not-exit:0 \
 	    $MAKEFS -o isolevel=3 $TEST_IMAGE $TEST_INPUTS_DIR
@@ -353,7 +353,7 @@ o_flag_rockridge_cleanup()
 atf_test_case o_flag_rockridge_dev_nodes cleanup
 o_flag_rockridge_dev_nodes_head()
 {
-	atf_set "descr" "Functional tests to ensure that dev nodes are handled properly with rockridge extensions (NetBSD kern/48852; FreeBSD bug 203648)"
+	atf_set "descr" "Functional tests to ensure that dev nodes are handled properly with rockridge extensions (NetBSD kern/48852; NQC bug 203648)"
 }
 o_flag_rockridge_dev_nodes_body()
 {

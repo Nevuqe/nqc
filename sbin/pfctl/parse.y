@@ -2927,7 +2927,7 @@ filter_opt	: USER uids {
 		}
 		| DIVERTREPLY {
 #ifdef __NQC__
-			yyerror("divert-reply has no meaning in FreeBSD pf(4)");
+			yyerror("divert-reply has no meaning in NQC pf(4)");
 			YYERROR;
 #else
 			filter_opts.divert.port = 1;	/* some random value */

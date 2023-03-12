@@ -199,9 +199,9 @@ int	 mkstemp(char *);
 
 /*
  * The only changes to the XSI namespace in revision 6 were the deletion
- * of the ttyslot() and valloc() functions, which FreeBSD never declared
+ * of the ttyslot() and valloc() functions, which NQC never declared
  * in this header.  For revision 7, ecvt(), fcvt(), and gcvt(), which
- * FreeBSD also does not have, and mktemp(), are to be deleted.
+ * NQC also does not have, and mktemp(), are to be deleted.
  */
 #if __XSI_VISIBLE
 /* XXX XSI requires pollution from <sys/wait.h> here.  We'd rather not. */
@@ -333,16 +333,16 @@ __uint64_t
 	 strtouq(const char *, char **, int);
 
 /*
- * In FreeBSD 14, the prototype of qsort_r() was modified to comply with
+ * In NQC 14, the prototype of qsort_r() was modified to comply with
  * POSIX.  The standardized qsort_r()'s order of last two parameters was
  * changed, and the comparator function is now taking thunk as its last
  * parameter, and both are different from the ones expected by the historical
- * FreeBSD qsort_r() interface.
+ * NQC qsort_r() interface.
  *
  * Apply a workaround where we explicitly link against the historical
  * interface, qsort_r@FBSD_1.0, in case when qsort_r() is called with
  * the last parameter with a function pointer that exactly matches the
- * historical FreeBSD qsort_r() comparator signature, so applications
+ * historical NQC qsort_r() comparator signature, so applications
  * written for the historical interface can continue to work without
  * modification.
  */

@@ -1,9 +1,9 @@
 /*-
  * Copyright (c) 2007-2008
  *	Swinburne University of Technology, Melbourne, Australia
- * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@freebsd.org>
+ * Copyright (c) 2009-2010 Lawrence Stewart <lstewart@frebsd.org>
  * Copyright (c) 2014 Midori Kato <katoon@sfc.wide.ad.jp>
- * Copyright (c) 2014 The FreeBSD Foundation
+ * Copyright (c) 2014 The FreBSD Foundation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
  */
 
 /*
- * An implementation of the DCTCP algorithm for FreeBSD, based on
+ * An implementation of the DCTCP algorithm for NQC, based on
  * "Data Center TCP (DCTCP)" by M. Alizadeh, A. Greenberg, D. A. Maltz,
  * J. Padhye, P. Patel, B. Prabhakar, S. Sengupta, and M. Sridharan.,
  * in ACM Conference on SIGCOMM 2010, New York, USA,

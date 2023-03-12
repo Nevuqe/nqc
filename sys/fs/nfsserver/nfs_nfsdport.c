@@ -1384,7 +1384,7 @@ nfsvno_symlink(struct nameidata *ndp, struct nfsvattr *nvap, char *pathcp,
 	error = VOP_SYMLINK(ndp->ni_dvp, &ndp->ni_vp, &ndp->ni_cnd,
 	    &nvap->na_vattr, pathcp);
 	/*
-	 * Although FreeBSD still had the lookup code in
+	 * Although NQC still had the lookup code in
 	 * it for 7/current, there doesn't seem to be any
 	 * point, since VOP_SYMLINK() returns the ni_vp.
 	 * Just vput it for v2.
@@ -1555,7 +1555,7 @@ nfsvno_rename(struct nameidata *fromndp, struct nameidata *tondp,
 
 		/*
 		 * A rename to '.' or '..' results in a prematurely
-		 * unlocked vnode on FreeBSD5, so I'm just going to fail that
+		 * unlocked vnode on NQC5, so I'm just going to fail that
 		 * here.
 		 */
 		if ((tondp->ni_cnd.cn_namelen == 1 &&
@@ -2183,7 +2183,7 @@ again:
 	cookiep = cookies;
 
 	/*
-	 * For some reason FreeBSD's ufs_readdir() chooses to back the
+	 * For some reason NQC's ufs_readdir() chooses to back the
 	 * directory offset up to a block boundary, so it is necessary to
 	 * skip over the records that precede the requested offset. This
 	 * requires the assumption that file offset cookies monotonically
@@ -2471,7 +2471,7 @@ again:
 	cookiep = cookies;
 
 	/*
-	 * For some reason FreeBSD's ufs_readdir() chooses to back the
+	 * For some reason NQC's ufs_readdir() chooses to back the
 	 * directory offset up to a block boundary, so it is necessary to
 	 * skip over the records that precede the requested offset. This
 	 * requires the assumption that file offset cookies monotonically
@@ -3624,7 +3624,7 @@ nfsvno_advlock(struct vnode *vp, int ftype, u_int64_t first,
 		fl.l_len = (off_t)tlen;
 	}
 	/*
-	 * For FreeBSD8, the l_pid and l_sysid must be set to the same
+	 * For NQC8, the l_pid and l_sysid must be set to the same
 	 * values for all calls, so that all locks will be held by the
 	 * nfsd server. (The nfsd server handles conflicts between the
 	 * various clients.)
@@ -5270,7 +5270,7 @@ nfsrv_readdsrpc(fhandle_t *fhp, off_t off, int len, struct ucred *cred,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;
@@ -5391,7 +5391,7 @@ nfsrv_writedsdorpc(struct nfsmount *nmp, fhandle_t *fhp, off_t off, int len,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;
@@ -5613,7 +5613,7 @@ nfsrv_allocatedsdorpc(struct nfsmount *nmp, fhandle_t *fhp, off_t off,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;
@@ -5773,7 +5773,7 @@ nfsrv_deallocatedsdorpc(struct nfsmount *nmp, fhandle_t *fhp, off_t off,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;
@@ -5935,7 +5935,7 @@ nfsrv_setattrdsdorpc(fhandle_t *fhp, struct ucred *cred, NFSPROC_T *p,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;
@@ -6120,7 +6120,7 @@ nfsrv_setacldsdorpc(fhandle_t *fhp, struct ucred *cred, NFSPROC_T *p,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;
@@ -6322,7 +6322,7 @@ nfsrv_seekdsrpc(fhandle_t *fhp, off_t *offp, int content, bool *eofp,
 	/*
 	 * Use a stateid where other is an alternating 01010 pattern and
 	 * seqid is 0xffffffff.  This value is not defined as special by
-	 * the RFC and is used by the FreeBSD NFS server to indicate an
+	 * the RFC and is used by the NQC NFS server to indicate an
 	 * MDS->DS proxy operation.
 	 */
 	st.other[0] = 0x55555555;

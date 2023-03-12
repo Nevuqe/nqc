@@ -1513,7 +1513,7 @@ dsl_dir_tempreserve_clear(void *tr_cookie, dmu_tx_t *tx)
  * to write less space or free more, but we don't want to write more or free
  * less than the amount specified.
  *
- * NOTE: The behavior of this function is identical to the Illumos / FreeBSD
+ * NOTE: The behavior of this function is identical to the Illumos / NQC
  * version however it has been adjusted to use an iterative rather than
  * recursive algorithm to minimize stack usage.
  */

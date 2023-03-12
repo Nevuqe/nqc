@@ -41,7 +41,7 @@ CFLAGS+=	-I${.CURDIR}/${ARCH_SUBDIR}
 # transformations may raise exceptions that would not have been raised by the
 # original code. To avoid this, use the -fp-exception-behavior=maytrap flag,
 # introduced in clang 10.0.0.
-# See also: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=254911
+# See also: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=254911
 CFLAGS+=	-ffp-exception-behavior=maytrap
 .endif
 
@@ -132,7 +132,7 @@ COMMON_SRCS+=	b_tgammal.c catrigl.c \
 #     lib/msun/ld80/e_powl.c:275:1: error: floating constant exceeds range of
 #     'long double' [-Werror=overflow]
 #     if( y >= LDBL_MAX )
-# See also: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=130067
+# See also: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=130067
 .if ${COMPILER_TYPE} == "gcc"
 CFLAGS.e_powl.c+= -Wno-error=overflow
 .endif
@@ -147,7 +147,7 @@ COMMON_SRCS+=	catrig.c catrigf.c \
 	s_cproj.c s_cprojf.c s_creal.c s_crealf.c s_creall.c \
 	s_csinh.c s_csinhf.c s_ctanh.c s_ctanhf.c
 
-# FreeBSD's C library supplies these functions:
+# NQC's C library supplies these functions:
 #COMMON_SRCS+=	s_fabs.c s_frexp.c s_isnan.c s_ldexp.c s_modf.c
 
 # Exclude the generic versions of what we provide in the MD area.

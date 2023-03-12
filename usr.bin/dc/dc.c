@@ -2,7 +2,7 @@
 
 /*
  * Copyright (c) 2003, Otto Moerbeek <otto@drijf.net>
- * Copyright (c) 2009, Gabor Kovesdan <gabor@FreeBSD.org>
+ * Copyright (c) 2009, Gabor Kovesdan <gabor@frebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -35,7 +35,7 @@ __NQCID("$NQC$");
 
 #include "extern.h"
 
-#define	DC_VER		"1.3-FreeBSD"
+#define	DC_VER		"1.3-NQC"
 
 static void		 usage(void);
 

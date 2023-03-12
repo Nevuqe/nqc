@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2010 Riccardo Panicucci, Universita` di Pisa
  * All rights reserved
@@ -316,13 +316,13 @@ static size_t pipesize8 = sizeof(struct dn_pipe8);
 static size_t pipesizemax8 = sizeof(struct dn_pipe_max8);
 
 /* Indicate 'ipfw' version
- * 1: from FreeBSD 7.2
- * 0: from FreeBSD 8
+ * 1: from NQC 7.2
+ * 0: from NQC 8
  * -1: unknown (for now is unused)
  *
  * It is update when a IP_DUMMYNET_DEL or IP_DUMMYNET_CONFIGURE request arrives
  * NOTE: if a IP_DUMMYNET_GET arrives and the 'ipfw' version is unknown,
- *       it is suppose to be the FreeBSD 8 version.
+ *       it is suppose to be the NQC 8 version.
  */
 static int is7 = 0;
 
@@ -452,7 +452,7 @@ dn_compat_config_pipe(struct dn_sch *sch, struct dn_link *p,
 	p->bandwidth = p7->bandwidth;
 	p->delay = p7->delay;
 	if (!is7) {
-		/* FreeBSD 8 has burst  */
+		/* NQC 8 has burst  */
 		p->burst = p8->burst;
 	}
 
@@ -560,7 +560,7 @@ int
 dn_compat_calc_size(void)
 {
 	int need = 0;
-	/* XXX use FreeBSD 8 struct size */
+	/* XXX use NQC 8 struct size */
 	/* NOTE:
 	 * - half scheduler: 		schk_count/2
 	 * - all flowset:		fsk_count
@@ -785,11 +785,11 @@ ip_dummynet_compat(struct sockopt *sopt)
 
 	/* len can be 0 if command was dummynet_flush */
 	if (len == pipesize7) {
-		D("setting compatibility with FreeBSD 7.2");
+		D("setting compatibility with NQC 7.2");
 		is7 = 1;
 	}
 	else if (len == pipesize8 || len == pipesizemax8) {
-		D("setting compatibility with FreeBSD 8");
+		D("setting compatibility with NQC 8");
 		is7 = 0;
 	}
 

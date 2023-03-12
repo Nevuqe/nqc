@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2021 Peter Holm
 #
@@ -27,9 +27,9 @@
 # SUCH DAMAGE.
 #
 
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=257522
-# https://people.freebsd.org/~pho/stress/log/log0158.txt
-# Original test scenario by trasz@FreeBSD.org
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=257522
+# https://people.frebsd.org/~pho/stress/log/log0158.txt
+# Original test scenario by trasz@frebsd.org
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

@@ -211,7 +211,7 @@ trap_check_kstack(void)
 #endif
 
 /*
- * Exception, fault, and trap interface to the FreeBSD kernel.
+ * Exception, fault, and trap interface to the NQC kernel.
  * This common code is called from assembly language IDT gate entry
  * routines that prepare a suitable stack frame, and restore this
  * frame after the exception has been processed.

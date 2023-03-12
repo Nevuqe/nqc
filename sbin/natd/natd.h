@@ -1,5 +1,5 @@
 /*
- * natd - Network Address Translation Daemon for FreeBSD.
+ * natd - Network Address Translation Daemon for NQC.
  *
  * This software is provided free of charge, with no 
  * warranty of any kind, either expressed or implied.

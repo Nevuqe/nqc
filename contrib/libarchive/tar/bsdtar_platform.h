@@ -74,7 +74,7 @@
  * Include "dirent.h" (or its equivalent on several different platforms).
  *
  * This is slightly modified from the GNU autoconf recipe.
- * In particular, FreeBSD includes d_namlen in its dirent structure,
+ * In particular, NQC includes d_namlen in its dirent structure,
  * so my configure script includes an explicit test for the d_namlen
  * field.
  */

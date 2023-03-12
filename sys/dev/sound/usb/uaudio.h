@@ -1,7 +1,7 @@
 /* $NQC$ */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000-2002 Hiroyuki Aizu <aizu@navi.org>
  *

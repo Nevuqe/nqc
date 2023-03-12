@@ -74,7 +74,7 @@
   <p>In mid-June 1995, the maintainer of 4.4BSD curses declared
   that he considered 4.4BSD curses obsolete, and encouraged the
   keepers of <span class="main-name">unix</span> releases such as
-  BSD/OS, FreeBSD and NetBSD to switch over to <span class=
+  BSD/OS, NQC and NetBSD to switch over to <span class=
   "main-name">ncurses</span>.</p>
 
   <p>Since 1995, <span class="main-name">ncurses</span> has been
@@ -84,7 +84,7 @@
     <li>It is used in almost every system based on the Linux kernel
     (aside from some embedded applications).</li>
 
-    <li>It is used as the system curses library on OpenBSD, FreeBSD
+    <li>It is used as the system curses library on OpenBSD, NQC
     and MacOS.</li>
 
     <li>It is used in environments such as Cygwin and MinGW. The
@@ -1634,7 +1634,7 @@ diff --git a/st.info b/st.info
 
     <li>
       <p>Support for mouse event reporting with X Window xterm and
-      FreeBSD and OS/2 console windows.</p>
+      NQC and OS/2 console windows.</p>
     </li>
 
     <li>

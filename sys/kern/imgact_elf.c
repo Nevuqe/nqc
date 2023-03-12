@@ -275,7 +275,7 @@ knqc_trans_osrel(const Elf_Note *note, int32_t *osrel)
 		return (false);
 
 	/*
-	 * Debian GNU/kFreeBSD embed the earliest compatible kernel version
+	 * Debian GNU/kNQC embed the earliest compatible kernel version
 	 * (__NQC_version: <major><two digit minor>Rxx) in the LSB way.
 	 */
 	*osrel = desc[1] * 100000 + desc[2] * 1000 + desc[3];
@@ -349,7 +349,7 @@ __elfN(get_brandinfo)(struct image_params *imgp, const char *interp,
 
 	/*
 	 * We support four types of branding -- (1) the ELF EI_OSABI field
-	 * that SCO added to the ELF spec, (2) FreeBSD 3.x's traditional string
+	 * that SCO added to the ELF spec, (2) NQC 3.x's traditional string
 	 * branding w/in the ELF header, (3) path of the `interp_path'
 	 * field, and (4) the ".note.ABI-tag" ELF section.
 	 */
@@ -2430,7 +2430,7 @@ __elfN(prepare_register_notes)(struct thread *td, struct note_info_list *list,
 
 	regsetp = sv->sv_regset_begin;
 	if (regsetp == NULL) {
-		/* XXX: This shouldn't be true for any FreeBSD ABIs. */
+		/* XXX: This shouldn't be true for any NQC ABIs. */
 		size += __elfN(register_regset_note)(td, list,
 		    &__elfN(regset_fpregset), target_td);
 		return (size);

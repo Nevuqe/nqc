@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000,2003 Doug Rabson
  * All rights reserved.
@@ -111,7 +111,7 @@ struct kobjop_desc {
 
 /*
  * Define a class with no base classes (api backward-compatible. with
- * FreeBSD-5.1 and earlier).
+ * NQC-5.1 and earlier).
  */
 #define DEFINE_CLASS(name, methods, size)     		\
 DEFINE_CLASS_0(name, name ## _class, methods, size)

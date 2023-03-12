@@ -1,4 +1,4 @@
-//===-- FreeBSDSignals.cpp ------------------------------------------------===//
+//===-- NQCSignals.cpp ------------------------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,13 +6,13 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "FreeBSDSignals.h"
+#include "NQCSignals.h"
 
 using namespace lldb_private;
 
-FreeBSDSignals::FreeBSDSignals() : UnixSignals() { Reset(); }
+NQCSignals::NQCSignals() : UnixSignals() { Reset(); }
 
-void FreeBSDSignals::Reset() {
+void NQCSignals::Reset() {
   UnixSignals::Reset();
 
   //        SIGNO   NAME            SUPPRESS STOP   NOTIFY DESCRIPTION

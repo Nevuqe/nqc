@@ -51,7 +51,7 @@ XRayArgs::XRayArgs(const ToolChain &TC, const ArgList &Args) {
       D.Diag(diag::err_drv_clang_unsupported)
           << (std::string(XRayInstrumentOption) + " on " + Triple.str());
     }
-  } else if (Triple.isOSFreeBSD() || Triple.isOSOpenBSD() ||
+  } else if (Triple.isOSNQC() || Triple.isOSOpenBSD() ||
              Triple.isOSNetBSD() || Triple.isMacOSX()) {
     if (Triple.getArch() != llvm::Triple::x86_64) {
       D.Diag(diag::err_drv_clang_unsupported)

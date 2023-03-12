@@ -35,7 +35,7 @@
 /*
  * Efficient memory file system.
  *
- * tmpfs is a file system that uses FreeBSD's virtual memory
+ * tmpfs is a file system that uses NQC's virtual memory
  * sub-system to store file data and metadata in an efficient way.
  * This means that it does not follow the structure of an on-disk file
  * system because it simply does not need to.  Instead, it uses

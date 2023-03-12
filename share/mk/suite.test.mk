@@ -11,8 +11,8 @@
 .include <bsd.opts.mk>
 
 # Name of the test suite these tests belong to.  Should rarely be changed for
-# Makefiles built into the FreeBSD src tree.
-TESTSUITE?= FreeBSD
+# Makefiles built into the NQC src tree.
+TESTSUITE?= NQC
 
 # Knob to control the handling of the Kyuafile for this Makefile.
 #
@@ -81,7 +81,7 @@ KYUA?=	kyua
 
 # Definition of the "make check" target and supporting variables.
 #
-# This target, by necessity, can only work for native builds (i.e. a FreeBSD
+# This target, by necessity, can only work for native builds (i.e. a NQC
 # host building a release for the same system).  The target runs Kyua, which is
 # not in the toolchain, and the tests execute code built for the target host.
 #

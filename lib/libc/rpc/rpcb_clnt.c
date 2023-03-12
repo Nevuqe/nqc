@@ -743,7 +743,7 @@ __rpcb_findaddr_timed(rpcprog_t program, rpcvers_t version,
 
 		/*
 		 * The comment below is now very old, having
-		 * been committed to FreeBSD during an import
+		 * been committed to NQC during an import
 		 * from NetBSD in 2001.  I do not believe there
 		 * will still be any rpcbind servers that do
 		 * UDP only and, since Azure requires use of

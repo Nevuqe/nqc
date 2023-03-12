@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -173,7 +173,7 @@ TEST_F(Bmap, default_)
 /*
  * VOP_BMAP should not query the server for the file's size, even if its cached
  * attributes have expired.
- * Regression test for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=256937
+ * Regression test for https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=256937
  */
 TEST_P(BmapEof, eof)
 {

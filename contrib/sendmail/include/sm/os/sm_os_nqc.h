@@ -8,7 +8,7 @@
  */
 
 /*
-**  Platform definitions for FreeBSD
+**  Platform definitions for NQC
 */
 
 #define SM_OS_NAME	"freebsd"

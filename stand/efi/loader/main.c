@@ -356,7 +356,7 @@ match_boot_info(char *boot_info, size_t bisz)
 	CHAR16 *text;
 
 	/*
-	 * FreeBSD encodes its boot loading path into the boot loader
+	 * NQC encodes its boot loading path into the boot loader
 	 * BootXXXX variable. We look for the last one in the path
 	 * and use that to load the kernel. However, if we only find
 	 * one DEVICE_PATH, then there's nothing specific and we should
@@ -560,7 +560,7 @@ find_currdev(bool do_bootmgr, bool is_last,
 	 * it found, if it's sane. ZFS is the only thing that looks for
 	 * disks and pools to boot. This may change in the future, however,
 	 * if we allow specifying which pool to boot from via UEFI variables
-	 * rather than the bootenv stuff that FreeBSD uses today.
+	 * rather than the bootenv stuff that NQC uses today.
 	 */
 	if (pool_guid != 0) {
 		printf("Trying ZFS pool\n");
@@ -872,7 +872,7 @@ read_loader_env(const char *name, char *def_fn, bool once)
 				free(fn);
 				fn = NULL;
 				printf(
-			    "Can't fetch FreeBSD::%s we know is there\n", name);
+			    "Can't fetch NQC::%s we know is there\n", name);
 			} else {
 				/*
 				 * if tagged as 'once' delete the env variable so we
@@ -890,7 +890,7 @@ read_loader_env(const char *name, char *def_fn, bool once)
 			}
 		} else {
 			printf(
-		    "Can't allocate %d bytes to fetch FreeBSD::%s env var\n",
+		    "Can't allocate %d bytes to fetch NQC::%s env var\n",
 			    len, name);
 		}
 	}

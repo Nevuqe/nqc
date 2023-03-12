@@ -2532,7 +2532,7 @@ smsatInquiryPage83(
     
 #else
 
-    /* For FreeBSD */
+    /* For NQC */
 
     /* Fill in SAT Rev8 Table85 */
     /*
@@ -2542,8 +2542,8 @@ smsatInquiryPage83(
    /*
      * Identifier descriptor
      */
-    pInquiry[4]  = 0x01;                        /* Code set: binary codes; this is proto_codeset in FreeBSD */
-    pInquiry[5]  = 0x03;                        /* Identifier type : NAA ; this is  id_type in FreeBSD*/
+    pInquiry[4]  = 0x01;                        /* Code set: binary codes; this is proto_codeset in NQC */
+    pInquiry[5]  = 0x03;                        /* Identifier type : NAA ; this is  id_type in NQC*/
     pInquiry[6]  = 0x00;                        /* Reserved               */
     pInquiry[7]  = 0x08;                        /* Identifier length      */
 
@@ -2558,8 +2558,8 @@ smsatInquiryPage83(
     pInquiry[14] = (bit8)((pSATAIdData->uniqueID_bit0_15) >> 8);        /* Vendor Specific ID  */
     pInquiry[15] = (bit8)((pSATAIdData->uniqueID_bit0_15) & 0xFF);      /* Vendor Specific ID  */
 
-    pInquiry[16]  = 0x61;                        /* Code set: binary codes; this is proto_codeset in FreeBSD; SCSI_PROTO_SAS and SVPD_ID_CODESET_BINARY */
-    pInquiry[17]  = 0x93;                        /* Identifier type : NAA ; this is  id_type in FreeBSD; PIV set, ASSOCIATION is 01b and NAA (3h)   */
+    pInquiry[16]  = 0x61;                        /* Code set: binary codes; this is proto_codeset in NQC; SCSI_PROTO_SAS and SVPD_ID_CODESET_BINARY */
+    pInquiry[17]  = 0x93;                        /* Identifier type : NAA ; this is  id_type in NQC; PIV set, ASSOCIATION is 01b and NAA (3h)   */
     pInquiry[18]  = 0x00;                        /* Reserved               */
     pInquiry[19]  = 0x08;                        /* Identifier length      */
     
@@ -2663,7 +2663,7 @@ smsatInquiryPage83(
     pInquiry[74] = (bit8)((pSimpleData->word[19]) >> 8);
     pInquiry[75] = (bit8)((pSimpleData->word[19]) & 0x00ff);
 #else
-    /* for the FreeBSD */
+    /* for the NQC */
     /* Fill in SAT Rev8 Table86 */
     /*
      * Logical unit name derived from the model number and serial number.
@@ -2747,8 +2747,8 @@ smsatInquiryPage83(
     pInquiry[74] = (bit8)((pSimpleData->word[19]) >> 8);
     pInquiry[75] = (bit8)((pSimpleData->word[19]) & 0x00ff);
 
-    pInquiry[76]  = 0x61;                        /* Code set: binary codes; this is proto_codeset in FreeBSD; SCSI_PROTO_SAS and SVPD_ID_CODESET_BINARY */
-    pInquiry[77]  = 0x93;                        /* Identifier type : NAA ; this is  id_type in FreeBSD; PIV set, ASSOCIATION is 01b and NAA (3h)   */
+    pInquiry[76]  = 0x61;                        /* Code set: binary codes; this is proto_codeset in NQC; SCSI_PROTO_SAS and SVPD_ID_CODESET_BINARY */
+    pInquiry[77]  = 0x93;                        /* Identifier type : NAA ; this is  id_type in NQC; PIV set, ASSOCIATION is 01b and NAA (3h)   */
     pInquiry[78]  = 0x00;                        /* Reserved               */
     pInquiry[79]  = 0x08;                        /* Identifier length      */
     

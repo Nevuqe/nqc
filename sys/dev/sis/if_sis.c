@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *
- * Copyright (c) 2005 Poul-Henning Kamp <phk@FreeBSD.org>
+ * Copyright (c) 2005 Poul-Henning Kamp <phk@frebsd.org>
  * Copyright (c) 1997, 1998, 1999
  *	Bill Paul <wpaul@ctr.columbia.edu>.  All rights reserved.
  *

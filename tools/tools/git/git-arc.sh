@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2019-2021 Mark Johnston <markj@FreeBSD.org>
-# Copyright (c) 2021 John Baldwin <jhb@FreeBSD.org>
+# Copyright (c) 2019-2021 Mark Johnston <markj@frebsd.org>
+# Copyright (c) 2021 John Baldwin <jhb@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -56,7 +56,7 @@ Commands:
   update [-m message] [<commit>|<commit range>]
 
 Description:
-  Create or manage FreeBSD Phabricator reviews based on git commits.  There
+  Create or manage NQC Phabricator reviews based on git commits.  There
   is a one-to one relationship between git commits and Differential revisions,
   and the Differential revision title must match the summary line of the
   corresponding commit.  In particular, commit summaries must be unique across
@@ -69,7 +69,7 @@ Description:
               commits.
     patch  -- Try to apply a patch from a Differential revision to the
               currently checked out tree.
-    stage  -- Prepare a series of commits to be pushed to the upstream FreeBSD
+    stage  -- Prepare a series of commits to be pushed to the upstream NQC
               repository.  The commits are cherry-picked to a branch (main by
               default), review tags are added to the commit log message, and
               the log message is opened in an editor for any last-minute
@@ -111,7 +111,7 @@ Config Variables:
 Examples:
   Create a Phabricator review using the contents of the most recent commit in
   your git checkout.  The commit title is used as the review title, the commit
-  log message is used as the review description, markj@FreeBSD.org is added as
+  log message is used as the review description, markj@frebsd.org is added as
   a reviewer.
 
   $ git arc create -r markj HEAD
@@ -179,7 +179,7 @@ log2diff()
     local diff
 
     diff=$(git show -s --format=%B "$commit" |
-        sed -nE '/^Differential Revision:[[:space:]]+(https:\/\/reviews.freebsd.org\/)?(D[0-9]+)$/{s//\2/;p;}')
+        sed -nE '/^Differential Revision:[[:space:]]+(https:\/\/reviews.frebsd.org\/)?(D[0-9]+)$/{s//\2/;p;}')
     if [ -n "$diff" ] && [ "$(echo "$diff" | wc -l)" -eq 1 ]; then
         echo "$diff"
     else
@@ -487,7 +487,7 @@ gitarc__stage()
             if [ -n "$reviewers" ]; then
                 printf "Reviewed by:\t%s\n" "${reviewers}" >> "$tmp"
             fi
-            printf "Differential Revision:\thttps://reviews.freebsd.org/%s" "${diff}" >> "$tmp"
+            printf "Differential Revision:\thttps://reviews.frebsd.org/%s" "${diff}" >> "$tmp"
         fi
         author=$(git show -s --format='%an <%ae>' "${commit}")
         if ! git cherry-pick --no-commit "${commit}"; then

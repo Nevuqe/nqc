@@ -10,11 +10,11 @@ dir=`dirname $0`
 require chflags
 
 case "${os}:${fs}" in
-FreeBSD:ZFS)
+NQC:ZFS)
 	flags="SF_IMMUTABLE SF_NOUNLINK SF_APPEND"
 	echo "1..195"
 	;;
-FreeBSD:UFS)
+NQC:UFS)
 	flags="SF_IMMUTABLE SF_NOUNLINK SF_APPEND UF_IMMUTABLE UF_NOUNLINK UF_APPEND"
 	echo "1..351"
 	;;
@@ -31,9 +31,9 @@ for type in regular dir fifo block char socket symlink; do
 		for flag in ${flags}; do
 			expect 0 chflags ${n0} ${flag}
 			expect ${flag} stat ${n0} flags
-			[ "${flag}" = "SF_APPEND" ] && todo FreeBSD:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
+			[ "${flag}" = "SF_APPEND" ] && todo NQC:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
 			expect EPERM rename ${n0} ${n1}
-			[ "${flag}" = "SF_APPEND" ] && todo FreeBSD:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
+			[ "${flag}" = "SF_APPEND" ] && todo NQC:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
 			expect ENOENT rename ${n1} ${n0}
 		done
 		expect 0 chflags ${n0} none
@@ -48,9 +48,9 @@ for type in regular dir fifo block char socket symlink; do
 	for flag in ${flags}; do
 		expect 0 lchflags ${n0} ${flag}
 		expect ${flag} lstat ${n0} flags
-		[ "${flag}" = "SF_APPEND" ] && todo FreeBSD:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
+		[ "${flag}" = "SF_APPEND" ] && todo NQC:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
 		expect EPERM rename ${n0} ${n1}
-		[ "${flag}" = "SF_APPEND" ] && todo FreeBSD:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
+		[ "${flag}" = "SF_APPEND" ] && todo NQC:ZFS "Renaming a file protected by SF_APPEND should return EPERM."
 		expect ENOENT rename ${n1} ${n0}
 	done
 	expect 0 lchflags ${n0} none

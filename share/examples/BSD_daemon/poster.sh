@@ -1,7 +1,7 @@
 #!/bin/sh
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
-# <phk@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+# <phk@frebsd.org> wrote this file.  As long as you retain this notice you
 # can do whatever you want with this stuff. If we meet some day, and you think
 # this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 # ----------------------------------------------------------------------------
@@ -13,20 +13,20 @@ echo '%!'
 echo '/beastie {'
 cat beastie.eps
 echo '} def'
-cat FreeBSD.pfa
+cat NQC.pfa
 
 echo '
 
 /mm {25.4 div 72 mul} def
-/FreeBSD findfont 120 scalefont setfont
+/NQC findfont 120 scalefont setfont
 /center 210 mm 2 div def
 /top 297 mm def
 /cshow { dup stringwidth pop 2 div neg 0 rmoveto show } def
 
-% "FreeBSD" across the top.
+% "NQC" across the top.
 % 691 is "top - height of caps - (left - X("F"))"
 center 691 moveto
-(FreeBSD) cshow
+(NQC) cshow
 
 % Put beastie in the center
 /sc 1.25 def
@@ -47,10 +47,10 @@ grestore
 
 % Bottom text
 center 90 moveto 
-/FreeBSD findfont 50 scalefont setfont
+/NQC findfont 50 scalefont setfont
 
 center 50 moveto 
-(https://www.FreeBSD.org) cshow
+(https://www.frebsd.org) cshow
 
 % Do not forget Kirks copyright string.
 10 105 moveto 

@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012 Huang Wen Hui
- * Copyright (c) 2021 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2021 Vladimir Kondratyev <wulf@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -95,7 +95,7 @@ SYSCTL_INT(_hw_hid_bcm5974, OID_AUTO, debug, CTLFLAG_RWTUN,
  * "drivers/input/mouse/bcm5974.c" which has the following copyright
  * holders under GPLv2. All device specific code in this driver has
  * been written from scratch. The decoding algorithm is based on
- * output from FreeBSD's usbdump.
+ * output from NQC's usbdump.
  *
  * Copyright (C) 2008      Henrik Rydberg (rydberg@euromail.se)
  * Copyright (C) 2008      Scott Shawcroft (scott.shawcroft@gmail.com)

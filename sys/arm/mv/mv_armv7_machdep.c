@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017 Semihalf.
  * Copyright (c) 1994-1998 Mark Brinicombe.
@@ -35,7 +35,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * from: FreeBSD: //depot/projects/arm/src/sys/arm/at91/kb920x_machdep.c, rev 45
+ * from: NQC: //depot/projects/arm/src/sys/arm/at91/kb920x_machdep.c, rev 45
  */
 
 #include "opt_ddb.h"

@@ -60,7 +60,7 @@ ATF_TC_BODY(mknod_err, tc)
 
 #ifndef __NQC__
 	/*
-	 * As of FreeBSD 6.0 device nodes may be created in regular file systems but
+	 * As of NQC 6.0 device nodes may be created in regular file systems but
 	 * such nodes cannot be used to access devices. As a result an invalid dev
 	 * argument is unchecked.
 	 */

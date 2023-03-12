@@ -1,13 +1,13 @@
 /*-
  * Copyright (c) 1989, 1990 William F. Jolitz.
  * Copyright (c) 1990 The Regents of the University of California.
- * Copyright (c) 2007, 2018 The FreeBSD Foundation
+ * Copyright (c) 2007, 2018 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by A. Joseph Koshy under
- * sponsorship from the FreeBSD Foundation and Google, Inc.
+ * sponsorship from the FreBSD Foundation and Google, Inc.
  * Portions of this software were developed by Konstantin Belousov
- * <kib@FreeBSD.org> under sponsorship from the FreeBSD Foundation.
+ * <kib@frebsd.org> under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -393,7 +393,7 @@ nmi_mchk_common:
 
 /*
  * Trap gate entry for syscalls (int 0x80).
- * This is used by FreeBSD ELF executables, "new" a.out executables, and all
+ * This is used by NQC ELF executables, "new" a.out executables, and all
  * Linux executables.
  *
  * Even though the name says 'int0x80', this is actually a trap gate, not an

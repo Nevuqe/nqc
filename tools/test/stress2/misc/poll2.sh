@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # Test of pipe_poll()
-# https://reviews.freebsd.org/D21333
+# https://reviews.frebsd.org/D21333
 
 # No problems seen.
 

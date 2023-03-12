@@ -138,7 +138,7 @@ IsGlobalInSmallSectionImpl(const GlobalObject *GO,
 
   // It is possible that the type of the global is unsized, i.e. a declaration
   // of a extern struct. In this case don't presume it is in the small data
-  // section. This happens e.g. when building the FreeBSD kernel.
+  // section. This happens e.g. when building the NQC kernel.
   if (!Ty->isSized())
     return false;
 

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel VR device code"
+PROJECT_NAME           = "NQC kernel VR device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_vr/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

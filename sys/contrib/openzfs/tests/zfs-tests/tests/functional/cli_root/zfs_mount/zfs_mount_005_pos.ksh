@@ -44,7 +44,7 @@
 # 2. Apply 'zfs set mountpoint=path <filesystem>'.
 # 3. Change directory to that given mountpoint.
 # 3. Invoke 'zfs mount <filesystem>'.
-# 4. Verify that mount succeeds on Linux and FreeBSD and fails for other
+# 4. Verify that mount succeeds on Linux and NQC and fails for other
 #    platforms.
 #
 

@@ -658,11 +658,11 @@ const char *ConversionSpecifier::toString() const {
   // Objective-C specific specifiers.
   case ObjCObjArg: return "@";
 
-  // FreeBSD kernel specific specifiers.
-  case FreeBSDbArg: return "b";
-  case FreeBSDDArg: return "D";
-  case FreeBSDrArg: return "r";
-  case FreeBSDyArg: return "y";
+  // NQC kernel specific specifiers.
+  case NQCbArg: return "b";
+  case NQCDArg: return "D";
+  case NQCrArg: return "r";
+  case NQCyArg: return "y";
 
   // GlibC specific specifiers.
   case PrintErrno: return "m";
@@ -764,9 +764,9 @@ bool FormatSpecifier::hasValidLengthModifier(const TargetInfo &Target,
         case ConversionSpecifier::XArg:
         case ConversionSpecifier::nArg:
           return true;
-        case ConversionSpecifier::FreeBSDrArg:
-        case ConversionSpecifier::FreeBSDyArg:
-          return Target.getTriple().isOSFreeBSD() || Target.getTriple().isPS();
+        case ConversionSpecifier::NQCrArg:
+        case ConversionSpecifier::NQCyArg:
+          return Target.getTriple().isOSNQC() || Target.getTriple().isPS();
         default:
           return false;
       }
@@ -799,9 +799,9 @@ bool FormatSpecifier::hasValidLengthModifier(const TargetInfo &Target,
         case ConversionSpecifier::ScanListArg:
         case ConversionSpecifier::ZArg:
           return true;
-        case ConversionSpecifier::FreeBSDrArg:
-        case ConversionSpecifier::FreeBSDyArg:
-          return Target.getTriple().isOSFreeBSD() || Target.getTriple().isPS();
+        case ConversionSpecifier::NQCrArg:
+        case ConversionSpecifier::NQCyArg:
+          return Target.getTriple().isOSNQC() || Target.getTriple().isPS();
         default:
           return false;
       }
@@ -935,10 +935,10 @@ bool FormatSpecifier::hasStandardConversionSpecifier(
     case ConversionSpecifier::SArg:
       return LangOpt.ObjC;
     case ConversionSpecifier::InvalidSpecifier:
-    case ConversionSpecifier::FreeBSDbArg:
-    case ConversionSpecifier::FreeBSDDArg:
-    case ConversionSpecifier::FreeBSDrArg:
-    case ConversionSpecifier::FreeBSDyArg:
+    case ConversionSpecifier::NQCbArg:
+    case ConversionSpecifier::NQCDArg:
+    case ConversionSpecifier::NQCrArg:
+    case ConversionSpecifier::NQCyArg:
     case ConversionSpecifier::PrintErrno:
     case ConversionSpecifier::DArg:
     case ConversionSpecifier::OArg:

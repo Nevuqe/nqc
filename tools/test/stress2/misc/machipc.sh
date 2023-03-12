@@ -27,7 +27,7 @@
 #
 
 # Threaded Mach IPC test scenario
-# https://people.freebsd.org/~pho/stress/log/kip014.txt
+# https://people.frebsd.org/~pho/stress/log/kip014.txt
 
 ps -p1 | grep -q launchd || exit 0
 

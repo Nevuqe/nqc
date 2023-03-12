@@ -29,7 +29,7 @@
 
 /*
  * (a) this should be N(a),
- * (b) FreeBSD does define nitems,
+ * (b) NQC does define nitems,
  * (c) it doesn't have an AH_ prefix, sigh.
  */
 #define ARRAY_LENGTH(a)         (sizeof(a) / sizeof((a)[0]))
@@ -861,7 +861,7 @@ struct ath_hal_9300 {
     u_int32_t           ah_rx_cal_chan_flag;
     u_int32_t           ah_rx_cal_corr[AR9300_MAX_CHAINS];
 
-    /* Local additions for FreeBSD */
+    /* Local additions for NQC */
     /*
      * These fields are in the top level HAL in the atheros
      * codebase; here we place them in the AR9300 HAL and
@@ -881,7 +881,7 @@ struct ath_hal_9300 {
     int                  ah_fccaifs;
     int ah_reset_reason;
     int ah_dcs_enable;
-    HAL_ANI_STATE ext_ani_state;     /* FreeBSD; external facing ANI state */
+    HAL_ANI_STATE ext_ani_state;     /* NQC; external facing ANI state */
 
     struct ar9300NfLimits nf_2GHz;
     struct ar9300NfLimits nf_5GHz;

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Roger Pau Monné <royger@FreeBSD.org>
+ * Copyright (c) 2014 Roger Pau Monné <royger@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 /*
  * This multiboot implementation only implements a subset of the full
  * multiboot specification in order to be able to boot Xen and a
- * FreeBSD Dom0. Trying to use it to boot other multiboot compliant
+ * NQC Dom0. Trying to use it to boot other multiboot compliant
  * kernels will most surely fail.
  *
  * The full multiboot specification can be found here:
@@ -75,7 +75,7 @@ struct file_format multiboot_obj =
 
 extern void multiboot_tramp();
 
-static const char mbl_name[] = "FreeBSD Loader";
+static const char mbl_name[] = "NQC Loader";
 
 static int
 multiboot_loadfile(char *filename, uint64_t dest,
@@ -224,12 +224,12 @@ multiboot_exec(struct preloaded_file *fp)
 	/*
 	 * Prepare the multiboot module list, Xen assumes the first
 	 * module is the Dom0 kernel, and the second one is the initramfs.
-	 * This is not optimal for FreeBSD, that doesn't have a initramfs
+	 * This is not optimal for NQC, that doesn't have a initramfs
 	 * but instead loads modules dynamically and creates the metadata
 	 * info on-the-fly.
 	 *
 	 * As expected, the first multiboot module is going to be the
-	 * FreeBSD kernel loaded as a raw file. The second module is going
+	 * NQC kernel loaded as a raw file. The second module is going
 	 * to contain the metadata info and the loaded modules.
 	 *
 	 * There's a small header prefixed in the second module that contains
@@ -261,7 +261,7 @@ multiboot_exec(struct preloaded_file *fp)
 
 	fp = file_findfile(NULL, "elf kernel");
 	if (fp == NULL) {
-		printf("No FreeBSD kernel provided, aborting\n");
+		printf("No NQC kernel provided, aborting\n");
 		error = EINVAL;
 		goto error;
 	}
@@ -332,7 +332,7 @@ multiboot_obj_loadfile(char *filename, uint64_t dest,
 		return (EFTYPE);
 
 	/*
-	 * We have a multiboot kernel loaded, see if there's a FreeBSD
+	 * We have a multiboot kernel loaded, see if there's a NQC
 	 * kernel loaded also.
 	 */
 	kfp = file_findfile(NULL, "elf kernel");

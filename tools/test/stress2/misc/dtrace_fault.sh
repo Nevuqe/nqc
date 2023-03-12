@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Konstantin Belousov <kib@FreeBSD.org>
+# Copyright (c) 2021 Konstantin Belousov <kib@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -40,7 +40,7 @@
 # calltrap() at calltrap+0x6/frame 0xf3de7cdc
 # --- trap 0x20, eip = 0x8048565, esp = 0xbfbfe7d4, ebp = 0xbfbfe7d4 ---
 
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221151
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=221151
 # Fixed by r321919
 
 . ../default.cfg

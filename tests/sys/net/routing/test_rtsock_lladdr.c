@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2019 Alexander V. Chernikov
  *
@@ -162,7 +162,7 @@ ATF_TC_BODY(rtm_add_v6_ll_lle_success, tc)
 	RTSOCK_ATF_REQUIRE_MSG(rtm, ret != 0, "GATEWAY sa diff: %s", msg);
 
 #if 0
-	/* Disable the check until https://reviews.freebsd.org/D22003 merge */
+	/* Disable the check until https://reviews.frebsd.org/D22003 merge */
 	/* Some additional checks to verify kernel has filled in interface data */
 	struct sockaddr_dl *sdl = (struct sockaddr_dl *)sa;
 	RTSOCK_ATF_REQUIRE_MSG(rtm, sdl->sdl_type > 0, "sdl_type not set");
@@ -214,7 +214,7 @@ ATF_TC_BODY(rtm_add_v6_gu_lle_success, tc)
 	RTSOCK_ATF_REQUIRE_MSG(rtm, ret != 0, "GATEWAY sa diff: %s", msg);
 
 #if 0
-	/* Disable the check until https://reviews.freebsd.org/D22003 merge */
+	/* Disable the check until https://reviews.frebsd.org/D22003 merge */
 	/* Some additional checks to verify kernel has filled in interface data */
 	struct sockaddr_dl *sdl = (struct sockaddr_dl *)sa;
 	RTSOCK_ATF_REQUIRE_MSG(rtm, sdl->sdl_type > 0, "sdl_type not set");

@@ -316,7 +316,7 @@ struct nstat {
 #define	UF_NOUNLINK	0x00000010	/* file may not be removed or renamed */
 /*
  * These two bits are defined in MacOS X.  They are not currently used in
- * FreeBSD.
+ * NQC.
  */
 #if 0
 #define	UF_COMPRESSED	0x00000020	/* file is compressed */

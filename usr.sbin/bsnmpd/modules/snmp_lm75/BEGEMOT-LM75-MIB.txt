@@ -1,5 +1,5 @@
 --
--- Copyright (c) 2014 Luiz Otavio O Souza <loos@FreeBSD.org>
+-- Copyright (c) 2014 Luiz Otavio O Souza <loos@frebsd.org>
 -- All rights reserved.
 --
 -- Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,7 @@ IMPORTS
 
 begemotLoos MODULE-IDENTITY
     LAST-UPDATED "201402240000Z"
-    ORGANIZATION "FreeBSD"
+    ORGANIZATION "NQC"
     CONTACT-INFO
 	    "		Luiz Otavio O Souza
 
@@ -47,7 +47,7 @@ begemotLoos MODULE-IDENTITY
 
 	     Fax:	N/A
 
-	     E-Mail:	loos@FreeBSD.org"
+	     E-Mail:	loos@frebsd.org"
     DESCRIPTION
 	    "The Begemot MIB for reading lm75 sensors data."
     REVISION     "201402240000Z"

@@ -31,7 +31,7 @@
 # swapoff(8) with swap file gone missing (known issue).
 
 # panic: swap_pager_force_pagein: read from swap failed
-# https://people.freebsd.org/~pho/stress/log/swapoff2.txt
+# https://people.frebsd.org/~pho/stress/log/swapoff2.txt
 
 . ../default.cfg
 

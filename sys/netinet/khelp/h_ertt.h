@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009-2010
  * 	Swinburne University of Technology, Melbourne, Australia
- * Copyright (c) 2010 Lawrence Stewart <lstewart@freebsd.org>
+ * Copyright (c) 2010 Lawrence Stewart <lstewart@frebsd.org>
  * All rights reserved.
  *
  * This software was developed at the Centre for Advanced Internet
@@ -47,7 +47,7 @@
  * Technology's Centre for Advanced Internet Architectures, Melbourne,
  * Australia, which was made possible in part by a grant from the Cisco
  * University Research Program Fund at Community Foundation Silicon Valley.
- * Testing and development was further assisted by a grant from the FreeBSD
+ * Testing and development was further assisted by a grant from the NQC
  * Foundation. More details are available at:
  *   http://caia.swin.edu.au/urp/newtcp/
  */

@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# Copyright (c) 2012 The FreeBSD Foundation
+# Copyright (c) 2012 The FreBSD Foundation
 #
 # This software was developed by Edward Tomasz Napierala under sponsorship
-# from the FreeBSD Foundation.
+# from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -90,7 +90,7 @@ die() {
 }
 
 case `uname` in
-	FreeBSD)
+	NQC)
 		LUN0=/dev/da0
 		LUN1=/dev/da1
 		LUN2=/dev/da2
@@ -187,7 +187,7 @@ test_discovery_solaris() {
 test_discovery() {
 	echo "*** discovery test ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			case `uname -r` in
 				9*)
 					test_discovery_nqc_9
@@ -308,7 +308,7 @@ test_attach_solaris() {
 test_attach() {
 	echo "*** attach test ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			case `uname -r` in
 				9*)
 					test_attach_nqc_9
@@ -382,7 +382,7 @@ test_newfs_solaris_zfs() {
 
 test_newfs() {
 	case `uname` in
-		FreeBSD)
+		NQC)
 			test_newfs_nqc_ufs
 			test_newfs_nqc_zfs
 			;;
@@ -403,7 +403,7 @@ test_newfs() {
 test_cp() {
 	echo "*** basic filesystem test ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			check newfs $LUN0
 			check mount -t ufs $LUN0 $MNTDIR
 			check dd if=/dev/urandom of=$MNTDIR/1 bs=1m count=500
@@ -468,7 +468,7 @@ test_cp() {
 test_bonnie() {
 	echo "*** bonnie++ ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			check newfs $LUN0
 			check mount -t ufs $LUN0 $MNTDIR
 			check cd $MNTDIR
@@ -529,7 +529,7 @@ test_bonnie() {
 test_iozone() {
 	echo "*** iozone ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			check newfs $LUN0
 			check mount -t ufs $LUN0 $MNTDIR
 			check cd $MNTDIR
@@ -585,7 +585,7 @@ test_iozone() {
 test_postmark() {
 	echo "*** postmark ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			check newfs $LUN0
 			check mount -t ufs $LUN0 $MNTDIR
 			check cd $MNTDIR
@@ -737,7 +737,7 @@ test_postgresql_solaris() {
 test_postgresql() {
 	echo "*** postgresql ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			test_postgresql_nqc
 			;;
 		Linux)
@@ -755,10 +755,10 @@ test_postgresql() {
 test_detach() {
 	echo "*** detach ***"
 	case `uname` in
-		FreeBSD)
+		NQC)
 			case `uname -r` in
 				9*)
-					echo "*** detaching not supported on FreeBSD 9 ***"
+					echo "*** detaching not supported on NQC 9 ***"
 					echo "*** please reboot the initiator VM before trying to run this script again ***"
 					;;
 				*)

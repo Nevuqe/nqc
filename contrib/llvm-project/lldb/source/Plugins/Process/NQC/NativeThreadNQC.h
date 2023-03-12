@@ -1,4 +1,4 @@
-//===-- NativeThreadFreeBSD.h --------------------------------- -*- C++ -*-===//
+//===-- NativeThreadNQC.h --------------------------------- -*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -11,7 +11,7 @@
 
 #include "lldb/Host/common/NativeThreadProtocol.h"
 
-#include "Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.h"
+#include "Plugins/Process/NQC/NativeRegisterContextNQC.h"
 
 #include <csignal>
 #include <map>
@@ -20,13 +20,13 @@
 namespace lldb_private {
 namespace process_nqc {
 
-class NativeProcessFreeBSD;
+class NativeProcessNQC;
 
-class NativeThreadFreeBSD : public NativeThreadProtocol {
-  friend class NativeProcessFreeBSD;
+class NativeThreadNQC : public NativeThreadProtocol {
+  friend class NativeProcessNQC;
 
 public:
-  NativeThreadFreeBSD(NativeProcessFreeBSD &process, lldb::tid_t tid);
+  NativeThreadNQC(NativeProcessNQC &process, lldb::tid_t tid);
 
   // NativeThreadProtocol Interface
   std::string GetName() override;
@@ -36,7 +36,7 @@ public:
   bool GetStopReason(ThreadStopInfo &stop_info,
                      std::string &description) override;
 
-  NativeRegisterContextFreeBSD &GetRegisterContext() override;
+  NativeRegisterContextNQC &GetRegisterContext() override;
 
   Status SetWatchpoint(lldb::addr_t addr, size_t size, uint32_t watch_flags,
                        bool hardware) override;
@@ -70,19 +70,19 @@ private:
   void SetRunning();
   void SetStepping();
 
-  llvm::Error CopyWatchpointsFrom(NativeThreadFreeBSD &source);
+  llvm::Error CopyWatchpointsFrom(NativeThreadNQC &source);
 
   // Member Variables
   lldb::StateType m_state;
   ThreadStopInfo m_stop_info;
-  std::unique_ptr<NativeRegisterContextFreeBSD> m_reg_context_up;
+  std::unique_ptr<NativeRegisterContextNQC> m_reg_context_up;
   std::string m_stop_description;
   using WatchpointIndexMap = std::map<lldb::addr_t, uint32_t>;
   WatchpointIndexMap m_watchpoint_index_map;
   WatchpointIndexMap m_hw_break_index_map;
 };
 
-typedef std::shared_ptr<NativeThreadFreeBSD> NativeThreadFreeBSDSP;
+typedef std::shared_ptr<NativeThreadNQC> NativeThreadNQCSP;
 } // namespace process_nqc
 } // namespace lldb_private
 

@@ -5,7 +5,7 @@
  */
 
 /*
- * This is the trampoline that starts the FreeBSD kernel. Since the Linux kernel
+ * This is the trampoline that starts the NQC kernel. Since the Linux kernel
  * calls this routine with no args, and has a different environment than the boot
  * loader provides and that the kernel expects, this code is responsible for setting
  * all that up and calling the normal kernel entry point. It's analogous ot the
@@ -26,7 +26,7 @@
  *	uint64_t	memmap_len;		// 32 Length to copy
  * };
  *
- * FreeBSD's arm64 entry point is _start which assumes:
+ * NQC's arm64 entry point is _start which assumes:
  *  MMU      on with an identity map, or off
  *  D-Cache: off
  *  I-Cache: on or off

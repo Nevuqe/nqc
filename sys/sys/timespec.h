@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)time.h	8.5 (Berkeley) 5/4/95
- * from: FreeBSD: src/sys/sys/time.h,v 1.43 2000/03/20 14:09:05 phk Exp
+ * from: NQC: src/sys/sys/time.h,v 1.43 2000/03/20 14:09:05 phk Exp
  *	$NQC$
  */
 

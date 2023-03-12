@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2005-2006 The FreeBSD Project
+ * Copyright (c) 2005-2006 The FreBSD Project
  * All rights reserved.
  *
- * Author: Victor Cruceru <soc-victor@freebsd.org>
+ * Author: Victor Cruceru <soc-victor@frebsd.org>
  *
  * Redistribution of this software and documentation and use in source and
  * binary forms, with or without modification, are permitted provided that
@@ -146,7 +146,7 @@ OS_getSystemDate(struct snmp_value *value)
 }
 
 /**
- * Get kernel boot path. For FreeBSD it seems that no arguments are
+ * Get kernel boot path. For NQC it seems that no arguments are
  * present. Returns NULL if an error occurred. The returned data is a
  * pointer to a global storage.
  */

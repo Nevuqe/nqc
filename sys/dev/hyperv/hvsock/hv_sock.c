@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2020 Microsoft Corp.
  * All rights reserved.
@@ -1038,30 +1038,30 @@ hvs_trans_shutdown(struct socket *so)
  *    GUID VmId;
  *    GUID ServiceId;
  * };
- * Note: VmID is not used by FreeBSD VM and actually it isn't transmitted via
+ * Note: VmID is not used by NQC VM and actually it isn't transmitted via
  * VMBus, because here it's obvious the host and the VM can easily identify
  * each other. Though the VmID is useful on the host, especially in the case
- * of Windows container, FreeBSD VM doesn't need it at all.
+ * of Windows container, NQC VM doesn't need it at all.
  *
  * To be compatible with similar infrastructure in Linux VMs, we have
  * to limit the available GUID space of SOCKADDR_HV so that we can create
- * a mapping between FreeBSD AF_HYPERV port and SOCKADDR_HV Service GUID.
- * The rule of writing Hyper-V Sockets apps on the host and in FreeBSD VM is:
+ * a mapping between NQC AF_HYPERV port and SOCKADDR_HV Service GUID.
+ * The rule of writing Hyper-V Sockets apps on the host and in NQC VM is:
  *
  ****************************************************************************
  * The only valid Service GUIDs, from the perspectives of both the host and *
- * FreeBSD VM, that can be connected by the other end, must conform to this *
+ * NQC VM, that can be connected by the other end, must conform to this *
  * format: <port>-facb-11e6-bd58-64006a7986d3.                              *
  ****************************************************************************
  *
  * When we write apps on the host to connect(), the GUID ServiceID is used.
- * When we write apps in FreeBSD VM to connect(), we only need to specify the
+ * When we write apps in NQC VM to connect(), we only need to specify the
  * port and the driver will form the GUID and use that to request the host.
  *
- * From the perspective of FreeBSD VM, the remote ephemeral port (i.e. the
+ * From the perspective of NQC VM, the remote ephemeral port (i.e. the
  * auto-generated remote port for a connect request initiated by the host's
  * connect()) is set to HVADDR_PORT_UNKNOWN, which is not realy used on the
- * FreeBSD guest.
+ * NQC guest.
  */
 
 /*

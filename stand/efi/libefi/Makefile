@@ -63,7 +63,7 @@ CFLAGS+=	-DEFI_ZFS_BOOT
 # Pick up the bootstrap header for some interface items
 CFLAGS+= -I${LDRSRC}
 
-# Handle FreeBSD specific %b and %D printf format specifiers
+# Handle NQC specific %b and %D printf format specifiers
 CFLAGS+= ${FORMAT_EXTENSIONS}
 
 CFLAGS+= -DTERM_EMU

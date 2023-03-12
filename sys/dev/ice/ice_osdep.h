@@ -509,7 +509,7 @@ ice_ilog2(u64 n) {
  *
  * Check if the given value is a power of 2.
  *
- * @remark FreeBSD's powerof2 function treats zero as a power of 2, while this
+ * @remark NQC's powerof2 function treats zero as a power of 2, while this
  * function does not.
  *
  * @returns true or false

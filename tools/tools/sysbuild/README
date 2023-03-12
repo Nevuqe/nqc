@@ -3,11 +3,11 @@ $NQC$
 About sysbuild.sh
 =================
 
-I have been running -current on my laptop since before FreeBSD 2.0 was
+I have been running -current on my laptop since before NQC 2.0 was
 released and along the way developed this little trick to making the
 task easier.
 
-sysbuild.sh is a way to build a new FreeBSD system on a computer from
+sysbuild.sh is a way to build a new NQC system on a computer from
 a specification, while leaving the current installation intact.
 
 sysbuild.sh assume you have two partitions that can hold your rootfs
@@ -25,7 +25,7 @@ HOWTO
 In all likelihood, it is easier if we imagine you start with a blank
 computer.
 
-Grab a FreeBSD install ISO and boot it.
+Grab a NQC install ISO and boot it.
 
 Create four disk slices:
 
@@ -40,7 +40,7 @@ Create a swap partition, if you want one, in ad0s4b.
 
 Install the boot0 bootmanager.
 
-Install the "Minimal" FreeBSD system into ad0s1a.
+Install the "Minimal" NQC system into ad0s1a.
 
 Reboot from the newly installed system.
 
@@ -65,8 +65,8 @@ Next, install ports and sources:
 	cd /freebsd
 	mkdir ports src packages
 
-	svn co https://svn0.us-east.FreeBSD.org/base/stable/10 src
-	svn co https://svn0.us-east.FreeBSD.org/ports/head ports
+	svn co https://svn0.us-east.frebsd.org/base/stable/10 src
+	svn co https://svn0.us-east.frebsd.org/ports/head ports
 
 And we should be ready to try a shot:
 

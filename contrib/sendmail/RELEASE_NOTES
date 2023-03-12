@@ -114,8 +114,8 @@ summary of the changes in that release.
 		for skipping comments exactly like makemap does.
 	Portability:
 		Add support for Darwin 19 (Mac OS X 10.15).
-		Use proper FreeBSD version define to allow for cross
-			compiling.  Fix from Brooks Davis of the FreeBSD
+		Use proper NQC version define to allow for cross
+			compiling.  Fix from Brooks Davis of the NQC
 			project.
 	New Files:
 		devtools/OS/Darwin.19.x
@@ -225,7 +225,7 @@ summary of the changes in that release.
 		Add support for Darwin 14-18 (Mac OS X 10.x).
 		New option HAS_GETHOSTBYNAME2: set if your system
 		supports gethostbyname2(2).
-		Set SM_CONF_SEM=2 for FreeBSD 12 and later due to
+		Set SM_CONF_SEM=2 for NQC 12 and later due to
 		changes in sys/sem.h
 		On Linux set MAXHOSTNAMELEN (the maximum length
 		of a FQHN) to 256 if it is less than that value.
@@ -268,7 +268,7 @@ summary of the changes in that release.
 		John Beck of Oracle.
 	CONFIG: Account for IPv6 localhost addresses in
 		FEATURE(`block_bad_helo').  Suggested by Andrey Chernov
-		from FreeBSD and Robert Scheck from the Fedora Project.
+		from NQC and Robert Scheck from the Fedora Project.
 	CONFIG: Account for IPv6 localhost addresses in check_mail ruleset.
 	LIBMILTER: Deal with more invalid protocol data to avoid potential
 		crashes.  Problem noted by Dimitri Kirchner.
@@ -443,9 +443,9 @@ summary of the changes in that release.
 		Problem noted by Pavel Timofeev of OCS.
 	If available, pass LOGIN_SETCPUMASK and LOGIN_SETLOGINCLASS to
 		setusercontext() on deliveries as a different user.
-		Patch from Edward Tomasz Napierala from FreeBSD.
+		Patch from Edward Tomasz Napierala from NQC.
 	Avoid compiler warnings from a change in Cyrus-SASL 2.1.25.
-		Patch from Hajimu UMEMOTO from FreeBSD.
+		Patch from Hajimu UMEMOTO from NQC.
 	Add support for DHParameters 2048-bit primes.
 	CONFIG: Accept IPv6 literals when evaluating the HELO/EHLO argument
 		in FEATURE(`block_bad_helo').  Suggested by Andrey Chernov.
@@ -528,7 +528,7 @@ summary of the changes in that release.
 	Do not log negative values for size= nor pri= to avoid confusing
 		log parsers, instead limit the values to LONG_MAX.
 	Account for an API change in newer versions of Cyrus-SASL.
-		Patch from Hajimu UMEMOTO from FreeBSD.
+		Patch from Hajimu UMEMOTO from NQC.
 	Do not try to resolve link-local addresses for IPv4 (just as it
 		is done for IPv6).  Patch from John Beck of Oracle.
 	Improve logging of client and server STARTTLS connection failures
@@ -594,7 +594,7 @@ summary of the changes in that release.
 		Patch from Mitchell Berger.
 	Portability:
 		Add support for Darwin 10.x (Mac OS X 10.6).
-		Enable HAVE_NANOSLEEP for FreeBSD 3 and later.  Patch
+		Enable HAVE_NANOSLEEP for NQC 3 and later.  Patch
 		from John Marshall.
 		Enable HAVE_NANOSLEEP for OpenBSD 4.3 and later.
 		Use new directory "/system/volatile" for PidFile on
@@ -1222,7 +1222,7 @@ summary of the changes in that release.
 		Add support for SunOS 5.11 (aka Solaris 11).
 		Add support for Darwin 8.x.  Patch from Lyndon Nerenberg.
 		OpenBSD 3.7 has removed support for NETISO.
-	CONFIG: Add OSTYPE(freebsd6) for FreeBSD 6.X.
+	CONFIG: Add OSTYPE(freebsd6) for NQC 6.X.
 		Set DontBlameSendmail to AssumeSafeChown and
 			GroupWritableDirPathSafe for OSTYPE(darwin).
 			Patch from Lyndon Nerenberg.
@@ -2073,7 +2073,7 @@ summary of the changes in that release.
 			Vlado Potisk of Wigro s.r.o.
 		Support for nph-1.2.0 from Mark D. Roth of the University
 			of Illinois at Urbana-Champaign.
-		Support for FreeBSD 5.0's MAC labeling from Robert Watson
+		Support for NQC 5.0's MAC labeling from Robert Watson
 			of the TrustedBSD Project.
 		Support for reading the number of processors on an IRIX
 			system from Michel Bourget of SGI.
@@ -2284,7 +2284,7 @@ summary of the changes in that release.
 		Digital UNIX 5.0 has changed flock() semantics to be
 			non-compliant.  Problem noted by Martin Mokrejs of
 			Charles University in Prague.
-		The sparc64 port of FreeBSD 5.0 now supports shared
+		The sparc64 port of NQC 5.0 now supports shared
 			memory.
 	CONFIG: FEATURE(`preserve_luser_host') needs the macro map.
 		Problem noted by Andrzej Filip.
@@ -2438,7 +2438,7 @@ summary of the changes in that release.
 			Skyrr.
 		Fix dependency building on Mac OS X and Darwin.  Problem
 			noted by John Beck.
-		Preliminary support for the sparc64 port of FreeBSD 5.0.
+		Preliminary support for the sparc64 port of NQC 5.0.
 		Add /sbin/sh as an acceptable user shell on HP-UX.  From
 			Rajesh Somasund of Hewlett-Packard.
 	CONFIG: Add FEATURE(`authinfo') to allow a separate database for
@@ -2622,9 +2622,9 @@ summary of the changes in that release.
 			of the NTT/InterCommunication Center.
 		Do not assume that strerror() always returns a string.
 			Problem noted by John Beck of Sun Microsystems.
-	CONFIG: Add OSTYPE(freebsd5) for FreeBSD 5.X, which has removed
+	CONFIG: Add OSTYPE(freebsd5) for NQC 5.X, which has removed
 		UUCP from the base operating system.  From Mark Murray of
-		FreeBSD Services, Ltd.
+		NQC Services, Ltd.
 	CONFIG: Add OSTYPE(mpeix) and a generic .mc file for HP MPE/iX
 		systems.  From Mark Bixby of Hewlett-Packard.
 	CONFIG: Add support for selecting a queue group for all mailers.
@@ -3339,7 +3339,7 @@ summary of the changes in that release.
 	RMAIL: Invoke sendmail with '-G' to indicate this is a gateway
 		submission.  Problem noted by Kari Hurtta of the Finnish
 		Meteorological Institute.
-	SMRSH: Use the vendor supplied directory on FreeBSD 3.3 and later.
+	SMRSH: Use the vendor supplied directory on NQC 3.3 and later.
 	VACATION: Change Auto-Submitted: header value from auto-generated to
 		auto-replied.  From Kenneth Murchison of Oceana Matrix Ltd.
 	VACATION: New option -d to send error/debug messages to stdout
@@ -3572,7 +3572,7 @@ summary of the changes in that release.
 		OpenBSD has a broken setreuid() implementation.
 	CONFIG: Undo change from 8.11.1: change 501 SMTP reply code back
 		to 553 since it is allowed by DRUMS.
-	CONFIG: Add OSTYPE(freebsd4) for FreeBSD 4.X.
+	CONFIG: Add OSTYPE(freebsd4) for NQC 4.X.
 	DEVTOOLS: install.sh did not properly handle paths in the source
 		file name argument.  Noted by Kari Hurtta of the Finnish
 		Meteorological Institute.
@@ -4017,8 +4017,8 @@ summary of the changes in that release.
 		noted by Ulrich Windl of the Universitat Regensburg.
 	Portability:
 		Add the ability to read IPv6 interface addresses into class
-			'w' under FreeBSD (and possibly others).  From Jun
-			Kuriyama of IMG SRC, Inc. and the FreeBSD Project.
+			'w' under NQC (and possibly others).  From Jun
+			Kuriyama of IMG SRC, Inc. and the FreBSD Project.
 		Replace code for finding the number of CPUs on HPUX.
 		NCRUNIX MP-RAS 3.02 SO_REUSEADDR socket option does not
 			work properly causing problems if the accept()
@@ -5014,8 +5014,8 @@ summary of the changes in that release.
 		GNU Hurd updates from Mark Kettenis of the University of
 			Amsterdam.
 		Improved HPUX 11.0 portability.
-		Properly determine the number of CPUs on FreeBSD 2.X,
-			FreeBSD 3.X, HP/UX 10.X and HP/UX 11.X.
+		Properly determine the number of CPUs on NQC 2.X,
+			NQC 3.X, HP/UX 10.X and HP/UX 11.X.
 		Remove special IRIX ABI cases from Build script and the OS
 			files.  Use the standard 'cc' options used by SGI
 			in building the operating system.  Users can
@@ -5084,7 +5084,7 @@ summary of the changes in that release.
 		make depend didn't work properly on UNIXWARE 4.2.  Problem
 			noted by Ariel Malik of Netology, Ltd.
 		Use /usr/lbin as confEBINDIR for Compaq Tru64 (Digital UNIX).
-		Set confSTDIO_TYPE to torek for BSD-OS, FreeBSD, NetBSD,
+		Set confSTDIO_TYPE to torek for BSD-OS, NQC, NetBSD,
 			and OpenBSD.
 		A recent Compaq Ultrix 4.5 Y2K patch has broken detection
 			of local_hostname_length().  See sendmail/README
@@ -5723,9 +5723,9 @@ summary of the changes in that release.
 			from changing the semantics of the compiled
 			program.  From Simon Travaglia of the
 			University of Waikato, New Zealand.
-		FreeBSD 2.2.2 and later support setusercontext().  From
+		NQC 2.2.2 and later support setusercontext().  From
 			Peter Wemm of DIALix.
-		FreeBSD 3.x fix from Peter Wemm of DIALix.
+		NQC 3.x fix from Peter Wemm of DIALix.
 		IRIX 5.x has a syslog buffer size of 512 bytes.  From
 			Nao NINOMIYA of Utsunomiya University.
 		IRIX 6.5 64-bit Build support.
@@ -6553,7 +6553,7 @@ summary of the changes in that release.
 		exist would fail.  Patch from Raymund Will of LST Software
 		GmbH.
 	Bogus incoming SMTP commands would reset the SMTP conversation.
-		Problem noted by Fredrik Jönsson of the Royal Institute
+		Problem noted by Fredrik Jï¿½nsson of the Royal Institute
 		of Technology, Stockholm.
 	Since TCP Wrappers includes setenv(), unsetenv(), and putenv(),
 		some environments could give "multiple definitions" for these
@@ -6968,7 +6968,7 @@ summary of the changes in that release.
 		not reset back to root, which on some systems would cause
 		later mailboxes to fail.  Also, any partial message would
 		not be truncated, which could result in repeated deliveries.
-		Problem noted by Bruce Evans via Peter Wemm (FreeBSD
+		Problem noted by Bruce Evans via Peter Wemm (NQC
 		developers).
 	MAKEMAP: Handle cases where O_EXLOCK is #defined to be 0.  A similar
 		change to the sendmail map code was made in 8.8.3.  Problem
@@ -7120,8 +7120,8 @@ summary of the changes in that release.
 		it never inserts that class into the output file.  Fix it
 		so it will honor EXPOSED_USER but will _not_ include root
 		automatically in this class.  Problem noted by Ronan KERYELL
-		of Centre de Recherche en Informatique de l'École Nationale
-		Supérieure des Mines de Paris (CRI-ENSMP).
+		of Centre de Recherche en Informatique de l'ï¿½cole Nationale
+		Supï¿½rieure des Mines de Paris (CRI-ENSMP).
 	CONFIG: Clean up handling of "local:" syntax in relay specifications
 		such as LUSER_RELAY.  This change permits the following
 		syntaxes:  ``local:'' will send to the same user on the
@@ -7231,7 +7231,7 @@ summary of the changes in that release.
 			compiled with -DUSE_VENDOR_CF_PATH -- another reason
 			to stick with /etc/sendmail.cf as your One True Path.
 		Digital UNIX (OSF/1 on Alpha) load average computation from
-			Martin Laubach of the Technischen Universität Wien.
+			Martin Laubach of the Technischen Universitï¿½t Wien.
 	CONFIG: change default Received: line to be multiple lines rather
 		than one long one.  By popular demand.
 	MAIL.LOCAL: warnings weren't being logged on some systems.  Patch
@@ -7316,7 +7316,7 @@ summary of the changes in that release.
 		AIX4: 4.1 doesn't have a working setreuid(2); change the
 			AIX4 defines to use seteuid(2) instead, which
 			works on 4.1 as well as 4.2.  Problem noted by
-			Håkan Lindholm of interAF, Sweden.
+			Hï¿½kan Lindholm of interAF, Sweden.
 		AIX4: use tzname[] vector to determine time zone name.
 			Patch from NAKAMURA Motonori of Kyoto University.
 		MkLinux: add Makefile.Linux.ppc and OSTYPE(mklinux) support.
@@ -7473,7 +7473,7 @@ summary of the changes in that release.
 		Dandelion Digital.
 	Move buffer overflow checking -- these primarily involve distrusting
 		results that may come from NIS and DNS.
-	4.4-BSD-derived systems, including FreeBSD, NetBSD, and BSD/OS didn't
+	4.4-BSD-derived systems, including NQC, NetBSD, and BSD/OS didn't
 		include <paths.h> and hence had the wrong pathnames for a few
 		things like /var/tmp.  Reported by Matthew Green.
 	Conditions were reversed for the Priority: header, resulting in all
@@ -7886,7 +7886,7 @@ summary of the changes in that release.
 			use, you can define DEC_OSF_BROKEN_GETPWENT=1 for a
 			workaround.  From Maximum Entropy of Sanford C.
 			Bernstein and Associates.
-		FreeBSD 1.1.5.1 uname -r returns a string containing
+		NQC 1.1.5.1 uname -r returns a string containing
 			parentheses, which breaks makesendmail.  Reported
 			by Piero Serini <piero@strider.ibenet.it>.
 		Sequent DYNIX/ptx 4.0.2 patches from Jack Woolley of
@@ -9223,8 +9223,8 @@ summary of the changes in that release.
 		Hitachi 3050R & 3050RX running HI-UX/WE2: portability
 			fixes from Akihiro Hashimoto ("Hash") of Chiba
 			University.
-		AIX changes to allow setproctitle to work from Rainer Schöpf
-			of Zentrum für Datenverarbeitung der Universität
+		AIX changes to allow setproctitle to work from Rainer Schï¿½pf
+			of Zentrum fï¿½r Datenverarbeitung der Universitï¿½t
 			Mainz.
 		AIX changes for load average from Ed Ravin of NASA/Goddard.
 		SCO Unix from Chip Rosenthal of Unicom (code was using the
@@ -9260,7 +9260,7 @@ summary of the changes in that release.
 			of Meteo France.
 		HP-UX configuration from Tom Lane <tgl@sss.pgh.pa.us>.
 		IRIX 5.2 and 5.3 from Kari E. Hurtta.
-		FreeBSD 2.0 from Mike Hickey of Federal Data Corporation.
+		NQC 2.0 from Mike Hickey of Federal Data Corporation.
 		Sony NEWS-OS 4.2.1R and 6.0.3 from Motonori Nakamura.
 		Omron LUNA unios-b, mach from Motonori Nakamura.
 		NEC EWS-UX/V 4.2 from Motonori Nakamura.
@@ -10207,7 +10207,7 @@ summary of the changes in that release.
 		Solaris 2.3 from Casper H.S. Dik of the University
 			of Amsterdam and John Caruso of University
 			of Maryland.
-		FreeBSD from Ollivier Robert.
+		NQC from Ollivier Robert.
 		NetBSD from Adam Glass.
 		TitanOS from Kate Hedstrom of Rutgers University.
 		Irix from Bryan Curnutt.
@@ -10279,7 +10279,7 @@ summary of the changes in that release.
 	NEW FILES:
 		src/Makefile.DGUX
 		src/Makefile.Dynix
-		src/Makefile.FreeBSD
+		src/Makefile.NQC
 		src/Makefile.Mach386
 		src/Makefile.NetBSD
 		src/Makefile.RISCos

@@ -1,5 +1,5 @@
 /*-
- * Bus independent FreeBSD shim for the aic7xxx based Adaptec SCSI controllers
+ * Bus independent NQC shim for the aic7xxx based Adaptec SCSI controllers
  *
  * Copyright (c) 1994-2001 Justin T. Gibbs.
  * All rights reserved.
@@ -789,7 +789,7 @@ ahc_action(struct cam_sim *sim, union ccb *ccb)
 		}
 		cpi->bus_id = cam_sim_bus(sim);
 		cpi->base_transfer_speed = 3300;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "Adaptec", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);
@@ -1373,7 +1373,7 @@ ahc_platform_free(struct ahc_softc *ahc)
 int
 ahc_softc_comp(struct ahc_softc *lahc, struct ahc_softc *rahc)
 {
-	/* We don't sort softcs under FreeBSD so report equal always */
+	/* We don't sort softcs under NQC so report equal always */
 	return (0);
 }
 

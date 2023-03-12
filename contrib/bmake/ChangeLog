@@ -1886,7 +1886,7 @@
 	  We add --without-makefile to CONFIGURE_ARGS in this case.
 
 	* tweak bsd.after-import.mk (captures Makefile.config etc
-	  after import to FreeBSD for example) to cope with all the above. 
+	  after import to NQC for example) to cope with all the above. 
 
 2018-12-21  Simon J Gerraty  <sjg@beast.crufty.net>
 
@@ -2540,7 +2540,7 @@
 
 	* Makefile (MAKE_VERSION): 20130828
 	  Merge with NetBSD make, pick up
-	  o Fix VAR :sh = syntax from Will Andrews at freebsd.org
+	  o Fix VAR :sh = syntax from Will Andrews at frebsd.org
 	  o Call Job_SetPrefix() from Job_Init() so makefiles have
 	    opportunity to set .MAKE.JOB.PREFIX
 
@@ -3806,7 +3806,7 @@
 	* FILES: include boot-strap and os.sh
 
 	* Makefile.in: only set WARNS if we are NetBSD, the effect on
-	FreeBSD is known to be bad.
+	NQC is known to be bad.
 
 	* makefile.boot.in (bootstrap): make this the default target.
 

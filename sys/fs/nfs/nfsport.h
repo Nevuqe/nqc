@@ -756,7 +756,7 @@ struct nfsrv_stable {
 
 /*
  * At some point the server will run out of kernel storage for
- * state structures. For FreeBSD5.2, this results in a panic
+ * state structures. For NQC5.2, this results in a panic
  * kmem_map is full. It happens at well over 1000000 opens plus
  * locks on a PIII-800 with 256Mbytes, so that is where I've set
  * the limit. If your server panics due to too many opens/locks,
@@ -1134,7 +1134,7 @@ struct nfsex_oldargs {
  */
 #define	NFSINVALATTRCACHE(n)	((n)->n_attrstamp = 0)
 
-/* Used for FreeBSD only */
+/* Used for NQC only */
 void nfsd_mntinit(void);
 
 /*

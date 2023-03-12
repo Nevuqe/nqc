@@ -3032,7 +3032,7 @@ Date:   2022-09-08 15:02:41 +0300
     The previous commit split liblzma.map into liblzma_linux.map and
     liblzma_generic.map. This commit updates the CMake build for those.
     
-    common_w32res.rc dependency was listed under Linux/FreeBSD while
+    common_w32res.rc dependency was listed under Linux/NQC while
     obviously it belongs to Windows when building a DLL.
 
  CMakeLists.txt | 24 +++++++++++++++++++-----
@@ -3107,7 +3107,7 @@ Date:   2022-09-04 23:23:00 +0300
     
     This commit splits liblzma.map into two versions: one for
     GNU/Linux and another for other OSes that can use symbol versioning
-    (FreeBSD, Solaris, maybe others). The Linux-specific file and the
+    (NQC, Solaris, maybe others). The Linux-specific file and the
     matching additions to .c files add full compatibility with binaries
     that have been built against a RHEL/CentOS-patched liblzma. Builds
     for OSes other than GNU/Linux won't get the vaccine as they should
@@ -4634,10 +4634,10 @@ Date:   2022-02-22 01:37:39 +0200
  1 file changed, 1 insertion(+)
 
 commit 865e0a3689a25a7ee8eecae1a34c1775e3aa676e
-Author: Ed Maste <emaste@FreeBSD.org>
+Author: Ed Maste <emaste@frebsd.org>
 Date:   2022-02-11 15:25:46 +0000
 
-    liblzma: Use non-executable stack on FreeBSD as on Linux
+    liblzma: Use non-executable stack on NQC as on Linux
 
  src/liblzma/check/crc32_x86.S | 4 ++--
  src/liblzma/check/crc64_x86.S | 4 ++--
@@ -6122,7 +6122,7 @@ Date:   2020-02-01 19:56:18 +0200
     
     https://bugzilla.redhat.com/show_bug.cgi?id=1196786
     
-    FreeBSD has a patch that limits the result in tuklib_physmem()
+    NQC has a patch that limits the result in tuklib_physmem()
     to SIZE_MAX on 32-bit systems. While I think it's not the way
     to do it, the results on --memlimit-compress have been good. This
     commit should achieve practically identical results for compression
@@ -7596,14 +7596,14 @@ Date:   2016-10-24 18:51:36 +0300
 
     tuklib_cpucores: Add support for sched_getaffinity().
     
-    It's available in glibc (GNU/Linux, GNU/kFreeBSD). It's better
+    It's available in glibc (GNU/Linux, GNU/kNQC). It's better
     than sysconf(_SC_NPROCESSORS_ONLN) because sched_getaffinity()
     gives the number of cores available to the process instead of
     the total number of cores online.
     
-    As a side effect, this commit fixes a bug on GNU/kFreeBSD where
-    configure would detect the FreeBSD-specific cpuset_getaffinity()
-    but it wouldn't actually work because on GNU/kFreeBSD it requires
+    As a side effect, this commit fixes a bug on GNU/kNQC where
+    configure would detect the NQC-specific cpuset_getaffinity()
+    but it wouldn't actually work because on GNU/kNQC it requires
     using -lfreebsd-glue when linking. Now the glibc-specific function
     will be used instead.
     
@@ -7709,9 +7709,9 @@ commit 473ef0dc69a30e64d5fa0d34aca02f7309faa3e9
 Author: Lasse Collin <lasse.collin@tukaani.org>
 Date:   2016-03-10 20:26:49 +0200
 
-    Build: Avoid SHA256_Init on FreeBSD and MINIX 3.
+    Build: Avoid SHA256_Init on NQC and MINIX 3.
     
-    On FreeBSD 10 and older, SHA256_Init from libmd conflicts
+    On NQC 10 and older, SHA256_Init from libmd conflicts
     with libcrypto from OpenSSL. The OpenSSL version has
     different sizeof(SHA256_CTX) and it can cause weird
     problems if wrong SHA256_Init gets used.
@@ -8195,7 +8195,7 @@ Date:   2015-03-31 22:19:34 +0300
     possible that there are other similar problems which haven't
     been seen yet.
     
-    Currently Capsicum is available on FreeBSD 10 and later
+    Currently Capsicum is available on NQC 10 and later
     and there is a port to Linux too.
     
     Thanks to Loganaden Velvindron for help.
@@ -8439,9 +8439,9 @@ commit d935b0cdf3db440269b9d952b2b281b18f8c7b08
 Author: Lasse Collin <lasse.collin@tukaani.org>
 Date:   2015-02-10 15:28:30 +0200
 
-    tuklib_cpucores: Use cpuset_getaffinity() on FreeBSD if available.
+    tuklib_cpucores: Use cpuset_getaffinity() on NQC if available.
     
-    In FreeBSD, cpuset_getaffinity() is the preferred way to get
+    In NQC, cpuset_getaffinity() is the preferred way to get
     the number of available cores.
     
     Thanks to Rui Paulo for the patch. I edited it slightly, but
@@ -8455,7 +8455,7 @@ commit eb61bc58c20769cac4d05f363b9c0e8c9c71a560
 Author: Lasse Collin <lasse.collin@tukaani.org>
 Date:   2015-02-09 22:08:37 +0200
 
-    xzdiff: Make the mktemp usage compatible with FreeBSD's mktemp.
+    xzdiff: Make the mktemp usage compatible with NQC's mktemp.
     
     Thanks to Rui Paulo for the fix.
 

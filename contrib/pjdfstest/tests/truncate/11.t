@@ -7,7 +7,7 @@ desc="truncate returns ETXTBSY the file is a pure procedure (shared text) file t
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}" = "FreeBSD" ] || quick_exit
+[ "${os}" = "NQC" ] || quick_exit
 noexec && quick_exit
 
 requires_exec

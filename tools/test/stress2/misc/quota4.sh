@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,7 @@
 [ "`sysctl -in kern.features.ufs_quota`" != "1" ] && exit 0
 
 # Has shown a deadlock after 7 hours of testing
-# https://people.freebsd.org/~pho/stress/log/quota4.txt
+# https://people.frebsd.org/~pho/stress/log/quota4.txt
 
 . ../default.cfg
 

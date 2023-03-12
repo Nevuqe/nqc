@@ -1,5 +1,5 @@
 /*-
- * Copyright 2007 John Birrell <jb@FreeBSD.org>
+ * Copyright 2007 John Birrell <jb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -54,7 +54,7 @@ opensolaris_load(void *dummy)
 
 	/*
 	 * "Enable" all CPUs even though they may not exist just so
-	 * that the asserts work. On FreeBSD, if a CPU exists, it is
+	 * that the asserts work. On NQC, if a CPU exists, it is
 	 * enabled.
 	 */
 	for (i = 0; i < MAXCPU; i++) {

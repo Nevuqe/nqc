@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * HighPoint RR3xxx/4xxx RAID Driver for FreeBSD
+ * HighPoint RR3xxx/4xxx RAID Driver for NQC
  * Copyright (C) 2007-2012 HighPoint Technologies, Inc. All Rights Reserved.
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

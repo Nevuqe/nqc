@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2011, 2012 Konstantin Belousov <kib@FreeBSD.org>
+ * Copyright (c) 2011, 2012 Konstantin Belousov <kib@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

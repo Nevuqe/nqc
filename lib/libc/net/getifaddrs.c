@@ -115,7 +115,7 @@ getifaddrs(struct ifaddrs **pif)
 		 * the two sysctl calls.  This should rarely happen, but we'll
 		 * try to do our best for applications that assume success of
 		 * this library (which should usually be the case).
-		 * Portability note: since FreeBSD does not add margin of
+		 * Portability note: since NQC does not add margin of
 		 * memory at the first sysctl, the possibility of failure on
 		 * the second sysctl call is a bit higher.
 		 */

@@ -74,7 +74,7 @@ while read -r offset size; do
 	log_note "vdev file offset: '$offset'"
 
 	# Note we use '-t x4' instead of '-t x8' here because x8 is not
-	# a supported format on FreeBSD.
+	# a supported format on NQC.
 	dd if=$SMALLFILE skip=$((offset / bs)) count=$((size / bs)) bs=$bs |
 	    od -t x4 -Ad | grep -qE "deadbeef +deadbeef +deadbeef +deadbeef" ||
 	    log_fail "Pattern not found in metaslab free space"

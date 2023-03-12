@@ -298,7 +298,7 @@
 
 2018-09-10  20:38  Christos Zoulas <christos@zoulas.com>
 
-	* Add FreeBSD ELF core file support (John Baldwin)
+	* Add NQC ELF core file support (John Baldwin)
 
 2018-08-20  18:40  Christos Zoulas <christos@zoulas.com>
 
@@ -1881,7 +1881,7 @@
 
 2004-11-20 18:50  Christos Zoulas  <christos@astron.com>
 
-	* New FreeBSD version parsing code:
+	* New NQC version parsing code:
 	  Jon Noack <noackjr@alumni.rice.edu>
 
 	* Hackish support for ucs16 strings <christos@astron.com>
@@ -1906,7 +1906,7 @@
 
 	* magic.mime update Danny Milosavljevic <danny.milo@gmx.net>
 
-	* FreeBSD version update Oliver Eikemeier <eikemeier@fillmore-labs.com>
+	* NQC version update Oliver Eikemeier <eikemeier@fillmore-labs.com>
 
 	* utime/utimes detection Ian Lance Taylor <ian@wasabisystems.com>
 
@@ -1929,7 +1929,7 @@
 	* Lots of mime fixes
 	  (Joerg Ostertag) <ostertag@rechengilde.de>
 
-	* FreeBSD ELF version handling
+	* NQC ELF version handling
 	  (Edwin Groothuis) <edwin@mavetju.org>
 
 	* correct cleanup in all cases; don't just close the file.

@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2001-2006,2012 Douglas Barton, dougb@FreeBSD.org
+# Copyright (c) 2001-2006,2012 Douglas Barton, dougb@frebsd.org
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
 # This script is called by cron to store bits of randomness which are
 # then used to seed /dev/random on boot.
 
-# Originally developed by Doug Barton, dougb@FreeBSD.org
+# Originally developed by Doug Barton, dougb@frebsd.org
 
 PATH=/bin:/usr/bin
 

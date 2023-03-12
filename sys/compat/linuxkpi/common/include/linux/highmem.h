@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2010 Isilon Systems, Inc.
  * Copyright (c) 2016 Matthew Macy (mmacy@mattmacy.io)
  * Copyright (c) 2017 Mellanox Technologies, Ltd.
- * Copyright (c) 2021 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2021 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are

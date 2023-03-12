@@ -117,7 +117,7 @@ alloc_pw_size(size_t len)
 	 * memory region. Since mlock(2) and munlock(2) operate on whole memory
 	 * pages we should allocate a whole page here as mmap(2) does. Further
 	 * this ensures that the addresses passed to mlock(2) an munlock(2) are
-	 * on a page boundary as suggested by FreeBSD and required by some
+	 * on a page boundary as suggested by NQC and required by some
 	 * other implementations. Finally we avoid inadvertently munlocking
 	 * memory mlocked by an concurrently running instance of us.
 	 */

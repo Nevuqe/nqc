@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2004 John Baldwin <jhb@FreeBSD.org>
+ * Copyright (c) 2004 John Baldwin <jhb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -30,7 +30,7 @@ __NQCID("$NQC$");
 
 /*
  * The ELCR is a register that controls the trigger mode and polarity of
- * EISA and ISA interrupts.  In FreeBSD 3.x and 4.x, the ELCR was only
+ * EISA and ISA interrupts.  In NQC 3.x and 4.x, the ELCR was only
  * consulted for determining the appropriate trigger mode of EISA
  * interrupts when using an APIC.  However, it seems that almost all
  * systems that include PCI also include an ELCR that manages the ISA

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005 Ariff Abdullah <ariff@FreeBSD.org>
+ * Copyright (c) 2005 Ariff Abdullah <ariff@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
  */
 
 /*
- * FreeBSD pcm driver for ATI IXP 150/200/250/300 AC97 controllers
+ * NQC pcm driver for ATI IXP 150/200/250/300 AC97 controllers
  *
  * Features
  *	* 16bit playback / recording

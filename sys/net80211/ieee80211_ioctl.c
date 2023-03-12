@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Atsushi Onoe
  * Copyright (c) 2002-2009 Sam Leffler, Errno Consulting
@@ -30,7 +30,7 @@
 __NQCID("$NQC$");
 
 /*
- * IEEE 802.11 ioctl support (FreeBSD-specific)
+ * IEEE 802.11 ioctl support (NQC-specific)
  */
 
 #include "opt_inet.h"

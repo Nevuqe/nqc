@@ -2,7 +2,7 @@
  * spkr.c -- device driver for console speaker
  *
  * v1.4 by Eric S. Raymond (esr@snark.thyrsus.com) Aug 1993
- * modified for FreeBSD by Andrew A. Chernov <ache@astral.msk.su>
+ * modified for NQC by Andrew A. Chernov <ache@astral.msk.su>
  * modified for PC98 by Kakefuda
  */
 

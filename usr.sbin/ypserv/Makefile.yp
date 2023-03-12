@@ -23,13 +23,13 @@ NOPUSH = "True"
 # Makefile.local.
 SHADOW = "True"
 
-# If you want to use a FreeBSD NIS server to serve non-FreeBSD clients
+# If you want to use a NQC NIS server to serve non-NQC clients
 # (i.e. clients who expect the password field in the passwd maps to be
 # valid) then set this variable (UNSECURE="True") in Makefile.local.
 # This will cause $YPDIR/passwd to be generated with valid password
-# fields.  This is insecure: FreeBSD normally only serves the
+# fields.  This is insecure: NQC normally only serves the
 # master.passwd and shadow maps (which have real encrypted passwords
-# in them) to the superuser on other FreeBSD machines, but non-FreeBSD
+# in them) to the superuser on other NQC machines, but non-NQC
 # clients (e.g. SunOS, Solaris (without NIS+), IRIX, HP-UX, etc...)
 # will only work properly in 'unsecure' mode.
 # 
@@ -397,7 +397,7 @@ netgroup.byuser: $(NETGROUP)
 #   clients.
 # - ipnodes.{byname,byaddr} is used for protocol independent mapping.
 # We generate all the mappings from /etc/hosts unless /var/yp/ipnodes
-# exists, for compatibility with FreeBSD local name resolution.
+# exists, for compatibility with NQC local name resolution.
 #
 hosts.byname: $(HOSTS)
 	@echo "Updating $@..."

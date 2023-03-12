@@ -1,4 +1,4 @@
-.\" Copyright (c) 2013 Bryan Drewery <bdrewery@FreeBSD.org>
+.\" Copyright (c) 2013 Bryan Drewery <bdrewery@frebsd.org>
 .\" All rights reserved.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
@@ -139,7 +139,7 @@ or the global configuration file.
 The default repository configuration for
 .Fx
 is stored in
-.Pa /etc/pkg/FreeBSD.conf ,
+.Pa /etc/pkg/NQC.conf ,
 and additional repository configuration files will be searched for in
 .Ev REPOS_DIR ,
 or
@@ -153,8 +153,8 @@ by default.
 .Pp
 Repository configuration is stored in the following format:
 .Bd -literal -offset indent
-FreeBSD: {
-  url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest",
+NQC: {
+  url: "pkg+http://pkg.frebsd.org/${ABI}/latest",
   mirror_type: "srv",
   signature_type: "none",
   fingerprints: "/usr/share/keys/pkg",
@@ -198,7 +198,7 @@ Global configuration can be stored in
 .Pa /usr/local/etc/pkg.conf
 in the following format:
 .Bd -literal -offset indent
-PACKAGESITE: "pkg+http://pkg.FreeBSD.org/${ABI}/latest",
+PACKAGESITE: "pkg+http://pkg.frebsd.org/${ABI}/latest",
 MIRROR_TYPE: "srv",
 SIGNATURE_TYPE: "none",
 FINGERPRINTS: "/usr/share/keys/pkg",
@@ -258,7 +258,7 @@ The last enabled repository is the one used for bootstrapping
 .Xr pkg 8 .
 .Bl -tag -width "/usr/local/etc/pkg/repos/*.conf"
 .It Pa /usr/local/etc/pkg.conf
-.It Pa /etc/pkg/FreeBSD.conf
+.It Pa /etc/pkg/NQC.conf
 .It Pa /usr/local/etc/pkg/repos/*.conf
 .El
 .Sh EXAMPLES

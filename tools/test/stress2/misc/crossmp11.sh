@@ -29,10 +29,10 @@
 # Copy of crossmp3.sh + elements from dfull.sh
 
 # Live lock seen:
-# https://people.freebsd.org/~pho/stress/log/crossmp11.txt
+# https://people.frebsd.org/~pho/stress/log/crossmp11.txt
 
 # umount stuck in mnt_ref seen:
-# https://people.freebsd.org/~pho/stress/log/kostik1002.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1002.txt
 
 # Fixed by r319518, r319519 and r319539.
 

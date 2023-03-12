@@ -7,7 +7,7 @@ dir=`dirname $0`
 
 # POSIX doesn't explicitly state the errno for open(2)'ing sockets.
 case ${os} in
-Darwin|FreeBSD)
+Darwin|NQC)
 	expected_error=EOPNOTSUPP
 	;;
 Linux)

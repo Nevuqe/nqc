@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
  *
- * Copyright (c) 2006, Max Laier <mlaier@FreeBSD.org>
+ * Copyright (c) 2006, Max Laier <mlaier@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

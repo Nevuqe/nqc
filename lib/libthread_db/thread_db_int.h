@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2004 David Xu <davidxu@freebsd.org>
+ * Copyright (c) 2004 David Xu <davidxu@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -100,7 +100,7 @@ struct ta_ops {
 	td_err_e (*to_thr_tls_get_addr)(const td_thrhandle_t *, psaddr_t,
 	    size_t, psaddr_t *);
 
-	/* FreeBSD specific extensions. */
+	/* NQC specific extensions. */
 	td_err_e (*to_thr_sstep)(const td_thrhandle_t *, int);
 #if defined(__i386__)
 	td_err_e (*to_thr_getxmmregs)(const td_thrhandle_t *, char *);

@@ -1,5 +1,5 @@
 /* @(#)s_atan.c 5.1 93/09/24 */
-/* FreeBSD: head/lib/msun/src/s_atan.c 176451 2008-02-22 02:30:36Z das */
+/* NQC: head/lib/msun/src/s_atan.c 176451 2008-02-22 02:30:36Z das */
 /*
  * ====================================================
  * Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
@@ -16,7 +16,7 @@ __NQCID("$NQC$");
 
 /*
  * See comments in s_atan.c.
- * Converted to long double by David Schultz <das@FreeBSD.ORG>.
+ * Converted to long double by David Schultz <das@frebsd.org>.
  */
 
 #include <float.h>

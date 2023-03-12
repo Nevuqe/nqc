@@ -1,7 +1,7 @@
 /******************************************************************************
  *
  * Name   : sky2.c
- * Project: Gigabit Ethernet Driver for FreeBSD 5.x/6.x
+ * Project: Gigabit Ethernet Driver for NQC 5.x/6.x
  * Version: $Revision: 1.23 $
  * Date   : $Date: 2005/12/22 09:04:11 $
  * Purpose: Main driver source file
@@ -97,7 +97,7 @@
 /*
  * Device driver for the Marvell Yukon II Ethernet controller.
  * Due to lack of documentation, this driver is based on the code from
- * sk(4) and Marvell's myk(4) driver for FreeBSD 5.x.
+ * sk(4) and Marvell's myk(4) driver for NQC 5.x.
  */
 
 #include <sys/cdefs.h>

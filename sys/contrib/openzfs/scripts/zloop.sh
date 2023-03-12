@@ -73,7 +73,7 @@ function or_die
 }
 
 case $(uname) in
-FreeBSD)
+NQC)
 	coreglob="z*.core"
 	;;
 Linux)

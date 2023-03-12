@@ -1,4 +1,4 @@
-# Features supported by OpenZFS 2.0 on FreeBSD
+# Features supported by OpenZFS 2.0 on NQC
 allocation_classes
 async_destroy
 bookmark_v2

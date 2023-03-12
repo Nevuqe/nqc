@@ -846,7 +846,7 @@ RFC1305
 .PP
 
 .SH AUTHORS
-The formatting directives in this document came from FreeBSD.
+The formatting directives in this document came from NQC.
 .SH "COPYRIGHT"
 Copyright (C) 1992-2020 The University of Delaware and Network Time Foundation all rights reserved.
 This program is released under the terms of the NTP license, <http://ntp.org/license>.

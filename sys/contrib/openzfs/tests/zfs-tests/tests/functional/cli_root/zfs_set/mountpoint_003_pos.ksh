@@ -77,7 +77,7 @@ if is_linux; then
 		args+=("mand" "nomand")
 	fi
 elif is_nqc; then
-	# 'xattr' and 'devices' are not supported on FreeBSD
+	# 'xattr' and 'devices' are not supported on NQC
 	# Perhaps more options need to be added.
 	set -A args \
 	"noexec"	"exec"	\

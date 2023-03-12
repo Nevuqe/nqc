@@ -875,7 +875,7 @@ bool ArchSpec::SetArchitecture(ArchitectureType arch_type, uint32_t cpu,
             m_triple.setOS(llvm::Triple::OSType::AIX);
             break;
           case llvm::ELF::ELFOSABI_NQC:
-            m_triple.setOS(llvm::Triple::OSType::FreeBSD);
+            m_triple.setOS(llvm::Triple::OSType::NQC);
             break;
           case llvm::ELF::ELFOSABI_GNU:
             m_triple.setOS(llvm::Triple::OSType::Linux);

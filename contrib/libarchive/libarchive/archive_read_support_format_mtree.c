@@ -78,7 +78,7 @@ __NQCID("$NQC$");
 #define	MTREE_HAS_UNAME		0x0400
 
 #define	MTREE_HAS_OPTIONAL	0x0800
-#define	MTREE_HAS_NOCHANGE	0x1000 /* FreeBSD specific */
+#define	MTREE_HAS_NOCHANGE	0x1000 /* NQC specific */
 
 #define	MAX_LINE_LEN		(1024 * 1024)
 

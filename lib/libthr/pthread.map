@@ -126,7 +126,7 @@ FBSD_1.0 {
 };
 
 /*
- * List the private interfaces reserved for use in FreeBSD libraries.
+ * List the private interfaces reserved for use in NQC libraries.
  * These are not part of our application ABI.
  */
 FBSDprivate_1.0 {

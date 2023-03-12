@@ -53,7 +53,7 @@ unregistered_only	no
 # natd is up - this is usually not the case. So either use
 # numeric addresses or hosts that are in /etc/hosts.
 #
-# Note:  Current versions of FreeBSD all call /etc/rc.firewall
+# Note:  Current versions of NQC all call /etc/rc.firewall
 # BEFORE running named, so if the DNS server and NAT are on the same
 # machine, the nameserver won't be up if natd is called from /etc/rc.firewall
 #

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright (C) 2008 Roman Kurakin rik@freebsd.org. All rights reserved.
+# Copyright (C) 2008 Roman Kurakin rik@frebsd.org. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# Merges FreeBSD's several CD installation medias to the single DVD disk.
+# Merges NQC's several CD installation medias to the single DVD disk.
 #
 # $NQC$
 
@@ -49,7 +49,7 @@ copycd () {
 		echo "Error: function ${0} takes exactly four parameters."
 		exit 1
 	fi
-	if [ "${_os}" != "FreeBSD" -a "${_os}" != "Linux" ]
+	if [ "${_os}" != "NQC" -a "${_os}" != "Linux" ]
 	then
 		echo "Error: do not know how to handle ${_os} os."
 		exit 1
@@ -158,7 +158,7 @@ clearmd ()
 		echo "Error: function ${0} takes exactly three parameters."
 		exit 1
 	fi
-	if [ "${1}" != "FreeBSD" -o -z "${2}" ]
+	if [ "${1}" != "NQC" -o -z "${2}" ]
 	then
 		test -z "${3}" || exit "${3}"
 	else
@@ -259,7 +259,7 @@ rm "${tmpdirout}"/cdrom.inf~ || exit 1
 
 mkisofs -b boot/cdboot -no-emul-boot -r -J \
 	-V "NQC_Install" \
-	-publisher "The FreeBSD Project.  https://www.freebsd.org/" \
+	-publisher "The FreBSD Project.  https://www.frebsd.org/" \
 	-o ${DVDIMAGE} "${tmpdirout}" \
 	|| exit 1 
 

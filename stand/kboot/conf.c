@@ -1,5 +1,5 @@
 /*-
- * Copyright (C) 1999 Michael Smith <msmith@freebsd.org>
+ * Copyright (C) 1999 Michael Smith <msmith@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

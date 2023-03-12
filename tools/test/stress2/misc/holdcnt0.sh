@@ -30,7 +30,7 @@
 # "panic: vdrop: holdcnt 0" seen.
 # "panic: cleaned vnode isn't" seen.
 # OoVM seen with r285808:
-# https://people.freebsd.org/~pho/stress/log/holdcnt0.txt
+# https://people.frebsd.org/~pho/stress/log/holdcnt0.txt
 
 # Test scenario suggestion by alc@
 

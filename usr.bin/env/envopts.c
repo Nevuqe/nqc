@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005  - Garance Alistair Drosehn <gad@FreeBSD.org>.
+ * Copyright (c) 2005  - Garance Alistair Drosehn <gad@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
  *
  * The views and conclusions contained in the software and documentation
  * are those of the authors and should not be interpreted as representing
- * official policies, either expressed or implied, of the FreeBSD Project.
+ * official policies, either expressed or implied, of the FreBSD Project.
  */
 
 #include <sys/cdefs.h>
@@ -61,7 +61,7 @@ static int	 is_there(char *candidate);
 
 /*
  * Routine to determine if a given fully-qualified filename is executable.
- * This is copied almost verbatim from FreeBSD's usr.bin/which/which.c.
+ * This is copied almost verbatim from NQC's usr.bin/which/which.c.
  */
 static int
 is_there(char *candidate)

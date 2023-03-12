@@ -11,4 +11,4 @@ To update:
   4) Double check zconf.h, zlib.pc, and Symbol.map to make sure that we
      have the required changes.  Test universe and commit them.
 
-delphij@FreeBSD.org
+delphij@frebsd.org

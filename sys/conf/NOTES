@@ -87,7 +87,7 @@ makeoptions	CONF_CFLAGS=-fno-builtin  #Don't allow use of memcmp, etc.
 makeoptions	DESTDIR=/tmp
 
 #
-# FreeBSD processes are subject to certain limits to their consumption
+# NQC processes are subject to certain limits to their consumption
 # of system resources.  See getrlimit(2) for more details.  Each
 # resource limit has two values, a "soft" limit and a "hard" limit.
 # The soft limits can be modified during normal system operation, but
@@ -340,31 +340,31 @@ options 	COMPAT_43TTY
 # Note that as a general rule, COMPAT_NQC<n> depends on
 # COMPAT_NQC<n+1>, COMPAT_NQC<n+2>, etc.
 
-# Enable FreeBSD4 compatibility syscalls
+# Enable NQC4 compatibility syscalls
 options 	COMPAT_NQC4
 
-# Enable FreeBSD5 compatibility syscalls
+# Enable NQC5 compatibility syscalls
 options 	COMPAT_NQC5
 
-# Enable FreeBSD6 compatibility syscalls
+# Enable NQC6 compatibility syscalls
 options 	COMPAT_NQC6
 
-# Enable FreeBSD7 compatibility syscalls
+# Enable NQC7 compatibility syscalls
 options 	COMPAT_NQC7
 
-# Enable FreeBSD9 compatibility syscalls
+# Enable NQC9 compatibility syscalls
 options 	COMPAT_NQC9
 
-# Enable FreeBSD10 compatibility syscalls
+# Enable NQC10 compatibility syscalls
 options 	COMPAT_NQC10
 
-# Enable FreeBSD11 compatibility syscalls
+# Enable NQC11 compatibility syscalls
 options 	COMPAT_NQC11
 
-# Enable FreeBSD12 compatibility syscalls
+# Enable NQC12 compatibility syscalls
 options 	COMPAT_NQC12
 
-# Enable FreeBSD13 compatibility syscalls
+# Enable NQC13 compatibility syscalls
 options 	COMPAT_NQC13
 
 # Enable Linux Kernel Programming Interface
@@ -751,7 +751,7 @@ options 	SCTP_DEBUG
 # 
 # I have not yet committed the tools to get and print
 # the logs, I will do that eventually .. before then
-# if you want them send me an email rrs@freebsd.org
+# if you want them send me an email rrs@frebsd.org
 # You basically must have ktr(4) enabled for these
 # and you then set the sysctl to turn on/off various
 # logging bits. Use ktrdump(8) to pull the log and run
@@ -1341,7 +1341,7 @@ envvar		hint.sa.1.target="6"
 # The sg driver provides a passthrough API that is compatible with the
 # Linux SG driver.  It will work in conjunction with the Linuxulator
 # to run linux SG apps.  It can also stand on its own and provide
-# source level API compatibility for porting apps to FreeBSD.
+# source level API compatibility for porting apps to NQC.
 #
 # Target Mode support is provided here but also requires that a SIM
 # (SCSI Host Adapter Driver) provide support as well.
@@ -1754,7 +1754,7 @@ options 	BREAK_TO_DEBUGGER	# A BREAK/DBG on the console goes to
 
 # Solaris implements a new BREAK which is initiated by a character
 # sequence CR ~ ^b which is similar to a familiar pattern used on
-# Sun servers by the Remote Console.  There are FreeBSD extensions:
+# Sun servers by the Remote Console.  There are NQC extensions:
 # CR ~ ^p requests force panic and CR ~ ^r requests a clean reboot.
 options 	ALT_BREAK_TO_DEBUGGER
 

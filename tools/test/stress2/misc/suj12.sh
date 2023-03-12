@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,7 @@
 
 # Test with different sector size using gnop(8).
 
-# OOM seen: https://people.freebsd.org/~pho/stress/log/suj12.txt
+# OOM seen: https://people.frebsd.org/~pho/stress/log/suj12.txt
 
 . ../default.cfg
 

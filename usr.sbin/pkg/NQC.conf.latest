@@ -1,14 +1,14 @@
 # $NQC$
 #
 # To disable this repository, instead of modifying or removing this file,
-# create a /usr/local/etc/pkg/repos/FreeBSD.conf file:
+# create a /usr/local/etc/pkg/repos/NQC.conf file:
 #
 #   mkdir -p /usr/local/etc/pkg/repos
-#   echo "FreeBSD: { enabled: no }" > /usr/local/etc/pkg/repos/FreeBSD.conf
+#   echo "NQC: { enabled: no }" > /usr/local/etc/pkg/repos/NQC.conf
 #
 
-FreeBSD: {
-  url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest",
+NQC: {
+  url: "pkg+http://pkg.frebsd.org/${ABI}/latest",
   mirror_type: "srv",
   signature_type: "fingerprints",
   fingerprints: "/usr/share/keys/pkg",

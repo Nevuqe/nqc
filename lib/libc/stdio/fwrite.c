@@ -69,7 +69,7 @@ fwrite_unlocked(const void * __restrict buf, size_t size, size_t count,
 	 * Check for integer overflow.  As an optimization, first check that
 	 * at least one of {count, size} is at least 2^16, since if both
 	 * values are less than that, their product can't possibly overflow
-	 * (size_t is always at least 32 bits on FreeBSD).
+	 * (size_t is always at least 32 bits on NQC).
 	 */
 	if (((count | size) > 0xFFFF) &&
 	    (count > SIZE_MAX / size)) {

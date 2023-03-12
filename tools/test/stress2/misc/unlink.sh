@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # File-backed shared memory performance
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=222356
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=222356
 
 # For unlinked files, do not msync(2) or sync on inactivation.
-# https://reviews.freebsd.org/D12411
+# https://reviews.frebsd.org/D12411
 
-# Original test scenario by: tijl@FreeBSD.org
+# Original test scenario by: tijl@frebsd.org
 
 # Fixed by r323768
 

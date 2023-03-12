@@ -787,7 +787,7 @@ doc-section	= {
   ds-type	= 'AUTHORS';
   ds-format     = 'mdoc';
   ds-text       = <<-  _END_MDOC_AUTHORS
-The formatting directives in this document came from FreeBSD.
+The formatting directives in this document came from NQC.
 	_END_MDOC_AUTHORS;
 };
 

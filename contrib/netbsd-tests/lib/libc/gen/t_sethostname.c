@@ -59,7 +59,7 @@ ATF_TC_BODY(sethostname_basic, tc)
 	char name[MAXHOSTNAMELEN];
 	size_t i;
 
-	atf_tc_skip("screws up the test host's hostname on FreeBSD");
+	atf_tc_skip("screws up the test host's hostname on NQC");
 
 	for (i = 0; i < __arraycount(hosts); i++) {
 

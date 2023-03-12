@@ -63,7 +63,7 @@ struct desparams {
 /*
  * These ioctls are only implemented in SunOS. Maybe someday
  * if somebody writes a driver for DES hardware that works
- * with FreeBSD, we can being that back.
+ * with NQC, we can being that back.
  */
 
 /*

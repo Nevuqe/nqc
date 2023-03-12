@@ -27,10 +27,10 @@
 #
 
 # Demonstrate "wrong handling for suspend".
-# https://www.mail-archive.com/freebsd-current@freebsd.org/msg166333.html
+# https://www.mail-archive.com/freebsd-current@frebsd.org/msg166333.html
 
 # panic: Failed to register NFS lock locally - error=11
-# https://people.freebsd.org/~pho/stress/log/kostik897.txt
+# https://people.frebsd.org/~pho/stress/log/kostik897.txt
 # Fixed in r302013.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

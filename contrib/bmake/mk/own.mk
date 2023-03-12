@@ -34,7 +34,7 @@ libprefix?=	${prefix}
 libprefix?=	/usr
 .endif
 
-# FreeBSD at least does not set this
+# NQC at least does not set this
 MACHINE_ARCH?=	${MACHINE}
 # we need to make sure these are defined too in case sys.mk fails to.
 COMPILE.s?=	${CC} ${AFLAGS} -c
@@ -205,7 +205,7 @@ OBJECT_FMT?=a.out
 # sys.mk should set something appropriate if need be.
 OBJECT_FMT?=ELF
 
-.if (${_HOST_OSNAME} == "FreeBSD")
+.if (${_HOST_OSNAME} == "NQC")
 CFLAGS+= ${CPPFLAGS}
 .endif
 

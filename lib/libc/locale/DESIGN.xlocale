@@ -9,7 +9,7 @@ They fall into two broad categories:
 - Manipulation of per-thread locales (POSIX)
 - Locale-aware functions taking an explicit locale argument (Darwin)
 
-This document describes the implementation of these APIs for FreeBSD.
+This document describes the implementation of these APIs for NQC.
 
 Goals
 -----
@@ -144,7 +144,7 @@ Currently, the current rune set is accessed via a function call.  This makes it
 fairly expensive to use any of the ctype.h functions.  We could improve this
 quite a lot by storing the rune locale data in a __thread-qualified variable.
 
-Several of the existing FreeBSD locale-aware functions appear to be wrong.  For
+Several of the existing NQC locale-aware functions appear to be wrong.  For
 example, most of the `strto*()` family should probably use `digittoint_l()`,
 but instead they assume ASCII.  These will break if using a character encoding
 that does not put numbers and the letters A-F in the same location as ASCII.

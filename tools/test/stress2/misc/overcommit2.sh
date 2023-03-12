@@ -28,7 +28,7 @@
 
 # Test vm.overcommit. Variation of overcommit.sh
 # Use a swap backed MD disk with the size of 1.2 * hw.usermem.
-# Deadlock seen: https://people.freebsd.org/~pho/stress/log/alan007.txt
+# Deadlock seen: https://people.frebsd.org/~pho/stress/log/alan007.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ `swapinfo | wc -l` -eq 1 ] && exit 0

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2021 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2021 Alexander Motin <mav@frebsd.org>
  * Copyright 2019 Cisco Systems, Inc.
  * All rights reserved.
  *

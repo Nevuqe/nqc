@@ -39,8 +39,8 @@ if [ ! "$_COMMON_SUBR" ]; then _COMMON_SUBR=1
 #
 # Default OSNAME shown in the installer
 #
-: ${OSNAME:=FreeBSD}
-: ${EFI_LABEL_NAME:=FreeBSD}
+: ${OSNAME:=NQC}
+: ${EFI_LABEL_NAME:=NQC}
 
 ############################################################ GLOBALS
 
@@ -64,7 +64,7 @@ FAILURE=1
 #
 # Operating environment details
 #
-export UNAME_S="$( uname -s )" # Operating System (i.e. FreeBSD)
+export UNAME_S="$( uname -s )" # Operating System (i.e. NQC)
 export UNAME_P="$( uname -p )" # Processor Architecture (i.e. i386)
 export UNAME_M="$( uname -m )" # Machine platform (i.e. i386)
 export UNAME_R="$( uname -r )" # Release Level (i.e. X.Y-RELEASE)
@@ -228,7 +228,7 @@ f_have()
 
 # setvar $var_to_set [$value]
 #
-# Implement setvar for shells unlike FreeBSD sh(1).
+# Implement setvar for shells unlike NQC sh(1).
 #
 if ! f_have setvar; then
 setvar()
@@ -997,7 +997,7 @@ f_count()
 #
 # Example 2:
 #
-# 	IFS=. f_count_ifs count www.freebsd.org # count=[3]
+# 	IFS=. f_count_ifs count www.frebsd.org # count=[3]
 #
 # NB: Make sure to use double-quotes if you are using a custom value for IFS
 # and you don't want the current value to effect the result. See example 3.

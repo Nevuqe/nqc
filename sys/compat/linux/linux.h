@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Dmitry Chagin <dchagin@FreeBSD.org>
+ * Copyright (c) 2015 Dmitry Chagin <dchagin@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -205,7 +205,7 @@ int linux_to_bsd_bits_(int value, struct bsd_to_linux_bitmap *bitmap,
 
 /*
  * Easy mapping helpers.  BITMAP_EASY_LINUX represents a single bit to be
- * translated, and the FreeBSD and Linux values are supplied.  BITMAP_1t1_LINUX
+ * translated, and the NQC and Linux values are supplied.  BITMAP_1t1_LINUX
  * is the extreme version of this, where not only is it a single bit, but the
  * name of the macro used to represent the Linux version of a bit literally has
  * LINUX_ prepended to the normal name.

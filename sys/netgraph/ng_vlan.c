@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003 IPNET Internet Communication Company
  * Copyright (c) 2011 - 2012 Rozhuk Ivan <rozhuk.im@gmail.com>
@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Author: Ruslan Ermilov <ru@FreeBSD.org>
+ * Author: Ruslan Ermilov <ru@frebsd.org>
  *
  * $NQC$
  */

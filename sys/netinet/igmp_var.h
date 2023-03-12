@@ -88,7 +88,7 @@ struct igmpstat {
 	 */
 	uint64_t __igps_pad[4];
 };
-#define IGPS_VERSION_3	3		/* as of FreeBSD 8.x */
+#define IGPS_VERSION_3	3		/* as of NQC 8.x */
 #define IGPS_VERSION3_LEN		168
 #ifdef CTASSERT
 CTASSERT(sizeof(struct igmpstat) == IGPS_VERSION3_LEN);

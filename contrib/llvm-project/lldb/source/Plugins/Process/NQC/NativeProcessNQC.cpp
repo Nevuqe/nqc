@@ -1,4 +1,4 @@
-//===-- NativeProcessFreeBSD.cpp ------------------------------------------===//
+//===-- NativeProcessNQC.cpp ------------------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "NativeProcessFreeBSD.h"
+#include "NativeProcessNQC.h"
 
 // clang-format off
 #include <sys/types.h>
@@ -51,7 +51,7 @@ static Status EnsureFDFlags(int fd, int flags) {
 // Public Static Methods
 
 llvm::Expected<std::unique_ptr<NativeProcessProtocol>>
-NativeProcessFreeBSD::Factory::Launch(ProcessLaunchInfo &launch_info,
+NativeProcessNQC::Factory::Launch(ProcessLaunchInfo &launch_info,
                                       NativeDelegate &native_delegate,
                                       MainLoop &mainloop) const {
   Log *log = GetLog(POSIXLog::Process);
@@ -89,7 +89,7 @@ NativeProcessFreeBSD::Factory::Launch(ProcessLaunchInfo &launch_info,
   LLDB_LOG(log, "pid = {0:x}, detected architecture {1}", pid,
            Info.GetArchitecture().GetArchitectureName());
 
-  std::unique_ptr<NativeProcessFreeBSD> process_up(new NativeProcessFreeBSD(
+  std::unique_ptr<NativeProcessNQC> process_up(new NativeProcessNQC(
       pid, launch_info.GetPTY().ReleasePrimaryFileDescriptor(), native_delegate,
       Info.GetArchitecture(), mainloop));
 
@@ -98,14 +98,14 @@ NativeProcessFreeBSD::Factory::Launch(ProcessLaunchInfo &launch_info,
     return status.ToError();
 
   for (const auto &thread : process_up->m_threads)
-    static_cast<NativeThreadFreeBSD &>(*thread).SetStoppedBySignal(SIGSTOP);
+    static_cast<NativeThreadNQC &>(*thread).SetStoppedBySignal(SIGSTOP);
   process_up->SetState(StateType::eStateStopped, false);
 
   return std::move(process_up);
 }
 
 llvm::Expected<std::unique_ptr<NativeProcessProtocol>>
-NativeProcessFreeBSD::Factory::Attach(
+NativeProcessNQC::Factory::Attach(
     lldb::pid_t pid, NativeProcessProtocol::NativeDelegate &native_delegate,
     MainLoop &mainloop) const {
   Log *log = GetLog(POSIXLog::Process);
@@ -118,7 +118,7 @@ NativeProcessFreeBSD::Factory::Attach(
                                          llvm::inconvertibleErrorCode());
   }
 
-  std::unique_ptr<NativeProcessFreeBSD> process_up(new NativeProcessFreeBSD(
+  std::unique_ptr<NativeProcessNQC> process_up(new NativeProcessNQC(
       pid, -1, native_delegate, Info.GetArchitecture(), mainloop));
 
   Status status = process_up->Attach();
@@ -128,8 +128,8 @@ NativeProcessFreeBSD::Factory::Attach(
   return std::move(process_up);
 }
 
-NativeProcessFreeBSD::Extension
-NativeProcessFreeBSD::Factory::GetSupportedExtensions() const {
+NativeProcessNQC::Extension
+NativeProcessNQC::Factory::GetSupportedExtensions() const {
   return
 #if defined(PT_COREDUMP)
       Extension::savecore |
@@ -141,7 +141,7 @@ NativeProcessFreeBSD::Factory::GetSupportedExtensions() const {
 
 // Public Instance Methods
 
-NativeProcessFreeBSD::NativeProcessFreeBSD(::pid_t pid, int terminal_fd,
+NativeProcessNQC::NativeProcessNQC(::pid_t pid, int terminal_fd,
                                            NativeDelegate &delegate,
                                            const ArchSpec &arch,
                                            MainLoop &mainloop)
@@ -159,7 +159,7 @@ NativeProcessFreeBSD::NativeProcessFreeBSD(::pid_t pid, int terminal_fd,
 }
 
 // Handles all waitpid events from the inferior process.
-void NativeProcessFreeBSD::MonitorCallback(lldb::pid_t pid, int signal) {
+void NativeProcessNQC::MonitorCallback(lldb::pid_t pid, int signal) {
   switch (signal) {
   case SIGTRAP:
     return MonitorSIGTRAP(pid);
@@ -170,7 +170,7 @@ void NativeProcessFreeBSD::MonitorCallback(lldb::pid_t pid, int signal) {
   }
 }
 
-void NativeProcessFreeBSD::MonitorExited(lldb::pid_t pid, WaitStatus status) {
+void NativeProcessNQC::MonitorExited(lldb::pid_t pid, WaitStatus status) {
   Log *log = GetLog(POSIXLog::Process);
 
   LLDB_LOG(log, "got exit signal({0}) , pid = {1}", status, pid);
@@ -184,16 +184,16 @@ void NativeProcessFreeBSD::MonitorExited(lldb::pid_t pid, WaitStatus status) {
   SetState(StateType::eStateExited, true);
 }
 
-void NativeProcessFreeBSD::MonitorSIGSTOP(lldb::pid_t pid) {
+void NativeProcessNQC::MonitorSIGSTOP(lldb::pid_t pid) {
   /* Stop all Threads attached to Process */
   for (const auto &thread : m_threads) {
-    static_cast<NativeThreadFreeBSD &>(*thread).SetStoppedBySignal(SIGSTOP,
+    static_cast<NativeThreadNQC &>(*thread).SetStoppedBySignal(SIGSTOP,
                                                                    nullptr);
   }
   SetState(StateType::eStateStopped, true);
 }
 
-void NativeProcessFreeBSD::MonitorSIGTRAP(lldb::pid_t pid) {
+void NativeProcessNQC::MonitorSIGTRAP(lldb::pid_t pid) {
   Log *log = GetLog(POSIXLog::Process);
   struct ptrace_lwpinfo info;
 
@@ -206,24 +206,24 @@ void NativeProcessFreeBSD::MonitorSIGTRAP(lldb::pid_t pid) {
 
   LLDB_LOG(log, "got SIGTRAP, pid = {0}, lwpid = {1}, flags = {2:x}", pid,
            info.pl_lwpid, info.pl_flags);
-  NativeThreadFreeBSD *thread = nullptr;
+  NativeThreadNQC *thread = nullptr;
 
   if (info.pl_flags & (PL_FLAG_BORN | PL_FLAG_EXITED)) {
     if (info.pl_flags & PL_FLAG_BORN) {
       LLDB_LOG(log, "monitoring new thread, tid = {0}", info.pl_lwpid);
-      NativeThreadFreeBSD &t = AddThread(info.pl_lwpid);
+      NativeThreadNQC &t = AddThread(info.pl_lwpid);
 
-      // Technically, the FreeBSD kernel copies the debug registers to new
+      // Technically, the NQC kernel copies the debug registers to new
       // threads.  However, there is a non-negligible delay between acquiring
       // the DR values and reporting the new thread during which the user may
       // establish a new watchpoint.  In order to ensure that watchpoints
       // established during this period are propagated to new threads,
       // explicitly copy the DR value at the time the new thread is reported.
       //
-      // See also: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250954
+      // See also: https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=250954
 
       llvm::Error error = t.CopyWatchpointsFrom(
-          static_cast<NativeThreadFreeBSD &>(*GetCurrentThread()));
+          static_cast<NativeThreadNQC &>(*GetCurrentThread()));
       if (error) {
         LLDB_LOG_ERROR(log, std::move(error),
                        "failed to copy watchpoints to new thread {1}: {0}",
@@ -254,7 +254,7 @@ void NativeProcessFreeBSD::MonitorSIGTRAP(lldb::pid_t pid) {
     NotifyDidExec();
 
     for (const auto &thread : m_threads)
-      static_cast<NativeThreadFreeBSD &>(*thread).SetStoppedByExec();
+      static_cast<NativeThreadNQC &>(*thread).SetStoppedByExec();
     SetCurrentThreadID(m_threads.front()->GetID());
     SetState(StateType::eStateStopped, true);
     return;
@@ -263,8 +263,8 @@ void NativeProcessFreeBSD::MonitorSIGTRAP(lldb::pid_t pid) {
   if (info.pl_lwpid > 0) {
     for (const auto &t : m_threads) {
       if (t->GetID() == static_cast<lldb::tid_t>(info.pl_lwpid))
-        thread = static_cast<NativeThreadFreeBSD *>(t.get());
-      static_cast<NativeThreadFreeBSD *>(t.get())->SetStoppedWithNoReason();
+        thread = static_cast<NativeThreadNQC *>(t.get());
+      static_cast<NativeThreadNQC *>(t.get())->SetStoppedWithNoReason();
     }
     if (!thread)
       LLDB_LOG(log, "thread not found in m_threads, pid = {0}, LWP = {1}", pid,
@@ -323,7 +323,7 @@ void NativeProcessFreeBSD::MonitorSIGTRAP(lldb::pid_t pid) {
                info.pl_siginfo.si_addr);
 
       if (thread) {
-        auto &regctx = static_cast<NativeRegisterContextFreeBSD &>(
+        auto &regctx = static_cast<NativeRegisterContextNQC &>(
             thread->GetRegisterContext());
         uint32_t wp_index = LLDB_INVALID_INDEX32;
         Status error = regctx.GetWatchpointHitIndex(
@@ -356,7 +356,7 @@ void NativeProcessFreeBSD::MonitorSIGTRAP(lldb::pid_t pid) {
   MonitorSignal(pid, SIGTRAP);
 }
 
-void NativeProcessFreeBSD::MonitorSignal(lldb::pid_t pid, int signal) {
+void NativeProcessNQC::MonitorSignal(lldb::pid_t pid, int signal) {
   Log *log = GetLog(POSIXLog::Process);
   struct ptrace_lwpinfo info;
 
@@ -371,8 +371,8 @@ void NativeProcessFreeBSD::MonitorSignal(lldb::pid_t pid, int signal) {
   assert(info.pl_siginfo.si_signo == signal);
 
   for (const auto &abs_thread : m_threads) {
-    NativeThreadFreeBSD &thread =
-        static_cast<NativeThreadFreeBSD &>(*abs_thread);
+    NativeThreadNQC &thread =
+        static_cast<NativeThreadNQC &>(*abs_thread);
     assert(info.pl_lwpid >= 0);
     if (info.pl_lwpid == 0 ||
         static_cast<lldb::tid_t>(info.pl_lwpid) == thread.GetID()) {
@@ -384,7 +384,7 @@ void NativeProcessFreeBSD::MonitorSignal(lldb::pid_t pid, int signal) {
   SetState(StateType::eStateStopped, true);
 }
 
-Status NativeProcessFreeBSD::PtraceWrapper(int req, lldb::pid_t pid, void *addr,
+Status NativeProcessNQC::PtraceWrapper(int req, lldb::pid_t pid, void *addr,
                                            int data, int *result) {
   Log *log = GetLog(POSIXLog::Ptrace);
   Status error;
@@ -409,7 +409,7 @@ Status NativeProcessFreeBSD::PtraceWrapper(int req, lldb::pid_t pid, void *addr,
 }
 
 llvm::Expected<llvm::ArrayRef<uint8_t>>
-NativeProcessFreeBSD::GetSoftwareBreakpointTrapOpcode(size_t size_hint) {
+NativeProcessNQC::GetSoftwareBreakpointTrapOpcode(size_t size_hint) {
   static const uint8_t g_arm_opcode[] = {0xfe, 0xde, 0xff, 0xe7};
   static const uint8_t g_thumb_opcode[] = {0x01, 0xde};
 
@@ -429,7 +429,7 @@ NativeProcessFreeBSD::GetSoftwareBreakpointTrapOpcode(size_t size_hint) {
   }
 }
 
-Status NativeProcessFreeBSD::Resume(const ResumeActionList &resume_actions) {
+Status NativeProcessNQC::Resume(const ResumeActionList &resume_actions) {
   Log *log = GetLog(POSIXLog::Process);
   LLDB_LOG(log, "pid {0}", GetID());
 
@@ -438,8 +438,8 @@ Status NativeProcessFreeBSD::Resume(const ResumeActionList &resume_actions) {
   int signal = 0;
   for (const auto &abs_thread : m_threads) {
     assert(abs_thread && "thread list should not contain NULL threads");
-    NativeThreadFreeBSD &thread =
-        static_cast<NativeThreadFreeBSD &>(*abs_thread);
+    NativeThreadNQC &thread =
+        static_cast<NativeThreadNQC &>(*abs_thread);
 
     const ResumeAction *action =
         resume_actions.GetActionForThread(thread.GetID(), true);
@@ -476,7 +476,7 @@ Status NativeProcessFreeBSD::Resume(const ResumeActionList &resume_actions) {
 
     default:
       return Status(
-          "NativeProcessFreeBSD::%s (): unexpected state %s specified "
+          "NativeProcessNQC::%s (): unexpected state %s specified "
           "for pid %" PRIu64 ", tid %" PRIu64,
           __FUNCTION__, StateAsCString(action->state), GetID(), thread.GetID());
     }
@@ -494,7 +494,7 @@ Status NativeProcessFreeBSD::Resume(const ResumeActionList &resume_actions) {
   return ret;
 }
 
-Status NativeProcessFreeBSD::Halt() {
+Status NativeProcessNQC::Halt() {
   Status error;
 
   // Do not try to stop a process that's already stopped, this may cause
@@ -506,7 +506,7 @@ Status NativeProcessFreeBSD::Halt() {
   return error;
 }
 
-Status NativeProcessFreeBSD::Detach() {
+Status NativeProcessNQC::Detach() {
   Status error;
 
   // Stop monitoring the inferior.
@@ -519,7 +519,7 @@ Status NativeProcessFreeBSD::Detach() {
   return PtraceWrapper(PT_DETACH, GetID());
 }
 
-Status NativeProcessFreeBSD::Signal(int signo) {
+Status NativeProcessNQC::Signal(int signo) {
   Status error;
 
   if (kill(GetID(), signo))
@@ -528,9 +528,9 @@ Status NativeProcessFreeBSD::Signal(int signo) {
   return error;
 }
 
-Status NativeProcessFreeBSD::Interrupt() { return Halt(); }
+Status NativeProcessNQC::Interrupt() { return Halt(); }
 
-Status NativeProcessFreeBSD::Kill() {
+Status NativeProcessNQC::Kill() {
   Log *log = GetLog(POSIXLog::Process);
   LLDB_LOG(log, "pid {0}", GetID());
 
@@ -561,7 +561,7 @@ Status NativeProcessFreeBSD::Kill() {
   return PtraceWrapper(PT_KILL, m_pid);
 }
 
-Status NativeProcessFreeBSD::GetMemoryRegionInfo(lldb::addr_t load_addr,
+Status NativeProcessNQC::GetMemoryRegionInfo(lldb::addr_t load_addr,
                                                  MemoryRegionInfo &range_info) {
 
   if (m_supports_mem_region == LazyBool::eLazyBoolNo) {
@@ -617,7 +617,7 @@ Status NativeProcessFreeBSD::GetMemoryRegionInfo(lldb::addr_t load_addr,
   return error;
 }
 
-Status NativeProcessFreeBSD::PopulateMemoryRegionCache() {
+Status NativeProcessNQC::PopulateMemoryRegionCache() {
   Log *log = GetLog(POSIXLog::Process);
   // If our cache is empty, pull the latest.  There should always be at least
   // one memory region if memory region handling is supported.
@@ -697,16 +697,16 @@ Status NativeProcessFreeBSD::PopulateMemoryRegionCache() {
   return Status();
 }
 
-size_t NativeProcessFreeBSD::UpdateThreads() { return m_threads.size(); }
+size_t NativeProcessNQC::UpdateThreads() { return m_threads.size(); }
 
-Status NativeProcessFreeBSD::SetBreakpoint(lldb::addr_t addr, uint32_t size,
+Status NativeProcessNQC::SetBreakpoint(lldb::addr_t addr, uint32_t size,
                                            bool hardware) {
   if (hardware)
     return SetHardwareBreakpoint(addr, size);
   return SetSoftwareBreakpoint(addr, size);
 }
 
-Status NativeProcessFreeBSD::GetLoadedModuleFileSpec(const char *module_path,
+Status NativeProcessNQC::GetLoadedModuleFileSpec(const char *module_path,
                                                      FileSpec &file_spec) {
   Status error = PopulateMemoryRegionCache();
   if (error.Fail())
@@ -727,7 +727,7 @@ Status NativeProcessFreeBSD::GetLoadedModuleFileSpec(const char *module_path,
 }
 
 Status
-NativeProcessFreeBSD::GetFileLoadAddress(const llvm::StringRef &file_name,
+NativeProcessNQC::GetFileLoadAddress(const llvm::StringRef &file_name,
                                          lldb::addr_t &load_addr) {
   load_addr = LLDB_INVALID_ADDRESS;
   Status error = PopulateMemoryRegionCache();
@@ -744,7 +744,7 @@ NativeProcessFreeBSD::GetFileLoadAddress(const llvm::StringRef &file_name,
   return Status("No load address found for file %s.", file_name.str().c_str());
 }
 
-void NativeProcessFreeBSD::SigchldHandler() {
+void NativeProcessNQC::SigchldHandler() {
   Log *log = GetLog(POSIXLog::Process);
   int status;
   ::pid_t wait_pid =
@@ -776,7 +776,7 @@ void NativeProcessFreeBSD::SigchldHandler() {
   }
 }
 
-bool NativeProcessFreeBSD::HasThreadNoLock(lldb::tid_t thread_id) {
+bool NativeProcessNQC::HasThreadNoLock(lldb::tid_t thread_id) {
   for (const auto &thread : m_threads) {
     assert(thread && "thread list should not contain NULL threads");
     if (thread->GetID() == thread_id) {
@@ -789,7 +789,7 @@ bool NativeProcessFreeBSD::HasThreadNoLock(lldb::tid_t thread_id) {
   return false;
 }
 
-NativeThreadFreeBSD &NativeProcessFreeBSD::AddThread(lldb::tid_t thread_id) {
+NativeThreadNQC &NativeProcessNQC::AddThread(lldb::tid_t thread_id) {
   Log *log = GetLog(POSIXLog::Thread);
   LLDB_LOG(log, "pid {0} adding thread with tid {1}", GetID(), thread_id);
 
@@ -801,11 +801,11 @@ NativeThreadFreeBSD &NativeProcessFreeBSD::AddThread(lldb::tid_t thread_id) {
   if (m_threads.empty())
     SetCurrentThreadID(thread_id);
 
-  m_threads.push_back(std::make_unique<NativeThreadFreeBSD>(*this, thread_id));
-  return static_cast<NativeThreadFreeBSD &>(*m_threads.back());
+  m_threads.push_back(std::make_unique<NativeThreadNQC>(*this, thread_id));
+  return static_cast<NativeThreadNQC &>(*m_threads.back());
 }
 
-void NativeProcessFreeBSD::RemoveThread(lldb::tid_t thread_id) {
+void NativeProcessNQC::RemoveThread(lldb::tid_t thread_id) {
   Log *log = GetLog(POSIXLog::Thread);
   LLDB_LOG(log, "pid {0} removing thread with tid {1}", GetID(), thread_id);
 
@@ -824,7 +824,7 @@ void NativeProcessFreeBSD::RemoveThread(lldb::tid_t thread_id) {
     SetCurrentThreadID(m_threads.front()->GetID());
 }
 
-Status NativeProcessFreeBSD::Attach() {
+Status NativeProcessNQC::Attach() {
   // Attach to the requested process.
   // An attach will cause the thread to stop with a SIGSTOP.
   Status status = PtraceWrapper(PT_ATTACH, m_pid);
@@ -845,7 +845,7 @@ Status NativeProcessFreeBSD::Attach() {
     return status;
 
   for (const auto &thread : m_threads)
-    static_cast<NativeThreadFreeBSD &>(*thread).SetStoppedBySignal(SIGSTOP);
+    static_cast<NativeThreadNQC &>(*thread).SetStoppedBySignal(SIGSTOP);
 
   // Let our process instance know the thread has stopped.
   SetCurrentThreadID(m_threads.front()->GetID());
@@ -853,7 +853,7 @@ Status NativeProcessFreeBSD::Attach() {
   return Status();
 }
 
-Status NativeProcessFreeBSD::ReadMemory(lldb::addr_t addr, void *buf,
+Status NativeProcessNQC::ReadMemory(lldb::addr_t addr, void *buf,
                                         size_t size, size_t &bytes_read) {
   unsigned char *dst = static_cast<unsigned char *>(buf);
   struct ptrace_io_desc io;
@@ -869,7 +869,7 @@ Status NativeProcessFreeBSD::ReadMemory(lldb::addr_t addr, void *buf,
     io.piod_offs = (void *)(addr + bytes_read);
     io.piod_addr = dst + bytes_read;
 
-    Status error = NativeProcessFreeBSD::PtraceWrapper(PT_IO, GetID(), &io);
+    Status error = NativeProcessNQC::PtraceWrapper(PT_IO, GetID(), &io);
     if (error.Fail() || io.piod_len == 0)
       return error;
 
@@ -880,7 +880,7 @@ Status NativeProcessFreeBSD::ReadMemory(lldb::addr_t addr, void *buf,
   return Status();
 }
 
-Status NativeProcessFreeBSD::WriteMemory(lldb::addr_t addr, const void *buf,
+Status NativeProcessNQC::WriteMemory(lldb::addr_t addr, const void *buf,
                                          size_t size, size_t &bytes_written) {
   const unsigned char *src = static_cast<const unsigned char *>(buf);
   Status error;
@@ -898,7 +898,7 @@ Status NativeProcessFreeBSD::WriteMemory(lldb::addr_t addr, const void *buf,
         const_cast<void *>(static_cast<const void *>(src + bytes_written));
     io.piod_offs = (void *)(addr + bytes_written);
 
-    Status error = NativeProcessFreeBSD::PtraceWrapper(PT_IO, GetID(), &io);
+    Status error = NativeProcessNQC::PtraceWrapper(PT_IO, GetID(), &io);
     if (error.Fail() || io.piod_len == 0)
       return error;
 
@@ -910,7 +910,7 @@ Status NativeProcessFreeBSD::WriteMemory(lldb::addr_t addr, const void *buf,
 }
 
 llvm::ErrorOr<std::unique_ptr<llvm::MemoryBuffer>>
-NativeProcessFreeBSD::GetAuxvData() const {
+NativeProcessNQC::GetAuxvData() const {
   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_AUXV, static_cast<int>(GetID())};
   size_t auxv_size = AT_COUNT * sizeof(Elf_Auxinfo);
   std::unique_ptr<WritableMemoryBuffer> buf =
@@ -922,7 +922,7 @@ NativeProcessFreeBSD::GetAuxvData() const {
   return buf;
 }
 
-Status NativeProcessFreeBSD::SetupTrace() {
+Status NativeProcessNQC::SetupTrace() {
   // Enable event reporting
   int events;
   Status status =
@@ -937,7 +937,7 @@ Status NativeProcessFreeBSD::SetupTrace() {
   return ReinitializeThreads();
 }
 
-Status NativeProcessFreeBSD::ReinitializeThreads() {
+Status NativeProcessNQC::ReinitializeThreads() {
   // Clear old threads
   m_threads.clear();
 
@@ -960,12 +960,12 @@ Status NativeProcessFreeBSD::ReinitializeThreads() {
   return error;
 }
 
-bool NativeProcessFreeBSD::SupportHardwareSingleStepping() const {
+bool NativeProcessNQC::SupportHardwareSingleStepping() const {
   return !m_arch.IsMIPS();
 }
 
-void NativeProcessFreeBSD::MonitorClone(::pid_t child_pid, bool is_vfork,
-                                        NativeThreadFreeBSD &parent_thread) {
+void NativeProcessNQC::MonitorClone(::pid_t child_pid, bool is_vfork,
+                                        NativeThreadNQC &parent_thread) {
   Log *log = GetLog(POSIXLog::Process);
   LLDB_LOG(log, "fork, child_pid={0}", child_pid);
 
@@ -996,8 +996,8 @@ void NativeProcessFreeBSD::MonitorClone(::pid_t child_pid, bool is_vfork,
   assert(info.pl_event == PL_EVENT_SIGNAL);
   lldb::tid_t child_tid = info.pl_lwpid;
 
-  std::unique_ptr<NativeProcessFreeBSD> child_process{
-      new NativeProcessFreeBSD(static_cast<::pid_t>(child_pid), m_terminal_fd,
+  std::unique_ptr<NativeProcessNQC> child_process{
+      new NativeProcessNQC(static_cast<::pid_t>(child_pid), m_terminal_fd,
                                m_delegate, m_arch, m_main_loop)};
   if (!is_vfork)
     child_process->m_software_breakpoints = m_software_breakpoints;
@@ -1006,7 +1006,7 @@ void NativeProcessFreeBSD::MonitorClone(::pid_t child_pid, bool is_vfork,
   if ((m_enabled_extensions & expected_ext) == expected_ext) {
     child_process->SetupTrace();
     for (const auto &thread : child_process->m_threads)
-      static_cast<NativeThreadFreeBSD &>(*thread).SetStoppedBySignal(SIGSTOP);
+      static_cast<NativeThreadNQC &>(*thread).SetStoppedBySignal(SIGSTOP);
     child_process->SetState(StateType::eStateStopped, false);
 
     m_delegate.NewSubprocess(this, std::move(child_process));
@@ -1028,7 +1028,7 @@ void NativeProcessFreeBSD::MonitorClone(::pid_t child_pid, bool is_vfork,
 }
 
 llvm::Expected<std::string>
-NativeProcessFreeBSD::SaveCore(llvm::StringRef path_hint) {
+NativeProcessNQC::SaveCore(llvm::StringRef path_hint) {
 #if defined(PT_COREDUMP)
   using namespace llvm::sys::fs;
 
@@ -1056,6 +1056,6 @@ NativeProcessFreeBSD::SaveCore(llvm::StringRef path_hint) {
 #else // !defined(PT_COREDUMP)
   return llvm::createStringError(
       llvm::inconvertibleErrorCode(),
-      "PT_COREDUMP not supported in the FreeBSD version used to build LLDB");
+      "PT_COREDUMP not supported in the NQC version used to build LLDB");
 #endif
 }

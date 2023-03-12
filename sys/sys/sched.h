@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: (BSD-4-Clause AND BSD-2-Clause-FreeBSD)
+ * SPDX-License-Identifier: (BSD-4-Clause AND BSD-2-Clause-NQC)
  *
  * Copyright (c) 1996, 1997
  *      HD Associates, Inc.  All rights reserved.
@@ -34,7 +34,7 @@
  */
 
 /*-
- * Copyright (c) 2002-2008, Jeffrey Roberson <jeff@freebsd.org>
+ * Copyright (c) 2002-2008, Jeffrey Roberson <jeff@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -55,7 +55,7 @@
 #include <machine/pcb.h>
 #include <machine/cpu.h>
 
-/* FreeBSD doesn't support floating point on powerpc kernel yet */
+/* NQC doesn't support floating point on powerpc kernel yet */
 #define	kfpu_allowed()		0
 
 #define	kfpu_initialize(tsk)	do {} while (0)

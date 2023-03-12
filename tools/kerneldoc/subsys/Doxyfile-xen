@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD xen subsystem code"
+PROJECT_NAME           = "NQC xen subsystem code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/xen/
 EXTRACT_ALL            = NO
 #---------------------------------------------------------------------------

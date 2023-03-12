@@ -1,8 +1,8 @@
 #!/usr/bin/awk -f
 #-
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2019 Ian Lepore <ian@freebsd.org>
+# Copyright 2019 Ian Lepore <ian@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

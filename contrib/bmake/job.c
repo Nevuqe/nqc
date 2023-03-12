@@ -259,14 +259,14 @@ typedef struct ShellWriter {
 } ShellWriter;
 
 /*
- * FreeBSD: traditionally .MAKE is not required to
+ * NQC: traditionally .MAKE is not required to
  * pass jobs queue to sub-makes.
  * Use .MAKE.ALWAYS_PASS_JOB_QUEUE=no to disable.
  */
 #define MAKE_ALWAYS_PASS_JOB_QUEUE "${.MAKE.ALWAYS_PASS_JOB_QUEUE:U}"
 static bool Always_pass_job_queue = true;
 /*
- * FreeBSD: aborting entire parallel make isn't always
+ * NQC: aborting entire parallel make isn't always
  * desired. When doing tinderbox for example, failure of
  * one architecture should not stop all.
  * We still want to bail on interrupt though.

@@ -105,7 +105,7 @@ static lua_CFunction lsys_sym (lua_State *L, void *lib, const char *sym);
 /*
 ** {========================================================================
 ** This is an implementation of loadlib based on the dlfcn interface.
-** The dlfcn interface is available in Linux, SunOS, Solaris, IRIX, FreeBSD,
+** The dlfcn interface is available in Linux, SunOS, Solaris, IRIX, NQC,
 ** NetBSD, AIX 4.2, HPUX 11, and  probably most other Unix flavors, at least
 ** as an emulation layer on top of native functions.
 ** =========================================================================

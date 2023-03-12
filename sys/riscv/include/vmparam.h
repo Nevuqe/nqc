@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)vmparam.h     5.9 (Berkeley) 5/12/91
- *	from: FreeBSD: src/sys/i386/include/vmparam.h,v 1.33 2000/03/30
+ *	from: NQC: src/sys/i386/include/vmparam.h,v 1.33 2000/03/30
  * $NQC$
  */
 
@@ -117,7 +117,7 @@
  *
  * RISC-V implements multiple paging modes with different virtual address space
  * sizes: SV32, SV39, SV48 and SV57.  Only SV39 and SV48 are supported by
- * FreeBSD.  SV39 provides a 512GB virtual address space and uses three-level
+ * NQC.  SV39 provides a 512GB virtual address space and uses three-level
  * page tables, while SV48 provides a 256TB virtual address space and uses
  * four-level page tables.  64-bit RISC-V implementations are required to provide
  * at least SV39 mode; locore initially enables SV39 mode while bootstrapping

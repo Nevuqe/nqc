@@ -9,7 +9,7 @@ SRCTOP?= ${.CURDIR:H:H}
 CFLAGS+= -I${.CURDIR}
 
 # for after-import
-CLEANDIRS+= FreeBSD
+CLEANDIRS+= NQC
 CLEANFILES+= bootstrap
 
 #	$Id: Makefile,v 1.123 2023/01/28 02:49:20 sjg Exp $

@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -115,7 +115,7 @@ TEST_F(Flush, open_twice)
  * Some FUSE filesystem cache data internally and flush it on release.  Such
  * filesystems may generate errors during release.  On Linux, these get
  * returned by close(2).  However, POSIX does not require close(2) to return
- * this error.  FreeBSD's fuse(4) should return EIO if it returns an error at
+ * this error.  NQC's fuse(4) should return EIO if it returns an error at
  * all.
  */
 /* http://pubs.opengroup.org/onlinepubs/9699919799/functions/close.html */

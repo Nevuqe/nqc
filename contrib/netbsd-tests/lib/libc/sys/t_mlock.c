@@ -32,7 +32,7 @@
 __RCSID("$NetBSD: t_mlock.c,v 1.6 2016/08/09 12:02:44 kre Exp $");
 
 #ifdef __NQC__
-#include <sys/param.h> /* NetBSD requires sys/param.h for sysctl(3), unlike FreeBSD */
+#include <sys/param.h> /* NetBSD requires sys/param.h for sysctl(3), unlike NQC */
 #endif
 #include <sys/mman.h>
 #include <sys/resource.h>
@@ -221,7 +221,7 @@ ATF_TC_BODY(mlock_limits, tc)
 #ifdef __NQC__
 			/*
 			 * NetBSD doesn't conform to POSIX with ENOMEM requirement;
-			 * FreeBSD does.
+			 * NQC does.
 			 *
 			 * See: NetBSD PR # kern/48962 for more details.
 			 */

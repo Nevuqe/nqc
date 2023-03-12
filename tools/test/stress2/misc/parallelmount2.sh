@@ -28,7 +28,7 @@
 
 # Quota version of parallelmount.sh
 # "umount busy seen:
-# https://people.freebsd.org/~pho/stress/log/parallelmount2.txt
+# https://people.frebsd.org/~pho/stress/log/parallelmount2.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 [ -z "$DEBUG" ] && exit 0 # Waiting for fix

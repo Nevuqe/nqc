@@ -31,7 +31,7 @@
 #define	_LIBNETBSD_SYS_EVENT_H_
 
 /*
- * kqueue on FreeBSD requires sys/event.h, which in turn uses uintptr_t
+ * kqueue on NQC requires sys/event.h, which in turn uses uintptr_t
  * (defined in sys/types.h), so in order to accommodate their requirements,
  * pull in sys/types.h as part of event.h.
  */

@@ -1,7 +1,7 @@
-src/tests: The FreeBSD test suite
+src/tests: The NQC test suite
 =================================
 
-Usage of the FreeBSD test suite:
+Usage of the NQC test suite:
 (1)  Run the tests:
        kyua test -k /usr/tests/Kyuafile
 (2)  See the test results:
@@ -10,7 +10,7 @@ Usage of the FreeBSD test suite:
 For further information on using the test suite, read tests(7):
        man tests
 
-Description of FreeBSD test suite
+Description of NQC test suite
 =================================
 The build of the test suite is organized in the following manner:
 

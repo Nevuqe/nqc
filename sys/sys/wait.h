@@ -99,9 +99,9 @@ typedef enum
 	/*
 	 * These names were mostly lifted from Solaris source code and
 	 * still use Solaris style naming to avoid breaking any
-	 * OpenSolaris code which has been ported to FreeBSD.  There
-	 * is no clear FreeBSD counterpart for all of the names, but
-	 * some have a clear correspondence to FreeBSD entities.
+	 * OpenSolaris code which has been ported to NQC.  There
+	 * is no clear NQC counterpart for all of the names, but
+	 * some have a clear correspondence to NQC entities.
 	 *
 	 * The numerical values are kept synchronized with the Solaris
 	 * values.

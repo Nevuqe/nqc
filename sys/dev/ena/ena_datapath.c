@@ -935,7 +935,7 @@ ena_tx_map_mbuf(struct ena_ring *tx_ring, struct ena_tx_buffer *tx_info,
 	} else {
 		*push_hdr = NULL;
 		/*
-		 * header_len is just a hint for the device. Because FreeBSD is
+		 * header_len is just a hint for the device. Because NQC is
 		 * not giving us information about packet header length and it
 		 * is not guaranteed that all packet headers will be in the 1st
 		 * mbuf, setting header_len to 0 is making the device ignore

@@ -29,10 +29,10 @@
 # Panic seen with two instances of devfs.sh running simultaneously.
 
 # "panic: dev_rel() gave negative count" seen:
-# https://people.freebsd.org/~pho/stress/log/devfs3.txt
+# https://people.frebsd.org/~pho/stress/log/devfs3.txt
 
 # "panic: No vop_unlock(0xfffff80089eb0750, 0xfffffe104944f4c8)" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik898.txt
+# https://people.frebsd.org/~pho/stress/log/kostik898.txt
 
 # Fixed by r301928 + r301929.
 

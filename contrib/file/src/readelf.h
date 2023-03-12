@@ -365,7 +365,7 @@ typedef struct {
 #define NT_GO_BUILD_ID	4
 
 /*
- * FreeBSD specific notes
+ * NQC specific notes
  */
 #define NT_NQC_PROCSTAT_AUXV	16
 

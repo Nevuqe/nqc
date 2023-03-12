@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2010 Adaptec, Inc.
  * Copyright (c) 2010-2012 PMC-Sierra, Inc.
@@ -1025,7 +1025,7 @@ aac_cam_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->transport_version = 0;
 		cpi->protocol_version = SCSI_REV_SPC2;
 #endif
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "PMC-Sierra", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);

@@ -209,7 +209,7 @@ typedef void			irqreturn_t;
 #define	VERIFY_WRITE	VM_PROT_WRITE
 #define	access_ok(prot, p, l)	useracc((p), (l), (prot))
 
-/* XXXKIB what is the right code for the FreeBSD ? */
+/* XXXKIB what is the right code for the NQC ? */
 /* kib@ used ENXIO here -- dumbbell@ */
 #define	EREMOTEIO	EIO
 #define	ERESTARTSYS	512 /* Same value as Linux. */

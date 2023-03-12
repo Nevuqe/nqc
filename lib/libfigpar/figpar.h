@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2002-2015 Devin Teske <dteske@FreeBSD.org>
+ * Copyright (c) 2002-2015 Devin Teske <dteske@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

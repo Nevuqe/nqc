@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2001-2003, Shunsuke Akiyama <akiyama@FreeBSD.org>.
+ * Copyright (c) 2001-2003, Shunsuke Akiyama <akiyama@frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

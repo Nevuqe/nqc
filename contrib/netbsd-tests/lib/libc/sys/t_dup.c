@@ -212,7 +212,7 @@ ATF_TC_BODY(dup3_err, tc)
 	errno = 0;
 #if defined(__NQC__) || defined(__linux__)
 	/*
-	 * FreeBSD and linux return EINVAL, because...
+	 * NQC and linux return EINVAL, because...
 	 *
 	 * [EINVAL] The oldd argument is equal to the newd argument.
 	 */

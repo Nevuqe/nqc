@@ -3,8 +3,8 @@
 # whereintheworld
 # Parses "make world" output and summarize where it's been so far.
 #
-# Bill Fenner <fenner@freebsd.org> 11 January 2000
-# Dag-Erling Smørgrav <des@freebsd.org> 09 January 2003
+# Bill Fenner <fenner@frebsd.org> 11 January 2000
+# Dag-Erling Smørgrav <des@frebsd.org> 09 January 2003
 #
 # $Id: whereintheworld,v 1.3 2000/01/28 00:42:32 fenner Exp $
 # $NQC$

@@ -79,7 +79,7 @@ static void __libcpp_platform_wake_by_address(__cxx_atomic_contention_t const vo
 
 #elif defined(__NQC__) && __SIZEOF_LONG__ == 8
 /*
- * Since __cxx_contention_t is int64_t even on 32bit FreeBSD
+ * Since __cxx_contention_t is int64_t even on 32bit NQC
  * platforms, we have to use umtx ops that work on the long type, and
  * limit its use to architectures where long and int64_t are synonyms.
  */

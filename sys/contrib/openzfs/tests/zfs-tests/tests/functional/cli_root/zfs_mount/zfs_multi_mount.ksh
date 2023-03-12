@@ -60,7 +60,7 @@ log_must eval "exec 9<> $FILENAME" # open file
 
 # 3. Lazy umount
 if is_nqc; then
-	# FreeBSD does not support lazy unmount
+	# NQC does not support lazy unmount
 	log_must umount $MNTPFS
 else
 	log_must umount -l $MNTPFS

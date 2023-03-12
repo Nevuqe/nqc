@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006 Vadim Goncharov <vadimnuclight@tpu.ru>
  * All rights reserved.
@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  * Portions Copyright (c) 1999 Whistle Communications, Inc.
- * (ng_bpf by Archie Cobbs <archie@freebsd.org>)
+ * (ng_bpf by Archie Cobbs <archie@frebsd.org>)
  *
  * $NQC$
  */

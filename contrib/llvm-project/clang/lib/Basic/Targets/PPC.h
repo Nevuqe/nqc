@@ -373,7 +373,7 @@ public:
 
     switch (getTriple().getOS()) {
     case llvm::Triple::Linux:
-    case llvm::Triple::FreeBSD:
+    case llvm::Triple::NQC:
     case llvm::Triple::NetBSD:
       SizeType = UnsignedInt;
       PtrDiffType = SignedInt;
@@ -391,7 +391,7 @@ public:
       break;
     }
 
-    if (Triple.isOSFreeBSD() || Triple.isOSNetBSD() || Triple.isOSOpenBSD() ||
+    if (Triple.isOSNQC() || Triple.isOSNetBSD() || Triple.isOSOpenBSD() ||
         Triple.isMusl()) {
       LongDoubleWidth = LongDoubleAlign = 64;
       LongDoubleFormat = &llvm::APFloat::IEEEdouble();
@@ -427,7 +427,7 @@ public:
     } else if ((Triple.getArch() == llvm::Triple::ppc64le)) {
       DataLayout = "e-m:e-i64:64-n32:64";
       ABI = "elfv2";
-    } else if (Triple.isOSFreeBSD() && (Triple.getOSMajorVersion() == 0 || Triple.getOSMajorVersion() >= 13)) {
+    } else if (Triple.isOSNQC() && (Triple.getOSMajorVersion() == 0 || Triple.getOSMajorVersion() >= 13)) {
       DataLayout = "E-m:e-i64:64-n32:64";
       ABI = "elfv2";
     } else {
@@ -435,7 +435,7 @@ public:
       ABI = "elfv1";
     }
 
-    if (Triple.isOSFreeBSD() || Triple.isOSOpenBSD() || Triple.isMusl()) {
+    if (Triple.isOSNQC() || Triple.isOSOpenBSD() || Triple.isMusl()) {
       LongDoubleWidth = LongDoubleAlign = 64;
       LongDoubleFormat = &llvm::APFloat::IEEEdouble();
     }

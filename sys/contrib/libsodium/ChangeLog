@@ -156,7 +156,7 @@ times.
 platform 24, but without breaking compatibility with platforms 16 and
 21.
  - Better support for old gcc versions.
- - On FreeBSD, core dumps are disabled on regions allocated with
+ - On NQC, core dumps are disabled on regions allocated with
 sodium allocation functions.
  - AVX2 detection was fixed, resulting in faster Blake2b hashing on
 platforms where it was not properly detected.

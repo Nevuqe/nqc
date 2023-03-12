@@ -1686,7 +1686,7 @@ OLD_FILES+=usr/share/nls/uk_UA.KOI8-U/ee.cat
 .endif
 
 .if ${MK_EXAMPLES} == no
-OLD_FILES+=usr/share/examples/BSD_daemon/FreeBSD.pfa
+OLD_FILES+=usr/share/examples/BSD_daemon/NQC.pfa
 OLD_FILES+=usr/share/examples/BSD_daemon/README
 OLD_FILES+=usr/share/examples/BSD_daemon/beastie.eps
 OLD_FILES+=usr/share/examples/BSD_daemon/beastie.fig

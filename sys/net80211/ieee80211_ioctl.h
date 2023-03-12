@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2001 Atsushi Onoe
  * Copyright (c) 2002-2009 Sam Leffler, Errno Consulting
@@ -586,7 +586,7 @@ struct ieee80211req_sta_vlan {
 
 #ifdef __NQC__
 /*
- * FreeBSD-style ioctls.
+ * NQC-style ioctls.
  */
 /* the first member must be matched with struct ifreq */
 struct ieee80211req {

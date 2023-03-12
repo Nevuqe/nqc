@@ -353,7 +353,7 @@
 	<translation encoding="CP1251"
 	    cldr="MODIFIER_LETTER_APOSTROPHE" unicode="APOSTROPHE" />
 
-	<!-- Copied from the original FreeBSD src/share/monetdef -->
+	<!-- Copied from the original NQC src/share/monetdef -->
 	<translation encoding="CP1251" cldr="HRYVNIA_SIGN" hex="E3F0ED" />
 	<translation encoding="ISO8859-5" cldr="HRYVNIA_SIGN" hex="D3E0DD" />
 	<translation encoding="KOI8-U" cldr="HRYVNIA_SIGN" hex="C7D2CE" />

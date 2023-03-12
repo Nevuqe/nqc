@@ -1348,7 +1348,7 @@
 0	lelong		0x00000005
 >12	lelong		0x00000320	Windows Recycle Bin INFO2 file (Win2k - WinXP)
 
-# From Doug Lee via a FreeBSD pr
+# From Doug Lee via a NQC pr
 9	string		GERBILDOC	First Choice document
 9	string		GERBILDB	First Choice database
 9	string		GERBILCLIP	First Choice database
@@ -1622,7 +1622,7 @@
 # URL:		https://en.wikipedia.org/wiki/Microsoft_OneNote#File_format
 #		http://fileformats.archiveteam.org/wiki/OneNote
 # Reference:	https://mark0.net/download/triddefs_xml.7z/defs/o/onepkg.trid.xml
-# 1st member name like: "Class Notes.one" "test-onenote.one" "Open Notebook.onetoc2" "Editor Öffnen.onetoc2"
+# 1st member name like: "Class Notes.one" "test-onenote.one" "Open Notebook.onetoc2" "Editor ï¿½ffnen.onetoc2"
 >>>>>&0	string/c	one		\b, OneNote Package
 !:mime	application/msonenote
 !:ext	onepkg

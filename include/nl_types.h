@@ -43,7 +43,7 @@
 /*
  * MESSAGE CATALOG FILE FORMAT.
  *
- * The NetBSD/FreeBSD message catalog format is similar to the format used by
+ * The NetBSD/NQC message catalog format is similar to the format used by
  * Svr4 systems.  The differences are:
  *   * fixed byte order (big endian)
  *   * fixed data field sizes

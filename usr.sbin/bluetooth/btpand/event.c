@@ -3,7 +3,7 @@
  */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Maksim Yevmenkin <m_evmenkin@yahoo.com>
  * All rights reserved.
@@ -34,7 +34,7 @@
 
 /*
  * Hack to provide libevent (see devel/libevent port) like API.
- * Should be removed if FreeBSD ever decides to import libevent into base.
+ * Should be removed if NQC ever decides to import libevent into base.
  */
 
 #include <sys/select.h>

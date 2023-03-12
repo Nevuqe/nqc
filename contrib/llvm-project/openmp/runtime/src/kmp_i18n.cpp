@@ -720,7 +720,7 @@ static char *sys_error(int err) {
   // `char *'.
   message = __kmp_str_format("%s", err_msg);
 
-#else // OS X*, FreeBSD* etc.
+#else // OS X*, NQC* etc.
   // XSI version of strerror_r.
   int size = 2048;
   char *buffer = (char *)KMP_INTERNAL_MALLOC(size);

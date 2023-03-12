@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2016 Alan Somers
 #
@@ -85,7 +85,7 @@ HERE
 }
 
 # Regression test for PR 222671
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=222671
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=222671
 atf_test_case pipe_leading_newline_r
 pipe_leading_newline_r_head()
 {

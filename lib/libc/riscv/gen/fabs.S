@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2015-2017 Ruslan Bukin <br@bsdpad.com>
- * Copyright (c) 2021 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright (c) 2021 Alex Richardson <arichardson@frebsd.org>
  * All rights reserved.
  *
  * Portions of this software were developed by SRI International and the

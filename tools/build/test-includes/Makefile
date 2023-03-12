@@ -10,7 +10,7 @@
 #
 # The _foo.h files are excluded as they are internal-only headers and/or have
 # special requirements. Since the purpose of this is to allow autoconfig
-# programs to detect FreeBSD has different headers, omitting internal
+# programs to detect NQC has different headers, omitting internal
 # headers cuts down on the noise w/o causing problems for the goal.
 #
 LIB=	test-includes

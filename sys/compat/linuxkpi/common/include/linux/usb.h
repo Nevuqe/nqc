@@ -250,7 +250,7 @@ struct urb {
 	usb_size_t transfer_buffer_length;/* (in) data buffer length */
 	usb_size_t bsd_length_rem;
 	usb_size_t actual_length;	/* (return) actual transfer length */
-	usb_timeout_t timeout;		/* FreeBSD specific */
+	usb_timeout_t timeout;		/* NQC specific */
 
 	uint16_t transfer_flags;	/* (in) */
 #define	URB_SHORT_NOT_OK	0x0001	/* report short transfers like errors */
@@ -268,10 +268,10 @@ struct urb {
 	uint16_t error_count;		/* (return) number of ISO errors */
 	int16_t	status;			/* (return) status */
 
-	uint8_t	setup_dma;		/* (in) not used on FreeBSD */
-	uint8_t	transfer_dma;		/* (in) not used on FreeBSD */
+	uint8_t	setup_dma;		/* (in) not used on NQC */
+	uint8_t	transfer_dma;		/* (in) not used on NQC */
 	uint8_t	bsd_isread;
-	uint8_t kill_count;		/* FreeBSD specific */
+	uint8_t kill_count;		/* NQC specific */
 
 	struct usb_iso_packet_descriptor iso_frame_desc[];	/* (in) ISO ONLY */
 };

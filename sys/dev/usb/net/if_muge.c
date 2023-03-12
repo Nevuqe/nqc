@@ -1,11 +1,11 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2012 Ben Gray <bgray@freebsd.org>.
- * Copyright (C) 2018 The FreeBSD Foundation.
+ * Copyright (C) 2012 Ben Gray <bgray@frebsd.org>.
+ * Copyright (C) 2018 The FreBSD Foundation.
  *
  * This software was developed by Arshan Khanifar <arshankhanifar@gmail.com>
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -1088,7 +1088,7 @@ lan78xx_chip_init(struct muge_softc *sc)
 
 	/*
 	 * At this point the Linux driver writes multicast tables, and enables
-	 * checksum engines. But in FreeBSD that gets done in muge_init,
+	 * checksum engines. But in NQC that gets done in muge_init,
 	 * which gets called when the interface is brought up.
 	 */
 
@@ -1619,7 +1619,7 @@ muge_attach_post_sub(struct usb_ether *ue)
 	/*
 	 * In the Linux driver they also enable scatter/gather (NETIF_F_SG)
 	 * here, that's something related to socket buffers used in Linux.
-	 * FreeBSD doesn't have that as an interface feature.
+	 * NQC doesn't have that as an interface feature.
 	 */
 	if (MUGE_DEFAULT_TSO_ENABLE)
 		if_setcapabilitiesbit(ifp, IFCAP_TSO4 | IFCAP_TSO6, 0);

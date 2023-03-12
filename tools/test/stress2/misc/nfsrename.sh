@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008-2013 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008-2013 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -70,7 +70,7 @@ EOF
 /*
  * Try to expose races with doing renames over NFS that require silly
  * renames.  This results in 2 different RENAME RPCs leaving a race
- * window where the file may not exist.  It also appears that FreeBSD
+ * window where the file may not exist.  It also appears that NQC
  * with shared lookups in NFS can get confused and possibly reference
  * the sillyrenamed file in lookup but the file is deleted by the time
  * open gets to it.

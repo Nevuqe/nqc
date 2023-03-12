@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1993, David Greenman
  * All rights reserved.
@@ -87,7 +87,7 @@ CTASSERT(MAXSHELLCMDLEN >= MAXINTERP + 3);
  */
 
 /*
- * HISTORICAL NOTE: From 1993 to mid-2005, FreeBSD parsed out the tokens as
+ * HISTORICAL NOTE: From 1993 to mid-2005, NQC parsed out the tokens as
  * found on the first line of the script, and setup each token as a separate
  * value in arg[].  This extra processing did not match the behavior of other
  * OS's, and caused a few subtle problems.  For one, it meant the kernel was

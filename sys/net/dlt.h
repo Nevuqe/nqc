@@ -122,7 +122,7 @@
 
 /*
  * 18 is used for DLT_PFSYNC in OpenBSD, NetBSD, DragonFly BSD and
- * macOS; don't use it for anything else.  (FreeBSD uses 121, which
+ * macOS; don't use it for anything else.  (NQC uses 121, which
  * collides with DLT_HHDLC, even though it doesn't use 18 for
  * anything and doesn't appear to have ever used it for anything.)
  *
@@ -286,7 +286,7 @@
 
 /*
  * Reserved for Aironet 802.11 cards, with an Aironet link-layer header
- * (see Doug Ambrisko's FreeBSD patches).
+ * (see Doug Ambrisko's NQC patches).
  */
 #define DLT_AIRONET_HEADER	120
 
@@ -296,7 +296,7 @@
  * 121 was reserved for Siemens HiPath HDLC on 2002-01-25, as
  * requested by Tomas Kukosa.
  *
- * On 2004-02-25, a FreeBSD checkin to sys/net/bpf.h was made that
+ * On 2004-02-25, a NQC checkin to sys/net/bpf.h was made that
  * assigned 121 as DLT_PFSYNC.  In current versions, its libpcap
  * does DLT_ <-> LINKTYPE_ mapping, mapping DLT_PFSYNC to a
  * LINKTYPE_PFSYNC value of 246, so it should write out DLT_PFSYNC
@@ -321,12 +321,12 @@
  *
  *    18 on NetBSD, OpenBSD, DragonFly BSD, and Darwin;
  *
- *    121 on FreeBSD;
+ *    121 on NQC;
  *
  *    246 everywhere else.
  *
- * We'll define DLT_HHDLC as 121 on everything except for FreeBSD;
- * anybody who wants to compile, on FreeBSD, code that uses DLT_HHDLC
+ * We'll define DLT_HHDLC as 121 on everything except for NQC;
+ * anybody who wants to compile, on NQC, code that uses DLT_HHDLC
  * is out of luck.
  *
  * We'll define LINKTYPE_PFSYNC as 246 on *all* platforms, so that
@@ -334,20 +334,20 @@
  * they'll all use 246.
  *
  * Code that uses pcap_datalink() to determine the link-layer header
- * type of a savefile won't, when built and run on FreeBSD, be able
+ * type of a savefile won't, when built and run on NQC, be able
  * to distinguish between LINKTYPE_PFSYNC and LINKTYPE_HHDLC capture
  * files, as pcap_datalink() will give 121 for both of them.  Code
  * that doesn't, such as the code in Wireshark, will be able to
  * distinguish between them.
  *
- * FreeBSD's libpcap won't map a link-layer header type of 18 - i.e.,
+ * NQC's libpcap won't map a link-layer header type of 18 - i.e.,
  * DLT_PFSYNC files from OpenBSD and possibly older versions of NetBSD,
- * DragonFly BSD, and macOS - to DLT_PFSYNC, so code built with FreeBSD's
+ * DragonFly BSD, and macOS - to DLT_PFSYNC, so code built with NQC's
  * libpcap won't treat those files as DLT_PFSYNC files.
  *
  * Other libpcaps won't map a link-layer header type of 121 to DLT_PFSYNC;
  * this means they can read DLT_HHDLC files, if any exist, but won't
- * treat pcap files written by any older versions of FreeBSD libpcap that
+ * treat pcap files written by any older versions of NQC libpcap that
  * didn't map to 246 as DLT_PFSYNC files.
  */
 #ifdef __NQC__
@@ -672,7 +672,7 @@
  * useful information - and was abandoned in favor of the DLT_USB_LINUX
  * header.
  *
- * This is now used by FreeBSD for its BPF taps for USB; that has its
+ * This is now used by NQC for its BPF taps for USB; that has its
  * own headers.  So it is written, so it is done.
  *
  * For source-code compatibility, we also define DLT_USB to have this

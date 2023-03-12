@@ -71,7 +71,7 @@ identify_hypervisor_smbios(void)
 
 	/*
 	 * XXX: Some of these entries may not be needed since they were
-	 * added to FreeBSD before the checks above.
+	 * added to NQC before the checks above.
 	 */
 	p = kern_getenv("smbios.bios.vendor");
 	if (p != NULL) {

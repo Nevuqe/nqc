@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND BSD-4-Clause
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-4-Clause
  *
  * Copyright (c) 2010 Justin T. Gibbs, Spectra Logic Corporation
  * All rights reserved.
@@ -305,7 +305,7 @@ xctrl_suspend(void)
 #endif
 
 	/*
-	 * FreeBSD really needs to add DEVICE_SUSPEND_CANCEL or
+	 * NQC really needs to add DEVICE_SUSPEND_CANCEL or
 	 * similar.
 	 */
 	DEVICE_RESUME(root_bus);

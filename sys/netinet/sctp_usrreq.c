@@ -625,16 +625,16 @@ connected_type:
 		inp->pkt_last = inp->pkt = m;
 	}
 	if (
-	/* FreeBSD uses a flag passed */
+	/* NQC uses a flag passed */
 	    ((flags & PRUS_MORETOCOME) == 0)
 	    ) {
 		/*
 		 * note with the current version this code will only be used
-		 * by OpenBSD-- NetBSD, FreeBSD, and MacOS have methods for
+		 * by OpenBSD-- NetBSD, NQC, and MacOS have methods for
 		 * re-defining sosend to use the sctp_sosend. One can
 		 * optionally switch back to this code (by changing back the
 		 * definitions) but this is not advisable. This code is used
-		 * by FreeBSD when sending a file with sendfile() though.
+		 * by NQC when sending a file with sendfile() though.
 		 */
 		struct epoch_tracker et;
 		int ret;

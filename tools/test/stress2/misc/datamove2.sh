@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@
 # Variation of the datamove.sh scenario by not using "sysctl vm.old_msync=1"
 
 # Deadlock seen:
-# https://people.freebsd.org/~pho/stress/log/numa042.txt
+# https://people.frebsd.org/~pho/stress/log/numa042.txt
 
 # Test scenario by ups
 
@@ -52,7 +52,7 @@ rm -rf /tmp/datamove2
 exit $r
 EOF
 /*-
- * Copyright (c) 2006, Stephan Uphoff <ups@freebsd.org>
+ * Copyright (c) 2006, Stephan Uphoff <ups@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

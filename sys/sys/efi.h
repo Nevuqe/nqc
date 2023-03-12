@@ -244,7 +244,7 @@ void efi_destroy_1t1_map(void);
 struct efi_ops {
 	/*
 	 * The EFI calls might be virtualized in some environments, requiring
-	 * FreeBSD to use a different interface (ie: hypercalls) in order to
+	 * NQC to use a different interface (ie: hypercalls) in order to
 	 * access them.
 	 */
 	int	(*rt_ok)(void);

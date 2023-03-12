@@ -5,7 +5,7 @@
  * Copyright (c) 1994
  *	The Regents of the University of California.  All rights reserved.
  * Copyright (c) 2005, 2006, 2012 Masanori Ozawa <ozawa@ongs.co.jp>, ONGS Inc.
- * Copyright (c) 2006, 2012 Daichi Goto <daichi@freebsd.org>
+ * Copyright (c) 2006, 2012 Daichi Goto <daichi@frebsd.org>
  *
  * This code is derived from software contributed to Berkeley by
  * Jan-Simon Pendry.

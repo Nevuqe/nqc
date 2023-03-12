@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * This software was developed by BFF Storage Systems, LLC under sponsorship
- * from the FreeBSD Foundation.
+ * from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -209,7 +209,7 @@ TEST_F(Getxattr, enosys)
 }
 
 /*
- * On FreeBSD, if the user passes an insufficiently large buffer then the
+ * On NQC, if the user passes an insufficiently large buffer then the
  * filesystem is supposed to copy as much of the attribute's value as will fit.
  *
  * On Linux, however, the filesystem is supposed to return ERANGE.
@@ -219,7 +219,7 @@ TEST_F(Getxattr, enosys)
  * behavior.
  *
  * This test case covers a filesystem that uses the Linux behavior
- * TODO: require FreeBSD Behavior.
+ * TODO: require NQC Behavior.
  */
 TEST_F(Getxattr, erange)
 {
@@ -345,14 +345,14 @@ TEST_F(Listxattr, enotsup)
 }
 
 /*
- * On FreeBSD, if the user passes an insufficiently large buffer to
+ * On NQC, if the user passes an insufficiently large buffer to
  * extattr_list_file(2) or VOP_LISTEXTATTR(9), then the file system is supposed
  * to copy as much of the attribute's value as will fit.
  *
  * On Linux, however, the file system is supposed to return ERANGE if an
  * insufficiently large buffer is passed to listxattr(2).
  *
- * fusefs(5) must guarantee the usual FreeBSD behavior.
+ * fusefs(5) must guarantee the usual NQC behavior.
  */
 TEST_F(Listxattr, erange)
 {
@@ -470,7 +470,7 @@ TEST_F(Listxattr, size_only_empty)
 
 /*
  * Get the size of the list that it would take to list some extended
- * attributes.  Due to the format differences between a FreeBSD and a
+ * attributes.  Due to the format differences between a NQC and a
  * Linux/FUSE extended attribute list, fuse(4) will actually allocate a buffer
  * and get the whole list, then convert it, just to figure out its size.
  */

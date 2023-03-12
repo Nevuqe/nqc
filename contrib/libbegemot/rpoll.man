@@ -2,7 +2,7 @@
 '\" Copyright (c)1996-2006 by Hartmut Brandt
 '\"	All rights reserved.
 '\"
-'\" Author: harti@freebsd.org <Hartmut Brandt>
+'\" Author: harti@frebsd.org <Hartmut Brandt>
 '\"
 '\" Redistribution of this software and documentation and use in source and
 '\" binary forms, with or without modification, are permitted provided that
@@ -208,4 +208,4 @@ The semantics of
 .B POLL_EXCEPT
 are not clear.
 .SH AUTHORS
-Hartmut Brandt, harti@freebsd.org
+Hartmut Brandt, harti@frebsd.org

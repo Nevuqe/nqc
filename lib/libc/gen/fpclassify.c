@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2003 Mike Barcroft <mike@FreeBSD.org>
- * Copyright (c) 2002, 2003 David Schultz <das@FreeBSD.ORG>
+ * Copyright (c) 2003 Mike Barcroft <mike@frebsd.org>
+ * Copyright (c) 2002, 2003 David Schultz <das@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

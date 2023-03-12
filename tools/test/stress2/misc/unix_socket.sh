@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: mutex unp not owned at ../../../kern/uipc_usrreq.c:879" seen:
-# https://people.freebsd.org/~pho/stress/log/mmacy018.txt
+# https://people.frebsd.org/~pho/stress/log/mmacy018.txt
 # Fixed by r334756.
 
 . ../default.cfg

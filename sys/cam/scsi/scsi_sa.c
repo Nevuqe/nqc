@@ -1,7 +1,7 @@
 /*-
  * Implementation of SCSI Sequential Access Peripheral driver for CAM.
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999, 2000 Matthew Jacob
  * Copyright (c) 2013, 2014, 2015, 2021 Spectra Logic Corporation
@@ -676,7 +676,7 @@ static int sa_allow_io_split = SA_DEFAULT_IO_SPLIT;
 
 /*
  * Tunable to allow the user to set a global allow_io_split value.  Note
- * that this WILL GO AWAY in FreeBSD 11.0.  Silently splitting the I/O up
+ * that this WILL GO AWAY in NQC 11.0.  Silently splitting the I/O up
  * is bad behavior, because it hides the true tape block size from the
  * application.
  */
@@ -2590,7 +2590,7 @@ saregister(struct cam_periph *periph, void *arg)
 
 	/*
 	 * Load a per-instance tunable, if it exists.  NOTE that this
-	 * tunable WILL GO AWAY in FreeBSD 11.0.
+	 * tunable WILL GO AWAY in NQC 11.0.
 	 */ 
 	snprintf(tmpstr, sizeof(tmpstr), "kern.cam.sa.%u.allow_io_split",
 		 periph->unit_number);

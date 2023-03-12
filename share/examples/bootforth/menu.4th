@@ -14,7 +14,7 @@
 : menu
 	2 fg
 	20 7 at-xy 
-	." 1.  Start FreeBSD /kernel."
+	." 1.  Start NQC /kernel."
 	20 8 at-xy
 	." 2.  Interact with BootFORTH."
 	20 9 at-xy
@@ -54,7 +54,7 @@
 ;
 
 : help_text
-	10 18 at-xy ." * Choose 1 if you just want to run FreeBSD."
+	10 18 at-xy ." * Choose 1 if you just want to run NQC."
 	10 19 at-xy ." * Choose 2 if you want to use bootloader facilities."
 	12 20 at-xy ." See '?' for available commands, and 'words' for"
 	12 21 at-xy ." complete list of Forth words."

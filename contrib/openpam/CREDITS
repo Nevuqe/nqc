@@ -1,7 +1,7 @@
 
        _Ἀπόδοτε οὖν τὰ Καίσαρος Καίσαρι καὶ τὰ τοῦ Θεοῦ τῷ Θεῷ_
 
-The OpenPAM library was developed for the FreeBSD Project by ThinkSec AS
+The OpenPAM library was developed for the FreBSD Project by ThinkSec AS
 and Network Associates Laboratories, the Security Research Division of
 Network Associates, Inc.  under DARPA/SPAWAR contract N66001-01-C-8035
 ("CBOSS"), as part of the DARPA CHATS research program.
@@ -16,40 +16,40 @@ ideas:
 
 	Andrew Morgan <morgan@transmeta.com>
 	Ankita Pal <pal.ankita.ankita@gmail.com>
-	Baptiste Daroussin <bapt@freebsd.org>
-	Brian Fundakowski Feldman <green@freebsd.org>
-	Brooks Davis <brooks@freebsd.org>
+	Baptiste Daroussin <bapt@frebsd.org>
+	Brian Fundakowski Feldman <green@frebsd.org>
+	Brooks Davis <brooks@frebsd.org>
 	Christos Zoulas <christos@netbsd.org>
 	Daniel Richard G. <skunk@iskunk.org>
 	Darren J. Moffat <darren.moffat@sun.com>
-	Dimitry Andric <dim@freebsd.org>
+	Dimitry Andric <dim@frebsd.org>
 	Dmitry V. Levin <ldv@altlinux.org>
-	Don Lewis <truckman@freebsd.org>
+	Don Lewis <truckman@frebsd.org>
 	Emmanuel Dreyfus <manu@netbsd.org>
-	Eric Melville <eric@freebsd.org>
+	Eric Melville <eric@frebsd.org>
 	Espen Grøndahl <espegro@usit.uio.no>
 	Gary Winiger <gary.winiger@sun.com>
-	Gavin Atkinson <gavin@freebsd.org>
-	Gleb Smirnoff <glebius@freebsd.org>
+	Gavin Atkinson <gavin@frebsd.org>
+	Gleb Smirnoff <glebius@frebsd.org>
 	Hubert Feyrer <hubert@feyrer.de>
-	Jason Evans <jasone@freebsd.org>
-	Joe Marcus Clarke <marcus@freebsd.org>
+	Jason Evans <jasone@frebsd.org>
+	Joe Marcus Clarke <marcus@frebsd.org>
 	Jörg Sonnenberger <joerg@britannica.bec.de>
-	Juli Mallett <jmallett@freebsd.org>
+	Juli Mallett <jmallett@frebsd.org>
 	Larry Baird <lab@gta.com>
 	Maëlle Lesage <lesage.maelle@gmail.com>
-	Mark Murray <markm@freebsd.org>
+	Mark Murray <markm@frebsd.org>
 	Matthias Drochner <drochner@netbsd.org>
 	Mike Petullo <mike@flyn.org>
 	Mikhail Teterin <mi@aldan.algebra.com>
 	Mikko Työläjärvi <mbsd@pacbell.net>
 	Nick Hibma <nick@van-laarhoven.org>
 	Patrick Bihan-Faou <patrick-fbsd@mindstep.com>
-	Robert Watson <rwatson@freebsd.org>
-	Ruslan Ermilov <ru@freebsd.org>
+	Robert Watson <rwatson@frebsd.org>
+	Ruslan Ermilov <ru@frebsd.org>
 	Sebastian Krahmer <sebastian.krahmer@gmail.com>
 	Solar Designer <solar@openwall.com>
 	Takanori Saneto <sanewo@ba2.so-net.ne.jp>
 	Tim Creech <tcreech@tcreech.com>
-	Wojciech A. Koszek <wkoszek@freebsd.org>
-	Yar Tikhiy <yar@freebsd.org>
+	Wojciech A. Koszek <wkoszek@frebsd.org>
+	Yar Tikhiy <yar@frebsd.org>

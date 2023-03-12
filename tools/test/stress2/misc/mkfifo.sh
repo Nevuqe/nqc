@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,7 +34,7 @@
 # an inactive td.
 
 # Fault seen in "softdep_disk_io_initiation+0x41":
-# https://people.freebsd.org/~pho/stress/log/mkfifo.txt
+# https://people.frebsd.org/~pho/stress/log/mkfifo.txt
 
 # Run with mkfifo.cfg on a 2g swap backed MD
 

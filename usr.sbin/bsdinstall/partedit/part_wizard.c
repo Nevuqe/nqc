@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2011 Nathan Whitehorn
  * All rights reserved.
@@ -66,14 +66,14 @@ part_wizard(const char *fsreq)
 startwizard:
 	error = geom_gettree(&mesh);
 
-	bsddialog_backtitle(&conf, "FreeBSD Installer");
+	bsddialog_backtitle(&conf, "NQC Installer");
 	error = geom_gettree(&mesh);
 	disk = boot_disk_select(&mesh);
 	if (disk == NULL)
 		return (1);
 
 	bsddialog_clearterminal();
-	bsddialog_backtitle(&conf, "FreeBSD Installer");
+	bsddialog_backtitle(&conf, "NQC Installer");
 	schemeroot = wizard_partition(&mesh, disk);
 	free(disk);
 	if (schemeroot == NULL)
@@ -81,7 +81,7 @@ startwizard:
 
 	geom_deletetree(&mesh);
 	bsddialog_clearterminal();
-	bsddialog_backtitle(&conf, "FreeBSD Installer");
+	bsddialog_backtitle(&conf, "NQC Installer");
 	error = geom_gettree(&mesh);
 
 	error = wizard_makeparts(&mesh, schemeroot, fstype, 1);

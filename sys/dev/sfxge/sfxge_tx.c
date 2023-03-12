@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2010-2016 Solarflare Communications Inc.
  * All rights reserved.
@@ -30,7 +30,7 @@
  *
  * The views and conclusions contained in the software and documentation are
  * those of the authors and should not be interpreted as representing official
- * policies, either expressed or implied, of the FreeBSD Project.
+ * policies, either expressed or implied, of the FreBSD Project.
  */
 
 /* Theory of operation:
@@ -857,7 +857,7 @@ static void sfxge_parse_tx_packet(struct mbuf *mbuf)
 
 	/* These flags must not be duplicated */
 	/*
-	 * RST should not be duplicated as well, but FreeBSD kernel
+	 * RST should not be duplicated as well, but NQC kernel
 	 * generates TSO packets with RST flag. So, do not assert
 	 * its absence.
 	 */
@@ -1115,7 +1115,7 @@ static void tso_start(struct sfxge_txq *txq, struct sfxge_tso_state *tso,
 
 	/* These flags must not be duplicated */
 	/*
-	 * RST should not be duplicated as well, but FreeBSD kernel
+	 * RST should not be duplicated as well, but NQC kernel
 	 * generates TSO packets with RST flag. So, do not assert
 	 * its absence.
 	 */
@@ -1330,7 +1330,7 @@ static int tso_start_new_packet(struct sfxge_txq *txq,
 		if (tso->protocol == htons(ETHERTYPE_IP)) {
 			struct ip *tsoh_iph = (struct ip *)(header + tso->nh_off);
 			tsoh_iph->ip_len = htons(ip_length);
-			/* XXX We should increment ip_id, but FreeBSD doesn't
+			/* XXX We should increment ip_id, but NQC doesn't
 			 * currently allocate extra IDs for multiple segments.
 			 */
 		} else {

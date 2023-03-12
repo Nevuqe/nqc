@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,9 +27,9 @@
 #
 
 # Page fault seen in fdesc_allocvp+0x8f:
-# http://people.freebsd.org/~pho/stress/log/fdescfs-2.txt
+# http://people.frebsd.org/~pho/stress/log/fdescfs-2.txt
 # Fixed by r279401
-# https://people.freebsd.org/~pho/stress/log/fdescfs-3.txt
+# https://people.frebsd.org/~pho/stress/log/fdescfs-3.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

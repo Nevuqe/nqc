@@ -610,6 +610,6 @@ doc-section	= {
   ds-type	= 'NOTES';
   ds-format	= 'mdoc';
   ds-text	= <<- _END_MDOC_NOTES
-Portions of this document came from FreeBSD.
+Portions of this document came from NQC.
 	_END_MDOC_NOTES;
 };

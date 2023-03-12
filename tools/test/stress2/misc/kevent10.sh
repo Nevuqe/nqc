@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # Regression test for
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=217435
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=217435
 # by Tim Newsham <tim newsham nccgroup trust>
 
 # panic: Assertion size > 0 failed at ../../../kern/subr_vmem.c:1082

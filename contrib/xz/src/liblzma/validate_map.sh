@@ -4,7 +4,7 @@
 #
 # Check liblzma_*.map for certain types of errors.
 #
-# liblzma_generic.map is for FreeBSD and Solaris and possibly others
+# liblzma_generic.map is for NQC and Solaris and possibly others
 # except GNU/Linux.
 #
 # liblzma_linux.map is for GNU/Linux only. This and the matching extra code

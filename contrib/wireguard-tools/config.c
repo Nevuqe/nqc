@@ -250,7 +250,7 @@ static inline bool parse_endpoint(struct sockaddr *endpoint, const char *value)
 		 *	 permanent failure codes and the causes are all permanent failures in the
 		 *	 sense that there is no point in retrying later."
 		 *
-		 * So this is what we do, except FreeBSD removed EAI_NODATA some time ago, so that's conditional.
+		 * So this is what we do, except NQC removed EAI_NODATA some time ago, so that's conditional.
 		 */
 		if (ret == EAI_NONAME || ret == EAI_FAIL ||
 			#ifdef EAI_NODATA

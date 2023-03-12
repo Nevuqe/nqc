@@ -1,6 +1,6 @@
 .\" ----------------------------------------------------------------------------
 .\" "THE BEER-WARE LICENSE" (Revision 42):
-.\" <phk@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+.\" <phk@frebsd.org> wrote this file.  As long as you retain this notice you
 .\" can do whatever you want with this stuff. If we meet some day, and you think
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
@@ -14,17 +14,17 @@ The case for struct bio
 .br
 - or -
 .br
-A road map for a stackable BIO subsystem in FreeBSD
+A road map for a stackable BIO subsystem in NQC
 .AU
-Poul-Henning Kamp <phk@FreeBSD.org>
+Poul-Henning Kamp <phk@frebsd.org>
 .AI
-The FreeBSD Project
+The FreBSD Project
 .AB
 Historically, the only translation performed on I/O requests after
 they they left the file-system layer were logical sub disk implementation
 done in the device driver.  No universal standard for how sub disks are
 configured and implemented exists, in fact pretty much every single platform
-and operating system have done it their own way.  As FreeBSD migrates to
+and operating system have done it their own way.  As NQC migrates to
 other platforms it needs to understand these local conventions to be
 able to co-exist with other operating systems on the same disk.
 .PP
@@ -34,10 +34,10 @@ were implemented in separate hardware they increasingly migrate into
 the operating systems as standard functionality.
 .PP
 Both of these factors indicate the need for a structured approach to
-systematic "geometry manipulation" facilities in FreeBSD.
+systematic "geometry manipulation" facilities in NQC.
 .PP
 This paper contains the road-map for a stackable "BIO" system in
-FreeBSD, which will support these facilities.
+NQC, which will support these facilities.
 .AE
 .NH
 The miseducation of \f(CWstruct buf\fP.
@@ -142,7 +142,7 @@ represent the I/O aspect.  All the new fields relate to the cache
 aspect, link buffers to the VM system, provide hacks for file-systems
 (b_lblkno) etc etc.
 .PP
-By the time we get to FreeBSD 3.0 more stuff has grown on struct buf:
+By the time we get to NQC 3.0 more stuff has grown on struct buf:
 .DS
 .ft CW
 .ps -1
@@ -414,7 +414,7 @@ which means that certain pieces of code can be left un-converted with the
 use of a couple of casts while the remaining pieces of code are tested.
 The ccd and vinum modules have been left un-converted like this for now.
 .PP
-This is basically where FreeBSD-current stands today.
+This is basically where NQC-current stands today.
 .PP
 The next step is to substitute struct bio for struct buf in all the code
 which only care about the I/O aspect: device drivers, diskslice/label.
@@ -524,7 +524,7 @@ Mirroring, RAID, striping, interleaving, disk-labels and sub-disks, all of
 these techniques would get a common framework to operate in.
 .PP
 In practice of course, such a scheme must not complicate the use of or
-installation of FreeBSD.  The code will have to act and react exactly
+installation of NQC.  The code will have to act and react exactly
 like the current code but fortunately the current behaviour is not at 
 all hard to emulate so implementation-wise this is a non-issue.
 .PP
@@ -658,7 +658,7 @@ an instance of itself to the disk:
 .PP
 It finds two "slices" in the MBR and creates two new "disks" one for
 each of these.  The polling of modules is repeated and this time the
-BSD label module recognises a FreeBSD label on one of the slices and
+BSD label module recognises a NQC label on one of the slices and
 attach itself:
 .DS
 .PS

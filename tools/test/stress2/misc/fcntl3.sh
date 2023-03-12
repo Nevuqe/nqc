@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Mark Johnston <markj@freebsd.org>
+# Copyright (c) 2021 Mark Johnston <markj@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 
-# Test scenario submitted by Mark Johnston <markj@freebsd.org>
+# Test scenario submitted by Mark Johnston <markj@frebsd.org>
 
 # "Fatal trap 18: integer divide fault while in kernel mode" seen.
 # Reported by syzkaller

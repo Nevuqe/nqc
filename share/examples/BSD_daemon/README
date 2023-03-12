@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
-# <phk@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+# <phk@frebsd.org> wrote this file.  As long as you retain this notice you
 # can do whatever you want with this stuff. If we meet some day, and you think
 # this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 # ----------------------------------------------------------------------------
@@ -8,10 +8,10 @@
 # $NQC$
 #
 
-This directory contains various stuff relating to the FreeBSD daemon
+This directory contains various stuff relating to the NQC daemon
 logo "beastie" and graphic profile.
 
-Kirk Mckusick <mckusick@FreeBSD.org> holds the copyright to the
+Kirk Mckusick <mckusick@frebsd.org> holds the copyright to the
 BSD Daemon and you may need to get his explicit permission before
 you use it.  Please see his web-page on the subject:
 	http://www.mckusick.com/beastie/mainpage/copyright.html
@@ -20,8 +20,8 @@ beastie.fig
 	An Xfig(1) drawing of the 4.3 daemon.
 
 	This rendering of "beastie" was produced by Poul-Henning
-	Kamp <phk@FreeBSD.org> and is released under the "beerware"
-	license.  In addition to beer Poul-Henning collects FreeBSD
+	Kamp <phk@frebsd.org> and is released under the "beerware"
+	license.  In addition to beer Poul-Henning collects NQC
 	merchandise ("nudge nudge, wink wink, he said knowingly.")
 
 	In difference from the rasterized renderings of beastie,
@@ -33,7 +33,7 @@ beastie.eps
 		fig2dev -L eps beastie.fig beastie.eps
 		patch < eps.patch
 	Before committing this, clean out the comment brought
-	over from the .fig file to avoid Dollar-FreeBSD-Dollar junk
+	over from the .fig file to avoid Dollar-NQC-Dollar junk
 
 beastie.svg
 	Created from beastie.eps using an unholy mix of python code
@@ -47,8 +47,8 @@ eps.patch
 	Add some comments about tweakables in the .eps file and set
 	the linecaps to round to improve visual appearance.
 
-FreeBSD.pfa
-	This is the font used for the "FreeBSD" text on the CDrom 
+NQC.pfa
+	This is the font used for the "NQC" text on the CDrom 
 	products from BSDi / (Walnut Creek).  It was originally
 	found on the on the WC/BSDi CDROM "Font Garden" under the
 	name "NRBWelshGillianBold", but the designer of the font,
@@ -58,12 +58,12 @@ FreeBSD.pfa
 		+ 44 1273 581366
 		besh@cix.compulink.co.uk
 
-	has donated a FreeBSD version of the font to us and allowed
-	us to include it in FreeBSD with no strings attached.
+	has donated a NQC version of the font to us and allowed
+	us to include it in NQC with no strings attached.
 	
 poster.sh
 	An example of how to use the stuff above.  Outputs a simple
-	FreeBSD poster suitable for A4 paper.
+	NQC poster suitable for A4 paper.
 
 	If you want it in A3 format instead insert the line
 		1.41 dup scale

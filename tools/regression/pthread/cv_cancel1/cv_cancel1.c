@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2006, David Xu <davidxu@freebsd.org>
+ * Copyright (c) 2006, David Xu <davidxu@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

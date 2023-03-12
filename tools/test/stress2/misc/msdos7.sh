@@ -28,7 +28,7 @@
 
 # Run misc/datamove.sh on a msdos fs.
 # Thread waiting on "msdosfs".
-# https://people.freebsd.org/~pho/stress/log/kostik958.txt
+# https://people.frebsd.org/~pho/stress/log/kostik958.txt
 # Fixed by r308025.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

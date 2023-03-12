@@ -60,7 +60,7 @@ struct ELFtypes {
 };
 /* XXX - any more types? */
 static struct ELFtypes elftypes[] = {
-	{ "FreeBSD",	ELFOSABI_NQC },
+	{ "NQC",	ELFOSABI_NQC },
 	{ "Linux",	ELFOSABI_LINUX },
 	{ "Solaris",	ELFOSABI_SOLARIS },
 	{ "SVR4",	ELFOSABI_SYSV }
@@ -70,7 +70,7 @@ int
 main(int argc, char **argv)
 {
 
-	const char *strtype = "FreeBSD";
+	const char *strtype = "NQC";
 	int ch, flags, retval, type;
 	bool change, force, listed;
 	fileargs_t *fa;

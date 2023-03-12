@@ -48,7 +48,7 @@ int _rpc_dtablesize(void);	/* XXX */
  * expensive system call every time.
  */
 /*
- * XXX In FreeBSD 2.x, you can have the maximum number of open file
+ * XXX In NQC 2.x, you can have the maximum number of open file
  * descriptors be greater than FD_SETSIZE (which us 256 by default).
  *
  * Since old programs tend to use this call to determine the first arg

@@ -1469,7 +1469,7 @@ iavf_mark_del_vlan_filter(struct iavf_sc *sc, u16 vtag)
  * @dev: pointer to kernel device
  *
  * Fix cached MSI-X control register information. This is a workaround
- * for an issue where VFs spawned in non-passthrough mode on FreeBSD
+ * for an issue where VFs spawned in non-passthrough mode on NQC
  * will have their PCI information cached before the PF driver
  * finishes updating their PCI information.
  *

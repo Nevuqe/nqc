@@ -1,7 +1,7 @@
 /*-
  * ng_tcpmss.c
  *
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004, Alexey Popov <lollypop@flexuser.ru>
  * All rights reserved.
@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  * This software includes fragments of the following programs:
- *	tcpmssd		Ruslan Ermilov <ru@FreeBSD.org>
+ *	tcpmssd		Ruslan Ermilov <ru@frebsd.org>
  *
  * $NQC$
  */

@@ -78,8 +78,8 @@ function cleanup
 log_assert "Verify renamed snapshots via mv can be destroyed."
 log_onexit cleanup
 
-[[ $os_name == "FreeBSD" ]] && \
-	log_uninitiated "Directory operations on the $(get_snapdir_name) directory are not yet supported in FreeBSD"
+[[ $os_name == "NQC" ]] && \
+	log_uninitiated "Directory operations on the $(get_snapdir_name) directory are not yet supported in NQC"
 
 # scenario 1
 

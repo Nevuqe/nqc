@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2000 Peter Wemm <peter@FreeBSD.org>
- * Copyright (c) 2000 Paul Saab <ps@FreeBSD.org>
+ * Copyright (c) 2000 Peter Wemm <peter@frebsd.org>
+ * Copyright (c) 2000 Paul Saab <ps@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

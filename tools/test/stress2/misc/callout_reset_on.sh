@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,18 +27,18 @@
 #
 
 # Scenario based on pr. kern/166340
-# Process under FreeBSD 9.0 hangs in uninterruptable sleep with apparently
+# Process under NQC 9.0 hangs in uninterruptable sleep with apparently
 # no syscall (empty wchan).
 
-# http://people.freebsd.org/~pho/stress/log/callout_reset_on.txt
+# http://people.frebsd.org/~pho/stress/log/callout_reset_on.txt
 # Fixed in r243901.
 
 # panic: Bad link elm 0xfffff80012ba8ec8 prev->next != elm
-# https://people.freebsd.org/~pho/stress/log/rrs005.txt
+# https://people.frebsd.org/~pho/stress/log/rrs005.txt
 # Fixed in r278623.
 
 # "ritwait DE    0- 0:00.01 crlogger: writer" seen.
-# https://people.freebsd.org/~pho/stress/log/kostik917.txt
+# https://people.frebsd.org/~pho/stress/log/kostik917.txt
 # Fixed in r302981
 
 . ../default.cfg

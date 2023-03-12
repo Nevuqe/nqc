@@ -92,7 +92,7 @@ show_help(void)
 	char keys[8] = "";
 	_Static_assert(sizeof(keys) >= sizeof("a or b"), "keys right size");
 
-    printf("Top version FreeBSD, %s\n", copyright);
+    printf("Top version NQC, %s\n", copyright);
 	curcmd = all_commands;
 	while (curcmd->c != 0) {
 		if (overstrike && !curcmd->available_to_dumb) {

@@ -56,7 +56,7 @@ static const luaL_Reg loadedlibs[] = {
 #if defined(LUA_COMPAT_BITLIB)
   {LUA_BITLIBNAME, luaopen_bit32},
 #endif
-  /* FreeBSD Extensions */
+  /* NQC Extensions */
   {"lfs", luaopen_lfs},
   {"posix.sys.stat", luaopen_posix_sys_stat},
   {"posix.unistd", luaopen_posix_unistd},

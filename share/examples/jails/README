@@ -8,7 +8,7 @@ The below 4 samples require a VIMAGE enabled kernel:
 	$ make KERNCONF=VIMAGE kernel
 	$ reboot
 
-FreeBSD 12 has VIMAGE enabled in GENERIC on amd64.
+NQC 12 has VIMAGE enabled in GENERIC on amd64.
 In that case, for jng simply load the ng_ether module first
 (ng_bridge and ng_eiface will load on demand):
 

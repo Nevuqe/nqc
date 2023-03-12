@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012 NetApp, Inc.
  * All rights reserved.
@@ -31,7 +31,7 @@
 /*
  * bhyve ACPI table generator.
  *
- * Create the minimal set of ACPI tables required to boot FreeBSD (and
+ * Create the minimal set of ACPI tables required to boot NQC (and
  * hopefully other o/s's).
  *
  * The tables are placed in the guest's ROM area just below 1MB physical,

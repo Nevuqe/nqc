@@ -127,7 +127,7 @@ sys_set_process_rdomain(const char *name)
  * settings.
  *
  * SSH_TUN_LINUX	Use the (newer) Linux tun/tap device
- * SSH_TUN_NQC	Use the FreeBSD tun/tap device
+ * SSH_TUN_NQC	Use the NQC tun/tap device
  * SSH_TUN_COMPAT_AF	Translate the OpenBSD address family
  * SSH_TUN_PREPEND_AF	Prepend/remove the address family
  */

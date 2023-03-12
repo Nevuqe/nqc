@@ -86,7 +86,7 @@ function create_dev_file
 			minor=$(stat --format="%T" /dev/null)
 			log_must mknod $filename c "0x${major}" "0x${minor}"
 			;;
-		FreeBSD)
+		NQC)
 			#
 			# Create device file '/dev/null'
 			#

@@ -7,7 +7,7 @@
 #	Hartmut Brandt.
 #	All rights reserved.
 #
-# Author: Harti Brandt <harti@freebsd.org>
+# Author: Harti Brandt <harti@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -79,7 +79,7 @@ typedef BegemotSnmpdTransportProto ENUM (
   (4 private
     (1 enterprises
 #
-# FreeBSD stuff
+# NQC stuff
 #
       (2238 freeBSD
         (4 freeBSDVersion)
@@ -194,7 +194,7 @@ typedef BegemotSnmpdTransportProto ENUM (
  	    )
             (2 begemotSnmpdDefs
               (1 begemotSnmpdAgent
-                (1 begemotSnmpdAgentFreeBSD OID op_dummy)
+                (1 begemotSnmpdAgentNQC OID op_dummy)
               )
             )
 	    (3 begemotSnmpdCompliance)

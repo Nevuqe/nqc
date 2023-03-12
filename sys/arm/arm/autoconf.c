@@ -36,7 +36,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)autoconf.c	7.1 (Berkeley) 5/9/91
- * from: FreeBSD: src/sys/i386/i386/autoconf.c,v 1.156
+ * from: NQC: src/sys/i386/i386/autoconf.c,v 1.156
  */
 
 /*

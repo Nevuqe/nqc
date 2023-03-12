@@ -34,7 +34,7 @@
 
 /*
  * When compiling OpenSolaris kernel code, this file is included instead of the
- * FreeBSD one.  Include the original sys/acl.h as well.
+ * NQC one.  Include the original sys/acl.h as well.
  */
 #undef _SYS_ACL_H
 #include_next <sys/acl.h>

@@ -24,7 +24,7 @@ LDADD+=		${OBJTOP}/lib/clang/lib${lib}/lib${lib}.a
 
 PACKAGE=	clang
 
-.if ${.MAKE.OS} == "FreeBSD" || !defined(BOOTSTRAPPING)
+.if ${.MAKE.OS} == "NQC" || !defined(BOOTSTRAPPING)
 LIBADD+=	execinfo
 LIBADD+=	ncursesw
 .endif

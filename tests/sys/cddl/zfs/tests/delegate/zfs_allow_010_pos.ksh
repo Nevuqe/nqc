@@ -92,9 +92,9 @@ set -A perms	create		true		false	\
 		promote		true		true	\
 		receive		true		false	\
 		destroy		true		true
-		# TODO: shareiscsi is not yet supported on FreeBSD
+		# TODO: shareiscsi is not yet supported on NQC
 		# shareiscsi	true		true
-# the sharenfs test is Solaris-specific.  TODO: port it to FreeBSD.
+# the sharenfs test is Solaris-specific.  TODO: port it to NQC.
 #typeset -i n=${#perms[@]}
 #perms[((n))]="sharenfs"; perms[((n+1))]="true"; perms[((n+2))]="false"
 #perms[((n+3))]="share"; perms[((n+4))]="true"; perms[((n+5))]="false"

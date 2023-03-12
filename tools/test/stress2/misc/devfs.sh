@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
 #
 
 # Page fault seen:
-# https://people.freebsd.org/~pho/stress/log/devfs.txt
+# https://people.frebsd.org/~pho/stress/log/devfs.txt
 # Fixed by r326851.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

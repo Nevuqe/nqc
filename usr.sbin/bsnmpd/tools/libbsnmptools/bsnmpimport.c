@@ -1,8 +1,8 @@
 /*-
- * Copyright (c) 2006 The FreeBSD Project
+ * Copyright (c) 2006 The FreBSD Project
  * All rights reserved.
  *
- * Author: Shteryana Shopova <syrinx@FreeBSD.org>
+ * Author: Shteryana Shopova <syrinx@frebsd.org>
  *
  * Redistribution of this software and documentation and use in source and
  * binary forms, with or without modification, are permitted provided that

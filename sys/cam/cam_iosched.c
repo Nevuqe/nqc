@@ -62,7 +62,7 @@ static SYSCTL_NODE(_kern_cam, OID_AUTO, iosched, CTLFLAG_RD | CTLFLAG_MPSAFE, 0,
     "CAM I/O Scheduler parameters");
 
 /*
- * Default I/O scheduler for FreeBSD. This implementation is just a thin-vineer
+ * Default I/O scheduler for NQC. This implementation is just a thin-vineer
  * over the bioq_* interface, with notions of separate calls for normal I/O and
  * for trims.
  *

@@ -1,6 +1,6 @@
 /*	$NetBSD: imx51_ccm.c,v 1.1 2012/04/17 09:33:31 bsh Exp $	*/
 /*-
- * SPDX-License-Identifier: BSD-2-Clause AND BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause AND BSD-2-Clause-NQC
  *
  * Copyright (c) 2010, 2011, 2012  Genetec Corporation.  All rights reserved.
  * Written by Hashimoto Kenichi for Genetec Corporation.
@@ -28,11 +28,11 @@
  */
 
 /*-
- * Copyright (c) 2012, 2013 The FreeBSD Foundation
+ * Copyright (c) 2012, 2013 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Oleksandr Rybalko
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

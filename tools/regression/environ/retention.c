@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2007 Sean C. Farley <scf@FreeBSD.org>
+ * Copyright (c) 2007 Sean C. Farley <scf@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -96,7 +96,7 @@ main(int argc, char **argv)
 	    envValAny);
 
 	/*
-	 * Verify FreeBSD-ism about allowing a program to keep old pointers without
+	 * Verify NQC-ism about allowing a program to keep old pointers without
 	 * risk of segfaulting.
 	 */
 	if ((strcmp(env1, envValSmall) != 0) ||

@@ -1,10 +1,10 @@
 #!/usr/local/bin/perl -wC
 
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2009 Edwin Groothuis <edwin@FreeBSD.org>
+# Copyright 2009 Edwin Groothuis <edwin@frebsd.org>
 # Copyright 2015 John Marino <draco@marino.st>
-# Copyright 2020 Hiroki Sato <hrs@FreeBSD.org>
+# Copyright 2020 Hiroki Sato <hrs@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -309,7 +309,7 @@ sub callback_altmon {
 
 sub callback_abmon {
 	# for specified CJK locales, pad result with a space to enable
-	# columns to line up (style established in FreeBSD in 2001)
+	# columns to line up (style established in NQC in 2001)
 	my $s = shift;
 	my $nl = $callback{data}{l} . "_" . $callback{data}{c};
 

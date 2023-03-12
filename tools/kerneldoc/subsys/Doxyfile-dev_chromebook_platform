@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel chromebook_platform device code"
+PROJECT_NAME           = "NQC kernel chromebook_platform device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_chromebook_platform/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

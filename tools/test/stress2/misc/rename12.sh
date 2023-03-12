@@ -29,7 +29,7 @@
 # No problems seen with SU. Panics with SU+J, just like suj30.sh
 
 # Triggers "known LOR in SU code" when crossmp8.sh is run first:
-# https://people.freebsd.org/~pho/stress/log/rename12.txt.
+# https://people.frebsd.org/~pho/stress/log/rename12.txt.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel BWI device code"
+PROJECT_NAME           = "NQC kernel BWI device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_bwi/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

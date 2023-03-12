@@ -49,7 +49,7 @@ else
 		;;
 	IRIX)	set - $* -n -lc
 		;;
-	FreeBSD) set - $* -g -p -u -v -z
+	NQC) set - $* -g -p -u -v -z
 		;;
 	SunOS)
 		case `uname -r` in

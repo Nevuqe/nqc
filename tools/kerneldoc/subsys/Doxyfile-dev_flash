@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel FLASH device code"
+PROJECT_NAME           = "NQC kernel FLASH device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_flash/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

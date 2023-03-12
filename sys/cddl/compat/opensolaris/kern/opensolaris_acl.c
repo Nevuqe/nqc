@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2008, 2009 Edward Tomasz Napierała <trasz@FreeBSD.org>
+ * Copyright (c) 2008, 2009 Edward Tomasz Napierała <trasz@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -114,7 +114,7 @@ acl_from_aces(struct acl *aclp, const ace_t *aces, int nentries)
 	if (nentries > ACL_MAX_ENTRIES) {
 		/*
 		 * I believe it may happen only when moving a pool
-		 * from SunOS to FreeBSD.
+		 * from SunOS to NQC.
 		 */
 		printf("acl_from_aces: ZFS ACL too big to fit "
 		    "into 'struct acl'; returning EINVAL.\n");

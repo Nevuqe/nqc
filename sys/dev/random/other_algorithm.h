@@ -34,7 +34,7 @@
  * and the nearby fortuna.c may be consulted for examples of working code.
  *
  * The author is willing to provide reasonable help to those wishing to
- * write such a module for themselves. Please use the markm@ FreeBSD
+ * write such a module for themselves. Please use the markm@ NQC
  * email address, and ensure that you are developing this on a suitably
  * supported branch (This is currently 12-CURRENT, and may be no
  * older than 12-STABLE in the future).

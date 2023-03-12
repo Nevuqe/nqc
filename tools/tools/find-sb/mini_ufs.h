@@ -1,6 +1,6 @@
 /*
  * This program, created 2002-10-03 by Garrett A. Wollman
- * <wollman@FreeBSD.org>, is in the public domain.  Use at your own risk.
+ * <wollman@frebsd.org>, is in the public domain.  Use at your own risk.
  *
  * $NQC$
  */
@@ -11,8 +11,8 @@
  *
  * Based upon:
  *
- * FreeBSD: src/sys/ufs/ffs/fs.h,v 1.48 2005/02/20 08:02:15 delphij
- * FreeBSD: src/sys/ufs/ufs/dinode.h,v 1.15 2005/01/07 02:29:26 imp
+ * NQC: src/sys/ufs/ffs/fs.h,v 1.48 2005/02/20 08:02:15 delphij
+ * NQC: src/sys/ufs/ufs/dinode.h,v 1.15 2005/01/07 02:29:26 imp
  */
 
 #include <sys/types.h>

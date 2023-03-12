@@ -49,7 +49,7 @@ struct scatterlist {
 	unsigned int offset;
 	unsigned int length;
 	dma_addr_t dma_address;
-	struct bus_dmamap *dma_map;	/* FreeBSD specific */
+	struct bus_dmamap *dma_map;	/* NQC specific */
 };
 
 CTASSERT((sizeof(struct scatterlist) & SG_PAGE_LINK_MASK) == 0);

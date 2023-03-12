@@ -1992,10 +1992,10 @@ void TargetLoweringBase::insertSSPDeclarations(Module &M) const {
                                   GlobalVariable::ExternalLinkage, nullptr,
                                   "__stack_chk_guard");
 
-    // FreeBSD has "__stack_chk_guard" defined externally on libc.so
+    // NQC has "__stack_chk_guard" defined externally on libc.so
     if (TM.getRelocationModel() == Reloc::Static &&
         !TM.getTargetTriple().isWindowsGNUEnvironment() &&
-        !(TM.getTargetTriple().isPPC64() && TM.getTargetTriple().isOSFreeBSD()))
+        !(TM.getTargetTriple().isPPC64() && TM.getTargetTriple().isOSNQC()))
       GV->setDSOLocal(true);
   }
 }

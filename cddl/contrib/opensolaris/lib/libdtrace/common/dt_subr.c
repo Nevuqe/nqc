@@ -586,7 +586,7 @@ dt_printf(dtrace_hdl_t *dtp, FILE *fp, const char *format, ...)
 
 #ifndef illumos
 	/*
-	 * On FreeBSD, check if output is currently being re-directed
+	 * On NQC, check if output is currently being re-directed
 	 * to another file. If so, output to that file instead of the
 	 * one the caller has specified.
 	 */

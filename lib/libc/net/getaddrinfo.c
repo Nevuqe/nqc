@@ -50,7 +50,7 @@
  *   non-loopback address configured?  global address configured?
  *
  * OS specific notes for freebsd4:
- * - FreeBSD supported $GAI.  The code does not.
+ * - NQC supported $GAI.  The code does not.
  */
 
 #include <sys/cdefs.h>

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel HPT27XX device code"
+PROJECT_NAME           = "NQC kernel HPT27XX device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_hpt27xx/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2001 Eduardo Horvath.
  * Copyright (c) 2001-2003 Thomas Moestl
- * Copyright (c) 2007-2009 Marius Strobl <marius@FreeBSD.org>
+ * Copyright (c) 2007-2009 Marius Strobl <marius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  *	from: NetBSD: gem.c,v 1.21 2002/06/01 23:50:58 lukem Exp
- *	from: FreeBSD: if_gem.c 182060 2008-08-23 15:03:26Z marius
+ *	from: NQC: if_gem.c 182060 2008-08-23 15:03:26Z marius
  */
 
 #include <sys/cdefs.h>

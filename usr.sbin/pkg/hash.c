@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012-2014 Baptiste Daroussin <bapt@FreeBSD.org>
- * Copyright (c) 2013 Bryan Drewery <bdrewery@FreeBSD.org>
+ * Copyright (c) 2012-2014 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2013 Bryan Drewery <bdrewery@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

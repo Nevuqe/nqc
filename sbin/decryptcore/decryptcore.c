@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 Konrad Witaszczyk <def@FreeBSD.org>
+ * Copyright (c) 2016 Konrad Witaszczyk <def@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2004 Bernd Walter <ticso@FreeBSD.org>
+ * Copyright (c) 2004 Bernd Walter <ticso@frebsd.org>
  *
  * $URL: https://devel.bwct.de/svn/projects/ubser/ubser.c $
  * $Date: 2004-02-29 01:53:10 +0100 (Sun, 29 Feb 2004) $
@@ -8,9 +8,9 @@
  */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND BSD-2-Clause-NetBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-2-Clause-NetBSD
  *
- * Copyright (c) 2001-2002, Shunsuke Akiyama <akiyama@jp.FreeBSD.org>.
+ * Copyright (c) 2001-2002, Shunsuke Akiyama <akiyama@jp.frebsd.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -379,7 +379,7 @@ ubser_pre_param(struct ucom_softc *ucom, struct termios *t)
 
 	/*
 	 * XXX xon/xoff not supported by the firmware!
-	 * This is handled within FreeBSD only and may overflow buffers
+	 * This is handled within NQC only and may overflow buffers
 	 * because of delayed reaction due to device buffering.
 	 */
 

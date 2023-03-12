@@ -1,6 +1,6 @@
 /*
 ********************************************************************************
-**        OS    : FreeBSD
+**        OS    : NQC
 **   FILE NAME  : arcmsr.h
 **        BY    : Erich Chen, Ching Huang
 **   Description: SCSI RAID Device Driver for 

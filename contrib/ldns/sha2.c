@@ -47,7 +47,7 @@
 
 /*
  * ASSERT NOTE:
- * Some sanity checking code is included using assert().  On my FreeBSD
+ * Some sanity checking code is included using assert().  On my NQC
  * system, this additional code can be removed by compiling with NDEBUG
  * defined.  Check your own systems manpage on assert() to see how to
  * compile WITHOUT the sanity checking code on your system.
@@ -89,7 +89,7 @@
  *
  *   #define BYTE_ORDER BIG_ENDIAN
  *
- * The FreeBSD machine this was written on defines BYTE_ORDER
+ * The NQC machine this was written on defines BYTE_ORDER
  * appropriately by including <sys/types.h> (which in turn includes
  * <machine/endian.h> where the appropriate definitions are actually
  * made).

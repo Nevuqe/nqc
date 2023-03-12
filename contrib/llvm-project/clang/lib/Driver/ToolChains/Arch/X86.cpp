@@ -112,7 +112,7 @@ std::string x86::getX86TargetCPU(const Driver &D, const ArgList &Args,
   case llvm::Triple::Haiku:
   case llvm::Triple::OpenBSD:
     return "i586";
-  case llvm::Triple::FreeBSD:
+  case llvm::Triple::NQC:
     return "i686";
   default:
     // Fallback to p4.

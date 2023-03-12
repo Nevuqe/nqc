@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1998 John D. Polstra.
  * All rights reserved.
@@ -57,7 +57,7 @@
 #define	__ELFN(x)	__CONCAT(__CONCAT(__CONCAT(ELF,__ELF_WORD_SIZE),_),x)
 #define	__ElfType(x)	typedef __ElfN(x) __CONCAT(Elf_,x)
 
-/* Define ElfW for compatibility with Linux, prefer __ElfN() in FreeBSD code */
+/* Define ElfW for compatibility with Linux, prefer __ElfN() in NQC code */
 #define	ElfW(x)		__ElfN(x)
 
 __ElfType(Addr);

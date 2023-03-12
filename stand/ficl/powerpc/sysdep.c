@@ -18,7 +18,7 @@
 #include "ficl.h"
 
 /*
-*******************  FreeBSD  P O R T   B E G I N S   H E R E ******************** Michael Smith
+*******************  NQC  P O R T   B E G I N S   H E R E ******************** Michael Smith
 */
 
 #if PORTABLE_LONGMULDIV == 0

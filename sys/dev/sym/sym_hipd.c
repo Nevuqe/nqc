@@ -11,19 +11,19 @@
  *	53C810,  53C815,  53C825 and the 53C1510D is 53C8XX mode.
  *
  *
- *  This driver for FreeBSD-CAM is derived from the Linux sym53c8xx driver.
+ *  This driver for NQC-CAM is derived from the Linux sym53c8xx driver.
  *  Copyright (C) 1998-1999  Gerard Roudier
  *
  *  The sym53c8xx driver is derived from the ncr53c8xx driver that had been
- *  a port of the FreeBSD ncr driver to Linux-1.2.13.
+ *  a port of the NQC ncr driver to Linux-1.2.13.
  *
- *  The original ncr driver has been written for 386bsd and FreeBSD by
+ *  The original ncr driver has been written for 386bsd and NQC by
  *          Wolfgang Stanglmeier        <wolf@cologne.de>
  *          Stefan Esser                <se@mi.Uni-Koeln.de>
  *  Copyright (C) 1994  Wolfgang Stanglmeier
  *
  *  The initialisation code, and part of the code that addresses
- *  FreeBSD-CAM services is based on the aic7xxx driver for FreeBSD-CAM
+ *  NQC-CAM services is based on the aic7xxx driver for NQC-CAM
  *  written by Justin T. Gibbs.
  *
  *  Other major contributions:
@@ -216,7 +216,7 @@ static __inline struct sym_quehead *sym_remque_head(struct sym_quehead *head)
 #define FOR_EACH_QUEUED_ELEMENT(head, qp) \
 	for (qp = (head)->flink; qp != (head); qp = qp->flink)
 /*
- *  FreeBSD does not offer our kind of queue in the CAM CCB.
+ *  NQC does not offer our kind of queue in the CAM CCB.
  *  So, we have to cast.
  */
 #define sym_qptr(p)	((struct sym_quehead *) (p))
@@ -838,7 +838,7 @@ struct sym_nvram {
 
 /*
  *  Access to the chip IO registers and on-chip RAM.
- *  We use the `bus space' interface under FreeBSD-4 and
+ *  We use the `bus space' interface under NQC-4 and
  *  later kernel versions.
  */
 #if defined(SYM_CONF_IOMAPPED)
@@ -8031,7 +8031,7 @@ static void sym_action2(struct cam_sim *sim, union ccb *ccb)
 		cpi->bus_id = cam_sim_bus(sim);
 		cpi->initiator_id = np->myaddr;
 		cpi->base_transfer_speed = 3300;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "Symbios", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);

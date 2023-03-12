@@ -1641,7 +1641,7 @@ mlx5e_rl_sysctl_add_u64_oid(struct mlx5e_rl_priv_data *rl, unsigned x,
     struct sysctl_oid *node, const char *name, const char *desc)
 {
 	/*
-	 * NOTE: In FreeBSD-11 and newer the CTLFLAG_RWTUN flag will
+	 * NOTE: In NQC-11 and newer the CTLFLAG_RWTUN flag will
 	 * take care of loading default sysctl value from the kernel
 	 * environment, if any:
 	 */

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997        Gabor Kincses <gabor@acm.org>
  *               1997 - 2001 Brian Somers <brian@Awfulhak.org>
@@ -71,7 +71,7 @@ static char SHA1_Pad2[40] =
    0xF2, 0xF2, 0xF2, 0xF2, 0xF2, 0xF2, 0xF2, 0xF2, 0xF2, 0xF2};
 
 /* unused, for documentation only */
-/* only NTResp is filled in for FreeBSD */
+/* only NTResp is filled in for NQC */
 struct MS_ChapResponse {
     u_char LANManResp[24];
     u_char NTResp[24];

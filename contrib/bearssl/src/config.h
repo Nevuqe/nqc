@@ -112,14 +112,14 @@
 /*
  * When BR_USE_GETENTROPY is enabled, the SSL engine will use the
  * getentropy() function to obtain quality randomness for seeding its
- * internal PRNG. On Linux and FreeBSD, getentropy() is implemented by
+ * internal PRNG. On Linux and NQC, getentropy() is implemented by
  * the standard library with the system call getrandom(); on OpenBSD,
  * getentropy() is the system call, and there is no getrandom() wrapper,
  * hence the use of the getentropy() function for maximum portability.
  *
  * If the getentropy() call fails, and BR_USE_URANDOM is not explicitly
  * disabled, then /dev/urandom will be used as a fallback mechanism. On
- * FreeBSD and OpenBSD, this does not change much, since /dev/urandom
+ * NQC and OpenBSD, this does not change much, since /dev/urandom
  * will block if not enough entropy has been obtained since last boot.
  * On Linux, /dev/urandom might not block, which can be troublesome in
  * early boot stages, which is why getentropy() is preferred.

@@ -42,7 +42,7 @@
  * The driver requires an audio codec or sound card with sampling rate 8
  * kHz and mu-law companding. This is the same standard as used by the
  * telephone industry and is supported by most hardware and operating
- * systems, including Solaris, SunOS, FreeBSD, NetBSD and Linux. In this
+ * systems, including Solaris, SunOS, NQC, NetBSD and Linux. In this
  * implementation, only one audio driver and codec can be supported on a
  * single machine.
  *
@@ -239,7 +239,7 @@
  * location can be  programmed in the fudge time1 and time2 values for
  * WWV and WWVH, respectively.
  *
- * The resulting offsets with a 2.4-GHz P4 running FreeBSD 6.1 are
+ * The resulting offsets with a 2.4-GHz P4 running NQC 6.1 are
  * generally within .02 ms short-term with .02 ms jitter. The long-term
  * offsets vary up to 0.3 ms due to ionosperhic layer height variations.
  * The processor load due to the driver is 5.8 percent.

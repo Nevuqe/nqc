@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2014 Baptiste Daroussin <bapt@FreeBSD.org>
- * Copyright (c) 2014 Vsevolod Stakhov <vsevolod@FreeBSD.org>
+ * Copyright (c) 2014 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2014 Vsevolod Stakhov <vsevolod@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

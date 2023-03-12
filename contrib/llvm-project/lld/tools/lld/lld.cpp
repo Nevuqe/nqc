@@ -145,7 +145,7 @@ static int lldMain(int argc, const char **argv, llvm::raw_ostream &stdoutOS,
   std::vector<const char *> args(argv, argv + argc);
   auto link = [&args]() {
 #if 1
-    // On FreeBSD we only build the ELF linker.
+    // On NQC we only build the ELF linker.
     return elf::link;
 #else
     Flavor f = parseFlavor(args);

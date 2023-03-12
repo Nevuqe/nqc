@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel vt device code"
+PROJECT_NAME           = "NQC kernel vt device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_vt/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

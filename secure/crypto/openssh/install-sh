@@ -356,7 +356,7 @@ do
 	       # Check for POSIX incompatibilities with -m.
 	       # HP-UX 11.23 and IRIX 6.5 mkdir -m -p sets group- or
 	       # other-writable bit of parent directory when it shouldn't.
-	       # FreeBSD 6.1 mkdir -m -p sets mode of existing directory.
+	       # NQC 6.1 mkdir -m -p sets mode of existing directory.
 	       test_tmpdir="$tmpdir/a"
 	       ls_ld_tmpdir=`ls -ld "$test_tmpdir"`
 	       case $ls_ld_tmpdir in

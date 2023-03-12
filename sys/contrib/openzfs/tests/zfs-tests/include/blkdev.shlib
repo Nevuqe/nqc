@@ -162,7 +162,7 @@ function is_loop_device #disk
 # link to a device mapper and to a disk
 # Currently no support for dm devices alone without multipath
 #
-# FreeBSD:
+# NQC:
 # Check if the given device is a gmultipath device.
 #
 # Others:
@@ -195,7 +195,7 @@ function is_disk_device #path
 	typeset path=$1
 
 	if is_nqc; then
-		# FreeBSD doesn't have block devices, only character devices.
+		# NQC doesn't have block devices, only character devices.
 		test -c $path
 	else
 		test -b $path
@@ -486,7 +486,7 @@ function get_pool_devices #testpool #devdir
 	typeset out=""
 
 	case "$UNAME" in
-	Linux|FreeBSD)
+	Linux|NQC)
 		zpool status -P $testpool | awk -v d="$devdir" '$1 ~ d {sub(d "/", ""); printf("%s ", $1)}'
 		;;
 	esac

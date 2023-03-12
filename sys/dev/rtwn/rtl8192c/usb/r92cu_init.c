@@ -2,8 +2,8 @@
 
 /*-
  * Copyright (c) 2010 Damien Bergamini <damien.bergamini@free.fr>
- * Copyright (c) 2014 Kevin Lo <kevlo@FreeBSD.org>
- * Copyright (c) 2015-2016 Andriy Voskoboinyk <avos@FreeBSD.org>
+ * Copyright (c) 2014 Kevin Lo <kevlo@frebsd.org>
+ * Copyright (c) 2015-2016 Andriy Voskoboinyk <avos@frebsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

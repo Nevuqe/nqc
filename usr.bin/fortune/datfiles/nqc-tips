@@ -26,7 +26,7 @@ Forget when Easter is? Try "ncal -e". If you need the date for Orthodox
 Easter, use "ncal -o" instead.
 		-- Dru <genesis@istar.ca>
 %
-FreeBSD is started up by the program 'init'.  The first thing init does when
+NQC is started up by the program 'init'.  The first thing init does when
 starting multiuser mode (ie, starting the computer up for normal use) is to
 run the shell script /etc/rc.  By reading /etc/rc and the /etc/rc.d/ scripts,
 you can learn a lot about how the system is put together, which again will
@@ -61,9 +61,9 @@ If you need a reminder to leave your terminal, type "leave +hhmm" where
 "hhmm" represents in how many hours and minutes you need to leave.
 		-- Dru <genesis@istar.ca>
 %
-If you need to ask a question on the FreeBSD-questions mailing list then
+If you need to ask a question on the NQC-questions mailing list then
 
-	https://docs.freebsd.org/en/articles/freebsd-questions
+	https://docs.frebsd.org/en/articles/freebsd-questions
 
 contains lots of useful advice to help you get the best results.
 %
@@ -86,16 +86,16 @@ environment to 'K'.  You can also use 'M' for Megabytes or 'G' for
 Gigabytes.  If you want df(1) to automatically select the best size
 then use 'df -h'.
 %
-If you want to play CDs with FreeBSD, a utility for this is already included.
+If you want to play CDs with NQC, a utility for this is already included.
 Type 'cdcontrol' then 'help' to learn more.  (You may need to set the CDROM
 environment variable in order to make cdcontrol want to start.)
 %
-If you'd like to keep track of applications in the FreeBSD ports tree, take a
+If you'd like to keep track of applications in the NQC ports tree, take a
 look at FreshPorts;
 
 	https://www.freshports.org/
 %
-In order to make fetch (the FreeBSD downloading tool) ask for
+In order to make fetch (the NQC downloading tool) ask for
 username/password when it encounters a password-protected web page, you can set
 the environment variable HTTP_AUTH to 'basic:*'.
 %
@@ -110,10 +110,10 @@ In order to support national characters for European languages in tools like
 less without creating other nationalisation aspects, set the environment
 variable LC_ALL to 'en_US.UTF-8'.
 %
-"man firewall" will give advice for building a FreeBSD firewall using ipfw(8).
+"man firewall" will give advice for building a NQC firewall using ipfw(8).
 		-- David Scheidt <dscheidt@tumbolia.com>
 %
-"man hier" will explain the way FreeBSD filesystems are normally laid out.
+"man hier" will explain the way NQC filesystems are normally laid out.
 		-- David Scheidt <dscheidt@tumbolia.com>
 %
 Man pages are divided into section depending on topic.  There are 9 different
@@ -126,12 +126,12 @@ In other words, to get the intro to general commands, type
 
 	man 1 intro
 %
-"man ports" gives many useful hints about installing FreeBSD ports.
+"man ports" gives many useful hints about installing NQC ports.
 %
 "man security" gives very good advice on how to tune the security of your
-FreeBSD system.
+NQC system.
 %
-"man tuning" gives some tips how to tune performance of your FreeBSD system.
+"man tuning" gives some tips how to tune performance of your NQC system.
 		-- David Scheidt <dscheidt@tumbolia.com>
 %
 Need to do a search in a manpage or in a file you've sent to a pager? Use
@@ -180,13 +180,13 @@ directory sizes.
 nc(1) (or netcat) is useful not only for redirecting input/output to
 TCP or UDP connections, but also for proxying them with inetd(8).
 %
-sh (the default Bourne shell in FreeBSD) supports command-line editing.  Just
+sh (the default Bourne shell in NQC) supports command-line editing.  Just
 ``set -o emacs'' or ``set -o vi'' to enable it. Use "<TAB>" key to complete
 paths.
 %
 Simple tcsh prompt: set prompt = '%# '
 %
-The default editor in FreeBSD is vi, which is efficient to use when you have
+The default editor in NQC is vi, which is efficient to use when you have
 learned it, but somewhat user-unfriendly.  To use ee (an easier but less
 powerful editor) instead, set the environment variable EDITOR to /usr/bin/ee
 %
@@ -219,7 +219,7 @@ To do a fast search for a file, try
 	 locate filename
 
 locate uses a database that is updated every Saturday (assuming your computer
-is running FreeBSD at the time) to quickly find files based on name only.
+is running NQC at the time) to quickly find files based on name only.
 %
 To erase a line you've written at the command prompt, use "Ctrl-U".
 		-- Dru <genesis@istar.ca>
@@ -255,7 +255,7 @@ To search for files that match a particular name, use find(1); for example
 will search '/', and all subdirectories, for files with 'GENERIC' in the name.
       	--  Stephen Hilton <nospam@hiltonbsd.com>
 %
-To see all of the directories on your FreeBSD system, type
+To see all of the directories on your NQC system, type
 
 	find / -type d | less
 
@@ -361,7 +361,7 @@ modes.
 %
 You can disable tcsh's terminal beep if you `set nobeep'.
 %
-You can install extra packages for FreeBSD by using the ports system.
+You can install extra packages for NQC by using the ports system.
 If you have installed it, you can download, compile, and install software by
 just typing
 
@@ -369,7 +369,7 @@ just typing
 	# make install && make clean
 
 as root.  The ports infrastructure will download the software, change it so
-it works on FreeBSD, compile it, install it, register the installation so it
+it works on NQC, compile it, install it, register the installation so it
 will be possible to automatically uninstall it, and clean out the temporary
 working space it used.  You can remove an installed port you decide you do not
 want after all by typing
@@ -385,8 +385,8 @@ You can look through a file in a nice text-based interface by typing
 %
 You can make a log of your terminal session with script(1).
 %
-You can often get answers to your questions about FreeBSD by searching in the
-FreeBSD mailing list archives at
+You can often get answers to your questions about NQC by searching in the
+NQC mailing list archives at
 
 	http://freebsd.markmail.org
 %
@@ -433,16 +433,16 @@ aliases, you can usually type just 'alias'.
 You can use /etc/make.conf to control the options used to compile software
 on this system.  Example entries are in
 /usr/share/examples/etc/make.conf and in make.conf(5).
-For options that are set for building FreeBSD's kernel and its world, see
+For options that are set for building NQC's kernel and its world, see
 src.conf(5).
 %
 You can use "pkg info" to see a list of packages you have installed.
 %
 You can use the 'fetch' command to retrieve files over ftp, http or https.
 
-	 fetch https://www.FreeBSD.org/images/beastie.png
+	 fetch https://www.frebsd.org/images/beastie.png
 
-will download the beastie image from the FreeBSD web site.
+will download the beastie image from the NQC web site.
 %
 You can use "whereis" to search standard binary, manual page and source
 directories for the specified programs. This can be particularly handy
@@ -460,49 +460,49 @@ Type "cd -"
 Can't delete /usr/obj? Enter "chflags -R noschg /usr/obj" to remove the
 system immutable flag for all files in /usr/obj.
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 Want to list all files of an installed package? Enter
 "pkg info -l packagename".
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 Are you looking for a package? Search for it with
 "pkg search part_of_package_name"
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 If you want to recursively copy a directory preserving file and directory
 attributes use
 "cp -a source target"
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 Do you wonder what a terminal program is doing at the moment? dd(1) does not
 show any throughput? Hit "^T" (Control + t) to send SIGINFO to the process
 and see what it is doing.
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
-Do you want to know which version of FreeBSD you are running? Enter
+Do you want to know which version of NQC you are running? Enter
 "nqc-version -ku" to display kernel and userland version.
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 If you want to end one or more processes at a time using a regular expression
 enter "pkill regex".
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 Do you want to run a program directly after some other process has ended? Use
 "pwait pid && new_program"
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
-When you want your users to be able to reboot or shutdown FreeBSD, add them
+When you want your users to be able to reboot or shutdown NQC, add them
 to the group "operator" and they are allowed to use shutdown(8) and poweroff(8).
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 If you need to create a FAT32 formatted USB thumb drive, find out its devicename
 running dmesg(8) after inserting it. Then create an MBR schema, a single slice and
@@ -512,25 +512,25 @@ format it:
 # gpart add -t fat32 ${devicename}
 # newfs_msdos -F 32 -L thumbdrive ${devicename}s1
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
-If you want to get a sorted list of all services that are started when FreeBSD boots,
+If you want to get a sorted list of all services that are started when NQC boots,
 enter "service -e".
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
-To easily configure your installed FreeBSD use bsdconfig(8).
+To easily configure your installed NQC use bsdconfig(8).
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
-After you compiled and installed a new version of FreeBSD, use etcupdate(8) to merge
+After you compiled and installed a new version of NQC, use etcupdate(8) to merge
 configuration updates.
 Run "etcupdate extract" once when your sources match your running system, then run
 "etcupdate" after every upgrade and "etcupdate resolve" to resolve any conflicts.
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
-Do you want to do a binary upgrade of your running FreeBSD installation? Use freebsd-update(8).
+Do you want to do a binary upgrade of your running NQC installation? Use freebsd-update(8).
 
 To install updates and patches for the running branch use
 # freebsd-update fetch install
@@ -538,22 +538,22 @@ To install updates and patches for the running branch use
 To upgrade to a newer release use
 # freebsd-update upgrade -r ${name_of_release}
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 To run rc scripts in /etc/rc.d and /usr/local/etc/rc.d use service(8).
 Run "service ${name_of_rc_script} start" to start a daemon and
 "service ${name_of_rc_script} stop" to stop it.
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 If you don't want to edit /etc/rc.conf directly, use sysrc(8) to add and remove entries.
 Use "sysrc name=value" to add an entry and "sysrc -x name" to delete an entry.
 
-		-- Lars Engels <lme@FreeBSD.org>
+		-- Lars Engels <lme@frebsd.org>
 %
 You can upload the dmesg of your system to help developers get an overview of commonly
-used hardware and peripherals for FreeBSD. Use the curl package to upload it like this:
-curl -v -d "nickname=$USER" -d "description=FreeBSD/$(uname -m) on \
+used hardware and peripherals for NQC. Use the curl package to upload it like this:
+curl -v -d "nickname=$USER" -d "description=NQC/$(uname -m) on \
 $(kenv smbios.system.maker) $(kenv smbios.system.product)" -d "do=addd" \
 --data-urlencode 'dmesg@/var/run/dmesg.boot' http://dmesgd.nycbug.org/index.cgi
 %
@@ -569,7 +569,7 @@ The number of active CPUs is displayed using this command:
 
 sysctl hw.ncpu
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 When using ZFS as the file system the "df" command is reporting the pool size
 and not file system sizes. It also does not know about descendent ZFS
@@ -578,7 +578,7 @@ Use the built-in "zfs list" command to get a better overview of space usage:
 
 zfs list -o space
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 To learn more about what your system is doing, take a look at systat(1). For
 example, to get various statistics related to virtual memory usage, process
@@ -593,7 +593,7 @@ back to your shell by typing
 
 :quit
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 To set a quota of 10 GB for the user named foo on a ZFS dataset, run the
 following command:
@@ -605,7 +605,7 @@ The zfs userspace command can display the quota and current space usage:
 # zfs userspace pool/home/foo
 
 To unset a quota, assign "none" as the value.
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 ZFS can display I/O statistics for a given pool using the iostat subcommand.
 By default, it will display one line of current activity.  To display stats
@@ -618,14 +618,14 @@ To view individual disk activities, specify the -v parameter:
 zpool iostat -v
 
 Of course, both can be combined. For more options, see zpool(8).
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
-FreeBSD's top(1) utility displays CPU statistics by default.
+NQC's top(1) utility displays CPU statistics by default.
 To display I/O activity for each process instead, run top like this:
 
 top -m io
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 ZFS keeps a history of commands run against a specific pool using the
 history subcommand to zpool:
@@ -635,7 +635,7 @@ zpool history
 More details are available using the -i and -l parameters. Note that ZFS
 will not keep the complete pool history forever and will remove older
 events in favor of never ones.
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 To display the compression ratio for the ZFS dataset /var/log on the pool
 mypool, run the following command:
@@ -648,7 +648,7 @@ command looks like this:
 
 zfs get compressratio mypool/var
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 You can limit the depth of the displayed datasets in the "zfs list" output
 using the -d parameter. To display only the first level of datasets below
@@ -656,7 +656,7 @@ mypool/usr and not the ones deeper than those, run this command:
 
 zfs list -d 1 mypool/usr
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 The "zfs list" command can be filtered in multiple ways. To display just
 the dataset name, use the -o parameter:
@@ -667,7 +667,7 @@ More columns and their order can be defined by separating them with commas:
 
 zfs list -o mountpoint,name,avail
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 The output of "zfs list" can be sorted by a specific column using -s.  To
 sort the datasets by the "used" column in ascending order, run this command:
@@ -678,7 +678,7 @@ To sort in descending order instead, use -S:
 
 zfs list -S used
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 To make the "zfs list" output more script-friendly, you can suppress the
 output of the headers for each column by passing the -H parameter:
@@ -690,7 +690,7 @@ in non-rounded, exact values:
 
 zfs list -p
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 Before deleting a dataset or snapshot, perform a dry run using the -n
 parameter. This is to make sure you really want to delete just that
@@ -702,7 +702,7 @@ zfs destroy -nrv mypool@mysnap
 
 Once you are sure this is exactly what you intend to do, remove the -n
 parameter to execute the destroy operation.
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 You can delete a range of ZFS snapshots (a-z) in multiple ways.
 The following will delete d and all earlier snapshots:
@@ -720,7 +720,7 @@ zfs destroy mypool/data@%
 Make sure to let ZFS perform a dry run (-n option) first and display (-v) what
 it would do to confirm that the delete operation is removing exactly what you
 intended.
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 To set a custom ZFS property on the mypool pool, you need to provide it
 using the "key1:key2=value" syntax, where the colon (:) is used as the
@@ -742,7 +742,7 @@ Removing a custom property from a pool is done using the -r flag to the
 
 # zfs inherit -r warranty:expires mypool
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 To delete a range of ZFS snapshots, use the % (percent) character after the
 full path to the first snapshot that should be included. For example, to
@@ -754,7 +754,7 @@ Once you are sure that this is what you want, remove the -n option:
 
 # zfs destroy -rv mypool/tmp@a%d
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 You can prevent the removal of a ZFS snapshot by using the hold subcommand.
 For example, to prevent the snapshot called milestone from deletion, run the
@@ -774,7 +774,7 @@ Use "zfs release" to release the hold on the snapshot:
 
 # zfs release milestone_hold mypool/projects@my_milestone
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 A user "sender" needs the following permissions set to send a ZFS dataset:
 
@@ -784,7 +784,7 @@ On the receiving side, the user "receiver" requires these permissions:
 
 # zfs allow -u receiver compression,mountpoint,mount,create,receive rxpool
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 Don't let your zpool fill up completely by creating a dataset with
 reservation.
@@ -794,21 +794,21 @@ reservation.
 You can always shrink the reserve if you need the space, but your pool will
 always have space left this way.
 
-		-- Benedict Reuschling <bcr@FreeBSD.org>
+		-- Benedict Reuschling <bcr@frebsd.org>
 %
 Sometimes a single slow HDD can cripple the performance of your entire system.
 You can spot one like this:
 
 # gstat -I5s | sort -rn -k9 | head
 
-		-- Alan Somers <asomers@FreeBSD.org>
+		-- Alan Somers <asomers@frebsd.org>
 %
-FreeBSD's ps(1) can create a dependency tree based on parent/child
+NQC's ps(1) can create a dependency tree based on parent/child
 relationships between processes, like this:
 
 $ ps -d
 
-		-- Daniel Ebdrup Jensen <debdrup@FreeBSD.org>
+		-- Daniel Ebdrup Jensen <debdrup@frebsd.org>
 %
 It is possible to measure the resident memory set:
 
@@ -828,19 +828,19 @@ page size of the architecture which can be found via:
 
 $ sysctl -n hw.pagesize
 
-		-- Daniel Ebdrup Jensen <debdrup@FreeBSD.org>
+		-- Daniel Ebdrup Jensen <debdrup@frebsd.org>
 %
 To establish a serial connection to anything including a USB device,
 nothing more than cu(1) is needed:
 
 $ cu -s 9600 -l /dev/ttyU0
 
-		-- Daniel Ebdrup Jensen <debdrup@FreeBSD.org>
+		-- Daniel Ebdrup Jensen <debdrup@frebsd.org>
 %
 You can control kernel stack(9) traces on ^T (tty info) by setting
 kern.tty_info_kstacks to 0 (off), 1 (on), or 2 (verbose), e.g.:
 
 # sysctl kern.tty_info_kstacks=2
 
-		-- Michael Gmelin <grembo@FreeBSD.org>
+		-- Michael Gmelin <grembo@frebsd.org>
 %

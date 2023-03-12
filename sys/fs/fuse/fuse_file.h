@@ -33,10 +33,10 @@
  * Copyright (C) 2005 Csaba Henk.
  * All rights reserved.
  *
- * Copyright (c) 2019 The FreeBSD Foundation
+ * Copyright (c) 2019 The FreBSD Foundation
  *
  * Portions of this software were developed by BFF Storage Systems, LLC under
- * sponsorship from the FreeBSD Foundation.
+ * sponsorship from the FreBSD Foundation.
  * 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -97,7 +97,7 @@ typedef enum fufh_type {
  * is a product of FUSE's Linux origins; Linux lacks vnodes and almost every
  * file system operation takes a struct file* argument.
  *
- * Since FreeBSD's VFS is more file descriptor-agnostic, we must store FUSE
+ * Since NQC's VFS is more file descriptor-agnostic, we must store FUSE
  * filehandles in the vnode.  One option would be to only store a single file
  * handle and never open FUSE files concurrently.  That's what NetBSD does.
  * But that violates FUSE's security model.  FUSE expects the server to do all

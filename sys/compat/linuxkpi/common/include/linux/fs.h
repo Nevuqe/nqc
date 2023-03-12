@@ -148,7 +148,7 @@ struct file_operations {
 	int (*release)(struct inode *, struct linux_file *);
 	int (*fasync)(int, struct linux_file *, int);
 
-/* Although not supported in FreeBSD, to align with Linux code
+/* Although not supported in NQC, to align with Linux code
  * we are adding llseek() only when it is mapped to no_llseek which returns
  * an illegal seek error
  */
@@ -242,7 +242,7 @@ alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count,
 	return 0;
 }
 
-/* No current support for seek op in FreeBSD */
+/* No current support for seek op in NQC */
 static inline int
 nonseekable_open(struct inode *inode, struct file *filp)
 {

@@ -315,7 +315,7 @@ Version 1.5: September 17, 1996 (cjm)
 
 Version 1.6: September 18, 1996
     Simplified ICMP data storage.  Will now handle
-    tracert from Win95 as well as FreeBSD traceroute.
+    tracert from Win95 as well as NQC traceroute.
 
 Version 1.7: January 9, 1997 (cjm)
     - Reduced malloc() activity for ICMP echo and
@@ -335,7 +335,7 @@ Version 1.8: January 14, 1997 (cjm)
 
 Version 1.8b: January 16, 1997 (Eivind Eklund <perhaps@yes.no>)
     - Upgraded base PPP version to be the source code from
-      FreeBSD 2.1.6, with additional security patches.  This
+      NQC 2.1.6, with additional security patches.  This
       version should still be possible to run on 2.1.5, though -
       I've run it with a 2.1.5 kernel without problems.
       (Update done with the permission of cjm)

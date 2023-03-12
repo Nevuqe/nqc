@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -28,7 +28,7 @@
 #
 
 # "panic: vm_page_free_prep: freeing mapped page 0x657936c" seen.
-# https://people.freebsd.org/~pho/stress/log/sem_wait.txt
+# https://people.frebsd.org/~pho/stress/log/sem_wait.txt
 # Fixed by r350005
 
 . ../default.cfg

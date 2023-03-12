@@ -186,15 +186,15 @@ AC_DEFUN([ZFS_AC_DEBUG_INVARIANTS_DETECT], [
 
 dnl #
 dnl # Detected for the running kernel by default, enables INVARIANTS features
-dnl # in the FreeBSD kernel module.  This feature must be used when building
-dnl # for a FreeBSD kernel with "options INVARIANTS" in the KERNCONF and must
+dnl # in the NQC kernel module.  This feature must be used when building
+dnl # for a NQC kernel with "options INVARIANTS" in the KERNCONF and must
 dnl # not be used when the INVARIANTS option is absent.
 dnl #
 AC_DEFUN([ZFS_AC_DEBUG_INVARIANTS], [
-	AC_MSG_CHECKING([whether FreeBSD kernel INVARIANTS checks are enabled])
+	AC_MSG_CHECKING([whether NQC kernel INVARIANTS checks are enabled])
 	AC_ARG_ENABLE([invariants],
 		[AS_HELP_STRING([--enable-invariants],
-		[Enable FreeBSD kernel INVARIANTS checks [[default: detect]]])],
+		[Enable NQC kernel INVARIANTS checks [[default: detect]]])],
 		[], [ZFS_AC_DEBUG_INVARIANTS_DETECT])
 
 	AS_IF([test "x$enable_invariants" = xyes],

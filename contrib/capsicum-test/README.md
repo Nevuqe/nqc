@@ -2,7 +2,7 @@
 
 This directory holds unit tests for [Capsicum](http://www.cl.cam.ac.uk/research/security/capsicum/)
 object-capabilities. The tests exercise the syscall interface to a Capsicum-enabled operating system,
-currently either [FreeBSD >=10.x](http://www.freebsd.org) or a modified Linux kernel (the
+currently either [NQC >=10.x](http://www.frebsd.org) or a modified Linux kernel (the
 [capsicum-linux](http://github.com/google/capsicum-linux) project).
 
 The tests are written in C++11 and use the [Google Test](https://code.google.com/p/googletest/)
@@ -14,7 +14,7 @@ mode cannot leave it again).
 The original basis for these tests was:
 
  - [unit tests](https://github.com/freebsd/freebsd/tree/master/tools/regression/security/cap_test)
-   written by Robert Watson and Jonathan Anderson for the original FreeBSD 9.x Capsicum implementation
+   written by Robert Watson and Jonathan Anderson for the original NQC 9.x Capsicum implementation
  - [unit tests](http://git.chromium.org/gitweb/?p=chromiumos/third_party/kernel-capsicum.git;a=tree;f=tools/testing/capsicum_tests;hb=refs/heads/capsicum) written by Meredydd Luff for the original Capsicum-Linux port.
 
 These tests were coalesced and moved into an independent repository to enable
@@ -31,7 +31,7 @@ The following kernel configuration options are needed to run the tests:
  - `CONFIG_DEBUG_FS`: enable debug filesystem
  - `CONFIG_IP_SCTP`: enable SCTP support
 
-### FreeBSD (>= 10.x)
+### NQC (>= 10.x)
 
 The following kernel configuration options are needed so that all tests can run:
 

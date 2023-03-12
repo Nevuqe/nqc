@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002 Doug Rabson
  * Copyright (c) 2003 Peter Wemm
@@ -111,7 +111,7 @@ struct sysentvec ia32_nqc_sysvec = {
 	.sv_sigcode	= _binary_elf_vdso32_so_1_start,
 	.sv_szsigcode	= (int *)&_binary_elf_vdso32_so_1_size,
 	.sv_sigcodeoff	= VDSO_IA32_SIGCODE_OFFSET,
-	.sv_name	= "FreeBSD ELF32",
+	.sv_name	= "NQC ELF32",
 	.sv_coredump	= elf32_coredump,
 	.sv_elf_core_osabi = ELFOSABI_NQC,
 	.sv_elf_core_abi_vendor = NQC_ABI_VENDOR,
@@ -150,7 +150,7 @@ INIT_SYSENTVEC(elf_ia32_sysvec, &ia32_nqc_sysvec);
 static Elf32_Brandinfo ia32_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
 	.sysvec		= &ia32_nqc_sysvec,
@@ -166,7 +166,7 @@ SYSINIT(ia32, SI_SUB_EXEC, SI_ORDER_MIDDLE,
 static Elf32_Brandinfo ia32_brand_oinfo = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/usr/libexec/ld-elf.so.1",
 	.sysvec		= &ia32_nqc_sysvec,
@@ -182,7 +182,7 @@ SYSINIT(oia32, SI_SUB_EXEC, SI_ORDER_ANY,
 static Elf32_Brandinfo kia32_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_386,
-	.compat_3_brand	= "FreeBSD",
+	.compat_3_brand	= "NQC",
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld.so.1",
 	.sysvec		= &ia32_nqc_sysvec,

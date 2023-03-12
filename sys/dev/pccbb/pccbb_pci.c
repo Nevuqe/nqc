@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2000-2001 Jonathan Chen All rights reserved.
- * Copyright (c) 2002-2004 M. Warner Losh <imp@FreeBSD.org>
+ * Copyright (c) 2002-2004 M. Warner Losh <imp@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -64,11 +64,11 @@
  *  TI Datasheets:
  *   http://www-s.ti.com/cgi-bin/sc/generic2.cgi?family=PCI+CARDBUS+CONTROLLERS
  *
- * Written by Jonathan Chen <jon@freebsd.org>
+ * Written by Jonathan Chen <jon@frebsd.org>
  * The author would like to acknowledge:
  *  * HAYAKAWA Koichi: Author of the NetBSD code for the same thing
  *  * Warner Losh: Newbus/newcard guru and author of the pccard side of things
- *  * YAMAMOTO Shigeru: Author of another FreeBSD cardbus driver
+ *  * YAMAMOTO Shigeru: Author of another NQC cardbus driver
  *  * David Cross: Author of the initial ugly hack for a specific cardbus card
  */
 

@@ -27,7 +27,7 @@
 #
 
 # Demonstrate that fts_read(3) will open a fifo for read.
-# Not seen on a pristine FreeBSD.
+# Not seen on a pristine NQC.
 
 # $ while ./fifo.sh; do date; done
 # Wed Oct  1 14:07:41 CEST 2014
@@ -37,7 +37,7 @@
 # UID   PID  PPID CPU PRI NI   VSZ  RSS MWCHAN STAT TT     TIME COMMAND
 #   0 19547 19544   0  25  0 12176 3996 fifoor I     0  0:08.19 /tmp/fifo
 # $ gdb /tmp/fifo 19547
-# GNU gdb 6.1.1 [FreeBSD]
+# GNU gdb 6.1.1 [NQC]
 # Copyright 2004 Free Software Foundation, Inc.
 # GDB is free software, covered by the GNU General Public License, and you are
 # welcome to change it and/or distribute copies of it under certain conditions.

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel qlxge device code"
+PROJECT_NAME           = "NQC kernel qlxge device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_qlxge/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

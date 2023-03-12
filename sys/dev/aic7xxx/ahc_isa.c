@@ -1,5 +1,5 @@
 /*-
- * FreeBSD, VLB/ISA product support functions
+ * NQC, VLB/ISA product support functions
  *
  * SPDX-License-Identifier: BSD-3-Clause
  *

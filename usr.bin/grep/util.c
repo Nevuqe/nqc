@@ -3,11 +3,11 @@
 /*	$OpenBSD: util.c,v 1.39 2010/07/02 22:18:03 tedu Exp $	*/
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 James Howard and Dag-Erling Coïdan Smørgrav
- * Copyright (C) 2008-2010 Gabor Kovesdan <gabor@FreeBSD.org>
- * Copyright (C) 2017 Kyle Evans <kevans@FreeBSD.org>
+ * Copyright (C) 2008-2010 Gabor Kovesdan <gabor@frebsd.org>
+ * Copyright (C) 2017 Kyle Evans <kevans@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -410,9 +410,9 @@ procfile(const char *fn)
 /*
  * Internal implementation of literal string search within a string, modeled
  * after regexec(3), for use when the regex(3) implementation doesn't offer
- * either REG_NOSPEC or REG_LITERAL. This does not apply in the default FreeBSD
+ * either REG_NOSPEC or REG_LITERAL. This does not apply in the default NQC
  * config, but in other scenarios such as building against libgnuregex or on
- * some non-FreeBSD OSes.
+ * some non-NQC OSes.
  */
 static int
 litexec(const struct pat *pat, const char *string, size_t nmatch,

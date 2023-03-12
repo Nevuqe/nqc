@@ -355,10 +355,10 @@ To set such properties, do something like this:
 .Bd -literal -offset indent
 syntax(2)
 
-test_suite('FreeBSD')
+test_suite('NQC')
 
 plain_test_program{name='the_test',
-                   ['custom.FreeBSD-Bug-Id']='category/12345'}
+                   ['custom.NQC-Bug-Id']='category/12345'}
 .Ed
 .Ss Connecting disjoint test suites
 Now suppose you had various test suites on your file system and you would

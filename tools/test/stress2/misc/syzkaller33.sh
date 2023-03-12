@@ -32,7 +32,7 @@
 # [ thread pid 12 tid 100161 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x1283f9e(%rip)
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #0 main-n246123-21afed4b1d1-dirty: Sat Apr 17 07:39:42 CEST 2021
+# version: NQC 14.0-CURRENT #0 main-n246123-21afed4b1d1-dirty: Sat Apr 17 07:39:42 CEST 2021
 # pho@t2.osted.lan:/usr/src/sys/amd64/compile/PHO
 # db>
 

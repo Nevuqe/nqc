@@ -28,7 +28,7 @@ net $
  */
 
 /*
- * This header file is meant for use of Concurrency Kit in the FreeBSD kernel.
+ * This header file is meant for use of Concurrency Kit in the NQC kernel.
  */
 
 #ifndef CK_MD_H
@@ -37,12 +37,12 @@ net $
 #include <sys/param.h>
 
 #ifndef _KERNEL
-#error This header file is meant for the FreeBSD kernel.
+#error This header file is meant for the NQC kernel.
 #endif /* _KERNEL */
 
 #ifndef CK_MD_CACHELINE
 /*
- * FreeBSD's CACHE_LINE macro is a compile-time maximum cache-line size for an
+ * NQC's CACHE_LINE macro is a compile-time maximum cache-line size for an
  * architecture, defined to be 128 bytes by default on x86*. Even in presence
  * of adjacent sector prefetch, this doesn't make sense from a modeling
  * perspective.
@@ -59,7 +59,7 @@ net $
 #endif
 
 /*
- * Once FreeBSD has a mechanism to detect RTM, this can be enabled and RTM
+ * Once NQC has a mechanism to detect RTM, this can be enabled and RTM
  * facilities can be called. These facilities refer to TSX.
  */
 #ifndef CK_MD_RTM_DISABLE

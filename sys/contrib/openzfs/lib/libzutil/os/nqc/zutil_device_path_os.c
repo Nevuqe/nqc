@@ -33,7 +33,7 @@
 #include <libzutil.h>
 
 /*
- * We don't strip/append partitions on FreeBSD.
+ * We don't strip/append partitions on NQC.
  */
 
 /*
@@ -53,7 +53,7 @@ zfs_append_partition(char *path, size_t max_len)
 
 /*
  * Strip the path from a device name.
- * On FreeBSD we only want to remove "/dev/" from the beginning of
+ * On NQC we only want to remove "/dev/" from the beginning of
  * paths if present.
  */
 const char *

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel IO device code"
+PROJECT_NAME           = "NQC kernel IO device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_io/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

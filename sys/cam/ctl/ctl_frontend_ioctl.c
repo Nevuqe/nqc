@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003-2009 Silicon Graphics International Corp.
- * Copyright (c) 2012 The FreeBSD Foundation
- * Copyright (c) 2015 Alexander Motin <mav@FreeBSD.org>
- * Copyright (c) 2017 Jakub Wojciech Klama <jceel@FreeBSD.org>
+ * Copyright (c) 2012 The FreBSD Foundation
+ * Copyright (c) 2015 Alexander Motin <mav@frebsd.org>
+ * Copyright (c) 2017 Jakub Wojciech Klama <jceel@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

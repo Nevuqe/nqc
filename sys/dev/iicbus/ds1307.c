@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Luiz Otavio O Souza <loos@FreeBSD.org>
+ * Copyright (c) 2015 Luiz Otavio O Souza <loos@frebsd.org>
  * Copyright (c) 2022 Mathew McBride <matt@traverse.com.au>
  * All rights reserved.
  *

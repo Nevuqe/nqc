@@ -78,8 +78,8 @@ $ZFS 2>&1 | $GREP "allow" > /dev/null
 log_assert "Verify snapshot can be created via mkdir in $(get_snapdir_name)."
 log_onexit cleanup
 
-[[ $os_name == "FreeBSD" ]] && \
-	log_uninitiated "Directory operations on the $(get_snapdir_name) directory are not yet supported in FreeBSD"
+[[ $os_name == "NQC" ]] && \
+	log_uninitiated "Directory operations on the $(get_snapdir_name) directory are not yet supported in NQC"
 
 fs=$TESTPOOL/$TESTFS
 # Verify all the other directories are readonly.

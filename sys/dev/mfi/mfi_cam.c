@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 2007 Scott Long
  * All rights reserved.
@@ -224,7 +224,7 @@ mfip_cam_action(struct cam_sim *sim, union ccb *ccb)
 		cpi->max_target = MFI_SCSI_MAX_TARGETS;
 		cpi->max_lun = MFI_SCSI_MAX_LUNS;
 		cpi->initiator_id = MFI_SCSI_INITIATOR_ID;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "LSI", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);

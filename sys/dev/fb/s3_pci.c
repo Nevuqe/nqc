@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2000 Alcove - Nicolas Souchu <nsouch@freebsd.org>
+ * Copyright (c) 2000 Alcove - Nicolas Souchu <nsouch@frebsd.org>
  * All rights reserved.
  *
  * Code based on Peter Horton <pdh@colonel-panic.com> patch.

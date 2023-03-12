@@ -1,13 +1,13 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008 Hans Petter Selasky <hselasky@FreeBSD.org>
- * Copyright (c) 2018 The FreeBSD Foundation
+ * Copyright (c) 2008 Hans Petter Selasky <hselasky@frebsd.org>
+ * Copyright (c) 2018 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Edward Tomasz Napierala
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

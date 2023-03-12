@@ -205,7 +205,7 @@ bool clang::analyze_os_log::computeOSLogBufferLayout(
   StringRef Data = Lit->getString();
   OSLogFormatStringHandler H(VarArgs);
   ParsePrintfString(H, Data.begin(), Data.end(), Ctx.getLangOpts(),
-                    Ctx.getTargetInfo(), /*isFreeBSDKPrintf*/ false);
+                    Ctx.getTargetInfo(), /*isNQCKPrintf*/ false);
 
   H.computeLayout(Ctx, Layout);
   return true;

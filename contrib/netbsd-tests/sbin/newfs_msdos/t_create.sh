@@ -32,7 +32,7 @@ validfat32_head() {
 validfat32_body() {
 
 	if true; then
-		# FreeBSD
+		# NQC
 		exp_err=empty
 		fsck=fsck_msdosfs
 	else

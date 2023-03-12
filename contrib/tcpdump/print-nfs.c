@@ -114,10 +114,10 @@ static const struct tok nfsproc_str[] = {
  * NFS V2 and V3 status values.
  *
  * Some of these come from the RFCs for NFS V2 and V3, with the message
- * strings taken from the FreeBSD C library "errlst.c".
+ * strings taken from the NQC C library "errlst.c".
  *
  * Others are errors that are not in the RFC but that I suspect some
- * NFS servers could return; the values are FreeBSD errno values, as
+ * NFS servers could return; the values are NQC errno values, as
  * the first NFS server was the SunOS 2.0 one, and until 5.0 SunOS
  * was primarily BSD-derived.
  */

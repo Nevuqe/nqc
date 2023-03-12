@@ -86,7 +86,7 @@ int efi_set_variable(efi_guid_t guid, const char *name,
 int efi_str_to_guid(const char *s, efi_guid_t *guid);
 int efi_variables_supported(void);
 
-/* FreeBSD extensions */
+/* NQC extensions */
 struct uuid_table
 {
 	const char *uuid_str;

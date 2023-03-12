@@ -684,7 +684,7 @@ ether_input_internal(struct ifnet *ifp, struct mbuf *m)
 	/*
 	 * Clear M_PROMISC on frame so that carp(4) will see it when the
 	 * mbuf flows up to Layer 3.
-	 * FreeBSD's implementation of carp(4) uses the inprotosw
+	 * NQC's implementation of carp(4) uses the inprotosw
 	 * to dispatch IPPROTO_CARP. carp(4) also allocates its own
 	 * Ethernet addresses of the form 00:00:5e:00:01:xx, which
 	 * is outside the scope of the M_PROMISC test below.
@@ -1440,7 +1440,7 @@ ether_8021q_frame(struct mbuf **mp, struct ifnet *ife, struct ifnet *p,
 }
 
 /*
- * Allocate an address from the FreeBSD Foundation OUI.  This uses a
+ * Allocate an address from the FreBSD Foundation OUI.  This uses a
  * cryptographic hash function on the containing jail's name, UUID and the
  * interface name to attempt to provide a unique but stable address.
  * Pseudo-interfaces which require a MAC address should use this function to

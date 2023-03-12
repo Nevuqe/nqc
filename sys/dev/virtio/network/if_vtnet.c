@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2011, Bryan Venteicher <bryanv@FreeBSD.org>
+ * Copyright (c) 2011, Bryan Venteicher <bryanv@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1748,7 +1748,7 @@ vtnet_rxq_csum_needs_csum(struct vtnet_rxq *rxq, struct mbuf *m, uint16_t etype,
 	sc = rxq->vtnrx_sc;
 
 	/*
-	 * NEEDS_CSUM corresponds to Linux's CHECKSUM_PARTIAL, but FreeBSD does
+	 * NEEDS_CSUM corresponds to Linux's CHECKSUM_PARTIAL, but NQC does
 	 * not have an analogous CSUM flag. The checksum has been validated,
 	 * but is incomplete (TCP/UDP pseudo header).
 	 *
@@ -1759,7 +1759,7 @@ vtnet_rxq_csum_needs_csum(struct vtnet_rxq *rxq, struct mbuf *m, uint16_t etype,
 	 * Default to receiving the packet as-is for performance reasons, but
 	 * this can cause issues if the packet is to be forwarded because it
 	 * does not contain a valid checksum. This patch may be helpful:
-	 * https://reviews.freebsd.org/D6611. In the meantime, have the driver
+	 * https://reviews.frebsd.org/D6611. In the meantime, have the driver
 	 * compute the checksum if requested.
 	 *
 	 * BMV: Need to add an CSUM_PARTIAL flag?
@@ -1855,7 +1855,7 @@ vtnet_rxq_csum_data_valid(struct vtnet_rxq *rxq, struct mbuf *m,
 		break;
 	default:
 		/*
-		 * FreeBSD does not support checksum offloading of this
+		 * NQC does not support checksum offloading of this
 		 * protocol. Let the stack re-verify the checksum later
 		 * if the protocol is supported.
 		 */
@@ -2428,7 +2428,7 @@ vtnet_txq_offload_tso(struct vtnet_txq *txq, struct mbuf *m, int eth_type,
 	if (__predict_false(tcp->th_flags & TH_CWR)) {
 		/*
 		 * Drop if VIRTIO_NET_F_HOST_ECN was not negotiated. In
-		 * FreeBSD, ECN support is not on a per-interface basis,
+		 * NQC, ECN support is not on a per-interface basis,
 		 * but globally via the net.inet.tcp.ecn.enable sysctl
 		 * knob. The default is off.
 		 */

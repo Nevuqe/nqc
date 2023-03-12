@@ -2089,7 +2089,7 @@ void Clang::AddPPCTargetArgs(const ArgList &Args,
   if (T.isOSBinFormatELF()) {
     switch (getToolChain().getArch()) {
     case llvm::Triple::ppc64: {
-      if ((T.isOSFreeBSD() && T.getOSMajorVersion() >= 13) ||
+      if ((T.isOSNQC() && T.getOSMajorVersion() >= 13) ||
           T.isOSOpenBSD() || T.isMusl())
         ABIName = "elfv2";
       else
@@ -3389,7 +3389,7 @@ static void RenderSCPOptions(const ToolChain &TC, const ArgList &Args,
                              ArgStringList &CmdArgs) {
   const llvm::Triple &EffectiveTriple = TC.getEffectiveTriple();
 
-  if (!EffectiveTriple.isOSFreeBSD() && !EffectiveTriple.isOSLinux())
+  if (!EffectiveTriple.isOSNQC() && !EffectiveTriple.isOSLinux())
     return;
 
   if (!EffectiveTriple.isX86() && !EffectiveTriple.isSystemZ() &&

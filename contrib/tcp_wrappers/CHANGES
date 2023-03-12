@@ -53,7 +53,7 @@ the non-reentrant strtok() routine. The result is that hosts may slip
 through allow/deny filters. Workaround is to not rely on the vendor's
 strtok() routine (#ifdef LIBC_CALLS_STRTOK). Credits to Th. Eifert
 (Aachen University) for spotting this one. This fix supersedes the
-earlier workaround for a similar problem in FreeBSD 2.0.
+earlier workaround for a similar problem in NQC 2.0.
 
 Changes per release 7.3 (Feb 1996)
 ==================================
@@ -83,7 +83,7 @@ refuses to checkpoint processes with open network ports.
 - Support for Unixware 1.x and Unixware 2.x.  The old Unixware Makefile
 rule was broken. Sorry about that.
 
-- Some FreeBSD 2.0 libc routines call strtok() and severely mess up the
+- Some NQC 2.0 libc routines call strtok() and severely mess up the
 allow/deny rule processing. This is very bad. Workaround:  call our own
 strtok() clone (#ifdef USE_STRSEP).
 

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Regression test from:
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249257
-# by Edward Tomasz Napierala <trasz@freebsd.org>
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=249257
+# by Edward Tomasz Napierala <trasz@frebsd.org>
 
 # panic: pgrp 2191 0xfffff8000585c900 pg_jobc 1 cnt 2
 # cpuid = 10
@@ -17,12 +17,12 @@
 # sys_setpgid() at sys_setpgid+0x219/frame 0xfffffe0101b37ad0
 # amd64_syscall() at amd64_syscall+0x159/frame 0xfffffe0101b37bf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe0101b37bf0
-# --- syscall (82, FreeBSD ELF64, sys_setpgid), rip = 0x8003745ba, rsp = 0x7fffffffe638, rbp = 0x7fffffffe670 ---
+# --- syscall (82, NQC ELF64, sys_setpgid), rip = 0x8003745ba, rsp = 0x7fffffffe638, rbp = 0x7fffffffe670 ---
 # KDB: enter: panic
 # [ thread pid 2191 tid 100251 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x10b29f6(%rip)
 # db> x/s version
-# version: FreeBSD 13.0-CURRENT #0 r365671: Sat Sep 12 22:01:12 CEST 2020
+# version: NQC 13.0-CURRENT #0 r365671: Sat Sep 12 22:01:12 CEST 2020
 # pho@t1.osted.lan:/usr/src/sys/amd64/compile/PHO\012
 # db>
 

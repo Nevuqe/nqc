@@ -171,7 +171,7 @@ extern int __start_clock(int);
 extern u_long __stop_clock(int);
 
 /*
- * This particular function is part of the FreeBSD NIS+ implementation
+ * This particular function is part of the NQC NIS+ implementation
  * only. Ideally it should be somewhere else, but it is used by both
  * rpc.nisd and nis_cachemgr, and there aren't that many headers common
  * to both programs.

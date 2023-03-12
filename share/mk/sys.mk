@@ -1,8 +1,8 @@
 #	from: @(#)sys.mk	8.2 (Berkeley) 3/21/94
 # $NQC$
 
-unix		?=	We run FreeBSD, not UNIX.
-.FreeBSD	?=	true
+unix		?=	We run NQC, not UNIX.
+.NQC	?=	true
 
 .if !defined(%POSIX)
 #
@@ -11,7 +11,7 @@ unix		?=	We run FreeBSD, not UNIX.
 # has word size and endian swizzled in.  However, the source files for
 # these machines often are shared amongst all combinations of size
 # and/or endian.  This is called MACHINE_CPU in NetBSD, but that's used
-# for something different in FreeBSD.
+# for something different in NQC.
 #
 __TO_CPUARCH=C/arm(v[67])?/arm/:C/powerpc(64|64le|spe)/powerpc/:C/riscv64(sf)?/riscv/
 MACHINE_CPUARCH=${MACHINE_ARCH:${__TO_CPUARCH}}
@@ -323,7 +323,7 @@ MAKEFILE_PREFERENCE?= BSDmakefile makefile Makefile
 
 # By default bmake does *not* use set -e
 # when running target scripts, this is a problem for many makefiles here.
-# So define a shell that will do what FreeBSD expects.
+# So define a shell that will do what NQC expects.
 .ifndef WITHOUT_SHELL_ERRCTL
 __MAKE_SHELL?=/bin/sh
 .SHELL: name=sh \

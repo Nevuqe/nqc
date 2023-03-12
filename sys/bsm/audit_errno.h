@@ -173,20 +173,20 @@
  *
  * ELAST doesn't get a constant in the BSM space.
  */
-#define	BSM_ERRNO_EPROCLIM		190	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EBADRPC		191	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_ERPCMISMATCH		192	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EPROGUNAVAIL		193	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EPROGMISMATCH		194	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EPROCUNAVAIL		195	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EFTYPE		196	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EAUTH			197	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_ENEEDAUTH		198	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_ENOATTR		199	/* FreeBSD/Darwin-specific. */
-#define	BSM_ERRNO_EDOOFUS		200	/* FreeBSD-specific. */
-#define	BSM_ERRNO_EJUSTRETURN		201	/* FreeBSD-specific. */
-#define	BSM_ERRNO_ENOIOCTL		202	/* FreeBSD-specific. */
-#define	BSM_ERRNO_EDIRIOCTL		203	/* FreeBSD-specific. */
+#define	BSM_ERRNO_EPROCLIM		190	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EBADRPC		191	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_ERPCMISMATCH		192	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EPROGUNAVAIL		193	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EPROGMISMATCH		194	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EPROCUNAVAIL		195	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EFTYPE		196	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EAUTH			197	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_ENEEDAUTH		198	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_ENOATTR		199	/* NQC/Darwin-specific. */
+#define	BSM_ERRNO_EDOOFUS		200	/* NQC-specific. */
+#define	BSM_ERRNO_EJUSTRETURN		201	/* NQC-specific. */
+#define	BSM_ERRNO_ENOIOCTL		202	/* NQC-specific. */
+#define	BSM_ERRNO_EDIRIOCTL		203	/* NQC-specific. */
 #define	BSM_ERRNO_EPWROFF		204	/* Darwin-specific. */
 #define	BSM_ERRNO_EDEVERR		205	/* Darwin-specific. */
 #define	BSM_ERRNO_EBADEXEC		206	/* Darwin-specific. */
@@ -206,9 +206,9 @@
 #define	BSM_ERRNO_EKEYEXPIRED		220	/* Linux-specific. */
 #define	BSM_ERRNO_EKEYREVOKED		221	/* Linux-specific. */
 #define	BSM_ERRNO_EKEYREJECTED		222	/* Linux-specific. */
-#define	BSM_ERRNO_ENOTCAPABLE		223	/* FreeBSD-specific. */
-#define	BSM_ERRNO_ECAPMODE		224	/* FreeBSD-specific. */
-#define	BSM_ERRNO_EINTEGRITY		225	/* FreeBSD-specific. */
+#define	BSM_ERRNO_ENOTCAPABLE		223	/* NQC-specific. */
+#define	BSM_ERRNO_ECAPMODE		224	/* NQC-specific. */
+#define	BSM_ERRNO_EINTEGRITY		225	/* NQC-specific. */
 
 /*
  * In the event that OpenBSM doesn't have a file representation of a local

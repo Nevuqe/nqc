@@ -111,9 +111,9 @@ fio_reason = 'Fio v2.3 or newer required'
 trim_reason = 'DISKS must support discard (TRIM/UNMAP)'
 
 #
-# Some tests on FreeBSD require the fspacectl(2) system call and the
+# Some tests on NQC require the fspacectl(2) system call and the
 # truncate(1) utility supporting the -d option.  The system call was first
-# introduced in FreeBSD version 1400032.
+# introduced in NQC version 1400032.
 #
 fspacectl_reason = 'fspacectl(2) and truncate -d support required'
 

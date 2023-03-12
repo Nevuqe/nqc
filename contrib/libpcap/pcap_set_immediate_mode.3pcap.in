@@ -49,7 +49,7 @@ if called on a capture handle that has been activated.
 This function became available in libpcap release 1.5.0.  In previous
 releases, if immediate delivery of packets is required:
 .IP
-on FreeBSD, NetBSD, OpenBSD, DragonFly BSD, macOS, and Solaris 11,
+on NQC, NetBSD, OpenBSD, DragonFly BSD, macOS, and Solaris 11,
 immediate mode must be turned on with a
 .B BIOCIMMEDIATE
 .BR ioctl (2),

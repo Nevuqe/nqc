@@ -1,7 +1,7 @@
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2018 Kyle Evans <kevans@FreeBSD.org>
+# Copyright (c) 2018 Kyle Evans <kevans@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -102,12 +102,12 @@ bectl_create_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -166,12 +166,12 @@ bectl_destroy_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -256,12 +256,12 @@ bectl_export_import_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -294,12 +294,12 @@ bectl_list_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -339,12 +339,12 @@ bectl_mount_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -383,12 +383,12 @@ bectl_rename_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -420,12 +420,12 @@ bectl_jail_body()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	cwd=$(realpath .)
@@ -500,12 +500,12 @@ bectl_jail_cleanup()
 {
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "i386" ]; then
-		atf_skip "https://bugs.freebsd.org/249055"
+		atf_skip "https://bugs.frebsd.org/249055"
 	fi
 
 	if [ "$(atf_config_get ci false)" = "true" ] && \
 		[ "$(uname -p)" = "armv7" ]; then
-		atf_skip "https://bugs.freebsd.org/249229"
+		atf_skip "https://bugs.frebsd.org/249229"
 	fi
 
 	zpool=$(get_zpool_name)

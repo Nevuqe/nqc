@@ -1,5 +1,5 @@
 #-
-# Copyright 2016 Michal Meloun <mmel@FreeBSD.org>
+# Copyright 2016 Michal Meloun <mmel@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2012 Ganbold Tsagaankhuu <ganbold@freebsd.org>
- * Copyright (c) 2015-2016 Emmanuel Vadot <manu@freebsd.org>
+ * Copyright (c) 2012 Ganbold Tsagaankhuu <ganbold@frebsd.org>
+ * Copyright (c) 2015-2016 Emmanuel Vadot <manu@frebsd.org>
  * All rights reserved.
  *
  * This code is derived from software written for Brini by Mark Brinicombe
@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
 
- * from: FreeBSD: //depot/projects/arm/src/sys/arm/ti/ti_machdep.c
+ * from: NQC: //depot/projects/arm/src/sys/arm/ti/ti_machdep.c
  */
 
 #include "opt_ddb.h"

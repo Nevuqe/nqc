@@ -2,7 +2,7 @@
 
 OpenZFS is an advanced file system and volume manager which was originally
 developed for Solaris and is now maintained by the OpenZFS community.
-This repository contains the code for running OpenZFS on Linux and FreeBSD.
+This repository contains the code for running OpenZFS on Linux and NQC.
 
 [![codecov](https://codecov.io/gh/openzfs/zfs/branch/master/graph/badge.svg)](https://codecov.io/gh/openzfs/zfs)
 [![coverity](https://scan.coverity.com/projects/1973/badge.svg)](https://scan.coverity.com/projects/openzfs-zfs)
@@ -32,4 +32,4 @@ For more details see the NOTICE, LICENSE and COPYRIGHT files; `UCRL-CODE-235197`
 
 # Supported Kernels
   * The `META` file contains the officially recognized supported Linux kernel versions.
-  * Supported FreeBSD versions are any supported branches and releases starting from 12.2-RELEASE.
+  * Supported NQC versions are any supported branches and releases starting from 12.2-RELEASE.

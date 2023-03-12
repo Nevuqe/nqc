@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1994-1995 Søren Schmidt
  * All rights reserved.
@@ -1374,7 +1374,7 @@ linux_mount(struct thread *td, struct linux_mount_args *args)
 		}
 
 		/*
-		 * The FUSE server uses Linux errno values instead of FreeBSD
+		 * The FUSE server uses Linux errno values instead of NQC
 		 * ones; add a flag to tell fuse(4) to do errno translation.
 		 */
 		ma = mount_arg(ma, "linux_errnos", "1", -1);
@@ -1384,7 +1384,7 @@ linux_mount(struct thread *td, struct linux_mount_args *args)
 
 	/*
 	 * Linux SYNC flag is not included; the closest equivalent
-	 * FreeBSD has is !ASYNC, which is our default.
+	 * NQC has is !ASYNC, which is our default.
 	 */
 	if (args->rwflag & LINUX_MS_RDONLY)
 		fsflags |= MNT_RDONLY;

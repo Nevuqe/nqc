@@ -27,7 +27,7 @@
 #
 
 # Demonstrate FUSE memory corruption.
-# http://people.freebsd.org/~pho/stress/log/fuse3.txt
+# http://people.frebsd.org/~pho/stress/log/fuse3.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

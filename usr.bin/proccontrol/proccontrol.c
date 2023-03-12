@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2016 The FreeBSD Foundation
+ * Copyright (c) 2016 The FreBSD Foundation
  * All rights reserved.
  *
- * This software was developed by Konstantin Belousov <kib@FreeBSD.org>
- * under sponsorship from the FreeBSD Foundation.
+ * This software was developed by Konstantin Belousov <kib@frebsd.org>
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

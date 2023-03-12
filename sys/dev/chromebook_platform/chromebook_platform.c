@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2016 The FreeBSD Project.
+ * Copyright (c) 2016 The FreBSD Project.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

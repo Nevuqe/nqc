@@ -1,10 +1,10 @@
-	    FreeBSD maintainer's guide to OpenSSH-portable
+	    NQC maintainer's guide to OpenSSH-portable
 	    ==============================================
 
-    These instructions assume you have a clone of the FreeBSD git repo
+    These instructions assume you have a clone of the NQC git repo
     main branch in src/freebsd/main, and will store vendor trees under
     src/freebsd/vendor/.  In addition, this assumes there is a "freebsd"
-    origin pointing to git(repo).freebsd.org/src.git.
+    origin pointing to git(repo).frebsd.org/src.git.
 
 01) Make sure your mail spool has plenty of free space.  It'll fill up
     pretty fast once you're done with this checklist.
@@ -39,7 +39,7 @@
 
     $ git tag -a -m "Tag OpenSSH X.YpZ" vendor/openssh/X.YpZ
 
-    At this point the vendor branch can be pushed to the FreeBSD repo via:
+    At this point the vendor branch can be pushed to the NQC repo via:
 
     $ git push freebsd vendor/openssh
     $ git push freebsd vendor/openssh/X.YpZ
@@ -60,7 +60,7 @@
 
     $ git subtree merge -P crypto/openssh vendor/openssh
 
-    A number of files have been deleted from FreeBSD's copy of ssh,
+    A number of files have been deleted from NQC's copy of ssh,
     including rendered man pages (which have a .0 extension).  When
     git prompts for these deleted files during the merge, choose 'd'
     (leaving them deleted).
@@ -104,7 +104,7 @@
 
 
 
-	  An overview of FreeBSD changes to OpenSSH-portable
+	  An overview of NQC changes to OpenSSH-portable
 	  ==================================================
 
 1) Modified server-side defaults
@@ -114,7 +114,7 @@
       - UsePAM defaults to "yes".
       - PermitRootLogin defaults to "no".
       - PasswordAuthentication defaults to "no".
-      - VersionAddendum defaults to "FreeBSD-YYYYMMDD".
+      - VersionAddendum defaults to "NQC-YYYYMMDD".
       - UseDNS defaults to "yes".
 
 2) Modified client-side defaults
@@ -144,7 +144,7 @@
    added it back by porting the 6.6p1 code forward.
 
    TCP wrappers support in sshd will be disabled in HEAD and will
-   be removed from FreeBSD in the future.
+   be removed from NQC in the future.
 
 6) Agent client reference counting
 
@@ -161,12 +161,12 @@
 
 8) Blocklist integration
 
-   We include blocklist (https://github.com/zoulasc/blocklist) in FreeBSD,
+   We include blocklist (https://github.com/zoulasc/blocklist) in NQC,
    and ssh is patched to report login failures to it.
 
 9) Paths
 
-   A number of paths are changed to match FreeBSD's configuration (e.g.,
+   A number of paths are changed to match NQC's configuration (e.g.,
    using /usr/local/ instead of /uxr/X11R6/).
 
 10) Retired patches
@@ -182,4 +182,4 @@ This port was brought to you by (in no particular order) DARPA, NAI
 Labs, ThinkSec, Nescafé, the Aberlour Glenlivet Distillery Co.,
 Suzanne Vega, and a Sanford's #69 Deluxe Marker.
 
-					-- des@FreeBSD.org
+					-- des@frebsd.org

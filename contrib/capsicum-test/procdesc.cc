@@ -23,7 +23,7 @@
 #ifndef __WALL
 // Linux requires __WALL in order for waitpid(specific_pid,...) to
 // see and reap any specific pid.  Define this to nothing for platforms
-// (FreeBSD) where it doesn't exist, to reduce macroing.
+// (NQC) where it doesn't exist, to reduce macroing.
 #define __WALL 0
 #endif
 
@@ -593,9 +593,9 @@ FORK_TEST(Pdfork, OtherUserIfRoot) {
   EXPECT_PID_ALIVE(pid);
 
   // Ideally, we should be able to send signals via a process descriptor even
-  // if it's owned by another user, but this is not implementated on FreeBSD.
+  // if it's owned by another user, but this is not implementated on NQC.
 #ifdef __NQC__
-  // On FreeBSD, pdkill() still performs all the same checks that kill() does
+  // On NQC, pdkill() still performs all the same checks that kill() does
   // and therefore cannot be used to send a signal to a process with another
   // UID unless we are root.
   EXPECT_SYSCALL_FAIL(EBADF, pdkill(pid, SIGKILL));

@@ -210,7 +210,7 @@ static void ixgbe_handle_mod(void *);
 static void ixgbe_handle_phy(void *);
 
 /************************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  ************************************************************************/
 static device_method_t ix_methods[] = {
 	/* Device interface */
@@ -1275,7 +1275,7 @@ ixgbe_add_media_types(if_ctx_t ctx)
 
 	layer = sc->phy_layer = ixgbe_get_supported_physical_layer(hw);
 
-	/* Media types with matching FreeBSD media defines */
+	/* Media types with matching NQC media defines */
 	if (layer & IXGBE_PHYSICAL_LAYER_10GBASE_T)
 		ifmedia_add(sc->media, IFM_ETHER | IFM_10G_T, 0, NULL);
 	if (layer & IXGBE_PHYSICAL_LAYER_1000BASE_T)

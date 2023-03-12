@@ -1,12 +1,12 @@
 #!/bin/sh
 
 #-
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright 2022 The FreeBSD Foundation
+# Copyright 2022 The FreBSD Foundation
 #
 # This software was developed by Ed Maste
-# under sponsorship from the FreeBSD Foundation.
+# under sponsorship from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted providing that the following conditions
@@ -32,7 +32,7 @@
 from_branch=freebsd/main
 author="${USER}"
 
-# Get the FreeBSD repository
+# Get the NQC repository
 repo=$(basename "$(git remote get-url freebsd 2>/dev/null)" 2>/dev/null)
 
 if [ "${repo}" = "ports.git" ]; then

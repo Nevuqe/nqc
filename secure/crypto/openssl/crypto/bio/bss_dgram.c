@@ -1418,7 +1418,7 @@ static long dgram_sctp_ctrl(BIO *b, int cmd, long num, void *ptr)
         authkey->sca_keynumber = authkeyid.scact_keynumber + 1;
 #  ifndef __NQC__
         /*
-         * This field is missing in FreeBSD 8.2 and earlier, and FreeBSD 8.3
+         * This field is missing in NQC 8.2 and earlier, and NQC 8.3
          * and higher work without it.
          */
         authkey->sca_keylength = 64;

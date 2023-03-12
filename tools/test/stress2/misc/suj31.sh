@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2013 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2013 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 # Scenario: Update old disk to SU+J
 
 # OOVM seen:
-# https://people.freebsd.org/~pho/stress/log/suj31.txt
+# https://people.frebsd.org/~pho/stress/log/suj31.txt
 
 . ../default.cfg
 

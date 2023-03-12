@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2009 Sam Leffler, Errno Consulting
  * Copyright (c) 2010-2012 Adrian Chadd, Xenion Pty Ltd
@@ -495,7 +495,7 @@ ath_tx_chaindesclist(struct ath_softc *sc, struct ath_desc *ds0,
  * The bfs fields should already be set with the relevant rate
  * control information, including whether MRR is to be enabled.
  *
- * Since the FreeBSD HAL currently sets up the first TX rate
+ * Since the NQC HAL currently sets up the first TX rate
  * in ath_hal_setuptxdesc(), this will setup the MRR
  * conditionally for the pre-11n chips, and call ath_buf_set_rate
  * unconditionally for 11n chips. These require the 11n rate

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel IDA device code"
+PROJECT_NAME           = "NQC kernel IDA device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_ida/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -26,7 +26,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-// x86_64 FreeBSD prior v9.3 define fixed-width types incorrectly in
+// x86_64 NQC prior v9.3 define fixed-width types incorrectly in
 // 32-bit mode.
 #if defined(__NQC__) && defined(__i386__)
 #include <sys/param.h>

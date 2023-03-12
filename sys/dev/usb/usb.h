@@ -730,10 +730,10 @@ struct usb_port_status {
 #define	UPS_PORT_POWER_SS		0x0200	/* super-speed only */
 #define	UPS_LOW_SPEED			0x0200
 #define	UPS_HIGH_SPEED			0x0400
-#define	UPS_OTHER_SPEED			0x0600	/* currently FreeBSD specific */
+#define	UPS_OTHER_SPEED			0x0600	/* currently NQC specific */
 #define	UPS_PORT_TEST			0x0800
 #define	UPS_PORT_INDICATOR		0x1000
-#define	UPS_PORT_MODE_DEVICE		0x8000	/* currently FreeBSD specific */
+#define	UPS_PORT_MODE_DEVICE		0x8000	/* currently NQC specific */
 	uWord	wPortChange;
 #define	UPS_C_CONNECT_STATUS		0x0001
 #define	UPS_C_PORT_ENABLED		0x0002

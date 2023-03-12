@@ -5,7 +5,7 @@
  *
  * Copyright (c) 2004-2005, K A Fraser
  * Multi-process extensions Copyright (c) 2004, Steven Smith
- * FreeBSD port Copyright (c) 2014, Roger Pau Monné
+ * NQC port Copyright (c) 2014, Roger Pau Monné
  * Fetched from git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
  * File: drivers/xen/evtchn.c
  * Git commit: 0dc0064add422bc0ef5165ebe9ece3052bbd457d

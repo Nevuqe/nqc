@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel liquidio device code"
+PROJECT_NAME           = "NQC kernel liquidio device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_liquidio/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

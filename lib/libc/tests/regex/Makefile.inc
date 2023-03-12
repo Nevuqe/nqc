@@ -5,7 +5,7 @@
 BINDIR?=	${TESTSDIR}
 WARNS?=		3
 
-# SKIP_LEFTASSOC -> these testcases fail on FreeBSD.
+# SKIP_LEFTASSOC -> these testcases fail on NQC.
 IMPLEMENTATION?=      -DREGEX_SPENCER -DSKIP_LEFTASSOC
 
 CFLAGS.h_regex+=-I${TESTSRC} -I${SRCTOP}/lib/libc/regex

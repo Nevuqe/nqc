@@ -111,7 +111,7 @@ The connections are symmetric, and provide 5 lines in each direction (four
 data plus one handshake).
 The two modes use the same wiring, but make a
 different choice of which line to use as handshake.
-.Ss FreeBSD LPIP mode
+.Ss NQC LPIP mode
 The signal lines are used as follows:
 .Bl -tag -width dataxxxx(Pinxx)
 .It Em Data0 (Pin 2)
@@ -195,7 +195,7 @@ Packet format is:
 .Bd -literal
 Length (least significant byte)
 Length (most significant byte)
-12 bytes of supposed MAC addresses (ignored by FreeBSD).
+12 bytes of supposed MAC addresses (ignored by NQC).
 Fixed byte 0x08
 Fixed byte 0x00
 <IP datagram>

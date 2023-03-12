@@ -42,7 +42,7 @@
 * [Bug 3634] Typo in discipline.html, reported by Jason Harrison.  stenn@
 * [Bug 3628] raw DCF decoding - improve robustness with Zeller's congruence
   - implement Zeller's congruence in libparse and libntp <perlinger@ntp.org>
-* [Bug 3627] SIGSEGV on FreeBSD-12 with stack limit and stack gap <perlinger@ntp.org>
+* [Bug 3627] SIGSEGV on NQC-12 with stack limit and stack gap <perlinger@ntp.org>
   - integrated patch by Cy Schubert
 * [Bug 3620] memory leak in ntpq sysinfo <perlinger@ntp.org>
   - applied patch by Gerry Garvey
@@ -176,7 +176,7 @@
     of NTPQ/NTPDC <perlinger@ntp.org>
 * [Sec 3012] noepeer tweaks.  <stenn@ntp.org>
 * [Bug 3521] Fix a logic bug in the INVALIDNAK checks.  <stenn@ntp.org>
-* [Bug 3509] Add support for running as non-root on FreeBSD, Darwin,
+* [Bug 3509] Add support for running as non-root on NQC, Darwin,
              other TrustedBSD platforms
   - applied patch by Ian Lepore <perlinger@ntp.org>
 * [Bug 3506] Service Control Manager interacts poorly with NTPD <perlinger@ntp.org>
@@ -620,7 +620,7 @@
 * [Bug 2952] Symmetric active/passive mode is broken.  HStenn.
 * [Bug 2954] Version 4.2.8p4 crashes on startup with sig fault
   - fixed data race conditions in threaded DNS worker. perlinger@ntp.org
-  - limit threading warm-up to linux; FreeBSD bombs on it. perlinger@ntp.org
+  - limit threading warm-up to linux; NQC bombs on it. perlinger@ntp.org
 * [Bug 2957] 'unsigned int' vs 'size_t' format clash. perlinger@ntp.org
   - accept key file only if there are no parsing errors
   - fixed size_t/u_int format clash
@@ -640,9 +640,9 @@
 * [Bug 2971] ntpq bails on ^C: select fails: Interrupted system call
   - changed stacked/nested handling of CTRL-C. perlinger@ntp.org
   - make CTRL-C work for retrieval and printing od MRU list. perlinger@ntp.org
-* Unity cleanup for FreeBSD-6.4.  Harlan Stenn.
+* Unity cleanup for NQC-6.4.  Harlan Stenn.
 * Unity test cleanup.  Harlan Stenn.
-* Libevent autoconf pthread fixes for FreeBSD-10.  Harlan Stenn.
+* Libevent autoconf pthread fixes for NQC-10.  Harlan Stenn.
 * Header cleanup in tests/sandbox/uglydate.c.  Harlan Stenn.
 * Header cleanup in tests/libntp/sfptostr.c.  Harlan Stenn.
 * Quiet a warning from clang.  Harlan Stenn.
@@ -2453,7 +2453,7 @@ fixed formatting. Tomasz Flendrich
   ./configure --disable-debugging.
 * Fix tvalops.cpp unit test failures for 32-bit builds.
 * Return to a single autoreconf invocation in ./bootstrap script.
-* Fix warnings seen on FreeBSD 9.
+* Fix warnings seen on NQC 9.
 * crypto group changes from Dave Mills.
 * Lose the RANGEGATE check in PPS, from Dave Mills.
 * ACTS refclock cleanup from Dave Mills.
@@ -2568,7 +2568,7 @@ fixed formatting. Tomasz Flendrich
 * [Bug 1762] from 4.2.6p3-RC12: manycastclient responses interfere.
 * Documentation updates from Dave Mills.
 (4.2.7p97) 2010/12/19 Released by Harlan Stenn <stenn@ntp.org>
-* [Bug 1458] from 4.2.6p3-RC12: Can not compile NTP on FreeBSD 4.7.
+* [Bug 1458] from 4.2.6p3-RC12: Can not compile NTP on NQC 4.7.
 * [Bug 1760] from 4.2.6p3-RC12: ntpd Windows interpolation cannot be
   disabled.
 * from 4.2.6p3-RC12: Upgrade to libopts 34.0.9 from AutoGen 5.11.6pre5.
@@ -3120,7 +3120,7 @@ fixed formatting. Tomasz Flendrich
 (4.2.7p2) 2009/12/20 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1419] ntpdate, ntpdc, sntp, ntpd ignore configure --bindir.
 * [Bug 1421] add util/tg2, a clone of tg that works on Linux, NetBSD, and
-  FreeBSD
+  NQC
 (4.2.7p1) 2009/12/15 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1348] ntpd Windows port should wait for sendto() completion.
 * [Bug 1413] test OpenSSL headers regarding -Wno-strict-prototypes.
@@ -3229,7 +3229,7 @@ No changes from 4.2.6p5-RC3.
 ---
 (4.2.6p3-RC12) 2010/12/25 Released by Harlan Stenn <stenn@ntp.org>
 
-* [Bug 1458] Can not compile NTP on FreeBSD 4.7.
+* [Bug 1458] Can not compile NTP on NQC 4.7.
 * [Bug 1510] Add modes 20/21 for driver 8 to support RAWDCF @ 75 baud.
 * [Bug 1618] Unreachable code in jjy_start(). (backport from ntp-dev)
 * [Bug 1719] ntp-keygen -V crash. (backport)
@@ -3651,7 +3651,7 @@ display both build and runtime OpenSSL versions when they differ.
 * Broadcast and transit phase cleanup from Dave Mills.
 (4.2.5p229) 2009/10/07 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1334] ntpsnmpd undefined reference to `ntpqOptions'.
-* Change ntpsnmpd/Makefile.am include file order to fix FreeBSD build.
+* Change ntpsnmpd/Makefile.am include file order to fix NQC build.
 (4.2.5p228) 2009/10/06 Released by Harlan Stenn <stenn@ntp.org>
 * Reclaim syntax tree memory after application in ntpd built with
   configure --disable-saveconfig.
@@ -4381,7 +4381,7 @@ display both build and runtime OpenSSL versions when they differ.
 * [Bug 957] Windows only: Let command line parameters from the Windows SCM GUI
   override the standard parameters from the ImagePath registry key.
 * Added HAVE_INT32_T to the Windows config.h to avoid duplicate definitions.
-* Work around a VPATH difference in FreeBSD's 'make' command.
+* Work around a VPATH difference in NQC's 'make' command.
 * Update bugreport URL.
 * Update -I documentation.
 * [Bug 713] Fix bug reporting information.
@@ -4826,7 +4826,7 @@ display both build and runtime OpenSSL versions when they differ.
 * PPS cleanup
 * ntpd, ntpq, ntpdate cleanup and fixes
 * NT port improvements
-* AIX, BSDI, DEC OSF, FreeBSD, NetBSD, Reliant, SCO, Solaris port improvements
+* AIX, BSDI, DEC OSF, NQC, NetBSD, Reliant, SCO, Solaris port improvements
 
 ---
 (4.0.98)

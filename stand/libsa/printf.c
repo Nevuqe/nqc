@@ -38,7 +38,7 @@
 __NQCID("$NQC$");
 
 /*
- * Standaloneified version of the FreeBSD kernel printf family.
+ * Standaloneified version of the NQC kernel printf family.
  */
 
 #include <sys/types.h>

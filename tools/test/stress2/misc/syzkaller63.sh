@@ -28,13 +28,13 @@
 # sys_cpuset_getid(2048e3a0,2048e644,2048e3a0,2048e3a0,27a41b9c,...) at sys_cpuset_getid+0x32/frame 0x27a41ac0
 # syscall(27a41ba8,3b,3b,3b,ffbfe9fc,...) at syscall+0x1ef/frame 0x27a41b9c
 # Xint0x80_syscall() at 0xffc03479/frame 0x27a41b9c
-# --- syscall (486, FreeBSD ELF32, cpuset_getid), eip = 0x2056317d, esp = 0xffbfe990, ebp = 0xffbfe9b0 ---
+# --- syscall (486, NQC ELF32, cpuset_getid), eip = 0x2056317d, esp = 0xffbfe990, ebp = 0xffbfe9b0 ---
 # KDB: enter: panic
 # [ thread pid 804 tid 100092 ]
 # Stopped at      kdb_enter+0x34: movl    $0,kdb_why
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #0 main-n260354-34b867ca30479: Mon Jan 30 07:26:30 CET 2023
-# pho@mercat1.netperf.freebsd.org:/mnt25/obj/usr/src/i386.i386/sys/PHO
+# version: NQC 14.0-CURRENT #0 main-n260354-34b867ca30479: Mon Jan 30 07:26:30 CET 2023
+# pho@mercat1.netperf.frebsd.org:/mnt25/obj/usr/src/i386.i386/sys/PHO
 # db>
 
 . ../default.cfg

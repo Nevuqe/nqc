@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel AAC device code"
+PROJECT_NAME           = "NQC kernel AAC device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_aac/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

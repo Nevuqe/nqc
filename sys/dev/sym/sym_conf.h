@@ -11,19 +11,19 @@
  *	53C810,  53C815,  53C825 and the 53C1510D is 53C8XX mode.
  *
  *  
- *  This driver for FreeBSD-CAM is derived from the Linux sym53c8xx driver.
+ *  This driver for NQC-CAM is derived from the Linux sym53c8xx driver.
  *  Copyright (C) 1998-1999  Gerard Roudier
  *
  *  The sym53c8xx driver is derived from the ncr53c8xx driver that had been 
- *  a port of the FreeBSD ncr driver to Linux-1.2.13.
+ *  a port of the NQC ncr driver to Linux-1.2.13.
  *
- *  The original ncr driver has been written for 386bsd and FreeBSD by
+ *  The original ncr driver has been written for 386bsd and NQC by
  *          Wolfgang Stanglmeier        <wolf@cologne.de>
  *          Stefan Esser                <se@mi.Uni-Koeln.de>
  *  Copyright (C) 1994  Wolfgang Stanglmeier
  *
  *  The initialisation code, and part of the code that addresses 
- *  FreeBSD-CAM services is based on the aic7xxx driver for FreeBSD-CAM 
+ *  NQC-CAM services is based on the aic7xxx driver for NQC-CAM 
  *  written by Justin T. Gibbs.
  *
  *  Other major contributions:

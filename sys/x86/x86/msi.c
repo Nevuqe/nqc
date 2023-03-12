@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2006 Yahoo!, Inc.
  * All rights reserved.
- * Written by: John Baldwin <jhb@FreeBSD.org>
+ * Written by: John Baldwin <jhb@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -167,7 +167,7 @@ SYSCTL_UINT(_machdep, OID_AUTO, num_msi_irqs, CTLFLAG_RDTUN, &num_msi_irqs, 0,
  * enabled MSI-X table entries.  Allow migration of MSI-X interrupts
  * to be disabled via a tunable. Values have the following meaning:
  *
- * -1: automatic detection by FreeBSD
+ * -1: automatic detection by NQC
  *  0: enable migration
  *  1: disable migration
  */

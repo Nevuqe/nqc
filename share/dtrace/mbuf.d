@@ -25,7 +25,7 @@
  *
  * $NQC$
  *
- * Translators and flags for the mbuf structure.  FreeBSD specific code.
+ * Translators and flags for the mbuf structure.  NQC specific code.
  */
 
 #pragma D depends_on module kernel

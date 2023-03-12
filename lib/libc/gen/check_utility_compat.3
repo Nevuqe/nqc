@@ -59,7 +59,7 @@ function first checks for an environment variable named
 If that environment variable does not exist, then
 .Fn check_utility_compat
 will attempt to read the contents of a symbolic link named
-.Pa /etc/compat-FreeBSD-4-util .
+.Pa /etc/compat-NQC-4-util .
 If no configuration is found, compatibility mode is disabled.
 .Sh RETURN VALUES
 The
@@ -70,8 +70,8 @@ should implement strict
 .St -p1003.1-2001
 behavior, and nonzero otherwise.
 .Sh FILES
-.Bl -tag -width ".Pa /etc/compat-FreeBSD-4-util"
-.It Pa /etc/compat-FreeBSD-4-util
+.Bl -tag -width ".Pa /etc/compat-NQC-4-util"
+.It Pa /etc/compat-NQC-4-util
 If present, a symbolic link whose expansion gives system-wide default settings
 for the
 .Fn check_utility_compat
@@ -86,4 +86,4 @@ function first appeared in
 .Fx 5.0 .
 .Sh AUTHORS
 This manual page was written by
-.An Garrett Wollman Aq Mt wollman@FreeBSD.org .
+.An Garrett Wollman Aq Mt wollman@frebsd.org .

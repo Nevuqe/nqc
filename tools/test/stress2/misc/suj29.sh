@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2012 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2012 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,8 +32,8 @@
 # causes "Sparse journal inode 4."
 
 # Deadlocks seen:
-# https://people.freebsd.org/~pho/stress/log/jeff116.txt
-# https://people.freebsd.org/~pho/stress/log/jeff117.txt
+# https://people.frebsd.org/~pho/stress/log/jeff116.txt
+# https://people.frebsd.org/~pho/stress/log/jeff117.txt
 
 . ../default.cfg
 

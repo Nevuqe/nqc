@@ -33,7 +33,7 @@
  */
 
 /*
- * FreeBSD implementation by Paul Herman <pherman@frenchfries.net>
+ * NQC implementation by Paul Herman <pherman@frenchfries.net>
  */
 
 #ifndef _BLF_H_

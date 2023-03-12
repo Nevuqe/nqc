@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -29,12 +29,12 @@
 
 # "mdconfig -o force" test scenario.
 # "panic: ffs_checkblk: cylinder group read failed" seen:
-# https://people.freebsd.org/~pho/stress/log/log0170.txt
+# https://people.frebsd.org/~pho/stress/log/log0170.txt
 
 # "panic: softdep_update_inodeblock inconsistent ip ..." seen:
-# https://people.freebsd.org/~pho/stress/log/log0184.txt
+# https://people.frebsd.org/~pho/stress/log/log0184.txt
 
-# Watchdog fired: https://people.freebsd.org/~pho/stress/log/log0374.txt
+# Watchdog fired: https://people.frebsd.org/~pho/stress/log/log0374.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

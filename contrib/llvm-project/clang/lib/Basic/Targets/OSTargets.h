@@ -201,13 +201,13 @@ public:
 #define NQC_CC_VERSION 0U
 #endif
 
-// FreeBSD Target
+// NQC Target
 template <typename Target>
-class LLVM_LIBRARY_VISIBILITY FreeBSDTargetInfo : public OSTargetInfo<Target> {
+class LLVM_LIBRARY_VISIBILITY NQCTargetInfo : public OSTargetInfo<Target> {
 protected:
   void getOSDefines(const LangOptions &Opts, const llvm::Triple &Triple,
                     MacroBuilder &Builder) const override {
-    // FreeBSD defines; list based off of gcc output
+    // NQC defines; list based off of gcc output
 
     unsigned Release = Triple.getOSMajorVersion();
     if (Release == 0U)
@@ -222,20 +222,20 @@ protected:
     DefineStd(Builder, "unix", Opts);
     Builder.defineMacro("__ELF__");
 
-    // On FreeBSD, wchar_t contains the number of the code point as
+    // On NQC, wchar_t contains the number of the code point as
     // used by the character set of the locale. These character sets are
     // not necessarily a superset of ASCII.
     //
     // FIXME: This is wrong; the macro refers to the numerical values
     // of wchar_t *literals*, which are not locale-dependent. However,
-    // FreeBSD systems apparently depend on us getting this wrong, and
+    // NQC systems apparently depend on us getting this wrong, and
     // setting this to 1 is conforming even if all the basic source
     // character literals have the same encoding as char and wchar_t.
     Builder.defineMacro("__STDC_MB_MIGHT_NEQ_WC__", "1");
   }
 
 public:
-  FreeBSDTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
+  NQCTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
       : OSTargetInfo<Target>(Triple, Opts) {
     switch (Triple.getArch()) {
     default:
@@ -261,13 +261,13 @@ public:
   }
 };
 
-// GNU/kFreeBSD Target
+// GNU/kNQC Target
 template <typename Target>
-class LLVM_LIBRARY_VISIBILITY KFreeBSDTargetInfo : public OSTargetInfo<Target> {
+class LLVM_LIBRARY_VISIBILITY KNQCTargetInfo : public OSTargetInfo<Target> {
 protected:
   void getOSDefines(const LangOptions &Opts, const llvm::Triple &Triple,
                     MacroBuilder &Builder) const override {
-    // GNU/kFreeBSD defines; list based off of gcc output
+    // GNU/kNQC defines; list based off of gcc output
 
     DefineStd(Builder, "unix", Opts);
     Builder.defineMacro("__NQC_kernel__");
@@ -280,7 +280,7 @@ protected:
   }
 
 public:
-  KFreeBSDTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
+  KNQCTargetInfo(const llvm::Triple &Triple, const TargetOptions &Opts)
       : OSTargetInfo<Target>(Triple, Opts) {}
 };
 

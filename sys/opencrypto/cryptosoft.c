@@ -9,15 +9,15 @@
  * supported the development of this code.
  *
  * Copyright (c) 2000, 2001 Angelos D. Keromytis
- * Copyright (c) 2014-2021 The FreeBSD Foundation
+ * Copyright (c) 2014-2021 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by John-Mark Gurney
- * under sponsorship of the FreeBSD Foundation and
+ * under sponsorship of the FreBSD Foundation and
  * Rubicon Communications, LLC (Netgate).
  *
  * Portions of this software were developed by Ararat River
- * Consulting, LLC under sponsorship of the FreeBSD Foundation.
+ * Consulting, LLC under sponsorship of the FreBSD Foundation.
  *
  * Permission to use, copy, and modify this software with or without fee
  * is hereby granted, provided that this entire notice is included in

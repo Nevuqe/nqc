@@ -321,14 +321,14 @@ static const StringMap<MachineInfo> TargetMap{
 static Expected<TargetInfo>
 getOutputTargetInfoByTargetName(StringRef TargetName) {
   StringRef OriginalTargetName = TargetName;
-  bool IsFreeBSD = TargetName.consume_back("-freebsd");
+  bool IsNQC = TargetName.consume_back("-freebsd");
   auto Iter = TargetMap.find(TargetName);
   if (Iter == std::end(TargetMap))
     return createStringError(errc::invalid_argument,
                              "invalid output format: '%s'",
                              OriginalTargetName.str().c_str());
   MachineInfo MI = Iter->getValue();
-  if (IsFreeBSD)
+  if (IsNQC)
     MI.OSABI = ELF::ELFOSABI_NQC;
 
   FileFormat Format;

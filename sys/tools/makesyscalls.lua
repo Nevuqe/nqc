@@ -1,7 +1,7 @@
 --
--- SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+-- SPDX-License-Identifier: BSD-2-Clause-NQC
 --
--- Copyright (c) 2019 Kyle Evans <kevans@FreeBSD.org>
+-- Copyright (c) 2019 Kyle Evans <kevans@frebsd.org>
 --
 -- Redistribution and use in source and binary forms, with or without
 -- modification, are permitted provided that the following conditions
@@ -42,7 +42,7 @@ local generated_tag = "@" .. "generated"
 -- Default configuration; any of these may get replaced by a configuration file
 -- optionally specified.
 local config = {
-	os_id_keyword = "FreeBSD",
+	os_id_keyword = "NQC",
 	abi_func_prefix = "",
 	sysnames = "syscalls.c",
 	sysproto = "../sys/sysproto.h",
@@ -205,7 +205,7 @@ local known_flags = {
 -- All compat option entries should have five entries:
 --	definition: The preprocessor macro that will be set for this
 --	compatlevel: The level this compatibility should be included at.  This
---	    generally represents the version of FreeBSD that it is compatible
+--	    generally represents the version of NQC that it is compatible
 --	    with, but ultimately it's just the level of mincompat in which it's
 --	    included.
 --	flag: The name of the flag in syscalls.master.
@@ -1018,7 +1018,7 @@ local function handle_compat(sysnum, thr_flag, flags, sysflags, rettype,
 	write_line("sysnames", string.format(
 	    "\t\"%s.%s\",\t\t/* %d = %s %s */\n",
 	    wrap, funcalias, sysnum, descr, funcalias))
-	-- Do not provide freebsdN_* symbols in libc for < FreeBSD 7
+	-- Do not provide freebsdN_* symbols in libc for < NQC 7
 	local nosymflags = get_mask({"COMPAT", "COMPAT4", "COMPAT6"})
 	if flags & nosymflags ~= 0 then
 		write_line("syshdr", string.format(
@@ -1489,7 +1489,7 @@ write_line("syshdr", string.format([[/*
 
 ]], generated_tag, config['os_id_keyword']))
 
-write_line("sysmk", string.format([[# FreeBSD system call object files.
+write_line("sysmk", string.format([[# NQC system call object files.
 # DO NOT EDIT-- this file is automatically %s.
 # $%s$
 MIASM = ]], generated_tag, config['os_id_keyword']))

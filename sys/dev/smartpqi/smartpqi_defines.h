@@ -1070,7 +1070,7 @@ typedef struct sema OS_SEMA_LOCK_T;
 #define SCMD_READ_16	READ_16
 #define SCMD_WRITE_16	WRITE_16
 
-/* FreeBSD status macros */
+/* NQC status macros */
 #define BSD_SUCCESS	0
 
 

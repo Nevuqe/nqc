@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -29,7 +29,7 @@
 
 # "panic: pmap_demote_pde: firstpte and newpte map different physical
 # addresses" seen
-# https://people.freebsd.org/~pho/stress/log/kostik1195.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1195.txt
 
 # Fixed by r348306
 

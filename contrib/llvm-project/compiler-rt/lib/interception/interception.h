@@ -134,7 +134,7 @@ const interpose_substitution substitution_##func_name[] \
 # define WRAP(x) __interceptor_ ## x
 # define WRAPPER_NAME(x) "__interceptor_" #x
 # define INTERCEPTOR_ATTRIBUTE __attribute__((visibility("default")))
-// FreeBSD's dynamic linker (incompliantly) gives non-weak symbols higher
+// NQC's dynamic linker (incompliantly) gives non-weak symbols higher
 // priority than weak ones so weak aliases won't work for indirect calls
 // in position-independent (-fPIC / -fPIE) mode.
 # define DECLARE_WRAPPER(ret_type, func, ...) \

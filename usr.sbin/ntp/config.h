@@ -1810,7 +1810,7 @@ typedef union mpinfou {
 	#endif	/* !defined(_KERNEL) && !defined(PARSESTREAM) */
 	
 /*
- * FreeBSD specific: Explicitly specify date/time for reproducible build.
+ * NQC specific: Explicitly specify date/time for reproducible build.
  */
 #define	MKREPRO_DATE "Aug 19 2018"
 #define	MKREPRO_TIME "01:24:29"

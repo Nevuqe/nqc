@@ -167,7 +167,7 @@
 /*
 ** Revision History:
 ** 
-** 15 Apr 1999 (sadler) Merged FreeBSD changes for exception wordset and
+** 15 Apr 1999 (sadler) Merged NQC changes for exception wordset and
 ** counted strings in ficlExec. 
 ** 12 Jan 1999 (sobral) Corrected EVALUATE behavior. Now TIB has an
 ** "end" field, and all words respect this. ficlExec is passed a "size"
@@ -1110,7 +1110,7 @@ extern CELL dictThreshold;
 extern CELL dictIncrease;
 
 /*
-** Various FreeBSD goodies
+** Various NQC goodies
 */
 
 #if defined(__i386__) && !defined(TESTMAIN)

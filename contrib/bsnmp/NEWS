@@ -17,13 +17,13 @@
 
 	64bit HC counters in the IF-MIB by polling the OS periodically.
 
-	Fix link traps to be more RFC conform (thanks to glebius@freebsd.org)
+	Fix link traps to be more RFC conform (thanks to glebius@frebsd.org)
 
 	Add fallback definition for SA_SIZE() to support.h.
 
 	Move the porting definitions for U?INT32_{MIN,MAX} into support.h.
 
-	Include a sys/tree.h from FreeBSD-current and add autoconf
+	Include a sys/tree.h from NQC-current and add autoconf
 	check for it.
 
 1.11a	Fix build of modules when stdint.h is included after asn1.h
@@ -33,7 +33,7 @@
 	minutes. In the meantime process message from the routing socket
 	to update the table.
 
-	Lot of man-page fixes from ru@freebsd.org.
+	Lot of man-page fixes from ru@frebsd.org.
 
 	Fixes to command line macros and macro redefinition.
 
@@ -45,7 +45,7 @@
 
 	Lots of spelling fixes from Giorgios Keramidas.
 
-	A number of changes to facilitate building on FreeBSD-4 from
+	A number of changes to facilitate building on NQC-4 from
 	Andrey Elsukov.
 
 	Add repeatable timers.
@@ -64,12 +64,12 @@
 	lib/snmpclient: Add snmp_parse_server().
 
 1.9
-	tcpwrapper support from glebius@freebsd.org.
+	tcpwrapper support from glebius@frebsd.org.
 
 	crude interface to NTP: snmp_ntp
 
 1.8
-	many man page fixes from ru@freebsd.org and tobez@freebsd.org
+	many man page fixes from ru@frebsd.org and tobez@frebsd.org
 
 	snmpd/main.c: fix a problem which resulted in the daemon exiting
 	when a local socket was closed.

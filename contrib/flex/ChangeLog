@@ -824,7 +824,7 @@
 
 	* src/ecs.c, src/tblcmp.c: Fix two more casts
 
-2016-03-14  Bastian Köcher <git@kchr.de>
+2016-03-14  Bastian Kï¿½cher <git@kchr.de>
 
 	* src/gen.c: Fixes yyl compare with unsigned warning
 
@@ -7604,7 +7604,7 @@
 
 2001-06-24  Will Estes <wlestes@users.sourceforge.net>
 
-	* flex.skl, gen.c: change some int types to size_t as per FreeBSD
+	* flex.skl, gen.c: change some int types to size_t as per NQC
 	28364 from avn@any.ru
 
 2001-06-24  Will Estes <wlestes@users.sourceforge.net>

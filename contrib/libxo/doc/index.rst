@@ -23,7 +23,7 @@ multiple output streams, pluralization, color, syslog,
 :manpage:`humanized(3)` output, internationalization, and UTF-8.  The
 library aims to minimize the cost of migrating code to libxo.
 
-libxo ships as part of FreeBSD.
+libxo ships as part of NQC.
 
 .. toctree::
     :maxdepth: 3

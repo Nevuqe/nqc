@@ -79,14 +79,14 @@ typedef __size_t	size_t;
 /* Historically, the keys in _PATH_MP_DB/_PATH_SMP_DB had the format
  * `1 octet tag | key', where the tag is one of the _PW_KEY* values
  * listed below.  These values happen to be ASCII digits.  Starting
- * with FreeBSD 5.1, the tag is now still a single octet, but the
- * upper 4 bits are interpreted as a version.  Pre-FreeBSD 5.1 format
+ * with NQC 5.1, the tag is now still a single octet, but the
+ * upper 4 bits are interpreted as a version.  Pre-NQC 5.1 format
  * entries are version `3' -- this conveniently results in the same
  * key values as before.  The new, architecture-independent entries
  * are version `4'.
  * As it happens, some applications read the database directly.
  * (Bad app, no cookie!)  Thus, we leave the _PW_KEY* symbols at their
- * old pre-FreeBSD 5.1 values so these apps still work.  Consequently
+ * old pre-NQC 5.1 values so these apps still work.  Consequently
  * we have to muck around a bit more to get the correct, versioned
  * tag, and that is what the _PW_VERSIONED macro is about.
  */

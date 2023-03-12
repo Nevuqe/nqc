@@ -133,7 +133,7 @@ log_must $ZPOOL create $TESTPOOL mirror $VDEV1 $VDEV2 spare $VDEV3
 verify_bootfs $TESTPOOL
 
 ## the following configurations are not supported as bootable pools in Solaris,
-## but they are in FreeBSD
+## but they are in NQC
 
 # stripe
 log_must $ZPOOL create $TESTPOOL $VDEV1 $VDEV2

@@ -930,7 +930,7 @@ LIBS=$ol_LIBS
 if test $ol_cv_lib_fetch != no ; then
 	ol_link_fetch="-lfetch -lcom_err"
 	AC_DEFINE([HAVE_FETCH], [1],
-		[define if you actually have FreeBSD fetch(3)])
+		[define if you actually have NQC fetch(3)])
 fi
 ])dnl
 dnl

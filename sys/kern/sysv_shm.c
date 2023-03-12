@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-4-Clause AND BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-4-Clause AND BSD-2-Clause-NQC
  *
  * Copyright (c) 1994 Adam Glass and Charles Hannum.  All rights reserved.
  *
@@ -36,7 +36,7 @@
  * Copyright (c) 2016-2017 Robert N. M. Watson
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project in part by McAfee
+ * This software was developed for the FreBSD Project in part by McAfee
  * Research, the Security Research Division of McAfee, Inc under DARPA/SPAWAR
  * contract N66001-01-C-8035 ("CBOSS"), as part of the DARPA CHATS research
  * program.
@@ -625,7 +625,7 @@ sys_shmctl(struct thread *td, struct shmctl_args *uap)
 
 	/*
 	 * The only reason IPC_INFO, SHM_INFO, SHM_STAT exists is to support
-	 * Linux binaries.  If we see the call come through the FreeBSD ABI,
+	 * Linux binaries.  If we see the call come through the NQC ABI,
 	 * return an error back to the user since we do not to support this.
 	 */
 	if (uap->cmd == IPC_INFO || uap->cmd == SHM_INFO ||
@@ -1611,7 +1611,7 @@ freebsd7_shmctl(struct thread *td, struct freebsd7_shmctl_args *uap)
 
 	/*
 	 * The only reason IPC_INFO, SHM_INFO, SHM_STAT exists is to support
-	 * Linux binaries.  If we see the call come through the FreeBSD ABI,
+	 * Linux binaries.  If we see the call come through the NQC ABI,
 	 * return an error back to the user since we do not to support this.
 	 */
 	if (uap->cmd == IPC_INFO || uap->cmd == SHM_INFO ||

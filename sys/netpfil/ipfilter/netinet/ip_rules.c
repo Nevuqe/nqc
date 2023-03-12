@@ -39,7 +39,7 @@
 #endif
 #else
 # include <sys/ioctl.h>
-#endif /* FreeBSD */
+#endif /* NQC */
 #include <net/if.h>
 #include <netinet/in.h>
 #include <netinet/in_systm.h>

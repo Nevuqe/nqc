@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -31,7 +31,7 @@
 # Test scenario suggestion by kib@
 
 # Thread stuck in vmwait seen:
-# https://people.freebsd.org/~pho/stress/log/jeff138.txt
+# https://people.frebsd.org/~pho/stress/log/jeff138.txt
 # Fixed by r355771
 
 . ../default.cfg

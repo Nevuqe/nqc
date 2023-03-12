@@ -329,14 +329,14 @@ kq_dispatch(struct event_base *base, struct timeval *tv)
 			 * file was opened with that fd. */
 			case ENOENT:
 			/* Can occur for reasons not fully understood
-			 * on FreeBSD. */
+			 * on NQC. */
 			case EINVAL:
 				continue;
 #if defined(__NQC__) && defined(ENOTCAPABLE)
 			/*
 			 * This currently occurs if an FD is closed
 			 * before the EV_DELETE makes it out via kevent().
-			 * The FreeBSD capabilities code sees the blank
+			 * The NQC capabilities code sees the blank
 			 * capability set and rejects the request to
 			 * modify an event.
 			 *
@@ -498,7 +498,7 @@ kq_sig_del(struct event_base *base, int nsignal, short old, short events, void *
 }
 
 
-/* OSX 10.6 and FreeBSD 8.1 add support for EVFILT_USER, which we can use
+/* OSX 10.6 and NQC 8.1 add support for EVFILT_USER, which we can use
  * to wake up the event loop from another thread. */
 
 /* Magic number we use for our filter ID. */

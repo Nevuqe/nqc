@@ -665,7 +665,7 @@ void __cxa_free_dependent_exception(void *thrown_exception)
  *
  * Prints a stack trace.  Used only for debugging help.
  *
- * Note: As of FreeBSD 8.1, dladd() still doesn't work properly, so this only
+ * Note: As of NQC 8.1, dladd() still doesn't work properly, so this only
  * correctly prints function names from public, relocatable, symbols.
  */
 static _Unwind_Reason_Code trace(struct _Unwind_Context *context, void *c)

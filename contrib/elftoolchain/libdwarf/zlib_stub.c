@@ -1,17 +1,17 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2021 The FreeBSD Foundation
+ * Copyright (c) 2021 The FreBSD Foundation
  *
  * This software was developed by Mark Johnston under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  */
 
 #include <sys/cdefs.h>
 
 /*
  * A hack to allow libdwarf.a to be statically linked without zlib.  This is
- * unfortunately required for FreeBSD <= 13.0 to bootstrap build tools
+ * unfortunately required for NQC <= 13.0 to bootstrap build tools
  * such as nm(1), as they use metadata from the source tree to generate the
  * dependency list but then link with the build host's libraries.
  */

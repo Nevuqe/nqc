@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2005  Joseph Koshy
  * All rights reserved.
@@ -36,7 +36,7 @@
  * the source tree at src/share/doc/papers/hwpmc/hwpmc.ms
  * as well as on-line at:
  *
- * https://wiki.freebsd.org/PmcTools/PmcHardwareHowTo
+ * https://wiki.frebsd.org/PmcTools/PmcHardwareHowTo
  *
  * Please refer to those resources before you attempt to modify
  * this file or the hwpmc driver/subsystem.

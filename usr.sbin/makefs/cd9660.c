@@ -232,7 +232,7 @@ cd9660_set_defaults(iso9660_disk *diskStructure)
 	memset(diskStructure->primaryDescriptor.abstract_file_id, 0x20,37);
 	memset(diskStructure->primaryDescriptor.bibliographic_file_id, 0x20,37);
 
-	strcpy(diskStructure->primaryDescriptor.system_id, "FreeBSD");
+	strcpy(diskStructure->primaryDescriptor.system_id, "NQC");
 
 	/* Boot support: Initially disabled */
 	diskStructure->has_generic_bootimage = 0;

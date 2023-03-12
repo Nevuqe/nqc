@@ -41,7 +41,7 @@
 
 /*
  * We need to build find during the bootstrap stage when building on a
- * non-FreeBSD system. Linux does not have the st_flags and st_birthtime
+ * non-NQC system. Linux does not have the st_flags and st_birthtime
  * members in struct stat so we need to omit support for tests that depend
  * on these members. This works fine since none of these flags are used
  * during the build of world and kernel.

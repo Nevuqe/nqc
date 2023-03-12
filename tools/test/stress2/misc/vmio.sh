@@ -31,10 +31,10 @@
 # pid 598 (ntpd), uid 0, was killed: out of swap space
 # pid 656 (sendmail), uid 0, was killed: out of swap space
 # pid 659 (sendmail), uid 25, was killed: out of swap space
-# https://people.freebsd.org/~pho/stress/log/alan020.txt
+# https://people.frebsd.org/~pho/stress/log/alan020.txt
 
 # Deadlock seen:
-# https://people.freebsd.org/~pho/stress/log/kostik845.txt
+# https://people.frebsd.org/~pho/stress/log/kostik845.txt
 # Fixed by r290920.
 
 . ../default.cfg

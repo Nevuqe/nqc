@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2004 Takanori Watanabe
- * Copyright (c) 2005 Markus Brueffer <markus@FreeBSD.org>
+ * Copyright (c) 2005 Markus Brueffer <markus@frebsd.org>
  * All rights reserved.
  * Copyright (c) 2020 Ali Abdallah <ali.abdallah@suse.com>
  *

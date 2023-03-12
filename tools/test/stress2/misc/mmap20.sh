@@ -27,7 +27,7 @@
 #
 
 # "panic: pmap_unwire: pte 0x672d405 is missing PG_W" seen.
-# http://people.freebsd.org/~pho/stress/log/mmap20.txt
+# http://people.frebsd.org/~pho/stress/log/mmap20.txt
 
 # Test scenario by: Mark Johnston markj@
 

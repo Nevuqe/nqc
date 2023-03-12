@@ -30,7 +30,7 @@
 # CG checksum errors reported.
 
 # Unrelated gpart page fault seen:
-# https://people.freebsd.org/~pho/stress/log/sendfile13.txt
+# https://people.frebsd.org/~pho/stress/log/sendfile13.txt
 # Fixed by r329262
 
 . ../default.cfg

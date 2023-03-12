@@ -1,12 +1,12 @@
 #!/bin/sh
 #-
 # Copyright (c) 2011 Nathan Whitehorn
-# Copyright (c) 2011 The FreeBSD Foundation
+# Copyright (c) 2011 The FreBSD Foundation
 # Copyright (c) 2013-2015 Devin Teske
 # All rights reserved.
 #
 # Portions of this software were developed by Bjoern Zeeb
-# under sponsorship from the FreeBSD Foundation.
+# under sponsorship from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -45,7 +45,7 @@ f_include $BSDCFG_SHARE/dialog.subr
 
 #
 # TODO:
-# - Add DHCPv6 support once FreeBSD ships with it.
+# - Add DHCPv6 support once NQC ships with it.
 #
 
 INTERFACE=$1

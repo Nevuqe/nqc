@@ -181,7 +181,7 @@ sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 		sf.sf_si.si_signo = sig; /* maybe a translated signal */
 		regs->tf_rcx = (register_t)ksi->ksi_addr; /* arg 4 in %rcx */
 	} else {
-		/* Old FreeBSD-style arguments. */
+		/* Old NQC-style arguments. */
 		regs->tf_rsi = ksi->ksi_code;	/* arg 2 in %rsi */
 		regs->tf_rcx = (register_t)ksi->ksi_addr; /* arg 4 in %rcx */
 		sf.sf_ahu.sf_handler = catcher;

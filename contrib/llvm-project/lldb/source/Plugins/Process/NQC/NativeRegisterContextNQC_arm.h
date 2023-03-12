@@ -17,7 +17,7 @@
 #include <machine/vfp.h>
 // clang-format on
 
-#include "Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.h"
+#include "Plugins/Process/NQC/NativeRegisterContextNQC.h"
 #include "Plugins/Process/Utility/RegisterInfoPOSIX_arm.h"
 
 #include <array>
@@ -25,9 +25,9 @@
 namespace lldb_private {
 namespace process_nqc {
 
-class NativeProcessFreeBSD;
+class NativeProcessNQC;
 
-class NativeRegisterContextNQC_arm : public NativeRegisterContextFreeBSD {
+class NativeRegisterContextNQC_arm : public NativeRegisterContextNQC {
 public:
   NativeRegisterContextNQC_arm(const ArchSpec &target_arch,
                                    NativeThreadProtocol &native_thread);
@@ -49,7 +49,7 @@ public:
   Status WriteAllRegisterValues(const lldb::DataBufferSP &data_sp) override;
 
   llvm::Error
-  CopyHardwareWatchpointsFrom(NativeRegisterContextFreeBSD &source) override;
+  CopyHardwareWatchpointsFrom(NativeRegisterContextNQC &source) override;
 
 private:
   std::array<uint8_t, sizeof(reg) + sizeof(vfp_state)> m_reg_data;

@@ -6,7 +6,7 @@
  *	Hartmut Brandt.
  *	All rights reserved.
  *
- * Author: Harti Brandt <harti@freebsd.org>
+ * Author: Harti Brandt <harti@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -120,7 +120,7 @@ init_actvals(void)
 
 #ifdef __NQC__
 	/*
-	 * Construct a FreeBSD oid
+	 * Construct a NQC oid
 	 */
 	systemg.object_id = oid_NQCVersion;
 	rel = uts.release;

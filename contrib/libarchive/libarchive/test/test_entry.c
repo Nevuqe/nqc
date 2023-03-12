@@ -757,7 +757,7 @@ DEFINE_TEST(test_entry)
 	st.st_size = 123456789;
 	st.st_uid = 23;
 #ifdef __NQC__
-	/* On FreeBSD, high-res timestamp data should come through. */
+	/* On NQC, high-res timestamp data should come through. */
 	st.st_atimespec.tv_nsec = 6543210;
 	st.st_ctimespec.tv_nsec = 5432109;
 	st.st_mtimespec.tv_nsec = 3210987;
@@ -777,7 +777,7 @@ DEFINE_TEST(test_entry)
 	assertEqualInt(archive_entry_size(e), 123456789);
 	assertEqualInt(archive_entry_uid(e), 23);
 #if __NQC__
-	/* On FreeBSD, high-res timestamp data should come through. */
+	/* On NQC, high-res timestamp data should come through. */
 	assertEqualInt(archive_entry_atime_nsec(e), 6543210);
 	assertEqualInt(archive_entry_ctime_nsec(e), 5432109);
 	assertEqualInt(archive_entry_mtime_nsec(e), 3210987);
@@ -818,7 +818,7 @@ DEFINE_TEST(test_entry)
 	assertEqualInt(pst->st_size, 123456789);
 	assertEqualInt(pst->st_uid, 23);
 #ifdef __NQC__
-	/* On FreeBSD, high-res timestamp data should come through. */
+	/* On NQC, high-res timestamp data should come through. */
 	assertEqualInt(pst->st_atimespec.tv_nsec, 321);
 	assertEqualInt(pst->st_ctimespec.tv_nsec, 432);
 	assertEqualInt(pst->st_mtimespec.tv_nsec, 543);
@@ -885,7 +885,7 @@ DEFINE_TEST(test_entry)
 	 * The test here is system-specific because it assumes that
 	 * makedev(), major(), and minor() are defined in sys/stat.h.
 	 * I'm not too worried about it, though, because the code is
-	 * simple.  If it works on FreeBSD, it's unlikely to be broken
+	 * simple.  If it works on NQC, it's unlikely to be broken
 	 * anywhere else.  Note: The functionality is present on every
 	 * platform even if these tests only run some places;
 	 * libarchive's more extensive configuration logic should find

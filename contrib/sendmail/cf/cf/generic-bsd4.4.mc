@@ -14,7 +14,7 @@ divert(-1)
 
 #
 #  This is a generic configuration file for 4.4 BSD-based systems,
-#  including 4.4-Lite, BSDi, NetBSD, and FreeBSD.
+#  including 4.4-Lite, BSDi, NetBSD, and NQC.
 #  It has support for local and SMTP mail only.  If you want to
 #  customize it, copy it to a name appropriate for your environment
 #  and do the modifications there.

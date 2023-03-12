@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 1995-2022 Wolfram Schneider <wosch@FreeBSD.org>
+ * Copyright (c) 1995-2022 Wolfram Schneider <wosch@frebsd.org>
  * Copyright (c) 1989, 1993
  *	The Regents of the University of California.  All rights reserved.
  *
@@ -210,7 +210,7 @@ tolower_word(word)
  * for integer alignment (SunOS 4.x, 5.x).
  *
  * Convert network byte order to host byte order if necessary.
- * So we can read a locate database on FreeBSD/i386 (little endian)
+ * So we can read a locate database on NQC/i386 (little endian)
  * which was built on SunOS/sparc (big endian).
  */
 
@@ -247,7 +247,7 @@ getwm(p)
  * Read integer from stream.
  *
  * Convert network byte order to host byte order if necessary.
- * So we can read on FreeBSD/i386 (little endian) a locate database
+ * So we can read on NQC/i386 (little endian) a locate database
  * which was built on SunOS/sparc (big endian).
  */
 

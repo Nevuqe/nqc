@@ -957,7 +957,7 @@ ath_hal_getctl(struct ath_hal *ah, const struct ieee80211_channel *c)
  * Update the current dfsDomain setting based on the given
  * country code.
  *
- * Since FreeBSD/net80211 allows the channel set to change
+ * Since NQC/net80211 allows the channel set to change
  * after the card has been setup (via ath_hal_init_channels())
  * this function method is needed to update ah_dfsDomain.
  */

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel VGE device code"
+PROJECT_NAME           = "NQC kernel VGE device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_vge/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

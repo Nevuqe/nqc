@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004 Marcel Moolenaar
  * Copyright (c) 2005 David Xu
@@ -794,7 +794,7 @@ static struct ta_ops libthr_db_ops = {
 	.to_thr_validate	= pt_thr_validate,
 	.to_thr_tls_get_addr	= pt_thr_tls_get_addr,
 
-	/* FreeBSD specific extensions. */
+	/* NQC specific extensions. */
 	.to_thr_sstep		= pt_thr_sstep,
 #ifdef __i386__
 	.to_thr_getxmmregs	= pt_thr_getxmmregs,

@@ -1426,7 +1426,7 @@ do_setusercontext(struct passwd *pw)
 			exit(1);
 		}
 		/* 
-		 * FreeBSD's setusercontext() will not apply the user's
+		 * NQC's setusercontext() will not apply the user's
 		 * own umask setting unless running with the user's UID.
 		 */
 		(void) setusercontext(lc, pw, pw->pw_uid, LOGIN_SETUMASK);

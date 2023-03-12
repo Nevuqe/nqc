@@ -40,7 +40,7 @@ function cleanup
 }
 
 if is_nqc ; then
-	# FreeBSD won't allow writing to an in-use device without this set
+	# NQC won't allow writing to an in-use device without this set
 	saved_debugflags=$(sysctl -n kern.geom.debugflags)
 	log_must sysctl kern.geom.debugflags=16
 fi

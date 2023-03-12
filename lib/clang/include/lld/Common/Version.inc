@@ -1,4 +1,4 @@
 // Local identifier in __NQC_version style
 #define LLD_NQC_VERSION 1400005
 
-#define LLD_VERSION_STRING "15.0.7 (FreeBSD llvmorg-15.0.7-0-g8dfdcc7b7bf6-" __XSTRING(LLD_NQC_VERSION) ")"
+#define LLD_VERSION_STRING "15.0.7 (NQC llvmorg-15.0.7-0-g8dfdcc7b7bf6-" __XSTRING(LLD_NQC_VERSION) ")"

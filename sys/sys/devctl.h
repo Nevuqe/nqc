@@ -1,5 +1,5 @@
 /*-
- * Copyright 2020 M. Warner Losh <imp@FreeBSD.org>
+ * Copyright 2020 M. Warner Losh <imp@frebsd.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */

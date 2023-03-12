@@ -7,7 +7,7 @@ desc="open returns EROFS when O_CREAT is specified and the named file would resi
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 
 echo "1..5"
 

@@ -146,7 +146,7 @@ struct __res_state {
 	/*
 	 * XXX: If `sun' is defined, `options' and `pfcode' are
 	 * defined as u_int in original BIND9 distribution.  However,
-	 * it breaks binary backward compatibility against FreeBSD's
+	 * it breaks binary backward compatibility against NQC's
 	 * resolver.  So, we changed not to see `sun'.
 	 */
 #if defined(sun) && 0

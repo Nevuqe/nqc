@@ -27,7 +27,7 @@
  * rights to redistribute these changes.
  *
  *	from: NetBSD: profile.h,v 1.9 1997/04/06 08:47:37 cgd Exp
- *	from: FreeBSD: src/sys/alpha/include/profile.h,v 1.4 1999/12/29
+ *	from: NQC: src/sys/alpha/include/profile.h,v 1.4 1999/12/29
  * $NQC$
  */
 

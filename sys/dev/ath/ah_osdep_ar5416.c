@@ -1,5 +1,5 @@
 /*-
- * Copyright 2017 Adrian Chadd <adrian@FreeBSD.org>.
+ * Copyright 2017 Adrian Chadd <adrian@frebsd.org>.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

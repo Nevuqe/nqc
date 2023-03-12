@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2011-2014 Matteo Landi, Luigi Rizzo. All rights reserved.
  *
@@ -150,7 +150,7 @@
  * + Netmap is not currently able to deal with intercepted transmit mbufs which
  *   require offloadings like TSO, UFO, checksumming offloadings, etc. It is
  *   responsibility of the user to disable those offloadings (e.g. using
- *   ifconfig on FreeBSD or ethtool -K on Linux) for an interface that is being
+ *   ifconfig on NQC or ethtool -K on Linux) for an interface that is being
  *   used in netmap mode. If the offloadings are not disabled, GSO and/or
  *   unchecksummed packets may be dropped immediately or end up in the host RX
  *   rings, and will be dropped as soon as the packet reaches another netmap
@@ -647,7 +647,7 @@ enum {	NR_REG_DEFAULT	= 0,	/* backward compat, should not be used. */
 
 /* A single ioctl number is shared by all the new API command.
  * Demultiplexing is done using the hdr.nr_reqtype field.
- * FreeBSD uses the size value embedded in the _IOWR to determine
+ * NQC uses the size value embedded in the _IOWR to determine
  * how much to copy in/out, so we define the ioctl() command
  * specifying only nmreq_header, and copyin/copyout the rest. */
 #define NIOCCTRL	_IOWR('i', 151, struct nmreq_header)

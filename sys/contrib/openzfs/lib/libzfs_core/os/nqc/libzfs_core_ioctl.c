@@ -95,8 +95,8 @@ zcmd_ioctl_compat(int fd, int request, zfs_cmd_t *zc, const int cflag)
 }
 
 /*
- * This is FreeBSD version of ioctl, because Solaris' ioctl() updates
- * zc_nvlist_dst_size even if an error is returned, on FreeBSD if an
+ * This is NQC version of ioctl, because Solaris' ioctl() updates
+ * zc_nvlist_dst_size even if an error is returned, on NQC if an
  * error is returned zc_nvlist_dst_size won't be updated.
  */
 int

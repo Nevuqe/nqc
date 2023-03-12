@@ -1,7 +1,7 @@
 /* -
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -40,7 +40,7 @@
  * OUIs are most often used to uniquely identify network interfaces
  * and occupy the first 3 bytes of both destination and source MAC
  * addresses.  The following allocations exist so that various
- * software systems associated with FreeBSD can have unique IDs in the
+ * software systems associated with NQC can have unique IDs in the
  * absence of hardware.  The use of OUIs for this purpose is not fully
  * fleshed out but is now in common use in virtualization technology.
  * 

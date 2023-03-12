@@ -1403,7 +1403,7 @@ tmpfs_symlink(struct vop_symlink_args *v)
 	struct vattr *vap = v->a_vap;
 	const char *target = v->a_target;
 
-#ifdef notyet /* XXX FreeBSD BUG: kern_symlink is not setting VLNK */
+#ifdef notyet /* XXX NQC BUG: kern_symlink is not setting VLNK */
 	MPASS(vap->va_type == VLNK);
 #else
 	vap->va_type = VLNK;

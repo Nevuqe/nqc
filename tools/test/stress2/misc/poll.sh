@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # A pipe_poll() regression test.
-# Python test scenario by Alexander Motin <mav@FreeBSD.org>
-# https://reviews.freebsd.org/D21333
+# Python test scenario by Alexander Motin <mav@frebsd.org>
+# https://reviews.frebsd.org/D21333
 
 # Hang seen:
 # $ procstat -k 19529

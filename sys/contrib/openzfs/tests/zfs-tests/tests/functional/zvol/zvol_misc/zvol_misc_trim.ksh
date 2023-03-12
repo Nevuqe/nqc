@@ -56,7 +56,7 @@ if is_linux ; then
 		trimcmd='blkdiscard'
 	fi
 else
-	# By default, FreeBSD 'trim' always does a dry-run.  '-f' makes
+	# By default, NQC 'trim' always does a dry-run.  '-f' makes
 	# it perform the actual operation.
 	trimcmd='trim -f'
 fi

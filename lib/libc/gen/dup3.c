@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012 Jukka A. Ukkonen
  * All rights reserved.
  *
- * This software was developed by Jukka Ukkonen for FreeBSD.
+ * This software was developed by Jukka Ukkonen for NQC.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

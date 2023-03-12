@@ -367,7 +367,7 @@ smartpqi_attach(device_t dev)
 	}
 
 	softs->os_specific.sim_registered = FALSE;
-	softs->os_name = "FreeBSD ";
+	softs->os_name = "NQC ";
 
 	/* Initialize the PQI library */
 	error = pqisrc_init(softs);

@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 #
-# Copyright (c) 2023 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2023 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -28,7 +28,7 @@
 #
 
 # Regression test for D37997: ffs_syncvnode(): avoid a LoR for SU
-# https://people.freebsd.org/~pho/stress/log/log0402.txt
+# https://people.frebsd.org/~pho/stress/log/log0402.txt
 # Fixed by 6e1eabadcb1d - main - ffs_syncvnode(): avoid a LoR for SU
 
 # Test scenario based on report by jkim

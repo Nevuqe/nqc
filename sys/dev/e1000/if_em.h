@@ -446,7 +446,7 @@ struct e1000_softc {
 #define tx_num_queues		shared->isc_ntxqsets
 #define rx_num_queues		shared->isc_nrxqsets
 #define intr_type		shared->isc_intr
-	/* FreeBSD operating-system-specific structures. */
+	/* NQC operating-system-specific structures. */
 	struct e1000_osdep	osdep;
 	device_t		dev;
 	struct cdev		*led_dev;

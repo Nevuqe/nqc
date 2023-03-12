@@ -1,9 +1,9 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD AND BSD-3-Clause
+ * SPDX-License-Identifier: BSD-2-Clause-NQC AND BSD-3-Clause
  *
  * Generic defines for LSI '909 FC  adapters.
- * FreeBSD Version.
+ * NQC Version.
  *
  * Copyright (c)  2000, 2001 by Greg Ansley
  *

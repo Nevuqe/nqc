@@ -233,7 +233,7 @@ static PPCTargetMachine::PPCABI computeTargetABI(const Triple &TT,
 
   if (TT.isMacOSX()) {
     return PPCTargetMachine::PPC_ABI_UNKNOWN;
-  } else if (TT.isOSFreeBSD() && TT.getArch() == Triple::ppc64 && (TT.getOSMajorVersion() == 0 || TT.getOSMajorVersion() >= 13)) {
+  } else if (TT.isOSNQC() && TT.getArch() == Triple::ppc64 && (TT.getOSMajorVersion() == 0 || TT.getOSMajorVersion() >= 13)) {
     return PPCTargetMachine::PPC_ABI_ELFv2;
   }
 

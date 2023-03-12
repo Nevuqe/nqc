@@ -14,7 +14,7 @@
  *    documentation and/or other materials provided with the distribution.
  * 3. All advertising materials mentioning features or use of this software
  *    must display the following acknowledgement:
- *      This product includes software developed for the FreeBSD Project
+ *      This product includes software developed for the FreBSD Project
  *	by Peter Wemm.
  * 4. The name of the author may not be used to endorse or promote products
  *    derived from this software without specific prior written permission.

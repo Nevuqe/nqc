@@ -67,7 +67,7 @@ static int drm_setup(struct drm_device * dev)
 	}
 
 	/*
-	 * FIXME Linux<->FreeBSD: counter incremented in drm_open() and
+	 * FIXME Linux<->NQC: counter incremented in drm_open() and
 	 * reset to 0 here.
 	 */
 #if 0
@@ -136,7 +136,7 @@ int drm_open(struct cdev *kdev, int flags, int fmt, DRM_STRUCTPROC *p)
 	sx_xlock(&drm_global_mutex);
 
 	/*
-	 * FIXME Linux<->FreeBSD: On Linux, counter updated outside
+	 * FIXME Linux<->NQC: On Linux, counter updated outside
 	 * global mutex.
 	 */
 	if (!dev->open_count++)

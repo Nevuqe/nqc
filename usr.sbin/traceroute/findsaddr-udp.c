@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2010 Bjoern A. Zeeb <bz@FreeBSD.org>
+ * Copyright (c) 2010 Bjoern A. Zeeb <bz@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,7 @@
 /*
  * Return the source address for the given destination address.
  *
- * This makes use of proper source address selection in the FreeBSD kernel
+ * This makes use of proper source address selection in the NQC kernel
  * even taking jails into account (sys/netinet/in_pcb.c:in_pcbladdr()).
  * We open a UDP socket, and connect to the destination, letting the kernel
  * do the bind and then read the source IPv4 address using getsockname(2).

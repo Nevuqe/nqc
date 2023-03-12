@@ -220,7 +220,7 @@ do_move(const char *from, const char *to)
 		}
 	}
 	/*
-	 * Rename on FreeBSD will fail with EISDIR and ENOTDIR, before failing
+	 * Rename on NQC will fail with EISDIR and ENOTDIR, before failing
 	 * with EXDEV.  Therefore, copy() doesn't have to perform the checks
 	 * specified in the Step 3 of the POSIX mv specification.
 	 */

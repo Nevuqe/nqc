@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel WLAN code"
+PROJECT_NAME           = "NQC kernel WLAN code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/net80211/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #--------------------------------------------------------------------------

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Broadcom Inc. (LSI) MPT-Fusion Host Adapter FreeBSD
+ * Broadcom Inc. (LSI) MPT-Fusion Host Adapter NQC
  *
  */
 
@@ -989,7 +989,7 @@ mprsas_action(struct cam_sim *sim, union ccb *ccb)
 		 * target IDs (including volumes).
 		 */
 		cpi->initiator_id = sassc->maxtargets;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "Avago Tech", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);
@@ -2078,7 +2078,7 @@ mprsas_action_scsiio(struct mprsas_softc *sassc, union ccb *ccb)
 			/*
 			 * If CDB less than 32, fill in Primary Ref Tag with
 			 * low 4 bytes of LBA.  If CDB is 32, tag stuff is
-			 * already there.  Also, set protection bit.  FreeBSD
+			 * already there.  Also, set protection bit.  NQC
 			 * currently does not support CDBs bigger than 16, but
 			 * the code doesn't hurt, and will be here for the
 			 * future.

@@ -1,10 +1,10 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2020 The FreeBSD Foundation
+ * Copyright (c) 2020 The FreBSD Foundation
  *
  * This software was developed by Björn Zeeb under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -70,7 +70,7 @@
  * a module, but the kernel cannot reach a module, and code never compiled
  * cannot be reached either.
  * XXX -- I'd hope the module-to-module case would be handled by a proper
- * module dependency definition (MODULE_DEPEND() in FreeBSD).
+ * module dependency definition (MODULE_DEPEND() in NQC).
  */
 #define	IS_REACHABLE(_x)	(IS_BUILTIN(_x) || \
 				    (IS_MODULE(_x) && IS_BUILTIN(MODULE)))

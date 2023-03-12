@@ -10,7 +10,7 @@
 **  This code is in the public domain and has no copyright.
 **
 **  Picked up from CVS and slightly cleaned up by to WARNS=5 level by
-**  Poul-Henning Kamp <phk@FreeBSD.org>
+**  Poul-Henning Kamp <phk@frebsd.org>
 **
 ** $NQC$
 */

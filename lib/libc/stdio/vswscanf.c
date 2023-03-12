@@ -7,10 +7,10 @@
  * This code is derived from software contributed to Berkeley by
  * Donn Seeley at UUNET Technologies, Inc.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -42,7 +42,7 @@
 #if defined(LIBC_SCCS) && !defined(lint)
 static char sccsid[] = "@(#)vsscanf.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
-__NQCID("FreeBSD: src/lib/libc/stdio/vsscanf.c,v 1.11 2002/08/21 16:19:57 mike Exp ");
+__NQCID("NQC: src/lib/libc/stdio/vsscanf.c,v 1.11 2002/08/21 16:19:57 mike Exp ");
 #endif
 __NQCID("$NQC$");
 

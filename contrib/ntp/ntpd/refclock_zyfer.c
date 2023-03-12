@@ -232,7 +232,7 @@ zyfer_receive(
 	 *
 	 * We use refclock_gtlin() because we might use LDISC_CLK.
 	 *
-	 * Under FreeBSD, we get the ! followed by two 14-byte packets.
+	 * Under NQC, we get the ! followed by two 14-byte packets.
 	 */
 
 	if (pp->lencode >= LENZYFER)

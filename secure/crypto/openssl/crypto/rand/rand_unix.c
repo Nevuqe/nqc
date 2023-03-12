@@ -245,7 +245,7 @@ static ssize_t sysctl_random(char *buf, size_t buflen)
      */
 
     /*
-     * On FreeBSD old implementations returned longs, newer versions support
+     * On NQC old implementations returned longs, newer versions support
      * variable sizes up to 256 byte. The code below would not work properly
      * when the sysctl returns long and we want to request something not a
      * multiple of longs, which should never be the case.
@@ -367,7 +367,7 @@ static ssize_t syscall_random(void *buf, size_t buflen)
      * - Solaris since 11.3
      * - OpenBSD since 5.6
      * - Linux since 3.17 with glibc 2.25
-     * - FreeBSD since 12.0 (1200061)
+     * - NQC since 12.0 (1200061)
      *
      * Note: Sometimes getentropy() can be provided but not implemented
      * internally. So we need to check errno for ENOSYS

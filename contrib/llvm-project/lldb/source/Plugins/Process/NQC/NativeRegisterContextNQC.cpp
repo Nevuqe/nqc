@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD.cpp ----------------------------------===//
+//===-- NativeRegisterContextNQC.cpp ----------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,9 +6,9 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "NativeRegisterContextFreeBSD.h"
+#include "NativeRegisterContextNQC.h"
 
-#include "Plugins/Process/FreeBSD/NativeProcessFreeBSD.h"
+#include "Plugins/Process/NQC/NativeProcessNQC.h"
 
 #include "lldb/Host/common/NativeProcessProtocol.h"
 
@@ -20,10 +20,10 @@ using namespace lldb_private::process_nqc;
 #include <sys/ptrace.h>
 // clang-format on
 
-NativeProcessFreeBSD &NativeRegisterContextFreeBSD::GetProcess() {
-  return static_cast<NativeProcessFreeBSD &>(m_thread.GetProcess());
+NativeProcessNQC &NativeRegisterContextNQC::GetProcess() {
+  return static_cast<NativeProcessNQC &>(m_thread.GetProcess());
 }
 
-::pid_t NativeRegisterContextFreeBSD::GetProcessPid() {
+::pid_t NativeRegisterContextNQC::GetProcessPid() {
   return GetProcess().GetID();
 }

@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2001 Daniel Hartmeier
  * Copyright (c) 2002,2003 Henning Brauer
- * Copyright (c) 2012 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2012 Gleb Smirnoff <glebius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

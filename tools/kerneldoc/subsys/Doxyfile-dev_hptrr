@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel HPTRR device code"
+PROJECT_NAME           = "NQC kernel HPTRR device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_hptrr/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

@@ -136,7 +136,7 @@ void cpy16to8(const CHAR16 *, char *, size_t);
 /*
  * Routines for interacting with EFI's env vars in a more unix-like
  * way than the standard APIs. In addition, convenience routines for
- * the loader setting / getting FreeBSD specific variables.
+ * the loader setting / getting NQC specific variables.
  */
 
 EFI_STATUS efi_delenv(EFI_GUID *guid, const char *varname);

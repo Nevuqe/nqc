@@ -18,15 +18,15 @@
 # [ thread pid 54680 tid 102765 ]
 # Stopped at      kdb_enter+0x34: movl    $0,kdb_why
 # db> x/s version
-# version:        FreeBSD 14.0-CURRENT #0 main-n257606-9ea2716b775-dirty: Thu Aug 25 10:47:45 CEST 2022
-# pho@mercat1.netperf.freebsd.org:/media/ob
+# version:        NQC 14.0-CURRENT #0 main-n257606-9ea2716b775-dirty: Thu Aug 25 10:47:45 CEST 2022
+# pho@mercat1.netperf.frebsd.org:/media/ob
 # j/usr/src/i386.i386/sys/PHO\012
 # db> show proc
 # Process 54680 (date) at 0x28905d50:
 #  state: NORMAL
 #  uid: 0  gids: 0, 0, 5
 #  parent: pid 785 at 0x26c14000
-#  ABI: FreeBSD ELF32
+#  ABI: NQC ELF32
 #  flag: 0x10004002  flag2: 0
 #  arguments: date +%s
 #  reaper: 0x18c710a4 reapsubtree: 1

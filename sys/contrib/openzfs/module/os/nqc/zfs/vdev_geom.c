@@ -19,10 +19,10 @@
  * CDDL HEADER END
  */
 /*
- * Copyright (c) 2006 Pawel Jakub Dawidek <pjd@FreeBSD.org>
+ * Copyright (c) 2006 Pawel Jakub Dawidek <pjd@frebsd.org>
  * All rights reserved.
  *
- * Portions Copyright (c) 2012 Martin Matuska <mm@FreeBSD.org>
+ * Portions Copyright (c) 2012 Martin Matuska <mm@frebsd.org>
  */
 
 #include <sys/zfs_context.h>
@@ -976,7 +976,7 @@ skip_open:
 	vd->vdev_has_trim = (error == 0 && has_trim);
 
 	/* Set when device reports it supports secure TRIM. */
-	/* unavailable on FreeBSD */
+	/* unavailable on NQC */
 	vd->vdev_has_securetrim = B_FALSE;
 
 	return (0);

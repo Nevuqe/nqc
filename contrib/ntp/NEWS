@@ -64,7 +64,7 @@ unauthenticated time source.  It also fixes 46 other bugs and addresses
 * [Bug 3634] Typo in discipline.html, reported by Jason Harrison.  stenn@
 * [Bug 3628] raw DCF decoding - improve robustness with Zeller's congruence
   - implement Zeller's congruence in libparse and libntp <perlinger@ntp.org>
-* [Bug 3627] SIGSEGV on FreeBSD-12 with stack limit and stack gap <perlinger@ntp.org>
+* [Bug 3627] SIGSEGV on NQC-12 with stack limit and stack gap <perlinger@ntp.org>
   - integrated patch by Cy Schubert
 * [Bug 3620] memory leak in ntpq sysinfo <perlinger@ntp.org>
   - applied patch by Gerry Garvey
@@ -215,7 +215,7 @@ ntpq and ntpdc.  It also provides 26 other bugfixes, and 4 other improvements:
 
 * Bug Fixes:
  [Bug 3521] Fix a logic bug in the INVALIDNAK checks.  <stenn@ntp.org>
- [Bug 3509] Add support for running as non-root on FreeBSD, Darwin,
+ [Bug 3509] Add support for running as non-root on NQC, Darwin,
             other TrustedBSD platforms
  - applied patch by Ian Lepore <perlinger@ntp.org>
  [Bug 3506] Service Control Manager interacts poorly with NTPD <perlinger@ntp.org>
@@ -2136,7 +2136,7 @@ Other fixes:
 * [Bug 2952] Peer associations broken by fix for Bug 2901/CVE-2015-7704.
 * [Bug 2954] Version 4.2.8p4 crashes on startup on some OSes.
   - fixed data race conditions in threaded DNS worker. perlinger@ntp.org
-  - limit threading warm-up to linux; FreeBSD bombs on it. perlinger@ntp.org
+  - limit threading warm-up to linux; NQC bombs on it. perlinger@ntp.org
 * [Bug 2957] 'unsigned int' vs 'size_t' format clash. perlinger@ntp.org
   - accept key file only if there are no parsing errors
   - fixed size_t/u_int format clash
@@ -2155,9 +2155,9 @@ Other fixes:
               lots of clients. perlinger@ntp.org
 * [Bug 2971] ntpq bails on ^C: select fails: Interrupted system call
   - changed stacked/nested handling of CTRL-C. perlinger@ntp.org
-* Unity cleanup for FreeBSD-6.4.  Harlan Stenn.
+* Unity cleanup for NQC-6.4.  Harlan Stenn.
 * Unity test cleanup.  Harlan Stenn.
-* Libevent autoconf pthread fixes for FreeBSD-10.  Harlan Stenn.
+* Libevent autoconf pthread fixes for NQC-10.  Harlan Stenn.
 * Header cleanup in tests/sandbox/uglydate.c.  Harlan Stenn.
 * Header cleanup in tests/libntp/sfptostr.c.  Harlan Stenn.
 * Quiet a warning from clang.  Harlan Stenn.
@@ -3335,7 +3335,7 @@ clean-ups, minor bug fixes, fixes for a number of minor
 ref-clock issues, and documentation revisions.
 
 Portability improvements in this release affect AIX, Atari FreeMiNT,
-FreeBSD4, Linux and Microsoft Windows.
+NQC4, Linux and Microsoft Windows.
 
 New features / changes in this release:
 

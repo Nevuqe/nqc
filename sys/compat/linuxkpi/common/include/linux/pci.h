@@ -4,10 +4,10 @@
  * Copyright (c) 2010 Panasas, Inc.
  * Copyright (c) 2013-2016 Mellanox Technologies, Ltd.
  * All rights reserved.
- * Copyright (c) 2020-2022 The FreeBSD Foundation
+ * Copyright (c) 2020-2022 The FreBSD Foundation
  *
  * Portions of this software were developed by Björn Zeeb
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -816,7 +816,7 @@ struct msix_entry {
  * vectors.  Negative errors are failures.
  *
  * NB: define added to prevent this definition of pci_enable_msix from
- * clashing with the native FreeBSD version.
+ * clashing with the native NQC version.
  */
 #define	pci_enable_msix(...) \
   linux_pci_enable_msix(__VA_ARGS__)
@@ -947,7 +947,7 @@ pci_iomap(struct pci_dev *pdev, int mmio_bar, int mmio_size)
 	res = _lkpi_pci_iomap(pdev, mmio_bar, mmio_size);
 	if (res == NULL)
 		return (NULL);
-	/* This is a FreeBSD extension so we can use bus_*(). */
+	/* This is a NQC extension so we can use bus_*(). */
 	if (pdev->want_iomap_res)
 		return (res);
 	return ((void *)rman_get_bushandle(res));
@@ -1072,7 +1072,7 @@ struct pci_error_handlers {
 	void (*resume)(struct pci_dev *dev);
 };
 
-/* FreeBSD does not support SRIOV - yet */
+/* NQC does not support SRIOV - yet */
 static inline struct pci_dev *pci_physfn(struct pci_dev *dev)
 {
 	return dev;
@@ -1633,7 +1633,7 @@ linuxkpi_pci_get_device(uint16_t vendor, uint16_t device, struct pci_dev *odev)
 	return (lkpi_pci_get_device(vendor, device, odev));
 }
 
-/* This is a FreeBSD extension so we can use bus_*(). */
+/* This is a NQC extension so we can use bus_*(). */
 static inline void
 linuxkpi_pcim_want_to_use_bus_functions(struct pci_dev *pdev)
 {

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2022 Alexander V. Chernikov
  *
@@ -225,7 +225,7 @@ nlmsg_copy_nla(const struct nlattr *nla_orig, struct nl_writer *nw)
 }
 
 /*
- * Translate a FreeBSD interface name to a Linux interface name.
+ * Translate a NQC interface name to a Linux interface name.
  */
 static bool
 nlmsg_translate_ifname_nla(struct nlattr *nla, struct nl_writer *nw)
@@ -240,7 +240,7 @@ nlmsg_translate_ifname_nla(struct nlattr *nla, struct nl_writer *nw)
 
 #define	LINUX_NLA_UNHANDLED	-1
 /*
- * Translate a FreeBSD attribute to a Linux attribute.
+ * Translate a NQC attribute to a Linux attribute.
  * Returns LINUX_NLA_UNHANDLED when the attribute is not processed
  * and the caller must take care of it, otherwise the result is returned.
  */

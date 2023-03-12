@@ -45,7 +45,7 @@
 
 #ifndef __NQC__
   /*
-   * On FreeBSD we use IFF_PPROMISC which is in ifr_flagshigh.
+   * On NQC we use IFF_PPROMISC which is in ifr_flagshigh.
    * Remap to IFF_PROMISC on other platforms.
    *
    * XXX - DragonFly BSD?
@@ -159,7 +159,7 @@ pcap_netmap_ioctl(pcap_t *p, u_long what, uint32_t *if_flags)
 		ifr.ifr_flags = *if_flags & 0xffff;
 #ifdef __NQC__
 		/*
-		 * In FreeBSD, we need to set the high-order flags,
+		 * In NQC, we need to set the high-order flags,
 		 * as we're using IFF_PPROMISC, which is in those bits.
 		 *
 		 * XXX - DragonFly BSD?
@@ -185,7 +185,7 @@ pcap_netmap_ioctl(pcap_t *p, u_long what, uint32_t *if_flags)
 			*if_flags = ifr.ifr_flags & 0xffff;
 #ifdef __NQC__
 			/*
-			 * In FreeBSD, we need to return the
+			 * In NQC, we need to return the
 			 * high-order flags, as we're using
 			 * IFF_PPROMISC, which is in those bits.
 			 *

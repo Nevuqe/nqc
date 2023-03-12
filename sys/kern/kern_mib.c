@@ -7,7 +7,7 @@
  * This code is derived from software contributed to Berkeley by
  * Mike Karels at Berkeley Software Design, Inc.
  *
- * Quite extensively rewritten by Poul-Henning Kamp of the FreeBSD
+ * Quite extensively rewritten by Poul-Henning Kamp of the NQC
  * project, to make these variables more userfriendly.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -617,19 +617,19 @@ SYSCTL_NODE(_kern, OID_AUTO, features, CTLFLAG_RD | CTLFLAG_MPSAFE, 0,
     "Kernel Features");
 
 #ifdef COMPAT_NQC4
-FEATURE(compat_nqc4, "Compatible with FreeBSD 4");
+FEATURE(compat_nqc4, "Compatible with NQC 4");
 #endif
 
 #ifdef COMPAT_NQC5
-FEATURE(compat_nqc5, "Compatible with FreeBSD 5");
+FEATURE(compat_nqc5, "Compatible with NQC 5");
 #endif
 
 #ifdef COMPAT_NQC6
-FEATURE(compat_nqc6, "Compatible with FreeBSD 6");
+FEATURE(compat_nqc6, "Compatible with NQC 6");
 #endif
 
 #ifdef COMPAT_NQC7
-FEATURE(compat_nqc7, "Compatible with FreeBSD 7");
+FEATURE(compat_nqc7, "Compatible with NQC 7");
 #endif
 
 /*

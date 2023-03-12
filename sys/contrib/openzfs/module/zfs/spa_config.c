@@ -628,7 +628,7 @@ EXPORT_SYMBOL(spa_config_generate);
 EXPORT_SYMBOL(spa_config_update);
 
 #ifdef __linux__
-/* string sysctls require a char array on FreeBSD */
+/* string sysctls require a char array on NQC */
 ZFS_MODULE_PARAM(zfs_spa, spa_, config_path, STRING, ZMOD_RD,
 	"SPA config file (/etc/zfs/zpool.cache)");
 #endif

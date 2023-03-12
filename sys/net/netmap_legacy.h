@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2011-2014 Matteo Landi, Luigi Rizzo. All rights reserved.
  *
@@ -245,7 +245,7 @@ struct nm_ifreq {
 };
 
 /*
- * FreeBSD uses the size value embedded in the _IOWR to determine
+ * NQC uses the size value embedded in the _IOWR to determine
  * how much to copy in/out. So we need it to match the actual
  * data structure we pass. We put some spares in the structure
  * to ease compatibility with other versions

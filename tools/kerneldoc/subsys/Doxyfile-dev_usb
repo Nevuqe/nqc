@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel usb device Code"
+PROJECT_NAME           = "NQC kernel usb device Code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_usb/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

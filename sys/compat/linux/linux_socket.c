@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1995 Søren Schmidt
  * All rights reserved.
@@ -230,7 +230,7 @@ linux_to_bsd_ip_sockopt(int opt)
 	case LINUX_IP_TRANSPARENT:
 		/* IP_BINDANY or more? */
 		LINUX_RATELIMIT_MSG_OPT1(
-		    "unsupported IPv4 socket option IP_TRANSPARENT (%d), you can not enable transparent proxying in linux programs -- note, IP_FREEBIND is supported, no idea if the FreeBSD IP_BINDANY is equivalent to the Linux IP_TRANSPARENT or not, any info is welcome",
+		    "unsupported IPv4 socket option IP_TRANSPARENT (%d), you can not enable transparent proxying in linux programs -- note, IP_FREEBIND is supported, no idea if the NQC IP_BINDANY is equivalent to the Linux IP_TRANSPARENT or not, any info is welcome",
 		    opt);
 		return (-2);
 	case LINUX_IP_NODEFRAG:
@@ -488,7 +488,7 @@ linux_to_bsd_ip6_sockopt(int opt)
 	case LINUX_IPV6_TRANSPARENT:
 		/* IP_BINDANY or more? */
 		LINUX_RATELIMIT_MSG_OPT1(
-		    "unsupported IPv6 socket option IPV6_TRANSPARENT (%d), you can not enable transparent proxying in linux programs -- note, IP_FREEBIND is supported, no idea if the FreeBSD IP_BINDANY is equivalent to the Linux IP_TRANSPARENT or not, any info is welcome",
+		    "unsupported IPv6 socket option IPV6_TRANSPARENT (%d), you can not enable transparent proxying in linux programs -- note, IP_FREEBIND is supported, no idea if the NQC IP_BINDANY is equivalent to the Linux IP_TRANSPARENT or not, any info is welcome",
 		    opt);
 		return (-2);
 	case LINUX_IPV6_UNICAST_IF:
@@ -1171,7 +1171,7 @@ linux_socketpair(struct thread *td, struct linux_socketpair_args *args)
 		 * Use of PF_UNIX as protocol argument is not right,
 		 * but Linux does it.
 		 * Do not map PF_UNIX as its Linux value is identical
-		 * to FreeBSD one.
+		 * to NQC one.
 		 */
 		return (EPROTONOSUPPORT);
 	}
@@ -1326,9 +1326,9 @@ linux_recvfrom(struct thread *td, struct linux_recvfrom_args *args)
 		goto out;
 
 	/*
-	 * XXX. Seems that FreeBSD is different from Linux here. Linux
+	 * XXX. Seems that NQC is different from Linux here. Linux
 	 * fill source address if underlying protocol provides it, while
-	 * FreeBSD fill it if underlying protocol is not connection-oriented.
+	 * NQC fill it if underlying protocol is not connection-oriented.
 	 * So, kern_recvit() set msg.msg_namelen to 0 if protocol pr_flags
 	 * does not contains PR_ADDR flag.
 	 */
@@ -1372,7 +1372,7 @@ linux_sendmsg_common(struct thread *td, l_int s, struct l_msghdr *msghdr,
 	/*
 	 * Some Linux applications (ping) define a non-NULL control data
 	 * pointer, but a msg_controllen of 0, which is not allowed in the
-	 * FreeBSD system call interface.  NULL the msg_control pointer in
+	 * NQC system call interface.  NULL the msg_control pointer in
 	 * order to handle this case.  This should be checked, but allows the
 	 * Linux ping to work.
 	 */
@@ -1461,7 +1461,7 @@ linux_sendmsg_common(struct thread *td, l_int s, struct l_msghdr *msghdr,
 			 * Some applications (e.g. pulseaudio) attempt to
 			 * send ancillary data even if the underlying protocol
 			 * doesn't support it which is not allowed in the
-			 * FreeBSD system call interface.
+			 * NQC system call interface.
 			 */
 			if (sa_family != AF_UNIX)
 				goto next;
@@ -2404,18 +2404,18 @@ int
 linux_sendfile(struct thread *td, struct linux_sendfile_args *arg)
 {
 	/*
-	 * Differences between FreeBSD and Linux sendfile:
-	 * - Linux doesn't send anything when count is 0 (FreeBSD uses 0 to
+	 * Differences between NQC and Linux sendfile:
+	 * - Linux doesn't send anything when count is 0 (NQC uses 0 to
 	 *   mean send the whole file.)  In linux_sendfile given fds are still
 	 *   checked for validity when the count is 0.
-	 * - Linux can send to any fd whereas FreeBSD only supports sockets.
+	 * - Linux can send to any fd whereas NQC only supports sockets.
 	 *   The same restriction follows for linux_sendfile.
-	 * - Linux doesn't have an equivalent for FreeBSD's flags and sf_hdtr.
+	 * - Linux doesn't have an equivalent for NQC's flags and sf_hdtr.
 	 * - Linux takes an offset pointer and updates it to the read location.
-	 *   FreeBSD takes in an offset and a 'bytes read' parameter which is
+	 *   NQC takes in an offset and a 'bytes read' parameter which is
 	 *   only filled if it isn't NULL.  We use this parameter to update the
 	 *   offset pointer if it exists.
-	 * - Linux sendfile returns bytes read on success while FreeBSD
+	 * - Linux sendfile returns bytes read on success while NQC
 	 *   returns 0.  We use the 'bytes read' parameter to get this value.
 	 */
 

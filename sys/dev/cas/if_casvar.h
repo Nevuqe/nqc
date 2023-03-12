@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2001 Eduardo Horvath.
- * Copyright (c) 2008 Marius Strobl <marius@FreeBSD.org>
+ * Copyright (c) 2008 Marius Strobl <marius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	from: NetBSD: gemvar.h,v 1.8 2002/05/15 02:36:12 matt Exp
- *	from: FreeBSD: if_gemvar.h 177560 2008-03-24 17:23:53Z marius
+ *	from: NQC: if_gemvar.h 177560 2008-03-24 17:23:53Z marius
  *
  * $NQC$
  */

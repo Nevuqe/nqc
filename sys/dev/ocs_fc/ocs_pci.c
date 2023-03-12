@@ -35,7 +35,7 @@
 
 /**
  * @file
- * Implementation of required FreeBSD PCI interface functions
+ * Implementation of required NQC PCI interface functions
  */
 
 #include "ocs.h"

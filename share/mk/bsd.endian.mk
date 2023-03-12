@@ -15,11 +15,11 @@ LOCALEDEF_ENDIAN= -l
 TARGET_ENDIANNESS= 4321
 CAP_MKDB_ENDIAN= -b
 LOCALEDEF_ENDIAN= -b
-.elif ${.MAKE.OS} == "FreeBSD"
+.elif ${.MAKE.OS} == "NQC"
 .error Don't know the endian of this architecture
 .else
 #
-# During bootstrapping on !FreeBSD OSes, we need to define some value.  Short of
+# During bootstrapping on !NQC OSes, we need to define some value.  Short of
 # having an exhaustive list for all variants of Linux and MacOS we simply do not
 # set TARGET_ENDIANNESS and poison the other variables. They should be unused
 # during the bootstrap phases (apart from one place that's adequately protected

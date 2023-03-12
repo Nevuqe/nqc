@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005-2009 Ariff Abdullah <ariff@FreeBSD.org>
+ * Copyright (c) 2005-2009 Ariff Abdullah <ariff@frebsd.org>
  * Portions Copyright (c) Ryan Beasley <ryan.beasley@gmail.com> - GSoC 2006
- * Copyright (c) 1999 Cameron Grant <cg@FreeBSD.org>
+ * Copyright (c) 1999 Cameron Grant <cg@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -2261,7 +2261,7 @@ dsp_mmap_single(struct cdev *i_dev, vm_ooffset_t *offset,
 	 * Unfortunately, we have to give up this one due to linux_mmap
 	 * changes.
 	 *
-	 * https://lists.freebsd.org/pipermail/freebsd-emulation/2007-June/003698.html
+	 * https://lists.frebsd.org/pipermail/freebsd-emulation/2007-June/003698.html
 	 *
 	 */
 #ifdef SV_ABI_LINUX
@@ -3129,7 +3129,7 @@ dsp_oss_policy(struct pcm_channel *wrch, struct pcm_channel *rdch, int policy)
  * operates with 44100Hz/16bit/signed samples).
  *
  * Disabling cooked mode is intended for applications wanting to mmap()
- * a sound card's buffer space directly, bypassing the FreeBSD 2-stage
+ * a sound card's buffer space directly, bypassing the NQC 2-stage
  * feeder architecture, presumably to gain as much control over audio
  * hardware as possible.
  *
@@ -3187,7 +3187,7 @@ dsp_oss_cookedmode(struct pcm_channel *wrch, struct pcm_channel *rdch, int enabl
  * See @c http://manuals.opensound.com/developer/SNDCTL_DSP_GET_CHNORDER.html
  * for more details.
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support SNDCTL_DSP_GET_CHNORDER.
  *
  * @param wrch	playback channel (optional; may be NULL)
@@ -3218,7 +3218,7 @@ dsp_oss_getchnorder(struct pcm_channel *wrch, struct pcm_channel *rdch, unsigned
  *
  * This is the handler for @c SNDCTL_DSP_SET_CHNORDER.
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support @c SNDCTL_DSP_SET_CHNORDER.
  *
  * @param wrch	playback channel (optional; may be NULL)
@@ -3287,7 +3287,7 @@ dsp_oss_getchannelmask(struct pcm_channel *wrch, struct pcm_channel *rdch,
  * the application name (say quake) is shown as the label but
  * applications may change the labels themselves."
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support @c SNDCTL_GETLABEL.
  *
  * @param wrch	playback channel (optional; may be NULL)
@@ -3311,7 +3311,7 @@ dsp_oss_getlabel(struct pcm_channel *wrch, struct pcm_channel *rdch, oss_label_t
  * See @c http://manuals.opensound.com/developer/SNDCTL_GETLABEL.html
  * for more details.
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support SNDCTL_SETLABEL.
  *
  * @param wrch	playback channel (optional; may be NULL)
@@ -3336,7 +3336,7 @@ dsp_oss_setlabel(struct pcm_channel *wrch, struct pcm_channel *rdch, oss_label_t
  * See @c http://manuals.opensound.com/developer/SNDCTL_GETSONG.html
  * for more details.
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support SNDCTL_GETSONG.
  *
  * @param wrch	playback channel (optional; may be NULL)
@@ -3361,7 +3361,7 @@ dsp_oss_getsong(struct pcm_channel *wrch, struct pcm_channel *rdch, oss_longname
  * See @c http://manuals.opensound.com/developer/SNDCTL_SETSONG.html
  * for more details.
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support SNDCTL_SETSONG.
  *
  * @param wrch	playback channel (optional; may be NULL)
@@ -3390,7 +3390,7 @@ dsp_oss_setsong(struct pcm_channel *wrch, struct pcm_channel *rdch, oss_longname
  * name depending on the current context (for example 'OSS virtual wave table
  * synth' or 'VoIP link to London')."
  *
- * @note As the ioctl definition is still under construction, FreeBSD
+ * @note As the ioctl definition is still under construction, NQC
  * 	 does not currently support SNDCTL_SETNAME.
  *
  * @param wrch	playback channel (optional; may be NULL)

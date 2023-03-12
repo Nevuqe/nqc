@@ -104,7 +104,7 @@ SYSCTL_INT(_vfs_nfs, OID_AUTO, pnfsiothreads, CTLFLAG_RW, &nfs_pnfsiothreads,
 
 /*
  * Defines for malloc
- * (Here for FreeBSD, since they allocate storage.)
+ * (Here for NQC, since they allocate storage.)
  */
 MALLOC_DEFINE(M_NEWNFSRVCACHE, "NFSD srvcache", "NFSD Server Request Cache");
 MALLOC_DEFINE(M_NEWNFSDCLIENT, "NFSD V4client", "NFSD V4 Client Id");
@@ -402,7 +402,7 @@ newnfs_getcred(void)
 /*
  * Sleep for a short period of time unless errval == NFSERR_GRACE, where
  * the sleep should be for 5 seconds.
- * Since lbolt doesn't exist in FreeBSD-CURRENT, just use a timeout on
+ * Since lbolt doesn't exist in NQC-CURRENT, just use a timeout on
  * an event that never gets a wakeup. Only return EINTR or 0.
  */
 int

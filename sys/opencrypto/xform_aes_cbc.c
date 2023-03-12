@@ -24,11 +24,11 @@
  * Copyright (C) 2001, Angelos D. Keromytis.
  *
  * Copyright (C) 2008, Damien Miller
- * Copyright (c) 2014 The FreeBSD Foundation
+ * Copyright (c) 2014 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by John-Mark Gurney
- * under sponsorship of the FreeBSD Foundation and
+ * under sponsorship of the FreBSD Foundation and
  * Rubicon Communications, LLC (Netgate).
  *
  * Permission to use, copy, and modify this software with or without fee

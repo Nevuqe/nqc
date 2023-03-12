@@ -1,7 +1,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 #
-# Copyright (c) 2022 Kyle Evans <kevans@FreeBSD.org>
+# Copyright (c) 2022 Kyle Evans <kevans@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

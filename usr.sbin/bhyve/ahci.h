@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 1998 - 2008 Søren Schmidt <sos@FreeBSD.org>
- * Copyright (c) 2009-2012 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 1998 - 2008 Søren Schmidt <sos@frebsd.org>
+ * Copyright (c) 2009-2012 Alexander Motin <mav@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

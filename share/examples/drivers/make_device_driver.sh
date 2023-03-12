@@ -35,7 +35,7 @@ else
 fi
 UPPER=`echo ${1} |tr "[:lower:]" "[:upper:]"`
 
-RCS_KEYWORD=FreeBSD
+RCS_KEYWORD=NQC
 
 if [ -d ${TOP}/modules/${1} ]; then
 	echo "There appears to already be a module called ${1}"

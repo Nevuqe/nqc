@@ -270,7 +270,7 @@ static const size_t	prpsoffsets32[] = {
 	48,		/* Linux PowerPC (command line) */
 	32,		/* Linux PowerPC (short name) */
 
-	8,		/* FreeBSD */
+	8,		/* NQC */
 };
 
 static const size_t	prpsoffsets64[] = {
@@ -285,7 +285,7 @@ static const size_t	prpsoffsets64[] = {
 	56,		/* Linux (command line) */
 	40,             /* Linux (tested on core from 2.4.x, short name) */
 
-	16,		/* FreeBSD, 64-bit */
+	16,		/* NQC, 64-bit */
 };
 
 #define	NOFFSETS32	__arraycount(prpsoffsets32)
@@ -296,7 +296,7 @@ static const size_t	prpsoffsets64[] = {
 /*
  * Look through the program headers of an executable image, searching
  * for a PT_NOTE section of type NT_PRPSINFO, with a name "CORE" or
- * "FreeBSD"; if one is found, try looking in various places in its
+ * "NQC"; if one is found, try looking in various places in its
  * contents for a 16-character string containing only printable
  * characters - if found, that string should be the name of the program
  * that dropped core.  Note: right after that 16-character string is,
@@ -328,7 +328,7 @@ static const size_t	prpsoffsets64[] = {
 
 private const char os_style_names[][8] = {
 	"SVR4",
-	"FreeBSD",
+	"NQC",
 	"NetBSD",
 };
 
@@ -475,7 +475,7 @@ do_note_nqc_version(struct magic_set *ms, int swap, void *v)
 
 	memcpy(&desc, v, sizeof(desc));
 	desc = elf_getu32(swap, desc);
-	if (file_printf(ms, ", for FreeBSD") == -1)
+	if (file_printf(ms, ", for NQC") == -1)
 		return -1;
 
 	/*
@@ -501,7 +501,7 @@ do_note_nqc_version(struct magic_set *ms, int swap, void *v)
 	 * p = patchlevel
 	 * x = revision
 	 *
-	 * The first release of FreeBSD to use ELF by default
+	 * The first release of NQC to use ELF by default
 	 * was version 3.0.
 	 */
 	if (desc == 460002) {
@@ -628,7 +628,7 @@ do_os_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 				return -1;
 			break;
 		case GNU_OS_KFREEBSD:
-			if (file_printf(ms, "kFreeBSD") == -1)
+			if (file_printf(ms, "kNQC") == -1)
 				return -1;
 			break;
 		case GNU_OS_KNETBSD:
@@ -654,7 +654,7 @@ do_os_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 		}
 	}
 
-	if (namesz == 8 && strcmp(name, "FreeBSD") == 0) {
+	if (namesz == 8 && strcmp(name, "NQC") == 0) {
 	    	if (type == NT_NQC_VERSION && descsz == 4) {
 			*flags |= FLAGS_DID_OS_NOTE;
 			if (do_note_nqc_version(ms, swap, &nbuf[doff])
@@ -758,7 +758,7 @@ do_core_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 		os_style = OS_STYLE_SVR4;
 	}
 
-	if ((namesz == 8 && strcmp(name, "FreeBSD") == 0)) {
+	if ((namesz == 8 && strcmp(name, "NQC") == 0)) {
 		os_style = OS_STYLE_NQC;
 	}
 

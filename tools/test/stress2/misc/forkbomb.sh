@@ -30,7 +30,7 @@
 # https://en.wikipedia.org/wiki/Fork_bomb
 
 # OO memory seen:
-# https://people.freebsd.org/~pho/stress/log/forkbomb.txt
+# https://people.frebsd.org/~pho/stress/log/forkbomb.txt
 # Fixed by r289026.
 
 . ../default.cfg

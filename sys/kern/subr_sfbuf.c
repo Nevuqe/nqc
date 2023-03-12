@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2014 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2014 Gleb Smirnoff <glebius@frebsd.org>
  * Copyright (c) 2003, 2005 Alan L. Cox <alc@cs.rice.edu>
  * All rights reserved.
  *

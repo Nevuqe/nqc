@@ -9,11 +9,11 @@
  * Co. or Unix System Laboratories, Inc. and are reproduced herein with
  * the permission of UNIX System Laboratories, Inc.
  *
- * Copyright (c) 2012 Konstantin Belousov <kib@FreeBSD.org>
- * Copyright (c) 2013, 2014 The FreeBSD Foundation
+ * Copyright (c) 2012 Konstantin Belousov <kib@frebsd.org>
+ * Copyright (c) 2013, 2014 The FreBSD Foundation
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

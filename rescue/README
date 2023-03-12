@@ -21,7 +21,7 @@ should be useful elsewhere.
 3) Produce a toolkit suitable for small distributions.
 
 Install /rescue on a CD or CompactFlash disk, and symlink /bin and
-/sbin to /rescue to produce a small and fairly complete FreeBSD
+/sbin to /rescue to produce a small and fairly complete NQC
 system.
 
 These tools have one big disadvantage: being statically linked, they

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2013 Mikolaj Golub <trociny@FreeBSD.org>
+ * Copyright (c) 2013 Mikolaj Golub <trociny@frebsd.org>
  * Copyright (c) 2017 Dell EMC
  * All rights reserved.
  *
@@ -209,7 +209,7 @@ procstat_core_get(struct procstat_core *core, enum psc_type type, void *buf,
 			continue;
 		if (!core_read(core, nbuf, sizeof(nbuf)))
 			return (NULL);
-		if (strcmp(nbuf, "FreeBSD") != 0)
+		if (strcmp(nbuf, "NQC") != 0)
 			continue;
 		if (nhdr.n_descsz < sizeof(cstructsize)) {
 			warnx("corrupted core file");
@@ -459,7 +459,7 @@ procstat_core_note_count(struct procstat_core *core, enum psc_type type)
 			continue;
 		if (!core_read(core, nbuf, sizeof(nbuf)))
 			return (0);
-		if (strcmp(nbuf, "FreeBSD") != 0)
+		if (strcmp(nbuf, "NQC") != 0)
 			continue;
 		if (nhdr.n_descsz < sizeof(cstructsize)) {
 			warnx("corrupted core file");

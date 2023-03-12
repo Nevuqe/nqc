@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2004, 2005
  *      Damien Bergamini <damien.bergamini@free.fr>. All rights reserved.
  * Copyright (c) 2005-2006 Sam Leffler, Errno Consulting
- * Copyright (c) 2007 Andrew Thompson <thompsa@FreeBSD.org>
+ * Copyright (c) 2007 Andrew Thompson <thompsa@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

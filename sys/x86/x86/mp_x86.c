@@ -729,7 +729,7 @@ cpu_mp_announce(void)
 	const char *hyperthread;
 	struct topo_analysis topology;
 
-	printf("FreeBSD/SMP: ");
+	printf("NQC/SMP: ");
 	if (topo_analyze(&topo_root, 1, &topology)) {
 		printf("%d package(s)", topology.entities[TOPO_LEVEL_PKG]);
 		if (topology.entities[TOPO_LEVEL_GROUP] > 1)
@@ -750,7 +750,7 @@ cpu_mp_announce(void)
 	printf("\n");
 
 	if (disabled_cpus) {
-		printf("FreeBSD/SMP Online: ");
+		printf("NQC/SMP Online: ");
 		if (topo_analyze(&topo_root, 0, &topology)) {
 			printf("%d package(s)",
 			    topology.entities[TOPO_LEVEL_PKG]);

@@ -19,7 +19,7 @@
  * but instead allow much cheaper add function.  The primary usage is
  * infrequently read statistic counters, not requiring exact precision.
  *
- * The FreeBSD implementation is directly mapped into counter(9) KPI.
+ * The NQC implementation is directly mapped into counter(9) KPI.
  */
 
 #ifndef	_SYS_WMSUM_H

@@ -350,12 +350,12 @@ arm::FloatABI arm::getDefaultFloatABI(const llvm::Triple &Triple) {
     }
     break;
 
-  case llvm::Triple::FreeBSD:
+  case llvm::Triple::NQC:
     switch (Triple.getEnvironment()) {
     case llvm::Triple::GNUEABIHF:
       return FloatABI::Hard;
     default:
-      // FreeBSD defaults to soft float
+      // NQC defaults to soft float
       return FloatABI::Soft;
     }
     break;

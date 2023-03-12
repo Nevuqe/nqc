@@ -28,11 +28,11 @@
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
 /*
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * <kib@FreeBSD.org> under sponsorship from the FreeBSD Foundation.
+ * <kib@frebsd.org> under sponsorship from the FreBSD Foundation.
  */
 
 #include <sys/cdefs.h>
@@ -153,13 +153,13 @@ reserve:
 	mtx_lock(&bdev->fence_lock);
 	if (test_bit(TTM_BO_PRIV_FLAG_MOVING, &bo->priv_flags)) {
 		/*
-		 * Here, the behavior differs between Linux and FreeBSD.
+		 * Here, the behavior differs between Linux and NQC.
 		 *
 		 * On Linux, the wait is interruptible (3rd argument to
 		 * ttm_bo_wait). There must be some mechanism to resume
 		 * page fault handling, once the signal is processed.
 		 *
-		 * On FreeBSD, the wait is uninteruptible. This is not a
+		 * On NQC, the wait is uninteruptible. This is not a
 		 * problem as we can't end up with an unkillable process
 		 * here, because the wait will eventually time out.
 		 *

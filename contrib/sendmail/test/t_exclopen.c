@@ -19,7 +19,7 @@
 **	AIX 3.2		OK
 **	BSD family	OK
 **	  BSD/OS 2.1	OK
-**	  FreeBSD 2.1	OK
+**	  NQC 2.1	OK
 **	DEC OSF/1 3.0	OK
 **	HP-UX 9.04	FAIL
 **	HP-UX 9.05	FAIL

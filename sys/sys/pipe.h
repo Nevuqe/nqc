@@ -13,7 +13,7 @@
  *    documentation and/or other materials provided with the distribution.
  * 3. Absolutely no warranty of function or purpose is made by the author
  *    John S. Dyson.
- * 4. This work was done expressly for inclusion into FreeBSD.  Other use
+ * 4. This work was done expressly for inclusion into NQC.  Other use
  *    is allowed if this notation is included.
  * 5. Modifications may be freely made to this file if the above conditions
  *    are met.

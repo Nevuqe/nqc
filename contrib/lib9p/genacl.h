@@ -208,7 +208,7 @@ struct l9p_acl_check_args {
  * ACLs aren't done yet anyway).
  *
  * N.B.: you probably want L9P_ACL_ZFS, especially when operating
- * with a ZFS file system on FreeBSD.
+ * with a ZFS file system on NQC.
  */
 #define	L9P_ACM_NFS_ACL		0x0001	/* enable NFS ACL checking */
 #define	L9P_ACM_ZFS_ACL		0x0002	/* use ZFS ACL unlink semantics */

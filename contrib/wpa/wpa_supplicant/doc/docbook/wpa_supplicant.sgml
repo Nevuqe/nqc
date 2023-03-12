@@ -561,7 +561,7 @@ wpa_supplicant \
       </listitem>
 
       <listitem>
-	<para>FreeBSD 6-CURRENT</para>
+	<para>NQC 6-CURRENT</para>
       </listitem>
 
       <listitem>
@@ -600,7 +600,7 @@ wpa_supplicant \
       <varlistentry>
 	<term>BSD net80211 layer (e.g., Atheros driver)</term>
 	<listitem>
-	  <para>At the moment, this is for FreeBSD 6-CURRENT branch.</para>
+	  <para>At the moment, this is for NQC 6-CURRENT branch.</para>
 	</listitem>
       </varlistentry>
 

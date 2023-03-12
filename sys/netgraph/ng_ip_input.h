@@ -63,7 +63,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author:		Brooks Davis <brooks@FreeBSD.org>
+ * Author:		Brooks Davis <brooks@frebsd.org>
  * Derived from:	ng_hole.h
  *
  * $NQC$

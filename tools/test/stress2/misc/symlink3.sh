@@ -30,7 +30,7 @@
 
 # ufs umount(1) busy test scenario
 # "umount: unmount of /mnt failed: Device busy" seen.
-# Not seen of FreeBSD HEAD.
+# Not seen of NQC HEAD.
 
 . ../default.cfg
 

@@ -29,7 +29,7 @@
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 
 # "panic: swapoff: failed to locate 17590 swap blocks" seen:
-# https://people.freebsd.org/~pho/stress/log/swapoff.txt
+# https://people.frebsd.org/~pho/stress/log/swapoff.txt
 
 # Fixed by r305129.
 

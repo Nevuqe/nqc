@@ -220,7 +220,7 @@ lz4_decompress(void *s_start, void *d_start, size_t s_len, size_t d_len,
  * more than 2k of stack (see above for a description of COMPRESSIONLEVEL).
  * If more memory is needed, it is allocated from the heap.
  */
-/* FreeBSD: Use heap for all platforms for now */
+/* NQC: Use heap for all platforms for now */
 #define	STACKLIMIT 0
 
 /*

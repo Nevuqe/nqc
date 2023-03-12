@@ -176,7 +176,7 @@ Veritas ServPoint
 
 	This is a software storage virtualization engine that
 	runs on Sparc/Solaris in target mode for frontend
-	and with other FC or SCSI as the backend storage. FreeBSD
+	and with other FC or SCSI as the backend storage. NQC
 	has been used extensively to test it.
 
 

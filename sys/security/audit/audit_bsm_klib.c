@@ -459,7 +459,7 @@ audit_canon_path_vp(struct thread *td, struct vnode *rdir, struct vnode *cdir,
 	 * Make sure we handle chroot(2) and prepend the global path to these
 	 * environments.
 	 *
-	 * NB: vn_fullpath(9) on FreeBSD is less reliable than vn_getpath(9)
+	 * NB: vn_fullpath(9) on NQC is less reliable than vn_getpath(9)
 	 * on Darwin.  As a result, this may need some additional attention
 	 * in the future.
 	 */

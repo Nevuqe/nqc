@@ -382,7 +382,7 @@ struct tcp_info {
 	u_int32_t	__tcpi_rcv_rtt;
 	u_int32_t	tcpi_rcv_space;		/* Advertised recv window. */
 
-	/* FreeBSD extensions to tcp_info. */
+	/* NQC extensions to tcp_info. */
 	u_int32_t	tcpi_snd_wnd;		/* Advertised send window. */
 	u_int32_t	tcpi_snd_bwnd;		/* No longer used. */
 	u_int32_t	tcpi_snd_nxt;		/* Next egress seqno */

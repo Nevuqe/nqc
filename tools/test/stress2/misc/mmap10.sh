@@ -27,7 +27,7 @@
 #
 
 # "panic: vm_page_dirty: page is invalid!" seen.
-# http://people.freebsd.org/~pho/stress/log/mmap10.txt
+# http://people.frebsd.org/~pho/stress/log/mmap10.txt
 # No problems seen after r271681.
 
 . ../default.cfg

@@ -29,7 +29,7 @@
 #error AH_BYTE_ORDER needs to be defined!
 #endif
 
-/* FreeBSD extras - should be in ah_eeprom.h ? */
+/* NQC extras - should be in ah_eeprom.h ? */
 #define AR_EEPROM_EEPCAP_COMPRESS_DIS   0x0001
 #define AR_EEPROM_EEPCAP_AES_DIS        0x0002
 #define AR_EEPROM_EEPCAP_FASTFRAME_DIS  0x0004

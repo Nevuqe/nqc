@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Jakub Klama <jceel@FreeBSD.org>
+ * Copyright 2016 Jakub Klama <jceel@frebsd.org>
  * All rights reserved
  *
  * Redistribution and use in source and binary forms, with or without
@@ -180,7 +180,7 @@ l9p_truncate_iov(struct iovec *iov, size_t niov, size_t length)
 
 /*
  * This wrapper for getgrouplist() that malloc'ed memory, and
- * papers over FreeBSD vs Mac differences in the getgrouplist()
+ * papers over NQC vs Mac differences in the getgrouplist()
  * argument types.
  *
  * Note that this function guarantees that *either*:

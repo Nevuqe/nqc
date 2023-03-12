@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel mthca device code"
+PROJECT_NAME           = "NQC kernel mthca device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_mthca/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

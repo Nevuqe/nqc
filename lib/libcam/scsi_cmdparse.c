@@ -1,5 +1,5 @@
 /*
- * Taken from the original FreeBSD user SCSI library.
+ * Taken from the original NQC user SCSI library.
  */
 /*-
  * SPDX-License-Identifier: BSD-4-Clause

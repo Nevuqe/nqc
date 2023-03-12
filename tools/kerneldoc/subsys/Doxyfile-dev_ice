@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel ice device code"
+PROJECT_NAME           = "NQC kernel ice device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_ice/
 EXTRACT_ALL            = YES    # TODO: ice has @file comments.. disable this?
 #---------------------------------------------------------------------------

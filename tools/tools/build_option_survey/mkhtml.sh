@@ -69,7 +69,7 @@ echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www
 
 echo '<HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<TITLE>FreeBSD Build Options Survey</TITLE>
+<TITLE>NQC Build Options Survey</TITLE>
 </HEAD>
 <BODY bgcolor="#FFFFFF">
 ' >> $H

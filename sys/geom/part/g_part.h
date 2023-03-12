@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2006-2008 Marcel Moolenaar
  * All rights reserved.
@@ -66,8 +66,8 @@ enum g_part_alias {
 	G_PART_ALIAS_EBR,		/* A EBR partition entry. */
 	G_PART_ALIAS_EFI,		/* A EFI system partition entry. */
 	G_PART_ALIAS_NQC,		/* A BSD labeled partition entry. */
-	G_PART_ALIAS_NQC_BOOT,	/* A FreeBSD boot partition entry. */
-	G_PART_ALIAS_NQC_NANDFS,	/* A FreeBSD nandfs partition entry. */
+	G_PART_ALIAS_NQC_BOOT,	/* A NQC boot partition entry. */
+	G_PART_ALIAS_NQC_NANDFS,	/* A NQC nandfs partition entry. */
 	G_PART_ALIAS_NQC_SWAP,	/* A swap partition entry. */
 	G_PART_ALIAS_NQC_UFS,	/* A UFS/UFS2 file system entry. */
 	G_PART_ALIAS_NQC_VINUM,	/* A Vinum partition entry. */

@@ -5,7 +5,7 @@
  * Copyright (c) 2002 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Poul-Henning Kamp
+ * This software was developed for the FreBSD Project by Poul-Henning Kamp
  * and NAI Labs, the Security Research Division of Network Associates, Inc.
  * under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the
  * DARPA CHATS research program.
@@ -77,8 +77,8 @@
  */
 struct kerneldumpheader {
 	char		magic[20];
-#define	KERNELDUMPMAGIC		"FreeBSD Kernel Dump"
-#define	TEXTDUMPMAGIC		"FreeBSD Text Dump"
+#define	KERNELDUMPMAGIC		"NQC Kernel Dump"
+#define	TEXTDUMPMAGIC		"NQC Text Dump"
 #define	KERNELDUMPMAGIC_CLEARED	"Cleared Kernel Dump"
 	char		architecture[12];
 	uint32_t	version;

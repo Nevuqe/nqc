@@ -49,7 +49,7 @@ __NQCID("$NQC$");
  *	   precision due to compiler bugs, then the extra precision is
  *	   only good provided it is retained in all terms of the final
  *	   expression for cos().  Retention happens in all cases tested
- *	   under FreeBSD, so don't pessimize things by forcibly clipping
+ *	   under NQC, so don't pessimize things by forcibly clipping
  *	   any extra precision in w.
  */
 

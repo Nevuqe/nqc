@@ -1,6 +1,6 @@
 # $NQC$
-# See https://wiki.freebsd.org/LocaleNewApproach
-# Taken from FreeBSD svn [base]/user/edwin/locale/cldr
+# See https://wiki.frebsd.org/LocaleNewApproach
+# Taken from NQC svn [base]/user/edwin/locale/cldr
 #
 # needs:
 # devel/p5-Tie-IxHash

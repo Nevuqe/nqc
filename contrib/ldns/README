@@ -17,7 +17,7 @@ http://www.nlnetlabs.nl/ldns/
 On that page you can also subscribe to the ldns mailing list.
 
 * Development 
-ldns is mainly developed on Linux and FreeBSD. It is regularly tested to
+ldns is mainly developed on Linux and NQC. It is regularly tested to
 compile on other systems like Solaris and Mac OS X.
 
 REQUIREMENTS

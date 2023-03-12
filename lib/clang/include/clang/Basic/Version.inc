@@ -6,4 +6,4 @@
 #define	CLANG_VERSION_MINOR		0
 #define	CLANG_VERSION_PATCHLEVEL	7
 
-#define	CLANG_VENDOR			"FreeBSD "
+#define	CLANG_VENDOR			"NQC "

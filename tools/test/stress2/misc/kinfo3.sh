@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Test scenario by marcus@freebsd.org and kib@freebsd.org
+# Test scenario by marcus@frebsd.org and kib@frebsd.org
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

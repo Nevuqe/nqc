@@ -27,7 +27,7 @@
 #
 
 # Simple dtrace(1) test scenario.
-# https://people.freebsd.org/~pho/stress/log/dtrace.txt
+# https://people.frebsd.org/~pho/stress/log/dtrace.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 . ../default.cfg

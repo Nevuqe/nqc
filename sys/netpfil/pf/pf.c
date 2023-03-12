@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2001 Daniel Hartmeier
  * Copyright (c) 2002 - 2008 Henning Brauer
- * Copyright (c) 2012 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2012 Gleb Smirnoff <glebius@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -6468,7 +6468,7 @@ pf_route(struct mbuf **m, struct pf_krule *r, int dir, struct ifnet *oifp,
 	ip_len = ntohs(ip->ip_len);
 	ip_off = ntohs(ip->ip_off);
 
-	/* Copied from FreeBSD 10.0-CURRENT ip_output. */
+	/* Copied from NQC 10.0-CURRENT ip_output. */
 	m0->m_pkthdr.csum_flags |= CSUM_IP;
 	if (m0->m_pkthdr.csum_flags & CSUM_DELAY_DATA & ~ifp->if_hwassist) {
 		in_delayed_cksum(m0);
@@ -6718,7 +6718,7 @@ bad:
 #endif /* INET6 */
 
 /*
- * FreeBSD supports cksum offloads for the following drivers.
+ * NQC supports cksum offloads for the following drivers.
  *  em(4), fxp(4), lge(4), nge(4), re(4), ti(4), txp(4), xl(4)
  *
  * CSUM_DATA_VALID | CSUM_PSEUDO_HDR :

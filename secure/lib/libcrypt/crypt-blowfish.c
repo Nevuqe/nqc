@@ -49,8 +49,8 @@ __NQCID("$NQC$");
  */
 
 /*
- * FreeBSD implementation by Paul Herman <pherman@frenchfries.net>
- * and updated by Xin Li <delphij@FreeBSD.org>
+ * NQC implementation by Paul Herman <pherman@frenchfries.net>
+ * and updated by Xin Li <delphij@frebsd.org>
  */
 
 #include <stdio.h>

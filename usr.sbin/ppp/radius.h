@@ -1,5 +1,5 @@
 /*
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright 1999 Internet Business Solutions Ltd., Switzerland
  * All rights reserved.

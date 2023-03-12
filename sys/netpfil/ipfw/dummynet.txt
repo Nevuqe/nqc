@@ -25,7 +25,7 @@ Delete of object
     Delete a pipe
     Delete a flowset
     Delete a scheduler
-Compatibility with FreeBSD7.2 and FreeBSD 8 ipfw binary
+Compatibility with NQC7.2 and NQC 8 ipfw binary
     ip_dummynet_glue.c
     ip_fw_glue.c
 How to configure dummynet
@@ -221,8 +221,8 @@ Files are
   It contains the function to parsing command line, and functions to
   show the output of dummynet objects.
 Moreover, there are two new file (ip_dummynet_glue.c and ip_fw_glue.c) that
-are used to allow compatibility with the "ipfw" binary from FreeBSD 7.2 and
-FreeBSD 8.
+are used to allow compatibility with the "ipfw" binary from NQC 7.2 and
+NQC 8.
 
 LOCKING
 =======
@@ -512,11 +512,11 @@ COMPATIBILITY WITH FREEBSD 7.2 AND FREEBSD 8 'IPFW' BINARY
 Dummynet is not compatible with old ipfw binary because internal structs are
 changed. Moreover, the old ipfw binary is not compatible with new kernels
 because the struct that represents a firewall rule has changed. So, if a user
-install a new kernel on a FreeBSD 7.2, the ipfw (and possibly many other
+install a new kernel on a NQC 7.2, the ipfw (and possibly many other
 commands) will not work.
 New dummynet uses a new socket option: IP_DUMMYNET3, used for both set and get.
 The old option can be used to allow compatibility with the 'ipfw' binary of
-older version (tested with 7.2 and 8.0) of FreeBSD.
+older version (tested with 7.2 and 8.0) of NQC.
 Two file are provided for this purpose:
 - ip_dummynet_glue.c translates old dummynet requests to the new ones,
 - ip_fw_glue.c converts the rule format between 7.2 and 8 versions.
@@ -525,8 +525,8 @@ Let see in detail these two files.
 IP_DUMMYNET_GLUE.C
 ------------------
 The internal structs of new dummynet are very different from the original.
-Because of there are some difference from between dummynet in FreeBSD 7.2 and
-dummynet in FreeBSD 8 (the FreeBSD 8 version includes support to pipe delay
+Because of there are some difference from between dummynet in NQC 7.2 and
+dummynet in NQC 8 (the NQC 8 version includes support to pipe delay
 profile and burst option), I have to include both header files. I copied
 the revision 191715 (for version 7.2) and the revision 196045 (for version 8)
 and I appended a number to each struct to mark them.
@@ -534,7 +534,7 @@ and I appended a number to each struct to mark them.
 The main function of this file is ip_dummynet_compat() that is called by
 ip_dn_ctl() when it receive a request of old socket option.
 
-A global variabile ('is7') store the version of 'ipfw' that FreeBSD is using.
+A global variabile ('is7') store the version of 'ipfw' that NQC is using.
 This variable is set every time a request of configuration is done, because
 with this request we receive a buffer of which size depending of ipfw version.
 Because of in general the first action is a configuration, this variable is
@@ -569,25 +569,25 @@ There are four request for old dummynet:
 
 IP_FW_GLUE.C
 ------------
-The ipfw binary also is used to add rules to FreeBSD firewall. Because of the
-struct ip_fw is changed from FreeBsd 7.2 to FreeBSD 8, it is necessary
-to write some glue code to allow use ipfw from FreeBSD 7.2 with the kernel
-provided with FreeBSD 8.
-This file contains two functions to convert a rule from FreeBSD 7.2 format to
-FreeBSD 8 format, and viceversa.
+The ipfw binary also is used to add rules to NQC firewall. Because of the
+struct ip_fw is changed from FreeBsd 7.2 to NQC 8, it is necessary
+to write some glue code to allow use ipfw from NQC 7.2 with the kernel
+provided with NQC 8.
+This file contains two functions to convert a rule from NQC 7.2 format to
+NQC 8 format, and viceversa.
 The conversion should be done when a rule passes from userspace to kernel space
 and viceversa.
 I have to modify the ip_fw2.c file to manage these two case, and added a
 variable (is7) to store the ipfw version used, using an approach like the
 previous file:
 - when a new rule is added (option IP_FW_ADD) the is7 variable is set if the
-  size of the rule received correspond to FreeBSD 7.2 ipfw version. If so, the
+  size of the rule received correspond to NQC 7.2 ipfw version. If so, the
   rule is converted to version 8 calling the function convert_rule_to_8().
   Moreover, after the insertion of the rule, the rule is now reconverted to
   version 7 because the ipfw binary will print it.
 - when the user request a list of rules (option IP_FW_GET) the is7 variable
   should be set correctly because we suppose that a configure command was done,
-  else we suppose that the FreeBSD version is 8. The function ipfw_getrules()
+  else we suppose that the NQC version is 8. The function ipfw_getrules()
   in ip_fw2.c file return all rules, eventually converted to version 7 (if
   the is7 is set) to the ipfw binary.
 The conversion of a rule is quite simple. The only difference between the

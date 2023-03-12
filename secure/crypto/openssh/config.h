@@ -35,7 +35,7 @@
 /* getline is not what we expect */
 /* #undef BROKEN_GETLINE */
 
-/* FreeBSD glob does not do what we need */
+/* NQC glob does not do what we need */
 #define BROKEN_GLOB 1
 
 /* Define if you system's inet_ntoa is busted (e.g. Irix gcc issue) */
@@ -1978,7 +1978,7 @@
 /* Use tunnel device compatibility to OpenBSD */
 /* #undef SSH_TUN_COMPAT_AF */
 
-/* Open tunnel devices the FreeBSD way */
+/* Open tunnel devices the NQC way */
 #define SSH_TUN_NQC 1
 
 /* Open tunnel devices the Linux tun/tap way */

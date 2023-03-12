@@ -31,7 +31,7 @@
 # systems running with a heavy filesystem load."
 
 # Assert seen in WiP code:
-# https://people.freebsd.org/~pho/stress/log/mmacy016.txt
+# https://people.frebsd.org/~pho/stress/log/mmacy016.txt
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

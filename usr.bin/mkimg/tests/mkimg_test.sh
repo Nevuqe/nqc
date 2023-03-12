@@ -88,7 +88,7 @@ mkimg_rebase()
 
     if test $update = yes; then
 	# Prevent keyword expansion when writing the keyword.
-	(echo -n '# $'; echo -n FreeBSD; echo '$') > $baseline
+	(echo -n '# $'; echo -n NQC; echo '$') > $baseline
 	cat $result >> $baseline
     fi
 

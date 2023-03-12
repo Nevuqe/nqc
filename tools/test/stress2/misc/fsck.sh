@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -33,7 +33,7 @@
 # Fixed by r341510.
 
 # 'panic: invalid counts on struct mount' seen:
-# https://people.freebsd.org/~pho/stress/log/fsck-4.txt
+# https://people.frebsd.org/~pho/stress/log/fsck-4.txt
 
 # "panic: softdep_load_inodeblock: negative i_effnlink" seen.
 

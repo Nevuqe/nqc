@@ -55,9 +55,9 @@ small_btree_head()
 		"Checks btree database using small keys and small data" \
 		"pairs: takes the first hundred entries in the dictionary," \
 		"and makes them be key/data pairs."
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 small_btree_body()
 {
@@ -84,9 +84,9 @@ small_hash_head()
 		"Checks hash database using small keys and small data" \
 		"pairs: takes the first hundred entries in the dictionary," \
 		"and makes them be key/data pairs."
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 small_hash_body()
 {
@@ -113,9 +113,9 @@ small_recno_head()
 		"Checks recno database using small keys and small data" \
 		"pairs: takes the first hundred entries in the dictionary," \
 		"and makes them be key/data pairs."
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 small_recno_body()
 {
@@ -140,9 +140,9 @@ medium_btree_head()
 		"Checks btree database using small keys and medium" \
 		"data pairs: takes the first 200 entries in the" \
 		"dictionary, and gives them each a medium size data entry."
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 medium_btree_body()
 {
@@ -171,9 +171,9 @@ medium_hash_head()
 		"Checks hash database using small keys and medium" \
 		"data pairs: takes the first 200 entries in the" \
 		"dictionary, and gives them each a medium size data entry."
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 medium_hash_body()
 {
@@ -739,9 +739,9 @@ small_page_btree_head()
 		"reverses them, and gives them each a small size data" \
 		"entry. Uses a small page size to make sure the btree" \
 		"split code gets hammered."
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 small_page_btree_body()
 {
@@ -796,9 +796,9 @@ atf_test_case byte_orders_btree
 byte_orders_btree_head()
 {
 	atf_set "descr" "Checks btree database using differing byte orders"
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 byte_orders_btree_body()
 {
@@ -831,9 +831,9 @@ bsize_ffactor_head()
 	atf_set "timeout" "1800"
 	atf_set "descr" "Checks hash database with various" \
 					"bucketsizes and fill factors"
-	# Begin FreeBSD
+	# Begin NQC
 	atf_set "require.files" /usr/share/dict/words
-	# End FreeBSD
+	# End NQC
 }
 bsize_ffactor_body()
 {
@@ -903,15 +903,15 @@ bsize_ffactor_body()
 	h_bsize_ffactor 32768 455
 	h_bsize_ffactor 32768 683
 
-	# Begin FreeBSD
+	# Begin NQC
 	if false; then
-	# End FreeBSD
+	# End NQC
 	h_bsize_ffactor 65536 341
 	h_bsize_ffactor 65536 455
 	h_bsize_ffactor 65536 683
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 # This tests 64K block size addition/removal
@@ -935,15 +935,15 @@ r
 k1234
 EOF
 
-	# Begin FreeBSD
+	# Begin NQC
 	if true; then
 		atf_check "$(prog_db)" -i bsize=32768 hash in
 	else
-	# End FreeBSD
+	# End NQC
 	atf_check "$(prog_db)" -i bsize=65536 hash in
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 }
 
 
@@ -957,11 +957,11 @@ bsize_torture_body()
 {
 	TMPDIR="$(pwd)/db_dir"; export TMPDIR
 	mkdir ${TMPDIR}
-	# Begin FreeBSD
+	# Begin NQC
 	#
 	# db(3) doesn't support 64kB bucket sizes
 	for i in 2048 4096 8192 16384 32768 # 65536
-	# End FreeBSD
+	# End NQC
 	do
 		atf_check "$(prog_lfsr)" $i
 	done
@@ -1124,9 +1124,9 @@ EOF
 	    "$(prog_db)" -i psize=4096 btree in
 }
 
-# Begin FreeBSD
+# Begin NQC
 if false; then
-# End FreeBSD
+# End NQC
 atf_test_case btree_recursive_traversal
 btree_recursive_traversal_head()
 {
@@ -1173,9 +1173,9 @@ btree_recursive_traversal_body()
 	atf_check -o file:exp2 \
 	    "$(prog_db)" -i psize=512 btree in2
 }
-# Begin FreeBSD
+# Begin NQC
 fi
-# End FreeBSD
+# End NQC
 
 atf_test_case btree_byteswap_unaligned_access_bksd
 btree_byteswap_unaligned_access_bksd_head()
@@ -1289,13 +1289,13 @@ atf_init_test_cases()
 	atf_add_test_case bsize_torture
 	atf_add_test_case btree_weird_page_split
 	atf_add_test_case btree_tricky_page_split
-	# Begin FreeBSD
+	# Begin NQC
 	if false; then
-	# End FreeBSD
+	# End NQC
 	atf_add_test_case btree_recursive_traversal
-	# Begin FreeBSD
+	# Begin NQC
 	fi
-	# End FreeBSD
+	# End NQC
 	atf_add_test_case btree_byteswap_unaligned_access_bksd
 	atf_add_test_case btree_byteswap_unaligned_access_skbd
 	atf_add_test_case btree_known_byte_order

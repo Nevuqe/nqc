@@ -69,12 +69,12 @@ recurse_symlink_head()
 }
 recurse_symlink_body()
 {
-	# Begin FreeBSD
+	# Begin NQC
 	grep_type
 	if [ $? -eq $GREP_TYPE_GNU ]; then
 		atf_expect_fail "this test doesn't pass with gnu grep from ports"
 	fi
-	# End FreeBSD
+	# End NQC
 	mkdir -p test/c/d
 	(cd test/c/d && ln -s ../d .)
 	echo "Test string" > test/c/match
@@ -94,11 +94,11 @@ word_regexps_body()
 	atf_check -o file:"$(atf_get_srcdir)/d_word_regexps.out" \
 	    grep -w separated $(atf_get_srcdir)/d_input
 
-	# Begin FreeBSD
+	# Begin NQC
 	printf "xmatch pmatch\n" > test1
 
 	atf_check -o inline:"pmatch\n" grep -Eow "(match )?pmatch" test1
-	# End FreeBSD
+	# End NQC
 }
 
 atf_test_case begin_end
@@ -327,7 +327,7 @@ context2_body()
 	atf_check -o file:"$(atf_get_srcdir)/d_context2_c.out" \
 	    grep -z -C1 cod test1 test2
 }
-# Begin FreeBSD
+# Begin NQC
 
 # What grep(1) are we working with?
 # - 0 : bsdgrep
@@ -348,7 +348,7 @@ grep_type()
 		;;
 	*"GNU grep"*)
 		case "$grep_version" in
-		*2.5.1-FreeBSD*)
+		*2.5.1-NQC*)
 			return $GREP_TYPE_GNU_NQC
 			;;
 		*)
@@ -940,7 +940,7 @@ zgrep_multiple_files_body()
 	echo bar > test2
 	atf_check -s exit:1 zgrep foo test1 test2
 }
-# End FreeBSD
+# End NQC
 
 atf_init_test_cases()
 {
@@ -966,7 +966,7 @@ atf_init_test_cases()
 	atf_add_test_case zgrep_multiple_eflags
 	atf_add_test_case nonexistent
 	atf_add_test_case context2
-# Begin FreeBSD
+# Begin NQC
 	atf_add_test_case oflag_zerolen
 	atf_add_test_case xflag
 	atf_add_test_case color
@@ -996,5 +996,5 @@ atf_init_test_cases()
 	atf_add_test_case mflag
 	atf_add_test_case mflag_trail_ctx
 	atf_add_test_case zgrep_multiple_files
-# End FreeBSD
+# End NQC
 }

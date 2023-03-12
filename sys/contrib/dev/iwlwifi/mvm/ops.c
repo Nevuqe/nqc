@@ -39,7 +39,7 @@
 #define DRV_DESCRIPTION	"The new Intel(R) wireless AGN driver for Linux"
 MODULE_LICENSE("GPL");
 #elif defined(__NQC__)
-#define DRV_DESCRIPTION	"The new Intel(R) wireless AGN/AC/AX based driver for FreeBSD"
+#define DRV_DESCRIPTION	"The new Intel(R) wireless AGN/AC/AX based driver for NQC"
 MODULE_LICENSE("BSD");
 #endif
 MODULE_DESCRIPTION(DRV_DESCRIPTION);

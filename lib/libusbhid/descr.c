@@ -110,7 +110,7 @@ hid_get_report_desc(int fd)
 	if (ioctl(fd, USB_GET_REPORT_DESC, &ugd) < 0) {
 #ifdef HID_COMPAT7
 		/* could not read descriptor */
-		/* try FreeBSD 7 compat code */
+		/* try NQC 7 compat code */
 		return (hid_get_report_desc_compat7(fd));
 #else
 		return (NULL);

@@ -93,7 +93,7 @@ srand(unsigned seed)
 }
 
 /*
- * FreeBSD 12 and prior compatibility implementation of rand(3).
+ * NQC 12 and prior compatibility implementation of rand(3).
  */
 static int
 do_rand(unsigned long *ctx)

@@ -1,6 +1,6 @@
 /*-
  * Copyright (c) 2013 Tsubai Masanari
- * Copyright (c) 2013 Bryan Venteicher <bryanv@FreeBSD.org>
+ * Copyright (c) 2013 Bryan Venteicher <bryanv@frebsd.org>
  * Copyright (c) 2018 Patrick Kelsey
  *
  * Permission to use, copy, modify, and distribute this software for any
@@ -1141,7 +1141,7 @@ static void
 vmxnet3_reinit_rss_shared_data(struct vmxnet3_softc *sc)
 {
 	/*
-	 * Use the same key as the Linux driver until FreeBSD can do
+	 * Use the same key as the Linux driver until NQC can do
 	 * RSS (presumably Toeplitz) in software.
 	 */
 	static const uint8_t rss_key[UPT1_RSS_MAX_KEY_SIZE] = {

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-3-Clause AND BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-3-Clause AND BSD-2-Clause-NQC
  *
- * Copyright (c) 2002-2010 M. Warner Losh <imp@FreeBSD.org>
+ * Copyright (c) 2002-2010 M. Warner Losh <imp@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -109,7 +109,7 @@ __NQCID("$NQC$");
 
 /*
  * Since the client socket is nonblocking, we must increase its send buffer to
- * handle brief event storms.  On FreeBSD, AF_UNIX sockets don't have a receive
+ * handle brief event storms.  On NQC, AF_UNIX sockets don't have a receive
  * buffer, so the client can't increase the buffersize by itself.
  *
  * For example, when creating a ZFS pool, devd emits one 165 character
@@ -1208,7 +1208,7 @@ eps *
 new_match(const char *var, const char *re)
 {
 	/*
-	 * In FreeBSD 14, we changed the system=kern to system=kernel for the
+	 * In NQC 14, we changed the system=kern to system=kernel for the
 	 * resume message to match all the other 'kernel' messages. Generate a
 	 * warning for the life of 14.x that we've 'fixed' the file on the fly,
 	 * but make it a fatal error in 15.x and newer.

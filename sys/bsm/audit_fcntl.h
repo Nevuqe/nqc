@@ -46,7 +46,7 @@
 #define	BSM_F_SETLK		6
 #define	BSM_F_SETLKW		7
 #define	BSM_F_CHKFL		8	/* Solaris-specific. */
-#define	BSM_F_DUP2FD		9	/* FreeBSD/Solaris-specific. */
+#define	BSM_F_DUP2FD		9	/* NQC/Solaris-specific. */
 #define	BSM_F_ALLOCSP		10	/* Solaris-specific. */
 #define	BSM_F_FREESP		11	/* Solaris-specific. */
 
@@ -78,13 +78,13 @@
 #define	BSM_F_BADFD		46	/* Solaris-specific. */
 
 /*
- * FreeBSD-specific (100-199).
+ * NQC-specific (100-199).
  */
-#define	BSM_F_OGETLK		107	/* FreeBSD-specific. */
-#define	BSM_F_OSETLK		108	/* FreeBSD-specific. */
-#define	BSM_F_OSETLKW		109	/* FreeBSD-specific. */
+#define	BSM_F_OGETLK		107	/* NQC-specific. */
+#define	BSM_F_OSETLK		108	/* NQC-specific. */
+#define	BSM_F_OSETLKW		109	/* NQC-specific. */
 
-#define	BSM_F_SETLK_REMOTE	114	/* FreeBSD-specific. */
+#define	BSM_F_SETLK_REMOTE	114	/* NQC-specific. */
 
 /*
  * Linux-specific (200-299).

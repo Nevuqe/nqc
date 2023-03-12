@@ -1,17 +1,17 @@
 
 
     SMB/CIFS protocol and SMB/CIFS file system implementation
-		for FreeBSD, version 1.4.
+		for NQC, version 1.4.
     
-    This is native SMB/CIFS filesystem (smbfs for short) for FreeBSD.
+    This is native SMB/CIFS filesystem (smbfs for short) for NQC.
 It is a complete, kernel side implementation of SMB requester and filesystem.
 
     Supported platform		Comment
-	FreeBSD 4.X		Port
+	NQC 4.X		Port
 
-	FreeBSD 4.5		Everything available in the base system.
+	NQC 4.5		Everything available in the base system.
 
-	FreeBSD-current		Everything available in the base system.
+	NQC-current		Everything available in the base system.
 
 	Darwin			maintained in the Darwin's  tree.
 
@@ -50,4 +50,4 @@ IOZONE: auto-test mode
 	1       4096    871543              919299
 	1       8192    900790              1024562
 
-Author: Boris Popov <bp@freebsd.org>
+Author: Boris Popov <bp@frebsd.org>

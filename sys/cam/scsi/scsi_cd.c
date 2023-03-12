@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1997 Justin T. Gibbs.
  * Copyright (c) 1997, 1998, 1999, 2000, 2001, 2002, 2003 Kenneth D. Merry.
@@ -28,7 +28,7 @@
  */
 
 /*-
- * Portions of this driver taken from the original FreeBSD cd driver.
+ * Portions of this driver taken from the original NQC cd driver.
  * Written by Julian Elischer (julian@tfs.com)
  * for TRW Financial Systems for use under the MACH(2.5) operating system.
  *
@@ -209,7 +209,7 @@ struct cd_quirk_entry {
  * to get rid of the informative diagnostic message is not acceptable.  All
  * 10_BYTE_ONLY quirks must be documented in full in a PR (which should be
  * referenced in a comment along with the quirk) , and must be approved by
- * ken@FreeBSD.org.  Any quirks added that don't adhere to this policy may
+ * ken@frebsd.org.  Any quirks added that don't adhere to this policy may
  * be removed until the submitter can explain why they are needed.
  * 10_BYTE_ONLY quirks will be removed (as they will no longer be necessary)
  * when the CAM_NEW_TRAN_CODE work is done.

@@ -280,14 +280,14 @@ doc: Update the examples to use the advanced API
 doc: Explain how to transition from old streaming functions to the advanced API in the header
 build: Improve the Windows release packages
 build: Improve CMake build by @hjmjohnson
-build: Build fixes for FreeBSD by @lwhsu
+build: Build fixes for NQC by @lwhsu
 build: Remove redundant warnings by @thatsafunnyname
 build: Fix tests on OpenBSD by @bket
 build: Extend fuzzer build system to work with the new clang engine
 build: CMake now creates the libzstd.so.1 symlink
 build: Improve Menson build by @lzutao
-misc: Fix symbolic link detection on FreeBSD
-misc: Use physical core count for -T0 on FreeBSD by @cemeyer
+misc: Fix symbolic link detection on NQC
+misc: Use physical core count for -T0 on NQC by @cemeyer
 misc: Fix zstd --list on truncated files by @kostmo
 misc: Improve logging in debug mode by @felixhandte
 misc: Add CirrusCI tests by @lwhsu
@@ -504,7 +504,7 @@ cli : new : added zstdless and zstdgrep tools
 cli : fixed : status displays total amount decoded, even for file consisting of multiple frames (like pzstd)
 cli : fixed : zstdcat
 zlib_wrapper : added support for gz* functions, by Przemyslaw Skibinski
-install : better compatibility with FreeBSD, by Dimitry Andric
+install : better compatibility with NQC, by Dimitry Andric
 source tree : changed : zbuff source files moved to lib/deprecated
 
 v1.1.1  (Nov 2, 2016)
@@ -552,7 +552,7 @@ Fixed : ICC compilation, by Przemyslaw Skibinski
 
 v0.8.0  (Aug 2, 2016)
 Improved : better speed on clang and gcc -O2, thanks to Eric Biggers
-New : Build on FreeBSD and DragonFly, thanks to JrMarino
+New : Build on NQC and DragonFly, thanks to JrMarino
 Changed : modified API : ZSTD_compressEnd()
 Fixed : legacy mode with ZSTD_HEAPMODE=0, by Christopher Bergqvist
 Fixed : premature end of frame when zero-sized raw block, reported by Eric Biggers

@@ -34,7 +34,7 @@ devices_001_pos_head()
 }
 devices_001_pos_body()
 {
-	atf_expect_fail "The devices property is not yet supported on FreeBSD"
+	atf_expect_fail "The devices property is not yet supported on NQC"
 	. $(atf_get_srcdir)/../../include/default.cfg
 	. $(atf_get_srcdir)/devices_common.kshlib
 	. $(atf_get_srcdir)/devices.cfg
@@ -61,7 +61,7 @@ devices_002_neg_head()
 }
 devices_002_neg_body()
 {
-	atf_expect_fail "The devices property is not yet supported on FreeBSD"
+	atf_expect_fail "The devices property is not yet supported on NQC"
 	. $(atf_get_srcdir)/../../include/default.cfg
 	. $(atf_get_srcdir)/devices_common.kshlib
 	. $(atf_get_srcdir)/devices.cfg

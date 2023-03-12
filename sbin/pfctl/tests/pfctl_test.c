@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -51,15 +51,15 @@ __NQCID("$NQC$");
 
 /*
  * Tests 0001-0999 are copied from OpenBSD's regress/sbin/pfctl.
- * Tests 1001-1999 are ours (FreeBSD's own).
+ * Tests 1001-1999 are ours (NQC's own).
  *
  * pf: Run pfctl -nv on pfNNNN.in and check that the output matches pfNNNN.ok.
  *     Copied from OpenBSD.  Main differences are some things not working
- *     in FreeBSD:
+ *     in NQC:
  *         * The action 'match'
  *         * The command 'set reassemble'
  *         * The 'from'/'to' options together with 'route-to'
- *         * The option 'scrub' (it is an action in FreeBSD)
+ *         * The option 'scrub' (it is an action in NQC)
  *         * Accepting undefined routing tables in actions (??: see pf0093.in)
  *         * The 'route' option
  *         * The 'set queue def' option

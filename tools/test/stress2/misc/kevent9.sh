@@ -7,7 +7,7 @@
 #     locked @ kern/kern_event.c:2125
 # panic: witness_warn
 
-# https://people.freebsd.org/~pho/stress/log/kevent9.txt
+# https://people.frebsd.org/~pho/stress/log/kevent9.txt
 # Fixed in r302235.
 
 . ../default.cfg

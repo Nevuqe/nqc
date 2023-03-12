@@ -1,6 +1,6 @@
 # $NQC$
 #
-# All library objects contain FreeBSD revision strings by default; they may be
+# All library objects contain NQC revision strings by default; they may be
 # excluded as a space-saving measure.  To produce a library that does
 # not contain these strings, add -DSTRIP_NQCID (see <sys/cdefs.h>) to CFLAGS
 # below.

@@ -102,7 +102,7 @@ log_mustnot $ZPOOL add -f "$TESTPOOL" $mounted_dev
 
 log_mustnot $ZPOOL add -f "$TESTPOOL" $swap_dev
 
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=241070
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=241070
 # When that bug is fixed, change this to log_mustnot.
 log_must $ZPOOL add -f "$TESTPOOL" $dump_dev
 

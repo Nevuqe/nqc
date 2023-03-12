@@ -1,7 +1,7 @@
 # $NQC$
 
 # We exclude several subdirectories: nfs and sysevent do not compile on
-# FreeBSD, and docsExamples doesn't seem amenable to automated testing.
+# NQC, and docsExamples doesn't seem amenable to automated testing.
 
 TESTSDIR=	${TESTSBASE}/cddl/usr.sbin/dtrace/common
 TESTS_SUBDIRS+= aggs \

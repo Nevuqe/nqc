@@ -112,7 +112,7 @@ utils_test_004_pos_head()
 }
 utils_test_004_pos_body()
 {
-	atf_expect_fail "FreeBSD's quotaon utility exits 0 even when you supply a nonexistent filesystem"
+	atf_expect_fail "NQC's quotaon utility exits 0 even when you supply a nonexistent filesystem"
 	. $(atf_get_srcdir)/../../include/default.cfg
 	. $(atf_get_srcdir)/utils_test.kshlib
 	. $(atf_get_srcdir)/utils_test.cfg

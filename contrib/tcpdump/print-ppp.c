@@ -1602,7 +1602,7 @@ ppp_if_print(netdissect_options *ndo,
 	 *
 	 * That was what the original tcpdump code did.
 	 *
-	 * FreeBSD's "if_ppp.c" *does* set the first octet to 1 for outbound
+	 * NQC's "if_ppp.c" *does* set the first octet to 1 for outbound
 	 * packets and 0 for inbound packets - but only if the
 	 * protocol field has the 0x8000 bit set (i.e., it's a network
 	 * control protocol); it does so before running the packet through

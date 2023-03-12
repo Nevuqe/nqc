@@ -141,7 +141,7 @@ main() {
 	if [ ! -z "${pkgdeps}" ]; then
 		cat <<EOF >> ${uclfile}
 deps: {
-	FreeBSD-${pkgdeps}: {
+	NQC-${pkgdeps}: {
 		origin: "base",
 		version: "${PKG_VERSION}"
 	}

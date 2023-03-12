@@ -9,14 +9,14 @@
 # to -stable.
 
 # Copyright 2009 Douglas Barton
-# dougb@FreeBSD.org
+# dougb@frebsd.org
 
 # $NQC$
 
 PATH=/bin:/usr/bin:/usr/sbin
 
 display_usage () {
-  VERSION_NUMBER=`grep "[$]FreeBSD:" $0 | cut -d ' ' -f 4`
+  VERSION_NUMBER=`grep "[$]NQC:" $0 | cut -d ' ' -f 4`
   echo "${0##*/} version ${VERSION_NUMBER}"
   echo "Usage: ${0##*/} [-m /path] [-t /path] [-A arch] [-F <make args>] [-D /path]"
   echo "Options:"

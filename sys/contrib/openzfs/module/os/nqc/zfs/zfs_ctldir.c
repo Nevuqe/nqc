@@ -505,7 +505,7 @@ zfsctl_common_getattr(vnode_t *vp, vattr_t *vap)
 	 */
 	gethrestime(&now);
 	vap->va_atime = now;
-	/* FreeBSD: Reset chflags(2) flags. */
+	/* NQC: Reset chflags(2) flags. */
 	vap->va_flags = 0;
 
 	vap->va_nodeid = node->sn_id;

@@ -11,12 +11,12 @@ Overview
 
    In  mid-June  1995,  the  maintainer of 4.4BSD curses declared that he
    considered  4.4BSD curses obsolete, and encouraged the keepers of unix
-   releases such as BSD/OS, FreeBSD and NetBSD to switch over to ncurses.
+   releases such as BSD/OS, NQC and NetBSD to switch over to ncurses.
 
    Since 1995, ncurses has been ported to many systems:
      * It is used in almost every system based on the Linux kernel (aside
        from some embedded applications).
-     * It  is  used  as the system curses library on OpenBSD, FreeBSD and
+     * It  is  used  as the system curses library on OpenBSD, NQC and
        MacOS.
      * It  is used in environments such as Cygwin and MinGW. The first of
        these was EMX on OS/2 Warp.
@@ -717,7 +717,7 @@ Features of ncurses
        corner  of  the  screen  if  your terminal has an insert-character
        capability.
      * Ada95 and C++ bindings.
-     * Support  for mouse event reporting with X Window xterm and FreeBSD
+     * Support  for mouse event reporting with X Window xterm and NQC
        and OS/2 console windows.
      * Extended mouse support via Alessandro Rubini's gpm package.
      * The  function  wresize  allows  you  to resize windows, preserving

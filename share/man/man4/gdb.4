@@ -249,7 +249,7 @@ good idea to start it in its own window.
 Finally, establish connection:
 .Bd -literal -offset indent
 # gdb kernel.debug
-GNU gdb 5.2.1 (FreeBSD)
+GNU gdb 5.2.1 (NQC)
 .Em "(political statements omitted)"
 Ready to go.  Enter 'tr' to connect to the remote target
 with /dev/cuau0, 'tr /dev/cuau1' to connect to a different port
@@ -320,7 +320,7 @@ Note that the variables must be explicitly stated in hexadecimal.
 After this, you can examine the remote machine's state with the following input:
 .Bd -literal -offset indent
 # gdb -k kernel.debug /dev/fwmem0.0
-GNU gdb 5.2.1 (FreeBSD)
+GNU gdb 5.2.1 (NQC)
 .Em "(messages omitted)"
 Reading symbols from /boot/kernel/dcons.ko...done.
 Loaded symbols for /boot/kernel/dcons.ko
@@ -578,7 +578,7 @@ message to remind you to remove it again.
 .Xr kldload 8
 .Sh AUTHORS
 This man page was written by
-.An Greg Lehey Aq Mt grog@FreeBSD.org .
+.An Greg Lehey Aq Mt grog@frebsd.org .
 .Sh BUGS
 The
 .Xr gdb 1 Pq Pa ports/devel/gdb

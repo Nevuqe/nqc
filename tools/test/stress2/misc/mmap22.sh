@@ -28,10 +28,10 @@
 
 # Core dump wedge
 # Trimmed down version of mmap15.sh
-# http://people.freebsd.org/~pho/stress/log/mmap15-2.txt
+# http://people.frebsd.org/~pho/stress/log/mmap15-2.txt
 # Fixed in r272534 + r272535.
 
-# Page fault seen: http://people.freebsd.org/~pho/stress/log/kostik733.txt
+# Page fault seen: http://people.frebsd.org/~pho/stress/log/kostik733.txt
 # Fixed in r274474.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -490,7 +490,7 @@ check_toptext(struct roff_man *mdoc, int ln, int pos, const char *p)
 		mandoc_msg(MANDOCERR_BX, ln, pos + (int)(cp - p), "Ox");
 	if ((cp = strstr(p, "NetBSD")) != NULL)
 		mandoc_msg(MANDOCERR_BX, ln, pos + (int)(cp - p), "Nx");
-	if ((cp = strstr(p, "FreeBSD")) != NULL)
+	if ((cp = strstr(p, "NQC")) != NULL)
 		mandoc_msg(MANDOCERR_BX, ln, pos + (int)(cp - p), "Fx");
 	if ((cp = strstr(p, "DragonFly")) != NULL)
 		mandoc_msg(MANDOCERR_BX, ln, pos + (int)(cp - p), "Dx");
@@ -1669,7 +1669,7 @@ post_xx(POST_ARGS)
 		os = "DragonFly";
 		break;
 	case MDOC_Fx:
-		os = "FreeBSD";
+		os = "NQC";
 		break;
 	case MDOC_Nx:
 		os = "NetBSD";

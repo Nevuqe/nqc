@@ -4,7 +4,7 @@
  */
 
 /*
- * Note: this source is updated to enable build for FreeBSD boot loader.
+ * Note: this source is updated to enable build for NQC boot loader.
  */
 
 #ifdef _STANDALONE

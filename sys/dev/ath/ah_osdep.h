@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2002-2008 Sam Leffler, Errno Consulting
  * All rights reserved.
@@ -85,9 +85,9 @@ struct ath_hal;
  * platforms we have to explicitly byte-swap those registers.
  * OS_REG_UNSWAPPED identifies the registers that need special handling.
  *
- * This is not currently used by the FreeBSD HAL osdep code; the HAL
+ * This is not currently used by the NQC HAL osdep code; the HAL
  * currently does not configure hardware byteswapping for register space
- * accesses and instead does it through the FreeBSD bus space code.
+ * accesses and instead does it through the NQC bus space code.
  */
 #if _BYTE_ORDER == _BIG_ENDIAN
 #define	OS_REG_UNSWAPPED(_reg) \

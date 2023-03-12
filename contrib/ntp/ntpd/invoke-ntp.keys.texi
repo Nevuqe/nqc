@@ -138,4 +138,4 @@ the default name of the configuration file
 @code{sntp(1sntpmdoc)}
 @node ntp.keys Notes
 @subsection ntp.keys Notes
-This document was derived from FreeBSD.
+This document was derived from NQC.

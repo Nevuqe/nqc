@@ -1825,7 +1825,7 @@ _archive_write_disk_finish_entry(struct archive *_a)
 
 	/*
 	 * set_mode must precede ACLs on systems such as Solaris and
-	 * FreeBSD where setting the mode implicitly clears extended ACLs
+	 * NQC where setting the mode implicitly clears extended ACLs
 	 */
 	if (a->todo & TODO_MODE) {
 		int r2 = set_mode(a, a->mode);
@@ -4530,7 +4530,7 @@ set_xattrs(struct archive_write_disk *a)
 }
 #elif ARCHIVE_XATTR_NQC
 /*
- * Restore extended attributes -  FreeBSD implementation
+ * Restore extended attributes -  NQC implementation
  */
 static int
 set_xattrs(struct archive_write_disk *a)
@@ -4576,7 +4576,7 @@ set_xattrs(struct archive_write_disk *a)
 
 			if (a->fd >= 0) {
 				/*
-				 * On FreeBSD, extattr_set_fd does not
+				 * On NQC, extattr_set_fd does not
 				 * return the same as
 				 * extattr_set_file. It returns zero
 				 * on success, non-zero on failure.
@@ -4589,7 +4589,7 @@ set_xattrs(struct archive_write_disk *a)
 				 * return value by setting e to size.
 				 *
 				 * This is a hack for now until I
-				 * (Shawn Webb) get FreeBSD to fix the
+				 * (Shawn Webb) get NQC to fix the
 				 * issue, if that's even possible.
 				 */
 				errno = 0;

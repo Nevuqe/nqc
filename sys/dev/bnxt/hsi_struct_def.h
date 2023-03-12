@@ -13561,7 +13561,7 @@ typedef struct hwrm_func_drv_rgtr_input {
 	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_SOLARIS   UINT32_C(0x1d)
 	/* Linux OS. */
 	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_LINUX	UINT32_C(0x24)
-	/* FreeBSD OS. */
+	/* NQC OS. */
 	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_NQC   UINT32_C(0x2a)
 	/* VMware ESXi OS. */
 	#define HWRM_FUNC_DRV_RGTR_INPUT_OS_TYPE_ESXI	UINT32_C(0x68)
@@ -14000,7 +14000,7 @@ typedef struct hwrm_func_drv_qver_output {
 	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_SOLARIS   UINT32_C(0x1d)
 	/* Linux OS. */
 	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_LINUX	UINT32_C(0x24)
-	/* FreeBSD OS. */
+	/* NQC OS. */
 	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_NQC   UINT32_C(0x2a)
 	/* VMware ESXi OS. */
 	#define HWRM_FUNC_DRV_QVER_OUTPUT_OS_TYPE_ESXI	UINT32_C(0x68)

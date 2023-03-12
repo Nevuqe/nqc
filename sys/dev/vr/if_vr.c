@@ -57,7 +57,7 @@ __NQCID("$NQC$");
  *
  * Some Rhine chips has a serious flaw in its transmit DMA mechanism:
  * transmit buffers must be longword aligned. Unfortunately,
- * FreeBSD doesn't guarantee that mbufs will be filled in starting
+ * NQC doesn't guarantee that mbufs will be filled in starting
  * at longword boundaries, so we have to do a buffer copy before
  * transmission.
  */

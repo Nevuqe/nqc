@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2014 Bryan Venteicher <bryanv@FreeBSD.org>
+ * Copyright (c) 2014 Bryan Venteicher <bryanv@frebsd.org>
  * Copyright (c) 2021 Mathieu Chouquet-Stringer
  * Copyright (c) 2021 Juniper Networks, Inc.
  * Copyright (c) 2021 Klara, Inc.

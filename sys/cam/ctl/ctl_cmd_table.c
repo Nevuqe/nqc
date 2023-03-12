@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003, 2004, 2005, 2009 Silicon Graphics International Corp.
- * Copyright (c) 2014-2015 Alexander Motin <mav@FreeBSD.org>
+ * Copyright (c) 2014-2015 Alexander Motin <mav@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,13 +30,13 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_cmd_table.c#4 $
+ * $Id: //depot/users/kenm/NQC-test2/sys/cam/ctl/ctl_cmd_table.c#4 $
  * $NQC$
  */
 /*
  * CAM Target Layer command table.
  *
- * Author: Ken Merry <ken@FreeBSD.org>, Kim Le
+ * Author: Ken Merry <ken@frebsd.org>, Kim Le
  */
 
 #include <sys/cdefs.h>

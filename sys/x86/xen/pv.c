@@ -246,7 +246,7 @@ hammer_time_xen(vm_paddr_t start_info_paddr)
 /*-------------------------------- PV specific -------------------------------*/
 
 /*
- * When booted as a PVH guest FreeBSD needs to avoid using the RSDP address
+ * When booted as a PVH guest NQC needs to avoid using the RSDP address
  * hint provided by the loader because it points to the native set of ACPI
  * tables instead of the ones crafted by Xen. The acpi.rsdp env variable is
  * removed from kenv if present, and a new acpi.rsdp is added to kenv that

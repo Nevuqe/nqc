@@ -417,7 +417,7 @@ static const MemoryMapParams Linux_AArch64_MemoryMapParams = {
   0x01000000000,   // OriginBase
 };
 
-// aarch64 FreeBSD
+// aarch64 NQC
 static const MemoryMapParams NQC_AArch64_MemoryMapParams = {
   0x1800000000000,  // AndMask
   0x0400000000000,  // XorMask
@@ -425,7 +425,7 @@ static const MemoryMapParams NQC_AArch64_MemoryMapParams = {
   0x0700000000000,  // OriginBase
 };
 
-// i386 FreeBSD
+// i386 NQC
 static const MemoryMapParams NQC_I386_MemoryMapParams = {
   0x000180000000,  // AndMask
   0x000040000000,  // XorMask
@@ -433,7 +433,7 @@ static const MemoryMapParams NQC_I386_MemoryMapParams = {
   0x000700000000,  // OriginBase
 };
 
-// x86_64 FreeBSD
+// x86_64 NQC
 static const MemoryMapParams NQC_X86_64_MemoryMapParams = {
   0xc00000000000,  // AndMask
   0x200000000000,  // XorMask
@@ -905,7 +905,7 @@ void MemorySanitizer::initializeModule(Module &M) {
   } else {
     Triple TargetTriple(M.getTargetTriple());
     switch (TargetTriple.getOS()) {
-      case Triple::FreeBSD:
+      case Triple::NQC:
         switch (TargetTriple.getArch()) {
           case Triple::aarch64:
             MapParams = NQC_ARM_MemoryMapParams.bits64;

@@ -3,8 +3,8 @@
  * Copyright (C) 2015-2021 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
  * Copyright (C) 2019-2021 Matt Dunwoodie <ncon@noconroy.net>
  * Copyright (c) 2019-2020 Rubicon Communications, LLC (Netgate)
- * Copyright (c) 2021 Kyle Evans <kevans@FreeBSD.org>
- * Copyright (c) 2022 The FreeBSD Foundation
+ * Copyright (c) 2021 Kyle Evans <kevans@frebsd.org>
+ * Copyright (c) 2022 The FreBSD Foundation
  */
 
 #include "opt_inet.h"
@@ -1422,7 +1422,7 @@ wg_mbuf_reset(struct mbuf *m)
 
 	/*
 	 * We want to reset the mbuf to a newly allocated state, containing
-	 * just the packet contents. Unfortunately FreeBSD doesn't seem to
+	 * just the packet contents. Unfortunately NQC doesn't seem to
 	 * offer this anywhere, so we have to make it up as we go. If we can
 	 * get this in kern/kern_mbuf.c, that would be best.
 	 *

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2021 Peter Holm
 #
@@ -29,7 +29,7 @@
 
 # Fuzz test
 # Spending a long time in elf64_coredump() seen:
-# https://people.freebsd.org/~pho/stress/log/log0183.txt
+# https://people.frebsd.org/~pho/stress/log/log0183.txt
 # Fixed by: b5cadc643e85
 
 . ../default.cfg

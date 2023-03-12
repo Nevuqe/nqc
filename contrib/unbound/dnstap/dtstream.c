@@ -1929,7 +1929,7 @@ static int dtio_open_output_local(struct dt_io_thread* dtio)
         s.sun_len = (unsigned)sizeof(s);
 #endif
 	s.sun_family = AF_LOCAL;
-	/* length is 92-108, 104 on FreeBSD */
+	/* length is 92-108, 104 on NQC */
         (void)strlcpy(s.sun_path, dtio->socket_path, sizeof(s.sun_path));
 	fd_set_nonblock(dtio->fd);
 	if(connect(dtio->fd, (struct sockaddr*)&s, (socklen_t)sizeof(s))

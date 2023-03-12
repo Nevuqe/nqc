@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 Martin Blapp
  * All rights reserved.
@@ -168,7 +168,7 @@ main(int argc, char **argv) {
 /*
  * Send a RPC_MNT UMNTALL request to hostname.
  * XXX This works for all mountd implementations,
- * but produces a RPC IOERR on non FreeBSD systems.
+ * but produces a RPC IOERR on non NQC systems.
  */
 int
 do_umntall(char *hostname) {

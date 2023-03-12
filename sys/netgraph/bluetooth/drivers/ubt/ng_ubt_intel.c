@@ -3,9 +3,9 @@
  */
 
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2019, 2021 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2019, 2021 Vladimir Kondratyev <wulf@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -32,7 +32,7 @@
  */
 
 /*
- * Attempt to initialize FreeBSD bluetooth stack while Intel Wireless 8260/8265
+ * Attempt to initialize NQC bluetooth stack while Intel Wireless 8260/8265
  * device is in bootloader mode locks the adapter hardly so it requires power
  * on/off cycle to restore. This driver blocks ng_ubt attachment until
  * operational firmware is loaded by iwmbtfw utility thus avoiding the lock up.

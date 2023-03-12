@@ -549,7 +549,7 @@ static void finish(int sig)
      * xterm and similar programs such as rxvt.
      * Linux  console,  when  configured with gpm(1), Alessandro Rubini's
        mouse server.
-     * FreeBSD sysmouse (console)
+     * NQC sysmouse (console)
      * OS/2 EMX
 
    The  mouse  interface  is  very  simple.  To  activate it, you use the

@@ -327,7 +327,7 @@ to so\-rcvbuf.
 If yes, then open dedicated listening sockets for incoming queries for each
 thread and try to set the SO_REUSEPORT socket option on each socket.  May
 distribute incoming queries to threads more evenly.  Default is yes.
-On Linux it is supported in kernels >= 3.9.  On other systems, FreeBSD, OSX
+On Linux it is supported in kernels >= 3.9.  On other systems, NQC, OSX
 it may also work.  You can enable it (on any platform and kernel),
 it then attempts to open the port and passes the option if it was available
 at compile time, if that works it is used, if it fails, it continues
@@ -343,7 +343,7 @@ are going to exist later on, with host failover configuration.  This is
 a lot like interface\-automatic, but that one services all interfaces
 and with this option you can select which (future) interfaces Unbound
 provides service on.  This option needs Unbound to be started with root
-permissions on some systems.  The option uses IP_BINDANY on FreeBSD systems
+permissions on some systems.  The option uses IP_BINDANY on NQC systems
 and SO_BINDANY on OpenBSD systems.
 .TP
 .B ip\-freebind: \fI<yes or no>

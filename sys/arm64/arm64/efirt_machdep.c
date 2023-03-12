@@ -1,12 +1,12 @@
 /*-
  * Copyright (c) 2004 Marcel Moolenaar
  * Copyright (c) 2001 Doug Rabson
- * Copyright (c) 2016 The FreeBSD Foundation
+ * Copyright (c) 2016 The FreBSD Foundation
  * Copyright (c) 2017 Andrew Turner
  * All rights reserved.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory under DARPA/AFRL contract FA8750-10-C-0237

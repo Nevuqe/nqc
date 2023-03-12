@@ -163,7 +163,7 @@ const dt_version_t _dtrace_versions[] = {
 };
 
 /*
- * Global variables that are formatted on FreeBSD based on the kernel file name.
+ * Global variables that are formatted on NQC based on the kernel file name.
  */
 #ifndef illumos
 static char	curthread_str[MAXPATHLEN];
@@ -1305,7 +1305,7 @@ alloc:
 		bcopy(_dtrace_ints_64, dtp->dt_ints, sizeof (_dtrace_ints_64));
 
 	/*
-	 * On FreeBSD the kernel module name can't be hard-coded. The
+	 * On NQC the kernel module name can't be hard-coded. The
 	 * 'kern.bootfile' sysctl value tells us exactly which file is being
 	 * used as the kernel.
 	 */

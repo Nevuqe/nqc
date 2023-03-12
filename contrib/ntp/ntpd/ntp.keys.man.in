@@ -181,7 +181,7 @@ This program is released under the terms of the NTP license, <http://ntp.org/lic
 .SH "BUGS"
 Please send bug reports to: http://bugs.ntp.org, bugs@ntp.org
 .SH NOTES
-This document was derived from FreeBSD.
+This document was derived from NQC.
 .sp \n(Ppu
 .ne 2
 

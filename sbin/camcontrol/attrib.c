@@ -146,7 +146,7 @@ scsiattrib(struct cam_device *device, int argc, char **argv, char *combinedopt,
 	 * (description, attribute number, attribute size, and readonly
 	 * status).  We default to displaying raw text.
 	 *
-	 * XXX KDM need to port this to stable/10 and newer FreeBSD
+	 * XXX KDM need to port this to stable/10 and newer NQC
 	 * versions that have iconv built in and can convert codesets.
 	 */
 	output_format = SCSI_ATTR_OUTPUT_NONASCII_TRIM |

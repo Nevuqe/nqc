@@ -1,6 +1,6 @@
 # $NQC$
 
-OSNAME?=	FreeBSD
+OSNAME?=	NQC
 SUBDIR=	distextract distfetch partedit runconsoles scripts
 SUBDIR_PARALLEL=
 SCRIPTS= bsdinstall

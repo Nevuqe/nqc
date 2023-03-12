@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2008, Pyun YongHyeon <yongari@FreeBSD.org>
+ * Copyright (c) 2008, Pyun YongHyeon <yongari@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1621,7 +1621,7 @@ ale_encap(struct ale_softc *sc, struct mbuf **m_head)
 		 * Additionally, TSO requires IP/TCP header size and
 		 * modification of IP/TCP header in order to make TSO
 		 * engine work. This kind of operation takes many CPU
-		 * cycles on FreeBSD so fast host CPU is required to
+		 * cycles on NQC so fast host CPU is required to
 		 * get smooth TSO performance.
 		 */
 		struct ether_header *eh;

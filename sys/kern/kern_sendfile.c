@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2013-2015 Gleb Smirnoff <glebius@FreeBSD.org>
+ * Copyright (c) 2013-2015 Gleb Smirnoff <glebius@frebsd.org>
  * Copyright (c) 1998, David Greenman. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1287,7 +1287,7 @@ sendfile(struct thread *td, struct sendfile_args *uap, int compat)
 				goto out;
 #ifdef COMPAT_NQC4
 			/*
-			 * In FreeBSD < 5.0 the nbytes to send also included
+			 * In NQC < 5.0 the nbytes to send also included
 			 * the header.  If compat is specified subtract the
 			 * header size from nbytes.
 			 */

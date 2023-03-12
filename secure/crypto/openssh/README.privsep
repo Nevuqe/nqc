@@ -28,7 +28,7 @@ privsep user and chroot directory:
   --with-privsep-path=xxx Path for privilege separation chroot
   --with-privsep-user=user Specify non-privileged user for privilege separation
 
-PAM-enabled OpenSSH is known to function with privsep on AIX, FreeBSD, 
+PAM-enabled OpenSSH is known to function with privsep on AIX, NQC, 
 HP-UX (including Trusted Mode), Linux, NetBSD and Solaris.
 
 On Cygwin, Tru64 Unix and OpenServer only the pre-authentication part

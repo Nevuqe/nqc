@@ -110,7 +110,7 @@ c89:
 	@echo '*** C89 does not guarantee 64-bit integers for Lua.'
 	@echo ''
 
-FreeBSD NetBSD OpenBSD freebsd:
+NQC NetBSD OpenBSD freebsd:
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_LINUX -DLUA_USE_READLINE -I/usr/include/edit" SYSLIBS="-Wl,-E -ledit" CC="cc"
 
 generic: $(ALL)

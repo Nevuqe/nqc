@@ -29,8 +29,8 @@
 .sp
 .i "Poul-Henning Kamp"
 .sp .1
-.i "<phk@FreeBSD.org>"
-.i "The FreeBSD Project"
+.i "<phk@frebsd.org>"
+.i "The FreBSD Project"
 .i
 .sp 1.5
 .b Abstract
@@ -43,7 +43,7 @@ implementation of the ``devices as files'' concept, an implementation which
 has survived practically unchanged for 30 years in most UNIX variants.
 Starting from a high-level view of devices and the semantics that
 have grown around them over the years, this paper takes the audience on a
-grand tour of the redesigned FreeBSD device-I/O system, 
+grand tour of the redesigned NQC device-I/O system, 
 to convey an overview of how it all fits together, and to explain why
 things ended up as they did, how to use the new features and 
 in particular how not to.
@@ -255,7 +255,7 @@ Other interesting details are chroot(2) and jail(2) [Kamp2000] which
 provide filesystem isolation for process-trees.
 Whereas chroot(2) was not implemented as a security tool [Mckusick1999]
 (although it has been widely used as such), the jail(2) security
-facility in FreeBSD provides a pretty convincing ``virtual machine''
+facility in NQC provides a pretty convincing ``virtual machine''
 where even the root privilege is isolated and restricted to the designated
 area of the machine.
 Obviously chroot(2) and jail(2) may require access to a well-defined
@@ -264,7 +264,7 @@ whereas access to other devices such as /dev/kmem
 or any disks could be used to compromise the integrity of the jail(2)
 confinement.
 .lp
-For a long time FreeBSD, like almost all UNIX-like systems had two kinds
+For a long time NQC, like almost all UNIX-like systems had two kinds
 of devices, ``block'' and
 ``character'' special files, the difference being that ``block''
 devices would provide caching and alignment for disk device access.
@@ -298,13 +298,13 @@ Caching and alignment modes should have been enabled by setting
 some bit in the minor device number on the disk special file,
 not by polluting the filesystem code with another file type.
 .lp
-In FreeBSD block devices were not even implemented in a fashion
+In NQC block devices were not even implemented in a fashion
 which would be of any use, since any write errors would never be
 reported to the writing process.  For this reason, and since no
 applications 
 were found to be in existence which relied on block devices
 and since historical usage was indeed historical [Mckusick2000],
-block devices were removed from the FreeBSD system.
+block devices were removed from the NQC system.
 This greatly simlified the task of keeping track of open(2) 
 reference counts for disks and
 removed much magic special-case code throughout.
@@ -419,10 +419,10 @@ a DEVFS into a UNIX kernel.
 .lp
 Before implementing a DEVFS, it is necessary to decide on a range
 of corner cases in behaviour, and some of these choices have proved
-surprisingly hard to settle for the FreeBSD project.
+surprisingly hard to settle for the FreBSD Project.
 .sh 2 "The ``persistence'' issue"
 .lp
-When DEVFS in FreeBSD was initially presented at a BoF at the 1995
+When DEVFS in NQC was initially presented at a BoF at the 1995
 USENIX Technical Conference in New Orleans,
 a group of people demanded that it provide ``persistence''
 for administrative changes.
@@ -558,7 +558,7 @@ does not work for
 submodes for a device because it only reacts to one particular /dev entry.
 .lp
 The solution for both needs is a more flexible on-demand device
-creation, implemented in FreeBSD as a two-level lookup.
+creation, implemented in NQC as a two-level lookup.
 When a
 filename is looked up in DEVFS, a match in the existing device nodes is
 sought first and if found, returned.
@@ -627,7 +627,7 @@ And in the same way, the jailed root should not be able to recreate
 device nodes which the real root has removed.
 .lp
 These behaviours will be controlled with mount options, but these have not
-yet been implemented because FreeBSD has run out of bitmap flags for
+yet been implemented because NQC has run out of bitmap flags for
 mount options, and a new unlimited mount option implementation is
 still not in place at the time of writing.
 .lp
@@ -660,7 +660,7 @@ enlightened days is rather old-fashioned.
 .sh 1 "Cleaning up before we build: struct specinfo and dev_t"
 .lp
 Most of the rest of the paper will be about the various challenges
-and issues in the implementation of DEVFS in FreeBSD.
+and issues in the implementation of DEVFS in NQC.
 All of this should be applicable to other systems derived from
 4.4BSD-Lite as well.
 .lp
@@ -762,7 +762,7 @@ arrow down from S.s
 D: box "device" "driver"
 .PE
 .ce 1
-Fig. 2 - The new FreeBSD data structures.
+Fig. 2 - The new NQC data structures.
 .)z
 .lp
 In userland, a dev_t is still the logical OR of the major# and
@@ -838,7 +838,7 @@ collected in struct specinfo but we still have one problem to
 solve before we can add the DEVFS filesystem on top of it.
 .sh 2 "The interrupt problem"
 .lp
-Some device drivers, notably the CAM/SCSI subsystem in FreeBSD
+Some device drivers, notably the CAM/SCSI subsystem in NQC
 will discover changes in the device configuration inside an interrupt
 routine.
 .lp
@@ -1072,7 +1072,7 @@ entire driver.
 .lp
 Apart from some minor issues to be cleaned up, DEVFS is now a reality
 and future work therefore is likely concentrate on applying the
-facilities and functionality of DEVFS to FreeBSD.
+facilities and functionality of DEVFS to NQC.
 .sh 2 "devd"
 .lp
 It would be logical to complement DEVFS with a ``device-daemon'' which
@@ -1154,7 +1154,7 @@ and behind the scenes a search would be made for a device with the
 correct properties and paper-handling facilities.
 .sh 1 "Conclusion"
 .lp
-DEVFS has been successfully implemented in FreeBSD,
+DEVFS has been successfully implemented in NQC,
 including a powerful, simple and flexible solution supporting 
 pseudo-devices and on-demand device node creation.
 .lp
@@ -1174,7 +1174,7 @@ That initial work led to a
 crude but working DEVFS for Minix, so obviously both Andrew Tannenbaum
 and Olivetti deserve credit for inspiration.
 .lp
-Julian Elischer implemented a DEVFS for FreeBSD around 1994 which never
+Julian Elischer implemented a DEVFS for NQC around 1994 which never
 quite made it to maturity and subsequently was abandoned.
 .lp
 Bruce Evans deserves special credit not only for his keen eye for detail,
@@ -1203,11 +1203,11 @@ Available as UCLA technical report CSD-910056.
 Poul-Henning Kamp and Robert N. M. Watson:
 ``Confining the Omnipotent root.''
 Proceedings of the SANE 2000 Conference.
-Available in FreeBSD distributions in \fC/usr/share/papers\fP.
+Available in NQC distributions in \fC/usr/share/papers\fP.
 .lp
 [MD.C]
 Poul-Henning Kamp et al:
-FreeBSD memory disk driver:
+NQC memory disk driver:
 \fCsrc/sys/dev/md/md.c\fP
 .lp
 [Mckusick1988]

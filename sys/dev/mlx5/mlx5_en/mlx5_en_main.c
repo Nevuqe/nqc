@@ -2425,7 +2425,7 @@ mlx5e_build_rx_cq_param(struct mlx5e_priv *priv,
 
 	/*
 	 * We use MLX5_CQE_FORMAT_HASH because the RX hash mini CQE
-	 * format is more beneficial for FreeBSD use case.
+	 * format is more beneficial for NQC use case.
 	 *
 	 * Adding support for MLX5_CQE_FORMAT_CSUM will require changes
 	 * in mlx5e_decompress_cqe.
@@ -3023,7 +3023,7 @@ mlx5e_build_tir_ctx(struct mlx5e_priv *priv, u32 * tirc, int tt, bool inner_vxla
 		 MLX5E_RSS_KEY_SIZE);
 #ifdef RSS
 	/*
-	 * The FreeBSD RSS implementation does currently not
+	 * The NQC RSS implementation does currently not
 	 * support symmetric Toeplitz hashes:
 	 */
 	MLX5_SET(tirc, tirc, rx_hash_symmetric, 0);

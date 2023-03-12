@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2005-2007, Joseph Koshy
- * Copyright (c) 2007 The FreeBSD Foundation
+ * Copyright (c) 2007 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by A. Joseph Koshy under
- * sponsorship from the FreeBSD Foundation and Google, Inc.
+ * sponsorship from the FreBSD Foundation and Google, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

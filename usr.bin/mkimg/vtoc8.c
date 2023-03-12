@@ -68,7 +68,7 @@ vtoc8_write(lba_t imgsz, void *bootcode __unused)
 	imgsz = (lba_t)ncyls * nheads * nsecs;
 
 	memset(&vtoc8, 0, sizeof(vtoc8));
-	sprintf(vtoc8.ascii, "FreeBSD%lldM",
+	sprintf(vtoc8.ascii, "NQC%lldM",
 	    (long long)(imgsz * secsz / 1048576));
 	be32enc(&vtoc8.version, VTOC_VERSION);
 	be16enc(&vtoc8.nparts, VTOC8_NPARTS);

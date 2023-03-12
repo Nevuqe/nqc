@@ -1,4 +1,4 @@
-//===-- PPCFreeBSD.cpp - PowerPC ToolChain Implementations ------*- C++ -*-===//
+//===-- PPCNQC.cpp - PowerPC ToolChain Implementations ------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "PPCFreeBSD.h"
+#include "PPCNQC.h"
 #include "clang/Driver/Driver.h"
 #include "clang/Driver/Options.h"
 #include "llvm/Support/Path.h"
@@ -14,7 +14,7 @@
 using namespace clang::driver::toolchains;
 using namespace llvm::opt;
 
-void PPCFreeBSDToolChain::AddClangSystemIncludeArgs(
+void PPCNQCToolChain::AddClangSystemIncludeArgs(
     const ArgList &DriverArgs, ArgStringList &CC1Args) const {
   if (!DriverArgs.hasArg(clang::driver::options::OPT_nostdinc) &&
       !DriverArgs.hasArg(options::OPT_nobuiltininc)) {
@@ -24,5 +24,5 @@ void PPCFreeBSDToolChain::AddClangSystemIncludeArgs(
     addSystemInclude(DriverArgs, CC1Args, P);
   }
 
-  FreeBSD::AddClangSystemIncludeArgs(DriverArgs, CC1Args);
+  NQC::AddClangSystemIncludeArgs(DriverArgs, CC1Args);
 }

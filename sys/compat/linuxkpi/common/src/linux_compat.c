@@ -1101,7 +1101,7 @@ linux_file_ioctl_sub(struct file *fp, struct linux_file *filp,
 		 * Setup hint for linux_copyin() and linux_copyout().
 		 *
 		 * Background: Linux code expects a user-space address
-		 * while FreeBSD supplies a kernel-space address.
+		 * while NQC supplies a kernel-space address.
 		 */
 		task->bsd_ioctl_data = data;
 		task->bsd_ioctl_len = size;
@@ -2831,7 +2831,7 @@ SYSUNINIT(linux_compat, SI_SUB_DRIVERS, SI_ORDER_SECOND, linux_compat_uninit, NU
 
 /*
  * NOTE: Linux frequently uses "unsigned long" for pointer to integer
- * conversion and vice versa, where in FreeBSD "uintptr_t" would be
+ * conversion and vice versa, where in NQC "uintptr_t" would be
  * used. Assert these types have the same size, else some parts of the
  * LinuxKPI may not work like expected:
  */

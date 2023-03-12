@@ -968,9 +968,9 @@ Both commands are equivalent.
 
 #### Problematic Tests
 
-Some tests are problematic, in that they can cause `SIGKILL` on FreeBSD or
+Some tests are problematic, in that they can cause `SIGKILL` on NQC or
 `SIGSEGV` on Linux from being killed by the "OOM Killer" part of the kernel. On
-Linux, these tests are usually fine, but on FreeBSD, they are usually a problem.
+Linux, these tests are usually fine, but on NQC, they are usually a problem.
 
 To disable problematic tests, pass the `-P` flag or the
 `--disable-problematic-tests` option to `configure.sh` as follows:

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Written by Atsushi Murai <amurai@spec.co.jp>
  * Copyright (c) 1998, System Planning and Engineering Co.

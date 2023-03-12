@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2005-2011 David Schultz <das@FreeBSD.ORG>
+ * Copyright (c) 2005-2011 David Schultz <das@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -178,7 +178,7 @@ dd_mul(double a, double b)
  * This algorithm is sensitive to the rounding precision.  FPUs such
  * as the i387 must be set in double-precision mode if variables are
  * to be stored in FP registers in order to avoid incorrect results.
- * This is the default on FreeBSD, but not on many other systems.
+ * This is the default on NQC, but not on many other systems.
  *
  * Hardware instructions should be used on architectures that support it,
  * since this implementation will likely be several times slower.

@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2010 The FreeBSD Foundation
+ * Copyright (c) 2009-2010 The FreBSD Foundation
  *
  * This software was developed by Semihalf under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -69,7 +69,7 @@ int
 uart_fdt_get_clock(phandle_t node, pcell_t *cell)
 {
 
-	/* clock-frequency is a FreeBSD-only extension. */
+	/* clock-frequency is a NQC-only extension. */
 	if ((OF_getencprop(node, "clock-frequency", cell,
 	    sizeof(*cell))) <= 0) {
 		/* Try to retrieve parent 'bus-frequency' */

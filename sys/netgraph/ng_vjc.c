@@ -36,7 +36,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Archie Cobbs <archie@freebsd.org>
+ * Author: Archie Cobbs <archie@frebsd.org>
  *
  * $NQC$
  * $Whistle: ng_vjc.c,v 1.17 1999/11/01 09:24:52 julian Exp $

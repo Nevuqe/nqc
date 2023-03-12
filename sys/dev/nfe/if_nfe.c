@@ -1808,7 +1808,7 @@ nfe_ioctl(if_t ifp, u_long cmd, caddr_t data)
 		/*
 		 * XXX
 		 * It seems that VLAN stripping requires Rx checksum offload.
-		 * Unfortunately FreeBSD has no way to disable only Rx side
+		 * Unfortunately NQC has no way to disable only Rx side
 		 * VLAN stripping. So when we know Rx checksum offload is
 		 * disabled turn entire hardware VLAN assist off.
 		 */

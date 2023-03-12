@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# Demonstrate VM leakage. Not seen on FreeBSD HEAD.
+# Demonstrate VM leakage. Not seen on NQC HEAD.
 
 . ../default.cfg
 

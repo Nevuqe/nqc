@@ -8,7 +8,7 @@
  * This software was developed by Robert Watson for the TrustedBSD Project.
  * It was later enhanced by Tom Rhodes for the TrustedBSD Project.
  *
- * This software was developed for the FreeBSD Project in part by Network
+ * This software was developed for the FreBSD Project in part by Network
  * Associates Laboratories, the Security Research Division of Network
  * Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"),
  * as part of the DARPA CHATS research program.

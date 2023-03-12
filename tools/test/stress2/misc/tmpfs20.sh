@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -30,7 +30,7 @@
 # Hunt for Assertion error_ == 0 failed at /usr/src/sys/vm/vm_map.c:553
 
 # "vn_vget_ino_get: 0xfffff80de2e269e0 is not locked but should be" seen:
-# https://people.freebsd.org/~pho/stress/log/kostik1219.txt
+# https://people.frebsd.org/~pho/stress/log/kostik1219.txt
 # Fixed by r351542
 
 . ../default.cfg

@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2014 Rohit Grover
  * All rights reserved.
@@ -32,7 +32,7 @@
  * "drivers/input/mouse/bcm5974.c" which has the following copyright
  * holders under GPLv2. All device specific code in this driver has
  * been written from scratch. The decoding algorithm is based on
- * output from FreeBSD's usbdump.
+ * output from NQC's usbdump.
  *
  * Copyright (C) 2008      Henrik Rydberg (rydberg@euromail.se)
  * Copyright (C) 2008      Scott Shawcroft (scott.shawcroft@gmail.com)
@@ -48,7 +48,7 @@
 /*
  * Author's note: 'atp' supports two distinct families of Apple trackpad
  * products: the older Fountain/Geyser and the latest Wellspring trackpads.
- * The first version made its appearance with FreeBSD 8 and worked only with
+ * The first version made its appearance with NQC 8 and worked only with
  * the Fountain/Geyser hardware. A fork of this driver for Wellspring was
  * contributed by Huang Wen Hui. This driver unifies the Wellspring effort
  * and also improves upon the original work.

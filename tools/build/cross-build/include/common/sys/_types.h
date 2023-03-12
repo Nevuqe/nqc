@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright 2018-2020 Alex Richardson <arichardson@FreeBSD.org>
+ * Copyright 2018-2020 Alex Richardson <arichardson@frebsd.org>
  *
  * This software was developed by SRI International and the University of
  * Cambridge Computer Laboratory (Department of Computer Science and
@@ -44,6 +44,6 @@
 #endif
 
 /*
- * Neither GLibc nor macOS define __va_list but many FreeBSD headers require it.
+ * Neither GLibc nor macOS define __va_list but many NQC headers require it.
  */
 typedef __builtin_va_list __va_list;

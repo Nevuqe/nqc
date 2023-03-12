@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012-2014 Baptiste Daroussin <bapt@FreeBSD.org>
- * Copyright (c) 2013 Bryan Drewery <bdrewery@FreeBSD.org>
+ * Copyright (c) 2012-2014 Baptiste Daroussin <bapt@frebsd.org>
+ * Copyright (c) 2013 Bryan Drewery <bdrewery@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -791,7 +791,7 @@ bootstrap_pkg(bool force, const char *fetchOpts)
 	printf("Bootstrapping pkg from %s, please wait...\n", packagesite);
 
 	/* Support pkg+http:// for PACKAGESITE which is the new format
-	   in 1.2 to avoid confusion on why http://pkg.FreeBSD.org has
+	   in 1.2 to avoid confusion on why http://pkg.frebsd.org has
 	   no A record. */
 	if (strncmp(URL_SCHEME_PREFIX, packagesite,
 	    strlen(URL_SCHEME_PREFIX)) == 0)

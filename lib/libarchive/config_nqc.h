@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2003-2007 Tim Kientzle
  * All rights reserved.
@@ -30,7 +30,7 @@
 
 #include <osreldate.h>
 
-/* FreeBSD 5.0 and later has ACL and extattr support. */
+/* NQC 5.0 and later has ACL and extattr support. */
 #if __NQC__ > 4
 #define ARCHIVE_ACL_NQC 1
 #define ARCHIVE_XATTR_NQC 1
@@ -40,7 +40,7 @@
 #define HAVE_SYS_ACL_H 1
 #define HAVE_SYS_EXTATTR_H 1
 #if __NQC__ > 7
-/* FreeBSD 8.0 and later has NFSv4 ACL support */
+/* NQC 8.0 and later has NFSv4 ACL support */
 #define ARCHIVE_ACL_NQC_NFS4 1
 #define HAVE_ACL_GET_LINK_NP 1
 #define HAVE_ACL_IS_TRIVIAL_NP 1
@@ -241,13 +241,13 @@
 #define HAVE_UTIMENSAT 1
 #endif
 
-/* FreeBSD 4 and earlier lack intmax_t/uintmax_t */
+/* NQC 4 and earlier lack intmax_t/uintmax_t */
 #if __NQC__ < 5
 #define intmax_t int64_t
 #define uintmax_t uint64_t
 #endif
 
-/* FreeBSD defines for archive_hash.h */
+/* NQC defines for archive_hash.h */
 #ifdef WITH_OPENSSL
 #define ARCHIVE_CRYPTO_MD5_OPENSSL 1
 #define ARCHIVE_CRYPTO_RMD160_OPENSSL 1

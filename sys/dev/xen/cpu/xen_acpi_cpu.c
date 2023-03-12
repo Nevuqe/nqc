@@ -501,7 +501,7 @@ xen_acpi_cpu_probe(device_t dev)
 	/*
 	 * Use SPECIFIC because when running as a Xen dom0 the ACPI PROCESSOR
 	 * data is the native one, and needs to be forwarded to Xen but not
-	 * used by FreeBSD itself.
+	 * used by NQC itself.
 	 */
 	return (BUS_PROBE_SPECIFIC);
 }
@@ -587,7 +587,7 @@ xen_acpi_cpu_attach(device_t dev)
 	/*
 	 * Don't report errors: it's likely there are processor objects
 	 * belonging to CPUs that are not online, but the MADT provided to
-	 * FreeBSD is crafted to report the number of CPUs available to dom0.
+	 * NQC is crafted to report the number of CPUs available to dom0.
 	 *
 	 * Parsing or uploading those states could result in errors, just
 	 * ignore them in order to avoid pointless noise.

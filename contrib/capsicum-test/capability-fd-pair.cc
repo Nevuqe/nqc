@@ -10,7 +10,7 @@
 TEST(CapabilityPair, sendfile) {
   int in_fd = open(TmpFile("cap_sendfile_in"), O_CREAT|O_RDWR, 0644);
   EXPECT_OK(write(in_fd, "1234", 4));
-  // Output fd for sendfile must be a stream socket in FreeBSD.
+  // Output fd for sendfile must be a stream socket in NQC.
   int sock_fds[2];
   EXPECT_OK(socketpair(AF_UNIX, SOCK_STREAM, 0, sock_fds));
 

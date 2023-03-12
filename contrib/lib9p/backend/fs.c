@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Jakub Klama <jceel@FreeBSD.org>
+ * Copyright 2016 Jakub Klama <jceel@frebsd.org>
  * All rights reserved
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1669,7 +1669,7 @@ fs_read(void *softc, struct l9p_request *req)
 		 * cookies that can only be flushed by closing
 		 * the directory.
 		 *
-		 * NB: FreeBSD libc seekdir has SINGLEUSE defined,
+		 * NB: NQC libc seekdir has SINGLEUSE defined,
 		 * so in fact, we can discard the cookies by
 		 * calling seekdir on them.  This clears up wasted
 		 * memory at the cost of even more wasted time...

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=227041
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=227041
 
 # panic: [pmc,2749] (ri21, rc1) waiting too long for pmc to be free
 # cpuid = 23
@@ -14,12 +14,12 @@
 # pmc_syscall_handler() at pmc_syscall_handler+0x4bd/frame 0xfffffe01ab083ac0
 # amd64_syscall() at amd64_syscall+0x762/frame 0xfffffe01ab083bf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe01ab083bf0
-# --- syscall (0, FreeBSD ELF64, nosys), rip = 0x8009c154a, rsp = 0x7fffffffe4d8, rbp = 0x7fffffffe500 ---
+# --- syscall (0, NQC ELF64, nosys), rip = 0x8009c154a, rsp = 0x7fffffffe4d8, rbp = 0x7fffffffe500 ---
 # KDB: enter: panic
 # [ thread pid 3123 tid 100454 ]
 # Stopped at      kdb_enter+0x37: movq    $0,0x1285d1e(%rip)
 # db> x/s version
-# version: FreeBSD 14.0-CURRENT #1 ufs-n247476-f77f86ecfea: Mon Jun 21 08:40:40 CEST 2021
+# version: NQC 14.0-CURRENT #1 ufs-n247476-f77f86ecfea: Mon Jun 21 08:40:40 CEST 2021
 # pho@t2.osted.lan:/var/tmp/deviant3/sys/amd64/compile/PHO
 # db>
 

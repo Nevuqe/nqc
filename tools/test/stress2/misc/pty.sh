@@ -29,7 +29,7 @@
 # pty(4) test scenario.
 
 # "panic: make_dev_credv: bad si_name (error=17, si_name=ptysn)" seen.
-# https://people.freebsd.org/~pho/stress/log/pty.txt
+# https://people.frebsd.org/~pho/stress/log/pty.txt
 
 # /dev/pty[l-sL-S][0-9a-v]  Pseudo-terminal master devices.
 # /dev/tty[l-sL-S][0-9a-v]  Pseudo-terminal slave devices.

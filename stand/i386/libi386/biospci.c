@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 1998 Michael Smith <msmith@freebsd.org>
+ * Copyright (c) 1998 Michael Smith <msmith@frebsd.org>
  * All rights reserved.
  *
  * Copyright (c) 2016 Netflix, Inc.

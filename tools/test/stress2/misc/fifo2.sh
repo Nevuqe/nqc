@@ -27,7 +27,7 @@
 #
 
 # Page fault seen
-# http://people.freebsd.org/~pho/stress/log/kostik654.txt
+# http://people.frebsd.org/~pho/stress/log/kostik654.txt
 # Fixed by r259521.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

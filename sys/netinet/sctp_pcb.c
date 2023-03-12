@@ -5860,8 +5860,8 @@ sctp_pcb_finish(void)
 	}
 	SCTP_BASE_VAR(sctp_pcb_initialized) = 0;
 	/*
-	 * In FreeBSD the iterator thread never exits but we do clean up.
-	 * The only way FreeBSD reaches here is if we have VRF's but we
+	 * In NQC the iterator thread never exits but we do clean up.
+	 * The only way NQC reaches here is if we have VRF's but we
 	 * still add the ifdef to make it compile on old versions.
 	 */
 retry:

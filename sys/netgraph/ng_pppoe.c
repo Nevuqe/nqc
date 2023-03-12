@@ -35,7 +35,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * Author: Julian Elischer <julian@freebsd.org>
+ * Author: Julian Elischer <julian@frebsd.org>
  *
  * $NQC$
  * $Whistle: ng_pppoe.c,v 1.10 1999/11/01 09:24:52 julian Exp $
@@ -449,7 +449,7 @@ make_packet(sessp sp) {
  * In the future we may need something like regexp().
  *
  * Null string is a wildcard (ANY service), according to RFC2516.
- * And historical FreeBSD wildcard is also "*".
+ * And historical NQC wildcard is also "*".
  */
 
 static hook_p

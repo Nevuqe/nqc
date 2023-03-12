@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2019 Dell EMC Isilon
 #
@@ -30,7 +30,7 @@
 # Test threaded access to /dev/midistat.
 
 # "panic: vm_fault_hold: fault on nofault entry, addr: 0x8b352000" seen.
-# https://people.freebsd.org/~pho/stress/log/mark089.txt
+# https://people.frebsd.org/~pho/stress/log/mark089.txt
 # Fixed by 351262
 
 . ../default.cfg

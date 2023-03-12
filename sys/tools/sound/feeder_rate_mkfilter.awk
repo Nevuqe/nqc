@@ -1,8 +1,8 @@
 #!/usr/bin/awk -f
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2007-2009 Ariff Abdullah <ariff@FreeBSD.org>
+# Copyright (c) 2007-2009 Ariff Abdullah <ariff@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without

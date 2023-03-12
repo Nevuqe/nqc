@@ -1,7 +1,7 @@
 # $NQC$
 #
 # This is a sample LOMAC policy based upon the PLM defined in the
-# original FreeBSD LOMAC port.  It may be configured on a
+# original NQC LOMAC port.  It may be configured on a
 # system via setfsmac(8).
 
 .*				lomac/high

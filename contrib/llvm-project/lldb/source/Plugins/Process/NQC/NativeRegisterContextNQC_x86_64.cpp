@@ -22,7 +22,7 @@
 #include "lldb/Utility/RegisterValue.h"
 #include "lldb/Utility/Status.h"
 
-#include "NativeProcessFreeBSD.h"
+#include "NativeProcessNQC.h"
 #include "Plugins/Process/Utility/RegisterContextNQC_i386.h"
 #include "Plugins/Process/Utility/RegisterContextNQC_x86_64.h"
 
@@ -234,8 +234,8 @@ static const RegisterSet g_reg_sets_x86_64[k_num_register_sets] = {
 
 #define REG_CONTEXT_SIZE (GetRegisterInfoInterface().GetGPRSize())
 
-NativeRegisterContextFreeBSD *
-NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
+NativeRegisterContextNQC *
+NativeRegisterContextNQC::CreateHostNativeRegisterContextNQC(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
   return new NativeRegisterContextNQC_x86_64(target_arch, native_thread);
 }
@@ -341,23 +341,23 @@ NativeRegisterContextNQC_x86_64::GetSetForNativeRegNum(
 Status NativeRegisterContextNQC_x86_64::ReadRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
                                                m_gpr.data());
   case FPRegSet:
 #if defined(__x86_64__)
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETFPREGS, m_thread.GetID(),
                                                m_fpr.data());
 #else
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETXMMREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETXMMREGS, m_thread.GetID(),
                                                m_fpr.data());
 #endif
   case DBRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETDBREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETDBREGS, m_thread.GetID(),
                                                m_dbr.data());
   case YMMRegSet:
   case MPXRegSet: {
     struct ptrace_xstate_info info;
-    Status ret = NativeProcessFreeBSD::PtraceWrapper(
+    Status ret = NativeProcessNQC::PtraceWrapper(
         PT_GETXSTATE_INFO, GetProcessPid(), &info, sizeof(info));
     if (!ret.Success())
       return ret;
@@ -372,7 +372,7 @@ Status NativeRegisterContextNQC_x86_64::ReadRegisterSet(RegSetKind set) {
     }
 
     m_xsave.resize(info.xsave_len);
-    return NativeProcessFreeBSD::PtraceWrapper(PT_GETXSTATE, GetProcessPid(),
+    return NativeProcessNQC::PtraceWrapper(PT_GETXSTATE, GetProcessPid(),
                                                m_xsave.data(), m_xsave.size());
   }
   }
@@ -382,24 +382,24 @@ Status NativeRegisterContextNQC_x86_64::ReadRegisterSet(RegSetKind set) {
 Status NativeRegisterContextNQC_x86_64::WriteRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
                                                m_gpr.data());
   case FPRegSet:
 #if defined(__x86_64__)
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETFPREGS, m_thread.GetID(),
                                                m_fpr.data());
 #else
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETXMMREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETXMMREGS, m_thread.GetID(),
                                                m_fpr.data());
 #endif
   case DBRegSet:
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETDBREGS, m_thread.GetID(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETDBREGS, m_thread.GetID(),
                                                m_dbr.data());
   case YMMRegSet:
   case MPXRegSet:
     // ReadRegisterSet() must always be called before WriteRegisterSet().
     assert(m_xsave.size() > 0);
-    return NativeProcessFreeBSD::PtraceWrapper(PT_SETXSTATE, GetProcessPid(),
+    return NativeProcessNQC::PtraceWrapper(PT_SETXSTATE, GetProcessPid(),
                                                m_xsave.data(), m_xsave.size());
   }
   llvm_unreachable("NativeRegisterContextNQC_x86_64::WriteRegisterSet");
@@ -590,7 +590,7 @@ Status NativeRegisterContextNQC_x86_64::WriteAllRegisterValues(
 }
 
 llvm::Error NativeRegisterContextNQC_x86_64::CopyHardwareWatchpointsFrom(
-    NativeRegisterContextFreeBSD &source) {
+    NativeRegisterContextNQC &source) {
   auto &r_source = static_cast<NativeRegisterContextNQC_x86_64 &>(source);
   // NB: This implicitly reads the whole dbreg set.
   RegisterValue dr7;

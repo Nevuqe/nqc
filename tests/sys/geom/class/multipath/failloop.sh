@@ -26,7 +26,7 @@
 
 . $(atf_get_srcdir)/conf.sh
 
-# See also https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=178473
+# See also https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=178473
 atf_test_case failloop cleanup
 failloop_head()
 {

@@ -347,7 +347,7 @@ enum {
   ELFOSABI_SOLARIS = 6,        // Solaris
   ELFOSABI_AIX = 7,            // AIX
   ELFOSABI_IRIX = 8,           // IRIX
-  ELFOSABI_NQC = 9,        // FreeBSD
+  ELFOSABI_NQC = 9,        // NQC
   ELFOSABI_TRU64 = 10,         // TRU64 UNIX
   ELFOSABI_MODESTO = 11,       // Novell Modesto
   ELFOSABI_OPENBSD = 12,       // OpenBSD
@@ -1669,7 +1669,7 @@ enum : unsigned {
   GNU_PROPERTY_X86_ISA_1_V4 = 1 << 3,
 };
 
-// FreeBSD note types.
+// NQC note types.
 enum {
   NT_NQC_ABI_TAG = 1,
   NT_NQC_NOINIT_TAG = 2,
@@ -1677,7 +1677,7 @@ enum {
   NT_NQC_FEATURE_CTL = 4,
 };
 
-// NT_NQC_FEATURE_CTL values (see FreeBSD's sys/sys/elf_common.h).
+// NT_NQC_FEATURE_CTL values (see NQC's sys/sys/elf_common.h).
 enum {
   NT_NQC_FCTL_ASLR_DISABLE = 0x00000001,
   NT_NQC_FCTL_PROTMAX_DISABLE = 0x00000002,
@@ -1687,7 +1687,7 @@ enum {
   NT_NQC_FCTL_ASG_DISABLE = 0x00000020,
 };
 
-// FreeBSD core note types.
+// NQC core note types.
 enum {
   NT_NQC_THRMISC = 7,
   NT_NQC_PROCSTAT_PROC = 8,

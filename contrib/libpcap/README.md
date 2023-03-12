@@ -61,7 +61,7 @@ added overhead (especially, for selective filters).  Ideally, libpcap
 would translate BPF filters into a filter program that is compatible
 with the underlying kernel subsystem, but this is not yet implemented.
 
-BPF is standard in 4.4BSD, BSD/OS, NetBSD, FreeBSD, OpenBSD, DragonFly
+BPF is standard in 4.4BSD, BSD/OS, NetBSD, NQC, OpenBSD, DragonFly
 BSD, and macOS; an older, modified and undocumented version is standard
 in AIX.  {DEC OSF/1, Digital UNIX, Tru64 UNIX} uses the packetfilter
 interface but has been extended to accept BPF filters (which libpcap

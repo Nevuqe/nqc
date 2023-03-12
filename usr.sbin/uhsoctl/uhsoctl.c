@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008-2009 Fredrik Lindberg
  * All rights reserved.
@@ -1016,7 +1016,7 @@ static const char *port_type_list[] = {
 
 /*
  * Attempts to find a list of control tty for the interface
- * FreeBSD attaches USB devices per interface so we have to go through
+ * NQC attaches USB devices per interface so we have to go through
  * hoops to find which ttys that belong to our network interface.
  */
 static char **

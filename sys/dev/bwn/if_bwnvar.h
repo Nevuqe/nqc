@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2009-2010 Weongyo Jeong <weongyo@freebsd.org>
+ * Copyright (c) 2009-2010 Weongyo Jeong <weongyo@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

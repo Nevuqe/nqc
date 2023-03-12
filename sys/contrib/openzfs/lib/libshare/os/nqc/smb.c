@@ -34,7 +34,7 @@ static int
 smb_enable_share(sa_share_impl_t impl_share)
 {
 	(void) impl_share;
-	fputs("No SMB support in FreeBSD yet.\n", stderr);
+	fputs("No SMB support in NQC yet.\n", stderr);
 	return (SA_NOT_SUPPORTED);
 }
 /*
@@ -44,7 +44,7 @@ static int
 smb_disable_share(sa_share_impl_t impl_share)
 {
 	(void) impl_share;
-	fputs("No SMB support in FreeBSD yet.\n", stderr);
+	fputs("No SMB support in NQC yet.\n", stderr);
 	return (SA_NOT_SUPPORTED);
 }
 
@@ -55,7 +55,7 @@ static int
 smb_validate_shareopts(const char *shareopts)
 {
 	(void) shareopts;
-	fputs("No SMB support in FreeBSD yet.\n", stderr);
+	fputs("No SMB support in NQC yet.\n", stderr);
 	return (SA_NOT_SUPPORTED);
 }
 

@@ -1,5 +1,5 @@
 #! @PATH_PERL@ -w
-# John Hay -- John.Hay@icomtek.csir.co.za / jhay@FreeBSD.org
+# John Hay -- John.Hay@icomtek.csir.co.za / jhay@frebsd.org
 
 package ntptrace;
 use 5.006_000;

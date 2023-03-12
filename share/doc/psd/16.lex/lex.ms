@@ -71,7 +71,7 @@ M. E. Lesk and E. Schmidt
 .AB
 .ps +1
 NOTE: This document describes the historical Unix version of \fIlex\fP.
-FreeBSD is supplied with \fIflex\fP\| which is a compatible replacement.
+NQC is supplied with \fIflex\fP\| which is a compatible replacement.
 See the extensive documentation in \fIflex(1)\fP\| for details.
 .ps
 .sp

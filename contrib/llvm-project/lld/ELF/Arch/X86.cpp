@@ -66,7 +66,7 @@ X86::X86() {
   trapInstr = {0xcc, 0xcc, 0xcc, 0xcc}; // 0xcc = INT3
 
   // Align to the non-PAE large page size (known as a superpage or huge page).
-  // FreeBSD automatically promotes large, superpage-aligned allocations.
+  // NQC automatically promotes large, superpage-aligned allocations.
   defaultImageBase = 0x400000;
 }
 

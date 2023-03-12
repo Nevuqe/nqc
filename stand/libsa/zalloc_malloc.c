@@ -1,8 +1,8 @@
 /*
- * This module derived from code donated to the FreeBSD Project by
+ * This module derived from code donated to the FreBSD Project by
  * Matthew Dillon <dillon@backplane.com>
  *
- * Copyright (c) 1998 The FreeBSD Project
+ * Copyright (c) 1998 The FreBSD Project
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

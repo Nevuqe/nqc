@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2009 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2009 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# There is a well-known problem in FreeBSD, caused by allowing page faults
+# There is a well-known problem in NQC, caused by allowing page faults
 # while doing filesystem data move to or from userspace during read(2) and
 # write(2). The issue is that if the userspace address being read or write
 # from/to is backed by the mapping of the same file we are doing i/o to,
@@ -65,7 +65,7 @@ rm -rf /tmp/datamove
 exit 0
 EOF
 /*-
- * Copyright (c) 2006, Stephan Uphoff <ups@freebsd.org>
+ * Copyright (c) 2006, Stephan Uphoff <ups@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2019 Ian Lepore <ian@freebsd.org>
+ * Copyright (c) 2019 Ian Lepore <ian@frebsd.org>
  * Copyright (c) 2020-2021 Andriy Gapon
  * Copyright (c) 2022 Bjoern A. Zeeb
  *

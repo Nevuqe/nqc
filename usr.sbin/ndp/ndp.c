@@ -636,7 +636,7 @@ again:;
 
 		/*
 		 * Some OSes can produce a route that has the LINK flag but
-		 * has a non-AF_LINK gateway (e.g. fe80::xx%lo0 on FreeBSD
+		 * has a non-AF_LINK gateway (e.g. fe80::xx%lo0 on NQC
 		 * and BSD/OS, where xx is not the interface identifier on
 		 * lo0).  Such routes entry would annoy getnbrinfo() below,
 		 * so we skip them.

@@ -129,7 +129,7 @@ SYSCTL_INT(_net_inet_rss, OID_AUTO, buckets, CTLFLAG_RD, &rss_buckets, 0,
 
 /*
  * Base CPU number; devices will add this to all CPU numbers returned by the
- * RSS indirection table.  Currently unmodifable in FreeBSD.
+ * RSS indirection table.  Currently unmodifable in NQC.
  */
 static const u_int	rss_basecpu;
 SYSCTL_INT(_net_inet_rss, OID_AUTO, basecpu, CTLFLAG_RD,

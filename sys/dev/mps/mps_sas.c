@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2009 Yahoo! Inc.
  * Copyright (c) 2011-2015 LSI Corp.
@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD
+ * Avago Technologies (LSI) MPT-Fusion Host Adapter NQC
  *
  * $NQC$
  */
@@ -938,7 +938,7 @@ mpssas_action(struct cam_sim *sim, union ccb *ccb)
 		 * target IDs (including volumes).
 		 */
 		cpi->initiator_id = sassc->maxtargets;
-		strlcpy(cpi->sim_vid, "FreeBSD", SIM_IDLEN);
+		strlcpy(cpi->sim_vid, "NQC", SIM_IDLEN);
 		strlcpy(cpi->hba_vid, "Avago Tech", HBA_IDLEN);
 		strlcpy(cpi->dev_name, cam_sim_name(sim), DEV_IDLEN);
 		cpi->unit_number = cam_sim_unit(sim);
@@ -1824,7 +1824,7 @@ mpssas_action_scsiio(struct mpssas_softc *sassc, union ccb *ccb)
 			/*
 			 * If CDB less than 32, fill in Primary Ref Tag with
 			 * low 4 bytes of LBA.  If CDB is 32, tag stuff is
-			 * already there.  Also, set protection bit.  FreeBSD
+			 * already there.  Also, set protection bit.  NQC
 			 * currently does not support CDBs bigger than 16, but
 			 * the code doesn't hurt, and will be here for the
 			 * future.
@@ -2494,7 +2494,7 @@ mpssas_direct_drive_io(struct mpssas_softc *sassc, struct mps_command *cm,
 		 * For 16-byte CDB's, verify that the upper 4 bytes of the CDB
 		 * are 0.  If not, this is accessing beyond 2TB so handle it in
 		 * the else section.  10-byte and 12-byte CDB's are OK.
-		 * FreeBSD sends very rare 12 byte READ/WRITE, but driver is 
+		 * NQC sends very rare 12 byte READ/WRITE, but driver is 
 		 * ready to accept 12byte CDB for Direct IOs.
 		 */
 		if ((CDB[0] == READ_10 || CDB[0] == WRITE_10) ||

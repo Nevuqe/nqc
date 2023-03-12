@@ -4,10 +4,10 @@
  * Copyright (c) 1990, 1993
  *	The Regents of the University of California.  All rights reserved.
  *
- * Copyright (c) 2011 The FreeBSD Foundation
+ * Copyright (c) 2011 The FreBSD Foundation
  *
  * Portions of this software were developed by David Chisnall
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * This code is derived from software contributed to Berkeley by
  * Chris Torek.

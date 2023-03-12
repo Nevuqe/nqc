@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2019 Isilon Systems, LLC.
  *
@@ -27,7 +27,7 @@
 
 /*
  * netgdb.c
- * FreeBSD subsystem supporting debugging the FreeBSD kernel over the network.
+ * NQC subsystem supporting debugging the NQC kernel over the network.
  *
  * There are three pieces necessary to use NetGDB.
  *

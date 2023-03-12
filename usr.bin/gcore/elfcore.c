@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2017 Dell EMC
  * Copyright (c) 2007 Sandvine Incorporated
@@ -409,13 +409,13 @@ elf_putregnote(int type, lwpid_t tid, struct sbuf *sb)
 	if (ptrace(PT_GETREGSET, tid, (void *)&iov, type) != 0)
 		errx(1, "failed to fetch register set %d", type);
 
-	note.n_namesz = 8; /* strlen("FreeBSD") + 1 */
+	note.n_namesz = 8; /* strlen("NQC") + 1 */
 	note.n_descsz = iov.iov_len;
 	note.n_type = type;
 
 	sbuf_bcat(sb, &note, sizeof(note));
 	sbuf_start_section(sb, &old_len);
-	sbuf_bcat(sb, "FreeBSD", note.n_namesz);
+	sbuf_bcat(sb, "NQC", note.n_namesz);
 	sbuf_end_section(sb, old_len, sizeof(Elf32_Size), 0);
 	sbuf_start_section(sb, &old_len);
 	sbuf_bcat(sb, iov.iov_base, iov.iov_len);
@@ -435,13 +435,13 @@ elf_putnote(int type, notefunc_t notefunc, void *arg, struct sbuf *sb)
 	void *desc;
 
 	desc = notefunc(arg, &descsz);
-	note.n_namesz = 8; /* strlen("FreeBSD") + 1 */
+	note.n_namesz = 8; /* strlen("NQC") + 1 */
 	note.n_descsz = descsz;
 	note.n_type = type;
 
 	sbuf_bcat(sb, &note, sizeof(note));
 	sbuf_start_section(sb, &old_len);
-	sbuf_bcat(sb, "FreeBSD", note.n_namesz);
+	sbuf_bcat(sb, "NQC", note.n_namesz);
 	sbuf_end_section(sb, old_len, sizeof(Elf32_Size), 0);
 	if (descsz == 0)
 		return;

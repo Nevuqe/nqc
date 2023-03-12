@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel RANDOM device code"
+PROJECT_NAME           = "NQC kernel RANDOM device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_random/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

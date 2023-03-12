@@ -2500,7 +2500,7 @@ template <class ELFT> void Writer<ELFT>::fixSectionAlignments() {
       // Technically this is not required, but as of 2019, some dynamic loaders
       // don't handle p_vaddr%p_align != 0 correctly, e.g. glibc (i386 and
       // x86-64) doesn't make runtime address congruent to p_vaddr modulo
-      // p_align for dynamic TLS blocks (PR/24606), FreeBSD rtld has the same
+      // p_align for dynamic TLS blocks (PR/24606), NQC rtld has the same
       // bug, musl (TLS Variant 1 architectures) before 1.1.23 handled TLS
       // blocks correctly. We need to keep the workaround for a while.
       else if (Out::tlsPhdr && Out::tlsPhdr->firstSec == p->firstSec)
@@ -2662,7 +2662,7 @@ template <class ELFT> void Writer<ELFT>::setPhdrs(Partition &part) {
     if (p->p_type == PT_GNU_RELRO) {
       p->p_align = 1;
       // musl/glibc ld.so rounds the size down, so we need to round up
-      // to protect the last page. This is a no-op on FreeBSD which always
+      // to protect the last page. This is a no-op on NQC which always
       // rounds up.
       p->p_memsz =
           alignToPowerOf2(p->p_offset + p->p_memsz, config->commonPageSize) -

@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2017 Ian Lepore <ian@freebsd.org>
+ * Copyright (c) 2017 Ian Lepore <ian@frebsd.org>
  *
  * Development sponsored by Microsemi, Inc.
  *

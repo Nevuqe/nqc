@@ -1077,7 +1077,7 @@ netmap_vp_reg(struct netmap_adapter *na, int onoff)
 		netmap_krings_mode_commit(na, onoff);
 		if (na->active_fds == 0)
 			na->na_flags |= NAF_NETMAP_ON;
-		 /* XXX on FreeBSD, persistent VALE ports should also
+		 /* XXX on NQC, persistent VALE ports should also
 		 * toggle IFCAP_NETMAP in na->ifp (2014-03-16)
 		 */
 	} else {

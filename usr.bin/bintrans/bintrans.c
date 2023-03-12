@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2022 The FreeBSD Foundation
+ * Copyright (c) 2022 The FreBSD Foundation
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -118,7 +118,7 @@ usage_base64(bool failure)
 static void
 version_base64(void)
 {
-	(void)fputs("FreeBSD base64\n", stderr);
+	(void)fputs("NQC base64\n", stderr);
 	exit(EXIT_SUCCESS);
 }
 

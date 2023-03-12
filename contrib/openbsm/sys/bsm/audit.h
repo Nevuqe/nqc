@@ -68,7 +68,7 @@
 #define	AUDIT_TRIGGER_MAX		8
 
 /*
- * The special device filename (FreeBSD).
+ * The special device filename (NQC).
  */
 #define	AUDITDEV_FILENAME	"audit"
 #define	AUDIT_TRIGGER_FILE	("/dev/" AUDITDEV_FILENAME)

@@ -56,7 +56,7 @@
 #define PACKAGE "ncurses"
 #define NCURSES_VERSION "6.2"
 #define NCURSES_PATCHDATE 20210220
-#define SYSTEM_NAME "FreeBSD"
+#define SYSTEM_NAME "NQC"
 #if 0
 #include <stdlib.h>
 #endif

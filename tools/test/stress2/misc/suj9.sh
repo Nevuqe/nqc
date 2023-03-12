@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2011 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2011 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
 # "panic: softdep_revert_mkdir: dot addref parent mismatch" seen.
 
 # "panic: ufsdirhash_dirtrunc: bad offset" seen with WiP kernel code:
-# https://people.freebsd.org/~pho/stress/log/suj9.txt
+# https://people.frebsd.org/~pho/stress/log/suj9.txt
 
 . ../default.cfg
 

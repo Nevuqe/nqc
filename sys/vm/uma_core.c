@@ -1,8 +1,8 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2002-2019 Jeffrey Roberson <jeff@FreeBSD.org>
- * Copyright (c) 2004, 2005 Bosko Milekic <bmilekic@FreeBSD.org>
+ * Copyright (c) 2002-2019 Jeffrey Roberson <jeff@frebsd.org>
+ * Copyright (c) 2004, 2005 Bosko Milekic <bmilekic@frebsd.org>
  * Copyright (c) 2004-2006 Robert N. M. Watson
  * All rights reserved.
  *
@@ -32,7 +32,7 @@
  * uma_core.c  Implementation of the Universal Memory allocator
  *
  * This allocator is intended to replace the multitude of similar object caches
- * in the standard FreeBSD kernel.  The intent is to be flexible as well as
+ * in the standard NQC kernel.  The intent is to be flexible as well as
  * efficient.  A primary design goal is to return unused memory to the rest of
  * the system.  This will make the system as a whole more flexible due to the
  * ability to move memory to subsystems which most need it instead of leaving

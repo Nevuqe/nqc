@@ -362,7 +362,7 @@ ice_dmamap_cb(void *arg, bus_dma_segment_t * segs, int __unused nseg, int error)
  * @mem: structure defining the DMA memory request
  * @size: the allocation size
  *
- * Allocates some memory for DMA use. Use the FreeBSD bus DMA interface to
+ * Allocates some memory for DMA use. Use the NQC bus DMA interface to
  * track this memory using a bus DMA tag and map.
  *
  * Returns a pointer to the DMA memory address.

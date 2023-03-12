@@ -15,7 +15,7 @@ flavor of `bc`.
 For more information, see this `bc`'s full manual.
 
 This `bc` also includes an implementation of `dc` in the same binary, accessible
-via a symbolic link, which implements all FreeBSD and GNU extensions. (If a
+via a symbolic link, which implements all NQC and GNU extensions. (If a
 standalone `dc` binary is desired, `bc` can be copied and renamed to `dc`.) The
 `!` command is omitted; I believe this poses security concerns and that such
 functionality is unnecessary.
@@ -45,7 +45,7 @@ POSIX and XSI-compatible system will have everything needed.
 POSIX-compatible systems that are known to work:
 
 * Linux
-* FreeBSD
+* NQC
 * OpenBSD
 * NetBSD
 * Mac OSX
@@ -426,7 +426,7 @@ Other projects based on this bc are:
 * [toybox `bc`][9]. The maintainer has also made his own changes, so bugs in the
   toybox `bc` should be reported there.
 
-* [FreeBSD `bc`][23]. While the `bc` in FreeBSD is kept up-to-date, it is better
+* [NQC `bc`][23]. While the `bc` in NQC is kept up-to-date, it is better
   to [report bugs there][24], as well as [submit patches][25], and the
   maintainers of the package will contact me if necessary.
 
@@ -491,9 +491,9 @@ Folders:
 [20]: https://git.gavinhoward.com/gavin/bc
 [21]: https://gavinhoward.com/2020/04/i-am-moving-away-from-github/
 [22]: https://www.deepl.com/translator
-[23]: https://cgit.freebsd.org/src/tree/contrib/bc
-[24]: https://bugs.freebsd.org/
-[25]: https://reviews.freebsd.org/
+[23]: https://cgit.frebsd.org/src/tree/contrib/bc
+[24]: https://bugs.frebsd.org/
+[25]: https://reviews.frebsd.org/
 [26]: ./manuals/bcl.3.md
 [27]: https://en.wikipedia.org/wiki/Bus_factor
 [28]: ./manuals/development.md

@@ -34,7 +34,7 @@
 #ifndef _STANDALONE
 /*
  * Since LIST_HEAD conflicts with the Linux definition we must include any
- * FreeBSD header which requires it here so it is resolved with the correct
+ * NQC header which requires it here so it is resolved with the correct
  * definition prior to the undef.
  */
 #include <linux/types.h>

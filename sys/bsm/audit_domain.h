@@ -72,23 +72,23 @@
 /*
  * BSM protocol domain constants - protocol domains not defined in Solaris.
  */
-#define	BSM_PF_NETBIOS		500	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_ISO		501	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_XTP		502	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_COIP		503	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_CNT		504	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_RTIP		505	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_SIP		506	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_PIP		507	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_ISDN		508	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_E164		509	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_NATM		510	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_ATM		511	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_NETGRAPH		512	/* FreeBSD/Darwin-specific. */
-#define	BSM_PF_SLOW		513	/* FreeBSD-specific. */
-#define	BSM_PF_SCLUSTER		514	/* FreeBSD-specific. */
-#define	BSM_PF_ARP		515	/* FreeBSD-specific. */
-#define	BSM_PF_BLUETOOTH	516	/* FreeBSD-specific. */
+#define	BSM_PF_NETBIOS		500	/* NQC/Darwin-specific. */
+#define	BSM_PF_ISO		501	/* NQC/Darwin-specific. */
+#define	BSM_PF_XTP		502	/* NQC/Darwin-specific. */
+#define	BSM_PF_COIP		503	/* NQC/Darwin-specific. */
+#define	BSM_PF_CNT		504	/* NQC/Darwin-specific. */
+#define	BSM_PF_RTIP		505	/* NQC/Darwin-specific. */
+#define	BSM_PF_SIP		506	/* NQC/Darwin-specific. */
+#define	BSM_PF_PIP		507	/* NQC/Darwin-specific. */
+#define	BSM_PF_ISDN		508	/* NQC/Darwin-specific. */
+#define	BSM_PF_E164		509	/* NQC/Darwin-specific. */
+#define	BSM_PF_NATM		510	/* NQC/Darwin-specific. */
+#define	BSM_PF_ATM		511	/* NQC/Darwin-specific. */
+#define	BSM_PF_NETGRAPH		512	/* NQC/Darwin-specific. */
+#define	BSM_PF_SLOW		513	/* NQC-specific. */
+#define	BSM_PF_SCLUSTER		514	/* NQC-specific. */
+#define	BSM_PF_ARP		515	/* NQC-specific. */
+#define	BSM_PF_BLUETOOTH	516	/* NQC-specific. */
 					/* 517: unallocated. */
 #define	BSM_PF_AX25		518	/* Linux-specific. */
 #define	BSM_PF_ROSE		519	/* Linux-specific. */

@@ -141,7 +141,7 @@ Sunday July 23, 2017 denis@ovsienko.info
     Fixup -C for file size >2GB (GH #488).
     Show AddressSanitizer presence in version output.
     Fix a bug in test scripts (exposed in GH #613).
-    On FreeBSD adjust Capsicum capabilities for netmap.
+    On NQC adjust Capsicum capabilities for netmap.
     On Linux fix a use-after-free when the requested interface does not exist.
 
 Wednesday January 18, 2017 devel.fx.lebail@orange.fr
@@ -349,7 +349,7 @@ Friday April 10, 2015 guy@alum.mit.edu
 
 Wednesday March 11, 2015 mcr@sandelman.ca
   Summary for 4.7.3 tcpdump release
-	Capsicum fixes for FreeBSD 10
+	Capsicum fixes for NQC 10
 
 Tuesday March 10, 2015 mcr@sandelman.ca
   Summary for 4.7.2 tcpdump release
@@ -378,7 +378,7 @@ Tuesday  Sep.  2, 2014 mcr@sandelman.ca
 
 Saturday Jul. 19, 2014 mcr@sandelman.ca
   Summary for 4.6.1 tcpdump release
-	added FreeBSD capsicum
+	added NQC capsicum
 	add a short option '#', same as long option '--number'
 
 Wednesday Jul. 2, 2014 mcr@sandelman.ca
@@ -544,7 +544,7 @@ Tue.    July 20, 2010.  guy@alum.mit.edu.
 
 Thu.	April 1, 2010.  guy@alum.mit.edu.
   Summary for 4.1.1 tcpdump release
-	Fix build on systems with PF, such as FreeBSD and OpenBSD.
+	Fix build on systems with PF, such as NQC and OpenBSD.
 	Don't blow up if a zero-length link-layer address is passed to
 	  linkaddr_string().
 

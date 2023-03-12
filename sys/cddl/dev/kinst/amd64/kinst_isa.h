@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: CDDL 1.0
  *
- * Copyright 2022 Christos Margiolis <christos@FreeBSD.org>
- * Copyright 2022 Mark Johnston <markj@FreeBSD.org>
+ * Copyright 2022 Christos Margiolis <christos@frebsd.org>
+ * Copyright 2022 Mark Johnston <markj@frebsd.org>
  */
 
 #ifndef _KINST_ISA_H_

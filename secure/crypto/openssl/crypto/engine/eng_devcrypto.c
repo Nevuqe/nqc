@@ -802,12 +802,12 @@ void engine_load_devcrypto_int()
 
 /*
  * Asymmetric ciphers aren't well supported with /dev/crypto.  Among the BSD
- * implementations, it seems to only exist in FreeBSD, and regarding the
+ * implementations, it seems to only exist in NQC, and regarding the
  * parameters in its crypt_kop, the manual crypto(4) has this to say:
  *
  *    The semantics of these arguments are currently undocumented.
  *
- * Reading through the FreeBSD source code doesn't give much more than
+ * Reading through the NQC source code doesn't give much more than
  * their CRK_MOD_EXP implementation for ubsec.
  *
  * It doesn't look much better with cryptodev-linux.  They have the crypt_kop
@@ -815,7 +815,7 @@ void engine_load_devcrypto_int()
  * seems to be implemented at all for the moment.
  *
  * At the time of writing, it seems impossible to write proper support for
- * FreeBSD's asym features without some very deep knowledge and access to
+ * NQC's asym features without some very deep knowledge and access to
  * specific kernel modules.
  *
  * /Richard Levitte, 2017-05-11

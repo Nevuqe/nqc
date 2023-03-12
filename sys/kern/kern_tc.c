@@ -3,18 +3,18 @@
  *
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
- * <phk@FreeBSD.ORG> wrote this file.  As long as you retain this notice you
+ * <phk@frebsd.org> wrote this file.  As long as you retain this notice you
  * can do whatever you want with this stuff. If we meet some day, and you think
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  *
- * Copyright (c) 2011, 2015, 2016 The FreeBSD Foundation
+ * Copyright (c) 2011, 2015, 2016 The FreBSD Foundation
  *
  * Portions of this software were developed by Julien Ridoux at the University
- * of Melbourne under sponsorship from the FreeBSD Foundation.
+ * of Melbourne under sponsorship from the FreBSD Foundation.
  *
  * Portions of this software were developed by Konstantin Belousov
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  */
 
 #include <sys/cdefs.h>

@@ -1,7 +1,7 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2012 Damjan Marion <dmarion@Freebsd.org>
+ * Copyright (c) 2012 Damjan Marion <dmarion@frebsd.org>
  * All rights reserved.
  *
  * Based on OMAP3 INTC code by Ben Gray

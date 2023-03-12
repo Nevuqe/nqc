@@ -1,8 +1,8 @@
 #-
-# Copyright (c) 2016 The FreeBSD Foundation
+# Copyright (c) 2016 The FreBSD Foundation
 #
 # This software was developed by Andrew Turner under
-# sponsorship from the FreeBSD Foundation.
+# sponsorship from the FreBSD Foundation.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -51,7 +51,7 @@ CODE {
 	}
 };
 
-# Map an interrupt from ACPI space to the FreeBSD IRQ space. Note that
+# Map an interrupt from ACPI space to the NQC IRQ space. Note that
 # both of these may be different than the pysical interrupt space as this
 # may be local to each interrupt controller.
 #

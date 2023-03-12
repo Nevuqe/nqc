@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2013 NetApp, Inc.
 # All rights reserved.
@@ -71,7 +71,7 @@ usage() {
 	echo "       -c: number of virtual cpus (default: ${DEFAULT_CPUS})"
 	echo "       -C: console device (default: ${DEFAULT_CONSOLE})"
 	echo "       -d: virtio diskdev file (default: ${DEFAULT_VIRTIO_DISK})"
-	echo "       -e: set FreeBSD loader environment variable"
+	echo "       -e: set NQC loader environment variable"
 	echo "       -E: Use UEFI mode"
 	echo "       -f: Use a specific UEFI firmware"
 	echo "       -F: Use a custom UEFI GOP framebuffer size" \

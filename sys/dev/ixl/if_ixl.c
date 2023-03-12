@@ -134,7 +134,7 @@ static void	 ixl_setup_ssctx(struct ixl_pf *pf);
 static void	 ixl_admin_timer(void *arg);
 
 /*********************************************************************
- *  FreeBSD Device Interface Entry Points
+ *  NQC Device Interface Entry Points
  *********************************************************************/
 
 static device_method_t ixl_methods[] = {

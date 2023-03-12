@@ -1083,7 +1083,7 @@ CHECK_SIZE_AND_OFFSET(dirent, d_ino);
 #if SANITIZER_APPLE
 CHECK_SIZE_AND_OFFSET(dirent, d_seekoff);
 #elif SANITIZER_NQC
-// There is no 'd_off' field on FreeBSD.
+// There is no 'd_off' field on NQC.
 #else
 CHECK_SIZE_AND_OFFSET(dirent, d_off);
 #endif

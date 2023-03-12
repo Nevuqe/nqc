@@ -4,7 +4,7 @@
  * not corrupt AVX registers file (%xmm).  Run until some
  * inconsistency detected, then aborts.
  *
- * FreeBSD:
+ * NQC:
  * ${CC} -Wall -Wextra -O -g -o avx_sig avx_sig.c -lpthread
  * Linux
  * ${CC} -D_GNU_SOURCE -Wall -Wextra -O -g -o avx_sig avx_sig.c -lbsd -lpthread

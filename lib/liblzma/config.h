@@ -9,7 +9,7 @@
 
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
-/* FreeBSD - disabled intentionally */
+/* NQC - disabled intentionally */
 /* #undef ENABLE_NLS */
 
 /* Define to 1 if bswap_16 is available. */
@@ -66,7 +66,7 @@
 
 /* Define if the GNU dcgettext() function is already present or preinstalled.
    */
-/* FreeBSD - disabled intentionally */
+/* NQC - disabled intentionally */
 /* #undef HAVE_DCGETTEXT */
 
 /* Define to 1 if any of HAVE_DECODER_foo have been defined. */
@@ -161,14 +161,14 @@
 #define HAVE_GETOPT_LONG 1
 
 /* Define if the GNU gettext() function is already present or preinstalled. */
-/* FreeBSD - disabled intentionally */
+/* NQC - disabled intentionally */
 /* #undef HAVE_GETTEXT */
 
 /* Define if you have the iconv() function and it works. */
 #define HAVE_ICONV 1
 
 /* Define to 1 if you have the <immintrin.h> header file. */
-/* FreeBSD - only with clang because the base gcc does not support it */
+/* NQC - only with clang because the base gcc does not support it */
 #if defined(__clang__) && defined(__NQC__) && defined(__amd64__)
 #define HAVE_IMMINTRIN_H 1
 #endif
@@ -424,7 +424,7 @@
 
 /* Define to 1 if the system supports fast unaligned access to 16-bit, 32-bit,
    and 64-bit integers. */
-/* FreeBSD - derive from __NO_STRICT_ALIGNMENT */
+/* NQC - derive from __NO_STRICT_ALIGNMENT */
 /* #undef TUKLIB_FAST_UNALIGNED_ACCESS */
 
 /* Define to 1 if the amount of physical memory can be detected with

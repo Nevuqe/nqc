@@ -144,7 +144,7 @@ Here is a brief project history of the ELF and COFF ports.
 
 - July 2016: Started working on improving the linker script support.
 
-- December 2016: Succeeded to build the entire FreeBSD base system
+- December 2016: Succeeded to build the entire NQC base system
   including the kernel. We had widen the performance gap against the
   GNU linkers.
 

@@ -299,7 +299,7 @@ void		setnetgrent(const char *);
 
 
 /*
- * PRIVATE functions specific to the FreeBSD implementation
+ * PRIVATE functions specific to the NQC implementation
  */
 
 /* DO NOT USE THESE, THEY ARE SUBJECT TO CHANGE AND ARE NOT PORTABLE!!! */

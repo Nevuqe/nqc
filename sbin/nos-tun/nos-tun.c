@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1996, Nickolay Dudorov
  * All rights reserved.
@@ -142,7 +142,7 @@ tun_open(char *dev_name, struct sockaddr *ouraddr, char *theiraddr)
    *  Delete (previous) addresses for interface
    *
    *  !!!!
-   *  On FreeBSD this ioctl returns error
+   *  On NQC this ioctl returns error
    *  when tunN have no addresses, so - log and ignore it.
    *
    */

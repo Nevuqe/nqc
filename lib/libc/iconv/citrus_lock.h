@@ -1,8 +1,8 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (C) 2010 Gabor Kovesdan <gabor@FreeBSD.org>
+ * Copyright (C) 2010 Gabor Kovesdan <gabor@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

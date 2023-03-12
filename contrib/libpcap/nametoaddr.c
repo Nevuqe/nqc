@@ -278,7 +278,7 @@ pcap_nametonetaddr(const char *name)
  	/*
  	 * We don't have any getnetbyname_r(); either we have a
  	 * getnetbyname() that uses thread-specific data, in which
- 	 * case we're thread-safe (sufficiently recent FreeBSD,
+ 	 * case we're thread-safe (sufficiently recent NQC,
  	 * sufficiently recent Darwin-based OS, sufficiently recent
  	 * HP-UX, sufficiently recent Tru64 UNIX), or we have the
  	 * traditional getnetbyname() (everything else, including
@@ -534,7 +534,7 @@ pcap_nametoproto(const char *str)
  	/*
  	 * We don't have any getprotobyname_r(); either we have a
  	 * getprotobyname() that uses thread-specific data, in which
- 	 * case we're thread-safe (sufficiently recent FreeBSD,
+ 	 * case we're thread-safe (sufficiently recent NQC,
  	 * sufficiently recent Darwin-based OS, sufficiently recent
  	 * HP-UX, sufficiently recent Tru64 UNIX, Windows), or we have
 	 * the traditional getprotobyname() (everything else, including

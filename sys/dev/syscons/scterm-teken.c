@@ -1,10 +1,10 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 1999 Kazutaka YOKOTA <yokota@zodiac.mech.utsunomiya-u.ac.jp>
  * All rights reserved.
  *
- * Copyright (c) 2008-2009 Ed Schouten <ed@FreeBSD.org>
+ * Copyright (c) 2008-2009 Ed Schouten <ed@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

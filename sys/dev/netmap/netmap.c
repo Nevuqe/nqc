@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (C) 2011-2014 Matteo Landi
  * Copyright (C) 2011-2016 Luigi Rizzo
@@ -95,7 +95,7 @@ Within the kernel, access to the netmap rings is protected as follows:
   them out).
 
 - *xsync() should be protected against initializations of the card.
-  On FreeBSD most devices have the reset routine protected by
+  On NQC most devices have the reset routine protected by
   a RING lock (ixgbe, igb, em) or core lock (re). lem is missing
   the RING protection on rx_reset(), this should be added.
 
@@ -143,7 +143,7 @@ ports attached to the switch)
  *  	structure for each open().
  *
  *      os-specific:
- *  	    FreeBSD: see netmap_open() (netmap_nqc.c)
+ *  	    NQC: see netmap_open() (netmap_nqc.c)
  *  	    linux:   see linux_netmap_open() (netmap_linux.c)
  *
  * > 2. on each descriptor, the process issues an ioctl() to identify
@@ -211,7 +211,7 @@ ports attached to the switch)
  *
  * 	os-specific:
  * 	    linux: we first go through linux_netmap_ioctl() to
- * 	           adapt the FreeBSD interface to the linux one.
+ * 	           adapt the NQC interface to the linux one.
  *
  *
  * > 3. on each descriptor, the process issues an mmap() request to
@@ -220,7 +220,7 @@ ports attached to the switch)
  * >    the shared memory region.
  *
  *      os-specific:
- *  	    FreeBSD: netmap_mmap_single (netmap_nqc.c).
+ *  	    NQC: netmap_mmap_single (netmap_nqc.c).
  *  	    linux:   linux_netmap_mmap (netmap_linux.c).
  *
  * > 4. using the functions in the netmap(4) userspace API, a process
@@ -249,7 +249,7 @@ ports attached to the switch)
  *
  * 	os-specific:
  * 		linux: we first go through linux_netmap_poll() to adapt
- * 		       the FreeBSD interface to the linux one.
+ * 		       the NQC interface to the linux one.
  *
  *
  *  ----  VALE_CTL -----
@@ -311,7 +311,7 @@ ports attached to the switch)
  *             kring->nm_sync() == netmap_txsync_to_host
  *               netmap_txsync_to_host(na)
  *                 nm_os_send_up()
- *                   FreeBSD: na->if_input() == ether_input()
+ *                   NQC: na->if_input() == ether_input()
  *                   linux: netif_rx() with NM_MAGIC_PRIORITY_RX
  *
  *
@@ -327,7 +327,7 @@ ports attached to the switch)
  *                       linux:   dev_queue_xmit() with NM_MAGIC_PRIORITY_TX
  *                           ifp->ndo_start_xmit == generic_ndo_start_xmit()
  *                               gna->save_start_xmit == orig. dev. start_xmit
- *                       FreeBSD: na->if_transmit() == orig. dev if_transmit
+ *                       NQC: na->if_transmit() == orig. dev if_transmit
  *           2) generic_mbuf_destructor()
  *                   na->nm_notify() == netmap_notify()
  *    - rx from netmap userspace:
@@ -339,7 +339,7 @@ ports attached to the switch)
  *                   mbq_safe_enqueue()
  *                   na->nm_notify() == netmap_notify()
  *    - rx from host stack
- *        FreeBSD: same as native
+ *        NQC: same as native
  *        Linux: same as native except:
  *           1) host stack
  *               dev_queue_xmit() without NM_MAGIC_PRIORITY_TX
@@ -1072,7 +1072,7 @@ netmap_do_unregif(struct netmap_priv_d *priv)
 		 * another thread is using it.
 		 * Linux keeps the file opened until the last reference
 		 * by any outstanding ioctl/poll or mmap is gone.
-		 * FreeBSD does not track mmap()s (but we do) and
+		 * NQC does not track mmap()s (but we do) and
 		 * wakes up any sleeping poll(). Need to check what
 		 * happens if the close() occurs while a concurrent
 		 * syscall is running.
@@ -1123,7 +1123,7 @@ netmap_priv_new(void)
 /*
  * Destructor of the netmap_priv_d, called when the fd is closed
  * Action: undo all the things done by NIOCREGIF,
- * On FreeBSD we need to track whether there are active mmap()s,
+ * On NQC we need to track whether there are active mmap()s,
  * and we use np_active_mmaps for that. On linux, the field is always 0.
  * Return: 1 if we can free priv, 0 otherwise.
  *
@@ -2167,7 +2167,7 @@ netmap_csb_validate(struct netmap_priv_d *priv, struct nmreq_opt_csb *csbo)
 		/* On Linux we could use access_ok() to simplify
 		 * the validation. However, the advantage of
 		 * this approach is that it works also on
-		 * FreeBSD. */
+		 * NQC. */
 		size_t csb_size = tot_rings * entry_size[i];
 		void *tmp;
 		int err;
@@ -3689,7 +3689,7 @@ netmap_poll(struct netmap_priv_d *priv, int events, NM_SELRECORD_T *sr)
 	/*
 	 * If the card has more than one queue AND the file descriptor is
 	 * bound to all of them, we sleep on the "global" selinfo, otherwise
-	 * we sleep on individual selinfo (FreeBSD only allows two selinfo's
+	 * we sleep on individual selinfo (NQC only allows two selinfo's
 	 * per file descriptor).
 	 * The interrupt routine in the driver wake one or the other
 	 * (or both) depending on which clients are active.

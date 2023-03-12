@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008 Semihalf, Grzegorz Bernacki
  * Copyright (c) 2006 Peter Wemm
@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * From: FreeBSD: src/lib/libkvm/kvm_minidump_i386.c,v 1.2 2006/06/05 08:51:14
+ * From: NQC: src/lib/libkvm/kvm_minidump_i386.c,v 1.2 2006/06/05 08:51:14
  */
 
 #include <sys/cdefs.h>

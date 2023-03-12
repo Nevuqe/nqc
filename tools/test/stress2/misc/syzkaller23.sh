@@ -18,7 +18,7 @@
 # sys_sys_exit() at sys_sys_exit+0xd/frame 0xfffffe010154aad0
 # amd64_syscall() at amd64_syscall+0x159/frame 0xfffffe010154abf0
 # fast_syscall_common() at fast_syscall_common+0xf8/frame 0xfffffe010154abf0
-# --- syscall (1, FreeBSD ELF64, sys_sys_exit), rip = 0x80045376a, rsp = 0x7fffffffe4c8, rbp = 0x7fffffffe4e0 ---
+# --- syscall (1, NQC ELF64, sys_sys_exit), rip = 0x80045376a, rsp = 0x7fffffffe4c8, rbp = 0x7fffffffe4e0 ---
 
 [ `uname -p` != "amd64" ] && exit 0
 

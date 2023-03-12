@@ -39,7 +39,7 @@
 #       
 #
 # STRATEGY:
-#   1. Create a storage pool.  Only use the da driver (FreeBSD's SCSI disk
+#   1. Create a storage pool.  Only use the da driver (NQC's SCSI disk
 #      driver) because it has a special interface for simulating IO errors.
 #   2. Inject IO errors while doing IO to the pool.
 #   3. Verify that the vdev becomes FAULTED.

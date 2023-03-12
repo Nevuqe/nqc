@@ -1,7 +1,7 @@
 .\"
 .\" ----------------------------------------------------------------------------
 .\" "THE BEER-WARE LICENSE" (Revision 42):
-.\" <phk@FreeBSD.org> wrote this file.  As long as you retain this notice you
+.\" <phk@frebsd.org> wrote this file.  As long as you retain this notice you
 .\" can do whatever you want with this stuff. If we meet some day, and you think
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ Implementation
 A new malloc(3) implementation was written to meet the goals,
 and to the extent possible to address the shortcomings listed previously.
 .PP
-The source is 1218 lines of C code, and can be found in FreeBSD 2.2
+The source is 1218 lines of C code, and can be found in NQC 2.2
 (and probably later versions as well) as src/lib/libc/stdlib/malloc.c.
 .PP
 The main data structure is the

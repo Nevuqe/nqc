@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Jakub Klama <jceel@FreeBSD.org>
+ * Copyright 2016 Jakub Klama <jceel@frebsd.org>
  * All rights reserved
  *
  * Redistribution and use in source and binary forms, with or without
@@ -338,7 +338,7 @@ l9p_threadpool_tflush(struct l9p_request *req)
 		 * Worker thread flushee->lr_worker is working on it.
 		 * Kick it to get it out of blocking system calls.
 		 * (This requires that it carefully set up some
-		 * signal handlers, and may be FreeBSD-dependent,
+		 * signal handlers, and may be NQC-dependent,
 		 * it probably cannot be handled this way on MacOS.)
 		 */
 #ifdef notyet

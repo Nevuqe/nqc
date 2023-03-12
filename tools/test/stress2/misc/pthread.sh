@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Copyright (c) 2008 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2008 Peter Holm <pho@frebsd.org>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -28,7 +28,7 @@
 
 # panic: spin lock held too long
 
-# Test program and scenario by Peter Wemm <peter@FreeBSD.org>
+# Test program and scenario by Peter Wemm <peter@frebsd.org>
 
 . ../default.cfg
 

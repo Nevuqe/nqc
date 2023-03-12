@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Dmitry Chagin <dchagin@FreeBSD.org>
+ * Copyright (c) 2015 Dmitry Chagin <dchagin@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -65,7 +65,7 @@ _Static_assert(offsetof(struct sockaddr, sa_data) ==
 static bool use_real_ifnames = false;
 SYSCTL_BOOL(_compat_linux, OID_AUTO, use_real_ifnames, CTLFLAG_RWTUN,
     &use_real_ifnames, 0,
-    "Use FreeBSD interface names instead of generating ethN aliases");
+    "Use NQC interface names instead of generating ethN aliases");
 
 static int bsd_to_linux_sigtbl[LINUX_SIGTBLSZ] = {
 	LINUX_SIGHUP,	/* SIGHUP */
@@ -134,8 +134,8 @@ static int linux_to_bsd_sigtbl[LINUX_SIGTBLSZ] = {
 	SIGWINCH,	/* LINUX_SIGWINCH */
 	SIGIO,		/* LINUX_SIGIO */
 	/*
-	 * FreeBSD does not have SIGPWR signal, map Linux SIGPWR signal
-	 * to the first unused FreeBSD signal number. Since Linux supports
+	 * NQC does not have SIGPWR signal, map Linux SIGPWR signal
+	 * to the first unused NQC signal number. Since Linux supports
 	 * signals from 1 to 64 we are ok here as our SIGRTMIN = 65.
 	 */
 	LINUX_SIGPWREMU,/* LINUX_SIGPWR */
@@ -149,7 +149,7 @@ static struct cdevsw dev_shm_cdevsw = {
 };
 
 /*
- * Map Linux RT signals to the FreeBSD RT signals.
+ * Map Linux RT signals to the NQC RT signals.
  */
 static inline int
 linux_to_bsd_rt_signal(int sig)
@@ -198,7 +198,7 @@ linux_to_bsd_sigaltstack(int lsa)
 		bsa |= SS_DISABLE;
 	/*
 	 * Linux ignores SS_ONSTACK flag for ss
-	 * parameter while FreeBSD prohibits it.
+	 * parameter while NQC prohibits it.
 	 */
 	return (bsa);
 }
@@ -246,7 +246,7 @@ bsd_to_linux_sigset(sigset_t *bss, l_sigset_t *lss)
 }
 
 /*
- * Translate a FreeBSD interface name to a Linux interface name
+ * Translate a NQC interface name to a Linux interface name
  * by interface name, and return the number of bytes copied to lxname.
  */
 int
@@ -268,7 +268,7 @@ ifname_bsd_to_linux_name(const char *bsdname, char *lxname, size_t len)
 }
 
 /*
- * Translate a FreeBSD interface name to a Linux interface name
+ * Translate a NQC interface name to a Linux interface name
  * by interface index, and return the number of bytes copied to lxname.
  */
 int
@@ -290,7 +290,7 @@ ifname_bsd_to_linux_idx(u_int idx, char *lxname, size_t len)
 }
 
 /*
- * Translate a FreeBSD interface name to a Linux interface name,
+ * Translate a NQC interface name to a Linux interface name,
  * and return the number of bytes copied to lxname, 0 if interface
  * not found, -1 on error.
  */
@@ -341,7 +341,7 @@ ifname_bsd_to_linux_ifp(struct ifnet *ifp, char *lxname, size_t len)
 }
 
 /*
- * Translate a Linux interface name to a FreeBSD interface name,
+ * Translate a Linux interface name to a NQC interface name,
  * and return the associated ifnet structure
  * bsdname and lxname need to be least IFNAMSIZ bytes long, but
  * can point to the same buffer.
@@ -363,7 +363,7 @@ ifname_linux_to_ifp_cb(if_t ifp, void *arg)
 	NET_EPOCH_ASSERT();
 
 	/*
-	 * Allow Linux programs to use FreeBSD names. Don't presume
+	 * Allow Linux programs to use NQC names. Don't presume
 	 * we never have an interface named "eth", so don't make
 	 * the test optional based on is_eth.
 	 */
@@ -826,13 +826,13 @@ linux_to_bsd_poll_events(struct thread *td, int fd, short lev,
 	if (lev & LINUX_POLLRDHUP) {
 		/*
 		 * It seems that the Linux silencly ignores POLLRDHUP
-		 * on non-socket file descriptors unlike FreeBSD, where
+		 * on non-socket file descriptors unlike NQC, where
 		 * events bits is more strictly checked (POLLSTANDARD).
 		 */
 		error = fget_unlocked(td, fd, &cap_no_rights, &fp);
 		if (error == 0) {
 			/*
-			 * XXX. On FreeBSD POLLRDHUP applies only to
+			 * XXX. On NQC POLLRDHUP applies only to
 			 * stream sockets.
 			 */
 			if (fp->f_type == DTYPE_SOCKET)
@@ -860,7 +860,7 @@ bsd_to_linux_poll_events(short bev, short *lev)
 		bits |=	LINUX_POLLPRI;
 	if (bev & (POLLOUT | POLLWRNORM))
 		/*
-		 * POLLWRNORM is equal to POLLOUT on FreeBSD,
+		 * POLLWRNORM is equal to POLLOUT on NQC,
 		 * but not on Linux
 		 */
 		bits |= LINUX_POLLOUT;

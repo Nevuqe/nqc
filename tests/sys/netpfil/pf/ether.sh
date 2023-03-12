@@ -1,6 +1,6 @@
 # $NQC$
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright © 2021. Rubicon Communications, LLC (Netgate). All Rights Reserved.
 #

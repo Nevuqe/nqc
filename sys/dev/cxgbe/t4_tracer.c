@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2013 Chelsio Communications, Inc.
  * All rights reserved.
- * Written by: Navdeep Parhar <np@FreeBSD.org>
+ * Written by: Navdeep Parhar <np@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

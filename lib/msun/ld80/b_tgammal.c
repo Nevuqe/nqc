@@ -30,7 +30,7 @@
  */
 
 /*
- * The original code, FreeBSD's old svn r93211, contain the following
+ * The original code, NQC's old svn r93211, contain the following
  * attribution:
  *
  *    This code by P. McIlroy, Oct 1992;

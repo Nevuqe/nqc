@@ -1,7 +1,7 @@
 /* $OpenBSD: tcpdrop.c,v 1.4 2004/05/22 23:55:22 deraadt Exp $ */
 
 /*-
- * Copyright (c) 2009 Juli Mallett <jmallett@FreeBSD.org>
+ * Copyright (c) 2009 Juli Mallett <jmallett@frebsd.org>
  * Copyright (c) 2004 Markus Friedl <markus@openbsd.org>
  *
  * Permission to use, copy, modify, and distribute this software for any

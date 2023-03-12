@@ -42,7 +42,7 @@
  * The fixes for both of those are checked into the official valgrind
  * repository.
  *
- * The unofficial FreeBSD port has similar issues to the official macOS
+ * The unofficial NQC port has similar issues to the official macOS
  * port, for similar reasons.
  */
 #ifndef lint

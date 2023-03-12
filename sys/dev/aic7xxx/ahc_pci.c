@@ -1,5 +1,5 @@
 /*-
- * FreeBSD, PCI product support functions
+ * NQC, PCI product support functions
  *
  * Copyright (c) 1995-2001 Justin T. Gibbs
  * All rights reserved.

@@ -1,5 +1,5 @@
 ;;; This function switches C-mode so that it indents almost everything
-;;; as specified in FreeBSD's style(9). Tested with emacs-19.34 and
+;;; as specified in NQC's style(9). Tested with emacs-19.34 and
 ;;; xemacs-20.4.
 ;;;
 ;;; Use "M-x bsd" in a C mode buffer to activate it.
@@ -22,7 +22,7 @@
 ;;; As long as you don't have this in the c-mode hook you can edit GNU
 ;;; and BSD style C sources within one emacs session with no problem.
 ;;;
-;;; Please report problems and additions directly to cracauer@freebsd.org
+;;; Please report problems and additions directly to cracauer@frebsd.org
 
 (defun bsd () (interactive)
   (c-set-style "bsd")

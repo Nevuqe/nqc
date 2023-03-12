@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2008-2009 Hans Petter Selasky. All rights reserved.
  *
@@ -881,7 +881,7 @@ libusb20_dev_req_string_simple_sync(struct libusb20_device *pdev,
 	uint8_t temp[255];
 	uint8_t swap;
 
-	/* the following code derives from the FreeBSD USB kernel */
+	/* the following code derives from the NQC USB kernel */
 
 	if ((len < 1) || (ptr == NULL)) {
 		/* too short buffer */

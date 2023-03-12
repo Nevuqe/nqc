@@ -319,7 +319,7 @@ cdialog (20110707) unstable; urgency=high
 
 cdialog (20110630) unstable; urgency=high
 
-  * various bug-fixes reported in FreeBSD.
+  * various bug-fixes reported in NQC.
 
  -- Thomas E. Dickey <dickey@invisible-island.net>  Mon, 13 Jun 2011 05:44:17 -0400
 

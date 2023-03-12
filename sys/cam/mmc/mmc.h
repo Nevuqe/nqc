@@ -1,5 +1,5 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2014-2016 Ilya Bakulin.  All rights reserved.
  *
@@ -50,8 +50,8 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * Inspired coded in sys/dev/mmc. Thanks to Warner Losh <imp@FreeBSD.org>,
- * Bernd Walter <tisco@FreeBSD.org>, and other authors.
+ * Inspired coded in sys/dev/mmc. Thanks to Warner Losh <imp@frebsd.org>,
+ * Bernd Walter <tisco@frebsd.org>, and other authors.
  *
  * $NQC$
  */

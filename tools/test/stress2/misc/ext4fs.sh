@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -30,7 +30,7 @@
 # Simple ext4 test.
 
 # "panic: buf_vlist_add:  Preallocated nodes insufficient" seen:
-# https://people.freebsd.org/~pho/stress/log/mjguzik036.txt
+# https://people.frebsd.org/~pho/stress/log/mjguzik036.txt
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1
 

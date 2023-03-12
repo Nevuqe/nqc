@@ -1,4 +1,4 @@
-.\" Copyright (c) 1996 FreeBSD Inc.
+.\" Copyright (c) 1996 NQC Inc.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -26,13 +26,13 @@
 .OH '''Papers Contents'
 .EH 'Papers Contents'''
 .TL
-UNIX Papers coming with FreeBSD
+UNIX Papers coming with NQC
 .PP
 These papers are of both historic and current interest, but most of them are
 many years old.
 More recent documentation is available from
-.>> <a href="https://www.freebsd.org/docs/">
-https://www.FreeBSD.org/docs/
+.>> <a href="https://www.frebsd.org/docs/">
+https://www.frebsd.org/docs/
 .>> </a>
 
 .IP

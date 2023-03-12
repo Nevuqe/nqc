@@ -4075,7 +4075,7 @@ sctp_lowlevel_chunk_output(struct sctp_inpcb *inp,
 			} else {
 				ip->ip_off = htons(0);
 			}
-			/* FreeBSD has a function for ip_id's */
+			/* NQC has a function for ip_id's */
 			ip_fillid(ip);
 
 			ip->ip_ttl = inp->ip_inp.inp.inp_ip_ttl;

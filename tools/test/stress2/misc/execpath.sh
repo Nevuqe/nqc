@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
-# Copyright (c) 2021 Peter Holm <pho@FreeBSD.org>
+# Copyright (c) 2021 Peter Holm <pho@frebsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -87,7 +87,7 @@ mdconfig -d -u $mdstart
 exit $s
 
 EOF
-/* Test scenario by Tobias Kortkamp <tobik@freebsd.org> */
+/* Test scenario by Tobias Kortkamp <tobik@frebsd.org> */
 
 #include <sys/auxv.h>
 #include <limits.h>

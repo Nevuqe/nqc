@@ -12,7 +12,7 @@ CLEANFILES= krb5-config
 # a UTF-8 locale (see https://stackoverflow.com/a/23584470/894271)
 # TODO: Should we just require LC_ALL=C during the build?
 krb5-config: krb5-config.in
-	env LC_ALL=C sed -e "s,@PACKAGE@,FreeBSD heimdal,g" \
+	env LC_ALL=C sed -e "s,@PACKAGE@,NQC heimdal,g" \
 	    -e "s,@VERSION@,1.1.0,g" \
 	    -e "s,@prefix@,/usr,g" \
 	    -e "s,@exec_prefix@,/usr,g" \

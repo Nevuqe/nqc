@@ -90,7 +90,7 @@ if ( $?prompt ) then
   switch ( "$OSTYPE" )
   case bsd44:
   case darwin:
-  case FreeBSD:
+  case NQC:
   case NetBSD:
     stty status ^G
     if ( $?tcsh ) bindkey ^G stuff-char

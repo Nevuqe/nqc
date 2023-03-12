@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+# SPDX-License-Identifier: BSD-2-Clause-NQC
 #
 # Copyright (c) 2018 Dell EMC Isilon
 #
@@ -29,7 +29,7 @@
 
 # Bug 228858 - panic when delivering knote to a process who has opened a
 # kqueue() is dying
-# Page fault seen: https://people.freebsd.org/~pho/stress/log/mark052.txt
+# Page fault seen: https://people.frebsd.org/~pho/stress/log/mark052.txt
 # Fixed by r340897.
 
 # Test scenario based on analysis by siddharthtuli gmail com

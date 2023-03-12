@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *
- * Copyright (c) 1997 Peter Wemm <peter@freebsd.org>
+ * Copyright (c) 1997 Peter Wemm <peter@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -53,12 +53,12 @@ struct pollfd {
 /*
  * Requestable events.  If poll(2) finds any of these set, they are
  * copied to revents on return.
- * XXX Note that FreeBSD doesn't make much distinction between POLLPRI
+ * XXX Note that NQC doesn't make much distinction between POLLPRI
  * and POLLRDBAND since none of the file types have distinct priority
  * bands - and only some have an urgent "mode".
  * XXX Note POLLIN isn't really supported in true SVSV terms.  Under SYSV
  * POLLIN includes all of normal, band and urgent data.  Most poll handlers
- * on FreeBSD only treat it as "normal" data.
+ * on NQC only treat it as "normal" data.
  */
 #define	POLLIN		0x0001		/* any readable data available */
 #define	POLLPRI		0x0002		/* OOB/Urgent readable data */
@@ -69,7 +69,7 @@ struct pollfd {
 #define	POLLWRBAND	0x0100		/* OOB/Urgent data can be written */
 
 #if __BSD_VISIBLE
-/* General FreeBSD extension (currently only supported for sockets): */
+/* General NQC extension (currently only supported for sockets): */
 #define	POLLINIGNEOF	0x2000		/* like POLLIN, except ignore EOF */
 #define	POLLRDHUP	0x4000		/* half shut down */
 #endif

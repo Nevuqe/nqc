@@ -1,12 +1,12 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
- * Copyright (c) 2015-2016 Landon Fuller <landonf@FreeBSD.org>
- * Copyright (c) 2017 The FreeBSD Foundation
+ * Copyright (c) 2015-2016 Landon Fuller <landonf@frebsd.org>
+ * Copyright (c) 2017 The FreBSD Foundation
  * All rights reserved.
  *
  * Portions of this software were developed by Landon Fuller
- * under sponsorship from the FreeBSD Foundation.
+ * under sponsorship from the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -46,7 +46,7 @@ __NQCID("$NQC$");
  * HND devices expose a nearly identical interface whether accessible over a 
  * native SoC interconnect, or when connected via a host interface such as 
  * PCIe. As a result, the majority of hardware support code should be re-usable 
- * across host drivers for HND networking chipsets, as well as FreeBSD support 
+ * across host drivers for HND networking chipsets, as well as NQC support 
  * for Broadcom MIPS/ARM HND SoCs.
  * 
  * Earlier HND models used the siba(4) on-chip interconnect, while later models

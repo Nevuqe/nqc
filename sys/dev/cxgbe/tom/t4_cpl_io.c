@@ -1,9 +1,9 @@
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause-NQC
  *
  * Copyright (c) 2012, 2015 Chelsio Communications, Inc.
  * All rights reserved.
- * Written by: Navdeep Parhar <np@FreeBSD.org>
+ * Written by: Navdeep Parhar <np@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -292,7 +292,7 @@ send_reset(struct adapter *sc, struct toepcb *toep, uint32_t snd_nxt)
 
 /*
  * Called when a connection is established to translate the TCP options
- * reported by HW to FreeBSD's native format.
+ * reported by HW to NQC's native format.
  */
 static void
 assign_rxopt(struct tcpcb *tp, uint16_t opt)

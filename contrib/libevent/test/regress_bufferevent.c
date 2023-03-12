@@ -878,7 +878,7 @@ test_bufferevent_connect_fail(void *arg)
 	bufferevent_setcb(bev, NULL, NULL, want_fail_eventcb, data->base);
 
 	r = bufferevent_socket_connect(bev, (struct sockaddr *)&localhost, slen);
-	/* XXXX we'd like to test the '0' case everywhere, but FreeBSD tells
+	/* XXXX we'd like to test the '0' case everywhere, but NQC tells
 	 * detects the error immediately, which is not really wrong of it. */
 	tt_want(r == 0 || r == -1);
 

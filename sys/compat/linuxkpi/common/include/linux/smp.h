@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017 Mark Johnston <markj@FreeBSD.org>
+ * Copyright (c) 2017 Mark Johnston <markj@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -36,7 +36,7 @@
  *
  * The callback function passed to on_each_cpu() is called from a
  * so-called critical section, and if you need a mutex you will have
- * to rewrite the code to use native FreeBSD mtx spinlocks instead of
+ * to rewrite the code to use native NQC mtx spinlocks instead of
  * the spinlocks provided by the LinuxKPI! Be very careful to not call
  * any LinuxKPI functions inside the on_each_cpu()'s callback
  * function, because they may sleep, unlike in native Linux.

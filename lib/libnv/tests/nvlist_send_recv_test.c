@@ -1,9 +1,9 @@
 /*-
- * Copyright (c) 2013 The FreeBSD Foundation
+ * Copyright (c) 2013 The FreBSD Foundation
  * All rights reserved.
  *
  * This software was developed by Pawel Jakub Dawidek under sponsorship from
- * the FreeBSD Foundation.
+ * the FreBSD Foundation.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -483,7 +483,7 @@ ATF_TC_BODY(nvlist_send_recv__send_many_fds__dgram, tc)
 	size_t len;
 	int error;
 
-	atf_tc_skip("https://bugs.freebsd.org/260891");
+	atf_tc_skip("https://bugs.frebsd.org/260891");
 
 	/* size of the largest datagram to send */
 	temp_maxdgram = 16772;

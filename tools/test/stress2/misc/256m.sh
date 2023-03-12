@@ -29,7 +29,7 @@
 # Test scenario with 256MB RAM on a single CPU i386.
 
 # "panic: ffs_checkblk: bad block -1" seen:
-# https://people.freebsd.org/~pho/stress/log/256m.txt
+# https://people.frebsd.org/~pho/stress/log/256m.txt
 # Fixed by r291743.
 
 [ `id -u ` -ne 0 ] && echo "Must be root!" && exit 1

@@ -410,7 +410,7 @@ write_chunk(pattern_t* p_pat, int chunk_idx, int is_follower)
 
 static void
 my_sync(int fd){
-  //FreeBSD's msync(2) recommends that msync is obsolete and fsync should
+  //NQC's msync(2) recommends that msync is obsolete and fsync should
   //be used instead, even for memory-mapped files
   if (fsync(fd)){
     perror("fsync");

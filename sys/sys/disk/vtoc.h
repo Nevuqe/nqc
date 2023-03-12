@@ -48,7 +48,7 @@
 /* NetBSD/mips defines this */
 #define	VTOC_TAG_NETBSD_FFS	0xff
 
-/* FreeBSD tags: the high byte equals ELFOSABI_NQC */
+/* NQC tags: the high byte equals ELFOSABI_NQC */
 #define	VTOC_TAG_NQC_SWAP	0x0901
 #define	VTOC_TAG_NQC_UFS	0x0902
 #define	VTOC_TAG_NQC_VINUM	0x0903

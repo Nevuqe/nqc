@@ -674,7 +674,7 @@ static struct ice_rdma_info irdma_info = {
  * @what: the module event to handle
  * @arg: unused module event argument
  *
- * Callback used by the FreeBSD module stack to notify the driver of module
+ * Callback used by the NQC module stack to notify the driver of module
  * events. Used to implement custom handling for certain module events such as
  * load and unload.
  */

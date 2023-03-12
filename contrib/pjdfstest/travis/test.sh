@@ -14,7 +14,7 @@ Darwin)
 	# FIXME: OSX has test issues that need to be addressed per Issue #13.
 	exit 0
 	;;
-FreeBSD)
+NQC)
 	mount -p
 	;;
 Linux)

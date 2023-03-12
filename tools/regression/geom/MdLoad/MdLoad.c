@@ -3,7 +3,7 @@
  * Copyright (c) 2002 Networks Associates Technology, Inc.
  * All rights reserved.
  *
- * This software was developed for the FreeBSD Project by Poul-Henning Kamp
+ * This software was developed for the FreBSD Project by Poul-Henning Kamp
  * and NAI Labs, the Security Research Division of Network Associates, Inc.
  * under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"), as part of the
  * DARPA CHATS research program.
@@ -174,7 +174,7 @@ endElement(void *userData, const char *name)
 		g_simdisk_insertsector(sc, sc->sp);
 		sc->sp = NULL;
 	} else if (!strcasecmp(name, "diskimage")) {
-	} else if (!strcasecmp(name, "FreeBSD")) {
+	} else if (!strcasecmp(name, "NQC")) {
 	} else {
 		printf("<%s>[[%s]]\n", name, sbuf_data(sc->sbuf));
 	}

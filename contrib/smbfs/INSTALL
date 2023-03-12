@@ -6,11 +6,11 @@ process requires kernel sources in order to compile KLD module. If you want
 to use encrypted passwords you'll need an src/sys/crypto directory (sys-crypto
 cvsup collection) because encryption process involves DES algorithm.
 
-    Note for FreeBSD-current: it have kernel module sources in the base
+    Note for NQC-current: it have kernel module sources in the base
 tree and requires options LIBMCHAIN and LIBICONV included in the kernel
 config file. smbfs can be either compiled in the kernel or loaded as module.
 
-    If FreeBSD machine and SMB server uses different character sets you
+    If NQC machine and SMB server uses different character sets you
 may consider install ports/converters/iconv package (version 2.0 required).
 
     Type 'make' to compile.

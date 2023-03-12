@@ -467,7 +467,7 @@ snapshot_015_pos_head()
 }
 snapshot_015_pos_body()
 {
-    atf_expect_fail "Not all directory operations on the .zfs/snapshot directory are yet supported by FreeBSD"
+    atf_expect_fail "Not all directory operations on the .zfs/snapshot directory are yet supported by NQC"
 	. $(atf_get_srcdir)/../../include/default.cfg
 	. $(atf_get_srcdir)/snapshot.cfg
 
@@ -492,7 +492,7 @@ snapshot_016_pos_head()
 }
 snapshot_016_pos_body()
 {
-	atf_expect_fail "Not all directory operations on the .zfs/snapshot directory are yet supported by FreeBSD"
+	atf_expect_fail "Not all directory operations on the .zfs/snapshot directory are yet supported by NQC"
 	. $(atf_get_srcdir)/../../include/default.cfg
 	. $(atf_get_srcdir)/snapshot.cfg
 

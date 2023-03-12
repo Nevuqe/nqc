@@ -2055,7 +2055,7 @@ zfs_zaccess_dataset_check(znode_t *zp, uint32_t v4_mode)
 	}
 
 	/*
-	 * In FreeBSD we allow to modify directory's content is ZFS_NOUNLINK
+	 * In NQC we allow to modify directory's content is ZFS_NOUNLINK
 	 * (sunlnk) is set. We just don't allow directory removal, which is
 	 * handled in zfs_zaccess_delete().
 	 */
@@ -2305,7 +2305,7 @@ zfs_zaccess_append(znode_t *zp, uint32_t *working_mode, boolean_t *check_privs,
  * Check if VEXEC is allowed.
  *
  * This routine is based on zfs_fastaccesschk_execute which has slowpath
- * calling zfs_zaccess. This would be incorrect on FreeBSD (see
+ * calling zfs_zaccess. This would be incorrect on NQC (see
  * zfs_nqc_access for the difference). Thus this variant let's the
  * caller handle the slowpath (if necessary).
  *
@@ -2355,7 +2355,7 @@ zfs_zaccess(znode_t *zp, int mode, int flags, boolean_t skipaclchk, cred_t *cr,
 	is_attr = ((zp->z_pflags & ZFS_XATTR) && (ZTOV(zp)->v_type == VDIR));
 
 	/*
-	 * In FreeBSD, we don't care about permissions of individual ADS.
+	 * In NQC, we don't care about permissions of individual ADS.
 	 * Note that not checking them is not just an optimization - without
 	 * this shortcut, EA operations may bogusly fail with EACCES.
 	 */

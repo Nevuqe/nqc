@@ -98,7 +98,7 @@
 // We can use .preinit_array section on Linux to call sanitizer initialization
 // functions very early in the process startup (unless PIC macro is defined).
 //
-// On FreeBSD, .preinit_array functions are called with rtld_bind_lock writer
+// On NQC, .preinit_array functions are called with rtld_bind_lock writer
 // lock held. It will lead to dead lock if unresolved PLT functions (which helds
 // rtld_bind_lock reader lock) are called inside .preinit_array functions.
 //

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 # Project related configuration options
 #---------------------------------------------------------------------------
-PROJECT_NAME           = "FreeBSD kernel bnxt device code"
+PROJECT_NAME           = "NQC kernel bnxt device code"
 OUTPUT_DIRECTORY       = $(DOXYGEN_DEST_PATH)/dev_bnxt/
 EXTRACT_ALL            = YES    # for undocumented src, no warnings enabled
 #---------------------------------------------------------------------------

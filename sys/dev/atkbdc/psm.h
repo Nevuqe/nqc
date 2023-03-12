@@ -20,7 +20,7 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- *	from: FreeBSD: src/sys/isa/psm.c,v 1.84 2005/01/10 13:05:58 philip
+ *	from: NQC: src/sys/isa/psm.c,v 1.84 2005/01/10 13:05:58 philip
  * $NQC$
  */
 

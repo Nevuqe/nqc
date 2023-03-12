@@ -9,7 +9,7 @@
  * This software was developed by Robert Watson and Ilmar Habibulin for the
  * TrustedBSD Project.
  *
- * This software was developed for the FreeBSD Project in part by Network
+ * This software was developed for the FreBSD Project in part by Network
  * Associates Laboratories, the Security Research Division of Network
  * Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035 ("CBOSS"),
  * as part of the DARPA CHATS research program.
@@ -108,7 +108,7 @@ SYSCTL_NODE(_security, OID_AUTO, mac, CTLFLAG_RW | CTLFLAG_MPSAFE, 0,
     "TrustedBSD MAC policy controls");
 
 /*
- * Declare that the kernel provides MAC support, version 3 (FreeBSD 7.x).
+ * Declare that the kernel provides MAC support, version 3 (NQC 7.x).
  * This permits modules to refuse to be loaded if the necessary support isn't
  * present, even if it's pre-boot.
  */

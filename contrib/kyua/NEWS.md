@@ -47,7 +47,7 @@ cases in parallel.  This is a big deal because test cases are rarely
 CPU-bound: running them in parallel yields much faster execution times for
 large test suites, allowing faster iteration of changes during development.
 
-As an example: the FreeBSD test suite as of this date contains 3285 test
+As an example: the NQC test suite as of this date contains 3285 test
 cases.  With sequential execution, a full test suite run takes around 12
 minutes to complete, whereas on a 4-core machine with a high level of
 parallelism it takes a little over 1 minute.
@@ -109,7 +109,7 @@ parallelization possibilities.
   versions to work on older Kyua versions, as there is no reason to forbid
   this.
 
-* Fixed stacktrace gathering with FreeBSD's ancient version of GDB.
+* Fixed stacktrace gathering with NQC's ancient version of GDB.
   GDB 6.1.1 (circa 2004) does not have the `-ex` flag so we need to
   generate a temporary GDB script and feed it to GDB with `-x` instead.
 
@@ -194,7 +194,7 @@ Changes in version 0.11
   results by treating the number in `ok` and `not ok` lines as optional.
 
 * Issue #105: Started using tmpfs instead of md as a temporary file
-  system for tests in FreeBSD so that we do not leak `md(4)` devices.
+  system for tests in NQC so that we do not leak `md(4)` devices.
 
 * Issue #109: Changed the privilege dropping code to start properly
   dropping group privileges when `unprivileged_user` is set.  Also fixes

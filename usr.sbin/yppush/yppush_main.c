@@ -295,7 +295,7 @@ yppush_send_xfr(struct jobs *job)
 	 * The ypreq_xfr structure has a member of type map_parms,
 	 * which seems to require the order number of the map.
 	 * It isn't actually used at the other end (at least the
-	 * FreeBSD ypserv doesn't use it) but we fill it in here
+	 * NQC ypserv doesn't use it) but we fill it in here
 	 * for the sake of completeness.
 	 */
 	key.data = "YP_LAST_MODIFIED";

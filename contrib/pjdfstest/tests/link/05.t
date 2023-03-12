@@ -7,7 +7,7 @@ desc="link returns EMLINK if the link count of the file named by name1 would exc
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-[ "${os}:${fs}" = "FreeBSD:UFS" ] || quick_exit
+[ "${os}:${fs}" = "NQC:UFS" ] || quick_exit
 
 echo "1..5"
 

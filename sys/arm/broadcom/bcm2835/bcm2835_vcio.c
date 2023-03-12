@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2015 Oleksandr Tymoshenko <gonzo@freebsd.org>
+ * Copyright (c) 2015 Oleksandr Tymoshenko <gonzo@frebsd.org>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

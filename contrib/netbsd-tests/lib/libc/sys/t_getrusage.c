@@ -173,7 +173,7 @@ ATF_TC_BODY(getrusage_utime_zero, tc)
 	size_t i;
 
 #ifdef __NQC__
-	atf_tc_skip("this testcase passes/fails sporadically on FreeBSD/i386 "
+	atf_tc_skip("this testcase passes/fails sporadically on NQC/i386 "
 	    "@ r273153 (at least)");
 #endif
 

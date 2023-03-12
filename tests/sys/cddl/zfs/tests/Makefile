@@ -24,15 +24,15 @@ TESTS_SUBDIRS+=	history
 TESTS_SUBDIRS+=	hotplug
 TESTS_SUBDIRS+=	hotspare
 TESTS_SUBDIRS+=	inheritance
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	interop
 TESTS_SUBDIRS+=	inuse
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	iscsi
 TESTS_SUBDIRS+=	large_files
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	largest_pool
-# link_count is not yet ported to FreeBSD.  I'm not sure what its purpose is.
+# link_count is not yet ported to NQC.  I'm not sure what its purpose is.
 # The assertion message contradicts with the log_fail message.
 # TESTS_SUBDIRS+=	link_count
 TESTS_SUBDIRS+=	migration
@@ -53,7 +53,7 @@ TESTS_SUBDIRS+=	refreserv
 TESTS_SUBDIRS+=	replacement
 TESTS_SUBDIRS+=	reservation
 TESTS_SUBDIRS+=	rootpool
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	rsend
 TESTS_SUBDIRS+=	scrub_mirror
 TESTS_SUBDIRS+=	slog
@@ -66,13 +66,13 @@ TESTS_SUBDIRS+=	txg_integrity
 TESTS_SUBDIRS+=	userquota
 TESTS_SUBDIRS+=	utils_test
 TESTS_SUBDIRS+=	write_dirs
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	xattr
 TESTS_SUBDIRS+=	zfsd
 TESTS_SUBDIRS+=	zil
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	zinject
-# Not yet ported to FreeBSD
+# Not yet ported to NQC
 # TESTS_SUBDIRS+=	zones
 TESTS_SUBDIRS+=	zvol
 TESTS_SUBDIRS+=	zvol_thrash

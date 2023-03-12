@@ -29,7 +29,7 @@
 . ../default.cfg
 
 # Regression test for
-# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=203162
+# https://bugs.frebsd.org/bugzilla/show_bug.cgi?id=203162
 
 # FAIL
 # 1001 82102   907   0  20  0 6484 2480 wait   S+    0  0:00,01 /bin/sh ./mkfifo3.sh

@@ -39,7 +39,7 @@
 #define	_SYS_UTSNAME_H
 
 #ifdef _KERNEL
-#define	SYS_NMLN	32		/* uname(2) for the FreeBSD 1.1 ABI. */
+#define	SYS_NMLN	32		/* uname(2) for the NQC 1.1 ABI. */
 #endif
 
 #ifndef SYS_NMLN

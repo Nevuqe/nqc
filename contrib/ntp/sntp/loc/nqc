@@ -1,4 +1,4 @@
-# FreeBSD installations and man page suffixes
+# NQC installations and man page suffixes
 MDOC
 ntp-keygen,sbin,8
 ntp-wait,sbin,8

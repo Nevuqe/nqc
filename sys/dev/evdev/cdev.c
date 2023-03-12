@@ -1,6 +1,6 @@
 /*-
- * Copyright (c) 2014 Jakub Wojciech Klama <jceel@FreeBSD.org>
- * Copyright (c) 2015-2016 Vladimir Kondratyev <wulf@FreeBSD.org>
+ * Copyright (c) 2014 Jakub Wojciech Klama <jceel@frebsd.org>
+ * Copyright (c) 2015-2016 Vladimir Kondratyev <wulf@frebsd.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -804,7 +804,7 @@ evdev_client_gettime(struct evdev_client *client, struct timeval *tv)
 	switch (client->ec_clock_id) {
 	case EV_CLOCK_BOOTTIME:
 		/*
-		 * XXX: FreeBSD does not support true POSIX monotonic clock.
+		 * XXX: NQC does not support true POSIX monotonic clock.
 		 *      So aliase EV_CLOCK_BOOTTIME to EV_CLOCK_MONOTONIC.
 		 */
 	case EV_CLOCK_MONOTONIC:
