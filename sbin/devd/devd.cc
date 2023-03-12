@@ -1214,13 +1214,13 @@ new_match(const char *var, const char *re)
 	 * but make it a fatal error in 15.x and newer.
 	 */
 	if (strcmp(var, "kern") == 0) {
-#if __FreeBSD_version < 1500000
+#if __NQC_version < 1500000
 		devdlog(LOG_WARNING,
 		    "Changing deprecated system='kern' to new name 'kernel' in %s line %d.",
 		    curr_cf, lineno);
 		free(const_cast<char *>(var));
 		var = strdup("kernel");
-#elif  __FreeBSD_version < 1600000
+#elif  __NQC_version < 1600000
 		errx(1, "Encountered deprecated system=\"kern\" rule in %s line %d",
 		    curr_cf, lineno);
 #else

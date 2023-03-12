@@ -37,7 +37,7 @@ __FBSDID("$FreeBSD$");
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/sysctl.h>
 #endif
 #include <net/if.h>
@@ -2704,7 +2704,7 @@ pfrule		: action dir logquick interface route af proto fromto
 				}
 				free($9.queues.pqname);
 			}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			r.divert.port = $9.divert.port;
 #else
 			if ((r.divert.port = $9.divert.port)) {
@@ -2899,7 +2899,7 @@ filter_opt	: USER uids {
 			filter_opts.rtableid = $2;
 		}
 		| DIVERTTO portplain {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			filter_opts.divert.port = $2.a;
 			if (!filter_opts.divert.port) {
 				yyerror("invalid divert port: %u", ntohs($2.a));
@@ -2908,7 +2908,7 @@ filter_opt	: USER uids {
 #endif
 		}
 		| DIVERTTO STRING PORT portplain {
-#ifndef __FreeBSD__
+#ifndef __NQC__
 			if ((filter_opts.divert.addr = host($2)) == NULL) {
 				yyerror("could not parse divert address: %s",
 				    $2);
@@ -2926,7 +2926,7 @@ filter_opt	: USER uids {
 			}
 		}
 		| DIVERTREPLY {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			yyerror("divert-reply has no meaning in FreeBSD pf(4)");
 			YYERROR;
 #else
@@ -3580,7 +3580,7 @@ host		: STRING			{
 			char	*buf;
 
 			/* ie. for 10/8 parsing */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			if (asprintf(&buf, "%lld/%lld", (long long)$1, (long long)$3) == -1)
 #else
 			if (asprintf(&buf, "%lld/%lld", $1, $3) == -1)
@@ -7005,7 +7005,7 @@ map_tos(char *s, int *val)
 int
 rt_tableid_max(void)
 {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	int fibs;
 	size_t l = sizeof(fibs);
 

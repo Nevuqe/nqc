@@ -135,7 +135,7 @@ write_output(ifp, m, s, rt)
 	ip = MTOD(mb, ip_t *);
 
 #if (defined(NetBSD) && (NetBSD <= 1991011) && (NetBSD >= 199606)) || \
-    defined(__FreeBSD__)
+    defined(__NQC__)
 	sprintf(fname, "/tmp/%s", ifp->if_xname);
 #else
 	sprintf(fname, "/tmp/%s%d", ifp->if_name, ifp->if_unit);
@@ -158,7 +158,7 @@ ipf_setifpaddr(ifp, addr)
 {
 	struct ifaddr *ifa;
 
-#if defined(__NetBSD__) || defined(__FreeBSD__)
+#if defined(__NetBSD__) || defined(__NQC__)
 	if (ifp->if_addrlist.tqh_first != NULL)
 #else
 	if (ifp->if_addrlist != NULL)
@@ -166,7 +166,7 @@ ipf_setifpaddr(ifp, addr)
 		return;
 
 	ifa = (struct ifaddr *)malloc(sizeof(*ifa));
-#if defined(__NetBSD__) || defined(__FreeBSD__)
+#if defined(__NetBSD__) || defined(__NQC__)
 	ifp->if_addrlist.tqh_first = ifa;
 #else
 	ifp->if_addrlist = ifa;
@@ -214,7 +214,7 @@ get_unit(name, family)
 	struct ifnet *ifp, **ifpp, **old_ifneta;
 	char *addr;
 #if (defined(NetBSD) && (NetBSD <= 1991011) && (NetBSD >= 199606)) || \
-    defined(__FreeBSD__)
+    defined(__NQC__)
 
 	if (!*name)
 		return (NULL);
@@ -283,11 +283,11 @@ get_unit(name, family)
 	}
 	ifp = ifneta[nifs - 1];
 
-#if defined(__NetBSD__) || defined(__FreeBSD__)
+#if defined(__NetBSD__) || defined(__NQC__)
 	TAILQ_INIT(&ifp->if_addrlist);
 #endif
 #if (defined(NetBSD) && (NetBSD <= 1991011) && (NetBSD >= 199606)) || \
-    defined(__FreeBSD__)
+    defined(__NQC__)
 	(void) strncpy(ifp->if_xname, name, sizeof(ifp->if_xname));
 #else
 	s = name + strlen(name) - 1;
@@ -324,7 +324,7 @@ get_ifname(ifp)
 {
 	static char ifname[LIFNAMSIZ];
 
-#if defined(__NetBSD__) || defined(__FreeBSD__)
+#if defined(__NetBSD__) || defined(__NQC__)
 	sprintf(ifname, "%s", ifp->if_xname);
 #else
 	if (ifp->if_unit != -1)
@@ -345,7 +345,7 @@ init_ifp()
 	int fd;
 
 #if (defined(NetBSD) && (NetBSD <= 1991011) && (NetBSD >= 199606)) || \
-    defined(__FreeBSD__)
+    defined(__NQC__)
 	for (ifpp = ifneta; ifpp && (ifp = *ifpp); ifpp++) {
 		ifp->if_output = (void *)write_output;
 		sprintf(fname, "/tmp/%s", ifp->if_xname);
@@ -666,7 +666,7 @@ ipf_ifpaddr(softc, v, atype, ifptr, inp, inpmask)
 	struct ifnet *ifp = ifptr;
 	struct ifaddr *ifa;
 
-#if defined(__NetBSD__) || defined(__FreeBSD__)
+#if defined(__NetBSD__) || defined(__NQC__)
 	ifa = ifp->if_addrlist.tqh_first;
 #else
 	ifa = ifp->if_addrlist;

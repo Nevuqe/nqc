@@ -17,7 +17,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include "nqc_test_suite/macros.h"
 #endif
 
@@ -116,14 +116,14 @@ ATF_TC_BODY(mqueue, tc)
 	char template[32];
 	char mq_name[64];
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_KERNEL_MODULE("mqueuefs");
 #endif
 
 	strlcpy(template, "./t_mqueue.XXXXXX", sizeof(template));
 	tmpdir = mkdtemp(template);
 	ATF_REQUIRE_MSG(tmpdir != NULL, "mkdtemp failed: %d", errno);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	snprintf(mq_name, sizeof(mq_name), "/t_mqueue");
 #else
 	snprintf(mq_name, sizeof(mq_name), "%s/mq", tmpdir);
@@ -133,7 +133,7 @@ ATF_TC_BODY(mqueue, tc)
 
 	mqfd = mq_open(mq_name, O_RDWR | O_CREAT,
 	    S_IRUSR | S_IRWXG | S_IROTH, NULL);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_MSG(mqfd != (mqd_t)-1, "mq_open failed: %d", errno);
 #else
 	ATF_REQUIRE_MSG(mqfd != -1, "mq_open failed: %d", errno);

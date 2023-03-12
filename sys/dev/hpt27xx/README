@@ -64,7 +64,7 @@ Revision History:
   2) Extract the driver files under the kernel source tree:
 
      # cd /usr/src/sys/
-     # tar xvzf /your/path/to/HPT27xx_FreeBSD_Src_v1.2.7.1_15_06_08.tgz
+     # tar xvzf /your/path/to/HPT27xx_NQC_Src_v1.2.7.1_15_06_08.tgz
 
   3) Update the kernel configuration file to include the HighPoint source.
      Assume the configure file is GENERIC, and new kernel configure file is 
@@ -146,7 +146,7 @@ Revision History:
   2) Extract the driver files under the kernel source tree:
     
      # cd /usr/src/sys/
-     # tar xvzf /your/path/to/HPT27xx_FreeBSD_Src_v1.2.7.1_15_06_08.tgz
+     # tar xvzf /your/path/to/HPT27xx_NQC_Src_v1.2.7.1_15_06_08.tgz
 
 
   4) Build the driver module:

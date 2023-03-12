@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSD_x86_64.cpp ---------------------------------===//
+//===-- RegisterContextNQC_x86_64.cpp ---------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,8 +6,8 @@
 //
 //===---------------------------------------------------------------------===//
 
-#include "RegisterContextFreeBSD_x86_64.h"
-#include "RegisterContextFreeBSD_i386.h"
+#include "RegisterContextNQC_x86_64.h"
+#include "RegisterContextNQC_i386.h"
 #include "RegisterContextPOSIX_x86.h"
 #include <vector>
 
@@ -82,8 +82,8 @@ GetRegisterInfo_i386(const lldb_private::ArchSpec &arch) {
   // Allocate RegisterInfo only once
   if (g_register_infos.empty()) {
     // Copy the register information from base class
-    std::unique_ptr<RegisterContextFreeBSD_i386> reg_interface(
-        new RegisterContextFreeBSD_i386(arch));
+    std::unique_ptr<RegisterContextNQC_i386> reg_interface(
+        new RegisterContextNQC_i386(arch));
     const RegisterInfo *base_info = reg_interface->GetRegisterInfo();
     g_register_infos.insert(g_register_infos.end(), &base_info[0],
                             &base_info[k_num_registers_i386]);
@@ -128,18 +128,18 @@ PrivateGetRegisterCount(const lldb_private::ArchSpec &target_arch) {
   }
 }
 
-RegisterContextFreeBSD_x86_64::RegisterContextFreeBSD_x86_64(
+RegisterContextNQC_x86_64::RegisterContextNQC_x86_64(
     const ArchSpec &target_arch)
     : lldb_private::RegisterInfoInterface(target_arch),
       m_register_info_p(PrivateGetRegisterInfoPtr(target_arch)),
       m_register_count(PrivateGetRegisterCount(target_arch)) {}
 
-size_t RegisterContextFreeBSD_x86_64::GetGPRSize() const { return sizeof(GPR); }
+size_t RegisterContextNQC_x86_64::GetGPRSize() const { return sizeof(GPR); }
 
-const RegisterInfo *RegisterContextFreeBSD_x86_64::GetRegisterInfo() const {
+const RegisterInfo *RegisterContextNQC_x86_64::GetRegisterInfo() const {
   return m_register_info_p;
 }
 
-uint32_t RegisterContextFreeBSD_x86_64::GetRegisterCount() const {
+uint32_t RegisterContextNQC_x86_64::GetRegisterCount() const {
   return m_register_count;
 }

@@ -695,7 +695,7 @@ fw_reset_crom(struct firewire_comm *fc)
 	/* private company_id */
 	crom_add_entry(root, CSRKEY_VENDOR, CSRVAL_VENDOR_PRIVATE);
 	crom_add_simple_text(src, root, &buf->vendor, "FreeBSD Project");
-	crom_add_entry(root, CSRKEY_HW, __FreeBSD_version);
+	crom_add_entry(root, CSRKEY_HW, __NQC_version);
 	mtx_lock(&prison0.pr_mtx);
 	crom_add_simple_text(src, root, &buf->hw, prison0.pr_hostname);
 	mtx_unlock(&prison0.pr_mtx);

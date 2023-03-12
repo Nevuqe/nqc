@@ -33,7 +33,7 @@ __RCSID("$NetBSD: h_gets.c,v 1.1 2010/12/27 02:04:19 pgoyette Exp $");
 
 #include <stdio.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /*
  * We want to test the gets() implementation, but cannot simply link against
  * the gets symbol because it is not in the default version. (We've made it

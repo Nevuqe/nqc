@@ -101,7 +101,7 @@ static int axgbe_if_promisc_set(if_ctx_t, int);
 static uint64_t axgbe_if_get_counter(if_ctx_t, ift_counter);
 static void axgbe_if_vlan_register(if_ctx_t, uint16_t);
 static void axgbe_if_vlan_unregister(if_ctx_t, uint16_t);
-#if __FreeBSD_version >= 1300000
+#if __NQC_version >= 1300000
 static bool axgbe_if_needs_restart(if_ctx_t, enum iflib_restart_event);
 #endif
 static void axgbe_set_counts(if_ctx_t);
@@ -227,7 +227,7 @@ static device_method_t axgbe_if_methods[] = {
 	DEVMETHOD(ifdi_get_counter, axgbe_if_get_counter),
 	DEVMETHOD(ifdi_vlan_register, axgbe_if_vlan_register),
 	DEVMETHOD(ifdi_vlan_unregister, axgbe_if_vlan_unregister),
-#if __FreeBSD_version >= 1300000
+#if __NQC_version >= 1300000
 	DEVMETHOD(ifdi_needs_restart, axgbe_if_needs_restart),
 #endif
 	DEVMETHOD_END
@@ -1882,7 +1882,7 @@ axgbe_if_vlan_unregister(if_ctx_t ctx, uint16_t vtag)
 	xgbe_dump_active_vlans(pdata);
 }
 
-#if __FreeBSD_version >= 1300000
+#if __NQC_version >= 1300000
 static bool
 axgbe_if_needs_restart(if_ctx_t ctx __unused, enum iflib_restart_event event)
 {

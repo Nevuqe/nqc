@@ -290,7 +290,7 @@ struct name {							\
 #define	ELFTC_VCSID(ID)		__RCSID(ID)
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define	ELFTC_VCSID(ID)		__FBSDID(ID)
 #endif
 
@@ -331,14 +331,14 @@ struct name {							\
 
 #ifndef	ELFTC_GETPROGNAME
 
-#if defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || \
+#if defined(__APPLE__) || defined(__DragonFly__) || defined(__NQC__) || \
     defined(__minix) || defined(__NetBSD__)
 
 #include <stdlib.h>
 
 #define	ELFTC_GETPROGNAME()	getprogname()
 
-#endif	/* __DragonFly__ || __FreeBSD__ || __minix || __NetBSD__ */
+#endif	/* __DragonFly__ || __NQC__ || __minix || __NetBSD__ */
 
 
 #if defined(__GLIBC__) || defined(__linux__)
@@ -428,7 +428,7 @@ extern const char *__progname;
 #endif	/* __GLIBC__ || __linux__ */
 
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 
 #include <osreldate.h>
 #include <sys/endian.h>
@@ -439,10 +439,10 @@ extern const char *__progname;
 
 #define	ELFTC_HAVE_MMAP				1
 #define	ELFTC_HAVE_STRMODE			1
-#if __FreeBSD_version <= 900000
+#if __NQC_version <= 900000
 #define	ELFTC_BROKEN_YY_NO_INPUT		1
 #endif
-#endif	/* __FreeBSD__ */
+#endif	/* __NQC__ */
 
 
 #if defined(__minix)

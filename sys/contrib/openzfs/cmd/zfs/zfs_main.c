@@ -122,7 +122,7 @@ static int zfs_do_version(int argc, char **argv);
 static int zfs_do_redact(int argc, char **argv);
 static int zfs_do_wait(int argc, char **argv);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static int zfs_do_jail(int argc, char **argv);
 static int zfs_do_unjail(int argc, char **argv);
 #endif
@@ -257,7 +257,7 @@ static zfs_command_t command_table[] = {
 	{ "redact",	zfs_do_redact,		HELP_REDACT		},
 	{ "wait",	zfs_do_wait,		HELP_WAIT		},
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	{ "jail",	zfs_do_jail,		HELP_JAIL		},
 	{ "unjail",	zfs_do_unjail,		HELP_UNJAIL		},
 #endif
@@ -8823,7 +8823,7 @@ zfs_do_unzone(int argc, char **argv)
 }
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/jail.h>
 #include <jail.h>
 /*

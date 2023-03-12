@@ -137,16 +137,16 @@ static inline size_t getpagesize() {
 #define O_BINARY 0
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 
 #include <inttypes.h>
 #include <sys/types.h>
 
-#else /* defined(__FreeBSD__) */
+#else /* defined(__NQC__) */
 
 #include <inttypes.h>
 #include <stdint.h>
 
-#endif /* defined(__FreeBSD__) && defined(__i386__) */
+#endif /* defined(__NQC__) && defined(__i386__) */
 
 #endif /* PROFILE_INSTRPROFILING_PORT_H_ */

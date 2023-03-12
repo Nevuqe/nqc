@@ -1882,7 +1882,7 @@ pax_attribute(struct archive_read *a, struct tar *tar,
 	long n;
 	int err = ARCHIVE_OK, r;
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	if (value == NULL)
 		value = "";	/* Disable compiler warning; do not pass
 				 * NULL pointer to strlen().  */

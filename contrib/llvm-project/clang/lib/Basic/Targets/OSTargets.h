@@ -216,8 +216,8 @@ protected:
     if (CCVersion == 0U)
       CCVersion = Release * 100000U + 1U;
 
-    Builder.defineMacro("__FreeBSD__", Twine(Release));
-    Builder.defineMacro("__FreeBSD_cc_version", Twine(CCVersion));
+    Builder.defineMacro("__NQC__", Twine(Release));
+    Builder.defineMacro("__NQC_cc_version", Twine(CCVersion));
     Builder.defineMacro("__KPRINTF_ATTRIBUTE__");
     DefineStd(Builder, "unix", Opts);
     Builder.defineMacro("__ELF__");
@@ -270,7 +270,7 @@ protected:
     // GNU/kFreeBSD defines; list based off of gcc output
 
     DefineStd(Builder, "unix", Opts);
-    Builder.defineMacro("__FreeBSD_kernel__");
+    Builder.defineMacro("__NQC_kernel__");
     Builder.defineMacro("__GLIBC__");
     Builder.defineMacro("__ELF__");
     if (Opts.POSIXThreads)
@@ -547,8 +547,8 @@ class LLVM_LIBRARY_VISIBILITY PSOSTargetInfo : public OSTargetInfo<Target> {
 protected:
   void getOSDefines(const LangOptions &Opts, const llvm::Triple &Triple,
                     MacroBuilder &Builder) const override {
-    Builder.defineMacro("__FreeBSD__", "9");
-    Builder.defineMacro("__FreeBSD_cc_version", "900001");
+    Builder.defineMacro("__NQC__", "9");
+    Builder.defineMacro("__NQC_cc_version", "900001");
     Builder.defineMacro("__KPRINTF_ATTRIBUTE__");
     DefineStd(Builder, "unix", Opts);
     Builder.defineMacro("__ELF__");

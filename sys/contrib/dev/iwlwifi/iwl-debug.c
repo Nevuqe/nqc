@@ -10,12 +10,12 @@
 #endif
 #include "iwl-drv.h"
 #include "iwl-debug.h"
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include "iwl-modparams.h"
 #endif
 #include "iwl-devtrace.h"
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #if defined(CONFIG_IWLWIFI_DEBUG)
 #include <sys/systm.h>		/* hexdump(9) */
 #include <linux/preempt.h>
@@ -37,7 +37,7 @@ void __iwl_ ##fn(struct device *dev, const char *fmt, ...)	\
 	trace_iwlwifi_ ##fn(&vaf);				\
 	va_end(args);						\
 }
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 #define __iwl_fn(fn)						\
 void __iwl_ ##fn(struct device *dev, const char *fmt, ...)	\
 {								\
@@ -86,7 +86,7 @@ void __iwl_err(struct device *dev, enum iwl_err_mode mode, const char *fmt, ...)
 			dev_err(dev, "(RFKILL) %pV", &vaf);
 		else
 			dev_err(dev, "%pV", &vaf);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		char *str;
 		vasprintf(&str, M_KMALLOC, fmt, args2);
 		dev_err(dev, "%s%s", (mode == IWL_ERR_MODE_RFKILL) ? "(RFKILL)" : "", str);
@@ -117,7 +117,7 @@ void
 iwl_print_hex_dump(void *drv __unused, enum iwl_dl level,
 #if defined(__linux__)
     const char *prefix, uint8_t *data, size_t len)
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
     const char *prefix, const uint8_t *data, size_t len)
 #endif
 {
@@ -130,7 +130,7 @@ iwl_print_hex_dump(void *drv __unused, enum iwl_dl level,
 	/* XXX I am cluseless in my editor. pcie/trans.c to the rescue. */
 	print_hex_dump(KERN_ERR, prefix, DUMP_PREFIX_OFFSET,
 	    32, 4, data, len, 0);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	hexdump(data, len, prefix, 0);
 #endif
 }
@@ -152,7 +152,7 @@ void __iwl_dbg(struct device *dev,
 	    (!limit || net_ratelimit())) {
 #if defined(__linux_)
 		dev_printk(KERN_DEBUG, dev, "%s %pV", function, &vaf);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		char *str;
 		vasprintf(&str, M_KMALLOC, fmt, args);
 		dev_printk(KERN_DEBUG, dev, "%d %u %s %s",

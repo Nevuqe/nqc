@@ -67,7 +67,7 @@ VOLUME_LABEL=	${REVISION:C/[.-]/_/g}_${BRANCH:C/[.-]/_/g}_${TARGET_ARCH}
 .endif
 
 .if !defined(VOLUME_LABEL) || empty(VOLUME_LABEL)
-VOLUME_LABEL=	FreeBSD_Install
+VOLUME_LABEL=	NQC_Install
 .endif
 
 .if !exists(${PORTSDIR})
@@ -297,7 +297,7 @@ pkg-stage:
 	env PORTSDIR=${PORTSDIR} REPOS_DIR=${.CURDIR}/pkg_repos/ \
 		sh ${.CURDIR}/scripts/pkg-stage.sh
 	mkdir -p ${.OBJDIR}/dvd/packages/repos/
-	cp ${.CURDIR}/scripts/FreeBSD_install_cdrom.conf \
+	cp ${.CURDIR}/scripts/NQC_install_cdrom.conf \
 		${.OBJDIR}/dvd/packages/repos/
 .endif
 	touch ${.TARGET}

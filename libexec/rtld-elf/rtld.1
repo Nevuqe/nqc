@@ -428,7 +428,7 @@ Newer
 might provide some features or changes in runtime behavior that cannot be
 easily detected at runtime by checking of the normal exported symbols.
 Note that it is almost always wrong to verify
-.Dv __FreeBSD_version
+.Dv __NQC_version
 in userspace to detect features, either at compile or at run time,
 because either kernel, or libc, or environment variables could not
 match the running
@@ -445,9 +445,9 @@ Symbols start with the
 prefix.
 Current list of defined symbols and corresponding features is:
 .Bl -tag -width indent
-.It Dv _rtld_version__FreeBSD_version
+.It Dv _rtld_version__NQC_version
 Symbol exports the value of the
-.Dv __FreeBSD_version
+.Dv __NQC_version
 definition as it was provided during the
 .Nm
 build.

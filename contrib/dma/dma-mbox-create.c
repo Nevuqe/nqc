@@ -38,7 +38,7 @@
  * user-supplied information.  Keep the root window as small as possible.
  */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define	USE_CAPSICUM	1
 #endif
 

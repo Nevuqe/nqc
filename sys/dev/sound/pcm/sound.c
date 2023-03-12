@@ -1296,7 +1296,7 @@ void
 sound_oss_sysinfo(oss_sysinfo *si)
 {
 	static char si_product[] = "FreeBSD native OSS ABI";
-	static char si_version[] = __XSTRING(__FreeBSD_version);
+	static char si_version[] = __XSTRING(__NQC_version);
 	static char si_license[] = "BSD";
 	static int intnbits = sizeof(int) * 8;	/* Better suited as macro?
 						   Must pester a C guru. */

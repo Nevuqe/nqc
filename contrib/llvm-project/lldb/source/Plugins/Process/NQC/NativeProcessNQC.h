@@ -6,8 +6,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef liblldb_NativeProcessFreeBSD_H_
-#define liblldb_NativeProcessFreeBSD_H_
+#ifndef liblldb_NativeProcessNQC_H_
+#define liblldb_NativeProcessNQC_H_
 
 #include "Plugins/Process/POSIX/NativeProcessELF.h"
 #include "Plugins/Process/Utility/NativeProcessSoftwareSingleStep.h"
@@ -132,4 +132,4 @@ private:
 } // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef liblldb_NativeProcessFreeBSD_H_
+#endif // #ifndef liblldb_NativeProcessNQC_H_

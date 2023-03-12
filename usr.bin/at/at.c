@@ -45,10 +45,10 @@ __FBSDID("$FreeBSD$");
 #include <err.h>
 #include <errno.h>
 #include <fcntl.h>
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #include <getopt.h>
 #endif
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <locale.h>
 #endif
 #include <pwd.h>
@@ -221,7 +221,7 @@ writefile(time_t runtimer, char queue)
     mode_t cmask;
     struct flock lock;
     
-#ifdef __FreeBSD__
+#ifdef __NQC__
     (void) setlocale(LC_TIME, "");
 #endif
 
@@ -471,7 +471,7 @@ list_jobs(long *joblist, int len)
     char timestr[TIMESIZE];
     int first=1;
     
-#ifdef __FreeBSD__
+#ifdef __NQC__
     (void) setlocale(LC_TIME, "");
 #endif
 

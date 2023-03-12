@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSD_powerpc.h -------------------------*- C++
+//===-- RegisterContextNQC_powerpc.h -------------------------*- C++
 //-*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
@@ -12,11 +12,11 @@
 
 #include "RegisterInfoInterface.h"
 
-class RegisterContextFreeBSD_powerpc
+class RegisterContextNQC_powerpc
     : public lldb_private::RegisterInfoInterface {
 public:
-  RegisterContextFreeBSD_powerpc(const lldb_private::ArchSpec &target_arch);
-  ~RegisterContextFreeBSD_powerpc() override;
+  RegisterContextNQC_powerpc(const lldb_private::ArchSpec &target_arch);
+  ~RegisterContextNQC_powerpc() override;
 
   size_t GetGPRSize() const override;
 
@@ -25,10 +25,10 @@ public:
   uint32_t GetRegisterCount() const override;
 };
 
-class RegisterContextFreeBSD_powerpc32 : public RegisterContextFreeBSD_powerpc {
+class RegisterContextNQC_powerpc32 : public RegisterContextNQC_powerpc {
 public:
-  RegisterContextFreeBSD_powerpc32(const lldb_private::ArchSpec &target_arch);
-  ~RegisterContextFreeBSD_powerpc32() override;
+  RegisterContextNQC_powerpc32(const lldb_private::ArchSpec &target_arch);
+  ~RegisterContextNQC_powerpc32() override;
 
   size_t GetGPRSize() const override;
 
@@ -37,10 +37,10 @@ public:
   uint32_t GetRegisterCount() const override;
 };
 
-class RegisterContextFreeBSD_powerpc64 : public RegisterContextFreeBSD_powerpc {
+class RegisterContextNQC_powerpc64 : public RegisterContextNQC_powerpc {
 public:
-  RegisterContextFreeBSD_powerpc64(const lldb_private::ArchSpec &target_arch);
-  ~RegisterContextFreeBSD_powerpc64() override;
+  RegisterContextNQC_powerpc64(const lldb_private::ArchSpec &target_arch);
+  ~RegisterContextNQC_powerpc64() override;
 
   size_t GetGPRSize() const override;
 

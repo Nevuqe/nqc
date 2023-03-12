@@ -6049,7 +6049,7 @@ parse_args(char* argv[], int argc, bool *use_pathp, int *fdp,
 				set_ld_elf_hints_path();
 				rtld_printf(
 				    "FreeBSD ld-elf.so.1 %s\n"
-				    "FreeBSD_version %d\n"
+				    "NQC_version %d\n"
 				    "Default lib path %s\n"
 				    "Hints lib path %s\n"
 				    "Env prefix %s\n"
@@ -6057,7 +6057,7 @@ parse_args(char* argv[], int argc, bool *use_pathp, int *fdp,
 				    "Hint file %s\n"
 				    "libmap file %s\n",
 				    machine,
-				    __FreeBSD_version, ld_standard_library_path,
+				    __NQC_version, ld_standard_library_path,
 				    gethints(false),
 				    ld_env_prefix, ld_elf_hints_default,
 				    ld_elf_hints_path,
@@ -6270,8 +6270,8 @@ realloc(void *cp, size_t nbytes)
 	return (__crt_realloc(cp, nbytes));
 }
 
-extern int _rtld_version__FreeBSD_version __exported;
-int _rtld_version__FreeBSD_version = __FreeBSD_version;
+extern int _rtld_version__NQC_version __exported;
+int _rtld_version__NQC_version = __NQC_version;
 
 extern char _rtld_version_laddr_offset __exported;
 char _rtld_version_laddr_offset;

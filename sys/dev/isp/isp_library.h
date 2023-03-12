@@ -163,7 +163,7 @@ int isp_exec_entry_queue(ispsoftc_t *, void *, void *, int);
 #ifdef ISP_TARGET_MODE
 #if defined(__NetBSD__) || defined(__OpenBSD__)
 #include <dev/ic/isp_target.h>
-#elif  defined(__FreeBSD__)
+#elif  defined(__NQC__)
 #include <dev/isp/isp_target.h>
 #else
 #include "isp_target.h"

@@ -207,7 +207,7 @@ zfs_file_getattr(zfs_file_t *fp, zfs_file_attr_t *zfattr)
 
 	td = curthread;
 
-#if __FreeBSD_version < 1400037
+#if __NQC_version < 1400037
 	rc = fo_stat(fp, &sb, td->td_ucred, td);
 #else
 	rc = fo_stat(fp, &sb, td->td_ucred);
@@ -226,7 +226,7 @@ zfs_vop_fsync(vnode_t *vp)
 	struct mount *mp;
 	int error;
 
-#if __FreeBSD_version < 1400068
+#if __NQC_version < 1400068
 	if ((error = vn_start_write(vp, &mp, V_WAIT | PCATCH)) != 0)
 #else
 	if ((error = vn_start_write(vp, &mp, V_WAIT | V_PCATCH)) != 0)
@@ -294,9 +294,9 @@ zfs_file_unlink(const char *fnamep)
 	zfs_uio_seg_t seg = UIO_SYSSPACE;
 	int rc;
 
-#if __FreeBSD_version >= 1300018
+#if __NQC_version >= 1300018
 	rc = kern_funlinkat(curthread, AT_FDCWD, fnamep, FD_NONE, seg, 0, 0);
-#elif __FreeBSD_version >= 1202504 || defined(AT_BENEATH)
+#elif __NQC_version >= 1202504 || defined(AT_BENEATH)
 	rc = kern_unlinkat(curthread, AT_FDCWD, __DECONST(char *, fnamep),
 	    seg, 0, 0);
 #else

@@ -151,7 +151,7 @@ setoid(char oid[], size_t oidlen, const char *wlan)
 #ifdef __linux__
 	if (wlan)
 		snprintf(oid, oidlen, "net.%s.debug", wlan);
-#elif __FreeBSD__
+#elif __NQC__
 	if (wlan)
 		snprintf(oid, oidlen, "net.wlan.%s.debug", wlan+4);
 	else

@@ -50,7 +50,7 @@
  * For non-BSD platforms, you can compile lpr with -DHAVE_SYS_CDEFS_H
  * if <sys/cdefs.h> should be included.
  */
-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+#if defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__)
 #  define HAVE_SYS_CDEFS_H
 #endif
 #if defined(HAVE_SYS_CDEFS_H)
@@ -63,7 +63,7 @@
  * from the portable-openssh project.
  */
 #ifndef	USE_CLOSEFROM
-#  if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+#  if defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__)
 #    define	USE_CLOSEFROM	1
 #  endif
 #endif

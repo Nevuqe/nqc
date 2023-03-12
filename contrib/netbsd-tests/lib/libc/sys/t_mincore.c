@@ -196,7 +196,7 @@ ATF_TC_BODY(mincore_resid, tc)
 
 	npgs = 128;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	addr = mmap(NULL, npgs * page, PROT_READ | PROT_WRITE,
 	    MAP_ANON | MAP_PRIVATE, -1, (off_t)0);
 #else
@@ -208,7 +208,7 @@ ATF_TC_BODY(mincore_resid, tc)
 		atf_tc_skip("could not mmap wired anonymous test area, system "
 		    "might be low on memory");
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (mlock(addr, npgs * page) == -1 && errno != ENOMEM)
 		atf_tc_skip("could not wire anonymous test area, system might "
 		    "be low on memory");

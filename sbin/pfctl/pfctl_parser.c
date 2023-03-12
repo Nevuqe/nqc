@@ -668,7 +668,7 @@ print_src_node(struct pf_src_node *sn, int opts)
 			    sn->expire, min, sec);
 		}
 		printf(", %llu pkts, %llu bytes",
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		    (unsigned long long)(sn->packets[0] + sn->packets[1]),
 		    (unsigned long long)(sn->bytes[0] + sn->bytes[1]));
 #else
@@ -1162,7 +1162,7 @@ print_rule(struct pfctl_rule *r, const char *anchor_call, int verbose, int numer
 	if (r->rtableid != -1)
 		printf(" rtable %u", r->rtableid);
 	if (r->divert.port) {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		printf(" divert-to %u", ntohs(r->divert.port));
 #else
 		if (PF_AZERO(&r->divert.addr, r->af)) {

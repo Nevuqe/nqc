@@ -237,7 +237,7 @@ static eventhandler_tag fasttrap_thread_dtor_tag;
 
 static unsigned long tpoints_hash_size = FASTTRAP_TPOINTS_DEFAULT_SIZE;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 SYSCTL_DECL(_kern_dtrace);
 SYSCTL_NODE(_kern_dtrace, OID_AUTO, fasttrap, CTLFLAG_RD | CTLFLAG_MPSAFE, 0,
     "DTrace fasttrap parameters");
@@ -916,7 +916,7 @@ again:
 		ASSERT(0);
 	}
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (SV_PROC_FLAG(p, SV_LP64))
 		p->p_model = DATAMODEL_LP64;
 	else
@@ -1336,7 +1336,7 @@ fasttrap_pid_disable(void *arg, dtrace_id_t id, void *parg)
 	if (whack)
 		fasttrap_pid_cleanup();
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (p != NULL)
 		PRELE(p);
 #endif

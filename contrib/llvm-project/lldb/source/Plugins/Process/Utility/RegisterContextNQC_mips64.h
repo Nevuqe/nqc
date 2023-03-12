@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSD_mips64.h -------------------------*- C++ -*-===//
+//===-- RegisterContextNQC_mips64.h -------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -11,10 +11,10 @@
 
 #include "RegisterInfoInterface.h"
 
-class RegisterContextFreeBSD_mips64
+class RegisterContextNQC_mips64
     : public lldb_private::RegisterInfoInterface {
 public:
-  RegisterContextFreeBSD_mips64(const lldb_private::ArchSpec &target_arch);
+  RegisterContextNQC_mips64(const lldb_private::ArchSpec &target_arch);
 
   size_t GetGPRSize() const override;
 

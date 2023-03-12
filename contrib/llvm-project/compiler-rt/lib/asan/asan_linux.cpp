@@ -61,7 +61,7 @@ extern ElfW(Dyn) _DYNAMIC[];
 // x86-64 FreeBSD 9.2 and older define 'ucontext_t' incorrectly in
 // 32-bit mode.
 #if SANITIZER_FREEBSD && (SANITIZER_WORDSIZE == 32) && \
-  __FreeBSD_version <= 902001  // v9.2
+  __NQC_version <= 902001  // v9.2
 #define ucontext_t xucontext_t
 #endif
 

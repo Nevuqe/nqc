@@ -585,7 +585,7 @@ logmsg(int pri, const char *message, ...)
 
 		/* We don't care about truncation. */
 		vsnprintf(buf, sizeof buf, message, ap);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		strvis(visbuf, buf, VIS_CSTYLE | VIS_NL);
 #else
 		strnvis(visbuf, buf, sizeof visbuf, VIS_CSTYLE | VIS_NL);

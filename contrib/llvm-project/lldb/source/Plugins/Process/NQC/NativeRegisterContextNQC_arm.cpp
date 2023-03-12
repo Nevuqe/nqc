@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_arm.cpp ------------------------------===//
+//===-- NativeRegisterContextNQC_arm.cpp ------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,7 +8,7 @@
 
 #if defined(__arm__)
 
-#include "NativeRegisterContextFreeBSD_arm.h"
+#include "NativeRegisterContextNQC_arm.h"
 
 #include "lldb/Utility/DataBufferHeap.h"
 #include "lldb/Utility/RegisterValue.h"
@@ -30,36 +30,36 @@ using namespace lldb_private::process_nqc;
 NativeRegisterContextFreeBSD *
 NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
-  return new NativeRegisterContextFreeBSD_arm(target_arch, native_thread);
+  return new NativeRegisterContextNQC_arm(target_arch, native_thread);
 }
 
-NativeRegisterContextFreeBSD_arm::NativeRegisterContextFreeBSD_arm(
+NativeRegisterContextNQC_arm::NativeRegisterContextNQC_arm(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread)
     : NativeRegisterContextRegisterInfo(
           native_thread, new RegisterInfoPOSIX_arm(target_arch)) {}
 
 RegisterInfoPOSIX_arm &
-NativeRegisterContextFreeBSD_arm::GetRegisterInfo() const {
+NativeRegisterContextNQC_arm::GetRegisterInfo() const {
   return static_cast<RegisterInfoPOSIX_arm &>(*m_register_info_interface_up);
 }
 
-uint32_t NativeRegisterContextFreeBSD_arm::GetRegisterSetCount() const {
+uint32_t NativeRegisterContextNQC_arm::GetRegisterSetCount() const {
   return GetRegisterInfo().GetRegisterSetCount();
 }
 
 const RegisterSet *
-NativeRegisterContextFreeBSD_arm::GetRegisterSet(uint32_t set_index) const {
+NativeRegisterContextNQC_arm::GetRegisterSet(uint32_t set_index) const {
   return GetRegisterInfo().GetRegisterSet(set_index);
 }
 
-uint32_t NativeRegisterContextFreeBSD_arm::GetUserRegisterCount() const {
+uint32_t NativeRegisterContextNQC_arm::GetUserRegisterCount() const {
   uint32_t count = 0;
   for (uint32_t set_index = 0; set_index < GetRegisterSetCount(); ++set_index)
     count += GetRegisterSet(set_index)->num_registers;
   return count;
 }
 
-Status NativeRegisterContextFreeBSD_arm::ReadRegisterSet(uint32_t set) {
+Status NativeRegisterContextNQC_arm::ReadRegisterSet(uint32_t set) {
   switch (set) {
   case RegisterInfoPOSIX_arm::GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
@@ -69,10 +69,10 @@ Status NativeRegisterContextFreeBSD_arm::ReadRegisterSet(uint32_t set) {
         PT_GETVFPREGS, m_thread.GetID(),
         m_reg_data.data() + sizeof(RegisterInfoPOSIX_arm::GPR));
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_arm::ReadRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_arm::ReadRegisterSet");
 }
 
-Status NativeRegisterContextFreeBSD_arm::WriteRegisterSet(uint32_t set) {
+Status NativeRegisterContextNQC_arm::WriteRegisterSet(uint32_t set) {
   switch (set) {
   case RegisterInfoPOSIX_arm::GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
@@ -82,11 +82,11 @@ Status NativeRegisterContextFreeBSD_arm::WriteRegisterSet(uint32_t set) {
         PT_SETVFPREGS, m_thread.GetID(),
         m_reg_data.data() + sizeof(RegisterInfoPOSIX_arm::GPR));
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_arm::WriteRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_arm::WriteRegisterSet");
 }
 
 Status
-NativeRegisterContextFreeBSD_arm::ReadRegister(const RegisterInfo *reg_info,
+NativeRegisterContextNQC_arm::ReadRegister(const RegisterInfo *reg_info,
                                                RegisterValue &reg_value) {
   Status error;
 
@@ -113,7 +113,7 @@ NativeRegisterContextFreeBSD_arm::ReadRegister(const RegisterInfo *reg_info,
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_arm::WriteRegister(
+Status NativeRegisterContextNQC_arm::WriteRegister(
     const RegisterInfo *reg_info, const RegisterValue &reg_value) {
   Status error;
 
@@ -139,7 +139,7 @@ Status NativeRegisterContextFreeBSD_arm::WriteRegister(
   return WriteRegisterSet(set);
 }
 
-Status NativeRegisterContextFreeBSD_arm::ReadAllRegisterValues(
+Status NativeRegisterContextNQC_arm::ReadAllRegisterValues(
     lldb::WritableDataBufferSP &data_sp) {
   Status error;
 
@@ -158,20 +158,20 @@ Status NativeRegisterContextFreeBSD_arm::ReadAllRegisterValues(
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_arm::WriteAllRegisterValues(
+Status NativeRegisterContextNQC_arm::WriteAllRegisterValues(
     const lldb::DataBufferSP &data_sp) {
   Status error;
 
   if (!data_sp) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_arm::%s invalid data_sp provided",
+        "NativeRegisterContextNQC_arm::%s invalid data_sp provided",
         __FUNCTION__);
     return error;
   }
 
   if (data_sp->GetByteSize() != m_reg_data.size()) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_arm::%s data_sp contained mismatched "
+        "NativeRegisterContextNQC_arm::%s data_sp contained mismatched "
         "data size, expected %" PRIu64 ", actual %" PRIu64,
         __FUNCTION__, m_reg_data.size(), data_sp->GetByteSize());
     return error;
@@ -179,7 +179,7 @@ Status NativeRegisterContextFreeBSD_arm::WriteAllRegisterValues(
 
   const uint8_t *src = data_sp->GetBytes();
   if (src == nullptr) {
-    error.SetErrorStringWithFormat("NativeRegisterContextFreeBSD_arm::%s "
+    error.SetErrorStringWithFormat("NativeRegisterContextNQC_arm::%s "
                                    "DataBuffer::GetBytes() returned a null "
                                    "pointer",
                                    __FUNCTION__);
@@ -194,7 +194,7 @@ Status NativeRegisterContextFreeBSD_arm::WriteAllRegisterValues(
   return WriteRegisterSet(RegisterInfoPOSIX_arm::FPRegSet);
 }
 
-llvm::Error NativeRegisterContextFreeBSD_arm::CopyHardwareWatchpointsFrom(
+llvm::Error NativeRegisterContextNQC_arm::CopyHardwareWatchpointsFrom(
     NativeRegisterContextFreeBSD &source) {
   return llvm::Error::success();
 }

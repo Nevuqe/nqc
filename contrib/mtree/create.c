@@ -84,7 +84,7 @@ static uid_t uid;
 static mode_t mode;
 static u_long flags;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define	FTS_CONST const
 #else
 #define	FTS_CONST

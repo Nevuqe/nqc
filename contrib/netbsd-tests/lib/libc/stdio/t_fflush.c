@@ -48,7 +48,7 @@ ATF_TC_BODY(fflush_err, tc)
 {
 	FILE *f;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_expect_fail("the EOF invariant fails on FreeBSD; this is new");
 #endif
 

@@ -219,7 +219,7 @@ struct pfctl_watermarks {
 	uint32_t	lo;
 };
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /*
  * XXX
  * Absolutely this is not correct location to define this.

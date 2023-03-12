@@ -983,7 +983,7 @@ typedef enum {
 _LIBZFS_H zpool_compat_status_t zpool_load_compat(const char *,
     boolean_t *, char *, size_t);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 
 /*
  * Attach/detach the given filesystem to/from the given jail.
@@ -996,7 +996,7 @@ _LIBZFS_H int zfs_jail(zfs_handle_t *zhp, int jailid, int attach);
 _LIBZFS_H int zpool_nextboot(libzfs_handle_t *, uint64_t, uint64_t,
     const char *);
 
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 
 #ifdef __linux__
 

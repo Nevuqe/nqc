@@ -4313,9 +4313,9 @@ fail:
 	}
 
 	os_memset(&addr, 0, sizeof(addr));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	addr.sun_len = sizeof(addr);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	addr.sun_family = AF_UNIX;
 	fname = hostapd_ctrl_iface_path(hapd);
 	if (fname == NULL)
@@ -5067,9 +5067,9 @@ fail:
 	}
 
 	os_memset(&addr, 0, sizeof(addr));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	addr.sun_len = sizeof(addr);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	addr.sun_family = AF_UNIX;
 	fname = hostapd_global_ctrl_iface_path(interface);
 	if (fname == NULL)

@@ -78,7 +78,7 @@ const struct hnopts {
 	/*
 	 * Truncated output.  Rev. 1.7 produces "1.0 K".
 	 */
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	{ 6, 1000, "A", HN_AUTOSCALE, HN_DECIMAL, -1, "" },
 
 	/*

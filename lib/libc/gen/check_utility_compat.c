@@ -43,7 +43,7 @@ __FBSDID("$FreeBSD$");
 #include <unistd.h>
 
 #define	_PATH_UTIL_COMPAT	"/etc/compat-FreeBSD-4-util"
-#define	_ENV_UTIL_COMPAT	"_COMPAT_FreeBSD_4"
+#define	_ENV_UTIL_COMPAT	"_COMPAT_NQC_4"
 
 int
 check_utility_compat(const char *utility)

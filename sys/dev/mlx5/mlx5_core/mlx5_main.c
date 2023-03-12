@@ -192,8 +192,8 @@ static void mlx5_set_driver_version(struct mlx5_core_dev *dev)
 	string = MLX5_ADDR_OF(set_driver_version_in, in, driver_version);
 
 	snprintf(string, driver_ver_sz, "FreeBSD,mlx5_core,%u.%u.%u," DRIVER_VERSION,
-	    __FreeBSD_version / 100000, (__FreeBSD_version / 1000) % 100,
-	    __FreeBSD_version % 1000);
+	    __NQC_version / 100000, (__NQC_version / 1000) % 100,
+	    __NQC_version % 1000);
 
 	/* Send the command */
 	MLX5_SET(set_driver_version_in, in, opcode,

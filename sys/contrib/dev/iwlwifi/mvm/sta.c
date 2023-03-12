@@ -5,7 +5,7 @@
  * Copyright (C) 2016-2017 Intel Deutschland GmbH
  */
 #include <net/mac80211.h>
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/cache.h>
 #endif
 
@@ -1805,7 +1805,7 @@ int iwl_mvm_drain_sta(struct iwl_mvm *mvm, struct iwl_mvm_sta *mvmsta,
 #if defined(__linux__)
 		IWL_ERR(mvm, "Couldn't drain frames for staid %d\n",
 			mvmsta->sta_id);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		IWL_ERR(mvm, "Couldn't drain frames for staid %d, status %#x\n",
 			mvmsta->sta_id, status);
 #endif
@@ -1910,7 +1910,7 @@ int iwl_mvm_rm_sta(struct iwl_mvm *mvm,
 #if defined(__linux__)
 	if (iwl_mvm_has_new_rx_api(mvm))
 		kfree(mvm_sta->dup_data);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	if (iwl_mvm_has_new_rx_api(mvm)) {
 		kfree(mvm_sta->dup_data);
 		mvm_sta->dup_data = NULL;

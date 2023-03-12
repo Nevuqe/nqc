@@ -387,7 +387,7 @@ zfs_fuid_map_ids(znode_t *zp, cred_t *cr, uid_t *uidp, uid_t *gidp)
 	    cr, ZFS_GROUP);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 uid_t
 zfs_fuid_map_id(zfsvfs_t *zfsvfs, uint64_t fuid,
     cred_t *cr, zfs_fuid_type_t type)

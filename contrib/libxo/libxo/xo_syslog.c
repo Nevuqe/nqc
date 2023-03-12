@@ -87,7 +87,7 @@
 
 #define XO_SYSLOG_ENTERPRISE_ID	"kern.syslog.enterprise_id"
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define XO_DEFAULT_EID	2238
 #elif defined(__macosx__)
 #define XO_DEFAULT_EID	63

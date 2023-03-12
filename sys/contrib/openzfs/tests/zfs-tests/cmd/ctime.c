@@ -31,7 +31,7 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #include <sys/xattr.h>
 #endif
 #include <utime.h>
@@ -255,7 +255,7 @@ do_chown(const char *pfile)
 	return (ret);
 }
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 static int
 do_xattr(const char *pfile)
 {
@@ -295,7 +295,7 @@ static timetest_t timetest_table[] = {
 	{ ST_CTIME,	"st_ctime",	do_chown 	},
 	{ ST_CTIME,	"st_ctime",	do_link		},
 	{ ST_CTIME,	"st_ctime",	do_utime	},
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	{ ST_CTIME,	"st_ctime",	do_xattr	},
 #endif
 };

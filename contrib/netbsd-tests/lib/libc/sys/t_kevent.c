@@ -99,7 +99,7 @@ ATF_TC_BODY(kqueue_desc_passing, tc)
 	m.msg_namelen = 0;
 	m.msg_control = msg;
 	m.msg_controllen = CMSG_SPACE(sizeof(int));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	m.msg_flags = 0;
 #endif
 
@@ -125,7 +125,7 @@ ATF_TC_BODY(kqueue_desc_passing, tc)
 	iov.iov_base = &storage;
 	iov.iov_len = sizeof(int);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	msg = CMSG_FIRSTHDR(&m);
 #endif
 	msg->cmsg_level = SOL_SOCKET;

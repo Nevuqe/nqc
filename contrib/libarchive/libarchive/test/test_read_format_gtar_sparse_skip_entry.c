@@ -35,7 +35,7 @@ __FBSDID("$FreeBSD");
  */
 DEFINE_TEST(test_read_format_gtar_sparse_skip_entry)
 {
-#ifndef __FreeBSD__ /* Backport test. */
+#ifndef __NQC__ /* Backport test. */
 	const char *refname = "test_read_format_gtar_sparse_skip_entry.tar.Z.uu";
 #else
 	const char *refname = "test_read_format_gtar_sparse_skip_entry.tar.Z";
@@ -46,7 +46,7 @@ DEFINE_TEST(test_read_format_gtar_sparse_skip_entry)
 	size_t s;
 	int64_t o;
 
-#ifndef __FreeBSD__ /* Backport test. */
+#ifndef __NQC__ /* Backport test. */
 	copy_reference_file(refname);
 #else
 	extract_reference_file(refname);
@@ -61,7 +61,7 @@ DEFINE_TEST(test_read_format_gtar_sparse_skip_entry)
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
 	assertEqualString("a", archive_entry_pathname(ae));
 	assertEqualInt(LITERAL_LL(10737418244), archive_entry_size(ae));
-#ifndef __FreeBSD__ /* Backport test. */
+#ifndef __NQC__ /* Backport test. */
 	assertEqualInt(archive_entry_is_encrypted(ae), 0);
 	assertEqualIntA(a, archive_read_has_encrypted_entries(a),
 	    ARCHIVE_READ_FORMAT_ENCRYPTION_UNSUPPORTED);
@@ -71,7 +71,7 @@ DEFINE_TEST(test_read_format_gtar_sparse_skip_entry)
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
 	assertEqualString("b", archive_entry_pathname(ae));
 	assertEqualInt(4, archive_entry_size(ae));
-#ifndef __FreeBSD__ /* Backport test. */
+#ifndef __NQC__ /* Backport test. */
 	assertEqualInt(archive_entry_is_encrypted(ae), 0);
 	assertEqualIntA(a, archive_read_has_encrypted_entries(a),
 	    ARCHIVE_READ_FORMAT_ENCRYPTION_UNSUPPORTED);
@@ -104,7 +104,7 @@ DEFINE_TEST(test_read_format_gtar_sparse_skip_entry)
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
 	assertEqualString("a", archive_entry_pathname(ae));
 	assertEqualInt(LITERAL_LL(10737418244), archive_entry_size(ae));
-#ifndef __FreeBSD__ /* Backport test. */
+#ifndef __NQC__ /* Backport test. */
 	assertEqualInt(archive_entry_is_encrypted(ae), 0);
 	assertEqualIntA(a, archive_read_has_encrypted_entries(a),
 	    ARCHIVE_READ_FORMAT_ENCRYPTION_UNSUPPORTED);
@@ -118,7 +118,7 @@ DEFINE_TEST(test_read_format_gtar_sparse_skip_entry)
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
 	assertEqualString("b", archive_entry_pathname(ae));
 	assertEqualInt(4, archive_entry_size(ae));
-#ifndef __FreeBSD__ /* Backport test. */
+#ifndef __NQC__ /* Backport test. */
 	assertEqualInt(archive_entry_is_encrypted(ae), 0);
 	assertEqualIntA(a, archive_read_has_encrypted_entries(a),
 	    ARCHIVE_READ_FORMAT_ENCRYPTION_UNSUPPORTED);

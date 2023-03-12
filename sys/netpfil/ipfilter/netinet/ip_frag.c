@@ -24,7 +24,7 @@
 # include <sys/uio.h>
 # undef _KERNEL
 #endif
-#if defined(_KERNEL) && defined(__FreeBSD__)
+#if defined(_KERNEL) && defined(__NQC__)
 # include <sys/filio.h>
 # include <sys/fcntl.h>
 #else

@@ -32,5 +32,5 @@ __FBSDID("$FreeBSD$");
 #include <machine/asmacros.h>
 
 /* An ELF note so GDB detects this as a FreeBSD elf file */
-ELFNOTE(.note.tag, 1, "FreeBSD", .long, __FreeBSD_version);
+ELFNOTE(.note.tag, 1, "FreeBSD", .long, __NQC_version);
 

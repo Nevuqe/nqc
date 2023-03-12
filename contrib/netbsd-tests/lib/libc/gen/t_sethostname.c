@@ -65,7 +65,7 @@ ATF_TC_BODY(sethostname_basic, tc)
 
 		(void)memset(name, 0, sizeof(name));
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		/*
 		 * Sanity checks to ensure that the wrong invariant isn't being
 		 * tested for per PR # 181127
@@ -108,7 +108,7 @@ ATF_TC_BODY(sethostname_limit, tc)
 
 ATF_TC_CLEANUP(sethostname_limit, tc)
 {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE(sethostname(host, MAXHOSTNAMELEN - 1 ) == 0);
 	ATF_REQUIRE(sethostname(host, MAXHOSTNAMELEN) == -1);
 #endif

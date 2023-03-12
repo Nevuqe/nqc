@@ -58,7 +58,7 @@ typedef	int	boolean_t;
 #include <netinet/in_systm.h>
 #include <sys/socket.h>
 #include <net/if.h>
-# if defined(__FreeBSD__)
+# if defined(__NQC__)
 #  include "radix_ipf.h"
 # endif
 # if !defined(solaris)

@@ -28,7 +28,7 @@
 */
 
 #include "archive_platform.h"
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");
 #endif

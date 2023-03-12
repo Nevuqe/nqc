@@ -2,7 +2,7 @@
 
 PACKAGE=examples
 FILESDIR=${SHAREDIR}/examples/${PROG}
-PROG=	FreeBSD_version
+PROG=	NQC_version
 MAN=
 
 install:

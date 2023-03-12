@@ -63,14 +63,14 @@ __FBSDID("$FreeBSD$");
 #define	IDX_TO_OFF(idx) (((vm_ooffset_t)(idx)) << PAGE_SHIFT)
 #endif
 
-#if  __FreeBSD_version < 1300051
+#if  __NQC_version < 1300051
 #define	VM_ALLOC_BUSY_FLAGS VM_ALLOC_NOBUSY
 #else
 #define	VM_ALLOC_BUSY_FLAGS  VM_ALLOC_SBUSY | VM_ALLOC_IGN_SBUSY
 #endif
 
 
-#if __FreeBSD_version < 1300072
+#if __NQC_version < 1300072
 #define	dmu_page_lock(m)	vm_page_lock(m)
 #define	dmu_page_unlock(m)	vm_page_unlock(m)
 #else

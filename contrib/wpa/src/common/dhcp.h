@@ -9,7 +9,7 @@
 #ifndef DHCP_H
 #define DHCP_H
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 /*
  * Translate Linux to FreeBSD
  */

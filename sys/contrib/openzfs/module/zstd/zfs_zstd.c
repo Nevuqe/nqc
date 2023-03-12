@@ -908,7 +908,7 @@ zstd_fini(void)
 }
 
 #if defined(_KERNEL)
-#ifdef __FreeBSD__
+#ifdef __NQC__
 module_init(zstd_init);
 module_exit(zstd_fini);
 #endif

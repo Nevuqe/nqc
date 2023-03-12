@@ -525,7 +525,7 @@ TEST_F(PipePdfork, Close) {
   EXPECT_FALSE(had_signal[SIGCHLD]);
   EXPECT_PID_DEAD(pid_);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
   EXPECT_EQ(-1, waitpid(pid_, NULL, __WALL));
   EXPECT_EQ(errno, ECHILD);
 #else
@@ -594,7 +594,7 @@ FORK_TEST(Pdfork, OtherUserIfRoot) {
 
   // Ideally, we should be able to send signals via a process descriptor even
   // if it's owned by another user, but this is not implementated on FreeBSD.
-#ifdef __FreeBSD__
+#ifdef __NQC__
   // On FreeBSD, pdkill() still performs all the same checks that kill() does
   // and therefore cannot be used to send a signal to a process with another
   // UID unless we are root.
@@ -825,7 +825,7 @@ TEST_F(PipePdforkDaemon, NoPDSigchld) {
 
   EXPECT_OK(close(pd_));
   TerminateChild();
-#ifdef __FreeBSD__
+#ifdef __NQC__
   EXPECT_EQ(-1, waitpid(pid_, NULL, __WALL));
   EXPECT_EQ(errno, ECHILD);
 #else

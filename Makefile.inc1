@@ -506,7 +506,7 @@ GIT_CMD=   ${_P}/git
 
 .if !defined(OSRELDATE)
 .if exists(/usr/include/osreldate.h)
-OSRELDATE!=	awk '/^\#define[[:space:]]*__FreeBSD_version/ { print $$3 }' \
+OSRELDATE!=	awk '/^\#define[[:space:]]*__NQC_version/ { print $$3 }' \
 		/usr/include/osreldate.h
 .else
 OSRELDATE=	0
@@ -522,7 +522,7 @@ _${_V}!=	eval $$(awk '/^${_V}=/{print}' ${SRCTOP}/sys/conf/newvers.sh); echo $$$
 .endif
 .endfor
 .if !defined(SRCRELDATE)
-SRCRELDATE!=	awk '/^\#define[[:space:]]*__FreeBSD_version/ { print $$3 }' \
+SRCRELDATE!=	awk '/^\#define[[:space:]]*__NQC_version/ { print $$3 }' \
 		${SRCDIR}/sys/sys/param.h
 .export SRCRELDATE
 .endif
@@ -866,7 +866,7 @@ META_MODE_BAD_ABI_VERS+=	1200031
 .if !defined(OBJDIR_HOST_OSRELDATE)
 .if exists(${OBJTOP}/host-osreldate.h)
 OBJDIR_HOST_OSRELDATE!=	\
-    awk '/^\#define[[:space:]]*__FreeBSD_version/ { print $$3 }' \
+    awk '/^\#define[[:space:]]*__NQC_version/ { print $$3 }' \
     ${OBJTOP}/host-osreldate.h
 .elif exists(${WORLDTMP}/usr/include/osreldate.h)
 OBJDIR_HOST_OSRELDATE=	0
@@ -884,14 +884,14 @@ _meta_mode_need_rebuild=	${_ver}
 .endif
 .endfor
 .if defined(_meta_mode_need_rebuild)
-.info META_MODE: Rebuilding host tools due to ABI breakage in __FreeBSD_version ${_meta_mode_need_rebuild}.
+.info META_MODE: Rebuilding host tools due to ABI breakage in __NQC_version ${_meta_mode_need_rebuild}.
 NO_META_IGNORE_HOST_HEADERS=	1
 .export NO_META_IGNORE_HOST_HEADERS
 .endif	# defined(_meta_mode_need_rebuild)
 .endif	# defined(OBJDIR_HOST_OSRELDATE)
 .endif	# ${MK_META_MODE} == "yes" && ${MK_CLEAN} == "no" ...
 # This is only used for META_MODE+filemon to track what the oldest
-# __FreeBSD_version is in WORLDTMP.  This purposely does NOT have
+# __NQC_version is in WORLDTMP.  This purposely does NOT have
 # a make dependency on /usr/include/osreldate.h as the file should
 # only be copied when it is missing or meta mode determines it has changed.
 # Since host files are normally ignored without NO_META_IGNORE_HOST
@@ -902,8 +902,8 @@ host-osreldate.h: # DO NOT ADD /usr/include/osreldate.h here
 .if !defined(CROSSBUILD_HOST)
 	@cp -f /usr/include/osreldate.h ${.TARGET}
 .else
-	@echo "#ifndef __FreeBSD_version" > ${.TARGET}
-	@echo "#define __FreeBSD_version ${OSRELDATE}" >> ${.TARGET}
+	@echo "#ifndef __NQC_version" > ${.TARGET}
+	@echo "#define __NQC_version ${OSRELDATE}" >> ${.TARGET}
 	@echo "#endif" >> ${.TARGET}
 .endif
 

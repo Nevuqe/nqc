@@ -1104,7 +1104,7 @@ flush_kern(void)
 		if (rtm->rtm_flags & RTF_LLINFO)
 			continue;
 #endif
-#if defined(RTF_WASCLONED) && defined(__FreeBSD__)
+#if defined(RTF_WASCLONED) && defined(__NQC__)
 		/* ignore cloned routes
 		 */
 		if (rtm->rtm_flags & RTF_WASCLONED)
@@ -1272,7 +1272,7 @@ read_rt(void)
 		}
 #endif
 		
-#if defined(RTF_WASCLONED) && defined(__FreeBSD__)
+#if defined(RTF_WASCLONED) && defined(__NQC__)
 		if (m.r.rtm.rtm_flags & RTF_WASCLONED) {
 			trace_act("ignore cloned %s", str);
 			continue;

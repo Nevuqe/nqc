@@ -670,7 +670,7 @@ iface_ChangeFlags(const char *ifname, int flags, int how)
     close(s);
     return 0;
   }
-#ifdef __FreeBSD__
+#ifdef __NQC__
   new_flags = (ifrq.ifr_flags & 0xffff) | (ifrq.ifr_flagshigh << 16);
 #else
   new_flags = ifrq.ifr_flags & 0xffff;
@@ -681,7 +681,7 @@ iface_ChangeFlags(const char *ifname, int flags, int how)
   else
     new_flags &= ~flags;
   ifrq.ifr_flags = new_flags & 0xffff;
-#ifdef __FreeBSD__
+#ifdef __NQC__
   ifrq.ifr_flagshigh = new_flags >> 16;
 #endif
 

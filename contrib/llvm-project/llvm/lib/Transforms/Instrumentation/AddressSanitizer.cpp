@@ -106,8 +106,8 @@ static const uint64_t kMIPS32_ShadowOffset32 = 0x0aaa0000;
 static const uint64_t kMIPS64_ShadowOffset64 = 1ULL << 37;
 static const uint64_t kAArch64_ShadowOffset64 = 1ULL << 36;
 static const uint64_t kRISCV64_ShadowOffset64 = 0xd55550000;
-static const uint64_t kFreeBSD_ShadowOffset32 = 1ULL << 30;
-static const uint64_t kFreeBSD_ShadowOffset64 = 1ULL << 46;
+static const uint64_t kNQC_ShadowOffset32 = 1ULL << 30;
+static const uint64_t kNQC_ShadowOffset64 = 1ULL << 46;
 static const uint64_t kFreeBSDAArch64_ShadowOffset64 = 1ULL << 47;
 static const uint64_t kFreeBSDKasan_ShadowOffset64 = 0xdffff7c000000000;
 static const uint64_t kNetBSD_ShadowOffset32 = 1ULL << 30;
@@ -504,7 +504,7 @@ static ShadowMapping getShadowMapping(const Triple &TargetTriple, int LongSize,
     else if (IsMIPS32)
       Mapping.Offset = kMIPS32_ShadowOffset32;
     else if (IsFreeBSD)
-      Mapping.Offset = kFreeBSD_ShadowOffset32;
+      Mapping.Offset = kNQC_ShadowOffset32;
     else if (IsNetBSD)
       Mapping.Offset = kNetBSD_ShadowOffset32;
     else if (IsIOS)
@@ -530,7 +530,7 @@ static ShadowMapping getShadowMapping(const Triple &TargetTriple, int LongSize,
       if (IsKasan)
         Mapping.Offset = kFreeBSDKasan_ShadowOffset64;
       else
-        Mapping.Offset = kFreeBSD_ShadowOffset64;
+        Mapping.Offset = kNQC_ShadowOffset64;
     } else if (IsNetBSD) {
       if (IsKasan)
         Mapping.Offset = kNetBSDKasan_ShadowOffset64;

@@ -140,7 +140,7 @@ compat_strtou8(const char *cp, unsigned int base, unsigned char *res)
 	return 0;
 }
 
-#if __FreeBSD_version >= 1300500
+#if __NQC_version >= 1300500
 #undef dev_to_node
 static inline int
 dev_to_node(device_t dev)

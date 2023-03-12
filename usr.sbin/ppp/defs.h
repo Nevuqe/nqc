@@ -31,7 +31,7 @@
  */
 
 /* Check the following definitions for your machine environment */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 # define  MODEM_LIST	"/dev/cuau1\0/dev/cuau0"	/* name of tty device */
 #else
 # ifdef __OpenBSD__

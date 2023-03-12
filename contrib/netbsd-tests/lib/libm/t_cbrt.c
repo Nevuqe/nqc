@@ -255,7 +255,7 @@ ATF_TC_BODY(cbrtf_zero_pos, tc)
 		atf_tc_fail_nonfatal("cbrtf(+0.0) != +0.0");
 }
 
-#if !defined(__FreeBSD__) || LDBL_PREC != 53
+#if !defined(__NQC__) || LDBL_PREC != 53
 /*
  * cbrtl(3)
  */
@@ -287,12 +287,12 @@ ATF_TC_BODY(cbrtl_powl, tc)
 	size_t i;
 
 #if defined(__amd64__) && defined(__clang__) && __clang_major__ >= 7 && \
-    __clang_major__ < 10 && __FreeBSD_cc_version < 1300002
+    __clang_major__ < 10 && __NQC_cc_version < 1300002
 	atf_tc_expect_fail("test fails with clang 7-9 - bug 234040");
 #endif
 	for (i = 0; i < __arraycount(x); i++) {
 		long double x_cbrt = cbrtl(x[i]);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		/*
 		 * NetBSD doesn't have a real powl/cbrtl implementation, they
 		 * just call the double version. On FreeBSD we have a real
@@ -399,7 +399,7 @@ ATF_TP_ADD_TCS(tp)
 	ATF_TP_ADD_TC(tp, cbrtf_zero_neg);
 	ATF_TP_ADD_TC(tp, cbrtf_zero_pos);
 
-#if !defined(__FreeBSD__) || LDBL_PREC != 53
+#if !defined(__NQC__) || LDBL_PREC != 53
 	ATF_TP_ADD_TC(tp, cbrtl_nan);
 	ATF_TP_ADD_TC(tp, cbrtl_powl);
 	ATF_TP_ADD_TC(tp, cbrtl_inf_neg);

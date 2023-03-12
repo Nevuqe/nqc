@@ -28,7 +28,7 @@
 #ifndef	_SYS_CCOMPAT_H
 #define	_SYS_CCOMPAT_H
 
-#if  __FreeBSD_version < 1300051
+#if  __NQC_version < 1300051
 #define	vm_page_valid(m) (m)->valid = VM_PAGE_BITS_ALL
 #define	vm_page_do_sunbusy(m)
 #define	vm_page_none_valid(m) ((m)->valid == 0)
@@ -36,27 +36,27 @@
 #define	vm_page_do_sunbusy(m) vm_page_sunbusy(m)
 #endif
 
-#if  __FreeBSD_version < 1300074
+#if  __NQC_version < 1300074
 #define	VOP_UNLOCK1(x)	VOP_UNLOCK(x, 0)
 #else
 #define	VOP_UNLOCK1(x)	VOP_UNLOCK(x)
 #endif
 
-#if  __FreeBSD_version < 1300064
+#if  __NQC_version < 1300064
 #define	VN_IS_DOOMED(vp)	((vp)->v_iflag & VI_DOOMED)
 #endif
 
-#if  __FreeBSD_version < 1300068
+#if  __NQC_version < 1300068
 #define	VFS_VOP_VECTOR_REGISTER(x)
 #endif
 
-#if  __FreeBSD_version >= 1300076
+#if  __NQC_version >= 1300076
 #define	getnewvnode_reserve_()	getnewvnode_reserve()
 #else
 #define	getnewvnode_reserve_()	getnewvnode_reserve(1)
 #endif
 
-#if  __FreeBSD_version < 1300102
+#if  __NQC_version < 1300102
 #define	ASSERT_VOP_IN_SEQC(zp)
 #define	MNTK_FPLOOKUP 0
 #define	vn_seqc_write_begin(vp)

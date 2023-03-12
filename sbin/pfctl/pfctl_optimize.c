@@ -861,7 +861,7 @@ block_feedback(struct pfctl *pf, struct superblock *block)
 				break;
 			}
 		}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		if (por2 == NULL)
 #else
 		if (por2 == TAILQ_END(&block->sb_rules))

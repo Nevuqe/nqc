@@ -17,7 +17,7 @@
 #if LLDB_ENABLE_FBSDVMCORE
 #include <fvc.h>
 #endif
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <kvm.h>
 #endif
 
@@ -46,7 +46,7 @@ private:
 };
 #endif // LLDB_ENABLE_FBSDVMCORE
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 class ProcessFreeBSDKernelKVM : public ProcessFreeBSDKernel {
 public:
   ProcessFreeBSDKernelKVM(lldb::TargetSP target_sp, lldb::ListenerSP listener,
@@ -62,7 +62,7 @@ private:
 
   const char *GetError();
 };
-#endif // defined(__FreeBSD__)
+#endif // defined(__NQC__)
 
 } // namespace
 
@@ -85,7 +85,7 @@ lldb::ProcessSP ProcessFreeBSDKernel::CreateInstance(lldb::TargetSP target_sp,
                                                        fvc);
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
     kvm_t *kvm =
         kvm_open2(executable->GetFileSpec().GetPath().c_str(),
                   crash_file->GetPath().c_str(), O_RDONLY, nullptr, nullptr);
@@ -299,7 +299,7 @@ const char *ProcessFreeBSDKernelFVC::GetError() { return fvc_geterr(m_fvc); }
 
 #endif // LLDB_ENABLE_FBSDVMCORE
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 
 ProcessFreeBSDKernelKVM::ProcessFreeBSDKernelKVM(lldb::TargetSP target_sp,
                                                  ListenerSP listener_sp,
@@ -324,4 +324,4 @@ size_t ProcessFreeBSDKernelKVM::DoReadMemory(lldb::addr_t addr, void *buf,
 
 const char *ProcessFreeBSDKernelKVM::GetError() { return kvm_geterr(m_kvm); }
 
-#endif // defined(__FreeBSD__)
+#endif // defined(__NQC__)

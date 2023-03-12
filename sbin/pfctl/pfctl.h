@@ -92,7 +92,7 @@ void	 warn_namespace_collision(const char *);
 int	 pfctl_show_ifaces(const char *, int);
 FILE	*pfctl_fopen(const char *, const char *);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 extern int altqsupport;
 extern int dummynetsupport;
 #define	HTONL(x)		(x) = htonl((__uint32_t)(x))

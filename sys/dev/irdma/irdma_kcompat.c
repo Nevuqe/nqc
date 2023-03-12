@@ -97,7 +97,7 @@ irdma_del_gid(struct ib_device *device,
 	return 0;
 }
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 /**
  * irdma_alloc_mr - register stag for fast memory registration
  * @pd: ibpd pointer
@@ -175,7 +175,7 @@ err:
 
 #define IRDMA_ALLOC_UCTX_MIN_REQ_LEN offsetofend(struct irdma_alloc_ucontext_req, rsvd8)
 #define IRDMA_ALLOC_UCTX_MIN_RESP_LEN offsetofend(struct irdma_alloc_ucontext_resp, rsvd)
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 /**
  * irdma_alloc_ucontext - Allocate the user context data structure
  * @uctx: context
@@ -269,7 +269,7 @@ ver_error:
 }
 #endif
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 /**
  * irdma_alloc_ucontext - Allocate the user context data structure
  * @ibdev: ib device pointer
@@ -376,7 +376,7 @@ ver_error:
 }
 #endif
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 /**
  * irdma_dealloc_ucontext - deallocate the user context data structure
  * @context: user context created during alloc
@@ -392,7 +392,7 @@ irdma_dealloc_ucontext(struct ib_ucontext *context)
 }
 #endif
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 /**
  * irdma_dealloc_ucontext - deallocate the user context data structure
  * @context: user context created during alloc
@@ -411,7 +411,7 @@ irdma_dealloc_ucontext(struct ib_ucontext *context)
 #endif
 
 #define IRDMA_ALLOC_PD_MIN_RESP_LEN offsetofend(struct irdma_alloc_pd_resp, rsvd)
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 /**
  * irdma_alloc_pd - allocate protection domain
  * @pd: protection domain
@@ -464,7 +464,7 @@ error:
 }
 #endif
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 /**
  * irdma_alloc_pd - allocate protection domain
  * @ibdev: IB device
@@ -522,7 +522,7 @@ free_res:
 
 #endif
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 void
 irdma_dealloc_pd(struct ib_pd *ibpd, struct ib_udata *udata)
 {
@@ -534,7 +534,7 @@ irdma_dealloc_pd(struct ib_pd *ibpd, struct ib_udata *udata)
 
 #endif
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 int
 irdma_dealloc_pd(struct ib_pd *ibpd)
 {
@@ -634,7 +634,7 @@ irdma_create_ah_wait(struct irdma_pci_f *rf,
 
 #define IRDMA_CREATE_AH_MIN_RESP_LEN offsetofend(struct irdma_create_ah_resp, rsvd)
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 /**
  * irdma_create_ah - create address handle
  * @ib_ah: ptr to AH
@@ -766,7 +766,7 @@ irdma_ether_copy(u8 *dmac, struct ib_ah_attr *attr)
 	ether_addr_copy(dmac, attr->dmac);
 }
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 struct ib_ah *
 irdma_create_ah_stub(struct ib_pd *ibpd,
 		     struct ib_ah_attr *attr,
@@ -778,14 +778,14 @@ irdma_create_ah_stub(struct ib_ah *ib_ah,
 		     struct ib_udata *udata)
 #endif
 {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	return -ENOSYS;
 #else
 	return ERR_PTR(-ENOSYS);
 #endif
 }
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 void
 irdma_destroy_ah_stub(struct ib_ah *ibah, u32 flags)
 {
@@ -799,7 +799,7 @@ irdma_destroy_ah_stub(struct ib_ah *ibah)
 }
 #endif
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 /**
  * irdma_create_ah - create address handle
  * @ibpd: ptr to pd
@@ -1170,7 +1170,7 @@ error:
  * @ibqp: qp's ib pointer also to get to device's qp address
  * @udata: user data
  */
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 int
 irdma_destroy_qp(struct ib_qp *ibqp, struct ib_udata *udata)
 #else
@@ -1213,7 +1213,7 @@ free_rsrc:
  * @attr: attributes for cq
  * @udata: user data
  */
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 int
 irdma_create_cq(struct ib_cq *ibcq,
 		const struct ib_cq_init_attr *attr,
@@ -1228,12 +1228,12 @@ irdma_create_cq(struct ib_device *ibdev,
 {
 #define IRDMA_CREATE_CQ_MIN_REQ_LEN offsetofend(struct irdma_create_cq_req, user_cq_buf)
 #define IRDMA_CREATE_CQ_MIN_RESP_LEN offsetofend(struct irdma_create_cq_resp, cq_size)
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	struct ib_device *ibdev = ibcq->device;
 #endif
 	struct irdma_device *iwdev = to_iwdev(ibdev);
 	struct irdma_pci_f *rf = iwdev->rf;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	struct irdma_cq *iwcq = to_iwcq(ibcq);
 #else
 	struct irdma_cq *iwcq;
@@ -1251,7 +1251,7 @@ irdma_create_cq(struct ib_device *ibdev,
 	int entries = attr->cqe;
 	bool cqe_64byte_ena;
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	err_code = cq_validate_flags(attr->flags, dev->hw_attrs.uk_attrs.hw_rev);
 	if (err_code)
 		return err_code;
@@ -1275,7 +1275,7 @@ irdma_create_cq(struct ib_device *ibdev,
 	err_code = irdma_alloc_rsrc(rf, rf->allocated_cqs, rf->max_cq, &cq_num,
 				    &rf->next_cq);
 	if (err_code)
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		return err_code;
 #else
 		goto error;
@@ -1308,7 +1308,7 @@ irdma_create_cq(struct ib_device *ibdev,
 		struct irdma_cq_mr *cqmr_shadow;
 
 		iwcq->user_mode = true;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 		ucontext = to_ucontext(context);
@@ -1444,7 +1444,7 @@ irdma_create_cq(struct ib_device *ibdev,
 	rf->cq_table[cq_num] = iwcq;
 	init_completion(&iwcq->free_cq);
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	return 0;
 #else
 	return &iwcq->ibcq;
@@ -1453,7 +1453,7 @@ cq_destroy:
 	irdma_cq_wq_destroy(rf, cq);
 cq_free_rsrc:
 	irdma_cq_free_rsrc(rf, iwcq);
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	return err_code;
 #else
 error:
@@ -1509,7 +1509,7 @@ irdma_copy_user_pgaddrs(struct irdma_mr *iwmr, u64 *pbl,
  * @ah_flags: destroy flags
  */
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 void
 irdma_destroy_ah(struct ib_ah *ibah, u32 ah_flags)
 {
@@ -1524,7 +1524,7 @@ irdma_destroy_ah(struct ib_ah *ibah, u32 ah_flags)
 }
 #endif
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 int
 irdma_destroy_ah(struct ib_ah *ibah)
 {
@@ -1542,7 +1542,7 @@ irdma_destroy_ah(struct ib_ah *ibah)
 }
 #endif
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 int
 irdma_dereg_mr(struct ib_mr *ib_mr, struct ib_udata *udata)
 #else
@@ -1558,7 +1558,7 @@ irdma_dereg_mr(struct ib_mr *ib_mr)
 	if (iwmr->type != IRDMA_MEMREG_TYPE_MEM) {
 		if (iwmr->region) {
 			struct irdma_ucontext *ucontext;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 
 			ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 
@@ -1673,7 +1673,7 @@ kc_irdma_set_roce_cm_info(struct irdma_qp *iwqp, struct ib_qp_attr *attr,
 	return 0;
 }
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 /**
  * irdma_destroy_cq - destroy cq
  * @ib_cq: cq pointer
@@ -1709,7 +1709,7 @@ irdma_destroy_cq(struct ib_cq *ib_cq, struct ib_udata *udata)
 }
 
 #endif
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 /**
  * irdma_destroy_cq - destroy cq
  * @ib_cq: cq pointer
@@ -1811,7 +1811,7 @@ kc_set_loc_seq_num_mss(struct irdma_cm_node *cm_node)
 		    (cm_node->iwdev->vsi.mtu - IRDMA_MTU_TO_MSS_IPV6);
 }
 
-#if __FreeBSD_version < 1400026
+#if __NQC_version < 1400026
 struct irdma_vma_data {
 	struct list_head list;
 	struct vm_area_struct *vma;

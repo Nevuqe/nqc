@@ -9,7 +9,7 @@
 
 #include "includes.h"
 #include <sys/param.h>
-#if defined(__APPLE__) || defined(__GLIBC__) || defined(__FreeBSD_version)
+#if defined(__APPLE__) || defined(__GLIBC__) || defined(__NQC_version)
 #include <net/bpf.h>
 #endif /* __APPLE__ */
 #include <pcap.h>

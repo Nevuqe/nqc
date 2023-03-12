@@ -47,7 +47,7 @@ __FBSDID("$FreeBSD$");
 
 #include <vm/uma.h>
 
-#if __FreeBSD_version < 1201522
+#if __NQC_version < 1201522
 #define	taskqueue_start_threads_in_proc(tqp, count, pri, proc, name, ...) \
     taskqueue_start_threads(tqp, count, pri, name, __VA_ARGS__)
 #endif

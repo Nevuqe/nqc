@@ -89,7 +89,7 @@
 #include <prot.h>
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <resolv.h>
 #if defined(GSSAPI) && defined(HAVE_GSSAPI_GSSAPI_H)
 #include <gssapi/gssapi.h>
@@ -2217,7 +2217,7 @@ main(int ac, char **av)
 	ssh_signal(SIGCHLD, SIG_DFL);
 	ssh_signal(SIGINT, SIG_DFL);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * Initialize the resolver.  This may not happen automatically
 	 * before privsep chroot().

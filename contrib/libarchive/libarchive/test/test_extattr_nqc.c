@@ -25,7 +25,7 @@
 #include "test.h"
 __FBSDID("$FreeBSD$");
 
-#if defined(__FreeBSD__) && __FreeBSD__ > 4
+#if defined(__NQC__) && __NQC__ > 4
 #include <sys/extattr.h>
 #endif
 
@@ -35,9 +35,9 @@ __FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_extattr_nqc)
 {
-#if !defined(__FreeBSD__)
+#if !defined(__NQC__)
 	skipping("FreeBSD-specific extattr restore test");
-#elif __FreeBSD__ < 5
+#elif __NQC__ < 5
 	skipping("extattr restore supported only on FreeBSD 5.0 and later");
 #else
 	char buff[64];

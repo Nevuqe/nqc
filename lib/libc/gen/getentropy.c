@@ -41,7 +41,7 @@ __FBSDID("$FreeBSD$");
 
 #include "libc_private.h"
 
-/* First __FreeBSD_version bump after introduction of getrandom(2) (r331279) */
+/* First __NQC_version bump after introduction of getrandom(2) (r331279) */
 #define GETRANDOM_FIRST 1200061
 
 extern int __sysctl(int *, u_int, void *, size_t *, void *, size_t);

@@ -2,7 +2,7 @@
 #ifdef __linux__
 #include <sys/vfs.h>
 #include <linux/magic.h>
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 #include <sys/sysctl.h>
 #endif
 #include <ctype.h>
@@ -38,7 +38,7 @@ public:
     std::cerr << tmpdir << std::endl;
   }
   void CheckCapsicumSupport() {
-#ifdef __FreeBSD__
+#ifdef __NQC__
     int rc;
     bool trap_enotcap_enabled;
     size_t trap_enotcap_enabled_len = sizeof(trap_enotcap_enabled);

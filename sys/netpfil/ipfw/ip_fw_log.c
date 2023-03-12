@@ -410,7 +410,7 @@ ipfw_log(struct ip_fw_chain *chain, struct ip_fw *f, u_int hlen,
 				    (ipoff & IP_MF) ? "+" : "");
 		}
 	}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	log(LOG_SECURITY | LOG_INFO, "ipfw: %d %s %s %s via %s%s\n",
 	    f ? f->rulenum : -1, action, proto,
 	    args->flags & IPFW_ARGS_OUT ? "out" : "in", args->ifp->if_xname,

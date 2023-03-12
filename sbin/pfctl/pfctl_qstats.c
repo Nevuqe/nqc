@@ -97,7 +97,7 @@ pfctl_show_altq(int dev, const char *iface, int opts, int verbose2)
 	struct pf_altq_node	*root = NULL, *node;
 	int			 nodes, dotitle = (opts & PF_OPT_SHOWALL);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (!altqsupport)
 		return (-1);
 #endif
@@ -126,7 +126,7 @@ pfctl_show_altq(int dev, const char *iface, int opts, int verbose2)
 		for (node = root; node != NULL; node = node->next) {
 			if (iface != NULL && strcmp(node->altq.ifname, iface))
 				continue;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			if (node->altq.local_flags & PFALTQ_FLAG_IF_REMOVED)
 				continue;
 #endif
@@ -170,7 +170,7 @@ pfctl_update_qstats(int dev, struct pf_altq_node **root)
 			warn("DIOCGETALTQ");
 			return (-1);
 		}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		if ((pa.altq.qid > 0 || pa.altq.scheduler == ALTQT_CODEL) &&
 		    !(pa.altq.local_flags & PFALTQ_FLAG_IF_REMOVED)) {
 #else
@@ -194,7 +194,7 @@ pfctl_update_qstats(int dev, struct pf_altq_node **root)
 				pfctl_insert_altq_node(root, pa.altq, qstats);
 			}
 		}
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		else if (pa.altq.local_flags & PFALTQ_FLAG_IF_REMOVED) {
 			memset(&qstats.data, 0, sizeof(qstats.data));
 			if ((node = pfctl_find_altq_node(*root, pa.altq.qname,
@@ -313,7 +313,7 @@ pfctl_print_altq_nodestat(int dev, const struct pf_altq_node *a)
 	if (a->altq.qid == 0 && a->altq.scheduler != ALTQT_CODEL)
 		return;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (a->altq.local_flags & PFALTQ_FLAG_IF_REMOVED)
 		return;
 #endif

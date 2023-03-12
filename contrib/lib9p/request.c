@@ -31,7 +31,7 @@
 #include <errno.h>
 #include <sys/param.h>
 #include <sys/uio.h>
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/sbuf.h>
 #else
 #include "sbuf/sbuf.h"

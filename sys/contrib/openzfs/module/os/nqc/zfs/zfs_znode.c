@@ -91,7 +91,7 @@ SYSCTL_INT(_debug_sizeof, OID_AUTO, znode, CTLFLAG_RD,
  * (such as VFS logic) that will not compile easily in userland.
  */
 #ifdef _KERNEL
-#if !defined(KMEM_DEBUG) && __FreeBSD_version >= 1300102
+#if !defined(KMEM_DEBUG) && __NQC_version >= 1300102
 #define	_ZFS_USE_SMR
 static uma_zone_t znode_uma_zone;
 #else
@@ -433,7 +433,7 @@ zfs_znode_alloc(zfsvfs_t *zfsvfs, dmu_buf_t *db, int blksz,
 	    ("%s: fast path lookup enabled without smr", __func__));
 #endif
 
-#if __FreeBSD_version >= 1300076
+#if __NQC_version >= 1300076
 	KASSERT(curthread->td_vp_reserved != NULL,
 	    ("zfs_znode_alloc: getnewvnode without any vnodes reserved"));
 #else
@@ -460,7 +460,7 @@ zfs_znode_alloc(zfsvfs_t *zfsvfs, dmu_buf_t *db, int blksz,
 	zp->z_sync_cnt = 0;
 	zp->z_sync_writes_cnt = 0;
 	zp->z_async_writes_cnt = 0;
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	atomic_store_ptr(&zp->z_cached_symlink, NULL);
 #endif
 
@@ -539,7 +539,7 @@ zfs_znode_alloc(zfsvfs_t *zfsvfs, dmu_buf_t *db, int blksz,
 	 * Acquire vnode lock before making it available to the world.
 	 */
 	vn_lock(vp, LK_EXCLUSIVE | LK_RETRY);
-#if __FreeBSD_version >= 1400077
+#if __NQC_version >= 1400077
 	vn_set_state(vp, VSTATE_CONSTRUCTED);
 #endif
 	VN_LOCK_AREC(vp);
@@ -1094,7 +1094,7 @@ zfs_rezget(znode_t *zp)
 	 * Such pages will be invalid and can safely be skipped here.
 	 */
 	vp = ZTOV(zp);
-#if __FreeBSD_version >= 1400042
+#if __NQC_version >= 1400042
 	vn_pages_remove_valid(vp, 0, 0);
 #else
 	vn_pages_remove(vp, 0, 0);
@@ -1275,7 +1275,7 @@ void
 zfs_znode_free(znode_t *zp)
 {
 	zfsvfs_t *zfsvfs = zp->z_zfsvfs;
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	char *symlink;
 #endif
 
@@ -1287,7 +1287,7 @@ zfs_znode_free(znode_t *zp)
 	zfsvfs->z_nr_znodes--;
 	mutex_exit(&zfsvfs->z_znodes_lock);
 
-#if __FreeBSD_version >= 1300139
+#if __NQC_version >= 1300139
 	symlink = atomic_load_ptr(&zp->z_cached_symlink);
 	if (symlink != NULL) {
 		atomic_store_rel_ptr((uintptr_t *)&zp->z_cached_symlink,
@@ -1493,11 +1493,11 @@ zfs_free_range(znode_t *zp, uint64_t off, uint64_t len)
 	error = dmu_free_long_range(zfsvfs->z_os, zp->z_id, off, len);
 
 	if (error == 0) {
-#if __FreeBSD_version >= 1400032
+#if __NQC_version >= 1400032
 		vnode_pager_purge_range(ZTOV(zp), off, off + len);
 #else
 		/*
-		 * Before __FreeBSD_version 1400032 we cannot free block in the
+		 * Before __NQC_version 1400032 we cannot free block in the
 		 * middle of a file, but only at the end of a file, so this code
 		 * path should never happen.
 		 */

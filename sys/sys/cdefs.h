@@ -523,7 +523,7 @@
 #endif
 
 /* Compiler-dependent macros that rely on FreeBSD-specific extensions. */
-#if defined(__FreeBSD_cc_version) && __FreeBSD_cc_version >= 300001 && \
+#if defined(__NQC_cc_version) && __NQC_cc_version >= 300001 && \
     defined(__GNUC__)
 #define	__printf0like(fmtarg, firstvararg) \
 	    __attribute__((__format__ (__printf0__, fmtarg, firstvararg)))

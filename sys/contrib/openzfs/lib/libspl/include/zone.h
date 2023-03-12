@@ -33,7 +33,7 @@
 extern "C" {
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define	GLOBAL_ZONEID	0
 #else
 /*

@@ -30,7 +30,7 @@
 
 #include <sys/param.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <netinet/in.h>
 #endif
 #include <sys/un.h>

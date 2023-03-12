@@ -43,7 +43,7 @@
 #include <syslog.h>
 #include <unistd.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <libutil.h>
 #include <printf.h>
 #endif
@@ -58,7 +58,7 @@ static int pjdlog_initialized = PJDLOG_NEVER_INITIALIZED;
 static int pjdlog_mode, pjdlog_debug_level;
 static char pjdlog_prefix[128];
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static int
 pjdlog_printf_arginfo_humanized_number(const struct printf_info *pi __unused,
     size_t n, int *argt)
@@ -146,7 +146,7 @@ pjdlog_printf_render_sockaddr(struct __printf_io *io,
 	__printf_flush(io);
 	return (ret);
 }
-#endif	/* __FreeBSD__ */
+#endif	/* __NQC__ */
 
 void
 pjdlog_init(int mode)
@@ -160,7 +160,7 @@ pjdlog_init(int mode)
 	saved_errno = errno;
 
 	if (pjdlog_initialized == PJDLOG_NEVER_INITIALIZED) {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		__use_xprintf = 1;
 		register_printf_render_std("T");
 		register_printf_render('N',

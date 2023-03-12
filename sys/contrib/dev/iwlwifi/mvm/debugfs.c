@@ -706,7 +706,7 @@ static ssize_t iwl_dbgfs_fw_ver_read(struct file *file, char __user *user_buf,
 	pos += scnprintf(pos, endpos - pos, "Bus: %s\n",
 #if defined(__linux__)
 			 mvm->fwrt.dev->bus->name);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 			"<bus>");
 #endif
 

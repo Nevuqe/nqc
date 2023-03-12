@@ -698,7 +698,7 @@ bundle_Create(const char *prefix, int type, int unit)
   static struct bundle bundle;		/* there can be only one */
   int enoentcount, err, minunit, maxunit;
   const char *ifname;
-#if defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
   int kldtried;
 #endif
 #if defined(TUNSIFMODE) || defined(TUNSLMODE) || defined(TUNSIFHEAD)
@@ -719,7 +719,7 @@ bundle_Create(const char *prefix, int type, int unit)
   }
   err = ENOENT;
   enoentcount = 0;
-#if defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
   kldtried = 0;
 #endif
   for (bundle.unit = minunit; bundle.unit != maxunit; bundle.unit++) {
@@ -729,7 +729,7 @@ bundle_Create(const char *prefix, int type, int unit)
     if (bundle.dev.fd >= 0)
       break;
     else if (errno == ENXIO || errno == ENOENT) {
-#if defined(__FreeBSD__) && !defined(NOKLDLOAD)
+#if defined(__NQC__) && !defined(NOKLDLOAD)
       if (bundle.unit == minunit && !kldtried++) {
         /*
          * Attempt to load the tunnel interface KLD if it isn't loaded

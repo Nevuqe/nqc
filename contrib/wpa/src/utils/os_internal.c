@@ -209,7 +209,7 @@ int os_setenv(const char *name, const char *value, int overwrite)
 
 int os_unsetenv(const char *name)
 {
-#if defined(__FreeBSD__) || defined(__NetBSD__)
+#if defined(__NQC__) || defined(__NetBSD__)
 	unsetenv(name);
 	return 0;
 #else

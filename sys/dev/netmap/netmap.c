@@ -425,7 +425,7 @@ ports attached to the switch)
  * is present in netmap_kern.h
  */
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/cdefs.h> /* prerequisite */
 #include <sys/types.h>
 #include <sys/errno.h>
@@ -1198,11 +1198,11 @@ netmap_send_up(if_t dst, struct mbq *q)
 {
 	struct mbuf *m;
 	struct mbuf *head = NULL, *prev = NULL;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	struct epoch_tracker et;
 
 	NET_EPOCH_ENTER(et);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	/* Send packets up, outside the lock; head/prev machinery
 	 * is only useful for Windows. */
 	while ((m = mbq_dequeue(q)) != NULL) {
@@ -1214,9 +1214,9 @@ netmap_send_up(if_t dst, struct mbq *q)
 	}
 	if (head)
 		nm_os_send_up(dst, NULL, head);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	NET_EPOCH_EXIT(et);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	mbq_fini(q);
 }
 
@@ -3702,7 +3702,7 @@ netmap_poll(struct netmap_priv_d *priv, int events, NM_SELRECORD_T *sr)
 	si[NR_RX] = priv->np_si[NR_RX];
 	si[NR_TX] = priv->np_si[NR_TX];
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * We start with a lock free round which is cheap if we have
 	 * slots available. If this fails, then lock and call the sync
@@ -3971,12 +3971,12 @@ netmap_attach_common(struct netmap_adapter *na)
 		na->rx_buf_maxsize = PAGE_SIZE;
 	}
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (na->na_flags & NAF_HOST_RINGS && na->ifp) {
 		na->if_input = if_getinputfn(na->ifp); /* for netmap_send_up */
 	}
 	na->pdev = na; /* make sure netmap_mem_map() is called */
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	if (na->na_flags & NAF_HOST_RINGS) {
 		if (na->num_host_rx_rings == 0)
 			na->num_host_rx_rings = 1;
@@ -4301,9 +4301,9 @@ netmap_transmit(if_t ifp, struct mbuf *m)
 		goto done;
 	}
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ETHER_BPF_MTAP(ifp, m);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 
 	/* protect against netmap_rxsync_from_host(), netmap_sw_to_nic()
 	 * and maybe other instances of netmap_transmit (the latter
@@ -4610,7 +4610,7 @@ netmap_init(void)
 	if (error)
 		goto fail;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	nm_os_vi_init_index();
 #endif
 
@@ -4618,7 +4618,7 @@ netmap_init(void)
 	if (error)
 		goto fail;
 
-#if !defined(__FreeBSD__) || defined(KLD_MODULE)
+#if !defined(__NQC__) || defined(KLD_MODULE)
 	nm_prinf("netmap: loaded module");
 #endif
 	return (0);

@@ -1084,7 +1084,7 @@ static int iwl_set_hw_address(struct iwl_trans *trans,
 #if defined(__linux__)
 		IWL_INFO(trans, "base HW address: %pM, OTP minor version: 0x%x\n",
 			 data->hw_addr, iwl_read_prph(trans, REG_OTP_MINOR));
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		IWL_INFO(trans, "base HW address: %6D, OTP minor version: 0x%x\n",
 			 data->hw_addr, ":", iwl_read_prph(trans, REG_OTP_MINOR));
 #endif
@@ -1766,7 +1766,7 @@ struct iwl_nvm_data *iwl_get_nvm(struct iwl_trans *trans,
 
 #if defined(__linux__)
 	IWL_INFO(trans, "base HW address: %pM\n", nvm->hw_addr);
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	IWL_INFO(trans, "base HW address: %6D\n", nvm->hw_addr, ":");
 #endif
 

@@ -64,7 +64,7 @@
  *
  */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 
 #include <sys/cdefs.h> /* prerequisite */
 __FBSDID("$FreeBSD$");
@@ -481,7 +481,7 @@ generic_mbuf_destructor(struct mbuf *m)
 	/* Second, wake up clients. They will reclaim the event through
 	 * txsync. */
 	netmap_generic_irq(na, r, NULL);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	void_mbuf_dtor(m);
 #endif
 }
@@ -665,7 +665,7 @@ generic_netmap_txsync(struct netmap_kring *kring, int flags)
 	if (nm_i != head) {	/* we have new packets to send */
 		struct nm_os_gen_arg a;
 		u_int event = -1;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		struct epoch_tracker et;
 
 		NET_EPOCH_ENTER(et);
@@ -778,7 +778,7 @@ generic_netmap_txsync(struct netmap_kring *kring, int flags)
 		 * is not necessarily head, we could break early. */
 		kring->nr_hwcur = nm_i;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		NET_EPOCH_EXIT(et);
 #endif
 	}
@@ -1067,7 +1067,7 @@ generic_netmap_attach(if_t ifp)
 	int retval;
 	u_int num_tx_desc, num_rx_desc;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (if_gettype(ifp) == IFT_LOOP) {
 		nm_prerr("if_loop is not supported by %s", __func__);
 		return EINVAL;

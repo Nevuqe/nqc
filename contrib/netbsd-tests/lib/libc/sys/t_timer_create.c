@@ -112,7 +112,7 @@ timer_signal_create(clockid_t cid, bool expire)
 	ATF_REQUIRE(timer_delete(t) == 0);
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static void
 timer_callback(union sigval value)
 {
@@ -258,7 +258,7 @@ ATF_TC_HEAD(timer_thread_create_real, tc)
 	    "SIGEV_THREAD");
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 ATF_TC_BODY(timer_thread_create_real, tc)
 {
 	timer_thread_create(CLOCK_REALTIME, false);
@@ -315,7 +315,7 @@ ATF_TP_ADD_TCS(tp)
 	ATF_TP_ADD_TC(tp, timer_create_mono);
 	ATF_TP_ADD_TC(tp, timer_create_real_expire);
 	ATF_TP_ADD_TC(tp, timer_create_mono_expire);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_TP_ADD_TC(tp, timer_thread_create_real);
 	ATF_TP_ADD_TC(tp, timer_thread_create_mono);
 	ATF_TP_ADD_TC(tp, timer_thread_create_real_expire);

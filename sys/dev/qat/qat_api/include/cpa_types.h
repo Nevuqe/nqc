@@ -59,7 +59,7 @@
 extern "C" {
 #endif
 
-#if   defined (__FreeBSD__) && defined (_KERNEL)
+#if   defined (__NQC__) && defined (_KERNEL)
 
 /* FreeBSD kernel mode */
 #include <sys/types.h>

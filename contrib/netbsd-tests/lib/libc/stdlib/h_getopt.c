@@ -34,7 +34,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <err.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /*
  * Needed to avoid libutil.h pollution in stdio.h, which causes grief with
  * with hexdump(3) in lib/libc/db/h_hash.c

@@ -8,7 +8,7 @@
 /************************************************************
  * FreeBSD
  ************************************************************/
-#ifdef __FreeBSD__
+#ifdef __NQC__
 
 /* Map umount2 (Linux) syscall to unmount (FreeBSD) syscall */
 #define umount2(T, F) unmount(T, F)
@@ -108,7 +108,7 @@ inline long ptrace_(int request, pid_t pid, void *addr, void *data) {
 #define connect_ connect
 
 /* Features available */
-#if __FreeBSD_version >= 1000000
+#if __NQC_version >= 1000000
 #define HAVE_CHFLAGSAT
 #define HAVE_BINDAT
 #define HAVE_CONNECTAT

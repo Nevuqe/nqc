@@ -115,7 +115,7 @@ __END_DECLS
  * Here are some things which might be needed when compiling this under
  * platforms other than FreeBSD.
  */
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #   ifndef NAME_MAX
 #	define NAME_MAX	255
 #   endif

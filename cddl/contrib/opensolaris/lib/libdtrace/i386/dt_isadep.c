@@ -39,7 +39,7 @@
 
 #include <dis_tables.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <libproc.h>
 #include <libproc_compat.h>
 #endif

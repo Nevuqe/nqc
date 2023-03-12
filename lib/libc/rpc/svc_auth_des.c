@@ -434,7 +434,7 @@ cache_spot(des_block *key, char *name, struct timeval *timestamp)
 }
 
 
-#if (defined(sun) || defined(vax) || defined(__FreeBSD__))
+#if (defined(sun) || defined(vax) || defined(__NQC__))
 /*
  * Local credential handling stuff.
  * NOTE: bsd unix dependent.

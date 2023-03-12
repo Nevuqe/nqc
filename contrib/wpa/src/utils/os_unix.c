@@ -407,7 +407,7 @@ int os_setenv(const char *name, const char *value, int overwrite)
 
 int os_unsetenv(const char *name)
 {
-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__) || \
+#if defined(__NQC__) || defined(__NetBSD__) || defined(__APPLE__) || \
     defined(__OpenBSD__)
 	unsetenv(name);
 	return 0;
@@ -465,9 +465,9 @@ int os_file_exists(const char *fname)
 int os_fdatasync(FILE *stream)
 {
 	if (!fflush(stream)) {
-#if defined __FreeBSD__ || defined __linux__
+#if defined __NQC__ || defined __linux__
 		return fdatasync(fileno(stream));
-#else /* !__linux__ && !__FreeBSD__ */
+#else /* !__linux__ && !__NQC__ */
 #ifdef F_FULLFSYNC
 		/* OS X does not implement fdatasync(). */
 		return fcntl(fileno(stream), F_FULLFSYNC);

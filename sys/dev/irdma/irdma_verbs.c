@@ -107,7 +107,7 @@ irdma_mmap_legacy(struct irdma_ucontext *ucontext,
 	pfn = ((uintptr_t)ucontext->iwdev->rf->sc_dev.hw_regs[IRDMA_DB_ADDR_OFFSET] +
 	       pci_resource_start(ucontext->iwdev->rf->pcidev, 0)) >> PAGE_SHIFT;
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	return rdma_user_mmap_io(&ucontext->ibucontext, vma, pfn, PAGE_SIZE,
 				 pgprot_noncached(vma->vm_page_prot), NULL);
 #else
@@ -116,7 +116,7 @@ irdma_mmap_legacy(struct irdma_ucontext *ucontext,
 #endif
 }
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 static void
 irdma_mmap_free(struct rdma_user_mmap_entry *rdma_entry)
 {
@@ -254,7 +254,7 @@ irdma_user_mmap_entry_del_hash(struct irdma_user_mmap_entry *entry)
 static int
 irdma_mmap(struct ib_ucontext *context, struct vm_area_struct *vma)
 {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	struct rdma_user_mmap_entry *rdma_entry;
 #endif
 	struct irdma_user_mmap_entry *entry;
@@ -268,7 +268,7 @@ irdma_mmap(struct ib_ucontext *context, struct vm_area_struct *vma)
 	if (ucontext->legacy_mode)
 		return irdma_mmap_legacy(ucontext, vma);
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	rdma_entry = rdma_user_mmap_entry_get(&ucontext->ibucontext, vma);
 	if (!rdma_entry) {
 		irdma_debug(iwdev_to_idev(ucontext->iwdev), IRDMA_DEBUG_VERBS,
@@ -296,7 +296,7 @@ irdma_mmap(struct ib_ucontext *context, struct vm_area_struct *vma)
 
 	switch (entry->mmap_flag) {
 	case IRDMA_MMAP_IO_NC:
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		ret = rdma_user_mmap_io(context, vma, pfn, PAGE_SIZE,
 					pgprot_noncached(vma->vm_page_prot),
 					rdma_entry);
@@ -306,7 +306,7 @@ irdma_mmap(struct ib_ucontext *context, struct vm_area_struct *vma)
 #endif
 		break;
 	case IRDMA_MMAP_IO_WC:
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		ret = rdma_user_mmap_io(context, vma, pfn, PAGE_SIZE,
 					pgprot_writecombine(vma->vm_page_prot),
 					rdma_entry);
@@ -323,7 +323,7 @@ irdma_mmap(struct ib_ucontext *context, struct vm_area_struct *vma)
 		irdma_debug(iwdev_to_idev(ucontext->iwdev), IRDMA_DEBUG_VERBS,
 			    "bar_offset [0x%lx] mmap_flag[%d] err[%d]\n",
 			    entry->bar_offset, entry->mmap_flag, ret);
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	rdma_user_mmap_entry_put(rdma_entry);
 #endif
 
@@ -427,7 +427,7 @@ void
 irdma_remove_push_mmap_entries(struct irdma_qp *iwqp)
 {
 	if (iwqp->push_db_mmap_entry) {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		rdma_user_mmap_entry_remove(iwqp->push_db_mmap_entry);
 #else
 		irdma_user_mmap_entry_del_hash(iwqp->push_db_mmap_entry);
@@ -435,7 +435,7 @@ irdma_remove_push_mmap_entries(struct irdma_qp *iwqp)
 		iwqp->push_db_mmap_entry = NULL;
 	}
 	if (iwqp->push_wqe_mmap_entry) {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		rdma_user_mmap_entry_remove(iwqp->push_wqe_mmap_entry);
 #else
 		irdma_user_mmap_entry_del_hash(iwqp->push_wqe_mmap_entry);
@@ -457,7 +457,7 @@ irdma_setup_push_mmap_entries(struct irdma_ucontext *ucontext,
 
 	bar_off = irdma_compute_push_wqe_offset(iwdev, iwqp->sc_qp.push_idx);
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	iwqp->push_wqe_mmap_entry = irdma_user_mmap_entry_insert(ucontext,
 								 bar_off, IRDMA_MMAP_IO_WC,
 								 push_wqe_mmap_key);
@@ -470,7 +470,7 @@ irdma_setup_push_mmap_entries(struct irdma_ucontext *ucontext,
 
 	/* push doorbell page */
 	bar_off += IRDMA_HW_PAGE_SIZE;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	iwqp->push_db_mmap_entry = irdma_user_mmap_entry_insert(ucontext,
 								bar_off, IRDMA_MMAP_IO_NC,
 								push_db_mmap_key);
@@ -480,7 +480,7 @@ irdma_setup_push_mmap_entries(struct irdma_ucontext *ucontext,
 								  IRDMA_MMAP_IO_NC, push_db_mmap_key);
 #endif
 	if (!iwqp->push_db_mmap_entry) {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		rdma_user_mmap_entry_remove(iwqp->push_wqe_mmap_entry);
 #else
 		irdma_user_mmap_entry_del_hash(iwqp->push_wqe_mmap_entry);
@@ -548,7 +548,7 @@ irdma_setup_umode_qp(struct ib_udata *udata,
 	iwqp->ctx_info.qp_compl_ctx = req.user_compl_ctx;
 	iwqp->user_mode = 1;
 	if (req.user_wqe_bufs) {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		struct irdma_ucontext *ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 		struct irdma_ucontext *ucontext = to_ucontext(iwqp->iwpd->ibpd.uobject->context);
@@ -1242,7 +1242,7 @@ irdma_modify_qp_roce(struct ib_qp *ibqp, struct ib_qp_attr *attr,
 		if (udata && udata->outlen && dev->hw_attrs.uk_attrs.hw_rev >= IRDMA_GEN_2) {
 			struct irdma_ucontext *ucontext;
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 			ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 			ucontext = to_ucontext(ibqp->uobject->context);
@@ -1492,7 +1492,7 @@ irdma_modify_qp(struct ib_qp *ibqp, struct ib_qp_attr *attr, int attr_mask,
 	    dev->hw_attrs.uk_attrs.hw_rev >= IRDMA_GEN_2) {
 		struct irdma_ucontext *ucontext;
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 		ucontext = to_ucontext(ibqp->uobject->context);
@@ -1635,7 +1635,7 @@ irdma_resize_cq(struct ib_cq *ibcq, int entries,
 	if (udata) {
 		struct irdma_resize_cq_req req = {};
 		struct irdma_ucontext *ucontext =
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 		to_ucontext(ibcq->uobject->context);
@@ -2291,7 +2291,7 @@ irdma_reg_user_mr(struct ib_pd *pd, u64 start, u64 len,
 		if (err)
 			goto error;
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 		ucontext = to_ucontext(pd->uobject->context);
@@ -2315,7 +2315,7 @@ irdma_reg_user_mr(struct ib_pd *pd, u64 start, u64 len,
 		if (err)
 			goto error;
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 		ucontext = rdma_udata_to_drv_context(udata, struct irdma_ucontext, ibucontext);
 #else
 		ucontext = to_ucontext(pd->uobject->context);
@@ -3531,7 +3531,7 @@ irdma_set_device_ops(struct ib_device *ibdev)
 {
 	struct ib_device *dev_ops = ibdev;
 
-#if __FreeBSD_version >= 1400000
+#if __NQC_version >= 1400000
 	dev_ops->ops.driver_id = RDMA_DRIVER_I40IW;
 	dev_ops->ops.size_ib_ah = IRDMA_SET_RDMA_OBJ_SIZE(ib_ah, irdma_ah, ibah);
 	dev_ops->ops.size_ib_cq = IRDMA_SET_RDMA_OBJ_SIZE(ib_cq, irdma_cq, ibcq);
@@ -3540,7 +3540,7 @@ irdma_set_device_ops(struct ib_device *ibdev)
 								irdma_ucontext,
 								ibucontext);
 
-#endif				/* __FreeBSD_version >= 1400000 */
+#endif				/* __NQC_version >= 1400000 */
 	dev_ops->alloc_hw_stats = irdma_alloc_hw_stats;
 	dev_ops->alloc_mr = irdma_alloc_mr;
 	dev_ops->alloc_mw = irdma_alloc_mw;
@@ -3561,7 +3561,7 @@ irdma_set_device_ops(struct ib_device *ibdev)
 	dev_ops->get_netdev = irdma_get_netdev;
 	dev_ops->map_mr_sg = irdma_map_mr_sg;
 	dev_ops->mmap = irdma_mmap;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	dev_ops->mmap_free = irdma_mmap_free;
 #endif
 	dev_ops->poll_cq = irdma_poll_cq;

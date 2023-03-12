@@ -55,7 +55,7 @@
 static const struct asn_oid
 	oid_begemotSnmpdModuleTable = OIDX_begemotSnmpdModuleTable;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static const struct asn_oid
 	oid_freeBSDVersion = OIDX_freeBSDVersion;
 #endif
@@ -92,7 +92,7 @@ init_actvals(void)
 	struct utsname uts;
 	char *hostid;
 	size_t len;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	char *rel, *p, *end;
 	u_long num;
 #endif
@@ -118,7 +118,7 @@ init_actvals(void)
 	sprintf(systemg.descr, "%s %s %s %s", uts.nodename, hostid, uts.sysname,
 	    uts.release);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/*
 	 * Construct a FreeBSD oid
 	 */

@@ -41,7 +41,7 @@ void	zfs_vmobject_assert_wlocked(vm_object_t object);
 void	zfs_vmobject_wlock(vm_object_t object);
 void	zfs_vmobject_wunlock(vm_object_t object);
 
-#if __FreeBSD_version >= 1300081
+#if __NQC_version >= 1300081
 #define	zfs_vmobject_assert_wlocked_12(x)
 #define	zfs_vmobject_wlock_12(x)
 #define	zfs_vmobject_wunlock_12(x)

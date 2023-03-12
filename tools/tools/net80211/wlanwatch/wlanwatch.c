@@ -47,7 +47,7 @@
 #include <netinet/if_ether.h>
 #ifdef __NetBSD__
 #include <net80211/ieee80211_netbsd.h>
-#elif __FreeBSD__
+#elif __NQC__
 #include <net80211/ieee80211_nqc.h>
 #else
 #error	"No support for your operating system!"

@@ -28,7 +28,7 @@ Revision History
 #pragma pack()
 
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/stdint.h>
 #else
 //
@@ -79,7 +79,7 @@ Revision History
         #endif
     #endif
 #endif
-#endif	/* __FreeBSD__ */
+#endif	/* __NQC__ */
 
 //
 // Basic EFI types of various widths
@@ -200,7 +200,7 @@ void __mfa (void);
             (_if)->LoadInternal(type, name, entry)
 //        entry(NULL, ST)
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define INTERFACE_DECL(x) struct x
 #else
 //

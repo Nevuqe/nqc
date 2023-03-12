@@ -34,7 +34,7 @@ __RCSID("$NetBSD: t_realpath.c,v 1.2 2012/03/27 07:54:58 njoly Exp $");
 #include <sys/param.h>
 
 #include <atf-c.h>
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 #include <errno.h>
 #endif
 #include <fcntl.h>
@@ -125,7 +125,7 @@ ATF_TC_BODY(realpath_symlink, tc)
 	char resb[MAXPATHLEN] = { 0 };
 	int fd;
 
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 	ATF_REQUIRE_MSG(getcwd(path, sizeof(path)) != NULL,
 	    "getcwd(path) failed: %s", strerror(errno));
 	ATF_REQUIRE_MSG(getcwd(slnk, sizeof(slnk)) != NULL,

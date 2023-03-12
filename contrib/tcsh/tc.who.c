@@ -56,7 +56,7 @@
 #  define TCSH_PATH_UTMP _PATH_UTMPX
 # elif defined(UTMPX_FILE)
 #  define TCSH_PATH_UTMP UTMPX_FILE
-# elif __FreeBSD_version >= 900000
+# elif __NQC_version >= 900000
 #  /* Why isn't this defined somewhere? */
 #  define TCSH_PATH_UTMP "/var/run/utx.active"
 # elif defined(__hpux)

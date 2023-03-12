@@ -799,7 +799,7 @@ zfsctl_common_getacl(struct vop_getacl_args *ap)
 
 static struct vop_vector zfsctl_ops_root = {
 	.vop_default =	&default_vnodeops,
-#if __FreeBSD_version >= 1300121
+#if __NQC_version >= 1300121
 	.vop_fplookup_vexec = VOP_EAGAIN,
 #endif
 	.vop_open =	zfsctl_common_open,
@@ -816,7 +816,7 @@ static struct vop_vector zfsctl_ops_root = {
 	.vop_vptocnp =	zfsctl_root_vptocnp,
 	.vop_pathconf =	zfsctl_common_pathconf,
 	.vop_getacl =	zfsctl_common_getacl,
-#if __FreeBSD_version >= 1400043
+#if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
 };
@@ -1127,7 +1127,7 @@ zfsctl_snapdir_getattr(struct vop_getattr_args *ap)
 
 static struct vop_vector zfsctl_ops_snapdir = {
 	.vop_default =	&default_vnodeops,
-#if __FreeBSD_version >= 1300121
+#if __NQC_version >= 1300121
 	.vop_fplookup_vexec = VOP_EAGAIN,
 #endif
 	.vop_open =	zfsctl_common_open,
@@ -1141,7 +1141,7 @@ static struct vop_vector zfsctl_ops_snapdir = {
 	.vop_print =	zfsctl_common_print,
 	.vop_pathconf =	zfsctl_common_pathconf,
 	.vop_getacl =	zfsctl_common_getacl,
-#if __FreeBSD_version >= 1400043
+#if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
 };
@@ -1204,7 +1204,7 @@ zfsctl_snapshot_vptocnp(struct vop_vptocnp_args *ap)
 	 * before we can lock the vnode again.
 	 */
 	locked = VOP_ISLOCKED(vp);
-#if __FreeBSD_version >= 1300045
+#if __NQC_version >= 1300045
 	enum vgetstate vs = vget_prep(vp);
 #else
 	vhold(vp);
@@ -1220,7 +1220,7 @@ zfsctl_snapshot_vptocnp(struct vop_vptocnp_args *ap)
 		memcpy(ap->a_buf + *ap->a_buflen, node->sn_name, len);
 	}
 	vfs_unbusy(mp);
-#if __FreeBSD_version >= 1300045
+#if __NQC_version >= 1300045
 	vget_finish(vp, locked | LK_RETRY, vs);
 #else
 	vget(vp, locked | LK_VNHELD | LK_RETRY, curthread);
@@ -1234,11 +1234,11 @@ zfsctl_snapshot_vptocnp(struct vop_vptocnp_args *ap)
  */
 static struct vop_vector zfsctl_ops_snapshot = {
 	.vop_default =		NULL, /* ensure very restricted access */
-#if __FreeBSD_version >= 1300121
+#if __NQC_version >= 1300121
 	.vop_fplookup_vexec =	VOP_EAGAIN,
 #endif
 	.vop_inactive =		zfsctl_snapshot_inactive,
-#if __FreeBSD_version >= 1300045
+#if __NQC_version >= 1300045
 	.vop_need_inactive = vop_stdneed_inactive,
 #endif
 	.vop_reclaim =		zfsctl_snapshot_reclaim,
@@ -1248,7 +1248,7 @@ static struct vop_vector zfsctl_ops_snapshot = {
 	.vop_islocked =		vop_stdislocked,
 	.vop_advlockpurge =	vop_stdadvlockpurge, /* called by vgone */
 	.vop_print =		zfsctl_common_print,
-#if __FreeBSD_version >= 1400043
+#if __NQC_version >= 1400043
 	.vop_add_writecount =	vop_stdadd_writecount_nomsync,
 #endif
 };

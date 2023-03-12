@@ -53,7 +53,7 @@ __RCSID("$NetBSD: h_dns_server.c,v 1.4 2014/03/29 16:10:54 gson Exp $");
 #include <netinet6/in6.h>
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <paths.h>
 #endif
 
@@ -170,7 +170,7 @@ name2str(const void *v, char *buf, size_t buflen) {
 }
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /* XXX the daemon2_* functions should be in a library */
 
 int __daemon2_detach_pipe[2];
@@ -282,7 +282,7 @@ int main(int argc, char **argv) {
 	char buf1[1024], buf2[1024];
 #endif
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	daemon2_fork();
 #endif
 	if (argc < 2 || ((protocol = argv[1][0]) != '4' && protocol != '6'))
@@ -321,7 +321,7 @@ int main(int argc, char **argv) {
 	f = fopen(pidfile_name, "w");
 	fprintf(f, "%d", getpid());
 	fclose(f);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #ifdef DEBUG
 	daemon2_detach(0, 1);
 #else

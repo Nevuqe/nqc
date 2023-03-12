@@ -30,7 +30,7 @@
 #include <sys/param.h>
 #include <sys/file.h>
 #include <sys/time.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/mount.h>
 #endif
 #include <sys/stat.h>
@@ -47,8 +47,8 @@
 #include <string.h>
 #include <unistd.h>
 
-#ifdef __FreeBSD__
-#if __FreeBSD_version >= 800028
+#ifdef __NQC__
+#if __NQC_version >= 800028
 #define HAVE_SYSID
 #endif
 #include <sys/cdefs.h>
@@ -1575,7 +1575,7 @@ main(int argc, const char *argv[])
 	sigaction(SIGALRM, &sa, 0);
 
 	nointr = 0;
-#if defined(__FreeBSD__) && __FreeBSD_version < 800040
+#if defined(__NQC__) && __NQC_version < 800040
 	{
 		/*
 		 * FreeBSD with userland NLM can't interrupt a blocked

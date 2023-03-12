@@ -30,7 +30,7 @@ static const char rcsid[] =
   "$FreeBSD$";
 #endif /* not lint */
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 #define _POSIX_SOURCE 1
 
 /* System Headers */
@@ -55,7 +55,7 @@ gloadavg(void)
  */
 {
     double result;
-#ifndef __FreeBSD__
+#ifndef __NQC__
     FILE *fp;
     
     if((fp=fopen(PROC_DIR "loadavg","r")) == NULL)

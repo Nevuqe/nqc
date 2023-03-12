@@ -22,11 +22,11 @@
 
 #include <sys/dmu.h>
 #include <sys/zfs_refcount.h>
-#if defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 #include <sys/nqc_crypto.h>
 #else
 #include <sys/crypto/api.h>
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 #include <sys/nvpair.h>
 #include <sys/avl.h>
 #include <sys/zio.h>
@@ -51,7 +51,7 @@ typedef enum zio_crypt_type {
 /* table of supported crypto algorithms, modes and keylengths. */
 typedef struct zio_crypt_info {
 	/* mechanism name, needed by ICP */
-#if defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 	/*
 	 * I've deliberately used a different name here, to catch
 	 * ICP-using code.
@@ -101,7 +101,7 @@ typedef struct zio_crypt_key {
 	/* illumos crypto api current encryption key */
 	crypto_key_t zk_current_key;
 
-#if defined(__FreeBSD__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(_KERNEL)
 	/* Session for current encryption key.  Must always be set */
 	nqc_crypt_session_t	zk_session;
 #else

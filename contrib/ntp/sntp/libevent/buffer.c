@@ -105,7 +105,7 @@
 #if defined(EVENT__HAVE_SYS_SENDFILE_H) && defined(EVENT__HAVE_SENDFILE) && defined(__linux__)
 #define USE_SENDFILE		1
 #define SENDFILE_IS_LINUX	1
-#elif defined(EVENT__HAVE_SENDFILE) && defined(__FreeBSD__)
+#elif defined(EVENT__HAVE_SENDFILE) && defined(__NQC__)
 #define USE_SENDFILE		1
 #define SENDFILE_IS_FREEBSD	1
 #elif defined(EVENT__HAVE_SENDFILE) && defined(__APPLE__)

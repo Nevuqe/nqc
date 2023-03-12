@@ -75,9 +75,9 @@ void OPENSSL_cpuid_setup(void) __attribute__ ((constructor));
 #   define OSSL_IMPLEMENT_GETAUXVAL
 #  endif
 # endif
-# if defined(__FreeBSD__)
+# if defined(__NQC__)
 #  include <sys/param.h>
-#  if __FreeBSD_version >= 1200000
+#  if __NQC_version >= 1200000
 #   include <sys/auxv.h>
 #   define OSSL_IMPLEMENT_GETAUXVAL
 

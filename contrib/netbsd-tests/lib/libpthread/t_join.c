@@ -152,7 +152,7 @@ threadfunc2(void *arg)
 
 	j = (uintptr_t)arg;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	pthread_attr_init(&attr);
 #endif
 	ATF_REQUIRE(pthread_attr_get_np(pthread_self(), &attr) == 0);

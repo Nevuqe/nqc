@@ -271,7 +271,7 @@ main(int argc, char *argv[])
 			outmode = OUTMODE_ALL;
 			break;
 		case 'M':
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			defpaths = strdup(optarg);
 			if (defpaths == NULL)
 				err(1, "strdup");
@@ -460,7 +460,7 @@ main(int argc, char *argv[])
 
 	if (search.argmode != ARG_FILE ||
 	    mandoc_msg_getmin() == MANDOCERR_STYLE)
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	{
 		/*
 		 * Use manpath(1) to populate defpaths if -M is not specified.
@@ -483,7 +483,7 @@ main(int argc, char *argv[])
 #endif
 	/* Read the configuration file. */
 		manconf_parse(&conf, conf_file, defpaths, auxpaths);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		free(defpaths);
 	}
 #endif

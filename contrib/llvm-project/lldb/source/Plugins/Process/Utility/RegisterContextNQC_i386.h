@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSD_i386.h ---------------------------*- C++ -*-===//
+//===-- RegisterContextNQC_i386.h ---------------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -11,9 +11,9 @@
 
 #include "RegisterInfoInterface.h"
 
-class RegisterContextFreeBSD_i386 : public lldb_private::RegisterInfoInterface {
+class RegisterContextNQC_i386 : public lldb_private::RegisterInfoInterface {
 public:
-  RegisterContextFreeBSD_i386(const lldb_private::ArchSpec &target_arch);
+  RegisterContextNQC_i386(const lldb_private::ArchSpec &target_arch);
 
   size_t GetGPRSize() const override;
 

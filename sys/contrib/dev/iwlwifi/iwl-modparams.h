@@ -78,7 +78,7 @@ struct iwl_mod_params {
 #ifdef CONFIG_IWLWIFI_DEBUG
 #if defined(__linux__)
 	u32 debug_level;
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 	enum iwl_dl debug_level;
 #endif
 #endif

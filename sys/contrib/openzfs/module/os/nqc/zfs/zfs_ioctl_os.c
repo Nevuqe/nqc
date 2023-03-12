@@ -39,7 +39,7 @@ __FBSDID("$FreeBSD$");
 
 #include <sys/zfs_ioctl_impl.h>
 
-#if __FreeBSD_version < 1201517
+#if __NQC_version < 1201517
 #define	vm_page_max_user_wired	vm_page_max_wired
 #endif
 

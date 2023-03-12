@@ -58,7 +58,7 @@ ATF_TC_BODY(mknod_err, tc)
 
 	(void)memset(buf, 'x', sizeof(buf));
 
-#ifndef __FreeBSD__
+#ifndef __NQC__
 	/*
 	 * As of FreeBSD 6.0 device nodes may be created in regular file systems but
 	 * such nodes cannot be used to access devices. As a result an invalid dev
@@ -173,7 +173,7 @@ ATF_TC_BODY(mknod_stat, tc)
 
 	(void)memset(&st, 0, sizeof(struct stat));
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_expect_fail("mknod does not allow S_IFREG");
 #endif
 	ATF_REQUIRE(mknod(path, S_IFREG, 0) == 0);

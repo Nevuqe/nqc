@@ -50,7 +50,7 @@
 
 .section __xen_guest
 	ELFNOTE(Xen, XEN_ELFNOTE_GUEST_OS,       .asciz, "FreeBSD")
-	ELFNOTE(Xen, XEN_ELFNOTE_GUEST_VERSION,  .asciz, __XSTRING(__FreeBSD_version))
+	ELFNOTE(Xen, XEN_ELFNOTE_GUEST_VERSION,  .asciz, __XSTRING(__NQC_version))
 	ELFNOTE(Xen, XEN_ELFNOTE_XEN_VERSION,    .asciz, "xen-3.0")
 	ELFNOTE(Xen, XEN_ELFNOTE_VIRT_BASE,      .quad,  KERNBASE)
 	ELFNOTE(Xen, XEN_ELFNOTE_PADDR_OFFSET,   .quad,  0)

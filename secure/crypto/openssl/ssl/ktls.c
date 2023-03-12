@@ -71,7 +71,7 @@ static int check_rx_read_ahead(SSL *s, unsigned char *rec_seq)
 }
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 # include <crypto/cryptodev.h>
 
 /*-
@@ -181,7 +181,7 @@ int ktls_configure_crypto(SSL *s, const EVP_CIPHER *c, EVP_CIPHER_CTX *dd,
     return 1;
 };
 
-#endif                         /* __FreeBSD__ */
+#endif                         /* __NQC__ */
 
 #if defined(OPENSSL_SYS_LINUX)
 

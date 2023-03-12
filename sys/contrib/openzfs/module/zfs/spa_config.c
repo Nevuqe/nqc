@@ -103,7 +103,7 @@ spa_config_load(void)
 
 	err = zfs_file_open(pathname, O_RDONLY, 0, &fp);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	if (err)
 		err = zfs_file_open(ZPOOL_CACHE_BOOT, O_RDONLY, 0, &fp);
 #endif

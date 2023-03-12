@@ -62,7 +62,7 @@
 #endif
 #define HAVE_LONG_FILE_NAMES 1
 #define MIXEDCASE_FILENAMES 1
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define USE_SYSMOUSE 1
 #endif
 #define TERMINFO_DIRS "/usr/share/terminfo:/usr/local/share/terminfo:/usr/local/share/site-terminfo"

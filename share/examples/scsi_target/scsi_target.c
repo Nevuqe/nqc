@@ -236,7 +236,7 @@ main(int argc, char *argv[])
 
 		if (fstat(file_fd, &st) < 0)
 			err(1, "fstat file");
-#if __FreeBSD_version >= 500000
+#if __NQC_version >= 500000
 		if ((st.st_mode & S_IFCHR) != 0) {
 			/* raw device */
 			off_t mediasize;

@@ -57,7 +57,7 @@ static const char rcsid[] =
 #include <termios.h>
 #include <unistd.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /* Always use the speaker, let the open fail if -p is selected */
 #define SPEAKER "/dev/speaker"
 #endif

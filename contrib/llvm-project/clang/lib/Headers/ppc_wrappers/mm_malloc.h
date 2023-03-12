@@ -11,7 +11,7 @@
 #define _MM_MALLOC_H_INCLUDED
 
 #if defined(__ppc64__) &&                                                      \
-    (defined(__linux__) || defined(__FreeBSD__) || defined(_AIX))
+    (defined(__linux__) || defined(__NQC__) || defined(_AIX))
 
 #include <stdlib.h>
 

@@ -125,7 +125,7 @@ getidle(const char *tty, const char *display __unused)
 	idle = 0;
 	if (*tty == 'X') {
 		u_long kbd_idle, mouse_idle;
-#if	!defined(__FreeBSD__)
+#if	!defined(__NQC__)
 		kbd_idle = getidle("kbd", NULL);
 #else
 		kbd_idle = getidle("vga", NULL);

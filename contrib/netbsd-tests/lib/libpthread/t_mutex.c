@@ -35,7 +35,7 @@ __RCSID("$NetBSD: t_mutex.c,v 1.15 2017/01/16 16:23:41 christos Exp $");
 #include <inttypes.h> /* For UINT16_MAX */
 #include <pthread.h>
 #include <stdio.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <stdlib.h>
 #endif
 #include <string.h>
@@ -131,7 +131,7 @@ ATF_TC_BODY(mutex1, tc)
 	PTHREAD_REQUIRE(pthread_mutex_unlock(&mutex));
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /*
  * Increment the value using a noinline function that includes a small delay
  * to increase the window for the RMW data race.
@@ -154,14 +154,14 @@ mutex2_threadfunc(void *arg)
 {
 	long count = *(int *)arg;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	thread2_started = true;
 #endif
 	printf("2: Second thread (%p). Count is %ld\n", pthread_self(), count);
 
 	while (count--) {
 		PTHREAD_REQUIRE(mutex_lock(&mutex, &ts_lengthy));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		global_x = increment(global_x);
 #else
 		global_x++;
@@ -185,7 +185,7 @@ ATF_TC_HEAD(mutex2, tc)
 ATF_TC_BODY(mutex2, tc)
 {
 	int count, count2;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	int num_increments;
 #endif
 	pthread_t new;
@@ -202,7 +202,7 @@ ATF_TC_BODY(mutex2, tc)
 	PTHREAD_REQUIRE(pthread_mutex_init(&mutex, NULL));
 	
 	global_x = 0;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	num_increments = count = count2 = 1000;
 	if (getenv("NUM_ITERATIONS") != NULL) {
 		num_increments = count = count2 =
@@ -214,13 +214,13 @@ ATF_TC_BODY(mutex2, tc)
 #endif
 
 	PTHREAD_REQUIRE(mutex_lock(&mutex, &ts_lengthy));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	thread2_started = false;
 #endif
 	PTHREAD_REQUIRE(pthread_create(&new, NULL, mutex2_threadfunc, &count2));
 
 	printf("1: Thread %p\n", pthread_self());
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	while (!thread2_started) {
 		/* Wait for thread 2 to start to increase chance of race */
 	}
@@ -230,7 +230,7 @@ ATF_TC_BODY(mutex2, tc)
 
 	while (count--) {
 		PTHREAD_REQUIRE(mutex_lock(&mutex, &ts_lengthy));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		global_x = increment(global_x);
 #else
 		global_x++;
@@ -243,7 +243,7 @@ ATF_TC_BODY(mutex2, tc)
 	PTHREAD_REQUIRE(mutex_lock(&mutex, &ts_lengthy));
 	printf("1: Thread joined. X was %d. Return value (long) was %ld\n",
 		global_x, (long)joinval);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_EQ_MSG(count, -1, "%d", count);
 	ATF_REQUIRE_EQ_MSG((long)joinval, -1, "%ld", (long)joinval);
 	ATF_REQUIRE_EQ_MSG(global_x, num_increments * 2, "%d vs %d", global_x,
@@ -263,7 +263,7 @@ ATF_TC_BODY(mutex2, tc)
 #endif
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static volatile bool thread3_started = false;
 #endif
 
@@ -272,14 +272,14 @@ mutex3_threadfunc(void *arg)
 {
 	long count = *(int *)arg;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	thread3_started = true;
 #endif
 	printf("2: Second thread (%p). Count is %ld\n", pthread_self(), count);
 
 	while (count--) {
 		PTHREAD_REQUIRE(mutex_lock(&static_mutex, &ts_lengthy));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		global_x = increment(global_x);
 #else
 		global_x++;
@@ -304,7 +304,7 @@ ATF_TC_HEAD(mutex3, tc)
 ATF_TC_BODY(mutex3, tc)
 {
 	int count, count2;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	int num_increments;
 #endif
 	pthread_t new;
@@ -319,7 +319,7 @@ ATF_TC_BODY(mutex3, tc)
 #endif
 
 	global_x = 0;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	num_increments = count = count2 = 1000;
 	if (getenv("NUM_ITERATIONS") != NULL) {
 		num_increments = count = count2 =
@@ -334,7 +334,7 @@ ATF_TC_BODY(mutex3, tc)
 	PTHREAD_REQUIRE(pthread_create(&new, NULL, mutex3_threadfunc, &count2));
 
 	printf("1: Thread %p\n", pthread_self());
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	while (!thread3_started) {
 		/* Wait for thread 3 to start to increase chance of race */
 	}
@@ -344,7 +344,7 @@ ATF_TC_BODY(mutex3, tc)
 
 	while (count--) {
 		PTHREAD_REQUIRE(mutex_lock(&static_mutex, &ts_lengthy));
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		global_x = increment(global_x);
 #else
 		global_x++;
@@ -357,7 +357,7 @@ ATF_TC_BODY(mutex3, tc)
 	PTHREAD_REQUIRE(mutex_lock(&static_mutex, &ts_lengthy));
 	printf("1: Thread joined. X was %d. Return value (long) was %ld\n",
 		global_x, (long)joinval);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_REQUIRE_EQ_MSG(count, -1, "%d", count);
 	ATF_REQUIRE_EQ_MSG((long)joinval, -1, "%ld", (long)joinval);
 	ATF_REQUIRE_EQ_MSG(global_x, num_increments * 2, "%d vs %d", global_x,
@@ -678,7 +678,7 @@ ATF_TC_BODY(mutexattr2, tc)
 {
 	pthread_mutexattr_t mattr;
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_expect_fail("fails on i == 0 with: "
 	    "pthread_mutexattr_setprioceiling(&mattr, i): Invalid argument "
 	    "-- PR # 211802");

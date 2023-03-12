@@ -227,7 +227,7 @@ zfs_xattr_owner_unlinked(znode_t *zp)
 {
 	int unlinked = 0;
 	znode_t *dzp;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	znode_t *tzp = zp;
 
 	/*

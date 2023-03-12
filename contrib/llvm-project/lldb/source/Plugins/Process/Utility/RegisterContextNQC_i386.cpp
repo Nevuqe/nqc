@@ -1,4 +1,4 @@
-//===-- RegisterContextFreeBSD_i386.cpp -----------------------------------===//
+//===-- RegisterContextNQC_i386.cpp -----------------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -6,7 +6,7 @@
 //
 //===---------------------------------------------------------------------===//
 
-#include "RegisterContextFreeBSD_i386.h"
+#include "RegisterContextNQC_i386.h"
 #include "RegisterContextPOSIX_x86.h"
 
 using namespace lldb_private;
@@ -61,13 +61,13 @@ struct UserArea {
 #include "RegisterInfos_i386.h"
 #undef DECLARE_REGISTER_INFOS_I386_STRUCT
 
-RegisterContextFreeBSD_i386::RegisterContextFreeBSD_i386(
+RegisterContextNQC_i386::RegisterContextNQC_i386(
     const ArchSpec &target_arch)
     : RegisterInfoInterface(target_arch) {}
 
-size_t RegisterContextFreeBSD_i386::GetGPRSize() const { return sizeof(GPR); }
+size_t RegisterContextNQC_i386::GetGPRSize() const { return sizeof(GPR); }
 
-const RegisterInfo *RegisterContextFreeBSD_i386::GetRegisterInfo() const {
+const RegisterInfo *RegisterContextNQC_i386::GetRegisterInfo() const {
   switch (m_target_arch.GetMachine()) {
   case llvm::Triple::x86:
     return g_register_infos_i386;
@@ -77,7 +77,7 @@ const RegisterInfo *RegisterContextFreeBSD_i386::GetRegisterInfo() const {
   }
 }
 
-uint32_t RegisterContextFreeBSD_i386::GetRegisterCount() const {
+uint32_t RegisterContextNQC_i386::GetRegisterCount() const {
   return static_cast<uint32_t>(sizeof(g_register_infos_i386) /
                                sizeof(g_register_infos_i386[0]));
 }

@@ -12,7 +12,7 @@ Can you share the history of libxo?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In 2001, we added an XML API to the JUNOS operating system, which is
-built on top of FreeBSD_.  Eventually this API became standardized as
+built on top of NQC_.  Eventually this API became standardized as
 the NETCONF API (:RFC:`6241`).  As part of this effort, we modified many
 FreeBSD utilities to emit XML, typically via a "-X" switch.  The
 results were mixed.  The cost of maintaining this code, updating it,

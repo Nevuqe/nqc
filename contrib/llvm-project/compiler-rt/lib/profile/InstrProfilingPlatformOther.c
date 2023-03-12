@@ -6,7 +6,7 @@
 |*
 \*===----------------------------------------------------------------------===*/
 
-#if !defined(__APPLE__) && !defined(__linux__) && !defined(__FreeBSD__) &&     \
+#if !defined(__APPLE__) && !defined(__linux__) && !defined(__NQC__) &&     \
     !defined(__Fuchsia__) && !(defined(__sun__) && defined(__svr4__)) &&       \
     !defined(__NetBSD__) && !defined(_WIN32) && !defined(_AIX)
 

@@ -80,7 +80,7 @@
 #define WITH_NMNULL
 #endif
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <sys/selinfo.h>
 
 #define likely(x)	__builtin_expect((long)!!(x), 1L)
@@ -233,7 +233,7 @@ typedef struct hrtimer{
 #define	NMG_UNLOCK()		NM_MTX_UNLOCK(netmap_global_lock)
 #define	NMG_LOCK_ASSERT()	NM_MTX_ASSERT(netmap_global_lock)
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define nm_prerr_int	printf
 #define nm_prinf_int	printf
 #elif defined (_WIN32)
@@ -673,7 +673,7 @@ tail->|                 |<-hwtail    |                 |<-hwlease
  */
 
 struct lut_entry;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #define plut_entry lut_entry
 #endif
 
@@ -1727,7 +1727,7 @@ extern int netmap_generic_txqdisc;
 
 #define NM_IS_NATIVE(ifp)	(NM_NA_VALID(ifp) && NA(ifp)->nm_dtor == netmap_hw_dtor)
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 
 /* Assigns the device IOMMU domain to an allocator.
  * Returns -ENOMEM in case the domain is different */
@@ -1918,7 +1918,7 @@ netmap_idx_k2n(struct netmap_kring *kr, int idx)
 
 
 /* Entries of the look-up table. */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 struct lut_entry {
 	void *vaddr;		/* virtual address. */
 	vm_paddr_t paddr;	/* physical address. */
@@ -2379,7 +2379,7 @@ ptnet_sync_tail(struct nm_csb_ktoa *ktoa, struct netmap_kring *kring)
 }
 #endif /* WITH_PTNETMAP */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /*
  * FreeBSD mbuf allocator/deallocator in emulation mode:
  *
@@ -2420,7 +2420,7 @@ nm_os_get_mbuf(if_t ifp, int len)
 	return m;
 }
 
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 
 struct nmreq_option * nmreq_getoption(struct nmreq_header *, uint16_t);
 

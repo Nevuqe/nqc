@@ -607,9 +607,9 @@ static int wpas_ctrl_iface_open_sock(struct wpa_supplicant *wpa_s,
 	}
 
 	os_memset(&addr, 0, sizeof(addr));
-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+#if defined(__NQC__) || defined(__NQC_kernel__)
 	addr.sun_len = sizeof(addr);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	addr.sun_family = AF_UNIX;
 	fname = wpa_supplicant_ctrl_iface_path(wpa_s);
 	if (fname == NULL)
@@ -1216,9 +1216,9 @@ static int wpas_global_ctrl_iface_open_sock(struct wpa_global *global,
 	}
 
 	os_memset(&addr, 0, sizeof(addr));
-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+#if defined(__NQC__) || defined(__NQC_kernel__)
 	addr.sun_len = sizeof(addr);
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 	addr.sun_family = AF_UNIX;
 
 	if (os_strncmp(ctrl, "@abstract:", 10) == 0) {

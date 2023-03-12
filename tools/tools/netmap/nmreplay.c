@@ -111,10 +111,10 @@
 #include <libnetmap.h>
 #include <math.h> /* log, exp etc. */
 #include <pthread.h>
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <pthread_np.h> /* pthread w/ affinity */
 #include <sys/cpuset.h> /* cpu_set */
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>

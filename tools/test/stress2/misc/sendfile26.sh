@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 #
-# Copyright (c) 2021 Jean-Sébastien Pédron <dumbbell@FreeBSD.org>
+# Copyright (c) 2021 Jean-Sï¿½bastien Pï¿½dron <dumbbell@FreeBSD.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -97,7 +97,7 @@ sender_start(void *buffer __unused)
 		off_t sbytes = 0;
 
 		do {
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 			ret = sendfile(fd, sock, cursor, to_send,
 			    NULL, &sbytes, 0);
 			if (ret == 0) {

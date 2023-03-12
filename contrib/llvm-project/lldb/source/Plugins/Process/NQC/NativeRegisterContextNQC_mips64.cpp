@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_mips64.cpp ---------------------------===//
+//===-- NativeRegisterContextNQC_mips64.cpp ---------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,7 +8,7 @@
 
 #if defined(__mips64__)
 
-#include "NativeRegisterContextFreeBSD_mips64.h"
+#include "NativeRegisterContextNQC_mips64.h"
 
 #include "lldb/Utility/DataBufferHeap.h"
 #include "lldb/Utility/RegisterValue.h"
@@ -30,38 +30,38 @@ using namespace lldb_private::process_nqc;
 NativeRegisterContextFreeBSD *
 NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread) {
-  return new NativeRegisterContextFreeBSD_mips64(target_arch, native_thread);
+  return new NativeRegisterContextNQC_mips64(target_arch, native_thread);
 }
 
-NativeRegisterContextFreeBSD_mips64::NativeRegisterContextFreeBSD_mips64(
+NativeRegisterContextNQC_mips64::NativeRegisterContextNQC_mips64(
     const ArchSpec &target_arch, NativeThreadProtocol &native_thread)
     : NativeRegisterContextRegisterInfo(
-          native_thread, new RegisterContextFreeBSD_mips64(target_arch)) {}
+          native_thread, new RegisterContextNQC_mips64(target_arch)) {}
 
-RegisterContextFreeBSD_mips64 &
-NativeRegisterContextFreeBSD_mips64::GetRegisterInfo() const {
-  return static_cast<RegisterContextFreeBSD_mips64 &>(
+RegisterContextNQC_mips64 &
+NativeRegisterContextNQC_mips64::GetRegisterInfo() const {
+  return static_cast<RegisterContextNQC_mips64 &>(
       *m_register_info_interface_up);
 }
 
-uint32_t NativeRegisterContextFreeBSD_mips64::GetRegisterSetCount() const {
+uint32_t NativeRegisterContextNQC_mips64::GetRegisterSetCount() const {
   return GetRegisterInfo().GetRegisterSetCount();
 }
 
 const RegisterSet *
-NativeRegisterContextFreeBSD_mips64::GetRegisterSet(uint32_t set_index) const {
+NativeRegisterContextNQC_mips64::GetRegisterSet(uint32_t set_index) const {
   return GetRegisterInfo().GetRegisterSet(set_index);
 }
 
-uint32_t NativeRegisterContextFreeBSD_mips64::GetUserRegisterCount() const {
+uint32_t NativeRegisterContextNQC_mips64::GetUserRegisterCount() const {
   uint32_t count = 0;
   for (uint32_t set_index = 0; set_index < GetRegisterSetCount(); ++set_index)
     count += GetRegisterSet(set_index)->num_registers;
   return count;
 }
 
-llvm::Optional<NativeRegisterContextFreeBSD_mips64::RegSetKind>
-NativeRegisterContextFreeBSD_mips64::GetSetForNativeRegNum(
+llvm::Optional<NativeRegisterContextNQC_mips64::RegSetKind>
+NativeRegisterContextNQC_mips64::GetSetForNativeRegNum(
     uint32_t reg_num) const {
   switch (GetRegisterInfoInterface().GetTargetArchitecture().GetMachine()) {
   case llvm::Triple::mips64:
@@ -77,7 +77,7 @@ NativeRegisterContextFreeBSD_mips64::GetSetForNativeRegNum(
   llvm_unreachable("Register does not belong to any register set");
 }
 
-Status NativeRegisterContextFreeBSD_mips64::ReadRegisterSet(RegSetKind set) {
+Status NativeRegisterContextNQC_mips64::ReadRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_GETREGS, m_thread.GetID(),
@@ -87,10 +87,10 @@ Status NativeRegisterContextFreeBSD_mips64::ReadRegisterSet(RegSetKind set) {
         PT_GETFPREGS, m_thread.GetID(),
         m_reg_data.data() + GetRegisterInfo().GetGPRSize());
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_mips64::ReadRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_mips64::ReadRegisterSet");
 }
 
-Status NativeRegisterContextFreeBSD_mips64::WriteRegisterSet(RegSetKind set) {
+Status NativeRegisterContextNQC_mips64::WriteRegisterSet(RegSetKind set) {
   switch (set) {
   case GPRegSet:
     return NativeProcessFreeBSD::PtraceWrapper(PT_SETREGS, m_thread.GetID(),
@@ -100,11 +100,11 @@ Status NativeRegisterContextFreeBSD_mips64::WriteRegisterSet(RegSetKind set) {
         PT_SETFPREGS, m_thread.GetID(),
         m_reg_data.data() + GetRegisterInfo().GetGPRSize());
   }
-  llvm_unreachable("NativeRegisterContextFreeBSD_mips64::WriteRegisterSet");
+  llvm_unreachable("NativeRegisterContextNQC_mips64::WriteRegisterSet");
 }
 
 Status
-NativeRegisterContextFreeBSD_mips64::ReadRegister(const RegisterInfo *reg_info,
+NativeRegisterContextNQC_mips64::ReadRegister(const RegisterInfo *reg_info,
                                                   RegisterValue &reg_value) {
   Status error;
 
@@ -140,7 +140,7 @@ NativeRegisterContextFreeBSD_mips64::ReadRegister(const RegisterInfo *reg_info,
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_mips64::WriteRegister(
+Status NativeRegisterContextNQC_mips64::WriteRegister(
     const RegisterInfo *reg_info, const RegisterValue &reg_value) {
   Status error;
 
@@ -175,7 +175,7 @@ Status NativeRegisterContextFreeBSD_mips64::WriteRegister(
   return WriteRegisterSet(set);
 }
 
-Status NativeRegisterContextFreeBSD_mips64::ReadAllRegisterValues(
+Status NativeRegisterContextNQC_mips64::ReadAllRegisterValues(
     lldb::WritableDataBufferSP &data_sp) {
   Status error;
 
@@ -194,20 +194,20 @@ Status NativeRegisterContextFreeBSD_mips64::ReadAllRegisterValues(
   return error;
 }
 
-Status NativeRegisterContextFreeBSD_mips64::WriteAllRegisterValues(
+Status NativeRegisterContextNQC_mips64::WriteAllRegisterValues(
     const lldb::DataBufferSP &data_sp) {
   Status error;
 
   if (!data_sp) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_mips64::%s invalid data_sp provided",
+        "NativeRegisterContextNQC_mips64::%s invalid data_sp provided",
         __FUNCTION__);
     return error;
   }
 
   if (data_sp->GetByteSize() != m_reg_data.size()) {
     error.SetErrorStringWithFormat(
-        "NativeRegisterContextFreeBSD_mips64::%s data_sp contained mismatched "
+        "NativeRegisterContextNQC_mips64::%s data_sp contained mismatched "
         "data size, expected %" PRIu64 ", actual %" PRIu64,
         __FUNCTION__, m_reg_data.size(), data_sp->GetByteSize());
     return error;
@@ -215,7 +215,7 @@ Status NativeRegisterContextFreeBSD_mips64::WriteAllRegisterValues(
 
   const uint8_t *src = data_sp->GetBytes();
   if (src == nullptr) {
-    error.SetErrorStringWithFormat("NativeRegisterContextFreeBSD_mips64::%s "
+    error.SetErrorStringWithFormat("NativeRegisterContextNQC_mips64::%s "
                                    "DataBuffer::GetBytes() returned a null "
                                    "pointer",
                                    __FUNCTION__);
@@ -230,7 +230,7 @@ Status NativeRegisterContextFreeBSD_mips64::WriteAllRegisterValues(
   return WriteRegisterSet(FPRegSet);
 }
 
-llvm::Error NativeRegisterContextFreeBSD_mips64::CopyHardwareWatchpointsFrom(
+llvm::Error NativeRegisterContextNQC_mips64::CopyHardwareWatchpointsFrom(
     NativeRegisterContextFreeBSD &source) {
   return llvm::Error::success();
 }

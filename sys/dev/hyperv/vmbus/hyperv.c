@@ -56,7 +56,7 @@ __FBSDID("$FreeBSD$");
 #include <dev/hyperv/vmbus/hyperv_var.h>
 
 #define HYPERV_FREEBSD_BUILD		0ULL
-#define HYPERV_FREEBSD_VERSION		((uint64_t)__FreeBSD_version)
+#define HYPERV_FREEBSD_VERSION		((uint64_t)__NQC_version)
 #define HYPERV_FREEBSD_OSID		0ULL
 
 #define MSR_HV_GUESTID_BUILD_FREEBSD	\

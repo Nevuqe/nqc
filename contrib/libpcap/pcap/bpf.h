@@ -83,7 +83,7 @@ extern "C" {
  * pulled in.  To accommodate both requirements, make this header a wrapper
  * around the system net/bpf.h, but keep the extern function definitions.
  */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <net/bpf.h>
 #else
 /* BSD style release date */
@@ -256,12 +256,12 @@ struct bpf_insn {
 #define BPF_STMT(code, k) { (u_short)(code), 0, 0, k }
 #define BPF_JUMP(code, k, jt, jf) { (u_short)(code), jt, jf, k }
 
-#endif /* defined(__FreeBSD__) */
+#endif /* defined(__NQC__) */
 
 PCAP_API int bpf_validate(const struct bpf_insn *, int);
 PCAP_API u_int bpf_filter(const struct bpf_insn *, const u_char *, u_int, u_int);
 
-#if !defined(__FreeBSD__)
+#if !defined(__NQC__)
 /*
  * Number of scratch memory words (for BPF_LD|BPF_MEM and BPF_ST).
  */

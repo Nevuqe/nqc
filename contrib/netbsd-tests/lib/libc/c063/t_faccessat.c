@@ -166,7 +166,7 @@ ATF_TC_BODY(faccessat_fdlink, tc)
 	ATF_REQUIRE(faccessat(dfd, BASELINK, F_OK, 0) == -1);
 	ATF_REQUIRE(errno == ENOENT);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	atf_tc_expect_fail("Depends on non-standard behavior not mentioned in POSIX.1-2008");
 #endif
 	ATF_REQUIRE(faccessat(dfd, BASELINK, F_OK, AT_SYMLINK_NOFOLLOW) == 0);

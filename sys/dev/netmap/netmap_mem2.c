@@ -36,7 +36,7 @@
 #include "osx_glue.h"
 #endif /* __APPLE__ */
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/cdefs.h> /* prerequisite */
 __FBSDID("$FreeBSD$");
 
@@ -58,7 +58,7 @@ __FBSDID("$FreeBSD$");
 MALLOC_DECLARE(M_NETMAP);
 MALLOC_DEFINE(M_NETMAP, "netmap", "Network memory map");
 
-#endif /* __FreeBSD__ */
+#endif /* __NQC__ */
 
 #ifdef _WIN32
 #include <win_glue.h>
@@ -219,7 +219,7 @@ netmap_mem_ofstophys(struct netmap_mem_d *nmd, vm_ooffset_t off)
 {
 	vm_paddr_t pa;
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* This function is called by netmap_dev_pager_fault(), which holds a
 	 * non-sleepable lock since FreeBSD 12. Since we cannot sleep, we
 	 * spin on the trylock. */
@@ -505,7 +505,7 @@ static int
 netmap_mem2_get_lut(struct netmap_mem_d *nmd, struct netmap_lut *lut)
 {
 	lut->lut = nmd->pools[NETMAP_BUF_POOL].lut;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	lut->plut = lut->lut;
 #endif
 	lut->objtotal = nmd->pools[NETMAP_BUF_POOL].objtotal;
@@ -1539,7 +1539,7 @@ netmap_mem_unmap(struct netmap_obj_pool *p, struct netmap_adapter *na)
 
 
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* On FreeBSD mapping and unmapping is performed by the txsync
 	 * and rxsync routine, packet by packet. */
 	(void)i;
@@ -1575,7 +1575,7 @@ netmap_mem_map(struct netmap_obj_pool *p, struct netmap_adapter *na)
 	if (na->pdev == NULL)
 		return 0;
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	/* On FreeBSD mapping and unmapping is performed by the txsync
 	 * and rxsync routine, packet by packet. */
 	(void)i;

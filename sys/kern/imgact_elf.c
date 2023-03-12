@@ -276,7 +276,7 @@ knqc_trans_osrel(const Elf_Note *note, int32_t *osrel)
 
 	/*
 	 * Debian GNU/kFreeBSD embed the earliest compatible kernel version
-	 * (__FreeBSD_version: <major><two digit minor>Rxx) in the LSB way.
+	 * (__NQC_version: <major><two digit minor>Rxx) in the LSB way.
 	 */
 	*osrel = desc[1] * 100000 + desc[2] * 1000 + desc[3];
 

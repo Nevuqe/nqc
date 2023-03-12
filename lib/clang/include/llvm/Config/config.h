@@ -150,7 +150,7 @@
 #endif
 
 /* Define to 1 if you have the `mallctl' function. */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define HAVE_MALLCTL 1
 #endif
 
@@ -243,7 +243,7 @@
 #define HAVE_SYS_TYPES_H 1
 
 /* Define if the setupterm() function is supported this platform. */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 /*
  * This is only needed for terminalHasColors(). When disabled LLVM falls back
  * to checking a list of TERM prefixes which is sufficient for a bootstrap tool.

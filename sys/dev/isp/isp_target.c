@@ -42,7 +42,7 @@
 #ifdef	__NetBSD__
 #include <dev/ic/isp_netbsd.h>
 #endif
-#ifdef	__FreeBSD__
+#ifdef	__NQC__
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");
 #include <dev/isp/isp_nqc.h>

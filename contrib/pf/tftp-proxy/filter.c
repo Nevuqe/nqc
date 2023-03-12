@@ -306,7 +306,7 @@ prepare_rule(u_int32_t id, int rs_num, struct sockaddr *src,
 		pfrule.quick = 1;
 		pfrule.log = rule_log;
 		pfrule.keep_state = 1;
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		pfrule.flags = (proto == IPPROTO_TCP ? TH_SYN : 0);
 		pfrule.flagset = (proto == IPPROTO_TCP ?
 		    (TH_SYN|TH_ACK|TH_FIN|TH_RST) : 0);

@@ -47,7 +47,7 @@
 struct irdma_ucontext {
 	struct ib_ucontext ibucontext;
 	struct irdma_device *iwdev;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	struct rdma_user_mmap_entry *db_mmap_entry;
 #else
 	struct irdma_user_mmap_entry *db_mmap_entry;
@@ -200,7 +200,7 @@ struct irdma_qp {
 	struct irdma_cq *iwscq;
 	struct irdma_cq *iwrcq;
 	struct irdma_pd *iwpd;
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	struct rdma_user_mmap_entry *push_wqe_mmap_entry;
 	struct rdma_user_mmap_entry *push_db_mmap_entry;
 #else
@@ -267,7 +267,7 @@ enum irdma_mmap_flag {
 };
 
 struct irdma_user_mmap_entry {
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 	struct rdma_user_mmap_entry rdma_entry;
 #else
 	struct irdma_ucontext *ucontext;
@@ -317,7 +317,7 @@ static inline void irdma_mcast_mac_v6(u32 *ip_addr, u8 *mac)
 	ether_addr_copy(mac, mac6);
 }
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 struct rdma_user_mmap_entry*
 irdma_user_mmap_entry_insert(struct irdma_ucontext *ucontext, u64 bar_offset,
 			     enum irdma_mmap_flag mmap_flag, u64 *mmap_offset);

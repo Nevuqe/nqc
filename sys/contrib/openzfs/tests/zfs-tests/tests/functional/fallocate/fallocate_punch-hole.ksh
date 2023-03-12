@@ -44,7 +44,7 @@
 verify_runnable "global"
 
 #
-# Prior to __FreeBSD_version 1400032 there are no mechanism to punch hole in a
+# Prior to __NQC_version 1400032 there are no mechanism to punch hole in a
 # file on FreeBSD.  truncate -d support is required to call fspacectl(2) on
 # behalf of the script.
 #

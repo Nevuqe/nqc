@@ -360,7 +360,7 @@ FBSD_1.3 {
 	dup3;
 	fdclosedir;
 	fdlopen;
-	__FreeBSD_libc_enter_restricted_mode;
+	__NQC_libc_enter_restricted_mode;
 	getcontextx;
 	gid_from_group;
 	nvis;

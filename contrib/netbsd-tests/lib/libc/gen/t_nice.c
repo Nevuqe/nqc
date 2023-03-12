@@ -93,7 +93,7 @@ ATF_TC_HEAD(nice_priority, tc)
 
 ATF_TC_BODY(nice_priority, tc)
 {
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	int i, pri, pri2, nic;
 #else
 	int i, pri, nic;
@@ -132,7 +132,7 @@ ATF_TC_BODY(nice_priority, tc)
 #endif
 			ATF_REQUIRE(errno == 0);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 			if (pri != pri2)
 #else
 			if (nic != pri)
@@ -175,7 +175,7 @@ ATF_TC_HEAD(nice_thread, tc)
 ATF_TC_BODY(nice_thread, tc)
 {
 	pthread_t tid[5];
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	int pri, rv, val;
 #else
 	int rv, val;
@@ -191,7 +191,7 @@ ATF_TC_BODY(nice_thread, tc)
 		val = nice(i);
 		ATF_REQUIRE(val != -1);
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 		pri = getpriority(PRIO_PROCESS, 0);
 		rv = pthread_create(&tid[i], NULL, threadfunc, &pri);
 #else

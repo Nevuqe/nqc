@@ -31,8 +31,8 @@
 #error "_STANDALONE is not defined!"
 #endif
 
-#undef __FreeBSD_version
-#define	__FreeBSD_version 1400000
+#undef __NQC_version
+#define	__NQC_version 1400000
 
 #include <sys/cdefs.h>
 #include <sys/queue.h>

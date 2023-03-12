@@ -87,7 +87,7 @@
 #define KMP_GROUP_AFFINITY 0
 #endif
 
-#if (KMP_OS_LINUX || (KMP_OS_FREEBSD && __FreeBSD_version >= 1301000))
+#if (KMP_OS_LINUX || (KMP_OS_FREEBSD && __NQC_version >= 1301000))
 #define KMP_HAVE_SCHED_GETCPU 1
 #else
 #define KMP_HAVE_SCHED_GETCPU 0

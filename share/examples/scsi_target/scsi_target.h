@@ -122,7 +122,7 @@ extern int notaio;
 /*
  * Compat Defines
  */
-#if __FreeBSD_version >= 500000
+#if __NQC_version >= 500000
 #define	OFF_FMT	"%ju"
 #else
 #define	OFF_FMT "%llu"

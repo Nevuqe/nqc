@@ -27,7 +27,7 @@
 __FBSDID("$FreeBSD$");
 
 #include "namespace.h"
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <assert.h>
 #endif
 #include <fcntl.h>
@@ -46,7 +46,7 @@ __FBSDID("$FreeBSD$");
 
 #define CHACHA_EMBED
 #define KEYSTREAM_ONLY
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #define ARC4RANDOM_FXRNG 1
 #else
 #define ARC4RANDOM_FXRNG 0
@@ -78,7 +78,7 @@ static struct _rs {
 static struct _rsx {
 	chacha_ctx	rs_chacha;	/* chacha context for random keystream */
 	u_char		rs_buf[RSBUFSZ];	/* keystream blocks */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	uint32_t	rs_seed_generation;	/* 32-bit userspace RNG version */
 #endif
 } *rsx;
@@ -110,7 +110,7 @@ _rs_stir(void)
 	u_char rnd[KEYSZ + IVSZ];
 	uint32_t rekey_fuzz = 0;
 
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 	bool need_init;
 
 	/*
@@ -139,10 +139,10 @@ _rs_stir(void)
 	if (getentropy(rnd, sizeof rnd) == -1)
 		_getentropy_fail();
 
-#if !defined(__FreeBSD__)
+#if !defined(__NQC__)
 	if (!rs)
 		_rs_init(rnd, sizeof(rnd));
-#else /* __FreeBSD__ */
+#else /* __NQC__ */
 	assert(rs != NULL);
 	if (need_init)
 		_rs_init(rnd, sizeof(rnd));

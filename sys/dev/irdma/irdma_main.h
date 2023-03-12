@@ -44,7 +44,7 @@
 #include <netinet/if_ether.h>
 #include <linux/slab.h>
 #include <linux/rculist.h>
-#if __FreeBSD_version >= 1400000
+#if __NQC_version >= 1400000
 #include <rdma/uverbs_ioctl.h>
 #endif
 #include <rdma/ib_smi.h>
@@ -410,7 +410,7 @@ static inline struct irdma_ucontext *to_ucontext(struct ib_ucontext *ibucontext)
 	return container_of(ibucontext, struct irdma_ucontext, ibucontext);
 }
 
-#if __FreeBSD_version >= 1400026
+#if __NQC_version >= 1400026
 static inline struct irdma_user_mmap_entry *
 to_irdma_mmap_entry(struct rdma_user_mmap_entry *rdma_entry)
 {

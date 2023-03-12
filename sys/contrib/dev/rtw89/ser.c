@@ -534,7 +534,7 @@ struct __fw_backtrace_info {
 
 #if defined(__linux__)
 static_assert(RTW89_FW_BACKTRACE_INFO_SIZE ==
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 rtw89_static_assert(RTW89_FW_BACKTRACE_INFO_SIZE ==
 #endif
 	      sizeof(struct __fw_backtrace_info));

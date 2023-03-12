@@ -66,7 +66,7 @@ __RCSID("$NetBSD: t_wcstod.c,v 1.3 2011/10/01 17:56:11 christos Exp $");
 
 #include <atf-c.h>
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <stdio.h>
 #endif
 
@@ -238,7 +238,7 @@ static struct test {
 { L"          -0X.",	12,	0,			0 },
 #endif
 /* XXX: FIXME */
-#if defined(__NetBSD__) || defined(__linux__) || defined(__FreeBSD__)
+#if defined(__NetBSD__) || defined(__linux__) || defined(__NQC__)
 { L"0X.0",		4,	0,			0 },
 { L"+0X.0",		5,	0,			0 },
 { L"-0X.0",		5,	0,			0 },

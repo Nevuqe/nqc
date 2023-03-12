@@ -1,4 +1,4 @@
-//===-- NativeRegisterContextFreeBSD_mips64.h -------------------*- C++ -*-===//
+//===-- NativeRegisterContextNQC_mips64.h -------------------*- C++ -*-===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -8,8 +8,8 @@
 
 #if defined(__mips64__)
 
-#ifndef lldb_NativeRegisterContextFreeBSD_mips64_h
-#define lldb_NativeRegisterContextFreeBSD_mips64_h
+#ifndef lldb_NativeRegisterContextNQC_mips64_h
+#define lldb_NativeRegisterContextNQC_mips64_h
 
 // clang-format off
 #include <sys/types.h>
@@ -17,7 +17,7 @@
 // clang-format on
 
 #include "Plugins/Process/FreeBSD/NativeRegisterContextFreeBSD.h"
-#include "Plugins/Process/Utility/RegisterContextFreeBSD_mips64.h"
+#include "Plugins/Process/Utility/RegisterContextNQC_mips64.h"
 
 #include <array>
 
@@ -26,10 +26,10 @@ namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
-class NativeRegisterContextFreeBSD_mips64
+class NativeRegisterContextNQC_mips64
     : public NativeRegisterContextFreeBSD {
 public:
-  NativeRegisterContextFreeBSD_mips64(const ArchSpec &target_arch,
+  NativeRegisterContextNQC_mips64(const ArchSpec &target_arch,
                                       NativeThreadProtocol &native_thread);
 
   uint32_t GetRegisterSetCount() const override;
@@ -63,12 +63,12 @@ private:
   Status ReadRegisterSet(RegSetKind set);
   Status WriteRegisterSet(RegSetKind set);
 
-  RegisterContextFreeBSD_mips64 &GetRegisterInfo() const;
+  RegisterContextNQC_mips64 &GetRegisterInfo() const;
 };
 
 } // namespace process_nqc
 } // namespace lldb_private
 
-#endif // #ifndef lldb_NativeRegisterContextFreeBSD_mips64_h
+#endif // #ifndef lldb_NativeRegisterContextNQC_mips64_h
 
 #endif // defined (__mips64__)

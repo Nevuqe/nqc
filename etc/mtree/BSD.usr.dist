@@ -263,7 +263,7 @@
         examples
             BSD_daemon
             ..
-            FreeBSD_version
+            NQC_version
             ..
             IPv6
             ..

@@ -247,7 +247,7 @@ _kevent_cmp(struct kevent *k1, struct kevent *k2, const char *file, int line)
 /* XXX-
    Workaround for inconsistent implementation of kevent(2) 
  */
-#ifdef __FreeBSD__
+#ifdef __NQC__
     if (k1->flags & EV_ADD)
         k2->flags |= EV_ADD;
 #endif
@@ -313,7 +313,7 @@ main(int argc, char **argv)
     int test_signal = 1;
     int test_vnode = 1;
     int test_timer = 1;
-#ifdef __FreeBSD__
+#ifdef __NQC__
     int test_user = 1;
 #else
     /* XXX-FIXME temporary */

@@ -14,7 +14,7 @@
 # against 30300 for gcc likely isn't  what you wanted (since versions of gcc
 # prior to 4.2 likely have no prayer of working).
 #
-# COMPILER_FREEBSD_VERSION is the compiler's __FreeBSD_cc_version value.
+# COMPILER_FREEBSD_VERSION is the compiler's __NQC_cc_version value.
 #
 # COMPILER_FEATURES will contain one or more of the following, based on
 # compiler support for that feature:
@@ -217,11 +217,11 @@ ${X_}COMPILER_FEATURES=	apple-clang
 .undef _v
 .endif
 .if !defined(${X_}COMPILER_FREEBSD_VERSION)
-${X_}COMPILER_FREEBSD_VERSION!=	{ echo "__FreeBSD_cc_version" | ${${cc}:N${CCACHE_BIN}} -E - 2>/dev/null || echo __FreeBSD_cc_version; } | sed -n '$$p'
-# If we get a literal "__FreeBSD_cc_version" back then the compiler
+${X_}COMPILER_FREEBSD_VERSION!=	{ echo "__NQC_cc_version" | ${${cc}:N${CCACHE_BIN}} -E - 2>/dev/null || echo __NQC_cc_version; } | sed -n '$$p'
+# If we get a literal "__NQC_cc_version" back then the compiler
 # is a non-FreeBSD build that doesn't support it or some other error
 # occurred.
-.if ${${X_}COMPILER_FREEBSD_VERSION} == "__FreeBSD_cc_version"
+.if ${${X_}COMPILER_FREEBSD_VERSION} == "__NQC_cc_version"
 ${X_}COMPILER_FREEBSD_VERSION=	unknown
 .endif
 .endif

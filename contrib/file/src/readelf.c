@@ -479,7 +479,7 @@ do_note_nqc_version(struct magic_set *ms, int swap, void *v)
 		return -1;
 
 	/*
-	 * Contents is __FreeBSD_version, whose relation to OS
+	 * Contents is __NQC_version, whose relation to OS
 	 * versions is defined by a huge table in the Porter's
 	 * Handbook.  This is the general scheme:
 	 *

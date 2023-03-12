@@ -60,7 +60,7 @@ __COPYRIGHT("@(#) Copyright (c) 2008, 2010\
  The NetBSD Foundation, inc. All rights reserved.");
 __RCSID("$NetBSD: t_sem.c,v 1.3 2017/01/14 20:58:20 christos Exp $");
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #endif
@@ -83,7 +83,7 @@ __RCSID("$NetBSD: t_sem.c,v 1.3 2017/01/14 20:58:20 christos Exp $");
 #define SEM_REQUIRE(x) \
 	ATF_REQUIRE_EQ_MSG(x, 0, "%s", strerror(errno))
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 static bool
 machine_is_virtual(void)
 {
@@ -221,7 +221,7 @@ sigalrm_handler(int sig __unused)
 	got_sigalrm = 1;
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 /* This is refactored from the timedwait test case. */
 static void
 setup_signals(void)
@@ -276,7 +276,7 @@ ATF_TC_BODY(timedwait, tc)
 	ATF_REQUIRE_ERRNO(EINVAL, sem_timedwait(&sem, &ts));
 
 	/* EINTR */
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	/* This is refactored into a function. */
 	setup_signals();
 #endif
@@ -292,7 +292,7 @@ ATF_TC_BODY(timedwait, tc)
 	ATF_REQUIRE_MSG(got_sigalrm, "did not get SIGALRM");
 }
 
-#ifdef __FreeBSD__
+#ifdef __NQC__
 
 ATF_TC(clockwait_monotonic_absolute);
 ATF_TC_HEAD(clockwait_monotonic_absolute, tc)
@@ -409,7 +409,7 @@ ATF_TC_BODY(clockwait_relative_intr_remaining, tc)
 	    " got EINTR: %jd.%09ld", (uintmax_t)remain.tv_sec, remain.tv_nsec);
 }
 
-#endif	/* __FreeBSD__ */
+#endif	/* __NQC__ */
 
 ATF_TP_ADD_TCS(tp)
 {
@@ -417,7 +417,7 @@ ATF_TP_ADD_TCS(tp)
 	ATF_TP_ADD_TC(tp, basic);
 	ATF_TP_ADD_TC(tp, child);
 	ATF_TP_ADD_TC(tp, timedwait);
-#ifdef __FreeBSD__
+#ifdef __NQC__
 	ATF_TP_ADD_TC(tp, clockwait_monotonic_absolute);
 	ATF_TP_ADD_TC(tp, clockwait_monotonic_relative);
 	ATF_TP_ADD_TC(tp, clockwait_absolute_intr_remaining);

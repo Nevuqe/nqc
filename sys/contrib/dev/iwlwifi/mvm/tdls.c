@@ -4,7 +4,7 @@
  * Copyright (C) 2017 Intel Deutschland GmbH
  * Copyright (C) 2018-2020 Intel Corporation
  */
-#if defined(__FreeBSD__)
+#if defined(__NQC__)
 #include <linux/delay.h>
 #endif
 #include <linux/etherdevice.h>
@@ -609,7 +609,7 @@ out:
 	if (wait_for_phy)
 #if defined(__linux__)
 		msleep(TU_TO_MS(vif->bss_conf.dtim_period *
-#elif defined(__FreeBSD__)
+#elif defined(__NQC__)
 		linux_msleep(TU_TO_MS(vif->bss_conf.dtim_period *
 #endif
 				vif->bss_conf.beacon_int));
