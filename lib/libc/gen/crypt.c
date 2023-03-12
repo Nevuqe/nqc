@@ -86,7 +86,7 @@ __nqc11_encrypt(char *block __unused, int flag __unused)
 	return (0);
 }
 
-__sym_compat(des_setkey, __nqc11_des_setkey, FBSD_1.0);
-__sym_compat(des_cipher, __nqc11_des_cipher, FBSD_1.0);
-__sym_compat(setkey, __nqc11_setkey, FBSD_1.0);
-__sym_compat(encrypt, __nqc11_encrypt, FBSD_1.0);
+__sym_compat(des_setkey, __nqc11_des_setkey, NQC_1.0);
+__sym_compat(des_cipher, __nqc11_des_cipher, NQC_1.0);
+__sym_compat(setkey, __nqc11_setkey, NQC_1.0);
+__sym_compat(encrypt, __nqc11_encrypt, NQC_1.0);

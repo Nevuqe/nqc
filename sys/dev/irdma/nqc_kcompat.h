@@ -33,8 +33,8 @@
  */
 /*$NQC$*/
 
-#ifndef FBSD_KCOMPAT_H
-#define FBSD_KCOMPAT_H
+#ifndef NQC_KCOMPAT_H
+#define NQC_KCOMPAT_H
 #include "ice_rdma.h"
 
 #define TASKLET_DATA_TYPE	unsigned long
@@ -337,4 +337,4 @@ static inline size_t irdma_ib_umem_num_dma_blocks(struct ib_umem *umem, unsigned
 			 ALIGN_DOWN(iova, pgsz))) / pgsz;
 }
 
-#endif /* FBSD_KCOMPAT_H */
+#endif /* NQC_KCOMPAT_H */

@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	__b64_ntop;
 	__b64_pton;
 	ether_line;
@@ -144,12 +144,12 @@ FBSD_1.0 {
 	setsourcefilter;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	sctp_recvv;
 	sctp_sendv;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_nsdispatch;
 	_nsyyerror;	/* generated from nslexer.l */
 	_nsyylex;	/* generated from nslexer.l */

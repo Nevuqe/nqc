@@ -105,7 +105,7 @@ static ofw_def_t ofw_fdt = {
 };
 OFW_DEF(ofw_fdt);
 
-#define	FDT_FBSDVER_LEN	16
+#define	FDT_NQCVER_LEN	16
 #define	FDT_MODEL_LEN	80
 #define	FDT_COMPAT_LEN	255
 #define	FDT_SERIAL_LEN	32
@@ -113,7 +113,7 @@ OFW_DEF(ofw_fdt);
 static void *fdtp = NULL;
 static char fdt_model[FDT_MODEL_LEN];
 static char fdt_compatible[FDT_COMPAT_LEN];
-static char fdt_fbsd_version[FDT_FBSDVER_LEN];
+static char fdt_nqc_version[FDT_NQCVER_LEN];
 static char fdt_serial[FDT_SERIAL_LEN];
 
 static int
@@ -142,10 +142,10 @@ sysctl_register_fdt_oid(void *arg)
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),
 		    OID_AUTO, "compatible", CTLFLAG_RD, fdt_compatible,
 		    FDT_COMPAT_LEN, "Compatible platforms");
-	if (fdt_fbsd_version[0] != '\0')
+	if (fdt_nqc_version[0] != '\0')
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),
-		    OID_AUTO, "nqc-version", CTLFLAG_RD, fdt_fbsd_version,
-		    FDT_FBSDVER_LEN, "NQC DTS branding version");
+		    OID_AUTO, "nqc-version", CTLFLAG_RD, fdt_nqc_version,
+		    FDT_NQCVER_LEN, "NQC DTS branding version");
 	if (fdt_serial[0] != '\0')
 		SYSCTL_ADD_STRING(NULL, SYSCTL_STATIC_CHILDREN(_hw_fdt),
 		    OID_AUTO, "serial-number", CTLFLAG_RD, fdt_serial,
@@ -183,10 +183,10 @@ ofw_fdt_init(ofw_t ofw, void *data)
 				fdt_compatible[i] = ' ';
 	}
 	len = ofw_fdt_getproplen(NULL, root, "nqc,dts-version");
-	if (len > 0 && len <= FDT_FBSDVER_LEN) {
-		bzero(fdt_fbsd_version, FDT_FBSDVER_LEN);
+	if (len > 0 && len <= FDT_NQCVER_LEN) {
+		bzero(fdt_nqc_version, FDT_NQCVER_LEN);
 		ofw_fdt_getprop(NULL, root, "nqc,dts-version",
-		  fdt_fbsd_version, FDT_FBSDVER_LEN);
+		  fdt_nqc_version, FDT_NQCVER_LEN);
 	}
 	len = ofw_fdt_getproplen(NULL, root, "serial-number");
 	if (len > 0 && len <= FDT_SERIAL_LEN) {

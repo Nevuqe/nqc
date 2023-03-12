@@ -2,12 +2,12 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	regerror;
 	regexec;
 	regfree;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	regcomp;
 };

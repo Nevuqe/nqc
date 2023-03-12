@@ -306,7 +306,7 @@ zfs_read(struct znode *zp, zfs_uio_t *uio, int ioflag, cred_t *cr)
 			 * if we actually read some bytes, bubbling EFAULT
 			 * up to become EAGAIN isn't what we want here...
 			 *
-			 * ...on Linux, at least. On FBSD, doing this breaks.
+			 * ...on Linux, at least. On NQC, doing this breaks.
 			 */
 			if (error == EFAULT &&
 			    (zfs_uio_offset(uio) - start_offset) != 0)

@@ -24,7 +24,7 @@ ident		JETSON-TK1
 
 # Flattened Device Tree
 options 	FDT_DTB_STATIC
-makeoptions	FDT_DTS_FILE=tegra124-jetson-tk1-fbsd.dts
+makeoptions	FDT_DTS_FILE=tegra124-jetson-tk1-nqc.dts
 
 makeoptions MODULES_OVERRIDE=""
 #options 	BOOTVERBOSE

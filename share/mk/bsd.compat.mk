@@ -38,7 +38,7 @@ LIB32_MACHINE_ARCH=	i386
 LIB32WMAKEENV=	MACHINE_CPU="i686 mmx sse sse2"
 LIB32WMAKEFLAGS=	\
 		AS="${XAS} --32" \
-		LD="${XLD} -m elf_i386_fbsd"
+		LD="${XLD} -m elf_i386_nqc"
 
 .elif ${COMPAT_ARCH} == "powerpc64"
 HAS_COMPAT=32
@@ -57,7 +57,7 @@ LIB32CPUFLAGS+=	-target powerpc-unknown-nqc${OS_REVISION}
 LIB32_MACHINE=	powerpc
 LIB32_MACHINE_ARCH=	powerpc
 LIB32WMAKEFLAGS=	\
-		LD="${XLD} -m elf32ppc_fbsd"
+		LD="${XLD} -m elf32ppc_nqc"
 .endif
 
 LIB32WMAKEFLAGS+= NM="${XNM}"

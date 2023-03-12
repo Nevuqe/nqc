@@ -982,7 +982,7 @@ nqc4_sigaction(struct thread *td, struct nqc4_sigaction_args *uap)
 }
 #endif	/* COMAPT_NQC4 */
 
-#ifdef COMPAT_43	/* XXX - COMPAT_FBSD3 */
+#ifdef COMPAT_43	/* XXX - COMPAT_NQC3 */
 #ifndef _SYS_SYSPROTO_H_
 struct osigaction_args {
 	int	signum;
@@ -1208,7 +1208,7 @@ sys_sigprocmask(struct thread *td, struct sigprocmask_args *uap)
 	return (error);
 }
 
-#ifdef COMPAT_43	/* XXX - COMPAT_FBSD3 */
+#ifdef COMPAT_43	/* XXX - COMPAT_NQC3 */
 #ifndef _SYS_SYSPROTO_H_
 struct osigprocmask_args {
 	int	how;
@@ -1483,7 +1483,7 @@ sys_sigpending(struct thread *td, struct sigpending_args *uap)
 	return (copyout(&pending, uap->set, sizeof(sigset_t)));
 }
 
-#ifdef COMPAT_43	/* XXX - COMPAT_FBSD3 */
+#ifdef COMPAT_43	/* XXX - COMPAT_NQC3 */
 #ifndef _SYS_SYSPROTO_H_
 struct osigpending_args {
 	int	dummy;
@@ -1659,7 +1659,7 @@ kern_sigsuspend(struct thread *td, sigset_t mask)
 	return (EJUSTRETURN);
 }
 
-#ifdef COMPAT_43	/* XXX - COMPAT_FBSD3 */
+#ifdef COMPAT_43	/* XXX - COMPAT_NQC3 */
 /*
  * Compatibility sigsuspend call for old binaries.  Note nonstandard calling
  * convention: libc stub passes mask, not pointer, to save a copyin.

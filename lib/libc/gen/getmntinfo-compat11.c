@@ -68,4 +68,4 @@ nqc11_getmntinfo(struct nqc11_statfs **mntbufp, int flags)
 	return (mntsize);
 }
 
-__sym_compat(getmntinfo, nqc11_getmntinfo, FBSD_1.0);
+__sym_compat(getmntinfo, nqc11_getmntinfo, NQC_1.0);

@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	xdr_datum;
 	xdr_ypresp_all_seq;
 	ypresp_data;

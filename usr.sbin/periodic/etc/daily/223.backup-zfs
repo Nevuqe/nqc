@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # $NQC$
-# Created by: Miroslav Lachman <000.fbsd@quip.cz>
+# Created by: Miroslav Lachman <000.nqc@quip.cz>
 
 # Backup of zpool list, zfs list, zpool properties and zfs properties
 # for each filesystem. The backup will be stored in /var/backups.

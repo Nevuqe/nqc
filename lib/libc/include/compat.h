@@ -41,35 +41,35 @@
 	.symver impl, sym@verid
 
 #ifndef NO_COMPAT7
-__sym_compat(__semctl, nqc7___semctl, FBSD_1.0);
-__sym_compat(msgctl, nqc7_msgctl, FBSD_1.0);
-__sym_compat(shmctl, nqc7_shmctl, FBSD_1.0);
+__sym_compat(__semctl, nqc7___semctl, NQC_1.0);
+__sym_compat(msgctl, nqc7_msgctl, NQC_1.0);
+__sym_compat(shmctl, nqc7_shmctl, NQC_1.0);
 #endif
 
-__sym_compat(nfstat, nqc11_nfstat, FBSD_1.0);
-__sym_compat(nlstat, nqc11_nlstat, FBSD_1.0);
-__sym_compat(nstat, nqc11_nstat, FBSD_1.0);
+__sym_compat(nfstat, nqc11_nfstat, NQC_1.0);
+__sym_compat(nlstat, nqc11_nlstat, NQC_1.0);
+__sym_compat(nstat, nqc11_nstat, NQC_1.0);
 
-__sym_compat(fhstat, nqc11_fhstat, FBSD_1.0);
-__sym_compat(fstat, nqc11_fstat, FBSD_1.0);
-__sym_compat(fstatat, nqc11_fstatat, FBSD_1.1);
-__sym_compat(lstat, nqc11_lstat, FBSD_1.0);
-__sym_compat(stat, nqc11_stat, FBSD_1.0);
+__sym_compat(fhstat, nqc11_fhstat, NQC_1.0);
+__sym_compat(fstat, nqc11_fstat, NQC_1.0);
+__sym_compat(fstatat, nqc11_fstatat, NQC_1.1);
+__sym_compat(lstat, nqc11_lstat, NQC_1.0);
+__sym_compat(stat, nqc11_stat, NQC_1.0);
 
-__sym_compat(getdents, nqc11_getdents, FBSD_1.0);
-__sym_compat(getdirentries, nqc11_getdirentries, FBSD_1.0);
+__sym_compat(getdents, nqc11_getdents, NQC_1.0);
+__sym_compat(getdirentries, nqc11_getdirentries, NQC_1.0);
 
-__sym_compat(getfsstat, nqc11_getfsstat, FBSD_1.0);
-__sym_compat(fhstatfs, nqc11_fhstatfs, FBSD_1.0);
-__sym_compat(fstatfs, nqc11_fstatfs, FBSD_1.0);
-__sym_compat(statfs, nqc11_statfs, FBSD_1.0);
+__sym_compat(getfsstat, nqc11_getfsstat, NQC_1.0);
+__sym_compat(fhstatfs, nqc11_fhstatfs, NQC_1.0);
+__sym_compat(fstatfs, nqc11_fstatfs, NQC_1.0);
+__sym_compat(statfs, nqc11_statfs, NQC_1.0);
 
-__sym_compat(mknod, nqc11_mknod, FBSD_1.0);
-__sym_compat(mknodat, nqc11_mknodat, FBSD_1.1);
+__sym_compat(mknod, nqc11_mknod, NQC_1.0);
+__sym_compat(mknodat, nqc11_mknodat, NQC_1.1);
 
-__sym_compat(kevent, nqc11_kevent, FBSD_1.0);
+__sym_compat(kevent, nqc11_kevent, NQC_1.0);
 
-__sym_compat(swapoff, nqc13_swapoff, FBSD_1.0);
+__sym_compat(swapoff, nqc13_swapoff, NQC_1.0);
 
 #undef __sym_compat
 

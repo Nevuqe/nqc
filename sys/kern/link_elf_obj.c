@@ -1415,7 +1415,7 @@ relocate_file1(elf_file_t ef, bool ifuncs)
 	}
 
 	/*
-	 * Only clean SHN_FBSD_CACHED for successful return.  If we
+	 * Only clean SHN_NQC_CACHED for successful return.  If we
 	 * modified symbol table for the object but found an
 	 * unresolved symbol, there is no reason to roll back.
 	 */
@@ -1633,7 +1633,7 @@ elf_obj_cleanup_globals_cache(elf_file_t ef)
 
 	for (i = 0; i < ef->ddbsymcnt; i++) {
 		sym = ef->ddbsymtab + i;
-		if (sym->st_shndx == SHN_FBSD_CACHED) {
+		if (sym->st_shndx == SHN_NQC_CACHED) {
 			sym->st_shndx = SHN_UNDEF;
 			sym->st_value = 0;
 		}
@@ -1702,7 +1702,7 @@ elf_obj_lookup(linker_file_t lf, Elf_Size symidx, int deps, Elf_Addr *res)
 		 * above.
 		 */
 		if (res1 != 0) {
-			sym->st_shndx = SHN_FBSD_CACHED;
+			sym->st_shndx = SHN_NQC_CACHED;
 			sym->st_value = res1;
 			*res = res1;
 			return (0);

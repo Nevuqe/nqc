@@ -37,7 +37,7 @@
 #include <sys/lock.h>
 #include <sys/mutex.h>
 
-#define MPR_DRIVER_VERSION	"23.00.00.00-fbsd"
+#define MPR_DRIVER_VERSION	"23.00.00.00-nqc"
 
 #define MPR_DB_MAX_WAIT		2500
 

@@ -1563,7 +1563,7 @@ nqc13_tzsetwall(void)
   tzset_unlocked_name(NULL);
   unlock();
 }
-__sym_compat(tzsetwall, nqc13_tzsetwall, FBSD_1.0);
+__sym_compat(tzsetwall, nqc13_tzsetwall, NQC_1.0);
 __warn_references(tzsetwall,
     "warning: tzsetwall() is deprecated, use tzset() instead.");
 

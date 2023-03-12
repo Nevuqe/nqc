@@ -426,7 +426,7 @@ probe_bcrm(struct cam_device *dev) {
 
 __unused static uint8_t*
 mmap_fw() {
-	const char fw_path[] = "/home/kibab/repos/fbsd-bbb/brcm-firmware/brcmfmac4330-sdio.bin";
+	const char fw_path[] = "/home/kibab/repos/nqc-bbb/brcm-firmware/brcmfmac4330-sdio.bin";
 	struct stat sb;
 	uint8_t *fw_ptr;
 

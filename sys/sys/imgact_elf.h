@@ -82,7 +82,7 @@ typedef struct {
 typedef struct {
 	int brand;
 	int machine;
-	const char *compat_3_brand;	/* pre Binutils 2.10 method (FBSD 3) */
+	const char *compat_3_brand;	/* pre Binutils 2.10 method (NQC 3) */
 	const char *emul_path;
 	const char *interp_path;
 	struct sysentvec *sysvec;

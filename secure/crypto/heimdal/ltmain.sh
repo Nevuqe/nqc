@@ -2181,7 +2181,7 @@ compiler."
     # Only build a PIC object if we are building libtool libraries.
     if test "$build_libtool_libs" = yes; then
       # Without this assignment, base_compile gets emptied.
-      fbsd_hideous_sh_bug=$base_compile
+      nqc_hideous_sh_bug=$base_compile
 
       if test "$pic_mode" != no; then
 	command="$base_compile $qsrcfile $pic_flag"

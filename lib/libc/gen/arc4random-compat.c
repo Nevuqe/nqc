@@ -45,11 +45,11 @@ __NQCID("$NQC$");
  * logs this event and returns.
  */
 
-void __arc4random_stir_fbsd11(void);
-void __arc4random_addrandom_fbsd11(u_char *, int);
+void __arc4random_stir_nqc11(void);
+void __arc4random_addrandom_nqc11(u_char *, int);
 
 void
-__arc4random_stir_fbsd11(void)
+__arc4random_stir_nqc11(void)
 {
 	static bool warned = false;
 
@@ -59,7 +59,7 @@ __arc4random_stir_fbsd11(void)
 }
 
 void
-__arc4random_addrandom_fbsd11(u_char * dummy1 __unused, int dummy2 __unused)
+__arc4random_addrandom_nqc11(u_char * dummy1 __unused, int dummy2 __unused)
 {
 	static bool warned = false;
 
@@ -68,5 +68,5 @@ __arc4random_addrandom_fbsd11(u_char * dummy1 __unused, int dummy2 __unused)
 	warned = true;
 }
 
-__sym_compat(arc4random_stir, __arc4random_stir_fbsd11, FBSD_1.0);
-__sym_compat(arc4random_addrandom, __arc4random_addrandom_fbsd11, FBSD_1.0);
+__sym_compat(arc4random_stir, __arc4random_stir_nqc11, NQC_1.0);
+__sym_compat(arc4random_addrandom, __arc4random_addrandom_nqc11, NQC_1.0);

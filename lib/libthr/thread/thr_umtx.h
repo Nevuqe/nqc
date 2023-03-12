@@ -28,8 +28,8 @@
  * $NQC$
  */
 
-#ifndef _THR_FBSD_UMTX_H_
-#define _THR_FBSD_UMTX_H_
+#ifndef _THR_NQC_UMTX_H_
+#define _THR_NQC_UMTX_H_
 
 #include <strings.h>
 #include <sys/umtx.h>

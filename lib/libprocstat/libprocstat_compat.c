@@ -252,13 +252,13 @@ nqc12_procstat_get_vnode_info(struct procstat *procstat,
 	return (0);
 }
 
-__sym_compat(procstat_get_pts_info, nqc11_procstat_get_pts_info, FBSD_1.2);
+__sym_compat(procstat_get_pts_info, nqc11_procstat_get_pts_info, NQC_1.2);
 __sym_compat(procstat_get_socket_info, nqc11_procstat_get_socket_info,
-    FBSD_1.2);
+    NQC_1.2);
 __sym_compat(procstat_get_vnode_info, nqc11_procstat_get_vnode_info,
-    FBSD_1.2);
-__sym_compat(procstat_get_sem_info, nqc11_procstat_get_sem_info, FBSD_1.3);
-__sym_compat(procstat_get_shm_info, nqc11_procstat_get_shm_info, FBSD_1.3);
-__sym_compat(procstat_get_pts_info, nqc12_procstat_get_pts_info, FBSD_1.5);
+    NQC_1.2);
+__sym_compat(procstat_get_sem_info, nqc11_procstat_get_sem_info, NQC_1.3);
+__sym_compat(procstat_get_shm_info, nqc11_procstat_get_shm_info, NQC_1.3);
+__sym_compat(procstat_get_pts_info, nqc12_procstat_get_pts_info, NQC_1.5);
 __sym_compat(procstat_get_vnode_info, nqc12_procstat_get_vnode_info,
-    FBSD_1.5);
+    NQC_1.5);

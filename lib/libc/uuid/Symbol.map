@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	uuid_to_string;
 	uuid_is_nil;
 	uuid_hash;
@@ -13,7 +13,7 @@ FBSD_1.0 {
 	uuid_compare;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	uuid_enc_le;
 	uuid_dec_le;
 	uuid_enc_be;

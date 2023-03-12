@@ -59,6 +59,6 @@ __oldacl_delete_perm(acl_permset_t permset_d, oldacl_perm_t perm)
 	return (acl_delete_perm(permset_d, perm));
 }
 
-__sym_compat(acl_get_perm_np, __oldacl_get_perm_np, FBSD_1.0);
-__sym_compat(acl_add_perm, __oldacl_add_perm, FBSD_1.0);
-__sym_compat(acl_delete_perm, __oldacl_delete_perm, FBSD_1.0);
+__sym_compat(acl_get_perm_np, __oldacl_get_perm_np, NQC_1.0);
+__sym_compat(acl_add_perm, __oldacl_add_perm, NQC_1.0);
+__sym_compat(acl_delete_perm, __oldacl_delete_perm, NQC_1.0);

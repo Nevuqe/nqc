@@ -88,7 +88,7 @@ SECTIONS
 
 VERSION
 {
-	FBSD_1.7 {
+	NQC_1.7 {
 		global:
 			__vdso_sigcode;
 		local:

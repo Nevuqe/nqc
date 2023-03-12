@@ -9057,7 +9057,7 @@ ipf_main_soft_create(void *arg)
 #ifdef LARGE_NAT
 	softc->ipf_large_nat = 1;
 #endif
-	ipf_fbsd_kenv_get(softc);
+	ipf_nqc_kenv_get(softc);
 
 	return (softc);
 }

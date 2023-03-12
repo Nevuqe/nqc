@@ -103,7 +103,7 @@ typedef struct sem* sem_t;
  
 #define FB10_COMPAT(func, sym)                          \
         WEAK_REF(func, SYM_FB10(sym));                  \
-        SYM_COMPAT(sym, SYM_FB10(sym), FBSD_1.0)
+        SYM_COMPAT(sym, SYM_FB10(sym), NQC_1.0)
 
 static sem_t sem_alloc(unsigned int value, semid_t semid, int system_sem);
 static void  sem_free(sem_t sem);

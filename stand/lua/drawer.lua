@@ -36,7 +36,7 @@ local screen = require("screen")
 
 local drawer = {}
 
-local fbsd_brand
+local nqc_brand
 local none
 
 local menu_name_handlers
@@ -390,7 +390,7 @@ local function drawitem(func)
 	loader.setenv("console", console)
 end
 
-fbsd_brand = {
+nqc_brand = {
 "  ______               ____   _____ _____  ",
 " |  ____|             |  _ \\ / ____|  __ \\ ",
 " | |___ _ __ ___  ___ | |_) | (___ | |  | |",
@@ -433,8 +433,8 @@ menu_name_handlers = {
 branddefs = {
 	-- Indexed by valid values for loader_brand in loader.conf(5). Valid
 	-- keys are: graphic (table depicting graphic)
-	["fbsd"] = {
-		graphic = fbsd_brand,
+	["nqc"] = {
+		graphic = nqc_brand,
 		image = "/boot/images/nqc-brand-rev.png",
 	},
 	["none"] = {
@@ -447,10 +447,10 @@ logodefs = {
 	-- are: requires_color (boolean), graphic (table depicting graphic), and
 	-- shift (table containing x and y).
 	["tribute"] = {
-		graphic = fbsd_brand,
+		graphic = nqc_brand,
 	},
 	["tributebw"] = {
-		graphic = fbsd_brand,
+		graphic = nqc_brand,
 	},
 	["none"] = {
 		graphic = none,
@@ -466,7 +466,7 @@ default_shift = {x = 0, y = 0}
 shift = default_shift
 
 -- Module exports
-drawer.default_brand = 'fbsd'
+drawer.default_brand = 'nqc'
 drawer.default_color_logodef = 'orb'
 drawer.default_bw_logodef = 'orbbw'
 -- For when things go terribly wrong; this def should be present here in the

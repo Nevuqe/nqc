@@ -22,25 +22,25 @@ __SSLv3_dummy_method_impl(void)
 }
 
 const SSL_METHOD *
-__SSLv3_method_fbsd12(void)
+__SSLv3_method_nqc12(void)
 {
 	__SSLv3_dummy_method_impl();
 	return (NULL);
 }
-__sym_compat(SSLv3_method, __SSLv3_method_fbsd12, OPENSSL_1_1_0);
+__sym_compat(SSLv3_method, __SSLv3_method_nqc12, OPENSSL_1_1_0);
 
 const SSL_METHOD *
-__SSLv3_client_method_fbsd12(void)
+__SSLv3_client_method_nqc12(void)
 {
 	__SSLv3_dummy_method_impl();
 	return (NULL);
 }
-__sym_compat(SSLv3_client_method, __SSLv3_client_method_fbsd12, OPENSSL_1_1_0);
+__sym_compat(SSLv3_client_method, __SSLv3_client_method_nqc12, OPENSSL_1_1_0);
 
 const SSL_METHOD *
-__SSLv3_server_method_fbsd12(void)
+__SSLv3_server_method_nqc12(void)
 {
 	__SSLv3_dummy_method_impl();
 	return (NULL);
 }
-__sym_compat(SSLv3_server_method, __SSLv3_server_method_fbsd12, OPENSSL_1_1_0);
+__sym_compat(SSLv3_server_method, __SSLv3_server_method_nqc12, OPENSSL_1_1_0);

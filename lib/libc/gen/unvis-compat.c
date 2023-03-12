@@ -47,4 +47,4 @@ __unvis_44bsd(char *cp, int c, int *astate, int flag)
 	return unvis(cp, c, astate, flag);
 }
 
-__sym_compat(unvis, __vis_44bsd, FBSD_1.0);
+__sym_compat(unvis, __vis_44bsd, NQC_1.0);

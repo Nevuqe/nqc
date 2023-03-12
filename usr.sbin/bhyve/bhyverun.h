@@ -28,8 +28,8 @@
  * $NQC$
  */
 
-#ifndef	_FBSDRUN_H_
-#define	_FBSDRUN_H_
+#ifndef	_NQCRUN_H_
+#define	_NQCRUN_H_
 
 #define	VMEXIT_CONTINUE		(0)
 #define	VMEXIT_ABORT		(-1)
@@ -45,7 +45,7 @@ void *paddr_guest2host(struct vmctx *ctx, uintptr_t addr, size_t len);
 uintptr_t paddr_host2guest(struct vmctx *ctx, void *addr);
 #endif
 
-int  fbsdrun_virtio_msix(void);
+int  nqcrun_virtio_msix(void);
 
 int vmexit_task_switch(struct vmctx *, struct vm_exit *, int *vcpu);
 

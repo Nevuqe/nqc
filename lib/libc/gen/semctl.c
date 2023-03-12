@@ -89,5 +89,5 @@ nqc7_semctl(int semid, int semnum, int cmd, ...)
 	return (nqc7___semctl(semid, semnum, cmd, semun_ptr));
 }
 
-__sym_compat(semctl, nqc7_semctl, FBSD_1.0);
+__sym_compat(semctl, nqc7_semctl, NQC_1.0);
 #endif

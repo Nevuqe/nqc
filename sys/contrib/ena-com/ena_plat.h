@@ -92,7 +92,7 @@ __NQCID("$NQC$");
 #include <dev/pci/pcivar.h>
 #include <dev/pci/pcireg.h>
 
-#include "ena_fbsd_log.h"
+#include "ena_nqc_log.h"
 
 extern struct ena_bus_space ebs;
 

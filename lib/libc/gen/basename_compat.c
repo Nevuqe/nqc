@@ -81,5 +81,5 @@ __nqc11_basename(char *path)
 	return (__nqc11_basename_r(path, bname));
 }
 
-__sym_compat(basename_r, __nqc11_basename_r, FBSD_1.2);
-__sym_compat(basename, __nqc11_basename, FBSD_1.0);
+__sym_compat(basename_r, __nqc11_basename_r, NQC_1.2);
+__sym_compat(basename, __nqc11_basename, NQC_1.0);

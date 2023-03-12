@@ -1,4 +1,4 @@
-FBSD_1.6 {
+NQC_1.6 {
 	ifconfig_bridge_get_bridge_status;
 	ifconfig_bridge_free_bridge_status;
 	ifconfig_carp_get_info;

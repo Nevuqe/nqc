@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	/* h_nerr; */	/* Why is this not staticized in net/herror.c? */
 	h_errlist;
 	herror;
@@ -106,7 +106,7 @@ FBSD_1.0 {
 	__res_update;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	__res_rndinit;
 	__res_nrandomid;
 };

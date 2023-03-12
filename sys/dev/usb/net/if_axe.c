@@ -71,7 +71,7 @@ __NQCID("$NQC$");
 
 /*
  * Ax88178 and Ax88772 support backported from the OpenBSD driver.
- * 2007/02/12, J.R. Oldroyd, fbsd@opal.com
+ * 2007/02/12, J.R. Oldroyd, nqc@opal.com
  *
  * Manual here:
  * http://www.asix.com.tw/FrootAttach/datasheet/AX88178_datasheet_Rev10.pdf

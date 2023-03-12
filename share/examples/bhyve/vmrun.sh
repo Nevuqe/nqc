@@ -31,7 +31,7 @@
 
 LOADER=/usr/sbin/bhyveload
 BHYVECTL=/usr/sbin/bhyvectl
-FBSDRUN=/usr/sbin/bhyve
+NQCRUN=/usr/sbin/bhyve
 
 DEFAULT_MEMSIZE=512M
 DEFAULT_CPUS=2
@@ -361,7 +361,7 @@ while [ 1 ]; do
 		efiargs="${efiargs} ${tablet}"
 	fi
 
-	${FBSDRUN} -c ${cpus} -m ${memsize} ${bhyverun_opt}		\
+	${NQCRUN} -c ${cpus} -m ${memsize} ${bhyverun_opt}		\
 		-s 0:0,hostbridge					\
 		-s 1:0,lpc						\
 		${efiargs}						\

@@ -54,15 +54,15 @@ enum g_part_alias {
 	G_PART_ALIAS_CHROMEOS_KERNEL,	/* A ChromeOS Kernel part. entry. */
 	G_PART_ALIAS_CHROMEOS_RESERVED,	/* ChromeOS. Reserved for future use. */
 	G_PART_ALIAS_CHROMEOS_ROOT,	/* A ChromeOS root part. entry. */
-	G_PART_ALIAS_DFBSD,		/* A DfBSD label32 partition entry */
-	G_PART_ALIAS_DFBSD64,		/* A DfBSD label64 partition entry */
-	G_PART_ALIAS_DFBSD_CCD,		/* A DfBSD CCD partition entry */
-	G_PART_ALIAS_DFBSD_HAMMER,	/* A DfBSD HAMMER FS partition entry */
-	G_PART_ALIAS_DFBSD_HAMMER2,	/* A DfBSD HAMMER2 FS partition entry */
-	G_PART_ALIAS_DFBSD_LEGACY,	/* A DfBSD legacy partition entry */
-	G_PART_ALIAS_DFBSD_SWAP,	/* A DfBSD swap partition entry */
-	G_PART_ALIAS_DFBSD_UFS,		/* A DfBSD UFS partition entry */
-	G_PART_ALIAS_DFBSD_VINUM,	/* A DfBSD Vinum partition entry */
+	G_PART_ALIAS_DNQC,		/* A Dnqc label32 partition entry */
+	G_PART_ALIAS_DNQC64,		/* A Dnqc label64 partition entry */
+	G_PART_ALIAS_DNQC_CCD,		/* A Dnqc CCD partition entry */
+	G_PART_ALIAS_DNQC_HAMMER,	/* A Dnqc HAMMER FS partition entry */
+	G_PART_ALIAS_DNQC_HAMMER2,	/* A Dnqc HAMMER2 FS partition entry */
+	G_PART_ALIAS_DNQC_LEGACY,	/* A Dnqc legacy partition entry */
+	G_PART_ALIAS_DNQC_SWAP,	/* A Dnqc swap partition entry */
+	G_PART_ALIAS_DNQC_UFS,		/* A Dnqc UFS partition entry */
+	G_PART_ALIAS_DNQC_VINUM,	/* A Dnqc Vinum partition entry */
 	G_PART_ALIAS_EBR,		/* A EBR partition entry. */
 	G_PART_ALIAS_EFI,		/* A EFI system partition entry. */
 	G_PART_ALIAS_NQC,		/* A BSD labeled partition entry. */

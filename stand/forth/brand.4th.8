@@ -65,7 +65,7 @@ The brand that is drawn is configured by setting the
 variable in
 .Xr loader.conf 5
 to one of
-.Dq Li fbsd
+.Dq Li nqc
 (the default) or
 .Dq Li none .
 .Pp
@@ -83,7 +83,7 @@ The environment variables that effect its behavior are:
 .It Va loader_brand
 Selects the desired brand in the beastie boot menu.
 Possible values are:
-.Dq Li fbsd
+.Dq Li nqc
 (default) or
 .Dq Li none .
 .It Va loader_brand_x
@@ -110,7 +110,7 @@ Set NQC brand in
 .Xr loader.conf 5 :
 .Pp
 .Bd -literal -offset indent -compact
-loader_brand="fbsd"
+loader_brand="nqc"
 .Ed
 .Sh SEE ALSO
 .Xr loader.conf 5 ,

@@ -532,7 +532,7 @@ qat_ocf_session_init(device_t dev,
 	}
 
 	/* NOTE: lets keep double session (both directions) approach to overcome
-	 * lack of direction update in FBSD QAT.
+	 * lack of direction update in NQC QAT.
 	 */
 	qat_ssession->sessionCtx = sessionCtx;
 	qat_ssession->sessionCtxSize = sessionCtxSize;

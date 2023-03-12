@@ -50,6 +50,6 @@ log_onexit cleanup
 log_must tar --directory $TEST_BASE_DIR -xzSf $TESTPOOL_ZSTD_FILE
 log_must zpool import -d $TEST_BASE_DIR testpool_zstd
 log_must dd if=/testpool_zstd/x86_64/zstd of=/dev/null
-log_must dd if=/testpool_zstd/ppc64_fbsd/zstd of=/dev/null
+log_must dd if=/testpool_zstd/ppc64_nqc/zstd of=/dev/null
 
 log_pass "Reading from mangled zstd datasets works as expected."

@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.3 {
+NQC_1.3 {
 	__cap_rights_clear;
 	cap_rights_contains;
 	__cap_rights_init;

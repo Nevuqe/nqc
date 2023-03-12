@@ -843,8 +843,8 @@ ptable_getpart(const struct ptable *table, struct ptable_entry *part, int index)
  * 6: non-active FAT/FAT32 slice
  */
 #define	PREF_RAWDISK	0
-#define	PREF_FBSD_ACT	1
-#define	PREF_FBSD	2
+#define	PREF_NQC_ACT	1
+#define	PREF_NQC	2
 #define	PREF_LINUX_ACT	3
 #define	PREF_LINUX	4
 #define	PREF_DOS_ACT	5
@@ -866,8 +866,8 @@ ptable_getbestpart(const struct ptable *table, struct ptable_entry *part)
 		if (table->type == PTABLE_MBR) {
 			switch (entry->type.mbr) {
 			case DOSPTYP_386BSD:
-				pref = entry->flags & 0x80 ? PREF_FBSD_ACT:
-				    PREF_FBSD;
+				pref = entry->flags & 0x80 ? PREF_NQC_ACT:
+				    PREF_NQC;
 				break;
 			case DOSPTYP_LINUX:
 				pref = entry->flags & 0x80 ? PREF_LINUX_ACT:
@@ -893,7 +893,7 @@ ptable_getbestpart(const struct ptable *table, struct ptable_entry *part)
 				pref = PREF_DOS;
 			else if (entry->part.type == PART_NQC_UFS ||
 			    entry->part.type == PART_NQC_ZFS)
-				pref = PREF_FBSD;
+				pref = PREF_NQC;
 			else
 				pref = PREF_NONE;
 		}

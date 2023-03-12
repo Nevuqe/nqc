@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	flockfile;
 	ftrylockfile;
 	funlockfile;
@@ -110,14 +110,14 @@ FBSD_1.0 {
 	wscanf;
 };
 
-FBSD_1.1 {
+NQC_1.1 {
 	 dprintf;
 	 getdelim;
 	 getline;
 	 vdprintf;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	asprintf_l;
 	fprintf_l;
 	fwprintf_l;
@@ -162,16 +162,16 @@ FBSD_1.3 {
 	mkostemps;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	fdclose;
 	fopencookie;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	gets_s;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	fflush_unlocked;
 	fputc_unlocked;
 	fputs_unlocked;
@@ -180,7 +180,7 @@ FBSD_1.6 {
 	mkostempsat;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_flockfile;
 	_flockfile_debug_stub;
 	_flockfile_debug;

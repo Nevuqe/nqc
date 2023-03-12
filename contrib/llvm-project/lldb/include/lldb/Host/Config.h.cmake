@@ -45,7 +45,7 @@
 
 #cmakedefine01 LLDB_ENABLE_PYTHON
 
-#cmakedefine01 LLDB_ENABLE_FBSDVMCORE
+#cmakedefine01 LLDB_ENABLE_NQCVMCORE
 
 #cmakedefine01 LLDB_EMBED_PYTHON_HOME
 

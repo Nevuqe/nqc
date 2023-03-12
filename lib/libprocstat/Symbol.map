@@ -1,7 +1,7 @@
 /*
  * $NQC$
  */
-FBSD_1.2 {
+NQC_1.2 {
 	procstat_close;
 	procstat_freefiles;
 	procstat_freeprocs;
@@ -12,7 +12,7 @@ FBSD_1.2 {
 	procstat_open_sysctl;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	procstat_freeargv;
 	procstat_freeauxv;
 	procstat_freeenvv;
@@ -32,7 +32,7 @@ FBSD_1.3 {
 	procstat_open_core;
 };
 
-FBSD_1.5 {
+NQC_1.5 {
 	procstat_freeptlwpinfo;
 	procstat_getptlwpinfo;
 	procstat_get_sem_info;
@@ -40,12 +40,12 @@ FBSD_1.5 {
 	procstat_get_socket_info;
 };
 
-FBSD_1.6 {
+NQC_1.6 {
 	procstat_get_pts_info;
 	procstat_get_vnode_info;
 };
 
-FBSD_1.7 {
+NQC_1.7 {
 	 procstat_getadvlock;
 	 procstat_freeadvlock;
 };

@@ -47,8 +47,8 @@ __END_DECLS
  * versions of NQC is built using the host headers and libc during
  * the bootstrapping phase and depends on the old behavior.
  *
- * Apply a workaround where we explicitly link against basename@FBSD_1.0
- * and dirname@FBSD_1.0 in case these functions are called on constant
+ * Apply a workaround where we explicitly link against basename@NQC_1.0
+ * and dirname@NQC_1.0 in case these functions are called on constant
  * strings, instead of making the program crash at runtime.
  */
 #if defined(__generic) && !defined(__cplusplus)
@@ -56,8 +56,8 @@ __BEGIN_DECLS
 char	*__old_basename(char *);
 char	*__old_dirname(char *);
 __END_DECLS
-__sym_compat(basename, __old_basename, FBSD_1.0);
-__sym_compat(dirname, __old_dirname, FBSD_1.0);
+__sym_compat(basename, __old_basename, NQC_1.0);
+__sym_compat(dirname, __old_dirname, NQC_1.0);
 #define	basename(x)	__generic(x, const char *, __old_basename, basename)(x)
 #define	dirname(x)	__generic(x, const char *, __old_dirname, dirname)(x)
 #endif

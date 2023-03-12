@@ -300,11 +300,11 @@ CCLDFLAGS+=	-fuse-ld=${LD:[1]:S/^ld.//1W}
 
 # Set target-specific linker emulation name.
 LD_EMULATION_aarch64=aarch64elf
-LD_EMULATION_amd64=elf_x86_64_fbsd
-LD_EMULATION_arm=armelf_fbsd
-LD_EMULATION_armv6=armelf_fbsd
-LD_EMULATION_armv7=armelf_fbsd
-LD_EMULATION_i386=elf_i386_fbsd
+LD_EMULATION_amd64=elf_x86_64_nqc
+LD_EMULATION_arm=armelf_nqc
+LD_EMULATION_armv6=armelf_nqc
+LD_EMULATION_armv7=armelf_nqc
+LD_EMULATION_i386=elf_i386_nqc
 LD_EMULATION_riscv64= elf64lriscv
 LD_EMULATION_riscv64sf= elf64lriscv
 LD_EMULATION=${LD_EMULATION_${MACHINE_ARCH}}

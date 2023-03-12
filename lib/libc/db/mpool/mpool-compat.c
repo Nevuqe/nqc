@@ -41,4 +41,4 @@ __mpool_new__44bsd(MPOOL *mp, pgno_t *pgnoaddr)
 	return (mpool_new(mp, pgnoaddr, MPOOL_PAGE_NEXT));
 }
 
-__sym_compat(mpool_new, __mpool_new_44bsd, FBSD_1.0);
+__sym_compat(mpool_new, __mpool_new_44bsd, NQC_1.0);

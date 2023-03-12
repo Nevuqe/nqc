@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	__ns_makecanon;
 	__ns_msg_getflag;
 	__ns_name_ntol;
@@ -30,7 +30,7 @@ FBSD_1.0 {
 	__ns_parse_ttl;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	__ns_parserr2;
 	__ns_name_pton2;
 	__ns_name_unpack2;

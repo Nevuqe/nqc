@@ -31,8 +31,8 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ENA_FBSD_LOG_H
-#define ENA_FBSD_LOG_H
+#ifndef ENA_NQC_LOG_H
+#define ENA_NQC_LOG_H
 
 enum ena_log_t {
 	ENA_ERR = 0,
@@ -71,4 +71,4 @@ extern int ena_log_level;
 #define ena_log_nm(dev, level, fmt, args...)			\
 	ena_log((dev), level, "[nm] " fmt, ##args)
 
-#endif /* !(ENA_FBSD_LOG_H) */
+#endif /* !(ENA_NQC_LOG_H) */

@@ -25,7 +25,7 @@
 
 /* Work around <http://llvm.org/bugs/show_bug.cgi?id=12623>: */
 const char	*__malloc_options_1_0 = NULL;
-__sym_compat(_malloc_options, __malloc_options_1_0, FBSD_1.0);
+__sym_compat(_malloc_options, __malloc_options_1_0, NQC_1.0);
 
 /* Runtime configuration options. */
 const char	*je_malloc_conf

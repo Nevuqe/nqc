@@ -6,7 +6,7 @@ ICE_DIR = ${.CURDIR}/../../dev/ice
 
 KMOD=	irdma
 SRCS=	icrdma.c
-SRCS+=	fbsd_kcompat.c irdma_hw.c irdma_verbs.c irdma_utils.c
+SRCS+=	nqc_kcompat.c irdma_hw.c irdma_verbs.c irdma_utils.c
 SRCS+=	irdma_cm.c irdma_kcompat.c
 SRCS+=  irdma_if.h irdma_di_if.h ice_rdma.h vnode_if.h device_if.h bus_if.h opt_inet.h pci_if.h opt_inet6.h
 # Shared source

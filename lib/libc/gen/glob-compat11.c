@@ -1087,5 +1087,5 @@ qprintf(const char *str, Char *s)
 }
 #endif
 
-__sym_compat(glob, nqc11_glob, FBSD_1.0);
-__sym_compat(globfree, nqc11_globfree, FBSD_1.0);
+__sym_compat(glob, nqc11_glob, NQC_1.0);
+__sym_compat(globfree, nqc11_globfree, NQC_1.0);

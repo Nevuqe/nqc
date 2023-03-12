@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.2 {
+NQC_1.2 {
 	ulog_login;
 	ulog_login_pseudo;
 	ulog_logout;

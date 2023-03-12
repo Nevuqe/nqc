@@ -63,7 +63,7 @@
 #include "irdma_protos.h"
 #include "irdma_pble.h"
 #include "irdma_cm.h"
-#include "fbsd_kcompat.h"
+#include "nqc_kcompat.h"
 #include "irdma-abi.h"
 #include "irdma_verbs.h"
 #include "irdma_user.h"

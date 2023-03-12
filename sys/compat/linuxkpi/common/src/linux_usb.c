@@ -69,8 +69,8 @@
 struct usb_linux_softc {
 	LIST_ENTRY(usb_linux_softc) sc_attached_list;
 
-	device_t sc_fbsd_dev;
-	struct usb_device *sc_fbsd_udev;
+	device_t sc_nqc_dev;
+	struct usb_device *sc_nqc_udev;
 	struct usb_interface *sc_ui;
 	struct usb_driver *sc_udrv;
 };
@@ -276,8 +276,8 @@ usb_linux_attach(device_t dev)
 		return (ENOMEM);
 	device_set_usb_desc(dev);
 
-	sc->sc_fbsd_udev = uaa->device;
-	sc->sc_fbsd_dev = dev;
+	sc->sc_nqc_udev = uaa->device;
+	sc->sc_nqc_dev = dev;
 	sc->sc_udrv = udrv;
 	sc->sc_ui = usb_ifnum_to_if(uaa->device, uaa->info.bIfaceNum);
 	if (sc->sc_ui == NULL) {
@@ -325,7 +325,7 @@ usb_linux_detach(device_t dev)
 	 * this Linux "usb_interface", hence they will most likely not be
 	 * needed any more.
 	 */
-	usb_linux_cleanup_interface(sc->sc_fbsd_udev, sc->sc_ui);
+	usb_linux_cleanup_interface(sc->sc_nqc_udev, sc->sc_ui);
 	return (0);
 }
 
@@ -778,13 +778,13 @@ usb_setup_endpoint(struct usb_device *dev,
 	uint8_t type = uhe->desc.bmAttributes & UE_XFERTYPE;
 	uint8_t addr = uhe->desc.bEndpointAddress;
 
-	if (uhe->fbsd_buf_size == bufsize) {
+	if (uhe->nqc_buf_size == bufsize) {
 		/* optimize */
 		return (0);
 	}
 	usbd_transfer_unsetup(uhe->bsd_xfer, 2);
 
-	uhe->fbsd_buf_size = bufsize;
+	uhe->nqc_buf_size = bufsize;
 
 	if (bufsize == 0) {
 		return (0);
@@ -1168,7 +1168,7 @@ repeat:
 		if (sc->sc_udrv == drv) {
 			mtx_unlock(&Giant);
 			bus_topo_lock();
-			device_detach(sc->sc_fbsd_dev);
+			device_detach(sc->sc_nqc_dev);
 			bus_topo_unlock();
 			goto repeat;
 		}

@@ -65,8 +65,8 @@ static int sysctl_ipf_int_auth ( SYSCTL_HANDLER_ARGS );
 static int sysctl_ipf_int_frag ( SYSCTL_HANDLER_ARGS );
 static int ipf_modload(void);
 static int ipf_modunload(void);
-static int ipf_fbsd_sysctl_create(void);
-static int ipf_fbsd_sysctl_destroy(void);
+static int ipf_nqc_sysctl_create(void);
+static int ipf_nqc_sysctl_destroy(void);
 
 #ifdef __NQC__
 static	int	ipfopen(struct cdev*, int, int, struct thread *);
@@ -254,7 +254,7 @@ ipf_modload(void)
 	if (ipf_load_all() != 0)
 		return (EIO);
 
-	if (ipf_fbsd_sysctl_create() != 0) {
+	if (ipf_nqc_sysctl_create() != 0) {
 		return (EIO);
 	}
 
@@ -311,7 +311,7 @@ ipf_modunload(void)
 
 	ipf_event_dereg();
 
-	ipf_fbsd_sysctl_destroy();
+	ipf_nqc_sysctl_destroy();
 
 	error = ipf_pfil_unhook();
 	if (error != 0)
@@ -611,7 +611,7 @@ static int ipfwrite(dev, uio, ioflag)
 }
 
 static int
-ipf_fbsd_sysctl_create(void)
+ipf_nqc_sysctl_create(void)
 {
 
 	sysctl_ctx_init(&ipf_clist);
@@ -644,7 +644,7 @@ ipf_fbsd_sysctl_create(void)
 }
 
 static int
-ipf_fbsd_sysctl_destroy(void)
+ipf_nqc_sysctl_destroy(void)
 {
 	if (sysctl_ctx_free(&ipf_clist)) {
 		printf("sysctl_ctx_free failed");

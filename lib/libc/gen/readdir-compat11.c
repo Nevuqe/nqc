@@ -113,5 +113,5 @@ nqc11_readdir_r(DIR *dirp, struct nqc11_dirent *entry,
 	return (0);
 }
 
-__sym_compat(readdir, nqc11_readdir, FBSD_1.0);
-__sym_compat(readdir_r, nqc11_readdir_r, FBSD_1.0);
+__sym_compat(readdir, nqc11_readdir, NQC_1.0);
+__sym_compat(readdir_r, nqc11_readdir_r, NQC_1.0);

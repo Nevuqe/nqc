@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # $NQC$
-# Created by: Miroslav Lachman <000.fbsd@quip.cz>
+# Created by: Miroslav Lachman <000.nqc@quip.cz>
 
 # Backup output from `gmirror list`, which provides detailed information
 # of all gmirrors. The backup will be stored in /var/backups/.

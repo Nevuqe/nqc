@@ -7,7 +7,7 @@
  * symbol maps from other parts of libc (i.e., not found in
  * stdlib/Symbol.map, string/Symbol.map, sys/Symbol.map, ...).
  */
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__aeabi_atexit;
 
 	__aeabi_dcmpeq;

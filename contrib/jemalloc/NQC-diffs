@@ -369,7 +369,7 @@ index ed13718d..fefb719a 100644
  
 +/* Work around <http://llvm.org/bugs/show_bug.cgi?id=12623>: */
 +const char	*__malloc_options_1_0 = NULL;
-+__sym_compat(_malloc_options, __malloc_options_1_0, FBSD_1.0);
++__sym_compat(_malloc_options, __malloc_options_1_0, NQC_1.0);
 +
  /* Runtime configuration options. */
  const char	*je_malloc_conf
@@ -536,7 +536,7 @@ index d7cb0f52..cda589c4 100644
 +
 +void	(*__malloc_message_1_0)(const char *s1, const char *s2, const char *s3,
 +    const char *s4) = wrtmessage_1_0;
-+__sym_compat(_malloc_message, __malloc_message_1_0, FBSD_1.0);
++__sym_compat(_malloc_message, __malloc_message_1_0, NQC_1.0);
 +
  /*
   * Wrapper around malloc_message() that avoids the need for

@@ -18,4 +18,4 @@ qsort_b(void *base, size_t nel, size_t width, qsort_block compar)
 		GET_BLOCK_FUNCTION(compar));
 }
 
-__sym_compat(qsort_r, __qsort_r_compat, FBSD_1.0);
+__sym_compat(qsort_r, __qsort_r_compat, NQC_1.0);

@@ -22,7 +22,7 @@ FILES=	cli.lua \
 	loader.lua \
 	gfx-beastie.lua \
 	gfx-beastiebw.lua \
-	gfx-fbsdbw.lua \
+	gfx-nqcbw.lua \
 	gfx-orb.lua \
 	gfx-orbbw.lua \
 	menu.lua \

@@ -715,7 +715,7 @@ pci_vtcon_init(struct pci_devinst *pi, nvlist_t *nvl)
 	pci_set_cfgdata16(pi, PCIR_SUBDEV_0, VIRTIO_ID_CONSOLE);
 	pci_set_cfgdata16(pi, PCIR_SUBVEND_0, VIRTIO_VENDOR);
 
-	if (vi_intr_init(&sc->vsc_vs, 1, fbsdrun_virtio_msix()))
+	if (vi_intr_init(&sc->vsc_vs, 1, nqcrun_virtio_msix()))
 		return (1);
 	vi_set_io_bar(&sc->vsc_vs, 0);
 

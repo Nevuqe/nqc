@@ -76,4 +76,4 @@ end:
 	FUNLOCKFILE_CANCELSAFE();
 	return (ret);
 }
-__sym_compat(gets, __gets_unsafe, FBSD_1.0);
+__sym_compat(gets, __gets_unsafe, NQC_1.0);

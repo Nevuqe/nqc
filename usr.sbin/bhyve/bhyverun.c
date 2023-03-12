@@ -514,14 +514,14 @@ paddr_host2guest(struct vmctx *ctx, void *addr)
 #endif
 
 int
-fbsdrun_virtio_msix(void)
+nqcrun_virtio_msix(void)
 {
 
 	return (get_config_bool_default("virtio_msix", true));
 }
 
 static void *
-fbsdrun_start_thread(void *param)
+nqcrun_start_thread(void *param)
 {
 	char tname[MAXCOMLEN + 1];
 	struct mt_vmm_info *mtp;
@@ -552,7 +552,7 @@ fbsdrun_start_thread(void *param)
 }
 
 static void
-fbsdrun_addcpu(struct vmctx *ctx, int newcpu)
+nqcrun_addcpu(struct vmctx *ctx, int newcpu)
 {
 	int error;
 
@@ -568,12 +568,12 @@ fbsdrun_addcpu(struct vmctx *ctx, int newcpu)
 	mt_vmm_info[newcpu].mt_vcpu = newcpu;
 
 	error = pthread_create(&mt_vmm_info[newcpu].mt_thr, NULL,
-	    fbsdrun_start_thread, &mt_vmm_info[newcpu]);
+	    nqcrun_start_thread, &mt_vmm_info[newcpu]);
 	assert(error == 0);
 }
 
 static int
-fbsdrun_deletecpu(int vcpu)
+nqcrun_deletecpu(int vcpu)
 {
 
 	if (!CPU_ISSET(vcpu, &cpumask)) {
@@ -865,7 +865,7 @@ vmexit_suspend(struct vmctx *ctx, struct vm_exit *vme, int *pvcpu)
 
 	how = vme->u.suspended.how;
 
-	fbsdrun_deletecpu(*pvcpu);
+	nqcrun_deletecpu(*pvcpu);
 
 	if (*pvcpu != BSP) {
 		pthread_mutex_lock(&resetcpu_mtx);
@@ -1027,7 +1027,7 @@ num_vcpus_allowed(struct vmctx *ctx)
 }
 
 static void
-fbsdrun_set_capabilities(struct vmctx *ctx, int cpu)
+nqcrun_set_capabilities(struct vmctx *ctx, int cpu)
 {
 	int err, tmp;
 
@@ -1142,7 +1142,7 @@ spinup_vcpu(struct vmctx *ctx, int vcpu)
 	int error;
 
 	if (vcpu != BSP) {
-		fbsdrun_set_capabilities(ctx, vcpu);
+		nqcrun_set_capabilities(ctx, vcpu);
 
 		/*
 		 * Enable the 'unrestricted guest' mode for APs.
@@ -1153,7 +1153,7 @@ spinup_vcpu(struct vmctx *ctx, int vcpu)
 		assert(error == 0);
 	}
 
-	fbsdrun_addcpu(ctx, vcpu);
+	nqcrun_addcpu(ctx, vcpu);
 }
 
 static bool
@@ -1429,7 +1429,7 @@ main(int argc, char *argv[])
 		exit(4);
 	}
 
-	fbsdrun_set_capabilities(ctx, BSP);
+	nqcrun_set_capabilities(ctx, BSP);
 
 	memflags = 0;
 	if (get_config_bool_default("memory.wired", false))

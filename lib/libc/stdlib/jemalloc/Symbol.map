@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	_malloc_options;
 	_malloc_message;
 	malloc;
@@ -13,7 +13,7 @@ FBSD_1.0 {
 	malloc_usable_size;
 };
 
-FBSD_1.3 {
+NQC_1.3 {
 	malloc_conf;
 	malloc_message;
 	aligned_alloc;
@@ -51,7 +51,7 @@ FBSD_1.3 {
 	__nallocm;
 };
 
-FBSD_1.4 {
+NQC_1.4 {
 	sdallocx;
 	__sdallocx;
 	__aligned_alloc;
@@ -61,7 +61,7 @@ FBSD_1.4 {
 	__mallctlbymib;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	_malloc_thread_cleanup;
 	_malloc_prefork;
 	_malloc_postfork;

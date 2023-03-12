@@ -108,7 +108,7 @@ DEFINE_LINUX_IOCTL_SET(drm, DRM);
 DEFINE_LINUX_IOCTL_SET(sg, SG);
 DEFINE_LINUX_IOCTL_SET(v4l, VIDEO);
 DEFINE_LINUX_IOCTL_SET(v4l2, VIDEO2);
-DEFINE_LINUX_IOCTL_SET(fbsd_usb, FBSD_LUSB);
+DEFINE_LINUX_IOCTL_SET(nqc_usb, NQC_LUSB);
 DEFINE_LINUX_IOCTL_SET(evdev, EVDEV);
 DEFINE_LINUX_IOCTL_SET(kcov, KCOV);
 
@@ -3298,123 +3298,123 @@ linux_ioctl_v4l2(struct thread *td, struct linux_ioctl_args *args)
 }
 
 /*
- * Support for emulators/linux-libusb. This port uses FBSD_LUSB* macros
+ * Support for emulators/linux-libusb. This port uses NQC_LUSB* macros
  * instead of USB* ones. This lets us to provide correct values for cmd.
  * 0xffffffe0 -- 0xffffffff range seemed to be the least collision-prone.
  */
 static int
-linux_ioctl_fbsd_usb(struct thread *td, struct linux_ioctl_args *args)
+linux_ioctl_nqc_usb(struct thread *td, struct linux_ioctl_args *args)
 {
 	int error;
 
 	error = 0;
 	switch (args->cmd) {
-	case FBSD_LUSB_DEVICEENUMERATE:
+	case NQC_LUSB_DEVICEENUMERATE:
 		args->cmd = USB_DEVICEENUMERATE;
 		break;
-	case FBSD_LUSB_DEV_QUIRK_ADD:
+	case NQC_LUSB_DEV_QUIRK_ADD:
 		args->cmd = USB_DEV_QUIRK_ADD;
 		break;
-	case FBSD_LUSB_DEV_QUIRK_GET:
+	case NQC_LUSB_DEV_QUIRK_GET:
 		args->cmd = USB_DEV_QUIRK_GET;
 		break;
-	case FBSD_LUSB_DEV_QUIRK_REMOVE:
+	case NQC_LUSB_DEV_QUIRK_REMOVE:
 		args->cmd = USB_DEV_QUIRK_REMOVE;
 		break;
-	case FBSD_LUSB_DO_REQUEST:
+	case NQC_LUSB_DO_REQUEST:
 		args->cmd = USB_DO_REQUEST;
 		break;
-	case FBSD_LUSB_FS_CLEAR_STALL_SYNC:
+	case NQC_LUSB_FS_CLEAR_STALL_SYNC:
 		args->cmd = USB_FS_CLEAR_STALL_SYNC;
 		break;
-	case FBSD_LUSB_FS_CLOSE:
+	case NQC_LUSB_FS_CLOSE:
 		args->cmd = USB_FS_CLOSE;
 		break;
-	case FBSD_LUSB_FS_COMPLETE:
+	case NQC_LUSB_FS_COMPLETE:
 		args->cmd = USB_FS_COMPLETE;
 		break;
-	case FBSD_LUSB_FS_INIT:
+	case NQC_LUSB_FS_INIT:
 		args->cmd = USB_FS_INIT;
 		break;
-	case FBSD_LUSB_FS_OPEN:
+	case NQC_LUSB_FS_OPEN:
 		args->cmd = USB_FS_OPEN;
 		break;
-	case FBSD_LUSB_FS_START:
+	case NQC_LUSB_FS_START:
 		args->cmd = USB_FS_START;
 		break;
-	case FBSD_LUSB_FS_STOP:
+	case NQC_LUSB_FS_STOP:
 		args->cmd = USB_FS_STOP;
 		break;
-	case FBSD_LUSB_FS_UNINIT:
+	case NQC_LUSB_FS_UNINIT:
 		args->cmd = USB_FS_UNINIT;
 		break;
-	case FBSD_LUSB_GET_CONFIG:
+	case NQC_LUSB_GET_CONFIG:
 		args->cmd = USB_GET_CONFIG;
 		break;
-	case FBSD_LUSB_GET_DEVICEINFO:
+	case NQC_LUSB_GET_DEVICEINFO:
 		args->cmd = USB_GET_DEVICEINFO;
 		break;
-	case FBSD_LUSB_GET_DEVICE_DESC:
+	case NQC_LUSB_GET_DEVICE_DESC:
 		args->cmd = USB_GET_DEVICE_DESC;
 		break;
-	case FBSD_LUSB_GET_FULL_DESC:
+	case NQC_LUSB_GET_FULL_DESC:
 		args->cmd = USB_GET_FULL_DESC;
 		break;
-	case FBSD_LUSB_GET_IFACE_DRIVER:
+	case NQC_LUSB_GET_IFACE_DRIVER:
 		args->cmd = USB_GET_IFACE_DRIVER;
 		break;
-	case FBSD_LUSB_GET_PLUGTIME:
+	case NQC_LUSB_GET_PLUGTIME:
 		args->cmd = USB_GET_PLUGTIME;
 		break;
-	case FBSD_LUSB_GET_POWER_MODE:
+	case NQC_LUSB_GET_POWER_MODE:
 		args->cmd = USB_GET_POWER_MODE;
 		break;
-	case FBSD_LUSB_GET_REPORT_DESC:
+	case NQC_LUSB_GET_REPORT_DESC:
 		args->cmd = USB_GET_REPORT_DESC;
 		break;
-	case FBSD_LUSB_GET_REPORT_ID:
+	case NQC_LUSB_GET_REPORT_ID:
 		args->cmd = USB_GET_REPORT_ID;
 		break;
-	case FBSD_LUSB_GET_TEMPLATE:
+	case NQC_LUSB_GET_TEMPLATE:
 		args->cmd = USB_GET_TEMPLATE;
 		break;
-	case FBSD_LUSB_IFACE_DRIVER_ACTIVE:
+	case NQC_LUSB_IFACE_DRIVER_ACTIVE:
 		args->cmd = USB_IFACE_DRIVER_ACTIVE;
 		break;
-	case FBSD_LUSB_IFACE_DRIVER_DETACH:
+	case NQC_LUSB_IFACE_DRIVER_DETACH:
 		args->cmd = USB_IFACE_DRIVER_DETACH;
 		break;
-	case FBSD_LUSB_QUIRK_NAME_GET:
+	case NQC_LUSB_QUIRK_NAME_GET:
 		args->cmd = USB_QUIRK_NAME_GET;
 		break;
-	case FBSD_LUSB_READ_DIR:
+	case NQC_LUSB_READ_DIR:
 		args->cmd = USB_READ_DIR;
 		break;
-	case FBSD_LUSB_SET_ALTINTERFACE:
+	case NQC_LUSB_SET_ALTINTERFACE:
 		args->cmd = USB_SET_ALTINTERFACE;
 		break;
-	case FBSD_LUSB_SET_CONFIG:
+	case NQC_LUSB_SET_CONFIG:
 		args->cmd = USB_SET_CONFIG;
 		break;
-	case FBSD_LUSB_SET_IMMED:
+	case NQC_LUSB_SET_IMMED:
 		args->cmd = USB_SET_IMMED;
 		break;
-	case FBSD_LUSB_SET_POWER_MODE:
+	case NQC_LUSB_SET_POWER_MODE:
 		args->cmd = USB_SET_POWER_MODE;
 		break;
-	case FBSD_LUSB_SET_TEMPLATE:
+	case NQC_LUSB_SET_TEMPLATE:
 		args->cmd = USB_SET_TEMPLATE;
 		break;
-	case FBSD_LUSB_FS_OPEN_STREAM:
+	case NQC_LUSB_FS_OPEN_STREAM:
 		args->cmd = USB_FS_OPEN_STREAM;
 		break;
-	case FBSD_LUSB_GET_DEV_PORT_PATH:
+	case NQC_LUSB_GET_DEV_PORT_PATH:
 		args->cmd = USB_GET_DEV_PORT_PATH;
 		break;
-	case FBSD_LUSB_GET_POWER_USAGE:
+	case NQC_LUSB_GET_POWER_USAGE:
 		args->cmd = USB_GET_POWER_USAGE;
 		break;
-	case FBSD_LUSB_DEVICESTATS:
+	case NQC_LUSB_DEVICESTATS:
 		args->cmd = USB_DEVICESTATS;
 		break;
 	default:

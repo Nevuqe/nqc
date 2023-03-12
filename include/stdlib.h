@@ -340,7 +340,7 @@ __uint64_t
  * NQC qsort_r() interface.
  *
  * Apply a workaround where we explicitly link against the historical
- * interface, qsort_r@FBSD_1.0, in case when qsort_r() is called with
+ * interface, qsort_r@NQC_1.0, in case when qsort_r() is called with
  * the last parameter with a function pointer that exactly matches the
  * historical NQC qsort_r() comparator signature, so applications
  * written for the historical interface can continue to work without
@@ -349,7 +349,7 @@ __uint64_t
 #if defined(__generic) || defined(__cplusplus)
 void __qsort_r_compat(void *, size_t, size_t, void *,
 	    int (*)(void *, const void *, const void *));
-__sym_compat(qsort_r, __qsort_r_compat, FBSD_1.0);
+__sym_compat(qsort_r, __qsort_r_compat, NQC_1.0);
 #endif
 #if defined(__generic) && !defined(__cplusplus)
 #define	qsort_r(base, nel, width, arg4, arg5)				\

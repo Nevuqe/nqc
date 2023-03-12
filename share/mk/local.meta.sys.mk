@@ -254,7 +254,7 @@ NQC_REVISION!= sed -n '/^REVISION=/{s,.*=,,;s,",,g;p; }' ${SRCTOP}/sys/conf/newv
 CROSS_TARGET_FLAGS= -target ${MACHINE_ARCH}-unknown-nqc${NQC_REVISION}
 CFLAGS+= ${CROSS_TARGET_FLAGS}
 ACFLAGS+= ${CROSS_TARGET_FLAGS}
-LDFLAGS+= -Wl,-m -Wl,elf_${MACHINE_ARCH}_fbsd
+LDFLAGS+= -Wl,-m -Wl,elf_${MACHINE_ARCH}_nqc
 .endif
 
 META_MODE+=	missing-meta=yes

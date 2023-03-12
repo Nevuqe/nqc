@@ -112,4 +112,4 @@ done:
 	return (error);
 }
 
-__sym_compat(nftw, nqc11_nftw, FBSD_1.0);
+__sym_compat(nftw, nqc11_nftw, NQC_1.0);

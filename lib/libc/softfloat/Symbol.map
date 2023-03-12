@@ -2,7 +2,7 @@
  * $NQC$
  */
 
-FBSD_1.0 {
+NQC_1.0 {
 	_fpgetmask;
 	fpgetmask;
 	_fpgetround;
@@ -17,7 +17,7 @@ FBSD_1.0 {
 	fpsetsticky;
 };
 
-FBSDprivate_1.0 {
+NQCprivate_1.0 {
 	__softfloat_float_exception_flags;
 	__softfloat_float_exception_mask;
 	__softfloat_float_rounding_mode;

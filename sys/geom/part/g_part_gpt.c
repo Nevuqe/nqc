@@ -179,15 +179,15 @@ static struct uuid gpt_uuid_chromeos_firmware = GPT_ENT_TYPE_CHROMEOS_FIRMWARE;
 static struct uuid gpt_uuid_chromeos_kernel = GPT_ENT_TYPE_CHROMEOS_KERNEL;
 static struct uuid gpt_uuid_chromeos_reserved = GPT_ENT_TYPE_CHROMEOS_RESERVED;
 static struct uuid gpt_uuid_chromeos_root = GPT_ENT_TYPE_CHROMEOS_ROOT;
-static struct uuid gpt_uuid_dfbsd_ccd = GPT_ENT_TYPE_DRAGONFLY_CCD;
-static struct uuid gpt_uuid_dfbsd_hammer = GPT_ENT_TYPE_DRAGONFLY_HAMMER;
-static struct uuid gpt_uuid_dfbsd_hammer2 = GPT_ENT_TYPE_DRAGONFLY_HAMMER2;
-static struct uuid gpt_uuid_dfbsd_label32 = GPT_ENT_TYPE_DRAGONFLY_LABEL32;
-static struct uuid gpt_uuid_dfbsd_label64 = GPT_ENT_TYPE_DRAGONFLY_LABEL64;
-static struct uuid gpt_uuid_dfbsd_legacy = GPT_ENT_TYPE_DRAGONFLY_LEGACY;
-static struct uuid gpt_uuid_dfbsd_swap = GPT_ENT_TYPE_DRAGONFLY_SWAP;
-static struct uuid gpt_uuid_dfbsd_ufs1 = GPT_ENT_TYPE_DRAGONFLY_UFS1;
-static struct uuid gpt_uuid_dfbsd_vinum = GPT_ENT_TYPE_DRAGONFLY_VINUM;
+static struct uuid gpt_uuid_dnqc_ccd = GPT_ENT_TYPE_DRAGONFLY_CCD;
+static struct uuid gpt_uuid_dnqc_hammer = GPT_ENT_TYPE_DRAGONFLY_HAMMER;
+static struct uuid gpt_uuid_dnqc_hammer2 = GPT_ENT_TYPE_DRAGONFLY_HAMMER2;
+static struct uuid gpt_uuid_dnqc_label32 = GPT_ENT_TYPE_DRAGONFLY_LABEL32;
+static struct uuid gpt_uuid_dnqc_label64 = GPT_ENT_TYPE_DRAGONFLY_LABEL64;
+static struct uuid gpt_uuid_dnqc_legacy = GPT_ENT_TYPE_DRAGONFLY_LEGACY;
+static struct uuid gpt_uuid_dnqc_swap = GPT_ENT_TYPE_DRAGONFLY_SWAP;
+static struct uuid gpt_uuid_dnqc_ufs1 = GPT_ENT_TYPE_DRAGONFLY_UFS1;
+static struct uuid gpt_uuid_dnqc_vinum = GPT_ENT_TYPE_DRAGONFLY_VINUM;
 static struct uuid gpt_uuid_efi = GPT_ENT_TYPE_EFI;
 static struct uuid gpt_uuid_nqc = GPT_ENT_TYPE_NQC;
 static struct uuid gpt_uuid_nqc_boot = GPT_ENT_TYPE_NQC_BOOT;
@@ -251,15 +251,15 @@ static struct g_part_uuid_alias {
 	{ &gpt_uuid_chromeos_kernel,	G_PART_ALIAS_CHROMEOS_KERNEL,	 0 },
 	{ &gpt_uuid_chromeos_reserved,	G_PART_ALIAS_CHROMEOS_RESERVED,	 0 },
 	{ &gpt_uuid_chromeos_root,	G_PART_ALIAS_CHROMEOS_ROOT,	 0 },
-	{ &gpt_uuid_dfbsd_ccd,		G_PART_ALIAS_DFBSD_CCD,		 0 },
-	{ &gpt_uuid_dfbsd_hammer,	G_PART_ALIAS_DFBSD_HAMMER,	 0 },
-	{ &gpt_uuid_dfbsd_hammer2,	G_PART_ALIAS_DFBSD_HAMMER2,	 0 },
-	{ &gpt_uuid_dfbsd_label32,	G_PART_ALIAS_DFBSD,		 0xa5 },
-	{ &gpt_uuid_dfbsd_label64,	G_PART_ALIAS_DFBSD64,		 0xa5 },
-	{ &gpt_uuid_dfbsd_legacy,	G_PART_ALIAS_DFBSD_LEGACY,	 0 },
-	{ &gpt_uuid_dfbsd_swap,		G_PART_ALIAS_DFBSD_SWAP,	 0 },
-	{ &gpt_uuid_dfbsd_ufs1,		G_PART_ALIAS_DFBSD_UFS,		 0 },
-	{ &gpt_uuid_dfbsd_vinum,	G_PART_ALIAS_DFBSD_VINUM,	 0 },
+	{ &gpt_uuid_dnqc_ccd,		G_PART_ALIAS_DNQC_CCD,		 0 },
+	{ &gpt_uuid_dnqc_hammer,	G_PART_ALIAS_DNQC_HAMMER,	 0 },
+	{ &gpt_uuid_dnqc_hammer2,	G_PART_ALIAS_DNQC_HAMMER2,	 0 },
+	{ &gpt_uuid_dnqc_label32,	G_PART_ALIAS_DNQC,		 0xa5 },
+	{ &gpt_uuid_dnqc_label64,	G_PART_ALIAS_DNQC64,		 0xa5 },
+	{ &gpt_uuid_dnqc_legacy,	G_PART_ALIAS_DNQC_LEGACY,	 0 },
+	{ &gpt_uuid_dnqc_swap,		G_PART_ALIAS_DNQC_SWAP,	 0 },
+	{ &gpt_uuid_dnqc_ufs1,		G_PART_ALIAS_DNQC_UFS,		 0 },
+	{ &gpt_uuid_dnqc_vinum,	G_PART_ALIAS_DNQC_VINUM,	 0 },
 	{ &gpt_uuid_efi, 		G_PART_ALIAS_EFI,		 0xee },
 	{ &gpt_uuid_nqc,		G_PART_ALIAS_NQC,		 0xa5 },
 	{ &gpt_uuid_nqc_boot, 	G_PART_ALIAS_NQC_BOOT,	 0 },
@@ -804,7 +804,7 @@ g_part_gpt_dumpto(struct g_part_table *table, struct g_part_entry *baseentry)
 	entry = (struct g_part_gpt_entry *)baseentry;
 	return ((EQUUID(&entry->ent.ent_type, &gpt_uuid_nqc_swap) ||
 	    EQUUID(&entry->ent.ent_type, &gpt_uuid_linux_swap) ||
-	    EQUUID(&entry->ent.ent_type, &gpt_uuid_dfbsd_swap)) ? 1 : 0);
+	    EQUUID(&entry->ent.ent_type, &gpt_uuid_dnqc_swap)) ? 1 : 0);
 }
 
 static int

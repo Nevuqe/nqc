@@ -555,7 +555,7 @@ pci_vtblk_init(struct pci_devinst *pi, nvlist_t *nvl)
 	pci_set_cfgdata16(pi, PCIR_SUBDEV_0, VIRTIO_ID_BLOCK);
 	pci_set_cfgdata16(pi, PCIR_SUBVEND_0, VIRTIO_VENDOR);
 
-	if (vi_intr_init(&sc->vbsc_vs, 1, fbsdrun_virtio_msix())) {
+	if (vi_intr_init(&sc->vbsc_vs, 1, nqcrun_virtio_msix())) {
 		blockif_close(sc->bc);
 		free(sc);
 		return (1);

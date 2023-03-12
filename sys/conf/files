@@ -4714,7 +4714,7 @@ dev/irdma/irdma_hw.c		optional irdma ice inet inet6 pci ofed \
 	compile-with "${OFED_C} -I$S/dev/ice/"
 dev/irdma/icrdma_hw.c		optional irdma ice inet inet6 pci ofed \
 	compile-with "${OFED_C} -I$S/dev/ice/"
-dev/irdma/fbsd_kcompat.c	optional irdma ice inet inet6 pci ofed \
+dev/irdma/nqc_kcompat.c	optional irdma ice inet inet6 pci ofed \
 	compile-with "${OFED_C} -I$S/dev/ice/"
 dev/irdma/irdma_kcompat.c	optional irdma ice inet inet6 pci ofed \
 	compile-with "${OFED_C} -I$S/dev/ice/"

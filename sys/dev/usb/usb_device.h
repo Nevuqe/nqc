@@ -72,7 +72,7 @@ struct usb_host_endpoint {
 	TAILQ_HEAD(, urb) bsd_urb_list;
 	struct usb_xfer *bsd_xfer[2];
 	uint8_t *extra;			/* Extra descriptors */
-	usb_frlength_t fbsd_buf_size;
+	usb_frlength_t nqc_buf_size;
 	uint16_t extralen;
 	uint8_t	bsd_iface_index;
 } __aligned(USB_HOST_ALIGN);

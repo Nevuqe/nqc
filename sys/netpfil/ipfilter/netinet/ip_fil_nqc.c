@@ -1457,7 +1457,7 @@ ipf_pcksum6(struct mbuf *m, ip6_t *ip6, u_int32_t off, u_int32_t len)
 #endif
 
 void
-ipf_fbsd_kenv_get(ipf_main_softc_t *softc)
+ipf_nqc_kenv_get(ipf_main_softc_t *softc)
 {
 	TUNABLE_INT_FETCH("net.inet.ipf.large_nat",
 		&softc->ipf_large_nat);

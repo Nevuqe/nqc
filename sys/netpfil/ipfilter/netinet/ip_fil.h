@@ -1658,7 +1658,7 @@ extern	int	ipf_pfil_hook(void);
 extern	int	ipf_pfil_unhook(void);
 extern	void	ipf_event_reg(void);
 extern	void	ipf_event_dereg(void);
-extern	void	ipf_fbsd_kenv_get(ipf_main_softc_t *);
+extern	void	ipf_nqc_kenv_get(ipf_main_softc_t *);
 # endif
 
 # if defined(INSTANCES)

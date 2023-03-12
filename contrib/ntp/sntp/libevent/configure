@@ -7475,7 +7475,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
       *32-bit*)
 	case $host in
 	  x86_64-*knqc*-gnu)
-	    LD="${LD-ld} -m elf_i386_fbsd"
+	    LD="${LD-ld} -m elf_i386_nqc"
 	    ;;
 	  x86_64-*linux*)
 	    case `/usr/bin/file conftest.o` in
@@ -7504,7 +7504,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
       *64-bit*)
 	case $host in
 	  x86_64-*knqc*-gnu)
-	    LD="${LD-ld} -m elf_x86_64_fbsd"
+	    LD="${LD-ld} -m elf_x86_64_nqc"
 	    ;;
 	  x86_64-*linux*)
 	    LD="${LD-ld} -m elf_x86_64"

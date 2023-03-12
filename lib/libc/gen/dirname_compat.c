@@ -78,4 +78,4 @@ __nqc11_dirname(char *path)
 	return (dname);
 }
 
-__sym_compat(dirname, __nqc11_dirname, FBSD_1.0);
+__sym_compat(dirname, __nqc11_dirname, NQC_1.0);
