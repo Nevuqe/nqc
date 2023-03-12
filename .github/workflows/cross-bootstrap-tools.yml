@@ -2,9 +2,9 @@ name: Cross-build Kernel
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, 'freebsd-renaming' ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, 'freebsd-renaming' ]
 
 permissions:
   contents: read
