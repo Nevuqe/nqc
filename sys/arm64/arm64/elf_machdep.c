@@ -64,7 +64,7 @@ struct arm64_addr_mask elf64_addr_mask;
 static struct sysentvec elf64_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_fixup	= __elfN(freebsd_fixup),
+	.sv_fixup	= __elfN(nqc_fixup),
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
@@ -81,7 +81,7 @@ static struct sysentvec elf64_nqc_sysvec = {
 	.sv_psstrings	= PS_STRINGS,
 	.sv_psstringssz	= sizeof(struct ps_strings),
 	.sv_stackprot	= VM_PROT_READ | VM_PROT_WRITE,
-	.sv_copyout_auxargs = __elfN(freebsd_copyout_auxargs),
+	.sv_copyout_auxargs = __elfN(nqc_copyout_auxargs),
 	.sv_copyout_strings = exec_copyout_strings,
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
@@ -105,7 +105,7 @@ static struct sysentvec elf64_nqc_sysvec = {
 };
 INIT_SYSENTVEC(elf64_sysvec, &elf64_nqc_sysvec);
 
-static Elf64_Brandinfo freebsd_brand_info = {
+static Elf64_Brandinfo nqc_brand_info = {
 	.brand		= ELFOSABI_FREEBSD,
 	.machine	= EM_AARCH64,
 	.compat_3_brand	= "FreeBSD",
@@ -118,7 +118,7 @@ static Elf64_Brandinfo freebsd_brand_info = {
 };
 
 SYSINIT(elf64, SI_SUB_EXEC, SI_ORDER_FIRST,
-    (sysinit_cfunc_t)elf64_insert_brand_entry, &freebsd_brand_info);
+    (sysinit_cfunc_t)elf64_insert_brand_entry, &nqc_brand_info);
 
 static bool
 get_arm64_addr_mask(struct regset *rs, struct thread *td, void *buf,

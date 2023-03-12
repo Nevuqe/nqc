@@ -18,7 +18,7 @@
 #include <unistd.h>
 
 #ifdef __FreeBSD__
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 #endif
 
 #define	MQ_PRIO_BASE	24

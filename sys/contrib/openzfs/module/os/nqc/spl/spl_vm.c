@@ -33,7 +33,7 @@ __FBSDID("$FreeBSD$");
 
 #include <sys/byteorder.h>
 #include <sys/lock.h>
-#include <sys/freebsd_rwlock.h>
+#include <sys/nqc_rwlock.h>
 #include <sys/vm.h>
 
 #include <vm/vm.h>

@@ -19,7 +19,7 @@
 
 #include <sys/dmu.h>
 #include <sys/hkdf.h>
-#include <sys/freebsd_crypto.h>
+#include <sys/nqc_crypto.h>
 #include <sys/hkdf.h>
 
 static int

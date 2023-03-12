@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 #define MQNAME	"/mytstqueue5"
 #define LOOPS	1000

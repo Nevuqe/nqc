@@ -39,7 +39,7 @@ __FBSDID("$FreeBSD$");
 #include <libcasper.h>
 #include <casper/cap_fileargs.h>
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 #define MAX_FILES		200
 

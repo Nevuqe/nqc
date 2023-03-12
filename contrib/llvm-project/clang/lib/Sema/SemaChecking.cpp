@@ -8831,7 +8831,7 @@ Sema::FormatStringType Sema::GetFormatStringType(const FormatAttr *Format) {
       .Case("strftime", FST_Strftime)
       .Case("strfmon", FST_Strfmon)
       .Cases("kprintf", "cmn_err", "vcmn_err", "zcmn_err", FST_Kprintf)
-      .Case("freebsd_kprintf", FST_FreeBSDKPrintf)
+      .Case("nqc_kprintf", FST_FreeBSDKPrintf)
       .Case("os_trace", FST_OSLog)
       .Case("os_log", FST_OSLog)
       .Default(FST_Unknown);

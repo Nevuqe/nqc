@@ -25,7 +25,7 @@ noinst_HEADERS = \
 	%D%/spl/sys/dkio.h \
 	%D%/spl/sys/fcntl.h \
 	%D%/spl/sys/file.h \
-	%D%/spl/sys/freebsd_rwlock.h \
+	%D%/spl/sys/nqc_rwlock.h \
 	%D%/spl/sys/idmap.h \
 	%D%/spl/sys/inttypes.h \
 	%D%/spl/sys/isa_defs.h \
@@ -78,7 +78,7 @@ noinst_HEADERS = \
 	%D%/spl/sys/zmod.h \
 	%D%/spl/sys/zone.h \
 	\
-	%D%/zfs/sys/freebsd_crypto.h \
+	%D%/zfs/sys/nqc_crypto.h \
 	%D%/zfs/sys/sha2.h \
 	%D%/zfs/sys/vdev_os.h \
 	%D%/zfs/sys/zfs_bootenv_os.h \

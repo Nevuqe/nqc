@@ -7,7 +7,7 @@
 #include <signal.h>
 #include <stdio.h>
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 #define MQNAME	"/mytstqueue1"
 

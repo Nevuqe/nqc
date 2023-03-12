@@ -13,7 +13,7 @@ SRCS=	accept_sec_context.c \
 	cred_stubs.c \
 	external.c \
 	init_sec_context.c \
-	freebsd_compat.c \
+	nqc_compat.c \
 	${GEN:S/.x$/.c/:S/.hx$/.h/} \
 	gss_oid.c
 

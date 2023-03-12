@@ -115,10 +115,10 @@ struct sseg_closure {
 bool	__elfN(brand_inuse)(Elf_Brandinfo *entry);
 int	__elfN(insert_brand_entry)(Elf_Brandinfo *entry);
 int	__elfN(remove_brand_entry)(Elf_Brandinfo *entry);
-int	__elfN(freebsd_fixup)(uintptr_t *, struct image_params *);
+int	__elfN(nqc_fixup)(uintptr_t *, struct image_params *);
 int	__elfN(coredump)(struct thread *, struct vnode *, off_t, int);
 size_t	__elfN(populate_note)(int, void *, void *, size_t, void **);
-int	__elfN(freebsd_copyout_auxargs)(struct image_params *, uintptr_t);
+int	__elfN(nqc_copyout_auxargs)(struct image_params *, uintptr_t);
 void	__elfN(puthdr)(struct thread *, void *, size_t, int, size_t, int);
 void	__elfN(prepare_notes)(struct thread *, struct note_info_list *,
 	    size_t *);
@@ -130,8 +130,8 @@ size_t	__elfN(register_note)(struct thread *, struct note_info_list *,
 void	__elfN(dump_thread)(struct thread *, void *, size_t *);
 
 extern int __elfN(fallback_brand);
-extern Elf_Brandnote __elfN(freebsd_brandnote);
-extern Elf_Brandnote __elfN(kfreebsd_brandnote);
+extern Elf_Brandnote __elfN(nqc_brandnote);
+extern Elf_Brandnote __elfN(knqc_brandnote);
 #endif /* _KERNEL */
 
 #endif /* !_SYS_IMGACT_ELF_H_ */

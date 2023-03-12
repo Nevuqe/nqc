@@ -52,7 +52,7 @@
 /* Be sure to include tree copy rather than system copy. */
 #include "cryptodev.h"
 
-#include "freebsd_test_suite/macros.h"
+#include "nqc_test_suite/macros.h"
 
 #include <blake2.h>
 #include "blake2-kat.h"

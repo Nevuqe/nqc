@@ -5,7 +5,7 @@
 
 KMOD= qat_api
 
-SRCS+= freebsd_module.c
+SRCS+= nqc_module.c
 SRCS+= common/compression/dc_datapath.c
 SRCS+= common/compression/dc_header_footer.c
 SRCS+= common/compression/dc_session.c

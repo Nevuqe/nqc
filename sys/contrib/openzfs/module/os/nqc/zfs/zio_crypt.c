@@ -221,7 +221,7 @@ void
 zio_crypt_key_destroy(zio_crypt_key_t *key)
 {
 
-	freebsd_crypt_freesession(&key->zk_session);
+	nqc_crypt_freesession(&key->zk_session);
 	zio_crypt_key_destroy_early(key);
 }
 
@@ -281,7 +281,7 @@ zio_crypt_key_init(uint64_t crypt, zio_crypt_key_t *key)
 	    ci->ci_crypt_type != ZC_TYPE_CCM)
 		return (ENOTSUP);
 
-	ret = freebsd_crypt_newsession(&key->zk_session, ci,
+	ret = nqc_crypt_newsession(&key->zk_session, ci,
 	    &key->zk_current_key);
 	if (ret)
 		goto error;
@@ -327,8 +327,8 @@ zio_crypt_key_change_salt(zio_crypt_key_t *key)
 	memcpy(key->zk_salt, salt, ZIO_DATA_SALT_LEN);
 	key->zk_salt_count = 0;
 
-	freebsd_crypt_freesession(&key->zk_session);
-	ret = freebsd_crypt_newsession(&key->zk_session,
+	nqc_crypt_freesession(&key->zk_session);
+	ret = nqc_crypt_newsession(&key->zk_session,
 	    &zio_crypt_table[key->zk_crypt], &key->zk_current_key);
 	if (ret != 0)
 		goto out_unlock;
@@ -394,7 +394,7 @@ int failed_decrypt_size;
  *
  */
 static int
-zio_do_crypt_uio_opencrypto(boolean_t encrypt, freebsd_crypt_session_t *sess,
+zio_do_crypt_uio_opencrypto(boolean_t encrypt, nqc_crypt_session_t *sess,
     uint64_t crypt, crypto_key_t *key, uint8_t *ivbuf, uint_t datalen,
     zfs_uio_t *uio, uint_t auth_len)
 {
@@ -404,7 +404,7 @@ zio_do_crypt_uio_opencrypto(boolean_t encrypt, freebsd_crypt_session_t *sess,
 		return (ENOTSUP);
 
 
-	int ret = freebsd_crypt_uio(encrypt, sess, ci, uio, key, ivbuf,
+	int ret = nqc_crypt_uio(encrypt, sess, ci, uio, key, ivbuf,
 	    datalen, auth_len);
 	if (ret != 0) {
 #ifdef FCRYPTO_DEBUG
@@ -586,7 +586,7 @@ zio_crypt_key_unwrap(crypto_key_t *cwkey, uint64_t crypt, uint64_t version,
 	key->zk_hmac_key.ck_data = key->zk_hmac_keydata;
 	key->zk_hmac_key.ck_length = CRYPTO_BYTES2BITS(SHA512_HMAC_KEYLEN);
 
-	ret = freebsd_crypt_newsession(&key->zk_session,
+	ret = nqc_crypt_newsession(&key->zk_session,
 	    &zio_crypt_table[crypt], &key->zk_current_key);
 	if (ret != 0)
 		goto error;
@@ -1671,7 +1671,7 @@ zio_do_crypt_data(boolean_t encrypt, zio_crypt_key_t *key,
 	struct uio puio_s, cuio_s;
 	uint8_t enc_keydata[MASTER_KEY_MAX_LEN];
 	crypto_key_t tmp_ckey, *ckey = NULL;
-	freebsd_crypt_session_t *tmpl = NULL;
+	nqc_crypt_session_t *tmpl = NULL;
 	uint8_t *authbuf = NULL;
 
 

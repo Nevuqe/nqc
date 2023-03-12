@@ -186,7 +186,7 @@ static Elf32_Brandinfo kia32_brand_info = {
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld.so.1",
 	.sysvec		= &ia32_nqc_sysvec,
-	.brand_note	= &elf32_kfreebsd_brandnote,
+	.brand_note	= &elf32_knqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE_MANDATORY
 };
 

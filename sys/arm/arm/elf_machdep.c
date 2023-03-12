@@ -66,7 +66,7 @@ u_long elf_hwcap2;
 struct sysentvec elf32_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_fixup	= __elfN(freebsd_fixup),
+	.sv_fixup	= __elfN(nqc_fixup),
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
@@ -83,7 +83,7 @@ struct sysentvec elf32_nqc_sysvec = {
 	.sv_psstrings	= PS_STRINGS,
 	.sv_psstringssz	= sizeof(struct ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
-	.sv_copyout_auxargs = __elfN(freebsd_copyout_auxargs),
+	.sv_copyout_auxargs = __elfN(nqc_copyout_auxargs),
 	.sv_copyout_strings = exec_copyout_strings,
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
@@ -108,7 +108,7 @@ struct sysentvec elf32_nqc_sysvec = {
 };
 INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 
-static Elf32_Brandinfo freebsd_brand_info = {
+static Elf32_Brandinfo nqc_brand_info = {
 	.brand		= ELFOSABI_FREEBSD,
 	.machine	= EM_ARM,
 	.compat_3_brand	= "FreeBSD",
@@ -123,7 +123,7 @@ static Elf32_Brandinfo freebsd_brand_info = {
 
 SYSINIT(elf32, SI_SUB_EXEC, SI_ORDER_FIRST,
 	(sysinit_cfunc_t) elf32_insert_brand_entry,
-	&freebsd_brand_info);
+	&nqc_brand_info);
 
 static boolean_t
 elf32_arm_abi_supported(struct image_params *imgp, int32_t *osrel __unused,

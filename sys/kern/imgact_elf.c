@@ -94,9 +94,9 @@ static int __elfN(load_file)(struct proc *p, const char *file, u_long *addr,
 static int __elfN(load_section)(struct image_params *imgp, vm_ooffset_t offset,
     caddr_t vmaddr, size_t memsz, size_t filsz, vm_prot_t prot);
 static int __CONCAT(exec_, __elfN(imgact))(struct image_params *imgp);
-static bool __elfN(freebsd_trans_osrel)(const Elf_Note *note,
+static bool __elfN(nqc_trans_osrel)(const Elf_Note *note,
     int32_t *osrel);
-static bool kfreebsd_trans_osrel(const Elf_Note *note, int32_t *osrel);
+static bool knqc_trans_osrel(const Elf_Note *note, int32_t *osrel);
 static bool __elfN(check_note)(struct image_params *imgp,
     Elf_Brandnote *checknote, int32_t *osrel, bool *has_fctl0,
     uint32_t *fctl0);
@@ -228,17 +228,17 @@ static Elf_Brandinfo *elf_brand_list[MAX_BRANDS];
 
 #define	aligned(a, t)	(rounddown2((u_long)(a), sizeof(t)) == (u_long)(a))
 
-Elf_Brandnote __elfN(freebsd_brandnote) = {
+Elf_Brandnote __elfN(nqc_brandnote) = {
 	.hdr.n_namesz	= sizeof(FREEBSD_ABI_VENDOR),
 	.hdr.n_descsz	= sizeof(int32_t),
 	.hdr.n_type	= NT_FREEBSD_ABI_TAG,
 	.vendor		= FREEBSD_ABI_VENDOR,
 	.flags		= BN_TRANSLATE_OSREL,
-	.trans_osrel	= __elfN(freebsd_trans_osrel)
+	.trans_osrel	= __elfN(nqc_trans_osrel)
 };
 
 static bool
-__elfN(freebsd_trans_osrel)(const Elf_Note *note, int32_t *osrel)
+__elfN(nqc_trans_osrel)(const Elf_Note *note, int32_t *osrel)
 {
 	uintptr_t p;
 
@@ -252,17 +252,17 @@ __elfN(freebsd_trans_osrel)(const Elf_Note *note, int32_t *osrel)
 static const char GNU_ABI_VENDOR[] = "GNU";
 static int GNU_KFREEBSD_ABI_DESC = 3;
 
-Elf_Brandnote __elfN(kfreebsd_brandnote) = {
+Elf_Brandnote __elfN(knqc_brandnote) = {
 	.hdr.n_namesz	= sizeof(GNU_ABI_VENDOR),
 	.hdr.n_descsz	= 16,	/* XXX at least 16 */
 	.hdr.n_type	= 1,
 	.vendor		= GNU_ABI_VENDOR,
 	.flags		= BN_TRANSLATE_OSREL,
-	.trans_osrel	= kfreebsd_trans_osrel
+	.trans_osrel	= knqc_trans_osrel
 };
 
 static bool
-kfreebsd_trans_osrel(const Elf_Note *note, int32_t *osrel)
+knqc_trans_osrel(const Elf_Note *note, int32_t *osrel)
 {
 	const Elf32_Word *desc;
 	uintptr_t p;
@@ -1443,7 +1443,7 @@ ret:
 #define	elf_suword __CONCAT(suword, __ELF_WORD_SIZE)
 
 int
-__elfN(freebsd_copyout_auxargs)(struct image_params *imgp, uintptr_t base)
+__elfN(nqc_copyout_auxargs)(struct image_params *imgp, uintptr_t base)
 {
 	Elf_Auxargs *args = (Elf_Auxargs *)imgp->auxargs;
 	Elf_Auxinfo *argarray, *pos;
@@ -1526,7 +1526,7 @@ __elfN(freebsd_copyout_auxargs)(struct image_params *imgp, uintptr_t base)
 }
 
 int
-__elfN(freebsd_fixup)(uintptr_t *stack_base, struct image_params *imgp)
+__elfN(nqc_fixup)(uintptr_t *stack_base, struct image_params *imgp)
 {
 	Elf_Addr *base;
 

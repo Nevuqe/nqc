@@ -163,7 +163,7 @@ tc_delta(const struct vdso_timehands *th, u_int *delta)
  * is based on the kernel implementation.
  */
 static int
-freebsd_binuptime(struct bintime *bt, struct vdso_timekeep *tk, bool abs)
+nqc_binuptime(struct bintime *bt, struct vdso_timekeep *tk, bool abs)
 {
 	struct vdso_timehands *th;
 	uint32_t curr, gen;
@@ -210,7 +210,7 @@ freebsd_binuptime(struct bintime *bt, struct vdso_timekeep *tk, bool abs)
 }
 
 static int
-freebsd_getnanouptime(struct bintime *bt, struct vdso_timekeep *tk)
+nqc_getnanouptime(struct bintime *bt, struct vdso_timekeep *tk)
 {
 	struct vdso_timehands *th;
 	uint32_t curr, gen;
@@ -234,7 +234,7 @@ freebsd_getnanouptime(struct bintime *bt, struct vdso_timekeep *tk)
 }
 
 static int
-freebsd_gettimeofday(struct timeval *tv, struct timezone *tz)
+nqc_gettimeofday(struct timeval *tv, struct timezone *tz)
 {
 	struct vdso_timekeep *tk;
 	struct bintime bt;
@@ -247,14 +247,14 @@ freebsd_gettimeofday(struct timeval *tv, struct timezone *tz)
 		return (ENOSYS);
 	if (tk->tk_ver != VDSO_TK_VER_CURR)
 		return (ENOSYS);
-	error = freebsd_binuptime(&bt, tk, true);
+	error = nqc_binuptime(&bt, tk, true);
 	if (error == 0)
 		bintime2timeval(&bt, tv);
 	return (error);
 }
 
 static int
-freebsd_clock_gettime(clockid_t clock_id, struct timespec *ts)
+nqc_clock_gettime(clockid_t clock_id, struct timespec *ts)
 {
 	struct vdso_timekeep *tk;
 	struct bintime bt;
@@ -269,17 +269,17 @@ freebsd_clock_gettime(clockid_t clock_id, struct timespec *ts)
 	case CLOCK_REALTIME:
 	case CLOCK_REALTIME_PRECISE:
 	case CLOCK_REALTIME_FAST:
-		error = freebsd_binuptime(&bt, tk, true);
+		error = nqc_binuptime(&bt, tk, true);
 		break;
 	case CLOCK_MONOTONIC:
 	case CLOCK_MONOTONIC_PRECISE:
 	case CLOCK_UPTIME:
 	case CLOCK_UPTIME_PRECISE:
-		error = freebsd_binuptime(&bt, tk, false);
+		error = nqc_binuptime(&bt, tk, false);
 		break;
 	case CLOCK_MONOTONIC_FAST:
 	case CLOCK_UPTIME_FAST:
-		error = freebsd_getnanouptime(&bt, tk);
+		error = nqc_getnanouptime(&bt, tk);
 		break;
 	default:
 		error = ENOSYS;
@@ -304,7 +304,7 @@ __vdso_clock_gettime(clockid_t clock_id, struct l_timespec *lts)
 	error = __vdso_linux_to_native_clockid(&which, clock_id);
 	if (error != 0)
 		return (__vdso_clock_gettime_fallback(clock_id, lts));
-	error = freebsd_clock_gettime(which, &ts);
+	error = nqc_clock_gettime(which, &ts);
 	if (error == 0)
 		return (-__vdso_native_to_linux_timespec(lts, &ts));
 	else
@@ -317,7 +317,7 @@ __vdso_gettimeofday(l_timeval *ltv, struct timezone *tz)
 	struct timeval tv;
 	int error;
 
-	error = freebsd_gettimeofday(&tv, tz);
+	error = nqc_gettimeofday(&tv, tz);
 	if (error != 0)
 		return (__vdso_gettimeofday_fallback(ltv, tz));
 	return (-__vdso_native_to_linux_timeval(ltv, &tv));
@@ -341,7 +341,7 @@ __vdso_clock_gettime64(clockid_t clock_id, struct l_timespec64 *lts)
 	error = __vdso_linux_to_native_clockid(&which, clock_id);
 	if (error != 0)
 		return (__vdso_clock_gettime64_fallback(clock_id, lts));
-	error = freebsd_clock_gettime(which, &ts);
+	error = nqc_clock_gettime(which, &ts);
 	if (error == 0)
 		return(-__vdso_native_to_linux_timespec64(lts, &ts));
 	else
@@ -375,7 +375,7 @@ __vdso_time(long *tm)
 	struct timeval tv;
 	int error;
 
-	error = freebsd_gettimeofday(&tv, NULL);
+	error = nqc_gettimeofday(&tv, NULL);
 	if (error != 0)
 		return (__vdso_time_fallback(tm));
 	if (tm != NULL)

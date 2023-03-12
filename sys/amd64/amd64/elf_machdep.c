@@ -59,7 +59,7 @@ extern char _binary_elf_vdso_so_1_size;
 struct sysentvec elf64_nqc_sysvec_la48 = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_fixup	= __elfN(freebsd_fixup),
+	.sv_fixup	= __elfN(nqc_fixup),
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= _binary_elf_vdso_so_1_start,
 	.sv_szsigcode	= (int *)&_binary_elf_vdso_so_1_size,
@@ -77,7 +77,7 @@ struct sysentvec elf64_nqc_sysvec_la48 = {
 	.sv_psstrings	= PS_STRINGS_LA48,
 	.sv_psstringssz	= sizeof(struct ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
-	.sv_copyout_auxargs = __elfN(freebsd_copyout_auxargs),
+	.sv_copyout_auxargs = __elfN(nqc_copyout_auxargs),
 	.sv_copyout_strings	= exec_copyout_strings,
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
@@ -102,7 +102,7 @@ struct sysentvec elf64_nqc_sysvec_la48 = {
 struct sysentvec elf64_nqc_sysvec_la57 = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_fixup	= __elfN(freebsd_fixup),
+	.sv_fixup	= __elfN(nqc_fixup),
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= _binary_elf_vdso_so_1_start,
 	.sv_szsigcode	= (int *)&_binary_elf_vdso_so_1_size,
@@ -120,7 +120,7 @@ struct sysentvec elf64_nqc_sysvec_la57 = {
 	.sv_psstrings	= PS_STRINGS_LA57,
 	.sv_psstringssz	= sizeof(struct ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
-	.sv_copyout_auxargs = __elfN(freebsd_copyout_auxargs),
+	.sv_copyout_auxargs = __elfN(nqc_copyout_auxargs),
 	.sv_copyout_strings	= exec_copyout_strings,
 	.sv_setregs	= exec_setregs,
 	.sv_fixlimit	= NULL,
@@ -168,7 +168,7 @@ amd64_lower_shared_page(struct sysentvec *sv)
 }
 
 static boolean_t
-freebsd_brand_info_la57_img_compat(struct image_params *imgp,
+nqc_brand_info_la57_img_compat(struct image_params *imgp,
     int32_t *osrel __unused, uint32_t *fctl0)
 {
 	if ((imgp->proc->p_md.md_flags & P_MD_LA57) != 0)
@@ -180,7 +180,7 @@ freebsd_brand_info_la57_img_compat(struct image_params *imgp,
 	return (TRUE);
 }
 
-static Elf64_Brandinfo freebsd_brand_info_la48 = {
+static Elf64_Brandinfo nqc_brand_info_la48 = {
 	.brand		= ELFOSABI_FREEBSD,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
@@ -192,7 +192,7 @@ static Elf64_Brandinfo freebsd_brand_info_la48 = {
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE,
 };
 
-static Elf64_Brandinfo freebsd_brand_info_la57 = {
+static Elf64_Brandinfo nqc_brand_info_la57 = {
 	.brand		= ELFOSABI_FREEBSD,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
@@ -202,7 +202,7 @@ static Elf64_Brandinfo freebsd_brand_info_la57 = {
 	.interp_newpath	= NULL,
 	.brand_note	= &elf64_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE,
-	.header_supported = freebsd_brand_info_la57_img_compat,
+	.header_supported = nqc_brand_info_la57_img_compat,
 };
 
 static void
@@ -213,13 +213,13 @@ sysinit_register_elf64_brand_entries(void *arg __unused)
 	 * it to _48.
 	 */
 	if (la57)
-		elf64_insert_brand_entry(&freebsd_brand_info_la57);
-	elf64_insert_brand_entry(&freebsd_brand_info_la48);
+		elf64_insert_brand_entry(&nqc_brand_info_la57);
+	elf64_insert_brand_entry(&nqc_brand_info_la48);
 }
 SYSINIT(elf64, SI_SUB_EXEC, SI_ORDER_FIRST,
     sysinit_register_elf64_brand_entries, NULL);
 
-static Elf64_Brandinfo freebsd_brand_oinfo = {
+static Elf64_Brandinfo nqc_brand_oinfo = {
 	.brand		= ELFOSABI_FREEBSD,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
@@ -232,9 +232,9 @@ static Elf64_Brandinfo freebsd_brand_oinfo = {
 };
 
 SYSINIT(oelf64, SI_SUB_EXEC, SI_ORDER_ANY,
-    (sysinit_cfunc_t)elf64_insert_brand_entry, &freebsd_brand_oinfo);
+    (sysinit_cfunc_t)elf64_insert_brand_entry, &nqc_brand_oinfo);
 
-static Elf64_Brandinfo kfreebsd_brand_info = {
+static Elf64_Brandinfo knqc_brand_info = {
 	.brand		= ELFOSABI_FREEBSD,
 	.machine	= EM_X86_64,
 	.compat_3_brand	= "FreeBSD",
@@ -242,12 +242,12 @@ static Elf64_Brandinfo kfreebsd_brand_info = {
 	.interp_path	= "/lib/ld-kfreebsd-x86-64.so.1",
 	.sysvec		= &elf64_nqc_sysvec_la48,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf64_kfreebsd_brandnote,
+	.brand_note	= &elf64_knqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE_MANDATORY
 };
 
 SYSINIT(kelf64, SI_SUB_EXEC, SI_ORDER_ANY,
-    (sysinit_cfunc_t)elf64_insert_brand_entry, &kfreebsd_brand_info);
+    (sysinit_cfunc_t)elf64_insert_brand_entry, &knqc_brand_info);
 
 void
 elf64_dump_thread(struct thread *td, void *dst, size_t *off)

@@ -66,7 +66,7 @@ exportcmd	-s export -s readonly
 #exprcmd		expr
 falsecmd -n	false
 fgcmd -j	fg
-freebsd_wordexpcmd	freebsd_wordexp
+nqc_wordexpcmd	nqc_wordexp
 getoptscmd	getopts
 hashcmd		hash
 histcmd		fc

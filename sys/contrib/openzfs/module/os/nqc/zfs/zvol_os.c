@@ -92,7 +92,7 @@
 #include <sys/zio_checksum.h>
 #include <sys/zil_impl.h>
 #include <sys/filio.h>
-#include <sys/freebsd_event.h>
+#include <sys/nqc_event.h>
 
 #include <geom/geom.h>
 #include <sys/zvol.h>

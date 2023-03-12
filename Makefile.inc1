@@ -219,7 +219,7 @@ WANT_COMPILER_TYPE=
 .if !defined(WANT_COMPILER_FREEBSD_VERSION) && !make(showconfig) && \
     !make(test-system-linker)
 .if ${WANT_COMPILER_TYPE} == "clang"
-WANT_COMPILER_FREEBSD_VERSION_FILE= lib/clang/freebsd_cc_version.h
+WANT_COMPILER_FREEBSD_VERSION_FILE= lib/clang/nqc_cc_version.h
 WANT_COMPILER_FREEBSD_VERSION!= \
 	awk '$$2 == "FREEBSD_CC_VERSION" {printf("%d\n", $$3)}' \
 	${SRCDIR}/${WANT_COMPILER_FREEBSD_VERSION_FILE} || echo unknown

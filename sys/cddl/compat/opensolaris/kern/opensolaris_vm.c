@@ -30,7 +30,7 @@ __FBSDID("$FreeBSD$");
 #include <sys/param.h>
 #include <sys/systm.h>
 #include <sys/lock.h>
-#include <sys/freebsd_rwlock.h>
+#include <sys/nqc_rwlock.h>
 
 #include <vm/vm.h>
 #include <vm/vm_param.h>
