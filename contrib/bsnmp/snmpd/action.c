@@ -57,7 +57,7 @@ static const struct asn_oid
 
 #ifdef __NQC__
 static const struct asn_oid
-	oid_freeBSDVersion = OIDX_freeBSDVersion;
+	oid_NQCVersion = OIDX_NQCVersion;
 #endif
 
 /*
@@ -122,7 +122,7 @@ init_actvals(void)
 	/*
 	 * Construct a FreeBSD oid
 	 */
-	systemg.object_id = oid_freeBSDVersion;
+	systemg.object_id = oid_NQCVersion;
 	rel = uts.release;
 	while ((p = strsep(&rel, ".")) != NULL &&
 	    systemg.object_id.len < ASN_MAXOIDLEN) {
@@ -154,10 +154,10 @@ init_snmpd_engine(void)
 	snmpd_engine.engine_time = 1;
 	snmpd_engine.max_msg_size = 1500; /* XXX */
 
-	snmpd_engine.engine_id[0] = ((OID_freeBSD & 0xff000000) >> 24) | 0x80;
-	snmpd_engine.engine_id[1] = (OID_freeBSD & 0xff0000) >> 16;
-	snmpd_engine.engine_id[2] = (OID_freeBSD & 0xff00) >> 8;
-	snmpd_engine.engine_id[3] = OID_freeBSD & 0xff;
+	snmpd_engine.engine_id[0] = ((OID_NQC & 0xff000000) >> 24) | 0x80;
+	snmpd_engine.engine_id[1] = (OID_NQC & 0xff0000) >> 16;
+	snmpd_engine.engine_id[2] = (OID_NQC & 0xff00) >> 8;
+	snmpd_engine.engine_id[3] = OID_NQC & 0xff;
 	snmpd_engine.engine_id[4] = 128;
 	snmpd_engine.engine_len = 5;
 
