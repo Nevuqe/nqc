@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr routed 8
+utility.

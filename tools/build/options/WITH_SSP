@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Build world with propolice stack smashing protection.

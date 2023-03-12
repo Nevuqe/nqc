@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr pkg 7
+bootstrap tool.

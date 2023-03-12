@@ -1,0 +1,5 @@
+.\" $FreeBSD$
+Do not build PAM library and modules.
+.Bf -symbolic
+This option is deprecated and does nothing.
+.Ef

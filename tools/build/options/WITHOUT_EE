@@ -1,0 +1,5 @@
+.\" $FreeBSD$
+Do not build and install
+.Xr edit 1 ,
+.Xr ee 1 ,
+and related programs.

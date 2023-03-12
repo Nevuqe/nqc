@@ -1,0 +1,3 @@
+.\" $FreeBSD$
+Do not build
+.Xr cxgbetool 8

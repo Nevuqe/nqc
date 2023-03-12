@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Build and install
+.Lb libstats
+and dependent binaries.

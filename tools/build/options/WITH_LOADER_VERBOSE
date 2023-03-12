@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Build with extra verbose debugging in the loader.
+May explode already nearly too large loader over the limit.
+Use with care.

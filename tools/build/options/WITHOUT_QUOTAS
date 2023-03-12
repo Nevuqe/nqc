@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr quota 1
+and related programs.

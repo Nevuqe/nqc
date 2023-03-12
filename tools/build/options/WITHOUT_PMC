@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr pmccontrol 8
+and related programs.

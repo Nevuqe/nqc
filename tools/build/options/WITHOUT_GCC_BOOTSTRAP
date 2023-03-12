@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Do not build gcc and g++ as part of the bootstrap process.

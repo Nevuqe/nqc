@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Do not build kernel modules that include sourceless native code for host CPU.

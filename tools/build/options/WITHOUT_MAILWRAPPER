@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build the
+.Xr mailwrapper 8
+MTA selector.

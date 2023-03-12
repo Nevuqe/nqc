@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Build some programs without optional
+.Nm libkvm
+support.

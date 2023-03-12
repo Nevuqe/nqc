@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Do not build ZFS file system boot loader support.

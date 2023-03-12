@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr unbound 8
+and related programs.

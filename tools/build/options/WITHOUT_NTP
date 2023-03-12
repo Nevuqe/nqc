@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr ntpd 8
+and related programs.

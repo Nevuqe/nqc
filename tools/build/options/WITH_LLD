@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Build LLVM's lld linker.

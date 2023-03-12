@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Do not build USB gadget kernel modules.

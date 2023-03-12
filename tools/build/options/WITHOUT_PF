@@ -1,0 +1,2 @@
+.\" $FreeBSD$
+Do not build PF firewall package.

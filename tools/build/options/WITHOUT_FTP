@@ -1,0 +1,5 @@
+.\" $FreeBSD$
+Do not build or install
+.Xr ftp 1
+and
+.Xr ftpd 8 .

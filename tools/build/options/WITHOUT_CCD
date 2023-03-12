@@ -1,0 +1,4 @@
+.\" $FreeBSD$
+Do not build
+.Xr geom_ccd 4
+and related utilities.

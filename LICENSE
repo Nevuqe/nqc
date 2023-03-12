@@ -1,0 +1,220 @@
+NEVUQE OPEN SOURCE LICENSE
+Version 1.0 - Febuary 2, 2023
+
+All code in this project is licensed under the following terms unless
+otherwise specified.
+
+Copyright 2023, Nevuqe Inc.
+
+Please read this License carefully before downloading this software.
+By downloading or using this software, you are agreeing to be bound by
+the terms of this License. If you do not or cannot agree to the terms
+of this License, please do not download or use the software.
+
+1. General; Definitions. This License applies to any program or other
+work which Nevuqe Inc. ("Nevuqe") makes publicly available.
+As used in this License:
+
+1.1 "Contributor" means any person or entity that creates or
+contributes to the creation of Modifications.
+
+1.2 "Externally Deploy" means: (a) to sublicense, distribute or
+otherwise make Nevuqe code available, directly or indirectly, to
+anyone other than You; and/or (b) to use Nevuqe Code, alone or as
+part of a Larger Work, in any way to provide a service, including but
+not limited to delivery of content, through electronic communication
+with a client other than You.
+
+1.3 "Larger Work" means a work which combines Nevuqe Code or portions
+thereof with code not governed by the terms of this License.
+
+1.4 "Modifications" mean any addition to, deletion from, and/or change
+to, the substance and/or structure of the Original Code, any previous
+Modifications, the combination of Original Code and any previous
+Modifications, and/or any respective portions thereof. When code is
+released as a series of files, a Modification is: (a) any addition to
+or deletion from the contents of a file containing Nevuqe Code;
+and/or (b) any new file or other representation of computer program
+statements that contains any part of Nevuqe Code.
+
+1.5 "Source Code" means the human readable form of a program or other
+work that is suitable for making modifications to it, including all
+modules it contains, plus any associated interface definition files,
+scripts used to control compilation and installation of an executable
+(object code).
+
+1.6 "You" or "Your" means an individual or a legal entity exercising
+rights under this License. For legal entities, "You" or "Your"
+includes any entity which controls, is controlled by, or is under
+common control with, You, where "control" means (a) the power, direct
+or indirect, to cause the direction or management of such entity,
+whether by contract or otherwise, or (b) ownership of fifty percent
+(50%) or more of the outstanding shares or beneficial ownership of
+such entity.
+
+1.7. Permitted Uses; Conditions & Restrictions. Subject to the terms
+and conditions of this License, Nevuqe hereby grants You, effective on
+the date You accept this License and download the Original Code, a
+world-wide, royalty-free, non-exclusive license, to the extent of
+Nevuqe's Applicable Patent Rights and copyrights covering the Original
+Code, to do the following:
+
+1.8 Unmodified Code. You may use, reproduce, display, perform,
+internally distribute within Your organization, and Externally Deploy
+verbatim, unmodified copies of the Original Code, for commercial or
+non-commercial purposes, provided that in each instance:
+
+(a) You must retain and reproduce in all copies of Original Code the
+copyright and other proprietary notices and disclaimers of Nevuqe as
+they appear in the Original Code, and keep intact all notices in the
+Original Code that refer to this License; and
+
+(b) You must include a copy of this License with every copy of Source
+Code of Nevuqe Code and documentation You distribute or Externally
+Deploy, and You may not offer or impose any terms on such Source Code
+that alter or restrict this License or the recipients' rights
+hereunder, except as permitted under Section 6.
+
+1.9 Modified Code. You may modify Nevuqe Code and use, reproduce,
+display, perform, internally distribute within Your organization, and
+Externally Deploy Your Modifications and Nevuqe Code, for commercial
+or non-commercial purposes, provided that in each instance You also
+meet all of these conditions:
+
+(a) You must satisfy all the conditions of Section 1.8 with respect to
+the Source Code of Nevuqe Code;
+
+(b) You must duplicate, to the extent it does not already exist, the
+notice in Exhibit A in each file of the Source Code of all Your
+Modifications, and cause the modified files to carry prominent notices
+stating that You changed the files and the date of any change; and
+
+(c) If You Externally Deploy Your Modifications, You must make
+Source Code of all Your Externally Deployed Modifications either
+available to those to whom You have Externally Deployed Your
+Modifications, or publicly available. Source Code of Your Externally
+Deployed Modifications must be released under the terms set forth in
+this License, including the license grants set forth in Section 3
+below, for as long as you Externally Deploy the Nevuqe Code or twelve
+(12) months from the date of initial External Deployment, whichever is
+longer. You should preferably distribute the Source Code of Your
+Externally Deployed Modifications electronically (e.g. download from a
+web site).
+
+2. Distribution of Executable Versions. In addition, if You
+Externally Deploy Nevuqe Code (Original Code and/or Modifications) in
+object code, executable form only, You must include a prominent
+notice, in the code itself as well as in related documentation,
+stating that Source Code of the Nevuqe Code is available under the
+terms of this License with information on how and where to obtain such
+Source Code.
+
+2.1 Third Party Rights. You expressly acknowledge and agree that
+although Nevuqe and each Contributor grants the licenses to their
+respective portions of the Nevuqe Code set forth herein, no
+assurances are provided by Nevuqe or any Contributor that the Nevuqe
+Code does not infringe the patent or other intellectual property
+rights of any other entity. Nevuqe and each Contributor disclaim any
+liability to You for claims brought by any other entity based on
+infringement of intellectual property rights or otherwise. As a
+condition to exercising the rights and licenses granted hereunder, You
+hereby assume sole responsibility to secure any other intellectual
+property rights needed, if any. For example, if a third party patent
+license is required to allow You to distribute the Nevuqe Code, it is
+Your responsibility to acquire that license before distributing the
+Nevuqe Code.
+
+2.2 Larger Works. You may create a Larger Work by combining Nevuqe
+Code with other code not governed by the terms of this License and
+distribute the Larger Work as a single product. In each such instance,
+You must make sure the requirements of this License are fulfilled for
+the Nevuqe Code or any portion thereof.
+
+3. Additional Terms. You may choose to offer, and to charge a fee for,
+warranty, support, indemnity or liability obligations and/or other
+rights consistent with the scope of the license granted herein
+("Additional Terms") to one or more recipients of Nevuqe Code.
+However, You may do so only on Your own behalf and as Your sole
+responsibility, and not on behalf of Nevuqe or any Contributor. You
+must obtain the recipient's agreement that any such Additional Terms
+are offered by You alone, and You hereby agree to indemnify, defend
+and hold Nevuqe and every Contributor harmless for any liability
+incurred by or claims asserted against Nevuqe or such Contributor by
+reason of any such Additional Terms.
+
+4. Versions of the License. Nevuqe may publish revised and/or new
+versions of this License from time to time. Each version will be given
+a distinguishing version number. Once Original Code has been published
+under a particular version of this License, You may continue to use it
+under the terms of that version. You may also choose to use such
+Original Code under the terms of any subsequent version of this
+License published by Nevuqe. No one other than Nevuqe has the right to
+modify the terms applicable to Nevuqe Code created under this
+License.
+
+5. NO WARRANTY OR SUPPORT. The Nevuqe Code may contain in whole or in
+part pre-release, untested, or not fully tested works. Nevuqe
+Code may contain errors that could cause failures or loss of data, and
+may be incomplete or contain inaccuracies. You expressly acknowledge
+and agree that use of Nevuqe Code, or any portion thereof, is at
+Your sole and entire risk. NEVUQE CODE IS PROVIDED "AS IS" AND
+WITHOUT WARRANTY, UPGRADES OR SUPPORT OF ANY KIND AND NEVUQE AND
+NEVUQE'S LICENSOR(S) (COLLECTIVELY REFERRED TO AS "NEVUQE" FOR THE
+PURPOSES OF SECTIONS 5 AND 6) AND ALL CONTRIBUTORS EXPRESSLY DISCLAIM
+ALL WARRANTIES AND/OR CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, BUT
+NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF
+MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR
+PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NONINFRINGEMENT OF THIRD
+PARTY RIGHTS. NEVUQE AND EACH CONTRIBUTOR DOES NOT WARRANT AGAINST
+INTERFERENCE WITH YOUR ENJOYMENT OF NEVUQE CODE, THAT THE
+FUNCTIONS CONTAINED IN NEVUQE CODE WILL MEET YOUR REQUIREMENTS,
+THAT THE OPERATION OF NEVUQE CODE WILL BE UNINTERRUPTED OR
+ERROR-FREE, OR THAT DEFECTS IN NEVUQE CODE WILL BE CORRECTED. NO
+ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY NEVUQE, AN NEVUQE
+AUTHORIZED REPRESENTATIVE OR ANY CONTRIBUTOR SHALL CREATE A WARRANTY.
+You acknowledge that Nevuqe Code is not intended for use in the
+operation of nuclear facilities, aircraft navigation, communication
+systems, or air traffic control machines in which case the failure of
+Nevuqe Code could lead to death, personal injury, or severe
+physical or environmental damage.
+
+6. LIMITATION OF LIABILITY. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO
+EVENT SHALL NEVUQE OR ANY CONTRIBUTOR BE LIABLE FOR ANY INCIDENTAL,
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR RELATING
+TO THIS LICENSE OR YOUR USE OR INABILITY TO USE THE NEVUQE CODE, OR
+ANY PORTION THEREOF, WHETHER UNDER A THEORY OF CONTRACT, WARRANTY,
+TORT (INCLUDING NEGLIGENCE), PRODUCTS LIABILITY OR OTHERWISE, EVEN IF
+NEVUQE OR SUCH CONTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES AND NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY
+REMEDY. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY OF
+INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY
+TO YOU. In no event shall Nevuqe's total liability to You for all
+damages (other than as may be required by applicable law) under this
+License exceed the amount of fifty dollars ($50.00).
+
+7. Trademarks. This License does not grant any rights to use the
+trademarks or trade names "Nevuqe", "Nevuqe Inc.", "NQC", "NQC Kernel",
+"Enso" or any other trademarks,
+service marks, logos or trade names belonging to Nevuqe (collectively
+"Nevuqe Marks") or to any trademark, service mark, logo or trade name
+belonging to any Contributor.
+
+8. Termination.
+
+8.1 Termination. This License and the rights granted hereunder will
+terminate:
+
+(a) automatically with notice from Nevuqe if You fail to comply with
+any term(s) of this License and fail to cure such breach within 30
+days of becoming aware of such breach;
+
+(b) automatically without notice from Nevuqe if You, at any time during
+the term of this License, commence an action for patent infringement
+against Nevuqe; provided that Nevuqe did not first commence
+an action for patent infringement against You in that instance.
+
+The Original Code and all software distributed under the License are
+distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESS OR IMPLIED, AND NEVUQE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
