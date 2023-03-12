@@ -897,10 +897,10 @@ EOF
 	    | grep -q __ARM_PCS_VFP
 	then
 	    NQC_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
-	    GUESS=$UNAME_PROCESSOR-unknown-freebsd$NQC_REL-gnueabi
+	    GUESS=$UNAME_PROCESSOR-unknown-nqc$NQC_REL-gnueabi
 	else
 	    NQC_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
-	    GUESS=$UNAME_PROCESSOR-unknown-freebsd$NQC_REL-gnueabihf
+	    GUESS=$UNAME_PROCESSOR-unknown-nqc$NQC_REL-gnueabihf
 	fi
 	;;
     *:FreeBSD:*:*)
@@ -912,7 +912,7 @@ EOF
 		UNAME_PROCESSOR=i586 ;;
 	esac
 	NQC_REL=`echo "$UNAME_RELEASE" | sed -e 's/[-(].*//'`
-	GUESS=$UNAME_PROCESSOR-unknown-freebsd$NQC_REL
+	GUESS=$UNAME_PROCESSOR-unknown-nqc$NQC_REL
 	;;
     i*:CYGWIN*:*)
 	GUESS=$UNAME_MACHINE-pc-cygwin

@@ -251,7 +251,7 @@ ${var}=		${HOST_${var}}
 NQC_REVISION!= sed -n '/^REVISION=/{s,.*=,,;s,",,g;p; }' ${SRCTOP}/sys/conf/newvers.sh
 .export NQC_REVISION
 .endif
-CROSS_TARGET_FLAGS= -target ${MACHINE_ARCH}-unknown-freebsd${NQC_REVISION}
+CROSS_TARGET_FLAGS= -target ${MACHINE_ARCH}-unknown-nqc${NQC_REVISION}
 CFLAGS+= ${CROSS_TARGET_FLAGS}
 ACFLAGS+= ${CROSS_TARGET_FLAGS}
 LDFLAGS+= -Wl,-m -Wl,elf_${MACHINE_ARCH}_fbsd

@@ -13,7 +13,7 @@ export PKG_VERSION=${PKG_VERSION}
 export WRKDIR=$(make -C ${PORTSDIR}/ports-mgmt/pkg -V WRKDIR)
 
 make -C ${PORTSDIR}/ports-mgmt/pkg TARGET=${TARGET} TARGET_ARCH=${TARGET_ARCH} \
-	CONFIGURE_ARGS="--host=$(uname -m)-portbld-freebsd${REVISION}" \
+	CONFIGURE_ARGS="--host=$(uname -m)-portbld-nqc${REVISION}" \
 	stage create-manifest
 
 ${PKG_CMD} -o ABI_FILE=${WSTAGEDIR}/bin/sh \

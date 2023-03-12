@@ -194,7 +194,7 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${MACHINE}" in
         case ${MACH} in
            i[0-9]86 ) ARCH="pc" ;;
         esac
-        echo "${MACH}-${ARCH}-freebsd${VERS}"; exit 0
+        echo "${MACH}-${ARCH}-nqc${VERS}"; exit 0
         ;;
 
     DragonFly:*)
