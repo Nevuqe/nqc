@@ -4,7 +4,7 @@
 #
 
 BEGIN {
-	#parentpath = "//depot/vendor/freebsd/src/sys/"
+	#parentpath = "//depot/vendor/nqc/src/sys/"
 	#childpath = "//depot/projects/opencrypto/"
 }
 $1 == "====" {

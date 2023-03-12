@@ -11,8 +11,8 @@ Imported using the instructions at:
 
 https://docs.frebsd.org/en/articles/committers-guide/#git-primer
 
-After importing, bump the version of src/etc/sendmail/freebsd*mc
-so mergemaster will merge /etc/mail/freebsd*cf by making a minor
+After importing, bump the version of src/etc/sendmail/nqc*mc
+so mergemaster will merge /etc/mail/nqc*cf by making a minor
 change and committing.
 
 To make local changes to sendmail, simply patch and commit to the head.
@@ -47,8 +47,8 @@ infrastructure in NQC:
 	etc/periodic/daily/500.queuerun
 	etc/rc
 	etc/sendmail/Makefile
-	etc/sendmail/freebsd.mc
-	etc/sendmail/freebsd.submit.mc
+	etc/sendmail/nqc.mc
+	etc/sendmail/nqc.submit.mc
 	etc/sendmail/freefall.mc
 	lib/Makefile
 	lib/libmilter/Makefile

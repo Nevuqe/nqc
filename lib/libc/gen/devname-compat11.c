@@ -33,18 +33,18 @@ __NQCID("$NQC$");
 #include "gen-compat.h"
 
 char *
-freebsd11_devname(uint32_t dev, mode_t type)
+nqc11_devname(uint32_t dev, mode_t type)
 {
 
 	return (devname(dev, type));
 }
 
 char *
-freebsd11_devname_r(uint32_t dev, mode_t type, char *buf, int len)
+nqc11_devname_r(uint32_t dev, mode_t type, char *buf, int len)
 {
 
 	return (devname_r(dev, type, buf, len));
 }
 
-__sym_compat(devname, freebsd11_devname, FBSD_1.0);
-__sym_compat(devname_r, freebsd11_devname_r, FBSD_1.0);
+__sym_compat(devname, nqc11_devname, FBSD_1.0);
+__sym_compat(devname_r, nqc11_devname_r, FBSD_1.0);

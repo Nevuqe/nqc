@@ -62,7 +62,7 @@ struct gpioiic_softc
 
 static struct ofw_compat_data compat_data[] = {
 	{"i2c-gpio",  true}, /* Standard devicetree compat string */
-	{"gpioiic",   true}, /* Deprecated old freebsd compat string */
+	{"gpioiic",   true}, /* Deprecated old nqc compat string */
 	{NULL,        false}
 };
 OFWBUS_PNP_INFO(compat_data);

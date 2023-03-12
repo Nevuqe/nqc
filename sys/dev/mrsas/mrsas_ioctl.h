@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2015, AVAGO Tech. All rights reserved. Author: Marian Choy
  * Copyright (c) 2014, LSI Corp. All rights reserved. Author: Marian Choy
- * Support: freebsdraid@avagotech.com
+ * Support: nqcraid@avagotech.com
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -50,7 +50,7 @@ __NQCID("$NQC$");
 #ifdef COMPAT_NQC32
 /* Compilation error FIX */
 #include <sys/mount.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 #endif
 
 /*

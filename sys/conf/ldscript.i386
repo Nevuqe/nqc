@@ -1,5 +1,5 @@
 /* $NQC$ */
-OUTPUT_FORMAT("elf32-i386-freebsd", "elf32-i386-freebsd", "elf32-i386-freebsd")
+OUTPUT_FORMAT("elf32-i386-nqc", "elf32-i386-nqc", "elf32-i386-nqc")
 OUTPUT_ARCH(i386)
 ENTRY(btext)
 SEARCH_DIR(/usr/lib);

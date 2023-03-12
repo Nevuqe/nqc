@@ -13,8 +13,8 @@ KMOD=	zfs
         ${SRCDIR}/icp/asm-ppc64/blake3 \
         ${SRCDIR}/icp/asm-x86_64/blake3 \
 	${SRCDIR}/icp/algs/edonr \
-	${SRCDIR}/os/freebsd/spl \
-	${SRCDIR}/os/freebsd/zfs \
+	${SRCDIR}/os/nqc/spl \
+	${SRCDIR}/os/nqc/zfs \
 	${SRCDIR}/unicode \
 	${SRCDIR}/zcommon \
 	${SRCDIR}/zfs	\
@@ -25,9 +25,9 @@ KMOD=	zfs
 
 
 CFLAGS+= -I${INCDIR}
-CFLAGS+= -I${INCDIR}/os/freebsd
-CFLAGS+= -I${INCDIR}/os/freebsd/spl
-CFLAGS+= -I${INCDIR}/os/freebsd/zfs
+CFLAGS+= -I${INCDIR}/os/nqc
+CFLAGS+= -I${INCDIR}/os/nqc/spl
+CFLAGS+= -I${INCDIR}/os/nqc/zfs
 CFLAGS+= -I${SRCDIR}/zstd/include
 CFLAGS+= -I${SRCDIR}/icp/include
 CFLAGS+= -I${.CURDIR}
@@ -107,7 +107,7 @@ SRCS+=	nvpair.c \
 	nvpair_alloc_spl.c \
 	nvpair_alloc_fixed.c
 
-#os/freebsd/spl
+#os/nqc/spl
 SRCS+=	acl_common.c \
 	btree.c \
 	callb.c \
@@ -137,7 +137,7 @@ SRCS+=	acl_common.c \
 SRCS+= spl_atomic.c
 .endif
 
-#os/freebsd/zfs
+#os/nqc/zfs
 SRCS+=	abd_os.c \
 	crypto_os.c \
 	dmu_os.c \
@@ -337,7 +337,7 @@ SRCS+=	zfs_zstd.c \
 .include <bsd.kmod.mk>
 
 CFLAGS+= -include ${SRCTOP}/sys/cddl/compat/opensolaris/sys/debug_compat.h
-CFLAGS+= -include ${INCDIR}/os/freebsd/spl/sys/ccompile.h
+CFLAGS+= -include ${INCDIR}/os/nqc/spl/sys/ccompile.h
 CFLAGS+= -include ${SRCTOP}/sys/modules/zfs/static_ccompile.h
 
 CWARNFLAGS+=	${OPENZFS_CWARNFLAGS}

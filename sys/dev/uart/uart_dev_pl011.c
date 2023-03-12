@@ -468,7 +468,7 @@ uart_pl011_bus_hwrev_fdt(struct uart_softc *sc)
 	 * byte FIFOs, rev 3 and up are 32 byte.  The hardware rev is in the
 	 * primecell periphid register, but we get a bit of drama, as always,
 	 * with the bcm2835 (rpi), which claims to be rev 3, but has 16 byte
-	 * FIFOs.  We check for both the old freebsd-historic and the proper
+	 * FIFOs.  We check for both the old nqc-historic and the proper
 	 * bindings-defined compatible strings for bcm2835, and also check the
 	 * workaround the linux drivers use for rpi3, which is to override the
 	 * primecell periphid register value with a property.

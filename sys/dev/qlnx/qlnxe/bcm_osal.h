@@ -39,7 +39,7 @@
 
 #define OSAL_NUM_CPUS()	mp_ncpus
 /*
- * prototypes of freebsd specific functions required by ecore
+ * prototypes of nqc specific functions required by ecore
  */
 extern uint32_t qlnx_pci_bus_get_bar_size(void *ecore_dev, uint8_t bar_id);
 extern uint32_t qlnx_pci_read_config_byte(void *ecore_dev, uint32_t pci_reg,

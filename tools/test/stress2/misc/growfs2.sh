@@ -42,7 +42,7 @@ mount | grep "on $mntpoint " | grep -q /dev/md && umount -f $mntpoint
 [ -c /dev/md$mdstart ] &&  mdconfig -d -u $mdstart
 mdconfig -a -t swap -s 32g -u $mdstart
 /sbin/gpart create -s GPT md$mdstart > /dev/null
-/sbin/gpart add -t freebsd-ufs -s 2g -a 4k md$mdstart > /dev/null
+/sbin/gpart add -t nqc-ufs -s 2g -a 4k md$mdstart > /dev/null
 set +e
 
 newfs $newfs_flags md${mdstart}p1 > /dev/null

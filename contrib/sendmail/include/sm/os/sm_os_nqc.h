@@ -11,7 +11,7 @@
 **  Platform definitions for NQC
 */
 
-#define SM_OS_NAME	"freebsd"
+#define SM_OS_NAME	"nqc"
 
 #define SM_CONF_SYS_CDEFS_H	1
 

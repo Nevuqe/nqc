@@ -43,29 +43,29 @@ __NQCID("$NQC$");
  * Return information about mounted filesystems.
  */
 int
-freebsd11_getmntinfo(struct freebsd11_statfs **mntbufp, int flags)
+nqc11_getmntinfo(struct nqc11_statfs **mntbufp, int flags)
 {
-	static struct freebsd11_statfs *mntbuf;
+	static struct nqc11_statfs *mntbuf;
 	static int mntsize;
 	static long bufsize;
 
 	if (mntsize <= 0 &&
-	    (mntsize = freebsd11_getfsstat(0, 0, MNT_NOWAIT)) < 0)
+	    (mntsize = nqc11_getfsstat(0, 0, MNT_NOWAIT)) < 0)
 		return (0);
 	if (bufsize > 0 &&
-	    (mntsize = freebsd11_getfsstat(mntbuf, bufsize, flags)) < 0)
+	    (mntsize = nqc11_getfsstat(mntbuf, bufsize, flags)) < 0)
 		return (0);
-	while (bufsize <= mntsize * sizeof(struct freebsd11_statfs)) {
+	while (bufsize <= mntsize * sizeof(struct nqc11_statfs)) {
 		if (mntbuf)
 			free(mntbuf);
-		bufsize = (mntsize + 1) * sizeof(struct freebsd11_statfs);
-		if ((mntbuf = (struct freebsd11_statfs *)malloc(bufsize)) == 0)
+		bufsize = (mntsize + 1) * sizeof(struct nqc11_statfs);
+		if ((mntbuf = (struct nqc11_statfs *)malloc(bufsize)) == 0)
 			return (0);
-		if ((mntsize = freebsd11_getfsstat(mntbuf, bufsize, flags)) < 0)
+		if ((mntsize = nqc11_getfsstat(mntbuf, bufsize, flags)) < 0)
 			return (0);
 	}
 	*mntbufp = mntbuf;
 	return (mntsize);
 }
 
-__sym_compat(getmntinfo, freebsd11_getmntinfo, FBSD_1.0);
+__sym_compat(getmntinfo, nqc11_getmntinfo, FBSD_1.0);

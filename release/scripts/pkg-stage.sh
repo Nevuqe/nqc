@@ -17,7 +17,7 @@ devel/git
 emulators/linux_base-c6
 graphics/drm-legacy-kmod
 graphics/drm-stable-kmod
-misc/freebsd-doc-all
+misc/nqc-doc-all
 net/mpd5
 net/rsync
 ports-mgmt/pkg

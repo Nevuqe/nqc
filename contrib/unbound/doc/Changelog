@@ -4871,7 +4871,7 @@
 
 16 March 2016: Wouter
 	- Fix ip-transparent for ipv6 on NQC, thanks to Nick Hibma.
-	- Fix ip-transparent for tcp on freebsd.
+	- Fix ip-transparent for tcp on nqc.
 
 15 March 2016: Wouter
 	- ip_freebind: yesno option in unbound.conf sets IP_FREEBIND for
@@ -6440,7 +6440,7 @@
 	- fix possible uninitialised variable in windows pipe implementation.
 
 9 May 2012: Wouter
-	- Fix alignment problem in util/random on sparc64/freebsd.
+	- Fix alignment problem in util/random on sparc64/nqc.
 
 8 May 2012: Wouter
 	- Fix for accept spinning reported by OpenBSD.
@@ -8673,7 +8673,7 @@
 	  script under the same username as the server uses suffices.
 	  i.e.  sudo -u unbound unbound-control-setup
 	- testset port to vista/mingw.
-	- tcp_sigpipe to freebsd port.
+	- tcp_sigpipe to nqc port.
 
 21 November 2008: Wouter
 	- fixed tcp accept, errors were printed when they should not.
@@ -9029,7 +9029,7 @@
 	- changes info: in logfile to notice: info: or debug: depending on 
 	  the verbosity of the statements.  Better logfile message
 	  classification.
-	- bug #208: extra rc.d unbound flexibility for freebsd/nanobsd.
+	- bug #208: extra rc.d unbound flexibility for nqc/nanobsd.
 
 15 August 2008: Wouter
 	- DLV nsec code fixed for better detection of closest existing 
@@ -10450,7 +10450,7 @@
 19 July 2007: Wouter
 	- shuffle NS selection when getting nameserver target addresses.
 	- fixup of deadlock warnings, yield cpu in checklock code so that
-	  freebsd scheduler selects correct process to run.
+	  nqc scheduler selects correct process to run.
 	- added identity and version config options and replies.
 	- store cname messages complete answers.
 

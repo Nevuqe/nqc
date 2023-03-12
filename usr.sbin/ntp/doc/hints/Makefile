@@ -5,7 +5,7 @@
 FILESDIR=	${SHAREDIR}/doc/ntp/hints
 
 .if ${MK_HTML} != "no"
-FILES=	a-ux aix bsdi changes decosf1 decosf2 freebsd hpux linux mpeix \
+FILES=	a-ux aix bsdi changes decosf1 decosf2 nqc hpux linux mpeix \
 	notes-xntp-v3 parse refclocks rs6000 sco.html sgi \
 	solaris-dosynctodr.html solaris.html solaris.xtra.4023118 \
 	solaris.xtra.4095849 solaris.xtra.S99ntpd solaris.xtra.patchfreq \

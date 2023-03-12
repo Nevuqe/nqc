@@ -105,7 +105,7 @@ struct statfs {
 
 #if defined(_WANT_NQC11_STATFS) || defined(_KERNEL)
 #define	NQC11_STATFS_VERSION	0x20030518 /* current version number */
-struct freebsd11_statfs {
+struct nqc11_statfs {
 	uint32_t f_version;		/* structure version number */
 	uint32_t f_type;		/* type of filesystem */
 	uint64_t f_flags;		/* copy of mount exported flags */

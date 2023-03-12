@@ -86,7 +86,7 @@ static int	 fts_ufslinks(FTS11 *, const FTSENT11 *);
  */
 struct _fts_private11 {
 	FTS11		ftsp_fts;
-	struct freebsd11_statfs	ftsp_statfs;
+	struct nqc11_statfs	ftsp_statfs;
 	uint32_t	ftsp_dev;
 	int		ftsp_linksreliable;
 };
@@ -109,7 +109,7 @@ static const char *ufslike_filesystems[] = {
 };
 
 FTS11 *
-freebsd11_fts_open(char * const *argv, int options,
+nqc11_fts_open(char * const *argv, int options,
     int (*compar)(const FTSENT11 * const *, const FTSENT11 * const *))
 {
 	struct _fts_private11 *priv;
@@ -245,7 +245,7 @@ fts_load(FTS11 *sp, FTSENT11 *p)
 }
 
 int
-freebsd11_fts_close(FTS11 *sp)
+nqc11_fts_close(FTS11 *sp)
 {
 	FTSENT11 *freep, *p;
 	int saved_errno;
@@ -299,7 +299,7 @@ freebsd11_fts_close(FTS11 *sp)
 	    ? p->fts_pathlen - 1 : p->fts_pathlen)
 
 FTSENT11 *
-freebsd11_fts_read(FTS11 *sp)
+nqc11_fts_read(FTS11 *sp)
 {
 	FTSENT11 *p, *tmp;
 	int instr;
@@ -497,7 +497,7 @@ name:		t = sp->fts_path + NAPPEND(p->fts_parent);
  */
 /* ARGSUSED */
 int
-freebsd11_fts_set(FTS11 *sp, FTSENT11 *p, int instr)
+nqc11_fts_set(FTS11 *sp, FTSENT11 *p, int instr)
 {
 	if (instr != 0 && instr != FTS_AGAIN && instr != FTS_FOLLOW &&
 	    instr != FTS_NOINSTR && instr != FTS_SKIP) {
@@ -509,7 +509,7 @@ freebsd11_fts_set(FTS11 *sp, FTSENT11 *p, int instr)
 }
 
 FTSENT11 *
-freebsd11_fts_children(FTS11 *sp, int instr)
+nqc11_fts_children(FTS11 *sp, int instr)
 {
 	FTSENT11 *p;
 	int fd, rc, serrno;
@@ -579,43 +579,43 @@ freebsd11_fts_children(FTS11 *sp, int instr)
 	return (sp->fts_child);
 }
 
-#ifndef freebsd11_fts_get_clientptr
-#error "freebsd11_fts_get_clientptr not defined"
+#ifndef nqc11_fts_get_clientptr
+#error "nqc11_fts_get_clientptr not defined"
 #endif
 
 void *
-(freebsd11_fts_get_clientptr)(FTS11 *sp)
+(nqc11_fts_get_clientptr)(FTS11 *sp)
 {
 
-	return (freebsd11_fts_get_clientptr(sp));
+	return (nqc11_fts_get_clientptr(sp));
 }
 
-#ifndef freebsd11_fts_get_stream
-#error "freebsd11_fts_get_stream not defined"
+#ifndef nqc11_fts_get_stream
+#error "nqc11_fts_get_stream not defined"
 #endif
 
 FTS11 *
-(freebsd11_fts_get_stream)(FTSENT11 *p)
+(nqc11_fts_get_stream)(FTSENT11 *p)
 {
-	return (freebsd11_fts_get_stream(p));
+	return (nqc11_fts_get_stream(p));
 }
 
 void
-freebsd11_fts_set_clientptr(FTS11 *sp, void *clientptr)
+nqc11_fts_set_clientptr(FTS11 *sp, void *clientptr)
 {
 
 	sp->fts_clientptr = clientptr;
 }
 
-static struct freebsd11_dirent *
+static struct nqc11_dirent *
 fts_safe_readdir(DIR *dirp, int *readdir_errno)
 {
-	struct freebsd11_dirent *ret;
+	struct nqc11_dirent *ret;
 
 	errno = 0;
 	if (!dirp)
 		return (NULL);
-	ret = freebsd11_readdir(dirp);
+	ret = nqc11_readdir(dirp);
 	*readdir_errno = errno;
 	return (ret);
 }
@@ -637,7 +637,7 @@ fts_safe_readdir(DIR *dirp, int *readdir_errno)
 static FTSENT11 *
 fts_build(FTS11 *sp, int type)
 {
-	struct freebsd11_dirent *dp;
+	struct nqc11_dirent *dp;
 	FTSENT11 *p, *head;
 	FTSENT11 *cur, *tail;
 	DIR *dirp;
@@ -902,7 +902,7 @@ fts_stat(FTS11 *sp, FTSENT11 *p, int follow, int dfd)
 	FTSENT11 *t;
 	uint32_t dev;
 	uint32_t ino;
-	struct freebsd11_stat *sbp, sb;
+	struct nqc11_stat *sbp, sb;
 	int saved_errno;
 	const char *path;
 
@@ -931,9 +931,9 @@ fts_stat(FTS11 *sp, FTSENT11 *p, int follow, int dfd)
 	 * fail, set the errno from the stat call.
 	 */
 	if (ISSET(FTS_LOGICAL) || follow) {
-		if (freebsd11_fstatat(dfd, path, sbp, 0)) {
+		if (nqc11_fstatat(dfd, path, sbp, 0)) {
 			saved_errno = errno;
-			if (freebsd11_fstatat(dfd, path, sbp,
+			if (nqc11_fstatat(dfd, path, sbp,
 			    AT_SYMLINK_NOFOLLOW)) {
 				p->fts_errno = saved_errno;
 				goto err;
@@ -942,7 +942,7 @@ fts_stat(FTS11 *sp, FTSENT11 *p, int follow, int dfd)
 			if (S_ISLNK(sbp->st_mode))
 				return (FTS_SLNONE);
 		}
-	} else if (freebsd11_fstatat(dfd, path, sbp, AT_SYMLINK_NOFOLLOW)) {
+	} else if (nqc11_fstatat(dfd, path, sbp, AT_SYMLINK_NOFOLLOW)) {
 		p->fts_errno = errno;
 err:		memset(sbp, 0, sizeof(*sbp));
 		return (FTS_NS);
@@ -1036,7 +1036,7 @@ fts_alloc(FTS11 *sp, char *name, size_t namelen)
 
 	struct ftsent11_withstat {
 		FTSENT11	ent;
-		struct	freebsd11_stat statbuf;
+		struct	nqc11_stat statbuf;
 	};
 
 	/*
@@ -1150,7 +1150,7 @@ static int
 fts_safe_changedir(FTS11 *sp, FTSENT11 *p, int fd, char *path)
 {
 	int ret, oerrno, newfd;
-	struct freebsd11_stat sb;
+	struct nqc11_stat sb;
 
 	newfd = fd;
 	if (ISSET(FTS_NOCHDIR))
@@ -1158,7 +1158,7 @@ fts_safe_changedir(FTS11 *sp, FTSENT11 *p, int fd, char *path)
 	if (fd < 0 && (newfd = _open(path, O_RDONLY | O_DIRECTORY |
 	    O_CLOEXEC, 0)) < 0)
 		return (-1);
-	if (freebsd11_fstat(newfd, &sb)) {
+	if (nqc11_fstat(newfd, &sb)) {
 		ret = -1;
 		goto bail;
 	}
@@ -1193,7 +1193,7 @@ fts_ufslinks(FTS11 *sp, const FTSENT11 *ent)
 	 * avoidance.
 	 */
 	if (priv->ftsp_dev != ent->fts_dev) {
-		if (freebsd11_statfs(ent->fts_path, &priv->ftsp_statfs) != -1) {
+		if (nqc11_statfs(ent->fts_path, &priv->ftsp_statfs) != -1) {
 			priv->ftsp_dev = ent->fts_dev;
 			priv->ftsp_linksreliable = 0;
 			for (cpp = ufslike_filesystems; *cpp; cpp++) {
@@ -1210,11 +1210,11 @@ fts_ufslinks(FTS11 *sp, const FTSENT11 *ent)
 	return (priv->ftsp_linksreliable);
 }
 
-__sym_compat(fts_open, freebsd11_fts_open, FBSD_1.1);
-__sym_compat(fts_close, freebsd11_fts_close, FBSD_1.1);
-__sym_compat(fts_read, freebsd11_fts_read, FBSD_1.1);
-__sym_compat(fts_set, freebsd11_fts_set, FBSD_1.1);
-__sym_compat(fts_children, freebsd11_fts_children, FBSD_1.1);
-__sym_compat(fts_get_clientptr, freebsd11_fts_get_clientptr, FBSD_1.1);
-__sym_compat(fts_get_stream, freebsd11_fts_get_stream, FBSD_1.1);
-__sym_compat(fts_set_clientptr, freebsd11_fts_set_clientptr, FBSD_1.1);
+__sym_compat(fts_open, nqc11_fts_open, FBSD_1.1);
+__sym_compat(fts_close, nqc11_fts_close, FBSD_1.1);
+__sym_compat(fts_read, nqc11_fts_read, FBSD_1.1);
+__sym_compat(fts_set, nqc11_fts_set, FBSD_1.1);
+__sym_compat(fts_children, nqc11_fts_children, FBSD_1.1);
+__sym_compat(fts_get_clientptr, nqc11_fts_get_clientptr, FBSD_1.1);
+__sym_compat(fts_get_stream, nqc11_fts_get_stream, FBSD_1.1);
+__sym_compat(fts_set_clientptr, nqc11_fts_set_clientptr, FBSD_1.1);

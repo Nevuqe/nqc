@@ -26,7 +26,7 @@
  * $NQC$
  */
 
-#include "zstd_kfreebsd.h"
+#include "zstd_knqc.h"
 #include <sys/param.h>
 #include <sys/endian.h>
 

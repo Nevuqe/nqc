@@ -3,7 +3,7 @@
 .PATH: ${SRCTOP}/sys/contrib/openzfs/module/icp
 .PATH: ${SRCTOP}/sys/contrib/openzfs/module/zcommon
 .PATH: ${SRCTOP}/sys/contrib/openzfs/lib/libzfs
-.PATH: ${SRCTOP}/sys/contrib/openzfs/lib/libzfs/os/freebsd
+.PATH: ${SRCTOP}/sys/contrib/openzfs/lib/libzfs/os/nqc
 .PATH: ${SRCTOP}/sys/contrib/openzfs/lib/libshare
 .PATH: ${SRCTOP}/sys/contrib/openzfs/include
 .PATH: ${SRCTOP}/sys/contrib/openzfs/module/zstd
@@ -51,8 +51,8 @@ USER_C += \
 USER_C += \
 	libshare.c \
 	nfs.c \
-	os/freebsd/nfs.c \
-	os/freebsd/smb.c
+	os/nqc/nfs.c \
+	os/nqc/smb.c
 
 KERNEL_C = \
         algs/sha2/sha2.c \
@@ -90,15 +90,15 @@ SHLIB_MAJOR= 4
 CSTD=	c99
 CFLAGS+= -DIN_BASE
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/include
-CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/include/os/freebsd
+CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/include/os/nqc
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libspl/include
-CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libspl/include/os/freebsd
+CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libspl/include/os/nqc
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libshare
 CFLAGS+= -I${SRCTOP}/sys/contrib/ck/include
 CFLAGS+= -I${SRCTOP}/sys
 CFLAGS+= -I${SRCTOP}/cddl/compat/opensolaris/include
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/module/icp/include
-CFLAGS+= -include ${SRCTOP}/sys/contrib/openzfs/include/os/freebsd/spl/sys/ccompile.h
+CFLAGS+= -include ${SRCTOP}/sys/contrib/openzfs/include/os/nqc/spl/sys/ccompile.h
 CFLAGS+= -DHAVE_ISSETUGID
 CFLAGS+= -include ${SRCTOP}/sys/modules/zfs/zfs_config.h
 CFLAGS+= -DSYSCONFDIR=\"/etc\"

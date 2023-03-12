@@ -44,8 +44,8 @@ __NQCID("$NQC$");
 
 int	__semctl(int semid, int semnum, int cmd, union semun *arg);
 #ifndef NO_COMPAT7
-int	freebsd7___semctl(int semid, int semnum, int cmd, union semun_old *arg);
-int	freebsd7_semctl(int semid, int semnum, int cmd, ...);
+int	nqc7___semctl(int semid, int semnum, int cmd, union semun_old *arg);
+int	nqc7_semctl(int semid, int semnum, int cmd, ...);
 #endif
 
 int
@@ -70,7 +70,7 @@ semctl(int semid, int semnum, int cmd, ...)
 
 #ifndef NO_COMPAT7
 int
-freebsd7_semctl(int semid, int semnum, int cmd, ...)
+nqc7_semctl(int semid, int semnum, int cmd, ...)
 {
 	va_list ap;
 	union semun_old semun;
@@ -86,8 +86,8 @@ freebsd7_semctl(int semid, int semnum, int cmd, ...)
 	}
 	va_end(ap);
 
-	return (freebsd7___semctl(semid, semnum, cmd, semun_ptr));
+	return (nqc7___semctl(semid, semnum, cmd, semun_ptr));
 }
 
-__sym_compat(semctl, freebsd7_semctl, FBSD_1.0);
+__sym_compat(semctl, nqc7_semctl, FBSD_1.0);
 #endif

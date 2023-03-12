@@ -24,9 +24,9 @@
 #ifndef __SMTYPES_H__
 #define __SMTYPES_H__
 
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
 
 #include <dev/pms/RefTisa/sallsdk/api/sa.h>
 #include <dev/pms/RefTisa/sallsdk/api/saapi.h>

@@ -361,7 +361,7 @@ static int32_t bbr_verbose_logging = 0;
  * being a total of 122.850 seconds before a
  * connection is killed.
  */
-static int32_t bbr_rto_min_ms = 30;	/* 30ms same as main freebsd */
+static int32_t bbr_rto_min_ms = 30;	/* 30ms same as main nqc */
 static int32_t bbr_rto_max_sec = 4;	/* 4 seconds */
 
 /****************************************************/

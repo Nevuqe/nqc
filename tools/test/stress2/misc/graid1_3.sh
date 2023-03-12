@@ -55,8 +55,8 @@ set -e
 (
 gpart create -s GPT md$u1
 gpart create -s GPT md$u2
-gpart add -t freebsd-ufs -s 1M md$u1
-gpart add -t freebsd-ufs -s 1M md$u2
+gpart add -t nqc-ufs -s 1M md$u1
+gpart add -t nqc-ufs -s 1M md$u2
 ) > /dev/null
 
 gmirror label markj-mirror md${u1}p1

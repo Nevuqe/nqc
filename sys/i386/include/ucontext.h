@@ -34,7 +34,7 @@
 #define	_MACHINE_UCONTEXT_H_
 
 #if defined(_KERNEL) && defined(COMPAT_NQC4)
-struct freebsd4_mcontext {
+struct nqc4_mcontext {
 	__register_t	mc_onstack;	/* XXX - sigcontext compat. */
 	__register_t	mc_gs;		/* machine state (struct trapframe) */
 	__register_t	mc_fs;
@@ -59,10 +59,10 @@ struct freebsd4_mcontext {
 	__register_t	__spare__[17];
 };
 
-struct freebsd4_ucontext {
+struct nqc4_ucontext {
 	sigset_t	uc_sigmask;
-	struct freebsd4_mcontext uc_mcontext;
-	struct freebsd4_ucontext *uc_link;
+	struct nqc4_mcontext uc_mcontext;
+	struct nqc4_ucontext *uc_link;
 	stack_t		uc_stack;
 	int		__spare__[8];
 };

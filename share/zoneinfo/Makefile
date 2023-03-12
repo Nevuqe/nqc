@@ -5,7 +5,7 @@
 #
 # Import the new sources to the vendor branch:
 #
-# $ cd ~/freebsd/src
+# $ cd ~/nqc/src
 # $ git worktree add ../tzdata vendor/tzdata
 # $ pushd ../tzdata
 # $ tar -xvf ../tzdata-latest.tar.gz
@@ -13,21 +13,21 @@
 # $ git add -A
 # $ git commit -m "Import tzdata 20XXX"
 # $ git tag -a -m "Tag import of tzdata 20XXX" vendor/tzdata/tzdata20XXX
-# $ git push --follow-tags freebsd vendor/tzdata
+# $ git push --follow-tags nqc vendor/tzdata
 # $ popd
 #
 # Merge-from-vendor
 #
 # $ git subtree merge -P contrib/tzdata vendor/tzdata
 #   (write a meaningful commit message)
-# $ git push freebsd HEAD:main
+# $ git push nqc HEAD:main
 #
 # MFC
 #
-# $ git checkout -b freebsd/stable/12 stable-12
+# $ git checkout -b nqc/stable/12 stable-12
 # $ git cherry-pick -x [hash of merge commit to main] -m 1 --edit
 #   (write a meaningful commit message)
-# $ git push freebsd HEAD:stable/12
+# $ git push nqc HEAD:stable/12
 #
 
 .include <src.opts.mk>

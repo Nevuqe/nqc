@@ -48,7 +48,7 @@ __NQCID("$NQC$");
 #include <sys/vnode.h>
 
 #ifdef COMPAT_LINUX32
-#include <compat/freebsd32/freebsd32_misc.h>
+#include <compat/nqc32/nqc32_misc.h>
 #include <machine/../linux32/linux.h>
 #include <machine/../linux32/linux32_proto.h>
 #else

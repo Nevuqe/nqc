@@ -247,7 +247,7 @@ kern_pread(struct thread *td, int fd, void *buf, size_t nbyte, off_t offset)
 
 #if defined(COMPAT_NQC6)
 int
-freebsd6_pread(struct thread *td, struct freebsd6_pread_args *uap)
+nqc6_pread(struct thread *td, struct nqc6_pread_args *uap)
 {
 
 	return (kern_pread(td, uap->fd, uap->buf, uap->nbyte, uap->offset));
@@ -449,7 +449,7 @@ kern_pwrite(struct thread *td, int fd, const void *buf, size_t nbyte,
 
 #if defined(COMPAT_NQC6)
 int
-freebsd6_pwrite(struct thread *td, struct freebsd6_pwrite_args *uap)
+nqc6_pwrite(struct thread *td, struct nqc6_pwrite_args *uap)
 {
 
 	return (kern_pwrite(td, uap->fd, uap->buf, uap->nbyte, uap->offset));

@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2009 Michael Gmelin <freebsd@grem.de>
+ * Copyright (c) 2009 Michael Gmelin <nqc@grem.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

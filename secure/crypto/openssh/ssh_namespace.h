@@ -1,6 +1,6 @@
 /*
  * This file was machine-@generated.  Do not edit manually.
- * Run crypto/openssh/freebsd-namespace.sh to regenerate.
+ * Run crypto/openssh/nqc-namespace.sh to regenerate.
  */
 #define Blowfish_decipher			Fssh_Blowfish_decipher
 #define Blowfish_encipher			Fssh_Blowfish_encipher

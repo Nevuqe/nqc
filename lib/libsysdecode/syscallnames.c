@@ -45,7 +45,7 @@ static
 
 #if defined(__amd64__) || defined(__powerpc64__) || defined(__aarch64__)
 static
-#include <compat/freebsd32/freebsd32_syscalls.c>
+#include <compat/nqc32/nqc32_syscalls.c>
 #endif
 
 #if defined(__aarch64__) || defined(__amd64__) || defined(__i386__)
@@ -75,8 +75,8 @@ sysdecode_syscallname(enum sysdecode_abi abi, unsigned int code)
 		break;
 #if defined(__amd64__) || defined(__powerpc64__) || defined(__aarch64__)
 	case SYSDECODE_ABI_NQC32:
-		if (code < nitems(freebsd32_syscallnames))
-			return (freebsd32_syscallnames[code]);
+		if (code < nitems(nqc32_syscallnames))
+			return (nqc32_syscallnames[code]);
 		break;
 #endif
 #if defined(__aarch64__) || defined(__amd64__) || defined(__i386__)

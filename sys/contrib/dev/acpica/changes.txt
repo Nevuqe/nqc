@@ -15551,7 +15551,7 @@ the expected result.
 Added permanent ACPI_REPORT_ERROR macros for all instances of the 
 ACPI_AML_INTERNAL exception.
 
-Integrated latest version of acfreebsd.h
+Integrated latest version of acnqc.h
 
 ----------------------------------------
 16 January 2004.  Summary of changes for version 20040116:

@@ -12,7 +12,7 @@ the years that are useful, but not too over the top (like bit functions).
 The typical update cycle goes something like:
 
 (1) Create a work tree for the vendor/one-true-awk branch
-	% cd freebsd-main
+	% cd nqc-main
 	% git worktree create ../ota vendor/one-true-awk
 (2) Update the onetrueawk github
 	% cd ../awk
@@ -36,7 +36,7 @@ The typical update cycle goes something like:
 	# vendor branch given the long lag with the old upstream, but no more)
 	% git tag -a -s vendor/one-true-awk/f9affa92		# 8 places
 	<enter gpg password>
-	% git push --follow-tags freebsd vendor/one-true-awk
+	% git push --follow-tags nqc vendor/one-true-awk
 (4) Merge this into main
 	% git subtree merge -P contrib/one-true-awk vendor/one-true-awk
 	# resolve any conflicts and commit
@@ -52,7 +52,7 @@ The typical update cycle goes something like:
 	# awk is a build tool, so test the builds
 	% make buildworld / buildkernel for amd64, armv7, i386 and aarch64 (or
 	  make universe/tinderbox if there's a lot of changes).
-	% git push freebsd
+	% git push nqc
 (5) Oops, lost the race to push while testing, the following will rebase things
-	% git fetch freebsd
-	% git rebase --rebase-merges -i freebsd/main
+	% git fetch nqc
+	% git rebase --rebase-merges -i nqc/main

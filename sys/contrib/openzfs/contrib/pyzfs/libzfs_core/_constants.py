@@ -24,7 +24,7 @@ import sys
 
 
 # Compat for platform-specific errnos
-if sys.platform.startswith('freebsd'):
+if sys.platform.startswith('nqc'):
     ECHRNG = errno.ENXIO
     ECKSUM = 97  # EINTEGRITY
     ETIME = errno.ETIMEDOUT

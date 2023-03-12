@@ -23,7 +23,7 @@ merge)
 	;;
 esac
 
-outfile=$(mktemp /tmp/freebsd-git-commit.XXXXXXXX)
+outfile=$(mktemp /tmp/nqc-git-commit.XXXXXXXX)
 
 # Create a commit message template from three parts:
 #
@@ -53,7 +53,7 @@ $(awk '1;/^#$/{exit}' $1)
 # Relnotes:	<Set to 'yes' for mention in release notes.>
 # Security:	<Vulnerability reference (one per line) or description.>
 # Sponsored by:	<If the change was sponsored by an organization.>
-# Pull Request:	<https://github.com/freebsd/<repo>/pull/###>
+# Pull Request:	<https://github.com/nqc/<repo>/pull/###>
 # Differential Revision:	<https://reviews.frebsd.org/D###>
 #
 # "Pull Request" and "Differential Revision" require the *full* GitHub or

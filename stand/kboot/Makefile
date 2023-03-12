@@ -40,7 +40,7 @@ CFLAGS.gfx_fb_stub.c += -I${SRCTOP}/contrib/pnglite -I${SRCTOP}/sys/teken
 .if ${MK_LOADER_ZFS} != "no"
 CFLAGS+=	-I${ZFSSRC}
 CFLAGS+=        -I${SYSDIR}/contrib/openzfs/include
-CFLAGS+=        -I${SYSDIR}/contrib/openzfs/include/os/freebsd/zfs
+CFLAGS+=        -I${SYSDIR}/contrib/openzfs/include/os/nqc/zfs
 HAVE_ZFS=yes
 .endif
 

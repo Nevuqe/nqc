@@ -867,7 +867,7 @@ local function handle_noncompat(sysnum, thr_flag, flags, sysflags, rettype,
 	local protoflags = get_mask({"NOPROTO", "NODEF"})
 	if flags & protoflags == 0 then
 		if funcname == "nosys" or funcname == "lkmnosys" or
-		    funcname == "sysarch" or funcname:find("^freebsd") or
+		    funcname == "sysarch" or funcname:find("^nqc") or
 		    funcname:find("^linux") then
 			write_line("sysdcl", string.format(
 			    "%s\t%s(struct thread *, struct %s *)",
@@ -900,7 +900,7 @@ local function handle_noncompat(sysnum, thr_flag, flags, sysflags, rettype,
 		column = column + #"lkmressys" + #"AUE_NULL" + 3
 	else
 		if funcname == "nosys" or funcname == "lkmnosys" or
-		    funcname == "sysarch" or funcname:find("^freebsd") or
+		    funcname == "sysarch" or funcname:find("^nqc") or
 		    funcname:find("^linux") then
 			write_line("sysent", string.format(
 			    "%s, .sy_auevent = %s, .sy_flags = %s, .sy_thrcnt = %s },",
@@ -1018,7 +1018,7 @@ local function handle_compat(sysnum, thr_flag, flags, sysflags, rettype,
 	write_line("sysnames", string.format(
 	    "\t\"%s.%s\",\t\t/* %d = %s %s */\n",
 	    wrap, funcalias, sysnum, descr, funcalias))
-	-- Do not provide freebsdN_* symbols in libc for < NQC 7
+	-- Do not provide nqcN_* symbols in libc for < NQC 7
 	local nosymflags = get_mask({"COMPAT", "COMPAT4", "COMPAT6"})
 	if flags & nosymflags ~= 0 then
 		write_line("syshdr", string.format(

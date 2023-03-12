@@ -14,7 +14,7 @@ MIASM =  \
 	unlink.o \
 	chdir.o \
 	fchdir.o \
-	freebsd11_mknod.o \
+	nqc11_mknod.o \
 	chmod.o \
 	chown.o \
 	break.o \
@@ -38,7 +38,7 @@ MIASM =  \
 	kill.o \
 	getppid.o \
 	dup.o \
-	freebsd10_pipe.o \
+	nqc10_pipe.o \
 	getegid.o \
 	profil.o \
 	ktrace.o \
@@ -59,7 +59,7 @@ MIASM =  \
 	vfork.o \
 	sbrk.o \
 	sstk.o \
-	freebsd11_vadvise.o \
+	nqc11_vadvise.o \
 	munmap.o \
 	mprotect.o \
 	madvise.o \
@@ -119,14 +119,14 @@ MIASM =  \
 	setgid.o \
 	setegid.o \
 	seteuid.o \
-	freebsd11_stat.o \
-	freebsd11_fstat.o \
-	freebsd11_lstat.o \
+	nqc11_stat.o \
+	nqc11_fstat.o \
+	nqc11_lstat.o \
 	pathconf.o \
 	fpathconf.o \
 	getrlimit.o \
 	setrlimit.o \
-	freebsd11_getdirentries.o \
+	nqc11_getdirentries.o \
 	__syscall.o \
 	__sysctl.o \
 	mlock.o \
@@ -135,15 +135,15 @@ MIASM =  \
 	futimes.o \
 	getpgid.o \
 	poll.o \
-	freebsd7___semctl.o \
+	nqc7___semctl.o \
 	semget.o \
 	semop.o \
-	freebsd7_msgctl.o \
+	nqc7_msgctl.o \
 	msgget.o \
 	msgsnd.o \
 	msgrcv.o \
 	shmat.o \
-	freebsd7_shmctl.o \
+	nqc7_shmctl.o \
 	shmdt.o \
 	shmget.o \
 	clock_gettime.o \
@@ -168,16 +168,16 @@ MIASM =  \
 	aio_read.o \
 	aio_write.o \
 	lio_listio.o \
-	freebsd11_getdents.o \
+	nqc11_getdents.o \
 	lchmod.o \
 	lutimes.o \
-	freebsd11_nstat.o \
-	freebsd11_nfstat.o \
-	freebsd11_nlstat.o \
+	nqc11_nstat.o \
+	nqc11_nfstat.o \
+	nqc11_nlstat.o \
 	preadv.o \
 	pwritev.o \
 	fhopen.o \
-	freebsd11_fhstat.o \
+	nqc11_fhstat.o \
 	modnext.o \
 	modstat.o \
 	modfnext.o \
@@ -232,7 +232,7 @@ MIASM =  \
 	getresuid.o \
 	getresgid.o \
 	kqueue.o \
-	freebsd11_kevent.o \
+	nqc11_kevent.o \
 	extattr_set_fd.o \
 	extattr_get_fd.o \
 	extattr_delete_fd.o \
@@ -251,10 +251,10 @@ MIASM =  \
 	uuidgen.o \
 	sendfile.o \
 	mac_syscall.o \
-	freebsd11_getfsstat.o \
-	freebsd11_statfs.o \
-	freebsd11_fstatfs.o \
-	freebsd11_fhstatfs.o \
+	nqc11_getfsstat.o \
+	nqc11_statfs.o \
+	nqc11_fstatfs.o \
+	nqc11_fhstatfs.o \
 	ksem_close.o \
 	ksem_post.o \
 	ksem_wait.o \
@@ -276,7 +276,7 @@ MIASM =  \
 	getcontext.o \
 	setcontext.o \
 	swapcontext.o \
-	freebsd13_swapoff.o \
+	nqc13_swapoff.o \
 	__acl_get_link.o \
 	__acl_set_link.o \
 	__acl_delete_link.o \
@@ -286,8 +286,8 @@ MIASM =  \
 	thr_exit.o \
 	thr_self.o \
 	thr_kill.o \
-	freebsd10__umtx_lock.o \
-	freebsd10__umtx_unlock.o \
+	nqc10__umtx_lock.o \
+	nqc10__umtx_unlock.o \
 	jail_attach.o \
 	extattr_list_fd.o \
 	extattr_list_file.o \
@@ -329,7 +329,7 @@ MIASM =  \
 	truncate.o \
 	ftruncate.o \
 	thr_kill2.o \
-	freebsd12_shm_open.o \
+	nqc12_shm_open.o \
 	shm_unlink.o \
 	cpuset.o \
 	cpuset_setid.o \
@@ -340,12 +340,12 @@ MIASM =  \
 	fchmodat.o \
 	fchownat.o \
 	fexecve.o \
-	freebsd11_fstatat.o \
+	nqc11_fstatat.o \
 	futimesat.o \
 	linkat.o \
 	mkdirat.o \
 	mkfifoat.o \
-	freebsd11_mknodat.o \
+	nqc11_mknodat.o \
 	openat.o \
 	readlinkat.o \
 	renameat.o \
@@ -356,7 +356,7 @@ MIASM =  \
 	jail_get.o \
 	jail_set.o \
 	jail_remove.o \
-	freebsd12_closefrom.o \
+	nqc12_closefrom.o \
 	__semctl.o \
 	msgctl.o \
 	shmctl.o \

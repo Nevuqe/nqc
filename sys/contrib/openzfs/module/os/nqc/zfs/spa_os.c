@@ -267,7 +267,7 @@ spa_import_rootpool(const char *name, bool checkpointrewind)
 const char *
 spa_history_zone(void)
 {
-	return ("freebsd");
+	return ("nqc");
 }
 
 void

@@ -1,5 +1,5 @@
 
-"Readme.freebsd.txt"    PMC-Sierra, Inc.   05/01/2013
+"Readme.nqc.txt"    PMC-Sierra, Inc.   05/01/2013
 
               PMC-Sierra SPCv/SPCve/SPCv+ TISA NQC Initiator Driver
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -22,17 +22,17 @@ SPCv Host Driver ver. 1.2.0 for Rev C chip
    Tisa/sat/src
    - NQC related source tree -
    Tisa/tisa/api
-   freebsd/common
-   freebsd/ini
-   freebsd/ini/src
+   nqc/common
+   nqc/ini
+   nqc/ini/src
 
 2. Process To Build the Driver Module First Time
 ------------------------------------------------
-  From the directory freebsd/ini/src, type "make".
+  From the directory nqc/ini/src, type "make".
 
 3. Process To Rebuild the Driver Module
 ---------------------------------------
-  1. from the directory freebsd/ini/src, type "make clean".
+  1. from the directory nqc/ini/src, type "make clean".
   2. When the mclean operation is finished, type "make".
 
 4. Loading and Unloading Driver Module

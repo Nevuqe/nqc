@@ -121,7 +121,7 @@ _Static_assert(sizeof(((struct ifreq *)0)->ifr_name) ==
 __read_mostly epoch_t net_epoch_preempt;
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 
 struct ifreq_buffer32 {
 	uint32_t	length;		/* (size_t) */

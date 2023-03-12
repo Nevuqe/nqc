@@ -66,7 +66,7 @@ bootpart_size(const char *part_type) {
 
 const char *
 bootpart_type(const char *scheme, const char **mountpoint) {
-	return ("freebsd-boot");
+	return ("nqc-boot");
 }
 
 const char *

@@ -152,7 +152,7 @@ ax_pthread_flags="pthreads none -Kthread -pthread -pthreads -mthreads pthread --
 
 case $host_os in
 
-        freebsd*)
+        nqc*)
 
         # -kthread: NQC kernel threads (preferred to -pthread since SMP-able)
         # lthread: LinuxThreads port on NQC (also preferred to -pthread)

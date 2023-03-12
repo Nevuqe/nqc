@@ -14,7 +14,7 @@ SRCS = \
         assert.c \
         list.c \
         mkdirp.c \
-        os/freebsd/zone.c \
+        os/nqc/zone.c \
         page.c \
         timestamp.c \
         include/sys/list.h \
@@ -26,10 +26,10 @@ SRCS = \
 SRCS += \
         atomic.c \
         getexecname.c \
-        os/freebsd/getexecname.c \
-        os/freebsd/gethostid.c \
-        os/freebsd/getmntany.c \
-        os/freebsd/mnttab.c
+        os/nqc/getexecname.c \
+        os/nqc/gethostid.c \
+        os/nqc/getmntany.c \
+        os/nqc/mnttab.c
 .endif
 
 WARNS?=	2
@@ -37,10 +37,10 @@ CSTD=	c99
 CFLAGS+= -DIN_BASE
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/include
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libspl/include/
-CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libspl/include/os/freebsd
+CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/lib/libspl/include/os/nqc
 CFLAGS+= -I${SRCTOP}/cddl/compat/opensolaris/include
 CFLAGS+= -I${SRCTOP}/sys/contrib/openzfs/module/icp/include
-CFLAGS+= -include ${SRCTOP}/sys/contrib/openzfs/include/os/freebsd/spl/sys/ccompile.h
+CFLAGS+= -include ${SRCTOP}/sys/contrib/openzfs/include/os/nqc/spl/sys/ccompile.h
 CFLAGS+= -DHAVE_ISSETUGID
 CFLAGS+= -include ${SRCTOP}/sys/modules/zfs/zfs_config.h
 .if ${COMPILER_TYPE} == "clang"

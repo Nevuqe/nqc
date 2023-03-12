@@ -279,7 +279,7 @@ utility
 guards against multiple users connecting to a remote system by opening
 modems and terminal lines with exclusive access, and by honoring the
 locking protocol used by
-.Xr uucico 8 Pq Pa ports/net/freebsd-uucp .
+.Xr uucico 8 Pq Pa ports/net/nqc-uucp .
 .Pp
 During file transfers
 .Nm
@@ -587,7 +587,7 @@ database
 line access log
 .It Pa /var/spool/lock/LCK..*
 lock file to avoid conflicts with
-.Xr uucp 1 Pq Pa ports/net/freebsd-uucp
+.Xr uucp 1 Pq Pa ports/net/nqc-uucp
 .El
 .Sh EXAMPLES
 Connect to the first USB serial port at the speed of 115200 baud:

@@ -45,11 +45,11 @@ static ssize_t
 __cvt_dirents_from11(const char *de11, ssize_t len11, char *de, ssize_t len)
 {
 	struct dirent *dst;
-	const struct freebsd11_dirent *src;
+	const struct nqc11_dirent *src;
 	const char *edst, *esrc;
 	ssize_t rlen;
 
-	src = (const struct freebsd11_dirent *)de11;
+	src = (const struct nqc11_dirent *)de11;
 	dst = (struct dirent *)de;
 	esrc = de11 + len11;
 	edst = de + len;
@@ -67,7 +67,7 @@ __cvt_dirents_from11(const char *de11, ssize_t len11, char *de, ssize_t len)
 		memset(dst->d_name, 0, roundup(src->d_namlen + 1, 8));
 		memcpy(dst->d_name, src->d_name, src->d_namlen);
 		dst = (struct dirent *)((char *)dst + rlen);
-		src = (const struct freebsd11_dirent *)((const char *)src + src->d_reclen);
+		src = (const struct nqc11_dirent *)((const char *)src + src->d_reclen);
 	}
 	return ((char *)dst - de);
 }

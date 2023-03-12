@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# unbound freebsd startup rc.d script, modified from the named script.
+# unbound nqc startup rc.d script, modified from the named script.
 # uses the default unbound installation path and pidfile location.
 # copy this to /etc/rc.d/unbound
 # and put unbound_enable="YES" into rc.conf

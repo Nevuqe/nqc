@@ -1,7 +1,7 @@
 /*-
  * SPDX-License-Identifier: BSD-2-Clause
  *
- * Copyright (c) 2021 Daniel Austin <freebsd-ports@dan.me.uk>
+ * Copyright (c) 2021 Daniel Austin <nqc-ports@dan.me.uk>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

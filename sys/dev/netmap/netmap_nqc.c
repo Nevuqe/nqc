@@ -376,7 +376,7 @@ out:
  * Intercept the packet steering routine in the tx path,
  * so that we can decide which queue is used for an mbuf.
  * Second argument is non-zero to intercept, 0 to restore.
- * On freebsd we just intercept if_transmit.
+ * On nqc we just intercept if_transmit.
  */
 int
 nm_os_catch_tx(struct netmap_generic_adapter *gna, int intercept)
@@ -765,7 +765,7 @@ out:
 #include <dev/pci/pcivar.h>
 #include <dev/pci/pcireg.h>
 /*
- * ptnetmap memory device (memdev) for freebsd guest,
+ * ptnetmap memory device (memdev) for nqc guest,
  * ssed to expose host netmap memory to the guest through a PCI BAR.
  */
 

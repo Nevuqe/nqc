@@ -44,15 +44,15 @@ __NQCID("$NQC$");
 
 #include <security/audit/audit.h>
 
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32_proto.h>
 
 #ifdef CAPABILITIES
 
 MALLOC_DECLARE(M_FILECAPS);
 
 int
-freebsd32_cap_ioctls_limit(struct thread *td,
-    struct freebsd32_cap_ioctls_limit_args *uap)
+nqc32_cap_ioctls_limit(struct thread *td,
+    struct nqc32_cap_ioctls_limit_args *uap)
 {
 	u_long *cmds;
 	uint32_t *cmds32;
@@ -84,8 +84,8 @@ freebsd32_cap_ioctls_limit(struct thread *td,
 }
 
 int
-freebsd32_cap_ioctls_get(struct thread *td,
-    struct freebsd32_cap_ioctls_get_args *uap)
+nqc32_cap_ioctls_get(struct thread *td,
+    struct nqc32_cap_ioctls_get_args *uap)
 {
 	struct filedesc *fdp;
 	struct filedescent *fdep;
@@ -138,16 +138,16 @@ out:
 #else /* !CAPABILITIES */
 
 int
-freebsd32_cap_ioctls_limit(struct thread *td,
-    struct freebsd32_cap_ioctls_limit_args *uap)
+nqc32_cap_ioctls_limit(struct thread *td,
+    struct nqc32_cap_ioctls_limit_args *uap)
 {
 
 	return (ENOSYS);
 }
 
 int
-freebsd32_cap_ioctls_get(struct thread *td,
-    struct freebsd32_cap_ioctls_get_args *uap)
+nqc32_cap_ioctls_get(struct thread *td,
+    struct nqc32_cap_ioctls_get_args *uap)
 {
 
 	return (ENOSYS);

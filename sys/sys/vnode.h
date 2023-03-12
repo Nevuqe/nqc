@@ -638,7 +638,7 @@ struct file;
 struct mount;
 struct nameidata;
 struct ostat;
-struct freebsd11_stat;
+struct nqc11_stat;
 struct thread;
 struct proc;
 struct stat;
@@ -698,8 +698,8 @@ cache_assert_no_entries(struct vnode *vp)
 void	cache_fast_lookup_enabled_recalc(void);
 int	change_dir(struct vnode *vp, struct thread *td);
 void	cvtstat(struct stat *st, struct ostat *ost);
-int	freebsd11_cvtnstat(struct stat *sb, struct nstat *nsb);
-int	freebsd11_cvtstat(struct stat *st, struct freebsd11_stat *ost);
+int	nqc11_cvtnstat(struct stat *sb, struct nstat *nsb);
+int	nqc11_cvtstat(struct stat *st, struct nqc11_stat *ost);
 int	getnewvnode(const char *tag, struct mount *mp, struct vop_vector *vops,
 	    struct vnode **vpp);
 void	getnewvnode_reserve(void);

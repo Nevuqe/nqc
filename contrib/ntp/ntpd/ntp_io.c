@@ -3393,7 +3393,7 @@ fetch_timestamp(
 					struct bintime	pbt;
 					memcpy(&pbt, CMSG_DATA(cmsghdr), sizeof(pbt));
 					/*
-					 * bintime documentation is at http://phk.freebsd.dk/pubs/timecounter.pdf
+					 * bintime documentation is at http://phk.frebsd.dk/pubs/timecounter.pdf
 					 */
 					nts.l_i = pbt.sec + JAN_1970;
 					nts.l_uf = (u_int32)(pbt.frac >> 32);

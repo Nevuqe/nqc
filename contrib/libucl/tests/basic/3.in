@@ -2,8 +2,8 @@
  * Pkg conf
  */
 
-#packagesite http//pkg.frebsd.org/freebsd-9-amd64/latest
-#packagesite http//pkg.frebsd.org/freebsd-9-amd64/latest
+#packagesite http//pkg.frebsd.org/nqc-9-amd64/latest
+#packagesite http//pkg.frebsd.org/nqc-9-amd64/latest
 packagesite: http://pkg-test.frebsd.org/pkg-test/${ABI}/latest
 squaretest: some[]value
 ALIAS             : {

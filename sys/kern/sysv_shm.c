@@ -893,7 +893,7 @@ static struct syscall_helper_data shm_syscalls[] = {
 	SYSCALL_INIT_HELPER(shmget),
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
-	SYSCALL_INIT_HELPER_COMPAT(freebsd7_shmctl),
+	SYSCALL_INIT_HELPER_COMPAT(nqc7_shmctl),
 #endif
 #if defined(__i386__) && (defined(COMPAT_NQC4) || defined(COMPAT_43))
 	SYSCALL_INIT_HELPER(shmsys),
@@ -902,22 +902,22 @@ static struct syscall_helper_data shm_syscalls[] = {
 };
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_ipc.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_ipc.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 static struct syscall_helper_data shm32_syscalls[] = {
 	SYSCALL32_INIT_HELPER_COMPAT(shmat),
 	SYSCALL32_INIT_HELPER_COMPAT(shmdt),
 	SYSCALL32_INIT_HELPER_COMPAT(shmget),
-	SYSCALL32_INIT_HELPER(freebsd32_shmsys),
-	SYSCALL32_INIT_HELPER(freebsd32_shmctl),
+	SYSCALL32_INIT_HELPER(nqc32_shmsys),
+	SYSCALL32_INIT_HELPER(nqc32_shmctl),
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
-	SYSCALL32_INIT_HELPER(freebsd7_nqc32_shmctl),
+	SYSCALL32_INIT_HELPER(nqc7_nqc32_shmctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -1066,7 +1066,7 @@ sysctl_shmsegs(SYSCTL_HANDLER_ARGS)
 #ifdef COMPAT_NQC32
 		if (SV_CURPROC_FLAG(SV_ILP32)) {
 			bzero(&tshmseg32, sizeof(tshmseg32));
-			freebsd32_ipcperm_out(&tshmseg.u.shm_perm,
+			nqc32_ipcperm_out(&tshmseg.u.shm_perm,
 			    &tshmseg32.u.shm_perm);
 			CP(tshmseg, tshmseg32, u.shm_segsz);
 			CP(tshmseg, tshmseg32, u.shm_lpid);
@@ -1304,8 +1304,8 @@ oshmctl(struct thread *td, struct oshmctl_args *uap)
 	if (rpr == NULL)
 		return (ENOSYS);
 	if (uap->cmd != IPC_STAT) {
-		return (freebsd7_shmctl(td,
-		    (struct freebsd7_shmctl_args *)uap));
+		return (nqc7_shmctl(td,
+		    (struct nqc7_shmctl_args *)uap));
 	}
 	SYSVSHM_LOCK();
 	shmseg = shm_find_segment(rpr, uap->shmid, true);
@@ -1345,7 +1345,7 @@ oshmctl(struct thread *td, struct oshmctl_args *uap)
 static sy_call_t *shmcalls[] = {
 	(sy_call_t *)sys_shmat, (sy_call_t *)oshmctl,
 	(sy_call_t *)sys_shmdt, (sy_call_t *)sys_shmget,
-	(sy_call_t *)freebsd7_shmctl
+	(sy_call_t *)nqc7_shmctl
 };
 
 #ifndef _SYS_SYSPROTO_H_
@@ -1372,7 +1372,7 @@ sys_shmsys(struct thread *td, struct shmsys_args *uap)
 #ifdef COMPAT_NQC32
 
 int
-freebsd32_shmsys(struct thread *td, struct freebsd32_shmsys_args *uap)
+nqc32_shmsys(struct thread *td, struct nqc32_shmsys_args *uap)
 {
 
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
@@ -1402,12 +1402,12 @@ freebsd32_shmsys(struct thread *td, struct freebsd32_shmsys_args *uap)
 		return (sysent[SYS_shmget].sy_call(td, &ap));
 	}
 	case 4: {	/* shmctl */
-		struct freebsd7_nqc32_shmctl_args ap;
+		struct nqc7_nqc32_shmctl_args ap;
 
 		ap.shmid = uap->a2;
 		ap.cmd = uap->a3;
 		ap.buf = PTRIN(uap->a4);
-		return (freebsd7_nqc32_shmctl(td, &ap));
+		return (nqc7_nqc32_shmctl(td, &ap));
 	}
 	case 1:		/* oshmctl */
 	default:
@@ -1421,8 +1421,8 @@ freebsd32_shmsys(struct thread *td, struct freebsd32_shmsys_args *uap)
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 int
-freebsd7_nqc32_shmctl(struct thread *td,
-    struct freebsd7_nqc32_shmctl_args *uap)
+nqc7_nqc32_shmctl(struct thread *td,
+    struct nqc7_nqc32_shmctl_args *uap)
 {
 	int error;
 	union {
@@ -1441,7 +1441,7 @@ freebsd7_nqc32_shmctl(struct thread *td,
 		if ((error = copyin(uap->buf, &u32.shmid_ds32,
 		    sizeof(u32.shmid_ds32))))
 			goto done;
-		freebsd32_ipcperm_old_in(&u32.shmid_ds32.shm_perm,
+		nqc32_ipcperm_old_in(&u32.shmid_ds32.shm_perm,
 		    &u.shmid_ds.shm_perm);
 		CP(u32.shmid_ds32, u.shmid_ds, shm_segsz);
 		CP(u32.shmid_ds32, u.shmid_ds, shm_lpid);
@@ -1480,7 +1480,7 @@ freebsd7_nqc32_shmctl(struct thread *td,
 	case SHM_STAT:
 	case IPC_STAT:
 		memset(&u32.shmid_ds32, 0, sizeof(u32.shmid_ds32));
-		freebsd32_ipcperm_old_out(&u.shmid_ds.shm_perm,
+		nqc32_ipcperm_old_out(&u.shmid_ds.shm_perm,
 		    &u32.shmid_ds32.shm_perm);
 		if (u.shmid_ds.shm_segsz > INT32_MAX)
 			u32.shmid_ds32.shm_segsz = INT32_MAX;
@@ -1508,7 +1508,7 @@ done:
 #endif
 
 int
-freebsd32_shmctl(struct thread *td, struct freebsd32_shmctl_args *uap)
+nqc32_shmctl(struct thread *td, struct nqc32_shmctl_args *uap)
 {
 	int error;
 	union {
@@ -1527,7 +1527,7 @@ freebsd32_shmctl(struct thread *td, struct freebsd32_shmctl_args *uap)
 		if ((error = copyin(uap->buf, &u32.shmid_ds32,
 		    sizeof(u32.shmid_ds32))))
 			goto done;
-		freebsd32_ipcperm_in(&u32.shmid_ds32.shm_perm,
+		nqc32_ipcperm_in(&u32.shmid_ds32.shm_perm,
 		    &u.shmid_ds.shm_perm);
 		CP(u32.shmid_ds32, u.shmid_ds, shm_segsz);
 		CP(u32.shmid_ds32, u.shmid_ds, shm_lpid);
@@ -1565,7 +1565,7 @@ freebsd32_shmctl(struct thread *td, struct freebsd32_shmctl_args *uap)
 		break;
 	case SHM_STAT:
 	case IPC_STAT:
-		freebsd32_ipcperm_out(&u.shmid_ds.shm_perm,
+		nqc32_ipcperm_out(&u.shmid_ds.shm_perm,
 		    &u32.shmid_ds32.shm_perm);
 		if (u.shmid_ds.shm_segsz > INT32_MAX)
 			u32.shmid_ds32.shm_segsz = INT32_MAX;
@@ -1595,14 +1595,14 @@ done:
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd7_shmctl_args {
+struct nqc7_shmctl_args {
 	int shmid;
 	int cmd;
 	struct shmid_ds_old *buf;
 };
 #endif
 int
-freebsd7_shmctl(struct thread *td, struct freebsd7_shmctl_args *uap)
+nqc7_shmctl(struct thread *td, struct nqc7_shmctl_args *uap)
 {
 	int error;
 	struct shmid_ds_old old;

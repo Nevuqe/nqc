@@ -1398,7 +1398,7 @@
 
 	* krb5: repro copy the krb5 files here
 
-	* mech: import Doug Rabson mechglue from freebsd
+	* mech: import Doug Rabson mechglue from nqc
 	
 	* spnego: Import Luke Howard's SPNEGO from the mechglue branch
 

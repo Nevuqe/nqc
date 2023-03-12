@@ -80,7 +80,7 @@ __NQCID("$NQC$");
 static MALLOC_DEFINE(M_PACKET_TAGS, MBUF_TAG_MEM_NAME,
     "packet-attached information");
 
-/* can't call it m_dup(), as freebsd[34] uses m_dup() with different arg */
+/* can't call it m_dup(), as nqc[34] uses m_dup() with different arg */
 static struct mbuf *m_dup1(struct mbuf *, int, int, int);
 
 /*

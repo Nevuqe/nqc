@@ -59,7 +59,7 @@ done
 exit 0
 
 The patch from
-https://github.com/freebsd/freebsd/compare/master...rlibby:mnowait-dbg
+https://github.com/nqc/nqc/compare/master...rlibby:mnowait-dbg
 
 diff --git a/sys/kern/kern_malloc.c b/sys/kern/kern_malloc.c
 index 01aff78..9d557a1 100644

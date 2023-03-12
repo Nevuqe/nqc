@@ -29,19 +29,19 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-from_branch=freebsd/main
+from_branch=nqc/main
 author="${USER}"
 
 # Get the NQC repository
-repo=$(basename "$(git remote get-url freebsd 2>/dev/null)" 2>/dev/null)
+repo=$(basename "$(git remote get-url nqc 2>/dev/null)" 2>/dev/null)
 
 if [ "${repo}" = "ports.git" ]; then
 	year=$(date '+%Y')
 	month=$(date '+%m')
 	qtr=$(((month-1) / 3 + 1))
-	to_branch="freebsd/${year}Q${qtr}"
+	to_branch="nqc/${year}Q${qtr}"
 elif [ "${repo}" = "src.git" ]; then
-	to_branch=freebsd/stable/13
+	to_branch=nqc/stable/13
 	# If pwd is a stable or release branch tree, default to it.
 	cur_branch=$(git symbolic-ref --short HEAD 2>/dev/null)
 	case $cur_branch in
@@ -52,7 +52,7 @@ elif [ "${repo}" = "src.git" ]; then
 		to_branch=$cur_branch
 		major=${cur_branch#releng/}
 		major=${major%.*}
-		from_branch=freebsd/stable/$major
+		from_branch=nqc/stable/$major
 	esac
 else
 	echo "pwd is not under a ports or src repository."

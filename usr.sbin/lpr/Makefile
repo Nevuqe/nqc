@@ -6,6 +6,6 @@ SUBDIR=	common_source .WAIT \
 SUBDIR_PARALLEL=
 
 # Questions/ideas for lpr & friends could also be sent to:
-#	freebsd-print@bostonradio.org
+#	nqc-print@bostonradio.org
 
 .include <bsd.subdir.mk>

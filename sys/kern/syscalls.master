@@ -54,7 +54,7 @@
 ;	CAPENABLED syscall is allowed in capability mode
 ;
 ; To support programmatic generation of both the default ABI and 32-bit compat
-; (freebsd32) we impose a number of restrictions on the types of system calls.
+; (nqc32) we impose a number of restrictions on the types of system calls.
 ; For integer types:
 ;  - Bare int and long are allowed (long is a sign of a bad interface).
 ;  - Use u_int and u_long rather than "unsigned (int|long)".
@@ -1139,19 +1139,19 @@
 188	AUE_STAT	COMPAT11 {
 		int stat(
 		    _In_z_ const char *path,
-		    _Out_ _Contains_timet_ struct freebsd11_stat *ub
+		    _Out_ _Contains_timet_ struct nqc11_stat *ub
 		);
 	}
 189	AUE_FSTAT	COMPAT11|CAPENABLED {
 		int fstat(
 		    int fd,
-		    _Out_ _Contains_timet_ struct freebsd11_stat *sb
+		    _Out_ _Contains_timet_ struct nqc11_stat *sb
 		);
 	}
 190	AUE_LSTAT	COMPAT11 {
 		int lstat(
 		    _In_z_ const char *path,
-		    _Out_ _Contains_timet_ struct freebsd11_stat *ub
+		    _Out_ _Contains_timet_ struct nqc11_stat *ub
 		);
 	}
 191	AUE_PATHCONF	STD {
@@ -1572,7 +1572,7 @@
 299	AUE_FHSTAT	COMPAT11 {
 		int fhstat(
 		    _In_ const struct fhandle *u_fhp,
-		    _Out_ _Contains_long_timet_ struct freebsd11_stat *sb
+		    _Out_ _Contains_long_timet_ struct nqc11_stat *sb
 		);
 	}
 300	AUE_NULL	STD {
@@ -1814,7 +1814,7 @@
 	}
 344	AUE_SIGRETURN	COMPAT4|CAPENABLED {
 		int sigreturn(
-		    _In_ _Contains_long_ptr_ const struct freebsd4_ucontext *sigcntxp
+		    _In_ _Contains_long_ptr_ const struct nqc4_ucontext *sigcntxp
 		);
 	}
 345	AUE_SIGWAIT	STD|CAPENABLED {
@@ -1944,9 +1944,9 @@
 363	AUE_KEVENT	COMPAT11|CAPENABLED {
 		int kevent(
 		    int fd,
-		    _In_reads_opt_(nchanges) _Contains_ptr_ const struct freebsd11_kevent *changelist,
+		    _In_reads_opt_(nchanges) _Contains_ptr_ const struct nqc11_kevent *changelist,
 		    int nchanges,
-		    _Out_writes_opt_(nevents) _Contains_ptr_ struct freebsd11_kevent *eventlist,
+		    _Out_writes_opt_(nevents) _Contains_ptr_ struct nqc11_kevent *eventlist,
 		    int nevents,
 		    _In_opt_ _Contains_long_timet_ const struct timespec *timeout
 		);
@@ -2092,7 +2092,7 @@
 	}
 395	AUE_GETFSSTAT	COMPAT11 {
 		int getfsstat(
-		    _Out_writes_bytes_opt_(bufsize) struct freebsd11_statfs *buf,
+		    _Out_writes_bytes_opt_(bufsize) struct nqc11_statfs *buf,
 		    long bufsize,
 		    int mode
 		);
@@ -2100,19 +2100,19 @@
 396	AUE_STATFS	COMPAT11 {
 		int statfs(
 		    _In_z_ const char *path,
-		    _Out_ struct freebsd11_statfs *buf
+		    _Out_ struct nqc11_statfs *buf
 		);
 	}
 397	AUE_FSTATFS	COMPAT11|CAPENABLED {
 		int fstatfs(
 		    int fd,
-		    _Out_ struct freebsd11_statfs *buf
+		    _Out_ struct nqc11_statfs *buf
 		);
 	}
 398	AUE_FHSTATFS	COMPAT11 {
 		int fhstatfs(
 		    _In_ const struct fhandle *u_fhp,
-		    _Out_ struct freebsd11_statfs *buf
+		    _Out_ struct nqc11_statfs *buf
 		);
 	}
 399	AUE_NULL	RESERVED
@@ -2694,7 +2694,7 @@
 		int fstatat(
 		    int fd,
 		    _In_z_ const char *path,
-		    _Out_ _Contains_long_timet_ struct freebsd11_stat *buf,
+		    _Out_ _Contains_long_timet_ struct nqc11_stat *buf,
 		    int flag
 		);
 	}

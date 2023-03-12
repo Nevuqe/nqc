@@ -31,7 +31,7 @@
 
 # Scenario by rwatson@ from:
 #
-# Newsgroups: lucky.freebsd.current
+# Newsgroups: lucky.nqc.current
 # Subject: Re: setfacl requirements?
 # Date: Thu, 5 Dec 2002 15:50:02 +0000 (UTC)
 

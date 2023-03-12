@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  *
  * Copyright (c) 2000-2014 Dag-Erling Smørgrav
- * Copyright (c) 2013 Michael Gmelin <freebsd@grem.de>
+ * Copyright (c) 2013 Michael Gmelin <nqc@grem.de>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

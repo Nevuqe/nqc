@@ -80,8 +80,8 @@ __NQCID("$NQC$");
 #include <machine/intr_machdep.h>
 #include <machine/md_var.h>
 
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_util.h>
 #include <compat/ia32/ia32_signal.h>
 #include <machine/psl.h>
 #include <machine/segments.h>

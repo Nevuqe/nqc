@@ -471,9 +471,9 @@ MODULE_VERSION(kernel, __NQC_version);
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <sys/socket.h>
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_proto.h>
 
 typedef union modspecific32 {
 	int		intval;
@@ -499,7 +499,7 @@ struct module_stat32 {
 };
 
 int
-freebsd32_modstat(struct thread *td, struct freebsd32_modstat_args *uap)
+nqc32_modstat(struct thread *td, struct nqc32_modstat_args *uap)
 {
 	module_t mod;
 	modspecific32_t data32;

@@ -7,7 +7,7 @@
 PATH=.:$PATH
 . config
 
-SSID='freebsd+tdma'
+SSID='nqc+tdma'
 
 WLAN=`ifconfig wlan create wlanmode tdma wlandev $WIRELESS`
 ifconfig $WLAN ssid "$SSID"

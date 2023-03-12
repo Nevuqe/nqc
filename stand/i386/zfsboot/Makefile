@@ -32,8 +32,8 @@ CFLAGS+=-DBOOTPROG=\"zfsboot\" \
 	-I${SYSDIR}/crypto/skein \
 	-I${SYSDIR}/cddl/boot/zfs \
 	-I${SYSDIR}/contrib/openzfs/include \
-	-I${SYSDIR}/contrib/openzfs/include/os/freebsd/spl \
-	-I${SYSDIR}/contrib/openzfs/include/os/freebsd/zfs \
+	-I${SYSDIR}/contrib/openzfs/include/os/nqc/spl \
+	-I${SYSDIR}/contrib/openzfs/include/os/nqc/zfs \
 	-I${SYSDIR}/cddl/contrib/opensolaris/common/lz4 \
 	-I${BOOTSRC}/i386/boot2 \
 	-Wall -Waggregate-return -Wbad-function-cast -Wno-cast-align \

@@ -575,7 +575,7 @@ cpu_set_syscall_retval(struct thread *td, int error)
 		 * We saved this in tf_err.
 		 * %r10 (which was holding the value of %rcx) is restored
 		 * for the next iteration.
-		 * %r10 restore is only required for freebsd/amd64 processes,
+		 * %r10 restore is only required for nqc/amd64 processes,
 		 * but shall be innocent for any ia32 ABI.
 		 *
 		 * Require full context restore to get the arguments

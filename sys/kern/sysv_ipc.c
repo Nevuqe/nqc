@@ -181,17 +181,17 @@ ipcperm_new2old(struct ipc_perm *new, struct ipc_perm_old *old)
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <sys/socket.h>
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_ipc.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_ipc.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 void
-freebsd32_ipcperm_old_in(struct ipc_perm_old32 *ip32, struct ipc_perm *ip)
+nqc32_ipcperm_old_in(struct ipc_perm_old32 *ip32, struct ipc_perm *ip)
 {
 
 	CP(*ip32, *ip, cuid);
@@ -204,7 +204,7 @@ freebsd32_ipcperm_old_in(struct ipc_perm_old32 *ip32, struct ipc_perm *ip)
 }
 
 void
-freebsd32_ipcperm_old_out(struct ipc_perm *ip, struct ipc_perm_old32 *ip32)
+nqc32_ipcperm_old_out(struct ipc_perm *ip, struct ipc_perm_old32 *ip32)
 {
 
 	CP(*ip, *ip32, cuid);
@@ -218,7 +218,7 @@ freebsd32_ipcperm_old_out(struct ipc_perm *ip, struct ipc_perm_old32 *ip32)
 #endif
 
 void
-freebsd32_ipcperm_in(struct ipc_perm32 *ip32, struct ipc_perm *ip)
+nqc32_ipcperm_in(struct ipc_perm32 *ip32, struct ipc_perm *ip)
 {
 
 	CP(*ip32, *ip, cuid);
@@ -231,7 +231,7 @@ freebsd32_ipcperm_in(struct ipc_perm32 *ip32, struct ipc_perm *ip)
 }
 
 void
-freebsd32_ipcperm_out(struct ipc_perm *ip, struct ipc_perm32 *ip32)
+nqc32_ipcperm_out(struct ipc_perm *ip, struct ipc_perm32 *ip32)
 {
 
 	CP(*ip, *ip32, cuid);

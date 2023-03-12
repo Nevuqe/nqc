@@ -30,13 +30,13 @@ gpart create -s gpt $dsk
 
 # Boot
 siz=$(expr 1024 \- 34)
-gpart add -i 1 -b 34 -s $siz -t freebsd-boot $dsk
+gpart add -i 1 -b 34 -s $siz -t nqc-boot $dsk
 gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 $dsk
 
 # Swap
 off=$align
 siz=$swapsize
-gpart add -i 2 -b $off -s $siz -t freebsd-swap $dsk
+gpart add -i 2 -b $off -s $siz -t nqc-swap $dsk
 
 # ZFS
 off=$(expr $align + $swapsize)
@@ -45,6 +45,6 @@ if [ "$zfssize" -gt 0 ]; then
 else
   siz=""
 fi
-gpart add -i 3 -b $off $siz -t freebsd-zfs $dsk
+gpart add -i 3 -b $off $siz -t nqc-zfs $dsk
 
 gpart show $dsk

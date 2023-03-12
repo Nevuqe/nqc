@@ -139,7 +139,7 @@ struct bpf_program_buffer {
 
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 #define BPF_ALIGNMENT32 sizeof(int32_t)
 #define	BPF_WORDALIGN32(x) roundup2(x, BPF_ALIGNMENT32)
 

@@ -41,7 +41,7 @@ __weak_reference(_fstatfs, fstatfs);
 int
 _fstatfs(int fd, struct statfs *buf)
 {
-	struct freebsd11_statfs statfs11;
+	struct nqc11_statfs statfs11;
 	int rv;
 
 	if (__getosreldate() >= INO64_FIRST)

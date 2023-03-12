@@ -257,7 +257,7 @@ def FileCheck(fname):
 		print ("Unable to open zilstat proc file: " + fname)
 		sys.exit(1)
 
-if sys.platform.startswith('freebsd'):
+if sys.platform.startswith('nqc'):
 	# Requires py-sysctl on NQC
 	import sysctl
 

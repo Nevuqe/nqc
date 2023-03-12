@@ -209,13 +209,13 @@ The following example
 .Pa .mount.conf
 will direct the kernel to do a unionfs
 mount on a directory
-.Pa /jail/freebsd-8-stable
+.Pa /jail/nqc-8-stable
 which has a
 .Xr chroot 2
 environment.
 .Bd -literal -offset indent
 .Li .timeout 3
-.Li unionfs:/jail/freebsd-8-stable
+.Li unionfs:/jail/nqc-8-stable
 .Ed
 .Sh NOTES
 For each root file system which is mounted, a

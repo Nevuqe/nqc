@@ -27,7 +27,7 @@ LIB=		ficl
 
 # Standard softwords
 .PATH: ${FICLSRC}/softwords
-SOFTWORDS=	softcore.fr jhlocal.fr marker.fr freebsd.fr ficllocal.fr \
+SOFTWORDS=	softcore.fr jhlocal.fr marker.fr nqc.fr ficllocal.fr \
 		ifbrack.fr
 
 softcore.c: ${SOFTWORDS} softcore.awk

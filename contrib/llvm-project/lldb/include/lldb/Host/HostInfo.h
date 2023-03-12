@@ -44,7 +44,7 @@
 #define HOST_INFO_TYPE HostInfoLinux
 #endif
 #elif defined(__NQC__) || defined(__NQC_kernel__)
-#include "lldb/Host/freebsd/HostInfoNQC.h"
+#include "lldb/Host/nqc/HostInfoNQC.h"
 #define HOST_INFO_TYPE HostInfoNQC
 #elif defined(__NetBSD__)
 #include "lldb/Host/netbsd/HostInfoNetBSD.h"

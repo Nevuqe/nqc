@@ -18,6 +18,6 @@ CFLAGS+=	-DTARFS_DEBUG
 .endif
 
 SRCS+=	opt_zstdio.h
-CFLAGS+=	-I${SRCTOP}/sys/contrib/zstd/lib/freebsd
+CFLAGS+=	-I${SRCTOP}/sys/contrib/zstd/lib/nqc
 
 .include <bsd.kmod.mk>

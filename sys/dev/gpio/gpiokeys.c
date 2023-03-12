@@ -311,7 +311,7 @@ gpiokeys_attach_key(struct gpiokeys_softc *sc, phandle_t node,
 	else
 		key->debounce_interval = 5;
 
-	if ((OF_getprop(node, "freebsd,code", &prop, sizeof(prop))) > 0)
+	if ((OF_getprop(node, "nqc,code", &prop, sizeof(prop))) > 0)
 		key->keycode = fdt32_to_cpu(prop);
 	else if ((OF_getprop(node, "linux,code", &prop, sizeof(prop))) > 0) {
 		code = fdt32_to_cpu(prop);
@@ -325,7 +325,7 @@ gpiokeys_attach_key(struct gpiokeys_softc *sc, phandle_t node,
 #endif
 	}
 	else
-		device_printf(sc->sc_dev, "<%s> no linux,code or freebsd,code property\n",
+		device_printf(sc->sc_dev, "<%s> no linux,code or nqc,code property\n",
 		    key_name);
 
 	err = gpio_pin_get_by_ofw_idx(sc->sc_dev, node, 0, &key->pin);

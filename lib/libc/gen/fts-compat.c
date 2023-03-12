@@ -97,7 +97,7 @@ static int	 fts_ufslinks(FTS *, const FTSENT *);
  */
 struct _fts_private {
 	FTS		ftsp_fts;
-	struct freebsd11_statfs	ftsp_statfs;
+	struct nqc11_statfs	ftsp_statfs;
 	uint32_t	ftsp_dev;
 	int		ftsp_linksreliable;
 };
@@ -610,15 +610,15 @@ __fts_set_clientptr_44bsd(FTS *sp, void *clientptr)
 	sp->fts_clientptr = clientptr;
 }
 
-static struct freebsd11_dirent *
+static struct nqc11_dirent *
 fts_safe_readdir(DIR *dirp, int *readdir_errno)
 {
-	struct freebsd11_dirent *ret;
+	struct nqc11_dirent *ret;
 
 	errno = 0;
 	if (!dirp)
 		return (NULL);
-	ret = freebsd11_readdir(dirp);
+	ret = nqc11_readdir(dirp);
 	*readdir_errno = errno;
 	return (ret);
 }
@@ -640,7 +640,7 @@ fts_safe_readdir(DIR *dirp, int *readdir_errno)
 static FTSENT *
 fts_build(FTS *sp, int type)
 {
-	struct freebsd11_dirent *dp;
+	struct nqc11_dirent *dp;
 	FTSENT *p, *head;
 	int nitems;
 	FTSENT *cur, *tail;
@@ -919,7 +919,7 @@ fts_stat(FTS *sp, FTSENT *p, int follow)
 	FTSENT *t;
 	uint32_t dev;
 	uint32_t ino;
-	struct freebsd11_stat *sbp, sb;
+	struct nqc11_stat *sbp, sb;
 	int saved_errno;
 
 	/* If user needs stat info, stat buffer already allocated. */
@@ -942,16 +942,16 @@ fts_stat(FTS *sp, FTSENT *p, int follow)
 	 * fail, set the errno from the stat call.
 	 */
 	if (ISSET(FTS_LOGICAL) || follow) {
-		if (freebsd11_stat(p->fts_accpath, sbp)) {
+		if (nqc11_stat(p->fts_accpath, sbp)) {
 			saved_errno = errno;
-			if (!freebsd11_lstat(p->fts_accpath, sbp)) {
+			if (!nqc11_lstat(p->fts_accpath, sbp)) {
 				errno = 0;
 				return (FTS_SLNONE);
 			}
 			p->fts_errno = saved_errno;
 			goto err;
 		}
-	} else if (freebsd11_lstat(p->fts_accpath, sbp)) {
+	} else if (nqc11_lstat(p->fts_accpath, sbp)) {
 		p->fts_errno = errno;
 err:		memset(sbp, 0, sizeof(*sbp));
 		return (FTS_NS);
@@ -1045,7 +1045,7 @@ fts_alloc(FTS *sp, char *name, int namelen)
 
 	struct ftsent_withstat {
 		FTSENT	ent;
-		struct	freebsd11_stat statbuf;
+		struct	nqc11_stat statbuf;
 	};
 
 	/*
@@ -1171,14 +1171,14 @@ static int
 fts_safe_changedir(FTS *sp, FTSENT *p, int fd, char *path)
 {
 	int ret, oerrno, newfd;
-	struct freebsd11_stat sb;
+	struct nqc11_stat sb;
 
 	newfd = fd;
 	if (ISSET(FTS_NOCHDIR))
 		return (0);
 	if (fd < 0 && (newfd = _open(path, O_RDONLY | O_CLOEXEC, 0)) < 0)
 		return (-1);
-	if (freebsd11_fstat(newfd, &sb)) {
+	if (nqc11_fstat(newfd, &sb)) {
 		ret = -1;
 		goto bail;
 	}
@@ -1213,7 +1213,7 @@ fts_ufslinks(FTS *sp, const FTSENT *ent)
 	 * avoidance.
 	 */
 	if (priv->ftsp_dev != ent->fts_dev) {
-		if (freebsd11_statfs(ent->fts_path, &priv->ftsp_statfs) != -1) {
+		if (nqc11_statfs(ent->fts_path, &priv->ftsp_statfs) != -1) {
 			priv->ftsp_dev = ent->fts_dev;
 			priv->ftsp_linksreliable = 0;
 			for (cpp = ufslike_filesystems; *cpp; cpp++) {

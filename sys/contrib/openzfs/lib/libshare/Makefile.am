@@ -22,6 +22,6 @@ endif
 
 if BUILD_NQC
 libshare_la_SOURCES += \
-	%D%/os/freebsd/nfs.c \
-	%D%/os/freebsd/smb.c
+	%D%/os/nqc/nfs.c \
+	%D%/os/nqc/smb.c
 endif

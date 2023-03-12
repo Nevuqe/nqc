@@ -52,9 +52,9 @@ CLEANFILES+=	${PCFILES}
 #   DEBUG_FLAGS="-g"
 #
 # From Ubuntu 10.04:
-# freebsd-make LIBUSB_GLOBAL_INCLUDE_FILE=libusb_global_linux.h \
+# nqc-make LIBUSB_GLOBAL_INCLUDE_FILE=libusb_global_linux.h \
 #    PTHREAD_LIBS="-lpthread -lrt"
-# freebsd-make \
+# nqc-make \
 #    LIBUSB_GLOBAL_INCLUDE_FILE=libusb_global_linux.h \
 #    PTHREAD_LIBS="-lpthread -lrt"
 #

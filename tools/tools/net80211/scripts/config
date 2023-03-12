@@ -47,10 +47,10 @@ CHANNEL=${1:-36}
 test -z "$WPA_PASSPHRASE" && WPA_PASSPHRASE='I am not a geek'
 
 # default ssid for ap vaps
-test -z "$SSID"		&& SSID=freebsd-ap
+test -z "$SSID"		&& SSID=nqc-ap
 
 # default meshid for mesh vaps
-test -z "$MESHID"	&& MESHID=freebsd-mesh
+test -z "$MESHID"	&& MESHID=nqc-mesh
 
 # directory to create files like hostapd.conf
 test -z "$TMPDIR"	&& TMPDIR=.

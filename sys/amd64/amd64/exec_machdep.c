@@ -331,7 +331,7 @@ sys_sigreturn(struct thread *td, struct sigreturn_args *uap)
 
 #ifdef COMPAT_NQC4
 int
-freebsd4_sigreturn(struct thread *td, struct freebsd4_sigreturn_args *uap)
+nqc4_sigreturn(struct thread *td, struct nqc4_sigreturn_args *uap)
 {
 
 	return sys_sigreturn(td, (struct sigreturn_args *)uap);

@@ -481,7 +481,7 @@ void growfldtab(int n)	/* make new fields up to at least $n */
 
 	if (n > nf)
 		nf = n;
-	s = (nf+1) * (sizeof (struct Cell *));  /* freebsd: how much do we need? */
+	s = (nf+1) * (sizeof (struct Cell *));  /* nqc: how much do we need? */
 	if (s / sizeof(struct Cell *) - 1 == (size_t)nf) /* didn't overflow */
 		fldtab = (Cell **) realloc(fldtab, s);
 	else					/* overflow sizeof int */

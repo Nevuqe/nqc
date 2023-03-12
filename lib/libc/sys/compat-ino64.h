@@ -42,7 +42,7 @@
 #define INO64_FIRST 1200031
 
 static __inline void
-__stat11_to_stat(const struct freebsd11_stat *sb11, struct stat *sb)
+__stat11_to_stat(const struct nqc11_stat *sb11, struct stat *sb)
 {
 
 	sb->st_dev = sb11->st_dev;
@@ -73,7 +73,7 @@ __stat11_to_stat(const struct freebsd11_stat *sb11, struct stat *sb)
 }
 
 static __inline void
-__statfs11_to_statfs(const struct freebsd11_statfs *sf11, struct statfs *sf)
+__statfs11_to_statfs(const struct nqc11_statfs *sf11, struct statfs *sf)
 {
 
 	sf->f_version = STATFS_VERSION;

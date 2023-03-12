@@ -1327,7 +1327,7 @@ Changes in version 2.1.1-alpha (4 Apr 2012)
    o New evhttp function to adjust initial retry timeout (350a3c4)
    o Make regression tests run over 3x faster. (67a1763)
    o Use test_timeval_diff_eq more consistently (b77b43f)
-   o Allow more slop in deferred_cb_skew test; freebsd needs it (b9f7e5f)
+   o Allow more slop in deferred_cb_skew test; nqc needs it (b9f7e5f)
    o When including an -internal.h header outside the main tree, do so
      early (95e2455)
    o Add a new test: test-fdleak which tests for fd leaks by creating many

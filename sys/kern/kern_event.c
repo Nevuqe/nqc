@@ -1210,12 +1210,12 @@ kevent_copyin(void *arg, struct kevent *kevp, int count)
 static int
 kevent11_copyout(void *arg, struct kevent *kevp, int count)
 {
-	struct freebsd11_kevent_args *uap;
-	struct freebsd11_kevent kev11;
+	struct nqc11_kevent_args *uap;
+	struct nqc11_kevent kev11;
 	int error, i;
 
 	KASSERT(count <= KQ_NEVENTS, ("count (%d) > KQ_NEVENTS", count));
-	uap = (struct freebsd11_kevent_args *)arg;
+	uap = (struct nqc11_kevent_args *)arg;
 
 	for (i = 0; i < count; i++) {
 		kev11.ident = kevp->ident;
@@ -1239,12 +1239,12 @@ kevent11_copyout(void *arg, struct kevent *kevp, int count)
 static int
 kevent11_copyin(void *arg, struct kevent *kevp, int count)
 {
-	struct freebsd11_kevent_args *uap;
-	struct freebsd11_kevent kev11;
+	struct nqc11_kevent_args *uap;
+	struct nqc11_kevent kev11;
 	int error, i;
 
 	KASSERT(count <= KQ_NEVENTS, ("count (%d) > KQ_NEVENTS", count));
-	uap = (struct freebsd11_kevent_args *)arg;
+	uap = (struct nqc11_kevent_args *)arg;
 
 	for (i = 0; i < count; i++) {
 		error = copyin(uap->changelist, &kev11, sizeof(kev11));
@@ -1264,13 +1264,13 @@ kevent11_copyin(void *arg, struct kevent *kevp, int count)
 }
 
 int
-freebsd11_kevent(struct thread *td, struct freebsd11_kevent_args *uap)
+nqc11_kevent(struct thread *td, struct nqc11_kevent_args *uap)
 {
 	struct kevent_copyops k_ops = {
 		.arg = uap,
 		.k_copyout = kevent11_copyout,
 		.k_copyin = kevent11_copyin,
-		.kevent_size = sizeof(struct freebsd11_kevent),
+		.kevent_size = sizeof(struct nqc11_kevent),
 	};
 	struct g_kevent_args gk_args = {
 		.fd = uap->fd,
@@ -1281,7 +1281,7 @@ freebsd11_kevent(struct thread *td, struct freebsd11_kevent_args *uap)
 		.timeout = uap->timeout,
 	};
 
-	return (kern_kevent_generic(td, &gk_args, &k_ops, "freebsd11_kevent"));
+	return (kern_kevent_generic(td, &gk_args, &k_ops, "nqc11_kevent"));
 }
 #endif
 

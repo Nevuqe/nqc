@@ -60,7 +60,7 @@ Binary object descriptors encapsulate properties of an object format
 such as its file representation, ELF class, and byte endianness.
 .Pp
 Known descriptor names and their properties include:
-.Bl -column -offset "XXXX" ".Li elf32-x86-64-freebsd" "Object format" "Byte Order" "Bit Width"
+.Bl -column -offset "XXXX" ".Li elf32-x86-64-nqc" "Object format" "Byte Order" "Bit Width"
 .It Em Name Ta Em "Object Format" Ta Em "Byte Order" Ta Em "Bit Width"
 .It Li binary Ta Binary Ta - Ta -
 .It Li efi-app-ia32 Ta PE Ta LSB Ta 32
@@ -70,17 +70,17 @@ Known descriptor names and their properties include:
 .It Li elf32-bigarm Ta ELF Ta MSB Ta 32
 .It Li elf32-bigmips Ta ELF Ta MSB Ta 32
 .It Li elf32-i386 Ta ELF Ta LSB Ta 32
-.It Li elf32-i386-freebsd Ta ELF Ta LSB Ta 32
+.It Li elf32-i386-nqc Ta ELF Ta LSB Ta 32
 .It Li elf32-ia64-big Ta ELF Ta MSB Ta 32
 .It Li elf32-little Ta ELF Ta LSB Ta 32
 .It Li elf32-littlearm Ta ELF Ta LSB Ta 32
 .It Li elf32-littlemips Ta ELF Ta LSB Ta 32
 .It Li elf32-powerpc Ta ELF Ta MSB Ta 32
-.It Li elf32-powerpc-freebsd Ta ELF Ta MSB Ta 32
+.It Li elf32-powerpc-nqc Ta ELF Ta MSB Ta 32
 .It Li elf32-powerpcle Ta ELF Ta LSB Ta 32
 .It Li elf32-riscv Ta ELF Ta LSB Ta 32
 .It Li elf64-riscv Ta ELF Ta LSB Ta 64
-.It Li elf64-riscv-freebsd Ta ELF Ta LSB Ta 64
+.It Li elf64-riscv-nqc Ta ELF Ta LSB Ta 64
 .It Li elf32-sh Ta ELF Ta MSB Ta 32
 .It Li elf32-shl Ta ELF Ta LSB Ta 32
 .It Li elf32-sh-nbsd Ta ELF Ta MSB Ta 32
@@ -91,7 +91,7 @@ Known descriptor names and their properties include:
 .It Li elf32-tradbigmips Ta ELF Ta MSB Ta 32
 .It Li elf32-tradlittlemips Ta ELF Ta LSB Ta 32
 .It Li elf64-alpha Ta ELF Ta LSB Ta 64
-.It Li elf64-alpha-freebsd Ta ELF Ta LSB Ta 64
+.It Li elf64-alpha-nqc Ta ELF Ta LSB Ta 64
 .It Li elf64-big Ta ELF Ta MSB Ta 64
 .It Li elf64-bigmips Ta ELF Ta MSB Ta 64
 .It Li elf64-ia64-big Ta ELF Ta MSB Ta 64
@@ -100,7 +100,7 @@ Known descriptor names and their properties include:
 .It Li elf64-littleaarch64 Ta ELF Ta LSB Ta 64
 .It Li elf64-littlemips Ta ELF Ta LSB Ta 64
 .It Li elf64-powerpc Ta ELF Ta MSB Ta 64
-.It Li elf64-powerpc-freebsd Ta ELF Ta MSB Ta 64
+.It Li elf64-powerpc-nqc Ta ELF Ta MSB Ta 64
 .It Li elf64-powerpcle Ta ELF Ta LSB Ta 64
 .It Li elf64-sh64 Ta ELF Ta MSB Ta 64
 .It Li elf64-sh64l Ta ELF Ta LSB Ta 64
@@ -109,11 +109,11 @@ Known descriptor names and their properties include:
 .It Li elf64-sh64big-linux Ta ELF Ta MSB Ta 64
 .It Li elf64-sh64-linux Ta ELF Ta LSB Ta 64
 .It Li elf64-sparc Ta ELF Ta MSB Ta 64
-.It Li elf64-sparc-freebsd Ta ELF Ta MSB Ta 64
+.It Li elf64-sparc-nqc Ta ELF Ta MSB Ta 64
 .It Li elf64-tradbigmips Ta ELF Ta MSB Ta 64
 .It Li elf64-tradlittlemips Ta ELF Ta LSB Ta 64
 .It Li elf64-x86-64 Ta ELF Ta LSB Ta 64
-.It Li elf64-x86-64-freebsd Ta ELF Ta LSB Ta 64
+.It Li elf64-x86-64-nqc Ta ELF Ta LSB Ta 64
 .It Li ihex Ta IHEX Ta - Ta -
 .It Li pei-i386 Ta PE Ta LSB Ta 32
 .It Li pei-x86-64 Ta PE Ta LSB Ta 64

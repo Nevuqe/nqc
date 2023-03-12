@@ -74,7 +74,7 @@ if [ -z "$OS" ]; then
 
         # Work with cpu-kernel-os, ie Debian
 	case "$VENDOR" in
-	linux*|kfreebsd*) OS=$VENDOR; VENDOR= ;;
+	linux*|knqc*) OS=$VENDOR; VENDOR= ;;
 	esac
 	# Special case
 	case "$OS" in
@@ -99,7 +99,7 @@ linux*)
 esac
 
 case "$OS" in
-dragonfly*|freebsd*)
+dragonfly*|nqc*)
 	# On NQC, /etc/init.d/foo status returns 0 if foo is not enabled
 	# regardless of if it's not running.
 	# So we force onestatus to work around this silly bug.

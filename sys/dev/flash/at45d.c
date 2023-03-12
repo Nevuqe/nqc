@@ -353,7 +353,7 @@ at45d_delayed_attach(void *xsc)
 	{
 		pcell_t size;
 		if (OF_getencprop(ofw_bus_get_node(sc->dev),
-		    "freebsd,sectorsize", &size, sizeof(size)) > 0)
+		    "nqc,sectorsize", &size, sizeof(size)) > 0)
 			sectorsize = size;
 	}
 #endif

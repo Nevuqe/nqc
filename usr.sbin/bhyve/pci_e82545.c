@@ -2337,7 +2337,7 @@ e82545_init(struct pci_devinst *pi, nvlist_t *nvl)
 	pci_set_cfgdata8(pi,  PCIR_HDRTYPE, PCIM_HDRTYPE_NORMAL);
 	pci_set_cfgdata8(pi,  PCIR_INTPIN, 0x1);
 
-	/* TODO: this card also supports msi, but the freebsd driver for it
+	/* TODO: this card also supports msi, but the nqc driver for it
 	 * does not, so I have not implemented it. */
 	pci_lintr_request(pi);
 

@@ -48,7 +48,7 @@ generated="@""generated"
 cat >${header} <<EOF
 /*
  * This file was machine-$generated.  Do not edit manually.
- * Run crypto/openssh/freebsd-namespace.sh to regenerate.
+ * Run crypto/openssh/nqc-namespace.sh to regenerate.
  */
 EOF
 

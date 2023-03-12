@@ -185,7 +185,7 @@ struct nstat32 {
 	__uint32_t st_gen;		/* file generation number */
 	struct timespec32 st_birthtim;	/* time of file creation */
 	/*
-	 * See comment in the definition of struct freebsd11_stat
+	 * See comment in the definition of struct nqc11_stat
 	 * in sys/stat.h about the following padding.
 	 */
 	unsigned int :(8 / 2) * (16 - (int)sizeof(struct timespec32));
@@ -244,7 +244,7 @@ struct stat32 {
 	uint64_t st_gen;
 	uint64_t st_spare[10];
 };
-struct freebsd11_stat32 {
+struct nqc11_stat32 {
 	uint32_t st_dev;
 	uint32_t st_ino;
 	mode_t	st_mode;

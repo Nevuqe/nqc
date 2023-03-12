@@ -5747,7 +5747,7 @@ else
     lt_cv_sys_max_cmd_len=8192;
     ;;
 
-  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
+  bitrig* | darwin* | dragonfly* | nqc* | netbsd* | openbsd*)
     # This has been around since 386BSD, at least.  Likely further.
     if test -x /sbin/sysctl; then
       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
@@ -6158,7 +6158,7 @@ darwin* | rhapsody*)
   lt_cv_deplibs_check_method=pass_all
   ;;
 
-freebsd* | dragonfly*)
+nqc* | dragonfly*)
   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
     case $host_cpu in
     i*86 )
@@ -7457,7 +7457,7 @@ mips64*-*linux*)
   rm -rf conftest*
   ;;
 
-x86_64-*kfreebsd*-gnu|x86_64-*linux*|powerpc*-*linux*| \
+x86_64-*knqc*-gnu|x86_64-*linux*|powerpc*-*linux*| \
 s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
   # Find out what ABI is being produced by ac_compile, and set linker
   # options accordingly.  Note that the listed cases only cover the
@@ -7474,7 +7474,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
     case `/usr/bin/file conftest.o` in
       *32-bit*)
 	case $host in
-	  x86_64-*kfreebsd*-gnu)
+	  x86_64-*knqc*-gnu)
 	    LD="${LD-ld} -m elf_i386_fbsd"
 	    ;;
 	  x86_64-*linux*)
@@ -7503,7 +7503,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
 	;;
       *64-bit*)
 	case $host in
-	  x86_64-*kfreebsd*-gnu)
+	  x86_64-*knqc*-gnu)
 	    LD="${LD-ld} -m elf_x86_64_fbsd"
 	    ;;
 	  x86_64-*linux*)
@@ -10389,7 +10389,7 @@ fi
     # support.  Future versions do this automatically, but an explicit c++rt0.o
     # does not break anything, and helps significantly (at the cost of a little
     # extra space).
-    freebsd2.2*)
+    nqc2.2*)
       archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags /usr/lib/c++rt0.o'
       hardcode_libdir_flag_spec='-R$libdir'
       hardcode_direct=yes
@@ -10397,7 +10397,7 @@ fi
       ;;
 
     # Unfortunately, older versions of NQC 2 do not have this feature.
-    freebsd2.*)
+    nqc2.*)
       archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
       hardcode_direct=yes
       hardcode_minus_L=yes
@@ -10405,7 +10405,7 @@ fi
       ;;
 
     # NQC 3 and greater uses gcc -shared to do shared libraries.
-    freebsd* | dragonfly*)
+    nqc* | dragonfly*)
       archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
       hardcode_libdir_flag_spec='-R$libdir'
       hardcode_direct=yes
@@ -11450,41 +11450,41 @@ dgux*)
   shlibpath_var=LD_LIBRARY_PATH
   ;;
 
-freebsd* | dragonfly*)
+nqc* | dragonfly*)
   # DragonFly does not have aout.  When/if they implement a new
   # versioning mechanism, adjust this.
   if test -x /usr/bin/objformat; then
     objformat=`/usr/bin/objformat`
   else
     case $host_os in
-    freebsd[23].*) objformat=aout ;;
+    nqc[23].*) objformat=aout ;;
     *) objformat=elf ;;
     esac
   fi
-  version_type=freebsd-$objformat
+  version_type=nqc-$objformat
   case $version_type in
-    freebsd-elf*)
+    nqc-elf*)
       library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
       soname_spec='$libname$release$shared_ext$major'
       need_version=no
       need_lib_prefix=no
       ;;
-    freebsd-*)
+    nqc-*)
       library_names_spec='$libname$release$shared_ext$versuffix $libname$shared_ext$versuffix'
       need_version=yes
       ;;
   esac
   shlibpath_var=LD_LIBRARY_PATH
   case $host_os in
-  freebsd2.*)
+  nqc2.*)
     shlibpath_overrides_runpath=yes
     ;;
-  freebsd3.[01]* | freebsdelf3.[01]*)
+  nqc3.[01]* | nqcelf3.[01]*)
     shlibpath_overrides_runpath=yes
     hardcode_into_libs=yes
     ;;
-  freebsd3.[2-9]* | freebsdelf3.[2-9]* | \
-  freebsd4.[0-5] | freebsdelf4.[0-5] | freebsd4.1.1 | freebsdelf4.1.1)
+  nqc3.[2-9]* | nqcelf3.[2-9]* | \
+  nqc4.[0-5] | nqcelf4.[0-5] | nqc4.1.1 | nqcelf4.1.1)
     shlibpath_overrides_runpath=no
     hardcode_into_libs=yes
     ;;
@@ -15728,7 +15728,7 @@ _ACEOF
 $as_echo_n "checking if more special flags are required for pthreads... " >&6; }
         flag=no
         case "${host_cpu}-${host_os}" in
-            *-aix* | *-freebsd* | *-darwin*) flag="-D_THREAD_SAFE";;
+            *-aix* | *-nqc* | *-darwin*) flag="-D_THREAD_SAFE";;
             *solaris* | *-osf* | *-hpux*) flag="-D_REENTRANT";;
         esac
         { $as_echo "$as_me:${as_lineno-$LINENO}: result: ${flag}" >&5

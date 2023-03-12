@@ -42,9 +42,9 @@ Options:
   -b basedir   -- Operate on a system mounted at basedir
                   (default: /)
   -d workdir   -- Store working files in workdir
-                  (default: /var/db/freebsd-update/)
+                  (default: /var/db/nqc-update/)
   -f conffile  -- Read configuration options from conffile
-                  (default: /etc/freebsd-update.conf)
+                  (default: /etc/nqc-update.conf)
   -F           -- Force a fetch operation to proceed in the
                   case of an unfinished upgrade
   -j jail      -- Operate on the given jail specified by jid or name
@@ -89,7 +89,7 @@ EOF
 # 1. Initialize CONFFILE and all the options to "".
 # 2. Process the command line.  Throw an error if a non-accumulating option
 #    is specified twice.
-# 3. If CONFFILE is "", set CONFFILE to /etc/freebsd-update.conf .
+# 3. If CONFFILE is "", set CONFFILE to /etc/nqc-update.conf .
 # 4. For all the configuration options X, set X_saved to X.
 # 5. Initialize all the options to "".
 # 6. Read CONFFILE line by line, parsing options.
@@ -574,7 +574,7 @@ parse_conffile () {
 	# use the default configuration file path.  If that default does
 	# not exist, give up looking for any configuration.
 	if [ -z "${CONFFILE}" ]; then
-		CONFFILE="/etc/freebsd-update.conf"
+		CONFFILE="/etc/nqc-update.conf"
 		if [ ! -r "${CONFFILE}" ]; then
 			return
 		fi
@@ -610,7 +610,7 @@ default_params () {
 	nullconfig
 
 	# Default configurations
-	config_WorkDir /var/db/freebsd-update
+	config_WorkDir /var/db/nqc-update
 	config_MailTo root
 	config_AllowAdd yes
 	config_AllowDelete yes
@@ -664,7 +664,7 @@ fetch_setup_verboselevel () {
 # user is running -SECURITY, call it -RELEASE.  Chdir
 # into the working directory.
 fetchupgrade_check_params () {
-	export HTTP_USER_AGENT="freebsd-update (${COMMAND}, `uname -r`)"
+	export HTTP_USER_AGENT="nqc-update (${COMMAND}, `uname -r`)"
 
 	_SERVERNAME_z=\
 "SERVERNAME must be given via command line or configuration file."
@@ -971,7 +971,7 @@ rollback_check_params () {
 # -SECURITY, call it -RELEASE.  Chdir into the working
 # directory.
 IDS_check_params () {
-	export HTTP_USER_AGENT="freebsd-update (${COMMAND}, `uname -r`)"
+	export HTTP_USER_AGENT="nqc-update (${COMMAND}, `uname -r`)"
 
 	_SERVERNAME_z=\
 "SERVERNAME must be given via command line or configuration file."
@@ -1262,7 +1262,7 @@ fetch_tag () {
 
 	if ! [ `wc -l < tag.new` = 1 ] ||
 	    ! grep -qE	\
-    "^freebsd-update\|${ARCH}\|${RELNUM}\|[0-9]+\|[0-9a-f]{64}\|[0-9]{10}" \
+    "^nqc-update\|${ARCH}\|${RELNUM}\|[0-9]+\|[0-9a-f]{64}\|[0-9]{10}" \
 		tag.new; then
 		echo "invalid signature."
 		return 1
@@ -1299,7 +1299,7 @@ fetch_tagsanity () {
 	# against rollback (replay) attacks.
 	if [ -f tag ] &&
 	    grep -qE	\
-    "^freebsd-update\|${ARCH}\|${RELNUM}\|[0-9]+\|[0-9a-f]{64}\|[0-9]{10}" \
+    "^nqc-update\|${ARCH}\|${RELNUM}\|[0-9]+\|[0-9a-f]{64}\|[0-9]{10}" \
 		tag; then
 		LASTRELPATCHNUM=`cut -f 4 -d '|' < tag`
 
@@ -2763,7 +2763,7 @@ upgrade_run () {
 	# needs to be installed before the world.
 	touch ${BDHASH}-install/kernelfirst
 
-	# Remind the user that they need to run "freebsd-update install"
+	# Remind the user that they need to run "nqc-update install"
 	# to install the downloaded bits, in case they didn't RTFM.
 	echo "To install the downloaded upgrades, run \"$0 install\"."
 }
@@ -2824,7 +2824,7 @@ backup_kernel_finddir () {
 		# If directory do exist, we only use if it has our
 		# marker file.
 		if [ -d $BASEDIR/$BACKUPKERNELDIR -a \
-			-e $BASEDIR/$BACKUPKERNELDIR/.freebsd-update ]; then
+			-e $BASEDIR/$BACKUPKERNELDIR/.nqc-update ]; then
 			return 0
 		fi
 
@@ -2842,9 +2842,9 @@ backup_kernel_finddir () {
 
 # Backup the current kernel using hardlinks, if not disabled by user.
 # Since we delete all files in the directory used for previous backups
-# we create a marker file called ".freebsd-update" in the directory so
+# we create a marker file called ".nqc-update" in the directory so
 # we can determine on the next run that the directory was created by
-# freebsd-update and we then do not accidentally remove user files in
+# nqc-update and we then do not accidentally remove user files in
 # the unlikely case that the user has created a directory with a
 # conflicting name.
 backup_kernel () {
@@ -2868,8 +2868,8 @@ backup_kernel () {
 	mtree -cdn -p "${BASEDIR}/${KERNELDIR}" | \
 	    mtree -Ue -p "${BASEDIR}/${BACKUPKERNELDIR}" > /dev/null
 
-	# Mark the directory as having been created by freebsd-update.
-	touch $BASEDIR/$BACKUPKERNELDIR/.freebsd-update
+	# Mark the directory as having been created by nqc-update.
+	touch $BASEDIR/$BACKUPKERNELDIR/.nqc-update
 	if [ $? -ne 0 ]; then
 		echo "Could not create kernel backup directory"
 		exit 1
@@ -3418,7 +3418,7 @@ cmd_cron () {
 	fetch_check_params
 	sleep `jot -r 1 0 3600`
 
-	TMPFILE=`mktemp /tmp/freebsd-update.XXXXXX` || exit 1
+	TMPFILE=`mktemp /tmp/nqc-update.XXXXXX` || exit 1
 	finalize_components_config ${COMPONENTS} >> ${TMPFILE}
 	if ! fetch_run >> ${TMPFILE} ||
 	    ! grep -q "No updates needed" ${TMPFILE} ||

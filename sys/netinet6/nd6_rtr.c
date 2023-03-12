@@ -2110,7 +2110,7 @@ nd6_prefix_onlink(struct nd_prefix *pr)
 	ifa = (struct ifaddr *)in6ifa_ifpforlinklocal(ifp,
 	    IN6_IFF_NOTREADY | IN6_IFF_ANYCAST);
 	if (ifa == NULL) {
-		/* XXX: freebsd does not have ifa_ifwithaf */
+		/* XXX: nqc does not have ifa_ifwithaf */
 		CK_STAILQ_FOREACH(ifa, &ifp->if_addrhead, ifa_link) {
 			if (ifa->ifa_addr->sa_family == AF_INET6) {
 				ifa_ref(ifa);

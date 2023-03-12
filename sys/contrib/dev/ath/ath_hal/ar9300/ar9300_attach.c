@@ -48,7 +48,7 @@
 #include "ar9300/ar9300_aphrodite10.ini"
 
 
-/* Include various freebsd specific HAL methods */
+/* Include various nqc specific HAL methods */
 #include "ar9300/ar9300_nqc.h"
 
 /* XXX duplicate in ar9300_radio.c ? */
@@ -1388,7 +1388,7 @@ ar9300_attach(u_int16_t devid, HAL_SOFTC sc, HAL_BUS_TAG st,
             ar9340Modes_fast_clock_wasp_1p0,
             ARRAY_LENGTH(ar9340Modes_fast_clock_wasp_1p0), 3);
 
-        /* XXX TODO: need to add this for freebsd; it's missing from the current .ini files */
+        /* XXX TODO: need to add this for nqc; it's missing from the current .ini files */
 #if 0
         /* Japan 2484Mhz CCK settings */
         INIT_INI_ARRAY(&ahp->ah_ini_japan2484,

@@ -1818,7 +1818,7 @@ ChangeLog for wpa_supplicant
 	  CONFIG_ELOOP=eloop_win in .config
 	* added support for selecting l2_packet implementation in .config
 	  (CONFIG_L2_PACKET; following options are available now: linux, pcap,
-	  winpcap, freebsd, none)
+	  winpcap, nqc, none)
 	* added new l2_packet implementation for WinPcap
 	  (CONFIG_L2_PACKET=winpcap) that uses a separate receive thread to
 	  reduce latency in EAPOL receive processing from about 100 ms to about

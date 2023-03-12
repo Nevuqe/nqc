@@ -17,8 +17,8 @@ KMOD=	openzfs
 	${SRCDIR}/lua \
 	${SRCDIR}/nvpair \
 	${SRCDIR}/icp/algs/edonr \
-	${SRCDIR}/os/freebsd/spl \
-	${SRCDIR}/os/freebsd/zfs \
+	${SRCDIR}/os/nqc/spl \
+	${SRCDIR}/os/nqc/zfs \
 	${SRCDIR}/unicode \
 	${SRCDIR}/zcommon \
 	${SRCDIR}/zfs \
@@ -31,12 +31,12 @@ KMOD=	openzfs
 
 CFLAGS+= -I${.OBJDIR:H}/include
 CFLAGS+= -I${INCDIR}
-CFLAGS+= -I${INCDIR}/os/freebsd
-CFLAGS+= -I${INCDIR}/os/freebsd/spl
-CFLAGS+= -I${INCDIR}/os/freebsd/zfs
+CFLAGS+= -I${INCDIR}/os/nqc
+CFLAGS+= -I${INCDIR}/os/nqc/spl
+CFLAGS+= -I${INCDIR}/os/nqc/zfs
 CFLAGS+= -I${SRCDIR}/zstd/include
 CFLAGS+= -I${SRCDIR}/icp/include
-CFLAGS+= -include ${INCDIR}/os/freebsd/spl/sys/ccompile.h
+CFLAGS+= -include ${INCDIR}/os/nqc/spl/sys/ccompile.h
 
 CFLAGS+= -D__KERNEL__ -DNQC_NAMECACHE -DBUILDING_ZFS  -D__BSD_VISIBLE=1 \
 	 -DHAVE_UIO_ZEROCOPY -DWITHOUT_NETDUMP -D__KERNEL -D_SYS_CONDVAR_H_ \
@@ -137,7 +137,7 @@ SRCS+=	nvpair.c \
 	nvpair_alloc_spl.c \
 	nvpair_alloc_fixed.c
 
-#os/freebsd/spl
+#os/nqc/spl
 SRCS+=	acl_common.c \
 	callb.c \
 	list.c \
@@ -167,7 +167,7 @@ SRCS+=	acl_common.c \
 SRCS+= spl_atomic.c
 .endif
 
-#os/freebsd/zfs
+#os/nqc/zfs
 SRCS+=	abd_os.c \
 	arc_os.c \
 	crypto_os.c \

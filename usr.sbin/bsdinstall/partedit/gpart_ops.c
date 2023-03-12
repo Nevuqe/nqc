@@ -95,7 +95,7 @@ newfs_command(const char *fstype, char *command, int use_default)
 
 	bsddialog_initconf(&conf);
 
-	if (strcmp(fstype, "freebsd-ufs") == 0) {
+	if (strcmp(fstype, "nqc-ufs") == 0) {
 		int i;
 		struct bsddialog_menuitem items[] = {
 			{"", false, 0, "UFS1", "UFS Version 1",
@@ -133,7 +133,7 @@ newfs_command(const char *fstype, char *command, int use_default)
 			else if (strcmp(items[i].name, "TRIM") == 0)
 				strcat(command, "-t ");
 		}
-	} else if (strcmp(fstype, "freebsd-zfs") == 0) {
+	} else if (strcmp(fstype, "nqc-zfs") == 0) {
 		int i;
 		struct bsddialog_menuitem items[] = {
 			{"", 0, true, "fletcher4", "checksum algorithm: fletcher4",
@@ -547,8 +547,8 @@ gpart_edit(struct gprovider *pp)
 
 	struct bsddialog_formitem items[] = {
 		{ "Type:", 1, 1, "", 1, 12, 12, 15, NULL, 0,
-		    "Filesystem type (e.g. freebsd-ufs, freebsd-zfs, "
-		    "freebsd-swap)"},
+		    "Filesystem type (e.g. nqc-ufs, nqc-zfs, "
+		    "nqc-swap)"},
 		{ "Size:", 2, 1, "", 2, 12, 12, 15, NULL, 0,
 		    "Partition size. Append K, M, G for kilobytes, "
 		    "megabytes or gigabytes."},
@@ -695,7 +695,7 @@ endedit:
 	if (strcmp(oldtype, items[0].value) != 0 && cp != NULL)
 		gpart_destroy(cp->lg_geom);
 	if (strcmp(oldtype, items[0].value) != 0 && strcmp(items[0].value,
-	    "freebsd") == 0)
+	    "nqc") == 0)
 		gpart_partition(pp->lg_name, "BSD");
 
 	for (i = 0; i < nitems(items); i++)
@@ -724,7 +724,7 @@ set_default_part_metadata(const char *name, const char *scheme,
 		if (newfs != NULL && newfs[0] != '\0') {
 			md->newfs = malloc(strlen(newfs) + strlen(" /dev/") +
 			    strlen(mountpoint) + 5 + strlen(name) + 1);
-			if (strcmp("freebsd-zfs", type) == 0) {
+			if (strcmp("nqc-zfs", type) == 0) {
 				zpool_name = strdup((strlen(mountpoint) == 1) ?
 				    "root" : &mountpoint[1]);
 				for (i = 0; zpool_name[i] != 0; i++)
@@ -738,7 +738,7 @@ set_default_part_metadata(const char *name, const char *scheme,
 		}
 	}
 
-	if (strcmp(type, "freebsd-swap") == 0)
+	if (strcmp(type, "nqc-swap") == 0)
 		mountpoint = "none";
 	if (strcmp(type, bootpart_type(scheme, &default_bootmount)) == 0) {
 		if (default_bootmount == NULL)
@@ -767,7 +767,7 @@ set_default_part_metadata(const char *name, const char *scheme,
 			free(md->fstab->fs_mntops);
 			free(md->fstab->fs_type);
 		}
-		if (strcmp("freebsd-zfs", type) == 0) {
+		if (strcmp("nqc-zfs", type) == 0) {
 			md->fstab->fs_spec = strdup(zpool_name);
 		} else {
 			md->fstab->fs_spec = malloc(strlen(name) +
@@ -775,19 +775,19 @@ set_default_part_metadata(const char *name, const char *scheme,
 			sprintf(md->fstab->fs_spec, "/dev/%s", name);
 		}
 		md->fstab->fs_file = strdup(mountpoint);
-		/* Get VFS from text after freebsd-, if possible */
-		if (strncmp("freebsd-", type, 8) == 0)
+		/* Get VFS from text after nqc-, if possible */
+		if (strncmp("nqc-", type, 8) == 0)
 			md->fstab->fs_vfstype = strdup(&type[8]);
 		else if (strcmp("fat32", type) == 0 || strcmp("efi", type) == 0
 	     	    || strcmp("ms-basic-data", type) == 0)
 			md->fstab->fs_vfstype = strdup("msdosfs");
 		else
 			md->fstab->fs_vfstype = strdup(type); /* Guess */
-		if (strcmp(type, "freebsd-swap") == 0) {
+		if (strcmp(type, "nqc-swap") == 0) {
 			md->fstab->fs_type = strdup(FSTAB_SW);
 			md->fstab->fs_freq = 0;
 			md->fstab->fs_passno = 0;
-		} else if (strcmp(type, "freebsd-zfs") == 0) {
+		} else if (strcmp(type, "nqc-zfs") == 0) {
 			md->fstab->fs_type = strdup(FSTAB_RW);
 			md->fstab->fs_freq = 0;
 			md->fstab->fs_passno = 0;
@@ -930,7 +930,7 @@ add_boot_partition(struct ggeom *geom, struct gprovider *pp,
 	int choice;
 	struct bsddialog_conf conf;
 
-	/* Check for existing freebsd-boot partition */
+	/* Check for existing nqc-boot partition */
 	LIST_FOREACH(ppi, &geom->lg_provider, lg_provider) {
 		struct partition_metadata *md;
 		const char *bootmount = NULL;
@@ -1030,9 +1030,9 @@ gpart_create(struct gprovider *pp, const char *default_type,
 	struct bsddialog_conf conf;
 
 	struct bsddialog_formitem items[] = {
-		{"Type:", 1, 1, "freebsd-ufs", 1, 12, 12, 15, NULL, 0,
-		    "Filesystem type (e.g. freebsd-ufs, freebsd-zfs, "
-		    "freebsd-swap)"},
+		{"Type:", 1, 1, "nqc-ufs", 1, 12, 12, 15, NULL, 0,
+		    "Filesystem type (e.g. nqc-ufs, nqc-zfs, "
+		    "nqc-swap)"},
 		{"Size:", 2, 1, "", 2, 12, 12, 15, NULL, 0,
 		    "Partition size. Append K, M, G for kilobytes, "
 		    "megabytes or gigabytes."},
@@ -1106,8 +1106,8 @@ gpart_create(struct gprovider *pp, const char *default_type,
 
 	/* Special-case the MBR default type for nested partitions */
 	if (strcmp(scheme, "MBR") == 0) {
-		items[0].init = "freebsd";
-		items[0].bottomdesc = "Filesystem type (e.g. freebsd, fat32)";
+		items[0].init = "nqc";
+		items[0].bottomdesc = "Filesystem type (e.g. nqc, fat32)";
 	}
 
 	nitems = scheme_supports_labels(scheme) ? 4 : 3;
@@ -1191,7 +1191,7 @@ addpartform:
 	}
 
 	/* Warn if no mountpoint set */
-	if (strcmp(items[0].value, "freebsd-ufs") == 0 &&
+	if (strcmp(items[0].value, "nqc-ufs") == 0 &&
 	    items[2].value[0] != '/') {
 		choice = 0;
 		if (interactive) {
@@ -1213,10 +1213,10 @@ addpartform:
 	 * Error if this scheme needs nested partitions, this is one, and
 	 * a mountpoint was set.
 	 */
-	if (strcmp(items[0].value, "freebsd") == 0 &&
+	if (strcmp(items[0].value, "nqc") == 0 &&
 	    strlen(items[2].value) > 0) {
 		conf.title = "Error";
-		bsddialog_msgbox(&conf, "Partitions of type \"freebsd\" are "
+		bsddialog_msgbox(&conf, "Partitions of type \"nqc\" are "
 		    "nested BSD-type partition schemes and cannot have "
 		    "mountpoints. After creating one, select it and press "
 		    "Create again to add the actual file systems.", 0, 0);
@@ -1257,7 +1257,7 @@ addpartform:
 	 * the user to add one.
 	 */
 
-	if ((strcmp(items[0].value, "freebsd") == 0 ||
+	if ((strcmp(items[0].value, "nqc") == 0 ||
 	    strcmp(items[2].value, "/") == 0) && bootpart_size(scheme) > 0) {
 		size_t bytes = add_boot_partition(geom, pp, scheme,
 		    interactive);
@@ -1313,7 +1313,7 @@ addpartform:
 	gctl_free(r);
 
 
-	if (strcmp(items[0].value, "freebsd") == 0)
+	if (strcmp(items[0].value, "nqc") == 0)
 		gpart_partition(newpartname, "BSD");
 	else
 		set_default_part_metadata(newpartname, scheme,

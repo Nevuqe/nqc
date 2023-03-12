@@ -420,7 +420,7 @@ The next step is to substitute struct bio for struct buf in all the code
 which only care about the I/O aspect: device drivers, diskslice/label.
 The patch to do this is up for review. \**
 .FS
-And can be found at http://phk.freebsd.dk/misc
+And can be found at http://phk.frebsd.dk/misc
 .FE
 and consists mainly of systematic substitutions like these
 .DS

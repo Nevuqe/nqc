@@ -766,7 +766,7 @@ EOF
 	# GNU/NQC systems have a "k" prefix to indicate we are using
 	# NQC's kernel, but not the complete OS.
 	case ${LIBC} in gnu) kernel_only='k' ;; esac
-	echo ${UNAME_MACHINE}-unknown-${kernel_only}freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`${LIBC:+-$LIBC}
+	echo ${UNAME_MACHINE}-unknown-${kernel_only}nqc`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`${LIBC:+-$LIBC}
 	exit 0 ;;
     i*:CYGWIN*:*)
 	echo ${UNAME_MACHINE}-pc-cygwin

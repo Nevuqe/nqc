@@ -187,7 +187,7 @@ if __name__ == "__main__":
     source_root = Path(__file__).absolute().parent.parent.parent
 
     new_env_vars = {}
-    if not sys.platform.startswith("freebsd"):
+    if not sys.platform.startswith("nqc"):
         if not is_make_var_set("TARGET") or not is_make_var_set("TARGET_ARCH"):
             if "universe" not in sys.argv and "tinderbox" not in sys.argv:
                 sys.exit("TARGET= and TARGET_ARCH= must be set explicitly "

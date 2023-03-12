@@ -175,7 +175,7 @@ struct getppid_args {
 struct dup_args {
 	char fd_l_[PADL_(u_int)]; u_int fd; char fd_r_[PADR_(u_int)];
 };
-struct freebsd10_pipe_args {
+struct nqc10_pipe_args {
 	syscallarg_t dummy;
 };
 struct getegid_args {
@@ -2443,35 +2443,35 @@ int	ogetdirentries(struct thread *, struct ogetdirentries_args *);
 
 #ifdef COMPAT_NQC4
 
-struct freebsd4_getfsstat_args {
+struct nqc4_getfsstat_args {
 	char buf_l_[PADL_(struct ostatfs *)]; struct ostatfs * buf; char buf_r_[PADR_(struct ostatfs *)];
 	char bufsize_l_[PADL_(long)]; long bufsize; char bufsize_r_[PADR_(long)];
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 };
-struct freebsd4_statfs_args {
+struct nqc4_statfs_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char buf_l_[PADL_(struct ostatfs *)]; struct ostatfs * buf; char buf_r_[PADR_(struct ostatfs *)];
 };
-struct freebsd4_fstatfs_args {
+struct nqc4_fstatfs_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(struct ostatfs *)]; struct ostatfs * buf; char buf_r_[PADR_(struct ostatfs *)];
 };
-struct freebsd4_getdomainname_args {
+struct nqc4_getdomainname_args {
 	char domainname_l_[PADL_(char *)]; char * domainname; char domainname_r_[PADR_(char *)];
 	char len_l_[PADL_(int)]; int len; char len_r_[PADR_(int)];
 };
-struct freebsd4_setdomainname_args {
+struct nqc4_setdomainname_args {
 	char domainname_l_[PADL_(char *)]; char * domainname; char domainname_r_[PADR_(char *)];
 	char len_l_[PADL_(int)]; int len; char len_r_[PADR_(int)];
 };
-struct freebsd4_uname_args {
+struct nqc4_uname_args {
 	char name_l_[PADL_(struct utsname *)]; struct utsname * name; char name_r_[PADR_(struct utsname *)];
 };
-struct freebsd4_fhstatfs_args {
+struct nqc4_fhstatfs_args {
 	char u_fhp_l_[PADL_(const struct fhandle *)]; const struct fhandle * u_fhp; char u_fhp_r_[PADR_(const struct fhandle *)];
 	char buf_l_[PADL_(struct ostatfs *)]; struct ostatfs * buf; char buf_r_[PADR_(struct ostatfs *)];
 };
-struct freebsd4_sendfile_args {
+struct nqc4_sendfile_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char s_l_[PADL_(int)]; int s; char s_r_[PADR_(int)];
 	char offset_l_[PADL_(off_t)]; off_t offset; char offset_r_[PADR_(off_t)];
@@ -2480,45 +2480,45 @@ struct freebsd4_sendfile_args {
 	char sbytes_l_[PADL_(off_t *)]; off_t * sbytes; char sbytes_r_[PADR_(off_t *)];
 	char flags_l_[PADL_(int)]; int flags; char flags_r_[PADR_(int)];
 };
-struct freebsd4_sigaction_args {
+struct nqc4_sigaction_args {
 	char sig_l_[PADL_(int)]; int sig; char sig_r_[PADR_(int)];
 	char act_l_[PADL_(const struct sigaction *)]; const struct sigaction * act; char act_r_[PADR_(const struct sigaction *)];
 	char oact_l_[PADL_(struct sigaction *)]; struct sigaction * oact; char oact_r_[PADR_(struct sigaction *)];
 };
-struct freebsd4_sigreturn_args {
-	char sigcntxp_l_[PADL_(const struct freebsd4_ucontext *)]; const struct freebsd4_ucontext * sigcntxp; char sigcntxp_r_[PADR_(const struct freebsd4_ucontext *)];
+struct nqc4_sigreturn_args {
+	char sigcntxp_l_[PADL_(const struct nqc4_ucontext *)]; const struct nqc4_ucontext * sigcntxp; char sigcntxp_r_[PADR_(const struct nqc4_ucontext *)];
 };
-int	freebsd4_getfsstat(struct thread *, struct freebsd4_getfsstat_args *);
-int	freebsd4_statfs(struct thread *, struct freebsd4_statfs_args *);
-int	freebsd4_fstatfs(struct thread *, struct freebsd4_fstatfs_args *);
-int	freebsd4_getdomainname(struct thread *, struct freebsd4_getdomainname_args *);
-int	freebsd4_setdomainname(struct thread *, struct freebsd4_setdomainname_args *);
-int	freebsd4_uname(struct thread *, struct freebsd4_uname_args *);
-int	freebsd4_fhstatfs(struct thread *, struct freebsd4_fhstatfs_args *);
-int	freebsd4_sendfile(struct thread *, struct freebsd4_sendfile_args *);
-int	freebsd4_sigaction(struct thread *, struct freebsd4_sigaction_args *);
-int	freebsd4_sigreturn(struct thread *, struct freebsd4_sigreturn_args *);
+int	nqc4_getfsstat(struct thread *, struct nqc4_getfsstat_args *);
+int	nqc4_statfs(struct thread *, struct nqc4_statfs_args *);
+int	nqc4_fstatfs(struct thread *, struct nqc4_fstatfs_args *);
+int	nqc4_getdomainname(struct thread *, struct nqc4_getdomainname_args *);
+int	nqc4_setdomainname(struct thread *, struct nqc4_setdomainname_args *);
+int	nqc4_uname(struct thread *, struct nqc4_uname_args *);
+int	nqc4_fhstatfs(struct thread *, struct nqc4_fhstatfs_args *);
+int	nqc4_sendfile(struct thread *, struct nqc4_sendfile_args *);
+int	nqc4_sigaction(struct thread *, struct nqc4_sigaction_args *);
+int	nqc4_sigreturn(struct thread *, struct nqc4_sigreturn_args *);
 
 #endif /* COMPAT_NQC4 */
 
 
 #ifdef COMPAT_NQC6
 
-struct freebsd6_pread_args {
+struct nqc6_pread_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(void *)]; void * buf; char buf_r_[PADR_(void *)];
 	char nbyte_l_[PADL_(size_t)]; size_t nbyte; char nbyte_r_[PADR_(size_t)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char offset_l_[PADL_(off_t)]; off_t offset; char offset_r_[PADR_(off_t)];
 };
-struct freebsd6_pwrite_args {
+struct nqc6_pwrite_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(const void *)]; const void * buf; char buf_r_[PADR_(const void *)];
 	char nbyte_l_[PADL_(size_t)]; size_t nbyte; char nbyte_r_[PADR_(size_t)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char offset_l_[PADL_(off_t)]; off_t offset; char offset_r_[PADR_(off_t)];
 };
-struct freebsd6_mmap_args {
+struct nqc6_mmap_args {
 	char addr_l_[PADL_(void *)]; void * addr; char addr_r_[PADR_(void *)];
 	char len_l_[PADL_(size_t)]; size_t len; char len_r_[PADR_(size_t)];
 	char prot_l_[PADL_(int)]; int prot; char prot_r_[PADR_(int)];
@@ -2527,217 +2527,217 @@ struct freebsd6_mmap_args {
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char pos_l_[PADL_(off_t)]; off_t pos; char pos_r_[PADR_(off_t)];
 };
-struct freebsd6_lseek_args {
+struct nqc6_lseek_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char offset_l_[PADL_(off_t)]; off_t offset; char offset_r_[PADR_(off_t)];
 	char whence_l_[PADL_(int)]; int whence; char whence_r_[PADR_(int)];
 };
-struct freebsd6_truncate_args {
+struct nqc6_truncate_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char length_l_[PADL_(off_t)]; off_t length; char length_r_[PADR_(off_t)];
 };
-struct freebsd6_ftruncate_args {
+struct nqc6_ftruncate_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char length_l_[PADL_(off_t)]; off_t length; char length_r_[PADR_(off_t)];
 };
-struct freebsd6_aio_read_args {
+struct nqc6_aio_read_args {
 	char aiocbp_l_[PADL_(struct oaiocb *)]; struct oaiocb * aiocbp; char aiocbp_r_[PADR_(struct oaiocb *)];
 };
-struct freebsd6_aio_write_args {
+struct nqc6_aio_write_args {
 	char aiocbp_l_[PADL_(struct oaiocb *)]; struct oaiocb * aiocbp; char aiocbp_r_[PADR_(struct oaiocb *)];
 };
-struct freebsd6_lio_listio_args {
+struct nqc6_lio_listio_args {
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 	char acb_list_l_[PADL_(struct oaiocb * const *)]; struct oaiocb * const * acb_list; char acb_list_r_[PADR_(struct oaiocb * const *)];
 	char nent_l_[PADL_(int)]; int nent; char nent_r_[PADR_(int)];
 	char sig_l_[PADL_(struct osigevent *)]; struct osigevent * sig; char sig_r_[PADR_(struct osigevent *)];
 };
-int	freebsd6_pread(struct thread *, struct freebsd6_pread_args *);
-int	freebsd6_pwrite(struct thread *, struct freebsd6_pwrite_args *);
-int	freebsd6_mmap(struct thread *, struct freebsd6_mmap_args *);
-int	freebsd6_lseek(struct thread *, struct freebsd6_lseek_args *);
-int	freebsd6_truncate(struct thread *, struct freebsd6_truncate_args *);
-int	freebsd6_ftruncate(struct thread *, struct freebsd6_ftruncate_args *);
-int	freebsd6_aio_read(struct thread *, struct freebsd6_aio_read_args *);
-int	freebsd6_aio_write(struct thread *, struct freebsd6_aio_write_args *);
-int	freebsd6_lio_listio(struct thread *, struct freebsd6_lio_listio_args *);
+int	nqc6_pread(struct thread *, struct nqc6_pread_args *);
+int	nqc6_pwrite(struct thread *, struct nqc6_pwrite_args *);
+int	nqc6_mmap(struct thread *, struct nqc6_mmap_args *);
+int	nqc6_lseek(struct thread *, struct nqc6_lseek_args *);
+int	nqc6_truncate(struct thread *, struct nqc6_truncate_args *);
+int	nqc6_ftruncate(struct thread *, struct nqc6_ftruncate_args *);
+int	nqc6_aio_read(struct thread *, struct nqc6_aio_read_args *);
+int	nqc6_aio_write(struct thread *, struct nqc6_aio_write_args *);
+int	nqc6_lio_listio(struct thread *, struct nqc6_lio_listio_args *);
 
 #endif /* COMPAT_NQC6 */
 
 
 #ifdef COMPAT_NQC7
 
-struct freebsd7___semctl_args {
+struct nqc7___semctl_args {
 	char semid_l_[PADL_(int)]; int semid; char semid_r_[PADR_(int)];
 	char semnum_l_[PADL_(int)]; int semnum; char semnum_r_[PADR_(int)];
 	char cmd_l_[PADL_(int)]; int cmd; char cmd_r_[PADR_(int)];
 	char arg_l_[PADL_(union semun_old *)]; union semun_old * arg; char arg_r_[PADR_(union semun_old *)];
 };
-struct freebsd7_msgctl_args {
+struct nqc7_msgctl_args {
 	char msqid_l_[PADL_(int)]; int msqid; char msqid_r_[PADR_(int)];
 	char cmd_l_[PADL_(int)]; int cmd; char cmd_r_[PADR_(int)];
 	char buf_l_[PADL_(struct msqid_ds_old *)]; struct msqid_ds_old * buf; char buf_r_[PADR_(struct msqid_ds_old *)];
 };
-struct freebsd7_shmctl_args {
+struct nqc7_shmctl_args {
 	char shmid_l_[PADL_(int)]; int shmid; char shmid_r_[PADR_(int)];
 	char cmd_l_[PADL_(int)]; int cmd; char cmd_r_[PADR_(int)];
 	char buf_l_[PADL_(struct shmid_ds_old *)]; struct shmid_ds_old * buf; char buf_r_[PADR_(struct shmid_ds_old *)];
 };
-int	freebsd7___semctl(struct thread *, struct freebsd7___semctl_args *);
-int	freebsd7_msgctl(struct thread *, struct freebsd7_msgctl_args *);
-int	freebsd7_shmctl(struct thread *, struct freebsd7_shmctl_args *);
+int	nqc7___semctl(struct thread *, struct nqc7___semctl_args *);
+int	nqc7_msgctl(struct thread *, struct nqc7_msgctl_args *);
+int	nqc7_shmctl(struct thread *, struct nqc7_shmctl_args *);
 
 #endif /* COMPAT_NQC7 */
 
 
 #ifdef COMPAT_NQC10
 
-struct freebsd10__umtx_lock_args {
+struct nqc10__umtx_lock_args {
 	char umtx_l_[PADL_(struct umtx *)]; struct umtx * umtx; char umtx_r_[PADR_(struct umtx *)];
 };
-struct freebsd10__umtx_unlock_args {
+struct nqc10__umtx_unlock_args {
 	char umtx_l_[PADL_(struct umtx *)]; struct umtx * umtx; char umtx_r_[PADR_(struct umtx *)];
 };
-int	freebsd10_pipe(struct thread *, struct freebsd10_pipe_args *);
-int	freebsd10__umtx_lock(struct thread *, struct freebsd10__umtx_lock_args *);
-int	freebsd10__umtx_unlock(struct thread *, struct freebsd10__umtx_unlock_args *);
+int	nqc10_pipe(struct thread *, struct nqc10_pipe_args *);
+int	nqc10__umtx_lock(struct thread *, struct nqc10__umtx_lock_args *);
+int	nqc10__umtx_unlock(struct thread *, struct nqc10__umtx_unlock_args *);
 
 #endif /* COMPAT_NQC10 */
 
 
 #ifdef COMPAT_NQC11
 
-struct freebsd11_mknod_args {
+struct nqc11_mknod_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 	char dev_l_[PADL_(uint32_t)]; uint32_t dev; char dev_r_[PADR_(uint32_t)];
 };
-struct freebsd11_vadvise_args {
+struct nqc11_vadvise_args {
 	char anom_l_[PADL_(int)]; int anom; char anom_r_[PADR_(int)];
 };
-struct freebsd11_stat_args {
+struct nqc11_stat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
-	char ub_l_[PADL_(struct freebsd11_stat *)]; struct freebsd11_stat * ub; char ub_r_[PADR_(struct freebsd11_stat *)];
+	char ub_l_[PADL_(struct nqc11_stat *)]; struct nqc11_stat * ub; char ub_r_[PADR_(struct nqc11_stat *)];
 };
-struct freebsd11_fstat_args {
+struct nqc11_fstat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
-	char sb_l_[PADL_(struct freebsd11_stat *)]; struct freebsd11_stat * sb; char sb_r_[PADR_(struct freebsd11_stat *)];
+	char sb_l_[PADL_(struct nqc11_stat *)]; struct nqc11_stat * sb; char sb_r_[PADR_(struct nqc11_stat *)];
 };
-struct freebsd11_lstat_args {
+struct nqc11_lstat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
-	char ub_l_[PADL_(struct freebsd11_stat *)]; struct freebsd11_stat * ub; char ub_r_[PADR_(struct freebsd11_stat *)];
+	char ub_l_[PADL_(struct nqc11_stat *)]; struct nqc11_stat * ub; char ub_r_[PADR_(struct nqc11_stat *)];
 };
-struct freebsd11_getdirentries_args {
+struct nqc11_getdirentries_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(char *)]; char * buf; char buf_r_[PADR_(char *)];
 	char count_l_[PADL_(u_int)]; u_int count; char count_r_[PADR_(u_int)];
 	char basep_l_[PADL_(long *)]; long * basep; char basep_r_[PADR_(long *)];
 };
-struct freebsd11_getdents_args {
+struct nqc11_getdents_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(char *)]; char * buf; char buf_r_[PADR_(char *)];
 	char count_l_[PADL_(size_t)]; size_t count; char count_r_[PADR_(size_t)];
 };
-struct freebsd11_nstat_args {
+struct nqc11_nstat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char ub_l_[PADL_(struct nstat *)]; struct nstat * ub; char ub_r_[PADR_(struct nstat *)];
 };
-struct freebsd11_nfstat_args {
+struct nqc11_nfstat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char sb_l_[PADL_(struct nstat *)]; struct nstat * sb; char sb_r_[PADR_(struct nstat *)];
 };
-struct freebsd11_nlstat_args {
+struct nqc11_nlstat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char ub_l_[PADL_(struct nstat *)]; struct nstat * ub; char ub_r_[PADR_(struct nstat *)];
 };
-struct freebsd11_fhstat_args {
+struct nqc11_fhstat_args {
 	char u_fhp_l_[PADL_(const struct fhandle *)]; const struct fhandle * u_fhp; char u_fhp_r_[PADR_(const struct fhandle *)];
-	char sb_l_[PADL_(struct freebsd11_stat *)]; struct freebsd11_stat * sb; char sb_r_[PADR_(struct freebsd11_stat *)];
+	char sb_l_[PADL_(struct nqc11_stat *)]; struct nqc11_stat * sb; char sb_r_[PADR_(struct nqc11_stat *)];
 };
-struct freebsd11_kevent_args {
+struct nqc11_kevent_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
-	char changelist_l_[PADL_(const struct freebsd11_kevent *)]; const struct freebsd11_kevent * changelist; char changelist_r_[PADR_(const struct freebsd11_kevent *)];
+	char changelist_l_[PADL_(const struct nqc11_kevent *)]; const struct nqc11_kevent * changelist; char changelist_r_[PADR_(const struct nqc11_kevent *)];
 	char nchanges_l_[PADL_(int)]; int nchanges; char nchanges_r_[PADR_(int)];
-	char eventlist_l_[PADL_(struct freebsd11_kevent *)]; struct freebsd11_kevent * eventlist; char eventlist_r_[PADR_(struct freebsd11_kevent *)];
+	char eventlist_l_[PADL_(struct nqc11_kevent *)]; struct nqc11_kevent * eventlist; char eventlist_r_[PADR_(struct nqc11_kevent *)];
 	char nevents_l_[PADL_(int)]; int nevents; char nevents_r_[PADR_(int)];
 	char timeout_l_[PADL_(const struct timespec *)]; const struct timespec * timeout; char timeout_r_[PADR_(const struct timespec *)];
 };
-struct freebsd11_getfsstat_args {
-	char buf_l_[PADL_(struct freebsd11_statfs *)]; struct freebsd11_statfs * buf; char buf_r_[PADR_(struct freebsd11_statfs *)];
+struct nqc11_getfsstat_args {
+	char buf_l_[PADL_(struct nqc11_statfs *)]; struct nqc11_statfs * buf; char buf_r_[PADR_(struct nqc11_statfs *)];
 	char bufsize_l_[PADL_(long)]; long bufsize; char bufsize_r_[PADR_(long)];
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 };
-struct freebsd11_statfs_args {
+struct nqc11_statfs_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
-	char buf_l_[PADL_(struct freebsd11_statfs *)]; struct freebsd11_statfs * buf; char buf_r_[PADR_(struct freebsd11_statfs *)];
+	char buf_l_[PADL_(struct nqc11_statfs *)]; struct nqc11_statfs * buf; char buf_r_[PADR_(struct nqc11_statfs *)];
 };
-struct freebsd11_fstatfs_args {
+struct nqc11_fstatfs_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
-	char buf_l_[PADL_(struct freebsd11_statfs *)]; struct freebsd11_statfs * buf; char buf_r_[PADR_(struct freebsd11_statfs *)];
+	char buf_l_[PADL_(struct nqc11_statfs *)]; struct nqc11_statfs * buf; char buf_r_[PADR_(struct nqc11_statfs *)];
 };
-struct freebsd11_fhstatfs_args {
+struct nqc11_fhstatfs_args {
 	char u_fhp_l_[PADL_(const struct fhandle *)]; const struct fhandle * u_fhp; char u_fhp_r_[PADR_(const struct fhandle *)];
-	char buf_l_[PADL_(struct freebsd11_statfs *)]; struct freebsd11_statfs * buf; char buf_r_[PADR_(struct freebsd11_statfs *)];
+	char buf_l_[PADL_(struct nqc11_statfs *)]; struct nqc11_statfs * buf; char buf_r_[PADR_(struct nqc11_statfs *)];
 };
-struct freebsd11_fstatat_args {
+struct nqc11_fstatat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
-	char buf_l_[PADL_(struct freebsd11_stat *)]; struct freebsd11_stat * buf; char buf_r_[PADR_(struct freebsd11_stat *)];
+	char buf_l_[PADL_(struct nqc11_stat *)]; struct nqc11_stat * buf; char buf_r_[PADR_(struct nqc11_stat *)];
 	char flag_l_[PADL_(int)]; int flag; char flag_r_[PADR_(int)];
 };
-struct freebsd11_mknodat_args {
+struct nqc11_mknodat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char mode_l_[PADL_(mode_t)]; mode_t mode; char mode_r_[PADR_(mode_t)];
 	char dev_l_[PADL_(uint32_t)]; uint32_t dev; char dev_r_[PADR_(uint32_t)];
 };
-int	freebsd11_mknod(struct thread *, struct freebsd11_mknod_args *);
-int	freebsd11_vadvise(struct thread *, struct freebsd11_vadvise_args *);
-int	freebsd11_stat(struct thread *, struct freebsd11_stat_args *);
-int	freebsd11_fstat(struct thread *, struct freebsd11_fstat_args *);
-int	freebsd11_lstat(struct thread *, struct freebsd11_lstat_args *);
-int	freebsd11_getdirentries(struct thread *, struct freebsd11_getdirentries_args *);
-int	freebsd11_getdents(struct thread *, struct freebsd11_getdents_args *);
-int	freebsd11_nstat(struct thread *, struct freebsd11_nstat_args *);
-int	freebsd11_nfstat(struct thread *, struct freebsd11_nfstat_args *);
-int	freebsd11_nlstat(struct thread *, struct freebsd11_nlstat_args *);
-int	freebsd11_fhstat(struct thread *, struct freebsd11_fhstat_args *);
-int	freebsd11_kevent(struct thread *, struct freebsd11_kevent_args *);
-int	freebsd11_getfsstat(struct thread *, struct freebsd11_getfsstat_args *);
-int	freebsd11_statfs(struct thread *, struct freebsd11_statfs_args *);
-int	freebsd11_fstatfs(struct thread *, struct freebsd11_fstatfs_args *);
-int	freebsd11_fhstatfs(struct thread *, struct freebsd11_fhstatfs_args *);
-int	freebsd11_fstatat(struct thread *, struct freebsd11_fstatat_args *);
-int	freebsd11_mknodat(struct thread *, struct freebsd11_mknodat_args *);
+int	nqc11_mknod(struct thread *, struct nqc11_mknod_args *);
+int	nqc11_vadvise(struct thread *, struct nqc11_vadvise_args *);
+int	nqc11_stat(struct thread *, struct nqc11_stat_args *);
+int	nqc11_fstat(struct thread *, struct nqc11_fstat_args *);
+int	nqc11_lstat(struct thread *, struct nqc11_lstat_args *);
+int	nqc11_getdirentries(struct thread *, struct nqc11_getdirentries_args *);
+int	nqc11_getdents(struct thread *, struct nqc11_getdents_args *);
+int	nqc11_nstat(struct thread *, struct nqc11_nstat_args *);
+int	nqc11_nfstat(struct thread *, struct nqc11_nfstat_args *);
+int	nqc11_nlstat(struct thread *, struct nqc11_nlstat_args *);
+int	nqc11_fhstat(struct thread *, struct nqc11_fhstat_args *);
+int	nqc11_kevent(struct thread *, struct nqc11_kevent_args *);
+int	nqc11_getfsstat(struct thread *, struct nqc11_getfsstat_args *);
+int	nqc11_statfs(struct thread *, struct nqc11_statfs_args *);
+int	nqc11_fstatfs(struct thread *, struct nqc11_fstatfs_args *);
+int	nqc11_fhstatfs(struct thread *, struct nqc11_fhstatfs_args *);
+int	nqc11_fstatat(struct thread *, struct nqc11_fstatat_args *);
+int	nqc11_mknodat(struct thread *, struct nqc11_mknodat_args *);
 
 #endif /* COMPAT_NQC11 */
 
 
 #ifdef COMPAT_NQC12
 
-struct freebsd12_shm_open_args {
+struct nqc12_shm_open_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char flags_l_[PADL_(int)]; int flags; char flags_r_[PADR_(int)];
 	char mode_l_[PADL_(mode_t)]; mode_t mode; char mode_r_[PADR_(mode_t)];
 };
-struct freebsd12_closefrom_args {
+struct nqc12_closefrom_args {
 	char lowfd_l_[PADL_(int)]; int lowfd; char lowfd_r_[PADR_(int)];
 };
-int	freebsd12_shm_open(struct thread *, struct freebsd12_shm_open_args *);
-int	freebsd12_closefrom(struct thread *, struct freebsd12_closefrom_args *);
+int	nqc12_shm_open(struct thread *, struct nqc12_shm_open_args *);
+int	nqc12_closefrom(struct thread *, struct nqc12_closefrom_args *);
 
 #endif /* COMPAT_NQC12 */
 
 
 #ifdef COMPAT_NQC13
 
-struct freebsd13_swapoff_args {
+struct nqc13_swapoff_args {
 	char name_l_[PADL_(const char *)]; const char * name; char name_r_[PADR_(const char *)];
 };
-int	freebsd13_swapoff(struct thread *, struct freebsd13_swapoff_args *);
+int	nqc13_swapoff(struct thread *, struct nqc13_swapoff_args *);
 
 #endif /* COMPAT_NQC13 */
 

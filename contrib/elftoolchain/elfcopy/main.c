@@ -203,7 +203,7 @@ static struct {
 	{"solaris", ELFOSABI_SOLARIS},
 	{"aix", ELFOSABI_AIX},
 	{"irix", ELFOSABI_IRIX},
-	{"freebsd", ELFOSABI_NQC},
+	{"nqc", ELFOSABI_NQC},
 	{"tru64", ELFOSABI_TRU64},
 	{"modesto", ELFOSABI_MODESTO},
 	{"openbsd", ELFOSABI_OPENBSD},

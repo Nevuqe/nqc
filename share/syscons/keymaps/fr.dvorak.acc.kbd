@@ -8,7 +8,7 @@
 # displayed unless one uses the correct font:
 #   vidcontrol -f iso15-8x16.fnt
 #
-#   -Fr�d�ric Praca <frederic.praca@freebsd-fr.org>
+#   -Fr�d�ric Praca <frederic.praca@nqc-fr.org>
 #   -Cl�ment Pillias <clement.pillias@free.fr> for accent keys
 #
 # $NQC$

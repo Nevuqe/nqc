@@ -14,13 +14,13 @@ endif
 
 libzfs_core_la_CPPFLAGS  = $(AM_CPPFLAGS)
 if BUILD_NQC
-libzfs_core_la_CPPFLAGS += -Iinclude/os/freebsd/zfs
+libzfs_core_la_CPPFLAGS += -Iinclude/os/nqc/zfs
 
 libzfs_core_la_SOURCES += \
-	%D%/os/freebsd/libzfs_core_ioctl.c
+	%D%/os/nqc/libzfs_core_ioctl.c
 
 nodist_libzfs_core_la_SOURCES = \
-	module/os/freebsd/zfs/zfs_ioctl_compat.c
+	module/os/nqc/zfs/zfs_ioctl_compat.c
 endif
 
 libzfs_core_la_LIBADD = \

@@ -65,10 +65,10 @@ __NQCID("$NQC$");
 #include <vm/vm_object.h>
 #include <vm/vm_extern.h>
 
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_syscall.h>
 #include <compat/ia32/ia32_signal.h>
 #include <machine/frame.h>
 #include <machine/md_var.h>
@@ -91,7 +91,7 @@ extern const char _binary_elf_vdso32_so_1_start[];
 extern const char _binary_elf_vdso32_so_1_end[];
 extern char _binary_elf_vdso32_so_1_size;
 
-extern const char *freebsd32_syscallnames[];
+extern const char *nqc32_syscallnames[];
 
 static SYSCTL_NODE(_compat, OID_AUTO, ia32, CTLFLAG_RW | CTLFLAG_MPSAFE, 0,
     "ia32 mode");
@@ -105,7 +105,7 @@ SYSCTL_ULONG(_compat_ia32, OID_AUTO, maxvmem, CTLFLAG_RWTUN, &ia32_maxvmem, 0, "
 
 struct sysentvec ia32_nqc_sysvec = {
 	.sv_size	= NQC32_SYS_MAXSYSCALL,
-	.sv_table	= freebsd32_sysent,
+	.sv_table	= nqc32_sysent,
 	.sv_fixup	= elf32_nqc_fixup,
 	.sv_sendsig	= ia32_sendsig,
 	.sv_sigcode	= _binary_elf_vdso32_so_1_start,
@@ -122,10 +122,10 @@ struct sysentvec ia32_nqc_sysvec = {
 	.sv_maxuser	= NQC32_MAXUSER,
 	.sv_usrstack	= NQC32_USRSTACK,
 	.sv_psstrings	= NQC32_PS_STRINGS,
-	.sv_psstringssz	= sizeof(struct freebsd32_ps_strings),
+	.sv_psstringssz	= sizeof(struct nqc32_ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
 	.sv_copyout_auxargs	= elf32_nqc_copyout_auxargs,
-	.sv_copyout_strings	= freebsd32_copyout_strings,
+	.sv_copyout_strings	= nqc32_copyout_strings,
 	.sv_setregs	= ia32_setregs,
 	.sv_fixlimit	= ia32_fixlimit,
 	.sv_maxssiz	= &ia32_maxssiz,
@@ -133,7 +133,7 @@ struct sysentvec ia32_nqc_sysvec = {
 			    SV_SHP | SV_TIMEKEEP | SV_RNG_SEED_VER | SV_DSO_SIG,
 	.sv_set_syscall_retval = ia32_set_syscall_retval,
 	.sv_fetch_syscall_args = ia32_fetch_syscall_args,
-	.sv_syscallnames = freebsd32_syscallnames,
+	.sv_syscallnames = nqc32_syscallnames,
 	.sv_shared_page_base = NQC32_SHAREDPAGE,
 	.sv_shared_page_len = PAGE_SIZE,
 	.sv_schedtail	= NULL,

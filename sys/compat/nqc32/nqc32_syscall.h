@@ -23,8 +23,8 @@
 #define	NQC32_SYS_chmod	15
 #define	NQC32_SYS_chown	16
 #define	NQC32_SYS_break	17
-				/* 18 is freebsd4 freebsd32_getfsstat */
-				/* 19 is old freebsd32_lseek */
+				/* 18 is nqc4 nqc32_getfsstat */
+				/* 19 is old nqc32_lseek */
 #define	NQC32_SYS_getpid	20
 #define	NQC32_SYS_mount	21
 #define	NQC32_SYS_unmount	22
@@ -43,15 +43,15 @@
 #define	NQC32_SYS_fchflags	35
 #define	NQC32_SYS_sync	36
 #define	NQC32_SYS_kill	37
-				/* 38 is old freebsd32_stat */
+				/* 38 is old nqc32_stat */
 #define	NQC32_SYS_getppid	39
-				/* 40 is old freebsd32_lstat */
+				/* 40 is old nqc32_lstat */
 #define	NQC32_SYS_dup	41
 #define	NQC32_SYS_nqc10_pipe	42
 #define	NQC32_SYS_getegid	43
 #define	NQC32_SYS_profil	44
 #define	NQC32_SYS_ktrace	45
-				/* 46 is old freebsd32_sigaction */
+				/* 46 is old nqc32_sigaction */
 #define	NQC32_SYS_getgid	47
 				/* 48 is old sigprocmask */
 #define	NQC32_SYS_getlogin	49
@@ -67,7 +67,7 @@
 #define	NQC32_SYS_nqc32_execve	59
 #define	NQC32_SYS_umask	60
 #define	NQC32_SYS_chroot	61
-				/* 62 is old freebsd32_fstat */
+				/* 62 is old nqc32_fstat */
 				/* 63 is obsolete ogetkerninfo */
 				/* 64 is old getpagesize */
 #define	NQC32_SYS_msync	65
@@ -76,7 +76,7 @@
 				/* 68 is obsolete vwrite */
 #define	NQC32_SYS_sbrk	69
 #define	NQC32_SYS_sstk	70
-				/* 71 is old freebsd32_mmap */
+				/* 71 is old nqc32_mmap */
 #define	NQC32_SYS_nqc11_vadvise	72
 #define	NQC32_SYS_munmap	73
 #define	NQC32_SYS_nqc32_mprotect	74
@@ -106,18 +106,18 @@
 #define	NQC32_SYS_getpriority	100
 				/* 101 is old send */
 				/* 102 is old recv */
-				/* 103 is old freebsd32_sigreturn */
+				/* 103 is old nqc32_sigreturn */
 #define	NQC32_SYS_bind	104
 #define	NQC32_SYS_setsockopt	105
 #define	NQC32_SYS_listen	106
 				/* 107 is obsolete vtimes */
-				/* 108 is old freebsd32_sigvec */
+				/* 108 is old nqc32_sigvec */
 				/* 109 is old sigblock */
 				/* 110 is old sigsetmask */
 				/* 111 is old sigsuspend */
-				/* 112 is old freebsd32_sigstack */
-				/* 113 is old freebsd32_recvmsg */
-				/* 114 is old freebsd32_sendmsg */
+				/* 112 is old nqc32_sigstack */
+				/* 113 is old nqc32_recvmsg */
+				/* 114 is old nqc32_sendmsg */
 				/* 115 is obsolete vtrace */
 #define	NQC32_SYS_nqc32_gettimeofday	116
 #define	NQC32_SYS_nqc32_getrusage	117
@@ -131,8 +131,8 @@
 #define	NQC32_SYS_setreuid	126
 #define	NQC32_SYS_setregid	127
 #define	NQC32_SYS_rename	128
-				/* 129 is old freebsd32_truncate */
-				/* 130 is old freebsd32_ftruncate */
+				/* 129 is old nqc32_truncate */
+				/* 130 is old nqc32_ftruncate */
 #define	NQC32_SYS_flock	131
 #define	NQC32_SYS_mkfifo	132
 #define	NQC32_SYS_sendto	133
@@ -145,7 +145,7 @@
 #define	NQC32_SYS_nqc32_adjtime	140
 				/* 141 is old getpeername */
 				/* 142 is old gethostid */
-				/* 143 is old freebsd32_sethostid */
+				/* 143 is old nqc32_sethostid */
 				/* 144 is old getrlimit */
 				/* 145 is old setrlimit */
 				/* 146 is old killpg */
@@ -153,20 +153,20 @@
 #define	NQC32_SYS_quotactl	148
 				/* 149 is old quota */
 				/* 150 is old getsockname */
-				/* 156 is old freebsd32_getdirentries */
-				/* 157 is freebsd4 freebsd32_statfs */
-				/* 158 is freebsd4 freebsd32_fstatfs */
+				/* 156 is old nqc32_getdirentries */
+				/* 157 is nqc4 nqc32_statfs */
+				/* 158 is nqc4 nqc32_fstatfs */
 #define	NQC32_SYS_getfh	161
-				/* 162 is freebsd4 getdomainname */
-				/* 163 is freebsd4 setdomainname */
-				/* 164 is freebsd4 uname */
+				/* 162 is nqc4 getdomainname */
+				/* 163 is nqc4 setdomainname */
+				/* 164 is nqc4 uname */
 #define	NQC32_SYS_nqc32_sysarch	165
 #define	NQC32_SYS_rtprio	166
 #define	NQC32_SYS_nqc32_semsys	169
 #define	NQC32_SYS_nqc32_msgsys	170
 #define	NQC32_SYS_nqc32_shmsys	171
-				/* 173 is freebsd6 freebsd32_pread */
-				/* 174 is freebsd6 freebsd32_pwrite */
+				/* 173 is nqc6 nqc32_pread */
+				/* 174 is nqc6 nqc32_pwrite */
 #define	NQC32_SYS_setfib	175
 #define	NQC32_SYS_nqc32_ntp_adjtime	176
 #define	NQC32_SYS_setgid	181
@@ -184,11 +184,11 @@
 #define	NQC32_SYS_getrlimit	194
 #define	NQC32_SYS_setrlimit	195
 #define	NQC32_SYS_nqc11_nqc32_getdirentries	196
-				/* 197 is freebsd6 freebsd32_mmap */
+				/* 197 is nqc6 nqc32_mmap */
 #define	NQC32_SYS___syscall	198
-				/* 199 is freebsd6 freebsd32_lseek */
-				/* 200 is freebsd6 freebsd32_truncate */
-				/* 201 is freebsd6 freebsd32_ftruncate */
+				/* 199 is nqc6 nqc32_lseek */
+				/* 200 is nqc6 nqc32_truncate */
+				/* 201 is nqc6 nqc32_ftruncate */
 #define	NQC32_SYS_nqc32___sysctl	202
 #define	NQC32_SYS_mlock	203
 #define	NQC32_SYS_munlock	204
@@ -240,7 +240,7 @@
 #define	NQC32_SYS_nqc11_nqc32_nlstat	280
 #define	NQC32_SYS_nqc32_preadv	289
 #define	NQC32_SYS_nqc32_pwritev	290
-				/* 297 is freebsd4 freebsd32_fhstatfs */
+				/* 297 is nqc4 nqc32_fhstatfs */
 #define	NQC32_SYS_fhopen	298
 #define	NQC32_SYS_nqc11_nqc32_fhstat	299
 #define	NQC32_SYS_modnext	300
@@ -261,9 +261,9 @@
 #define	NQC32_SYS_nqc32_aio_suspend	315
 #define	NQC32_SYS_aio_cancel	316
 #define	NQC32_SYS_nqc32_aio_error	317
-				/* 318 is freebsd6 freebsd32_aio_read */
-				/* 319 is freebsd6 freebsd32_aio_write */
-				/* 320 is freebsd6 freebsd32_lio_listio */
+				/* 318 is nqc6 nqc32_aio_read */
+				/* 319 is nqc6 nqc32_aio_write */
+				/* 320 is nqc6 nqc32_lio_listio */
 #define	NQC32_SYS_yield	321
 				/* 322 is obsolete thr_sleep */
 				/* 323 is obsolete thr_wakeup */
@@ -279,13 +279,13 @@
 #define	NQC32_SYS_sched_get_priority_min	333
 #define	NQC32_SYS_nqc32_sched_rr_get_interval	334
 #define	NQC32_SYS_utrace	335
-				/* 336 is freebsd4 freebsd32_sendfile */
+				/* 336 is nqc4 nqc32_sendfile */
 #define	NQC32_SYS_nqc32_jail	338
 #define	NQC32_SYS_sigprocmask	340
 #define	NQC32_SYS_sigsuspend	341
-				/* 342 is freebsd4 freebsd32_sigaction */
+				/* 342 is nqc4 nqc32_sigaction */
 #define	NQC32_SYS_sigpending	343
-				/* 344 is freebsd4 freebsd32_sigreturn */
+				/* 344 is nqc4 nqc32_sigreturn */
 #define	NQC32_SYS_nqc32_sigtimedwait	345
 #define	NQC32_SYS_nqc32_sigwaitinfo	346
 #define	NQC32_SYS___acl_get_file	347

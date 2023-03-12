@@ -118,9 +118,9 @@ linux${SFX}_vdso.so.o: linux${SFX}_locore.o linux${SFX}_vdso_gtod.o
 	-o ${.TARGET} ${.ALLSRC:M*.o}
 
 .if ${MACHINE_CPUARCH} == "amd64"
-OBJCOPY_TARGET=--output-target elf64-x86-64-freebsd --binary-architecture i386
+OBJCOPY_TARGET=--output-target elf64-x86-64-nqc --binary-architecture i386
 .elif ${MACHINE_CPUARCH} == "i386"
-OBJCOPY_TARGET=--output-target elf32-i386-freebsd --binary-architecture i386
+OBJCOPY_TARGET=--output-target elf32-i386-nqc --binary-architecture i386
 .else
 .error ${MACHINE_CPUARCH} not yet supported by linux
 .endif

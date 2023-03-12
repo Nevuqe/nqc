@@ -240,27 +240,27 @@ static struct syscall_helper_data sem_syscalls[] = {
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	SYSCALL_INIT_HELPER(semsys),
-	SYSCALL_INIT_HELPER_COMPAT(freebsd7___semctl),
+	SYSCALL_INIT_HELPER_COMPAT(nqc7___semctl),
 #endif
 	SYSCALL_INIT_LAST
 };
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_ipc.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_ipc.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 static struct syscall_helper_data sem32_syscalls[] = {
-	SYSCALL32_INIT_HELPER(freebsd32___semctl),
+	SYSCALL32_INIT_HELPER(nqc32___semctl),
 	SYSCALL32_INIT_HELPER_COMPAT(semget),
 	SYSCALL32_INIT_HELPER_COMPAT(semop),
-	SYSCALL32_INIT_HELPER(freebsd32_semsys),
+	SYSCALL32_INIT_HELPER(nqc32_semsys),
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
-	SYSCALL32_INIT_HELPER(freebsd7_nqc32___semctl),
+	SYSCALL32_INIT_HELPER(nqc7_nqc32___semctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -1551,7 +1551,7 @@ sysctl_sema(SYSCTL_HANDLER_ARGS)
 #ifdef COMPAT_NQC32
 		if (SV_CURPROC_FLAG(SV_ILP32)) {
 			bzero(&tsemak32, sizeof(tsemak32));
-			freebsd32_ipcperm_out(&tsemak.u.sem_perm,
+			nqc32_ipcperm_out(&tsemak.u.sem_perm,
 			    &tsemak32.u.sem_perm);
 			/* Don't copy u.__sem_base */
 			CP(tsemak, tsemak32, u.sem_nsems);
@@ -1757,7 +1757,7 @@ SYSCTL_JAIL_PARAM_SYS_NODE(sysvsem, CTLFLAG_RW, "SYSV semaphores");
 
 /* XXX casting to (sy_call_t *) is bogus, as usual. */
 static sy_call_t *semcalls[] = {
-	(sy_call_t *)freebsd7___semctl, (sy_call_t *)sys_semget,
+	(sy_call_t *)nqc7___semctl, (sy_call_t *)sys_semget,
 	(sy_call_t *)sys_semop
 };
 
@@ -1777,7 +1777,7 @@ sys_semsys(struct thread *td, struct semsys_args *uap)
 }
 
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd7___semctl_args {
+struct nqc7___semctl_args {
 	int	semid;
 	int	semnum;
 	int	cmd;
@@ -1785,7 +1785,7 @@ struct freebsd7___semctl_args {
 };
 #endif
 int
-freebsd7___semctl(struct thread *td, struct freebsd7___semctl_args *uap)
+nqc7___semctl(struct thread *td, struct nqc7___semctl_args *uap)
 {
 	struct semid_ds_old dsold;
 	struct semid_ds dsbuf;
@@ -1860,7 +1860,7 @@ freebsd7___semctl(struct thread *td, struct freebsd7___semctl_args *uap)
 #ifdef COMPAT_NQC32
 
 int
-freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
+nqc32_semsys(struct thread *td, struct nqc32_semsys_args *uap)
 {
 
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
@@ -1868,8 +1868,8 @@ freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
 	AUDIT_ARG_SVIPC_WHICH(uap->which);
 	switch (uap->which) {
 	case 0:
-		return (freebsd7_nqc32___semctl(td,
-		    (struct freebsd7_nqc32___semctl_args *)&uap->a2));
+		return (nqc7_nqc32___semctl(td,
+		    (struct nqc7_nqc32___semctl_args *)&uap->a2));
 	default:
 		return (sys_semsys(td, (struct semsys_args *)uap));
 	}
@@ -1881,8 +1881,8 @@ freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 int
-freebsd7_nqc32___semctl(struct thread *td,
-    struct freebsd7_nqc32___semctl_args *uap)
+nqc7_nqc32___semctl(struct thread *td,
+    struct nqc7_nqc32___semctl_args *uap)
 {
 	struct semid_ds_old32 dsbuf32;
 	struct semid_ds dsbuf;
@@ -1913,7 +1913,7 @@ freebsd7_nqc32___semctl(struct thread *td,
 		error = copyin(PTRIN(arg.buf), &dsbuf32, sizeof(dsbuf32));
 		if (error)
 			return (error);
-		freebsd32_ipcperm_old_in(&dsbuf32.sem_perm, &dsbuf.sem_perm);
+		nqc32_ipcperm_old_in(&dsbuf32.sem_perm, &dsbuf.sem_perm);
 		PTRIN_CP(dsbuf32, dsbuf, __sem_base);
 		CP(dsbuf32, dsbuf, sem_nsems);
 		CP(dsbuf32, dsbuf, sem_otime);
@@ -1938,7 +1938,7 @@ freebsd7_nqc32___semctl(struct thread *td,
 	case SEM_STAT:
 	case IPC_STAT:
 		bzero(&dsbuf32, sizeof(dsbuf32));
-		freebsd32_ipcperm_old_out(&dsbuf.sem_perm, &dsbuf32.sem_perm);
+		nqc32_ipcperm_old_out(&dsbuf.sem_perm, &dsbuf32.sem_perm);
 		PTROUT_CP(dsbuf, dsbuf32, __sem_base);
 		CP(dsbuf, dsbuf32, sem_nsems);
 		CP(dsbuf, dsbuf32, sem_otime);
@@ -1954,7 +1954,7 @@ freebsd7_nqc32___semctl(struct thread *td,
 #endif
 
 int
-freebsd32___semctl(struct thread *td, struct freebsd32___semctl_args *uap)
+nqc32___semctl(struct thread *td, struct nqc32___semctl_args *uap)
 {
 	struct semid_ds32 dsbuf32;
 	struct semid_ds dsbuf;
@@ -1985,7 +1985,7 @@ freebsd32___semctl(struct thread *td, struct freebsd32___semctl_args *uap)
 		error = copyin(PTRIN(arg.buf), &dsbuf32, sizeof(dsbuf32));
 		if (error)
 			return (error);
-		freebsd32_ipcperm_in(&dsbuf32.sem_perm, &dsbuf.sem_perm);
+		nqc32_ipcperm_in(&dsbuf32.sem_perm, &dsbuf.sem_perm);
 		PTRIN_CP(dsbuf32, dsbuf, __sem_base);
 		CP(dsbuf32, dsbuf, sem_nsems);
 		CP(dsbuf32, dsbuf, sem_otime);
@@ -2010,7 +2010,7 @@ freebsd32___semctl(struct thread *td, struct freebsd32___semctl_args *uap)
 	case SEM_STAT:
 	case IPC_STAT:
 		bzero(&dsbuf32, sizeof(dsbuf32));
-		freebsd32_ipcperm_out(&dsbuf.sem_perm, &dsbuf32.sem_perm);
+		nqc32_ipcperm_out(&dsbuf.sem_perm, &dsbuf32.sem_perm);
 		PTROUT_CP(dsbuf, dsbuf32, __sem_base);
 		CP(dsbuf, dsbuf32, sem_nsems);
 		CP(dsbuf, dsbuf32, sem_otime);

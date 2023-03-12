@@ -1345,7 +1345,7 @@ es_pci_probe(device_t dev)
 			device_set_desc(dev, "AudioPCI ES1371-?");
 			device_printf(dev,
 			    "unknown revision %d -- please report to "
-			    "freebsd-multimedia@frebsd.org\n",
+			    "nqc-multimedia@frebsd.org\n",
 			    pci_get_revid(dev));
 			return (BUS_PROBE_DEFAULT);
 		}
@@ -1353,7 +1353,7 @@ es_pci_probe(device_t dev)
 		device_set_desc(dev, "Strange AudioPCI ES1371-? (vid=3274)");
 		device_printf(dev,
 		    "unknown revision %d -- please report to "
-		    "freebsd-multimedia@frebsd.org\n", pci_get_revid(dev));
+		    "nqc-multimedia@frebsd.org\n", pci_get_revid(dev));
 		return (BUS_PROBE_DEFAULT);
 	case CT4730_PCI_ID:
 		switch(pci_get_revid(dev)) {
@@ -1365,7 +1365,7 @@ es_pci_probe(device_t dev)
 			device_set_desc(dev, "Creative SB AudioPCI CT4730-?");
 			device_printf(dev,
 			    "unknown revision %d -- please report to "
-			    "freebsd-multimedia@frebsd.org\n",
+			    "nqc-multimedia@frebsd.org\n",
 			    pci_get_revid(dev));
 			return (BUS_PROBE_DEFAULT);
 		}
@@ -1384,7 +1384,7 @@ es_pci_probe(device_t dev)
 			device_set_desc(dev, "Creative CT5880-?");
 			device_printf(dev,
 			    "unknown revision %d -- please report to "
-			    "freebsd-multimedia@frebsd.org\n",
+			    "nqc-multimedia@frebsd.org\n",
 			    pci_get_revid(dev));
 			return (BUS_PROBE_DEFAULT);
 		}

@@ -1015,7 +1015,7 @@
 	Patino <jalbertop@aranea.com.mx>, Luke Howard <lukeh@PADL.COM>
 	Pointed out by Andrew Bartlett of Samba
 	
-	* lib/krb5/heim_threads.h: remove freebsd comment, don't use debug
+	* lib/krb5/heim_threads.h: remove nqc comment, don't use debug
 	pthread stubs by default
 
 	* lib/krb5/Makefile.am (man_MANS): drop krb5_free_addresses.3

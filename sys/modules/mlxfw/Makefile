@@ -12,7 +12,7 @@ CFLAGS+= \
 	-I${SRCTOP}/sys/ofed/include \
 	-I${SRCTOP}/sys/ofed/include/uapi \
 	${LINUXKPI_INCLUDES} \
-	-I${SRCTOP}/sys/contrib/xz-embedded/freebsd \
+	-I${SRCTOP}/sys/contrib/xz-embedded/nqc \
 	-I${SRCTOP}/sys/contrib/xz-embedded/linux/lib/xz
 
 EXPORT_SYMS=	YES

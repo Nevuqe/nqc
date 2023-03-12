@@ -1349,7 +1349,7 @@ sys_sendfile(struct thread *td, struct sendfile_args *uap)
 
 #ifdef COMPAT_NQC4
 int
-freebsd4_sendfile(struct thread *td, struct freebsd4_sendfile_args *uap)
+nqc4_sendfile(struct thread *td, struct nqc4_sendfile_args *uap)
 {
 	struct sendfile_args args;
 

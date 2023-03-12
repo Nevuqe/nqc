@@ -41,12 +41,12 @@ __NQCID("$NQC$");
 #include <machine/cpu.h>
 #include <machine/sysarch.h>
 
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_proto.h>
 
 int
-freebsd32_sysarch(struct thread *td, struct freebsd32_sysarch_args *uap)
+nqc32_sysarch(struct thread *td, struct nqc32_sysarch_args *uap)
 {
 	struct sysarch_args uap1;
 	struct i386_ldt_args uapl;

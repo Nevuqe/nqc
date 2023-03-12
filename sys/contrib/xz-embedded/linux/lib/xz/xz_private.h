@@ -50,7 +50,7 @@
 	 * macros and functions. This makes it easier to adapt the code into
 	 * different environments and avoids clutter in the Linux kernel tree.
 	 */
-#	include <contrib/xz-embedded/freebsd/xz_config.h>
+#	include <contrib/xz-embedded/nqc/xz_config.h>
 #endif
 
 /* If no specific decoding mode is requested, enable support for all modes. */

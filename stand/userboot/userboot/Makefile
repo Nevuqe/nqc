@@ -40,7 +40,7 @@ CFLAGS+=	-I${BOOTSRC}/userboot
 .if ${MK_LOADER_ZFS} != "no"
 CFLAGS.main.c+=	-I${BOOTSRC}/libsa/zfs
 CFLAGS.main.c+=	-I${SYSDIR}/contrib/openzfs/include
-CFLAGS.main.c+=	-I${SYSDIR}/contrib/openzfs/include/os/freebsd/zfs
+CFLAGS.main.c+=	-I${SYSDIR}/contrib/openzfs/include/os/nqc/zfs
 .endif
 
 CWARNFLAGS.main.c += -Wno-implicit-function-declaration

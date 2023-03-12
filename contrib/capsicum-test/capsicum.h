@@ -5,7 +5,7 @@
 #define __CAPSICUM_H__
 
 #ifdef __NQC__
-#include "capsicum-freebsd.h"
+#include "capsicum-nqc.h"
 #endif
 
 #ifdef __linux__

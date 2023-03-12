@@ -419,7 +419,7 @@ http://www.intel.com/support/
 
 If an issue is identified with the released source code on a supported kernel
 with a supported adapter, email the specific information related to the issue
-to freebsd@intel.com
+to nqc@intel.com
 
 
 Copyright(c) 1999-2019 Intel Corporation.

@@ -27,7 +27,7 @@ public:
   static lldb::PlatformSP CreateInstance(bool force, const ArchSpec *arch);
 
   static llvm::StringRef GetPluginNameStatic(bool is_host) {
-    return is_host ? Platform::GetHostPlatformName() : "remote-freebsd";
+    return is_host ? Platform::GetHostPlatformName() : "remote-nqc";
   }
 
   static llvm::StringRef GetPluginDescriptionStatic(bool is_host);

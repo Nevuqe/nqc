@@ -33,7 +33,7 @@
                 clang
                     15.0.7
                         lib
-                            freebsd
+                            nqc
                             ..
                         ..
                     ..

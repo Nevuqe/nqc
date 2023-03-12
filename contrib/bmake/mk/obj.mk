@@ -64,7 +64,7 @@ obj: _SUBDIRUSE
 _SUBDIRUSE:
 .endif
 
-# so we can interact with freebsd makefiles
+# so we can interact with nqc makefiles
 .if !target(objwarn)
 objwarn:
 .if ${.OBJDIR} == ${.CURDIR}

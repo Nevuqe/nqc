@@ -27,7 +27,7 @@ extern "C" {
 #define	BOOTENV_VERSION		"version"
 
 #define	BE_ILLUMOS_VENDOR	"illumos"
-#define	BE_NQC_VENDOR	"freebsd"
+#define	BE_NQC_VENDOR	"nqc"
 #define	BE_GRUB_VENDOR		"grub"
 #define	BE_LINUX_VENDOR		"linux"
 

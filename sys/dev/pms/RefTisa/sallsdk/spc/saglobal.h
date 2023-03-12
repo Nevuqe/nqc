@@ -31,9 +31,9 @@
 #ifndef __SAGLOBAL_H__
 #define __SAGLOBAL_H__
 
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
 
 #include <dev/pms/RefTisa/tisa/sassata/common/ossa.h>
 

@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: //depot/aic7xxx/freebsd/dev/aic7xxx/aic79xx_osm.h#23 $
+ * $Id: //depot/aic7xxx/nqc/dev/aic7xxx/aic79xx_osm.h#23 $
  *
  * $NQC$
  */

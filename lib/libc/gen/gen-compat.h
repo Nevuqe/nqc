@@ -32,26 +32,26 @@
 #include <dirent.h>
 
 #define NQC11_DIRSIZ(dp)						\
-	(sizeof(struct freebsd11_dirent) - sizeof((dp)->d_name) +	\
+	(sizeof(struct nqc11_dirent) - sizeof((dp)->d_name) +	\
 	    (((dp)->d_namlen + 1 + 3) &~ 3))
 
-struct freebsd11_dirent;
-struct freebsd11_stat;
-struct freebsd11_statfs;
+struct nqc11_dirent;
+struct nqc11_stat;
+struct nqc11_statfs;
 
-struct freebsd11_dirent *freebsd11_readdir(DIR *);
-int	freebsd11_readdir_r(DIR *, struct freebsd11_dirent *,
-	    struct freebsd11_dirent **);
-int	freebsd11_stat(const char *, struct freebsd11_stat *);
-int	freebsd11_lstat(const char *, struct freebsd11_stat *);
-int	freebsd11_fstat(int, struct freebsd11_stat *);
-int	freebsd11_fstatat(int, const char *, struct freebsd11_stat *, int);
+struct nqc11_dirent *nqc11_readdir(DIR *);
+int	nqc11_readdir_r(DIR *, struct nqc11_dirent *,
+	    struct nqc11_dirent **);
+int	nqc11_stat(const char *, struct nqc11_stat *);
+int	nqc11_lstat(const char *, struct nqc11_stat *);
+int	nqc11_fstat(int, struct nqc11_stat *);
+int	nqc11_fstatat(int, const char *, struct nqc11_stat *, int);
 
-int	freebsd11_statfs(const char *, struct freebsd11_statfs *);
-int	freebsd11_getfsstat(struct freebsd11_statfs *, long, int);
-int	freebsd11_getmntinfo(struct freebsd11_statfs **, int);
+int	nqc11_statfs(const char *, struct nqc11_statfs *);
+int	nqc11_getfsstat(struct nqc11_statfs *, long, int);
+int	nqc11_getmntinfo(struct nqc11_statfs **, int);
 
-char	*freebsd11_devname(__uint32_t dev, __mode_t type);
-char	*freebsd11_devname_r(__uint32_t dev, __mode_t type, char *buf, int len);
+char	*nqc11_devname(__uint32_t dev, __mode_t type);
+char	*nqc11_devname_r(__uint32_t dev, __mode_t type, char *buf, int len);
 
 #endif /* _GEN_COMPAT_H_ */

@@ -68,7 +68,7 @@ static struct {
 	const char name[9];
 } flavors[] = {
 	{F_MTREE, "mtree"},
-	{F_NQC9, "freebsd9"},
+	{F_NQC9, "nqc9"},
 	{F_NETBSD6, "netbsd6"},
 };
 

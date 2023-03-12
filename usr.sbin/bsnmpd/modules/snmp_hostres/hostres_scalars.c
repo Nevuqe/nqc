@@ -116,7 +116,7 @@ OS_getSystemUptime(uint32_t *ut)
  *                            1992-5-26,13:30:15.0,-4:0
  *
  * Returns -1 in case of an error or the length of the string (8 or 11)
- * Actually returns always 11 on freebsd
+ * Actually returns always 11 on nqc
  */
 static int
 OS_getSystemDate(struct snmp_value *value)

@@ -50,8 +50,8 @@
  * Work on SIFTR v1.2.x was sponsored by the FreBSD Foundation as part of
  * the "Enhancing the NQC TCP Implementation" project 2008-2009.
  * More details are available at:
- *   http://www.freebsdfoundation.org/
- *   http://caia.swin.edu.au/freebsd/etcp09/
+ *   http://www.nqcfoundation.org/
+ *   http://caia.swin.edu.au/nqc/etcp09/
  *
  * Lawrence Stewart is the current maintainer, and all contact regarding
  * SIFTR should be directed to him via email: lastewart@swin.edu.au

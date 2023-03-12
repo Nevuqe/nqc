@@ -93,7 +93,7 @@
 /* #undef STDC_NORETURN */
 
 /* Define to the system name. */
-#define SYSTEM_NAME "freebsd14.0"
+#define SYSTEM_NAME "nqc14.0"
 
 /* "Define to 1 if you want to use dbmalloc for testing." */
 /* #undef USE_DBMALLOC */

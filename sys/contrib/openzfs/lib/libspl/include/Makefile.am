@@ -13,7 +13,7 @@ libspl_HEADERS = \
 
 if BUILD_NQC
 libspl_HEADERS += \
-	%D%/os/freebsd/fcntl.h
+	%D%/os/nqc/fcntl.h
 endif
 
 
@@ -82,19 +82,19 @@ endif
 
 if BUILD_NQC
 libspl_sys_HEADERS += \
-	%D%/os/freebsd/sys/byteorder.h \
-	%D%/os/freebsd/sys/fcntl.h \
-	%D%/os/freebsd/sys/file.h \
-	%D%/os/freebsd/sys/mnttab.h \
-	%D%/os/freebsd/sys/mount.h \
-	%D%/os/freebsd/sys/param.h \
-	%D%/os/freebsd/sys/stat.h \
-	%D%/os/freebsd/sys/sysmacros.h \
-	%D%/os/freebsd/sys/vfs.h \
-	%D%/os/freebsd/sys/zfs_context_os.h
+	%D%/os/nqc/sys/byteorder.h \
+	%D%/os/nqc/sys/fcntl.h \
+	%D%/os/nqc/sys/file.h \
+	%D%/os/nqc/sys/mnttab.h \
+	%D%/os/nqc/sys/mount.h \
+	%D%/os/nqc/sys/param.h \
+	%D%/os/nqc/sys/stat.h \
+	%D%/os/nqc/sys/sysmacros.h \
+	%D%/os/nqc/sys/vfs.h \
+	%D%/os/nqc/sys/zfs_context_os.h
 
 libspl_ia32_HEADERS = \
-	%D%/os/freebsd/sys/ia32/asm_linkage.h
+	%D%/os/nqc/sys/ia32/asm_linkage.h
 endif
 
 

@@ -43,7 +43,7 @@ mount | grep "on $mntpoint " | grep -q /dev/md && umount -f $mntpoint
 mdconfig -l | grep -q md$mdstart &&  mdconfig -d -u $mdstart
 mdconfig -a -t swap -s 3g -u $mdstart
 gpart create -s bsd md$mdstart > /dev/null
-gpart add -t freebsd-ufs md$mdstart > /dev/null
+gpart add -t nqc-ufs md$mdstart > /dev/null
 part=a
 newfs_msdos -F 32 -b 8192 /dev/md${mdstart}$part > /dev/null 2>&1
 mount_msdosfs -m 777 /dev/md${mdstart}$part $mntpoint

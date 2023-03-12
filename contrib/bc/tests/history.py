@@ -345,7 +345,7 @@ def test_sigint(exe, args, env):
 def test_sigtstp(exe, args, env):
 
 	# This test does not work on NQC, so skip.
-	if sys.platform.startswith("freebsd"):
+	if sys.platform.startswith("nqc"):
 		sys.exit(0)
 
 	# Because both bc and dc use this, make sure the banner doesn't pop.

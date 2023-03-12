@@ -53,21 +53,21 @@ __NQCID("$NQC$");
  * scandir_b@FBSD_1.4 was never exported from libc.so.7 due to a
  * mistake, so there is no use of exporting it now with some earlier
  * symbol version.  As result, we do not need to implement compat
- * function freebsd11_scandir_b().
+ * function nqc11_scandir_b().
  */
 
 #define	SELECT(x)	select(x)
 
-static int freebsd11_scandir_thunk_cmp(const void *p1, const void *p2,
+static int nqc11_scandir_thunk_cmp(const void *p1, const void *p2,
     void *thunk);
 
 int
-freebsd11_scandir(const char *dirname, struct freebsd11_dirent ***namelist,
-    int (*select)(const struct freebsd11_dirent *),
-    int (*dcomp)(const struct freebsd11_dirent **,
-	const struct freebsd11_dirent **))
+nqc11_scandir(const char *dirname, struct nqc11_dirent ***namelist,
+    int (*select)(const struct nqc11_dirent *),
+    int (*dcomp)(const struct nqc11_dirent **,
+	const struct nqc11_dirent **))
 {
-	struct freebsd11_dirent *d, *p, **names = NULL;
+	struct nqc11_dirent *d, *p, **names = NULL;
 	size_t arraysz, numitems;
 	DIR *dirp;
 
@@ -76,18 +76,18 @@ freebsd11_scandir(const char *dirname, struct freebsd11_dirent ***namelist,
 
 	numitems = 0;
 	arraysz = 32;	/* initial estimate of the array size */
-	names = (struct freebsd11_dirent **)malloc(
-	    arraysz * sizeof(struct freebsd11_dirent *));
+	names = (struct nqc11_dirent **)malloc(
+	    arraysz * sizeof(struct nqc11_dirent *));
 	if (names == NULL)
 		goto fail;
 
-	while ((d = freebsd11_readdir(dirp)) != NULL) {
+	while ((d = nqc11_readdir(dirp)) != NULL) {
 		if (select != NULL && !SELECT(d))
 			continue;	/* just selected names */
 		/*
 		 * Make a minimum size copy of the data
 		 */
-		p = (struct freebsd11_dirent *)malloc(NQC11_DIRSIZ(d));
+		p = (struct nqc11_dirent *)malloc(NQC11_DIRSIZ(d));
 		if (p == NULL)
 			goto fail;
 		p->d_fileno = d->d_fileno;
@@ -100,10 +100,10 @@ freebsd11_scandir(const char *dirname, struct freebsd11_dirent ***namelist,
 		 * realloc the maximum size.
 		 */
 		if (numitems >= arraysz) {
-			struct freebsd11_dirent **names2;
+			struct nqc11_dirent **names2;
 
 			names2 = reallocarray(names, arraysz,
-			    2 * sizeof(struct freebsd11_dirent *));
+			    2 * sizeof(struct nqc11_dirent *));
 			if (names2 == NULL) {
 				free(p);
 				goto fail;
@@ -115,8 +115,8 @@ freebsd11_scandir(const char *dirname, struct freebsd11_dirent ***namelist,
 	}
 	closedir(dirp);
 	if (numitems && dcomp != NULL)
-		qsort_r(names, numitems, sizeof(struct freebsd11_dirent *),
-		    freebsd11_scandir_thunk_cmp, &dcomp);
+		qsort_r(names, numitems, sizeof(struct nqc11_dirent *),
+		    nqc11_scandir_thunk_cmp, &dcomp);
 	*namelist = names;
 	return (numitems);
 
@@ -133,24 +133,24 @@ fail:
  * POSIX 2008 requires that alphasort() uses strcoll().
  */
 int
-freebsd11_alphasort(const struct freebsd11_dirent **d1,
-    const struct freebsd11_dirent **d2)
+nqc11_alphasort(const struct nqc11_dirent **d1,
+    const struct nqc11_dirent **d2)
 {
 
 	return (strcoll((*d1)->d_name, (*d2)->d_name));
 }
 
 static int
-freebsd11_scandir_thunk_cmp(const void *p1, const void *p2, void *thunk)
+nqc11_scandir_thunk_cmp(const void *p1, const void *p2, void *thunk)
 {
-	int (*dc)(const struct freebsd11_dirent **, const struct
-	    freebsd11_dirent **);
+	int (*dc)(const struct nqc11_dirent **, const struct
+	    nqc11_dirent **);
 
-	dc = *(int (**)(const struct freebsd11_dirent **,
-	    const struct freebsd11_dirent **))thunk;
-	return (dc((const struct freebsd11_dirent **)p1,
-	    (const struct freebsd11_dirent **)p2));
+	dc = *(int (**)(const struct nqc11_dirent **,
+	    const struct nqc11_dirent **))thunk;
+	return (dc((const struct nqc11_dirent **)p1,
+	    (const struct nqc11_dirent **)p2));
 }
 
-__sym_compat(alphasort, freebsd11_alphasort, FBSD_1.0);
-__sym_compat(scandir, freebsd11_scandir, FBSD_1.0);
+__sym_compat(alphasort, nqc11_alphasort, FBSD_1.0);
+__sym_compat(scandir, nqc11_scandir, FBSD_1.0);

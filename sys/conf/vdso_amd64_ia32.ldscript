@@ -39,7 +39,7 @@
  * or binary based on TARGET.
  */
 OUTPUT_ARCH(i386)
-TARGET(elf32-i386-freebsd)
+TARGET(elf32-i386-nqc)
 
 PHDRS
 {

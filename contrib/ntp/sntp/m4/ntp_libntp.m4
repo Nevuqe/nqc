@@ -394,7 +394,7 @@ case "$have_pthreads" in
 	)]
     )
     case "$host:$have_sigwait" in
-     *-freebsd*:no)
+     *-nqc*:no)
 	AC_CHECK_LIB(
 	    [c_r],
 	    [sigwait],
@@ -411,9 +411,9 @@ case "$have_pthreads" in
     AC_CHECK_FUNCS([pthread_attr_setstacksize sysconf])
 
     case "$host" in
-     *-freebsd5.[[012]]|*-freebsd5.[[012]].*)
+     *-nqc5.[[012]]|*-nqc5.[[012]].*)
 	;;
-     *-freebsd5.[[3456789]]|*-freebsd5.[[3456789]].*|*-freebsd6.*)
+     *-nqc5.[[3456789]]|*-nqc5.[[3456789]].*|*-nqc6.*)
 	AC_DEFINE([NEED_PTHREAD_SCOPE_SYSTEM], [1],
 		  [use PTHREAD_SCOPE_SYSTEM?])
 	;;
@@ -944,7 +944,7 @@ case "$ntp_cv_hdr_def_sigio" in
      *-*-irix6*)
 	ans=no
 	;;
-     *-*-freebsd*)
+     *-*-nqc*)
 	ans=no
 	;;
      *-*-*linux*)
@@ -953,7 +953,7 @@ case "$ntp_cv_hdr_def_sigio" in
      *-*-unicosmp*)
 	ans=no
 	;;
-     *-*-kfreebsd*)
+     *-*-knqc*)
 	ans=no
 	;;
      m68k-*-mint*)
@@ -1044,7 +1044,7 @@ case "$ntp_cv_hdr_def_sigpoll" in
      *-*-unicosmp*)
 	ans=no
 	;;
-     *-*-kfreebsd*)
+     *-*-knqc*)
 	ans=no
 	;;
      *) ans=yes
@@ -1103,7 +1103,7 @@ case "$ntp_cv_hdr_def_sigpoll" in
      *-*-unicosmp*)
 	ans=no
 	;;
-     *-*-kfreebsd*)
+     *-*-knqc*)
 	ans=no
 	;;
      *) ans=yes

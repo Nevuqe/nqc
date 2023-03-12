@@ -7604,7 +7604,7 @@ Date:   2016-10-24 18:51:36 +0300
     As a side effect, this commit fixes a bug on GNU/kNQC where
     configure would detect the NQC-specific cpuset_getaffinity()
     but it wouldn't actually work because on GNU/kNQC it requires
-    using -lfreebsd-glue when linking. Now the glibc-specific function
+    using -lnqc-glue when linking. Now the glibc-specific function
     will be used instead.
     
     Thanks to Sebastian Andrzej Siewior for the original patch

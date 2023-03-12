@@ -65,7 +65,7 @@ static struct efi_uuid_mapping {
 	EFI_GUID efi_guid;
 } efi_uuid_mapping[] = {
 	{ .efi_guid_name = "global", .efi_guid = EFI_GLOBAL_VARIABLE },
-	{ .efi_guid_name = "freebsd", .efi_guid = NQC_BOOT_VAR_GUID },
+	{ .efi_guid_name = "nqc", .efi_guid = NQC_BOOT_VAR_GUID },
 	/* EFI Systab entry names. */
 	{ .efi_guid_name = "MPS Table", .efi_guid = MPS_TABLE_GUID },
 	{ .efi_guid_name = "ACPI Table", .efi_guid = ACPI_TABLE_GUID },
@@ -710,7 +710,7 @@ efi_print_var(CHAR16 *varnamearg, EFI_GUID *matchguid, int lflag)
 	if (lflag == 0) {
 		if (strcmp(str, "global") == 0)
 			rv = efi_print_global(varnamearg, data, datasz);
-		else if (strcmp(str, "freebsd") == 0)
+		else if (strcmp(str, "nqc") == 0)
 			rv = efi_print_nqc(varnamearg, data, datasz);
 		else if (strcmp(str,
 		    EFI_MEMORY_TYPE_INFORMATION_VARIABLE_NAME) == 0)

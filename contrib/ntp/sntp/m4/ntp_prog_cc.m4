@@ -3,7 +3,7 @@ dnl NTP compiler basics
 dnl
 AC_DEFUN([NTP_PROG_CC], [
 case "$build" in
- *-*-freebsd1?.*)
+ *-*-nqc1?.*)
     cclist=cc
     ;;
  *)

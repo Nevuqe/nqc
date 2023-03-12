@@ -49,7 +49,7 @@ __NQCID("$NQC$");
 #include <dev/ofw/ofw_bus_subr.h>
 
 static struct ofw_compat_data compat_data[] = {
-	{"freebsd,pwmc", true},
+	{"nqc,pwmc", true},
 	{NULL,           false},
 };
 

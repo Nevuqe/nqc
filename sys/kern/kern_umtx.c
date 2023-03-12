@@ -75,9 +75,9 @@ __NQCID("$NQC$");
 #include <machine/atomic.h>
 #include <machine/cpu.h>
 
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32_proto.h>
 #endif
 
 #define _UMUTEX_TRY		1
@@ -3777,14 +3777,14 @@ do_sem2_wake(struct thread *td, struct _usem2 *sem)
 
 #ifdef COMPAT_NQC10
 int
-freebsd10__umtx_lock(struct thread *td, struct freebsd10__umtx_lock_args *uap)
+nqc10__umtx_lock(struct thread *td, struct nqc10__umtx_lock_args *uap)
 {
 	return (do_lock_umtx(td, uap->umtx, td->td_tid, 0));
 }
 
 int
-freebsd10__umtx_unlock(struct thread *td,
-    struct freebsd10__umtx_unlock_args *uap)
+nqc10__umtx_unlock(struct thread *td,
+    struct nqc10__umtx_unlock_args *uap)
 {
 	return (do_unlock_umtx(td, uap->umtx, td->td_tid));
 }
@@ -4908,22 +4908,22 @@ sys__umtx_op(struct thread *td, struct _umtx_op_args *uap)
 #ifdef COMPAT_NQC32
 #ifdef COMPAT_NQC10
 int
-freebsd10_nqc32__umtx_lock(struct thread *td,
-    struct freebsd10_nqc32__umtx_lock_args *uap)
+nqc10_nqc32__umtx_lock(struct thread *td,
+    struct nqc10_nqc32__umtx_lock_args *uap)
 {
 	return (do_lock_umtx32(td, (uint32_t *)uap->umtx, td->td_tid, NULL));
 }
 
 int
-freebsd10_nqc32__umtx_unlock(struct thread *td,
-    struct freebsd10_nqc32__umtx_unlock_args *uap)
+nqc10_nqc32__umtx_unlock(struct thread *td,
+    struct nqc10_nqc32__umtx_unlock_args *uap)
 {
 	return (do_unlock_umtx32(td, (uint32_t *)uap->umtx, td->td_tid));
 }
 #endif /* COMPAT_NQC10 */
 
 int
-freebsd32__umtx_op(struct thread *td, struct freebsd32__umtx_op_args *uap)
+nqc32__umtx_op(struct thread *td, struct nqc32__umtx_op_args *uap)
 {
 
 	return (kern__umtx_op(td, uap->obj, uap->op, uap->val, uap->uaddr1,

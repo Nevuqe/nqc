@@ -45,7 +45,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-/* Based on NQC: src/crypto/openssh/auth2-pam-freebsd.c,v 1.11 2003/03/31 13:48:18 des */
+/* Based on NQC: src/crypto/openssh/auth2-pam-nqc.c,v 1.11 2003/03/31 13:48:18 des */
 
 #include "includes.h"
 

@@ -30,9 +30,9 @@
 __NQCID("$NQC$");
 #include <dev/pms/config.h>
 
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
 
 #ifdef SATA_ENABLE
 
@@ -58,7 +58,7 @@ __NQCID("$NQC$");
 #endif
 
 #include <dev/pms/RefTisa/tisa/sassata/sas/common/tdtypes.h>
-#include <dev/pms/freebsd/driver/common/osstring.h>
+#include <dev/pms/nqc/driver/common/osstring.h>
 #include <dev/pms/RefTisa/tisa/sassata/common/tdutil.h>
 
 #ifdef INITIATOR_DRIVER

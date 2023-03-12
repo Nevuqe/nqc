@@ -160,7 +160,7 @@ ASSYM(SIGF_SC, offsetof(struct osigframe, sf_siginfo.si_sc));
 #endif
 ASSYM(SIGF_UC, offsetof(struct sigframe, sf_uc));
 #ifdef COMPAT_NQC4
-ASSYM(SIGF_UC4, offsetof(struct freebsd4_sigframe, sf_uc));
+ASSYM(SIGF_UC4, offsetof(struct nqc4_sigframe, sf_uc));
 #endif
 #ifdef COMPAT_43
 ASSYM(SC_PS, offsetof(struct osigcontext, sc_ps));
@@ -169,8 +169,8 @@ ASSYM(SC_GS, offsetof(struct osigcontext, sc_gs));
 ASSYM(SC_TRAPNO, offsetof(struct osigcontext, sc_trapno));
 #endif
 #ifdef COMPAT_NQC4
-ASSYM(UC4_EFLAGS, offsetof(struct freebsd4_ucontext, uc_mcontext.mc_eflags));
-ASSYM(UC4_GS, offsetof(struct freebsd4_ucontext, uc_mcontext.mc_gs));
+ASSYM(UC4_EFLAGS, offsetof(struct nqc4_ucontext, uc_mcontext.mc_eflags));
+ASSYM(UC4_GS, offsetof(struct nqc4_ucontext, uc_mcontext.mc_gs));
 #endif
 ASSYM(UC_EFLAGS, offsetof(ucontext_t, uc_mcontext.mc_eflags));
 ASSYM(UC_GS, offsetof(ucontext_t, uc_mcontext.mc_gs));

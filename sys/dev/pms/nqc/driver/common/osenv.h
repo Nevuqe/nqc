@@ -36,7 +36,7 @@ Note:  This file defines the working environment of the system.  All
 
 #ifndef __OSENV_H__
 #define __OSENV_H__
-#include <dev/pms/freebsd/driver/common/osstring.h>
+#include <dev/pms/nqc/driver/common/osstring.h>
 
 /* 
 ** Define the protocols to compile with.  Currently, these defines are

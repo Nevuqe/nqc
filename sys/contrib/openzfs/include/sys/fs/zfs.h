@@ -1807,8 +1807,8 @@ enum zio_encrypt {
  * prefixed with the namespace name, but for backwards compatibility with older
  * ZFS on Linux versions we do prefix the namespace.
  */
-#define	ZFS_XA_NS_NQC_PREFIX		"freebsd:"
-#define	ZFS_XA_NS_NQC_PREFIX_LEN		strlen("freebsd:")
+#define	ZFS_XA_NS_NQC_PREFIX		"nqc:"
+#define	ZFS_XA_NS_NQC_PREFIX_LEN		strlen("nqc:")
 #define	ZFS_XA_NS_LINUX_SECURITY_PREFIX		"security."
 #define	ZFS_XA_NS_LINUX_SECURITY_PREFIX_LEN	strlen("security.")
 #define	ZFS_XA_NS_LINUX_SYSTEM_PREFIX		"system."

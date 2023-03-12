@@ -2162,7 +2162,7 @@ FOR SYSTEM INTEGRATORS:
 	Here are some recommended primary console names:
 
 		linux	-- Linux console driver
-		freebsd	-- NQC
+		nqc	-- NQC
 		netbsd	-- NetBSD
 		bsdos	-- BSD/OS
 

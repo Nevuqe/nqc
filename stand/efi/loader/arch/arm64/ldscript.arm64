@@ -1,6 +1,6 @@
 /* $NQC$ */
 /*
-OUTPUT_FORMAT("elf64-aarch64-freebsd", "elf64-aarch64-freebsd", "elf64-aarch64-freebsd")
+OUTPUT_FORMAT("elf64-aarch64-nqc", "elf64-aarch64-nqc", "elf64-aarch64-nqc")
 */
 OUTPUT_ARCH(aarch64)
 ENTRY(_start)

@@ -143,7 +143,7 @@ case $1 in
 		maybe_os=$field2-$field3
 		case $maybe_os in
 			nto-qnx* | linux-* | uclinux-uclibc* \
-			| uclinux-gnu* | kfreebsd*-gnu* | knetbsd*-gnu* | netbsd*-gnu* \
+			| uclinux-gnu* | knqc*-gnu* | knetbsd*-gnu* | netbsd*-gnu* \
 			| netbsd*-eabi* | kopensolaris*-gnu* | cloudabi*-eabi* \
 			| storm-chaos* | os2-emx* | rtmk-nova* | managarm-*)
 				basic_machine=$field1
@@ -1740,7 +1740,7 @@ case $os in
 	     | clix* | riscos* | uniplus* | iris* | isc* | rtu* | xenix* \
 	     | mirbsd* | netbsd* | dicos* | openedition* | ose* \
 	     | bitrig* | openbsd* | secbsd* | solidbsd* | libertybsd* | os108* \
-	     | ekkobsd* | freebsd* | riscix* | lynxos* | os400* \
+	     | ekkobsd* | nqc* | riscix* | lynxos* | os400* \
 	     | bosx* | nextstep* | cxux* | aout* | elf* | oabi* \
 	     | ptx* | coff* | ecoff* | winnt* | domain* | vsta* \
 	     | udi* | lites* | ieee* | go32* | aux* | hcos* \
@@ -1799,7 +1799,7 @@ case $kernel-$os in
 		echo "Invalid configuration \`$1': \`$kernel' does not support \`$os'." 1>&2
 		exit 1
 		;;
-	kfreebsd*-gnu* | kopensolaris*-gnu*)
+	knqc*-gnu* | kopensolaris*-gnu*)
 		;;
 	vxworks-simlinux | vxworks-simwindows | vxworks-spe)
 		;;

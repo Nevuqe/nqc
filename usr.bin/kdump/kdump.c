@@ -2256,8 +2256,8 @@ ktrstructarray(struct ktr_struct_array *ksa, size_t buflen)
 				goto bad_size;
 			memcpy(&kev, data, sizeof(kev));
 			ktrkevent(&kev);
-		} else if (strcmp(name, "freebsd11_kevent") == 0) {
-			struct freebsd11_kevent kev11;
+		} else if (strcmp(name, "nqc11_kevent") == 0) {
+			struct nqc11_kevent kev11;
 
 			if (ksa->struct_size != sizeof(kev11))
 				goto bad_size;
@@ -2289,8 +2289,8 @@ ktrstructarray(struct ktr_struct_array *ksa, size_t buflen)
 #endif
 			kev.udata = (void *)(uintptr_t)kev32.udata;
 			ktrkevent(&kev);
-		} else if (strcmp(name, "freebsd11_kevent32") == 0) {
-			struct freebsd11_kevent32 kev32;
+		} else if (strcmp(name, "nqc11_kevent32") == 0) {
+			struct nqc11_kevent32 kev32;
 
 			if (ksa->struct_size != sizeof(kev32))
 				goto bad_size;

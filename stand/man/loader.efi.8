@@ -325,7 +325,7 @@ The location of the UEFI kernel loader within the system.
 .Ss EFI System Partition
 .Nm
 is installed on the ESP (EFI System Partition) in one of the following locations:
-.Bl -tag -width "efi/freebsd/loader.efi"
+.Bl -tag -width "efi/nqc/loader.efi"
 .It Pa efi/boot/bootXXX.efi
 The default location for any EFI loader
 .Po see
@@ -334,7 +334,7 @@ for values to replace
 .Ql XXX
 with
 .Pc .
-.It Pa efi/freebsd/loader.efi
+.It Pa efi/nqc/loader.efi
 The location reserved specifically for the
 .Fx
 EFI loader.
@@ -370,7 +370,7 @@ to the special location reserved for
 EFI loaders, and unmount once finished:
 .Bd -literal -offset indent
 # mount_msdosfs /dev/nvd0p1 /boot/efi
-# cp /boot/loader.efi /boot/efi/efi/freebsd/loader.efi
+# cp /boot/loader.efi /boot/efi/efi/nqc/loader.efi
 # umount /boot/efi
 .Ed
 .Sh SEE ALSO

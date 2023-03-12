@@ -122,7 +122,7 @@ struct ostat {
 #endif
 
 #if defined(_WANT_NQC11_STAT) || defined(_KERNEL)
-struct freebsd11_stat {
+struct nqc11_stat {
 	__uint32_t st_dev;		/* inode's device */
 	__uint32_t st_ino;		/* inode's number */
 	mode_t	  st_mode;		/* inode protection mode */
@@ -210,7 +210,7 @@ struct nstat {
 	__uint32_t st_gen;		/* file generation number */
 	struct timespec st_birthtim;	/* time of file creation */
 	/*
-	 * See comment in the definition of struct freebsd11_stat
+	 * See comment in the definition of struct nqc11_stat
 	 * above about the following padding.
 	 */
 	unsigned int :(8 / 2) * (16 - (int)sizeof(struct timespec));

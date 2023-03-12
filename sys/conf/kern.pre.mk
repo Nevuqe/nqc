@@ -189,8 +189,8 @@ NORMAL_FWO= ${CC:N${CCACHE_BIN}} -c ${ASM_CFLAGS} ${WERROR} -o ${.TARGET} \
 	$S/kern/firmw.S -DFIRMW_FILE="${.ALLSRC:M*.fw}" \
 	-DFIRMW_SYMBOL="${.ALLSRC:M*.fw:C/[-.\/]/_/g}"
 
-# for ZSTD in the kernel (include zstd/lib/freebsd before other CFLAGS)
-ZSTD_C= ${CC} -c -DZSTD_HEAPMODE=1 -I$S/contrib/zstd/lib/freebsd ${CFLAGS} \
+# for ZSTD in the kernel (include zstd/lib/nqc before other CFLAGS)
+ZSTD_C= ${CC} -c -DZSTD_HEAPMODE=1 -I$S/contrib/zstd/lib/nqc ${CFLAGS} \
 	-I$S/contrib/zstd/lib -I$S/contrib/zstd/lib/common ${WERROR} \
 	-Wno-missing-prototypes -U__BMI__ -DZSTD_NO_INTRINSICS ${.IMPSRC}
 # https://github.com/facebook/zstd/commit/812e8f2a [zstd 1.4.1]
@@ -212,9 +212,9 @@ CDDL_CFLAGS=	\
 	-nostdinc \
 	-include $S/modules/zfs/static_ccompile.h \
 	-I${ZINCDIR} \
-	-I${ZINCDIR}/os/freebsd \
-	-I${ZINCDIR}/os/freebsd/spl \
-	-I${ZINCDIR}/os/freebsd/zfs  \
+	-I${ZINCDIR}/os/nqc \
+	-I${ZINCDIR}/os/nqc/spl \
+	-I${ZINCDIR}/os/nqc/zfs  \
 	-I$S/modules/zfs \
 	-I$S/contrib/openzfs/module/zstd/include \
 	${CFLAGS} \
@@ -231,7 +231,7 @@ CDDL_CFLAGS=	\
 	-Wno-uninitialized \
 	-Wno-unknown-pragmas \
 	-Wno-unused \
-	-include ${ZINCDIR}/os/freebsd/spl/sys/ccompile.h \
+	-include ${ZINCDIR}/os/nqc/spl/sys/ccompile.h \
 	-I$S/cddl/contrib/opensolaris/uts/common \
 	-I$S -I$S/cddl/compat/opensolaris
 CDDL_C=		${CC} -c ${CDDL_CFLAGS} ${WERROR} ${.IMPSRC}
@@ -310,7 +310,7 @@ OFED_C=		${OFED_C_NOIMP} ${.IMPSRC}
 
 # mlxfw C flags.
 MLXFW_C=	${OFED_C_NOIMP} \
-		-I${SRCTOP}/sys/contrib/xz-embedded/freebsd \
+		-I${SRCTOP}/sys/contrib/xz-embedded/nqc \
 		-I${SRCTOP}/sys/contrib/xz-embedded/linux/lib/xz \
 		${.IMPSRC}
 

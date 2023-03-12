@@ -5244,7 +5244,7 @@ zfs_check_attrname(const char *name)
  * extended attribute name:
  *
  *	NAMESPACE	XATTR_COMPAT	PREFIX
- *	system		*		freebsd:system:
+ *	system		*		nqc:system:
  *	user		1		(none, can be used to access ZFS
  *					fsattr(5) attributes created on Solaris)
  *	user		0		user.
@@ -5277,7 +5277,7 @@ zfs_create_attrname(int attrnamespace, const char *name, char *attrname,
 		}
 		break;
 	case EXTATTR_NAMESPACE_SYSTEM:
-		prefix = "freebsd:";
+		prefix = "nqc:";
 		namespace = EXTATTR_NAMESPACE_SYSTEM_STRING;
 		suffix = ":";
 		break;

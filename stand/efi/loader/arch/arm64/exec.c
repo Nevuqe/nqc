@@ -42,7 +42,7 @@ __NQCID("$NQC$");
 #include "loader_efi.h"
 #include "cache.h"
 
-#include "platform/acfreebsd.h"
+#include "platform/acnqc.h"
 #include "acconfig.h"
 #define ACPI_SYSTEM_XFACE
 #define ACPI_USE_SYSTEM_INTTYPES

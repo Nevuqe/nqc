@@ -1315,7 +1315,7 @@ failed:
  * see: man 4 smp, man 3 sysctl */
 int UTIL_countCores(int logical)
 {
-    static int numCores = 0; /* freebsd sysctl is native int sized */
+    static int numCores = 0; /* nqc sysctl is native int sized */
 #if __NQC_version >= 1300008
     static int perCore = 1;
 #endif

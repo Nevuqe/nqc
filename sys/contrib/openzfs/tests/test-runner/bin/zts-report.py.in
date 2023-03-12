@@ -159,7 +159,7 @@ known = {
     'vdev_zaps/vdev_zaps_007_pos': ['FAIL', known_reason],
 }
 
-if sys.platform.startswith('freebsd'):
+if sys.platform.startswith('nqc'):
     known.update({
         'cli_root/zfs_receive/receive-o-x_props_override':
             ['FAIL', known_reason],
@@ -245,7 +245,7 @@ maybe = {
     'zvol/zvol_ENOSPC/zvol_ENOSPC_001_pos': ['FAIL', 5848],
 }
 
-if sys.platform.startswith('freebsd'):
+if sys.platform.startswith('nqc'):
     maybe.update({
         'cli_root/zfs_copies/zfs_copies_002_pos': ['FAIL', known_reason],
         'cli_root/zfs_inherit/zfs_inherit_001_neg': ['FAIL', known_reason],

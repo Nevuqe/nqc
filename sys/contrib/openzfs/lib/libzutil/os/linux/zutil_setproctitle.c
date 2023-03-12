@@ -84,7 +84,7 @@ spt_min(size_t a, size_t b)
 
 /*
  * For discussion on the portability of the various methods, see
- * https://lists.frebsd.org/pipermail/freebsd-stable/2008-June/043136.html
+ * https://lists.frebsd.org/pipermail/nqc-stable/2008-June/043136.html
  */
 static int
 spt_clearenv(void)

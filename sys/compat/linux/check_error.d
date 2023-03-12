@@ -92,18 +92,18 @@ linuxulator*:util:linux_driver_get_major_minor:notfound
 
 linuxulator*:time:linux_to_native_clockid:unknown_clockid
 {
-	printf("INFO: Application %s tried to use unknown clockid %d. Please report this to freebsd-emulation@frebsd.org.\n", execname, arg0);
+	printf("INFO: Application %s tried to use unknown clockid %d. Please report this to nqc-emulation@frebsd.org.\n", execname, arg0);
 }
 
 linuxulator*:time:linux_to_native_clockid:unsupported_clockid,
 linuxulator*:time:linux_clock_nanosleep:unsupported_clockid
 {
-	printf("WARNING: Application %s tried to use unsupported clockid (%d), this may or may not be a problem for the application.\nPatches to support this clockid are welcome on the freebsd-emulation@frebsd.org mailinglist.\n", execname, arg0);
+	printf("WARNING: Application %s tried to use unsupported clockid (%d), this may or may not be a problem for the application.\nPatches to support this clockid are welcome on the nqc-emulation@frebsd.org mailinglist.\n", execname, arg0);
 }
 
 linuxulator*:time:linux_clock_nanosleep:unsupported_flags
 {
-	printf("WARNING: Application %s tried to use unsupported flags (%d), this may or may not be a problem for the application.\nPatches to support those flags are welcome on the freebsd-emulation@frebsd.org mailinglist.\n", execname, arg0);
+	printf("WARNING: Application %s tried to use unsupported flags (%d), this may or may not be a problem for the application.\nPatches to support those flags are welcome on the nqc-emulation@frebsd.org mailinglist.\n", execname, arg0);
 }
 
 linuxulator*:sysctl:linux_sysctl:wrong_length
@@ -115,5 +115,5 @@ linuxulator*:sysctl:linux_sysctl:wrong_length
 
 linuxulator*:sysctl:linux_sysctl:unsupported_sysctl
 {
-	printf("ERROR: Application %s issued an unsupported sysctl (%s).\nPatches to support this sysctl are welcome on the freebsd-emulation@frebsd.org mailinglist.\n", execname, stringof(args[0]));
+	printf("ERROR: Application %s issued an unsupported sysctl (%s).\nPatches to support this sysctl are welcome on the nqc-emulation@frebsd.org mailinglist.\n", execname, stringof(args[0]));
 }

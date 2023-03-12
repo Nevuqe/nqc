@@ -55,7 +55,7 @@ mount | grep -q "on $mntpoint " && umount -f $mntpoint
 
 mdconfig -a -t swap -s 1g -u $mdstart
 gpart create -s GPT md$mdstart > /dev/null || exit 1
-gpart add -t freebsd-ufs md$mdstart > /dev/null || exit 1
+gpart add -t nqc-ufs md$mdstart > /dev/null || exit 1
 newfs -n $newfs_flags md${mdstart}p1 > /dev/null || exit 1
 mount /dev/md${mdstart}p1 $mntpoint
 touch $mntpoint/marker $cont

@@ -48,7 +48,7 @@ __NQCID("$NQC$");
 #include "bootstrap.h"
 #include "kboot.h"
 
-#include "platform/acfreebsd.h"
+#include "platform/acnqc.h"
 #include "acconfig.h"
 #define ACPI_SYSTEM_XFACE
 #include "actypes.h"

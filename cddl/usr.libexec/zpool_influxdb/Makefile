@@ -16,8 +16,8 @@ CFLAGS+= \
 	-DIN_BASE \
 	-I${ZFSTOP}/include \
 	-I${ZFSTOP}/lib/libspl/include \
-	-I${ZFSTOP}/lib/libspl/include/os/freebsd \
-	-include ${ZFSTOP}/include/os/freebsd/spl/sys/ccompile.h \
+	-I${ZFSTOP}/lib/libspl/include/os/nqc \
+	-include ${ZFSTOP}/include/os/nqc/spl/sys/ccompile.h \
 	-DHAVE_ISSETUGID \
 	-include ${SRCTOP}/sys/modules/zfs/zfs_config.h \
 	-DSYSCONFDIR=\"/etc\" \

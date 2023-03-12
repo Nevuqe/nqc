@@ -42,9 +42,9 @@
 #include <dev/pms/RefTisa/tisa/api/tiglobal.h>
 #include <dev/pms/RefTisa/tisa/api/titypes.h>
 #include <dev/pms/RefTisa/tisa/sassata/common/tdioctl.h>
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
 #include <sys/param.h>		//zone allocation
 #include <sys/queue.h>		//zone allocation
 #include <vm/uma.h>		//zone allocation

@@ -14,7 +14,7 @@ sysbuild.sh assume you have two partitions that can hold your rootfs
 and can be booted, and roughly speaking, all it does is build a new
 system into the one you don't use, from the one you do use.
 
-A partition named /freebsd is assumed to be part of your layout, and
+A partition named /nqc is assumed to be part of your layout, and
 that is where the sources and ports will be found.
 
 If you know how nanobsd works, you will find a lot of similarity.
@@ -46,11 +46,11 @@ Reboot from the newly installed system.
 
 Run these commands to set up the other partitions sysbuild.sh cares about:
 
-	# /freebsd filesystem
+	# /nqc filesystem
 	newfs -b 4096 -f 512 -O2 -U /dev/ad0s3
-	echo "/dev/ad0s3 /freebsd ufs rw 2 2" >> /etc/fstab
-	mkdir /freebsd
-	mount /freebsd
+	echo "/dev/ad0s3 /nqc ufs rw 2 2" >> /etc/fstab
+	mkdir /nqc
+	mount /nqc
 
 	# deputy rootfilesystem
 	bsdlabel -B -w /dev/ad0s2
@@ -60,9 +60,9 @@ Next, install ports and sources:
 
 	cd /usr
 	rm -rf ports src
-	ln -s /freebsd/src
-	ln -s /freebsd/ports
-	cd /freebsd
+	ln -s /nqc/src
+	ln -s /nqc/ports
+	cd /nqc
 	mkdir ports src packages
 
 	svn co https://svn0.us-east.frebsd.org/base/stable/10 src
@@ -104,7 +104,7 @@ A partial example:
 	KERNCONF=SMP
 
 	# Cache built packages, so we can use -p
-	PKG_DIR=/freebsd/packages
+	PKG_DIR=/nqc/packages
 
 	# Mount ports distfiles from another machine
 	REMOTEDISTFILES=fs:/rdonly/distfiles
@@ -121,7 +121,7 @@ A partial example:
 		/usr/ports/cad/linux-eagle
 		/usr/ports/comms/lrzsz
 		/usr/ports/databases/rrdtool 
-		/usr/ports/devel/subversion-freebsd
+		/usr/ports/devel/subversion-nqc
 	'
 
 	# Files to move over
@@ -143,7 +143,7 @@ A partial example:
 
 		chpass -p "\$1\$VcM.9Ow8\$IcXHs0h9jsk27b8N64lOm/" phk
 
-		sed -i "" -e 's/^DS/DSorigo.freebsd.dk/' /etc/mail/sendmail.cf
+		sed -i "" -e 's/^DS/DSorigo.frebsd.dk/' /etc/mail/sendmail.cf
 		sed -i "" -e '/console/s/^/#/' /etc/syslog.conf
 		echo "beastie_disable=YES" >> /boot/loader.conf
 		touch /root/.hushlogin

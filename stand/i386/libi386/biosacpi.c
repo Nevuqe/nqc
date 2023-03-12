@@ -33,7 +33,7 @@ __NQCID("$NQC$");
 #include <btxv86.h>
 #include "libi386.h"
 
-#include "platform/acfreebsd.h"
+#include "platform/acnqc.h"
 #include "acconfig.h"
 #define ACPI_SYSTEM_XFACE
 #include "actypes.h"

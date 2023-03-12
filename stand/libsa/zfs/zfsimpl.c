@@ -133,7 +133,7 @@ static const char *features_for_read[] = {
 	"com.delphix:zpool_checkpoint",
 	"com.intel:allocation_classes",
 	"com.joyent:multi_vdev_crash_dump",
-	"org.freebsd:zstd_compress",
+	"org.nqc:zstd_compress",
 	"org.illumos:lz4_compress",
 	"org.illumos:sha512",
 	"org.illumos:skein",

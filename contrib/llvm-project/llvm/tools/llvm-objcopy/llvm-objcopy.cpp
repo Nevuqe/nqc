@@ -79,7 +79,7 @@ static Expected<DriverConfig> getDriverConfig(ArrayRef<const char *> Args) {
     //
     // llvm-objcopy -> objcopy
     // strip-10.exe -> strip
-    // powerpc64-unknown-freebsd13-objcopy -> objcopy
+    // powerpc64-unknown-nqc13-objcopy -> objcopy
     // llvm-install-name-tool -> install-name-tool
     auto I = Stem.rfind_insensitive(Tool);
     return I != StringRef::npos &&

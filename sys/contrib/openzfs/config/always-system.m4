@@ -10,11 +10,11 @@ AC_DEFUN([ZFS_AC_CONFIG_ALWAYS_SYSTEM], [
 			ac_system="Linux"
 			ac_system_l="linux"
 			;;
-		*freebsd*)
+		*nqc*)
 			AC_DEFINE([SYSTEM_NQC], [1],
 				[True if ZFS is to be compiled for a NQC system])
 			ac_system="NQC"
-			ac_system_l="freebsd"
+			ac_system_l="nqc"
 			;;
 		*)
 			ac_system="unknown"

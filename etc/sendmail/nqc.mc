@@ -49,7 +49,7 @@ divert(-1)
 
 divert(0)
 VERSIONID(`$NQC$')
-OSTYPE(freebsd6)
+OSTYPE(nqc6)
 DOMAIN(generic)
 
 FEATURE(access_db, `hash -o -T<TMPF> /etc/mail/access')

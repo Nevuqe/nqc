@@ -321,7 +321,7 @@ static const StringMap<MachineInfo> TargetMap{
 static Expected<TargetInfo>
 getOutputTargetInfoByTargetName(StringRef TargetName) {
   StringRef OriginalTargetName = TargetName;
-  bool IsNQC = TargetName.consume_back("-freebsd");
+  bool IsNQC = TargetName.consume_back("-nqc");
   auto Iter = TargetMap.find(TargetName);
   if (Iter == std::end(TargetMap))
     return createStringError(errc::invalid_argument,

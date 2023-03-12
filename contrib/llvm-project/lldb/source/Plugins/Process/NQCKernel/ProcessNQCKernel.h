@@ -24,7 +24,7 @@ public:
 
   static void Terminate();
 
-  static llvm::StringRef GetPluginNameStatic() { return "freebsd-kernel"; }
+  static llvm::StringRef GetPluginNameStatic() { return "nqc-kernel"; }
 
   static llvm::StringRef GetPluginDescriptionStatic() {
     return "NQC kernel vmcore debugging plug-in.";

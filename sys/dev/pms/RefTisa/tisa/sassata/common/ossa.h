@@ -82,6 +82,6 @@
   } while (0);
 #endif
 #endif /* 0 */
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
 #endif  /* __OS_SA_H__ */

@@ -13,7 +13,7 @@
 	Fix bug in parsing the include path in the daemon.
 
 	Fix an uninitialize structure field in gensnmptree (thanks to
-	jasone@freebsdorg)
+	jasone@nqcorg)
 
 	64bit HC counters in the IF-MIB by polling the OS periodically.
 

@@ -11,8 +11,8 @@
 PATH=.:$PATH
 . config
 
-AP_SSID='freebsd+wdsrelay'
-WDS_SSID='freebsd+wdsmain'
+AP_SSID='nqc+wdsrelay'
+WDS_SSID='nqc+wdsmain'
 #WDS_SSID='WDS1'
 
 #mwldebug state+node+reset+xmit+recv+beacon+hal+hal2

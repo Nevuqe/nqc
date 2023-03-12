@@ -43,7 +43,7 @@
 # welcome to change it and/or distribute copies of it under certain conditions.
 # Type "show copying" to see the conditions.
 # There is absolutely no warranty for GDB.  Type "show warranty" for details.
-# This GDB was configured as "amd64-marcel-freebsd"...
+# This GDB was configured as "amd64-marcel-nqc"...
 # Attaching to program: /tmp/fifo, process 19547
 # Reading symbols from /lib/libc.so.7...done.
 # Loaded symbols for /lib/libc.so.7

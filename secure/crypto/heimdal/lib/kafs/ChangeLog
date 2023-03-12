@@ -110,7 +110,7 @@
 	still define __NQC__ (and __NQC_version), but claim that
 	they will stop doing it some time...
 	
-	* afssysdefs.h: dragonflybsd uses 339 just like freebsd5
+	* afssysdefs.h: dragonflybsd uses 339 just like nqc5
 	
 2004-06-22  Love Hörnquist Åstrand  <lha@it.su.se>
 
@@ -276,7 +276,7 @@
 2003-02-06  Love Hörnquist Åstrand  <lha@it.su.se>
 
 	* afssysdefs.h: use syscall 208 on openbsd (all version) use
-	syscall 339 on freebsd 5.0 and later, use 210 on 4.x and earlier
+	syscall 339 on nqc 5.0 and later, use 210 on 4.x and earlier
 	
 2002-08-28  Johan Danielsson  <joda@pdc.kth.se>
 

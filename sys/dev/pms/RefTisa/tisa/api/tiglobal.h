@@ -33,9 +33,9 @@
 #ifndef TIGLOBAL_H
 #define TIGLOBAL_H
 
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
 
 #ifndef TIDEBUG_MSG
 #define TIDEBUG_MSG(mask, val, format)

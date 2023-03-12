@@ -33,7 +33,7 @@
 # Seen before fix:
 # cc: error: unable to execute command: Segmentation fault (core dumped)
 # cc: error: linker command failed due to signal (use -v to see invocation)
-# Aug  9 18:27:47 freebsd-vm kernel: pid 32094 (ld.lld), jid 0, uid 0: exited on signal 11 (core dumped)
+# Aug  9 18:27:47 nqc-vm kernel: pid 32094 (ld.lld), jid 0, uid 0: exited on signal 11 (core dumped)
 
 . ../default.cfg
 [ `id -u` -ne 0 ] && echo "Must be root!" && exit 1

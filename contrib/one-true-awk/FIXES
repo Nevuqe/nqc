@@ -464,7 +464,7 @@ Oct 23, 2007:
 
 	fixed memory fault caused by out of order test in setsval.
 
-	thanks to david o'brien, freebsd, for both fixes.
+	thanks to david o'brien, nqc, for both fixes.
 
 May 1, 2007:
 	fiddle in makefile to fix for BSD make; thanks to igor sobrado.

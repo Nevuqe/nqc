@@ -182,28 +182,28 @@ static struct syscall_helper_data msg_syscalls[] = {
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 	SYSCALL_INIT_HELPER(msgsys),
-	SYSCALL_INIT_HELPER_COMPAT(freebsd7_msgctl),
+	SYSCALL_INIT_HELPER_COMPAT(nqc7_msgctl),
 #endif
 	SYSCALL_INIT_LAST
 };
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_ipc.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_ipc.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 static struct syscall_helper_data msg32_syscalls[] = {
-	SYSCALL32_INIT_HELPER(freebsd32_msgctl),
-	SYSCALL32_INIT_HELPER(freebsd32_msgsnd),
-	SYSCALL32_INIT_HELPER(freebsd32_msgrcv),
+	SYSCALL32_INIT_HELPER(nqc32_msgctl),
+	SYSCALL32_INIT_HELPER(nqc32_msgsnd),
+	SYSCALL32_INIT_HELPER(nqc32_msgrcv),
 	SYSCALL32_INIT_HELPER_COMPAT(msgget),
-	SYSCALL32_INIT_HELPER(freebsd32_msgsys),
+	SYSCALL32_INIT_HELPER(nqc32_msgsys),
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
-	SYSCALL32_INIT_HELPER(freebsd7_nqc32_msgctl),
+	SYSCALL32_INIT_HELPER(nqc7_nqc32_msgctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -1442,7 +1442,7 @@ sysctl_msqids(SYSCTL_HANDLER_ARGS)
 #ifdef COMPAT_NQC32
 		if (SV_CURPROC_FLAG(SV_ILP32)) {
 			bzero(&tmsqk32, sizeof(tmsqk32));
-			freebsd32_ipcperm_out(&tmsqk.u.msg_perm,
+			nqc32_ipcperm_out(&tmsqk.u.msg_perm,
 			    &tmsqk32.u.msg_perm);
 			/* Don't copy u.msg_first or u.msg_last */
 			CP(tmsqk, tmsqk32, u.msg_cbytes);
@@ -1673,7 +1673,7 @@ SYSCTL_JAIL_PARAM_SYS_NODE(sysvmsg, CTLFLAG_RW, "SYSV message queues");
 
 #ifdef COMPAT_NQC32
 int
-freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
+nqc32_msgsys(struct thread *td, struct nqc32_msgsys_args *uap)
 {
 
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
@@ -1681,14 +1681,14 @@ freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
 	AUDIT_ARG_SVIPC_WHICH(uap->which);
 	switch (uap->which) {
 	case 0:
-		return (freebsd7_nqc32_msgctl(td,
-		    (struct freebsd7_nqc32_msgctl_args *)&uap->a2));
+		return (nqc7_nqc32_msgctl(td,
+		    (struct nqc7_nqc32_msgctl_args *)&uap->a2));
 	case 2:
-		return (freebsd32_msgsnd(td,
-		    (struct freebsd32_msgsnd_args *)&uap->a2));
+		return (nqc32_msgsnd(td,
+		    (struct nqc32_msgsnd_args *)&uap->a2));
 	case 3:
-		return (freebsd32_msgrcv(td,
-		    (struct freebsd32_msgrcv_args *)&uap->a2));
+		return (nqc32_msgrcv(td,
+		    (struct nqc32_msgrcv_args *)&uap->a2));
 	default:
 		return (sys_msgsys(td, (struct msgsys_args *)uap));
 	}
@@ -1700,8 +1700,8 @@ freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
 #if defined(COMPAT_NQC4) || defined(COMPAT_NQC5) || \
     defined(COMPAT_NQC6) || defined(COMPAT_NQC7)
 int
-freebsd7_nqc32_msgctl(struct thread *td,
-    struct freebsd7_nqc32_msgctl_args *uap)
+nqc7_nqc32_msgctl(struct thread *td,
+    struct nqc7_nqc32_msgctl_args *uap)
 {
 	struct msqid_ds msqbuf;
 	struct msqid_ds_old32 msqbuf32;
@@ -1711,7 +1711,7 @@ freebsd7_nqc32_msgctl(struct thread *td,
 		error = copyin(uap->buf, &msqbuf32, sizeof(msqbuf32));
 		if (error)
 			return (error);
-		freebsd32_ipcperm_old_in(&msqbuf32.msg_perm, &msqbuf.msg_perm);
+		nqc32_ipcperm_old_in(&msqbuf32.msg_perm, &msqbuf.msg_perm);
 		PTRIN_CP(msqbuf32, msqbuf, __msg_first);
 		PTRIN_CP(msqbuf32, msqbuf, __msg_last);
 		CP(msqbuf32, msqbuf, msg_cbytes);
@@ -1728,7 +1728,7 @@ freebsd7_nqc32_msgctl(struct thread *td,
 		return (error);
 	if (uap->cmd == IPC_STAT) {
 		bzero(&msqbuf32, sizeof(msqbuf32));
-		freebsd32_ipcperm_old_out(&msqbuf.msg_perm, &msqbuf32.msg_perm);
+		nqc32_ipcperm_old_out(&msqbuf.msg_perm, &msqbuf32.msg_perm);
 		PTROUT_CP(msqbuf, msqbuf32, __msg_first);
 		PTROUT_CP(msqbuf, msqbuf32, __msg_last);
 		CP(msqbuf, msqbuf32, msg_cbytes);
@@ -1746,7 +1746,7 @@ freebsd7_nqc32_msgctl(struct thread *td,
 #endif
 
 int
-freebsd32_msgctl(struct thread *td, struct freebsd32_msgctl_args *uap)
+nqc32_msgctl(struct thread *td, struct nqc32_msgctl_args *uap)
 {
 	struct msqid_ds msqbuf;
 	struct msqid_ds32 msqbuf32;
@@ -1756,7 +1756,7 @@ freebsd32_msgctl(struct thread *td, struct freebsd32_msgctl_args *uap)
 		error = copyin(uap->buf, &msqbuf32, sizeof(msqbuf32));
 		if (error)
 			return (error);
-		freebsd32_ipcperm_in(&msqbuf32.msg_perm, &msqbuf.msg_perm);
+		nqc32_ipcperm_in(&msqbuf32.msg_perm, &msqbuf.msg_perm);
 		PTRIN_CP(msqbuf32, msqbuf, __msg_first);
 		PTRIN_CP(msqbuf32, msqbuf, __msg_last);
 		CP(msqbuf32, msqbuf, msg_cbytes);
@@ -1772,7 +1772,7 @@ freebsd32_msgctl(struct thread *td, struct freebsd32_msgctl_args *uap)
 	if (error)
 		return (error);
 	if (uap->cmd == IPC_STAT) {
-		freebsd32_ipcperm_out(&msqbuf.msg_perm, &msqbuf32.msg_perm);
+		nqc32_ipcperm_out(&msqbuf.msg_perm, &msqbuf32.msg_perm);
 		PTROUT_CP(msqbuf, msqbuf32, __msg_first);
 		PTROUT_CP(msqbuf, msqbuf32, __msg_last);
 		CP(msqbuf, msqbuf32, msg_cbytes);
@@ -1789,7 +1789,7 @@ freebsd32_msgctl(struct thread *td, struct freebsd32_msgctl_args *uap)
 }
 
 int
-freebsd32_msgsnd(struct thread *td, struct freebsd32_msgsnd_args *uap)
+nqc32_msgsnd(struct thread *td, struct nqc32_msgsnd_args *uap)
 {
 	const void *msgp;
 	long mtype;
@@ -1806,7 +1806,7 @@ freebsd32_msgsnd(struct thread *td, struct freebsd32_msgsnd_args *uap)
 }
 
 int
-freebsd32_msgrcv(struct thread *td, struct freebsd32_msgrcv_args *uap)
+nqc32_msgrcv(struct thread *td, struct nqc32_msgrcv_args *uap)
 {
 	void *msgp;
 	long mtype;
@@ -1828,7 +1828,7 @@ freebsd32_msgrcv(struct thread *td, struct freebsd32_msgrcv_args *uap)
 
 /* XXX casting to (sy_call_t *) is bogus, as usual. */
 static sy_call_t *msgcalls[] = {
-	(sy_call_t *)freebsd7_msgctl, (sy_call_t *)sys_msgget,
+	(sy_call_t *)nqc7_msgctl, (sy_call_t *)sys_msgget,
 	(sy_call_t *)sys_msgsnd, (sy_call_t *)sys_msgrcv
 };
 
@@ -1862,20 +1862,20 @@ sys_msgsys(struct thread *td, struct msgsys_args *uap)
 #endif
 
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd7_msgctl_args {
+struct nqc7_msgctl_args {
 	int	msqid;
 	int	cmd;
 	struct	msqid_ds_old *buf;
 };
 #endif
 int
-freebsd7_msgctl(struct thread *td, struct freebsd7_msgctl_args *uap)
+nqc7_msgctl(struct thread *td, struct nqc7_msgctl_args *uap)
 {
 	struct msqid_ds_old msqold;
 	struct msqid_ds msqbuf;
 	int error;
 
-	DPRINTF(("call to freebsd7_msgctl(%d, %d, %p)\n", uap->msqid, uap->cmd,
+	DPRINTF(("call to nqc7_msgctl(%d, %d, %p)\n", uap->msqid, uap->cmd,
 	    uap->buf));
 	if (uap->cmd == IPC_SET) {
 		error = copyin(uap->buf, &msqold, sizeof(msqold));

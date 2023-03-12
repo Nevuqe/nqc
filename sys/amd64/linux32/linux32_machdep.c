@@ -59,7 +59,7 @@ __NQCID("$NQC$");
 
 #include <security/audit/audit.h>
 
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32_util.h>
 #include <amd64/linux32/linux.h>
 #include <amd64/linux32/linux32_proto.h>
 #include <compat/linux/linux_emul.h>
@@ -122,11 +122,11 @@ linux_execve(struct thread *td, struct linux_execve_args *args)
 	int error;
 
 	if (!LUSECONVPATH(td)) {
-		error = freebsd32_exec_copyin_args(&eargs, args->path, UIO_USERSPACE,
+		error = nqc32_exec_copyin_args(&eargs, args->path, UIO_USERSPACE,
 		    args->argp, args->envp);
 	} else {
 		LCONVPATHEXIST(args->path, &path);
-		error = freebsd32_exec_copyin_args(&eargs, path, UIO_SYSSPACE,
+		error = nqc32_exec_copyin_args(&eargs, path, UIO_SYSSPACE,
 		    args->argp, args->envp);
 		LFREEPATH(path);
 	}

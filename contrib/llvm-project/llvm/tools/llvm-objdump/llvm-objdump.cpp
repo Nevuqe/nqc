@@ -2888,7 +2888,7 @@ int main(int argc, char **argv) {
     //
     // llvm-objdump -> objdump
     // llvm-otool-10.exe -> otool
-    // powerpc64-unknown-freebsd13-objdump -> objdump
+    // powerpc64-unknown-nqc13-objdump -> objdump
     auto I = Stem.rfind_insensitive(Tool);
     return I != StringRef::npos &&
            (I + Tool.size() == Stem.size() || !isAlnum(Stem[I + Tool.size()]));

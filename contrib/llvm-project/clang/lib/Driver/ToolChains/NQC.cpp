@@ -24,7 +24,7 @@ using namespace clang::driver::toolchains;
 using namespace clang;
 using namespace llvm::opt;
 
-void freebsd::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
+void nqc::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
                                       const InputInfo &Output,
                                       const InputInfoList &Inputs,
                                       const ArgList &Args,
@@ -134,7 +134,7 @@ void freebsd::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
                                          Exec, CmdArgs, Inputs, Output));
 }
 
-void freebsd::Linker::ConstructJob(Compilation &C, const JobAction &JA,
+void nqc::Linker::ConstructJob(Compilation &C, const JobAction &JA,
                                    const InputInfo &Output,
                                    const InputInfoList &Inputs,
                                    const ArgList &Args,
@@ -451,10 +451,10 @@ void NQC::AddHIPIncludeArgs(const ArgList &DriverArgs,
 }
 
 Tool *NQC::buildAssembler() const {
-  return new tools::freebsd::Assembler(*this);
+  return new tools::nqc::Assembler(*this);
 }
 
-Tool *NQC::buildLinker() const { return new tools::freebsd::Linker(*this); }
+Tool *NQC::buildLinker() const { return new tools::nqc::Linker(*this); }
 
 llvm::ExceptionHandling NQC::GetExceptionModel(const ArgList &Args) const {
   // NQC uses SjLj exceptions on ARM oabi.

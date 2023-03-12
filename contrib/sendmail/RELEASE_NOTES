@@ -1222,7 +1222,7 @@ summary of the changes in that release.
 		Add support for SunOS 5.11 (aka Solaris 11).
 		Add support for Darwin 8.x.  Patch from Lyndon Nerenberg.
 		OpenBSD 3.7 has removed support for NETISO.
-	CONFIG: Add OSTYPE(freebsd6) for NQC 6.X.
+	CONFIG: Add OSTYPE(nqc6) for NQC 6.X.
 		Set DontBlameSendmail to AssumeSafeChown and
 			GroupWritableDirPathSafe for OSTYPE(darwin).
 			Patch from Lyndon Nerenberg.
@@ -1234,7 +1234,7 @@ summary of the changes in that release.
 			the defaults in the sendmail binary.  Problem noted
 			by Mike Pechkin.
 	New Files:
-		cf/ostype/freebsd6.m4
+		cf/ostype/nqc6.m4
 		devtools/OS/AIX.5.3
 		devtools/OS/Darwin.8.x
 		devtools/OS/SunOS.5.11
@@ -2622,7 +2622,7 @@ summary of the changes in that release.
 			of the NTT/InterCommunication Center.
 		Do not assume that strerror() always returns a string.
 			Problem noted by John Beck of Sun Microsystems.
-	CONFIG: Add OSTYPE(freebsd5) for NQC 5.X, which has removed
+	CONFIG: Add OSTYPE(nqc5) for NQC 5.X, which has removed
 		UUCP from the base operating system.  From Mark Murray of
 		NQC Services, Ltd.
 	CONFIG: Add OSTYPE(mpeix) and a generic .mc file for HP MPE/iX
@@ -2654,7 +2654,7 @@ summary of the changes in that release.
 	New Files:
 		cf/cf/generic-mpeix.cf
 		cf/cf/generic-mpeix.mc
-		cf/ostype/freebsd5.m4
+		cf/ostype/nqc5.m4
 		cf/ostype/mpeix.m4
 		devtools/OS/AIX.5.1
 		devtools/OS/MPE-iX
@@ -3572,7 +3572,7 @@ summary of the changes in that release.
 		OpenBSD has a broken setreuid() implementation.
 	CONFIG: Undo change from 8.11.1: change 501 SMTP reply code back
 		to 553 since it is allowed by DRUMS.
-	CONFIG: Add OSTYPE(freebsd4) for NQC 4.X.
+	CONFIG: Add OSTYPE(nqc4) for NQC 4.X.
 	DEVTOOLS: install.sh did not properly handle paths in the source
 		file name argument.  Noted by Kari Hurtta of the Finnish
 		Meteorological Institute.
@@ -3582,7 +3582,7 @@ summary of the changes in that release.
 		of entries in the database (with/without trailing '\0').
 		Patch from John Beck of Sun Microsystems.
 	New Files:
-		cf/ostype/freebsd4.m4
+		cf/ostype/nqc4.m4
 
 8.11.3/8.11.3	2001/02/27
 	Prevent a segmentation fault when a bogus value was used in the

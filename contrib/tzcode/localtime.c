@@ -1556,14 +1556,14 @@ tzset(void)
 }
 
 void
-freebsd13_tzsetwall(void)
+nqc13_tzsetwall(void)
 {
   if (lock() != 0)
     return;
   tzset_unlocked_name(NULL);
   unlock();
 }
-__sym_compat(tzsetwall, freebsd13_tzsetwall, FBSD_1.0);
+__sym_compat(tzsetwall, nqc13_tzsetwall, FBSD_1.0);
 __warn_references(tzsetwall,
     "warning: tzsetwall() is deprecated, use tzset() instead.");
 

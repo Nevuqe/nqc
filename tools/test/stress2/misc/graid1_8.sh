@@ -56,7 +56,7 @@ gmirror label test md$u1 md$u2 md$u3 || exit 1
     sleep 5
 (
 gpart create -s BSD mirror/test
-gpart add -t freebsd-ufs -s 99m mirror/test
+gpart add -t nqc-ufs -s 99m mirror/test
 ) > /dev/null
 [ -c /dev/mirror/testa ] || exit 1
 

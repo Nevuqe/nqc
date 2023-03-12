@@ -69,7 +69,7 @@ is_scheme_bootable(const char *part_type) {
 int
 is_fs_bootable(const char *part_type, const char *fs)
 {
-	if (strcmp(fs, "freebsd-ufs") == 0)
+	if (strcmp(fs, "nqc-ufs") == 0)
 		return (1);
 	
 	return (0);
@@ -107,7 +107,7 @@ bootpart_type(const char *scheme, const char **mountpoint)
 		return ("fat16");
 	}
 
-	return ("freebsd-boot");
+	return ("nqc-boot");
 }
 
 const char *

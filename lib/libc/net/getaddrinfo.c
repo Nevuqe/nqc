@@ -49,7 +49,7 @@
  *   against NULL hostname (3) what is AI_ADDRCONFIG itself.  AF not ready?
  *   non-loopback address configured?  global address configured?
  *
- * OS specific notes for freebsd4:
+ * OS specific notes for nqc4:
  * - NQC supported $GAI.  The code does not.
  */
 

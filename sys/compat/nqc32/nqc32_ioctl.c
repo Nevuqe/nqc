@@ -50,16 +50,16 @@ __NQCID("$NQC$");
 #include <sys/systm.h>
 #include <sys/uio.h>
 
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_ioctl.h>
-#include <compat/freebsd32/freebsd32_misc.h>
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_ioctl.h>
+#include <compat/nqc32/nqc32_misc.h>
+#include <compat/nqc32/nqc32_proto.h>
 
 CTASSERT(sizeof(struct mem_range_op32) == 12);
 
 static int
-freebsd32_ioctl_memrange(struct thread *td,
-    struct freebsd32_ioctl_args *uap, struct file *fp)
+nqc32_ioctl_memrange(struct thread *td,
+    struct nqc32_ioctl_args *uap, struct file *fp)
 {
 	struct mem_range_op mro;
 	struct mem_range_op32 mro32;
@@ -89,8 +89,8 @@ freebsd32_ioctl_memrange(struct thread *td,
 }
 
 static int
-freebsd32_ioctl_barmmap(struct thread *td,
-    struct freebsd32_ioctl_args *uap, struct file *fp)
+nqc32_ioctl_barmmap(struct thread *td,
+    struct nqc32_ioctl_args *uap, struct file *fp)
 {
 	struct pci_bar_mmap32 pbm32;
 	struct pci_bar_mmap pbm;
@@ -123,8 +123,8 @@ freebsd32_ioctl_barmmap(struct thread *td,
 }
 
 static int
-freebsd32_ioctl_sg(struct thread *td,
-    struct freebsd32_ioctl_args *uap, struct file *fp)
+nqc32_ioctl_sg(struct thread *td,
+    struct nqc32_ioctl_args *uap, struct file *fp)
 {
 	struct sg_io_hdr io;
 	struct sg_io_hdr32 io32;
@@ -188,7 +188,7 @@ freebsd32_ioctl_sg(struct thread *td,
 }
 
 int
-freebsd32_ioctl(struct thread *td, struct freebsd32_ioctl_args *uap)
+nqc32_ioctl(struct thread *td, struct nqc32_ioctl_args *uap)
 {
 	struct ioctl_args ap /*{
 		int	fd;
@@ -210,15 +210,15 @@ freebsd32_ioctl(struct thread *td, struct freebsd32_ioctl_args *uap)
 	switch (uap->com) {
 	case MEMRANGE_GET32:	/* FALLTHROUGH */
 	case MEMRANGE_SET32:
-		error = freebsd32_ioctl_memrange(td, uap, fp);
+		error = nqc32_ioctl_memrange(td, uap, fp);
 		break;
 
 	case SG_IO_32:
-		error = freebsd32_ioctl_sg(td, uap, fp);
+		error = nqc32_ioctl_sg(td, uap, fp);
 		break;
 
 	case PCIOCBARMMAP_32:
-		error = freebsd32_ioctl_barmmap(td, uap, fp);
+		error = nqc32_ioctl_barmmap(td, uap, fp);
 		break;
 
 	default:

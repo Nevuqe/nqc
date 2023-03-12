@@ -42,7 +42,7 @@ extern	u_int	cyrix_did;
 extern	int	has_f00f_bug;
 #endif
 #ifdef COMPAT_NQC4
-extern	int	szfreebsd4_sigcode;
+extern	int	sznqc4_sigcode;
 #endif
 #ifdef COMPAT_43
 extern	int	szosigcode;

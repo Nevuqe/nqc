@@ -178,7 +178,7 @@ uart_cpu_fdt_probe(struct uart_class **classp, bus_space_tag_t *bst,
 {
 	const char *propnames[] = {"stdout-path", "linux,stdout-path", "stdout",
 	    "stdin-path", "stdin", NULL};
-	const char *propnames_dbgport[] = {"freebsd,debug-path", NULL};
+	const char *propnames_dbgport[] = {"nqc,debug-path", NULL};
 	const char **name;
 	struct uart_class *class;
 	phandle_t node, chosen;

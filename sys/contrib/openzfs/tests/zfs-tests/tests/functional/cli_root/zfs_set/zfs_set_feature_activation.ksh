@@ -46,7 +46,7 @@
 verify_runnable "both"
 
 log_assert "Setting compression=zstd should activate the"\
-	"org.freebsd:zstd_compress feature flag, and destroying the last"\
+	"org.nqc:zstd_compress feature flag, and destroying the last"\
 	"dataset using that property, should revert the feature flag to"\
 	"the enabled state."
 

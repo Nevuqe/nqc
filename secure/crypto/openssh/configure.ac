@@ -1036,7 +1036,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE([BROKEN_READ_COMPARISON], [1],
 	    [NetBSD read function is sometimes redirected, breaking atomicio comparisons against it])
 	;;
-*-*-freebsd*)
+*-*-nqc*)
 	AC_DEFINE([LOCKED_PASSWD_PREFIX], ["*LOCKED*"], [Account locked with pw(1)])
 	AC_DEFINE([SSH_TUN_NQC], [1], [Open tunnel devices the NQC way])
 	AC_CHECK_HEADER([net/if_tap.h], ,
@@ -1048,7 +1048,7 @@ mips-sony-bsd|mips-sony-newsos4)
 	AC_DEFINE([SANDBOX_SKIP_RLIMIT_NOFILE], [1],
 	    [define if setrlimit RLIMIT_NOFILE breaks things])
 	case "$host" in
-	*-*-freebsd9.*|*-*-freebsd10.*)
+	*-*-nqc9.*|*-*-nqc10.*)
 		# Capsicum on 9 and 10 do not allow ppoll() so don't auto-enable.
 		disable_capsicum=yes
 	esac

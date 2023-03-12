@@ -22,7 +22,7 @@ stripfiles="Makefile README aslcompiler.y accygwin.h acdragonfly.h	\
 	acdragonflyex.h acefi.h acefiex.h achaiku.h acintel.h aclinux.h	\
 	aclinuxex.h acmacosx.h acmsvc.h acmsvcex.h acnetbsd.h acos2.h	\
 	acqnx.h acwin.h acwin64.h acwinex.h new_table.txt osbsdtbl.c	\
-	osefitbl.c osefixf.c osfreebsdtbl.c oslinuxtbl.c osunixdir.c	\
+	osefitbl.c osefixf.c osnqctbl.c oslinuxtbl.c osunixdir.c	\
 	osunixmap.c oswindir.c oswintbl.c oswinxf.c readme.txt utclib.c	\
 	utprint.c"
 
@@ -35,10 +35,10 @@ src_headers="acapps.h acbuffer.h acclib.h accommon.h acconfig.h		\
 	acrestyp.h acstruct.h actables.h actbinfo.h actbl.h actbl1.h	\
 	actbl2.h actbl3.h actypes.h acutils.h acuuid.h amlcode.h	\
 	amlresrc.h platform/acenv.h platform/acenvex.h			\
-	platform/acfreebsd.h platform/acgcc.h"
+	platform/acnqc.h platform/acgcc.h"
 comp_headers="aslcompiler.h asldefine.h aslglobal.h aslmessages.h	\
 	aslsupport.l asltypes.h dtcompiler.h dttemplate.h preprocess.h"
-platform_headers="acfreebsd.h acgcc.h"
+platform_headers="acnqc.h acgcc.h"
 
 # pre-clean
 echo pre-clean

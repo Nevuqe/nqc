@@ -1437,7 +1437,7 @@ iscsi_pdu_handle_reject(struct icl_pdu *response)
 
 static int
 iscsi_ioctl_daemon_wait(struct iscsi_softc *sc,
-    struct iscsi_daemon_request *request, bool freebsd13)
+    struct iscsi_daemon_request *request, bool nqc13)
 {
 	struct iscsi_session *is;
 	int error;
@@ -1486,7 +1486,7 @@ iscsi_ioctl_daemon_wait(struct iscsi_softc *sc,
 		    sizeof(request->idr_conf));
 
 #ifdef COMPAT_NQC13
-		if (freebsd13) {
+		if (nqc13) {
 			struct icl_drv_limits idl;
 			struct iscsi_daemon_request13 *request13;
 

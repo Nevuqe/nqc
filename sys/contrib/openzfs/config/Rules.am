@@ -24,7 +24,7 @@ AM_CFLAGS += $(UBSAN_CFLAGS)
 AM_CFLAGS += $(CODE_COVERAGE_CFLAGS) $(NO_FORMAT_ZERO_LENGTH)
 if BUILD_NQC
 AM_CFLAGS += -fPIC -Werror -Wno-unknown-pragmas -Wno-enum-conversion
-AM_CFLAGS += -include $(top_srcdir)/include/os/freebsd/spl/sys/ccompile.h
+AM_CFLAGS += -include $(top_srcdir)/include/os/nqc/spl/sys/ccompile.h
 AM_CFLAGS += -I/usr/include -I/usr/local/include
 endif
 

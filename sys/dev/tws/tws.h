@@ -4,7 +4,7 @@
  * Copyright (c) 2010, LSI Corp.
  * All rights reserved.
  * Author : Manjunath Ranganathaiah
- * Support: freebsdraid@lsi.com
+ * Support: nqcraid@lsi.com
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

@@ -1513,13 +1513,13 @@ sys_close_range(struct thread *td, struct close_range_args *uap)
  * Close open file descriptors.
  */
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd12_closefrom_args {
+struct nqc12_closefrom_args {
 	int	lowfd;
 };
 #endif
 /* ARGSUSED */
 int
-freebsd12_closefrom(struct thread *td, struct freebsd12_closefrom_args *uap)
+nqc12_closefrom(struct thread *td, struct nqc12_closefrom_args *uap)
 {
 	u_int lowfd;
 
@@ -1563,16 +1563,16 @@ ofstat(struct thread *td, struct ofstat_args *uap)
 
 #if defined(COMPAT_NQC11)
 int
-freebsd11_fstat(struct thread *td, struct freebsd11_fstat_args *uap)
+nqc11_fstat(struct thread *td, struct nqc11_fstat_args *uap)
 {
 	struct stat sb;
-	struct freebsd11_stat osb;
+	struct nqc11_stat osb;
 	int error;
 
 	error = kern_fstat(td, uap->fd, &sb);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtstat(&sb, &osb);
+	error = nqc11_cvtstat(&sb, &osb);
 	if (error == 0)
 		error = copyout(&osb, uap->sb, sizeof(osb));
 	return (error);
@@ -1635,14 +1635,14 @@ kern_fstat(struct thread *td, int fd, struct stat *sbp)
  * Return status information about a file descriptor.
  */
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd11_nfstat_args {
+struct nqc11_nfstat_args {
 	int	fd;
 	struct	nstat *sb;
 };
 #endif
 /* ARGSUSED */
 int
-freebsd11_nfstat(struct thread *td, struct freebsd11_nfstat_args *uap)
+nqc11_nfstat(struct thread *td, struct nqc11_nfstat_args *uap)
 {
 	struct nstat nub;
 	struct stat ub;
@@ -1651,7 +1651,7 @@ freebsd11_nfstat(struct thread *td, struct freebsd11_nfstat_args *uap)
 	error = kern_fstat(td, uap->fd, &ub);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtnstat(&ub, &nub);
+	error = nqc11_cvtnstat(&ub, &nub);
 	if (error != 0)
 		error = copyout(&nub, uap->sb, sizeof(nub));
 	return (error);

@@ -61,7 +61,7 @@ endif
 
 ifdef CONFIG_DRIVER_BSD
 ifndef CONFIG_L2_PACKET
-CONFIG_L2_PACKET=freebsd
+CONFIG_L2_PACKET=nqc
 endif
 DRV_CFLAGS += -DCONFIG_DRIVER_BSD
 DRV_OBJS += ../src/drivers/driver_bsd.o
@@ -71,7 +71,7 @@ endif
 
 ifdef CONFIG_DRIVER_OPENBSD
 ifndef CONFIG_L2_PACKET
-CONFIG_L2_PACKET=freebsd
+CONFIG_L2_PACKET=nqc
 endif
 DRV_CFLAGS += -DCONFIG_DRIVER_OPENBSD
 DRV_OBJS += ../src/drivers/driver_openbsd.o

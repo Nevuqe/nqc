@@ -75,7 +75,7 @@ struct osigframe {
 #endif
 #ifdef COMPAT_NQC4
 /* NQC 4.x */
-struct freebsd4_sigframe {
+struct nqc4_sigframe {
 	register_t	sf_signum;
 	register_t	sf_siginfo;	/* code or pointer to sf_si */
 	register_t	sf_ucontext;	/* points to sf_uc */
@@ -85,7 +85,7 @@ struct freebsd4_sigframe {
 		__siginfohandler_t	*sf_action;
 		__sighandler_t		*sf_handler;
 	} sf_ahu;
-	struct freebsd4_ucontext sf_uc;		/* = *sf_ucontext */
+	struct nqc4_ucontext sf_uc;		/* = *sf_ucontext */
 	siginfo_t	sf_si;		/* = *sf_siginfo (SA_SIGINFO case) */
 };
 #endif

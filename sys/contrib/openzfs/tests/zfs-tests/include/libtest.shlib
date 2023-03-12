@@ -853,7 +853,7 @@ function set_partition
 		if [[ -n $start ]]; then
 			start="-b $start"
 		fi
-		gpart add -t freebsd-zfs $start -s $size -i $index $disk
+		gpart add -t nqc-zfs $start -s $size -i $index $disk
 		if [[ $ret_val -ne 0 ]]; then
 			log_note "Failed to create partition $slicenum on $disk"
 			return 1

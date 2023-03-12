@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "lldb/Host/freebsd/HostInfoNQC.h"
+#include "lldb/Host/nqc/HostInfoNQC.h"
 #include "llvm/Support/FormatVariadic.h"
 #include <cstdio>
 #include <cstring>

@@ -63,8 +63,8 @@ __NQCID("$NQC$");
 #include <vm/vm_object.h>
 #include <vm/vm_extern.h>
 
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32_proto.h>
 #include <machine/fpu.h>
 #include <machine/psl.h>
 #include <machine/segments.h>

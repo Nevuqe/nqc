@@ -48,7 +48,7 @@ mdconfig -a -t swap -s 1g -u $mdstart
 set -e
 
 gpart create -s bsd md$mdstart
-gpart add -t freebsd-ufs md$mdstart
+gpart add -t nqc-ufs md$mdstart
 part=a
 newfs_msdos -F 32 -b 8192 /dev/md${mdstart}$part > /dev/null
 mkdir -p $mp1; chmod 777 $mp1

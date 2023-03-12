@@ -24,7 +24,7 @@ INCSDIR ?= ${INCDIR}
 
 STAGE_INCSDIR?= ${STAGE_OBJTOP}${INCSDIR}
 
-# accommodate folk used to freebsd
+# accommodate folk used to nqc
 INCGROUPS ?= ${INCSGROUPS:UINCS}
 INCGROUPS := ${INCGROUPS:O:u}
 

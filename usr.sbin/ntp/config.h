@@ -1579,15 +1579,15 @@
 
 /* canonical system (cpu-vendor-os) of where we should run */
 #if defined(__amd64__)
-#define STR_SYSTEM "amd64-undermydesk-freebsd"
+#define STR_SYSTEM "amd64-undermydesk-nqc"
 #elif defined(__aarch64__)
-#define STR_SYSTEM "arm64-undermydesk-freebsd"
+#define STR_SYSTEM "arm64-undermydesk-nqc"
 #elif defined(__arm__)
-#define STR_SYSTEM "arm-undermydesk-freebsd"
+#define STR_SYSTEM "arm-undermydesk-nqc"
 #elif defined(__riscv)
-#define STR_SYSTEM "riscv64-undermydesk-freebsd"
+#define STR_SYSTEM "riscv64-undermydesk-nqc"
 #else
-#define STR_SYSTEM "i386-undermydesk-freebsd"
+#define STR_SYSTEM "i386-undermydesk-nqc"
 #endif
 
 /* Does Xettimeofday take 1 arg? */

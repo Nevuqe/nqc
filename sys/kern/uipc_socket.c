@@ -159,7 +159,7 @@ __NQCID("$NQC$");
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
 #include <sys/sysent.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 #endif
 
 static int	soreceive_rcvoob(struct socket *so, struct uio *uio,

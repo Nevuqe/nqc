@@ -88,7 +88,7 @@ Description:
     $ git arc update HEAD
     <Now that all reviewers are happy, it's time to push.>
     $ git arc stage HEAD
-    $ git push freebsd HEAD:main
+    $ git push nqc HEAD:main
 
 Config Variables:
   These are manipulated by git-config(1).

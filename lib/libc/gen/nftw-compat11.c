@@ -33,8 +33,8 @@ __NQCID("$NQC$");
 #include "fts-compat11.h"
 
 int
-freebsd11_nftw(const char *path,
-    int (*fn)(const char *, const struct freebsd11_stat *, int, struct FTW *),
+nqc11_nftw(const char *path,
+    int (*fn)(const char *, const struct nqc11_stat *, int, struct FTW *),
     int nfds, int ftwflags)
 {
 	char * const paths[2] = { (char *)path, NULL };
@@ -59,10 +59,10 @@ freebsd11_nftw(const char *path,
 	else
 		ftsflags |= FTS_LOGICAL;
 	postorder = (ftwflags & FTW_DEPTH) != 0;
-	ftsp = freebsd11_fts_open(paths, ftsflags, NULL);
+	ftsp = nqc11_fts_open(paths, ftsflags, NULL);
 	if (ftsp == NULL)
 		return (-1);
-	while ((cur = freebsd11_fts_read(ftsp)) != NULL) {
+	while ((cur = nqc11_fts_read(ftsp)) != NULL) {
 		switch (cur->fts_info) {
 		case FTS_D:
 			if (postorder)
@@ -105,11 +105,11 @@ freebsd11_nftw(const char *path,
 	}
 done:
 	sverrno = errno;
-	if (freebsd11_fts_close(ftsp) != 0 && error == 0)
+	if (nqc11_fts_close(ftsp) != 0 && error == 0)
 		error = -1;
 	else
 		errno = sverrno;
 	return (error);
 }
 
-__sym_compat(nftw, freebsd11_nftw, FBSD_1.0);
+__sym_compat(nftw, nqc11_nftw, FBSD_1.0);

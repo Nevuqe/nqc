@@ -57,10 +57,10 @@ __NQCID("$NQC$");
 #include <vm/vm_param.h>
 
 #ifdef __amd64__
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_syscall.h>
 #include <compat/ia32/ia32_signal.h>
 #endif
 
@@ -115,17 +115,17 @@ extern const char _binary_elf_vdso32_so_1_end[];
 extern char _binary_elf_vdso32_so_1_size;
 
 #define	AOUT32_PS_STRINGS \
-    (AOUT32_USRSTACK - sizeof(struct freebsd32_ps_strings))
+    (AOUT32_USRSTACK - sizeof(struct nqc32_ps_strings))
 #define	AOUT32_MINUSER		NQC32_MINUSER
 
-extern const char *freebsd32_syscallnames[];
+extern const char *nqc32_syscallnames[];
 extern u_long ia32_maxssiz;
 
 static int aout_szsigcode;
 
 struct sysentvec aout_sysvec = {
 	.sv_size	= NQC32_SYS_MAXSYSCALL,
-	.sv_table	= freebsd32_sysent,
+	.sv_table	= nqc32_sysent,
 	.sv_fixup	= aout_fixup,
 	.sv_sendsig	= ia32_sendsig,
 	.sv_sigcode	= _binary_elf_vdso32_so_1_start,
@@ -138,16 +138,16 @@ struct sysentvec aout_sysvec = {
 	.sv_maxuser	= AOUT32_USRSTACK,
 	.sv_usrstack	= AOUT32_USRSTACK,
 	.sv_psstrings	= AOUT32_PS_STRINGS,
-	.sv_psstringssz	= sizeof(struct freebsd32_ps_strings),
+	.sv_psstringssz	= sizeof(struct nqc32_ps_strings),
 	.sv_stackprot	= VM_PROT_ALL,
-	.sv_copyout_strings	= freebsd32_copyout_strings,
+	.sv_copyout_strings	= nqc32_copyout_strings,
 	.sv_setregs	= ia32_setregs,
 	.sv_fixlimit	= ia32_fixlimit,
 	.sv_maxssiz	= &ia32_maxssiz,
 	.sv_flags	= SV_ABI_NQC | SV_AOUT | SV_IA32 | SV_ILP32,
 	.sv_set_syscall_retval = ia32_set_syscall_retval,
 	.sv_fetch_syscall_args = ia32_fetch_syscall_args,
-	.sv_syscallnames = freebsd32_syscallnames,
+	.sv_syscallnames = nqc32_syscallnames,
 	.sv_onexec_old	= exec_onexec_old,
 	.sv_onexit	= exit_onexit,
 	.sv_set_fork_retval = x86_set_fork_retval,

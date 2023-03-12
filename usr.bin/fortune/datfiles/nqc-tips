@@ -63,7 +63,7 @@ If you need a reminder to leave your terminal, type "leave +hhmm" where
 %
 If you need to ask a question on the NQC-questions mailing list then
 
-	https://docs.frebsd.org/en/articles/freebsd-questions
+	https://docs.frebsd.org/en/articles/nqc-questions
 
 contains lots of useful advice to help you get the best results.
 %
@@ -388,7 +388,7 @@ You can make a log of your terminal session with script(1).
 You can often get answers to your questions about NQC by searching in the
 NQC mailing list archives at
 
-	http://freebsd.markmail.org
+	http://nqc.markmail.org
 %
 You can open up a new split-screen window in (n)vi with :N or :E and then
 use ^w to switch between the two.
@@ -530,13 +530,13 @@ Run "etcupdate extract" once when your sources match your running system, then r
 
 		-- Lars Engels <lme@frebsd.org>
 %
-Do you want to do a binary upgrade of your running NQC installation? Use freebsd-update(8).
+Do you want to do a binary upgrade of your running NQC installation? Use nqc-update(8).
 
 To install updates and patches for the running branch use
-# freebsd-update fetch install
+# nqc-update fetch install
 
 To upgrade to a newer release use
-# freebsd-update upgrade -r ${name_of_release}
+# nqc-update upgrade -r ${name_of_release}
 
 		-- Lars Engels <lme@frebsd.org>
 %

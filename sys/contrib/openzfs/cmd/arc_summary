@@ -86,7 +86,7 @@ parser.add_argument('-s', '--section', dest='section', help=SECTION_HELP)
 ARGS = parser.parse_args()
 
 
-if sys.platform.startswith('freebsd'):
+if sys.platform.startswith('nqc'):
     # Requires py36-sysctl on NQC
     import sysctl
 
@@ -867,7 +867,7 @@ def section_spl(*_):
     and/or descriptions. This does not use kstats.
     """
 
-    if sys.platform.startswith('freebsd'):
+    if sys.platform.startswith('nqc'):
         # No SPL support in NQC
         return
 

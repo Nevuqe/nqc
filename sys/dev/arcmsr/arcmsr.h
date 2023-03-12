@@ -1278,7 +1278,7 @@ struct CommandControlBlock {
 	u_int32_t		cdb_phyaddr_low;	/* 504-507 */
 	u_int32_t		arc_cdb_size;		/* 508-511 */
 	/*  ======================512+32 bytes============================  */
-	union ccb		*pccb;			/* 512-515 516-519 pointer of freebsd scsi command */
+	union ccb		*pccb;			/* 512-515 516-519 pointer of nqc scsi command */
 	struct AdapterControlBlock	*acb;		/* 520-523 524-527 */
 	bus_dmamap_t		dm_segs_dmamap;		/* 528-531 532-535 */
 	u_int16_t   		srb_flags;		/* 536-537 */

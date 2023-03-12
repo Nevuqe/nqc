@@ -120,13 +120,13 @@ typedef uint_fast64_t Char;
 
 static int	 compare(const void *, const void *);
 static int	 g_Ctoc(const Char *, char *, size_t);
-static int	 g_lstat(Char *, struct freebsd11_stat *, glob11_t *);
+static int	 g_lstat(Char *, struct nqc11_stat *, glob11_t *);
 static DIR	*g_opendir(Char *, glob11_t *);
 static const Char *g_strchr(const Char *, wchar_t);
 #ifdef notdef
 static Char	*g_strcat(Char *, const Char *);
 #endif
-static int	 g_stat(Char *, struct freebsd11_stat *, glob11_t *);
+static int	 g_stat(Char *, struct nqc11_stat *, glob11_t *);
 static int	 glob0(const Char *, glob11_t *, struct glob_limit *,
     const char *);
 static int	 glob1(Char *, glob11_t *, struct glob_limit *);
@@ -153,7 +153,7 @@ static void	 qprintf(const char *, Char *);
 #endif
 
 int
-freebsd11_glob(const char * __restrict pattern, int flags,
+nqc11_glob(const char * __restrict pattern, int flags,
 	 int (*errfunc)(const char *, int), glob11_t * __restrict pglob)
 {
 	struct glob_limit limit = { 0, 0, 0, 0, 0 };
@@ -614,7 +614,7 @@ static int
 glob2(Char *pathbuf, Char *pathend, Char *pathend_last, Char *pattern,
       glob11_t *pglob, struct glob_limit *limit)
 {
-	struct freebsd11_stat sb;
+	struct nqc11_stat sb;
 	Char *p, *q;
 	int anymeta;
 
@@ -685,12 +685,12 @@ glob3(Char *pathbuf, Char *pathend, Char *pathend_last,
       Char *pattern, Char *restpattern,
       glob11_t *pglob, struct glob_limit *limit)
 {
-	struct freebsd11_dirent *dp;
+	struct nqc11_dirent *dp;
 	DIR *dirp;
 	int err, too_long, saverrno, saverrno2;
 	char buf[MAXPATHLEN + MB_LEN_MAX - 1];
 
-	struct freebsd11_dirent *(*readdirfunc)(DIR *);
+	struct nqc11_dirent *(*readdirfunc)(DIR *);
 
 	if (pathend > pathend_last) {
 		errno = E2BIG;
@@ -719,9 +719,9 @@ glob3(Char *pathbuf, Char *pathend, Char *pathend_last,
 	/* pglob->gl_readdir takes a void *, fix this manually */
 	if (pglob->gl_flags & GLOB_ALTDIRFUNC)
 		readdirfunc =
-		    (struct freebsd11_dirent *(*)(DIR *))pglob->gl_readdir;
+		    (struct nqc11_dirent *(*)(DIR *))pglob->gl_readdir;
 	else
-		readdirfunc = freebsd11_readdir;
+		readdirfunc = nqc11_readdir;
 
 	errno = 0;
 	/* Search directory for matching names. */
@@ -945,7 +945,7 @@ match(Char *name, Char *pat, Char *patend)
 
 /* Free allocated data belonging to a glob11_t structure. */
 void
-freebsd11_globfree(glob11_t *pglob)
+nqc11_globfree(glob11_t *pglob)
 {
 	size_t i;
 	char **pp;
@@ -981,7 +981,7 @@ g_opendir(Char *str, glob11_t *pglob)
 }
 
 static int
-g_lstat(Char *fn, struct freebsd11_stat *sb, glob11_t *pglob)
+g_lstat(Char *fn, struct nqc11_stat *sb, glob11_t *pglob)
 {
 	char buf[MAXPATHLEN + MB_LEN_MAX - 1];
 
@@ -991,11 +991,11 @@ g_lstat(Char *fn, struct freebsd11_stat *sb, glob11_t *pglob)
 	}
 	if (pglob->gl_flags & GLOB_ALTDIRFUNC)
 		return((*pglob->gl_lstat)(buf, sb));
-	return (freebsd11_lstat(buf, sb));
+	return (nqc11_lstat(buf, sb));
 }
 
 static int
-g_stat(Char *fn, struct freebsd11_stat *sb, glob11_t *pglob)
+g_stat(Char *fn, struct nqc11_stat *sb, glob11_t *pglob)
 {
 	char buf[MAXPATHLEN + MB_LEN_MAX - 1];
 
@@ -1005,7 +1005,7 @@ g_stat(Char *fn, struct freebsd11_stat *sb, glob11_t *pglob)
 	}
 	if (pglob->gl_flags & GLOB_ALTDIRFUNC)
 		return ((*pglob->gl_stat)(buf, sb));
-	return (freebsd11_stat(buf, sb));
+	return (nqc11_stat(buf, sb));
 }
 
 static const Char *
@@ -1087,5 +1087,5 @@ qprintf(const char *str, Char *s)
 }
 #endif
 
-__sym_compat(glob, freebsd11_glob, FBSD_1.0);
-__sym_compat(globfree, freebsd11_globfree, FBSD_1.0);
+__sym_compat(glob, nqc11_glob, FBSD_1.0);
+__sym_compat(globfree, nqc11_globfree, FBSD_1.0);

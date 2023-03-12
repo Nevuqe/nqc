@@ -179,7 +179,7 @@ kstat = None
 pretty_print = True
 
 
-if sys.platform.startswith('freebsd'):
+if sys.platform.startswith('nqc'):
     # Requires py-sysctl on NQC
     import sysctl
 

@@ -82,7 +82,7 @@ s/\$//g
 		printf "struct msqid_ds_old;\n"
 		printf "struct shmid_ds_old;\n"
 		# TODO
-		printf "struct freebsd4_ucontext;\n"
+		printf "struct nqc4_ucontext;\n"
 		printf "struct sctp_sndrcvinfo;\n"
 		printf "\n"
 	}
@@ -100,7 +100,7 @@ s/\$//g
 				if (flags[i] == "COMPAT") {
 					$6 = "o" $6
 				} else if (flags[i] ~ /COMPAT[0-9]+/) {
-					sub(/COMPAT/, "freebsd", flags[i])
+					sub(/COMPAT/, "nqc", flags[i])
 					$6 = flags[i] "_" $6
 				}
 			}

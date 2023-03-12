@@ -38,12 +38,12 @@ __NQCID("$NQC$");
 
 #define	SPECNAMELEN_COMPAT12	63
 
-struct freebsd11_ptsstat {
+struct nqc11_ptsstat {
 	uint32_t	dev;
 	char		devname[SPECNAMELEN_COMPAT12 + 1];
 };
 
-struct freebsd11_vnstat {
+struct nqc11_vnstat {
 	uint64_t	vn_fileid;
 	uint64_t	vn_size;
 	char		*vn_mntdir;
@@ -53,16 +53,16 @@ struct freebsd11_vnstat {
 	uint16_t	vn_mode;
 	char		vn_devname[SPECNAMELEN_COMPAT12 + 1];
 };
-struct freebsd11_semstat {
+struct nqc11_semstat {
 	uint32_t	value;
 	uint16_t	mode;
 };
-struct freebsd11_shmstat {
+struct nqc11_shmstat {
 	uint64_t	size;
 	uint16_t	mode;
 };
 
-struct freebsd11_sockstat {
+struct nqc11_sockstat {
 	uint64_t	inp_ppcb;
 	uint64_t	so_addr;
 	uint64_t	so_pcb;
@@ -77,7 +77,7 @@ struct freebsd11_sockstat {
 	char		dname[32];
 };
 
-struct freebsd12_vnstat {
+struct nqc12_vnstat {
 	uint64_t	vn_fileid;
 	uint64_t	vn_size;
 	uint64_t	vn_dev;
@@ -87,31 +87,31 @@ struct freebsd12_vnstat {
 	uint16_t	vn_mode;
 	char		vn_devname[SPECNAMELEN_COMPAT12 + 1];
 };
-struct freebsd12_ptsstat {
+struct nqc12_ptsstat {
 	uint64_t	dev;
 	char		devname[SPECNAMELEN_COMPAT12 + 1];
 };
 
-int	freebsd11_procstat_get_pts_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_ptsstat *pts, char *errbuf);
-int	freebsd12_procstat_get_pts_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd12_ptsstat *pts_compat, char *errbuf);
-int	freebsd11_procstat_get_sem_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_semstat *sem, char *errbuf);
-int	freebsd11_procstat_get_shm_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_shmstat *shm, char *errbuf);
-int	freebsd11_procstat_get_socket_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_sockstat *sock, char *errbuf);
-int	freebsd11_procstat_get_vnode_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_vnstat *vn, char *errbuf);
-int	freebsd12_procstat_get_vnode_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd12_vnstat *vn_compat, char *errbuf);
+int	nqc11_procstat_get_pts_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_ptsstat *pts, char *errbuf);
+int	nqc12_procstat_get_pts_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc12_ptsstat *pts_compat, char *errbuf);
+int	nqc11_procstat_get_sem_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_semstat *sem, char *errbuf);
+int	nqc11_procstat_get_shm_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_shmstat *shm, char *errbuf);
+int	nqc11_procstat_get_socket_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_sockstat *sock, char *errbuf);
+int	nqc11_procstat_get_vnode_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_vnstat *vn, char *errbuf);
+int	nqc12_procstat_get_vnode_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc12_vnstat *vn_compat, char *errbuf);
 
 static const char trunc_name[] = "<TRUNCATED>";
 
 int
-freebsd11_procstat_get_pts_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_ptsstat *pts_compat, char *errbuf)
+nqc11_procstat_get_pts_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_ptsstat *pts_compat, char *errbuf)
 {
 	struct ptsstat pts;
 	int r;
@@ -129,8 +129,8 @@ freebsd11_procstat_get_pts_info(struct procstat *procstat,
 }
 
 int
-freebsd12_procstat_get_pts_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd12_ptsstat *pts_compat, char *errbuf)
+nqc12_procstat_get_pts_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc12_ptsstat *pts_compat, char *errbuf)
 {
 	struct ptsstat pts;
 	int r;
@@ -148,8 +148,8 @@ freebsd12_procstat_get_pts_info(struct procstat *procstat,
 }
 
 int
-freebsd11_procstat_get_sem_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_semstat *sem_compat, char *errbuf)
+nqc11_procstat_get_sem_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_semstat *sem_compat, char *errbuf)
 {
 	struct semstat sem;
 	int r;
@@ -163,8 +163,8 @@ freebsd11_procstat_get_sem_info(struct procstat *procstat,
 }
 
 int
-freebsd11_procstat_get_shm_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_shmstat *shm_compat, char *errbuf)
+nqc11_procstat_get_shm_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_shmstat *shm_compat, char *errbuf)
 {
 	struct shmstat shm;
 	int r;
@@ -178,8 +178,8 @@ freebsd11_procstat_get_shm_info(struct procstat *procstat,
 }
 
 int
-freebsd11_procstat_get_socket_info(struct procstat *procstat, struct filestat *fst,
-    struct freebsd11_sockstat *sock_compat, char *errbuf)
+nqc11_procstat_get_socket_info(struct procstat *procstat, struct filestat *fst,
+    struct nqc11_sockstat *sock_compat, char *errbuf)
 {
 	struct sockstat sock;
 	int r;
@@ -203,8 +203,8 @@ freebsd11_procstat_get_socket_info(struct procstat *procstat, struct filestat *f
 }
 
 int
-freebsd11_procstat_get_vnode_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd11_vnstat *vn_compat, char *errbuf)
+nqc11_procstat_get_vnode_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc11_vnstat *vn_compat, char *errbuf)
 {
 	struct vnstat vn;
 	int r;
@@ -228,8 +228,8 @@ freebsd11_procstat_get_vnode_info(struct procstat *procstat,
 }
 
 int
-freebsd12_procstat_get_vnode_info(struct procstat *procstat,
-    struct filestat *fst, struct freebsd12_vnstat *vn_compat, char *errbuf)
+nqc12_procstat_get_vnode_info(struct procstat *procstat,
+    struct filestat *fst, struct nqc12_vnstat *vn_compat, char *errbuf)
 {
 	struct vnstat vn;
 	int r;
@@ -252,13 +252,13 @@ freebsd12_procstat_get_vnode_info(struct procstat *procstat,
 	return (0);
 }
 
-__sym_compat(procstat_get_pts_info, freebsd11_procstat_get_pts_info, FBSD_1.2);
-__sym_compat(procstat_get_socket_info, freebsd11_procstat_get_socket_info,
+__sym_compat(procstat_get_pts_info, nqc11_procstat_get_pts_info, FBSD_1.2);
+__sym_compat(procstat_get_socket_info, nqc11_procstat_get_socket_info,
     FBSD_1.2);
-__sym_compat(procstat_get_vnode_info, freebsd11_procstat_get_vnode_info,
+__sym_compat(procstat_get_vnode_info, nqc11_procstat_get_vnode_info,
     FBSD_1.2);
-__sym_compat(procstat_get_sem_info, freebsd11_procstat_get_sem_info, FBSD_1.3);
-__sym_compat(procstat_get_shm_info, freebsd11_procstat_get_shm_info, FBSD_1.3);
-__sym_compat(procstat_get_pts_info, freebsd12_procstat_get_pts_info, FBSD_1.5);
-__sym_compat(procstat_get_vnode_info, freebsd12_procstat_get_vnode_info,
+__sym_compat(procstat_get_sem_info, nqc11_procstat_get_sem_info, FBSD_1.3);
+__sym_compat(procstat_get_shm_info, nqc11_procstat_get_shm_info, FBSD_1.3);
+__sym_compat(procstat_get_pts_info, nqc12_procstat_get_pts_info, FBSD_1.5);
+__sym_compat(procstat_get_vnode_info, nqc12_procstat_get_vnode_info,
     FBSD_1.5);

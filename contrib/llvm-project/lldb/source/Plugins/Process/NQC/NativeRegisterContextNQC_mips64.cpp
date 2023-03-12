@@ -15,7 +15,7 @@
 #include "lldb/Utility/Status.h"
 
 #include "Plugins/Process/NQC/NativeProcessNQC.h"
-#include "Plugins/Process/Utility/lldb-mips-freebsd-register-enums.h"
+#include "Plugins/Process/Utility/lldb-mips-nqc-register-enums.h"
 
 // clang-format off
 #include <sys/param.h>

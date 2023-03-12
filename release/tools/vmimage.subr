@@ -235,7 +235,7 @@ vm_create_disk() {
 	local BOOTFILES BOOTPARTSOFFSET FSPARTTYPE X86GPTBOOTFILE
 
 	if [ -z "${NOSWAP}" ]; then
-		SWAPOPT="-p freebsd-swap/swapfs::${SWAPSIZE}"
+		SWAPOPT="-p nqc-swap/swapfs::${SWAPSIZE}"
 	fi
 
 	if [ -n "${VM_BOOTPARTSOFFSET}" ]; then
@@ -244,11 +244,11 @@ vm_create_disk() {
 
 	case "${VMFS}" in
 	ufs)
-		FSPARTTYPE=freebsd-ufs
+		FSPARTTYPE=nqc-ufs
 		X86GPTBOOTFILE=i386/gptboot/gptboot
 		;;
 	zfs)
-		FSPARTTYPE=freebsd-zfs
+		FSPARTTYPE=nqc-zfs
 		X86GPTBOOTFILE=i386/gptzfsboot/gptzfsboot
 		;;
 	*)
@@ -270,7 +270,7 @@ vm_create_disk() {
 		amd64:amd64 | i386:i386)
 			ESP=yes
 			BOOTPARTS="-b ${BOOTFILES}/i386/pmbr/pmbr \
-				   -p freebsd-boot/bootfs:=${BOOTFILES}/${X86GPTBOOTFILE}${BOOTPARTSOFFSET}"
+				   -p nqc-boot/bootfs:=${BOOTFILES}/${X86GPTBOOTFILE}${BOOTPARTSOFFSET}"
 			ROOTFSPART="-p ${FSPARTTYPE}/rootfs:=${VMBASE}"
 			MAKEFSARGS="$MAKEFSARGS -B little"
 			;;
@@ -283,7 +283,7 @@ vm_create_disk() {
 		powerpc:powerpc*)
 			ESP=no
 			BOOTPARTS="-p prepboot:=${BOOTFILES}/powerpc/boot1.chrp/boot1.elf -a 1"
-			ROOTFSPART="-p freebsd:=${VMBASE}"
+			ROOTFSPART="-p nqc:=${VMBASE}"
 			if [ ${TARGET_ARCH} = powerpc64le ]; then
 				MAKEFSARGS="$MAKEFSARGS -B little"
 			else

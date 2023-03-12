@@ -271,7 +271,7 @@ zpool_add_009_neg_cleanup()
 
 # Regression test for PR 225546.  "zpool add" asserts if the pool contains a
 # replacing vdev with a spare child.
-# Assertion failed: (nvlist_lookup_string(cnv, "path", &path) == 0), file /usr/home/alans/freebsd/head/cddl/contrib/opensolaris/cmd/zpool/zpool_vdev.c, line 694. /usr/tests/sys/cddl/zfs/tests/cli_root/zpool_add/zpool_add_010_pos.ksh[54]: log_must[69]: log_pos: line 206: 27710: Abort(coredump)
+# Assertion failed: (nvlist_lookup_string(cnv, "path", &path) == 0), file /usr/home/alans/nqc/head/cddl/contrib/opensolaris/cmd/zpool/zpool_vdev.c, line 694. /usr/tests/sys/cddl/zfs/tests/cli_root/zpool_add/zpool_add_010_pos.ksh[54]: log_must[69]: log_pos: line 206: 27710: Abort(coredump)
 atf_test_case zpool_add_010_pos cleanup
 zpool_add_010_pos_head()
 {

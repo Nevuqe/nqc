@@ -182,10 +182,10 @@ ofw_fdt_init(ofw_t ofw, void *data)
 			if (fdt_compatible[i] == '\0')
 				fdt_compatible[i] = ' ';
 	}
-	len = ofw_fdt_getproplen(NULL, root, "freebsd,dts-version");
+	len = ofw_fdt_getproplen(NULL, root, "nqc,dts-version");
 	if (len > 0 && len <= FDT_FBSDVER_LEN) {
 		bzero(fdt_fbsd_version, FDT_FBSDVER_LEN);
-		ofw_fdt_getprop(NULL, root, "freebsd,dts-version",
+		ofw_fdt_getprop(NULL, root, "nqc,dts-version",
 		  fdt_fbsd_version, FDT_FBSDVER_LEN);
 	}
 	len = ofw_fdt_getproplen(NULL, root, "serial-number");

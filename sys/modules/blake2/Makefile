@@ -69,7 +69,7 @@ ${src:S/.c/.o/}: intrin.h emmintrin.h tmmintrin.h smmintrin.h immintrin.h \
 .endfor
 
 # NQC-specific sources:
-SRCS	+= blake2_kfreebsd.h
+SRCS	+= blake2_knqc.h
 SRCS	+= config.h
 
 SRCS	+= stddef.h

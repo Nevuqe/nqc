@@ -41,8 +41,8 @@ __NQCID("$NQC$");
 #ifdef VFP
 #include <machine/vfp.h>
 #endif
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
 
 #include <vm/vm.h>
 #include <vm/vm_param.h>
@@ -53,7 +53,7 @@ _Static_assert(sizeof(mcontext32_t) == 208, "mcontext32_t size incorrect");
 _Static_assert(sizeof(ucontext32_t) == 260, "ucontext32_t size incorrect");
 _Static_assert(sizeof(struct siginfo32) == 64, "struct siginfo32 size incorrect");
 
-extern void freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask);
+extern void nqc32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask);
 
 /*
  * The first two fields of a ucontext_t are the signal mask and the machine
@@ -67,7 +67,7 @@ extern void freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask);
  */
 
 int
-freebsd32_sysarch(struct thread *td, struct freebsd32_sysarch_args *uap)
+nqc32_sysarch(struct thread *td, struct nqc32_sysarch_args *uap)
 {
 	int error;
 
@@ -247,7 +247,7 @@ set_mcontext32(struct thread *td, mcontext32_t *mcp)
 #define UC_COPY_SIZE	offsetof(ucontext32_t, uc_link)
 
 int
-freebsd32_getcontext(struct thread *td, struct freebsd32_getcontext_args *uap)
+nqc32_getcontext(struct thread *td, struct nqc32_getcontext_args *uap)
 {
 	ucontext32_t uc;
 	int ret;
@@ -266,7 +266,7 @@ freebsd32_getcontext(struct thread *td, struct freebsd32_getcontext_args *uap)
 }
 
 int
-freebsd32_setcontext(struct thread *td, struct freebsd32_setcontext_args *uap)
+nqc32_setcontext(struct thread *td, struct nqc32_setcontext_args *uap)
 {
 	ucontext32_t uc;
 	int ret;
@@ -286,7 +286,7 @@ freebsd32_setcontext(struct thread *td, struct freebsd32_setcontext_args *uap)
 }
 
 int
-freebsd32_sigreturn(struct thread *td, struct freebsd32_sigreturn_args *uap)
+nqc32_sigreturn(struct thread *td, struct nqc32_sigreturn_args *uap)
 {
 	ucontext32_t uc;
 	int error;
@@ -307,7 +307,7 @@ freebsd32_sigreturn(struct thread *td, struct freebsd32_sigreturn_args *uap)
 }
 
 int
-freebsd32_swapcontext(struct thread *td, struct freebsd32_swapcontext_args *uap)
+nqc32_swapcontext(struct thread *td, struct nqc32_swapcontext_args *uap)
 {
 	ucontext32_t uc;
 	int ret;
@@ -334,7 +334,7 @@ freebsd32_swapcontext(struct thread *td, struct freebsd32_swapcontext_args *uap)
 }
 
 void
-freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
+nqc32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 {
 	struct thread *td;
 	struct proc *p;
@@ -452,7 +452,7 @@ freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
  * mirrors what's connected to the NQC/arm syscall.
  */
 int
-ofreebsd32_sigreturn(struct thread *td, struct ofreebsd32_sigreturn_args *uap)
+onqc32_sigreturn(struct thread *td, struct onqc32_sigreturn_args *uap)
 {
 
 	return (nosys(td, (struct nosys_args *)uap));

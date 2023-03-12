@@ -1,5 +1,5 @@
 #
-# $Id: //depot/aic7xxx/freebsd/dev/aic7xxx/aicasm/Makefile#2 $
+# $Id: //depot/aic7xxx/nqc/dev/aic7xxx/aicasm/Makefile#2 $
 #
 # $NQC$
 

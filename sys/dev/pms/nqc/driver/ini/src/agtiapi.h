@@ -21,11 +21,11 @@
 **
 *******************************************************************************/
 
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
-#include <dev/pms/freebsd/driver/ini/src/agdef.h>
-#include <dev/pms/freebsd/driver/common/lxcommon.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/ini/src/agdef.h>
+#include <dev/pms/nqc/driver/common/lxcommon.h>
 #ifdef AGTIAPI_ISCSI
 #include "cmtypes.h"
 #include "bktypes.h"

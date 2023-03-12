@@ -97,8 +97,8 @@ __NQCID("$NQC$");
 #include <fs/devfs/devfs.h>
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_util.h>
 #endif
 
 SDT_PROVIDER_DEFINE(proc);
@@ -1384,7 +1384,7 @@ ptr32_trim(const void *ptr)
 	do { (dst).fld = ptr32_trim((src).fld); } while (0)
 
 static void
-freebsd32_kinfo_proc_out(const struct kinfo_proc *ki, struct kinfo_proc32 *ki32)
+nqc32_kinfo_proc_out(const struct kinfo_proc *ki, struct kinfo_proc32 *ki32)
 {
 	int i;
 
@@ -1466,8 +1466,8 @@ freebsd32_kinfo_proc_out(const struct kinfo_proc *ki, struct kinfo_proc32 *ki32)
 	CP(*ki, *ki32, ki_numthreads);
 	CP(*ki, *ki32, ki_tid);
 	CP(*ki, *ki32, ki_pri);
-	freebsd32_rusage_out(&ki->ki_rusage, &ki32->ki_rusage);
-	freebsd32_rusage_out(&ki->ki_rusage_ch, &ki32->ki_rusage_ch);
+	nqc32_rusage_out(&ki->ki_rusage, &ki32->ki_rusage);
+	nqc32_rusage_out(&ki->ki_rusage_ch, &ki32->ki_rusage_ch);
 	PTRTRIM_CP(*ki, *ki32, ki_pcb);
 	PTRTRIM_CP(*ki, *ki32, ki_kstack);
 	PTRTRIM_CP(*ki, *ki32, ki_udata);
@@ -1521,7 +1521,7 @@ kern_proc_out(struct proc *p, struct sbuf *sb, int flags)
 	if ((flags & KERN_PROC_NOTHREADS) != 0) {
 #ifdef COMPAT_NQC32
 		if ((flags & KERN_PROC_MASK32) != 0) {
-			freebsd32_kinfo_proc_out(&ki, &ki32);
+			nqc32_kinfo_proc_out(&ki, &ki32);
 			if (sbuf_bcat(sb, &ki32, sizeof(ki32)) != 0)
 				error = ENOMEM;
 		} else
@@ -1533,7 +1533,7 @@ kern_proc_out(struct proc *p, struct sbuf *sb, int flags)
 			fill_kinfo_thread(td, &ki, 1);
 #ifdef COMPAT_NQC32
 			if ((flags & KERN_PROC_MASK32) != 0) {
-				freebsd32_kinfo_proc_out(&ki, &ki32);
+				nqc32_kinfo_proc_out(&ki, &ki32);
 				if (sbuf_bcat(sb, &ki32, sizeof(ki32)) != 0)
 					error = ENOMEM;
 			} else
@@ -1828,7 +1828,7 @@ static int
 get_proc_vector32(struct thread *td, struct proc *p, char ***proc_vectorp,
     size_t *vsizep, enum proc_vector_type type)
 {
-	struct freebsd32_ps_strings pss;
+	struct nqc32_ps_strings pss;
 	Elf32_Auxinfo aux;
 	vm_offset_t vptr, ptr;
 	uint32_t *proc_vector32;

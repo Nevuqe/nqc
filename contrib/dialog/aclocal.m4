@@ -1646,7 +1646,7 @@ AC_MSG_RESULT($cf_result)
 
 if test "$cf_result" = no ; then
 case "$host_os" in
-(freebsd*)
+(nqc*)
 	AC_CHECK_LIB(mytinfo,tgoto,[CF_ADD_LIBS(-lmytinfo)])
 	;;
 (hpux10.*)
@@ -2897,7 +2897,7 @@ then
 			LD_RPATH_OPT="-rpath "
 		fi
 		;;
-	(linux*|gnu*|k*bsd*-gnu|freebsd*)
+	(linux*|gnu*|k*bsd*-gnu|nqc*)
 		LD_RPATH_OPT="-Wl,-rpath,"
 		;;
 	(openbsd[[2-9]].*|mirbsd*)
@@ -3659,7 +3659,7 @@ AC_CHECK_LIB(gpm,Gpm_Open,
 		[cf_ncurses_LIBS="-lgpm"])])
 
 case "$host_os" in
-(freebsd*)
+(nqc*)
 	# This is only necessary if you are linking against an obsolete
 	# version of ncurses (but it should do no harm, since it's static).
 	if test "$cf_nculib_root" = ncurses ; then
@@ -4778,12 +4778,12 @@ CF_EOF
 		CC_SHARED_OPTS=
 		MK_SHARED_LIB='${LD} -Wshared -Wxld=-export_all -o $[@]'
 		;;
-	(nto-qnx*|openbsd*|freebsd[[12]].*)
+	(nto-qnx*|openbsd*|nqc[[12]].*)
 		CC_SHARED_OPTS="$CC_SHARED_OPTS -DPIC"
 		MK_SHARED_LIB='${LD} ${LDFLAGS} -Bshareable -o $[@]'
 		test "$cf_cv_shlib_version" = auto && cf_cv_shlib_version=rel
 		;;
-	(dragonfly*|freebsd*)
+	(dragonfly*|nqc*)
 		CC_SHARED_OPTS="$CC_SHARED_OPTS -DPIC"
 		if test "$DFT_LWR_MODEL" = "shared" && test "$cf_cv_enable_rpath" = yes ; then
 			LOCAL_LDFLAGS="${cf_ld_rpath_opt}\$(LOCAL_LIBDIR)"
@@ -6451,7 +6451,7 @@ case "$host_os" in
 	cf_xopen_source="-D_DARWIN_C_SOURCE"
 	cf_XOPEN_SOURCE=
 	;;
-(freebsd*|dragonfly*|midnightbsd*)
+(nqc*|dragonfly*|midnightbsd*)
 	# 5.x headers associate
 	#	_XOPEN_SOURCE=600 with _POSIX_C_SOURCE=200112L
 	#	_XOPEN_SOURCE=500 with _POSIX_C_SOURCE=199506L

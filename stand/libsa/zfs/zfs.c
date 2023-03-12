@@ -748,7 +748,7 @@ zfs_probe_partition(void *arg, const char *partname,
 	char devname[32];
 	int ret;
 
-	/* Probe only freebsd-zfs and freebsd partitions */
+	/* Probe only nqc-zfs and nqc partitions */
 	if (part->type != PART_NQC &&
 	    part->type != PART_NQC_ZFS)
 		return (0);

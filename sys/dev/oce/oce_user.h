@@ -29,7 +29,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * Contact Information:
- * freebsd-drivers@emulex.com
+ * nqc-drivers@emulex.com
  *
  * Emulex
  * 3333 Susan Street

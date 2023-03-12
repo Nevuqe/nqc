@@ -12,5 +12,5 @@ MFC after:	<N [day[s]|week[s]|month[s]].  Request a reminder email>
 Relnotes:	<Set to 'yes' for mention in release notes.>
 Security:	<Vulnerability reference (one per line) or description.>
 Sponsored by:	<If the change was sponsored by an organization.>
-Pull Request:	<https://github.com/freebsd/<repo>/pull/###>
+Pull Request:	<https://github.com/nqc/<repo>/pull/###>
 Differential Revision:	<https://reviews.frebsd.org/D###>

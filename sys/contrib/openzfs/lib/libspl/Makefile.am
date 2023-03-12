@@ -32,11 +32,11 @@ endif
 
 if BUILD_NQC
 libspl_la_SOURCES += \
-	%D%/os/freebsd/getexecname.c \
-	%D%/os/freebsd/gethostid.c \
-	%D%/os/freebsd/getmntany.c \
-	%D%/os/freebsd/mnttab.c \
-	%D%/os/freebsd/zone.c
+	%D%/os/nqc/getexecname.c \
+	%D%/os/nqc/gethostid.c \
+	%D%/os/nqc/getmntany.c \
+	%D%/os/nqc/mnttab.c \
+	%D%/os/nqc/zone.c
 endif
 
 libspl_la_LIBADD = \

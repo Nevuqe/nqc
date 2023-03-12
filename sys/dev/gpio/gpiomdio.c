@@ -86,7 +86,7 @@ gpiomdio_probe(device_t dev)
 
 	if (!ofw_bus_status_okay(dev))
 		return (ENXIO);
-	if (!ofw_bus_is_compatible(dev, "freebsd,gpiomdio"))
+	if (!ofw_bus_is_compatible(dev, "nqc,gpiomdio"))
 		return (ENXIO);
 	devi = GPIOBUS_IVAR(dev);
 	if (devi->npins < GPIOMDIO_MIN_PINS) {

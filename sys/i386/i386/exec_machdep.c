@@ -110,7 +110,7 @@ static int  set_fpcontext(struct thread *td, mcontext_t *mcp,
 static void osendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
 #endif
 #ifdef COMPAT_NQC4
-static void freebsd4_sendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
+static void nqc4_sendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
 #endif
 
 extern struct sysentvec elf32_nqc_sysvec;
@@ -258,9 +258,9 @@ osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 
 #ifdef COMPAT_NQC4
 static void
-freebsd4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
+nqc4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 {
-	struct freebsd4_sigframe sf, *sfp;
+	struct nqc4_sigframe sf, *sfp;
 	struct proc *p;
 	struct thread *td;
 	struct sigacts *psp;
@@ -295,13 +295,13 @@ freebsd4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	/* Allocate space for the signal handler context. */
 	if ((td->td_pflags & TDP_ALTSTACK) != 0 && !oonstack &&
 	    SIGISMEMBER(psp->ps_sigonstack, sig)) {
-		sfp = (struct freebsd4_sigframe *)((uintptr_t)td->td_sigstk.ss_sp +
-		    td->td_sigstk.ss_size - sizeof(struct freebsd4_sigframe));
+		sfp = (struct nqc4_sigframe *)((uintptr_t)td->td_sigstk.ss_sp +
+		    td->td_sigstk.ss_size - sizeof(struct nqc4_sigframe));
 #if defined(COMPAT_43)
 		td->td_sigstk.ss_flags |= SS_ONSTACK;
 #endif
 	} else
-		sfp = (struct freebsd4_sigframe *)regs->tf_esp - 1;
+		sfp = (struct nqc4_sigframe *)regs->tf_esp - 1;
 
 	/* Build the argument list for the signal handler. */
 	sf.sf_signum = sig;
@@ -364,7 +364,7 @@ freebsd4_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 
 	regs->tf_esp = (int)sfp;
 	regs->tf_eip = PROC_SIGCODE(p) + szsigcode -
-	    szfreebsd4_sigcode;
+	    sznqc4_sigcode;
 	regs->tf_eflags &= ~(PSL_T | PSL_D);
 	regs->tf_cs = _ucodesel;
 	regs->tf_ds = _udatasel;
@@ -399,7 +399,7 @@ sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	mtx_assert(&psp->ps_mtx, MA_OWNED);
 #ifdef COMPAT_NQC4
 	if (SIGISMEMBER(psp->ps_nqc4, sig)) {
-		freebsd4_sendsig(catcher, ksi, mask);
+		nqc4_sendsig(catcher, ksi, mask);
 		return;
 	}
 #endif
@@ -656,11 +656,11 @@ osigreturn(struct thread *td, struct osigreturn_args *uap)
 
 #ifdef COMPAT_NQC4
 int
-freebsd4_sigreturn(struct thread *td, struct freebsd4_sigreturn_args *uap)
+nqc4_sigreturn(struct thread *td, struct nqc4_sigreturn_args *uap)
 {
-	struct freebsd4_ucontext uc;
+	struct nqc4_ucontext uc;
 	struct trapframe *regs;
-	struct freebsd4_ucontext *ucp;
+	struct nqc4_ucontext *ucp;
 	int cs, eflags, error;
 	ksiginfo_t ksi;
 
@@ -715,7 +715,7 @@ freebsd4_sigreturn(struct thread *td, struct freebsd4_sigreturn_args *uap)
 		 */
 		if (!EFL_SECURE(eflags, regs->tf_eflags)) {
 			uprintf(
-			    "pid %d (%s): freebsd4_sigreturn eflags = 0x%x\n",
+			    "pid %d (%s): nqc4_sigreturn eflags = 0x%x\n",
 			    td->td_proc->p_pid, td->td_name, eflags);
 			return (EINVAL);
 		}
@@ -727,7 +727,7 @@ freebsd4_sigreturn(struct thread *td, struct freebsd4_sigreturn_args *uap)
 		 */
 		cs = ucp->uc_mcontext.mc_cs;
 		if (!CS_SECURE(cs)) {
-			uprintf("pid %d (%s): freebsd4_sigreturn cs = 0x%x\n",
+			uprintf("pid %d (%s): nqc4_sigreturn cs = 0x%x\n",
 			    td->td_proc->p_pid, td->td_name, cs);
 			ksiginfo_init_trap(&ksi);
 			ksi.ksi_signo = SIGBUS;

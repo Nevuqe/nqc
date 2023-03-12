@@ -33,5 +33,5 @@ First, you will need a few things.
  '-d trace:gicv3\* -D /tmp/gic.log' for verbose gic tracing (spaces are important).
 
 There's also a linuxboot-test-raw.sh which boots w/o EDK2+Linux.efi but loads
-the kernel directly. and freebsd-test.sh which uses EDK2+loader.efi to boot NQC
+the kernel directly. and nqc-test.sh which uses EDK2+loader.efi to boot NQC
 w/o kboot at all.

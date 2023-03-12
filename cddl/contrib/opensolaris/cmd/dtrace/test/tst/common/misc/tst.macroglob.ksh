@@ -31,12 +31,12 @@ fi
 
 dtrace=$1
 
-$dtrace -ln 'syscall:freebsd:*$1:entry' read | \
+$dtrace -ln 'syscall:nqc:*$1:entry' read | \
 	awk '{print $(NF-1),$NF}' | grep -v -E 'compat.\.' | sort
-$dtrace -ln 'syscall:freebsd:$1*:entry' read | awk '{print $(NF-1),$NF}' | sort
-$dtrace -ln 'syscall:freebsd:re$1*:entry' ad | awk '{print $(NF-1),$NF}' | sort
-$dtrace -ln 'syscall:freebsd:$1l*:entry' read | awk '{print $(NF-1),$NF}' | sort
-$dtrace -ln 'syscall:freebsd:w$1[0-9]:entry' ait | \
+$dtrace -ln 'syscall:nqc:$1*:entry' read | awk '{print $(NF-1),$NF}' | sort
+$dtrace -ln 'syscall:nqc:re$1*:entry' ad | awk '{print $(NF-1),$NF}' | sort
+$dtrace -ln 'syscall:nqc:$1l*:entry' read | awk '{print $(NF-1),$NF}' | sort
+$dtrace -ln 'syscall:nqc:w$1[0-9]:entry' ait | \
 	awk '{print $(NF-1),$NF}' | sort
 
 exit $status

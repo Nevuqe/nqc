@@ -20,7 +20,7 @@ resize_body()
 
 	# Initialise
 	atf_check -s exit:0 -o ignore gpart create -s BSD ${md}
-	atf_check -s exit:0 -o ignore gpart add -t freebsd-ufs -s 10m ${md}
+	atf_check -s exit:0 -o ignore gpart add -t nqc-ufs -s 10m ${md}
 
 	echo secret >tmp.key
 	atf_check geli init -Bnone -PKtmp.key ${md}a
@@ -62,7 +62,7 @@ resize_body()
 	# to geli init.
 
 	atf_check -s exit:0 -o ignore gpart create -s GPT $md
-	atf_check -s exit:0 -o ignore gpart add -s 20m -t freebsd-ufs -i 1 $md
+	atf_check -s exit:0 -o ignore gpart add -s 20m -t nqc-ufs -i 1 $md
 	atf_check geli init -B none -K tmp.key -P ${md}p1
 	atf_check -s exit:0 -o match:resized gpart resize -s 30m -i 1 $md
 	atf_check geli resize -s 20m ${md}p1

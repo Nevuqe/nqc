@@ -1603,10 +1603,10 @@ unless ($disabled{ktls}) {
         my $cc = $config{CROSS_COMPILE}.$config{CC};
         system("printf '#include <sys/types.h>\n#include <sys/ktls.h>' | $cc -E - >/dev/null 2>&1");
         if ($? != 0) {
-            disable('too-old-freebsd', 'ktls');
+            disable('too-old-nqc', 'ktls');
         }
     } else {
-        disable('not-linux-or-freebsd', 'ktls');
+        disable('not-linux-or-nqc', 'ktls');
     }
 }
 

@@ -153,7 +153,7 @@ int	kern_fhstat(struct thread *td, fhandle_t fh, struct stat *buf);
 int	kern_fhstatfs(struct thread *td, fhandle_t fh, struct statfs *buf);
 int	kern_fpathconf(struct thread *td, int fd, int name, long *valuep);
 int	kern_nqc11_getfsstat(struct thread *td,
-	    struct freebsd11_statfs *ubuf, long bufsize, int mode);
+	    struct nqc11_statfs *ubuf, long bufsize, int mode);
 int	kern_fstat(struct thread *td, int fd, struct stat *sbp);
 int	kern_fstatfs(struct thread *td, int fd, struct statfs *buf);
 int	kern_fsync(struct thread *td, int fd, bool fullsync);
@@ -364,9 +364,9 @@ int	kern_unmount(struct thread *td, const char *path, int flags);
 #define	KSA_OSIGSET	0x0001	/* uses osigact_t */
 #define	KSA_NQC4	0x0002	/* uses ucontext4 */
 
-struct freebsd11_dirent;
+struct nqc11_dirent;
 
-int	freebsd11_kern_getdirentries(struct thread *td, int fd, char *ubuf, u_int
-	    count, long *basep, void (*func)(struct freebsd11_dirent *));
+int	nqc11_kern_getdirentries(struct thread *td, int fd, char *ubuf, u_int
+	    count, long *basep, void (*func)(struct nqc11_dirent *));
 
 #endif /* !_SYS_SYSCALLSUBR_H_ */

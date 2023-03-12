@@ -2147,7 +2147,7 @@ fixed formatting. Tomasz Flendrich
 * Add/distribute genLocInfo.
 (4.2.7p183) 2011/06/19 Released by Harlan Stenn <stenn@ntp.org>
 * Update the autogen include list for scripts/Makefile.am.
-* Added loc.freebsd (and distribute it).
+* Added loc.nqc (and distribute it).
 * Added loc.legacy (and distribute it).
 (4.2.7p182) 2011/06/15 Released by Harlan Stenn <stenn@ntp.org>
 * [Bug 1304] Update sntp.html to reflect new implementation.
@@ -3105,7 +3105,7 @@ fixed formatting. Tomasz Flendrich
 * [Bug 1442] Move Windows functions into libntp files
 * [Bug 1127] from 4.2.6p1-RC3: Check the return of X590_verify().
 * [Bug 1439] from 4.2.6p1-RC3: .texi gen after binary is linked.
-* [Bug 1440] from 4.2.6p1-RC3: Update configure.ac to support kfreebsd.
+* [Bug 1440] from 4.2.6p1-RC3: Update configure.ac to support knqc.
 * [Bug 1445] from 4.2.6p1-RC3: IRIX does not have -lcap or support
   linux capabilities.
 (4.2.7p5) 2009/12/25 Released by Harlan Stenn <stenn@ntp.org>
@@ -3481,7 +3481,7 @@ display both build and runtime OpenSSL versions when they differ.
 * [Bug 1450] Option to exclude warnings not unconditionally defined on Windows.
 * [Bug 1127] Properly check the return of X590_verify() - missed one.
 * [Bug 1439] .texi generation must wait until after binary is linked.
-* [Bug 1440] Update configure.ac to support kfreebsd.
+* [Bug 1440] Update configure.ac to support knqc.
 * [Bug 1445] IRIX does not have -lcap or support linux capabilities.
 * [Bug 1451] CID 115: sntp leaks KoD entry when updating existing.
 * [Bug 1453] Use $CC in config.cache filename in ./build script.

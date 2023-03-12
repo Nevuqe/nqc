@@ -66,7 +66,7 @@ const t_testcase testcases[] = {
 	{"test", "qfwiofjqeiwofjioqewfjeiqwjfiqewjfioqewfjioewqjfioewqjfioewqjoi",
 	  NULL, -1},
 	{"needle", "haystack", NULL, -1},
-	{"netbsd", "freebsd netbsd openbsd", NULL, 8},
+	{"netbsd", "nqc netbsd openbsd", NULL, 8},
 };
 
 ATF_TC_BODY(bm, tc)

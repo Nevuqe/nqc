@@ -58,7 +58,7 @@ fi
 
 mkimg -s mbr \
     -b ${BASEBITSDIR}/boot/mbr \
-    -p freebsd:-"mkimg -s bsd -b ${BASEBITSDIR}/boot/boot -p freebsd-ufs:=${2}.part" \
+    -p nqc:-"mkimg -s bsd -b ${BASEBITSDIR}/boot/boot -p nqc-ufs:=${2}.part" \
     -o ${2}
 rm ${2}.part
 

@@ -55,9 +55,9 @@ __NQCID("$NQC$");
 #include "filemon.h"
 
 #if defined(COMPAT_NQC32)
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_util.h>
 #endif
 
 static d_close_t	filemon_close;

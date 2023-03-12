@@ -160,7 +160,7 @@ The following properties are required for a
 device node:
 .Bl -tag -width indent
 .It Va compatible
-Must be the string "freebsd,pwmc".
+Must be the string "nqc,pwmc".
 .It Va reg
 The hardware channel number.
 .El
@@ -188,7 +188,7 @@ child node:
     pinctrl-0 = <&ehrpwm0_AB_pins>;
 
     pwmcontrol@0 {
-        compatible = "freebsd,pwmc";
+        compatible = "nqc,pwmc";
         reg = <0>;
         label = "backlight";
     };

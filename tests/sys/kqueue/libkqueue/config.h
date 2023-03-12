@@ -10,5 +10,5 @@
 #define WITH_NATIVE_KQUEUE_BUGS 0
 #define PROGRAM "libkqueue-test"
 #define VERSION "0.1"
-#define TARGET "freebsd"
+#define TARGET "nqc"
 #define CFLAGS "-g -O0 -Wall -Werror"

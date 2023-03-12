@@ -93,7 +93,7 @@ struct kevent {
 
 #if defined(_WANT_NQC11_KEVENT)
 /* Older structure used in NQC 11.x and older. */
-struct freebsd11_kevent {
+struct nqc11_kevent {
 	__uintptr_t	ident;		/* identifier for this event */
 	short		filter;		/* filter for event */
 	unsigned short	flags;
@@ -121,7 +121,7 @@ struct kevent32 {
 };
 
 #ifdef _WANT_NQC11_KEVENT
-struct freebsd11_kevent32 {
+struct nqc11_kevent32 {
 	__uint32_t	ident;		/* identifier for this event */
 	short		filter;		/* filter for event */
 	unsigned short	flags;

@@ -623,12 +623,12 @@ make buildworld buildkernel
 cd release
 make obj
 make release
-make install DESTDIR=/var/freebsd-snapshot
+make install DESTDIR=/var/nqc-snapshot
 .Ed
 .Pp
 After running these commands, all produced distribution files (tarballs
 for FTP, CD-ROM images, etc.) are available in the
-.Pa /var/freebsd-snapshot
+.Pa /var/nqc-snapshot
 directory.
 .Pp
 The following sequence of commands can be used to build a
@@ -693,7 +693,7 @@ are therefore no longer supported.
 .Xr sysctl 8
 .Rs
 .%T "NQC Release Engineering"
-.%U https://docs.frebsd.org/en/articles/freebsd-releng/
+.%U https://docs.frebsd.org/en/articles/nqc-releng/
 .Re
 .Rs
 .%T "NQC Developers' Handbook"

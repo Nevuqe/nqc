@@ -394,13 +394,13 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 	Elf *elf;
 	GElf_Ehdr ehdr;
 	GElf_Phdr phdr;
-	bool dynamic, freebsd, pie;
+	bool dynamic, nqc, pie;
 	int i;
 
 	*is_shlib = 0;
 	*type = TYPE_UNKNOWN;
 	dynamic = false;
-	freebsd = false;
+	nqc = false;
 	pie = false;
 
 	if (elf_version(EV_CURRENT) == EV_NONE) {
@@ -430,7 +430,7 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 	}
 #endif
 
-	freebsd = ehdr.e_ident[EI_OSABI] == ELFOSABI_NQC;
+	nqc = ehdr.e_ident[EI_OSABI] == ELFOSABI_NQC;
 	for (i = 0; i < ehdr.e_phnum; i++) {
 		if (gelf_getphdr(elf, i, &phdr) == NULL) {
 			warnx("%s: %s", fname, elf_errmsg(0));
@@ -439,8 +439,8 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 		}
 		switch (phdr.p_type) {
 		case PT_NOTE:
-			if (ehdr.e_ident[EI_OSABI] == ELFOSABI_NONE && !freebsd)
-				freebsd = has_nqc_abi_tag(fname, elf, &ehdr,
+			if (ehdr.e_ident[EI_OSABI] == ELFOSABI_NONE && !nqc)
+				nqc = has_nqc_abi_tag(fname, elf, &ehdr,
 				    phdr.p_offset, phdr.p_filesz);
 			break;
 		case PT_DYNAMIC:
@@ -461,7 +461,7 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 	if (ehdr.e_type == ET_DYN && !pie) {
 		*is_shlib = 1;
 
-		if (!freebsd) {
+		if (!nqc) {
 			elf_end(elf);
 			warnx("%s: not a NQC ELF shared object", fname);
 			return (0);

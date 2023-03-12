@@ -704,7 +704,7 @@ else
 		#
 		case "$host_os" in
 
-		freebsd*|darwin*|linux*)
+		nqc*|darwin*|linux*)
 			VALGRINDTEST_SRC=valgrindtest.c
 			;;
 		esac
@@ -1920,7 +1920,7 @@ irix*)
 	MAN_MISC_INFO=5
 	;;
 
-linux*|freebsd*|netbsd*|openbsd*|dragonfly*|kfreebsd*|gnu*|midipix*)
+linux*|nqc*|netbsd*|openbsd*|dragonfly*|knqc*|gnu*|midipix*)
 	DYEXT="so"
 
 	#
@@ -2127,7 +2127,7 @@ if test "x$enable_usb" != "xno" ; then
 	      ])
 	fi
 	;;
-    freebsd*)
+    nqc*)
 	#
 	# This just uses BPF in NQC 8.4 and later; we don't need
 	# to check for anything special for capturing.

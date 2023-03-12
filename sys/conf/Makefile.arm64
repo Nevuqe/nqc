@@ -27,7 +27,7 @@ S=	../../..
 
 INCLUDES+= -I$S/contrib/libfdt -I$S/contrib/device-tree/include
 
-LINUX_DTS_VERSION!=	awk '/freebsd,dts-version/ { sub(/;$$/,"", $$NF); print $$NF }' $S/dts/freebsd-compatible.dts
+LINUX_DTS_VERSION!=	awk '/nqc,dts-version/ { sub(/;$$/,"", $$NF); print $$NF }' $S/dts/nqc-compatible.dts
 CFLAGS += -DLINUX_DTS_VERSION=\"${LINUX_DTS_VERSION}\"
 
 PERTHREAD_SSP_ENABLED!=	grep PERTHREAD_SSP opt_global.h || true ; echo

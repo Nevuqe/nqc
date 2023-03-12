@@ -132,7 +132,7 @@ case $1 in
 		case $maybe_os in
 			nto-qnx* | linux-gnu* | linux-android* | linux-dietlibc \
 			| linux-newlib* | linux-musl* | linux-uclibc* | uclinux-uclibc* \
-			| uclinux-gnu* | kfreebsd*-gnu* | knetbsd*-gnu* | netbsd*-gnu* \
+			| uclinux-gnu* | knqc*-gnu* | knetbsd*-gnu* | netbsd*-gnu* \
 			| netbsd*-eabi* | kopensolaris*-gnu* | cloudabi*-eabi* \
 			| storm-chaos* | os2-emx* | rtmk-nova*)
 				basic_machine=$field1
@@ -1359,7 +1359,7 @@ case $os in
 	     | clix* | riscos* | uniplus* | iris* | rtu* | xenix* \
 	     | knetbsd* | mirbsd* | netbsd* \
 	     | bitrig* | openbsd* | solidbsd* | libertybsd* \
-	     | ekkobsd* | kfreebsd* | freebsd* | riscix* | lynxos* \
+	     | ekkobsd* | knqc* | nqc* | riscix* | lynxos* \
 	     | bosx* | nextstep* | cxux* | aout* | elf* | oabi* \
 	     | ptx* | coff* | ecoff* | winnt* | domain* | vsta* \
 	     | udi* | eabi* | lites* | ieee* | go32* | aux* | hcos* \

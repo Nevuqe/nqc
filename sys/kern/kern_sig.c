@@ -778,7 +778,7 @@ sigact_flag_test(const struct sigaction *act, int flag)
 /*
  * kern_sigaction
  * sigaction
- * freebsd4_sigaction
+ * nqc4_sigaction
  * osigaction
  */
 int
@@ -955,14 +955,14 @@ sys_sigaction(struct thread *td, struct sigaction_args *uap)
 
 #ifdef COMPAT_NQC4
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd4_sigaction_args {
+struct nqc4_sigaction_args {
 	int	sig;
 	struct	sigaction *act;
 	struct	sigaction *oact;
 };
 #endif
 int
-freebsd4_sigaction(struct thread *td, struct freebsd4_sigaction_args *uap)
+nqc4_sigaction(struct thread *td, struct nqc4_sigaction_args *uap)
 {
 	struct sigaction act, oact;
 	struct sigaction *actp, *oactp;

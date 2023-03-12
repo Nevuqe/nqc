@@ -35,7 +35,7 @@
 #include <dev/pms/RefTisa/tisa/sassata/common/tdioctl.h>
 #include <dev/pms/RefTisa/tisa/api/titypes.h>
 
-#include <dev/pms/freebsd/driver/common/lxencrypt.h>
+#include <dev/pms/nqc/driver/common/lxencrypt.h>
 #include <sys/param.h>
 #include <sys/queue.h>
 #include <vm/uma.h>

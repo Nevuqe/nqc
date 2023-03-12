@@ -37,7 +37,7 @@ enum {
 };
 
 /*
-C/C++ on linux/x86_64 and freebsd/x86_64
+C/C++ on linux/x86_64 and nqc/x86_64
 0000 0000 1000 - 0080 0000 0000: main binary and/or MAP_32BIT mappings (512GB)
 0040 0000 0000 - 0100 0000 0000: -
 0100 0000 0000 - 2000 0000 0000: shadow
@@ -392,7 +392,7 @@ struct MappingS390x {
   static const uptr kMidAppMemEnd = 0;
 };
 
-/* Go on linux, darwin and freebsd on x86_64
+/* Go on linux, darwin and nqc on x86_64
 0000 0000 1000 - 0000 1000 0000: executable
 0000 1000 0000 - 00c0 0000 0000: -
 00c0 0000 0000 - 00e0 0000 0000: heap

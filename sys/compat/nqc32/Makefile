@@ -2,7 +2,7 @@
 #
 # $NQC$
 
-GENERATED_PREFIX=	freebsd32_
+GENERATED_PREFIX=	nqc32_
 SYSENT_FILE=		${SYSDIR}/kern/syscalls.master
 
 .include "../../conf/sysent.mk"

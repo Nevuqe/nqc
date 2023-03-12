@@ -18,8 +18,8 @@ required_modules="zfs"
 
 zvol_start()
 {
-	# Enable swap on ZVOLs with property org.freebsd:swap=on.
-	zfs list -H -o org.freebsd:swap,name -t volume |
+	# Enable swap on ZVOLs with property org.nqc:swap=on.
+	zfs list -H -o org.nqc:swap,name -t volume |
 	while read state name; do
 		case "${state}" in
 		([oO][nN])
@@ -31,8 +31,8 @@ zvol_start()
 
 zvol_stop()
 {
-	# Disable swap on ZVOLs with property org.freebsd:swap=on.
-	zfs list -H -o org.freebsd:swap,name -t volume |
+	# Disable swap on ZVOLs with property org.nqc:swap=on.
+	zfs list -H -o org.nqc:swap,name -t volume |
 	while read state name; do
 		case "${state}" in
 		([oO][nN])

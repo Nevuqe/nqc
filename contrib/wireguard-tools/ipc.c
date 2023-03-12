@@ -46,7 +46,7 @@ static int string_list_add(struct string_list *list, const char *str)
 #elif defined(__OpenBSD__)
 #include "ipc-openbsd.h"
 #elif defined(__NQC__)
-#include "ipc-freebsd.h"
+#include "ipc-nqc.h"
 #elif defined(_WIN32)
 #include "ipc-windows.h"
 #endif

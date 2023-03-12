@@ -2162,8 +2162,8 @@ __elfN(putnote)(struct thread *td, struct note_info *ninfo, struct sbuf *sb)
  */
 
 #if defined(COMPAT_NQC32) && __ELF_WORD_SIZE == 32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_signal.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_signal.h>
 
 typedef struct prstatus32 elf_prstatus_t;
 typedef struct prpsinfo32 elf_prpsinfo_t;

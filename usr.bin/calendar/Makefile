@@ -13,7 +13,7 @@ CFLAGS+=	-DWITH_ICONV
 .endif
 
 FILESGROUPS+=	CALS
-CALS=	calendars/calendar.freebsd
+CALS=	calendars/calendar.nqc
 CALSDIR=	${SHAREDIR}/calendar
 
 HAS_TESTS=

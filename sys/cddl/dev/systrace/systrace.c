@@ -97,15 +97,15 @@ extern struct sysent linux32_sysent[];
  * The syscall arguments are processed into a DTrace argument array
  * using a generated function. See sys/tools/makesyscalls.lua.
  */
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_systrace_args.c>
-extern const char *freebsd32_syscallnames[];
-#define	MODNAME		"freebsd32"
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_systrace_args.c>
+extern const char *nqc32_syscallnames[];
+#define	MODNAME		"nqc32"
 #define	MAXSYSCALL	NQC32_SYS_MAXSYSCALL
-#define	SYSCALLNAMES	freebsd32_syscallnames
-#define	SYSENT		freebsd32_sysent
+#define	SYSCALLNAMES	nqc32_syscallnames
+#define	SYSENT		nqc32_sysent
 #else
 /*
  * The syscall arguments are processed into a DTrace argument array
@@ -113,7 +113,7 @@ extern const char *freebsd32_syscallnames[];
  */
 #include <sys/syscall.h>
 #include <kern/systrace_args.c>
-#define	MODNAME		"freebsd"
+#define	MODNAME		"nqc"
 #define	MAXSYSCALL	SYS_MAXSYSCALL
 #define	SYSCALLNAMES	syscallnames
 #define	SYSENT		sysent

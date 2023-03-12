@@ -66,7 +66,7 @@ make_esp_file ${espfilename} ${fat32min} ${BASEBITSDIR}/boot/loader.efi
 mkimg -s mbr \
     -b ${BASEBITSDIR}/boot/mbr \
     -p efi:=${espfilename} \
-    -p freebsd:-"mkimg -s bsd -b ${BASEBITSDIR}/boot/boot -p freebsd-ufs:=${2}.part" \
+    -p nqc:-"mkimg -s bsd -b ${BASEBITSDIR}/boot/boot -p nqc-ufs:=${2}.part" \
     -a 2 \
     -o ${2}
 rm ${espfilename}

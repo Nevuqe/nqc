@@ -1,7 +1,7 @@
 #	@(#)Makefile	8.2 (Berkeley) 4/19/94
 # $NQC$
 
-DB=	freebsd-tips
+DB=	nqc-tips
 
 BLDS=	${DB:S/$/.dat/}
 FILES=	${DB} ${BLDS}

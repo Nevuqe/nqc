@@ -100,7 +100,7 @@
 # e.g., `make buildworld CROSS_TOOLCHAIN=amd64-gcc6`.
 #
 # The ${TARGET_ARCH}-gccN packages are provided as flavors of the
-# devel/freebsd-gccN ports.
+# devel/nqc-gccN ports.
 #
 # See src/UPDATING `COMMON ITEMS' for more complete information.
 #

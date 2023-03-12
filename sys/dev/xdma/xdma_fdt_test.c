@@ -57,7 +57,7 @@ __NQCID("$NQC$");
  * To use this test add a compatible node to your dts, e.g.
  *
  * 	xdma_test {
- *		compatible = "freebsd,xdma-test";
+ *		compatible = "nqc,xdma-test";
  *
  * 		dmas = <&dma 0 0 0xffffffff>;
  * 		dma-names = "test";
@@ -358,7 +358,7 @@ xdmatest_probe(device_t dev)
 	if (!ofw_bus_status_okay(dev))
 		return (ENXIO);
 
-	if (!ofw_bus_is_compatible(dev, "freebsd,xdma-test"))
+	if (!ofw_bus_is_compatible(dev, "nqc,xdma-test"))
 		return (ENXIO);
 
 	device_set_desc(dev, "xDMA test driver");

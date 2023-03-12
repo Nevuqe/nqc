@@ -532,7 +532,7 @@ AC_DEFUN([ZFS_AC_DEFAULT_PACKAGE], [
 		elif test -f /etc/alpine-release ; then
 			VENDOR=alpine ;
 		elif test -f /bin/nqc-version ; then
-			VENDOR=freebsd ;
+			VENDOR=nqc ;
 		elif test -f /etc/openEuler-release ; then
 			VENDOR=openeuler ;
 		else
@@ -558,7 +558,7 @@ AC_DEFUN([ZFS_AC_DEFAULT_PACKAGE], [
 		lunar)      DEFAULT_PACKAGE=tgz  ;;
 		ubuntu)     DEFAULT_PACKAGE=deb  ;;
 		debian)     DEFAULT_PACKAGE=deb  ;;
-		freebsd)    DEFAULT_PACKAGE=pkg  ;;
+		nqc)    DEFAULT_PACKAGE=pkg  ;;
 		openeuler)  DEFAULT_PACKAGE=rpm  ;;
 		*)          DEFAULT_PACKAGE=rpm  ;;
 	esac
@@ -567,7 +567,7 @@ AC_DEFUN([ZFS_AC_DEFAULT_PACKAGE], [
 
 	AC_MSG_CHECKING([default init directory])
 	case "$VENDOR" in
-		freebsd)    initdir=$sysconfdir/rc.d  ;;
+		nqc)    initdir=$sysconfdir/rc.d  ;;
 		*)          initdir=$sysconfdir/init.d;;
 	esac
 	AC_MSG_RESULT([$initdir])
@@ -602,7 +602,7 @@ AC_DEFUN([ZFS_AC_DEFAULT_PACKAGE], [
 		openeuler)  initconfdir=/etc/sysconfig ;;
 		ubuntu)     initconfdir=/etc/default   ;;
 		debian)     initconfdir=/etc/default   ;;
-		freebsd)    initconfdir=$sysconfdir/rc.conf.d;;
+		nqc)    initconfdir=$sysconfdir/rc.conf.d;;
 		*)          initconfdir=/etc/default   ;;
 	esac
 	AC_MSG_RESULT([$initconfdir])
@@ -624,7 +624,7 @@ dnl # Default ZFS package configuration
 dnl #
 AC_DEFUN([ZFS_AC_PACKAGE], [
 	ZFS_AC_DEFAULT_PACKAGE
-	AS_IF([test x$VENDOR != xfreebsd], [
+	AS_IF([test x$VENDOR != xnqc], [
 		ZFS_AC_RPM
 		ZFS_AC_DPKG
 		ZFS_AC_ALIEN

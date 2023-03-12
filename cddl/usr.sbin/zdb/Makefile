@@ -18,10 +18,10 @@ CFLAGS+= \
 	-DIN_BASE \
 	-I${ZFSTOP}/include \
 	-I${ZFSTOP}/lib/libspl/include \
-	-I${ZFSTOP}/lib/libspl/include/os/freebsd \
-	-I${ZFSTOP}/lib/libspl/include/os/freebsd/spl \
+	-I${ZFSTOP}/lib/libspl/include/os/nqc \
+	-I${ZFSTOP}/lib/libspl/include/os/nqc/spl \
 	-I${SRCTOP}/sys \
-	-include ${ZFSTOP}/include/os/freebsd/spl/sys/ccompile.h \
+	-include ${ZFSTOP}/include/os/nqc/spl/sys/ccompile.h \
 	-DHAVE_ISSETUGID
 
 LIBADD=	nvpair umem uutil zfs spl avl zutil zpool

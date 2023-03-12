@@ -40,7 +40,7 @@ mdconfig -l | grep -q $mdstart &&  mdconfig -d -u $mdstart
 
 mdconfig -a -t swap -s 1g -u $mdstart
 gpart create -s bsd md$mdstart > /dev/null
-gpart add -t freebsd-ufs md$mdstart > /dev/null
+gpart add -t nqc-ufs md$mdstart > /dev/null
 mke2fs /dev/md${mdstart}a
 # No panic seen when disabling hashed b-tree lookup for large directories
 # tune2fs -O ^dir_index /dev/md$mdstart

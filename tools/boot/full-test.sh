@@ -108,7 +108,7 @@ make_minimal_nqc_tree()
     [ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
 
     file="NQC-${v}-RELEASE-${ma_combo}-${flavor}"
-    dir=${TREES}/${ma_combo}/freebsd
+    dir=${TREES}/${ma_combo}/nqc
     rm -rf ${dir}
 
     # Make a super simple userland. It has just enough to print a santiy value,
@@ -217,7 +217,7 @@ make_linux_initrds()
 	[ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
 	dir=${TREES}/${ma_combo}/linuxboot
 	dir2=${TREES}/${ma_combo}/test-stand
-	dir3=${TREES}/${ma_combo}/freebsd
+	dir3=${TREES}/${ma_combo}/nqc
 	initrd=${TREES}/${ma_combo}/initrd.img
 	rm -rf ${dir}
 	mkdir -p ${dir}
@@ -268,7 +268,7 @@ make_linuxboot_images()
 	ma_combo="${m}"
 	[ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
 	src=${TREES}/${ma_combo}/linuxboot-esp
-	dir=${TREES}/${ma_combo}/freebsd
+	dir=${TREES}/${ma_combo}/nqc
 	dir2=${TREES}/${ma_combo}/test-stand
 	esp=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}.esp
 	ufs=${IMAGES}/${ma_combo}/linuxboot-${ma_combo}.ufs
@@ -280,13 +280,13 @@ make_linuxboot_images()
 	makefs -t msdos -o fat_type=32 -o sectors_per_cluster=1 \
 	       -o volume_label=EFISYS -s80m ${esp} ${src}
 	makefs -t ffs -B little -s 200m -o label=root ${ufs} ${dir} ${dir2}
-	mkimg -s gpt -p efi:=${esp} -p freebsd-ufs:=${ufs} -o ${img}
+	mkimg -s gpt -p efi:=${esp} -p nqc-ufs:=${ufs} -o ${img}
 	makefs -t zfs -s 200m \
 	       -o poolname=${pool} -o bootfs=${pool} -o rootpath=/ \
 		${zfs} ${dir} ${dir2}
 	mkimg -s gpt \
 	      -p efi:=${esp} \
-	      -p freebsd-zfs:=${zfs} -o ${img2}
+	      -p nqc-zfs:=${zfs} -o ${img2}
 	rm -f ${esp}	# Don't need to keep this around
     done
 
@@ -360,7 +360,7 @@ EOF
 		;;
 	    aarch64)
 		# ESP version
-		raw=${IMAGES}/${ma_combo}/freebsd-arm64-aarch64.img
+		raw=${IMAGES}/${ma_combo}/nqc-arm64-aarch64.img
 		cat > ${out} <<EOF
 ${qemu_bin}/qemu-system-aarch64 -nographic -machine virt,gic-version=3 -m 512M -smp 4 \\
         -cpu cortex-a57 \\
@@ -411,7 +411,7 @@ make_nqc_esps()
 	ma=${a##*:}
 	ma_combo="${m}"
 	[ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
-	dir=${TREES}/${ma_combo}/freebsd-esp
+	dir=${TREES}/${ma_combo}/nqc-esp
 	dir2=${TREES}/${ma_combo}/test-stand
 	rm -rf ${dir}
 	mkdir -p ${dir}
@@ -433,12 +433,12 @@ make_nqc_images()
 	ma=${a##*:}
 	ma_combo="${m}"
 	[ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
-	src=${TREES}/${ma_combo}/freebsd-esp
-	dir=${TREES}/${ma_combo}/freebsd
+	src=${TREES}/${ma_combo}/nqc-esp
+	dir=${TREES}/${ma_combo}/nqc
 	dir2=${TREES}/${ma_combo}/test-stand
-	esp=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.esp
-	ufs=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.ufs
-	img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
+	esp=${IMAGES}/${ma_combo}/nqc-${ma_combo}.esp
+	ufs=${IMAGES}/${ma_combo}/nqc-${ma_combo}.ufs
+	img=${IMAGES}/${ma_combo}/nqc-${ma_combo}.img
 	mkdir -p ${IMAGES}/${ma_combo}
 	mkdir -p ${dir2}/etc
 	cat > ${dir2}/etc/fstab <<EOF
@@ -447,7 +447,7 @@ EOF
 	makefs -t msdos -o fat_type=32 -o sectors_per_cluster=1 \
 	       -o volume_label=EFISYS -s100m ${esp} ${src}
 	makefs -t ffs -B little -s 200m -o label=root ${ufs} ${dir} ${dir2}
-	mkimg -s gpt -p efi:=${esp} -p freebsd-ufs:=${ufs} -o ${img}
+	mkimg -s gpt -p efi:=${esp} -p nqc-ufs:=${ufs} -o ${img}
 	# rm -f ${esp} ${ufs}	# Don't need to keep this around
     done
 
@@ -459,10 +459,10 @@ EOF
     ma=${a##*:}
     ma_combo="${m}"
     [ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
-    dir=${TREES}/${ma_combo}/freebsd
+    dir=${TREES}/${ma_combo}/nqc
     dir2=${TREES}/${ma_combo}/test-stand
-    ufs=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.ufs
-    img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
+    ufs=${IMAGES}/${ma_combo}/nqc-${ma_combo}.ufs
+    img=${IMAGES}/${ma_combo}/nqc-${ma_combo}.img
     mkdir -p ${IMAGES}/${ma_combo}
     mkdir -p ${dir2}/etc
     cat > ${dir2}/etc/fstab <<EOF
@@ -472,8 +472,8 @@ EOF
 	   -o label=root,version=2,bsize=32768,fsize=4096,density=16384 \
 	   ${ufs} ${dir} ${dir2}
     mkimg -s gpt -b ${dir2}/boot/pmbr \
-	  -p freebsd-boot:=${dir2}/boot/gptboot \
-	  -p freebsd-ufs:=${ufs} \
+	  -p nqc-boot:=${dir2}/boot/gptboot \
+	  -p nqc-ufs:=${ufs} \
 	  -o ${img}
     rm -f ${src}/etc/fstab
 }
@@ -509,8 +509,8 @@ make_nqc_scripts()
 	esac
 
 	# Now make me a script
-	img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
-	out=${SCRIPTS}/${ma_combo}/freebsd-test.sh
+	img=${IMAGES}/${ma_combo}/nqc-${ma_combo}.img
+	out=${SCRIPTS}/${ma_combo}/nqc-test.sh
 	mkdir -p ${SCRIPTS}/${ma_combo}
 	case ${ma} in
 	    amd64)
@@ -549,8 +549,8 @@ EOF
     ma=${a##*:}
     ma_combo="${m}"
     [ "${m}" != "${ma}" ] && ma_combo="${m}-${ma}"
-    img=${IMAGES}/${ma_combo}/freebsd-${ma_combo}.img
-    out=${SCRIPTS}/${ma_combo}/freebsd-test.sh
+    img=${IMAGES}/${ma_combo}/nqc-${ma_combo}.img
+    out=${SCRIPTS}/${ma_combo}/nqc-test.sh
     mkdir -p ${SCRIPTS}/${ma_combo}
     cat > ${out} <<EOF
 ${qemu_bin}/qemu-system-i386 -m 1g \\

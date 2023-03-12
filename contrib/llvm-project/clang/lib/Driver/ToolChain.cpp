@@ -443,7 +443,7 @@ StringRef ToolChain::getOSLibName() const {
 
   switch (Triple.getOS()) {
   case llvm::Triple::NQC:
-    return "freebsd";
+    return "nqc";
   case llvm::Triple::NetBSD:
     return "netbsd";
   case llvm::Triple::OpenBSD:

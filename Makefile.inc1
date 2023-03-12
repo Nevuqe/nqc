@@ -1537,7 +1537,7 @@ test-includes: .PHONY
 # we may need to function.
 _sysent_PATH=	${TMPPATH}:/usr/libexec
 _sysent_dirs=	sys/kern
-_sysent_dirs+=	sys/compat/freebsd32
+_sysent_dirs+=	sys/compat/nqc32
 _sysent_dirs+=	sys/amd64/linux		\
 		sys/amd64/linux32	\
 		sys/arm64/linux		\
@@ -3459,7 +3459,7 @@ NOFUN=-DNO_FSCHG MK_HTML=no -DNO_LINT \
 	TARGET=${TARGET} TARGET_ARCH=${TARGET_ARCH} \
 	CPUTYPE=${XDEV_CPUTYPE}
 
-XDDIR=${TARGET_ARCH}-freebsd
+XDDIR=${TARGET_ARCH}-nqc
 XDTP?=/usr/${XDDIR}
 .if ${XDTP:N/*}
 .error XDTP variable should be an absolute path

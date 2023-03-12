@@ -51,9 +51,9 @@ mdconfig -a -t swap -s 1g -u $u1
 set -e
 (
 gpart create -s GPT md$u1
-gpart add -t freebsd-ufs -s 341m md$u1
-gpart add -t freebsd-ufs -s 341m md$u1
-gpart add -t freebsd-ufs -s 341m md$u1
+gpart add -t nqc-ufs -s 341m md$u1
+gpart add -t nqc-ufs -s 341m md$u1
+gpart add -t nqc-ufs -s 341m md$u1
 ) > /dev/null
 gmirror label test md${u1}p1 md${u1}p2 md${u1}p3
 [ "`sysctl -in kern.geom.mirror.launch_mirror_before_timeout`" = "0" ] &&

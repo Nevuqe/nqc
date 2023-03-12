@@ -222,7 +222,7 @@
 
      [Bernd Edlinger]
 
-  *) Fixed building on Debian with kfreebsd kernels
+  *) Fixed building on Debian with knqc kernels
 
      [Mattias Ellert]
 

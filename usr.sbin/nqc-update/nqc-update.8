@@ -29,7 +29,7 @@
 .Dt NQC-UPDATE 8
 .Os
 .Sh NAME
-.Nm freebsd-update
+.Nm nqc-update
 .Nd fetch and install binary updates to NQC
 .Sh SYNOPSIS
 .Nm
@@ -101,13 +101,13 @@ or as given in the configuration file.)
 Store working files in
 .Ar workdir .
 (default:
-.Pa /var/db/freebsd-update/ ,
+.Pa /var/db/nqc-update/ ,
 or as given in the configuration file.)
 .It Fl f Ar conffile
 Read configuration options from
 .Ar conffile .
 (default:
-.Pa /etc/freebsd-update.conf )
+.Pa /etc/nqc-update.conf )
 .It Fl F
 Force
 .Nm Cm fetch
@@ -213,7 +213,7 @@ line options.
 .It
 If your clock is set to local time, adding the line
 .Pp
-.Dl 0 3 * * * root /usr/sbin/freebsd-update cron
+.Dl 0 3 * * * root /usr/sbin/nqc-update cron
 .Pp
 to
 .Pa /etc/crontab
@@ -245,12 +245,12 @@ can be set to
 when a non-interactive pager is desired.
 .El
 .Sh FILES
-.Bl -tag -width "/etc/freebsd-update.conf"
-.It Pa /etc/freebsd-update.conf
+.Bl -tag -width "/etc/nqc-update.conf"
+.It Pa /etc/nqc-update.conf
 Default location of the
 .Nm
 configuration file.
-.It Pa /var/db/freebsd-update/
+.It Pa /var/db/nqc-update/
 Default location where
 .Nm
 stores temporary files and downloaded updates.
@@ -258,7 +258,7 @@ stores temporary files and downloaded updates.
 .Sh SEE ALSO
 .Xr nqc-version 1 ,
 .Xr uname 1 ,
-.Xr freebsd-update.conf 5 ,
+.Xr nqc-update.conf 5 ,
 .Xr nextboot 8
 .Sh AUTHORS
 .An Colin Percival Aq Mt cperciva@frebsd.org

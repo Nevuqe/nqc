@@ -4001,7 +4001,7 @@ it is not possible to add this information.
 	+ correct check in infocmp for number of terminal names when more than
 	  two are given.
 	+ correct typo in curs_threads.3x (report by Yanhui Shen on
-	  freebsd-hackers mailing list).
+	  nqc-hackers mailing list).
 
 20120512
 	+ corrected 'op' for bterm (report by Samuel Thibault) -TD
@@ -8934,7 +8934,7 @@ it is not possible to add this information.
 	+ improve scoansi terminfo entry, and add scoansi-new entry -TD
 	+ add pcvt25-color terminfo entry -TD
 	+ add kf13-kf48 strings to cons25w terminfo entry (reported by Stephen
-	  Hurd <deuce@lordlegacy.org> in newsgroup lucky.freebsd.bugs) -TD
+	  Hurd <deuce@lordlegacy.org> in newsgroup lucky.nqc.bugs) -TD
 	+ add entrypoint _nc_trace_ttymode(), use this to distinguish the
 	  Ottyb and Nttyb members of terminal (aka cur_term), for tracing.
 
@@ -9785,7 +9785,7 @@ it is not possible to add this information.
 	  <ehud@unix.simonwiesel.co.il>).
 	+ add check in lib_tgoto.c's is_termcap() function to reject null or
 	  empty strings (reported by Valentin Nechayev <netch@netch.kiev.ua> to
-	  freebsd-bugs).
+	  nqc-bugs).
 	+ add definition from configure script that denotes the path-separator,
 	  which is normally a colon.  The path-separator is a semicolon on
 	  OS/2 EMX and similar systems which may use a colon within pathnames.
@@ -10194,7 +10194,7 @@ it is not possible to add this information.
 	  shared libraries, in particular for NQC, etc.
 	+ regenerate misc/*.def files for OS/2 EMX dll's.
 	+ correct quoting of values for CC_SHARED_OPTS in aclocal.m4 for
-	  cases openbsd2*, openbsd*, freebsd* and netbsd* (patch by Peter
+	  cases openbsd2*, openbsd*, nqc* and netbsd* (patch by Peter
 	  Wemm) (err in 20000610).
 	+ minor updates to release notes, as well as adding/updating URLs for
 	  examples cited in announce.html
@@ -10833,7 +10833,7 @@ it is not possible to add this information.
 	  the result to the buffer parameter.  Testing shows Solaris does
 	  update this, though of course tgetent's buffer is untouched (reported
 	  in Peter Edwards <peter.edwards@ireland.com> in
-	  mpc.lists.freebsd.current newsgroup.
+	  mpc.lists.nqc.current newsgroup.
 	+ corrected beterm terminfo entry, which lists some capabilities which
 	  are not actually provided by the BeOS Terminal.
 	+ add special logic to replace select() calls on BeOS, whose select()

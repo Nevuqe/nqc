@@ -5,7 +5,7 @@ ZFSTOP=	${SRCTOP}/sys/contrib/openzfs
 .PATH: ${ZFSTOP}/cmd/zfs
 .PATH: ${ZFSTOP}/man/man7
 .PATH: ${ZFSTOP}/man/man8
-.PATH: ${ZFSTOP}/module/os/freebsd/spl
+.PATH: ${ZFSTOP}/module/os/nqc/spl
 
 PACKAGE=	zfs
 PROG=	zfs
@@ -63,13 +63,13 @@ WARNS?=	2
 CFLAGS+= \
 	-DIN_BASE \
 	-I${ZFSTOP}/include \
-	-I${ZFSTOP}/include/os/freebsd \
+	-I${ZFSTOP}/include/os/nqc \
 	-I${ZFSTOP}/lib/libspl/include \
-	-I${ZFSTOP}/lib/libspl/include/os/freebsd \
+	-I${ZFSTOP}/lib/libspl/include/os/nqc \
 	-I${SRCTOP}/sys \
 	-I${SRCTOP}/cddl/compat/opensolaris/include \
 	-I${ZFSTOP}/module/icp/include \
-	-include ${ZFSTOP}/include/os/freebsd/spl/sys/ccompile.h \
+	-include ${ZFSTOP}/include/os/nqc/spl/sys/ccompile.h \
 	-DHAVE_ISSETUGID \
 	-include ${SRCTOP}/sys/modules/zfs/zfs_config.h \
 	-I${SRCTOP}/sys/modules/zfs

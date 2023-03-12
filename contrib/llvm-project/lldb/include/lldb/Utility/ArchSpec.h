@@ -405,7 +405,7 @@ public:
   ///   arm-apple-ios
   ///   thumb-apple-ios
   ///   powerpc-apple-darwin
-  ///   *-*-freebsd
+  ///   *-*-nqc
   ///   *-*-linux
   ///   *-*-netbsd
   ///   *-*-openbsd

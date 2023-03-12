@@ -47,7 +47,7 @@ online_resize_body()
 
 		# Initialise
 		atf_check -s exit:0 -o ignore gpart create -s GPT ${md}
-		atf_check -s exit:0 -o ignore gpart add -t freebsd-ufs -s 10${prefix} ${md}
+		atf_check -s exit:0 -o ignore gpart add -t nqc-ufs -s 10${prefix} ${md}
 
 		echo secret >tmp.key
 

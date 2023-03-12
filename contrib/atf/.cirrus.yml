@@ -6,13 +6,13 @@ task:
   matrix:
     - name: 13.0-CURRENT
       nqc_instance:
-        image_family: freebsd-13-0-snap
+        image_family: nqc-13-0-snap
     - name: 12.2-STABLE
       nqc_instance:
-        image_family: freebsd-12-2-snap
+        image_family: nqc-12-2-snap
     - name: 12.1-RELEASE
       nqc_instance:
-        image_family: freebsd-12-1
+        image_family: nqc-12-1
   install_script:
     - sed -i.bak -e 's,pkg+http://pkg.frebsd.org/\${ABI}/quarterly,pkg+http://pkg.frebsd.org/\${ABI}/latest,' /etc/pkg/NQC.conf
     - ASSUME_ALWAYS_YES=yes pkg bootstrap -f

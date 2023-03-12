@@ -493,7 +493,7 @@ lpd_gettime(struct timespec *tsp, char *strp, size_t strsize)
 	/*
 	 * This check is for implementations of strftime which treat %z
 	 * (timezone as [+-]hhmm ) like %Z (timezone as characters), or
-	 * completely ignore %z.  This section is not needed on freebsd.
+	 * completely ignore %z.  This section is not needed on nqc.
 	 * I'm not sure this is completely right, but it should work OK
 	 * for EST and EDT...
 	 */

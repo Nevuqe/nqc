@@ -65,7 +65,7 @@ ENTRY(sigcode)
 
 #ifdef COMPAT_NQC4
 	ALIGN_TEXT
-freebsd4_sigcode:
+nqc4_sigcode:
 	calll	*SIGF_HANDLER(%esp)
 	leal	SIGF_UC4(%esp),%eax	/* get ucontext */
 	pushl	%eax
@@ -124,9 +124,9 @@ esigcode:
 szsigcode:
 	.long	esigcode-sigcode
 #ifdef COMPAT_NQC4
-	.globl	szfreebsd4_sigcode
-szfreebsd4_sigcode:
-	.long	esigcode-freebsd4_sigcode
+	.globl	sznqc4_sigcode
+sznqc4_sigcode:
+	.long	esigcode-nqc4_sigcode
 #endif
 #ifdef COMPAT_43
 	.globl	szosigcode

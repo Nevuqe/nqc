@@ -2,7 +2,7 @@
 # 5/31/2012
 #PATH shall include all directories
 
-.PATH: 	${SRCTOP}/sys/dev/pms/freebsd/driver/ini/src \
+.PATH: 	${SRCTOP}/sys/dev/pms/nqc/driver/ini/src \
 	${SRCTOP}/sys/dev/pms/RefTisa/sallsdk/api \
 	${SRCTOP}/sys/dev/pms/RefTisa/sallsdk/spc \
 	${SRCTOP}/sys/dev/pms/RefTisa/sallsdk/hda/64k \
@@ -15,7 +15,7 @@
 	${SRCTOP}/sys/dev/pms/RefTisa/tisa/sassata/sas/common \
 	${SRCTOP}/sys/dev/pms/RefTisa/tisa/sassata/sas/ini \
 	${SRCTOP}/sys/dev/pms/RefTisa/tisa/sassata/sata/host \
-	${SRCTOP}/sys/dev/pms/freebsd/driver/common
+	${SRCTOP}/sys/dev/pms/nqc/driver/common
 
 CFLAGS+=-fno-builtin
 CFLAGS+=-fms-extensions
@@ -32,7 +32,7 @@ CFLAGS+=-w
 
 
 #SUBDIR= tisa tisa/drivers tisa/drivers/NQC tisa/drivers/NQC/ini tisa/drivers/NQC/ini/src
-#SUBDIR= Hialeah_driver Hialeah_driver/freebsd Hialeah_driver/freebsd/ini Hialeah_driver/freebsd/ini/src 
+#SUBDIR= Hialeah_driver Hialeah_driver/nqc Hialeah_driver/nqc/ini Hialeah_driver/nqc/ini/src 
 
 KMOD=	pmspcv
 #OS files

@@ -32,7 +32,7 @@ S=	../../..
 
 INCLUDES+= -I$S/contrib/libfdt -I$S/contrib/device-tree/include -I$$/dts/include
 
-LINUX_DTS_VERSION!=	awk '/freebsd,dts-version/ { sub(/;$$/,"", $$NF); print $$NF }' $S/dts/freebsd-compatible.dts
+LINUX_DTS_VERSION!=	awk '/nqc,dts-version/ { sub(/;$$/,"", $$NF); print $$NF }' $S/dts/nqc-compatible.dts
 CFLAGS += -DLINUX_DTS_VERSION=\"${LINUX_DTS_VERSION}\"
 
 .if !defined(DEBUG)

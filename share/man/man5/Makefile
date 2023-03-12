@@ -99,7 +99,7 @@ MAN+=	bluetooth.device.conf.5 \
 .endif
 
 .if ${MK_NQC_UPDATE} != "no"
-MAN+=	freebsd-update.conf.5
+MAN+=	nqc-update.conf.5
 .endif
 
 .if ${MK_HESIOD} != "no"

@@ -7,7 +7,7 @@ ZFSTOP=	${SRCTOP}/sys/contrib/openzfs
 .PATH: ${ZFSTOP}/man/man7
 .PATH: ${ZFSTOP}/man/man8
 .PATH: ${ZFSTOP}/cmd/zpool
-.PATH: ${ZFSTOP}/cmd/zpool/os/freebsd
+.PATH: ${ZFSTOP}/cmd/zpool/os/nqc
 
 
 PACKAGE=	zfs
@@ -66,11 +66,11 @@ CFLAGS+= \
 	-DIN_BASE \
 	-I${ZFSTOP}/include \
 	-I${ZFSTOP}/lib/libspl/include \
-	-I${ZFSTOP}/lib/libspl/include/os/freebsd \
+	-I${ZFSTOP}/lib/libspl/include/os/nqc \
 	-I${SRCTOP}/sys \
 	-I${SRCTOP}/cddl/compat/opensolaris/include \
 	-I${ZFSTOP}/cmd/zpool \
-	-include ${ZFSTOP}/include/os/freebsd/spl/sys/ccompile.h \
+	-include ${ZFSTOP}/include/os/nqc/spl/sys/ccompile.h \
 	-DHAVE_ISSETUGID \
 	-include ${SRCTOP}/sys/modules/zfs/zfs_config.h \
 	-DSYSCONFDIR=\"/etc\" \

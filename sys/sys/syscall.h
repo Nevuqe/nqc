@@ -23,7 +23,7 @@
 #define	SYS_chmod	15
 #define	SYS_chown	16
 #define	SYS_break	17
-				/* 18 is freebsd4 getfsstat */
+				/* 18 is nqc4 getfsstat */
 				/* 19 is old lseek */
 #define	SYS_getpid	20
 #define	SYS_mount	21
@@ -156,20 +156,20 @@
 #define	SYS_nlm_syscall	154
 #define	SYS_nfssvc	155
 				/* 156 is old getdirentries */
-				/* 157 is freebsd4 statfs */
-				/* 158 is freebsd4 fstatfs */
+				/* 157 is nqc4 statfs */
+				/* 158 is nqc4 fstatfs */
 #define	SYS_lgetfh	160
 #define	SYS_getfh	161
-				/* 162 is freebsd4 getdomainname */
-				/* 163 is freebsd4 setdomainname */
-				/* 164 is freebsd4 uname */
+				/* 162 is nqc4 getdomainname */
+				/* 163 is nqc4 setdomainname */
+				/* 164 is nqc4 uname */
 #define	SYS_sysarch	165
 #define	SYS_rtprio	166
 #define	SYS_semsys	169
 #define	SYS_msgsys	170
 #define	SYS_shmsys	171
-				/* 173 is freebsd6 pread */
-				/* 174 is freebsd6 pwrite */
+				/* 173 is nqc6 pread */
+				/* 174 is nqc6 pwrite */
 #define	SYS_setfib	175
 #define	SYS_ntp_adjtime	176
 #define	SYS_setgid	181
@@ -187,11 +187,11 @@
 #define	SYS_getrlimit	194
 #define	SYS_setrlimit	195
 #define	SYS_nqc11_getdirentries	196
-				/* 197 is freebsd6 mmap */
+				/* 197 is nqc6 mmap */
 #define	SYS___syscall	198
-				/* 199 is freebsd6 lseek */
-				/* 200 is freebsd6 truncate */
-				/* 201 is freebsd6 ftruncate */
+				/* 199 is nqc6 lseek */
+				/* 200 is nqc6 truncate */
+				/* 201 is nqc6 ftruncate */
 #define	SYS___sysctl	202
 #define	SYS_mlock	203
 #define	SYS_munlock	204
@@ -244,7 +244,7 @@
 #define	SYS_nqc11_nlstat	280
 #define	SYS_preadv	289
 #define	SYS_pwritev	290
-				/* 297 is freebsd4 fhstatfs */
+				/* 297 is nqc4 fhstatfs */
 #define	SYS_fhopen	298
 #define	SYS_nqc11_fhstat	299
 #define	SYS_modnext	300
@@ -265,9 +265,9 @@
 #define	SYS_aio_suspend	315
 #define	SYS_aio_cancel	316
 #define	SYS_aio_error	317
-				/* 318 is freebsd6 aio_read */
-				/* 319 is freebsd6 aio_write */
-				/* 320 is freebsd6 lio_listio */
+				/* 318 is nqc6 aio_read */
+				/* 319 is nqc6 aio_write */
+				/* 320 is nqc6 lio_listio */
 #define	SYS_yield	321
 				/* 322 is obsolete thr_sleep */
 				/* 323 is obsolete thr_wakeup */
@@ -283,15 +283,15 @@
 #define	SYS_sched_get_priority_min	333
 #define	SYS_sched_rr_get_interval	334
 #define	SYS_utrace	335
-				/* 336 is freebsd4 sendfile */
+				/* 336 is nqc4 sendfile */
 #define	SYS_kldsym	337
 #define	SYS_jail	338
 #define	SYS_nnpfs_syscall	339
 #define	SYS_sigprocmask	340
 #define	SYS_sigsuspend	341
-				/* 342 is freebsd4 sigaction */
+				/* 342 is nqc4 sigaction */
 #define	SYS_sigpending	343
-				/* 344 is freebsd4 sigreturn */
+				/* 344 is nqc4 sigreturn */
 #define	SYS_sigtimedwait	345
 #define	SYS_sigwaitinfo	346
 #define	SYS___acl_get_file	347

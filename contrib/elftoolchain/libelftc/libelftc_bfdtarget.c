@@ -79,7 +79,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 	},
 
 	{
-		.bt_name      = "elf32-i386-freebsd",
+		.bt_name      = "elf32-i386-nqc",
 		.bt_type      = ETF_ELF,
 		.bt_byteorder = ELFDATA2LSB,
 		.bt_elfclass  = ELFCLASS32,
@@ -203,7 +203,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 	},
 
 	{
-		.bt_name      = "elf64-alpha-freebsd",
+		.bt_name      = "elf64-alpha-nqc",
 		.bt_type      = ETF_ELF,
 		.bt_byteorder = ELFDATA2LSB,
 		.bt_elfclass  = ELFCLASS64,
@@ -282,7 +282,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 	},
 
 	{
-		.bt_name      = "elf64-riscv-freebsd",
+		.bt_name      = "elf64-riscv-nqc",
 		.bt_type      = ETF_ELF,
 		.bt_byteorder = ELFDATA2MSB,
 		.bt_elfclass  = ELFCLASS64,
@@ -351,7 +351,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 	},
 
 	{
-		.bt_name      = "elf64-sparc-freebsd",
+		.bt_name      = "elf64-sparc-nqc",
 		.bt_type      = ETF_ELF,
 		.bt_byteorder = ELFDATA2MSB,
 		.bt_elfclass  = ELFCLASS64,
@@ -384,7 +384,7 @@ struct _Elftc_Bfd_Target _libelftc_targets[] = {
 	},
 
 	{
-		.bt_name      = "elf64-x86-64-freebsd",
+		.bt_name      = "elf64-x86-64-nqc",
 		.bt_type      = ETF_ELF,
 		.bt_byteorder = ELFDATA2LSB,
 		.bt_elfclass  = ELFCLASS64,

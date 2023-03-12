@@ -41,7 +41,7 @@
 #include <sys/types.h>
 #include <glob.h>
 
-struct freebsd11_stat;
+struct nqc11_stat;
 typedef struct {
 	size_t gl_pathc;	/* Count of total paths so far. */
 	size_t gl_matchc;	/* Count of paths matching pattern. */
@@ -57,16 +57,16 @@ typedef struct {
 	 * and lstat(2).
 	 */
 	void (*gl_closedir)(void *);
-	struct freebsd11_dirent *(*gl_readdir)(void *);
+	struct nqc11_dirent *(*gl_readdir)(void *);
 	void *(*gl_opendir)(const char *);
-	int (*gl_lstat)(const char *, struct freebsd11_stat *);
-	int (*gl_stat)(const char *, struct freebsd11_stat *);
+	int (*gl_lstat)(const char *, struct nqc11_stat *);
+	int (*gl_stat)(const char *, struct nqc11_stat *);
 } glob11_t;
 
 __BEGIN_DECLS
-int	freebsd11_glob(const char * __restrict, int,
+int	nqc11_glob(const char * __restrict, int,
 	int (*)(const char *, int), glob11_t * __restrict);
-void	freebsd11_globfree(glob11_t *);
+void	nqc11_globfree(glob11_t *);
 __END_DECLS
 
 #endif /* !_GLOB_COMPAT11_H_ */

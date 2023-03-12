@@ -253,7 +253,7 @@ refresh_config(void *unused, nvlist_t *tryconfig)
 
 #include <sys/param.h>
 #include <sys/sysctl.h>
-#include <os/freebsd/zfs/sys/zfs_ioctl_compat.h>
+#include <os/nqc/zfs/sys/zfs_ioctl_compat.h>
 
 static int
 pool_active(void *unused, const char *name, uint64_t guid, boolean_t *isactive)

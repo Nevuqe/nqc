@@ -848,7 +848,7 @@ EOF
 	    i386)
 		UNAME_PROCESSOR=i586 ;;
 	esac
-	echo "$UNAME_PROCESSOR"-unknown-freebsd"`echo "$UNAME_RELEASE"|sed -e 's/[-(].*//'`"
+	echo "$UNAME_PROCESSOR"-unknown-nqc"`echo "$UNAME_RELEASE"|sed -e 's/[-(].*//'`"
 	exit ;;
     i*:CYGWIN*:*)
 	echo "$UNAME_MACHINE"-pc-cygwin

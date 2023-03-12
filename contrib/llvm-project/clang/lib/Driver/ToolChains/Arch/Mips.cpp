@@ -49,8 +49,8 @@ void mips::getMipsCPUAndABI(const ArgList &Args, const llvm::Triple &Triple,
   if (Triple.isOSOpenBSD())
     DefMips64CPU = "mips3";
 
-  // MIPS2 is the default for mips(el)?-unknown-freebsd.
-  // MIPS3 is the default for mips64(el)?-unknown-freebsd.
+  // MIPS2 is the default for mips(el)?-unknown-nqc.
+  // MIPS3 is the default for mips64(el)?-unknown-nqc.
   if (Triple.isOSNQC()) {
     DefMips32CPU = "mips2";
     DefMips64CPU = "mips3";

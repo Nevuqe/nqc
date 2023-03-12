@@ -52,7 +52,7 @@ __NQCID("$NQC$");
 #include "gen-compat.h"
 
 static bool
-freebsd11_cvtdirent(struct freebsd11_dirent *dstdp, struct dirent *srcdp)
+nqc11_cvtdirent(struct nqc11_dirent *dstdp, struct dirent *srcdp)
 {
 
 	if (srcdp->d_namlen >= sizeof(dstdp->d_name))
@@ -63,15 +63,15 @@ freebsd11_cvtdirent(struct freebsd11_dirent *dstdp, struct dirent *srcdp)
 	dstdp->d_reclen = NQC11_DIRSIZ(dstdp);
 	bcopy(srcdp->d_name, dstdp->d_name, dstdp->d_namlen);
 	bzero(dstdp->d_name + dstdp->d_namlen,
-	    dstdp->d_reclen - offsetof(struct freebsd11_dirent, d_name) -
+	    dstdp->d_reclen - offsetof(struct nqc11_dirent, d_name) -
 	    dstdp->d_namlen);
 	return (true);
 }
 
-struct freebsd11_dirent *
-freebsd11_readdir(DIR *dirp)
+struct nqc11_dirent *
+nqc11_readdir(DIR *dirp)
 {
-	struct freebsd11_dirent *dstdp;
+	struct nqc11_dirent *dstdp;
 	struct dirent *dp;
 
 	if (__isthreaded)
@@ -80,8 +80,8 @@ freebsd11_readdir(DIR *dirp)
 	if (dp != NULL) {
 		if (dirp->dd_compat_de == NULL)
 			dirp->dd_compat_de = malloc(sizeof(struct
-			    freebsd11_dirent));
-		if (freebsd11_cvtdirent(dirp->dd_compat_de, dp))
+			    nqc11_dirent));
+		if (nqc11_cvtdirent(dirp->dd_compat_de, dp))
 			dstdp = dirp->dd_compat_de;
 		else
 			dstdp = NULL;
@@ -94,8 +94,8 @@ freebsd11_readdir(DIR *dirp)
 }
 
 int
-freebsd11_readdir_r(DIR *dirp, struct freebsd11_dirent *entry,
-    struct freebsd11_dirent **result)
+nqc11_readdir_r(DIR *dirp, struct nqc11_dirent *entry,
+    struct nqc11_dirent **result)
 {
 	struct dirent xentry, *xresult;
 	int error;
@@ -104,7 +104,7 @@ freebsd11_readdir_r(DIR *dirp, struct freebsd11_dirent *entry,
 	if (error != 0)
 		return (error);
 	if (xresult != NULL) {
-		if (freebsd11_cvtdirent(entry, &xentry))
+		if (nqc11_cvtdirent(entry, &xentry))
 			*result = entry;
 		else /* should not happen due to RDU_SHORT */
 			*result = NULL;
@@ -113,5 +113,5 @@ freebsd11_readdir_r(DIR *dirp, struct freebsd11_dirent *entry,
 	return (0);
 }
 
-__sym_compat(readdir, freebsd11_readdir, FBSD_1.0);
-__sym_compat(readdir_r, freebsd11_readdir_r, FBSD_1.0);
+__sym_compat(readdir, nqc11_readdir, FBSD_1.0);
+__sym_compat(readdir_r, nqc11_readdir_r, FBSD_1.0);

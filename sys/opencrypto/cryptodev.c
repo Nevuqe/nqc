@@ -82,7 +82,7 @@ SDT_PROBE_DEFINE1(opencrypto, dev, ioctl, error, "int"/*line number*/);
 
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 
 struct session_op32 {
 	uint32_t	cipher;

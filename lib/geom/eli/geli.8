@@ -1065,7 +1065,7 @@ If an encrypted filesystem is extended, it is necessary to relocate and
 update the metadata:
 .Bd -literal -offset indent
 # gpart create -s GPT ada0
-# gpart add -s 1g -t freebsd-ufs -i 1 ada0
+# gpart add -s 1g -t nqc-ufs -i 1 ada0
 # geli init -K keyfile -P ada0p1
 # gpart resize -s 2g -i 1 ada0
 # geli resize -s 1g ada0p1

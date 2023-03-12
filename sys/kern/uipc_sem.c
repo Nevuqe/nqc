@@ -960,14 +960,14 @@ static struct syscall_helper_data ksem_syscalls[] = {
 };
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 int
-freebsd32_ksem_init(struct thread *td, struct freebsd32_ksem_init_args *uap)
+nqc32_ksem_init(struct thread *td, struct nqc32_ksem_init_args *uap)
 {
 
 	return (ksem_create(td, NULL, (semid_t *)uap->idp, S_IRWXU | S_IRWXG, uap->value,
@@ -975,7 +975,7 @@ freebsd32_ksem_init(struct thread *td, struct freebsd32_ksem_init_args *uap)
 }
 
 int
-freebsd32_ksem_open(struct thread *td, struct freebsd32_ksem_open_args *uap)
+nqc32_ksem_open(struct thread *td, struct nqc32_ksem_open_args *uap)
 {
 
 	if ((uap->oflag & ~(O_CREAT | O_EXCL)) != 0)
@@ -985,8 +985,8 @@ freebsd32_ksem_open(struct thread *td, struct freebsd32_ksem_open_args *uap)
 }
 
 int
-freebsd32_ksem_timedwait(struct thread *td,
-    struct freebsd32_ksem_timedwait_args *uap)
+nqc32_ksem_timedwait(struct thread *td,
+    struct nqc32_ksem_timedwait_args *uap)
 {
 	struct timespec32 abstime32;
 	struct timespec *ts, abstime;
@@ -1011,13 +1011,13 @@ freebsd32_ksem_timedwait(struct thread *td,
 }
 
 static struct syscall_helper_data ksem32_syscalls[] = {
-	SYSCALL32_INIT_HELPER(freebsd32_ksem_init),
-	SYSCALL32_INIT_HELPER(freebsd32_ksem_open),
+	SYSCALL32_INIT_HELPER(nqc32_ksem_init),
+	SYSCALL32_INIT_HELPER(nqc32_ksem_open),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_unlink),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_close),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_post),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_wait),
-	SYSCALL32_INIT_HELPER(freebsd32_ksem_timedwait),
+	SYSCALL32_INIT_HELPER(nqc32_ksem_timedwait),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_trywait),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_getvalue),
 	SYSCALL32_INIT_HELPER_COMPAT(ksem_destroy),

@@ -376,7 +376,7 @@ regcomp(regex_t * __restrict preg,
  * Legacy interface that requires more lax escaping behavior.
  */
 int
-freebsd12_regcomp(regex_t * __restrict preg,
+nqc12_regcomp(regex_t * __restrict preg,
 	const char * __restrict pattern,
 	int cflags, int pflags)
 {
@@ -384,7 +384,7 @@ freebsd12_regcomp(regex_t * __restrict preg,
 	return (regcomp_internal(preg, pattern, cflags, PFLAG_LEGACY_ESC));
 }
 
-__sym_compat(regcomp, freebsd12_regcomp, FBSD_1.0);
+__sym_compat(regcomp, nqc12_regcomp, FBSD_1.0);
 #endif	/* !LIBREGEX */
 
 /*

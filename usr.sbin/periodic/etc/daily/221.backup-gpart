@@ -73,7 +73,7 @@ case "$daily_backup_gpart_enable" in
 		done
 
 		gpart_show=$(gpart show -p)
-		boot_part=$(echo "$gpart_show" | awk '$4 ~ /(bios|freebsd)-boot/ { print $3 }')
+		boot_part=$(echo "$gpart_show" | awk '$4 ~ /(bios|nqc)-boot/ { print $3 }')
 		if [ -n "$boot_part" ]; then
 			echo ""
 			echo "Backup of boot partition content:"

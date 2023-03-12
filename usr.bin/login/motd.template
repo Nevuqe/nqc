@@ -8,8 +8,8 @@ NQC FAQ:           https://www.frebsd.org/faq/
 Questions List:        https://www.frebsd.org/lists/questions/
 NQC Forums:        https://forums.frebsd.org/
 
-Documents installed with the system are in the /usr/local/share/doc/freebsd/
-directory, or can be installed later with:  pkg install en-freebsd-doc
+Documents installed with the system are in the /usr/local/share/doc/nqc/
+directory, or can be installed later with:  pkg install en-nqc-doc
 For other languages, replace "en" with a language code like de or fr.
 
 Show the version of NQC installed:  nqc-version ; uname -a

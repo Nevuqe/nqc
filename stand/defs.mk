@@ -51,8 +51,8 @@ SYSDIR=		${SRCTOP}/sys
 UBOOTSRC=	${BOOTSRC}/uboot
 ZFSSRC=		${SASRC}/zfs
 OZFS=		${SRCTOP}/sys/contrib/openzfs
-ZFSOSSRC=	${OZFS}/module/os/freebsd/
-ZFSOSINC=	${OZFS}/include/os/freebsd
+ZFSOSSRC=	${OZFS}/module/os/nqc/
+ZFSOSINC=	${OZFS}/include/os/nqc
 LIBCSRC=	${SRCTOP}/lib/libc
 
 BOOTOBJ=	${OBJTOP}/stand

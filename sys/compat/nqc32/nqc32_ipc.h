@@ -187,13 +187,13 @@ union semun_old32 {
 	uint32_t	array;
 };
 
-void	freebsd32_ipcperm_old_in(struct ipc_perm_old32 *ip32,
+void	nqc32_ipcperm_old_in(struct ipc_perm_old32 *ip32,
 	    struct ipc_perm *ip);
-void	freebsd32_ipcperm_old_out(struct ipc_perm *ip,
+void	nqc32_ipcperm_old_out(struct ipc_perm *ip,
 	    struct ipc_perm_old32 *ip32);
 #endif
 
-void	freebsd32_ipcperm_in(struct ipc_perm32 *ip32, struct ipc_perm *ip);
-void	freebsd32_ipcperm_out(struct ipc_perm *ip, struct ipc_perm32 *ip32);
+void	nqc32_ipcperm_in(struct ipc_perm32 *ip32, struct ipc_perm *ip);
+void	nqc32_ipcperm_out(struct ipc_perm *ip, struct ipc_perm32 *ip32);
 
 #endif /* !_COMPAT_NQC32_NQC32_IPC_H_ */

@@ -64,11 +64,11 @@ __NQCID("$NQC$");
 #include <sys/systm.h>
 #include <sys/types.h>
 #include <dev/pms/RefTisa/tisa/api/tiapi.h>
-#include <dev/pms/freebsd/driver/ini/src/agtiapi.h>
-#include <dev/pms/freebsd/driver/ini/src/agtiproto.h>
+#include <dev/pms/nqc/driver/ini/src/agtiapi.h>
+#include <dev/pms/nqc/driver/ini/src/agtiproto.h>
 #include <dev/pms/RefTisa/tisa/api/ostiapi.h>
 #include <dev/pms/RefTisa/tisa/sassata/common/tdsatypes.h>
-#include <dev/pms/freebsd/driver/common/lxencrypt.h> 
+#include <dev/pms/nqc/driver/common/lxencrypt.h> 
 
 MALLOC_DEFINE( M_PMC_MCCB, "CCB List", "CCB List for PMCS driver" );
 
@@ -6631,9 +6631,9 @@ DRIVER_MODULE( pmspcv, pci, pmspcv_driver, 0, 0 );
 MODULE_DEPEND( pmspcv, cam, 1, 1, 1 );
 MODULE_DEPEND( pmspcv, pci, 1, 1, 1 );
 
-#include <dev/pms/freebsd/driver/common/lxosapi.c>
-#include <dev/pms/freebsd/driver/ini/src/osapi.c>
-#include <dev/pms/freebsd/driver/common/lxutil.c>
-#include <dev/pms/freebsd/driver/common/lxencrypt.c>
+#include <dev/pms/nqc/driver/common/lxosapi.c>
+#include <dev/pms/nqc/driver/ini/src/osapi.c>
+#include <dev/pms/nqc/driver/common/lxutil.c>
+#include <dev/pms/nqc/driver/common/lxencrypt.c>
 
 

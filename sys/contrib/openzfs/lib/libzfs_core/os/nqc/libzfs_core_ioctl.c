@@ -22,7 +22,7 @@
 #include <sys/param.h>
 #include <sys/sysctl.h>
 #include <sys/zfs_ioctl.h>
-#include <os/freebsd/zfs/sys/zfs_ioctl_compat.h>
+#include <os/nqc/zfs/sys/zfs_ioctl_compat.h>
 #include <err.h>
 #include <libzfs_core.h>
 

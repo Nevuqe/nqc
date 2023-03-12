@@ -39,7 +39,7 @@ sshd.pam.generic:
 
 A generic PAM config file which may be useful on your system. YMMV
 
-sshd.pam.freebsd:
+sshd.pam.nqc:
 
 A PAM config file which works with NQC's PAM port. Contributed by
 Dominik Brettnacher <domi@saargate.de>

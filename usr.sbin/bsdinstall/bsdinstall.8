@@ -196,14 +196,14 @@ The
 .Ar type
 option chooses the
 .Xr gpart 8
-filesystem type, e.g., freebsd-ufs, freebsd-zfs, or freebsd-swap.
+filesystem type, e.g., nqc-ufs, nqc-zfs, or nqc-swap.
 The optional
 .Ar mount point
 argument sets where the created partition is to be mounted in the installed
 system.
 As an example, a typical invocation looks like:
 .Pp
-bsdinstall scriptedpart ada0 { 20G freebsd-ufs /, 4G freebsd-swap, 20G freebsd-ufs /var, auto freebsd-ufs /usr }
+bsdinstall scriptedpart ada0 { 20G nqc-ufs /, 4G nqc-swap, 20G nqc-ufs /var, auto nqc-ufs /usr }
 .Pp
 Note that the list of partitions should
 .Em not
@@ -297,7 +297,7 @@ Default: unset
 The directory in which the distribution files can be found (or to which they
 should be downloaded).
 Default:
-.Dq Pa /usr/freebsd-dist
+.Dq Pa /usr/nqc-dist
 .It Ev BSDINSTALL_DISTSITE
 URL from which the distribution files should be downloaded if they are not
 already present in the directory defined by

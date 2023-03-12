@@ -213,7 +213,7 @@ main(int argc, char **argv)
 		case 'b':		/* set bind-addr */
 		case 'n':		/* set max num of children */
 		case 'r':		/* allow 'of' for remote ptrs */
-					/* ...[not needed in freebsd] */
+					/* ...[not needed in nqc] */
 			/* FALLTHROUGH */
 		default:
 			errs++;

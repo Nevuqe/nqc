@@ -28,7 +28,7 @@
 #
 
 # Maxime Villard <max@m00nbsd.net> spotted this problem:
-# Issue with segment registers on freebsd-i386
+# Issue with segment registers on nqc-i386
 
 # Fixed in r323722
 

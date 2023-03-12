@@ -67,10 +67,10 @@ __NQCID("$NQC$");
 #include <vm/vm_object.h>
 #include <vm/vm_extern.h>
 
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_util.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_util.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32.h>
 #include <compat/ia32/ia32_signal.h>
 #include <machine/psl.h>
 #include <machine/segments.h>
@@ -88,7 +88,7 @@ extern const char _binary_elf_vdso32_so_1_end[];
 extern char _binary_elf_vdso32_so_1_size;
 
 #ifdef COMPAT_NQC4
-static void freebsd4_ia32_sendsig(sig_t, ksiginfo_t *, sigset_t *);
+static void nqc4_ia32_sendsig(sig_t, ksiginfo_t *, sigset_t *);
 #endif
 
 static void
@@ -256,7 +256,7 @@ ia32_set_mcontext(struct thread *td, struct ia32_mcontext *mcp)
 #define	UC_COPY_SIZE	offsetof(struct ia32_ucontext, uc_link)
 
 int
-freebsd32_getcontext(struct thread *td, struct freebsd32_getcontext_args *uap)
+nqc32_getcontext(struct thread *td, struct nqc32_getcontext_args *uap)
 {
 	struct ia32_ucontext uc;
 	int ret;
@@ -275,7 +275,7 @@ freebsd32_getcontext(struct thread *td, struct freebsd32_getcontext_args *uap)
 }
 
 int
-freebsd32_setcontext(struct thread *td, struct freebsd32_setcontext_args *uap)
+nqc32_setcontext(struct thread *td, struct nqc32_setcontext_args *uap)
 {
 	struct ia32_ucontext uc;
 	int ret;
@@ -296,7 +296,7 @@ freebsd32_setcontext(struct thread *td, struct freebsd32_setcontext_args *uap)
 }
 
 int
-freebsd32_swapcontext(struct thread *td, struct freebsd32_swapcontext_args *uap)
+nqc32_swapcontext(struct thread *td, struct nqc32_swapcontext_args *uap)
 {
 	struct ia32_ucontext uc;
 	int ret;
@@ -439,7 +439,7 @@ ia32_osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 
 #ifdef COMPAT_NQC4
 static void
-freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
+nqc4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 {
 	struct ia32_nqc4_sigframe sf, *sfp;
 	struct siginfo32 siginfo;
@@ -572,7 +572,7 @@ ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	psp = p->p_sigacts;
 #ifdef COMPAT_NQC4
 	if (SIGISMEMBER(psp->ps_nqc4, sig)) {
-		freebsd4_ia32_sendsig(catcher, ksi, mask);
+		nqc4_ia32_sendsig(catcher, ksi, mask);
 		return;
 	}
 #endif
@@ -694,7 +694,7 @@ ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 
 #ifdef COMPAT_43
 int
-ofreebsd32_sigreturn(struct thread *td, struct ofreebsd32_sigreturn_args *uap)
+onqc32_sigreturn(struct thread *td, struct onqc32_sigreturn_args *uap)
 {
 	struct ia32_osigcontext sc, *scp;
 	struct trapframe *regs;
@@ -751,8 +751,8 @@ ofreebsd32_sigreturn(struct thread *td, struct ofreebsd32_sigreturn_args *uap)
 
 #ifdef COMPAT_NQC4
 int
-freebsd4_nqc32_sigreturn(struct thread *td,
-    struct freebsd4_nqc32_sigreturn_args *uap)
+nqc4_nqc32_sigreturn(struct thread *td,
+    struct nqc4_nqc32_sigreturn_args *uap)
 {
 	struct ia32_nqc4_ucontext uc;
 	struct trapframe *regs;
@@ -770,7 +770,7 @@ freebsd4_nqc32_sigreturn(struct thread *td,
 	 * Don't allow users to change privileged or reserved flags.
 	 */
 	if (!EFL_SECURE(eflags, regs->tf_rflags)) {
-		uprintf("pid %d (%s): freebsd4_nqc32_sigreturn eflags = 0x%x\n",
+		uprintf("pid %d (%s): nqc4_nqc32_sigreturn eflags = 0x%x\n",
 		    td->td_proc->p_pid, td->td_name, eflags);
 		return (EINVAL);
 	}
@@ -782,7 +782,7 @@ freebsd4_nqc32_sigreturn(struct thread *td,
 	 */
 	cs = ucp->uc_mcontext.mc_cs;
 	if (!CS_SECURE(cs)) {
-		uprintf("pid %d (%s): freebsd4_sigreturn cs = 0x%x\n",
+		uprintf("pid %d (%s): nqc4_sigreturn cs = 0x%x\n",
 		    td->td_proc->p_pid, td->td_name, cs);
 		ksiginfo_init_trap(&ksi);
 		ksi.ksi_signo = SIGBUS;
@@ -819,7 +819,7 @@ freebsd4_nqc32_sigreturn(struct thread *td,
 #endif	/* COMPAT_NQC4 */
 
 int
-freebsd32_sigreturn(struct thread *td, struct freebsd32_sigreturn_args *uap)
+nqc32_sigreturn(struct thread *td, struct nqc32_sigreturn_args *uap)
 {
 	struct ia32_ucontext uc;
 	struct trapframe *regs;
@@ -839,7 +839,7 @@ freebsd32_sigreturn(struct thread *td, struct freebsd32_sigreturn_args *uap)
 	 * Don't allow users to change privileged or reserved flags.
 	 */
 	if (!EFL_SECURE(eflags, regs->tf_rflags)) {
-		uprintf("pid %d (%s): freebsd32_sigreturn eflags = 0x%x\n",
+		uprintf("pid %d (%s): nqc32_sigreturn eflags = 0x%x\n",
 		    td->td_proc->p_pid, td->td_name, eflags);
 		return (EINVAL);
 	}

@@ -27,7 +27,7 @@
 PATH=.:$PATH
 . config
 
-SSID='freebsd+wdsmain'
+SSID='nqc+wdsmain'
 WDSUP=$TMPDIR/wdsup$$
 
 #mwldebug state+node+reset+xmit+recv+beacon+hal+hal2

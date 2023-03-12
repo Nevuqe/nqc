@@ -8,7 +8,7 @@
 
 #include "RegisterContextNQC_mips64.h"
 #include "RegisterContextPOSIX_mips64.h"
-#include "lldb-mips-freebsd-register-enums.h"
+#include "lldb-mips-nqc-register-enums.h"
 #include <vector>
 
 using namespace lldb_private;

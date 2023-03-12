@@ -174,7 +174,7 @@ create_diskimage ( ) (
 	}
 	{
 		# Make partition
-		print "gpart add -t freebsd -b ", $1, " -s ", $2, " $1"
+		print "gpart add -t nqc -b ", $1, " -s ", $2, " $1"
 	}
 	END {
 		# Force slice 1 to be marked active. This is necessary

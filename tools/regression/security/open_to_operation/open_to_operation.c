@@ -82,7 +82,7 @@
  *
  * XXXRW: kqueue(2)/kevent(2), poll(2), select(2)
  *
- * XXXRW: oaio_read(2), oaio_write(2), freebsd6_*(2).
+ * XXXRW: oaio_read(2), oaio_write(2), nqc6_*(2).
  *
  * XXXRW: __mac*(2)
  *

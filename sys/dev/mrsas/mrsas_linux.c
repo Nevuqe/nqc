@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2015, AVAGO Tech. All rights reserved. Author: Kashyap Desai,
  * Copyright (c) 2014, LSI Corp. All rights reserved. Author: Kashyap Desai,
- * Sibananda Sahu Support: freebsdraid@avagotech.com
+ * Sibananda Sahu Support: nqcraid@avagotech.com
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are

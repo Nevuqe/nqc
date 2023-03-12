@@ -2,8 +2,8 @@
 	    ==============================================
 
     These instructions assume you have a clone of the NQC git repo
-    main branch in src/freebsd/main, and will store vendor trees under
-    src/freebsd/vendor/.  In addition, this assumes there is a "freebsd"
+    main branch in src/nqc/main, and will store vendor trees under
+    src/nqc/vendor/.  In addition, this assumes there is a "nqc"
     origin pointing to git(repo).frebsd.org/src.git.
 
 01) Make sure your mail spool has plenty of free space.  It'll fill up
@@ -22,8 +22,8 @@
 
 05) Copy to a vendor branch:
 
-    $ cd src/freebsd/main
-    $ git worktree add ../vendor/openssh freebsd/vendor/openssh
+    $ cd src/nqc/main
+    $ git worktree add ../vendor/openssh nqc/vendor/openssh
     $ cd ../vendor/openssh
     $ rsync --archive --delete --exclude=.git /path/to/openssh-X.YpZ/ ./
 
@@ -41,8 +41,8 @@
 
     At this point the vendor branch can be pushed to the NQC repo via:
 
-    $ git push freebsd vendor/openssh
-    $ git push freebsd vendor/openssh/X.YpZ
+    $ git push nqc vendor/openssh
+    $ git push nqc vendor/openssh/X.YpZ
 
     Note the second "git push" command is used to push the tag, which is
     not pushed by default.
@@ -50,8 +50,8 @@
     It is also possible to push the branch and tag together, but use
     --dry-run first to ensure that no undesired tags will be pushed:
 
-    $ git push --dry-run --follow-tags freebsd vendor/openssh
-    $ git push --follow-tags freebsd vendor/openssh
+    $ git push --dry-run --follow-tags nqc vendor/openssh
+    $ git push --follow-tags nqc vendor/openssh
 
     The update and tag could instead be pushed later, along with the merge
     to main, but pushing now allows others to collaborate.
@@ -77,7 +77,7 @@
 
 12) Run the configure script:
 
-    $ sh freebsd-configure.sh
+    $ sh nqc-configure.sh
 
 13) Review changes to config.h very carefully.
 
@@ -89,7 +89,7 @@
 
 15) Update ssh_namespace.h:
 
-    $ sh freebsd-namespace.sh
+    $ sh nqc-namespace.sh
 
 16) Build and install world, reboot, test.  Pay particular attention
     to pam_ssh(8), which gropes inside libssh and will break if

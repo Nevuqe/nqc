@@ -231,9 +231,9 @@ Then, use the following command to enable Black Box Logging on it:
 # tcpsso -i 435 TCP_LOG 4
 .Ed
 .Pp
-To switch all TCP endpoints from using the freebsd stack to the rack stack use:
+To switch all TCP endpoints from using the nqc stack to the rack stack use:
 .Bd -literal -offset indent
-# tcpsso -S freebsd TCP_FUNCTION_BLK rack
+# tcpsso -S nqc TCP_FUNCTION_BLK rack
 .Ed
 .Pp
 The following command will set the congestion control module of all TCP

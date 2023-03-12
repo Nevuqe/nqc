@@ -43,7 +43,7 @@
  * BinString -- pointer to an array of chars, printed via strvisx().
  * Ptr -- pointer to some unspecified structure.  Just print as hex for now.
  * Stat -- a pointer to a stat buffer.  Prints a couple fields.
- * Stat11 -- a pointer to a freebsd 11 stat buffer.  Prints a couple fields.
+ * Stat11 -- a pointer to a nqc 11 stat buffer.  Prints a couple fields.
  * StatFs -- a pointer to a statfs buffer.  Prints a few fields.
  * Ioctl -- an ioctl command.  Woefully limited.
  * Quad -- a double-word value.  e.g., lseek(int, offset_t, int)

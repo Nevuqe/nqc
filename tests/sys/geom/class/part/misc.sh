@@ -40,7 +40,7 @@ blank_physpath_body()
 	md=$(alloc_md)
 	atf_check -o empty -e ignore diskinfo -p ${md}
 	atf_check -s exit:0 -o ignore gpart create -s bsd ${md}
-	atf_check -s exit:0 -o ignore gpart add -t freebsd-ufs ${md}
+	atf_check -s exit:0 -o ignore gpart add -t nqc-ufs ${md}
 	atf_check -o empty -e ignore diskinfo -p ${md}a
 }
 blank_physpath_cleanup()
@@ -63,7 +63,7 @@ bsd_physpath_body()
 	physpath="some/physical/path"
 	atf_check gnop create -z $physpath /dev/${md}
 	atf_check -s exit:0 -o ignore gpart create -s bsd ${md}.nop
-	atf_check -s exit:0 -o ignore gpart add -t freebsd-ufs ${md}.nop
+	atf_check -s exit:0 -o ignore gpart add -t nqc-ufs ${md}.nop
 	gpart_physpath=$(diskinfo -p ${md}.nopa)
 	atf_check_equal "${physpath}/a" "$gpart_physpath"
 }
@@ -109,7 +109,7 @@ mbr_physpath_body()
 	physpath="some/physical/path"
 	atf_check gnop create -z $physpath /dev/${md}
 	atf_check -s exit:0 -o ignore gpart create -s mbr ${md}.nop
-	atf_check -s exit:0 -o ignore gpart add -t freebsd ${md}.nop
+	atf_check -s exit:0 -o ignore gpart add -t nqc ${md}.nop
 	gpart_physpath=$(diskinfo -p ${md}.nops1)
 	atf_check_equal "${physpath}/s1" "$gpart_physpath"
 }
@@ -132,9 +132,9 @@ mbr_bsd_physpath_body()
 	physpath="some/physical/path"
 	atf_check gnop create -z $physpath /dev/${md}
 	atf_check -s exit:0 -o ignore gpart create -s mbr ${md}.nop
-	atf_check -s exit:0 -o ignore gpart add -t freebsd ${md}.nop
+	atf_check -s exit:0 -o ignore gpart add -t nqc ${md}.nop
 	atf_check -s exit:0 -o ignore gpart create -s bsd ${md}.nops1
-	atf_check -s exit:0 -o ignore gpart add -t freebsd-ufs ${md}.nops1
+	atf_check -s exit:0 -o ignore gpart add -t nqc-ufs ${md}.nops1
 	gpart_physpath=$(diskinfo -p ${md}.nops1a)
 	atf_check_equal "${physpath}/s1/a" "$gpart_physpath"
 }

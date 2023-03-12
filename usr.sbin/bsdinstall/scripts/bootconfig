@@ -101,7 +101,7 @@ if [ -n "$(awk '{if ($2=="/boot/efi") printf("%s\n",$1);}' $PATH_FSTAB)" ]; then
 	esac
 	BOOTDIR="/efi/boot"
 	BOOTNAME="${BOOTDIR}/boot${ARCHBOOTNAME}.efi"
-	NQC_BOOTDIR="/efi/freebsd"
+	NQC_BOOTDIR="/efi/nqc"
 	NQC_BOOTNAME="${NQC_BOOTDIR}/loader.efi"
 	mntpt="$BSDINSTALL_CHROOT/boot/efi"
 

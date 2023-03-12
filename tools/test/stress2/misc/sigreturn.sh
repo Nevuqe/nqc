@@ -27,7 +27,7 @@
 #
 
 # "panic: smp_tlb_shootdown: interrupts disabled" seen.
-# http://people.frebsd.org/~pho/stress/log/freebsd4_sigreturn.txt
+# http://people.frebsd.org/~pho/stress/log/nqc4_sigreturn.txt
 # Fixed in r251033.
 
 . ../default.cfg

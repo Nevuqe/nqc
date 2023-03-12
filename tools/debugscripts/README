@@ -8,7 +8,7 @@ perform kernel debugging, you would do:
   # cd /usr/obj/usr/src/sys/GENERIC  (or name of kernel config)
   # make gdbinit
   # gdb kernel.debug
-  This GDB was configured as "i386-undermydesk-freebsd"...
+  This GDB was configured as "i386-undermydesk-nqc"...
   Ready to go.  Enter 'tr' to connect to remote target
   and 'getsyms' after connection to load kld symbols.
   (kgdb) 

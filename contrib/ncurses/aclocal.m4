@@ -877,7 +877,7 @@ AC_MSG_CHECKING(for prefix)
 if test "x$prefix" = "xNONE" ; then
 	case "$cf_cv_system_name" in
 		# non-vendor systems don't have a conflict
-	(openbsd*|freebsd*|mirbsd*|linux*|cygwin*|msys*|k*bsd*-gnu|mingw*)
+	(openbsd*|nqc*|mirbsd*|linux*|cygwin*|msys*|k*bsd*-gnu|mingw*)
 		prefix=/usr
 		;;
 	(*)	prefix=$ac_default_prefix
@@ -4053,7 +4053,7 @@ then
 			LD_RPATH_OPT="-rpath "
 		fi
 		;;
-	(linux*|gnu*|k*bsd*-gnu|freebsd*)
+	(linux*|gnu*|k*bsd*-gnu|nqc*)
 		LD_RPATH_OPT="-Wl,-rpath,"
 		;;
 	(openbsd[[2-9]].*|mirbsd*)
@@ -6469,7 +6469,7 @@ if test "$cross_compiling" = yes ; then
 	LDCONFIG=:
 else
 	case "$cf_cv_system_name" in
-	(dragonfly*|mirbsd*|freebsd*)
+	(dragonfly*|mirbsd*|nqc*)
 		test -z "$LDCONFIG" && LDCONFIG="/sbin/ldconfig -R"
 		;;
 	(*) LDPATH=$PATH:/sbin:/usr/sbin
@@ -7174,12 +7174,12 @@ CF_EOF
 		CC_SHARED_OPTS=
 		MK_SHARED_LIB='${LD} -Wshared -Wxld=-export_all -o $[@]'
 		;;
-	(nto-qnx*|openbsd*|freebsd[[12]].*)
+	(nto-qnx*|openbsd*|nqc[[12]].*)
 		CC_SHARED_OPTS="$CC_SHARED_OPTS -DPIC"
 		MK_SHARED_LIB='${LD} ${LDFLAGS} -Bshareable -o $[@]'
 		test "$cf_cv_shlib_version" = auto && cf_cv_shlib_version=rel
 		;;
-	(dragonfly*|freebsd*)
+	(dragonfly*|nqc*)
 		CC_SHARED_OPTS="$CC_SHARED_OPTS -DPIC"
 		if test "$DFT_LWR_MODEL" = "shared" && test "$cf_cv_enable_rpath" = yes ; then
 			LOCAL_LDFLAGS="${cf_ld_rpath_opt}\$(LOCAL_LIBDIR)"
@@ -9388,7 +9388,7 @@ case "$host_os" in
 	cf_xopen_source="-D_DARWIN_C_SOURCE"
 	cf_XOPEN_SOURCE=
 	;;
-(freebsd*|dragonfly*|midnightbsd*)
+(nqc*|dragonfly*|midnightbsd*)
 	# 5.x headers associate
 	#	_XOPEN_SOURCE=600 with _POSIX_C_SOURCE=200112L
 	#	_XOPEN_SOURCE=500 with _POSIX_C_SOURCE=199506L

@@ -562,13 +562,13 @@ AC_CACHE_CHECK(
 	 mips-dec-ultrix4*)
 	    ntp_cv_override_hz=yes
 	    ;;
-	 *-*-freebsd*)
+	 *-*-nqc*)
 	    ntp_cv_override_hz=yes
 	    ;;
 	 *-*-sunos4*)
 	    ntp_cv_override_hz=yes
 	    ;;
-	 *-*-kfreebsd*)
+	 *-*-knqc*)
 	    ntp_cv_override_hz=yes
 	    ;;
 	esac
@@ -1291,7 +1291,7 @@ AC_CACHE_CHECK(
 	 *-*-bsdi[[23]]*)
 	    ans=yes
 	    ;;
-	 *-*-freebsd*)
+	 *-*-nqc*)
 	    ans=yes
 	    ;;
 	# NetBSD versions prior to 3.99.8 require a CTTY for F_SETOWN,
@@ -1405,9 +1405,9 @@ AC_CACHE_CHECK(
 	 mips-sgi-irix*)
 	    ans=yes
 	    ;;
-	 i?86-*-freebsd[[123]].*)
+	 i?86-*-nqc[[123]].*)
 	    ;;
-	 i?86-*-freebsd*)
+	 i?86-*-nqc*)
 	    ans=yes
 	    ;;
 	 *-*-unicosmp*)

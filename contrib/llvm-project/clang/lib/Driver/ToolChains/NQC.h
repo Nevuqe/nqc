@@ -17,12 +17,12 @@ namespace clang {
 namespace driver {
 namespace tools {
 
-/// freebsd -- Directly call GNU Binutils assembler and linker
-namespace freebsd {
+/// nqc -- Directly call GNU Binutils assembler and linker
+namespace nqc {
 class LLVM_LIBRARY_VISIBILITY Assembler : public Tool {
 public:
   Assembler(const ToolChain &TC)
-      : Tool("freebsd::Assembler", "assembler", TC) {}
+      : Tool("nqc::Assembler", "assembler", TC) {}
 
   bool hasIntegratedCPP() const override { return false; }
 
@@ -34,7 +34,7 @@ public:
 
 class LLVM_LIBRARY_VISIBILITY Linker : public Tool {
 public:
-  Linker(const ToolChain &TC) : Tool("freebsd::Linker", "linker", TC) {}
+  Linker(const ToolChain &TC) : Tool("nqc::Linker", "linker", TC) {}
 
   bool hasIntegratedCPP() const override { return false; }
   bool isLinkJob() const override { return true; }
@@ -44,7 +44,7 @@ public:
                     const llvm::opt::ArgList &TCArgs,
                     const char *LinkingOutput) const override;
 };
-} // end namespace freebsd
+} // end namespace nqc
 } // end namespace tools
 
 namespace toolchains {

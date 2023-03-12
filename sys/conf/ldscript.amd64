@@ -1,5 +1,5 @@
 /* $NQC$ */
-OUTPUT_FORMAT("elf64-x86-64-freebsd", "elf64-x86-64-freebsd", "elf64-x86-64-freebsd")
+OUTPUT_FORMAT("elf64-x86-64-nqc", "elf64-x86-64-nqc", "elf64-x86-64-nqc")
 OUTPUT_ARCH(i386:x86-64)
 ENTRY(btext)
 SEARCH_DIR("/usr/lib");

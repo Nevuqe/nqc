@@ -28,7 +28,7 @@ AC_MSG_RESULT([$ntp_ept])
 AC_MSG_CHECKING([if we can run test-ntp_restrict])
 ntp_test_ntp_restrict="no"
 case "$ntp_ept:$cross:$host" in
- no:0:*-*-freebsd6.4) ;;
+ no:0:*-*-nqc6.4) ;;
  no:0:*-*-hpux11.23*) ;;
  no:0:*-*-solaris*) ;;
  *) ntp_test_ntp_restrict="yes" ;;
@@ -43,7 +43,7 @@ AM_CONDITIONAL([BUILD_TEST_NTP_RESTRICT], [test x$ntp_test_ntp_restrict = xyes])
 AC_MSG_CHECKING([if we can run test-ntp_scanner])
 ntp_test_ntp_scanner="no"
 case "$ntp_ept:$cross:$host" in
- no:0:*-*-freebsd6.4) ;;
+ no:0:*-*-nqc6.4) ;;
  no:0:*-*-solaris*) ;;
  *) ntp_test_ntp_scanner="yes" ;;
 esac
@@ -57,7 +57,7 @@ AM_CONDITIONAL([BUILD_TEST_NTP_SCANNER], [test x$ntp_test_ntp_scanner = xyes])
 AC_MSG_CHECKING([if we can run test-ntp_signd])
 ntp_test_ntp_signd="no"
 case "$ntp_ept:$cross:$host" in
- no:0:*-*-freebsd6.4) ;;
+ no:0:*-*-nqc6.4) ;;
  no:0:*-*-solaris*) ;;
  *) ntp_test_ntp_signd="yes" ;;
 esac

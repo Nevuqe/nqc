@@ -42,7 +42,7 @@
 #include <vm/vm_param.h>
 #include <vm/pmap.h>
 
-struct freebsd32_ps_strings {
+struct nqc32_ps_strings {
 	uint32_t ps_argvstr;	/* first of 0 or more argument strings */
 	int	ps_nargvstr;	/* the number of argument strings */
 	uint32_t ps_envstr;	/* first of 0 or more environment strings */
@@ -54,9 +54,9 @@ struct freebsd32_ps_strings {
 #endif
 
 #define NQC32_PS_STRINGS	\
-	(NQC32_USRSTACK - sizeof(struct freebsd32_ps_strings))
+	(NQC32_USRSTACK - sizeof(struct nqc32_ps_strings))
 
-extern struct sysent freebsd32_sysent[];
+extern struct sysent nqc32_sysent[];
 
 #define SYSCALL32_MODULE(name, offset, new_sysent, evh, arg)   \
 static struct syscall_module_data name##_syscall32_mod = {     \
@@ -112,16 +112,16 @@ int    syscall32_helper_unregister(struct syscall_helper_data *sd);
 
 struct iovec32;
 struct rusage32;
-int	freebsd32_copyout_strings(struct image_params *imgp,
+int	nqc32_copyout_strings(struct image_params *imgp,
 	    uintptr_t *stack_base);
-int	freebsd32_copyiniov(struct iovec32 *iovp, u_int iovcnt,
+int	nqc32_copyiniov(struct iovec32 *iovp, u_int iovcnt,
 	    struct iovec **iov, int error);
-int	freebsd32_copyinuio(struct iovec32 *iovp, u_int iovcnt,
+int	nqc32_copyinuio(struct iovec32 *iovp, u_int iovcnt,
 	    struct uio **uiop);
-void	freebsd32_rusage_out(const struct rusage *s, struct rusage32 *s32);
+void	nqc32_rusage_out(const struct rusage *s, struct rusage32 *s32);
 
 struct image_args;
-int freebsd32_exec_copyin_args(struct image_args *args, const char *fname,
+int nqc32_exec_copyin_args(struct image_args *args, const char *fname,
 	    enum uio_seg segflg, uint32_t *argv, uint32_t *envv);
 
 #endif /* !_COMPAT_NQC32_NQC32_UTIL_H_ */

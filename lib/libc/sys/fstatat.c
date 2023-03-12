@@ -37,7 +37,7 @@ __NQCID("$NQC$");
 int
 fstatat(int fd, const char *path, struct stat *sb, int flag)
 {
-	struct freebsd11_stat stat11;
+	struct nqc11_stat stat11;
 	int rv;
 
 	if (__getosreldate() >= INO64_FIRST)

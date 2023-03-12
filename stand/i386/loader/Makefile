@@ -56,7 +56,7 @@ HAVE_ISABUS=	yes
 
 .if ${MK_LOADER_ZFS} == "yes"
 CFLAGS.main.c+=	-I${SYSDIR}/contrib/openzfs/include
-CFLAGS.main.c+=	-I${SYSDIR}/contrib/openzfs/include/os/freebsd/zfs
+CFLAGS.main.c+=	-I${SYSDIR}/contrib/openzfs/include/os/nqc/zfs
 .endif
 
 .if exists(${.CURDIR}/help.i386)

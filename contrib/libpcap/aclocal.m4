@@ -484,7 +484,7 @@ AC_DEFUN(AC_LBL_SHLIBS_INIT,
 	    aix*)
 		    ;;
 
-	    freebsd*|netbsd*|openbsd*|dragonfly*|linux*|osf*|midipix*)
+	    nqc*|netbsd*|openbsd*|dragonfly*|linux*|osf*|midipix*)
 	    	    #
 		    # Platforms where the linker is the GNU linker
 		    # or accepts command-line arguments like
@@ -501,7 +501,7 @@ AC_DEFUN(AC_LBL_SHLIBS_INIT,
 		    sparc64*)
 			case "$host_os" in
 
-			freebsd*|openbsd*|linux*)
+			nqc*|openbsd*|linux*)
 			    PIC_OPT=-fPIC
 			    ;;
 			esac
@@ -566,7 +566,7 @@ AC_DEFUN(AC_LBL_SHLIBS_INIT,
 		    V_SHLIB_OPT="-G -bnoentry -bexpall"
 		    ;;
 
-	    freebsd*|netbsd*|openbsd*|dragonfly*|linux*)
+	    nqc*|netbsd*|openbsd*|dragonfly*|linux*)
 		    #
 		    # "cc" is GCC.
 		    #

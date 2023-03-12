@@ -149,7 +149,7 @@ RFC2545: Use of BGP-4 Multiprotocol Extensions for IPv6 Inter-Domain Routing
 RFC2553: (see RFC3493)
 RFC2671: Extension Mechanisms for DNS (EDNS0)
     * see USAGE for how to use it.
-    * not supported on kame/freebsd4 and kame/bsdi4.
+    * not supported on kame/nqc4 and kame/bsdi4.
 RFC2673: Binary Labels in the Domain Name System
     * KAME/bsdi4 supports A6, DNAME and binary label to some extent.
     * KAME apps/bind8 repository has resolver library with partial A6, DNAME
@@ -160,7 +160,7 @@ RFC2710: Multicast Listener Discovery for IPv6
 RFC2711: IPv6 router alert option
 RFC2732: Format for Literal IPv6 Addresses in URL's
     * The spec is implemented in programs that handle URLs
-      (like freebsd ftpio(3) and fetch(1), or netbsd ftp(1))
+      (like nqc ftpio(3) and fetch(1), or netbsd ftp(1))
 RFC2874: DNS Extensions to Support IPv6 Address Aggregation and Renumbering
     * KAME/bsdi4 supports A6, DNAME and binary label to some extent.
     * KAME apps/bind8 repository has resolver library with partial A6, DNAME
@@ -1552,7 +1552,7 @@ libinet6.a has a couple of extensions against libc DNS resolver:
 
 KAME requires three items to be added into the standard drivers:
 
-(1) (freebsd[234] and bsdi[34] only) mbuf clustering requirement.
+(1) (nqc[234] and bsdi[34] only) mbuf clustering requirement.
     In this stable release, we changed MINCLSIZE into MHLEN+1 for all the
     operating systems in order to make all the drivers behave as we expect.  
 

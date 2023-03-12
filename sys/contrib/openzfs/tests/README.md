@@ -177,7 +177,7 @@ with the `zfs-tests.sh` wrapper script will look something like this:
       dist_pkgdata_DATA = \
         zpool_example.run \
         common.run \
-        freebsd.run \
+        nqc.run \
         linux.run \
         longevity.run \
         perf-regression.run \

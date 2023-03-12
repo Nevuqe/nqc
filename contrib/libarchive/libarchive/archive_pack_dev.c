@@ -294,7 +294,7 @@ static const struct format {
 	{"386bsd",  pack_8_8},
 	{"4bsd",    pack_8_8},
 	{"bsdos",   pack_bsdos},
-	{"freebsd", pack_nqc},
+	{"nqc", pack_nqc},
 	{"hpux",    pack_8_24},
 	{"isc",     pack_8_8},
 	{"linux",   pack_8_8},

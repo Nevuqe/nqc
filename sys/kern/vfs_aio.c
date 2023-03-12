@@ -2169,7 +2169,7 @@ sys_aio_error(struct thread *td, struct aio_error_args *uap)
 /* syscall - asynchronous read from a file (REALTIME) */
 #ifdef COMPAT_NQC6
 int
-freebsd6_aio_read(struct thread *td, struct freebsd6_aio_read_args *uap)
+nqc6_aio_read(struct thread *td, struct nqc6_aio_read_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_READ,
@@ -2194,7 +2194,7 @@ sys_aio_readv(struct thread *td, struct aio_readv_args *uap)
 /* syscall - asynchronous write to a file (REALTIME) */
 #ifdef COMPAT_NQC6
 int
-freebsd6_aio_write(struct thread *td, struct freebsd6_aio_write_args *uap)
+nqc6_aio_write(struct thread *td, struct nqc6_aio_write_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_WRITE,
@@ -2370,7 +2370,7 @@ kern_lio_listio(struct thread *td, int mode, struct aiocb * const *uacb_list,
 /* syscall - list directed I/O (REALTIME) */
 #ifdef COMPAT_NQC6
 int
-freebsd6_lio_listio(struct thread *td, struct freebsd6_lio_listio_args *uap)
+nqc6_lio_listio(struct thread *td, struct nqc6_lio_listio_args *uap)
 {
 	struct aiocb **acb_list;
 	struct sigevent *sigp, sig;
@@ -2720,11 +2720,11 @@ filt_lio(struct knote *kn, long hint)
 #include <sys/mount.h>
 #include <sys/socket.h>
 #include <sys/sysent.h>
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 struct __aiocb_private32 {
 	int32_t	status;
@@ -2834,7 +2834,7 @@ aiocb32_copyin(struct aiocb *ujob, struct kaiocb *kjob, int type)
 		iov32 = PTRIN(job32.aio_iov);
 		CP(job32, *kcb, aio_iovcnt);
 		/* malloc a uio and copy in the iovec */
-		error = freebsd32_copyinuio(iov32,
+		error = nqc32_copyinuio(iov32,
 		    kcb->aio_iovcnt, &kjob->uiop);
 		if (error)
 			return (error);
@@ -2926,14 +2926,14 @@ static struct aiocb_ops aiocb32_ops_osigevent = {
 #endif
 
 int
-freebsd32_aio_return(struct thread *td, struct freebsd32_aio_return_args *uap)
+nqc32_aio_return(struct thread *td, struct nqc32_aio_return_args *uap)
 {
 
 	return (kern_aio_return(td, (struct aiocb *)uap->aiocbp, &aiocb32_ops));
 }
 
 int
-freebsd32_aio_suspend(struct thread *td, struct freebsd32_aio_suspend_args *uap)
+nqc32_aio_suspend(struct thread *td, struct nqc32_aio_suspend_args *uap)
 {
 	struct timespec32 ts32;
 	struct timespec ts, *tsp;
@@ -2969,7 +2969,7 @@ freebsd32_aio_suspend(struct thread *td, struct freebsd32_aio_suspend_args *uap)
 }
 
 int
-freebsd32_aio_error(struct thread *td, struct freebsd32_aio_error_args *uap)
+nqc32_aio_error(struct thread *td, struct nqc32_aio_error_args *uap)
 {
 
 	return (kern_aio_error(td, (struct aiocb *)uap->aiocbp, &aiocb32_ops));
@@ -2977,8 +2977,8 @@ freebsd32_aio_error(struct thread *td, struct freebsd32_aio_error_args *uap)
 
 #ifdef COMPAT_NQC6
 int
-freebsd6_nqc32_aio_read(struct thread *td,
-    struct freebsd6_nqc32_aio_read_args *uap)
+nqc6_nqc32_aio_read(struct thread *td,
+    struct nqc6_nqc32_aio_read_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_READ,
@@ -2987,7 +2987,7 @@ freebsd6_nqc32_aio_read(struct thread *td,
 #endif
 
 int
-freebsd32_aio_read(struct thread *td, struct freebsd32_aio_read_args *uap)
+nqc32_aio_read(struct thread *td, struct nqc32_aio_read_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_READ,
@@ -2995,7 +2995,7 @@ freebsd32_aio_read(struct thread *td, struct freebsd32_aio_read_args *uap)
 }
 
 int
-freebsd32_aio_readv(struct thread *td, struct freebsd32_aio_readv_args *uap)
+nqc32_aio_readv(struct thread *td, struct nqc32_aio_readv_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_READV,
@@ -3004,8 +3004,8 @@ freebsd32_aio_readv(struct thread *td, struct freebsd32_aio_readv_args *uap)
 
 #ifdef COMPAT_NQC6
 int
-freebsd6_nqc32_aio_write(struct thread *td,
-    struct freebsd6_nqc32_aio_write_args *uap)
+nqc6_nqc32_aio_write(struct thread *td,
+    struct nqc6_nqc32_aio_write_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_WRITE,
@@ -3014,7 +3014,7 @@ freebsd6_nqc32_aio_write(struct thread *td,
 #endif
 
 int
-freebsd32_aio_write(struct thread *td, struct freebsd32_aio_write_args *uap)
+nqc32_aio_write(struct thread *td, struct nqc32_aio_write_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_WRITE,
@@ -3022,7 +3022,7 @@ freebsd32_aio_write(struct thread *td, struct freebsd32_aio_write_args *uap)
 }
 
 int
-freebsd32_aio_writev(struct thread *td, struct freebsd32_aio_writev_args *uap)
+nqc32_aio_writev(struct thread *td, struct nqc32_aio_writev_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_WRITEV,
@@ -3030,7 +3030,7 @@ freebsd32_aio_writev(struct thread *td, struct freebsd32_aio_writev_args *uap)
 }
 
 int
-freebsd32_aio_mlock(struct thread *td, struct freebsd32_aio_mlock_args *uap)
+nqc32_aio_mlock(struct thread *td, struct nqc32_aio_mlock_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_MLOCK,
@@ -3038,8 +3038,8 @@ freebsd32_aio_mlock(struct thread *td, struct freebsd32_aio_mlock_args *uap)
 }
 
 int
-freebsd32_aio_waitcomplete(struct thread *td,
-    struct freebsd32_aio_waitcomplete_args *uap)
+nqc32_aio_waitcomplete(struct thread *td,
+    struct nqc32_aio_waitcomplete_args *uap)
 {
 	struct timespec32 ts32;
 	struct timespec ts, *tsp;
@@ -3061,7 +3061,7 @@ freebsd32_aio_waitcomplete(struct thread *td,
 }
 
 int
-freebsd32_aio_fsync(struct thread *td, struct freebsd32_aio_fsync_args *uap)
+nqc32_aio_fsync(struct thread *td, struct nqc32_aio_fsync_args *uap)
 {
 
 	return (kern_aio_fsync(td, uap->op, (struct aiocb *)uap->aiocbp,
@@ -3070,8 +3070,8 @@ freebsd32_aio_fsync(struct thread *td, struct freebsd32_aio_fsync_args *uap)
 
 #ifdef COMPAT_NQC6
 int
-freebsd6_nqc32_lio_listio(struct thread *td,
-    struct freebsd6_nqc32_lio_listio_args *uap)
+nqc6_nqc32_lio_listio(struct thread *td,
+    struct nqc6_nqc32_lio_listio_args *uap)
 {
 	struct aiocb **acb_list;
 	struct sigevent *sigp, sig;
@@ -3117,7 +3117,7 @@ freebsd6_nqc32_lio_listio(struct thread *td,
 #endif
 
 int
-freebsd32_lio_listio(struct thread *td, struct freebsd32_lio_listio_args *uap)
+nqc32_lio_listio(struct thread *td, struct nqc32_lio_listio_args *uap)
 {
 	struct aiocb **acb_list;
 	struct sigevent *sigp, sig;

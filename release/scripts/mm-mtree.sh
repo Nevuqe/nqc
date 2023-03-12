@@ -130,7 +130,7 @@ echo ''
 #
 rm -f ${TEMPROOT}/etc/*.db ${TEMPROOT}/etc/passwd
 
-# We only need to compare things like freebsd.cf once
+# We only need to compare things like nqc.cf once
 find ${TEMPROOT}/usr/obj -type f -delete 2>/dev/null
 
 # Delete stuff we do not need to keep the mtree database small,

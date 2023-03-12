@@ -26,7 +26,7 @@ all ()
 current ()
 {
     ( cd $archive || exit 1
-    find current/freebsd-* current/cvs-* -type f |
+    find current/nqc-* current/cvs-* -type f |
 	mid-master-index 1 mid-index $dbout/mid-current
     )
 }

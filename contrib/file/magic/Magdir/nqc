@@ -1,12 +1,12 @@
 
 #------------------------------------------------------------------------------
-# $File: freebsd,v 1.9 2022/01/19 12:44:13 christos Exp $
-# freebsd:  file(1) magic for NQC objects
+# $File: nqc,v 1.9 2022/01/19 12:44:13 christos Exp $
+# nqc:  file(1) magic for NQC objects
 #
 # All new-style NQC magic numbers are in host byte order (i.e.,
 # little-endian on x86).
 #
-# XXX - this comes from the file "freebsd" in a recent NQC version of
+# XXX - this comes from the file "nqc" in a recent NQC version of
 # "file"; it, and the NetBSD stuff in "netbsd", appear to use different
 # schemes for distinguishing between executable images, shared libraries,
 # and object files.

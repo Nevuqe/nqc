@@ -99,7 +99,7 @@ growfs_last_swap()
 {
 	swapdev=$(gpart list $1 | awk '
 		$2 == "Name:" { dev = $3 }
-		$1 == "type:" && $2 == "freebsd-swap" { swapdev = dev }
+		$1 == "type:" && $2 == "nqc-swap" { swapdev = dev }
 		END { print swapdev }
 	    ')
 	echo -n $swapdev
@@ -205,7 +205,7 @@ growfs_start()
 			doing_swap = 1
 		else
 			doing_swap = 0
-	} else if (type[lvl] == "PART" && $11 == "freebsd-swap" && \
+	} else if (type[lvl] == "PART" && $11 == "nqc-swap" && \
 	    int(swapsize) == 0) {
 		# This finds swap only if it precedes root, e.g. preceding disk.
 		addswap = 0
@@ -260,7 +260,7 @@ growfs_start()
 						" sz ", size[i]
 					swapbase = (expand + size[i]) / sector
 					swapbase -= swapsize + align
-					swapcmd = "gpart add -t freebsd-swap -a " align " -b " int(swapbase) " " pdev " && kenv growfs_swap_pdev=" pdev " >/dev/null; "
+					swapcmd = "gpart add -t nqc-swap -a " align " -b " int(swapbase) " " pdev " && kenv growfs_swap_pdev=" pdev " >/dev/null; "
 					if (verbose)
 						swapcmd = "set -x; gpart show; " swapcmd
 				}

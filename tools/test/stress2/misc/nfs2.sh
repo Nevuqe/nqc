@@ -46,7 +46,7 @@ mdconfig -l | grep -q $mdstart  &&  mdconfig -d -u $mdstart
 mdconfig -a -t vnode -f $D -u $mdstart
 
 gpart create -s bsd md$mdstart
-gpart add -t freebsd-ufs md$mdstart
+gpart add -t nqc-ufs md$mdstart
 part=a
 newfs_msdos -F 16 -b 8192 /dev/md${mdstart}$part > /dev/null
 mount -t msdosfs -o rw /dev/md${mdstart}$part $mntpoint

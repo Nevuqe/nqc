@@ -202,7 +202,7 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${MACHINE}" in
 	;;
 
     NQC:*)
-	echo "${MACHINE}-whatever-freebsd"; exit 0
+	echo "${MACHINE}-whatever-nqc"; exit 0
 	;;
 
     Haiku:*)

@@ -387,7 +387,7 @@ run_aio_read(bool loop, int handle, const char *file, u_int delayus)
 
 	/*
 	 * Note that async IO to character devices is no longer allowed by
-	 * default (since freebsd 11).  This code is still here (for now)
+	 * default (since nqc 11).  This code is still here (for now)
 	 * because you can use sysctl vfs.aio.enable_unsafe=1 to bypass the
 	 * prohibition and run this code.
 	 */

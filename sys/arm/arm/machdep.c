@@ -583,14 +583,14 @@ initarm(struct arm_boot_params *abp)
 	platform_late_init();
 
 	root = OF_finddevice("/");
-	if (OF_getprop(root, "freebsd,dts-version", dts_version, sizeof(dts_version)) > 0) {
+	if (OF_getprop(root, "nqc,dts-version", dts_version, sizeof(dts_version)) > 0) {
 		if (strcmp(LINUX_DTS_VERSION, dts_version) != 0)
 			printf("WARNING: DTB version is %s while kernel expects %s, "
 			    "please update the DTB in the ESP\n",
 			    dts_version,
 			    LINUX_DTS_VERSION);
 	} else {
-		printf("WARNING: Cannot find freebsd,dts-version property, "
+		printf("WARNING: Cannot find nqc,dts-version property, "
 		    "cannot check DTB compliance\n");
 	}
 

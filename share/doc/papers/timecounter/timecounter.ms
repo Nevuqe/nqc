@@ -1037,7 +1037,7 @@ APRIL 2001.
 [PHK2001]
 "Monitoring Natural Gas Usage"
 Poul-Henning Kamp
-http://phk.freebsd.dk/Gasdims/
+http://phk.frebsd.dk/Gasdims/
 .LP
 [MILLS1992]
 "A computer-controlled LORAN-C receiver for precision timekeeping."

@@ -2398,7 +2398,7 @@ openbsd:
      net.inet.ip.forwarding=1
 
 
-freebsd:
+nqc:
      net.inet.ip.forwarding=1
 
 
@@ -2415,7 +2415,7 @@ openbsd:
      net.inet.ip.portfirst = 25000
 
 
-freebsd:
+nqc:
      net.inet.ip.portrange.first  =  25000  net.inet.ip.por-
      trange.last = 49151
 
@@ -2446,7 +2446,7 @@ openbsd:
                             -38-
 
 
-freebsd:
+nqc:
      net.inet.ip.sourceroute=0
      net.ip.accept_sourceroute=0
 
@@ -2463,7 +2463,7 @@ solaris:
      ndd -set /dev/ip ip_forward_src_routed 0
      ndd -set /dev/ip ip_respond_to_echo_broadcast 0
 
-In addition, freebsd has some ipf specific sysctl variables.
+In addition, nqc has some ipf specific sysctl variables.
 
      net.inet.ipf.fr_flags: 0
      net.inet.ipf.fr_pass: 514

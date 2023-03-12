@@ -35,14 +35,14 @@ case "$PARALLEL_BUILDS" in
 esac
 
 # Backroom:
-#   barnstable	   freebsd-6.1
-#   beauregard	   freebsd-6.0
+#   barnstable	   nqc-6.1
+#   beauregard	   nqc-6.0
 # X churchy	   alpha-dec-osf5.1
 #   deacon	   sparc-sun-solaris2.10
-#   grundoon	   freebsd-6.2
-#   howland	   freebsd-6.1
-# o macabre	   freebsd-6.1-STABLE
-# o mort	   freebsd-6.1
+#   grundoon	   nqc-6.2
+#   howland	   nqc-6.1
+# o macabre	   nqc-6.1-STABLE
+# o mort	   nqc-6.1
 #   whimsy	   sparc-sun-solaris2.10
 
 # Campus:
@@ -50,7 +50,7 @@ esac
 # * bridgeport	   sparc-sun-solaris2.10
 # * malarky	   sparc-sun-solaris2.10
 # * pogo	   sparc-sun-solaris2.10
-# * rackety	   freebsd-6.1
+# * rackety	   nqc-6.1
 
 if [ ! -r sntp/libevent/build-aux/config.guess ] ; then
 	echo "Error: bootstrap required." 1>&2 && exit 1

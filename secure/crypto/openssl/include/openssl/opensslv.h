@@ -40,7 +40,7 @@ extern "C" {
  *  major minor fix final patch/beta)
  */
 # define OPENSSL_VERSION_NUMBER  0x1010114fL
-# define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.1t-freebsd  7 Feb 2023"
+# define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.1t-nqc  7 Feb 2023"
 
 /*-
  * The macros below are to be used for shared library (.so, .dll, ...)

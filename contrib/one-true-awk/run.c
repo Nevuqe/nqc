@@ -723,7 +723,7 @@ Cell *indirect(Node **a, int n)	/* $( a[0] ) */
 	char *s;
 
 	x = execute(a[0]);
-	val = getfval(x);	/* freebsd: defend against super large field numbers */
+	val = getfval(x);	/* nqc: defend against super large field numbers */
 	if ((Awkfloat)INT_MAX < val)
 		FATAL("trying to access out of range field %s", x->nval);
 	m = (int) val;

@@ -57,36 +57,36 @@ __NQCID("$NQC$");
 #include <machine/vfp.h>
 #endif
 
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32_util.h>
 
 #define	NQC32_MINUSER	0x00001000
 #define	NQC32_MAXUSER	((1ul << 32) - PAGE_SIZE)
 #define	NQC32_SHAREDPAGE	(NQC32_MAXUSER - PAGE_SIZE)
 #define	NQC32_USRSTACK	NQC32_SHAREDPAGE
 
-extern const char *freebsd32_syscallnames[];
+extern const char *nqc32_syscallnames[];
 
 extern char aarch32_sigcode[];
 extern int sz_aarch32_sigcode;
 
-static int freebsd32_fetch_syscall_args(struct thread *td);
-static void freebsd32_setregs(struct thread *td, struct image_params *imgp,
+static int nqc32_fetch_syscall_args(struct thread *td);
+static void nqc32_setregs(struct thread *td, struct image_params *imgp,
     u_long stack);
-static void freebsd32_set_syscall_retval(struct thread *, int);
+static void nqc32_set_syscall_retval(struct thread *, int);
 
 static boolean_t elf32_arm_abi_supported(struct image_params *, int32_t *,
     uint32_t *);
 
-extern void freebsd32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask);
+extern void nqc32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask);
 
 u_long __read_frequently elf32_hwcap;
 u_long __read_frequently elf32_hwcap2;
 
 static struct sysentvec elf32_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
-	.sv_table	= freebsd32_sysent,
+	.sv_table	= nqc32_sysent,
 	.sv_fixup	= elf32_nqc_fixup,
-	.sv_sendsig	= freebsd32_sendsig,
+	.sv_sendsig	= nqc32_sendsig,
 	.sv_sigcode	= aarch32_sigcode,
 	.sv_szsigcode	= &sz_aarch32_sigcode,
 	.sv_name	= "NQC ELF32",
@@ -100,18 +100,18 @@ static struct sysentvec elf32_nqc_sysvec = {
 	.sv_maxuser	= NQC32_MAXUSER,
 	.sv_usrstack	= NQC32_USRSTACK,
 	.sv_psstrings	= NQC32_PS_STRINGS,
-	.sv_psstringssz	= sizeof(struct freebsd32_ps_strings),
+	.sv_psstringssz	= sizeof(struct nqc32_ps_strings),
 	.sv_stackprot	= VM_PROT_READ | VM_PROT_WRITE,
 	.sv_copyout_auxargs = elf32_nqc_copyout_auxargs,
-	.sv_copyout_strings = freebsd32_copyout_strings,
-	.sv_setregs	= freebsd32_setregs,
+	.sv_copyout_strings = nqc32_copyout_strings,
+	.sv_setregs	= nqc32_setregs,
 	.sv_fixlimit	= NULL, // XXX
 	.sv_maxssiz	= NULL,
 	.sv_flags	= SV_ABI_NQC | SV_ILP32 | SV_SHP | SV_TIMEKEEP |
 	    SV_RNG_SEED_VER,
-	.sv_set_syscall_retval = freebsd32_set_syscall_retval,
-	.sv_fetch_syscall_args = freebsd32_fetch_syscall_args,
-	.sv_syscallnames = freebsd32_syscallnames,
+	.sv_set_syscall_retval = nqc32_set_syscall_retval,
+	.sv_fetch_syscall_args = nqc32_fetch_syscall_args,
+	.sv_syscallnames = nqc32_syscallnames,
 	.sv_shared_page_base = NQC32_SHAREDPAGE,
 	.sv_shared_page_len = PAGE_SIZE,
 	.sv_schedtail	= NULL,
@@ -126,7 +126,7 @@ static struct sysentvec elf32_nqc_sysvec = {
 };
 INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 
-static Elf32_Brandinfo freebsd32_brand_info = {
+static Elf32_Brandinfo nqc32_brand_info = {
 	.brand		= ELFOSABI_NQC,
 	.machine	= EM_ARM,
 	.compat_3_brand	= "NQC",
@@ -140,7 +140,7 @@ static Elf32_Brandinfo freebsd32_brand_info = {
 };
 
 SYSINIT(elf32, SI_SUB_EXEC, SI_ORDER_FIRST,
-    (sysinit_cfunc_t)elf32_insert_brand_entry, &freebsd32_brand_info);
+    (sysinit_cfunc_t)elf32_insert_brand_entry, &nqc32_brand_info);
 
 static boolean_t
 elf32_arm_abi_supported(struct image_params *imgp, int32_t *osrel __unused,
@@ -168,7 +168,7 @@ elf32_arm_abi_supported(struct image_params *imgp, int32_t *osrel __unused,
 }
 
 static int
-freebsd32_fetch_syscall_args(struct thread *td)
+nqc32_fetch_syscall_args(struct thread *td)
 {
 	struct proc *p;
 	register_t *ap;
@@ -220,7 +220,7 @@ freebsd32_fetch_syscall_args(struct thread *td)
 }
 
 static void
-freebsd32_set_syscall_retval(struct thread *td, int error)
+nqc32_set_syscall_retval(struct thread *td, int error)
 {
 	struct trapframe *frame;
 
@@ -251,7 +251,7 @@ freebsd32_set_syscall_retval(struct thread *td, int error)
 }
 
 static void
-freebsd32_setregs(struct thread *td, struct image_params *imgp,
+nqc32_setregs(struct thread *td, struct image_params *imgp,
    uintptr_t stack)
 {
 	struct trapframe *tf = td->td_frame;

@@ -2513,7 +2513,7 @@ done:
 
 #ifdef COMPAT_NQC13
 int
-freebsd13_swapoff(struct thread *td, struct freebsd13_swapoff_args *uap)
+nqc13_swapoff(struct thread *td, struct nqc13_swapoff_args *uap)
 {
 	return (kern_swapoff(td, uap->name, UIO_USERSPACE, 0));
 }

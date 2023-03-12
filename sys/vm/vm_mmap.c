@@ -430,7 +430,7 @@ done:
 
 #if defined(COMPAT_NQC6)
 int
-freebsd6_mmap(struct thread *td, struct freebsd6_mmap_args *uap)
+nqc6_mmap(struct thread *td, struct nqc6_mmap_args *uap)
 {
 	return (kern_mmap(td, &(struct mmap_req){
 		.mr_hint = (uintptr_t)uap->addr,

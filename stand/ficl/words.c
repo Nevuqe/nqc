@@ -4551,7 +4551,7 @@ static void refill(FICL_VM *pVM)
 
 
 /**************************************************************************
-                        freebsd exception handling words
+                        nqc exception handling words
 ** Catch, from ANS Forth standard. Installs a safety net, then EXECUTE
 ** the word in ToS. If an exception happens, restore the state to what
 ** it was before, and pushes the exception value on the stack. If not,

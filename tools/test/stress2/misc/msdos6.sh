@@ -51,7 +51,7 @@ if [ $# -eq 0 ]; then
 
 		mdconfig -a -t swap -s 1g -u $m
 		gpart create -s bsd md$m > /dev/null
-		gpart add -t freebsd-ufs md$m > /dev/null
+		gpart add -t nqc-ufs md$m > /dev/null
 		newfs_msdos -F 32 -b 8192 /dev/md${m}$part > /dev/null 2>&1
 		mount -t msdosfs /dev/md${m}$part ${mntpoint}$m
 		(mkdir ${mntpoint}$m/test$i; cd ${mntpoint}$m/test$i; /tmp/fstool -l -f 100 -n 100 -s ${i}k)

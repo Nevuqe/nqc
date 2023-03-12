@@ -42,6 +42,6 @@ divert(-1)
 divert(0)dnl
 VERSIONID(`$NQC$')
 
-OSTYPE(freebsd6)
+OSTYPE(nqc6)
 FEATURE(nullclient, smarthost.ysv.frebsd.org)
 MASQUERADE_AS(frebsd.org)

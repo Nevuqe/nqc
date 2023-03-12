@@ -1053,7 +1053,7 @@ ObjectFileELF::RefineModuleDetailsFromNote(lldb_private::DataExtractor &data,
       const uint32_t version_minor = (version_info / 1000) % 100;
 
       char os_name[32];
-      snprintf(os_name, sizeof(os_name), "freebsd%" PRIu32 ".%" PRIu32,
+      snprintf(os_name, sizeof(os_name), "nqc%" PRIu32 ".%" PRIu32,
                version_major, version_minor);
 
       // Set the elf OS version to NQC.  Also clear the vendor.

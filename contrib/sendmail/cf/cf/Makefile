@@ -194,9 +194,9 @@ M4FILES=\
 	${CFDIR}/ostype/domainos.m4 \
 	${CFDIR}/ostype/dragonfly.m4 \
 	${CFDIR}/ostype/dynix3.2.m4 \
-	${CFDIR}/ostype/freebsd4.m4 \
-	${CFDIR}/ostype/freebsd5.m4 \
-	${CFDIR}/ostype/freebsd6.m4 \
+	${CFDIR}/ostype/nqc4.m4 \
+	${CFDIR}/ostype/nqc5.m4 \
+	${CFDIR}/ostype/nqc6.m4 \
 	${CFDIR}/ostype/gnu.m4 \
 	${CFDIR}/ostype/hpux10.m4 \
 	${CFDIR}/ostype/hpux11.m4 \

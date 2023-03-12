@@ -1368,7 +1368,7 @@ mips64*-*linux*)
   rm -rf conftest*
   ;;
 
-x86_64-*kfreebsd*-gnu|x86_64-*linux*|powerpc*-*linux*| \
+x86_64-*knqc*-gnu|x86_64-*linux*|powerpc*-*linux*| \
 s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
   # Find out what ABI is being produced by ac_compile, and set linker
   # options accordingly.  Note that the listed cases only cover the
@@ -1381,7 +1381,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
     case `/usr/bin/file conftest.o` in
       *32-bit*)
 	case $host in
-	  x86_64-*kfreebsd*-gnu)
+	  x86_64-*knqc*-gnu)
 	    LD="${LD-ld} -m elf_i386_fbsd"
 	    ;;
 	  x86_64-*linux*)
@@ -1410,7 +1410,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
 	;;
       *64-bit*)
 	case $host in
-	  x86_64-*kfreebsd*-gnu)
+	  x86_64-*knqc*-gnu)
 	    LD="${LD-ld} -m elf_x86_64_fbsd"
 	    ;;
 	  x86_64-*linux*)
@@ -1713,7 +1713,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [dnl
     lt_cv_sys_max_cmd_len=8192;
     ;;
 
-  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
+  bitrig* | darwin* | dragonfly* | nqc* | netbsd* | openbsd*)
     # This has been around since 386BSD, at least.  Likely further.
     if test -x /sbin/sysctl; then
       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
@@ -2654,41 +2654,41 @@ dgux*)
   shlibpath_var=LD_LIBRARY_PATH
   ;;
 
-freebsd* | dragonfly*)
+nqc* | dragonfly*)
   # DragonFly does not have aout.  When/if they implement a new
   # versioning mechanism, adjust this.
   if test -x /usr/bin/objformat; then
     objformat=`/usr/bin/objformat`
   else
     case $host_os in
-    freebsd[[23]].*) objformat=aout ;;
+    nqc[[23]].*) objformat=aout ;;
     *) objformat=elf ;;
     esac
   fi
-  version_type=freebsd-$objformat
+  version_type=nqc-$objformat
   case $version_type in
-    freebsd-elf*)
+    nqc-elf*)
       library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
       soname_spec='$libname$release$shared_ext$major'
       need_version=no
       need_lib_prefix=no
       ;;
-    freebsd-*)
+    nqc-*)
       library_names_spec='$libname$release$shared_ext$versuffix $libname$shared_ext$versuffix'
       need_version=yes
       ;;
   esac
   shlibpath_var=LD_LIBRARY_PATH
   case $host_os in
-  freebsd2.*)
+  nqc2.*)
     shlibpath_overrides_runpath=yes
     ;;
-  freebsd3.[[01]]* | freebsdelf3.[[01]]*)
+  nqc3.[[01]]* | nqcelf3.[[01]]*)
     shlibpath_overrides_runpath=yes
     hardcode_into_libs=yes
     ;;
-  freebsd3.[[2-9]]* | freebsdelf3.[[2-9]]* | \
-  freebsd4.[[0-5]] | freebsdelf4.[[0-5]] | freebsd4.1.1 | freebsdelf4.1.1)
+  nqc3.[[2-9]]* | nqcelf3.[[2-9]]* | \
+  nqc4.[[0-5]] | nqcelf4.[[0-5]] | nqc4.1.1 | nqcelf4.1.1)
     shlibpath_overrides_runpath=no
     hardcode_into_libs=yes
     ;;
@@ -3499,7 +3499,7 @@ darwin* | rhapsody*)
   lt_cv_deplibs_check_method=pass_all
   ;;
 
-freebsd* | dragonfly*)
+nqc* | dragonfly*)
   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
     case $host_cpu in
     i*86 )
@@ -4328,7 +4328,7 @@ m4_if([$1], [CXX], [
 	    ;;
 	esac
 	;;
-      freebsd* | dragonfly*)
+      nqc* | dragonfly*)
 	# NQC uses GNU C++
 	;;
       hpux9* | hpux10* | hpux11*)
@@ -5651,7 +5651,7 @@ _LT_EOF
     # support.  Future versions do this automatically, but an explicit c++rt0.o
     # does not break anything, and helps significantly (at the cost of a little
     # extra space).
-    freebsd2.2*)
+    nqc2.2*)
       _LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags /usr/lib/c++rt0.o'
       _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
       _LT_TAGVAR(hardcode_direct, $1)=yes
@@ -5659,7 +5659,7 @@ _LT_EOF
       ;;
 
     # Unfortunately, older versions of NQC 2 do not have this feature.
-    freebsd2.*)
+    nqc2.*)
       _LT_TAGVAR(archive_cmds, $1)='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
       _LT_TAGVAR(hardcode_direct, $1)=yes
       _LT_TAGVAR(hardcode_minus_L, $1)=yes
@@ -5667,7 +5667,7 @@ _LT_EOF
       ;;
 
     # NQC 3 and greater uses gcc -shared to do shared libraries.
-    freebsd* | dragonfly*)
+    nqc* | dragonfly*)
       _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
       _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
       _LT_TAGVAR(hardcode_direct, $1)=yes
@@ -6768,17 +6768,17 @@ if test yes != "$_lt_caught_CXX_error"; then
         esac
         ;;
 
-      freebsd2.*)
+      nqc2.*)
         # C++ shared libraries reported to be fairly broken before
 	# switch to ELF
         _LT_TAGVAR(ld_shlibs, $1)=no
         ;;
 
-      freebsd-elf*)
+      nqc-elf*)
         _LT_TAGVAR(archive_cmds_need_lc, $1)=no
         ;;
 
-      freebsd* | dragonfly*)
+      nqc* | dragonfly*)
         # NQC 3 and later use GNU C++ and GNU ld with standard ELF
         # conventions
         _LT_TAGVAR(ld_shlibs, $1)=yes

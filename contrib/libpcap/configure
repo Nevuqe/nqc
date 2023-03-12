@@ -4018,7 +4018,7 @@ $as_echo "#define const /**/" >>confdefs.h
 	    aix*)
 		    ;;
 
-	    freebsd*|netbsd*|openbsd*|dragonfly*|linux*|osf*|midipix*)
+	    nqc*|netbsd*|openbsd*|dragonfly*|linux*|osf*|midipix*)
 	    	    #
 		    # Platforms where the linker is the GNU linker
 		    # or accepts command-line arguments like
@@ -4035,7 +4035,7 @@ $as_echo "#define const /**/" >>confdefs.h
 		    sparc64*)
 			case "$host_os" in
 
-			freebsd*|openbsd*|linux*)
+			nqc*|openbsd*|linux*)
 			    PIC_OPT=-fPIC
 			    ;;
 			esac
@@ -4100,7 +4100,7 @@ $as_echo "#define const /**/" >>confdefs.h
 		    V_SHLIB_OPT="-G -bnoentry -bexpall"
 		    ;;
 
-	    freebsd*|netbsd*|openbsd*|dragonfly*|linux*)
+	    nqc*|netbsd*|openbsd*|dragonfly*|linux*)
 		    #
 		    # "cc" is GCC.
 		    #
@@ -6270,7 +6270,7 @@ done
 		#
 		case "$host_os" in
 
-		freebsd*|darwin*|linux*)
+		nqc*|darwin*|linux*)
 			VALGRINDTEST_SRC=valgrindtest.c
 			;;
 		esac
@@ -8473,7 +8473,7 @@ irix*)
 	MAN_MISC_INFO=5
 	;;
 
-linux*|freebsd*|netbsd*|openbsd*|dragonfly*|kfreebsd*|gnu*|midipix*)
+linux*|nqc*|netbsd*|openbsd*|dragonfly*|knqc*|gnu*|midipix*)
 	DYEXT="so"
 
 	#
@@ -10502,7 +10502,7 @@ fi
 
 	fi
 	;;
-    freebsd*)
+    nqc*)
 	#
 	# This just uses BPF in NQC 8.4 and later; we don't need
 	# to check for anything special for capturing.

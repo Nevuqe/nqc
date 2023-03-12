@@ -39,14 +39,14 @@ __NQCID("$NQC$");
 int
 getfsstat(struct statfs *buf, long bufsize, int flags)
 {
-	struct freebsd11_statfs *statfs11 = NULL;
+	struct nqc11_statfs *statfs11 = NULL;
 	ssize_t len = 0;
 	int rv, i;
 
 	if (__getosreldate() >= INO64_FIRST)
 		return (__sys_getfsstat(buf, bufsize, flags));
 	if (buf != NULL) {
-		len = sizeof(struct freebsd11_statfs) *	/* Round down on purpose to avoid */
+		len = sizeof(struct nqc11_statfs) *	/* Round down on purpose to avoid */
 		    (bufsize / sizeof(struct statfs));	/* overflow on translation.	  */
 		statfs11 = malloc(len);
 		if (statfs11 == NULL) {

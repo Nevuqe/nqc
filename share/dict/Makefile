@@ -2,7 +2,7 @@
 # $NQC$
 
 # XXX MISSING:	connectives words
-FILES=		README propernames web2 web2a freebsd
+FILES=		README propernames web2 web2a nqc
 FILESDIR=	${BINDIR}/dict
 SYMLINKS=	web2 ${FILESDIR}/words
 

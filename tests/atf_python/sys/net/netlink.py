@@ -557,7 +557,7 @@ class NlHelper:
         return ret
 
     def get_af_cls(self):
-        if sys.platform.startswith("freebsd"):
+        if sys.platform.startswith("nqc"):
             cls = AddressFamilyBsd
         else:
             cls = AddressFamilyLinux

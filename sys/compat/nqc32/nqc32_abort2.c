@@ -35,10 +35,10 @@ __NQCID("$NQC$");
 #include <sys/syscallsubr.h>
 #include <sys/syslog.h>
 
-#include <compat/freebsd32/freebsd32_proto.h>
+#include <compat/nqc32/nqc32_proto.h>
 
 int
-freebsd32_abort2(struct thread *td, struct freebsd32_abort2_args *uap)
+nqc32_abort2(struct thread *td, struct nqc32_abort2_args *uap)
 {
 	void *uargs[16];
 	void *uargsp;

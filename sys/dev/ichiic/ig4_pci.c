@@ -3,7 +3,7 @@
  *
  * This code is derived from software contributed to The DragonFly Project
  * by Matthew Dillon <dillon@backplane.com> and was subsequently ported
- * to NQC by Michael Gmelin <freebsd@grem.de>
+ * to NQC by Michael Gmelin <nqc@grem.de>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions

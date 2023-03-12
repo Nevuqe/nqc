@@ -80,7 +80,7 @@ struct dirent {
 };
 
 #if defined(_WANT_NQC11_DIRENT) || defined(_KERNEL)
-struct freebsd11_dirent {
+struct nqc11_dirent {
 	__uint32_t d_fileno;		/* file number of entry */
 	__uint16_t d_reclen;		/* length of this record */
 	__uint8_t  d_type;		/* file type, see below */

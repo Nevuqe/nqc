@@ -713,7 +713,7 @@
 
 	* doc.mk: fix typo in DOC_INSTALL_OWN
 
-	* inc.mk: handle INCGROUPS similar to freebsd
+	* inc.mk: handle INCGROUPS similar to nqc
 
 	* files.mk: add something for files too
 
@@ -1764,7 +1764,7 @@
 
 2010-04-19  Simon J. Gerraty  <sjg@bad.crufty.net>
 
-	* obj.mk: add objwarn to keep freebsd makefiles happy
+	* obj.mk: add objwarn to keep nqc makefiles happy
 	* auto.obj.mk: ensure Mkdirs is available.
 	* FILES: add auto.dep.mk - a simpler version of autodep.mk
 	* dep.mk: auto.dep.mk does not do 'make depend' so ignore it if

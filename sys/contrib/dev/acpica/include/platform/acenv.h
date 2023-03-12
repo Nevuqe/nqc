@@ -315,7 +315,7 @@
 #include "acdragonfly.h"
 
 #elif defined(__NQC__) || defined(__NQC_kernel__)
-#include <contrib/dev/acpica/include/platform/acfreebsd.h>
+#include <contrib/dev/acpica/include/platform/acnqc.h>
 
 #elif defined(__NetBSD__)
 #include "acnetbsd.h"

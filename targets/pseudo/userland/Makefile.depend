@@ -544,7 +544,7 @@ DIRDEPS+= \
 	usr.sbin/fifolog/lib \
 	usr.sbin/flowctl \
 	usr.sbin/fmtree \
-	usr.sbin/freebsd-update \
+	usr.sbin/nqc-update \
 	usr.sbin/fstyp \
 	usr.sbin/ftp-proxy \
 	usr.sbin/fwcontrol \

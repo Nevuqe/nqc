@@ -823,7 +823,7 @@ TESTING
  o Make unit test for add_file able to tell "error" from "done" (88a543f)
  o Make test for bufferevent_connect_hostname system-neutral (f89168e)
  o Make test.sh support mingw/msys on win32 (0ee6f6c)
- o Fix test.sh on freebsd (3d9e05b)
+ o Fix test.sh on nqc (3d9e05b)
 
 INTERNALS, PERFORMANCE, AND AND CODE CLEANUPS
  o Improve the speed of evbuffer_readln() (cc1600a)
@@ -957,7 +957,7 @@ BUGFIXES AND TESTS
  o When working without a current event base, don't try to use IOCP listeners (cb52838)
  o Fix getpid() usage on Windows (ff2a134)
  o Add a unit test for secure rng. (48a29b6)
- o Add some headers to fix freebsd compilation (b72be50)
+ o Add some headers to fix nqc compilation (b72be50)
  o When connect() succeeds immediately, don't invoke the callback immediately. (7515de9)
  o Suspend read/write on bufferevents during hostname lookup (db08f64)
  o Make bufferevent_free() clear all callbacks immediately. (b2fbeb3)
@@ -971,7 +971,7 @@ BUGFIXES AND TESTS
  o Try to define a sane _EVENT_SIZEOF_SIZE_T for msvc compilation (1e14f82)
  o Fix arc4random compilation on MSVC. (98edb89)
  o deal with connect() failing immediately (7bc48bf)
- o Small cleanups on freebsd-connect-refused patch. (57b7248)
+ o Small cleanups on nqc-connect-refused patch. (57b7248)
 
 BUILD AND DISTRIBUTION CHANGES
  o Remove the contents of WIN32-Prj as unmaintained. (c69d5a5)

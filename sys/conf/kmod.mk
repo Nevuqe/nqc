@@ -536,12 +536,12 @@ OPENZFS_CFLAGS=     \
 	-nostdinc \
 	-DSMP \
 	-I${ZINCDIR}  \
-	-I${ZINCDIR}/os/freebsd \
-	-I${ZINCDIR}/os/freebsd/spl \
-	-I${ZINCDIR}/os/freebsd/zfs \
+	-I${ZINCDIR}/os/nqc \
+	-I${ZINCDIR}/os/nqc/spl \
+	-I${ZINCDIR}/os/nqc/zfs \
 	-I${SYSDIR}/cddl/compat/opensolaris \
 	-I${SYSDIR}/cddl/contrib/opensolaris/uts/common \
-	-include ${ZINCDIR}/os/freebsd/spl/sys/ccompile.h
+	-include ${ZINCDIR}/os/nqc/spl/sys/ccompile.h
 OPENZFS_CWARNFLAGS= \
 	-Wno-nested-externs
 

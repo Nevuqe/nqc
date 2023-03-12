@@ -67,9 +67,9 @@ __NQCID("$NQC$");
 #include <sys/ktrace.h>
 #endif
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 #endif
 
 #include <net/vnet.h>
@@ -343,7 +343,7 @@ sys_sctp_generic_sendmsg_iov(struct thread *td, struct sctp_generic_sendmsg_iov_
 
 #ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
-		error = freebsd32_copyiniov((struct iovec32 *)uap->iov,
+		error = nqc32_copyiniov((struct iovec32 *)uap->iov,
 		    uap->iovlen, &iov, EMSGSIZE);
 	else
 #endif
@@ -444,7 +444,7 @@ sys_sctp_generic_recvmsg(struct thread *td, struct sctp_generic_recvmsg_args *ua
 		return (error);
 #ifdef COMPAT_NQC32
 	if (SV_CURPROC_FLAG(SV_ILP32))
-		error = freebsd32_copyiniov((struct iovec32 *)uap->iov,
+		error = nqc32_copyiniov((struct iovec32 *)uap->iov,
 		    uap->iovlen, &iov, EMSGSIZE);
 	else
 #endif

@@ -6,8 +6,8 @@
 #
 
 # NQC Mailing lists aliases
-# alias freebsd-bugs freebsd-bugs@frebsd.org
-# alias freebsd-questions freebsd-questions@frebsd.org
+# alias nqc-bugs nqc-bugs@frebsd.org
+# alias nqc-questions nqc-questions@frebsd.org
 
 # an alias for your good friends
 # alias bicycle  christoph gerhardt velophil zentralrad

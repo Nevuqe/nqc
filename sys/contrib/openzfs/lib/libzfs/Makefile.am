@@ -22,8 +22,8 @@ dist_libzfs_la_SOURCES = \
 
 if BUILD_NQC
 dist_libzfs_la_SOURCES += \
-	%D%/os/freebsd/libzfs_compat.c \
-	%D%/os/freebsd/libzfs_zmount.c
+	%D%/os/nqc/libzfs_compat.c \
+	%D%/os/nqc/libzfs_zmount.c
 endif
 
 if BUILD_LINUX

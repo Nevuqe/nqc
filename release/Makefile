@@ -170,14 +170,14 @@ disc1: packagesystem
 	    MK_KERNEL_SYMBOLS=no MK_TESTS=no MK_DEBUG_FILES=no \
 	    -DDB_FROM_SRC
 # Copy distfiles
-	mkdir -p ${.TARGET}/usr/freebsd-dist
+	mkdir -p ${.TARGET}/usr/nqc-dist
 	for dist in MANIFEST $$(ls *.txz | grep -vE -- '(base|lib32)-dbg'); \
-	    do cp $${dist} ${.TARGET}/usr/freebsd-dist; \
+	    do cp $${dist} ${.TARGET}/usr/nqc-dist; \
 	done
 .if defined(NO_ROOT)
-	echo "./usr/freebsd-dist type=dir uname=root gname=wheel mode=0755" >> ${.TARGET}/METALOG
+	echo "./usr/nqc-dist type=dir uname=root gname=wheel mode=0755" >> ${.TARGET}/METALOG
 	for dist in MANIFEST $$(ls *.txz | grep -vE -- '(base|lib32)-dbg'); \
-	    do echo "./usr/freebsd-dist/$${dist} type=file uname=root gname=wheel mode=0644" >> ${.TARGET}/METALOG; \
+	    do echo "./usr/nqc-dist/$${dist} type=file uname=root gname=wheel mode=0644" >> ${.TARGET}/METALOG; \
 	done
 .endif
 # Set up installation environment
@@ -210,11 +210,11 @@ bootonly: packagesystem
 	    MK_KERNEL_SYMBOLS=no MK_TESTS=no MK_DEBUG_FILES=no \
 	    -DDB_FROM_SRC
 # Copy manifest only (no distfiles) to get checksums
-	mkdir -p ${.TARGET}/usr/freebsd-dist
-	cp MANIFEST ${.TARGET}/usr/freebsd-dist
+	mkdir -p ${.TARGET}/usr/nqc-dist
+	cp MANIFEST ${.TARGET}/usr/nqc-dist
 .if defined(NO_ROOT)
-	echo "./usr/freebsd-dist type=dir uname=root gname=wheel mode=0755" >> ${.TARGET}/METALOG
-	echo "./usr/freebsd-dist/MANIFEST type=file uname=root gname=wheel mode=0644" >> ${.TARGET}/METALOG
+	echo "./usr/nqc-dist type=dir uname=root gname=wheel mode=0755" >> ${.TARGET}/METALOG
+	echo "./usr/nqc-dist/MANIFEST type=file uname=root gname=wheel mode=0644" >> ${.TARGET}/METALOG
 .endif
 # Set up installation environment
 	ln -fs /tmp/bsdinstall_etc/resolv.conf ${.TARGET}/etc/resolv.conf
@@ -241,14 +241,14 @@ dvd: packagesystem
 		MK_TESTS=no MK_DEBUG_FILES=no \
 		-DDB_FROM_SRC
 # Copy distfiles
-	mkdir -p ${.TARGET}/usr/freebsd-dist
+	mkdir -p ${.TARGET}/usr/nqc-dist
 	for dist in MANIFEST $$(ls *.txz | grep -v -- '(base|lib32)-dbg'); \
-	    do cp $${dist} ${.TARGET}/usr/freebsd-dist; \
+	    do cp $${dist} ${.TARGET}/usr/nqc-dist; \
 	done
 .if defined(NO_ROOT)
-	echo "./usr/freebsd-dist type=dir uname=root gname=wheel mode=0755" >> ${.TARGET}/METALOG
+	echo "./usr/nqc-dist type=dir uname=root gname=wheel mode=0755" >> ${.TARGET}/METALOG
 	for dist in MANIFEST $$(ls *.txz | grep -vE -- '(base|lib32)-dbg'); \
-	    do echo "./usr/freebsd-dist/$${dist} type=file uname=root gname=wheel mode=0644" >> ${.TARGET}/METALOG; \
+	    do echo "./usr/nqc-dist/$${dist} type=file uname=root gname=wheel mode=0644" >> ${.TARGET}/METALOG; \
 	done
 .endif
 # Set up installation environment

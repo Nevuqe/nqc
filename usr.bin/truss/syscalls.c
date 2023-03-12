@@ -2132,7 +2132,7 @@ print_arg(struct syscall_arg *sc, syscallarg_t *args, syscallarg_t *retval,
 		break;
 	}
 	case Kevent11: {
-		struct freebsd11_kevent *ke11;
+		struct nqc11_kevent *ke11;
 		struct kevent ke;
 		int numevents = -1;
 		size_t bytes;
@@ -2144,7 +2144,7 @@ print_arg(struct syscall_arg *sc, syscallarg_t *args, syscallarg_t *retval,
 			numevents = retval[0];
 
 		if (numevents >= 0) {
-			bytes = sizeof(struct freebsd11_kevent) * numevents;
+			bytes = sizeof(struct nqc11_kevent) * numevents;
 			if ((ke11 = malloc(bytes)) == NULL)
 				err(1,
 				    "Cannot malloc %zu bytes for kevent array",
@@ -2190,7 +2190,7 @@ print_arg(struct syscall_arg *sc, syscallarg_t *args, syscallarg_t *retval,
 		break;
 	}
 	case Stat11: {
-		struct freebsd11_stat st;
+		struct nqc11_stat st;
 
 		if (get_struct(pid, args[sc->offset], &st, sizeof(st))
 		    != -1) {

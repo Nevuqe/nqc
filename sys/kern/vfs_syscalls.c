@@ -587,16 +587,16 @@ out:
 /*
  * Get old format filesystem statistics.
  */
-static void freebsd4_cvtstatfs(struct statfs *, struct ostatfs *);
+static void nqc4_cvtstatfs(struct statfs *, struct ostatfs *);
 
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd4_statfs_args {
+struct nqc4_statfs_args {
 	char *path;
 	struct ostatfs *buf;
 };
 #endif
 int
-freebsd4_statfs(struct thread *td, struct freebsd4_statfs_args *uap)
+nqc4_statfs(struct thread *td, struct nqc4_statfs_args *uap)
 {
 	struct ostatfs osb;
 	struct statfs *sfp;
@@ -605,7 +605,7 @@ freebsd4_statfs(struct thread *td, struct freebsd4_statfs_args *uap)
 	sfp = malloc(sizeof(struct statfs), M_STATFS, M_WAITOK);
 	error = kern_statfs(td, uap->path, UIO_USERSPACE, sfp);
 	if (error == 0) {
-		freebsd4_cvtstatfs(sfp, &osb);
+		nqc4_cvtstatfs(sfp, &osb);
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	}
 	free(sfp, M_STATFS);
@@ -616,13 +616,13 @@ freebsd4_statfs(struct thread *td, struct freebsd4_statfs_args *uap)
  * Get filesystem statistics.
  */
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd4_fstatfs_args {
+struct nqc4_fstatfs_args {
 	int fd;
 	struct ostatfs *buf;
 };
 #endif
 int
-freebsd4_fstatfs(struct thread *td, struct freebsd4_fstatfs_args *uap)
+nqc4_fstatfs(struct thread *td, struct nqc4_fstatfs_args *uap)
 {
 	struct ostatfs osb;
 	struct statfs *sfp;
@@ -631,7 +631,7 @@ freebsd4_fstatfs(struct thread *td, struct freebsd4_fstatfs_args *uap)
 	sfp = malloc(sizeof(struct statfs), M_STATFS, M_WAITOK);
 	error = kern_fstatfs(td, uap->fd, sfp);
 	if (error == 0) {
-		freebsd4_cvtstatfs(sfp, &osb);
+		nqc4_cvtstatfs(sfp, &osb);
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	}
 	free(sfp, M_STATFS);
@@ -642,14 +642,14 @@ freebsd4_fstatfs(struct thread *td, struct freebsd4_fstatfs_args *uap)
  * Get statistics on all filesystems.
  */
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd4_getfsstat_args {
+struct nqc4_getfsstat_args {
 	struct ostatfs *buf;
 	long bufsize;
 	int mode;
 };
 #endif
 int
-freebsd4_getfsstat(struct thread *td, struct freebsd4_getfsstat_args *uap)
+nqc4_getfsstat(struct thread *td, struct nqc4_getfsstat_args *uap)
 {
 	struct statfs *buf, *sp;
 	struct ostatfs osb;
@@ -669,7 +669,7 @@ freebsd4_getfsstat(struct thread *td, struct freebsd4_getfsstat_args *uap)
 	if (size != 0) {
 		sp = buf;
 		while (count != 0 && error == 0) {
-			freebsd4_cvtstatfs(sp, &osb);
+			nqc4_cvtstatfs(sp, &osb);
 			error = copyout(&osb, uap->buf, sizeof(osb));
 			sp++;
 			uap->buf++;
@@ -684,13 +684,13 @@ freebsd4_getfsstat(struct thread *td, struct freebsd4_getfsstat_args *uap)
  * Implement fstatfs() for (NFS) file handles.
  */
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd4_fhstatfs_args {
+struct nqc4_fhstatfs_args {
 	struct fhandle *u_fhp;
 	struct ostatfs *buf;
 };
 #endif
 int
-freebsd4_fhstatfs(struct thread *td, struct freebsd4_fhstatfs_args *uap)
+nqc4_fhstatfs(struct thread *td, struct nqc4_fhstatfs_args *uap)
 {
 	struct ostatfs osb;
 	struct statfs *sfp;
@@ -703,7 +703,7 @@ freebsd4_fhstatfs(struct thread *td, struct freebsd4_fhstatfs_args *uap)
 	sfp = malloc(sizeof(struct statfs), M_STATFS, M_WAITOK);
 	error = kern_fhstatfs(td, fh, sfp);
 	if (error == 0) {
-		freebsd4_cvtstatfs(sfp, &osb);
+		nqc4_cvtstatfs(sfp, &osb);
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	}
 	free(sfp, M_STATFS);
@@ -714,7 +714,7 @@ freebsd4_fhstatfs(struct thread *td, struct freebsd4_fhstatfs_args *uap)
  * Convert a new format statfs structure to an old format statfs structure.
  */
 static void
-freebsd4_cvtstatfs(struct statfs *nsp, struct ostatfs *osp)
+nqc4_cvtstatfs(struct statfs *nsp, struct ostatfs *osp)
 {
 
 	statfs_scale_blocks(nsp, LONG_MAX);
@@ -747,19 +747,19 @@ freebsd4_cvtstatfs(struct statfs *nsp, struct ostatfs *osp)
 /*
  * Get old format filesystem statistics.
  */
-static void freebsd11_cvtstatfs(struct statfs *, struct freebsd11_statfs *);
+static void nqc11_cvtstatfs(struct statfs *, struct nqc11_statfs *);
 
 int
-freebsd11_statfs(struct thread *td, struct freebsd11_statfs_args *uap)
+nqc11_statfs(struct thread *td, struct nqc11_statfs_args *uap)
 {
-	struct freebsd11_statfs osb;
+	struct nqc11_statfs osb;
 	struct statfs *sfp;
 	int error;
 
 	sfp = malloc(sizeof(struct statfs), M_STATFS, M_WAITOK);
 	error = kern_statfs(td, uap->path, UIO_USERSPACE, sfp);
 	if (error == 0) {
-		freebsd11_cvtstatfs(sfp, &osb);
+		nqc11_cvtstatfs(sfp, &osb);
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	}
 	free(sfp, M_STATFS);
@@ -770,16 +770,16 @@ freebsd11_statfs(struct thread *td, struct freebsd11_statfs_args *uap)
  * Get filesystem statistics.
  */
 int
-freebsd11_fstatfs(struct thread *td, struct freebsd11_fstatfs_args *uap)
+nqc11_fstatfs(struct thread *td, struct nqc11_fstatfs_args *uap)
 {
-	struct freebsd11_statfs osb;
+	struct nqc11_statfs osb;
 	struct statfs *sfp;
 	int error;
 
 	sfp = malloc(sizeof(struct statfs), M_STATFS, M_WAITOK);
 	error = kern_fstatfs(td, uap->fd, sfp);
 	if (error == 0) {
-		freebsd11_cvtstatfs(sfp, &osb);
+		nqc11_cvtstatfs(sfp, &osb);
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	}
 	free(sfp, M_STATFS);
@@ -790,16 +790,16 @@ freebsd11_fstatfs(struct thread *td, struct freebsd11_fstatfs_args *uap)
  * Get statistics on all filesystems.
  */
 int
-freebsd11_getfsstat(struct thread *td, struct freebsd11_getfsstat_args *uap)
+nqc11_getfsstat(struct thread *td, struct nqc11_getfsstat_args *uap)
 {
 	return (kern_nqc11_getfsstat(td, uap->buf, uap->bufsize, uap->mode));
 }
 
 int
-kern_nqc11_getfsstat(struct thread *td, struct freebsd11_statfs * ubuf,
+kern_nqc11_getfsstat(struct thread *td, struct nqc11_statfs * ubuf,
     long bufsize, int mode)
 {
-	struct freebsd11_statfs osb;
+	struct nqc11_statfs osb;
 	struct statfs *buf, *sp;
 	size_t count, size;
 	int error;
@@ -815,7 +815,7 @@ kern_nqc11_getfsstat(struct thread *td, struct freebsd11_statfs * ubuf,
 	if (size > 0) {
 		sp = buf;
 		while (count > 0 && error == 0) {
-			freebsd11_cvtstatfs(sp, &osb);
+			nqc11_cvtstatfs(sp, &osb);
 			error = copyout(&osb, ubuf, sizeof(osb));
 			sp++;
 			ubuf++;
@@ -830,9 +830,9 @@ kern_nqc11_getfsstat(struct thread *td, struct freebsd11_statfs * ubuf,
  * Implement fstatfs() for (NFS) file handles.
  */
 int
-freebsd11_fhstatfs(struct thread *td, struct freebsd11_fhstatfs_args *uap)
+nqc11_fhstatfs(struct thread *td, struct nqc11_fhstatfs_args *uap)
 {
-	struct freebsd11_statfs osb;
+	struct nqc11_statfs osb;
 	struct statfs *sfp;
 	fhandle_t fh;
 	int error;
@@ -843,7 +843,7 @@ freebsd11_fhstatfs(struct thread *td, struct freebsd11_fhstatfs_args *uap)
 	sfp = malloc(sizeof(struct statfs), M_STATFS, M_WAITOK);
 	error = kern_fhstatfs(td, fh, sfp);
 	if (error == 0) {
-		freebsd11_cvtstatfs(sfp, &osb);
+		nqc11_cvtstatfs(sfp, &osb);
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	}
 	free(sfp, M_STATFS);
@@ -854,7 +854,7 @@ freebsd11_fhstatfs(struct thread *td, struct freebsd11_fhstatfs_args *uap)
  * Convert a new format statfs structure to an old format statfs structure.
  */
 static void
-freebsd11_cvtstatfs(struct statfs *nsp, struct freebsd11_statfs *osp)
+nqc11_cvtstatfs(struct statfs *nsp, struct nqc11_statfs *osp)
 {
 
 	bzero(osp, sizeof(*osp));
@@ -1299,8 +1299,8 @@ sys_mknodat(struct thread *td, struct mknodat_args *uap)
 
 #if defined(COMPAT_NQC11)
 int
-freebsd11_mknod(struct thread *td,
-    struct freebsd11_mknod_args *uap)
+nqc11_mknod(struct thread *td,
+    struct nqc11_mknod_args *uap)
 {
 
 	return (kern_mknodat(td, AT_FDCWD, uap->path, UIO_USERSPACE,
@@ -1308,8 +1308,8 @@ freebsd11_mknod(struct thread *td,
 }
 
 int
-freebsd11_mknodat(struct thread *td,
-    struct freebsd11_mknodat_args *uap)
+nqc11_mknodat(struct thread *td,
+    struct nqc11_mknodat_args *uap)
 {
 
 	return (kern_mknodat(td, uap->fd, uap->path, UIO_USERSPACE, uap->mode,
@@ -2041,7 +2041,7 @@ olseek(struct thread *td, struct olseek_args *uap)
 #if defined(COMPAT_NQC6)
 /* Version with the 'pad' argument */
 int
-freebsd6_lseek(struct thread *td, struct freebsd6_lseek_args *uap)
+nqc6_lseek(struct thread *td, struct nqc6_lseek_args *uap)
 {
 
 	return (kern_lseek(td, uap->fd, uap->offset, uap->whence));
@@ -2259,7 +2259,7 @@ SYSCTL_INT(_vfs, OID_AUTO, ino64_trunc_error, CTLFLAG_RW,
     "Error on truncation of device, file or inode number, or link count");
 
 int
-freebsd11_cvtstat(struct stat *st, struct freebsd11_stat *ost)
+nqc11_cvtstat(struct stat *st, struct nqc11_stat *ost)
 {
 
 	ost->st_dev = st->st_dev;
@@ -2324,51 +2324,51 @@ freebsd11_cvtstat(struct stat *st, struct freebsd11_stat *ost)
 	ost->st_lspare = 0;
 	ost->st_birthtim = st->st_birthtim;
 	bzero((char *)&ost->st_birthtim + sizeof(ost->st_birthtim),
-	    sizeof(*ost) - offsetof(struct freebsd11_stat,
+	    sizeof(*ost) - offsetof(struct nqc11_stat,
 	    st_birthtim) - sizeof(ost->st_birthtim));
 	return (0);
 }
 
 int
-freebsd11_stat(struct thread *td, struct freebsd11_stat_args* uap)
+nqc11_stat(struct thread *td, struct nqc11_stat_args* uap)
 {
 	struct stat sb;
-	struct freebsd11_stat osb;
+	struct nqc11_stat osb;
 	int error;
 
 	error = kern_statat(td, 0, AT_FDCWD, uap->path, UIO_USERSPACE,
 	    &sb, NULL);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtstat(&sb, &osb);
+	error = nqc11_cvtstat(&sb, &osb);
 	if (error == 0)
 		error = copyout(&osb, uap->ub, sizeof(osb));
 	return (error);
 }
 
 int
-freebsd11_lstat(struct thread *td, struct freebsd11_lstat_args* uap)
+nqc11_lstat(struct thread *td, struct nqc11_lstat_args* uap)
 {
 	struct stat sb;
-	struct freebsd11_stat osb;
+	struct nqc11_stat osb;
 	int error;
 
 	error = kern_statat(td, AT_SYMLINK_NOFOLLOW, AT_FDCWD, uap->path,
 	    UIO_USERSPACE, &sb, NULL);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtstat(&sb, &osb);
+	error = nqc11_cvtstat(&sb, &osb);
 	if (error == 0)
 		error = copyout(&osb, uap->ub, sizeof(osb));
 	return (error);
 }
 
 int
-freebsd11_fhstat(struct thread *td, struct freebsd11_fhstat_args* uap)
+nqc11_fhstat(struct thread *td, struct nqc11_fhstat_args* uap)
 {
 	struct fhandle fh;
 	struct stat sb;
-	struct freebsd11_stat osb;
+	struct nqc11_stat osb;
 	int error;
 
 	error = copyin(uap->u_fhp, &fh, sizeof(fhandle_t));
@@ -2377,24 +2377,24 @@ freebsd11_fhstat(struct thread *td, struct freebsd11_fhstat_args* uap)
 	error = kern_fhstat(td, fh, &sb);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtstat(&sb, &osb);
+	error = nqc11_cvtstat(&sb, &osb);
 	if (error == 0)
 		error = copyout(&osb, uap->sb, sizeof(osb));
 	return (error);
 }
 
 int
-freebsd11_fstatat(struct thread *td, struct freebsd11_fstatat_args* uap)
+nqc11_fstatat(struct thread *td, struct nqc11_fstatat_args* uap)
 {
 	struct stat sb;
-	struct freebsd11_stat osb;
+	struct nqc11_stat osb;
 	int error;
 
 	error = kern_statat(td, uap->flag, uap->fd, uap->path,
 	    UIO_USERSPACE, &sb, NULL);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtstat(&sb, &osb);
+	error = nqc11_cvtstat(&sb, &osb);
 	if (error == 0)
 		error = copyout(&osb, uap->buf, sizeof(osb));
 	return (error);
@@ -2473,12 +2473,12 @@ kern_statat(struct thread *td, int flag, int fd, const char *path,
  * Implementation of the NetBSD [l]stat() functions.
  */
 int
-freebsd11_cvtnstat(struct stat *sb, struct nstat *nsb)
+nqc11_cvtnstat(struct stat *sb, struct nstat *nsb)
 {
-	struct freebsd11_stat sb11;
+	struct nqc11_stat sb11;
 	int error;
 
-	error = freebsd11_cvtstat(sb, &sb11);
+	error = nqc11_cvtstat(sb, &sb11);
 	if (error != 0)
 		return (error);
 
@@ -2503,13 +2503,13 @@ freebsd11_cvtnstat(struct stat *sb, struct nstat *nsb)
 }
 
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd11_nstat_args {
+struct nqc11_nstat_args {
 	char	*path;
 	struct nstat *ub;
 };
 #endif
 int
-freebsd11_nstat(struct thread *td, struct freebsd11_nstat_args *uap)
+nqc11_nstat(struct thread *td, struct nqc11_nstat_args *uap)
 {
 	struct stat sb;
 	struct nstat nsb;
@@ -2519,7 +2519,7 @@ freebsd11_nstat(struct thread *td, struct freebsd11_nstat_args *uap)
 	    &sb, NULL);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtnstat(&sb, &nsb);
+	error = nqc11_cvtnstat(&sb, &nsb);
 	if (error == 0)
 		error = copyout(&nsb, uap->ub, sizeof (nsb));
 	return (error);
@@ -2529,13 +2529,13 @@ freebsd11_nstat(struct thread *td, struct freebsd11_nstat_args *uap)
  * NetBSD lstat.  Get file status; this version does not follow links.
  */
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd11_nlstat_args {
+struct nqc11_nlstat_args {
 	char	*path;
 	struct nstat *ub;
 };
 #endif
 int
-freebsd11_nlstat(struct thread *td, struct freebsd11_nlstat_args *uap)
+nqc11_nlstat(struct thread *td, struct nqc11_nlstat_args *uap)
 {
 	struct stat sb;
 	struct nstat nsb;
@@ -2545,7 +2545,7 @@ freebsd11_nlstat(struct thread *td, struct freebsd11_nlstat_args *uap)
 	    UIO_USERSPACE, &sb, NULL);
 	if (error != 0)
 		return (error);
-	error = freebsd11_cvtnstat(&sb, &nsb);
+	error = nqc11_cvtnstat(&sb, &nsb);
 	if (error == 0)
 		error = copyout(&nsb, uap->ub, sizeof (nsb));
 	return (error);
@@ -3522,14 +3522,14 @@ otruncate(struct thread *td, struct otruncate_args *uap)
 #if defined(COMPAT_NQC6)
 /* Versions with the pad argument */
 int
-freebsd6_truncate(struct thread *td, struct freebsd6_truncate_args *uap)
+nqc6_truncate(struct thread *td, struct nqc6_truncate_args *uap)
 {
 
 	return (kern_truncate(td, uap->path, UIO_USERSPACE, uap->length));
 }
 
 int
-freebsd6_ftruncate(struct thread *td, struct freebsd6_ftruncate_args *uap)
+nqc6_ftruncate(struct thread *td, struct nqc6_ftruncate_args *uap)
 {
 
 	return (kern_ftruncate(td, uap->fd, uap->length));
@@ -3964,10 +3964,10 @@ fdout:
 
 #if defined(COMPAT_43) || defined(COMPAT_NQC11)
 int
-freebsd11_kern_getdirentries(struct thread *td, int fd, char *ubuf, u_int count,
-    long *basep, void (*func)(struct freebsd11_dirent *))
+nqc11_kern_getdirentries(struct thread *td, int fd, char *ubuf, u_int count,
+    long *basep, void (*func)(struct nqc11_dirent *))
 {
-	struct freebsd11_dirent dstdp;
+	struct nqc11_dirent dstdp;
 	struct dirent *dp, *edp;
 	char *dirbuf;
 	off_t base;
@@ -4015,7 +4015,7 @@ freebsd11_kern_getdirentries(struct thread *td, int fd, char *ubuf, u_int count,
 		    ((dp->d_namlen + 1 + 3) &~ 3);
 		bcopy(dp->d_name, dstdp.d_name, dstdp.d_namlen);
 		bzero(dstdp.d_name + dstdp.d_namlen,
-		    dstdp.d_reclen - offsetof(struct freebsd11_dirent, d_name) -
+		    dstdp.d_reclen - offsetof(struct nqc11_dirent, d_name) -
 		    dstdp.d_namlen);
 		MPASS(dstdp.d_reclen <= dp->d_reclen);
 		MPASS(ucount + dstdp.d_reclen <= count);
@@ -4038,7 +4038,7 @@ done:
 
 #ifdef COMPAT_43
 static void
-ogetdirentries_cvt(struct freebsd11_dirent *dp)
+ogetdirentries_cvt(struct nqc11_dirent *dp)
 {
 #if (BYTE_ORDER == LITTLE_ENDIAN)
 	/*
@@ -4090,7 +4090,7 @@ kern_ogetdirentries(struct thread *td, struct ogetdirentries_args *uap,
 	if (uap->count > 64 * 1024)
 		return (EINVAL);
 
-	error = freebsd11_kern_getdirentries(td, uap->fd, uap->buf, uap->count,
+	error = nqc11_kern_getdirentries(td, uap->fd, uap->buf, uap->count,
 	    &base, ogetdirentries_cvt);
 
 	if (error == 0 && uap->basep != NULL)
@@ -4102,7 +4102,7 @@ kern_ogetdirentries(struct thread *td, struct ogetdirentries_args *uap,
 
 #if defined(COMPAT_NQC11)
 #ifndef _SYS_SYSPROTO_H_
-struct freebsd11_getdirentries_args {
+struct nqc11_getdirentries_args {
 	int	fd;
 	char	*buf;
 	u_int	count;
@@ -4110,13 +4110,13 @@ struct freebsd11_getdirentries_args {
 };
 #endif
 int
-freebsd11_getdirentries(struct thread *td,
-    struct freebsd11_getdirentries_args *uap)
+nqc11_getdirentries(struct thread *td,
+    struct nqc11_getdirentries_args *uap)
 {
 	long base;
 	int error;
 
-	error = freebsd11_kern_getdirentries(td, uap->fd, uap->buf, uap->count,
+	error = nqc11_kern_getdirentries(td, uap->fd, uap->buf, uap->count,
 	    &base, NULL);
 
 	if (error == 0 && uap->basep != NULL)
@@ -4125,15 +4125,15 @@ freebsd11_getdirentries(struct thread *td,
 }
 
 int
-freebsd11_getdents(struct thread *td, struct freebsd11_getdents_args *uap)
+nqc11_getdents(struct thread *td, struct nqc11_getdents_args *uap)
 {
-	struct freebsd11_getdirentries_args ap;
+	struct nqc11_getdirentries_args ap;
 
 	ap.fd = uap->fd;
 	ap.buf = uap->buf;
 	ap.count = uap->count;
 	ap.basep = NULL;
-	return (freebsd11_getdirentries(td, &ap));
+	return (nqc11_getdirentries(td, &ap));
 }
 #endif /* COMPAT_NQC11 */
 

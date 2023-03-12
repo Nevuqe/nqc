@@ -630,7 +630,7 @@ create_udp_sock(int family, int socktype, struct sockaddr* addr,
 #ifndef USE_WINSOCK
 #ifdef EADDRINUSE
 		*inuse = (errno == EADDRINUSE);
-		/* detect freebsd jail with no ipv6 permission */
+		/* detect nqc jail with no ipv6 permission */
 		if(family==AF_INET6 && errno==EINVAL)
 			*noproto = 1;
 		else if(errno != EADDRINUSE &&
@@ -836,7 +836,7 @@ create_tcp_accept_sock(struct addrinfo *addr, int v6only, int* noproto,
 #endif
         bind(s, addr->ai_addr, addr->ai_addrlen) != 0) {
 #ifndef USE_WINSOCK
-		/* detect freebsd jail with no ipv6 permission */
+		/* detect nqc jail with no ipv6 permission */
 		if(addr->ai_family==AF_INET6 && errno==EINVAL)
 			*noproto = 1;
 		else {
@@ -876,7 +876,7 @@ create_tcp_accept_sock(struct addrinfo *addr, int v6only, int* noproto,
 	if ((setsockopt(s, IPPROTO_TCP, TCP_FASTOPEN, &qlen, 
 		  sizeof(qlen))) == -1 ) {
 #ifdef ENOPROTOOPT
-		/* squelch ENOPROTOOPT: freebsd server mode with kernel support
+		/* squelch ENOPROTOOPT: nqc server mode with kernel support
 		   disabled, except when verbosity enabled for debugging */
 		if(errno != ENOPROTOOPT || verbosity >= 3) {
 #endif

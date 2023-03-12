@@ -46,7 +46,7 @@
 #
 #	SENDMAIL_MC=/etc/mail/myconfig.mc
 #
-# If '<HOSTNAME>.mc' does not exist, it is created using 'freebsd.mc'
+# If '<HOSTNAME>.mc' does not exist, it is created using 'nqc.mc'
 # as a template.
 #
 # It also uses '<HOSTNAME>.submit.mc' as the default mail submission .mc
@@ -56,7 +56,7 @@
 #	SENDMAIL_SUBMIT_MC=/etc/mail/mysubmit.mc
 #
 # If '<HOSTNAME>.submit.mc' does not exist, it is created using
-# 'freebsd.submit.mc' as a template.
+# 'nqc.submit.mc' as a template.
 # ------------------------------------------------------------------------
 #
 # The Makefile knows about the following maps:
@@ -69,7 +69,7 @@ SENDMAIL_MC!=           hostname
 SENDMAIL_MC:=           ${SENDMAIL_MC}.mc
 
 ${SENDMAIL_MC}:
-	${CP} freebsd.mc ${SENDMAIL_MC}
+	${CP} nqc.mc ${SENDMAIL_MC}
 .endif
 
 .ifndef SENDMAIL_SUBMIT_MC
@@ -77,7 +77,7 @@ SENDMAIL_SUBMIT_MC!=	hostname
 SENDMAIL_SUBMIT_MC:=	${SENDMAIL_SUBMIT_MC}.submit.mc
 
 ${SENDMAIL_SUBMIT_MC}:
-	${CP} freebsd.submit.mc ${SENDMAIL_SUBMIT_MC}
+	${CP} nqc.submit.mc ${SENDMAIL_SUBMIT_MC}
 .endif
 
 INSTALL_CF=		${SENDMAIL_MC:R}.cf

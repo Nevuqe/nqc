@@ -241,7 +241,7 @@ done:
 
 #ifdef COMPAT_NQC11
 int
-freebsd11_vadvise(struct thread *td, struct freebsd11_vadvise_args *uap)
+nqc11_vadvise(struct thread *td, struct nqc11_vadvise_args *uap)
 {
 
 	return (EINVAL);

@@ -1561,7 +1561,7 @@ emu_addefxmixer(struct emu_sc_info *sc, const char *mix_name, const int mix_id, 
 	if (mix_name != NULL) {
 		/*
 		 * Temporary sysctls should start with underscore,
-		 * see freebsd-current mailing list, emu10kx driver
+		 * see nqc-current mailing list, emu10kx driver
 		 * discussion around 2006-05-24.
 		 */
 		snprintf(sysctl_name, 32, "_%s", mix_name);

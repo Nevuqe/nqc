@@ -62,7 +62,7 @@ struct __mcontext {
 typedef struct __mcontext mcontext_t;
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32_signal.h>
+#include <compat/nqc32/nqc32_signal.h>
 typedef struct __mcontext32 {
 	uint32_t		mc_gregset[17];
 	uint32_t		mc_vfp_size;

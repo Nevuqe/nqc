@@ -312,7 +312,7 @@ query:
 		struct gmesh submesh;
 		geom_gettree(&submesh);
 		gpart_create(provider_for_name(&submesh, disk),
-		    "freebsd", NULL, NULL, &retval,
+		    "nqc", NULL, NULL, &retval,
 		    choice /* Non-interactive for "Entire Disk" */);
 		geom_deletetree(&submesh);
 	} else {
@@ -329,7 +329,7 @@ wizard_makeparts(struct gmesh *mesh, const char *disk, const char *fstype,
 	struct gclass *classp;
 	struct ggeom *gp;
 	struct gprovider *pp;
-	char *fsnames[] = {"freebsd-ufs", "freebsd-zfs"};
+	char *fsnames[] = {"nqc-ufs", "nqc-zfs"};
 	char *fsname;
 	struct gmesh submesh;
 	char swapsizestr[10], rootsizestr[10];
@@ -388,7 +388,7 @@ wizard_makeparts(struct gmesh *mesh, const char *disk, const char *fstype,
 
 	geom_gettree(&submesh);
 	pp = provider_for_name(&submesh, disk);
-	gpart_create(pp, "freebsd-swap", swapsizestr, NULL, NULL, 0);
+	gpart_create(pp, "nqc-swap", swapsizestr, NULL, NULL, 0);
 	geom_deletetree(&submesh);
 
 	return (0);

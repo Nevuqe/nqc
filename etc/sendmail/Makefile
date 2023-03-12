@@ -25,8 +25,8 @@ M4FILES!=	find ${SENDMAIL_CF_DIR} -type f -name '*.m4' -print
 DEST_CF=	${DESTDIR}/etc/mail/sendmail.cf
 DEST_SUBMIT_CF=	${DESTDIR}/etc/mail/submit.cf
 
-ALL=		freebsd.cf freebsd.submit.cf
-CLEANFILES=	freebsd.cf freebsd.submit.cf
+ALL=		nqc.cf nqc.submit.cf
+CLEANFILES=	nqc.cf nqc.submit.cf
 
 # Local SENDMAIL_MC or SENDMAIL_CF may be set in /etc/make.conf.
 # Warning!  If set, this causes 'make install' to always copy it
@@ -65,9 +65,9 @@ all: ${ALL}
 
 distribution:
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 644 -T "package=sendmail" \
-	    ${.CURDIR}/freebsd.mc freebsd.cf ${DESTDIR}/etc/mail
+	    ${.CURDIR}/nqc.mc nqc.cf ${DESTDIR}/etc/mail
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 -T "package=sendmail" \
-	    ${.CURDIR}/freebsd.submit.mc freebsd.submit.cf ${DESTDIR}/etc/mail
+	    ${.CURDIR}/nqc.submit.mc nqc.submit.cf ${DESTDIR}/etc/mail
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 -T "package=sendmail" \
 	    ${SMDIR}/helpfile ${DESTDIR}/etc/mail
 .if defined(INSTALL_CF)
@@ -75,7 +75,7 @@ distribution:
 	    ${INSTALL_CF} ${DEST_CF}
 .else
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 644 -T "package=sendmail" \
-	    freebsd.cf ${DEST_CF}
+	    nqc.cf ${DEST_CF}
 .endif
 .if defined(SENDMAIL_ADDITIONAL_CF)
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 644 -T "package=sendmail" \
@@ -87,7 +87,7 @@ distribution:
 	    ${INSTALL_SUBMIT_CF} ${DEST_SUBMIT_CF}
 .else
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 -T "package=sendmail" \
-	    freebsd.submit.cf ${DEST_SUBMIT_CF}
+	    nqc.submit.cf ${DEST_SUBMIT_CF}
 .endif
 .endif
 

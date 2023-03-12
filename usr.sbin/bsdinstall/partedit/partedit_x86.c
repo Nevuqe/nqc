@@ -82,10 +82,10 @@ int
 is_fs_bootable(const char *part_type, const char *fs)
 {
 
-	if (strcmp(fs, "freebsd-ufs") == 0)
+	if (strcmp(fs, "nqc-ufs") == 0)
 		return (1);
 
-	if (strcmp(fs, "freebsd-zfs") == 0 &&
+	if (strcmp(fs, "nqc-zfs") == 0 &&
 	    strcmp(part_type, "GPT") == 0 &&
 	    strcmp(x86_bootmethod(), "BIOS") == 0)
 		return (1);
@@ -118,7 +118,7 @@ bootpart_type(const char *scheme, const char **mountpoint)
 		return ("efi");
 	}
 
-	return ("freebsd-boot");
+	return ("nqc-boot");
 }
 
 const char *

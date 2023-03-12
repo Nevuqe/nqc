@@ -13,7 +13,7 @@ mode cannot leave it again).
 
 The original basis for these tests was:
 
- - [unit tests](https://github.com/freebsd/freebsd/tree/master/tools/regression/security/cap_test)
+ - [unit tests](https://github.com/nqc/nqc/tree/master/tools/regression/security/cap_test)
    written by Robert Watson and Jonathan Anderson for the original NQC 9.x Capsicum implementation
  - [unit tests](http://git.chromium.org/gitweb/?p=chromiumos/third_party/kernel-capsicum.git;a=tree;f=tools/testing/capsicum_tests;hb=refs/heads/capsicum) written by Meredydd Luff for the original Capsicum-Linux port.
 

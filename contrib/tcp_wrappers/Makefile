@@ -19,7 +19,7 @@ what:
 	@echo
 	@echo "	generic (most bsd-ish systems with sys5 compatibility)"
 	@echo "	386bsd aix alpha apollo bsdos convex-ultranet dell-gcc dgux dgux543"
-	@echo "	dynix epix esix freebsd hpux irix4 irix5 irix6 isc iunix"
+	@echo "	dynix epix esix nqc hpux irix4 irix5 irix6 isc iunix"
 	@echo "	linux machten mips(untested) ncrsvr4 netbsd next osf power_unix_211"
 	@echo "	ptx-2.x ptx-generic pyramid sco sco-nis sco-od2 sco-os5 sinix sunos4"
 	@echo "	sunos40 sunos5 solaris8 sysv4 tandem ultrix unicos7 unicos8 unixware1 unixware2"
@@ -137,7 +137,7 @@ epix:
 	LIBS= RANLIB=ranlib ARFLAGS=rv AUX_OBJ= NETGROUP= TLI= \
 	EXTRA_CFLAGS=-DSYS_ERRLIST_DEFINED VSYSLOG= all
 
-freebsd:
+nqc:
 	@make REAL_DAEMON_DIR=$(REAL_DAEMON_DIR) STYLE=$(STYLE) \
 	RANLIB=ranlib ARFLAGS=$(ARFLAGS) AUX_OBJ= NETGROUP=-DNETGROUP TLI= \
 	EXTRA_CFLAGS="-DSYS_ERRLIST_DEFINED -DINET6 -DUSE_GETIPNODEBY" \

@@ -40,9 +40,9 @@
 
 #define TIDEFS_H
 
-#include <dev/pms/freebsd/driver/common/osenv.h>
-#include <dev/pms/freebsd/driver/common/ostypes.h>
-#include <dev/pms/freebsd/driver/common/osdebug.h>
+#include <dev/pms/nqc/driver/common/osenv.h>
+#include <dev/pms/nqc/driver/common/ostypes.h>
+#include <dev/pms/nqc/driver/common/osdebug.h>
 
 /*****************************************************************************
  *  INITIATOR/TARGET SHARED DEFINES AND ENUMS

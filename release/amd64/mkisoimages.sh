@@ -120,7 +120,7 @@ if [ "$bootable" != "" ]; then
 	$MKIMG -s gpt \
 	    --capacity $imgsize \
 	    -b "$BASEBITSDIR/boot/pmbr" \
-	    -p freebsd-boot:="$BASEBITSDIR/boot/isoboot" \
+	    -p nqc-boot:="$BASEBITSDIR/boot/isoboot" \
 	    $espparam \
 	    -o $hybridfilename
 

@@ -116,7 +116,7 @@ make_esp_device() {
         fi
     fi
 
-    if [ ! -f "${mntpt}/EFI/freebsd/loader.efi" ] && [ "$kbfree" -lt "$loadersize" ]; then
+    if [ ! -f "${mntpt}/EFI/nqc/loader.efi" ] && [ "$kbfree" -lt "$loadersize" ]; then
         umount "${mntpt}"
 	rmdir "${mntpt}"
         echo "Failed to update the EFI System Partition ${dev}"
@@ -125,27 +125,27 @@ make_esp_device() {
         die
     fi
 
-    mkdir -p "${mntpt}/EFI/freebsd"
+    mkdir -p "${mntpt}/EFI/nqc"
 
     # Keep a copy of the existing loader.efi in case there's a problem with the new one
-    if [ -f "${mntpt}/EFI/freebsd/loader.efi" ] && [ "$kbfree" -gt "$((loadersize * 2))" ]; then
-        cp "${mntpt}/EFI/freebsd/loader.efi" "${mntpt}/EFI/freebsd/loader-old.efi"
+    if [ -f "${mntpt}/EFI/nqc/loader.efi" ] && [ "$kbfree" -gt "$((loadersize * 2))" ]; then
+        cp "${mntpt}/EFI/nqc/loader.efi" "${mntpt}/EFI/nqc/loader-old.efi"
     fi
 
-    echo "Copying loader to /EFI/freebsd on ESP"
-    cp "${file}" "${mntpt}/EFI/freebsd/loader.efi"
+    echo "Copying loader to /EFI/nqc on ESP"
+    cp "${file}" "${mntpt}/EFI/nqc/loader.efi"
 
     if [ -n "${updatesystem}" ]; then
-        existingbootentryloaderfile=$(efibootmgr -v | grep "${mntpt}//EFI/freebsd/loader.efi")
+        existingbootentryloaderfile=$(efibootmgr -v | grep "${mntpt}//EFI/nqc/loader.efi")
 
         if [ -z "$existingbootentryloaderfile" ]; then
             # Try again without the double forward-slash in the path
-            existingbootentryloaderfile=$(efibootmgr -v | grep "${mntpt}/EFI/freebsd/loader.efi")
+            existingbootentryloaderfile=$(efibootmgr -v | grep "${mntpt}/EFI/nqc/loader.efi")
         fi
 
         if [ -z "$existingbootentryloaderfile" ]; then
             echo "Creating UEFI boot entry for NQC"
-            efibootmgr --create --label NQC --loader "${mntpt}/EFI/freebsd/loader.efi" > /dev/null
+            efibootmgr --create --label NQC --loader "${mntpt}/EFI/nqc/loader.efi" > /dev/null
             if [ $? -ne 0 ]; then
                 die "Failed to create new boot entry"
             fi
@@ -215,9 +215,9 @@ boot_nogeli_gpt_ufs_legacy() {
     dev=$1
     dst=$2
 
-    idx=$(find_part $dev "freebsd-boot")
+    idx=$(find_part $dev "nqc-boot")
     if [ -z "$idx" ] ; then
-	die "No freebsd-boot partition found"
+	die "No nqc-boot partition found"
     fi
     doit gpart bootcode -b ${gpt0} -p ${gpt2} -i $idx $dev
 }
@@ -235,9 +235,9 @@ boot_nogeli_gpt_zfs_legacy() {
     dev=$1
     dst=$2
 
-    idx=$(find_part $dev "freebsd-boot")
+    idx=$(find_part $dev "nqc-boot")
     if [ -z "$idx" ] ; then
-	die "No freebsd-boot partition found"
+	die "No nqc-boot partition found"
     fi
     doit gpart bootcode -b ${gpt0} -p ${gptzfs2} -i $idx $dev
 }
@@ -256,9 +256,9 @@ boot_nogeli_mbr_ufs_legacy() {
     dst=$2
 
     doit gpart bootcode -b ${mbr0} ${dev}
-    s=$(find_part $dev "freebsd")
+    s=$(find_part $dev "nqc")
     if [ -z "$s" ] ; then
-	die "No freebsd slice found"
+	die "No nqc slice found"
     fi
     doit gpart bootcode -p ${mbr2} ${dev}s${s}
 }
@@ -277,15 +277,15 @@ boot_nogeli_mbr_zfs_legacy() {
     dst=$2
 
     # search to find the BSD slice
-    s=$(find_part $dev "freebsd")
+    s=$(find_part $dev "nqc")
     if [ -z "$s" ] ; then
 	die "No BSD slice found"
     fi
-    idx=$(find_part ${dev}s${s} "freebsd-zfs")
+    idx=$(find_part ${dev}s${s} "nqc-zfs")
     if [ -z "$idx" ] ; then
-	die "No freebsd-zfs slice found"
+	die "No nqc-zfs slice found"
     fi
-    # search to find the freebsd-zfs partition within the slice
+    # search to find the nqc-zfs partition within the slice
     # Or just assume it is 'a' because it has to be since it fails otherwise
     doit gpart bootcode -b ${dst}/boot/mbr ${dev}
     dd if=${dst}/boot/zfsboot of=/tmp/zfsboot1 count=1

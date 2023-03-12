@@ -2715,11 +2715,11 @@ static struct syscall_helper_data mq_syscalls[] = {
 };
 
 #ifdef COMPAT_NQC32
-#include <compat/freebsd32/freebsd32.h>
-#include <compat/freebsd32/freebsd32_proto.h>
-#include <compat/freebsd32/freebsd32_signal.h>
-#include <compat/freebsd32/freebsd32_syscall.h>
-#include <compat/freebsd32/freebsd32_util.h>
+#include <compat/nqc32/nqc32.h>
+#include <compat/nqc32/nqc32_proto.h>
+#include <compat/nqc32/nqc32_signal.h>
+#include <compat/nqc32/nqc32_syscall.h>
+#include <compat/nqc32/nqc32_util.h>
 
 static void
 mq_attr_from32(const struct mq_attr32 *from, struct mq_attr *to)
@@ -2742,7 +2742,7 @@ mq_attr_to32(const struct mq_attr *from, struct mq_attr32 *to)
 }
 
 int
-freebsd32_kmq_open(struct thread *td, struct freebsd32_kmq_open_args *uap)
+nqc32_kmq_open(struct thread *td, struct nqc32_kmq_open_args *uap)
 {
 	struct mq_attr attr;
 	struct mq_attr32 attr32;
@@ -2762,7 +2762,7 @@ freebsd32_kmq_open(struct thread *td, struct freebsd32_kmq_open_args *uap)
 }
 
 int
-freebsd32_kmq_setattr(struct thread *td, struct freebsd32_kmq_setattr_args *uap)
+nqc32_kmq_setattr(struct thread *td, struct nqc32_kmq_setattr_args *uap)
 {
 	struct mq_attr attr, oattr;
 	struct mq_attr32 attr32, oattr32;
@@ -2785,8 +2785,8 @@ freebsd32_kmq_setattr(struct thread *td, struct freebsd32_kmq_setattr_args *uap)
 }
 
 int
-freebsd32_kmq_timedsend(struct thread *td,
-    struct freebsd32_kmq_timedsend_args *uap)
+nqc32_kmq_timedsend(struct thread *td,
+    struct nqc32_kmq_timedsend_args *uap)
 {
 	struct mqueue *mq;
 	struct file *fp;
@@ -2817,8 +2817,8 @@ out:
 }
 
 int
-freebsd32_kmq_timedreceive(struct thread *td,
-    struct freebsd32_kmq_timedreceive_args *uap)
+nqc32_kmq_timedreceive(struct thread *td,
+    struct nqc32_kmq_timedreceive_args *uap)
 {
 	struct mqueue *mq;
 	struct file *fp;
@@ -2848,7 +2848,7 @@ out:
 }
 
 int
-freebsd32_kmq_notify(struct thread *td, struct freebsd32_kmq_notify_args *uap)
+nqc32_kmq_notify(struct thread *td, struct nqc32_kmq_notify_args *uap)
 {
 	struct sigevent ev, *evp;
 	struct sigevent32 ev32;
@@ -2869,11 +2869,11 @@ freebsd32_kmq_notify(struct thread *td, struct freebsd32_kmq_notify_args *uap)
 }
 
 static struct syscall_helper_data mq32_syscalls[] = {
-	SYSCALL32_INIT_HELPER(freebsd32_kmq_open),
-	SYSCALL32_INIT_HELPER_F(freebsd32_kmq_setattr, SYF_CAPENABLED),
-	SYSCALL32_INIT_HELPER_F(freebsd32_kmq_timedsend, SYF_CAPENABLED),
-	SYSCALL32_INIT_HELPER_F(freebsd32_kmq_timedreceive, SYF_CAPENABLED),
-	SYSCALL32_INIT_HELPER_F(freebsd32_kmq_notify, SYF_CAPENABLED),
+	SYSCALL32_INIT_HELPER(nqc32_kmq_open),
+	SYSCALL32_INIT_HELPER_F(nqc32_kmq_setattr, SYF_CAPENABLED),
+	SYSCALL32_INIT_HELPER_F(nqc32_kmq_timedsend, SYF_CAPENABLED),
+	SYSCALL32_INIT_HELPER_F(nqc32_kmq_timedreceive, SYF_CAPENABLED),
+	SYSCALL32_INIT_HELPER_F(nqc32_kmq_notify, SYF_CAPENABLED),
 	SYSCALL32_INIT_HELPER_COMPAT(kmq_unlink),
 	SYSCALL_INIT_LAST
 };

@@ -58,9 +58,9 @@ done > /dev/null
 
 set -e
 (
-gpart add -t freebsd-ufs -s 340m md$u1
-gpart add -t freebsd-ufs -s 340m md$u2
-gpart add -t freebsd-ufs -s 340m md$u3
+gpart add -t nqc-ufs -s 340m md$u1
+gpart add -t nqc-ufs -s 340m md$u2
+gpart add -t nqc-ufs -s 340m md$u3
 ) > /dev/null
 gnop create md$u2
 gnop create md$u3

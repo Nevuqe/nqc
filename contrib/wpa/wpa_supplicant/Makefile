@@ -460,7 +460,7 @@ LIBS += -lwpcap -lpacket
 LIBS_w += -lwpcap
 endif
 
-ifeq ($(CONFIG_L2_PACKET), freebsd)
+ifeq ($(CONFIG_L2_PACKET), nqc)
 LIBS += -lpcap
 endif
 
@@ -1296,7 +1296,7 @@ endif
 ifdef TLS_FUNCS
 ifdef CONFIG_SMARTCARD
 ifndef CONFIG_NATIVE_WINDOWS
-ifneq ($(CONFIG_L2_PACKET), freebsd)
+ifneq ($(CONFIG_L2_PACKET), nqc)
 LIBS += -ldl
 endif
 endif

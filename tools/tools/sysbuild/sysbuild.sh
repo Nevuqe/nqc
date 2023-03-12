@@ -43,7 +43,7 @@ if [ `uname -m` = "i386" -o `uname -m` = "amd64" ] ; then
 
 	NQC_PART=`sed -n	\
 		-e 's/#.*//'	\
-		-e '/[ 	]\/freebsd[ 	]/!d'	\
+		-e '/[ 	]\/nqc[ 	]/!d'	\
 		-e 's/[ 	].*//p'	\
 		/etc/fstab`
 
@@ -59,7 +59,7 @@ else
 fi
 
 
-# Relative to /freebsd
+# Relative to /nqc
 PORTS_PATH=ports
 SRC_PATH=src
 # OBJ_PATH=obj
@@ -121,10 +121,10 @@ final_chroot() (
 #######################################################################
 # -P is a pretty neat way to clean junk out from your ports dist-files:
 #
-#	mkdir /freebsd/ports/distfiles.old
-#	mv /freebsd/ports/distfiles/* /freebsd/ports/distfiles.old
-#	sh sysbuild.sh -c $yourconfig -P /freebsd/ports/distfiles.old
-#	rm -rf /freebsd/ports/distfiles.old
+#	mkdir /nqc/ports/distfiles.old
+#	mv /nqc/ports/distfiles/* /nqc/ports/distfiles.old
+#	sh sysbuild.sh -c $yourconfig -P /nqc/ports/distfiles.old
+#	rm -rf /nqc/ports/distfiles.old
 #
 # Unfortunately bsd.ports.mk does not attempt to use a hard-link so
 # while this runs you need diskspace for both your old and your "new"
@@ -449,27 +449,27 @@ fi
 log_it Unmount everything
 (
 	( cleanup )
-	umount /freebsd/distfiles || true
-	umount ${SBMNT}/freebsd/distfiles || true
+	umount /nqc/distfiles || true
+	umount ${SBMNT}/nqc/distfiles || true
 	umount ${NQC_PART} || true
-	umount ${SBMNT}/freebsd || true
+	umount ${SBMNT}/nqc || true
 	umount ${SBMNT}/dev || true
 	umount ${SBMNT} || true
 	umount /dev/${TARGET_PART} || true
 ) # > /dev/null 2>&1
 
 log_it Prepare running image
-mkdir -p /freebsd
-mount ${NQC_PART} /freebsd
+mkdir -p /nqc
+mount ${NQC_PART} /nqc
 
 #######################################################################
 
-if [ ! -d /freebsd/${PORTS_PATH} ] ;  then
+if [ ! -d /nqc/${PORTS_PATH} ] ;  then
 	echo PORTS_PATH does not exist 1>&2
 	exit 1
 fi
 
-if [ ! -d /freebsd/${SRC_PATH} ] ;  then
+if [ ! -d /nqc/${SRC_PATH} ] ;  then
 	echo SRC_PATH does not exist 1>&2
 	exit 1
 fi
@@ -478,15 +478,15 @@ log_it TARGET_PART $TARGET_PART
 sleep 5
 
 rm -rf /usr/ports
-ln -s /freebsd/${PORTS_PATH} /usr/ports
+ln -s /nqc/${PORTS_PATH} /usr/ports
 
 rm -rf /usr/src
-ln -s /freebsd/${SRC_PATH} /usr/src
+ln -s /nqc/${SRC_PATH} /usr/src
 
 if $do_world ; then
 	if [ "x${OBJ_PATH}" != "x" ] ; then
 		rm -rf /usr/obj
-		(cd /freebsd && mkdir -p ${OBJ_PATH} && ln -s ${OBJ_PATH} /usr/obj)
+		(cd /nqc && mkdir -p ${OBJ_PATH} && ln -s ${OBJ_PATH} /usr/obj)
 	else
 		rm -rf /usr/obj/*
 		mkdir -p /usr/obj
@@ -522,10 +522,10 @@ mkdir -p ${SBMNT}/dev
 mount -t devfs devfs ${SBMNT}/dev
 
 if [ "x${REMOTEDISTFILES}" != "x" ] ; then
-	rm -rf /freebsd/${PORTS_PATH}/distfiles
-	ln -s /freebsd/distfiles /freebsd/${PORTS_PATH}/distfiles
-	mkdir -p /freebsd/distfiles
-	mount  ${REMOTEDISTFILES} /freebsd/distfiles
+	rm -rf /nqc/${PORTS_PATH}/distfiles
+	ln -s /nqc/distfiles /nqc/${PORTS_PATH}/distfiles
+	mkdir -p /nqc/distfiles
+	mount  ${REMOTEDISTFILES} /nqc/distfiles
 fi
 
 log_it copy ports config files
@@ -565,7 +565,7 @@ log_it Installkernel
 
 if [ "x${OBJ_PATH}" != "x" ] ; then
 	rmdir ${SBMNT}/usr/obj
-	( cd /freebsd && mkdir -p ${OBJ_PATH} && ln -s ${OBJ_PATH} ${SBMNT}/usr/obj )
+	( cd /nqc && mkdir -p ${OBJ_PATH} && ln -s ${OBJ_PATH} ${SBMNT}/usr/obj )
 fi
 
 log_it Wait for ports prefetch
@@ -575,20 +575,20 @@ wait
 log_it Move filesystems
 
 if [ "x${REMOTEDISTFILES}" != "x" ] ; then
-	umount /freebsd/distfiles
+	umount /nqc/distfiles
 fi
 umount ${NQC_PART} || true
-mkdir -p ${SBMNT}/freebsd
-mount ${NQC_PART} ${SBMNT}/freebsd
+mkdir -p ${SBMNT}/nqc
+mount ${NQC_PART} ${SBMNT}/nqc
 if [ "x${REMOTEDISTFILES}" != "x" ] ; then
-	mount  ${REMOTEDISTFILES} ${SBMNT}/freebsd/distfiles
+	mount  ${REMOTEDISTFILES} ${SBMNT}/nqc/distfiles
 fi
 
 rm -rf ${SBMNT}/usr/ports || true
-ln -s /freebsd/${PORTS_PATH} ${SBMNT}/usr/ports
+ln -s /nqc/${PORTS_PATH} ${SBMNT}/usr/ports
 
 rm -rf ${SBMNT}/usr/src || true
-ln -s /freebsd/${SRC_PATH} ${SBMNT}/usr/src
+ln -s /nqc/${SRC_PATH} ${SBMNT}/usr/src
 
 log_it Build and install ports
 

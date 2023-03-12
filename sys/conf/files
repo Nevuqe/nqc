@@ -134,28 +134,28 @@ cam/scsi/smp_all.c		optional scbus
 # shared between zfs and dtrace
 cddl/compat/opensolaris/kern/opensolaris.c		optional dtrace compile-with "${CDDL_C}"
 cddl/compat/opensolaris/kern/opensolaris_proc.c		optional zfs | dtrace compile-with "${CDDL_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_misc.c		optional zfs | dtrace compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_cmn_err.c		optional zfs | dtrace compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_taskq.c		optional zfs | dtrace compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_kmem.c		optional zfs | dtrace compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_misc.c		optional zfs | dtrace compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_cmn_err.c		optional zfs | dtrace compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_taskq.c		optional zfs | dtrace compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_kmem.c		optional zfs | dtrace compile-with "${ZFS_C}"
 
 #zfs solaris portability layer
-contrib/openzfs/module/os/freebsd/spl/acl_common.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/callb.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/list.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_acl.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_dtrace.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_kstat.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_policy.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_string.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_sunddi.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_sysevent.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_uio.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_vfs.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_vm.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_zone.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_procfs_list.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/spl/spl_zlib.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/acl_common.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/callb.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/list.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_acl.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_dtrace.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_kstat.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_policy.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_string.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_sunddi.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_sysevent.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_uio.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_vfs.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_vm.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_zone.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_procfs_list.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/spl/spl_zlib.c		optional zfs compile-with "${ZFS_C}"
 
 
 # zfs specific
@@ -196,31 +196,31 @@ contrib/openzfs/module/nvpair/nvpair_alloc_fixed.c	optional zfs compile-with "${
 contrib/openzfs/module/nvpair/nvpair_alloc_spl.c	optional zfs compile-with "${ZFS_C}"
 
 #zfs platform compatibility code
-contrib/openzfs/module/os/freebsd/zfs/abd_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/arc_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/crypto_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/dmu_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/event_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/hkdf.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/kmod_core.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/spa_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/sysctl_os.c		optional zfs compile-with "${ZFS_C}  -include $S/modules/zfs/zfs_config.h"
-contrib/openzfs/module/os/freebsd/zfs/vdev_file.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/vdev_label_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/vdev_geom.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_acl.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_ctldir.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_debug.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_dir.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_file_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_ioctl_compat.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_ioctl_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_racct.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_vfsops.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_vnops_os.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zfs_znode.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zio_crypt.c		optional zfs compile-with "${ZFS_C}"
-contrib/openzfs/module/os/freebsd/zfs/zvol_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/abd_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/arc_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/crypto_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/dmu_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/event_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/hkdf.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/kmod_core.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/spa_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/sysctl_os.c		optional zfs compile-with "${ZFS_C}  -include $S/modules/zfs/zfs_config.h"
+contrib/openzfs/module/os/nqc/zfs/vdev_file.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/vdev_label_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/vdev_geom.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_acl.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_ctldir.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_debug.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_dir.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_file_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_ioctl_compat.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_ioctl_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_racct.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_vfsops.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_vnops_os.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zfs_znode.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zio_crypt.c		optional zfs compile-with "${ZFS_C}"
+contrib/openzfs/module/os/nqc/zfs/zvol_os.c		optional zfs compile-with "${ZFS_C}"
 
 #zfs unicode support
 contrib/openzfs/module/unicode/uconv.c		optional zfs compile-with "${ZFS_C}"
@@ -383,12 +383,12 @@ cddl/dev/fbt/fbt.c			optional dtrace_fbt      | dtraceall compile-with "${FBT_C}
 cddl/dev/systrace/systrace.c		optional dtrace_systrace | dtraceall compile-with "${CDDL_C}"
 cddl/dev/prototype.c			optional dtrace_prototype | dtraceall compile-with "${CDDL_C}"
 fs/nfsclient/nfs_clkdtrace.c		optional dtnfscl nfscl   | dtraceall nfscl compile-with "${CDDL_C}"
-compat/freebsd32/freebsd32_abort2.c	optional compat_nqc32
-compat/freebsd32/freebsd32_capability.c	optional compat_nqc32
-compat/freebsd32/freebsd32_ioctl.c	optional compat_nqc32
-compat/freebsd32/freebsd32_misc.c	optional compat_nqc32
-compat/freebsd32/freebsd32_syscalls.c	optional compat_nqc32
-compat/freebsd32/freebsd32_sysent.c	optional compat_nqc32
+compat/nqc32/nqc32_abort2.c	optional compat_nqc32
+compat/nqc32/nqc32_capability.c	optional compat_nqc32
+compat/nqc32/nqc32_ioctl.c	optional compat_nqc32
+compat/nqc32/nqc32_misc.c	optional compat_nqc32
+compat/nqc32/nqc32_syscalls.c	optional compat_nqc32
+compat/nqc32/nqc32_sysent.c	optional compat_nqc32
 contrib/ck/src/ck_array.c				standard compile-with "${NORMAL_C} -I$S/contrib/ck/include"
 contrib/ck/src/ck_barrier_centralized.c			standard compile-with "${NORMAL_C} -I$S/contrib/ck/include"
 contrib/ck/src/ck_barrier_combining.c			standard compile-with "${NORMAL_C} -I$S/contrib/ck/include"
@@ -635,19 +635,19 @@ contrib/libnv/nvlist.c		standard
 contrib/libnv/bsd_nvpair.c		standard
 # xz
 dev/xz/xz_mod.c	optional xz \
-	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/freebsd/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
+	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/nqc/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
 contrib/xz-embedded/linux/lib/xz/xz_crc32.c	optional xz \
-	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/freebsd/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
+	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/nqc/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
 contrib/xz-embedded/linux/lib/xz/xz_crc64.c	optional xz \
-	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/freebsd/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
+	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/nqc/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
 contrib/xz-embedded/linux/lib/xz/xz_dec_bcj.c	optional xz \
-	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/freebsd/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
+	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/nqc/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
 contrib/xz-embedded/linux/lib/xz/xz_dec_lzma2.c	optional xz \
-	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/freebsd/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
+	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/nqc/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
 contrib/xz-embedded/linux/lib/xz/xz_dec_stream.c optional xz \
-	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/freebsd/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
+	compile-with "${NORMAL_C} -DXZ_USE_CRC64 -I$S/contrib/xz-embedded/nqc/ -I$S/contrib/xz-embedded/linux/lib/xz/ -I$S/contrib/xz-embedded/linux/include/linux/"
 # Zstd
-contrib/zstd/lib/freebsd/zstd_kmalloc.c		optional zstdio compile-with ${ZSTD_C}
+contrib/zstd/lib/nqc/zstd_kmalloc.c		optional zstdio compile-with ${ZSTD_C}
 contrib/zstd/lib/common/zstd_common.c		optional zstdio compile-with ${ZSTD_C}
 contrib/zstd/lib/common/fse_decompress.c	optional zstdio compile-with ${ZSTD_C}
 contrib/zstd/lib/common/entropy_common.c	optional zstdio compile-with ${ZSTD_C}
@@ -2598,7 +2598,7 @@ dev/pci/pci_user.c		optional pci
 dev/pci/pcib_if.m		standard
 dev/pci/pcib_support.c		standard
 dev/pci/vga_pci.c		optional pci
-dev/pms/freebsd/driver/ini/src/agtiapi.c		optional pmspcv \
+dev/pms/nqc/driver/ini/src/agtiapi.c		optional pmspcv \
 	compile-with "${NORMAL_C} -Wunused-variable -Woverflow -Wparentheses -w"
 dev/pms/RefTisa/sallsdk/spc/sadisc.c			optional pmspcv \
 	compile-with "${NORMAL_C} -Wunused-variable -Woverflow -Wparentheses -w"
@@ -3571,7 +3571,7 @@ fs/smbfs/smbfs_smb.c		optional smbfs
 fs/smbfs/smbfs_subr.c		optional smbfs
 fs/smbfs/smbfs_vfsops.c		optional smbfs
 fs/smbfs/smbfs_vnops.c		optional smbfs
-fs/tarfs/tarfs_io.c		optional tarfs compile-with "${NORMAL_C} -I$S/contrib/zstd/lib/freebsd"
+fs/tarfs/tarfs_io.c		optional tarfs compile-with "${NORMAL_C} -I$S/contrib/zstd/lib/nqc"
 fs/tarfs/tarfs_subr.c		optional tarfs
 fs/tarfs/tarfs_vfsops.c		optional tarfs
 fs/tarfs/tarfs_vnops.c		optional tarfs
@@ -3674,7 +3674,7 @@ geom/uzip/g_uzip_lzma.c		optional geom_uzip
 geom/uzip/g_uzip_wrkthr.c	optional geom_uzip
 geom/uzip/g_uzip_zlib.c		optional geom_uzip
 geom/uzip/g_uzip_zstd.c		optional geom_uzip zstdio \
-	compile-with "${NORMAL_C} -I$S/contrib/zstd/lib/freebsd"
+	compile-with "${NORMAL_C} -I$S/contrib/zstd/lib/nqc"
 geom/vinum/geom_vinum.c		optional geom_vinum
 geom/vinum/geom_vinum_create.c	optional geom_vinum
 geom/vinum/geom_vinum_drive.c	optional geom_vinum
@@ -3845,7 +3845,7 @@ kern/subr_bufring.c		standard
 kern/subr_capability.c		standard
 kern/subr_clock.c		standard
 kern/subr_compressor.c		standard \
-	compile-with "${NORMAL_C} -I$S/contrib/zstd/lib/freebsd"
+	compile-with "${NORMAL_C} -I$S/contrib/zstd/lib/nqc"
 kern/subr_coverage.c		optional coverage \
 	compile-with "${NORMAL_C:N-fsanitize*}"
 kern/subr_counter.c		standard

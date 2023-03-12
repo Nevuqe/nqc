@@ -84,7 +84,7 @@ _DECLARE_DEBUG(LOG_INFO);
 
 #ifdef COMPAT_NQC32
 #include <sys/mount.h>
-#include <compat/freebsd32/freebsd32.h>
+#include <compat/nqc32/nqc32.h>
 
 struct if_msghdr32 {
 	uint16_t ifm_msglen;

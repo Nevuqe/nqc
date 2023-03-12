@@ -323,7 +323,7 @@ struct uname_args {
 #endif
 /* ARGSUSED */
 int
-freebsd4_uname(struct thread *td, struct freebsd4_uname_args *uap)
+nqc4_uname(struct thread *td, struct nqc4_uname_args *uap)
 {
 	int name[2], error;
 	size_t len;
@@ -397,8 +397,8 @@ struct getdomainname_args {
 #endif
 /* ARGSUSED */
 int
-freebsd4_getdomainname(struct thread *td,
-    struct freebsd4_getdomainname_args *uap)
+nqc4_getdomainname(struct thread *td,
+    struct nqc4_getdomainname_args *uap)
 {
 	int name[2];
 	size_t len = uap->len;
@@ -417,8 +417,8 @@ struct setdomainname_args {
 #endif
 /* ARGSUSED */
 int
-freebsd4_setdomainname(struct thread *td,
-    struct freebsd4_setdomainname_args *uap)
+nqc4_setdomainname(struct thread *td,
+    struct nqc4_setdomainname_args *uap)
 {
 	int name[2];
 

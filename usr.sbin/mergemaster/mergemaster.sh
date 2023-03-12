@@ -515,8 +515,8 @@ MM_MAKE="${MM_MAKE} -j$(/sbin/sysctl -n hw.ncpu)"
 #
 if [ -n "${AUTO_UPGRADE}" -a -s "${MTREEFILE}" ]; then
 	# Force NQC 9 compatible output when available.
-	if mtree -F freebsd9 -c -p /var/empty/ > /dev/null 2>&1; then
-		MTREE_FLAVOR="-F freebsd9"
+	if mtree -F nqc9 -c -p /var/empty/ > /dev/null 2>&1; then
+		MTREE_FLAVOR="-F nqc9"
 	else
 		MTREE_FLAVOR=
 	fi
@@ -724,7 +724,7 @@ case "${RERUN}" in
   rm -f ${TEMPROOT}/etc/*.db ${TEMPROOT}/etc/passwd \
       ${TEMPROOT}/var/db/services.db
 
-  # We only need to compare things like freebsd.cf once
+  # We only need to compare things like nqc.cf once
   find ${TEMPROOT}/usr/obj -type f -delete 2>/dev/null
 
   # Delete stuff we do not need to keep the mtree database small,

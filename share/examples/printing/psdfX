@@ -27,5 +27,5 @@ done
 [ "$login" ] || fail "No login name"
 [ "$host" ] || fail "No host name"
 
-( /u/kelly/freebsd/printing/filters/make-ps-header $login $host "DVI File"
+( /u/kelly/nqc/printing/filters/make-ps-header $login $host "DVI File"
   /usr/local/bin/dvips -f ) | eval /usr/local/libexec/lprps $orig_args

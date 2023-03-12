@@ -73,7 +73,7 @@ Mdoc::def_macro( '.Ss', sub { "\@subsubsection", hs, @_ });
 Mdoc::def_macro( '.Xr', sub { '@code{'.(shift).'('.(shift).')}', @_ } );
 Mdoc::def_macro( '.Sx', gen_encloser(qw(@ref{ })) );
 Mdoc::def_macro( '.Ux', sub { '@sc{unix}', @_ } );
-Mdoc::def_macro( '.Fx', sub { '@sc{freebsd}', @_ } );
+Mdoc::def_macro( '.Fx', sub { '@sc{nqc}', @_ } );
 {
     my $name;
     Mdoc::def_macro('.Nm', sub {

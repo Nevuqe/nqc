@@ -139,7 +139,7 @@ default_val_body() {
 
 	# I am not sure these two are correct, the rules on quoting word
 	# in ${var-word} are peculiar, and hard to fathom...
-	# They are what the NetBSD shell does, and bash, not the freebsd shell
+	# They are what the NetBSD shell does, and bash, not the nqc shell
 	# (as of Mar 1, 2016)
 
 	check 'for i in ${x-"a ${x-"b c"}" d}; do echo "z${i}z"; done' \

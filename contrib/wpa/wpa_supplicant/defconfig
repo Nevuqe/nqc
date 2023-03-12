@@ -298,7 +298,7 @@ CONFIG_BACKEND=file
 # Select layer 2 packet implementation
 # linux = Linux packet socket (default)
 # pcap = libpcap/libdnet/WinPcap
-# freebsd = NQC libpcap
+# nqc = NQC libpcap
 # winpcap = WinPcap with receive thread
 # ndis = Windows NDISUIO (note: requires CONFIG_USE_NDISUIO=y)
 # none = Empty template

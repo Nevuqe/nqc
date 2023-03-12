@@ -16,7 +16,7 @@ zpool_SOURCES = \
 
 if BUILD_NQC
 zpool_SOURCES += \
-	%D%/os/freebsd/zpool_vdev_os.c
+	%D%/os/nqc/zpool_vdev_os.c
 endif
 
 if BUILD_LINUX
@@ -136,14 +136,14 @@ dist_zpoolcompat_DATA = \
 	%D%/compatibility.d/compat-2019 \
 	%D%/compatibility.d/compat-2020 \
 	%D%/compatibility.d/compat-2021 \
-	%D%/compatibility.d/freebsd-11.0 \
-	%D%/compatibility.d/freebsd-11.2 \
-	%D%/compatibility.d/freebsd-11.3 \
+	%D%/compatibility.d/nqc-11.0 \
+	%D%/compatibility.d/nqc-11.2 \
+	%D%/compatibility.d/nqc-11.3 \
 	%D%/compatibility.d/freenas-9.10.2 \
 	%D%/compatibility.d/grub2 \
-	%D%/compatibility.d/openzfs-2.0-freebsd \
+	%D%/compatibility.d/openzfs-2.0-nqc \
 	%D%/compatibility.d/openzfs-2.0-linux \
-	%D%/compatibility.d/openzfs-2.1-freebsd \
+	%D%/compatibility.d/openzfs-2.1-nqc \
 	%D%/compatibility.d/openzfs-2.1-linux \
 	%D%/compatibility.d/openzfsonosx-1.7.0 \
 	%D%/compatibility.d/openzfsonosx-1.8.1 \
@@ -161,17 +161,17 @@ zpoolcompatlinks = \
 	"compat-2019		2019" \
 	"compat-2020		2020" \
 	"compat-2021		2021" \
-	"freebsd-11.0		freebsd-11.1" \
-	"freebsd-11.0		freenas-11.0" \
-	"freebsd-11.2		freenas-11.2" \
-	"freebsd-11.3		freebsd-11.4" \
-	"freebsd-11.3		freebsd-12.0" \
-	"freebsd-11.3		freebsd-12.1" \
-	"freebsd-11.3		freebsd-12.2" \
-	"freebsd-11.3		freenas-11.3" \
+	"nqc-11.0		nqc-11.1" \
+	"nqc-11.0		freenas-11.0" \
+	"nqc-11.2		freenas-11.2" \
+	"nqc-11.3		nqc-11.4" \
+	"nqc-11.3		nqc-12.0" \
+	"nqc-11.3		nqc-12.1" \
+	"nqc-11.3		nqc-12.2" \
+	"nqc-11.3		freenas-11.3" \
 	"freenas-11.0		freenas-11.1" \
 	"openzfsonosx-1.9.3	openzfsonosx-1.9.4" \
-	"openzfs-2.0-freebsd	truenas-12.0" \
+	"openzfs-2.0-nqc	truenas-12.0" \
 	"zol-0.7		ubuntu-18.04" \
 	"zol-0.8		ubuntu-20.04"
 

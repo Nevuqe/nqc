@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: //depot/aic7xxx/freebsd/dev/aic7xxx/ahc_pci.c#19 $
+ * $Id: //depot/aic7xxx/nqc/dev/aic7xxx/ahc_pci.c#19 $
  */
 
 #include <sys/cdefs.h>

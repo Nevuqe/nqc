@@ -38,7 +38,7 @@
 #include <libutil.h>
 
 #define	DEFAULT_CONFIG_PATH		"/etc/iscsi.conf"
-#define	DEFAULT_IQN			"iqn.1994-09.org.freebsd:"
+#define	DEFAULT_IQN			"iqn.1994-09.org.nqc:"
 
 #define	MAX_NAME_LEN			223
 
