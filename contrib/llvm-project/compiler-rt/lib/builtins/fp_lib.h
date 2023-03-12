@@ -28,7 +28,7 @@
 
 // x86_64 NQC prior v9.3 define fixed-width types incorrectly in
 // 32-bit mode.
-#if defined(__NQC__) && defined(__i386__)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(__i386__)
 #include <sys/param.h>
 #if __NQC_version < 903000 // v9.3
 #define uint64_t unsigned long long

@@ -21,7 +21,7 @@
 #include "fw/api/txq.h"
 #include "fw/api/dbg-tlv.h"
 #include "iwl-dbg-tlv.h"
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/skbuff.h>
 #include "iwl-modparams.h"
 #endif
@@ -222,7 +222,7 @@ struct iwl_host_cmd {
 	struct iwl_rx_packet *resp_pkt;
 #if defined(__linux__)
 	unsigned long _rx_page_addr;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	struct page *_page;
 #endif
 	u32 _rx_page_order;
@@ -237,7 +237,7 @@ static inline void iwl_free_resp(struct iwl_host_cmd *cmd)
 {
 #if defined(__linux__)
 	free_pages(cmd->_rx_page_addr, cmd->_rx_page_order);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	__free_pages(cmd->_page, cmd->_rx_page_order);
 #endif
 }

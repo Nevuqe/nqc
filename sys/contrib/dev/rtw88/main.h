@@ -14,7 +14,7 @@
 #include <linux/iopoll.h>
 #include <linux/interrupt.h>
 #include <linux/workqueue.h>
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/kernel.h>
 #include <linux/delay.h>
 #include <linux/etherdevice.h>
@@ -2183,7 +2183,7 @@ int rtw_dump_reg(struct rtw_dev *rtwdev, const u32 addr, const u32 size);
 void rtw_set_txrx_1ss(struct rtw_dev *rtwdev, bool config_1ss);
 #if defined(__linux__)
 #define	rtw88_static_assert(_x)		static_assert(_x)
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 #define	rtw88_static_assert(_x)		_Static_assert(_x, "bad array size")
 #endif
 

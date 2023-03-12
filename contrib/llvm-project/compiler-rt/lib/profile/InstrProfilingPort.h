@@ -137,7 +137,7 @@ static inline size_t getpagesize() {
 #define O_BINARY 0
 #endif
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 
 #include <inttypes.h>
 #include <sys/types.h>

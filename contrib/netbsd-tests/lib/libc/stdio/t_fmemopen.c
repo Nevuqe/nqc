@@ -27,7 +27,7 @@
  *
  */
 
-#if defined(__NQC__) || defined(__NetBSD__)
+#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NetBSD__)
 #include <atf-c.h>
 #else
 #if defined(__linux__)

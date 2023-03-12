@@ -149,7 +149,7 @@ terminate(const char *format, ...)
 
 	if (getenv("CTF_ABORT_ON_TERMINATE") != NULL)
 		abort();
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 /*
  * For the time being just output the termination message, but don't
  * return an exit status that would cause the build to fail. We need

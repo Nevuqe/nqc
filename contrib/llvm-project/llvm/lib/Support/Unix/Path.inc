@@ -42,7 +42,7 @@
 #if __has_include(<sys/clonefile.h>)
 #include <sys/clonefile.h>
 #endif
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 #include <osreldate.h>
 #if __NQC_version >= 1300057
 #include <sys/auxv.h>
@@ -126,7 +126,7 @@ namespace fs {
 
 const file_t kInvalidFile = -1;
 
-#if defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) ||     \
+#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) ||     \
     defined(__minix) || defined(__NQC_kernel__) || defined(__linux__) ||   \
     defined(__CYGWIN__) || defined(__DragonFly__) || defined(_AIX) || defined(__GNU__) || \
     (defined(__sun__) && defined(__svr4__))
@@ -206,7 +206,7 @@ std::string getMainExecutableImpl(const char *argv0, void *MainAddr) {
     if (realpath(exe_path, link_path))
       return link_path;
   }
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
   // On NQC if the exec path specified in ELF auxiliary vectors is
   // preferred, if available.  /proc/curproc/file and the KERN_PROC_PATHNAME
   // sysctl may not return the desired path if there are multiple hardlinks
@@ -954,7 +954,7 @@ ErrorOr<basic_file_status> directory_entry::status() const {
 // NQC optionally provides /proc/self/fd, but it is incompatible with
 // Linux. The thing to use is realpath.
 //
-#if !defined(__NQC__)
+#if !defined(__NQC__) && !defined(__FreeBSD__)
 #define TRY_PROC_SELF_FD
 #endif
 

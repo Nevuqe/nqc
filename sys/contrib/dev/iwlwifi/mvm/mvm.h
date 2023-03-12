@@ -36,7 +36,7 @@
 #include "iwl-nvm-parse.h"
 
 #include <linux/average.h>
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <net/if_inet6.h>
 #endif
 
@@ -654,7 +654,7 @@ struct _iwl_mvm_reorder_buf_entry {
 struct iwl_mvm_reorder_buf_entry {
 	struct _iwl_mvm_reorder_buf_entry e;
 }
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 __aligned(roundup2(sizeof(struct _iwl_mvm_reorder_buf_entry), 32))
 #elif !defined(__CHECKER__)
 /* sparse doesn't like this construct: "bad integer constant expression" */

@@ -3,7 +3,7 @@
  * Copyright (C) 2017 Intel Deutschland GmbH
  * Copyright (C) 2018-2021 Intel Corporation
  */
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/delay.h>
 #endif
 #include "iwl-trans.h"

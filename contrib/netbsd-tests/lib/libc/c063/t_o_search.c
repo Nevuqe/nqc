@@ -53,7 +53,7 @@ __RCSID("$NetBSD: t_o_search.c,v 1.10 2020/02/08 19:58:36 kamil Exp $");
  * until a decision is reached about the semantics of O_SEARCH and a
  * non-broken implementation is available.
  */
-#if defined(__NQC__) || (O_MASK & O_SEARCH) != 0
+#if defined(__NQC__) && defined(__FreeBSD__) || (O_MASK & O_SEARCH) != 0
 #define USE_O_SEARCH
 #endif
 

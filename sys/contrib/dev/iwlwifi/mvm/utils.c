@@ -4,7 +4,7 @@
  * Copyright (C) 2013-2014 Intel Mobile Communications GmbH
  * Copyright (C) 2015-2017 Intel Deutschland GmbH
  */
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/math64.h>
 #endif
 #include <net/mac80211.h>

@@ -43,7 +43,7 @@ extern "C" {
 
 #ifdef _KERNEL
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <sys/types.h>
 #elif defined(__linux__)
 #include <linux/types.h>

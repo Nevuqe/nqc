@@ -2,7 +2,7 @@
 /* Copyright(c) 2020  Realtek Corporation
  */
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #define	LINUXKPI_PARAM_PREFIX	rtw89_pci_
 #endif
 
@@ -1186,7 +1186,7 @@ static int rtw89_pci_txwd_submit(struct rtw89_dev *rtwdev,
 
 #if defined(__linux__)
 	txwp_info = txwd->vaddr + txwd_len;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	txwp_info = (struct rtw89_pci_tx_wp_info *)((u8 *)txwd->vaddr + txwd_len);
 #endif
 	txwp_info->seq0 = cpu_to_le16(txwd->seq | RTW89_PCI_TXWP_VALID);
@@ -1197,7 +1197,7 @@ static int rtw89_pci_txwd_submit(struct rtw89_dev *rtwdev,
 	tx_ring->tx_cnt++;
 #if defined(__linux__)
 	txaddr_info_addr = txwd->vaddr + txwd_len + txwp_len;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	txaddr_info_addr = (u8 *)txwd->vaddr + txwd_len + txwp_len;
 #endif
 	txaddr_info_len =
@@ -1545,7 +1545,7 @@ static u32 rtw89_pci_ops_read32_cmac(struct rtw89_dev *rtwdev, u32 addr)
 	struct rtw89_pci *rtwpci = (struct rtw89_pci *)rtwdev->priv;
 #if defined(__linux__)
 	u32 val = readl(rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	u32 val;
 
 	val = bus_read_4((struct resource *)rtwpci->mmap, addr);
@@ -1563,7 +1563,7 @@ static u32 rtw89_pci_ops_read32_cmac(struct rtw89_dev *rtwdev, u32 addr)
 		rtw89_pci_ops_write32(rtwdev, R_AX_CK_EN, B_AX_CMAC_ALLCKEN);
 #if defined(__linux__)
 		val = readl(rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 		val = bus_read_4((struct resource *)rtwpci->mmap, addr);
 		rtw89_debug(rtwdev, RTW89_DBG_IO_RW, "R32 (%#010x) -> %#010x\n", addr, val);
 #endif
@@ -1580,7 +1580,7 @@ static u8 rtw89_pci_ops_read8(struct rtw89_dev *rtwdev, u32 addr)
 	if (!ACCESS_CMAC(addr))
 #if defined(__linux__)
 		return readb(rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	{
 		u8 val;
 
@@ -1604,7 +1604,7 @@ static u16 rtw89_pci_ops_read16(struct rtw89_dev *rtwdev, u32 addr)
 	if (!ACCESS_CMAC(addr))
 #if defined(__linux__)
 		return readw(rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	{
 		u16 val;
 
@@ -1627,7 +1627,7 @@ static u32 rtw89_pci_ops_read32(struct rtw89_dev *rtwdev, u32 addr)
 	if (!ACCESS_CMAC(addr))
 #if defined(__linux__)
 		return readl(rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	{
 		u32 val;
 
@@ -1646,7 +1646,7 @@ static void rtw89_pci_ops_write8(struct rtw89_dev *rtwdev, u32 addr, u8 data)
 
 #if defined(__linux__)
 	writeb(data, rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	rtw89_debug(rtwdev, RTW89_DBG_IO_RW, "W08 (%#010x) <- %#04x\n", addr, data);
 	return (bus_write_1((struct resource *)rtwpci->mmap, addr, data));
 #endif
@@ -1658,7 +1658,7 @@ static void rtw89_pci_ops_write16(struct rtw89_dev *rtwdev, u32 addr, u16 data)
 
 #if defined(__linux__)
 	writew(data, rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	rtw89_debug(rtwdev, RTW89_DBG_IO_RW, "W16 (%#010x) <- %#06x\n", addr, data);
 	return (bus_write_2((struct resource *)rtwpci->mmap, addr, data));
 #endif
@@ -1670,7 +1670,7 @@ static void rtw89_pci_ops_write32(struct rtw89_dev *rtwdev, u32 addr, u32 data)
 
 #if defined(__linux__)
 	writel(data, rtwpci->mmap + addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	rtw89_debug(rtwdev, RTW89_DBG_IO_RW, "W32 (%#010x) <- %#010x\n", addr, data);
 	return (bus_write_4((struct resource *)rtwpci->mmap, addr, data));
 #endif
@@ -2708,7 +2708,7 @@ static int rtw89_pci_setup_mapping(struct rtw89_dev *rtwdev,
 		goto err_release_regions;
 	}
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	linuxkpi_pcim_want_to_use_bus_functions(pdev);
 #endif
 	resource_len = pci_resource_len(pdev, bar_id);
@@ -2979,7 +2979,7 @@ static int rtw89_pci_alloc_tx_rings(struct rtw89_dev *rtwdev,
 		if (ret) {
 #if defined(__linux__)
 			rtw89_err(rtwdev, "failed to alloc tx ring %d\n", i);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 			rtw89_err(rtwdev, "failed to alloc tx ring %d: ret=%d\n", i, ret);
 #endif
 			goto err_free;
@@ -3049,7 +3049,7 @@ static int rtw89_pci_alloc_rx_ring(struct rtw89_dev *rtwdev,
 		if (ret) {
 #if defined(__linux__)
 			rtw89_err(rtwdev, "failed to init rx buf %d\n", i);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 			rtw89_err(rtwdev, "failed to init rx buf %d ret=%d\n", i, ret);
 #endif
 			dev_kfree_skb_any(skb);
@@ -3932,7 +3932,7 @@ EXPORT_SYMBOL(rtw89_pci_remove);
 MODULE_AUTHOR("Realtek Corporation");
 MODULE_DESCRIPTION("Realtek 802.11ax wireless PCI driver");
 MODULE_LICENSE("Dual BSD/GPL");
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 MODULE_VERSION(rtw89_pci, 1);
 MODULE_DEPEND(rtw89_pci, linuxkpi, 1, 1, 1);
 MODULE_DEPEND(rtw89_pci, linuxkpi_wlan, 1, 1, 1);

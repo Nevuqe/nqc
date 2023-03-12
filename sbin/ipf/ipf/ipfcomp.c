@@ -116,7 +116,7 @@ printc(frentry_t *fr)
 		fprintf(fp, "# include <sys/mbuf.h>\n");
 		fprintf(fp, "#endif\n");
 		fprintf(fp,
-"#if defined(__NQC__) && (__NQC_version > 220000)\n");
+"#if defined(__NQC__) && defined(__FreeBSD__) && (__NQC_version > 220000)\n");
 		fprintf(fp, "# include <sys/sockio.h>\n");
 		fprintf(fp, "#else\n");
 		fprintf(fp, "# include <sys/ioctl.h>\n");

@@ -59,7 +59,7 @@ PlatformSP PlatformNQC::CreateInstance(bool force, const ArchSpec *arch) {
       create = true;
       break;
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
     // Only accept "unknown" for the OS if the host is BSD and it "unknown"
     // wasn't specified (it was just returned because it was NOT specified)
     case llvm::Triple::OSType::UnknownOS:
@@ -87,7 +87,7 @@ void PlatformNQC::Initialize() {
   Platform::Initialize();
 
   if (g_initialize_count++ == 0) {
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
     PlatformSP default_platform_sp(new PlatformNQC(true));
     default_platform_sp->SetSystemArchitecture(HostInfo::GetArchitecture());
     Platform::SetHostPlatform(default_platform_sp);

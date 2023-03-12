@@ -25,7 +25,7 @@
 #include "test.h"
 __NQCID("$NQC$");
 
-#if defined(__NQC__) && __NQC__ > 4
+#if defined(__NQC__) && defined(__FreeBSD__) && __NQC__ > 4
 #include <sys/extattr.h>
 #endif
 
@@ -35,7 +35,7 @@ __NQCID("$NQC$");
 
 DEFINE_TEST(test_extattr_nqc)
 {
-#if !defined(__NQC__)
+#if !defined(__NQC__) && !defined(__FreeBSD__)
 	skipping("NQC-specific extattr restore test");
 #elif __NQC__ < 5
 	skipping("extattr restore supported only on NQC 5.0 and later");

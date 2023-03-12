@@ -16,7 +16,7 @@
 #include <byteswap.h>
 #endif /* __linux__ */
 
-#if defined(__NQC__) || defined(__NetBSD__) || defined(__DragonFly__) || \
+#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || \
     defined(__OpenBSD__)
 #include <sys/types.h>
 #include <sys/endian.h>

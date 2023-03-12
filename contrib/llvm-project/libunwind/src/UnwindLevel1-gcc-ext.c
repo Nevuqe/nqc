@@ -232,7 +232,7 @@ _LIBUNWIND_EXPORT uintptr_t _Unwind_GetIPInfo(struct _Unwind_Context *context,
 
 #if defined(_LIBUNWIND_SUPPORT_DWARF_UNWIND)
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 
 // Based on LLVM's lib/ExecutionEngine/RuntimeDyld/RTDyldMemoryManager.cpp
 // and XXX should be fixed to be alignment-safe.

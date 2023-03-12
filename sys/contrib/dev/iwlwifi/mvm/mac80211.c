@@ -12,13 +12,13 @@
 #include <linux/ip.h>
 #include <linux/if_arp.h>
 #include <linux/time.h>
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/math64.h>
 #endif
 #include <net/mac80211.h>
 #include <net/ieee80211_radiotap.h>
 #include <net/tcp.h>
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/udp.h>
 #endif
 
@@ -1706,7 +1706,7 @@ static u64 iwl_mvm_prepare_multicast(struct ieee80211_hw *hw,
 		cmd->pass_all = 1;
 #if defined(__linux__)
 		return (u64)(unsigned long)cmd;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 		return (u64)(uintptr_t)cmd;
 #endif
 	}
@@ -1715,7 +1715,7 @@ static u64 iwl_mvm_prepare_multicast(struct ieee80211_hw *hw,
 #if defined(__linux__)
 		IWL_DEBUG_MAC80211(mvm, "mcast addr (%d): %pM\n",
 				   cmd->count, addr->addr);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 		IWL_DEBUG_MAC80211(mvm, "mcast addr (%d): %6D\n",
 				   cmd->count, addr->addr, ":");
 #endif
@@ -1726,7 +1726,7 @@ static u64 iwl_mvm_prepare_multicast(struct ieee80211_hw *hw,
 
 #if defined(__linux__)
 	return (u64)(unsigned long)cmd;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	return (u64)(uintptr_t)cmd;
 #endif
 }
@@ -1739,7 +1739,7 @@ static void iwl_mvm_configure_filter(struct ieee80211_hw *hw,
 	struct iwl_mvm *mvm = IWL_MAC80211_GET_MVM(hw);
 #if defined(__linux__)
 	struct iwl_mcast_filter_cmd *cmd = (void *)(unsigned long)multicast;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	struct iwl_mcast_filter_cmd *cmd = (void *)(uintptr_t)multicast;
 #endif
 

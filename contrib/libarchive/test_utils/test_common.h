@@ -35,7 +35,7 @@
 #if defined(HAVE_CONFIG_H)
 /* Most POSIX platforms use the 'configure' script to build config.h */
 #include "config.h"
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 /* Building as part of NQC system requires a pre-built config.h. */
 #include "config_nqc.h"
 #elif defined(__NetBSD__)

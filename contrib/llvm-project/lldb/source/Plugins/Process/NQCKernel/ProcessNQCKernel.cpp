@@ -17,7 +17,7 @@
 #if LLDB_ENABLE_NQCVMCORE
 #include <fvc.h>
 #endif
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <kvm.h>
 #endif
 
@@ -46,7 +46,7 @@ private:
 };
 #endif // LLDB_ENABLE_NQCVMCORE
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 class ProcessNQCKernelKVM : public ProcessNQCKernel {
 public:
   ProcessNQCKernelKVM(lldb::TargetSP target_sp, lldb::ListenerSP listener,
@@ -85,7 +85,7 @@ lldb::ProcessSP ProcessNQCKernel::CreateInstance(lldb::TargetSP target_sp,
                                                        fvc);
 #endif
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
     kvm_t *kvm =
         kvm_open2(executable->GetFileSpec().GetPath().c_str(),
                   crash_file->GetPath().c_str(), O_RDONLY, nullptr, nullptr);
@@ -299,7 +299,7 @@ const char *ProcessNQCKernelFVC::GetError() { return fvc_geterr(m_fvc); }
 
 #endif // LLDB_ENABLE_NQCVMCORE
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 
 ProcessNQCKernelKVM::ProcessNQCKernelKVM(lldb::TargetSP target_sp,
                                                  ListenerSP listener_sp,

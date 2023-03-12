@@ -22,7 +22,7 @@ typedef ADDRESS_FAMILY sa_family_t;
 #include <sys/socket.h>
 #endif
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <sys/types.h>
 #endif
 

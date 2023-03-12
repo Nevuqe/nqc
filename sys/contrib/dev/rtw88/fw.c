@@ -1860,7 +1860,7 @@ static int _rtw_hw_scan_update_probe_req(struct rtw_dev *rtwdev, u8 num_probes,
 		skb_unlink(skb, probe_req_list);
 		rtw_fill_rsvd_page_desc(rtwdev, skb, RSVD_PROBE_REQ);
 		if (skb->len > page_size * RTW_PROBE_PG_CNT) {
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 			kfree_skb(skb);
 #endif
 			ret = -EINVAL;

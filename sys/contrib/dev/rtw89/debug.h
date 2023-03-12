@@ -7,7 +7,7 @@
 
 #include "core.h"
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/printk.h>
 #ifndef	DUMP_PREFIX_OFFSET
 #define	DUMP_PREFIX_OFFSET	0
@@ -33,7 +33,7 @@ enum rtw89_debug_mask {
 	RTW89_DBG_HW_SCAN = BIT(15),
 	RTW89_DBG_SAR = BIT(16),
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	RTW89_DBG_IO_RW = BIT(30),
 #endif
 	RTW89_DBG_UNEXP = BIT(31),

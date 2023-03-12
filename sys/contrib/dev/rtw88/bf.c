@@ -52,7 +52,7 @@ void rtw_bf_assoc(struct rtw_dev *rtwdev, struct ieee80211_vif *vif,
 #if defined(__linux__)
 		rtw_warn(rtwdev, "failed to find station entry for bss %pM\n",
 			 bssid);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 		rtw_warn(rtwdev, "failed to find station entry for bss %6D\n",
 			 bssid, ":");
 #endif

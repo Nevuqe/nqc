@@ -6,7 +6,7 @@
  */
 #include "mvm.h"
 #include "debugfs.h"
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <linux/math64.h>
 #endif
 
@@ -568,7 +568,7 @@ static ssize_t iwl_dbgfs_uapsd_misbehaving_read(struct file *file,
 
 #if defined(__linux__)
 	len = sprintf(buf, "%pM\n", mvmvif->uapsd_misbehaving_bssid);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	len = sprintf(buf, "%6D\n", mvmvif->uapsd_misbehaving_bssid, ":");
 #endif
 	return simple_read_from_buffer(user_buf, count, ppos, buf, len);

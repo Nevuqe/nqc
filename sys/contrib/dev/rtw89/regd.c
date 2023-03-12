@@ -294,7 +294,7 @@ int rtw89_regd_init(struct rtw89_dev *rtwdev,
 		return -EINVAL;
 
 	chip_regd = rtw89_regd_find_reg_by_name(rtwdev->efuse.country_code);
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	rtwdev->regd = chip_regd;
 #endif
 	if (!rtw89_regd_is_ww(chip_regd)) {

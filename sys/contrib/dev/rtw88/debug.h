@@ -25,7 +25,7 @@ enum rtw_debug_mask {
 	RTW_DBG_HW_SCAN		= 0x00010000,
 	RTW_DBG_STATE		= 0x00020000,
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	RTW_DBG_IO_RW		= 0x80000000,
 #endif
 	RTW_DBG_ALL		= 0xffffffff
@@ -50,7 +50,7 @@ void __rtw_dbg(struct rtw_dev *rtwdev, enum rtw_debug_mask mask,
 
 #if defined(__linux__)
 #define rtw_dbg(rtwdev, a...) __rtw_dbg(rtwdev, ##a)
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 #define	rtw_dbg(rtwdev, ...)	__rtw_dbg(rtwdev, __VA_ARGS__)
 #endif
 

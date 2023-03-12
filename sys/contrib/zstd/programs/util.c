@@ -1306,7 +1306,7 @@ failed:
     }
 }
 
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 
 #include <sys/param.h>
 #include <sys/sysctl.h>

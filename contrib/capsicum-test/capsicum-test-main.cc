@@ -2,7 +2,7 @@
 #ifdef __linux__
 #include <sys/vfs.h>
 #include <linux/magic.h>
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 #include <sys/sysctl.h>
 #endif
 #include <ctype.h>

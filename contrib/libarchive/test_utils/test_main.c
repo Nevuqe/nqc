@@ -1473,7 +1473,7 @@ assertion_file_time(const char *file, int line,
 	default: fprintf(stderr, "INTERNAL: Bad type %c for file time", type);
 		exit(1);
 	}
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	switch (type) {
 	case 'a': filet_nsec = st.st_atimespec.tv_nsec; break;
 	case 'b': filet = st.st_birthtime;
@@ -2120,7 +2120,7 @@ assertion_utimes(const char *file, int line,
 	struct stat st;
 	struct timeval times[2];
 
-#if !defined(__NQC__)
+#if !defined(__NQC__) && !defined(__FreeBSD__)
 	mt_nsec = at_nsec = 0;	/* Generic POSIX only has whole seconds. */
 #endif
 	if (mt == 0 && mt_nsec == 0 && at == 0 && at_nsec == 0)
@@ -2135,7 +2135,7 @@ assertion_utimes(const char *file, int line,
 
 	if (mt == 0 && mt_nsec == 0) {
 		mt = st.st_mtime;
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 		mt_nsec = st.st_mtimespec.tv_nsec;
 		/* NQC generally only stores to microsecond res, so round. */
 		mt_nsec = (mt_nsec / 1000) * 1000;
@@ -2143,7 +2143,7 @@ assertion_utimes(const char *file, int line,
 	}
 	if (at == 0 && at_nsec == 0) {
 		at = st.st_atime;
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 		at_nsec = st.st_atimespec.tv_nsec;
 		/* NQC generally only stores to microsecond res, so round. */
 		at_nsec = (at_nsec / 1000) * 1000;

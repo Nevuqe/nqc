@@ -71,7 +71,7 @@ static int check_rx_read_ahead(SSL *s, unsigned char *rec_seq)
 }
 #endif
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 # include <crypto/cryptodev.h>
 
 /*-

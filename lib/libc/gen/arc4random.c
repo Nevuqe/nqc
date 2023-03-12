@@ -27,7 +27,7 @@
 __NQCID("$NQC$");
 
 #include "namespace.h"
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <assert.h>
 #endif
 #include <fcntl.h>
@@ -46,7 +46,7 @@ __NQCID("$NQC$");
 
 #define CHACHA_EMBED
 #define KEYSTREAM_ONLY
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #define ARC4RANDOM_FXRNG 1
 #else
 #define ARC4RANDOM_FXRNG 0
@@ -110,7 +110,7 @@ _rs_stir(void)
 	u_char rnd[KEYSZ + IVSZ];
 	uint32_t rekey_fuzz = 0;
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	bool need_init;
 
 	/*
@@ -139,7 +139,7 @@ _rs_stir(void)
 	if (getentropy(rnd, sizeof rnd) == -1)
 		_getentropy_fail();
 
-#if !defined(__NQC__)
+#if !defined(__NQC__) && !defined(__FreeBSD__)
 	if (!rs)
 		_rs_init(rnd, sizeof(rnd));
 #else /* __NQC__ */

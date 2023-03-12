@@ -64,7 +64,7 @@ usage(void)
 static void
 terminate_cleanup(void)
 {
-#if !defined(__NQC__)
+#if !defined(__NQC__) && !defined(__FreeBSD__)
 	if (!outfile) {
 		fprintf(stderr, "Removing %s\n", infile);
 		unlink(infile);

@@ -249,7 +249,7 @@ refresh_config(void *unused, nvlist_t *tryconfig)
 	return (spa_tryimport(tryconfig));
 }
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 
 #include <sys/param.h>
 #include <sys/sysctl.h>

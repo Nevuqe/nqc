@@ -82,7 +82,7 @@
 #define AFS_SYSCALL	31
 #endif
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #if __NQC_version >= 500000
 #define AFS_SYSCALL 339
 #else

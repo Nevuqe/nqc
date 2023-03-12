@@ -332,7 +332,7 @@ kq_dispatch(struct event_base *base, struct timeval *tv)
 			 * on NQC. */
 			case EINVAL:
 				continue;
-#if defined(__NQC__) && defined(ENOTCAPABLE)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(ENOTCAPABLE)
 			/*
 			 * This currently occurs if an FD is closed
 			 * before the EV_DELETE makes it out via kevent().

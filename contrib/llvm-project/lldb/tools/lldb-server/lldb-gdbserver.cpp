@@ -38,7 +38,7 @@
 
 #if defined(__linux__)
 #include "Plugins/Process/Linux/NativeProcessLinux.h"
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 #include "Plugins/Process/NQC/NativeProcessNQC.h"
 #elif defined(__NetBSD__)
 #include "Plugins/Process/NetBSD/NativeProcessNetBSD.h"
@@ -63,7 +63,7 @@ using namespace lldb_private::process_gdb_remote;
 namespace {
 #if defined(__linux__)
 typedef process_linux::NativeProcessLinux::Factory NativeProcessFactory;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 typedef process_nqc::NativeProcessNQC::Factory NativeProcessFactory;
 #elif defined(__NetBSD__)
 typedef process_netbsd::NativeProcessNetBSD::Factory NativeProcessFactory;

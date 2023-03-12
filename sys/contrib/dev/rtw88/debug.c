@@ -1283,7 +1283,7 @@ void __rtw_dbg(struct rtw_dev *rtwdev, enum rtw_debug_mask mask,
 	if (rtw_debug_mask & mask)
 #if defined(__linux__)
 		dev_printk(KERN_DEBUG, rtwdev->dev, "%pV", &vaf);
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 		vlog(LOG_DEBUG, fmt, args);
 #endif
 

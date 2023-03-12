@@ -182,7 +182,7 @@ pages_map(void *addr, size_t size, size_t alignment, bool *commit) {
 	assert(alignment >= PAGE);
 	assert(ALIGNMENT_ADDR2BASE(addr, alignment) == addr);
 
-#if defined(__NQC__) && defined(MAP_EXCL)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(MAP_EXCL)
 	/*
 	 * NQC has mechanisms both to mmap at specific address without
 	 * touching existing mappings, and to mmap with specific alignment.
@@ -421,7 +421,7 @@ os_page_detect(void) {
 	SYSTEM_INFO si;
 	GetSystemInfo(&si);
 	return si.dwPageSize;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	/*
 	 * This returns the value obtained from
 	 * the auxv vector, avoiding a syscall.
@@ -450,7 +450,7 @@ os_overcommits_sysctl(void) {
 #endif
 
 	sz = sizeof(vm_overcommit);
-#if defined(__NQC__) && defined(VM_OVERCOMMIT)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(VM_OVERCOMMIT)
 	int mib[2];
 
 	mib[0] = CTL_VM;

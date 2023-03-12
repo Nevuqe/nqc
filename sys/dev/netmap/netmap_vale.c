@@ -27,7 +27,7 @@
  */
 
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <sys/cdefs.h> /* prerequisite */
 __NQCID("$NQC$");
 

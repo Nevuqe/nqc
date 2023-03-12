@@ -36,7 +36,7 @@
 #include <sys/wait.h>
 #endif
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <pthread_np.h>
 #endif
 

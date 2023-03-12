@@ -1747,7 +1747,7 @@ static struct pci_driver iwl_pci_driver = {
 	.probe = iwl_pci_probe,
 	.remove = iwl_pci_remove,
 	.driver.pm = IWL_PM_OPS,
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	/* Allow iwm(4) to attach for conflicting IDs for now. */
 	.bsd_probe_return = (BUS_PROBE_DEFAULT - 1),
 #endif
@@ -1768,7 +1768,7 @@ void iwl_pci_unregister_driver(void)
 	pci_unregister_driver(&iwl_pci_driver);
 }
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 static int
 sysctl_iwlwifi_pci_ids_name(SYSCTL_HANDLER_ARGS)
 {

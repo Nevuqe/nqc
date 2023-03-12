@@ -305,7 +305,7 @@ blake3_param_set(const char *val, zfs_kernel_param_t *unused)
 	return (blake3_impl_setname(val));
 }
 
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 
 #include <sys/sbuf.h>
 

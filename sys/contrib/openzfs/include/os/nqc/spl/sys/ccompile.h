@@ -126,7 +126,7 @@ typedef int enum_t;
 #define	ARRAY_SIZE(a) (sizeof (a) / sizeof (a[0]))
 #define	mmap64 mmap
 /* Note: this file can be used on linux/macOS when bootstrapping tools. */
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #define	open64 open
 #define	pwrite64 pwrite
 #define	ftruncate64 ftruncate

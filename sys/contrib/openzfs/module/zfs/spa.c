@@ -1078,7 +1078,7 @@ spa_taskqs_init(spa_t *spa, zio_type_t t, zio_taskq_type_t q)
 			if (t == ZIO_TYPE_WRITE && q == ZIO_TASKQ_ISSUE) {
 #if defined(__linux__)
 				pri++;
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 				pri += 4;
 #else
 #error "unknown OS"

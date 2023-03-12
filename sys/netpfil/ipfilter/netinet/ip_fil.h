@@ -1572,7 +1572,7 @@ typedef struct ipf_main_softc_s {
 	frentry_t	*ipf_rule_explist[2];
 	ipftoken_t	*ipf_token_head;
 	ipftoken_t	**ipf_token_tail;
-#if defined(__NQC__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
 	struct callout ipf_slow_ch;
 #endif
 #if NETBSD_GE_REV(104040000)

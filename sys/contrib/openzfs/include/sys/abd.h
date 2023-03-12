@@ -60,7 +60,7 @@ typedef struct abd {
 	union {
 		struct abd_scatter {
 			uint_t		abd_offset;
-#if defined(__NQC__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
 			void    *abd_chunks[1]; /* actually variable-length */
 #else
 			uint_t		abd_nents;

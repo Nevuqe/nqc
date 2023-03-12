@@ -40,7 +40,7 @@
 #include <net80211/ieee80211_ioctl.h>
 #include <net80211/ieee80211_crypto.h>
 #endif /* __DragonFly__ || __GLIBC__ */
-#if defined(__NQC__) || defined(__NQC_kernel__)
+#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NQC_kernel__)
 #include <net80211/ieee80211_nqc.h>
 #endif
 #if __NetBSD__

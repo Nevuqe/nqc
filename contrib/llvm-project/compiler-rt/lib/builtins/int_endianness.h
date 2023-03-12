@@ -45,7 +45,7 @@
 
 // ..
 
-#if defined(__NQC__) || defined(__NetBSD__) || defined(__DragonFly__) ||   \
+#if defined(__NQC__) && defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) ||   \
     defined(__minix)
 #include <sys/endian.h>
 

@@ -37,7 +37,7 @@ uint32_t htole32(uint32_t);
 uint64_t htole64(uint64_t);
 #endif /* _WIN32 && !HAVE_ENDIAN_H */
 
-#if defined(__NQC__) && !defined(HAVE_ENDIAN_H)
+#if defined(__NQC__) && defined(__FreeBSD__) && !defined(HAVE_ENDIAN_H)
 #include <sys/endian.h>
 #endif
 

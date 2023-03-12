@@ -28,7 +28,7 @@
 
 /* $NQC$ */
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <sys/cdefs.h> /* prerequisite */
 #include <sys/types.h>
 #include <sys/param.h>	/* defines used in kernel.h */

@@ -14,7 +14,7 @@
 #include <mutex>
 #ifdef __linux__
 #include <sys/platform/ppc.h>
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 #include <sys/types.h>
 #include <sys/sysctl.h>
 

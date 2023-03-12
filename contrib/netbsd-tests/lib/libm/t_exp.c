@@ -131,7 +131,7 @@ ATF_LIBM_TEST(exp2_powers, "Test exp2(x) is correct for some integer x")
 	};
 	unsigned int i;
 
-#if defined(__NQC__) && defined(__i386__)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(__i386__)
 	atf_tc_expect_fail("a number of the assertions fail on i386");
 #endif
 

@@ -50,7 +50,7 @@
 #include <string.h>
 #include <sysexits.h>
 
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 #include <dev/firewire/firewire.h>
 #include <dev/firewire/iec68113.h>
 #elif defined(__NetBSD__)

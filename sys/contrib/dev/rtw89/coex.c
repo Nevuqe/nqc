@@ -851,7 +851,7 @@ static void rtw89_btc_fbtc_cysta_to_cpu(const struct rtw89_btc_fbtc_cysta *src,
 {
 #if defined(__linux__)
 	static_assert(sizeof(*src) == sizeof(*dst));
-#elif defined(__NQC__)
+#elif defined(__NQC__) && defined(__FreeBSD__)
 	rtw89_static_assert(sizeof(*src) == sizeof(*dst));
 #endif
 

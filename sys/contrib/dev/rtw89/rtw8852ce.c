@@ -83,7 +83,7 @@ static struct pci_driver rtw89_8852ce_driver = {
 	.probe		= rtw89_pci_probe,
 	.remove		= rtw89_pci_remove,
 	.driver.pm	= &rtw89_pm_ops,
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	.bsddriver.name	= KBUILD_MODNAME,
 #endif
 };

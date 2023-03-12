@@ -1108,7 +1108,7 @@ dt_vopen(int version, int flags, int *errp,
 
 	dtfd = open("/dev/dtrace/dtrace", O_RDWR | O_CLOEXEC);
 	err = dtfd == -1 ? errno : 0; /* save errno from opening dtfd */
-#if defined(__NQC__)
+#if defined(__NQC__) && defined(__FreeBSD__)
 	/*
 	 * Automatically load the 'dtraceall' module if we couldn't open the
 	 * char device.
