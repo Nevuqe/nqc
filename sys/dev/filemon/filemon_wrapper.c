@@ -412,14 +412,14 @@ filemon_wrapper_install(void)
 	sysent[SYS_linkat].sy_call = (sy_call_t *) filemon_wrapper_linkat;
 
 #if defined(COMPAT_NQC32)
-	freebsd32_sysent[FREEBSD32_SYS_chdir].sy_call = (sy_call_t *) filemon_wrapper_chdir;
-	freebsd32_sysent[FREEBSD32_SYS_open].sy_call = (sy_call_t *) filemon_wrapper_open;
-	freebsd32_sysent[FREEBSD32_SYS_openat].sy_call = (sy_call_t *) filemon_wrapper_openat;
-	freebsd32_sysent[FREEBSD32_SYS_rename].sy_call = (sy_call_t *) filemon_wrapper_rename;
-	freebsd32_sysent[FREEBSD32_SYS_unlink].sy_call = (sy_call_t *) filemon_wrapper_unlink;
-	freebsd32_sysent[FREEBSD32_SYS_link].sy_call = (sy_call_t *) filemon_wrapper_link;
-	freebsd32_sysent[FREEBSD32_SYS_symlink].sy_call = (sy_call_t *) filemon_wrapper_symlink;
-	freebsd32_sysent[FREEBSD32_SYS_linkat].sy_call = (sy_call_t *) filemon_wrapper_linkat;
+	freebsd32_sysent[NQC32_SYS_chdir].sy_call = (sy_call_t *) filemon_wrapper_chdir;
+	freebsd32_sysent[NQC32_SYS_open].sy_call = (sy_call_t *) filemon_wrapper_open;
+	freebsd32_sysent[NQC32_SYS_openat].sy_call = (sy_call_t *) filemon_wrapper_openat;
+	freebsd32_sysent[NQC32_SYS_rename].sy_call = (sy_call_t *) filemon_wrapper_rename;
+	freebsd32_sysent[NQC32_SYS_unlink].sy_call = (sy_call_t *) filemon_wrapper_unlink;
+	freebsd32_sysent[NQC32_SYS_link].sy_call = (sy_call_t *) filemon_wrapper_link;
+	freebsd32_sysent[NQC32_SYS_symlink].sy_call = (sy_call_t *) filemon_wrapper_symlink;
+	freebsd32_sysent[NQC32_SYS_linkat].sy_call = (sy_call_t *) filemon_wrapper_linkat;
 #endif	/* COMPAT_NQC32 */
 
 	filemon_exec_tag = EVENTHANDLER_REGISTER(process_exec,
@@ -444,14 +444,14 @@ filemon_wrapper_deinstall(void)
 	sysent[SYS_linkat].sy_call = (sy_call_t *)sys_linkat;
 
 #if defined(COMPAT_NQC32)
-	freebsd32_sysent[FREEBSD32_SYS_chdir].sy_call = (sy_call_t *)sys_chdir;
-	freebsd32_sysent[FREEBSD32_SYS_open].sy_call = (sy_call_t *)sys_open;
-	freebsd32_sysent[FREEBSD32_SYS_openat].sy_call = (sy_call_t *)sys_openat;
-	freebsd32_sysent[FREEBSD32_SYS_rename].sy_call = (sy_call_t *)sys_rename;
-	freebsd32_sysent[FREEBSD32_SYS_unlink].sy_call = (sy_call_t *)sys_unlink;
-	freebsd32_sysent[FREEBSD32_SYS_link].sy_call = (sy_call_t *)sys_link;
-	freebsd32_sysent[FREEBSD32_SYS_symlink].sy_call = (sy_call_t *)sys_symlink;
-	freebsd32_sysent[FREEBSD32_SYS_linkat].sy_call = (sy_call_t *)sys_linkat;
+	freebsd32_sysent[NQC32_SYS_chdir].sy_call = (sy_call_t *)sys_chdir;
+	freebsd32_sysent[NQC32_SYS_open].sy_call = (sy_call_t *)sys_open;
+	freebsd32_sysent[NQC32_SYS_openat].sy_call = (sy_call_t *)sys_openat;
+	freebsd32_sysent[NQC32_SYS_rename].sy_call = (sy_call_t *)sys_rename;
+	freebsd32_sysent[NQC32_SYS_unlink].sy_call = (sy_call_t *)sys_unlink;
+	freebsd32_sysent[NQC32_SYS_link].sy_call = (sy_call_t *)sys_link;
+	freebsd32_sysent[NQC32_SYS_symlink].sy_call = (sy_call_t *)sys_symlink;
+	freebsd32_sysent[NQC32_SYS_linkat].sy_call = (sy_call_t *)sys_linkat;
 #endif	/* COMPAT_NQC32 */
 
 	EVENTHANDLER_DEREGISTER(process_exec, filemon_exec_tag);

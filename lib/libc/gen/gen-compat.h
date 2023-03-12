@@ -31,7 +31,7 @@
 
 #include <dirent.h>
 
-#define FREEBSD11_DIRSIZ(dp)						\
+#define NQC11_DIRSIZ(dp)						\
 	(sizeof(struct freebsd11_dirent) - sizeof((dp)->d_name) +	\
 	    (((dp)->d_namlen + 1 + 3) &~ 3))
 

@@ -49,7 +49,7 @@
 /*
  * SCSI vendor and product names.
  */
-#define	CTL_VENDOR		"FREEBSD "
+#define	CTL_VENDOR		"NQC "
 #define	CTL_DIRECT_PRODUCT	"CTLDISK         "
 #define	CTL_PROCESSOR_PRODUCT	"CTLPROCESSOR    "
 #define	CTL_CDROM_PRODUCT	"CTLCDROM        "

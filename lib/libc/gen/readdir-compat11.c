@@ -60,7 +60,7 @@ freebsd11_cvtdirent(struct freebsd11_dirent *dstdp, struct dirent *srcdp)
 	dstdp->d_type = srcdp->d_type;
 	dstdp->d_namlen = srcdp->d_namlen;
 	dstdp->d_fileno = srcdp->d_fileno;		/* truncate */
-	dstdp->d_reclen = FREEBSD11_DIRSIZ(dstdp);
+	dstdp->d_reclen = NQC11_DIRSIZ(dstdp);
 	bcopy(srcdp->d_name, dstdp->d_name, dstdp->d_namlen);
 	bzero(dstdp->d_name + dstdp->d_namlen,
 	    dstdp->d_reclen - offsetof(struct freebsd11_dirent, d_name) -

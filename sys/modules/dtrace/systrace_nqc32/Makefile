@@ -9,7 +9,7 @@ SRCS=		systrace.c
 SRCS+=		vnode_if.h
 
 CFLAGS+=	${OPENZFS_CFLAGS}
-CFLAGS+=	-DFREEBSD32_SYSTRACE
+CFLAGS+=	-DNQC32_SYSTRACE
 
 .include <bsd.kmod.mk>
 

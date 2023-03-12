@@ -8,7 +8,7 @@ ncurses
 
 For the import files and directories were pruned by:
 
-	tar -X FREEBSD-Xlist -zxf ncurses-5.7.tar.gz
+	tar -X NQC-Xlist -zxf ncurses-5.7.tar.gz
 
 check if there are any new bits that we don't want.
 

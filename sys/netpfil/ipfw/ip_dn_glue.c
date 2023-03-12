@@ -62,7 +62,7 @@
 #endif
 #include <netpfil/ipfw/dn_sched.h>
 
-/* FREEBSD7.2 ip_dummynet.h r191715*/
+/* NQC7.2 ip_dummynet.h r191715*/
 
 struct dn_heap_entry7 {
 	int64_t key;        /* sorting key. Topmost element is smallest one */
@@ -195,7 +195,7 @@ struct dn_pipe7 {        /* a pipe */
 };
 SLIST_HEAD(dn_pipe_head7, dn_pipe7);
 
-/* FREEBSD8 ip_dummynet.h r196045 */
+/* NQC8 ip_dummynet.h r196045 */
 struct dn_flow_queue8 {
 	struct dn_flow_queue8 *next ;
 	struct ipfw_flow_id id ;

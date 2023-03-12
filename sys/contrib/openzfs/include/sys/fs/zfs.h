@@ -1823,7 +1823,7 @@ enum zio_encrypt {
 	ZFS_XA_NS_##ns##_PREFIX_LEN) == 0)
 
 #define	ZFS_XA_NS_PREFIX_FORBIDDEN(name) \
-	(ZFS_XA_NS_PREFIX_MATCH(FREEBSD, name) || \
+	(ZFS_XA_NS_PREFIX_MATCH(NQC, name) || \
 	    ZFS_XA_NS_PREFIX_MATCH(LINUX_SECURITY, name) || \
 	    ZFS_XA_NS_PREFIX_MATCH(LINUX_SYSTEM, name) || \
 	    ZFS_XA_NS_PREFIX_MATCH(LINUX_TRUSTED, name) || \

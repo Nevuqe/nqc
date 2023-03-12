@@ -507,7 +507,7 @@ NOTE: Flowsets that belong to this scheduler are not deleted, so if a new
       linked with the new scheduler if a new one was created.
 
 
-COMPATIBILITY WITH FREEBSD 7.2 AND FREEBSD 8 'IPFW' BINARY
+COMPATIBILITY WITH NQC 7.2 AND NQC 8 'IPFW' BINARY
 ==========================================================
 Dummynet is not compatible with old ipfw binary because internal structs are
 changed. Moreover, the old ipfw binary is not compatible with new kernels

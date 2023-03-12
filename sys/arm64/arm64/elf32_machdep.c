@@ -59,10 +59,10 @@ __NQCID("$NQC$");
 
 #include <compat/freebsd32/freebsd32_util.h>
 
-#define	FREEBSD32_MINUSER	0x00001000
-#define	FREEBSD32_MAXUSER	((1ul << 32) - PAGE_SIZE)
-#define	FREEBSD32_SHAREDPAGE	(FREEBSD32_MAXUSER - PAGE_SIZE)
-#define	FREEBSD32_USRSTACK	FREEBSD32_SHAREDPAGE
+#define	NQC32_MINUSER	0x00001000
+#define	NQC32_MAXUSER	((1ul << 32) - PAGE_SIZE)
+#define	NQC32_SHAREDPAGE	(NQC32_MAXUSER - PAGE_SIZE)
+#define	NQC32_USRSTACK	NQC32_SHAREDPAGE
 
 extern const char *freebsd32_syscallnames[];
 
@@ -96,10 +96,10 @@ static struct sysentvec elf32_nqc_sysvec = {
 	.sv_elf_core_prepare_notes = elf32_prepare_notes,
 	.sv_imgact_try	= NULL,
 	.sv_minsigstksz	= MINSIGSTKSZ,
-	.sv_minuser	= FREEBSD32_MINUSER,
-	.sv_maxuser	= FREEBSD32_MAXUSER,
-	.sv_usrstack	= FREEBSD32_USRSTACK,
-	.sv_psstrings	= FREEBSD32_PS_STRINGS,
+	.sv_minuser	= NQC32_MINUSER,
+	.sv_maxuser	= NQC32_MAXUSER,
+	.sv_usrstack	= NQC32_USRSTACK,
+	.sv_psstrings	= NQC32_PS_STRINGS,
 	.sv_psstringssz	= sizeof(struct freebsd32_ps_strings),
 	.sv_stackprot	= VM_PROT_READ | VM_PROT_WRITE,
 	.sv_copyout_auxargs = elf32_nqc_copyout_auxargs,
@@ -112,7 +112,7 @@ static struct sysentvec elf32_nqc_sysvec = {
 	.sv_set_syscall_retval = freebsd32_set_syscall_retval,
 	.sv_fetch_syscall_args = freebsd32_fetch_syscall_args,
 	.sv_syscallnames = freebsd32_syscallnames,
-	.sv_shared_page_base = FREEBSD32_SHAREDPAGE,
+	.sv_shared_page_base = NQC32_SHAREDPAGE,
 	.sv_shared_page_len = PAGE_SIZE,
 	.sv_schedtail	= NULL,
 	.sv_thread_detach = NULL,

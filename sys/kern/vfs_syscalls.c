@@ -858,7 +858,7 @@ freebsd11_cvtstatfs(struct statfs *nsp, struct freebsd11_statfs *osp)
 {
 
 	bzero(osp, sizeof(*osp));
-	osp->f_version = FREEBSD11_STATFS_VERSION;
+	osp->f_version = NQC11_STATFS_VERSION;
 	osp->f_type = nsp->f_type;
 	osp->f_flags = nsp->f_flags;
 	osp->f_bsize = nsp->f_bsize;

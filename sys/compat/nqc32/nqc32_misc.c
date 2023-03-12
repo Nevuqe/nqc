@@ -289,11 +289,11 @@ copy_statfs(struct statfs *in, struct ostatfs32 *out)
 	strlcpy(out->f_fstypename,
 	      in->f_fstypename, MFSNAMELEN);
 	strlcpy(out->f_mntonname,
-	      in->f_mntonname, min(MNAMELEN, FREEBSD4_OMNAMELEN));
+	      in->f_mntonname, min(MNAMELEN, NQC4_OMNAMELEN));
 	out->f_syncreads = MIN(in->f_syncreads, INT32_MAX);
 	out->f_asyncreads = MIN(in->f_asyncreads, INT32_MAX);
 	strlcpy(out->f_mntfromname,
-	      in->f_mntfromname, min(MNAMELEN, FREEBSD4_OMNAMELEN));
+	      in->f_mntfromname, min(MNAMELEN, NQC4_OMNAMELEN));
 }
 #endif
 
@@ -1338,14 +1338,14 @@ freebsd32_copyoutmsghdr(struct msghdr *msg, struct msghdr32 *msg32)
 	return (error);
 }
 
-#define FREEBSD32_ALIGNBYTES	(sizeof(int) - 1)
-#define FREEBSD32_ALIGN(p)	\
-	(((u_long)(p) + FREEBSD32_ALIGNBYTES) & ~FREEBSD32_ALIGNBYTES)
-#define	FREEBSD32_CMSG_SPACE(l)	\
-	(FREEBSD32_ALIGN(sizeof(struct cmsghdr)) + FREEBSD32_ALIGN(l))
+#define NQC32_ALIGNBYTES	(sizeof(int) - 1)
+#define NQC32_ALIGN(p)	\
+	(((u_long)(p) + NQC32_ALIGNBYTES) & ~NQC32_ALIGNBYTES)
+#define	NQC32_CMSG_SPACE(l)	\
+	(NQC32_ALIGN(sizeof(struct cmsghdr)) + NQC32_ALIGN(l))
 
-#define	FREEBSD32_CMSG_DATA(cmsg)	((unsigned char *)(cmsg) + \
-				 FREEBSD32_ALIGN(sizeof(struct cmsghdr)))
+#define	NQC32_CMSG_DATA(cmsg)	((unsigned char *)(cmsg) + \
+				 NQC32_ALIGN(sizeof(struct cmsghdr)))
 
 static size_t
 freebsd32_cmsg_convert(const struct cmsghdr *cm, void *data, socklen_t datalen)
@@ -1443,15 +1443,15 @@ freebsd32_copy_msg_out(struct msghdr *msg, struct mbuf *control)
 				goto exit;
 			}
 			oldclen = cm->cmsg_len;
-			cm->cmsg_len = FREEBSD32_ALIGN(sizeof(struct cmsghdr)) +
+			cm->cmsg_len = NQC32_ALIGN(sizeof(struct cmsghdr)) +
 			    datalen_out;
 			error = copyout(cm, ctlbuf, copylen);
 			cm->cmsg_len = oldclen;
 			if (error != 0)
 				goto exit;
 
-			ctlbuf += FREEBSD32_ALIGN(copylen);
-			len    -= FREEBSD32_ALIGN(copylen);
+			ctlbuf += NQC32_ALIGN(copylen);
+			len    -= NQC32_ALIGN(copylen);
 
 			copylen = datalen_out;
 			if (len < copylen) {
@@ -1465,8 +1465,8 @@ freebsd32_copy_msg_out(struct msghdr *msg, struct mbuf *control)
 			if (error)
 				goto exit;
 
-			ctlbuf += FREEBSD32_ALIGN(copylen);
-			len    -= FREEBSD32_ALIGN(copylen);
+			ctlbuf += NQC32_ALIGN(copylen);
+			len    -= NQC32_ALIGN(copylen);
 
 			if (CMSG_SPACE(datalen) < clen) {
 				clen -= CMSG_SPACE(datalen);
@@ -1478,7 +1478,7 @@ freebsd32_copy_msg_out(struct msghdr *msg, struct mbuf *control)
 			}
 
 			msg->msg_controllen +=
-			    FREEBSD32_CMSG_SPACE(datalen_out);
+			    NQC32_CMSG_SPACE(datalen_out);
 		}
 	}
 	if (len == 0 && m != NULL) {
@@ -1579,12 +1579,12 @@ freebsd32_copyin_control(struct mbuf **mp, caddr_t buf, u_int buflen)
 			break;
 		}
 		cm = (struct cmsghdr *)in1;
-		if (cm->cmsg_len < FREEBSD32_ALIGN(sizeof(*cm)) ||
+		if (cm->cmsg_len < NQC32_ALIGN(sizeof(*cm)) ||
 		    cm->cmsg_len > buflen) {
 			error = EINVAL;
 			break;
 		}
-		msglen = FREEBSD32_ALIGN(cm->cmsg_len);
+		msglen = NQC32_ALIGN(cm->cmsg_len);
 		if (msglen < cm->cmsg_len) {
 			error = EINVAL;
 			break;
@@ -1596,7 +1596,7 @@ freebsd32_copyin_control(struct mbuf **mp, caddr_t buf, u_int buflen)
 
 		in1 = (char *)in1 + msglen;
 		outlen += CMSG_ALIGN(sizeof(*cm)) +
-		    CMSG_ALIGN(msglen - FREEBSD32_ALIGN(sizeof(*cm)));
+		    CMSG_ALIGN(msglen - NQC32_ALIGN(sizeof(*cm)));
 	}
 	if (error != 0)
 		goto out;
@@ -1624,14 +1624,14 @@ freebsd32_copyin_control(struct mbuf **mp, caddr_t buf, u_int buflen)
 		/* Copy the message header and align the length field. */
 		cm = md;
 		memcpy(cm, in1, sizeof(*cm));
-		msglen = cm->cmsg_len - FREEBSD32_ALIGN(sizeof(*cm));
+		msglen = cm->cmsg_len - NQC32_ALIGN(sizeof(*cm));
 		cm->cmsg_len = CMSG_ALIGN(sizeof(*cm)) + msglen;
 
 		/* Copy the message body. */
-		in1 = (char *)in1 + FREEBSD32_ALIGN(sizeof(*cm));
+		in1 = (char *)in1 + NQC32_ALIGN(sizeof(*cm));
 		md = (char *)md + CMSG_ALIGN(sizeof(*cm));
 		memcpy(md, in1, msglen);
-		in1 = (char *)in1 + FREEBSD32_ALIGN(msglen);
+		in1 = (char *)in1 + NQC32_ALIGN(msglen);
 		md = (char *)md + CMSG_ALIGN(msglen);
 		KASSERT(outlen >= CMSG_ALIGN(sizeof(*cm)) + CMSG_ALIGN(msglen),
 		    ("outlen %u underflow, msglen %u", outlen, msglen));

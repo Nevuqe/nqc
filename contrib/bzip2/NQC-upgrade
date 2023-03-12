@@ -11,7 +11,7 @@ Imported by:
 Notes:
 	The following log shows details of trimming:
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	tar xvfz bzip2-1.0.4.tar.gz -X FREEBSD-Xlist
+	tar xvfz bzip2-1.0.4.tar.gz -X NQC-Xlist
 	cd bzip2-1.0.4
 	uuencode sample1.bz2 sample1.bz2 > sample1.bz2.uu
 	uuencode sample2.bz2 sample2.bz2 > sample2.bz2.uu

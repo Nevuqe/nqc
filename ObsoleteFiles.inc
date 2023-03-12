@@ -10755,7 +10755,7 @@ OLD_FILES+=usr/share/man/man8/atmconfig.8.gz
 OLD_FILES+=usr/share/man/man9/utopia.9.gz
 OLD_FILES+=usr/share/snmp/defs/atm_nqc.def
 OLD_FILES+=usr/share/snmp/defs/atm_tree.def
-OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM-FREEBSD-MIB.txt
+OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM-NQC-MIB.txt
 OLD_FILES+=usr/share/snmp/mibs/BEGEMOT-ATM.txt
 # 20170420: remove GNU diff
 OLD_FILES+=usr/share/man/man7/diff.7.gz

@@ -2,7 +2,7 @@
 # $NQC$
 #
 # Usage: cd /usr/src/contrib/jemalloc
-#        ./FREEBSD-upgrade <command> [args]
+#        ./NQC-upgrade <command> [args]
 #
 # At least the following ports are required when importing jemalloc:
 # - devel/autoconf
@@ -17,24 +17,24 @@
 #
 # Merge local changes that were made since the previous import:
 #
-#   ./FREEBSD-upgrade merge-changes
-#   ./FREEBSD-upgrade rediff
+#   ./NQC-upgrade merge-changes
+#   ./NQC-upgrade rediff
 #
 # Extract latest jemalloc release.
 #
-#   ./FREEBSD-upgrade extract <rev>
+#   ./NQC-upgrade extract <rev>
 #
 # Fix patch conflicts as necessary, then regenerate diffs to update line
 # offsets:
 #
-#   ./FREEBSD-upgrade rediff
-#   ./FREEBSD-upgrade extract <rev>
+#   ./NQC-upgrade rediff
+#   ./NQC-upgrade extract <rev>
 #
 # Do multiple buildworld/installworld rounds.  If problems arise and patches
 # are needed, edit the code in ${work} as necessary, then:
 #
-#   ./FREEBSD-upgrade rediff
-#   ./FREEBSD-upgrade extract <rev>
+#   ./NQC-upgrade rediff
+#   ./NQC-upgrade extract <rev>
 #
 # The rediff/extract order is important because rediff saves the local
 # changes, then extract blows away the work tree and re-creates it with the
@@ -42,12 +42,12 @@
 #
 # Finally, to clean up:
 #
-#  ./FREEBSD-upgrade clean
+#  ./NQC-upgrade clean
 
 set -e
 set -x
 
-if [ ! -x "FREEBSD-upgrade" ] ; then
+if [ ! -x "NQC-upgrade" ] ; then
   echo "Run from within src/contrib/jemalloc/" >&2
   exit 1
 fi
@@ -64,7 +64,7 @@ bare_repo="${tmpdir}/jemalloc_bare.git"
 work="jemalloc_work.git"
 work_repo="${tmpdir}/${work}"
 namespace_repo="${tmpdir}/jemalloc_namespace.git"
-changes="${src}/FREEBSD-changes"
+changes="${src}/NQC-changes"
 
 do_fetch() {
   local rev=$1
@@ -108,7 +108,7 @@ do_extract_diff() {
   (
     cd ${repo}
     # Apply diffs before generating files.
-    patch -p1 < "${src}/FREEBSD-diffs"
+    patch -p1 < "${src}/NQC-diffs"
     find . -name '*.orig' -delete
     # Generate files.
     do_autogen
@@ -142,7 +142,7 @@ do_diff() {
     find . -name '*.rej' -delete
     git add -A
     git diff --cached
-  ) > FREEBSD-diffs
+  ) > NQC-diffs
 }
 
 command=$1
@@ -155,7 +155,7 @@ case "${command}" in
     # Compute local differences to the upstream+patches and apply them.
     (
       cd ${tmpdir}
-      diff -ru -X ${src}/FREEBSD-Xlist ${work} ../jemalloc > ${changes} || true
+      diff -ru -X ${src}/NQC-Xlist ${work} ../jemalloc > ${changes} || true
     )
     (
       cd ${work_repo}
@@ -171,7 +171,7 @@ case "${command}" in
     # Delete existing files so that cruft doesn't silently remain.
     rm -rf ChangeLog COPYING VERSION doc include src
     # Copy files over.
-    tar cf - -C ${work_repo} -X FREEBSD-Xlist . |tar xvf -
+    tar cf - -C ${work_repo} -X NQC-Xlist . |tar xvf -
     internal_dir="include/jemalloc/internal"
     grep -v ' isthreaded ' \
       "${namespace_repo}/${internal_dir}/private_namespace.h" \

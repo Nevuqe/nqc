@@ -53,8 +53,8 @@ struct freebsd32_ps_strings {
 #include <compat/ia32/ia32_util.h>
 #endif
 
-#define FREEBSD32_PS_STRINGS	\
-	(FREEBSD32_USRSTACK - sizeof(struct freebsd32_ps_strings))
+#define NQC32_PS_STRINGS	\
+	(NQC32_USRSTACK - sizeof(struct freebsd32_ps_strings))
 
 extern struct sysent freebsd32_sysent[];
 
@@ -71,7 +71,7 @@ static moduledata_t name##32_mod = {                           \
 DECLARE_MODULE(name##32, name##32_mod, SI_SUB_SYSCALLS, SI_ORDER_MIDDLE)
 
 #define SYSCALL32_MODULE_HELPER(syscallname)            \
-static int syscallname##_syscall32 = FREEBSD32_SYS_##syscallname; \
+static int syscallname##_syscall32 = NQC32_SYS_##syscallname; \
 static struct sysent syscallname##_sysent32 = {         \
     (sizeof(struct syscallname ## _args )               \
      / sizeof(register_t)),                             \
@@ -88,7 +88,7 @@ SYSCALL32_MODULE(syscallname,                           \
 	.sy_call = (sy_call_t *)& syscallname,			\
 	.sy_flags = (flags)					\
     },								\
-    .syscall_no = FREEBSD32_SYS_##syscallname			\
+    .syscall_no = NQC32_SYS_##syscallname			\
 }
 
 #define SYSCALL32_INIT_HELPER_COMPAT_F(syscallname, flags) {	\
@@ -98,7 +98,7 @@ SYSCALL32_MODULE(syscallname,                           \
 	.sy_call = (sy_call_t *)& sys_ ## syscallname,		\
 	.sy_flags = (flags)					\
     },								\
-    .syscall_no = FREEBSD32_SYS_##syscallname			\
+    .syscall_no = NQC32_SYS_##syscallname			\
 }
 
 #define SYSCALL32_INIT_HELPER(syscallname)			\

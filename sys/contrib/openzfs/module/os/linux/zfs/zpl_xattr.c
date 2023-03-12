@@ -1500,7 +1500,7 @@ zpl_xattr_permission(xattr_filldir_t *xf, const char *name, int name_len)
 	handler = zpl_xattr_handler(name);
 	if (handler == NULL) {
 		/* Do not expose NQC system namespace xattrs. */
-		if (ZFS_XA_NS_PREFIX_MATCH(FREEBSD, name))
+		if (ZFS_XA_NS_PREFIX_MATCH(NQC, name))
 			return (XAPERM_DENY);
 		/*
 		 * Anything that doesn't match a known namespace gets put in the

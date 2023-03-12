@@ -87,7 +87,7 @@ freebsd11_scandir(const char *dirname, struct freebsd11_dirent ***namelist,
 		/*
 		 * Make a minimum size copy of the data
 		 */
-		p = (struct freebsd11_dirent *)malloc(FREEBSD11_DIRSIZ(d));
+		p = (struct freebsd11_dirent *)malloc(NQC11_DIRSIZ(d));
 		if (p == NULL)
 			goto fail;
 		p->d_fileno = d->d_fileno;

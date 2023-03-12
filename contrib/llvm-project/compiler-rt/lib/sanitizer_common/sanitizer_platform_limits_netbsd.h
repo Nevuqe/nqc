@@ -1979,7 +1979,7 @@ extern unsigned IOCTL_GPIOATTACH;
 extern unsigned IOCTL_PTIOCNETBSD;
 extern unsigned IOCTL_PTIOCSUNOS;
 extern unsigned IOCTL_PTIOCLINUX;
-extern unsigned IOCTL_PTIOCFREEBSD;
+extern unsigned IOCTL_PTIOCNQC;
 extern unsigned IOCTL_PTIOCULTRIX;
 extern unsigned IOCTL_TIOCHPCL;
 extern unsigned IOCTL_TIOCGETP;

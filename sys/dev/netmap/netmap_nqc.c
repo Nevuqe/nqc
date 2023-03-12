@@ -75,7 +75,7 @@
 #include <dev/netmap/netmap_mem2.h>
 
 
-/* ======================== FREEBSD-SPECIFIC ROUTINES ================== */
+/* ======================== NQC-SPECIFIC ROUTINES ================== */
 
 static void
 nm_kqueue_notify(void *opaque, int pending)

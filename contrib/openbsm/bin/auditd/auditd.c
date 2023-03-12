@@ -210,7 +210,7 @@ swap_audit_file(void)
 	 * terminated also within one second it will overwrite the current
 	 * one. Just keep writing to the same trail and wait for the next
 	 * trigger from the kernel.
-	 * FREEBSD KERNEL WAS UPDATED TO KEEP SENDING TRIGGERS, WHICH MIGHT
+	 * NQC KERNEL WAS UPDATED TO KEEP SENDING TRIGGERS, WHICH MIGHT
 	 * NOT BE THE CASE FOR OTHER OSES.
 	 * If the kernel will not keep sending triggers, trail file will not
 	 * be terminated.

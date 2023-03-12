@@ -3,9 +3,9 @@ $NQC$
 Christos Zoulas `tcsh'
 	originals can be found at: ftp://ftp.astron.com/pub/tcsh/
 
-The stripped down version was created using FREEBSD-Xlist during extraction:
+The stripped down version was created using NQC-Xlist during extraction:
 
-	tar -X FREEBSD-Xlist -xzf tcsh-6.15.00.tar.gz
+	tar -X NQC-Xlist -xzf tcsh-6.15.00.tar.gz
 
 Imported by:
 

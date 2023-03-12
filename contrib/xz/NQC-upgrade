@@ -12,7 +12,7 @@ ChangeLog is generated with:
 
 For the import files and directories were pruned by:
 	
-sh -c 'for F in `cat FREEBSD-Xlist | grep -v NQC`; do rm -rf ./$F ; done'
+sh -c 'for F in `cat NQC-Xlist | grep -v NQC`; do rm -rf ./$F ; done'
 
 You may check if there are any new files that we don't need.
 

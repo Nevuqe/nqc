@@ -4,7 +4,7 @@ zstd
 
 To import new vendor sources, prune unwanted files with:
 
-	tar -X FREEBSD-Xlist -xf zstd-x.y.z.tar.zst
+	tar -X NQC-Xlist -xf zstd-x.y.z.tar.zst
 
 When importing a new version, be sure to check if there are any new bits that
 we don't want.

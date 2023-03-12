@@ -222,13 +222,13 @@ local compat_option_sets = {
 			prefix = "o",
 			descr = "old",
 		},
-		{ stdcompat = "FREEBSD4" },
-		{ stdcompat = "FREEBSD6" },
-		{ stdcompat = "FREEBSD7" },
-		{ stdcompat = "FREEBSD10" },
-		{ stdcompat = "FREEBSD11" },
-		{ stdcompat = "FREEBSD12" },
-		{ stdcompat = "FREEBSD13" },
+		{ stdcompat = "NQC4" },
+		{ stdcompat = "NQC6" },
+		{ stdcompat = "NQC7" },
+		{ stdcompat = "NQC10" },
+		{ stdcompat = "NQC11" },
+		{ stdcompat = "NQC12" },
+		{ stdcompat = "NQC13" },
 	},
 }
 
@@ -356,7 +356,7 @@ local function process_compat()
 			local stdcompat = v["stdcompat"]
 			v["definition"] = "COMPAT_" .. stdcompat:upper()
 			v["compatlevel"] = tonumber(stdcompat:match("([0-9]+)$"))
-			v["flag"] = stdcompat:gsub("FREEBSD", "COMPAT")
+			v["flag"] = stdcompat:gsub("NQC", "COMPAT")
 			v["prefix"] = stdcompat:lower() .. "_"
 			v["descr"] = stdcompat:lower()
 		end

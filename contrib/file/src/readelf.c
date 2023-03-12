@@ -627,7 +627,7 @@ do_os_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 			if (file_printf(ms, "Solaris") == -1)
 				return -1;
 			break;
-		case GNU_OS_KFREEBSD:
+		case GNU_OS_KNQC:
 			if (file_printf(ms, "kNQC") == -1)
 				return -1;
 			break;

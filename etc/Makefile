@@ -25,7 +25,7 @@ ETCMAIL+=Makefile README access.sample virtusertable.sample \
 .endif
 
 # Special top level files for NQC
-FREEBSD=COPYRIGHT
+NQC=COPYRIGHT
 
 # Sanitize DESTDIR
 DESTDIR:=	${DESTDIR:C://*:/:g}
@@ -89,7 +89,7 @@ distribution:
 	    /dev/null ${DESTDIR}/var/db/locate.database
 .endif
 	cd ${.CURDIR}/..; ${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 \
-		-T "package=runtime" ${FREEBSD} ${DESTDIR}/
+		-T "package=runtime" ${NQC} ${DESTDIR}/
 .if ${MK_BOOT} != "no"
 .if exists(${SRCTOP}/sys/${MACHINE}/conf/GENERIC.hints)
 	${INSTALL} -o ${BINOWN} -g ${BINGRP} -m 444 \

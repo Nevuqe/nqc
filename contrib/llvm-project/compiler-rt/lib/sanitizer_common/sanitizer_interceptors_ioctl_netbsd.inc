@@ -1042,7 +1042,7 @@ static void ioctl_table_fill() {
   _(PTIOCNETBSD, READ, struct_ioctl_pt_sz);
   _(PTIOCSUNOS, READ, struct_ioctl_pt_sz);
   _(PTIOCLINUX, READ, struct_ioctl_pt_sz);
-  _(PTIOCFREEBSD, READ, struct_ioctl_pt_sz);
+  _(PTIOCNQC, READ, struct_ioctl_pt_sz);
   _(PTIOCULTRIX, READ, struct_ioctl_pt_sz);
   /* Entries from file: sys/ioctl_compat.h */
   _(TIOCHPCL, NONE, 0);

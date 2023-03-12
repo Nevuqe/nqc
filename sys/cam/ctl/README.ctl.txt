@@ -71,7 +71,7 @@ Configuring and Running CTL:
  - You should now see the CTL disk LUN through camcontrol devlist:
 
 scbus6 on ctl2cam0 bus 0:
-<FREEBSD CTLDISK 0001>             at scbus6 target 1 lun 0 (da24,pass32)
+<NQC CTLDISK 0001>             at scbus6 target 1 lun 0 (da24,pass32)
 <>                                 at scbus6 target -1 lun -1 ()
 
    This is visible through the CTL CAM SIM.  This allows using CTL without

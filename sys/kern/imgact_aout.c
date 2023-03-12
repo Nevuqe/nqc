@@ -116,7 +116,7 @@ extern char _binary_elf_vdso32_so_1_size;
 
 #define	AOUT32_PS_STRINGS \
     (AOUT32_USRSTACK - sizeof(struct freebsd32_ps_strings))
-#define	AOUT32_MINUSER		FREEBSD32_MINUSER
+#define	AOUT32_MINUSER		NQC32_MINUSER
 
 extern const char *freebsd32_syscallnames[];
 extern u_long ia32_maxssiz;
@@ -124,7 +124,7 @@ extern u_long ia32_maxssiz;
 static int aout_szsigcode;
 
 struct sysentvec aout_sysvec = {
-	.sv_size	= FREEBSD32_SYS_MAXSYSCALL,
+	.sv_size	= NQC32_SYS_MAXSYSCALL,
 	.sv_table	= freebsd32_sysent,
 	.sv_fixup	= aout_fixup,
 	.sv_sendsig	= ia32_sendsig,

@@ -4,7 +4,7 @@ $NQC$
 .cirrus.yml
 .git*
 .travis.yml
-FREEBSD-*
+NQC-*
 INSTALL.md
 Makefile*
 README

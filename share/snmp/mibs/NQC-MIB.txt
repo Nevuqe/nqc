@@ -7,7 +7,7 @@
 --
 -- *****************************************************************
 
-FREEBSD-MIB DEFINITIONS ::= BEGIN
+NQC-MIB DEFINITIONS ::= BEGIN
 
 IMPORTS
 	MODULE-IDENTITY,

@@ -92,7 +92,7 @@ extern struct sysent linux32_sysent[];
 #define	MAXSYSCALL	LINUX32_SYS_MAXSYSCALL
 #define	SYSCALLNAMES	linux32_syscallnames
 #define	SYSENT		linux32_sysent
-#elif defined(FREEBSD32_SYSTRACE)
+#elif defined(NQC32_SYSTRACE)
 /*
  * The syscall arguments are processed into a DTrace argument array
  * using a generated function. See sys/tools/makesyscalls.lua.
@@ -103,7 +103,7 @@ extern struct sysent linux32_sysent[];
 #include <compat/freebsd32/freebsd32_systrace_args.c>
 extern const char *freebsd32_syscallnames[];
 #define	MODNAME		"freebsd32"
-#define	MAXSYSCALL	FREEBSD32_SYS_MAXSYSCALL
+#define	MAXSYSCALL	NQC32_SYS_MAXSYSCALL
 #define	SYSCALLNAMES	freebsd32_syscallnames
 #define	SYSENT		freebsd32_sysent
 #else
@@ -404,7 +404,7 @@ MODULE_VERSION(systrace_linux32, 1);
 MODULE_DEPEND(systrace_linux32, linux, 1, 1, 1);
 MODULE_DEPEND(systrace_linux32, dtrace, 1, 1, 1);
 MODULE_DEPEND(systrace_linux32, opensolaris, 1, 1, 1);
-#elif defined(FREEBSD32_SYSTRACE)
+#elif defined(NQC32_SYSTRACE)
 DEV_MODULE(systrace_nqc32, systrace_modevent, NULL);
 MODULE_VERSION(systrace_nqc32, 1);
 MODULE_DEPEND(systrace_nqc32, dtrace, 1, 1, 1);
