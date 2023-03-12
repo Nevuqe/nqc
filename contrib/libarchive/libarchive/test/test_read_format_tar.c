@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Each of these archives is a short archive with a single entry.  The

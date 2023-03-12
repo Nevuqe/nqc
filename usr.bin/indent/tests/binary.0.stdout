@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #define b00101010 -1
 void
 t(void)

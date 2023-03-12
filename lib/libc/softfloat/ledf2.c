@@ -9,7 +9,7 @@
 #include "softfloat.h"
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 flag __ledf2(float64, float64);
 

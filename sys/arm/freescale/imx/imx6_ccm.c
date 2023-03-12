@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Clocks and power control driver for Freescale i.MX6 family of SoCs.

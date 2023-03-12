@@ -28,7 +28,7 @@
  *
  * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 struct mps_fw_event_work;

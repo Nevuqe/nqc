@@ -31,7 +31,7 @@
 /*
  * cd9660_archimedes.c - support for RISC OS "ARCHIMEDES" extension
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 struct ISO_ARCHIMEDES {

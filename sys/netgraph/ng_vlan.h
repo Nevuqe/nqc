@@ -28,7 +28,7 @@
  *
  * Author: Ruslan Ermilov <ru@FreeBSD.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETGRAPH_NG_VLAN_H_

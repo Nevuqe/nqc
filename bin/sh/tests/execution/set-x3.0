@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 key='must contain this'
 PS4='$key+ '

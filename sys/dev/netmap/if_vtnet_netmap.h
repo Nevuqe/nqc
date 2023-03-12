@@ -24,7 +24,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <net/netmap.h>

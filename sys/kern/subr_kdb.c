@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_kdb.h"
 #include "opt_stack.h"

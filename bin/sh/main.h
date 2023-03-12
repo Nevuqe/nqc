@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)main.h	8.2 (Berkeley) 5/4/95
- * $FreeBSD$
+ * $NQC$
  */
 
 extern int rootpid;	/* pid of main shell */

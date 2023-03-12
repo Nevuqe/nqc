@@ -1,4 +1,4 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 /*	$OpenBSD: if_iwnvar.h,v 1.18 2010/04/30 16:06:46 damien Exp $	*/
 
 /*-

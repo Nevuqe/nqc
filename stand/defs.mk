@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .if !defined(__BOOT_DEFS_MK__)
 __BOOT_DEFS_MK__=${MFILE}

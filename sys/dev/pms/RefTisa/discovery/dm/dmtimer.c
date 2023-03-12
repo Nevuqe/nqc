@@ -22,7 +22,7 @@
 **
 ********************************************************************************/
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #include <dev/pms/config.h>
 
 #include <dev/pms/freebsd/driver/common/osenv.h>

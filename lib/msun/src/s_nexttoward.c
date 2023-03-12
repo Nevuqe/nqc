@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * We assume that a long double has a 15-bit exponent.  On systems

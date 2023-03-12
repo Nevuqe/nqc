@@ -2,7 +2,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
    SPDX-License-Identifier: RSA-MD

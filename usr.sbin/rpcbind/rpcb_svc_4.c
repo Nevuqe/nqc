@@ -1,6 +1,6 @@
 /*
  * $NetBSD: rpcb_svc_4.c,v 1.1 2000/06/02 23:15:41 fvdl Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 /*-

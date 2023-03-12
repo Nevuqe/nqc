@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Readonly filesystem for Microsoft FAT12/FAT16/FAT32 filesystems,

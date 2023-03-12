@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFI_IP_H
 #define _EFI_IP_H
 

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "core_priv.h"
 #include <sys/eventhandler.h>

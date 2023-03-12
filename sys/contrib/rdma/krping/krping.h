@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 struct krping_stats {

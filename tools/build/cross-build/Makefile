@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 NO_OBJ=
 SCRIPTS=	date.sh hostname.sh

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef TESTMAIN
 #include <machine/cpufunc.h>

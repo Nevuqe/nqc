@@ -1,4 +1,4 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * Copyright (c) 2005, 2006
@@ -18,7 +18,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Ralink Technology RT2560 chipset driver

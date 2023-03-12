@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)proc.h	7.1 (Berkeley) 5/15/91
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifdef __i386__

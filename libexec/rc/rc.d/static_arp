@@ -25,7 +25,7 @@
 #
 # Configure static ARP table
 #
-# $FreeBSD$
+# $NQC$
 #
 
 # PROVIDE: static_arp

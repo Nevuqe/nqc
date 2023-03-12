@@ -30,7 +30,7 @@
  * THIS SOFTWARE, EVEN IF ARCHIE L. COBBS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

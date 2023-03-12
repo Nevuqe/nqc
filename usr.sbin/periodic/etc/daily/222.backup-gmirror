@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NQC$
 # Created by: Miroslav Lachman <000.fbsd@quip.cz>
 
 # Backup output from `gmirror list`, which provides detailed information

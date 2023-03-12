@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "common.h"
 #include "t4_regs.h"

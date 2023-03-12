@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * SiS 190/191 PCI Ethernet NIC driver.

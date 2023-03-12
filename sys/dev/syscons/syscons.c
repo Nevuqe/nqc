@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_syscons.h"
 #include "opt_splash.h"

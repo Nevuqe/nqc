@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 static unsigned char archive[] = {
 '0','7','0','7','0','7','0','0','2','0','2','5','0','7','4','6','6','1','0',

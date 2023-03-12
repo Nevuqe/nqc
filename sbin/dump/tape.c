@@ -34,7 +34,7 @@
 static char sccsid[] = "@(#)tape.c	8.4 (Berkeley) 5/1/95";
 #endif
 static const char rcsid[] =
-  "$FreeBSD$";
+  "$NQC$";
 #endif /* not lint */
 
 #include <sys/param.h>

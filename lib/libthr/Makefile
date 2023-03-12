@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # All library objects contain FreeBSD revision strings by default; they may be
 # excluded as a space-saving measure.  To produce a library that does

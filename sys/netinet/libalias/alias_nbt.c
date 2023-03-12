@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
     alias_nbt.c performs special processing for NetBios over TCP/IP

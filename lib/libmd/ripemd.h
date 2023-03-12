@@ -57,7 +57,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef HEADER_RIPEMD_H

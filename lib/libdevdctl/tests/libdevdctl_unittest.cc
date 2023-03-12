@@ -29,7 +29,7 @@
  *
  * Authors: Alan Somers         (Spectra Logic Corporation)
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <gtest/gtest.h>

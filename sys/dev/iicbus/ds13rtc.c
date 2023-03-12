@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for Dallas/Maxim DS13xx real-time clock/calendar chips:

@@ -13,7 +13,7 @@
 #      v      v
 #    node4  node5
 #
-# $FreeBSD$
+# $NQC$
 #
 PATH=../:.:$PATH
 . config

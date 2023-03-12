@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 PROG=	syscall_timing

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	pam_echo
 SRCS=	pam_echo.c

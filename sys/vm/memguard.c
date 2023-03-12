@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * MemGuard is a simple replacement allocator for debugging only

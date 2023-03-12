@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef ADF_TRANSPORT_H
 #define ADF_TRANSPORT_H
 

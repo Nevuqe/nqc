@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	iwn5150fw
 IMG=	iwlwifi-5150-8.24.2.2

@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not install header files.
 This option used to be spelled
 .Va NO_INCS .

@@ -1,7 +1,7 @@
 /*-
  * Test 0083:	Check that the last instruction is BPF_RET.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

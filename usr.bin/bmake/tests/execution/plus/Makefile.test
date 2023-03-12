@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 check-+:
 	@${MAKE} -f ${MAKEFILE} -j2 -n do-$@

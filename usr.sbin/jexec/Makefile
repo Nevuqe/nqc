@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	jexec
 MAN=	jexec.8

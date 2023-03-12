@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* ld80 version of __ieee754_rem_pio2l(x,y)
  * 

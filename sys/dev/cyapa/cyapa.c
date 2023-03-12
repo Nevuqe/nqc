@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * CYAPA - Cypress APA trackpad with I2C Interface driver

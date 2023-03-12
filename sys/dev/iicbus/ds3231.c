@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for Maxim DS3231[N] real-time clock/calendar.

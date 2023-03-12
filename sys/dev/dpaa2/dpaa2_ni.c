@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * The DPAA2 Network Interface (DPNI) driver.

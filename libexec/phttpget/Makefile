@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	phttpget
 MAN=	phttpget.8

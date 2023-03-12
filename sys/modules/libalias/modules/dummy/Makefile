@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	alias_dummy
 SRCS=	alias_dummy.c

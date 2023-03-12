@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for the RDC Semiconductor R6040 10/100 PHY.

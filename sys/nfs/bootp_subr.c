@@ -45,7 +45,7 @@
 #define IN_HISTORICAL_NETS		/* include class masks */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_bootp.h"
 #include "opt_nfs.h"

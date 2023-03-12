@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NQC$
 #
 # PROVIDE: netwait
 # REQUIRE: devd ipfw pf routing

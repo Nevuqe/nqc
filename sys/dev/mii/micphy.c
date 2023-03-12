@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Micrel KSZ8081/KSZ9021/KSZ9031 Gigabit Ethernet Transceiver

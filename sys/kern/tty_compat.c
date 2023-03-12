@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * mapping routines for old line discipline (yuck)

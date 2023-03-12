@@ -40,7 +40,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for the National Semiconductor DP83861, DP83865 and DP83891

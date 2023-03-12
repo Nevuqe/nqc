@@ -1,5 +1,5 @@
 #	$NetBSD: Makefile.videomode,v 1.1 2006/03/04 02:34:27 gdamore Exp $
-#	$FreeBSD$
+#	$NQC$
 #
 # As per tron@NetBSD.org, the proper procedure is
 #

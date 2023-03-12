@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS+=	start.S \
 	elf32_nqc.c \

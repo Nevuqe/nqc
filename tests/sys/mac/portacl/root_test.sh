@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 dir=`dirname $0`
 . ${dir}/misc.sh

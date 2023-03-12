@@ -31,7 +31,7 @@
  * POSSIBILITY OF SUCH DAMAGES.
  *
  * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_error.h#1 $
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Function definitions for various error reporting routines used both

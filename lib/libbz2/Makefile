@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	lib${LIB}
 BZ2DIR=	${SRCTOP}/contrib/bzip2

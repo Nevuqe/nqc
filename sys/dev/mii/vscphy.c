@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Microsemi / Vitesse VSC8501 (and similar).

@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Check that we generate an error message when reading a truncated

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 
 # Script generates a $2/fdt_static_dtb.h file.
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mfi_checkq
 MAN=

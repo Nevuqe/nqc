@@ -66,7 +66,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
    Alias_smedia.c is meant to contain the aliasing code for streaming media

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	mapper_std
 SRCS+=	citrus_mapper_std.c

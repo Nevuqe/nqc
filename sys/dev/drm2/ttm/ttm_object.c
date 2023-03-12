@@ -36,7 +36,7 @@
 
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /**
  * struct ttm_object_file

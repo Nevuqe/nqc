@@ -37,7 +37,7 @@
  *
  * Author: Julian Elisher <julian@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  * $Whistle: ng_hole.c,v 1.10 1999/11/01 09:24:51 julian Exp $
  */
 

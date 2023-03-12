@@ -21,7 +21,7 @@
 static const char rcsid[] = "$Id: res_data.c,v 1.7 2008/12/11 09:59:00 marka Exp $";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "port_before.h"
 

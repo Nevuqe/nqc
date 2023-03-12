@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # The include file <dtb.mk> handles building and installing dtb files.
 #

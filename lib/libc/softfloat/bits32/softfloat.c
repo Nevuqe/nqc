@@ -52,7 +52,7 @@ this code that are retained.
 */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef SOFTFLOAT_FOR_GCC
 #include "softfloat-for-gcc.h"

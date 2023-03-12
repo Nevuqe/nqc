@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mutex_isowned_np
 MAN=

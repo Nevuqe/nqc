@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # .gdbinit file for remote serial debugging.
 #
 # XXX Do not use this file directly.  It contains parameters which are

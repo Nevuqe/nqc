@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This is to include src/lib/Makefile.inc
 

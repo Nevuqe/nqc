@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$")
+__NQCID("$NQC$")
 
 ENTRY(copysign)
 	movl	16(%esp),%edx

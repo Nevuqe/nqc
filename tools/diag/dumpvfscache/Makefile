@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	dumpvfscache
 LIBADD=	kvm

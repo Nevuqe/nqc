@@ -1,9 +1,9 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
  *
- * $FreeBSD$
+ * $NQC$
  * See the IPFILTER.LICENCE file for details on licencing.
  */
 

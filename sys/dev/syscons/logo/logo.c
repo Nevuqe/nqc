@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	LOGO_WIDTH	66
 #define	LOGO_HEIGHT	69

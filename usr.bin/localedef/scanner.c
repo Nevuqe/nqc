@@ -33,7 +33,7 @@
  * for localedef for processing by the higher level grammar processor.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <stdio.h>
 #include <stdlib.h>

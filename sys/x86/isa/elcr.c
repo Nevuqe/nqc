@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * The ELCR is a register that controls the trigger mode and polarity of

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Machine dependent definitions for the amd64 architecture.
 #

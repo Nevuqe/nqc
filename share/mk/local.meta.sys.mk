@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # local configuration specific to meta mode
 # XXX some of this should be in meta.sys.mk

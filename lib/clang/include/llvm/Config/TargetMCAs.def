@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef LLVM_TARGETMCA
 #  error Please define the macro LLVM_TARGETMCA(TargetName)

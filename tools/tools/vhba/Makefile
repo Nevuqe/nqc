@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Copyright (c) 2010 by Panasas Inc
 # All rights reserved.

@@ -5,7 +5,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * This stpcpy implementation copies a byte at a time until the

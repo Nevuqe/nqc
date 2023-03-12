@@ -41,7 +41,7 @@
 ** SUCH DAMAGE.
 */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <string.h>
 #include <ctype.h>

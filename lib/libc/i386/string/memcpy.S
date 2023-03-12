@@ -1,5 +1,5 @@
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define MEMCOPY
 #include "bcopy.S"

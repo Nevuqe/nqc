@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define NEED_BRSSL_H
 #include "../libsecureboot-priv.h"

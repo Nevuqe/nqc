@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * SafeNet SafeXcel-1141 hardware crypto accelerator

@@ -38,7 +38,7 @@
 __RCSID("$NetBSD: asa.c,v 1.11 1997/09/20 14:55:00 lukem Exp $");
 #endif
 #endif
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <err.h>
 #include <stdio.h>

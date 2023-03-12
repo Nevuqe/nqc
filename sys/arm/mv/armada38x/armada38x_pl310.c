@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * The machine-dependent part of the arm/pl310 driver for Armada 38x SoCs.

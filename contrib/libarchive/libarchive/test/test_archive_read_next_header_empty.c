@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 static void
 test_empty_file1(void)

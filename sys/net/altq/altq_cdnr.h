@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  *
  * $KAME: altq_cdnr.h,v 1.9 2003/07/10 12:07:48 kjc Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _ALTQ_ALTQ_CDNR_H_

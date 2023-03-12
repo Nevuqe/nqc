@@ -13,7 +13,7 @@
 # purpose.
 #
 
-# $FreeBSD$
+# $NQC$
 
 #include <bootargs.h>
 

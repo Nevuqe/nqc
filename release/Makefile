@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Makefile for building releases and release media.
 #

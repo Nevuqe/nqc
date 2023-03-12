@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)iso.h	8.6 (Berkeley) 5/10/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #define ISODCL(from, to) (to - from + 1)

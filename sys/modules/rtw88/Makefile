@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DEVRTW88DIR=	${SRCTOP}/sys/contrib/dev/rtw88
 

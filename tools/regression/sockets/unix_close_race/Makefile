@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	unix_close_race
 MAN=

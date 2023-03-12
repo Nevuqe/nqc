@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* __ieee754_exp(x)
  * Returns the exponential of x.

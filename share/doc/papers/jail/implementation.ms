@@ -1,5 +1,5 @@
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .NH
 Implementation jail in the FreeBSD kernel.

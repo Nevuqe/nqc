@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD$*/
+/*$NQC$*/
 
 #include <sys/limits.h>
 #include <sys/time.h>

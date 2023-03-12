@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* This is a little pointless, as Windows doesn't support symlinks
  * (except for the seriously crippled CreateSymbolicLink API) so these

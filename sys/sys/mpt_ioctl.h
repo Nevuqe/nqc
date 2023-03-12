@@ -31,7 +31,7 @@
  *
  * LSI MPT-Fusion Host Adapter FreeBSD userland interface
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MPT_IOCTL_H_

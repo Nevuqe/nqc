@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # module_name	symbol_name
 all	_ahstat

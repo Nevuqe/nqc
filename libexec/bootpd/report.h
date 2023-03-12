@@ -1,5 +1,5 @@
 /* report.h */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 extern void report_init(int nolog);
 extern void report(int, const char *, ...) __printflike(2, 3);

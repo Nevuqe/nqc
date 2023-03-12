@@ -11,7 +11,7 @@
 # targets survive with MYTOOL_CMD=false, then MYTOOL_CMD probably
 # does not belong here. Stick it somewhere else, thank you very much!
 #
-# $FreeBSD$
+# $NQC$
 
 .if !target(__<src.tools.mk>__)
 

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * The DPAA2 Management Complex (MC) Bus Driver (FDT-based).

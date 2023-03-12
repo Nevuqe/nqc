@@ -10,7 +10,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Just when we thought life were beautiful, reality pops its grim face over

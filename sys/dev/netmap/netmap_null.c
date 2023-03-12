@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #if defined(__NQC__)
 #include <sys/cdefs.h> /* prerequisite */

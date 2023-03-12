@@ -35,7 +35,7 @@ static const char sccsid[] = "@(#)setup.c	8.10 (Berkeley) 5/9/95";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/disk.h>

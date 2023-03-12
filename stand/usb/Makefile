@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 # Copyright (c) 2013 Hans Petter Selasky.
 # Copyright (c) 2014 SRI International

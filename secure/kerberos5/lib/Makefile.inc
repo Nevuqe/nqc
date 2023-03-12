@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB_MAJOR?=	11
 

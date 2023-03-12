@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .sh:
 	cp -f ${.IMPSRC} ${.TARGET}

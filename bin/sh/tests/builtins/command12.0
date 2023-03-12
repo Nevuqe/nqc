@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 alias aa=echo\ \'\"\'
 cmd=$(command -v aa)

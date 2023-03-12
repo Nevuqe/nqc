@@ -27,7 +27,7 @@
  *
  * Written by: yen_cw@myson.com.tw  available at: http://www.myson.com.tw/
  *
- * $FreeBSD$
+ * $NQC$
  *
  * Myson MTD80x register definitions.
  *

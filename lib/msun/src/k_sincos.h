@@ -12,7 +12,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 static const double
 S1  = -1.66666666666666324348e-01, /* 0xBFC55555, 0x55555549 */

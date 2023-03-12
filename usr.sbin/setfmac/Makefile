@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=   setfmac
 LINKS=	${BINDIR}/setfmac ${BINDIR}/setfsmac

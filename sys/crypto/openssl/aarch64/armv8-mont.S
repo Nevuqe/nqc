@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from armv8-mont.pl. */
 .text
 

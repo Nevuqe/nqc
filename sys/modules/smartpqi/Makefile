@@ -1,5 +1,5 @@
 # 5/10/2017
-# $FreeBSD$
+# $NQC$
 
 KMOD = smartpqi
 

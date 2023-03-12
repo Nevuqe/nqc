@@ -13,7 +13,7 @@
 # purpose.
 #
 
-# $FreeBSD$
+# $NQC$
 
 #
 # BTX V86 interface.

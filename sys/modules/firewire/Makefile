@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR=	firewire \
 	fwe \

@@ -6,7 +6,7 @@
 #
 # This code is released to the public domain.
 #----------------------------------------------------------------
-# $FreeBSD$
+# $NQC$
 #
     .text
     .altmacro

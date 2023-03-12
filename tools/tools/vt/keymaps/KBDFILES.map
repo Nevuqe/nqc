@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # The Files are converted by "convert-keymaps.pl" from the given encoding to UCS.
 #
@@ -127,8 +127,8 @@ ISO8859-9	tr.iso9.q.kbd			tr.kbd
 
 ISO8859-1+EURO	uk.iso.kbd			uk.kbd
 ISO8859-1+EURO	uk.iso-ctrl.kbd			uk.capsctrl.kbd
-#CP850		uk.cp850.kbd			uk.kbd.from-cp850		(no ¤ and different Alt/Alt-Shift encodings)
-#CP850		uk.cp850-ctrl.kbd		uk.capsctrl.kbd.from-cp850	(no ¤ and different Alt/Alt-Shift encodings)
+#CP850		uk.cp850.kbd			uk.kbd.from-cp850		(no ï¿½ and different Alt/Alt-Shift encodings)
+#CP850		uk.cp850-ctrl.kbd		uk.capsctrl.kbd.from-cp850	(no ï¿½ and different Alt/Alt-Shift encodings)
 ISO8859-15	uk.dvorak.kbd			uk.dvorak.kbd
 
 ISO8859-1	us.iso.kbd			us.kbd

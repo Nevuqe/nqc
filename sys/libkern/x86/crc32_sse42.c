@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * This file is compiled in userspace in order to run ATF unit tests.

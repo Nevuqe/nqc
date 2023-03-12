@@ -34,7 +34,7 @@
 
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 
 const char value1[] = "Large ------------------ value";

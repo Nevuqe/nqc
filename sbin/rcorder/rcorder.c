@@ -40,7 +40,7 @@
  */
 
 #include <sys/types.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/stat.h>
 

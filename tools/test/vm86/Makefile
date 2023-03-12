@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 all:	vm86_test
 

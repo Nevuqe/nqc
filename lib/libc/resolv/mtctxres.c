@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <port_before.h>
 #ifdef DO_PTHREADS

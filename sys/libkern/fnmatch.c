@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Function fnmatch() as specified in POSIX 1003.2-1992, section B.6.

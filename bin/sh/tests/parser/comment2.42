@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ${SH} -c '#
 exit 42'

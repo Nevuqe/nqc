@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* See r303718 */
 void
 t(void)

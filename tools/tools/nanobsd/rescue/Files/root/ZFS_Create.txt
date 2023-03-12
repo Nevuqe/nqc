@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 Some remarks for setting up a zfs boot environment
 

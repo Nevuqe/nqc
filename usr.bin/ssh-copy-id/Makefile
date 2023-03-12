@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SCRIPTS= ssh-copy-id.sh
 MAN=	ssh-copy-id.1

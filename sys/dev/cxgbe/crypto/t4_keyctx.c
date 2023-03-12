@@ -28,7 +28,7 @@
 #include "opt_kern_tls.h"
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/ktls.h>

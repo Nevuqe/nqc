@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: _strtoul.h,v 1.1 2008/08/20 12:42:26 joerg Exp $ */
 
 /*-

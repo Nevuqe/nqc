@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for imx6 Secure Non-Volatile Storage system, which really means "all

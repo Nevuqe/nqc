@@ -19,7 +19,7 @@
  * suitability of this software for any purpose.  It is provided "as is"
  * without express or implied warranty.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _BOOTP_H_

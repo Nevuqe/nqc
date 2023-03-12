@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .if defined(DEBUG)
 DEBUG_FLAGS+= -D_DEBUG -g

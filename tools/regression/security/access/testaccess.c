@@ -29,7 +29,7 @@
  * Work sponsored by Defense Advanced Research Projects Agency under the
  * CHATS research program, CBOSS project.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for it_IT.ISO8859-15 locale
 $

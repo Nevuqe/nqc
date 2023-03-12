@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from rc4-586.pl. */
 #ifdef PIC
 .text

@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 void __stack_chk_fail(void);
 

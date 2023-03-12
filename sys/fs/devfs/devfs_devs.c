@@ -27,7 +27,7 @@
  *
  * From: FreeBSD: src/sys/miscfs/kernfs/kernfs_vfsops.c 1.36
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

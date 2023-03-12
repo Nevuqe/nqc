@@ -26,7 +26,7 @@
  */
 
 #include "archive_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * The definitive documentation of the Zip file format is:

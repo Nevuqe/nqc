@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 _ALL!=	cd ${.CURDIR} && ls Doxyfile-*

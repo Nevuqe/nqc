@@ -1,5 +1,5 @@
 #	$OpenBSD: Makefile,v 1.4 2005/05/16 15:22:46 espie Exp $
-# $FreeBSD$
+# $NQC$
 
 .include <src.opts.mk>
 

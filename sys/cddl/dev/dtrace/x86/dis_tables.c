@@ -33,7 +33,7 @@
 /*	  All Rights Reserved  	*/
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #include	"dis_tables.h"

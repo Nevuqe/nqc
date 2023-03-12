@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>		/* to pick up __NQC_version */
 #include <string.h>

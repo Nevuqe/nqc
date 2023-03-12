@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.6 (Berkeley) 5/8/95
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=runtime
 PROG=	mount

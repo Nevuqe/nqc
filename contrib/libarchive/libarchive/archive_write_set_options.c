@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "archive_write_private.h"
 #include "archive_options_private.h"

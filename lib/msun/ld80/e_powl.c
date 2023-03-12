@@ -15,7 +15,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <math.h>
 
@@ -117,7 +117,7 @@ __p1evll(long double x, long double *PP, int n)
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <float.h>
 #include <math.h>

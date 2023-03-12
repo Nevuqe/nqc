@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define	__RUNETYPE_INTERNAL 1
 

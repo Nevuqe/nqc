@@ -1,5 +1,5 @@
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 	.section .init,"ax",%progbits
 	.align 4

@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <machine/riscvreg.h>
 #include <sys/errno.h>

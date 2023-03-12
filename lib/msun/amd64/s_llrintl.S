@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$"); 
+__NQCID("$NQC$"); 
 	
 ENTRY(llrintl)
 	fldt	8(%rsp)

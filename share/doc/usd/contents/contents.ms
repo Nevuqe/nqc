@@ -26,7 +26,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"	@(#)00.contents	8.2 (Berkeley) 4/20/94
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .de ND
 .KE

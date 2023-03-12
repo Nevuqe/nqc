@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Option file for bmake builds. These options are available to all users of
 # bmake (including the source tree userland and kernel builds). They generally

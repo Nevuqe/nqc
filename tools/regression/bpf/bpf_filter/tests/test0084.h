@@ -1,7 +1,7 @@
 /*-
  * Test 0084:	Check very long BPF program.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

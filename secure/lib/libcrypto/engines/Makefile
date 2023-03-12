@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR=		capi
 .if ${MACHINE_CPUARCH} == "amd64" || ${MACHINE_CPUARCH} == "i386"

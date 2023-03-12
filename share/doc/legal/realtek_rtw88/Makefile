@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FILES=		${SRCTOP}/sys/contrib/dev/rtw88fw/LICENCE.rtlwifi_firmware.txt
 FILESDIR=	${SHAREDIR}/doc/legal

@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 This is an implementation of the frag attack described in:
 http://tapir.cs.ucl.ac.uk/bittau-wep.pdf

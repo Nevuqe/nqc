@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/security/mac_seeotheruids
 

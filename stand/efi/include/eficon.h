@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFI_CON_H
 #define _EFI_CON_H
 

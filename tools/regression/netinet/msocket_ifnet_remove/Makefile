@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	msocket_ifnet_remove
 WARNS?=	3

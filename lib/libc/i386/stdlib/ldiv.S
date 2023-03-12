@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 ENTRY(ldiv)
         movl    4(%esp),%eax

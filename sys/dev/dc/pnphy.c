@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Pseudo-driver for media selection on the Lite-On PNIC 82c168

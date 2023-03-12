@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Pseudo-driver for internal NWAY support on DEC 21143 and workalike

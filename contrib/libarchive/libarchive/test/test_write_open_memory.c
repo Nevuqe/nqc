@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* Try to force archive_write_open_memory.c to write past the end of an array. */
 static unsigned char buff[16384];

@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 #
 
 MSDOS=		${SRCTOP}/sys/fs/msdosfs

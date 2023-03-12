@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* __ieee754_lgamma_r(x, signgamp)
  * Reentrant version of the logarithm of the Gamma function

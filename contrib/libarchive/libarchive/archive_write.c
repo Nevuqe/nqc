@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * This file contains the "essential" portions of the write API, that

@@ -17,7 +17,7 @@
  */
 
 /* $Id: platform.h.in,v 1.2.6.2 2008/01/23 02:15:02 tbox Exp $ */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*! \file */
 

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Code for dealing with the BIOS in x86 PC systems.

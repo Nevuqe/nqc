@@ -8,7 +8,7 @@
 # rootgen.sh and related scripts generate much more extensive tests for many
 # combinations of boot env (ufs, zfs, geli, etc).
 #
-# $FreeBSD$
+# $NQC$
 
 set -e
 

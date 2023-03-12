@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 ENTRY(cerror)
 	addi	sp, sp, -16

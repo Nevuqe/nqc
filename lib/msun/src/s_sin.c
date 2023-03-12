@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* sin(x)
  * Return sine function of x.

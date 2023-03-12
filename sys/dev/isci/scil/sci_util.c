@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <dev/isci/scil/sci_util.h>
 

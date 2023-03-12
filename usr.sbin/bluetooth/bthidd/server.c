@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: server.c,v 1.9 2006/09/07 21:06:53 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/queue.h>

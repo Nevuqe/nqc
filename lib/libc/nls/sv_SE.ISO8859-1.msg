@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for sv_SE.ISO8859-1 locale
 $
@@ -6,7 +6,7 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Otillåten operation
+1 Otillï¿½ten operation
 $ ENOENT
 2 Filen eller katalogen finns ej
 $ ESRCH
@@ -16,159 +16,159 @@ $ EINTR
 $ EIO
 5 In-/utmatningsfel
 $ ENXIO
-6 Enheten är ej konfigurerad
+6 Enheten ï¿½r ej konfigurerad
 $ E2BIG
-7 Argumentlistan är för lång
+7 Argumentlistan ï¿½r fï¿½r lï¿½ng
 $ ENOEXEC
-8 Ej körbar fil
+8 Ej kï¿½rbar fil
 $ EBADF
 9 Felaktigt filhandtag
 $ ECHILD
 10 Inga barnprocesser
 $ EDEADLK
-11 Undvek resursdödläge
+11 Undvek resursdï¿½dlï¿½ge
 $ ENOMEM
-12 Kan ej erhålla minne
+12 Kan ej erhï¿½lla minne
 $ EACCES
-13 Tillstånd nekas
+13 Tillstï¿½nd nekas
 $ EFAULT
 14 Felaktig adress
 $ ENOTBLK
-15 Blockenhet krävs
+15 Blockenhet krï¿½vs
 $ EBUSY
-16 Enheten är upptagen
+16 Enheten ï¿½r upptagen
 $ EEXIST
 17 Filen finns redan
 $ EXDEV
-18 Länken korsar enheter
+18 Lï¿½nken korsar enheter
 $ ENODEV
-19 Enheten stöder ej operationen
+19 Enheten stï¿½der ej operationen
 $ ENOTDIR
-20 Är ej en katalog
+20 ï¿½r ej en katalog
 $ EISDIR
-21 Är en katalog
+21 ï¿½r en katalog
 $ EINVAL
 22 Ogiltigt argument
 $ ENFILE
-23 För många öppna filer i systemet
+23 Fï¿½r mï¿½nga ï¿½ppna filer i systemet
 $ EMFILE
-24 För många öppna filer
+24 Fï¿½r mï¿½nga ï¿½ppna filer
 $ ENOTTY
-25 Olämplig ioctl för enheten
+25 Olï¿½mplig ioctl fï¿½r enheten
 $ ETXTBSY
-26 Programfilen är upptagen
+26 Programfilen ï¿½r upptagen
 $ EFBIG
-27 Filen är för stor
+27 Filen ï¿½r fï¿½r stor
 $ ENOSPC
-28 Inget utrymme kvar på enheten
+28 Inget utrymme kvar pï¿½ enheten
 $ ESPIPE
-29 Otillåten sökning
+29 Otillï¿½ten sï¿½kning
 $ EROFS
 30 Skrivskyddat filsystem
 $ EMLINK
-31 För många länkar
+31 Fï¿½r mï¿½nga lï¿½nkar
 $ EPIPE
 32 Avbruten kommunikationskanal
 $ EDOM
-33 Numeriskt argument utanför domänen
+33 Numeriskt argument utanfï¿½r domï¿½nen
 $ ERANGE
-34 Resultatet är för stort
+34 Resultatet ï¿½r fï¿½r stort
 $ EAGAIN, EWOULDBLOCK
-35 Resursen är tillfälligt otillgänglig
+35 Resursen ï¿½r tillfï¿½lligt otillgï¿½nglig
 $ EINPROGRESS
-36 Operationen är igång
+36 Operationen ï¿½r igï¿½ng
 $ EALREADY
-37 Operationen är redan igång
+37 Operationen ï¿½r redan igï¿½ng
 $ ENOTSOCK
-38 Sockeloperation på icke-sockel
+38 Sockeloperation pï¿½ icke-sockel
 $ EDESTADDRREQ
 39 Destinationsadress erfordras
 $ EMSGSIZE
-40 För långt meddelande
+40 Fï¿½r lï¿½ngt meddelande
 $ EPROTOTYPE
-41 Fel protokolltyp för sockeln
+41 Fel protokolltyp fï¿½r sockeln
 $ ENOPROTOOPT
-42 Protokollet otillgängligt
+42 Protokollet otillgï¿½ngligt
 $ EPROTONOSUPPORT
-43 Protokollet är ej understött
+43 Protokollet ï¿½r ej understï¿½tt
 $ ESOCKTNOSUPPORT
-44 Sockeltypen är ej understödd
+44 Sockeltypen ï¿½r ej understï¿½dd
 $ EOPNOTSUPP
-45 Operationen är ej understödd
+45 Operationen ï¿½r ej understï¿½dd
 $ EPFNOSUPPORT
-46 Protokollfamiljen är ej understödd
+46 Protokollfamiljen ï¿½r ej understï¿½dd
 $ EAFNOSUPPORT
-47 Adressfamiljen är ej understödd av protokollfamiljen
+47 Adressfamiljen ï¿½r ej understï¿½dd av protokollfamiljen
 $ EADDRINUSE
-48 Adressen är upptagen
+48 Adressen ï¿½r upptagen
 $ EADDRNOTAVAIL
-49 Kan ej tilldela den begärda adressen
+49 Kan ej tilldela den begï¿½rda adressen
 $ ENETDOWN
-50 Nätverket fungerar inte
+50 Nï¿½tverket fungerar inte
 $ ENETUNREACH
-51 Nätverket är ej kontaktbart
+51 Nï¿½tverket ï¿½r ej kontaktbart
 $ ENETRESET
-52 Nätverket tappade kontakten vid återställningen
+52 Nï¿½tverket tappade kontakten vid ï¿½terstï¿½llningen
 $ ECONNABORTED
 53 Mjukvara orsakade nedkoppling
 $ ECONNRESET
-54 Motparten avbröt uppkopplingen
+54 Motparten avbrï¿½t uppkopplingen
 $ ENOBUFS
-55 Inget buffertutrymme tillgängligt
+55 Inget buffertutrymme tillgï¿½ngligt
 $ EISCONN
-56 Sockeln är redan uppkopplad
+56 Sockeln ï¿½r redan uppkopplad
 $ ENOTCONN
-57 Sockeln är ej uppkopplad
+57 Sockeln ï¿½r ej uppkopplad
 $ ESHUTDOWN
-58 Kan ej sända efter att sockeln nedkopplats
+58 Kan ej sï¿½nda efter att sockeln nedkopplats
 $ ETOOMANYREFS
-59 För många referenser: kan inte delas
+59 Fï¿½r mï¿½nga referenser: kan inte delas
 $ ETIMEDOUT
 60 Uppkopplingstiden tog slut
 $ ECONNREFUSED
 61 Uppkopplingen nekad
 $ ELOOP
-62 För många nivåer av symboliska länkar
+62 Fï¿½r mï¿½nga nivï¿½er av symboliska lï¿½nkar
 $ ENAMETOOLONG
-63 Alldeles för långt filnamn
+63 Alldeles fï¿½r lï¿½ngt filnamn
 $ EHOSTDOWN
-64 Värddatorn är nere
+64 Vï¿½rddatorn ï¿½r nere
 $ EHOSTUNREACH
-65 Väg till värddatorn saknas
+65 Vï¿½g till vï¿½rddatorn saknas
 $ ENOTEMPTY
 66 Katalogen ej tom
 $ EPROCLIM
-67 För många processer
+67 Fï¿½r mï¿½nga processer
 $ EUSERS
-68 För många användare
+68 Fï¿½r mï¿½nga anvï¿½ndare
 $ EDQUOT
-69 Diskkvot överskriden
+69 Diskkvot ï¿½verskriden
 $ ESTALE
 70 Inaktuellt NFS-filhandtag
 $ EREMOTE
-71 För många fjärrnivåer i sökvägen
+71 Fï¿½r mï¿½nga fjï¿½rrnivï¿½er i sï¿½kvï¿½gen
 $ EBADRPC
 72 Felaktig RPC-struktur
 $ ERPCMISMATCH
 73 Felaktig RPC-version
 $ EPROGUNAVAIL
-74 RPC-programmet otillgängligt
+74 RPC-programmet otillgï¿½ngligt
 $ EPROGMISMATCH
 75 Fel programversion
 $ EPROCUNAVAIL
-76 Felaktig procedur för programmet
+76 Felaktig procedur fï¿½r programmet
 $ ENOLCK
-77 Inga lås tillgängliga
+77 Inga lï¿½s tillgï¿½ngliga
 $ ENOSYS
-78 Funktionen är ej implementerad
+78 Funktionen ï¿½r ej implementerad
 $ EFTYPE
-79 Olämplig filtyp eller format
+79 Olï¿½mplig filtyp eller format
 $
 $ strsignal() support catalog
 $
 $set 2
 $ SIGHUP
-1 Lägg på
+1 Lï¿½gg pï¿½
 $ SIGINT
 2 Avbryt
 $ SIGQUIT
@@ -176,15 +176,15 @@ $ SIGQUIT
 $ SIGILL
 4 Olaglig instruktion
 $ SIGTRAP
-5 Spår- eller brytpunktsfälla
+5 Spï¿½r- eller brytpunktsfï¿½lla
 $ SIGABRT
-6 Avslutsfälla
+6 Avslutsfï¿½lla
 $ SIGEMT
-7 Emuleringsfälla
+7 Emuleringsfï¿½lla
 $ SIGFPE
 8 Flyttalsavbrott
 $ SIGKILL
-9 Dräpt
+9 Drï¿½pt
 $ SIGBUS
 10 Bussfel
 $ SIGSEGV
@@ -194,17 +194,17 @@ $ SIGSYS
 $ SIGPIPE
 13 Avbruten kommunikationskanal
 $ SIGALRM
-14 Äggklocka
+14 ï¿½ggklocka
 $ SIGTERM
 15 Terminerad
 $ SIGURG
-16 Brådskande In/Ut-tillstånd
+16 Brï¿½dskande In/Ut-tillstï¿½nd
 $ SIGSTOP
 17 Stoppad (signal)
 $ SIGTSTP
 18 Stoppad
 $ SIGCONT
-19 Fortsätter
+19 Fortsï¿½tter
 $ SIGCHLD
 20 Barn avslutat
 $ SIGTTIN
@@ -212,22 +212,22 @@ $ SIGTTIN
 $ SIGTTOU
 22 Stoppad (terminalutmatning)
 $ SIGIO
-23 In- och utmatning möjlig
+23 In- och utmatning mï¿½jlig
 $ SIGXCPU
-24 Cputidsgränsen överskriden
+24 Cputidsgrï¿½nsen ï¿½verskriden
 $ SIGXFSZ
-25 Filstorleksgränsen överskriden
+25 Filstorleksgrï¿½nsen ï¿½verskriden
 $ SIGVTALRM
-26 Virtuella äggklockan ringde
+26 Virtuella ï¿½ggklockan ringde
 $ SIGPROF
-27 Profileringsäggklockan ringde
+27 Profileringsï¿½ggklockan ringde
 $ SIGWINCH
-28 Fönsterstorleken ändras
+28 Fï¿½nsterstorleken ï¿½ndras
 $ SIGINFO
-29 Informationsförfrågan
+29 Informationsfï¿½rfrï¿½gan
 $ SIGUSR1
-30 Användardefinierad signal 1
+30 Anvï¿½ndardefinierad signal 1
 $ SIGUSR2
-31 Användardefinierad signal 2
+31 Anvï¿½ndardefinierad signal 2
 $ SIGPWR
 32 Kraftbortfall/omstart

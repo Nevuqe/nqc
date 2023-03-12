@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD$*/
+/*$NQC$*/
 
 /*
  * 82575EB Gigabit Network Connection

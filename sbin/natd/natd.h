@@ -9,7 +9,7 @@
  *
  * Ari Suutari <suutari@iki.fi>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #define PIDFILE	"/var/run/natd.pid"

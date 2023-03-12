@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "efx.h"
 #include "efx_impl.h"

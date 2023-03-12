@@ -23,7 +23,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef DRM_FIXED_H
 #define DRM_FIXED_H

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD		=  ciss
 .PATH:		${SRCTOP}/sys/dev/${KMOD}

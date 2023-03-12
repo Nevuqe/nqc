@@ -1,4 +1,4 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 /*	$KAME: config.c,v 1.84 2003/08/05 12:34:23 itojun Exp $	*/
 
 /*-

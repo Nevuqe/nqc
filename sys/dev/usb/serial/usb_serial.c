@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Copyright (c) 1998, 2000 The NetBSD Foundation, Inc.

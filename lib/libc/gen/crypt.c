@@ -34,7 +34,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)crypt.c	5.11 (Berkeley) 6/25/91");
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <stdio.h>
 #include <string.h>

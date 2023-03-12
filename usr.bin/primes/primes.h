@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)primes.h	8.2 (Berkeley) 3/1/94
- * $FreeBSD$
+ * $NQC$
  */
 
 /*

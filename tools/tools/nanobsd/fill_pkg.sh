@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD$
+# $NQC$
 #
 # Usage:
 # 	$0 PACKAGE_DUMP NANO_PACKAGE_DIR /usr/ports/foo/bar [package.txz]...

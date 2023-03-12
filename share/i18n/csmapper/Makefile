@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $NetBSD: Makefile,v 1.13 2007/03/13 16:34:37 tnozaki Exp $
 
 FILESDIR= ${CSMAPPERDIR}

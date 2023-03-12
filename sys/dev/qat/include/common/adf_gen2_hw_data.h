@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause  */
 /* Copyright(c) 2021 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef ADF_GEN2_HW_DATA_H_
 #define ADF_GEN2_HW_DATA_H_
 

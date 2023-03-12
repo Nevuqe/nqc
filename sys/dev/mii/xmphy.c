@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * driver for the XaQti XMAC II's internal PHY. This is sort of

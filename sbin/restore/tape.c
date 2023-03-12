@@ -41,7 +41,7 @@ static char sccsid[] = "@(#)tape.c	8.9 (Berkeley) 5/1/95";
 #endif /* not lint */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/file.h>

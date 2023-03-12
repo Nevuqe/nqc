@@ -6,7 +6,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 ENTRY(lldiv)
 	movq	%rdi,%rax

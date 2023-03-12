@@ -1,5 +1,5 @@
 # Makefile for simple caller of syscall
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=examples
 FILESDIR=${SHAREDIR}/examples/kld/test

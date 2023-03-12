@@ -1,5 +1,5 @@
 # $Id: Makefile.def,v 1.18 2007/03/22 11:20:15 gmm Exp $
-# $FreeBSD$
+# $NQC$
 
 HPTRR=  ${SRCTOP}/sys/dev/hptrr
 .PATH: ${HPTRR}

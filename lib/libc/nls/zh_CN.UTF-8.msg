@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for zh_CN.UTF-8 locale
 $

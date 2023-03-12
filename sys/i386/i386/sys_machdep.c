@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_capsicum.h"
 #include "opt_kstack_pages.h"

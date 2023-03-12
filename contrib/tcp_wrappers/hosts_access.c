@@ -16,7 +16,7 @@
   * 
   * Author: Wietse Venema, Eindhoven University of Technology, The Netherlands.
   *
-  * $FreeBSD$
+  * $NQC$
   */
 
 #ifndef lint

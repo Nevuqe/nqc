@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_inet6.h"
 #include "opt_kgssapi.h"

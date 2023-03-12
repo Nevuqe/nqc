@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR=	wtap vis_map
 

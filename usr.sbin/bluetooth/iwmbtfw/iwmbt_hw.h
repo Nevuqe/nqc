@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 #ifndef	__IWMBT_HW_H__
 #define	__IWMBT_HW_H__

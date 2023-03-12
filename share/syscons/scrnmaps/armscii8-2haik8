@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 static scrmap_t scrmap = {

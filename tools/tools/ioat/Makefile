@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	ioatcontrol
 MAN=	ioatcontrol.8

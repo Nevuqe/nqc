@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 args='-ab'
 getopts ab opt $args

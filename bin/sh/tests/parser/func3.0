@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 name=/var/empty/nosuch
 f() { true; } <$name

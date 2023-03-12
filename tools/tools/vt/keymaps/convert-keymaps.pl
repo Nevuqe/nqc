@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# $FreeBSD$
+# $NQC$
 
 use Text::Iconv;
 use Encode;

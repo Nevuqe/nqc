@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * AHB bus front-end for the Atheros Wireless LAN controller driver.

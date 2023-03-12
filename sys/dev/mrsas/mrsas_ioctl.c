@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <dev/mrsas/mrsas.h>
 #include <dev/mrsas/mrsas_ioctl.h>

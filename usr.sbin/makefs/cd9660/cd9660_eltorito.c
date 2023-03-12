@@ -39,7 +39,7 @@
 #include <util.h>
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef DEBUG
 #define	ELTORITO_DPRINTF(__x)	printf __x

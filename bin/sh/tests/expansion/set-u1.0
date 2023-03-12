@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ${SH} -uc 'unset foo; echo $foo' 2>/dev/null && exit 1
 ${SH} -uc 'foo=; echo $foo' >/dev/null || exit 1

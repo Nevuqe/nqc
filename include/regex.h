@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)regex.h	8.2 (Berkeley) 1/3/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _REGEX_H_

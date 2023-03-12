@@ -19,7 +19,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Naive implementation of the Adaptive Multi Rate Retry algorithm:

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	UES
 SRCS+=	citrus_ues.c

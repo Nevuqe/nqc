@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$FreeBSD$
+ *	$NQC$
  *      from: pnp.h,v 1.7 1998/09/13 22:15:44 eivind Exp
  */
 

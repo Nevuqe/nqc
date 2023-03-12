@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # General kernel macros
 
 # Print the command name of the current process

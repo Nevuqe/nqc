@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.1 2003/09/08 02:27:27 max Exp $
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	bluetooth
 PROG=		sdpcontrol

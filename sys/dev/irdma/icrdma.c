@@ -31,7 +31,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-/*$FreeBSD$*/
+/*$NQC$*/
 
 #include <sys/param.h>
 #include <sys/systm.h>

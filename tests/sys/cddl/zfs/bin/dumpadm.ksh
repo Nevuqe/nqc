@@ -1,6 +1,6 @@
 #! /usr/local/bin/ksh93 -p
 
-# $FreeBSD$
+# $NQC$
 
 if [ $# != 0 ]
 then

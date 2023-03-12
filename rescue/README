@@ -40,4 +40,4 @@ To compile:
 Note that rebuilds don't always work correctly; if you run into
 trouble, try 'make clean' before recompiling.
 
-$FreeBSD$
+$NQC$

@@ -33,7 +33,7 @@
  * LC_CTYPE database generation routines for localedef.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/tree.h>
 

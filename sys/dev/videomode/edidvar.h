@@ -1,5 +1,5 @@
 /*	$NetBSD: edidvar.h,v 1.2 2006/05/11 19:05:41 gdamore Exp $	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * Copyright (c) 2006 Itronix Inc.

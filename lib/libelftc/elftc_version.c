@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <sys/types.h>
 #include <libelftc.h>

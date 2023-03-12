@@ -60,7 +60,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)in_pcb.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETINET6_IN6_PCB_H_

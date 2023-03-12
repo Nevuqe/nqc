@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_adaptive_mutexes.h"
 #include "opt_ddb.h"

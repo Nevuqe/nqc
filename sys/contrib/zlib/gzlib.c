@@ -3,7 +3,7 @@
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include "gzguts.h"
 #include "zutil.h"

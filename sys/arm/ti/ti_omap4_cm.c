@@ -27,11 +27,11 @@
  *
  * Based on sys/arm/ti/ti_sysc.c
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

@@ -26,7 +26,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #if defined(__NQC__)
 #include <sys/cdefs.h> /* prerequisite */

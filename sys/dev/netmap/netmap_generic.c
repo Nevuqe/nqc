@@ -67,7 +67,7 @@
 #ifdef __NQC__
 
 #include <sys/cdefs.h> /* prerequisite */
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/errno.h>

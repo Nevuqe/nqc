@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ATF_TESTS_C+=	sbuf_core_test
 ATF_TESTS_C+=	sbuf_stdio_test

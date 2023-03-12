@@ -26,7 +26,7 @@
 #
 #       Email: Mike Makonnen <mtm@FreeBSD.Org>
 #
-# $FreeBSD$
+# $NQC$
 #
 
 # err msg

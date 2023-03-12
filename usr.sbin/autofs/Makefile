@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CONFS=	auto_master
 PACKAGE=autofs

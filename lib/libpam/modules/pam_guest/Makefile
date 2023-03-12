@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=		pam_guest
 SRCS=		pam_guest.c

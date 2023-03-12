@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	TTYMSG_IOV_MAX	32
 

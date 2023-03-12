@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_hci_main.c,v 1.2 2003/03/18 00:09:36 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

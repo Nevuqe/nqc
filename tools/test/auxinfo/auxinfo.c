@@ -2,7 +2,7 @@
  * This file is in public domain.
  * Written by Konstantin Belousov <kib@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/mman.h>

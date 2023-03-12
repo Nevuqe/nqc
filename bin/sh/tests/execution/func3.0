@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This may fail when parsing or when defining the function, or the definition
 # may silently do nothing. In no event may the function be executed.

@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)btree.h	8.11 (Berkeley) 8/17/94
- * $FreeBSD$
+ * $NQC$
  */
 
 /* Macros to set/clear/test flags. */

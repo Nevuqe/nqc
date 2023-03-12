@@ -3,7 +3,7 @@
 # Validate all locales installed in specified directory
 # (by default check system locales)
 #
-# $FreeBSD$
+# $NQC$
 #
 
 LOCALEDIR=/usr/share/locale

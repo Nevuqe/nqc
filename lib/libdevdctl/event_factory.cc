@@ -44,7 +44,7 @@
 #include "event.h"
 #include "event_factory.h"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*================================== Macros ==================================*/
 #define NUM_ELEMENTS(x) (sizeof(x) / sizeof(*x))

@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id$
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

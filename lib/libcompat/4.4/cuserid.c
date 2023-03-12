@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 __SCCSID("@(#)cuserid.c	8.1 (Berkeley) 6/4/93");
 
 #include <pwd.h>

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mlxcontrol
 MAN=	mlxcontrol.8

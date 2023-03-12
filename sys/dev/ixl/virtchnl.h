@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD$*/
+/*$NQC$*/
 
 #ifndef _VIRTCHNL_H_
 #define _VIRTCHNL_H_

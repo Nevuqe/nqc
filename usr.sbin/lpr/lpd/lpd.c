@@ -43,7 +43,7 @@ static char sccsid[] = "@(#)lpd.c	8.7 (Berkeley) 5/10/95";
 #endif
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * lpd -- line printer daemon.

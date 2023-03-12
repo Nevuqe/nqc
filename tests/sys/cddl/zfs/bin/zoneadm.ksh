@@ -1,6 +1,6 @@
 #!/usr/local/bin/ksh93
 
-# $FreeBSD$
+# $NQC$
 
 echo global
 exit 0

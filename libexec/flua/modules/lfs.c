@@ -50,7 +50,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef _STANDALONE
 #include <sys/stat.h>

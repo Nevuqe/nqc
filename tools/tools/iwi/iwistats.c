@@ -1,4 +1,4 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * Copyright (c) 2005
@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/sysctl.h>

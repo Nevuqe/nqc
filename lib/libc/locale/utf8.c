@@ -34,7 +34,7 @@
  */
 
 #include <sys/param.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <errno.h>
 #include <limits.h>

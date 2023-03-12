@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.6 2003/08/14 20:05:58 max Exp $
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	bluetooth
 PROG=		bcmfw

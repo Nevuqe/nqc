@@ -14,7 +14,7 @@ static char sccsid[] = "%Z% %M% %I% %E% %U%";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/param.h>

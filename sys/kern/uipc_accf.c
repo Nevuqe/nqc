@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define ACCEPT_FILTER_MOD
 

@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <rpc/rpc.h>
 #include <rpcsvc/yp.h>

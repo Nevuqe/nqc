@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for es_ES.ISO8859-1 locale
 $
@@ -6,7 +6,7 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Operación no permitida
+1 Operaciï¿½n no permitida
 $ ENOENT
 2 Fichero o directorio inexistente
 $ ESRCH
@@ -32,7 +32,7 @@ $ ENOMEM
 $ EACCES
 13 Permiso denegado
 $ EFAULT
-14 Dirección incorrecta
+14 Direcciï¿½n incorrecta
 $ ENOTBLK
 15 Se necesita un dispositivo de bloques
 $ EBUSY
@@ -42,7 +42,7 @@ $ EEXIST
 $ EXDEV
 18 Enlace entre dispositivos
 $ ENODEV
-19 Operación inadecuada para este dispositivo
+19 Operaciï¿½n inadecuada para este dispositivo
 $ ENOTDIR
 20 No es un directorio
 $ EISDIR
@@ -62,7 +62,7 @@ $ EFBIG
 $ ENOSPC
 28 No queda espacio libre en el dispositivo
 $ ESPIPE
-29 Búsqueda ilegal
+29 Bï¿½squeda ilegal
 $ EROFS
 30 Sistema de ficheros de solo lectura
 $ EMLINK
@@ -70,23 +70,23 @@ $ EMLINK
 $ EPIPE
 32 Canal (pipe) roto
 $ EDOM
-33 Argumento numérico fuera de rango
+33 Argumento numï¿½rico fuera de rango
 $ ERANGE
 34 El resultado es demasiado grande
 $ EAGAIN, EWOULDBLOCK
-35 el recurso no está disponible temporalmente
+35 el recurso no estï¿½ disponible temporalmente
 $ EINPROGRESS
-36 Operación en proceso
+36 Operaciï¿½n en proceso
 $ EALREADY
-37 La operación ya se está ejecutando
+37 La operaciï¿½n ya se estï¿½ ejecutando
 $ ENOTSOCK
-38 Operación de socket inaceptable para el dispositivo
+38 Operaciï¿½n de socket inaceptable para el dispositivo
 $ EDESTADDRREQ
-39 Se necesita una dirección de destino
+39 Se necesita una direcciï¿½n de destino
 $ EMSGSIZE
 40 Mensaje demasiado largo
 $ EPROTOTYPE
-41 Tipo erróneo de protocolo para el socket
+41 Tipo errï¿½neo de protocolo para el socket
 $ ENOPROTOOPT
 42 Protocolo no disponible
 $ EPROTONOSUPPORT
@@ -94,49 +94,49 @@ $ EPROTONOSUPPORT
 $ ESOCKTNOSUPPORT
 44 Tipo de socket no contemplado
 $ EOPNOTSUPP
-45 Operación no contemplada
+45 Operaciï¿½n no contemplada
 $ EPFNOSUPPORT
 46 Familia de protocolos no contemplada
 $ EAFNOSUPPORT
 47 Familia de direcciones no contemplada por la familia de protocolos
 $ EADDRINUSE
-48 La dirección ya está siendo usada
+48 La direcciï¿½n ya estï¿½ siendo usada
 $ EADDRNOTAVAIL
-49 No se pudo asignar la dirección requerida
+49 No se pudo asignar la direcciï¿½n requerida
 $ ENETDOWN
 50 La red no funciona
 $ ENETUNREACH
 51 No se ha podido acceder a la red
 $ ENETRESET
-52 La conexión de red se ha interrumpido al reinicializar
+52 La conexiï¿½n de red se ha interrumpido al reinicializar
 $ ECONNABORTED
-53 Conexión perdida por problemas en el software
+53 Conexiï¿½n perdida por problemas en el software
 $ ECONNRESET
-54 El interlocutor ha reinicializado la conexión
+54 El interlocutor ha reinicializado la conexiï¿½n
 $ ENOBUFS
-55 No queda espacio en el búfer
+55 No queda espacio en el bï¿½fer
 $ EISCONN
 56 El socket ya estaba conectado
 $ ENOTCONN
-57 El socket no está conectado
+57 El socket no estï¿½ conectado
 $ ESHUTDOWN
-58 No se puede enviar tras la desconexión del socket
+58 No se puede enviar tras la desconexiï¿½n del socket
 $ ETOOMANYREFS
 59 Demasiadas referencias: no se pueden unir
 $ ETIMEDOUT
-60 El tiempo de conexión ha expirado
+60 El tiempo de conexiï¿½n ha expirado
 $ ECONNREFUSED
-61 Conexión rehusada
+61 Conexiï¿½n rehusada
 $ ELOOP
-62 Demasiados niveles de enlaces simbólicos
+62 Demasiados niveles de enlaces simbï¿½licos
 $ ENAMETOOLONG
 63 Nombre de fichero demasiado largo
 $ EHOSTDOWN
-64 La máquina está fuera de servicio
+64 La mï¿½quina estï¿½ fuera de servicio
 $ EHOSTUNREACH
-65 No hay ruta hasta la máquina
+65 No hay ruta hasta la mï¿½quina
 $ ENOTEMPTY
-66 Directorio no vacío
+66 Directorio no vacï¿½o
 $ EPROCLIM
 67 Demasiados procesos
 $ EUSERS
@@ -144,27 +144,27 @@ $ EUSERS
 $ EDQUOT
 69 Cuota de disco sobrepasada
 $ ESTALE
-70 Descriptor de fichero NFS inválido
+70 Descriptor de fichero NFS invï¿½lido
 $ EREMOTE
 71 Ruta con demasiados niveles
 $ EBADRPC
-72 La estructura de la RPC es errónea
+72 La estructura de la RPC es errï¿½nea
 $ ERPCMISMATCH
-73 La versón de la RPC es errónea
+73 La versï¿½n de la RPC es errï¿½nea
 $ EPROGUNAVAIL
-74 La RPC no está accesible
+74 La RPC no estï¿½ accesible
 $ EPROGMISMATCH
-75 Versión errónea del programa
+75 Versiï¿½n errï¿½nea del programa
 $ EPROCUNAVAIL
-76 Procedimiento erróneo para el programa
+76 Procedimiento errï¿½neo para el programa
 $ ENOLCK
 77 No hay bloqueos disponibles
 $ ENOSYS
-78 Función no realizada
+78 Funciï¿½n no realizada
 $ EFTYPE
 79 Tipo de fichero o formato inapropiado
 $ EAUTH
-80 Error de autentificación
+80 Error de autentificaciï¿½n
 $ ENEEDAUTH
 81 Se necesita un autenticador
 $ EIDRM
@@ -174,15 +174,15 @@ $ ENOMSG
 $ EOVERFLOW
 84 Valor demasiado grande para almacenarse en el tipo deseado
 $ ECANCELED
-85 Operación cancelada
+85 Operaciï¿½n cancelada
 $ EILSEQ
 86 Secuencia de bytes ilegal
 $ ENOATTR
 87 Atributo no encontrado
 $ EDOOFUS
-88 Error de programación
+88 Error de programaciï¿½n
 $ EBADMSG
-89 Mensaje inválido
+89 Mensaje invï¿½lido
 $ EMULTIHOP
 90 Intento de hop multiple
 $ ENOLINK
@@ -196,13 +196,13 @@ $ strsignal() support catalog
 $
 $set 2
 $ SIGHUP
-1 Fin de línea (Hangup)
+1 Fin de lï¿½nea (Hangup)
 $ SIGINT
 2 Interrumpido
 $ SIGQUIT
 3 Terminado
 $ SIGILL
-4 Instrucción ilegal
+4 Instrucciï¿½n ilegal
 $ SIGTRAP
 5 Trace/BPT trap
 $ SIGABRT
@@ -210,15 +210,15 @@ $ SIGABRT
 $ SIGEMT
 7 EMT trap
 $ SIGFPE
-8 Excepción de coma flotante
+8 Excepciï¿½n de coma flotante
 $ SIGKILL
 9 Matado
 $ SIGBUS
 10 Error en el bus
 $ SIGSEGV
-11 Fallo de segmentación
+11 Fallo de segmentaciï¿½n
 $ SIGSYS
-12 Llamada al sistema errónea
+12 Llamada al sistema errï¿½nea
 $ SIGPIPE
 13 Canal (pipe) roto
 $ SIGALRM
@@ -226,9 +226,9 @@ $ SIGALRM
 $ SIGTERM
 15 Terminado
 $ SIGURG
-16 Condición urgente de E/S
+16 Condiciï¿½n urgente de E/S
 $ SIGSTOP
-17 Detenido (señal)
+17 Detenido (seï¿½al)
 $ SIGTSTP
 18 Detenido
 $ SIGCONT
@@ -242,41 +242,41 @@ $ SIGTTOU
 $ SIGIO
 23 E/S posible
 $ SIGXCPU
-24 Se ha sobrepasado el tiempo límite de la CPU
+24 Se ha sobrepasado el tiempo lï¿½mite de la CPU
 $ SIGXFSZ
-25 Se ha sobrepasado el límite de tamaño de fichero
+25 Se ha sobrepasado el lï¿½mite de tamaï¿½o de fichero
 $ SIGVTALRM
 26 Temporizador virtual expirado
 $ SIGPROF
-27 Temporizador de perfilación expirado
+27 Temporizador de perfilaciï¿½n expirado
 $ SIGWINCH
-28 Cambios en el tamaño de ventana
+28 Cambios en el tamaï¿½o de ventana
 $ SIGINFO
-29 Petición de información
+29 Peticiï¿½n de informaciï¿½n
 $ SIGUSR1
-30 Señal definida por el usuario n1
+30 Seï¿½al definida por el usuario n1
 $ SIGUSR2
-31 Señal definida por el usuario n2
+31 Seï¿½al definida por el usuario n2
 $
 $ gai_strerror() support catalog
 $
 $set 3
 $ 1 (obsoleto)
-1 Tipo de dirección no contemplado
+1 Tipo de direcciï¿½n no contemplado
 $ EAI_AGAIN
-2 Error transitorio en la resolución de nombres
+2 Error transitorio en la resoluciï¿½n de nombres
 $ EAI_BADFLAGS
-3 Valor inválido de ai_flags
+3 Valor invï¿½lido de ai_flags
 $ EAI_FAIL
-4 Error no recuperable en la resolución de nombres
+4 Error no recuperable en la resoluciï¿½n de nombres
 $ EAI_FAMILY
 5 ai_family no contemplado
 $ EAI_MEMORY
-6 Error en la asignación de memoria
+6 Error en la asignaciï¿½n de memoria
 $ 7 (obsoleto)
-7 No hay dirección asociada con el nombre de máquina
+7 No hay direcciï¿½n asociada con el nombre de mï¿½quina
 $ EAI_NONAME
-8 No se dispone nombre de máquina, ni nombre de servicio
+8 No se dispone nombre de mï¿½quina, ni nombre de servicio
 $ EAI_SERVICE
 9 Nombre de servicio no contemplado en ai_socktype
 $ EAI_SOCKTYPE
@@ -284,12 +284,12 @@ $ EAI_SOCKTYPE
 $ EAI_SYSTEM
 11 Error de sistema devuelto en errno
 $ EAI_BADHINTS
-12 Valor inválido de hints
+12 Valor invï¿½lido de hints
 $ EAI_PROTOCOL
 13 Protocolo resuelto desconocido
 $ EAI_OVERFLOW
-14 Búfer de argumentos sobrepasado
+14 Bï¿½fer de argumentos sobrepasado
 $ 0
-32766 Éxito
+32766 ï¿½xito
 $ NL_MSGMAX
 32767 Error desconocido

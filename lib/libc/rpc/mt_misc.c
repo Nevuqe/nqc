@@ -2,7 +2,7 @@
 
 /* #pragma ident	"@(#)mt_misc.c	1.24	93/04/29 SMI" */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "namespace.h"
 #include "reentrant.h"

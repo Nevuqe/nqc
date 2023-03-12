@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 f() { return 42; }
 f

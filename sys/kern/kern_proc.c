@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_ddb.h"
 #include "opt_ktrace.h"

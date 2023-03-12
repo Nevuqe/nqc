@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 This directory contains tools intended to help committers use git when
 interacting with standard FreeBSD project resources like Differential.

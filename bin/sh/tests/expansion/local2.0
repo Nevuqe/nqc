@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 run_test() {
 	w='@ @'

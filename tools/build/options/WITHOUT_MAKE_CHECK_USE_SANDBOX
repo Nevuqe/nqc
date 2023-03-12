@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not execute
 .Dq Li "make check"
 in limited sandbox mode.

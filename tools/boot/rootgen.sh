@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NQC$
 
 passphrase=passphrase
 iterations=50000

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <sys/param.h>
 #include <sys/time.h>

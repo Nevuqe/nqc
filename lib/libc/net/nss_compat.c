@@ -34,7 +34,7 @@
  * Compatibility shims for the GNU C Library-style nsswitch interface.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "namespace.h"
 #include <sys/param.h>

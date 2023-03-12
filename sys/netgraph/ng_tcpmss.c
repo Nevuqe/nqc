@@ -31,7 +31,7 @@
  * This software includes fragments of the following programs:
  *	tcpmssd		Ruslan Ermilov <ru@FreeBSD.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /*

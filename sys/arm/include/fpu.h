@@ -1,7 +1,7 @@
 /*-
  * This file is in the public domain.
  *
- * $FreeBSD$
+ * $NQC$
  */
 #include <machine/ucontext.h>
 #include <machine/vfp.h>

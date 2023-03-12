@@ -25,7 +25,7 @@
  */
 
 #include "lafe_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_STDARG_H
 #include <stdarg.h>

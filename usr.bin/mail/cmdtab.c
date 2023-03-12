@@ -35,7 +35,7 @@ static char sccsid[] = "@(#)cmdtab.c	8.1 (Berkeley) 6/6/93";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "def.h"
 #include "extern.h"

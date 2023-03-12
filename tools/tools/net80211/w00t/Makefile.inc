@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 W00T=	../libw00t
 # NB: we get crc32 from -lz

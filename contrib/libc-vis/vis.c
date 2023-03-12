@@ -60,7 +60,7 @@
 __RCSID("$NetBSD: vis.c,v 1.74 2017/11/27 16:37:21 christos Exp $");
 #endif /* LIBC_SCCS and not lint */
 #ifdef __NQCID
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #define	_DIAGASSERT(x)	assert(x)
 #endif
 

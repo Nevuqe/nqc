@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # DTS files for the Raspberry Pi-B
 .if ${MACHINE_ARCH:Marmv[67]*} != ""
 DTSO=	\

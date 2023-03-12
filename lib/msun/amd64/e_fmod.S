@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$")
+__NQCID("$NQC$")
 
 ENTRY(fmod)
 	movsd	%xmm0,-8(%rsp)

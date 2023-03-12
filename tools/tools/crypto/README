@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 The cryptotest program repeatedly encrypts and decrypts a buffer
 with the built-in iv and key, using hardware crypto.  At the end,

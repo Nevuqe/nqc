@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)resourcevar.h	8.4 (Berkeley) 1/9/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_SYS_RESOURCEVAR_H_

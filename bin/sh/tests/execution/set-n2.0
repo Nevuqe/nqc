@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 $SH -n <<'EOF'
 echo bad

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 command -V ls
 command -V true
 command -V /bin/ls

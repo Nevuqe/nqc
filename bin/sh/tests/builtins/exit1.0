@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # exit with an argument should overwrite the exit status in an EXIT trap.
 

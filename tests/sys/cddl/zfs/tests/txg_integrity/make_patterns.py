@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-# $FreeBSD$
+# $NQC$
 
 # Generate random IO patterns for the txg_integrity test
 # We do this statically and embed the results into the code so that the

@@ -33,7 +33,7 @@
 #include "opt_acpi.h"
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/systm.h>

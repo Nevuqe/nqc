@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 atf_test_case ident
 ident_body() {

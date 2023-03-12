@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef QAT_NQC_H_
 #define QAT_NQC_H_
 

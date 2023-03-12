@@ -1,5 +1,5 @@
 /*	$NetBSD: videomode.h,v 1.2 2010/05/04 21:17:10 macallan Exp $	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*
  * Copyright (c) 2001, 2002 Bang Jun-Young

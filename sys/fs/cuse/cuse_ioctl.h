@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*-
  * Copyright (c) 2014-2022 Hans Petter Selasky. All rights reserved.
  *

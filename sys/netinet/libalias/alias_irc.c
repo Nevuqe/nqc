@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* Alias_irc.c intercepts packages contain IRC CTCP commands, and
 	changes DCC commands to export a port on the aliasing host instead

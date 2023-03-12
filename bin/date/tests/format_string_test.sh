@@ -3,7 +3,7 @@
 #
 # Submitted by Edwin Groothuis <edwin@FreeBSD.org>
 #
-# $FreeBSD$
+# $NQC$
 #
 
 #

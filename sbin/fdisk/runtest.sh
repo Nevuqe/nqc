@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 set -e
 MD=`mdconfig -a -t malloc -s 4m -x 63 -y 16`

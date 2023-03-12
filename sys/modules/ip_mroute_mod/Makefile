@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/netinet ${SRCTOP}/sys/netinet6
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	ipcrm
 SRCS=	ipcrm.c ipc.c

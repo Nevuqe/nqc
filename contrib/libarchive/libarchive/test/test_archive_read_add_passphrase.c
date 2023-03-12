@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 struct archive_read;
 extern void __archive_read_reset_passphrase(struct archive_read *);

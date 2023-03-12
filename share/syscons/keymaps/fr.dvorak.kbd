@@ -4,9 +4,9 @@
 # according to Francis Leboutte on 
 # http://www.algo.be/ergo/dvorak-fr.html
 #
-#   -Frédéric Praca <frederic.praca@freebsd-fr.org>
+#   -Frï¿½dï¿½ric Praca <frederic.praca@freebsd-fr.org>
 #
-# $FreeBSD$
+# $NQC$
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock
 # code  base   shift  cntrl  shift  alt    shift  cntrl  shift state
@@ -14,9 +14,9 @@
   000   nop    nop    nop    nop    nop    nop    nop    nop     O
   001   esc    esc    esc    esc    esc    esc    debug  esc     O		 	 	 
   002	'='    '1'    nop    ' '    '='    '1'    nop    nop     C
-  003	224    '2'    nop    '~'    'à'    '2'    nop    nop     C
+  003	224    '2'    nop    '~'    'ï¿½'    '2'    nop    nop     C
   004	'-'    '3'    nop    '#'    '-'    '3'    nop    nop     C
-  005	232    '4'    nop    '{'    'è'    '4'    nop    nop     C
+  005	232    '4'    nop    '{'    'ï¿½'    '4'    nop    nop     C
   006	'/'    '5'    nop    '['    '/'    '5'    nop    nop     C
   007	'^'    '6'    nop    '|'    '^'    '6'    nop    nop     C
   008	'('    '7'    nop    '`'    '('    '7'    nop    nop     C
@@ -29,7 +29,7 @@
   015   ht     btab   nop    nop    ht     btab   nop    nop     O
   016	':'    '?'    nop    ' '    ':'    '?'    nop    nop     O
   017	'''    '<'    nop    ' '    '''    '<'    nop    nop     C
-  018	233    '>'    nop    '?'    'é'    '>'    nop    nop     C
+  018	233    '>'    nop    '?'    'ï¿½'    '>'    nop    nop     C
   019	'g'    'G'    nop    ' '    'g'    'G'    nop    nop     C
   020	'.'    '!'    nop    ' '    '.'    '!'    nop    nop     O
   021	'h'    'H'    nop    ' '    'h'    'H'    nop    nop     C
@@ -38,7 +38,7 @@
   024	'm'    'M'    nop    ' '    'm'    'M'    nop    nop     C
   025	'k'    'K'    nop    ' '    'k'    'K'    nop    nop     C
   026	'z'    'Z'    nop    ' '    'z'    'Z'    nop    nop     C
-  027	168    '&'    nop    '¤'    '¨'    '&'    nop    nop     C
+  027	168    '&'    nop    'ï¿½'    'ï¿½'    '&'    nop    nop     C
   028   cr     cr     nl     nl     cr     cr     nl     nl      O
   029   lctrl  lctrl  lctrl  lctrl  lctrl  lctrl  lctrl  lctrl   O
   030	'o'    'O'    nop    ' '    'o'    'O'    nop    nop     C

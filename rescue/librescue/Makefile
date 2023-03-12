@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 .include <src.opts.mk>

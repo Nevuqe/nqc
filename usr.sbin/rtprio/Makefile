@@ -1,5 +1,5 @@
 #	from: @(#)Makefile	5.5 (Berkeley) 5/11/90
-# $FreeBSD$
+# $NQC$
 
 PROG=	rtprio
 LINKS=  ${BINDIR}/rtprio ${BINDIR}/idprio

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 # Start up for the Audit daemon.
 #

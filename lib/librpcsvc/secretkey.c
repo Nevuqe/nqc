@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if !defined(lint) && defined(SCCSIDS)
 static char sccsid[] = "@(#)secretkey.c 1.8 91/03/11 Copyr 1986 Sun Micro";

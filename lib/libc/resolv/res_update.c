@@ -28,7 +28,7 @@ static const char rcsid[] = "$Id: res_update.c,v 1.13 2005/04/27 04:56:43 sra Ex
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "port_before.h"
 

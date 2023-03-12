@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	quot
 MAN=	quot.8

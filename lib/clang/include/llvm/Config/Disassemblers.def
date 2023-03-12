@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef LLVM_DISASSEMBLER
 #  error Please define the macro LLVM_DISASSEMBLER(TargetName)

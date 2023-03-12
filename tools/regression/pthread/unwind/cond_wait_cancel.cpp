@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Test stack unwinding for pthread_cond_wait function */
 
 #include <pthread.h>

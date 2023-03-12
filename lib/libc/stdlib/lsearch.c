@@ -8,7 +8,7 @@
  */
 #include <sys/types.h>
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define	_SEARCH_PRIVATE
 #include <search.h>

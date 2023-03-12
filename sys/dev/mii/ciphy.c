@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for the Cicada/Vitesse CS/VSC8xxx 10/100/1000 copper PHY.

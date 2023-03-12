@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* PCI/PCI-X/PCIe bus interface for the LSI MegaSAS controllers */
 

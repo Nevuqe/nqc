@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build the
 .Xr llvm-cov 1
 tool.

@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Intel(R) PRO/Wireless 2100 MiniPCI driver

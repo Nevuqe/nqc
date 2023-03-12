@@ -41,7 +41,7 @@
 static char sccsid[] = "@(#)scanf.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "namespace.h"
 #include <stdio.h>

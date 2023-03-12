@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 REGRESSION_START($1)
 

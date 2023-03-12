@@ -49,7 +49,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* Sets and clears bits in the CPSR register
  *

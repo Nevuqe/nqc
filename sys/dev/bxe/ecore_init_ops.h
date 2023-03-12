@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef ECORE_INIT_OPS_H
 #define ECORE_INIT_OPS_H

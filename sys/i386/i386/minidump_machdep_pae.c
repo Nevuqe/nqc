@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define	PMAP_PAE_COMP
 #include <sys/param.h>

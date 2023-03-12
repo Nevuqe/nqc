@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	runtime
 PROG=	ip6addrctl

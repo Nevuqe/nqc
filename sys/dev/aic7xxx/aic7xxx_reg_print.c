@@ -7,7 +7,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #include <dev/aic7xxx/aic7xxx_osm.h>
 
 static ahc_reg_parse_entry_t SCSISEQ_parse_table[] = {

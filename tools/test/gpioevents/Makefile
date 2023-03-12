@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG= gpioevents
 SRCS= gpioevents.c

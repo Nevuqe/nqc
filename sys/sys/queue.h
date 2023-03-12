@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)queue.h	8.5 (Berkeley) 8/20/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_QUEUE_H_

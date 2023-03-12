@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mpsutil
 SRCS=	mps_cmd.c mps_debug.c mps_flash.c mps_set.c mps_show.c mps_slot.c mpsutil.c

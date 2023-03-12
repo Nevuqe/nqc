@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: sp.c,v 1.5 2004/01/13 01:54:39 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/queue.h>

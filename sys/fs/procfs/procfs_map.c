@@ -34,7 +34,7 @@
  *
  *	@(#)procfs_status.c	8.3 (Berkeley) 2/17/94
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

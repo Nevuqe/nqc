@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mkuzip
 MAN=	mkuzip.8

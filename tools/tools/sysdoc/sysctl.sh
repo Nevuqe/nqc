@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 # For each sysctl, repeat:
 #	if it has a short description

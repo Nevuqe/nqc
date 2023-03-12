@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/contrib/openzfs/module/nvpair
 .PATH: ${SRCTOP}/sys/contrib/openzfs/lib/libnvpair

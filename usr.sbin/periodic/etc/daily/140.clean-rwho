@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 # Remove stale files in /var/rwho
 #

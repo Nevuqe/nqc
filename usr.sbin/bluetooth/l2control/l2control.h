@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: l2control.h,v 1.1 2002/11/24 20:22:41 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _L2CONTROL_H_

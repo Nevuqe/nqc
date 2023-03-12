@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Option file for FreeBSD /usr/src builds, at least the userland and boot loader
 # portions of the tree. These options generally chose what parts of the tree to

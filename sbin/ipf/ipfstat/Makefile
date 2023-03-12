@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 NOGCCERROR=	# defined
 

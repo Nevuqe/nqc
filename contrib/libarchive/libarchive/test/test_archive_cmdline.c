@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define __LIBARCHIVE_TEST
 #include "archive_cmdline_private.h"

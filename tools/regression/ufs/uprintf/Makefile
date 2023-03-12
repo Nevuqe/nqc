@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	ufs_uprintf
 WARNS?=	3

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)limits.h	8.3 (Berkeley) 1/4/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_LIMITS_H_

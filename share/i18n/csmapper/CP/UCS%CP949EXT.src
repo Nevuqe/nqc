@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $NetBSD: UCS%CP949EXT.src,v 1.6 2006/02/11 17:31:43 tnozaki Exp $
 
 TYPE		ROWCOL

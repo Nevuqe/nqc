@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # avoid duplication
 DIRDEPS.AUDIT.yes= lib/libbsm

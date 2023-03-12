@@ -24,7 +24,7 @@
  * behaviour
  *
  * $OpenBSD: common.h,v 1.26 2006/03/11 19:41:30 otto Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

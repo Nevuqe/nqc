@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_MACHINE_SPEAKER_H_

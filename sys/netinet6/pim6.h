@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	$KAME: pim6.h,v 1.3 2000/03/25 07:23:58 sumikawa Exp $
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Protocol Independent Multicast (PIM) definitions

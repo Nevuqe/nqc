@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 int	 asprintf_l(char **, locale_t, const char *, ...) __printflike(3, 4);

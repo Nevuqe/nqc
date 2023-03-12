@@ -1,2 +1,2 @@
-# $FreeBSD$
+# $NQC$
 case x in x) </dev/null ;; esac

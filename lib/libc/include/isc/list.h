@@ -17,7 +17,7 @@
  * OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef LIST_H
 #define LIST_H 1

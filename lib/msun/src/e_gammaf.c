@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* __ieee754_gammaf(x)
  * Return the logarithm of the Gamma function of x.

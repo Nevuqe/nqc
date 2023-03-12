@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Build modules specific to Texas Instruments ARM SoCs.
 
 SUBDIR = \

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	teken
 SHLIB_MAJOR= 0

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:		${ZFSSRC}
 .PATH:		${SYSDIR}/crypto/skein

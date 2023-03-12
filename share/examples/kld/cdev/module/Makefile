@@ -1,5 +1,5 @@
 # Makefile for kld char device driver.
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=examples
 FILESDIR=${SHAREDIR}/examples/kld/${KMOD}/module

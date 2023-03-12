@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 TEST_MDS_FILE="${TMPDIR}/test_mds.$(basename $0)"
 

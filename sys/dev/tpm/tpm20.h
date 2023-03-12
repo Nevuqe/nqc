@@ -29,7 +29,7 @@
 #define	_TPM20_H_
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/endian.h>
 #include <sys/param.h>

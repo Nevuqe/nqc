@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /**
  * WARC is standardised by ISO TC46/SC4/WG12 and currently available as

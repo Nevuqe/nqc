@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 mkimg_blksz_list="512 4096"
 mkimg_format_list="qcow qcow2 raw vhd vhdf vhdx vmdk"

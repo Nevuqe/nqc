@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if defined(__i386__) || (defined(__amd64__) && defined(COMPAT_LINUX32))
 #define	__ELF_WORD_SIZE	32

@@ -57,7 +57,7 @@
  *   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _DEV_PCI_QATVAR_H_
 #define _DEV_PCI_QATVAR_H_

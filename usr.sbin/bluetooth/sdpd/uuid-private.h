@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: uuid-private.h,v 1.1 2004/12/09 18:20:26 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _UUID_PRIVATE_H_

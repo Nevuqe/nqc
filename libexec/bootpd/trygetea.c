@@ -1,7 +1,7 @@
 /*
  * trygetea.c - test program for getether.c
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

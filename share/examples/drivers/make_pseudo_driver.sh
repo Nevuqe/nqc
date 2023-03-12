@@ -6,7 +6,7 @@
 #
 # Trust me, RUN THIS SCRIPT :)
 #
-# $FreeBSD$
+# $NQC$
 #
 #-------cut here------------------
 

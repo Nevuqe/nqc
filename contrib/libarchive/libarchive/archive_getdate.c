@@ -30,7 +30,7 @@
 #include "archive_platform.h"
 #ifdef __NQC__
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #endif
 
 #include <ctype.h>

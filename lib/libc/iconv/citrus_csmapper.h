@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*	$NetBSD: citrus_csmapper.h,v 1.3 2013/06/24 17:28:35 joerg Exp $	*/
 
 /*-

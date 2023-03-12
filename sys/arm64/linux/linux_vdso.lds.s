@@ -2,7 +2,7 @@
  * Linker script for 64-bit vDSO.
  * Copied from Linux kernel arch/arm64/kernel/vdso/vdso.lds.S
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 SECTIONS

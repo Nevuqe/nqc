@@ -1,5 +1,5 @@
 # vim: filetype=sh
-# $FreeBSD$
+# $NQC$
 
 . ${STF_SUITE}/include/libtest.kshlib
 . ${STF_SUITE}/include/commands.cfg

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # keyboard mapping for both Ukrainian and Russian languages, koi8-u charset.
 #   by sia@lot.cs.kiev.ua
@@ -7,7 +7,7 @@
 #
 #   it has  'i', 'ye','yi',"g'" at positions of '-','=','\','`';
 #       ->`1234567890-=\<-
-#       ->­1234567890¦¤§<-
+#       ->ï¿½1234567890ï¿½ï¿½ï¿½<-
 #   Lwin,Rwin=Meta, Menu=Screensaver
 #   PrScr=NextScreen, Shift+PrScr=PrevScreen
 #   Shift+Insert=paste

@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build LUA bindings for the boot loader.

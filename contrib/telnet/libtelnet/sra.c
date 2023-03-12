@@ -30,7 +30,7 @@
 
 #include <sys/cdefs.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef	SRA
 #ifdef	ENCRYPTION

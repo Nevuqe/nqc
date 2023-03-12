@@ -483,7 +483,7 @@ char *yytext;
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 #include "parser.h"
 #include <assert.h>

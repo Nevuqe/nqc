@@ -9,7 +9,7 @@
 #include "softfloat.h"
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef FLOATX80
 

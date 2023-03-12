@@ -1,7 +1,7 @@
 # This is a generated file, do NOT edit!
 # See contrib/bmake/bsd.after-import.mk
 #
-# $FreeBSD$
+# $NQC$
 # $Id: Makefile,v 1.191 2023/01/24 06:09:49 sjg Exp $
 #
 # $NetBSD: Makefile,v 1.331 2023/01/24 00:24:02 sjg Exp $

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 set -e
 
 P=${TMPDIR:-/tmp}

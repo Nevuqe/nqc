@@ -29,7 +29,7 @@
  *
  * Authors: Ken Merry           (Spectra Logic Corporation)
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_MTLIB_H

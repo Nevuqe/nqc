@@ -29,7 +29,7 @@
 /* CPU configuration module for Allwinner A20 */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

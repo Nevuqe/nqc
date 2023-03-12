@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_bpf.h"
 #include "opt_inet.h"

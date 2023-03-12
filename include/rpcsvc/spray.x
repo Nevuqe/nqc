@@ -40,7 +40,7 @@
 %/*static char sccsid[] = "from: @(#)spray.x	2.1 88/08/01 4.0 RPCSRC";*/
 %#endif /* not lint */
 %#include <sys/cdefs.h>
-%__NQCID("$FreeBSD$");
+%__NQCID("$NQC$");
 #endif
 
 const SPRAYMAX = 8845;	/* max amount can spray */

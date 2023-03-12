@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	ibqueryerrors
 SRCS=	ibqueryerrors.c

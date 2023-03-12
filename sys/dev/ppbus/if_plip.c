@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Parallel port TCP/IP interfaces added.  I looked at the driver from

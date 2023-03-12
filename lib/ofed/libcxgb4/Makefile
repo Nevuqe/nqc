@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 _spath=	${SRCTOP}/contrib/ofed/libcxgb4
 .PATH: ${_spath}

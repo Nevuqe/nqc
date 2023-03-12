@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*	$OpenBSD: umoscom.c,v 1.2 2006/10/26 06:02:43 jsg Exp $	*/
 
 /*

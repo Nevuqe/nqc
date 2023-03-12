@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $FreeBSD$
+# $NQC$
 #
 # Merge two boot loader help files for FreeBSD 3.0
 # Joe Abley <jabley@patho.gen.nz>

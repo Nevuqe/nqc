@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #include <unistd.h>
 
 static uint32_t buf[512/4];

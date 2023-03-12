@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD$
+# $NQC$
 
 #
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.

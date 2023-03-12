@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # $Whistle: Makefile,v 1.1 1999/01/24 06:48:07 archie Exp $
 
 .PATH: ${SRCTOP}/sys/net

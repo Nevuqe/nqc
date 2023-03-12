@@ -31,7 +31,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*
  * Sundance Technology PCI vendor ID

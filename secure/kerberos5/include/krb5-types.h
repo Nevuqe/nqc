@@ -2,7 +2,7 @@
  * generic krb5-types.h for cross compiling, assume system is posix/sus
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef __krb5_types_h__
 #define __krb5_types_h__

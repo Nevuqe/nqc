@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # Copyright(c) 2007-2022 Intel Corporation
-# $FreeBSD$
+# $NQC$
 .PATH:	${SRCTOP}/sys/dev/qat/qat_common
 
 KMOD= qat_common

@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)ualarm.c	8.1 (Berkeley) 6/4/93");
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/time.h>
 #include <unistd.h>

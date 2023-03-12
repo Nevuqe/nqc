@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * fabsf(x) returns the absolute value of x.

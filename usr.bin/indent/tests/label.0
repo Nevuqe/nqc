@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* See r303489 */
 void t(void) {
 	switch (1)

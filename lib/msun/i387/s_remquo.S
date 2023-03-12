@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$"); 
+__NQCID("$NQC$"); 
 	
 ENTRY(remquo)
 	fldl	12(%esp)

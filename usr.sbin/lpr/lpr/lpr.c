@@ -52,7 +52,7 @@ static char sccsid[] = "@(#)lpr.c	8.4 (Berkeley) 4/28/95";
 #endif
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  *      lpr -- off line print

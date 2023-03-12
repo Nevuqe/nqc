@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${LIBC_SRCTOP}/arm/aeabi
 

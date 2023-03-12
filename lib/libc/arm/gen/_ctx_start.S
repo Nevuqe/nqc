@@ -1,6 +1,6 @@
 #include <machine/asm.h>
 
-.ident	"$FreeBSD$"
+.ident	"$NQC$"
 ENTRY(_ctx_start)
 	mov	lr, pc
 	mov	pc, r4

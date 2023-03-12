@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 echo before: $LINENO
 dummy=$'a\0

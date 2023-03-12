@@ -58,7 +58,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * driver for Quality Semiconductor's QS6612 ethernet 10/100 PHY

@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 This directory contains regression tests for make(1).
 

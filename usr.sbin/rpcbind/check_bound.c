@@ -1,5 +1,5 @@
 /*	$NetBSD: check_bound.c,v 1.2 2000/06/22 08:09:26 fvdl Exp $	*/
-/*	$FreeBSD$ */
+/*	$NQC$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

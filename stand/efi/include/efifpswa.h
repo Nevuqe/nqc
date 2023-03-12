@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFI_FPSWA_H
 #define _EFI_FPSWA_H
 

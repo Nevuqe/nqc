@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #	@(#)Makefile	8.1 (Berkeley) 6/8/93
 
 # Only parse this if executing make in this directory, not in other places

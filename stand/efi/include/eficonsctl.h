@@ -29,7 +29,7 @@
  * Abstract: Abstraction of a Text mode or GOP/UGA screen
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _EFI_CONS_CTL_H
 #define _EFI_CONS_CTL_H

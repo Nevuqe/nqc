@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _PORT_AFTER_H_
 #define _PORT_AFTER_H_

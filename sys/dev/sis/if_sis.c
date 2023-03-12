@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * SiS 900/SiS 7016 fast ethernet PCI NIC driver. Datasheets are

@@ -12,7 +12,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * ld80 version of k_tan.c.  See ../src/k_tan.c for most comments.

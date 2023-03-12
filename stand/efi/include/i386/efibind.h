@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*++
 
 Copyright (c)  1999 - 2003 Intel Corporation. All rights reserved

@@ -8,7 +8,7 @@
 
 #ifndef RPC_HDR
 %#include <sys/cdefs.h>
-%__NQCID("$FreeBSD$");
+%__NQCID("$NQC$");
 #endif
 
 const RQ_PATHLEN = 1024;

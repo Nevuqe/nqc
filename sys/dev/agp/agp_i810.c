@@ -40,7 +40,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if 0
 #define	KTR_AGP_I810	KTR_DEV

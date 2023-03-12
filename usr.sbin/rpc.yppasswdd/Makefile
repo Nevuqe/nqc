@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 RPCDIR=	${DESTDIR}/usr/include/rpcsvc
 

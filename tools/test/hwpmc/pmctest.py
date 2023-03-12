@@ -33,7 +33,7 @@
 #
 # Author: George V. Neville-Neil
 #
-# $FreeBSD$
+# $NQC$
 
 # Description: A program to run a simple program against every available
 # pmc counter present in a system.

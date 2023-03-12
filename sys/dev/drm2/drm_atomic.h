@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 typedef u_int		atomic_t;
 typedef uint64_t	atomic64_t;

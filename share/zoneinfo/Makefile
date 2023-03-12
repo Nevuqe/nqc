@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 #
 # HOW TO UPDATE THE ZONEINFO DATA

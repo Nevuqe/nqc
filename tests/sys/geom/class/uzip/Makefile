@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 # Regression test for geom_uzip.
 #

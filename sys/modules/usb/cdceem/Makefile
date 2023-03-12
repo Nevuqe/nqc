@@ -1,6 +1,6 @@
 #
-# $FreeBSD$
-# $FreeBSD$
+# $NQC$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/dev/usb/net
 

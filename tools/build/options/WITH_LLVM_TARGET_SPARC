@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build LLVM target support for SPARC.
 The
 .Va LLVM_TARGET_ALL

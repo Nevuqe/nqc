@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	teken_stress
 LDADD=	-lteken

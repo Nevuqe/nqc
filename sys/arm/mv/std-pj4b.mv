@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 files		"../mv/files.arm7"
 cpu		CPU_MV_PJ4B

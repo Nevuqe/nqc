@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* __ieee754_j1(x), __ieee754_y1(x)
  * Bessel function of the first and second kinds of order zero.

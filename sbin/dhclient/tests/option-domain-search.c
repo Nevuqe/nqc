@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <setjmp.h>
 #include <stdlib.h>

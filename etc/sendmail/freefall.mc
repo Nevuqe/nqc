@@ -40,7 +40,7 @@ divert(-1)
 #
 
 divert(0)dnl
-VERSIONID(`$FreeBSD$')
+VERSIONID(`$NQC$')
 
 OSTYPE(freebsd6)
 FEATURE(nullclient, smarthost.ysv.freebsd.org)

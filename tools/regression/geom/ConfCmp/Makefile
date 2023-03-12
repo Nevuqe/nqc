@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	ConfCmp
 SRCS+=	ConfCmp.c

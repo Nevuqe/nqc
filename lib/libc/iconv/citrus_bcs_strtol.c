@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: citrus_bcs_strtol.c,v 1.4 2013/04/26 21:20:47 joerg Exp $ */
 
 /*-

@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * 2000/3/24  added NetBSD/OpenBSD support (from Alex Nemirovsky)

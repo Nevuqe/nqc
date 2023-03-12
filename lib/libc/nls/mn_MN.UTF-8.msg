@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for mn_MN.UTF-8 locale
 $

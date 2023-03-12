@@ -1,5 +1,5 @@
 #!/usr/local/bin/tclsh8.3
-# $FreeBSD$
+# $NQC$
 
 set fo [open _.html w]
 

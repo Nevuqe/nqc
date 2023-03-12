@@ -1,6 +1,6 @@
 # Makefile for syscall tables
 #
-# $FreeBSD$
+# $NQC$
 
 GENERATED_PREFIX=	freebsd32_
 SYSENT_FILE=		${SYSDIR}/kern/syscalls.master

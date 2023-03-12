@@ -1,5 +1,5 @@
 #	@(#)Makefile    5.11 (Berkeley) 9/6/90
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${LIBC_SRCTOP}/rpc ${LIBC_SRCTOP}/.
 CONFS+=	rpc/netconfig rpc/rpc

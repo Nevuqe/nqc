@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <atf-c.h>
 #define _SEARCH_PRIVATE

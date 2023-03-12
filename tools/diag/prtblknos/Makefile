@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 BINDIR?=	/usr/bin
 

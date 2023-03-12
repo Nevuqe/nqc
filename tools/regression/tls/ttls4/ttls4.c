@@ -4,7 +4,7 @@
  *
  * David Xu <davidxu@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <stdio.h>

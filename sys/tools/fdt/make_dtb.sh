@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 
 # Script generates dtb file ($3) from dts source ($2) in build tree S ($1)
 S=$1

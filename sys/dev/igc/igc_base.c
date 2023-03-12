@@ -5,7 +5,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "igc_hw.h"
 #include "igc_i225.h"

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 env IFS=_ ${SH} -c '
 rc=2

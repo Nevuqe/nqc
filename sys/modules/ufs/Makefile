@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:	${SRCTOP}/sys/ufs/ufs ${SRCTOP}/sys/ufs/ffs
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	pam_ftpusers
 SRCS=	pam_ftpusers.c

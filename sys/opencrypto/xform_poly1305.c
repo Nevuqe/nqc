@@ -1,7 +1,7 @@
 /* This file is in the public domain. */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <opencrypto/xform_auth.h>
 

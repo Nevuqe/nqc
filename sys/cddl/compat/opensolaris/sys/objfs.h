@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _COMPAT_OPENSOLARIS_SYS_OBJFS_H

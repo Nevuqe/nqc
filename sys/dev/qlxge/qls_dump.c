@@ -31,7 +31,7 @@
  * File: qls_dump.c
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "qls_os.h"
 #include "qls_hw.h"

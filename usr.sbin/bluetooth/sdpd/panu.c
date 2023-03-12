@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: panu.c,v 1.1 2008/03/11 00:02:42 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/queue.h>

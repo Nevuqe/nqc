@@ -28,7 +28,7 @@
  *
  * Broadcom Inc. (LSI) MPT-Fusion Host Adapter FreeBSD
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MPRVAR_H

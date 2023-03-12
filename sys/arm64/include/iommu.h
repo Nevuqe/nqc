@@ -1,7 +1,7 @@
 /*-
  * This file is in the public domain.
  */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef	_MACHINE_IOMMU_H_
 #define	_MACHINE_IOMMU_H_

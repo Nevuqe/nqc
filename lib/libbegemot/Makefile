@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIBBEGEMOT_DIR=${SRCTOP}/contrib/libbegemot
 

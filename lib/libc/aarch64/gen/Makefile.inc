@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CFLAGS+=	-DNO_COMPAT7
 

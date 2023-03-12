@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Don't use an OBJDIR
 .OBJDIR: ${.CURDIR}

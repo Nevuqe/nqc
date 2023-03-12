@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  * from: NetBSD: zopen.c,v 1.8 2003/08/07 11:13:29 agc Exp
- * $FreeBSD$
+ * $NQC$
  */
 
 /* This file is #included by gzip.c */

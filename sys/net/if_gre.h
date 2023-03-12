@@ -30,7 +30,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * $NetBSD: if_gre.h,v 1.13 2003/11/10 08:51:52 wiz Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NET_IF_GRE_H_

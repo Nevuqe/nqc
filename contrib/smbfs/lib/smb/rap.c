@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: rap.c,v 1.8 2001/02/24 15:56:05 bp Exp $
- * $FreeBSD$
+ * $NQC$
  *
  * This is very simple implementation of RAP protocol.
  */

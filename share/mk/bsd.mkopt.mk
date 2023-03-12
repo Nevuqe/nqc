@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 # Generic mechanism to deal with WITH and WITHOUT options and turn
 # them into MK_ options.

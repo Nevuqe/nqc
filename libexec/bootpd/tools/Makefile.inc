@@ -1,5 +1,5 @@
 # Makefile.inc
-# $FreeBSD$
+# $NQC$
 
 BINDIR=		/usr/sbin
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # resolv sources
 .PATH: ${LIBC_SRCTOP}/resolv

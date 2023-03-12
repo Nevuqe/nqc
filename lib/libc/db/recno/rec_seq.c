@@ -34,7 +34,7 @@
 /* XXX use __SCCSID */
 static char sccsid[] __unused = "@(#)rec_seq.c	8.3 (Berkeley) 7/14/94";
 #endif /* not lint */
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 

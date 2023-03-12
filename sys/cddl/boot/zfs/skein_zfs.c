@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * Copyright 2013 Saso Kiselkov.  All rights reserved.

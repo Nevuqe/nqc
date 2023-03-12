@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include <bsd.sysdir.mk>
 .include "${SYSDIR}/conf/dtb.mk"

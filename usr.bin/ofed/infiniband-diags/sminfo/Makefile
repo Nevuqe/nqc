@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	sminfo
 SRCS=	sminfo.c

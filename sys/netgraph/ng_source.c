@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * This node is used for high speed packet geneneration.  It queues

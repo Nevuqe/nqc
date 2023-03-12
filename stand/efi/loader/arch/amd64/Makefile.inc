@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS+=	amd64_tramp.S \
 	start.S \

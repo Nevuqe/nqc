@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef COMPAT_NQC32
 #error "Unable to compile Linux-emulator due to missing COMPAT_NQC32 option!"

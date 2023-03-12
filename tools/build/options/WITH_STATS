@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build and install
 .Lb libstats
 and dependent binaries.

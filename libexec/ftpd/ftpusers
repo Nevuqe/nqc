@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # list of users disallowed any ftp access.
 # read by ftpd(8).

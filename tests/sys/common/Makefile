@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=		tests
 TESTSDIR=		${TESTSBASE}/sys/common

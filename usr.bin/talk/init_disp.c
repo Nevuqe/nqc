@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef lint
 static const char sccsid[] = "@(#)init_disp.c	8.2 (Berkeley) 2/16/94";

@@ -1,4 +1,4 @@
 /* getif.h */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 extern struct ifreq *getif(int, struct in_addr *);

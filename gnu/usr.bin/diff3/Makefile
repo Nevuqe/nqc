@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DIFFSRC=${SRCTOP}/contrib/diff/src
 .PATH:  ${DIFFSRC} \

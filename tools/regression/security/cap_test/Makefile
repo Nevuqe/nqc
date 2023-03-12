@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	cap_test
 SRCS=	cap_test.c \

@@ -1,5 +1,5 @@
 /*	$OpenBSD: if_iwmvar.h,v 1.7 2015/03/02 13:51:10 jsg Exp $	*/
-/*	$FreeBSD$ */
+/*	$NQC$ */
 
 /*
  * Copyright (c) 2014 genua mbh <info@genua.de>

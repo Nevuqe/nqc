@@ -21,7 +21,7 @@
 /* Driver for VMware vmxnet3 virtual ethernet devices. */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_rss.h"
 

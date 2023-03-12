@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	rdma
 PROG=	ibv_asyncwatch

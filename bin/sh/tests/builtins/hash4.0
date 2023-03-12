@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 exec 3>&1
 m=`hash nosuchtool 2>&1 >&3`

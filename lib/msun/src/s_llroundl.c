@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define type		long double
 #define	roundit		roundl

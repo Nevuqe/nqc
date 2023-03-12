@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=at
 MAINSRC=${SRCTOP}/usr.bin/at

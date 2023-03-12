@@ -1,5 +1,5 @@
 /*	$NetBSD: reg.h,v 1.2 2001/02/23 21:23:52 reinoud Exp $	*/
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef MACHINE_REG_H
 #define MACHINE_REG_H
 

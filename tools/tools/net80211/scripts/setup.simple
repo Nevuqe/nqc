@@ -2,7 +2,7 @@
 #
 # Script for testing simple (single bss) ap operation.
 #
-# $FreeBSD$
+# $NQC$
 #
 PATH=.:$PATH
 . config

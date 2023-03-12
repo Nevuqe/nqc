@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	rmextattr
 MAN=	rmextattr.8

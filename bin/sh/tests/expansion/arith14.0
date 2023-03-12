@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Check that <</>> use the low bits of the shift count.
 
 if [ $((1<<16<<16)) = 0 ]; then

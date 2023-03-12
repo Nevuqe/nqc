@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 $SH -c '{ { :; } </var/empty/x; } 2>/dev/null || kill -INT $$; echo continued'
 r=$?

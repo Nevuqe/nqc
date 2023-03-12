@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 void	tftp_send(int peer, uint16_t *block, struct tftp_stats *tp);
 void	tftp_receive(int peer, uint16_t *block, struct tftp_stats *tp,

@@ -50,7 +50,7 @@
 #
 ###############################################################################
 
-# $FreeBSD$
+# $NQC$
 
 . $STF_SUITE/include/libtest.kshlib
 . $STF_SUITE/tests/userquota/userquota_common.kshlib

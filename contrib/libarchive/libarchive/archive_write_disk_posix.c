@@ -26,7 +26,7 @@
  */
 
 #include "archive_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if !defined(_WIN32) || defined(__CYGWIN__)
 

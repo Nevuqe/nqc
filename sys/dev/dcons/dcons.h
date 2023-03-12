@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  * 
  * $Id: dcons.h,v 1.15 2003/10/23 15:05:31 simokawa Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #if defined(_KERNEL) || defined(_BOOT)

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FWVERSION=	73
 NAME=		cc-a0

@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * vnode op calls for Sun NFS version 2, 3 and 4

@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <efi.h>
 #include <efilib.h>

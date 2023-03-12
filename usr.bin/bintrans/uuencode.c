@@ -41,7 +41,7 @@ static char sccsid[] = "@(#)uuencode.c	8.2 (Berkeley) 4/2/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * uuencode [input] output

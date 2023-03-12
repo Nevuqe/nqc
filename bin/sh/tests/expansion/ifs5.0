@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 set -- $(echo a b c d)
 [ "$#" = 4 ]

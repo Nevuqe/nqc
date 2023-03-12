@@ -45,7 +45,7 @@ static const char sccsid[] = "from: @(#)wall.c	5.14 (Berkeley) 3/2/91";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * This program is not related to David Wall, whose Stanford Ph.D. thesis

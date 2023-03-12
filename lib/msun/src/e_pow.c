@@ -10,7 +10,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* __ieee754_pow(x,y) return x**y
  *

@@ -39,7 +39,7 @@ static char copyright[] =
 static char sccsid[] = "@(#)dbtest.c	8.17 (Berkeley) 9/1/94";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/stat.h>

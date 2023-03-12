@@ -59,7 +59,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * RealTek RTL8150 USB to fast ethernet controller driver.

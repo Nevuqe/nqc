@@ -40,7 +40,7 @@ static const char sccsid[] = "@(#)ruptime.c	8.2 (Berkeley) 4/5/94";
 #endif /* not lint */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 

@@ -27,7 +27,7 @@
 /*
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _TTM_BO_API_H_
 #define _TTM_BO_API_H_

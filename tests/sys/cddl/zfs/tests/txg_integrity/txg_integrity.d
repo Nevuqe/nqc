@@ -6,7 +6,7 @@
  * that we want it to.
  * XXX this is a work in progress.  It is not yet usable
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* zfs:kernel:dbuf_fix_old_data:entry

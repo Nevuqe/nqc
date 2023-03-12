@@ -57,7 +57,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef SYM_CONF_H
 #define SYM_CONF_H

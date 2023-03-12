@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 ENTRY(_ctx_start)
 	jalr	s0		/* Call func from makecontext */

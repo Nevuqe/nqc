@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ARM64				opt_global.h		# for cpu ARM64 to work
 INTRNG				opt_global.h

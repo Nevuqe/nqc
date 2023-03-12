@@ -29,7 +29,7 @@
 
 #include <sys/cdefs.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef lint
 static char sccsid[] = "@(#)rsaencpwd.c	8.3 (Berkeley) 5/30/95";

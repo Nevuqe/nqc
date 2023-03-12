@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# $FreeBSD$
+# $NQC$
 
 from hashlib import pbkdf2_hmac
 import hashlib

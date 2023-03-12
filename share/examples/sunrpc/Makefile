@@ -4,7 +4,7 @@
 #
 #   Build all demo services
 #
-# $FreeBSD$
+# $NQC$
 #
 
 PACKAGE=examples

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TESTSDIR=	${TESTSBASE}/lib/libc/iconv
 

@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)cdefs.h	8.8 (Berkeley) 1/9/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_SYS_CDEFS_H_
@@ -580,7 +580,7 @@
  * Embed the rcs id of a source file in the resulting library.  Note that in
  * more recent ELF binutils, we use .ident allowing the ID to be stripped.
  * Usage:
- *	__NQCID("$FreeBSD$");
+ *	__NQCID("$NQC$");
  */
 #ifndef	__NQCID
 #if !defined(STRIP_NQCID)

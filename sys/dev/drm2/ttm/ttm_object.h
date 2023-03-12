@@ -27,7 +27,7 @@
 /*
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
-/* $FreeBSD$ */
+/* $NQC$ */
 /** @file ttm_object.h
  *
  * Base- and reference object implementation for the various

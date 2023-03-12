@@ -10,7 +10,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Float version of k_log.h.  See the latter for most comments.

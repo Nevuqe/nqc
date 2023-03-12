@@ -13,7 +13,7 @@
 /* SUPPRESS 288 on yyerrlab *//* Label unused */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <stdio.h>
 #include <ctype.h>

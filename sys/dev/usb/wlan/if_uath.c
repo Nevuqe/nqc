@@ -51,7 +51,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Driver for Atheros AR5523 USB parts.

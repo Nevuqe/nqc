@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 Running:
 1. Compile mergesort_bench.c into mergesort_bench

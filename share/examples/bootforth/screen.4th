@@ -1,5 +1,5 @@
 \ Screen manipulation related words.
-\ $FreeBSD$
+\ $NQC$
 
 marker task-screen.4th
 

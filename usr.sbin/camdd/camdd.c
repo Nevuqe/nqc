@@ -38,7 +38,7 @@
  * - An example of how to use the asynchronous pass(4) driver interface.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/ioctl.h>
 #include <sys/stdint.h>

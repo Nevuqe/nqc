@@ -30,7 +30,7 @@
  *
  *	@(#)rwhod.h	8.1 (Berkeley) 6/2/93
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _PROTOCOLS_RWHOD_H_

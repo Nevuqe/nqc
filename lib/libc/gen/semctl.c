@@ -29,7 +29,7 @@
 
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef NO_COMPAT7
 #define _WANT_SEMUN_OLD

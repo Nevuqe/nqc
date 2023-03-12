@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FILESDIR=	${LIBEXECDIR}/bsdconfig/050.diskmgmt/include
 FILES=		messages.subr

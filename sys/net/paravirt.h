@@ -27,7 +27,7 @@
 #define NET_PARAVIRT_H
 
  /*
-  * $FreeBSD$
+  * $NQC$
   *
  Support for virtio-like communication between host (H) and guest (G) NICs.
 

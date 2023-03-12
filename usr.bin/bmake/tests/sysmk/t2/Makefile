@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TESTSDIR=	${TESTSBASE}/usr.bin/bmake/sysmk/t2
 

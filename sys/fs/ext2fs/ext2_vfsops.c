@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ffs_vfsops.c	8.8 (Berkeley) 4/18/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

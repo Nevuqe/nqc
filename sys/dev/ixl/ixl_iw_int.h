@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD$*/
+/*$NQC$*/
 
 #ifndef _IXL_IW_INT_H_
 #define _IXL_IW_INT_H_

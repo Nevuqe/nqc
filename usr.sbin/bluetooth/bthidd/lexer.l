@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  * $Id: lexer.l,v 1.3 2006/09/07 21:06:53 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 #define L2CAP_SOCKET_CHECKED
 #include <bluetooth.h>

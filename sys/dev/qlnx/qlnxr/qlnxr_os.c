@@ -29,7 +29,7 @@
  * File: qlnxr_os.c
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "qlnxr_def.h"
 

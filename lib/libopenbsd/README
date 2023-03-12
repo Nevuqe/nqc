@@ -1,4 +1,4 @@
-$FreeBSD$
+$NQC$
 
 libopenbsd is a thin compatibility layer intended to allow a limited
 set of OpenBSD software to compile as part of the FreeBSD build with

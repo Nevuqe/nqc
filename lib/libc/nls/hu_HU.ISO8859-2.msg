@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for hu_HU.ISO8859-2 locale
 $
@@ -6,191 +6,191 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Nem engedélyezett mûvelet
+1 Nem engedï¿½lyezett mï¿½velet
 $ ENOENT
-2 Fájl vagy könyvtár nem található
+2 Fï¿½jl vagy kï¿½nyvtï¿½r nem talï¿½lhatï¿½
 $ ESRCH
-3 Processz nem található
+3 Processz nem talï¿½lhatï¿½
 $ EINTR
-4 Megszakított rendszerhívás
+4 Megszakï¿½tott rendszerhï¿½vï¿½s
 $ EIO
 5 B/K hiba
 $ ENXIO
-6 Konfigurálatlan eszköz
+6 Konfigurï¿½latlan eszkï¿½z
 $ E2BIG
-7 Túl hosszú argumentumlista
+7 Tï¿½l hosszï¿½ argumentumlista
 $ ENOEXEC
-8 Hibás végrehajtható formátum
+8 Hibï¿½s vï¿½grehajthatï¿½ formï¿½tum
 $ EBADF
-9 Rossz fájlleíró
+9 Rossz fï¿½jlleï¿½rï¿½
 $ ECHILD
-10 Nem létezõ gyermek processz
+10 Nem lï¿½tezï¿½ gyermek processz
 $ EDEADLK
 11 Resource deadlock avoided
 $ ENOMEM
-12 Memória nem foglalható le
+12 Memï¿½ria nem foglalhatï¿½ le
 $ EACCES
-13 Hozzáférés megtagadva
+13 Hozzï¿½fï¿½rï¿½s megtagadva
 $ EFAULT
-14 Rossz cím
+14 Rossz cï¿½m
 $ ENOTBLK
-15 Blokkos eszköz szükséges
+15 Blokkos eszkï¿½z szï¿½ksï¿½ges
 $ EBUSY
-16 Eszköz foglalt
+16 Eszkï¿½z foglalt
 $ EEXIST
-17 Fájl létezik
+17 Fï¿½jl lï¿½tezik
 $ EXDEV
-18 Kereszthivatkozás eszközökön
+18 Kereszthivatkozï¿½s eszkï¿½zï¿½kï¿½n
 $ ENODEV
-19 A mûvelet nem támogatott az eszköz által
+19 A mï¿½velet nem tï¿½mogatott az eszkï¿½z ï¿½ltal
 $ ENOTDIR
-20 Nem könyvtár
+20 Nem kï¿½nyvtï¿½r
 $ EISDIR
-21 Könyvtár
+21 Kï¿½nyvtï¿½r
 $ EINVAL
-22 Érvénytelen argumentum
+22 ï¿½rvï¿½nytelen argumentum
 $ ENFILE
-23 Túl sok megnyitott fájl a rendszerben
+23 Tï¿½l sok megnyitott fï¿½jl a rendszerben
 $ EMFILE
-24 Túl sok megnyitott fájl
+24 Tï¿½l sok megnyitott fï¿½jl
 $ ENOTTY
-25 Nem megfelelõ ioctl az eszközhöz
+25 Nem megfelelï¿½ ioctl az eszkï¿½zhï¿½z
 $ ETXTBSY
-26 Szöveges fájl foglalt
+26 Szï¿½veges fï¿½jl foglalt
 $ EFBIG
-27 Fájl túl nagy
+27 Fï¿½jl tï¿½l nagy
 $ ENOSPC
-28 Nincs hely az eszközön
+28 Nincs hely az eszkï¿½zï¿½n
 $ ESPIPE
-29 Érvénytelen seek
+29 ï¿½rvï¿½nytelen seek
 $ EROFS
-30 Csak olvasható fájlrendszer
+30 Csak olvashatï¿½ fï¿½jlrendszer
 $ EMLINK
-31 Túl sok link
+31 Tï¿½l sok link
 $ EPIPE
-32 Hibás csõvezeték
+32 Hibï¿½s csï¿½vezetï¿½k
 $ EDOM
-33 Numerikus argumentum nem esik a tartományba
+33 Numerikus argumentum nem esik a tartomï¿½nyba
 $ ERANGE
-34 Az esermény túl nagy
+34 Az esermï¿½ny tï¿½l nagy
 $ EAGAIN, EWOULDBLOCK
-35 Az erõforrás ideiglenesen nem érhetõ el
+35 Az erï¿½forrï¿½s ideiglenesen nem ï¿½rhetï¿½ el
 $ EINPROGRESS
-36 A mûvelet folyamatban van
+36 A mï¿½velet folyamatban van
 $ EALREADY
-37 A mûvelet már folyamatban van
+37 A mï¿½velet mï¿½r folyamatban van
 $ ENOTSOCK
-38 Socket mûvelet nem socketen
+38 Socket mï¿½velet nem socketen
 $ EDESTADDRREQ
-39 Cél cím szükséges
+39 Cï¿½l cï¿½m szï¿½ksï¿½ges
 $ EMSGSIZE
-40 Túl hosszú üzenet
+40 Tï¿½l hosszï¿½ ï¿½zenet
 $ EPROTOTYPE
-41 Rossz protokolltípus a sockethez
+41 Rossz protokolltï¿½pus a sockethez
 $ ENOPROTOOPT
-42 Protokoll nem érhetõ el
+42 Protokoll nem ï¿½rhetï¿½ el
 $ EPROTONOSUPPORT
-43 Protokoll nem támogatott
+43 Protokoll nem tï¿½mogatott
 $ ESOCKTNOSUPPORT
-44 Sockettípus nem támogatott
+44 Sockettï¿½pus nem tï¿½mogatott
 $ EOPNOTSUPP
-45 Mûvelet nem támogatott
+45 Mï¿½velet nem tï¿½mogatott
 $ EPFNOSUPPORT
-46 Protokollcsalád nem támogatott
+46 Protokollcsalï¿½d nem tï¿½mogatott
 $ EAFNOSUPPORT
-47 A címcsalád nem támogatott a protokollcsalád által
+47 A cï¿½mcsalï¿½d nem tï¿½mogatott a protokollcsalï¿½d ï¿½ltal
 $ EADDRINUSE
-48 A cím már használatban van
+48 A cï¿½m mï¿½r hasznï¿½latban van
 $ EADDRNOTAVAIL
-49 A kért cím nem osztható ki
+49 A kï¿½rt cï¿½m nem oszthatï¿½ ki
 $ ENETDOWN
-50 A hálózat nem mûködik
+50 A hï¿½lï¿½zat nem mï¿½kï¿½dik
 $ ENETUNREACH
-51 A hálózat nem érhetõ el
+51 A hï¿½lï¿½zat nem ï¿½rhetï¿½ el
 $ ENETRESET
-52 A hálózat megszakította a kapcsolatot
+52 A hï¿½lï¿½zat megszakï¿½totta a kapcsolatot
 $ ECONNABORTED
-53 A szoftver megszakította a kapcsolatot
+53 A szoftver megszakï¿½totta a kapcsolatot
 $ ECONNRESET
-54 A kapcsolatot megszakította a peer
+54 A kapcsolatot megszakï¿½totta a peer
 $ ENOBUFS
-55 Nincs rendelkezésre álló pufferterület
+55 Nincs rendelkezï¿½sre ï¿½llï¿½ pufferterï¿½let
 $ EISCONN
-56 A socket már kapcsolódva van
+56 A socket mï¿½r kapcsolï¿½dva van
 $ ENOTCONN
-57 A socket nincs kapcsolódva
+57 A socket nincs kapcsolï¿½dva
 $ ESHUTDOWN
-58 Nem küldhetõ el a socket lebontása után
+58 Nem kï¿½ldhetï¿½ el a socket lebontï¿½sa utï¿½n
 $ ETOOMANYREFS
-59 Túl sok hivatkozás: nem illeszthetõ össze
+59 Tï¿½l sok hivatkozï¿½s: nem illeszthetï¿½ ï¿½ssze
 $ ETIMEDOUT
-60 A mûvelet túllépte a rendelkezésre álló idõt
+60 A mï¿½velet tï¿½llï¿½pte a rendelkezï¿½sre ï¿½llï¿½ idï¿½t
 $ ECONNREFUSED
-61 Kapcsolat elutasítva
+61 Kapcsolat elutasï¿½tva
 $ ELOOP
-62 Túl sok szint a szimbolikus linkekben
+62 Tï¿½l sok szint a szimbolikus linkekben
 $ ENAMETOOLONG
-63 Túl hosszú fájlnév
+63 Tï¿½l hosszï¿½ fï¿½jlnï¿½v
 $ EHOSTDOWN
-64 A kiszolgáló nem érhetõ el
+64 A kiszolgï¿½lï¿½ nem ï¿½rhetï¿½ el
 $ EHOSTUNREACH
-65 Nincs útvonal a kiszolgálóhoz
+65 Nincs ï¿½tvonal a kiszolgï¿½lï¿½hoz
 $ ENOTEMPTY
-66 Könyvtár nem üres
+66 Kï¿½nyvtï¿½r nem ï¿½res
 $ EPROCLIM
-67 Túl sok processz
+67 Tï¿½l sok processz
 $ EUSERS
-68 Túl sok felhasználó
+68 Tï¿½l sok felhasznï¿½lï¿½
 $ EDQUOT
-69 A lemezkvóta túllépve
+69 A lemezkvï¿½ta tï¿½llï¿½pve
 $ ESTALE
-70 Elavult NFS fájlkezelõ
+70 Elavult NFS fï¿½jlkezelï¿½
 $ EREMOTE
-71 Túl sok szint a távoli útvonalban
+71 Tï¿½l sok szint a tï¿½voli ï¿½tvonalban
 $ EBADRPC
-72 Rossz RPC struktúra
+72 Rossz RPC struktï¿½ra
 $ ERPCMISMATCH
-73 Rossz RPC verzió
+73 Rossz RPC verziï¿½
 $ EPROGUNAVAIL
-74 RPC program nem érhetõ el
+74 RPC program nem ï¿½rhetï¿½ el
 $ EPROGMISMATCH
-75 Rossz programverzió
+75 Rossz programverziï¿½
 $ EPROCUNAVAIL
-76 Rossz eljárás a programhoz
+76 Rossz eljï¿½rï¿½s a programhoz
 $ ENOLCK
-77 Nincs elérhetõ zárolás
+77 Nincs elï¿½rhetï¿½ zï¿½rolï¿½s
 $ ENOSYS
-78 Nem implementált funkció
+78 Nem implementï¿½lt funkciï¿½
 $ EFTYPE
-79 Nem megfelelõ fájltípus vagy formátum
+79 Nem megfelelï¿½ fï¿½jltï¿½pus vagy formï¿½tum
 $ EAUTH
-80 Azonosítási hiba
+80 Azonosï¿½tï¿½si hiba
 $ ENEEDAUTH
-81 Azonosítás szükséges
+81 Azonosï¿½tï¿½s szï¿½ksï¿½ges
 $ EIDRM
-82 Azonosító eltávolítva
+82 Azonosï¿½tï¿½ eltï¿½volï¿½tva
 $ ENOMSG
-83 Nincs üzenet a kívánt típusból
+83 Nincs ï¿½zenet a kï¿½vï¿½nt tï¿½pusbï¿½l
 $ EOVERFLOW
-84 Az érték túl nagy az adott adattípusban való tároláshoz
+84 Az ï¿½rtï¿½k tï¿½l nagy az adott adattï¿½pusban valï¿½ tï¿½rolï¿½shoz
 $ ECANCELED
-85 Mûvelet törölva
+85 Mï¿½velet tï¿½rï¿½lva
 $ EILSEQ
-86 Érvénytelen bájtsorrend
+86 ï¿½rvï¿½nytelen bï¿½jtsorrend
 $ ENOATTR
-87 Attribútum nem található
+87 Attribï¿½tum nem talï¿½lhatï¿½
 $ EDOOFUS
-88 Programozási hiba
+88 Programozï¿½si hiba
 $ EBADMSG
-89 Helytelen üzenet
+89 Helytelen ï¿½zenet
 $ EMULTIHOP
-90 Multihop kísérlet
+90 Multihop kï¿½sï¿½rlet
 $ ENOLINK
-91 A kapcsolat szigorítva lett
+91 A kapcsolat szigorï¿½tva lett
 $ EPROTO
 92 Protokol hiba
 $ ENOTCAPABLE
-93 Elégtelen képességek
+93 Elï¿½gtelen kï¿½pessï¿½gek
 $
 $ strsignal() support catalog
 $
@@ -198,11 +198,11 @@ $set 2
 $ SIGHUP
 1 Hangup
 $ SIGINT
-2 Megszakítás
+2 Megszakï¿½tï¿½s
 $ SIGQUIT
-3 Kilépés
+3 Kilï¿½pï¿½s
 $ SIGILL
-4 Érvénytelen mûvelet
+4 ï¿½rvï¿½nytelen mï¿½velet
 $ SIGTRAP
 5 Trace/BPT csapda
 $ SIGABRT
@@ -210,85 +210,85 @@ $ SIGABRT
 $ SIGEMT
 7 EMT csapda
 $ SIGFPE
-8 Lebegõpontos kivétel
+8 Lebegï¿½pontos kivï¿½tel
 $ SIGKILL
-9 Megölve
+9 Megï¿½lve
 $ SIGBUS
 10 Busz hiba
 $ SIGSEGV
-11 Szegmentációs hiba
+11 Szegmentï¿½ciï¿½s hiba
 $ SIGSYS
-12 Rossz rendszerhívás
+12 Rossz rendszerhï¿½vï¿½s
 $ SIGPIPE
-13 Hibás csõvezeték
+13 Hibï¿½s csï¿½vezetï¿½k
 $ SIGALRM
-14 Idõzítési riasztás
+14 Idï¿½zï¿½tï¿½si riasztï¿½s
 $ SIGTERM
 15 Befejezve
 $ SIGURG
-16 Sürgõs B/K feltétel
+16 Sï¿½rgï¿½s B/K feltï¿½tel
 $ SIGSTOP
-17 Elaltatva (szignál)
+17 Elaltatva (szignï¿½l)
 $ SIGTSTP
 18 Elaltatva
 $ SIGCONT
 19 Folytatva
 $ SIGCHLD
-20 Gyermek befejezõdött
+20 Gyermek befejezï¿½dï¿½tt
 $ SIGTTIN
-21 Leállítva (tty bevitel)
+21 Leï¿½llï¿½tva (tty bevitel)
 $ SIGTTOU
-22 Leállítva (tty kivitel)
+22 Leï¿½llï¿½tva (tty kivitel)
 $ SIGIO
-23 B/K lehetséges
+23 B/K lehetsï¿½ges
 $ SIGXCPU
-24 Processzoridõ-korlátozás túllépve
+24 Processzoridï¿½-korlï¿½tozï¿½s tï¿½llï¿½pve
 $ SIGXFSZ
-25 ájlméret-korlátozás túllépve
+25 ï¿½jlmï¿½ret-korlï¿½tozï¿½s tï¿½llï¿½pve
 $ SIGVTALRM
-26 Virtuális idõzítõ lejárt
+26 Virtuï¿½lis idï¿½zï¿½tï¿½ lejï¿½rt
 $ SIGPROF
-27 Profilidõzítõ lejárt
+27 Profilidï¿½zï¿½tï¿½ lejï¿½rt
 $ SIGWINCH
-28 Ablakméret-változások
+28 Ablakmï¿½ret-vï¿½ltozï¿½sok
 $ SIGINFO
-29 Információkérés
+29 Informï¿½ciï¿½kï¿½rï¿½s
 $ SIGUSR1
-30 Felhasználói szignál 1
+30 Felhasznï¿½lï¿½i szignï¿½l 1
 $ SIGUSR2
-31 Felhasználói szignál 2
+31 Felhasznï¿½lï¿½i szignï¿½l 2
 $
 $ gai_strerror() support catalog
 $
 $set 3
 $ 1 (elavult)
-1 A hosztnévhez tartozó címcsalád nem támogatott
+1 A hosztnï¿½vhez tartozï¿½ cï¿½mcsalï¿½d nem tï¿½mogatott
 $ EAI_AGAIN
-2 Ideiglenes hiba a névfeloldáskor
+2 Ideiglenes hiba a nï¿½vfeloldï¿½skor
 $ EAI_BADFLAGS
-3 Érvénytelen ai_flags érték
+3 ï¿½rvï¿½nytelen ai_flags ï¿½rtï¿½k
 $ EAI_FAIL
-4 Nem helyreállítható hiba a névfeloldásban
+4 Nem helyreï¿½llï¿½thatï¿½ hiba a nï¿½vfeloldï¿½sban
 $ EAI_FAMILY
-5 ai_family nem támogatott
+5 ai_family nem tï¿½mogatott
 $ EAI_MEMORY
-6 Memóriafoglalási hiba
+6 Memï¿½riafoglalï¿½si hiba
 $ 7 (elavult)
-7 Nem tartozik cím í hosztnévhez
+7 Nem tartozik cï¿½m ï¿½ hosztnï¿½vhez
 $ EAI_NONAME
-8 Se hosztnév, se szolgáltatásnév nem áll rendelkezésre
+8 Se hosztnï¿½v, se szolgï¿½ltatï¿½snï¿½v nem ï¿½ll rendelkezï¿½sre
 $ EAI_SERVICE
-9 Nem támogatott ai_socktype szolgáltatásnév
+9 Nem tï¿½mogatott ai_socktype szolgï¿½ltatï¿½snï¿½v
 $ EAI_SOCKTYPE
-10 ai_socktype nem támogatott
+10 ai_socktype nem tï¿½mogatott
 $ EAI_SYSTEM
-11 Rendszerhiba jött vissza az errno változóban
+11 Rendszerhiba jï¿½tt vissza az errno vï¿½ltozï¿½ban
 $ EAI_BADHINTS
-12 Érvénytelen hint érték
+12 ï¿½rvï¿½nytelen hint ï¿½rtï¿½k
 $ EAI_PROTOCOL
 13 A feloldott protokol ismeretlen
 $ EAI_OVERFLOW
-14 Az argumentumok puffere túlcsordult
+14 Az argumentumok puffere tï¿½lcsordult
 $ 0
 32766 Siker
 $ NL_MSGMAX

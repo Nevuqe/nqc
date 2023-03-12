@@ -1,5 +1,5 @@
 /*	$NetBSD: lockd.c,v 1.7 2000/08/12 18:08:44 thorpej Exp $	*/
-/*	$FreeBSD$ */
+/*	$NQC$ */
 
 /*-
  * SPDX-License-Identifier: BSD-4-Clause

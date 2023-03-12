@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 VOLUME=	smm
 DOC=	contents

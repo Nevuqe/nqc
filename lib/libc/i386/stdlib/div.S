@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 ENTRY(div)
         movl    4(%esp),%eax

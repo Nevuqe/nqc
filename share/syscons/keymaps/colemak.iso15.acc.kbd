@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Colemak Layout for FreeBSD console
 # 2006-01-01 Shai Coleman, http://colemak.com/ . Public domain.
@@ -9,55 +9,55 @@
 # ------------------------------------------------------------------
 
   041   '`'    '~'    nop    nop    dtil   '~'    nop    nop     O
-  002   '1'    '!'    nop    nop    '¡'    '¹'    nop    nop     O
-  003   '2'    '@'    nul    nul    'º'    '²'    nul    nul     O
-  004   '3'    '#'    nop    nop    'ª'    '³'    nop    nop     O
-  005   '4'    '$'    nop    nop    '¢'    '£'    nop    nop     O
-  006   '5'    '%'    nop    nop    '¤'    '¥'    nop    nop     O
+  002   '1'    '!'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
+  003   '2'    '@'    nul    nul    'ï¿½'    'ï¿½'    nul    nul     O
+  004   '3'    '#'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
+  005   '4'    '$'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
+  006   '5'    '%'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
   007   '6'    '^'    rs     rs     '~'    '~'    rs     rs      O
-  008   '7'    '&'    nop    nop    'ð'    'Ð'    nop    nop     O
-  009   '8'    '*'    nop    nop    'þ'    'Þ'    nop    nop     O
+  008   '7'    '&'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
+  009   '8'    '*'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
   010   '9'    '('    nop    nop    '~'    '~'    nop    nop     O
   011   '0'    ')'    nop    nop    '~'    '~'    nop    nop     O
   012   '-'    '_'    us     us     '~'    '~'    us     us      O
-  013   '='    '+'    nop    nop    '×'    '÷'    nop    nop     O
+  013   '='    '+'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
 
-  016   'q'    'Q'    dc1    dc1    'ä'    'Ä'    dc1    dc1     C
-  017   'w'    'W'    etb    etb    'å'    'Å'    etb    etb     C
-  018   'f'    'F'    ack    ack    'ã'    'Ã'    ack    ack     C
-  019   'p'    'P'    dle    dle    'ø'    'Ø'    dle    dle     C
+  016   'q'    'Q'    dc1    dc1    'ï¿½'    'ï¿½'    dc1    dc1     C
+  017   'w'    'W'    etb    etb    'ï¿½'    'ï¿½'    etb    etb     C
+  018   'f'    'F'    ack    ack    'ï¿½'    'ï¿½'    ack    ack     C
+  019   'p'    'P'    dle    dle    'ï¿½'    'ï¿½'    dle    dle     C
   020   'g'    'G'    bel    bel    '~'    '~'    bel    bel     C
   021   'j'    'J'    nl     nl     '~'    '~'    nl     nl      C
   022   'l'    'L'    ff     ff     '~'    '~'    ff     ff      C
-  023   'u'    'U'    nak    nak    'ú'    'Ú'    nak    nak     C
-  024   'y'    'Y'    em     em     'ü'    'Ü'    em     em      C
-  025   ';'    ':'    nop    nop    'ö'    'Ö'    nop    nop     O
-  026   '['    '{'    esc    esc    '«'    '~'    esc    esc     O
-  027   ']'    '}'    gs     gs     '»'    '~'    gs     gs      O
+  023   'u'    'U'    nak    nak    'ï¿½'    'ï¿½'    nak    nak     C
+  024   'y'    'Y'    em     em     'ï¿½'    'ï¿½'    em     em      C
+  025   ';'    ':'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
+  026   '['    '{'    esc    esc    'ï¿½'    '~'    esc    esc     O
+  027   ']'    '}'    gs     gs     'ï¿½'    '~'    gs     gs      O
   043   '\'    '|'    fs     fs     '~'    '~'    fs     fs      O
 
-  030   'a'    'A'    soh    soh    'á'    'Á'    soh    soh     C
+  030   'a'    'A'    soh    soh    'ï¿½'    'ï¿½'    soh    soh     C
   031   'r'    'R'    dc2    dc2    dgra   '~'    dc2    dc2     C
-  032   's'    'S'    dc3    dc3    'ß'    '~'    dc3    dc3     C
+  032   's'    'S'    dc3    dc3    'ï¿½'    '~'    dc3    dc3     C
   033   't'    'T'    dc4    dc4    dacu   '~'    dc4    dc4     C
   034   'd'    'D'    eot    eot    duml   '~'    eot    eot     C
   035   'h'    'H'    bs     bs     '~'    '~'    bs     bs      C
-  036   'n'    'N'    so     so     'ñ'    'Ñ'    so     so      C
-  037   'e'    'E'    enq    enq    'é'    'É'    enq    enq     C
-  038   'i'    'I'    ht     ht     'í'    'Í'    ht     ht      C
-  039   'o'    'O'    si     si     'ó'    'Ó'    si     si      C
-  040   '''    '"'    nop    nop    'õ'    'Õ'    nop    nop     O
+  036   'n'    'N'    so     so     'ï¿½'    'ï¿½'    so     so      C
+  037   'e'    'E'    enq    enq    'ï¿½'    'ï¿½'    enq    enq     C
+  038   'i'    'I'    ht     ht     'ï¿½'    'ï¿½'    ht     ht      C
+  039   'o'    'O'    si     si     'ï¿½'    'ï¿½'    si     si      C
+  040   '''    '"'    nop    nop    'ï¿½'    'ï¿½'    nop    nop     O
 
-  044   'z'    'Z'    sub    sub    'æ'    'Æ'    sub    sub     C
+  044   'z'    'Z'    sub    sub    'ï¿½'    'ï¿½'    sub    sub     C
   045   'x'    'X'    can    can    dcir   '~'    can    can     C
-  046   'c'    'C'    etx    etx    'ç'    'Ç'    etx    etx     C
-  047   'v'    'V'    syn    syn    '½'    '¼'    syn    syn     C
+  046   'c'    'C'    etx    etx    'ï¿½'    'ï¿½'    etx    etx     C
+  047   'v'    'V'    syn    syn    'ï¿½'    'ï¿½'    syn    syn     C
   048   'b'    'B'    stx    stx    '~'    '~'    stx    stx     C
   049   'k'    'K'    vt     vt     drin   '~'    vt     vt      C
   050   'm'    'M'    cr     cr     '~'    '~'    cr     cr      C
   051   ','    '<'    nop    nop    dced   '~'    nop    nop     O
   052   '.'    '>'    nop    nop    '~'    '~'    nop    nop     O
-  053   '/'    '?'    nop    nop    '¿'    '~'    nop    nop     O
+  053   '/'    '?'    nop    nop    'ï¿½'    '~'    nop    nop     O
 
   058   bs     bs     bs     bs     bs     bs     bs     bs      O
   086   '-'    '_'    us     us     '~'    '~'    us     us      O

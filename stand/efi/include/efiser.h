@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFI_SER_H
 #define _EFI_SER_H
 

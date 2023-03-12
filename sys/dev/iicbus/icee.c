@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 /*
  * Generic IIC eeprom support, modeled after the AT24C family of products.
  */

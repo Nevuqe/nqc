@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	locales
 FILESGROUPS=	FILES ALWAYS

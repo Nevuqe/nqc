@@ -35,7 +35,7 @@
  */
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * movejobs.c - The lpc commands which move jobs around.

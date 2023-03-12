@@ -7,7 +7,7 @@
  * For more information, see the README file.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*
  * Routines dealing with signals.

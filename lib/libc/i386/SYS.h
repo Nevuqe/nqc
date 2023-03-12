@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)SYS.h	5.5 (Berkeley) 5/7/91
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/syscall.h>

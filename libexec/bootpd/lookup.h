@@ -1,5 +1,5 @@
 /* lookup.h */
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include "bptypes.h"	/* for int32, u_int32 */
 

@@ -1,5 +1,5 @@
 #! /usr/local/bin/ksh93 -p
 
-# $FreeBSD$
+# $NQC$
 
 /usr/sbin/pw groupshow $*

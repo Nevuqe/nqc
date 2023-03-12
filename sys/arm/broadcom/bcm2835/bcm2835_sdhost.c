@@ -31,7 +31,7 @@
  *
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * pin 48-53 - card slot

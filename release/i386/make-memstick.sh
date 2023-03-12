@@ -7,7 +7,7 @@
 #
 # Usage: make-memstick.sh <directory tree or manifest> <image filename>
 #
-# $FreeBSD$
+# $NQC$
 #
 
 set -e

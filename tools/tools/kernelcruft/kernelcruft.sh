@@ -4,7 +4,7 @@
 #
 # Try to find *.c files in /sys which are orphaned
 #
-# $FreeBSD$
+# $NQC$
 
 cd /sys/conf
 cat files* | sed '

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	dconschat
 MAN=	dconschat.8

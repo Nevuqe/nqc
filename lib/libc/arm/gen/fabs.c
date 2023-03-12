@@ -37,7 +37,7 @@
  * fabs(x) returns the absolute value of x.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 double
 fabs(double x)

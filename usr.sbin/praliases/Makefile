@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 9/21/96
-# $FreeBSD$
+# $NQC$
 
 SENDMAIL_DIR=	${SRCTOP}/contrib/sendmail
 .PATH: ${SENDMAIL_DIR}/praliases

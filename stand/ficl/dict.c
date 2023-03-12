@@ -51,7 +51,7 @@
 ** SUCH DAMAGE.
 */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifdef TESTMAIN
 #include <stdio.h>

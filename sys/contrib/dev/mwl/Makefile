@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 FILES=	mw88W8363.fw.uu mwlboot.fw.uu
 

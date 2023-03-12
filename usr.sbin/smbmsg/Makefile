@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 
 PROG=	smbmsg
 MAN=	smbmsg.8

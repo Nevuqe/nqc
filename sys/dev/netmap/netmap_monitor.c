@@ -25,7 +25,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * Monitors
  *

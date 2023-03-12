@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # building clang is particularly tedious - so avoid re-inventing wheels
 

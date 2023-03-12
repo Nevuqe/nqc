@@ -57,7 +57,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * driver for National Semiconductor's DP83840A ethernet 10/100 PHY

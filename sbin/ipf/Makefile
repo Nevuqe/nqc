@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 SUBDIR=		libipf .WAIT
 SUBDIR+=	ipf ipfs ipfstat ipmon ipnat ippool

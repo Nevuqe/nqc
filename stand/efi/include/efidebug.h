@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _EFI_DEBUG_H
 #define _EFI_DEBUG_H
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 IFS=,
 
 SPECIAL="break abc,\

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 shift $#
 getopts x opt

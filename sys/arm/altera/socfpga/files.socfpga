@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 arm/altera/socfpga/socfpga_common.c		standard
 arm/altera/socfpga/socfpga_machdep.c		standard

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 FWVERSION=	73
 NAME=		ty-a0-gf-a0

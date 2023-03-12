@@ -33,7 +33,7 @@
  *     and: Thomas E. Dickey                        1996 on                 *
  ****************************************************************************/
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /*
  *	comp_scan.c --- Lexical scanner for terminfo compiler.

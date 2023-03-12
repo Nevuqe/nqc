@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "opt_quota.h"
 #include "opt_suiddir.h"

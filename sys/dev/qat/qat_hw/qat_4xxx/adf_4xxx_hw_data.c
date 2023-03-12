@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #include <linux/iopoll.h>
 #include <adf_accel_devices.h>
 #include <adf_cfg.h>

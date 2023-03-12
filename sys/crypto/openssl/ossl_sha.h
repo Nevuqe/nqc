@@ -6,7 +6,7 @@
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef __OSSL_SHA_H__

@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include "defs.h"
@@ -36,7 +36,7 @@
 #include <netinet/ip.h>
 #include <netinet/ip_icmp.h>
 
-__RCSID("$FreeBSD$");
+__RCSID("$NQC$");
 
 /* router advertisement ICMP packet */
 struct icmp_ad {

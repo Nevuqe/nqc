@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # The include file <src.libnames.mk> define library names suitable
 # for INTERNALLIB and PRIVATELIB definition

@@ -31,7 +31,7 @@
  * POSSIBILITY OF SUCH DAMAGES.
  *
  * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_io.h#5 $
- * $FreeBSD$
+ * $NQC$
  */
 /*
  * CAM Target Layer data movement structures/interface.

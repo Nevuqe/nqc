@@ -38,7 +38,7 @@
 #ident	"@(#)svc_dg.c	1.17	94/04/24 SMI"
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * svc_dg.c, Server side for connectionless RPC.

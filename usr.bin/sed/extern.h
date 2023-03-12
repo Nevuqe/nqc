@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD$
+ * $NQC$
  */
 
 extern struct s_command *prog;

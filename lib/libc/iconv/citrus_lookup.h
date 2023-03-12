@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: citrus_lookup.h,v 1.2 2004/07/21 14:16:34 tshiozak Exp $ */
 
 /*-

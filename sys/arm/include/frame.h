@@ -44,7 +44,7 @@
  *
  * Created      : 30/09/94
  *
- * $FreeBSD$
+ * $NQC$
  *
  */
 

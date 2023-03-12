@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * Testing program for schedulers
  *

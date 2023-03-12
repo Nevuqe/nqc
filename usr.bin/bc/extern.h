@@ -1,4 +1,4 @@
-/*	$FreeBSD$						*/
+/*	$NQC$						*/
 /*      $OpenBSD: extern.h,v 1.12 2014/04/17 19:07:14 otto Exp $	*/
 
 /*

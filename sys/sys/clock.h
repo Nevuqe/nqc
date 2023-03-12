@@ -43,7 +43,7 @@
  *
  * All that code should go here for service.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_CLOCK_H_

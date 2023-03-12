@@ -58,7 +58,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)tcp_var.h	8.4 (Berkeley) 5/24/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETINET_TCP6_VAR_H_

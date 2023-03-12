@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	localedef
 SRCS=	charmap.c \

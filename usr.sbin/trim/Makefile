@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	trim
 MAN=	trim.8

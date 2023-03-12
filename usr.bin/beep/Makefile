@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	beep
 MAN=	beep.1

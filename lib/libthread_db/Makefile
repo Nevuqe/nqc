@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:	${.CURDIR}/arch/${MACHINE_CPUARCH}
 

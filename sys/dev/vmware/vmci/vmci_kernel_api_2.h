@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: (BSD-2-Clause OR GPL-2.0)
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* Kernel API (v2) exported from the VMCI guest driver. */

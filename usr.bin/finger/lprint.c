@@ -39,7 +39,7 @@ static char sccsid[] = "@(#)lprint.c	8.3 (Berkeley) 4/28/95";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <sys/socket.h>

@@ -4,7 +4,7 @@
 # Custom kernel for arm64 plus MMCCAM as opposed to the prior MMC stack. It is
 # present to keep it building in tree since it wouldn't work in LINT.
 #
-# $FreeBSD$
+# $NQC$
 
 #NO_UNIVERSE
 

@@ -27,7 +27,7 @@
 
 /* Modified from gssd.x for the client side of RPC-over-TLS. */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 struct rpctlscd_connect_arg {
 	char certname<>;

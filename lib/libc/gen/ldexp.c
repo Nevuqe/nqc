@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * ldexp() and scalbn() are defined to be identical, but ldexp() lives in libc

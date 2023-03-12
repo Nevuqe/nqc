@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 
 DEFINE_TEST(test_read_format_warc)

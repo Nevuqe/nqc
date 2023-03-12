@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # This include file <bsd.nls.mk> handles building and installing Native
 # Language Support (NLS) catalogs

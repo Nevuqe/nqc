@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=		bus
 SHLIB_MAJOR=	0

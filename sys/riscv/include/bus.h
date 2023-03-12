@@ -62,7 +62,7 @@
  *
  * From: sys/arm/include/bus.h
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_BUS_H_

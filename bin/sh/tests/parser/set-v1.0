@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ${SH} <<\EOF
 echo one >&2

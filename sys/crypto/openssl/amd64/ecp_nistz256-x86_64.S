@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from ecp_nistz256-x86_64.pl. */
 .text	
 .globl	ecp_nistz256_precomputed

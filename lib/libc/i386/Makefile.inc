@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Long double is 80 bits
 GDTOASRCS+=strtorx.c

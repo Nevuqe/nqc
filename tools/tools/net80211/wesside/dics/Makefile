@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	dics
 BINDIR=	/usr/local/bin

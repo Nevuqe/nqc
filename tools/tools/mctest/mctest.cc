@@ -33,7 +33,7 @@
 //
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 // C++ STL and other related includes
 #include <iostream>

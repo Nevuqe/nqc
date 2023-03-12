@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * GPIO driver for the ADI Engineering RCC-VE and RCC-DFF/DFFv2.

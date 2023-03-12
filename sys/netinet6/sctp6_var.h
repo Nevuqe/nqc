@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef _NETINET6_SCTP6_VAR_H_
 #define _NETINET6_SCTP6_VAR_H_

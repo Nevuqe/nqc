@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 e= s='foo'
 failures=''

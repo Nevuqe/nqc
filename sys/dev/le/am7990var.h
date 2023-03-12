@@ -32,7 +32,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifndef _DEV_LE_AM7990VAR_H_
 #define	_DEV_LE_AM7990VAR_H_

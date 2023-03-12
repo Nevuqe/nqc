@@ -1,5 +1,5 @@
 /*
- * $FreeBSD$
+ * $NQC$
  *
  * linux-like bidirectional lists
  */

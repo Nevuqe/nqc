@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 arm/arm/autoconf.c		standard
 arm/arm/bcopy_page.S		standard

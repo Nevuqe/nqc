@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Build dev/fdt modules.
 
 SUBDIR = \

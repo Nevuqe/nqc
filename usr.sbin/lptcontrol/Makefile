@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	lptcontrol
 MAN=	lptcontrol.8

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <DISKIMAGE>
-  <FreeBSD>$FreeBSD$</FreeBSD>
+  <FreeBSD>$NQC$</FreeBSD>
   <sectorsize>512</sectorsize>
   <mediasize>366530560</mediasize>
   <fwsectors>0</fwsectors>

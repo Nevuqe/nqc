@@ -35,7 +35,7 @@
 
 #include <machine/asm.h>
 
-__NQCID("$FreeBSD$")
+__NQCID("$NQC$")
 
 ENTRY(remainderl)
 	fldt	24(%rsp)

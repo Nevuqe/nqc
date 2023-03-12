@@ -22,7 +22,7 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  * SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

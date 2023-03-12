@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)if_ethersubr.c	8.1 (Berkeley) 6/10/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #include "opt_inet.h"

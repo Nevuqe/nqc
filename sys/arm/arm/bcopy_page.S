@@ -40,7 +40,7 @@
 
 #include <machine/asm.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "assym.inc"
 

@@ -30,7 +30,7 @@
 # SUCH DAMAGE.
 #
 #	@(#)pagesize.sh	8.1 (Berkeley) 4/3/94
-# $FreeBSD$
+# $NQC$
 #
 
 PATH=/bin:/usr/bin:/sbin:/usr/sbin; export PATH

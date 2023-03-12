@@ -22,7 +22,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define CORE_AUTHOR		"Gareth Hughes, Leif Delgass, José Fonseca, Jon Smirl"
 

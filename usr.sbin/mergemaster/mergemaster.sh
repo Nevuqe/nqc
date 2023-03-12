@@ -8,7 +8,7 @@
 # Copyright (c) 1998-2012 Douglas Barton, All rights reserved
 # Please see detailed copyright below
 
-# $FreeBSD$
+# $NQC$
 
 PATH=/bin:/usr/bin:/usr/sbin
 

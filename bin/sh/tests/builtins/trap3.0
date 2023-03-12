@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 {
 	trap '' garbage && exit 3

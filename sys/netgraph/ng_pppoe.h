@@ -37,7 +37,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  * $Whistle: ng_pppoe.h,v 1.7 1999/10/16 10:16:43 julian Exp $
  */
 

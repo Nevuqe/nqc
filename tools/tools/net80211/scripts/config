@@ -1,7 +1,7 @@
 #
 # Common configuration settings for vap test scripts.
 #
-# $FreeBSD$
+# $NQC$
 #
 
 media_type()

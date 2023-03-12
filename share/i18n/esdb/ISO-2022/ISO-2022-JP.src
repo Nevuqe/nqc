@@ -1,4 +1,4 @@
-# $FreeBSD$ 
+# $NQC$ 
 # $NetBSD: ISO-2022-JP.src,v 1.2 2003/07/16 06:57:35 tshiozak Exp $
 
 NAME		"ISO-2022-JP"

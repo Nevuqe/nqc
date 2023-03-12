@@ -27,7 +27,7 @@
 #include <machine/asm.h>
 #include <machine/armreg.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 .global _C_LABEL(mptramp_pmu_boot)
 

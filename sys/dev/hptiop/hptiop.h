@@ -29,7 +29,7 @@
 #define _HPTIOP_H
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define DBG 0
 

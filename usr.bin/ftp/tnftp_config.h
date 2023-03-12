@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* tnftp_config.h.  Generated from tnftp_config.h.in by configure.  */
 /* tnftp_config.h.in.  Generated from configure.ac by autoheader.  */
 

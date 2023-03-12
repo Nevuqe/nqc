@@ -22,7 +22,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /** @file drm_sysctl.c
  * Implementation of various sysctls for controlling DRM behavior and reporting

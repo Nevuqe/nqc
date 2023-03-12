@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	semtest
 SRCS=	semtest.c

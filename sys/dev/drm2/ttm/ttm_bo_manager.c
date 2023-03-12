@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <dev/drm2/drmP.h>
 #include <dev/drm2/ttm/ttm_module.h>

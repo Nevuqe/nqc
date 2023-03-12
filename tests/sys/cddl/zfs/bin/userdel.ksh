@@ -1,6 +1,6 @@
 #! /usr/local/bin/ksh93 -p
 
-# $FreeBSD$
+# $NQC$
 
 a=
 g=

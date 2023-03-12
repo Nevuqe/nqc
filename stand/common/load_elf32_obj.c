@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define __ELF_WORD_SIZE 32
 #define	_MACHINE_ELF_WANT_32BIT

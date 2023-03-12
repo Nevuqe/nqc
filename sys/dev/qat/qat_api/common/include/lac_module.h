@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef __LAC_MODULE_H__
 #define __LAC_MODULE_H__
 

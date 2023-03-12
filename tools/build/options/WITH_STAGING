@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Enable staging of files to a stage tree.
 This can be best thought of as auto-install to
 .Va DESTDIR

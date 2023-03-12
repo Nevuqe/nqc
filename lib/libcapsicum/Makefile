@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 INCS=	capsicum_helpers.h
 

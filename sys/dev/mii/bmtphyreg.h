@@ -30,7 +30,7 @@
  *
  *	from NetBSD: bmtphyreg.h,v 1.1 2001/06/02 21:42:10 thorpej Exp
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _DEV_MII_BMTPHYREG_H_

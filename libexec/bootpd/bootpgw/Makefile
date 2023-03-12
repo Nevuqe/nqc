@@ -1,5 +1,5 @@
 # Makefile
-# $FreeBSD$
+# $NQC$
 
 PROG=	bootpgw
 MAN=

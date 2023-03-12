@@ -1,5 +1,5 @@
 /*	$NetBSD: uaudio.c,v 1.91 2004/11/05 17:46:14 kent Exp $	*/
-/*	$FreeBSD$ */
+/*	$NQC$ */
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * USB audio specs: http://www.usb.org/developers/devclass_docs/audio10.pdf

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /* Define when using wide characters */
 #define USE_WIDECHAR

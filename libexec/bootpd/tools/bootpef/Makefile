@@ -1,5 +1,5 @@
 # Makefile
-# $FreeBSD$
+# $NQC$
 
 PROG=	bootpef
 MAN=	bootpef.8

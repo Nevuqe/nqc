@@ -28,11 +28,11 @@
  *
  * based on sys/arm/allwinner/clkng/aw_clk_np.c
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

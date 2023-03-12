@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD$
+# $NQC$
 
 #
 # Copyright 2013 Spectra Logic  All rights reserved.

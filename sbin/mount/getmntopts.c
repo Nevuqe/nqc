@@ -35,7 +35,7 @@ static char sccsid[] = "@(#)getmntopts.c	8.3 (Berkeley) 3/29/95";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/mount.h>

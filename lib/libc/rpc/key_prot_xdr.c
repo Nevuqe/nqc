@@ -39,7 +39,7 @@
 
 /* #pragma ident	"@(#)key_prot.x	1.7	94/04/29 SMI" */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* 
  * Compiled from key_prot.x using rpcgen.

@@ -21,7 +21,7 @@
 static const char rcsid[] = "$Id: inet_net_ntop.c,v 1.5 2006/06/20 02:50:14 marka Exp $";
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "port_before.h"
 

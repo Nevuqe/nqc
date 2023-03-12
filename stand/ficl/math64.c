@@ -42,7 +42,7 @@
 ** SUCH DAMAGE.
 */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include "ficl.h"
 #include "math64.h"

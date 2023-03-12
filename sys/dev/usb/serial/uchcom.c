@@ -58,7 +58,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for WinChipHead CH341/340, the worst USB-serial chip in the

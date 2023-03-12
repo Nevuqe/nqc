@@ -25,7 +25,7 @@
 
 #include "archive_platform.h"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 //#undef HAVE_LZO_LZOCONF_H
 //#undef HAVE_LZO_LZO1X_H
 

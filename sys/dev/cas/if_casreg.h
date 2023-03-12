@@ -29,7 +29,7 @@
  *	from: NetBSD: gemreg.h,v 1.8 2005/12/11 12:21:26 christos Exp
  *	from: FreeBSD: if_gemreg.h 174987 2007-12-30 01:32:03Z marius
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	_IF_CASREG_H

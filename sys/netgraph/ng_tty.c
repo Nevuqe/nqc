@@ -39,7 +39,7 @@
  *
  * Updated by Andrew Thompson <thompsa@FreeBSD.org> for MPSAFE TTY.
  *
- * $FreeBSD$
+ * $NQC$
  * $Whistle: ng_tty.c,v 1.21 1999/11/01 09:24:52 julian Exp $
  */
 

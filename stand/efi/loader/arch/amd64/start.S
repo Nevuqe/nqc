@@ -33,7 +33,7 @@
 
 /*
  * crt0-efi-x86_64.S - x86_64 EFI startup code.
- * $FreeBSD$
+ * $NQC$
  */
 
 	.text

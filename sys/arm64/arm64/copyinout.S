@@ -28,7 +28,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/errno.h>
 

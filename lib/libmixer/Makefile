@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=		mixer
 SRCS=		${LIB}.c

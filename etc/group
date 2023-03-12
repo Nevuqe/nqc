@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 wheel:*:0:root
 daemon:*:1:

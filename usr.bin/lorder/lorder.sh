@@ -31,7 +31,7 @@
 #
 #	@(#)lorder.sh	8.1 (Berkeley) 6/6/93
 #
-# $FreeBSD$
+# $NQC$
 #
 
 # only one argument is a special case, just output the name twice

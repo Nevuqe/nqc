@@ -5,7 +5,7 @@
  *
  * Written by Artur Grabowski <art@openbsd.org> 2002 Public Domain.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /*

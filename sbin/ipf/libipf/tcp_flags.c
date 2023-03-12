@@ -1,4 +1,4 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*
  * Copyright (C) 2000-2004 by Darren Reed.

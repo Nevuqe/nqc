@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 SRCDIR="$(dirname "${0}")"; export SRCDIR
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Directory permissions management.
 

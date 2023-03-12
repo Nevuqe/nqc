@@ -56,7 +56,7 @@
 #define _MFIVAR_H
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/lock.h>
 #include <sys/sx.h>

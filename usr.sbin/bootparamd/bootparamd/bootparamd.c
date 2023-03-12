@@ -8,7 +8,7 @@ use and modify. Please send modifications and/or suggestions + bug fixes to
 */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef YP
 #include <rpc/rpc.h>

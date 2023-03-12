@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	tgmath
 CSTD=	c99

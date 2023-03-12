@@ -18,7 +18,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*-
  * Ralink Technology RT2860/RT3090/RT3390/RT3562/RT5390/RT5392 chipset driver

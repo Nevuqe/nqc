@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	ZW
 SRCS+=	citrus_zw.c

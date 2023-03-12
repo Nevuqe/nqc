@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIBSODIUM=${SRCTOP}/sys/contrib/libsodium/src/libsodium
 

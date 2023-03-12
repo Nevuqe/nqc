@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <opencrypto/gmac.h>
 #include <opencrypto/xform_auth.h>

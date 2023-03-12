@@ -64,7 +64,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for generic unknown ten-bit interfaces(1000BASE-{LX,SX}

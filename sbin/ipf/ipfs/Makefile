@@ -1,4 +1,4 @@
-#	$FreeBSD$
+#	$NQC$
 
 PACKAGE=ipf
 PROG=	ipfs

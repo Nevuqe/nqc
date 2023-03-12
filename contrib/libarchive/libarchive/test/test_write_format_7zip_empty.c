@@ -25,7 +25,7 @@
 
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Test writing an empty archive.

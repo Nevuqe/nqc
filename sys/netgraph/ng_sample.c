@@ -37,7 +37,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD$
+ * $NQC$
  * $Whistle: ng_sample.c,v 1.13 1999/11/01 09:24:52 julian Exp $
  */
 

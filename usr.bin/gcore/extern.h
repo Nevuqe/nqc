@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #define	PFLAGS_FULL	0x01

@@ -40,7 +40,7 @@
  *
  * Prototypes for cpu, mmu and tlb related functions.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_CPUFUNC_H_

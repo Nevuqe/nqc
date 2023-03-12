@@ -36,7 +36,7 @@
 .\"
 .\"	@(#)Clang.ms	8.1 (Berkeley) 6/8/93
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .nr Cl 2
 .TL
 The C Programming Language - Reference Manual

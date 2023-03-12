@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * John Bicket's SampleRate control algorithm.

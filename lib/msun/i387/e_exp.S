@@ -34,7 +34,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$")
+__NQCID("$NQC$")
 
 /* e^x = 2^(x * log2(e)) */
 ENTRY(exp)

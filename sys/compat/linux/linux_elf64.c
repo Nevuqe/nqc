@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define __ELF_WORD_SIZE 64
 #include <compat/linux/linux_elf.c>

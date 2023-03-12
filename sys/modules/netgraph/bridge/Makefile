@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	ng_bridge
 SRCS= 	ng_bridge.c

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 eval 'false;' && exit 1
 eval 'true;' || exit 1

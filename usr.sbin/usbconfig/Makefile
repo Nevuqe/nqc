@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 PROG=	usbconfig
 MAN=	usbconfig.8

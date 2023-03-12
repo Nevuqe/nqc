@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)if_loop.c	8.2 (Berkeley) 1/9/95
- * $FreeBSD$
+ * $NQC$
  */
 
 /*

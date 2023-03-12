@@ -33,7 +33,7 @@
  *
  *	@(#)fdesc.h	8.5 (Berkeley) 1/21/94
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _FS_FDESC_H_

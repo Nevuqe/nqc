@@ -5,7 +5,7 @@
  * 
  * Copyright (c) 2002, K A Fraser
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef __XEN_HYPERVISOR_H__

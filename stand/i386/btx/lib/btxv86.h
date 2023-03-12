@@ -14,7 +14,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _BTXV86_H_

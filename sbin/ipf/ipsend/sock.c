@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*
  * sock.c (C) 1995-1998 Darren Reed
  *

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 /*
  * Analog Devices AD7418 chip sitting on the I2C bus.
  */

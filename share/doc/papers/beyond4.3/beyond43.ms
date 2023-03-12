@@ -26,7 +26,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"	@(#)beyond43.ms	5.1 (Berkeley) 6/5/90
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .\" *troff -ms
 .rm CM

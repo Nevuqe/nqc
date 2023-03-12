@@ -1,5 +1,5 @@
 #	@(#)Makefile.inc	8.1 (Berkeley) 6/4/93
-# $FreeBSD$
+# $NQC$
 
 SRCS+=	_setjmp.S rfork_thread.S setjmp.S sigsetjmp.S \
 	fabs.S \

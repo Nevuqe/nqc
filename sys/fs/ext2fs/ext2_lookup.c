@@ -40,7 +40,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ufs_lookup.c	8.6 (Berkeley) 4/1/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

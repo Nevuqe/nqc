@@ -38,7 +38,7 @@
  * Costa Mesa, CA 92626
  */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include "oce_if.h"
 

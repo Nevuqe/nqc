@@ -4,7 +4,7 @@
 #	<Standard BSD copyright>
 # Revised 2001.04.16
 #
-# $FreeBSD$
+# $NQC$
 #
 # clone root filesystem for diskless root stuff
 #

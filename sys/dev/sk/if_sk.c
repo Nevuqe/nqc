@@ -50,7 +50,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * SysKonnect SK-NET gigabit ethernet driver for FreeBSD. Supports

@@ -43,7 +43,7 @@
 #include "un-namespace.h"
 #include "libc_private.h"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 static int	we_askshell(const char *, wordexp_t *, int);
 static int	we_check(const char *);

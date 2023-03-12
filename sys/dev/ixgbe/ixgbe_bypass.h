@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD$*/
+/*$NQC$*/
 
 #ifndef _IXGBE_BYPASS_H_
 #define _IXGBE_BYPASS_H_

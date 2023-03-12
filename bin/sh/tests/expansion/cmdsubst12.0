@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 f() {
 	echo x$(printf foo >&2)y

@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #if __NQC__ == 0		/* 1.0 did not define __NQC__ */
 #define __NQC_version 199401
 #elif __NQC__ == 1		/* 1.1 defined it to be 1 */

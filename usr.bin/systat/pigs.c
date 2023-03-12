@@ -36,7 +36,7 @@ static char sccsid[] = "@(#)pigs.c	8.2 (Berkeley) 9/23/93";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Pigs display from Bill Reeves at Lucasfilm

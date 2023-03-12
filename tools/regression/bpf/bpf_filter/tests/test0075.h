@@ -1,7 +1,7 @@
 /*-
  * Test 0075:	Check boundary conditions (BPF_LD+BPF_MEM)
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

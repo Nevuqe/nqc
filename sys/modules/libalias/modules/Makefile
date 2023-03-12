@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "${.CURDIR}/modules.inc"
 

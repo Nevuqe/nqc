@@ -1,4 +1,4 @@
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD

@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* File data */
 static const char file_name[] = "file";

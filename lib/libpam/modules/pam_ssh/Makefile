@@ -1,5 +1,5 @@
 # PAM module for SSH
-# $FreeBSD$
+# $NQC$
 
 SSHDIR=	${SRCTOP}/secure/crypto/openssh
 

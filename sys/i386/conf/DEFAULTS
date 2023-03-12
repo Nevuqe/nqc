@@ -1,7 +1,7 @@
 #
 # DEFAULTS -- Default kernel configuration file for FreeBSD/i386
 #
-# $FreeBSD$
+# $NQC$
 
 machine		i386
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 exit 44 & p44=$!
 exit 45 & p45=$!

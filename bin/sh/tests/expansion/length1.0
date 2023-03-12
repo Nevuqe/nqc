@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 v=abcd
 [ "${#v}" = 4 ] || echo '${#v} wrong'

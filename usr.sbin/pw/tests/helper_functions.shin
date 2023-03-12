@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # The pw command
 PW="pw -V ${HOME}"

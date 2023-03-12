@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from armv4cpuid.pl. */
 #include "arm_arch.h"
 

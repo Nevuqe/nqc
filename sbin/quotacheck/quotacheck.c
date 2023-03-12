@@ -44,7 +44,7 @@ static char sccsid[] = "@(#)quotacheck.c	8.3 (Berkeley) 1/29/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Fix up / report on disk quotas & usage

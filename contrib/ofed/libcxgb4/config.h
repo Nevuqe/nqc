@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	ENODATA ECONNREFUSED
 #define	likely(x) __predict_true(x)

@@ -56,7 +56,7 @@
 *
 *******************************************************************************/
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 #include <crypto/aesni/aesni_os.h>

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/contrib/openzfs/lib/libzfs_core
 .PATH: ${SRCTOP}/sys/contrib/openzfs/include

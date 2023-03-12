@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=	lib${LIB}
 SHLIBDIR?=	/lib

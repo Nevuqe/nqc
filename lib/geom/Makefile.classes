@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .if !defined(COMPAT_32BIT)
 GEOM_CLASS_DIR?=/lib/geom

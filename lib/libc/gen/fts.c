@@ -33,7 +33,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)fts.c	8.6 (Berkeley) 8/14/94");
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "namespace.h"
 #include <sys/param.h>

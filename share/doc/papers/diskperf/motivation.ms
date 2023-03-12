@@ -27,7 +27,7 @@
 .\"
 .\"	@(#)motivation.ms	6.2 (Berkeley) 4/16/91
 .\"
-.\"	$FreeBSD$
+.\"	$NQC$
 .\"
 .ds RH Motivation
 .NH

@@ -34,7 +34,7 @@
 static char sccsid[] = "@(#)getnetconfig.c	1.12 91/12/19 SMI";
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Copyright (c) 1989 by Sun Microsystems, Inc.

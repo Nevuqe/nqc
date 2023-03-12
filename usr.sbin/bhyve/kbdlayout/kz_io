@@ -3,7 +3,7 @@
 #
 # Created by: Koine Yuusuke(koinec) <koinec@users.osdn.me>
 #
-# $FreeBSD$
+# $NQC$
 
 '"',0x82;	"  (0x22)
 '(',0xa9;	(  (0x28)

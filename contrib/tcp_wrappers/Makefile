@@ -1,5 +1,5 @@
 # @(#) Makefile 1.23 97/03/21 19:27:20
-# $FreeBSD$
+# $NQC$
 
 what:
 	@echo

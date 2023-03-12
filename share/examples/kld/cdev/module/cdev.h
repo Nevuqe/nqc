@@ -68,7 +68,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef __CDEV_H_

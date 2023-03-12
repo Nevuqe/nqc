@@ -32,7 +32,7 @@
 #include "opt_kern_tls.h"
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/ktr.h>

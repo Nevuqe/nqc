@@ -24,7 +24,7 @@
    THE SOFTWARE.
    */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "osdep.h"
 #include "fastlz.h"

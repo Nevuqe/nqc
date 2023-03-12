@@ -39,7 +39,7 @@
  *
  * From: src/sys/sys/vnioctl.h,v 1.4
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_MDIOCTL_H_

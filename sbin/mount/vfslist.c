@@ -35,7 +35,7 @@ static char sccsid[] = "@(#)vfslist.c	8.1 (Berkeley) 5/8/95";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <err.h>
 #include <stdlib.h>

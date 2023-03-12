@@ -24,7 +24,7 @@
 */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	__IF_BWN_PHY_PPR_H__

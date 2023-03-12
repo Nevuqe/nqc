@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 typedef void (*xxxxxxxxxxx) (int,
 							 char);
 

@@ -24,7 +24,7 @@
  * behaviour
  *
  * $OpenBSD: pch.c,v 1.43 2014/11/18 17:03:35 tobias Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/types.h>

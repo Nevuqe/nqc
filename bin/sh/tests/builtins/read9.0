@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 empty=''
 read a b c <<EOF

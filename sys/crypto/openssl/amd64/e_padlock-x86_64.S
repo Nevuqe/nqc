@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* Do not modify. This file is auto-generated from e_padlock-x86_64.pl. */
 .text	
 .globl	padlock_capability

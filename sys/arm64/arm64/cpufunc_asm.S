@@ -35,7 +35,7 @@
 
 #include "assym.inc"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * FIXME:

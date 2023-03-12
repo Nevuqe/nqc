@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 struct archive_write;
 extern const char * __archive_write_get_passphrase(struct archive_write *);

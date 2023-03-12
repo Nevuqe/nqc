@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # RCSid:
 #	$Id: host-target.mk,v 1.11 2015/10/25 00:07:20 sjg Exp $
 

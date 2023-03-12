@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SUBDIR= fonts keymaps scrnmaps
 SUBDIR_PARALLEL=

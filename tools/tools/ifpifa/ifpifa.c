@@ -53,7 +53,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 static struct nlist	nl[] = {
 #define N_IFNET         0

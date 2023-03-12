@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LOADER_DISK_SUPPORT?=	yes
 LOADER_CD9660_SUPPORT?=	yes

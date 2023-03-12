@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $NQC$
 
 #
 # Installs/updates the necessary boot blocks for the desired boot environment

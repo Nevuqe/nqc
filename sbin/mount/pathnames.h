@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)pathnames.h	8.2 (Berkeley) 3/27/94
- *	$FreeBSD$
+ *	$NQC$
  */
 
 #define	_PATH_MOUNTDPID	"/var/run/mountd.pid"

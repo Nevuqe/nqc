@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*	$NetBSD: citrus_iso2022.c,v 1.20 2010/12/07 22:01:45 joerg Exp $	*/
 
 /*-

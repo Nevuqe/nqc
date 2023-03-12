@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 use strict;
 use warnings;

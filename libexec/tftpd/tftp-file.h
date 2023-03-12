@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 int	write_init(int fd, FILE *f, const char *mode);
 size_t	write_file(char *buffer, int count);

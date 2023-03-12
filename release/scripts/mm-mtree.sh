@@ -11,7 +11,7 @@
 # Copyright 2009 Douglas Barton
 # dougb@FreeBSD.org
 
-# $FreeBSD$
+# $NQC$
 
 PATH=/bin:/usr/bin:/usr/sbin
 

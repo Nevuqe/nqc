@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <wchar.h>
 #include <wctype.h>

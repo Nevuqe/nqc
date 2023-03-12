@@ -33,7 +33,7 @@ static const char sccsid[] = "@(#)enc_des.c	8.3 (Berkeley) 5/30/95";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef	ENCRYPTION
 # ifdef	AUTHENTICATION

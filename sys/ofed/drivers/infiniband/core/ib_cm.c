@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <linux/completion.h>
 #include <linux/dma-mapping.h>

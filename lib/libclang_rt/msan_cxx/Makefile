@@ -1,5 +1,5 @@
 
-# $FreeBSD$
+# $NQC$
 
 .include <bsd.init.mk>
 

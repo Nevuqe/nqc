@@ -42,7 +42,7 @@ static char sccsid[] = "@(#)msgs.c	8.2 (Berkeley) 4/28/95";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * msgs - a user bulletin board program

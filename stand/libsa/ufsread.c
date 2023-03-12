@@ -44,7 +44,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <ufs/ufs/dinode.h>
 #include <ufs/ufs/dir.h>

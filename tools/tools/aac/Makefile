@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	aac_checkq
 MAN=

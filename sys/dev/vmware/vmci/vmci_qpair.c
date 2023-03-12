@@ -15,7 +15,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "vmci_kernel_api.h"
 #include "vmci_kernel_defs.h"

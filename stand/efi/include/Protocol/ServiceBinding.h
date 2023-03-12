@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /** @file
   UEFI Service Binding Protocol is defined in UEFI specification.
 

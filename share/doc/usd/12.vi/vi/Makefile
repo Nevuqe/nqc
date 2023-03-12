@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS=		vi.in vi.chars
 USE_TBL=

@@ -49,7 +49,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #include <opt_cc.h>
 #include <sys/param.h>
 #include <sys/kernel.h>

@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* The sample has some files in a directory with a very long name. */
 #define TESTPATH "abcdefghijklmnopqrstuvwxyz/"	\

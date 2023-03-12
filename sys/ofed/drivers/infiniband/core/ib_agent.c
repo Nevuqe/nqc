@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <linux/slab.h>
 #include <linux/string.h>

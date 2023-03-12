@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${.CURDIR:H}
 CFLAGS+=	-DDSO_BASE

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This is a reach over build of BearSSL (www.BearSSL.org)
 

@@ -17,7 +17,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <stddef.h>
 #include <stdlib.h>

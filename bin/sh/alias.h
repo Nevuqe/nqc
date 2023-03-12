@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)alias.h	8.2 (Berkeley) 5/4/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #define ALIASINUSE	1

@@ -55,7 +55,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for Seiko Instruments S-35390A Real-time Clock

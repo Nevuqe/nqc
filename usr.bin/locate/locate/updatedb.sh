@@ -28,7 +28,7 @@
 #
 # updatedb - update locate database for local mounted filesystems
 #
-# $FreeBSD$
+# $NQC$
 
 if [ "$(id -u)" = "0" ]; then
 	echo ">>> WARNING" 1>&2

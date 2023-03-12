@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*	$NetBSD: citrus_mapper_zone.h,v 1.1 2003/06/25 09:51:48 tshiozak Exp $	*/
 
 /*-

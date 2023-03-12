@@ -37,7 +37,7 @@
 
 #include <sys/cdefs.h>
 #ifdef __NQC__
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #else
 #if defined(_KERNEL)
 __KERNEL_RCSID(0, "$NetBSD: ubsan.c,v 1.3 2018/08/03 16:31:04 kamil Exp $");

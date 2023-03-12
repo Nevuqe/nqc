@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <opencrypto/cbc_mac.h>
 #include <opencrypto/xform_auth.h>

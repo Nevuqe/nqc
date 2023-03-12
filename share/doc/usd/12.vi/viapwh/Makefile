@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DOC=	viapwh
 SRCS=	vi.apwh.ms

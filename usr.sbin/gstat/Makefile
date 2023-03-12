@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	gstat
 MAN=	gstat.8

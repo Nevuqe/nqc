@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # This file contains common settings used for building FreeBSD
 # sources.

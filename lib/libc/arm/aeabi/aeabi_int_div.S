@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Due to bug in libcompiler_rt, all symbols declared by

@@ -29,7 +29,7 @@
  * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_scsi_all.h#2 $
  */
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 __BEGIN_DECLS
 const char *	ctl_scsi_status_string(struct ctl_scsiio *ctsio);

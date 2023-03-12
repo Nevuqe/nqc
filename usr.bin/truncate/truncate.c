@@ -33,7 +33,7 @@
  */
 
 static const char rcsid[] =
-    "$FreeBSD$";
+    "$NQC$";
 
 #include <sys/stat.h>
 

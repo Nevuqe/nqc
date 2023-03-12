@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CALENDAR_FILE="-f ${SRCDIR}/calendar.comment"
 CALENDAR_BIN="calendar"

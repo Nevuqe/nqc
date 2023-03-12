@@ -3,7 +3,7 @@
 #
 # Created by: Koine Yuusuke(koinec) <koinec@users.osdn.me>
 #
-# $FreeBSD$
+# $NQC$
 
 '*',0xb7;	*  (0x2a)
 0xffb5,0x71;	Keypad 5

@@ -26,7 +26,7 @@
 #  OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 #  SUCH DAMAGE.
 #
-# $FreeBSD$
+# $NQC$
 
 # Rendering a manual page is fast. Even a manual page several 100k in size
 # takes less than a CPU second. If it takes much longer, it is very likely

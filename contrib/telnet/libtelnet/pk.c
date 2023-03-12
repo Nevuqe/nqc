@@ -30,7 +30,7 @@
 
 #include <sys/cdefs.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* public key routines */
 /* functions:

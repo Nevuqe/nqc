@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for sk_SK.ISO8859-2 locale
 $
@@ -6,195 +6,195 @@ $ strerror() support catalog
 $
 $set 1
 $ EPERM
-1 Operácia nie je povolená
+1 Operï¿½cia nie je povolenï¿½
 $ ENOENT
-2 Neexistujúci súbor alebo adresár
+2 Neexistujï¿½ci sï¿½bor alebo adresï¿½r
 $ ESRCH
 3 Proces neexistuje
 $ EINTR
-4 Systémové volanie preru¹ené
+4 Systï¿½movï¿½ volanie preruï¿½enï¿½
 $ EIO
-5 Chyba vstupu/výstupu
+5 Chyba vstupu/vï¿½stupu
 $ ENXIO
-6 Zariadenie nie je nakonfigurované
+6 Zariadenie nie je nakonfigurovanï¿½
 $ E2BIG
-7 Príli¹ dlhý zoznam argumentov
+7 Prï¿½liï¿½ dlhï¿½ zoznam argumentov
 $ ENOEXEC
-8 Chybný formát spusteného súboru
+8 Chybnï¿½ formï¿½t spustenï¿½ho sï¿½boru
 $ EBADF
-9 Chybný deskriptor súboru
+9 Chybnï¿½ deskriptor sï¿½boru
 $ ECHILD
-10 Neexistuje ¾iaden potomok procesu
+10 Neexistuje ï¿½iaden potomok procesu
 $ EDEADLK
-11 Bolo zabránené zablokovaniu prostriedku
+11 Bolo zabrï¿½nenï¿½ zablokovaniu prostriedku
 $ ENOMEM
-12 Nie je mo¾né prideli» pamä»
+12 Nie je moï¿½nï¿½ prideliï¿½ pamï¿½
 $ EACCES
-13 Prístup odmietnutý
+13 Prï¿½stup odmietnutï¿½
 $ EFAULT
-14 Chybná adresa
+14 Chybnï¿½ adresa
 $ ENOTBLK
-15 Vy¾adované blokové zariadenie
+15 Vyï¿½adovanï¿½ blokovï¿½ zariadenie
 $ EBUSY
-16 Zariadenie je pou¾ívané
+16 Zariadenie je pouï¿½ï¿½vanï¿½
 $ EEXIST
-17 Súbor existuje
+17 Sï¿½bor existuje
 $ EXDEV
 18 Odkaz medzi zariadeniami
 $ ENODEV
-19 Operácia nie je zariadením podporovaná
+19 Operï¿½cia nie je zariadenï¿½m podporovanï¿½
 $ ENOTDIR
-20 Nie je adresár
+20 Nie je adresï¿½r
 $ EISDIR
-21 Je adresár
+21 Je adresï¿½r
 $ EINVAL
-22 Chybný argument
+22 Chybnï¿½ argument
 $ ENFILE
-23 Priveµa otvorených súborov v systéme
+23 Priveï¿½a otvorenï¿½ch sï¿½borov v systï¿½me
 $ EMFILE
-24 Priveµa otvorených súborov
+24 Priveï¿½a otvorenï¿½ch sï¿½borov
 $ ENOTTY
-25 Nevhodné ioctl pre dané zariadenie
+25 Nevhodnï¿½ ioctl pre danï¿½ zariadenie
 $ ETXTBSY
-26 Textový súbor je pou¾ívaný
+26 Textovï¿½ sï¿½bor je pouï¿½ï¿½vanï¿½
 $ EFBIG
-27 Súbor je príli¹ veµký
+27 Sï¿½bor je prï¿½liï¿½ veï¿½kï¿½
 $ ENOSPC
-28 Na zariadení nie je voµné miesto
+28 Na zariadenï¿½ nie je voï¿½nï¿½ miesto
 $ ESPIPE
-29 Neprípustné nastavenie pozície
+29 Neprï¿½pustnï¿½ nastavenie pozï¿½cie
 $ EROFS
-30 Súborový systém je len na èítanie
+30 Sï¿½borovï¿½ systï¿½m je len na ï¿½ï¿½tanie
 $ EMLINK
-31 Priveµa odkazov
+31 Priveï¿½a odkazov
 $ EPIPE
-32 Preru¹ená rúra
+32 Preruï¿½enï¿½ rï¿½ra
 $ EDOM
-33 Èíselný argument mimo definièný obor
+33 ï¿½ï¿½selnï¿½ argument mimo definiï¿½nï¿½ obor
 $ ERANGE
-34 Výsledok príli¹ veµký alebo príli¹ malý
+34 Vï¿½sledok prï¿½liï¿½ veï¿½kï¿½ alebo prï¿½liï¿½ malï¿½
 $ EAGAIN, EWOULDBLOCK
-35 Zdroj je doèasne nedostupný
+35 Zdroj je doï¿½asne nedostupnï¿½
 $ EINPROGRESS
-36 Operácia práve prebieha
+36 Operï¿½cia prï¿½ve prebieha
 $ EALREADY
-37 Operácia u¾ prebieha
+37 Operï¿½cia uï¿½ prebieha
 $ ENOTSOCK
-38 Socketová operácia na objekte, ktorý nie je socket
+38 Socketovï¿½ operï¿½cia na objekte, ktorï¿½ nie je socket
 $ EDESTADDRREQ
-39 Vy¾adovaná cieµová adresa
+39 Vyï¿½adovanï¿½ cieï¿½ovï¿½ adresa
 $ EMSGSIZE
-40 Príli¹ dlhá správa
+40 Prï¿½liï¿½ dlhï¿½ sprï¿½va
 $ EPROTOTYPE
-41 Protokol nie je socketom podporovaný
+41 Protokol nie je socketom podporovanï¿½
 $ ENOPROTOOPT
-42 Protokol nie je k dispozícii
+42 Protokol nie je k dispozï¿½cii
 $ EPROTONOSUPPORT
-43 Protokol nie je podporovaný
+43 Protokol nie je podporovanï¿½
 $ ESOCKTNOSUPPORT
-44 Typ socketu nie je podporovaný
+44 Typ socketu nie je podporovanï¿½
 $ EOPNOTSUPP
-45 Operácia nie je podporovaná
+45 Operï¿½cia nie je podporovanï¿½
 $ EPFNOSUPPORT
-46 Rodina protokolov nie je podporovaná
+46 Rodina protokolov nie je podporovanï¿½
 $ EAFNOSUPPORT
-47 Rodina adries nie je podporovaná rodinou protokolov
+47 Rodina adries nie je podporovanï¿½ rodinou protokolov
 $ EADDRINUSE
-48 Adresa je u¾ pou¾ívaná
+48 Adresa je uï¿½ pouï¿½ï¿½vanï¿½
 $ EADDRNOTAVAIL
-49 Nie je mo¾né prideli» po¾adovanú adresu
+49 Nie je moï¿½nï¿½ prideliï¿½ poï¿½adovanï¿½ adresu
 $ ENETDOWN
-50 Sie» je nefunkèná
+50 Sieï¿½ je nefunkï¿½nï¿½
 $ ENETUNREACH
-51 Sie» je nedostupná
+51 Sieï¿½ je nedostupnï¿½
 $ ENETRESET
-52 Sie» zru¹ila spojenie po resete
+52 Sieï¿½ zruï¿½ila spojenie po resete
 $ ECONNABORTED
-53 Program spôsobil ukonèenie spojenia
+53 Program spï¿½sobil ukonï¿½enie spojenia
 $ ECONNRESET
-54 Spojenie zru¹ené druhou stranou
+54 Spojenie zruï¿½enï¿½ druhou stranou
 $ ENOBUFS
-55 Vyrovnávacia pamä» nie je k dispozícii
+55 Vyrovnï¿½vacia pamï¿½ nie je k dispozï¿½cii
 $ EISCONN
-56 Socket je u¾ pripojený
+56 Socket je uï¿½ pripojenï¿½
 $ ENOTCONN
-57 Socket nie je pripojený
+57 Socket nie je pripojenï¿½
 $ ESHUTDOWN
-58 Nie je mo¾né posiela» po uzavretí socketu
+58 Nie je moï¿½nï¿½ posielaï¿½ po uzavretï¿½ socketu
 $ ETOOMANYREFS
-59 Príli¹ mnoho odkazov: nie je mo¾né spoji»
+59 Prï¿½liï¿½ mnoho odkazov: nie je moï¿½nï¿½ spojiï¿½
 $ ETIMEDOUT
-60 Èasový limit pre spojenie vypr¹al
+60 ï¿½asovï¿½ limit pre spojenie vyprï¿½al
 $ ECONNREFUSED
-61 Spojenie odmietnuté
+61 Spojenie odmietnutï¿½
 $ ELOOP
-62 Priveµa úrovní symbolických odkazov
+62 Priveï¿½a ï¿½rovnï¿½ symbolickï¿½ch odkazov
 $ ENAMETOOLONG
-63 Meno súboru príli¹ dlhé
+63 Meno sï¿½boru prï¿½liï¿½ dlhï¿½
 $ EHOSTDOWN
-64 Vzdialený uzol je odpojený
+64 Vzdialenï¿½ uzol je odpojenï¿½
 $ EHOSTUNREACH
-65 Neexistuje cesta k vzdialenému uzlu
+65 Neexistuje cesta k vzdialenï¿½mu uzlu
 $ ENOTEMPTY
-66 Adresár nie je prázdny
+66 Adresï¿½r nie je prï¿½zdny
 $ EPROCLIM
-67 Priveµa procesov
+67 Priveï¿½a procesov
 $ EUSERS
-68 Priveµa pou¾ívateµov
+68 Priveï¿½a pouï¿½ï¿½vateï¿½ov
 $ EDQUOT
-69 Disková kvóta prekroèená
+69 Diskovï¿½ kvï¿½ta prekroï¿½enï¿½
 $ ESTALE
-70 Zastaralý NFS súborový ukazateµ
+70 Zastaralï¿½ NFS sï¿½borovï¿½ ukazateï¿½
 $ EREMOTE
-71 Priveµa úrovní vzdialeného v ceste
+71 Priveï¿½a ï¿½rovnï¿½ vzdialenï¿½ho v ceste
 $ EBADRPC
-72 RPC ¹truktúra je chybná
+72 RPC ï¿½truktï¿½ra je chybnï¿½
 $ ERPCMISMATCH
-73 Chybná verzia RPC
+73 Chybnï¿½ verzia RPC
 $ EPROGUNAVAIL
-74 RPC program nie je k dispozícii
+74 RPC program nie je k dispozï¿½cii
 $ EPROGMISMATCH
-75 Chybná verzia RPC programu
+75 Chybnï¿½ verzia RPC programu
 $ EPROCUNAVAIL
-76 Chybná RPC procedúra pre program
+76 Chybnï¿½ RPC procedï¿½ra pre program
 $ ENOLCK
-77 Zámky nie sú k dispozícii
+77 Zï¿½mky nie sï¿½ k dispozï¿½cii
 $ ENOSYS
-78 Funkcia nie je implementovaná
+78 Funkcia nie je implementovanï¿½
 $ EFTYPE
-79 Nevhodný typ alebo formát súboru
+79 Nevhodnï¿½ typ alebo formï¿½t sï¿½boru
 $ EAUTH
-80 Overenie práv neúspe¹né
+80 Overenie prï¿½v neï¿½speï¿½nï¿½
 $ ENEEDAUTH
-81 Vy¾adovaný overovací objekt
+81 Vyï¿½adovanï¿½ overovacï¿½ objekt
 $ EIDRM
-82 Identifikátor odstránený
+82 Identifikï¿½tor odstrï¿½nenï¿½
 $ ENOMSG
-83 Neexistuje správa ¾elaného typu
+83 Neexistuje sprï¿½va ï¿½elanï¿½ho typu
 $ EOVERFLOW
-84 Hodnota je pre daný dátový typ priveµká
+84 Hodnota je pre danï¿½ dï¿½tovï¿½ typ priveï¿½kï¿½
 $ EILSEQ
-85 Neprípustná postupnos» bajtov
+85 Neprï¿½pustnï¿½ postupnosï¿½ bajtov
 $ ENOTSUP
-86 Nie je podporované
+86 Nie je podporovanï¿½
 $ ECANCELED
-87 Operácia zru¹ená
+87 Operï¿½cia zruï¿½enï¿½
 $ EBADMSG
-88 Chybná alebo poru¹ená správa
+88 Chybnï¿½ alebo poruï¿½enï¿½ sprï¿½va
 $ ENODATA
-89 ®iadna správa nie je k dispozícii
+89 ï¿½iadna sprï¿½va nie je k dispozï¿½cii
 $ ENOSR
-90 ®iadne STREAM zdroje
+90 ï¿½iadne STREAM zdroje
 $ ENOSTR
 91 Nie je STREAM
 $ ETIME
-92 Èasový limit pre STREAM ioctl vypr¹al
+92 ï¿½asovï¿½ limit pre STREAM ioctl vyprï¿½al
 $ ENOATTR
-93 Atribút nenájdený
+93 Atribï¿½t nenï¿½jdenï¿½
 $ EMULTIHOP
 94 Pokus o spojenie cez viacero uzlov
 $ ENOLINK
-95 Odkaz bol pretrhnutý
+95 Odkaz bol pretrhnutï¿½
 $ EPROTO
 96 Chyba protokolu
 $
@@ -202,66 +202,66 @@ $ strsignal() support catalog
 $
 $set 2
 $ SIGHUP
-1 Terminál odpojený
+1 Terminï¿½l odpojenï¿½
 $ SIGINT
-2 Preru¹enie
+2 Preruï¿½enie
 $ SIGQUIT
 3 Koniec
 $ SIGILL
-4 Chybná in¹trukcia
+4 Chybnï¿½ inï¿½trukcia
 $ SIGTRAP
-5 Trasovacia/ladiaca in¹trukcia
+5 Trasovacia/ladiaca inï¿½trukcia
 $ SIGABRT
-6 Násilné ukonèenie
+6 Nï¿½silnï¿½ ukonï¿½enie
 $ SIGEMT
-7 Emulovaná in¹trukcia
+7 Emulovanï¿½ inï¿½trukcia
 $ SIGFPE
-8 Výnimka pohyblivej rádovej èiarky
+8 Vï¿½nimka pohyblivej rï¿½dovej ï¿½iarky
 $ SIGKILL
-9 Zabité
+9 Zabitï¿½
 $ SIGBUS
 10 Chyba na zbernici
 $ SIGSEGV
-11 Chyba segmentácie
+11 Chyba segmentï¿½cie
 $ SIGSYS
-12 Chybné systémové volanie
+12 Chybnï¿½ systï¿½movï¿½ volanie
 $ SIGPIPE
-13 Preru¹ená rúra
+13 Preruï¿½enï¿½ rï¿½ra
 $ SIGALRM
-14 Budík
+14 Budï¿½k
 $ SIGTERM
-15 Ukonèené
+15 Ukonï¿½enï¿½
 $ SIGURG
-16 Naliehavý vstupný/výstupný stav
+16 Naliehavï¿½ vstupnï¿½/vï¿½stupnï¿½ stav
 $ SIGSTOP
-17 Pozastavené (signál)
+17 Pozastavenï¿½ (signï¿½l)
 $ SIGTSTP
-18 Pozastavené
+18 Pozastavenï¿½
 $ SIGCONT
-19 Pokraèovanie
+19 Pokraï¿½ovanie
 $ SIGCHLD
-20 Potomok procesu ukonèený
+20 Potomok procesu ukonï¿½enï¿½
 $ SIGTTIN
-21 Pozastavené (terminálový vstup)
+21 Pozastavenï¿½ (terminï¿½lovï¿½ vstup)
 $ SIGTTOU
-22 Pozastavené (terminálový výstup)
+22 Pozastavenï¿½ (terminï¿½lovï¿½ vï¿½stup)
 $ SIGIO
-23 Vstup/výstup mo¾ný
+23 Vstup/vï¿½stup moï¿½nï¿½
 $ SIGXCPU
-24 Prekroèený èasový limit pre procesor
+24 Prekroï¿½enï¿½ ï¿½asovï¿½ limit pre procesor
 $ SIGXFSZ
-25 Prekroèený limit veµkosti súboru
+25 Prekroï¿½enï¿½ limit veï¿½kosti sï¿½boru
 $ SIGVTALRM
-26 Vypr¹al virtuálny èasovaè
+26 Vyprï¿½al virtuï¿½lny ï¿½asovaï¿½
 $ SIGPROF
-27 Vypr¹al profilovací èasovaè
+27 Vyprï¿½al profilovacï¿½ ï¿½asovaï¿½
 $ SIGWINCH
-28 Veµkos» okna zmenená
+28 Veï¿½kosï¿½ okna zmenenï¿½
 $ SIGINFO
-29 ®iados» o informáciu
+29 ï¿½iadosï¿½ o informï¿½ciu
 $ SIGUSR1
-30 Pou¾ívateµom definovaný signál 1
+30 Pouï¿½ï¿½vateï¿½om definovanï¿½ signï¿½l 1
 $ SIGUSR2
-31 Pou¾ívateµom definovaný signál 2
+31 Pouï¿½ï¿½vateï¿½om definovanï¿½ signï¿½l 2
 $ SIGPWR
-32 Zlyhanie/opakované spustenie napájania
+32 Zlyhanie/opakovanï¿½ spustenie napï¿½jania

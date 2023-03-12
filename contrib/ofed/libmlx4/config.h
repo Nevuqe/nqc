@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #ifdef	__LP64__
 #define	SIZEOF_LONG 8

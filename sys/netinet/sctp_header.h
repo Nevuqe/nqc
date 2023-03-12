@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef _NETINET_SCTP_HEADER_H_
 #define _NETINET_SCTP_HEADER_H_

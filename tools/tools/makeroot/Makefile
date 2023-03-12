@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SCRIPTS=	makeroot.sh
 MAN=		makeroot.8

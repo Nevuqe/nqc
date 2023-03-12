@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 compute_engine_instance:
   # Image list available via

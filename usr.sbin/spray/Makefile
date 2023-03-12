@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	spray
 MAN=	spray.8

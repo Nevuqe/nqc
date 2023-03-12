@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .include "${SRCTOP}/sys/modules/libalias/modules/modules.inc"
 

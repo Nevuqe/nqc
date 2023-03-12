@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef _DRM_OS_NQC_H_
 #define	_DRM_OS_NQC_H_

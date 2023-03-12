@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	samsung
 SRCS=	samsung.c

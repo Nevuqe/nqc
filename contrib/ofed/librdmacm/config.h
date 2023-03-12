@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	min(a, b) ((a) > (b) ? (b) : (a))
 #define	VALGRIND_MAKE_MEM_DEFINED(...)	0

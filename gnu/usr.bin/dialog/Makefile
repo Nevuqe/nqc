@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 DIALOG=	${SRCTOP}/contrib/dialog
 PROG=   dialog

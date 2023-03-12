@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 # A really simple script to create a swap-backed msdosfs filesystem, then
 # test to make sure the mbnambuf optimisation(msdosfs_conv.c rev 1.40)
 # doesn't break multi-byte characters.

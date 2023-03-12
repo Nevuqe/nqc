@@ -4,7 +4,7 @@
  *  Aug 1995, Godmar Back (gback@cs.utah.edu)
  *  University of Utah, Department of Computer Science
  *
- * $FreeBSD$
+ * $NQC$
  */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD

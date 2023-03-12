@@ -28,7 +28,7 @@
  *
  * Textual conventions for OctetStrings
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

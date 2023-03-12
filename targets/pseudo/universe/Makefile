@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This target is "special".
 #

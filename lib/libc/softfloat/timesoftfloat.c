@@ -31,7 +31,7 @@ this code that are retained.
 */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <stdlib.h>
 #include <stdarg.h>

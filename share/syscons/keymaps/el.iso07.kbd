@@ -1,7 +1,7 @@
 # Greek ISO 8859-7 keyboard for FreeBSD
 # by Basileios Anastasatos <B.Anastasatos@Freemail.gr>
 #
-# $FreeBSD$
+# $NQC$
 #
 # English/Greek keyboard lock:  (Left)Alt+(Left|Right)Shift
 # English/Greek keyboard shift: (Right)AltGr
@@ -17,33 +17,33 @@
 # Suspend power (APM):          (Left)Alt+Pause
 #
 # Composite characters:
-#   acute (tonos):              [;/:] and ÁÅÇÉÏÕÙáåçéïõù => ¶¸¹º¼¾¿ÜÝÞßüýþ
-#   diaeresis (dialytika):      Shift+[;/:] and ÉÕéõ => ÚÛúû
-#   acute and diaeresis:        Ctrl+[;/:] and éõ => Àà 
+#   acute (tonos):              [;/:] and ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ => ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#   diaeresis (dialytika):      Shift+[;/:] and ï¿½ï¿½ï¿½ï¿½ => ï¿½ï¿½ï¿½ï¿½
+#   acute and diaeresis:        Ctrl+[;/:] and ï¿½ï¿½ => ï¿½ï¿½ 
 #
-# Greek semicolon (ano teleia): Shift+'w/W' => ·
+# Greek semicolon (ano teleia): Shift+'w/W' => ï¿½
 #                               
 # Other ISO 8859-7 characters:
 #
 #   Key combination     Code Symbol Name
 #
-#   Ctrl+[`/~]          166    ¦    BROKEN BAR
-#   Shift+Ctrl+[`/~]    189    ½    VULGAR FRACTION ONE HALF
-#   Ctrl+[1/!]          178    ²    SUPERSCRIPT TWO
-#   Shift+Ctrl+[1/!]    179    ³    SUPERSCRIPT THREE
-#   Shift(+Ctrl)+[3/#]  169    ©    COPYRIGHT SIGN
-#   Shift(+Ctrl)+[4/$]  163    £    POUND SIGN
-#   Shift(+Ctrl)+[5/%]  167    §    SECTION SIGN
-#   Shift(+Ctrl)+[7/&]  161    ¡    SINGLE HIGH-REVERSED-9 QUOTATION MARK
-#   Shift(+Ctrl)+[8/*]  162    ¢    RIGHT SINGLE QUOTATION MARK
-#   Shift(+Ctrl)+[9/(]  171    «    LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
-#   Shift(+Ctrl)+[0/)]  187    »    RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
-#   Shift(+Ctrl)+[=/+]  177    ±    PLUS-MINUS SIGN
-#   Shift(+Ctrl)+['/"]  176    °    DEGREE SIGN
-#   Shift(+Ctrl)+[,/<]  173    ­    SOFT HYPHEN
-#   Shift(+Ctrl)+[./>]  175    ¯    HORIZONTAL BAR
-#   Shift(+Ctrl)+[//?]  172    ¬    NOT SIGN
-#   Ctrl+Shift+Space    160         NO-BREAK SPACE
+#   Ctrl+[`/~]          166    ï¿½    BROKEN BAR
+#   Shift+Ctrl+[`/~]    189    ï¿½    VULGAR FRACTION ONE HALF
+#   Ctrl+[1/!]          178    ï¿½    SUPERSCRIPT TWO
+#   Shift+Ctrl+[1/!]    179    ï¿½    SUPERSCRIPT THREE
+#   Shift(+Ctrl)+[3/#]  169    ï¿½    COPYRIGHT SIGN
+#   Shift(+Ctrl)+[4/$]  163    ï¿½    POUND SIGN
+#   Shift(+Ctrl)+[5/%]  167    ï¿½    SECTION SIGN
+#   Shift(+Ctrl)+[7/&]  161    ï¿½    SINGLE HIGH-REVERSED-9 QUOTATION MARK
+#   Shift(+Ctrl)+[8/*]  162    ï¿½    RIGHT SINGLE QUOTATION MARK
+#   Shift(+Ctrl)+[9/(]  171    ï¿½    LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+#   Shift(+Ctrl)+[0/)]  187    ï¿½    RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+#   Shift(+Ctrl)+[=/+]  177    ï¿½    PLUS-MINUS SIGN
+#   Shift(+Ctrl)+['/"]  176    ï¿½    DEGREE SIGN
+#   Shift(+Ctrl)+[,/<]  173    ï¿½    SOFT HYPHEN
+#   Shift(+Ctrl)+[./>]  175    ï¿½    HORIZONTAL BAR
+#   Shift(+Ctrl)+[//?]  172    ï¿½    NOT SIGN
+#   Ctrl+Shift+Space    160    ï¿½    NO-BREAK SPACE
 #   
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock

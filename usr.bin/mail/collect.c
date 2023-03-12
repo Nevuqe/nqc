@@ -35,7 +35,7 @@ static char sccsid[] = "@(#)collect.c	8.2 (Berkeley) 4/19/94";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Mail -- a mail program

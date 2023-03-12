@@ -53,7 +53,7 @@
 #include <machine/asmacros.h>
 #include <machine/trap.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef KDTRACE_HOOKS
 	.bss

@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)if.c	8.5 (Berkeley) 1/9/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #include "opt_bpf.h"

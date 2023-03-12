@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)route.h	8.4 (Berkeley) 1/9/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NET_ROUTE_H_

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ttycom.h	8.1 (Berkeley) 3/28/94
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS__WINSIZE_H_

@@ -26,7 +26,7 @@
 #
 # ident	"@(#)setup.ksh	1.3	09/05/19 SMI"
 #
-# $FreeBSD$
+# $NQC$
 
 . ${STF_SUITE}/include/libtest.kshlib
 . $STF_SUITE/include/libgnop.kshlib

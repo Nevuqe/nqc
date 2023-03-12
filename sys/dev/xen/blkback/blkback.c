@@ -33,7 +33,7 @@
  *          Ken Merry           (Spectra Logic Corporation)
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /**
  * \file blkback.c

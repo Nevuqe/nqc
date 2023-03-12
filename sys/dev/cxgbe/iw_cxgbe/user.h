@@ -31,7 +31,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 #ifndef __C4IW_USER_H__
 #define __C4IW_USER_H__

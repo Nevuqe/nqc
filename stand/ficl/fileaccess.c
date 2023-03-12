@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <errno.h>
 #include <stdlib.h>

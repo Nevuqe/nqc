@@ -41,7 +41,7 @@
 #include <machine/asm.h>
 #include <sys/errno.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #include <arm/arm/bcopyinout_xscale.S>
 
 /*

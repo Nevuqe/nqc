@@ -1,7 +1,7 @@
 \ examples from FORML conference paper Nov 98
 \ sadler
 \
-\ $FreeBSD$
+\ $NQC$
 
 .( loading FORML examples ) cr
 object --> sub c-example

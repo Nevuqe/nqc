@@ -3,7 +3,7 @@
 # Copyright 2015 Spectra Logic Corporation.
 #
 
-# $FreeBSD$
+# $NQC$
 
 . $STF_SUITE/include/libtest.kshlib
 

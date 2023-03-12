@@ -33,7 +33,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS THE
  * SOFTWARE.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #if !defined(CM_MSGS_H)

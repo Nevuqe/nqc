@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)mount.h	8.21 (Berkeley) 5/20/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_MOUNT_H_

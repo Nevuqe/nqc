@@ -1,5 +1,5 @@
 /*	$NetBSD: util.c,v 1.9 2011/02/27 17:33:37 joerg Exp $	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 /*	$OpenBSD: util.c,v 1.39 2010/07/02 22:18:03 tedu Exp $	*/
 
 /*-
@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/stat.h>
 #include <sys/types.h>

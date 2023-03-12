@@ -1,4 +1,4 @@
-$ $FreeBSD$
+$ $NQC$
 $
 $ Message catalog for pl_PL.ISO8859-2 locale
 $
@@ -12,61 +12,61 @@ $ ENOENT
 $ ESRCH
 3 Nie ma takiego procesu
 $ EINTR
-4 Wywo³anie systemowe przerwane
+4 Wywoï¿½anie systemowe przerwane
 $ EIO
-5 B³±d wej¶cia/wyj¶cia
+5 Bï¿½ï¿½d wejï¿½cia/wyjï¿½cia
 $ ENXIO
-6 Nieskonfigurowane urz±dzenie
+6 Nieskonfigurowane urzï¿½dzenie
 $ E2BIG
-7 Zbyt d³uga lista argumentów
+7 Zbyt dï¿½uga lista argumentï¿½w
 $ ENOEXEC
-8 B³êdny format pliku wykonywalnego
+8 Bï¿½ï¿½dny format pliku wykonywalnego
 $ EBADF
-9 Z³y deskryptor pliku
+9 Zï¿½y deskryptor pliku
 $ ECHILD
-10 Brak procesów potomnych
+10 Brak procesï¿½w potomnych
 $ EDEADLK
-11 Unikniêto zakleszczenia zasobów
+11 Unikniï¿½to zakleszczenia zasobï¿½w
 $ ENOMEM
-12 Brak pamiêci do przydzia³u
+12 Brak pamiï¿½ci do przydziaï¿½u
 $ EACCES
-13 Brak dostêpu
+13 Brak dostï¿½pu
 $ EFAULT
-14 Z³y adres
+14 Zï¿½y adres
 $ ENOTBLK
-15 Wymagane urz±dzenie blokowe
+15 Wymagane urzï¿½dzenie blokowe
 $ EBUSY
-16 Urz±dzenie zajête
+16 Urzï¿½dzenie zajï¿½te
 $ EEXIST
 17 Plik istnieje
 $ EXDEV
-18 Dowi±zanie miedzy urz±dzeniami
+18 Dowiï¿½zanie miedzy urzï¿½dzeniami
 $ ENODEV
-19 Operacja nieobs³ugiwana przez urz±dzenie
+19 Operacja nieobsï¿½ugiwana przez urzï¿½dzenie
 $ ENOTDIR
 20 To nie jest katalog
 $ EISDIR
 21 To jest katalog
 $ EINVAL
-22 B³êdny argument
+22 Bï¿½ï¿½dny argument
 $ ENFILE
-23 Zbyt wiele otwartych plików w systemie
+23 Zbyt wiele otwartych plikï¿½w w systemie
 $ EMFILE
-24 Zbyt wiele otwartych plików
+24 Zbyt wiele otwartych plikï¿½w
 $ ENOTTY
-25 Niew³a¶ciwy dostêp do urz±dzenia
+25 Niewï¿½aï¿½ciwy dostï¿½p do urzï¿½dzenia
 $ ETXTBSY
-26 Plik wykonywalny jest zajêty
+26 Plik wykonywalny jest zajï¿½ty
 $ EFBIG
-27 Zbyt du¿y plik
+27 Zbyt duï¿½y plik
 $ ENOSPC
-28 Brak miejsca na urz±dzeniu
+28 Brak miejsca na urzï¿½dzeniu
 $ ESPIPE
-29 Przesuniêcie niemo¿liwe
+29 Przesuniï¿½cie niemoï¿½liwe
 $ EROFS
-30 System plików tylko do odczytu
+30 System plikï¿½w tylko do odczytu
 $ EMLINK
-31 Zbyt wiele dowi±zañ
+31 Zbyt wiele dowiï¿½zaï¿½
 $ EPIPE
 32 Potok przerwany
 $ EDOM
@@ -74,176 +74,176 @@ $ EDOM
 $ ERANGE
 34 Wynik z poza zakresu
 $ EAGAIN, EWOULDBLOCK
-35 Zasoby chwilowo niedostêpne
+35 Zasoby chwilowo niedostï¿½pne
 $ EINPROGRESS
-36 Operacja jest w³a¶nie wykonywana
+36 Operacja jest wï¿½aï¿½nie wykonywana
 $ EALREADY
-37 Operacja jest ju¿ wykonywana
+37 Operacja jest juï¿½ wykonywana
 $ ENOTSOCK
-38 Operacja na obiekcie, który nie jest gniazdem
+38 Operacja na obiekcie, ktï¿½ry nie jest gniazdem
 $ EDESTADDRREQ
 39 Wymagany adres przeznaczenia
 $ EMSGSIZE
-40 Wiadomo¶æ zbyt d³uga
+40 Wiadomoï¿½ï¿½ zbyt dï¿½uga
 $ EPROTOTYPE
-41 Typ protoko³u nie pasuje do gniazda
+41 Typ protokoï¿½u nie pasuje do gniazda
 $ ENOPROTOOPT
-42 Protokó³ nie jest dostêpny
+42 Protokï¿½ nie jest dostï¿½pny
 $ EPROTONOSUPPORT
-43 Nieobs³ugiwany protokó³
+43 Nieobsï¿½ugiwany protokï¿½
 $ ESOCKTNOSUPPORT
-44 Nieobs³ugiwany typ gniazda
+44 Nieobsï¿½ugiwany typ gniazda
 $ EOPNOTSUPP
-45 Nieobs³ugiwana operacja
+45 Nieobsï¿½ugiwana operacja
 $ EPFNOSUPPORT
-46 Nieobs³ugiwana rodzina protoko³ów
+46 Nieobsï¿½ugiwana rodzina protokoï¿½ï¿½w
 $ EAFNOSUPPORT
-47 Rodzina adresów nie jest obs³ugiwana przez rodzinê protoko³ów
+47 Rodzina adresï¿½w nie jest obsï¿½ugiwana przez rodzinï¿½ protokoï¿½ï¿½w
 $ EADDRINUSE
-48 Adres jest ju¿ w u¿yciu
+48 Adres jest juï¿½ w uï¿½yciu
 $ EADDRNOTAVAIL
-49 Adres nie mo¿e byæ przydzielony
+49 Adres nie moï¿½e byï¿½ przydzielony
 $ ENETDOWN
-50 Sieæ nie dzia³a
+50 Sieï¿½ nie dziaï¿½a
 $ ENETUNREACH
-51 Sieæ jest niedostêpna
+51 Sieï¿½ jest niedostï¿½pna
 $ ENETRESET
-52 Sieæ przerwa³a po³±czenie po resecie
+52 Sieï¿½ przerwaï¿½a poï¿½ï¿½czenie po resecie
 $ ECONNABORTED
-53 Oprogramowanie spowodowa³o przerwanie po³±czenia
+53 Oprogramowanie spowodowaï¿½o przerwanie poï¿½ï¿½czenia
 $ ECONNRESET
-54 Po³±czenie zerwane przez drug± stronê
+54 Poï¿½ï¿½czenie zerwane przez drugï¿½ stronï¿½
 $ ENOBUFS
 55 Brak miejsca w buforze
 $ EISCONN
-56 Gniazdo jest ju¿ po³±czone
+56 Gniazdo jest juï¿½ poï¿½ï¿½czone
 $ ENOTCONN
-57 Gniazdo nie jest po³±czone
+57 Gniazdo nie jest poï¿½ï¿½czone
 $ ESHUTDOWN
-58 Nie mo¿na wysy³aæ po zamkniêciu gniazda
+58 Nie moï¿½na wysyï¿½aï¿½ po zamkniï¿½ciu gniazda
 $ ETOOMANYREFS
-59 Za du¿o powi±zañ: dowi±zanie niemo¿liwe
+59 Za duï¿½o powiï¿½zaï¿½: dowiï¿½zanie niemoï¿½liwe
 $ ETIMEDOUT
 60 Limit czasu operacji przekroczony
 $ ECONNREFUSED
-61 Po³±czenie odrzucone
+61 Poï¿½ï¿½czenie odrzucone
 $ ELOOP
-62 Zbyt wiele wzajemnych dowi±zañ symbolicznych
+62 Zbyt wiele wzajemnych dowiï¿½zaï¿½ symbolicznych
 $ ENAMETOOLONG
-63 Zbyt d³uga nazwa pliku
+63 Zbyt dï¿½uga nazwa pliku
 $ EHOSTDOWN
-64 Host jest wy³±czony
+64 Host jest wyï¿½ï¿½czony
 $ EHOSTUNREACH
 65 Brak drogi do hosta
 $ ENOTEMPTY
 66 Katalog nie jest pusty
 $ EPROCLIM
-67 Zbyt wiele procesów
+67 Zbyt wiele procesï¿½w
 $ EUSERS
-68 Zbyt wielu u¿ytkowników
+68 Zbyt wielu uï¿½ytkownikï¿½w
 $ EDQUOT
 69 Przekroczono limit miejsca na dysku
 $ ESTALE
 70 Uchwyt pliku NFS jest nieaktualny
 $ EREMOTE
-71 Zbyt wiele poziomów zagnie¿d¿enia w ¶cie¿ce
+71 Zbyt wiele poziomï¿½w zagnieï¿½dï¿½enia w ï¿½cieï¿½ce
 $ EBADRPC
-72 RPC b³êdna struktura
+72 RPC bï¿½ï¿½dna struktura
 $ ERPCMISMATCH
 73 RPC niekompatybilna wersja
 $ EPROGUNAVAIL
-74 RPC program niedostêpny
+74 RPC program niedostï¿½pny
 $ EPROGMISMATCH
-75 Nieobs³ugiwana wersja programu
+75 Nieobsï¿½ugiwana wersja programu
 $ EPROCUNAVAIL
-76 Nieobs³ugiwana procedura
+76 Nieobsï¿½ugiwana procedura
 $ ENOLCK
 77 Wyczerpany limit blokad
 $ ENOSYS
-78 Nieobs³ugiwana funkcja
+78 Nieobsï¿½ugiwana funkcja
 $ EFTYPE
-79 Niew³a¶ciwy typ lub format pliku
+79 Niewï¿½aï¿½ciwy typ lub format pliku
 $ EAUTH
-80 B³±d uwierzytelnienia
+80 Bï¿½ï¿½d uwierzytelnienia
 $ ENEEDAUTH
 81 Wymagane uwierzytelnienie
 $ EIDRM
-82 Identyfikator zosta³ usuniêty
+82 Identyfikator zostaï¿½ usuniï¿½ty
 $ ENOMSG
-83 Brak komunikatu po¿±danego typu
+83 Brak komunikatu poï¿½ï¿½danego typu
 $ EOVERFLOW
-84 Warto¶æ zbyt du¿a dla zdefiniowanego typu danych
+84 Wartoï¿½ï¿½ zbyt duï¿½a dla zdefiniowanego typu danych
 $ ECANCELED
 85 Operacja anulowana
 $ EILSEQ
-86 B³êdna sekwencja bajtów
+86 Bï¿½ï¿½dna sekwencja bajtï¿½w
 $ ENOATTR
 87 Nie znaleziono atrybutu
 $ EDOOFUS
-88 Wewnêtrzny b³±d programu
+88 Wewnï¿½trzny bï¿½ï¿½d programu
 $
 $ strsignal() support catalog
 $
 $set 2
 $ SIGHUP
-1 Roz³±czenie
+1 Rozï¿½ï¿½czenie
 $ SIGINT
 2 Przerwanie
 $ SIGQUIT
-3 Wyj¶cie
+3 Wyjï¿½cie
 $ SIGILL
 4 Nieznana instrukcja
 $ SIGTRAP
-5 Pu³apka debuggera/BPT
+5 Puï¿½apka debuggera/BPT
 $ SIGABRT
-6 Przerwana pu³apka
+6 Przerwana puï¿½apka
 $ SIGEMT
-7 Pu³apka EMT
+7 Puï¿½apka EMT
 $ SIGFPE
-8 B³±d w obliczeniach zmiennoprzecinkowych
+8 Bï¿½ï¿½d w obliczeniach zmiennoprzecinkowych
 $ SIGKILL
 9 Unicestwiony
 $ SIGBUS
-10 B³±d szyny
+10 Bï¿½ï¿½d szyny
 $ SIGSEGV
-11 Naruszenie ochrony pamiêci
+11 Naruszenie ochrony pamiï¿½ci
 $ SIGSYS
-12 B³êdne wywo³anie systemowe
+12 Bï¿½ï¿½dne wywoï¿½anie systemowe
 $ SIGPIPE
 13 Przerwany potok
 $ SIGALRM
 14 Budzik
 $ SIGTERM
-15 Zakoñczony
+15 Zakoï¿½czony
 $ SIGURG
-16 Nag³y wypadek I/O
+16 Nagï¿½y wypadek I/O
 $ SIGSTOP
-17 Zatrzymany (sygna³)
+17 Zatrzymany (sygnaï¿½)
 $ SIGTSTP
 18 Zatrzymany
 $ SIGCONT
 19 Kontynuacja
 $ SIGCHLD
-20 Proces potomny zakoñczy³ pracê
+20 Proces potomny zakoï¿½czyï¿½ pracï¿½
 $ SIGTTIN
-21 Zatrzymany (wej¶cie z tty)
+21 Zatrzymany (wejï¿½cie z tty)
 $ SIGTTOU
-22 Zatrzymany (wyj¶cie z tty)
+22 Zatrzymany (wyjï¿½cie z tty)
 $ SIGIO
 23 Wej/Wyj dozwolone
 $ SIGXCPU
 24 Przekroczony limit czasu procesora
 $ SIGXFSZ
-25 Przekroczony limit wielko¶ci pliku
+25 Przekroczony limit wielkoï¿½ci pliku
 $ SIGVTALRM
 26 Alarm stopera wirtualnego
 $ SIGPROF
-27 Alarm stopera profiluj±cego
+27 Alarm stopera profilujï¿½cego
 $ SIGWINCH
 28 Zmiana rozmiaru okna
 $ SIGINFO
-29 ¯±danie informacji
+29 ï¿½ï¿½danie informacji
 $ SIGUSR1
-30 Sygna³ u¿ytkownika 1
+30 Sygnaï¿½ uï¿½ytkownika 1
 $ SIGUSR2
-31 Sygna³ u¿ytkownika 2
+31 Sygnaï¿½ uï¿½ytkownika 2

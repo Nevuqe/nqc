@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.4 (Berkeley) 6/16/94
- * $FreeBSD$
+ * $NQC$
  */
 
 BUFHEAD	*__add_ovflpage(HTAB *, BUFHEAD *);

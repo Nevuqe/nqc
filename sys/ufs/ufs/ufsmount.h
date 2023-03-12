@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ufsmount.h	8.6 (Berkeley) 3/30/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _UFS_UFS_UFSMOUNT_H_

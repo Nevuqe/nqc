@@ -9,7 +9,7 @@
 # forth in the LICENSE file which can be found at the top level of
 # the sendmail distribution.
 #
-# $FreeBSD$
+# $NQC$
 #
 
 ######################################################################

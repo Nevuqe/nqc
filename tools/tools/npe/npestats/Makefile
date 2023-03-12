@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	npestats
 SRCS=	main.c npestats.c

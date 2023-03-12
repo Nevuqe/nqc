@@ -1,5 +1,5 @@
 /*	$NetBSD: queue.c,v 1.5 2011/08/31 16:24:57 plunky Exp $	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/queue.h>

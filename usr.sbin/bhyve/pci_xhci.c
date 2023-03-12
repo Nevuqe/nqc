@@ -33,7 +33,7 @@
      tablet             USB tablet mouse
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/param.h>
 #include <sys/uio.h>

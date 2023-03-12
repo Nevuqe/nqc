@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 TESTGROUP= ${.CURDIR:H:T}/${.CURDIR:T}
 TESTBASE= ${SRCTOP}/cddl/contrib/opensolaris/cmd/dtrace/test/tst

@@ -24,7 +24,7 @@
 */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef	__IF_BWN_RADIO_2055_H__

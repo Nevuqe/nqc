@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 static void
 verify_zip_filesize(uint64_t size, int expected)

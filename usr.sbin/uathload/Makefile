@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	uathload
 MAN=	uathload.8

@@ -26,7 +26,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * A basic exercise of lzip reading and writing.

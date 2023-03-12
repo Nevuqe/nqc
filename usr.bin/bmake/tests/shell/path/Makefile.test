@@ -7,7 +7,7 @@
 # Be sure to include a meta-character into the command line, so that
 # really our shell is executed.
 #
-# $FreeBSD$
+# $NQC$
 #
 
 .ifmake sh_test

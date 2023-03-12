@@ -1,6 +1,6 @@
 /*-
  * This file is in the public domain.
  *
- * $FreeBSD$
+ * $NQC$
  */
 #include <machine/npx.h>

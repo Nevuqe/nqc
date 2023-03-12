@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
-/* $FreeBSD$ */
+/* $NQC$ */
 #ifndef _ICP_QAT_FW_INIT_ADMIN_H_
 #define _ICP_QAT_FW_INIT_ADMIN_H_
 

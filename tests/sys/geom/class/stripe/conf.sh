@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 name="$(mktemp -u stripe.XXXXXX)"
 class="stripe"

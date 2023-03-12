@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if defined(LIBC_SCCS) && !defined(lint)
 static char sccsid[] = "@(#)getopt.c	8.3 (Berkeley) 4/27/95";

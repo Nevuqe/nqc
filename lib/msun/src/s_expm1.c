@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* expm1(x)
  * Returns exp(x)-1, the exponential of x minus 1.

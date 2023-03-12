@@ -1,7 +1,7 @@
 /*-
  * Test 0008:	BPF_LDX+BPF_W+BPF_LEN & BPF_MISC+BPF_TXA
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 /* BPF program */

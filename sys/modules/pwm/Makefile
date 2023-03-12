@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Modules for dev/pwm drivers.
 

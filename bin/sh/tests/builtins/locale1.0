@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 # Note: this test depends on strerror() using locale.
 
 failures=0

@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $FreeBSD$
+# $NQC$
 BEGIN {
   state = 0;
   struct_seen = "";

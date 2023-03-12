@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 unset dummyvar
 msg=`(: ${dummyvar?}) 2>&1`

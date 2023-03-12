@@ -45,7 +45,7 @@ static char sccsid[] = "@(#)fold.c	8.1 (Berkeley) 6/6/93";
 #endif /* not lint */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <err.h>
 #include <limits.h>

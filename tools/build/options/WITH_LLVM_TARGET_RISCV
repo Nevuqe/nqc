@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build LLVM target support for RISC-V.
 The
 .Va LLVM_TARGET_ALL

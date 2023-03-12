@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.15 (Berkeley) 7/28/94
-# $FreeBSD$
+# $NQC$
 
 PROG=	dbtest
 OBJS=	dbtest.o strerror.o

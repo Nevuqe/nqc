@@ -42,7 +42,7 @@ static char sccsid[] = "@(#)banner.c	8.4 (Berkeley) 4/29/95";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * banner - prints large signs

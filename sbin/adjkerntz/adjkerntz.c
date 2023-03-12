@@ -34,7 +34,7 @@ static const char copyright[] =
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Andrey A. Chernov   <ache@astral.msk.su>    Dec 20 1993

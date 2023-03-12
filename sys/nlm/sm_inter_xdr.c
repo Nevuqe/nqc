@@ -5,7 +5,7 @@
 
 #include <nlm/sm_inter.h>
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 bool_t
 xdr_sm_name(XDR *xdrs, sm_name *objp)

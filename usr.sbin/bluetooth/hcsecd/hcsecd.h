@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: hcsecd.h,v 1.3 2003/09/08 18:54:21 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _HCSECD_H_

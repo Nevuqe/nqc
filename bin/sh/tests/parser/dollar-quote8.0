@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 [ $'hello\0' = hello ]
 [ $'hello\0world' = hello ]

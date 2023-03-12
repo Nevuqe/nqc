@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 /* Define as 1 if you want Dual Sided RMPP Support */
 #define DUAL_SIDED_RMPP 1

@@ -8,10 +8,10 @@
 # displayed unless one uses the correct font:
 #   vidcontrol -f iso15-8x16.fnt
 #
-#   -Frédéric Praca <frederic.praca@freebsd-fr.org>
-#   -Clément Pillias <clement.pillias@free.fr> for accent keys
+#   -Frï¿½dï¿½ric Praca <frederic.praca@freebsd-fr.org>
+#   -Clï¿½ment Pillias <clement.pillias@free.fr> for accent keys
 #
-# $FreeBSD$
+# $NQC$
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock
 # code  base   shift  cntrl  shift  alt    shift  cntrl  shift state
@@ -21,7 +21,7 @@
   002	'='    '1'    nop    nop    nop    nop    nop    nop     C
   003	'/'    '2'    nop    nop    nop    nop    nop    nop     C
   004	'-'    '3'    nop    nop    nop    nop    nop    nop     C
-  005	'è'    '4'    nop    nop    nop    nop    nop    nop     C
+  005	'ï¿½'    '4'    nop    nop    nop    nop    nop    nop     C
   006	'\'    '5'    nop    nop    nop    nop    nop    nop     C
   007	dcir   '6'    nop    nop    nop    nop    nop    nop     C
   008	'('    '7'    nop    nop    nop    nop    nop    nop     C
@@ -34,7 +34,7 @@
   015   ht     btab   nop    nop    ht     btab   nop    nop     O
   016	':'    '?'    nop    nop    nop    nop    nop    nop     O
   017	'''    '<'    nop    nop    nop    nop    nop    nop     C
-  018	'é'    '>'    nop    nop    nop    nop    nop    nop     C
+  018	'ï¿½'    '>'    nop    nop    nop    nop    nop    nop     C
   019	'g'    'G'    nop    nop    nop    nop    nop    nop     C
   020	'.'    '!'    nop    nop    nop    nop    nop    nop     O
   021	'h'    'H'    nop    nop    nop    nop    nop    nop     C
@@ -102,7 +102,7 @@
   083   del    '.'    '.'    '.'    '.'    '.'    boot   boot    N
   084   nop    nop    nop    nop    nop    nop    nop    nop     O
   085   nop    nop    nop    nop    nop    nop    nop    nop     O
-  086	'à'    'ç'    nop    nop    nop    nop    nop    nop     O
+  086	'ï¿½'    'ï¿½'    nop    nop    nop    nop    nop    nop     O
   087   fkey11 fkey23 fkey35 fkey47 scr11  scr11  scr11  scr11   O
   088   fkey12 fkey24 fkey36 fkey48 scr12  scr12  scr12  scr12   O
   089   cr     cr     nl     nl     cr     cr     nl     nl      O
@@ -126,24 +126,24 @@
   107   fkey64 fkey64 fkey64 fkey64 fkey64 fkey64 fkey64 fkey64  O
   108   nop    nop    nop    nop    nop    nop    nop    nop     O
 
-  dgra  '`'    ( '/' '±' ) ( '-' '¼' ) ( 'è' '½' ) ( '\' '¾' )
-               ( '?' 'Æ' ) ( 'C' 'Ç' )
-               ( ':' 'æ' ) ( '`' '$' ) ( 'é' 'É' ) ( 'g' 164 )
-                           ( '.' '°' ) ( 'c' 'ç' ) ( 'm' 'µ' )
-               ( 'O' 'Ò' ) ( 'A' 192 ) ( 'U' 'Ù' ) ( 'E' 'È' )
-               ( 'o' 'ò' ) ( 'a' 'à' ) ( 'u' 'ù' ) ( 'e' 'è' )
-                                       ( 's' '«' ) ( 'n' '»' )
-               ( 'ç' 'Ç' ) ( '|' 188 ) ( 'I' 'Ì' )
-               ( 'à' 192 ) ( ';' 189 ) ( 'q' '{' ) ( ',' '}' )
-                           ( 'i' 'ì' ) ( 'r' 'º' ) ( 'p' '§' )
-               ( '!' '¡' )
-  dcir  '^'    ( 'a' 'â' ) ( 'e' 'ê' ) ( 'i' 'î' ) ( 'o' 'ô' ) ( 'u' 'û' )
-               ( 'A' 'Â' ) ( 'E' 'Ê' ) ( 'I' 'Î' ) ( 'O' 'Ô' ) ( 'U' 'Û' )
-  dtil  '~'    ( 'n' 'ñ' ) ( 'N' 'Ñ' )
-               ( 'a' 'ã' ) ( 'A' 'Ã' ) ( 'o' 'õ' ) ( 'O' 'Õ' )
-  ddia  '"'    ( 'a' 'ä' ) ( 'e' 'ë' ) ( 'i' 'ï' ) ( 'o' 'ö' ) ( 'u' 'ü' )
-               ( 'A' 'Ä' ) ( 'E' 'Ë' ) ( 'I' 'Ï' ) ( 'O' 'Ö' ) ( 'U' 'Ü' )
+  dgra  '`'    ( '/' 'ï¿½' ) ( '-' 'ï¿½' ) ( 'ï¿½' 'ï¿½' ) ( '\' 'ï¿½' )
+               ( '?' 'ï¿½' ) ( 'C' 'ï¿½' )
+               ( ':' 'ï¿½' ) ( '`' '$' ) ( 'ï¿½' 'ï¿½' ) ( 'g' 164 )
+                           ( '.' 'ï¿½' ) ( 'c' 'ï¿½' ) ( 'm' 'ï¿½' )
+               ( 'O' 'ï¿½' ) ( 'A' 192 ) ( 'U' 'ï¿½' ) ( 'E' 'ï¿½' )
+               ( 'o' 'ï¿½' ) ( 'a' 'ï¿½' ) ( 'u' 'ï¿½' ) ( 'e' 'ï¿½' )
+                                       ( 's' 'ï¿½' ) ( 'n' 'ï¿½' )
+               ( 'ï¿½' 'ï¿½' ) ( '|' 188 ) ( 'I' 'ï¿½' )
+               ( 'ï¿½' 192 ) ( ';' 189 ) ( 'q' '{' ) ( ',' '}' )
+                           ( 'i' 'ï¿½' ) ( 'r' 'ï¿½' ) ( 'p' 'ï¿½' )
+               ( '!' 'ï¿½' )
+  dcir  '^'    ( 'a' 'ï¿½' ) ( 'e' 'ï¿½' ) ( 'i' 'ï¿½' ) ( 'o' 'ï¿½' ) ( 'u' 'ï¿½' )
+               ( 'A' 'ï¿½' ) ( 'E' 'ï¿½' ) ( 'I' 'ï¿½' ) ( 'O' 'ï¿½' ) ( 'U' 'ï¿½' )
+  dtil  '~'    ( 'n' 'ï¿½' ) ( 'N' 'ï¿½' )
+               ( 'a' 'ï¿½' ) ( 'A' 'ï¿½' ) ( 'o' 'ï¿½' ) ( 'O' 'ï¿½' )
+  ddia  '"'    ( 'a' 'ï¿½' ) ( 'e' 'ï¿½' ) ( 'i' 'ï¿½' ) ( 'o' 'ï¿½' ) ( 'u' 'ï¿½' )
+               ( 'A' 'ï¿½' ) ( 'E' 'ï¿½' ) ( 'I' 'ï¿½' ) ( 'O' 'ï¿½' ) ( 'U' 'ï¿½' )
                ( 'y' 255 ) ( 'Y' 190 )
-  dacu  '´'    ( 'a' 'á' ) ( 'e' 'é' ) ( 'i' 237 ) ( 'o' 'ó') ( 'u' 'ú' )
-               ( 'A' 'Á' ) ( 'E' 'É' ) ( 'I' 'Í' ) ( 'O' 'Ó' ) ( 'U' 'Ú' )
+  dacu  'ï¿½'    ( 'a' 'ï¿½' ) ( 'e' 'ï¿½' ) ( 'i' 237 ) ( 'o' 'ï¿½') ( 'u' 'ï¿½' )
+               ( 'A' 'ï¿½' ) ( 'E' 'ï¿½' ) ( 'I' 'ï¿½' ) ( 'O' 'ï¿½' ) ( 'U' 'ï¿½' )
                ( 'Y' 221 ) ( 'y' 253 )

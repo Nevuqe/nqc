@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	wlandebug
 MAN=	wlandebug.8

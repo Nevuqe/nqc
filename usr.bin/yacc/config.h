@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* config.h.  Generated automatically by configure.  */
 /* config_h.in.  Generated automatically from configure.in by autoheader.  */
 

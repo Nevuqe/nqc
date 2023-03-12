@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 trap ': $((brokenpipe+=1))' PIPE
 
 P=${TMPDIR:-/tmp}

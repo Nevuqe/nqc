@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	listen_kqueue
 MAN=

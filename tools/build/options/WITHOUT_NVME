@@ -1,2 +1,2 @@
-.\" $FreeBSD$
+.\" $NQC$
 Do not build nvme related tools and kernel modules.

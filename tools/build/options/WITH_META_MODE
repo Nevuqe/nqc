@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Create
 .Xr make 1
 meta files when building, which can provide a reliable incremental build when

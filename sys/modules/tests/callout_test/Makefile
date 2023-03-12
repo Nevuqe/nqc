@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 .PATH: ${SRCTOP}/sys/tests/callout_test

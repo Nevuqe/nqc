@@ -1,7 +1,7 @@
 /*-
  * Based on sys/sparc64/include/ieeefp.h
  * Public domain.
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_IEEEFP_H_

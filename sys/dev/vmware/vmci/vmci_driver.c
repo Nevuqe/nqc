@@ -7,7 +7,7 @@
 /* VMCI initialization. */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "vmci.h"
 #include "vmci_doorbell.h"

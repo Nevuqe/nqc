@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #define	CLANG_VERSION			15.0.7
 #define	CLANG_VERSION_STRING		"15.0.7"

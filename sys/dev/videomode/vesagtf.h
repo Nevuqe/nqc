@@ -1,5 +1,5 @@
 /*	$NetBSD$	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * Copyright (c) 2006 Itronix Inc.

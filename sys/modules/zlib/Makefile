@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/libkern
 .PATH: ${SRCTOP}/sys/dev/zlib

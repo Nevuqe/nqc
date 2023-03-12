@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $NQC$
 #
 
 Notes on the internal structure of dummynet (2010 version)

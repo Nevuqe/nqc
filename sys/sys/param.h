@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)param.h	8.3 (Berkeley) 4/4/95
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_PARAM_H_

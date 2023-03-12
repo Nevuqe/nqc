@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${.CURDIR}/../man4.arm # Some manpages are common to arm and aarch64
 

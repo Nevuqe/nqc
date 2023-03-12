@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 KMOD=	x86bios
 SRCS=	opt_x86bios.h

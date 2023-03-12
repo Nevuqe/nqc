@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .if !target(__<bsd.init.mk>__)
 .error bsd.files.mk cannot be included directly.

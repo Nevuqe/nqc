@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 # Will image the test directory (default /tmp/loadertest) if it doesn't exist
 

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef ECORE_MFW_REQ_H
 #define ECORE_MFW_REQ_H

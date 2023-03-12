@@ -31,7 +31,7 @@
 
 #ifndef lint
 static const char rcs_id[] =
-    "@(#) $FreeBSD$";
+    "@(#) $NQC$";
 #endif
 
 #include <sys/types.h>

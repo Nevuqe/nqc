@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 PROG=	ministat
 
 LIBADD=	m

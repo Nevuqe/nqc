@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	crunchgen
 SRCS=	crunchgen.c crunched_skel.c

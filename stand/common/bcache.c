@@ -27,7 +27,7 @@
 
 #include <sys/cdefs.h>
 #include <sys/param.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Simple hashed block cache

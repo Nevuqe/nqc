@@ -1,5 +1,5 @@
 /*	$OpenBSD: udl.h,v 1.21 2013/04/15 09:23:02 mglocker Exp $ */
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*
  * Copyright (c) 2009 Marcus Glocker <mglocker@openbsd.org>

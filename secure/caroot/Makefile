@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 CLEANFILES+=	certdata.txt
 

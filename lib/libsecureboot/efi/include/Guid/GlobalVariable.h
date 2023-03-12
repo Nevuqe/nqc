@@ -15,7 +15,7 @@
 #define __GLOBAL_VARIABLE_GUID_H__
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef EFI_GLOBAL_VARIABLE
 #define EFI_GLOBAL_VARIABLE \

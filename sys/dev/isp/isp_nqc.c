@@ -31,7 +31,7 @@
  * Platform (FreeBSD) dependent common attachment code for Qlogic adapters.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <dev/isp/isp_nqc.h>
 #include <sys/unistd.h>

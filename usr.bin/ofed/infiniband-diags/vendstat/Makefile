@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	vendstat
 SRCS=	vendstat.c

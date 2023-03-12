@@ -12,7 +12,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* __kernel_sin( x, y, iy)
  * kernel sin function on ~[-pi/4, pi/4] (except on -0), pi/4 ~ 0.7854

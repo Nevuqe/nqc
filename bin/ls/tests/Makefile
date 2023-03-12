@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ATF_TESTS_SH+=	ls_tests
 # This seems like overkill, but the idea in mind is that all of the testcases

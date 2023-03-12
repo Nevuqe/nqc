@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)rtsock.c	8.7 (Berkeley) 10/12/95
- * $FreeBSD$
+ * $NQC$
  */
 #include "opt_ddb.h"
 #include "opt_route.h"

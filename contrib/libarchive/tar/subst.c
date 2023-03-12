@@ -24,7 +24,7 @@
  */
 
 #include "bsdtar_platform.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if defined(HAVE_REGEX_H) || defined(HAVE_PCREPOSIX_H)
 #include "bsdtar.h"

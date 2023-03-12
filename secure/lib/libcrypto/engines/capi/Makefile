@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB_NAME?=	capi.so
 

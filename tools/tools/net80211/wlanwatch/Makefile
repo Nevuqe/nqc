@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	wlanwatch
 BINDIR=	/usr/local/bin

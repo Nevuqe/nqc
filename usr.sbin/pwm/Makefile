@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	pwm
 MAN=	pwm.8

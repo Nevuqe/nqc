@@ -38,7 +38,7 @@ static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 5/4/95";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <unistd.h>
 #include <stdlib.h>

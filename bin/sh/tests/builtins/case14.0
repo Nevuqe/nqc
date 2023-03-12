@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 case `false` in
 no) exit 3 ;;

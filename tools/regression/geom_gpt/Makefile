@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	gctl_test_helper
 MAN=

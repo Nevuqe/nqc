@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	mwlstats
 BINDIR=	/usr/local/bin

@@ -1,5 +1,5 @@
 # Makefile for mrsas driver
-# $FreeBSD$
+# $NQC$
 
 .PATH: ${SRCTOP}/sys/dev/mrsas
 

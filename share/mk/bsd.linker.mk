@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # Setup variables for the linker.
 #

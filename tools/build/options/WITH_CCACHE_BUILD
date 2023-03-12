@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Use
 .Xr ccache 1
 for the build.

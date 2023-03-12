@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	tcpp
 INCS=	tcpp.h

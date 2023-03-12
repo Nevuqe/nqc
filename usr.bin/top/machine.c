@@ -13,7 +13,7 @@
  *          Thomas Moestl <tmoestl@gmx.net>
  *          Eitan Adler <eadler@FreeBSD.org>
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/errno.h>

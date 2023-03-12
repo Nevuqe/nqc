@@ -39,7 +39,7 @@ static char sccsid[] = "@(#)sleep.c	8.3 (Berkeley) 4/2/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <capsicum_helpers.h>
 #include <err.h>

@@ -70,7 +70,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD$
+ * $NQC$
  */
 #include <sys/types.h>
 #include <sys/ioccom.h>

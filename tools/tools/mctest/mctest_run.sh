@@ -2,7 +2,7 @@
 # 
 # A program to act as a test harness for the mctest program
 #
-# $FreeBSD$
+# $NQC$
 #
 # Defaults
 size=1024

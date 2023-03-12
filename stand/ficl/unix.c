@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #include <string.h>
 #include <netinet/in.h>

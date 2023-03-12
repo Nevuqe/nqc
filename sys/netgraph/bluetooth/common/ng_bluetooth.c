@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_bluetooth.c,v 1.3 2003/04/26 22:37:31 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/param.h>

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /* Auto-generated file.  Avoid direct editing.     */
 /* Edits will be lost when file regenerated.       */

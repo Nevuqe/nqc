@@ -1,5 +1,5 @@
 /*	$KAME: rtsock.c,v 1.3 2000/10/10 08:46:45 itojun Exp $	*/
-/*	$FreeBSD$	*/
+/*	$NQC$	*/
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

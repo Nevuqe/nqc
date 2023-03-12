@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /* $NetBSD: citrus_module.c,v 1.9 2009/01/11 02:46:24 christos Exp $ */
 
 /*-

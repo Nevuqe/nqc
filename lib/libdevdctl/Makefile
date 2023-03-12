@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB_CXX=	devdctl
 INCS=	consumer.h		\

@@ -12,7 +12,7 @@
  *
  * Snoop stuff.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_SNOOP_H_

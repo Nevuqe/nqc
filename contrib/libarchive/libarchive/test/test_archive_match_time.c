@@ -24,7 +24,7 @@
  */
 
 #include "test.h"
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define __LIBARCHIVE_BUILD 1
 #include "archive_getdate.h"

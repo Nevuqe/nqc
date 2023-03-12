@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	wlaninject
 BINDIR=	/usr/local/bin

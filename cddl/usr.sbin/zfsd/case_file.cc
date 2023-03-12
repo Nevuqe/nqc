@@ -74,7 +74,7 @@
 #include "zfsd_exception.h"
 #include "zpool_list.h"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*============================ Namespace Control =============================*/
 using std::hex;

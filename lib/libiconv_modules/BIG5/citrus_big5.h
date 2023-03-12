@@ -1,4 +1,4 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 /*	$NetBSD: citrus_big5.h,v 1.2 2003/06/25 09:51:41 tshiozak Exp $	*/
 
 /*-

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SCRIPTS=	ansify.pl
 BINDIR?=	/usr/local/bin

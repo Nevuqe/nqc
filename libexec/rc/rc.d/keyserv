@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $NQC$
 #
 
 # Start keyserv if we are running Secure RPC

@@ -32,7 +32,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #include "SYS.h"
 
 .globl  _C_LABEL(__error)

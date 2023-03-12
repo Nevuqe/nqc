@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * ISA Bridge driver for Generic ISA Bus Devices.  See section 10.7 of the

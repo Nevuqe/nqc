@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 #
 # Author: Shteryana Shopova <syrinx@freebsd.org>
 

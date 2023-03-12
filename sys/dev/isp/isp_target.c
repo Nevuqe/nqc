@@ -44,7 +44,7 @@
 #endif
 #ifdef	__NQC__
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #include <dev/isp/isp_nqc.h>
 #endif
 #ifdef	__OpenBSD__

@@ -1,4 +1,4 @@
-.\" $FreeBSD$
+.\" $NQC$
 Build the system with rate limit support.
 .Pp
 This makes

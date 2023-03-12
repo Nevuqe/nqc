@@ -28,7 +28,7 @@
  * File : ecore_spq.c
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "bcm_osal.h"
 #include "reg_addr.h"

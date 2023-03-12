@@ -24,7 +24,7 @@
  * behaviour
  *
  * $OpenBSD: util.c,v 1.35 2010/07/24 01:10:12 ray Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <sys/stat.h>

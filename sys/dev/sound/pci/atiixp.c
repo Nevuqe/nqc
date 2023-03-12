@@ -69,7 +69,7 @@
 
 #include <dev/sound/pci/atiixp.h>
 
-SND_DECLARE_FILE("$FreeBSD$");
+SND_DECLARE_FILE("$NQC$");
 
 #define ATI_IXP_DMA_RETRY_MAX	100
 

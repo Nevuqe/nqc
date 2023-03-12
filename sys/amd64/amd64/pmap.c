@@ -86,7 +86,7 @@
 #define	AMD64_NPT_AWARE
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  *	Manages physical address maps.

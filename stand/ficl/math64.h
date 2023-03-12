@@ -40,7 +40,7 @@
 ** SUCH DAMAGE.
 */
 
-/* $FreeBSD$ */
+/* $NQC$ */
 
 #if !defined (__MATH64_H__)
 #define __MATH64_H__

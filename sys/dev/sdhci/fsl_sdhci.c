@@ -25,7 +25,7 @@
  *
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * SDHCI driver glue for Freescale i.MX SoC and QorIQ families.

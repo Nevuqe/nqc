@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)specialreg.h	7.1 (Berkeley) 5/9/91
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _MACHINE_SPECIALREG_H_

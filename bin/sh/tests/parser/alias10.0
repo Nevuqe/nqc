@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 # This test may start consuming memory indefinitely if it fails.
 ulimit -t 5 2>/dev/null

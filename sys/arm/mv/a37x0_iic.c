@@ -26,7 +26,7 @@
  *
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Driver for Armada 37x0 i2c controller.

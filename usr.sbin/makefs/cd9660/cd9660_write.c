@@ -38,7 +38,7 @@
 #include "iso9660_rrip.h"
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <util.h>
 

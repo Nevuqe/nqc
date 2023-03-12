@@ -16,7 +16,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef __P

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 ELFTCDIR=	${SRCTOP}/contrib/elftoolchain
 

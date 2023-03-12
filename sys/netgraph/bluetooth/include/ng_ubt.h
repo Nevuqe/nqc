@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_ubt.h,v 1.6 2003/04/13 21:34:42 max Exp $
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NG_UBT_H_

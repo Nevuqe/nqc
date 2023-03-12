@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 atf_test_case diff3
 atf_test_case diff3_lesssimple

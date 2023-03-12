@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 test "$(trap 'echo trapped' EXIT; :)" = trapped || exit 1
 

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 LIB=	pam_rhosts
 SRCS=	pam_rhosts.c

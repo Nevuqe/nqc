@@ -1,2 +1,2 @@
-/* $FreeBSD$ */
+/* $NQC$ */
 #include <machine/frame.h>

@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 # this puts __global_pointer$ into .dynsym, so symlook_obj can now find that
 # (see reloc.c)

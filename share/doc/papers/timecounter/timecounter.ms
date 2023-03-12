@@ -1,5 +1,5 @@
 .EQ
-delim øø
+delim ï¿½ï¿½
 .EN
 .\"
 .\" ----------------------------------------------------------------------------
@@ -9,7 +9,7 @@ delim øø
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .\"
 .if n .ND
 .TI
@@ -107,8 +107,8 @@ The duration of  9,192,631,770 periods of the radiation corresponding to the tra
 .LP
 and we have frequency standards which are able to mark a sequence of 
 such seconds
-with an error less than ø2 cdot 10 sup{-15}ø [DMK2001] with commercially 
-available products doing better than ø1 cdot 10 sup{-14}ø [AG2002].
+with an error less than ï¿½2 cdot 10 sup{-15}ï¿½ [DMK2001] with commercially 
+available products doing better than ï¿½1 cdot 10 sup{-14}ï¿½ [AG2002].
 .LP
 Unlike other physical units with a conventionally defined origin,
 longitude for instance, the ephemeral nature of time prevents us
@@ -288,7 +288,7 @@ precise can be easily corrected for the offset and thus calibrated
 is as good as any clock.
 .LP
 This lack of precision is not necessarily a flaw in these kinds of
-devices, once you get into the ø10 cdot 10 sup{-15}ø territory
+devices, once you get into the ï¿½10 cdot 10 sup{-15}ï¿½ territory
 things like the blackbody spectrum at the particular absolute 
 temperature of the clocks hardware and general relativistic
 effects mostly dependent on the altitude above earths center
@@ -370,11 +370,11 @@ The list of clock frequencies we could support with 32 bits are:
 .TS
 center;
 l l n l.
-ø2 sup{32} / 1ø	ø=ø	4.294	GHz
-ø2 sup{32} / 2ø	ø=ø	2.147	GHz
-ø2 sup{32} / 3ø	ø=ø	1.432	GHz
+ï¿½2 sup{32} / 1ï¿½	ï¿½=ï¿½	4.294	GHz
+ï¿½2 sup{32} / 2ï¿½	ï¿½=ï¿½	2.147	GHz
+ï¿½2 sup{32} / 3ï¿½	ï¿½=ï¿½	1.432	GHz
 \&...
-ø2 sup{32} / (2 sup{32}-1)ø	ø=ø	1.000	Hz
+ï¿½2 sup{32} / (2 sup{32}-1)ï¿½	ï¿½=ï¿½	1.000	Hz
 .TE
 We can immediately see that 32 bit is insufficient to faithfully
 represent clock frequencies even in the low GHz area, much less in
@@ -386,12 +386,12 @@ With 64 bit fractions the same table looks like:
 .TS
 center;
 l l r l.
-ø2 sup{64} / 1ø	ø=ø	ø 18.45 cdot 10 sup{9}ø	GHz
-ø2 sup{64} / 2ø	ø=ø	ø 9.223 cdot 10 sup{9}ø	GHz
+ï¿½2 sup{64} / 1ï¿½	ï¿½=ï¿½	ï¿½ 18.45 cdot 10 sup{9}ï¿½	GHz
+ï¿½2 sup{64} / 2ï¿½	ï¿½=ï¿½	ï¿½ 9.223 cdot 10 sup{9}ï¿½	GHz
 \&...
-ø2 sup{64} / 2 sup{32}ø	ø=ø	4.294	GHz
+ï¿½2 sup{64} / 2 sup{32}ï¿½	ï¿½=ï¿½	4.294	GHz
 \&...
-ø2 sup{64} / (2 sup{64}-1)ø	ø=ø	1.000	Hz
+ï¿½2 sup{64} / (2 sup{64}-1)ï¿½	ï¿½=ï¿½	1.000	Hz
 .TE
 And the resolution in the 4 GHz frequency range is approximately one Hz.
 .LP
@@ -538,7 +538,7 @@ The scaling step is straightforward.
 T sub{now} = Delta Count cdot R sub{counter} + T sub{ref}
 .EN
 .DE
-The scaling factor øR sub{counter}ø will be described below.
+The scaling factor ï¿½R sub{counter}ï¿½ will be described below.
 .LP
 At regular intervals, scheduled by \fChardclock()\fP, a housekeeping
 routine is run which does the following:
@@ -570,7 +570,7 @@ T sub{ref} = T sub{now}
 .LP
 If a new second has started, the NTP processing routines are called
 and the correction they return and the counters frequency is used
-to calculate the new scaling factor øR sub{counter}ø:
+to calculate the new scaling factor ï¿½R sub{counter}ï¿½:
 .DS
 .ce
 .EQ
@@ -578,7 +578,7 @@ R sub{counter} = {2 sup{64} over Freq sub{counter}} cdot ( 1 + R sub{NTP} )
 .EN
 .DE
 Since we only have access to 64 bit arithmetic, dividing something
-into ø2 sup{64}ø is a problem, so in the name of code clarity
+into ï¿½2 sup{64}ï¿½ is a problem, so in the name of code clarity
 and efficiency, we sacrifice the low order bit and instead calculate:
 .DS
 .ce
@@ -586,7 +586,7 @@ and efficiency, we sacrifice the low order bit and instead calculate:
 R sub{counter} = 2 cdot {2 sup{63} over Freq sub{counter}} cdot ( 1 + R sub{NTP} )
 .EN
 .DE
-The øR sub{NTP}ø correct factor arrives as the signed number of
+The ï¿½R sub{NTP}ï¿½ correct factor arrives as the signed number of
 nanoseconds (with 32 bit binary fractions) to adjust per second.
 This quasi-decimal number is a bit of a square peg in our round binary
 hole, and a conversion factor is needed.
@@ -599,7 +599,7 @@ Ideally we want to multiply this factor by:
 .DE
 This is not a nice number to work with.
 Fortunately, the precision of this correction is not critical, we are
-within an factor of a million of the ø10 sup{-15}ø performance level
+within an factor of a million of the ï¿½10 sup{-15}ï¿½ performance level
 of state of the art atomic clocks, so we can use an approximation
 on this term without anybody noticing.
 .LP
@@ -623,7 +623,7 @@ not a concern:
 .EN
 .DE
 The resulting error is an systematic under compensation of 10.6PPM 
-of the requested change, or ø1.06 cdot 10 sup -14ø per nanosecond
+of the requested change, or ï¿½1.06 cdot 10 sup -14ï¿½ per nanosecond
 of correction.
 This is perfectly acceptable.
 .LP
@@ -691,7 +691,7 @@ This would however be a very heavy-handed approach.  First of
 all, the updates are infrequent compared to simple references,
 second it is not important which particular state of meta data
 a consumer gets hold of, as long as it is consistent: as long
-as the øCount sub{ref}ø and øT sub{ref}ø are a matching pair,
+as the ï¿½Count sub{ref}ï¿½ and ï¿½T sub{ref}ï¿½ are a matching pair,
 and not old enough to cause an ambiguity with hardware counter
 rollover, a valid timestamp can be derived from them.
 .LP
@@ -992,7 +992,7 @@ the readability of the source code.
 Acknowledgements
 .PP
 .EQ
-delim ññ
+delim ï¿½ï¿½
 .EN
 The author would like to thank:
 .LP
@@ -1012,10 +1012,10 @@ Danish Posts center for Customs and Dues to prevent it.
 .PP
 Corby Dawson for helping with the care and feeding for caesium standards.
 .PP
-The staff at the NELS Loran-C control station in Bø, Norway for providing
+The staff at the NELS Loran-C control station in Bï¿½, Norway for providing
 information about step-changes.
 .PP
-The staff at NELS Loran-C station Eiðe, Faeroe
+The staff at NELS Loran-C station Eiï¿½e, Faeroe
 Islands for permission to tour their installation.
 .PP
 The FreeBSD users for putting up with ``micro uptime went backwards''.

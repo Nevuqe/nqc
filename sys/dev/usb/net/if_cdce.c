@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/gsb_crc32.h>
 #include <sys/eventhandler.h>

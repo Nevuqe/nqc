@@ -37,7 +37,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ctype.h	8.4 (Berkeley) 1/21/94
- *      $FreeBSD$
+ *      $NQC$
  */
 
 #ifndef _CTYPE_H_

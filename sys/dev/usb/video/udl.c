@@ -1,5 +1,5 @@
 /*	$OpenBSD: udl.c,v 1.81 2014/12/09 07:05:06 doug Exp $ */
-/*	$FreeBSD$ */
+/*	$NQC$ */
 
 /*-
  * Copyright (c) 2015 Hans Petter Selasky <hselasky@freebsd.org>

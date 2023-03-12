@@ -31,7 +31,7 @@
  *
  * Authors: Ken Merry           (Spectra Logic Corporation)
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _SYS_DISK_ZONE_H_

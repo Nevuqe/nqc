@@ -15,7 +15,7 @@
 
 #ifndef INLINE_KERNEL_TANDF
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 #endif
 
 #include "math.h"

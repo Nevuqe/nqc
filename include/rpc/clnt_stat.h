@@ -1,4 +1,4 @@
-/*	$FreeBSD$ */
+/*	$NQC$ */
 /*
  * Copyright (c) 1986 - 1991, 1994, 1996, 1997 by Sun Microsystems, Inc.
  * All rights reserved.

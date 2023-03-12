@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)tcp_timer.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD$
+ * $NQC$
  */
 
 #ifndef _NETINET_TCP_TIMER_H_

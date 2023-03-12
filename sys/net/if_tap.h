@@ -33,7 +33,7 @@
  */
 
 /*
- * $FreeBSD$
+ * $NQC$
  * $Id: if_tap.h,v 0.7 2000/07/12 04:12:51 max Exp $
  */
 

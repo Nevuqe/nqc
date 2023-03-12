@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 a1=$(alias)
 : $(alias testalias=abcd)

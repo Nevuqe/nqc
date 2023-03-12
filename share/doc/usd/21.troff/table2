@@ -36,7 +36,7 @@
 .\" 
 .\"	@(#)table2	8.1 (Berkeley) 8/14/93
 .\"
-.\" $FreeBSD$
+.\" $NQC$
 .sp 100
 .br
 .de mx

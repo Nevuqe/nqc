@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 r=x
 f() { return 42; }

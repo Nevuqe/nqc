@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 .PATH:	${SRCTOP}/sys/dev/xz
 .PATH:	${SRCTOP}/sys/contrib/xz-embedded/freebsd

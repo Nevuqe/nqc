@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #if defined(LOADER_FDT_SUPPORT)
 #include <sys/param.h>

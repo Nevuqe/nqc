@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SHLIB=	JOHAB
 SRCS+=	citrus_johab.c

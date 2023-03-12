@@ -30,7 +30,7 @@
 #define BXE_STATS_H
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/types.h>
 

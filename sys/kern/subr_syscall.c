@@ -43,7 +43,7 @@
 #include "opt_capsicum.h"
 #include "opt_ktrace.h"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <sys/capsicum.h>
 #include <sys/ktr.h>

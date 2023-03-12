@@ -58,7 +58,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #define SYM_DRIVER_NAME	"sym-1.6.5-20000902"
 

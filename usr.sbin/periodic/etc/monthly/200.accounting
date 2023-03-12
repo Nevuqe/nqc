@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $FreeBSD$
+# $NQC$
 #
 
 # If there is a global system configuration file, suck it in.

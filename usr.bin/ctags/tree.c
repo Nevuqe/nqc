@@ -36,7 +36,7 @@ static char sccsid[] = "@(#)tree.c	8.3 (Berkeley) 4/2/94";
 #endif
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <err.h>
 #include <limits.h>

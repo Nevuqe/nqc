@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef	_NET_IF_LLATBL_H_
 #define	_NET_IF_LLATBL_H_

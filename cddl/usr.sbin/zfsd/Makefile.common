@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 SRCS=		callout.cc		\
 		case_file.cc		\

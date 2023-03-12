@@ -31,7 +31,7 @@
 
 #include <dev/cfe/cfe_api.h>
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifndef	CFE_ENV_SIZE
 #define	CFE_ENV_SIZE	PAGE_SIZE	/* default is one page */

@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 alias command='command '
 alias alias0=exit

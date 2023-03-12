@@ -1,5 +1,5 @@
 # Makefile for building the sample syscall module
-# $FreeBSD$
+# $NQC$
 
 PACKAGE=examples
 FILESDIR=${SHAREDIR}/examples/kld/${KMOD}

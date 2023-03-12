@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * Broadcom BCM57xx(x)/BCM590x NetXtreme and NetLink family Ethernet driver

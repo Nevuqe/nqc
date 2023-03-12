@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $NQC$
 
 testsdir=$(dirname $0)
 . $testsdir/conf.sh

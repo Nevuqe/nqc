@@ -26,7 +26,7 @@
 
 #include "archive_platform.h"
 
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>

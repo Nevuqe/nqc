@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 T=$(mktemp "${TMPDIR:-/tmp}/sh-test.XXXXXXXX") || exit
 trap 'rm -f -- "$T"' 0

@@ -38,7 +38,7 @@ static const char copyright[] =
 #endif
 #endif
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 /*
  * sa:	system accounting

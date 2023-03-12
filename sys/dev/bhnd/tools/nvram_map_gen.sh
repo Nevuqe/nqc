@@ -3,7 +3,7 @@
 # Use C locale to ensure AWK string comparisons always produce
 # a stable sort order.
 
-# $FreeBSD$
+# $NQC$
 
 BHND_TOOLDIR="$(dirname $0)/"
 

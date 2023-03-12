@@ -112,7 +112,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include "xgbe.h"
 #include "xgbe-common.h"

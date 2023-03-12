@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $NQC$
 
 PROG=	wlanwds
 BINDIR=	/usr/local/bin

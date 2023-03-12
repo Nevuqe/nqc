@@ -2,7 +2,7 @@
  * Machine-independent glue to integrate David Gay's gdtoa
  * package into libc.
  *
- * $FreeBSD$
+ * $NQC$
  */
 
 #include <pthread.h>

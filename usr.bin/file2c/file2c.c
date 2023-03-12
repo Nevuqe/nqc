@@ -8,7 +8,7 @@
  */
 
 #include <sys/cdefs.h>
-__NQCID("$FreeBSD$");
+__NQCID("$NQC$");
 
 #include <limits.h>
 #include <stdio.h>
