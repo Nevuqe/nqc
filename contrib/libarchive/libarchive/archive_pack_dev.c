@@ -71,7 +71,7 @@ __RCSID("$NetBSD$");
 #include "archive_pack_dev.h"
 
 static	pack_t	pack_netbsd;
-static	pack_t	pack_freebsd;
+static	pack_t	pack_nqc;
 static	pack_t	pack_8_8;
 static	pack_t	pack_12_20;
 static	pack_t	pack_14_18;
@@ -143,21 +143,21 @@ pack_netbsd(int n, unsigned long numbers[], const char **error)
 }
 
 
-#define	major_freebsd(x)	((int32_t)(((x) & 0x0000ff00) >> 8))
-#define	minor_freebsd(x)	((int32_t)(((x) & 0xffff00ff) >> 0))
-#define	makedev_freebsd(x,y)	((dev_t)((((x) << 8) & 0x0000ff00) | \
+#define	major_nqc(x)	((int32_t)(((x) & 0x0000ff00) >> 8))
+#define	minor_nqc(x)	((int32_t)(((x) & 0xffff00ff) >> 0))
+#define	makedev_nqc(x,y)	((dev_t)((((x) << 8) & 0x0000ff00) | \
 					 (((y) << 0) & 0xffff00ff)))
 
 static dev_t
-pack_freebsd(int n, unsigned long numbers[], const char **error)
+pack_nqc(int n, unsigned long numbers[], const char **error)
 {
 	dev_t dev = 0;
 
 	if (n == 2) {
-		dev = makedev_freebsd(numbers[0], numbers[1]);
-		if ((unsigned long)major_freebsd(dev) != numbers[0])
+		dev = makedev_nqc(numbers[0], numbers[1]);
+		if ((unsigned long)major_nqc(dev) != numbers[0])
 			*error = iMajorError;
-		if ((unsigned long)minor_freebsd(dev) != numbers[1])
+		if ((unsigned long)minor_nqc(dev) != numbers[1])
 			*error = iMinorError;
 	} else
 		*error = tooManyFields;
@@ -294,7 +294,7 @@ static const struct format {
 	{"386bsd",  pack_8_8},
 	{"4bsd",    pack_8_8},
 	{"bsdos",   pack_bsdos},
-	{"freebsd", pack_freebsd},
+	{"freebsd", pack_nqc},
 	{"hpux",    pack_8_24},
 	{"isc",     pack_8_8},
 	{"linux",   pack_8_8},

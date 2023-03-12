@@ -27,7 +27,7 @@
 #include "Plugins/Process/Utility/RegisterContextFreeBSD_x86_64.h"
 
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 
 // x86 64-bit general purpose registers.
 static const uint32_t g_gpr_regnums_x86_64[] = {

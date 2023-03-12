@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: BSD-3-Clause */
 /* Copyright(c) 2007-2022 Intel Corporation */
 /* $FreeBSD$ */
-#include "qat_freebsd.h"
+#include "qat_nqc.h"
 #include "adf_common_drv.h"
 #include "adf_cfg_device.h"
 #include "adf_cfg_dev_dbg.h"

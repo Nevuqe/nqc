@@ -42,7 +42,7 @@
 #include <string.h>
 #include <net80211/ieee80211.h>
 #include <net80211/ieee80211_ioctl.h>
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 #include <net80211/ieee80211_radiotap.h>
 #include <sys/endian.h>
 #include <assert.h>

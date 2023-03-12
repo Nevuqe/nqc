@@ -88,7 +88,7 @@ set -A perms	create		true		false	\
 		xattr		true		false	\
 		receive		true		false
 
-elif is_freebsd; then
+elif is_nqc; then
 #				Results in	Results in
 #		Permission	Filesystem	Volume
 #

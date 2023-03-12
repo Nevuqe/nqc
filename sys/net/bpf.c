@@ -96,7 +96,7 @@ __FBSDID("$FreeBSD$");
 #include <sys/kernel.h>
 #include <sys/sysctl.h>
 
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 
 #include <security/mac/mac_framework.h>
 

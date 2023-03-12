@@ -26,7 +26,7 @@
 
 using namespace lldb;
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 
 NativeRegisterContextFreeBSD *
 NativeRegisterContextFreeBSD::CreateHostNativeRegisterContextFreeBSD(

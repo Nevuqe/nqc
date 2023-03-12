@@ -16,7 +16,7 @@ SRCS=	cpio.c cmdline.c
 SRCS+=	err.c line_reader.c passphrase.c
 
 CFLAGS+= -DBSDCPIO_VERSION_STRING=\"${BSDCPIO_VERSION_STRING}\"
-CFLAGS+= -DPLATFORM_CONFIG_H=\"${_LIBARCHIVECONFDIR}/config_freebsd.h\"
+CFLAGS+= -DPLATFORM_CONFIG_H=\"${_LIBARCHIVECONFDIR}/config_nqc.h\"
 CFLAGS+= -I${_LIBARCHIVEDIR}/cpio -I${_LIBARCHIVEDIR}/libarchive_fe
 
 LIBADD=	archive

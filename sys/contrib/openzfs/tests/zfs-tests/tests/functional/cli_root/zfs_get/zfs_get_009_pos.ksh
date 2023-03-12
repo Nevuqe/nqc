@@ -58,7 +58,7 @@ set -A all_props type used available creation volsize referenced \
 	snapdir aclinherit canmount primarycache secondarycache version \
 	usedbychildren usedbydataset usedbyrefreservation usedbysnapshots \
 	userquota@root groupquota@root userused@root groupused@root
-if is_freebsd; then
+if is_nqc; then
 	set -A all_props ${all_props[*]} jailed aclmode
 else
 	set -A all_props ${all_props[*]} zoned acltype

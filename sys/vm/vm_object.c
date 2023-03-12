@@ -2585,7 +2585,7 @@ vm_object_list_handler(struct sysctl_req *req, bool swap_only)
 
 		kvo->kvo_vn_fileid = 0;
 		kvo->kvo_vn_fsid = 0;
-		kvo->kvo_vn_fsid_freebsd11 = 0;
+		kvo->kvo_vn_fsid_nqc11 = 0;
 		freepath = NULL;
 		fullpath = "";
 		vp = NULL;
@@ -2607,7 +2607,7 @@ vm_object_list_handler(struct sysctl_req *req, bool swap_only)
 			if (VOP_GETATTR(vp, &va, curthread->td_ucred) == 0) {
 				kvo->kvo_vn_fileid = va.va_fileid;
 				kvo->kvo_vn_fsid = va.va_fsid;
-				kvo->kvo_vn_fsid_freebsd11 = va.va_fsid;
+				kvo->kvo_vn_fsid_nqc11 = va.va_fsid;
 								/* truncate */
 			}
 			vput(vp);

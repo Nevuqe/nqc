@@ -216,7 +216,7 @@ function cmp_ds_prop
 	props+=",atime,canmount,checksum,compression,copies,devices"
 	props+=",exec,quota,readonly,recordsize,reservation,setuid"
 	props+=",snapdir,version,volsize,xattr,mountpoint"
-	if is_freebsd; then
+	if is_nqc; then
 		props+=",jailed"
 	else
 		props+=",zoned"

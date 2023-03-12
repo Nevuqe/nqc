@@ -60,7 +60,7 @@
 
 verify_runnable "both"
 
-if is_linux || is_freebsd; then
+if is_linux || is_nqc; then
 	log_unsupported "Requires pfexec command"
 fi
 

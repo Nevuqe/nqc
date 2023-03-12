@@ -50,7 +50,7 @@ typeset v_props=(type used available creation volsize referenced compressratio \
     compression atime devices exec readonly setuid snapdir version \
     aclinherit canmount primarycache secondarycache \
     usedbychildren usedbydataset usedbyrefreservation usedbysnapshots)
-if is_freebsd; then
+if is_nqc; then
 	typeset v_props_os=(jailed aclmode)
 else
 	typeset v_props_os=(zoned acltype)

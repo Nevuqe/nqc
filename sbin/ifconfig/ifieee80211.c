@@ -73,7 +73,7 @@
 #include <net/route.h>
 
 #include <net80211/ieee80211_ioctl.h>
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 #include <net80211/ieee80211_superg.h>
 #include <net80211/ieee80211_tdma.h>
 #include <net80211/ieee80211_mesh.h>

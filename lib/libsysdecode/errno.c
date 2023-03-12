@@ -41,7 +41,7 @@ __FBSDID("$FreeBSD$");
 #endif
 
 int
-sysdecode_abi_to_freebsd_errno(enum sysdecode_abi abi, int error)
+sysdecode_abi_to_nqc_errno(enum sysdecode_abi abi, int error)
 {
 
 	switch (abi) {
@@ -71,7 +71,7 @@ sysdecode_abi_to_freebsd_errno(enum sysdecode_abi abi, int error)
 }
 
 int
-sysdecode_freebsd_to_abi_errno(enum sysdecode_abi abi, int error)
+sysdecode_nqc_to_abi_errno(enum sysdecode_abi abi, int error)
 {
 
 	switch (abi) {

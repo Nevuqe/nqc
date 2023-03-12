@@ -9,7 +9,7 @@
 PACKAGE=	wpa
 PROG=	wpa_priv
 SRCS=	os_unix.c eloop.c common.c wpa_debug.c wpabuf.c wpa_priv.c \
-	l2_packet_freebsd.c
+	l2_packet_nqc.c
 
 LIBADD+=pcap wpadrivers
 

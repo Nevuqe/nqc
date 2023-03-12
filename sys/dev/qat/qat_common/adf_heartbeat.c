@@ -3,7 +3,7 @@
 /* $FreeBSD$ */
 #include <sys/types.h>
 #include <linux/random.h>
-#include "qat_freebsd.h"
+#include "qat_nqc.h"
 
 #include "adf_heartbeat.h"
 #include "adf_common_drv.h"

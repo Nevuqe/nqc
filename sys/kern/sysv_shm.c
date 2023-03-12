@@ -917,7 +917,7 @@ static struct syscall_helper_data shm32_syscalls[] = {
 	SYSCALL32_INIT_HELPER(freebsd32_shmctl),
 #if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
     defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
-	SYSCALL32_INIT_HELPER(freebsd7_freebsd32_shmctl),
+	SYSCALL32_INIT_HELPER(freebsd7_nqc32_shmctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -1402,12 +1402,12 @@ freebsd32_shmsys(struct thread *td, struct freebsd32_shmsys_args *uap)
 		return (sysent[SYS_shmget].sy_call(td, &ap));
 	}
 	case 4: {	/* shmctl */
-		struct freebsd7_freebsd32_shmctl_args ap;
+		struct freebsd7_nqc32_shmctl_args ap;
 
 		ap.shmid = uap->a2;
 		ap.cmd = uap->a3;
 		ap.buf = PTRIN(uap->a4);
-		return (freebsd7_freebsd32_shmctl(td, &ap));
+		return (freebsd7_nqc32_shmctl(td, &ap));
 	}
 	case 1:		/* oshmctl */
 	default:
@@ -1421,8 +1421,8 @@ freebsd32_shmsys(struct thread *td, struct freebsd32_shmsys_args *uap)
 #if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
     defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
 int
-freebsd7_freebsd32_shmctl(struct thread *td,
-    struct freebsd7_freebsd32_shmctl_args *uap)
+freebsd7_nqc32_shmctl(struct thread *td,
+    struct freebsd7_nqc32_shmctl_args *uap)
 {
 	int error;
 	union {

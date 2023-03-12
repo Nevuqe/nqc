@@ -67,7 +67,7 @@ __FBSDID("$FreeBSD$");
 #include <capsicum_helpers.h>
 #include <libgen.h>
 
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 
 
 #ifndef _PATH_VAREMPTY

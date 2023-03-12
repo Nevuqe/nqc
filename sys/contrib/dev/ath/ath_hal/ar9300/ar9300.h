@@ -17,7 +17,7 @@
 #ifndef _ATH_AR9300_H_
 #define _ATH_AR9300_H_
 
-#include "ar9300_freebsd_inc.h"
+#include "ar9300_nqc_inc.h"
 
 /* XXX doesn't belong here */
 #define	AR_EEPROM_MODAL_SPURS	5

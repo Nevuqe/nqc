@@ -57,7 +57,7 @@ set -A badopts "r" "R" "-R" "-rR" "-a" "-" "-?" "-1" "-2" "-v" "-n"
 set -A props "recordsize" "mountpoint" "sharenfs" "checksum" "compression" \
     "atime" "devices" "exec" "setuid" "readonly" "snapdir" "aclmode" \
     "aclinherit" "xattr" "copies"
-if is_freebsd; then
+if is_nqc; then
 	props+=("jailed")
 else
 	props+=("zoned")

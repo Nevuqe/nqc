@@ -68,7 +68,7 @@ create_pool $TESTPOOL $DISK0
 create_pool $TESTPOOL1 $DISK1
 log_must zfs create -s -V $VOLSIZE $TESTPOOL1/$TESTVOL
 block_device_wait
-if is_freebsd; then
+if is_nqc; then
 	typeset recursive=$(get_tunable VOL_RECURSIVE)
 	log_must set_tunable64 VOL_RECURSIVE 1
 fi

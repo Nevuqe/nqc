@@ -414,11 +414,11 @@ int
 sys_fcntl(struct thread *td, struct fcntl_args *uap)
 {
 
-	return (kern_fcntl_freebsd(td, uap->fd, uap->cmd, uap->arg));
+	return (kern_fcntl_nqc(td, uap->fd, uap->cmd, uap->arg));
 }
 
 int
-kern_fcntl_freebsd(struct thread *td, int fd, int cmd, long arg)
+kern_fcntl_nqc(struct thread *td, int fd, int cmd, long arg)
 {
 	struct flock fl;
 	struct __oflock ofl;

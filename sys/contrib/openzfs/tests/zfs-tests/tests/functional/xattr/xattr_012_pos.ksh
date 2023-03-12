@@ -47,7 +47,7 @@
 
 function cleanup {
 	log_must rm $TESTDIR/myfile.$$
-	if is_freebsd; then
+	if is_nqc; then
 		log_must rm /tmp/xattr.$$
 	fi
 }
@@ -69,7 +69,7 @@ fi
 
 FS_SIZE=$(get_prop used $TESTPOOL/$TESTFS)
 
-if is_freebsd; then
+if is_nqc; then
 	# FreeBSD setextattr has awful scaling with respect to input size.
 	# It reallocs after every 1024 bytes. For now we'll just break up
 	# the 200MB into 10 20MB attributes, but this test could be revisited

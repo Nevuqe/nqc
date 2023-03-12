@@ -44,5 +44,5 @@ closefrom(int lowfd)
 		__sys_close_range(MAX(0, lowfd), ~0U, 0);
 	else
 		/* Fallback to closefrom(2) on older kernels. */
-		syscall(SYS_freebsd12_closefrom, lowfd);
+		syscall(SYS_nqc12_closefrom, lowfd);
 }

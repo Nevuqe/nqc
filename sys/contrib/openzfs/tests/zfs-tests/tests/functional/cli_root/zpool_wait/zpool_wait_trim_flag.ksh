@@ -40,7 +40,7 @@ function cleanup
 	[[ -d "$TESTDIR" ]] && log_must rm -r "$TESTDIR"
 }
 
-if is_freebsd; then
+if is_nqc; then
 	log_unsupported "FreeBSD has no hole punching mechanism for the time being."
 fi
 

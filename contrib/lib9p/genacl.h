@@ -299,7 +299,7 @@ struct l9p_acl *l9p_darwin_nfsv4acl_to_acl(acl_t acl);
 #endif
 
 #if defined(HAVE_FREEBSD_ACLS)
-struct l9p_acl *l9p_freebsd_nfsv4acl_to_acl(acl_t acl);
+struct l9p_acl *l9p_nqc_nfsv4acl_to_acl(acl_t acl);
 #endif
 
 #if defined(HAVE_POSIX_ACLS) && 0 /* not yet */

@@ -264,7 +264,7 @@ main(int argc, char *argv[])
 		}
 		if (!_rpcpmstart)
 			proto = IPPROTO_UDP;
-		if (!svc_register(transp, YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, ypxfrd_freebsd_prog_1, proto)) {
+		if (!svc_register(transp, YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, ypxfrd_nqc_prog_1, proto)) {
 			_msgout("unable to register (YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, udp).");
 			exit(1);
 		}
@@ -278,7 +278,7 @@ main(int argc, char *argv[])
 		}
 		if (!_rpcpmstart)
 			proto = IPPROTO_TCP;
-		if (!svc_register(transp, YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, ypxfrd_freebsd_prog_1, proto)) {
+		if (!svc_register(transp, YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, ypxfrd_nqc_prog_1, proto)) {
 			_msgout("unable to register (YPXFRD_FREEBSD_PROG, YPXFRD_FREEBSD_VERS, tcp).");
 			exit(1);
 		}

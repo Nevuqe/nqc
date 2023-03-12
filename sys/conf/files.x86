@@ -122,7 +122,7 @@ dev/hyperv/pcib/vmbus_pcib.c				optional	hyperv pci
 dev/hyperv/netvsc/hn_nvs.c				optional	hyperv
 dev/hyperv/netvsc/hn_rndis.c				optional	hyperv
 dev/hyperv/netvsc/if_hn.c				optional	hyperv
-dev/hyperv/storvsc/hv_storvsc_drv_freebsd.c		optional	hyperv
+dev/hyperv/storvsc/hv_storvsc_drv_nqc.c		optional	hyperv
 dev/hyperv/utilities/hv_kvp.c				optional	hyperv
 dev/hyperv/utilities/hv_snapshot.c			optional	hyperv
 dev/hyperv/utilities/vmbus_heartbeat.c			optional	hyperv

@@ -23,7 +23,7 @@
 #include <array>
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
@@ -60,7 +60,7 @@ private:
   RegisterInfoPOSIX_arm &GetRegisterInfo() const;
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
 #endif // #ifndef lldb_NativeRegisterContextFreeBSD_arm_h

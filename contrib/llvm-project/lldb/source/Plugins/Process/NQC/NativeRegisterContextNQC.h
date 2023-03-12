@@ -14,7 +14,7 @@
 #include "Plugins/Process/Utility/NativeRegisterContextRegisterInfo.h"
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
@@ -37,7 +37,7 @@ protected:
   virtual ::pid_t GetProcessPid();
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
 #endif // #ifndef lldb_NativeRegisterContextFreeBSD_h

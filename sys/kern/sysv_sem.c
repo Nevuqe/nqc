@@ -260,7 +260,7 @@ static struct syscall_helper_data sem32_syscalls[] = {
 	SYSCALL32_INIT_HELPER(freebsd32_semsys),
 #if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
     defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
-	SYSCALL32_INIT_HELPER(freebsd7_freebsd32___semctl),
+	SYSCALL32_INIT_HELPER(freebsd7_nqc32___semctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -1868,8 +1868,8 @@ freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
 	AUDIT_ARG_SVIPC_WHICH(uap->which);
 	switch (uap->which) {
 	case 0:
-		return (freebsd7_freebsd32___semctl(td,
-		    (struct freebsd7_freebsd32___semctl_args *)&uap->a2));
+		return (freebsd7_nqc32___semctl(td,
+		    (struct freebsd7_nqc32___semctl_args *)&uap->a2));
 	default:
 		return (sys_semsys(td, (struct semsys_args *)uap));
 	}
@@ -1881,8 +1881,8 @@ freebsd32_semsys(struct thread *td, struct freebsd32_semsys_args *uap)
 #if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
     defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
 int
-freebsd7_freebsd32___semctl(struct thread *td,
-    struct freebsd7_freebsd32___semctl_args *uap)
+freebsd7_nqc32___semctl(struct thread *td,
+    struct freebsd7_nqc32___semctl_args *uap)
 {
 	struct semid_ds_old32 dsbuf32;
 	struct semid_ds dsbuf;

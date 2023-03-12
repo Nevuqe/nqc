@@ -43,7 +43,7 @@ if ! is_linux; then
 	fi
 fi
 
-if is_freebsd; then
+if is_nqc; then
 	log_must sysctl vfs.usermount=0
 fi
 

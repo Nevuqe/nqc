@@ -792,11 +792,11 @@ freebsd11_fstatfs(struct thread *td, struct freebsd11_fstatfs_args *uap)
 int
 freebsd11_getfsstat(struct thread *td, struct freebsd11_getfsstat_args *uap)
 {
-	return (kern_freebsd11_getfsstat(td, uap->buf, uap->bufsize, uap->mode));
+	return (kern_nqc11_getfsstat(td, uap->buf, uap->bufsize, uap->mode));
 }
 
 int
-kern_freebsd11_getfsstat(struct thread *td, struct freebsd11_statfs * ubuf,
+kern_nqc11_getfsstat(struct thread *td, struct freebsd11_statfs * ubuf,
     long bufsize, int mode)
 {
 	struct freebsd11_statfs osb;

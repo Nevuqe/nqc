@@ -27,7 +27,7 @@
 
 using namespace lldb;
 using namespace lldb_private;
-using namespace lldb_private::process_freebsd;
+using namespace lldb_private::process_nqc;
 
 static const uint32_t g_gpr_regnums[] = {
     gpr_r0_powerpc,  gpr_r1_powerpc,  gpr_r2_powerpc,  gpr_r3_powerpc,

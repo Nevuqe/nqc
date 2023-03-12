@@ -26,7 +26,7 @@
 #include "ar9300phy.h"
 #include "ar9300desc.h"
 
-#include "ar9300_freebsd.h"
+#include "ar9300_nqc.h"
 
 #include "ar9300_stub.h"
 #include "ar9300_stub_funcs.h"
@@ -58,7 +58,7 @@ ar9300GetSlotTime(struct ath_hal *ah)
 }
 
 static HAL_BOOL
-ar9300_freebsd_set_tx_power_limit(struct ath_hal *ah, uint32_t limit)
+ar9300_nqc_set_tx_power_limit(struct ath_hal *ah, uint32_t limit)
 {
 	return (ar9300_set_tx_power_limit(ah, limit, 0, 0));
 }
@@ -94,28 +94,28 @@ ar9300_set_nav(struct ath_hal *ah, u_int nav)
  * For now we'll just go with the HAL default and make these no-ops.
  */
 static HAL_ANT_SETTING
-ar9300_freebsd_get_antenna_switch(struct ath_hal *ah)
+ar9300_nqc_get_antenna_switch(struct ath_hal *ah)
 {
 
 	return (HAL_ANT_VARIABLE);
 }
 
 static HAL_BOOL
-ar9300_freebsd_set_antenna_switch(struct ath_hal *ah, HAL_ANT_SETTING setting)
+ar9300_nqc_set_antenna_switch(struct ath_hal *ah, HAL_ANT_SETTING setting)
 {
 
 	return (AH_TRUE);
 }
 
 static u_int
-ar9300_freebsd_get_cts_timeout(struct ath_hal *ah)
+ar9300_nqc_get_cts_timeout(struct ath_hal *ah)
 {
     u_int clks = MS(OS_REG_READ(ah, AR_TIME_OUT), AR_TIME_OUT_CTS);
     return ath_hal_mac_usec(ah, clks);      /* convert from system clocks */
 }
 
 static void
-ar9300_freebsd_set_tsf64(struct ath_hal *ah, uint64_t tsf64)
+ar9300_nqc_set_tsf64(struct ath_hal *ah, uint64_t tsf64)
 {
 
 	/*
@@ -132,7 +132,7 @@ ar9300_freebsd_set_tsf64(struct ath_hal *ah, uint64_t tsf64)
 #define	EXT_CH_RADAR_EARLY_FOUND	0x04
 
 static HAL_BOOL
-ar9300_freebsd_proc_radar_event(struct ath_hal *ah, struct ath_rx_status *rxs,
+ar9300_nqc_proc_radar_event(struct ath_hal *ah, struct ath_rx_status *rxs,
     uint64_t fulltsf, const char *buf, HAL_DFS_EVENT *event)
 {
 	HAL_BOOL doDfsExtCh;
@@ -322,7 +322,7 @@ ar9300_freebsd_proc_radar_event(struct ath_hal *ah, struct ath_rx_status *rxs,
 }
 
 void
-ar9300_attach_freebsd_ops(struct ath_hal *ah)
+ar9300_attach_nqc_ops(struct ath_hal *ah)
 {
 
 	/* Global functions */
@@ -330,16 +330,16 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	ah->ah_getRateTable		= ar9300_get_rate_table;
 
 	/* Reset functions */
-	ah->ah_reset		= ar9300_reset_freebsd;
+	ah->ah_reset		= ar9300_reset_nqc;
 	ah->ah_phyDisable		= ar9300_phy_disable;
 	ah->ah_disable		= ar9300_disable;
-	ah->ah_configPCIE		= ar9300_config_pcie_freebsd;
+	ah->ah_configPCIE		= ar9300_config_pcie_nqc;
 //	ah->ah_disablePCIE		= ar9300_disable_pcie_phy;
 	ah->ah_setPCUConfig		= ar9300_set_pcu_config;
 	// perCalibration
-	ah->ah_perCalibrationN	= ar9300_per_calibration_freebsd;
-	ah->ah_resetCalValid	= ar9300_reset_cal_valid_freebsd;
-	ah->ah_setTxPowerLimit	= ar9300_freebsd_set_tx_power_limit;
+	ah->ah_perCalibrationN	= ar9300_per_calibration_nqc;
+	ah->ah_resetCalValid	= ar9300_reset_cal_valid_nqc;
+	ah->ah_setTxPowerLimit	= ar9300_nqc_set_tx_power_limit;
 	ah->ah_getChanNoise		= ath_hal_getChanNoise;
 
 	/* Transmit functions */
@@ -352,16 +352,16 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	ah->ah_setTxDP		= ar9300_set_tx_dp;
 	ah->ah_numTxPending		= ar9300_num_tx_pending;
 	ah->ah_startTxDma		= ar9300_start_tx_dma;
-	ah->ah_stopTxDma		= ar9300_stop_tx_dma_freebsd;
-	ah->ah_setupTxDesc		= ar9300_freebsd_setup_tx_desc;
-	ah->ah_setupXTxDesc		= ar9300_freebsd_setup_x_tx_desc;
-	ah->ah_fillTxDesc		= ar9300_freebsd_fill_tx_desc;
-	ah->ah_procTxDesc		= ar9300_freebsd_proc_tx_desc;
+	ah->ah_stopTxDma		= ar9300_stop_tx_dma_nqc;
+	ah->ah_setupTxDesc		= ar9300_nqc_setup_tx_desc;
+	ah->ah_setupXTxDesc		= ar9300_nqc_setup_x_tx_desc;
+	ah->ah_fillTxDesc		= ar9300_nqc_fill_tx_desc;
+	ah->ah_procTxDesc		= ar9300_nqc_proc_tx_desc;
 	ah->ah_getTxIntrQueue	= ar9300_get_tx_intr_queue;
 	// reqTxIntrDesc
-	ah->ah_getTxCompletionRates	= ar9300_freebsd_get_tx_completion_rates;
+	ah->ah_getTxCompletionRates	= ar9300_nqc_get_tx_completion_rates;
 	ah->ah_setTxDescLink	= ar9300_set_desc_link;
-	ah->ah_getTxDescLink	= ar9300_freebsd_get_desc_link;
+	ah->ah_getTxDescLink	= ar9300_nqc_get_desc_link;
 	ah->ah_getTxDescLinkPtr	= ar9300_get_desc_link_ptr;
 	ah->ah_setupTxStatusRing	= ar9300_setup_tx_status_ring;
 	ah->ah_getTxRawTxDesc	 = ar9300_get_raw_tx_desc;
@@ -371,7 +371,7 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	ah->ah_getRxDP		= ar9300_get_rx_dp;
 	ah->ah_setRxDP		= ar9300_set_rx_dp;
 	ah->ah_enableReceive	= ar9300_enable_receive;
-	ah->ah_stopDmaReceive	= ar9300_stop_dma_receive_freebsd;
+	ah->ah_stopDmaReceive	= ar9300_stop_dma_receive_nqc;
 	ah->ah_startPcuReceive	= ar9300_start_pcu_receive;
 	ah->ah_stopPcuReceive	= ar9300_stop_pcu_receive;
 	ah->ah_setMulticastFilter	= ar9300_set_multicast_filter;
@@ -380,9 +380,9 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	ah->ah_getRxFilter		= ar9300_get_rx_filter;
 	ah->ah_setRxFilter		= ar9300_set_rx_filter;
 	/* setupRxDesc */
-	ah->ah_procRxDesc		= ar9300_proc_rx_desc_freebsd;
-	ah->ah_rxMonitor		= ar9300_ani_rxmonitor_freebsd;
-	ah->ah_aniPoll		= ar9300_ani_poll_freebsd;
+	ah->ah_procRxDesc		= ar9300_proc_rx_desc_nqc;
+	ah->ah_rxMonitor		= ar9300_ani_rxmonitor_nqc;
+	ah->ah_aniPoll		= ar9300_ani_poll_nqc;
 	ah->ah_procMibEvent		= ar9300_process_mib_intr;
 
 	/* Misc functions */
@@ -406,14 +406,14 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	ah->ah_getTsf32		= ar9300_get_tsf32;
 	ah->ah_getTsf64		= ar9300_get_tsf64;
 	ah->ah_resetTsf		= ar9300_reset_tsf;
-	ah->ah_setTsf64		= ar9300_freebsd_set_tsf64;
+	ah->ah_setTsf64		= ar9300_nqc_set_tsf64;
 	ah->ah_detectCardPresent	= ar9300_detect_card_present;
 	// ah->ah_updateMibCounters	= ar9300_update_mib_counters;
 	ah->ah_getRfGain		= ar9300_get_rfgain;
 	ah->ah_getDefAntenna	= ar9300_get_def_antenna;
 	ah->ah_setDefAntenna	= ar9300_set_def_antenna;
-	ah->ah_getAntennaSwitch	= ar9300_freebsd_get_antenna_switch;
-	ah->ah_setAntennaSwitch	= ar9300_freebsd_set_antenna_switch;
+	ah->ah_getAntennaSwitch	= ar9300_nqc_get_antenna_switch;
+	ah->ah_setAntennaSwitch	= ar9300_nqc_set_antenna_switch;
 	// ah->ah_setSifsTime		= ar9300_set_sifs_time;
 	// ah->ah_getSifsTime		= ar9300_get_sifs_time;
 	ah->ah_setSlotTime		= ar9300_set_slot_time;
@@ -422,17 +422,17 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	ah->ah_setAckTimeout	= ar9300_set_ack_timeout;
 	// XXX ack/ctsrate
 	// XXX CTS timeout
-	ah->ah_getCTSTimeout = ar9300_freebsd_get_cts_timeout;
+	ah->ah_getCTSTimeout = ar9300_nqc_get_cts_timeout;
 	// XXX decompmask
 	// coverageclass
 	ah->ah_setQuiet		= ar9300_set_quiet;
-	ah->ah_getMibCycleCounts	= ar9300_freebsd_get_mib_cycle_counts;
+	ah->ah_getMibCycleCounts	= ar9300_nqc_get_mib_cycle_counts;
 
 	/* DFS functions */
 	ah->ah_enableDfs		= ar9300_enable_dfs;
 	ah->ah_getDfsThresh		= ar9300_get_dfs_thresh;
 	ah->ah_getDfsDefaultThresh	= ar9300_get_default_dfs_thresh;
-	ah->ah_procRadarEvent		= ar9300_freebsd_proc_radar_event;
+	ah->ah_procRadarEvent		= ar9300_nqc_proc_radar_event;
 	ah->ah_isFastClockEnabled	= ar9300_is_fast_clock_enabled;
 	ah->ah_get11nExtBusy		= ar9300_get_11n_ext_busy;
 	ah->ah_setDfsCacTxQuiet		= ar9300_cac_tx_quiet;
@@ -458,7 +458,7 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 
 	/* Beacon functions */
 	/* ah_setBeaconTimers */
-	ah->ah_beaconInit		= ar9300_freebsd_beacon_init;
+	ah->ah_beaconInit		= ar9300_nqc_beacon_init;
 	ah->ah_setBeaconTimers		= ar9300_beacon_set_beacon_timers;
 	ah->ah_setStationBeaconTimers = ar9300_set_sta_beacon_timers;
 	/* ah_resetStationBeaconTimers */
@@ -466,9 +466,9 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 
 	/* Interrupt functions */
 	ah->ah_isInterruptPending	= ar9300_is_interrupt_pending;
-	ah->ah_getPendingInterrupts	= ar9300_get_pending_interrupts_freebsd;
+	ah->ah_getPendingInterrupts	= ar9300_get_pending_interrupts_nqc;
 	ah->ah_getInterrupts =	ar9300_get_interrupts;
-	ah->ah_setInterrupts =	ar9300_set_interrupts_freebsd;
+	ah->ah_setInterrupts =	ar9300_set_interrupts_nqc;
 
 	/* Regulatory/internal functions */
 	//    AH_PRIVATE(ah)->ah_getNfAdjust = ar9300_get_nf_adjust;
@@ -482,17 +482,17 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 	/* XXX ah_eeversion */
 	/* XXX ah_eepromDetach */
 	/* XXX ah_eepromGet */
-	AH_PRIVATE(ah)->ah_eepromGet = ar9300_eeprom_get_freebsd;
+	AH_PRIVATE(ah)->ah_eepromGet = ar9300_eeprom_get_nqc;
 	/* XXX ah_eepromSet */
 	/* XXX ah_getSpurChan */
 	/* XXX ah_eepromDiag */
 
 	/* 802.11n functions */
-	ah->ah_chainTxDesc = ar9300_freebsd_chain_tx_desc;
-	ah->ah_setupFirstTxDesc= ar9300_freebsd_setup_first_tx_desc;
-	ah->ah_setupLastTxDesc = ar9300_freebsd_setup_last_tx_desc;
-	ah->ah_set11nRateScenario = ar9300_freebsd_set_11n_rate_scenario;
-	ah->ah_set11nTxDesc = ar9300_freebsd_setup_11n_desc;
+	ah->ah_chainTxDesc = ar9300_nqc_chain_tx_desc;
+	ah->ah_setupFirstTxDesc= ar9300_nqc_setup_first_tx_desc;
+	ah->ah_setupLastTxDesc = ar9300_nqc_setup_last_tx_desc;
+	ah->ah_set11nRateScenario = ar9300_nqc_set_11n_rate_scenario;
+	ah->ah_set11nTxDesc = ar9300_nqc_setup_11n_desc;
 	ah->ah_set11nAggrFirst = ar9300_set_11n_aggr_first;
 	ah->ah_set11nAggrMiddle = ar9300_set_11n_aggr_middle;
 	ah->ah_set11nAggrLast = ar9300_set_11n_aggr_last;
@@ -543,7 +543,7 @@ ar9300_attach_freebsd_ops(struct ath_hal *ah)
 }
 
 HAL_BOOL
-ar9300_reset_freebsd(struct ath_hal *ah, HAL_OPMODE opmode,
+ar9300_reset_nqc(struct ath_hal *ah, HAL_OPMODE opmode,
     struct ieee80211_channel *chan, HAL_BOOL bChannelChange,
     HAL_RESET_TYPE resetType,
     HAL_STATUS *status)
@@ -569,7 +569,7 @@ ar9300_reset_freebsd(struct ath_hal *ah, HAL_OPMODE opmode,
 }
 
 void
-ar9300_config_pcie_freebsd(struct ath_hal *ah, HAL_BOOL restore,
+ar9300_config_pcie_nqc(struct ath_hal *ah, HAL_BOOL restore,
     HAL_BOOL powerOff)
 {
 
@@ -586,7 +586,7 @@ ar9300_config_pcie_freebsd(struct ath_hal *ah, HAL_BOOL restore,
  * When I fix this particular API, I'll undo this.
  */
 HAL_STATUS
-ar9300_eeprom_get_freebsd(struct ath_hal *ah, int param, void *val)
+ar9300_eeprom_get_nqc(struct ath_hal *ah, int param, void *val)
 {
 
 	switch (param) {
@@ -600,14 +600,14 @@ ar9300_eeprom_get_freebsd(struct ath_hal *ah, int param, void *val)
 }
 
 HAL_BOOL
-ar9300_stop_tx_dma_freebsd(struct ath_hal *ah, u_int q)
+ar9300_stop_tx_dma_nqc(struct ath_hal *ah, u_int q)
 {
 
 	return ar9300_stop_tx_dma(ah, q, 1000);
 }
 
 void
-ar9300_ani_poll_freebsd(struct ath_hal *ah,
+ar9300_ani_poll_nqc(struct ath_hal *ah,
     const struct ieee80211_channel *chan)
 {
 
@@ -640,7 +640,7 @@ ar9300_ani_poll_freebsd(struct ath_hal *ah,
  * wants.
  */
 void
-ar9300_config_defaults_freebsd(struct ath_hal *ah, HAL_OPS_CONFIG *ah_config)
+ar9300_config_defaults_nqc(struct ath_hal *ah, HAL_OPS_CONFIG *ah_config)
 {
 
 	/* Until FreeBSD's HAL does this by default - just copy */
@@ -649,14 +649,14 @@ ar9300_config_defaults_freebsd(struct ath_hal *ah, HAL_OPS_CONFIG *ah_config)
 }
 
 HAL_BOOL
-ar9300_stop_dma_receive_freebsd(struct ath_hal *ah)
+ar9300_stop_dma_receive_nqc(struct ath_hal *ah)
 {
 
 	return ar9300_stop_dma_receive(ah, 1000);
 }
 
 HAL_BOOL
-ar9300_get_pending_interrupts_freebsd(struct ath_hal *ah, HAL_INT *masked)
+ar9300_get_pending_interrupts_nqc(struct ath_hal *ah, HAL_INT *masked)
 {
 
 	/* Non-MSI, so no MSI vector; and 'nortc' = 0 */
@@ -664,7 +664,7 @@ ar9300_get_pending_interrupts_freebsd(struct ath_hal *ah, HAL_INT *masked)
 }
 
 HAL_INT
-ar9300_set_interrupts_freebsd(struct ath_hal *ah, HAL_INT ints)
+ar9300_set_interrupts_nqc(struct ath_hal *ah, HAL_INT ints)
 {
 
 	/* nortc = 0 */
@@ -672,7 +672,7 @@ ar9300_set_interrupts_freebsd(struct ath_hal *ah, HAL_INT ints)
 }
 
 HAL_BOOL
-ar9300_per_calibration_freebsd(struct ath_hal *ah,
+ar9300_per_calibration_nqc(struct ath_hal *ah,
     struct ieee80211_channel *chan, u_int rxchainmask, HAL_BOOL long_cal,
     HAL_BOOL *isCalDone)
 {
@@ -688,7 +688,7 @@ ar9300_per_calibration_freebsd(struct ath_hal *ah,
 }
 
 HAL_BOOL
-ar9300_reset_cal_valid_freebsd(struct ath_hal *ah,
+ar9300_reset_cal_valid_nqc(struct ath_hal *ah,
     const struct ieee80211_channel *chan)
 {
 
@@ -707,7 +707,7 @@ ar9300_reset_cal_valid_freebsd(struct ath_hal *ah,
  * routine doesn't check 'pa'.
  */
 HAL_STATUS
-ar9300_proc_rx_desc_freebsd(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_proc_rx_desc_nqc(struct ath_hal *ah, struct ath_desc *ds,
     uint32_t pa, struct ath_desc *ds_next, uint64_t tsf,
     struct ath_rx_status *rxs)
 {
@@ -720,7 +720,7 @@ ar9300_proc_rx_desc_freebsd(struct ath_hal *ah, struct ath_desc *ds,
  * This is the primary way the ANI code gets the node statistics per packet.
  */
 void
-ar9300_ani_rxmonitor_freebsd(struct ath_hal *ah, const HAL_NODE_STATS *stats,
+ar9300_ani_rxmonitor_nqc(struct ath_hal *ah, const HAL_NODE_STATS *stats,
     const struct ieee80211_channel *chan)
 {
 	struct ath_hal_9300 *ahp = AH9300(ah);
@@ -729,7 +729,7 @@ ar9300_ani_rxmonitor_freebsd(struct ath_hal *ah, const HAL_NODE_STATS *stats,
 }
 
 void
-ar9300_freebsd_get_desc_link(struct ath_hal *ah, void *ds, uint32_t *link)
+ar9300_nqc_get_desc_link(struct ath_hal *ah, void *ds, uint32_t *link)
 {
 	struct ar9300_txc *ads = AR9300TXC(ds);
 
@@ -742,7 +742,7 @@ ar9300_freebsd_get_desc_link(struct ath_hal *ah, void *ds, uint32_t *link)
 
 
 HAL_BOOL
-ar9300_freebsd_setup_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_setup_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     u_int pktLen, u_int hdrLen, HAL_PKT_TYPE type, u_int txPower,
     u_int txRate0, u_int txTries0, u_int keyIx, u_int antMode, u_int flags,
     u_int rtsctsRate, u_int rtsCtsDuration, u_int compicvLen,
@@ -763,7 +763,7 @@ ar9300_freebsd_setup_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 }
 
 HAL_BOOL
-ar9300_freebsd_setup_x_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_setup_x_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     u_int txRate1, u_int txTries1,
     u_int txRate2, u_int txTries2,
     u_int txRate3, u_int txTries3)
@@ -782,7 +782,7 @@ ar9300_freebsd_setup_x_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 }
 
 HAL_BOOL
-ar9300_freebsd_fill_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_fill_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     HAL_DMA_ADDR *bufListPtr, uint32_t *segLenPtr, u_int descId, u_int qid,
     HAL_BOOL firstSeg, HAL_BOOL lastSeg,
     const struct ath_desc *ds0)
@@ -803,7 +803,7 @@ ar9300_freebsd_fill_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 }
 
 HAL_BOOL
-ar9300_freebsd_get_tx_completion_rates(struct ath_hal *ah,
+ar9300_nqc_get_tx_completion_rates(struct ath_hal *ah,
     const struct ath_desc *ds0, int *rates, int *tries)
 {
 
@@ -816,7 +816,7 @@ ar9300_freebsd_get_tx_completion_rates(struct ath_hal *ah,
  * 802.11n TX descriptor wrappers
  */
 void
-ar9300_freebsd_set_11n_rate_scenario(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_set_11n_rate_scenario(struct ath_hal *ah, struct ath_desc *ds,
     u_int durUpdateEn, u_int rtsctsRate, HAL_11N_RATE_SERIES series[],
     u_int nseries, u_int flags)
 {
@@ -828,7 +828,7 @@ ar9300_freebsd_set_11n_rate_scenario(struct ath_hal *ah, struct ath_desc *ds,
 
 /* chaintxdesc */
 HAL_BOOL
-ar9300_freebsd_chain_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_chain_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     HAL_DMA_ADDR *bufLenList, uint32_t *segLenList,
     u_int pktLen, u_int hdrLen, HAL_PKT_TYPE type, u_int keyIx,
     HAL_CIPHER cipher, uint8_t numDelims,
@@ -841,7 +841,7 @@ ar9300_freebsd_chain_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 
 /* setupfirsttxdesc */
 HAL_BOOL
-ar9300_freebsd_setup_first_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_setup_first_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     u_int aggrLen, u_int flags, u_int txPower, u_int txRate0,
     u_int txTries0, u_int antMode, u_int rtsctsRate, u_int rtsctsDuration)
 {
@@ -856,7 +856,7 @@ ar9300_freebsd_setup_first_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
  * it's only used to update the rate control information.
  */
 HAL_BOOL
-ar9300_freebsd_setup_last_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_setup_last_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     const struct ath_desc *ds0)
 {
 
@@ -865,7 +865,7 @@ ar9300_freebsd_setup_last_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 }
 
 void
-ar9300_freebsd_setup_11n_desc(struct ath_hal *ah, void *ds, u_int pktLen,
+ar9300_nqc_setup_11n_desc(struct ath_hal *ah, void *ds, u_int pktLen,
     HAL_PKT_TYPE type, u_int txPower, u_int keyIx, u_int flags)
 {
 	ath_hal_printf(ah, "%s: called\n", __func__);
@@ -884,7 +884,7 @@ ar9300_freebsd_setup_11n_desc(struct ath_hal *ah, void *ds, u_int pktLen,
 }
 
 HAL_STATUS
-ar9300_freebsd_proc_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
+ar9300_nqc_proc_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
     struct ath_tx_status *ts)
 {
 
@@ -892,7 +892,7 @@ ar9300_freebsd_proc_tx_desc(struct ath_hal *ah, struct ath_desc *ds,
 }
 
 void
-ar9300_freebsd_beacon_init(struct ath_hal *ah, uint32_t next_beacon,
+ar9300_nqc_beacon_init(struct ath_hal *ah, uint32_t next_beacon,
     uint32_t beacon_period)
 {
 
@@ -901,7 +901,7 @@ ar9300_freebsd_beacon_init(struct ath_hal *ah, uint32_t next_beacon,
 }
 
 HAL_BOOL
-ar9300_freebsd_get_mib_cycle_counts(struct ath_hal *ah,
+ar9300_nqc_get_mib_cycle_counts(struct ath_hal *ah,
     HAL_SURVEY_SAMPLE *hs)
 
 {

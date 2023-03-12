@@ -103,7 +103,7 @@ typedef struct _GPR {
   uint64_t pc;
   uint64_t ic;
   uint64_t dummy;
-} GPR_freebsd_mips;
+} GPR_nqc_mips;
 
 typedef struct _FPR {
   uint64_t f0;
@@ -140,7 +140,7 @@ typedef struct _FPR {
   uint64_t f31;
   uint64_t fcsr;
   uint64_t fir;
-} FPR_freebsd_mips;
+} FPR_nqc_mips;
 
 // Include RegisterInfos_mips64 to declare our g_register_infos_mips64
 // structure.
@@ -153,7 +153,7 @@ RegisterContextFreeBSD_mips64::RegisterContextFreeBSD_mips64(
     : RegisterInfoInterface(target_arch) {}
 
 size_t RegisterContextFreeBSD_mips64::GetGPRSize() const {
-  return sizeof(GPR_freebsd_mips);
+  return sizeof(GPR_nqc_mips);
 }
 
 const RegisterSet *

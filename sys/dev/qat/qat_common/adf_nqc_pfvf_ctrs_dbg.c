@@ -4,7 +4,7 @@
 #include "adf_accel_devices.h"
 #include "adf_common_drv.h"
 #include "adf_dev_err.h"
-#include "adf_freebsd_pfvf_ctrs_dbg.h"
+#include "adf_nqc_pfvf_ctrs_dbg.h"
 
 #define MAX_REPORT_LINES (14)
 #define MAX_REPORT_LINE_LEN (64)

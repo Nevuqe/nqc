@@ -85,8 +85,8 @@ __vdso_ia32_sigcode:
 	.cfi_endproc
 
 	ALIGN_TEXT
-	.globl	__vdso_freebsd4_ia32_sigcode
-__vdso_freebsd4_ia32_sigcode:
+	.globl	__vdso_nqc4_ia32_sigcode
+__vdso_nqc4_ia32_sigcode:
 #ifdef COMPAT_FREEBSD4
 	calll	*IA32_SIGF_HANDLER(%esp)
 	leal	IA32_SIGF_UC4(%esp),%eax/* get ucontext */

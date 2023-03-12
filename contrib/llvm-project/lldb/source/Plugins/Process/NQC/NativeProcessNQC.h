@@ -19,7 +19,7 @@
 #include "NativeThreadFreeBSD.h"
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 /// \class NativeProcessFreeBSD
 /// Manages communication with the inferior (debugee) process.
 ///
@@ -129,7 +129,7 @@ private:
   Status ReinitializeThreads();
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
 #endif // #ifndef liblldb_NativeProcessFreeBSD_H_

@@ -865,10 +865,10 @@ read_loader_env(const char *name, char *def_fn, bool once)
 
 	len = 0;
 	fn = def_fn;
-	if (efi_freebsd_getenv(name, NULL, &len) == EFI_BUFFER_TOO_SMALL) {
+	if (efi_nqc_getenv(name, NULL, &len) == EFI_BUFFER_TOO_SMALL) {
 		freeme = fn = malloc(len + 1);
 		if (fn != NULL) {
-			if (efi_freebsd_getenv(name, fn, &len) != EFI_SUCCESS) {
+			if (efi_nqc_getenv(name, fn, &len) != EFI_SUCCESS) {
 				free(fn);
 				fn = NULL;
 				printf(
@@ -879,7 +879,7 @@ read_loader_env(const char *name, char *def_fn, bool once)
 				 * only use it once.
 				 */
 				if (once)
-					efi_freebsd_delenv(name);
+					efi_nqc_delenv(name);
 				/*
 				 * We malloced 1 more than len above, then redid the call.
 				 * so now we have room at the end of the string to NUL terminate
@@ -1079,7 +1079,7 @@ main(int argc, CHAR16 *argv[])
 	text = efi_devpath_name(boot_img->FilePath);
 	if (text != NULL) {
 		printf("   Load Path: %S\n", text);
-		efi_setenv_freebsd_wcs("LoaderPath", text);
+		efi_setenv_nqc_wcs("LoaderPath", text);
 		efi_free_devpath_name(text);
 	}
 
@@ -1089,7 +1089,7 @@ main(int argc, CHAR16 *argv[])
 		text = efi_devpath_name(imgpath);
 		if (text != NULL) {
 			printf("   Load Device: %S\n", text);
-			efi_setenv_freebsd_wcs("LoaderDev", text);
+			efi_setenv_nqc_wcs("LoaderDev", text);
 			efi_free_devpath_name(text);
 		}
 	}

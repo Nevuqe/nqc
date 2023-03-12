@@ -59,7 +59,7 @@ __FBSDID("$FreeBSD$");
 #include <net/ethernet.h>
 
 #include <net80211/ieee80211_var.h>
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 #include <net80211/ieee80211_alq.h>
 
 static struct alq *ieee80211_alq;

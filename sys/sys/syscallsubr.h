@@ -147,12 +147,12 @@ int	kern_fchmodat(struct thread *td, int fd, const char *path,
 int	kern_fchownat(struct thread *td, int fd, const char *path,
 	    enum uio_seg pathseg, int uid, int gid, int flag);
 int	kern_fcntl(struct thread *td, int fd, int cmd, intptr_t arg);
-int	kern_fcntl_freebsd(struct thread *td, int fd, int cmd, long arg);
+int	kern_fcntl_nqc(struct thread *td, int fd, int cmd, long arg);
 int	kern_fhopen(struct thread *td, const struct fhandle *u_fhp, int flags);
 int	kern_fhstat(struct thread *td, fhandle_t fh, struct stat *buf);
 int	kern_fhstatfs(struct thread *td, fhandle_t fh, struct statfs *buf);
 int	kern_fpathconf(struct thread *td, int fd, int name, long *valuep);
-int	kern_freebsd11_getfsstat(struct thread *td,
+int	kern_nqc11_getfsstat(struct thread *td,
 	    struct freebsd11_statfs *ubuf, long bufsize, int mode);
 int	kern_fstat(struct thread *td, int fd, struct stat *sbp);
 int	kern_fstatfs(struct thread *td, int fd, struct statfs *buf);

@@ -33,7 +33,7 @@ __FBSDID("$FreeBSD$");
  * Verify extended attribute restore-to-disk.  This test is FreeBSD-specific.
  */
 
-DEFINE_TEST(test_extattr_freebsd)
+DEFINE_TEST(test_extattr_nqc)
 {
 #if !defined(__FreeBSD__)
 	skipping("FreeBSD-specific extattr restore test");

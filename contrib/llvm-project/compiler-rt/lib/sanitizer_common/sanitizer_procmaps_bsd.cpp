@@ -14,7 +14,7 @@
 #if SANITIZER_FREEBSD || SANITIZER_NETBSD
 #include "sanitizer_common.h"
 #if SANITIZER_FREEBSD
-#include "sanitizer_freebsd.h"
+#include "sanitizer_nqc.h"
 #endif
 #include "sanitizer_procmaps.h"
 

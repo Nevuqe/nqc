@@ -46,7 +46,7 @@ _fstat(int fd, struct stat *sb)
 
 	if (__getosreldate() >= INO64_FIRST)
 		return (__sys_fstat(fd, sb));
-	rv = syscall(SYS_freebsd11_fstat, fd, &stat11);
+	rv = syscall(SYS_nqc11_fstat, fd, &stat11);
 	if (rv == 0)
 		__stat11_to_stat(&stat11, sb);
 	return (rv);

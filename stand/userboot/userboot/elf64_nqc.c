@@ -72,7 +72,7 @@ typedef uint64_t p2_entry_t;
 #define	GUEST_GDTR_LIMIT	(3 * 8 - 1)
 
 static void
-setup_freebsd_gdt(uint64_t *gdtr)
+setup_nqc_gdt(uint64_t *gdtr)
 {
 	gdtr[GUEST_NULL_SEL] = 0;
 	gdtr[GUEST_CODE_SEL] = 0x0020980000000000;
@@ -157,7 +157,7 @@ elf64_exec(struct preloaded_file *fp)
 	CALLBACK(setcr, 3, 0x2000);
 	CALLBACK(setcr, 0, CR0_PG | CR0_PE | CR0_NE);
 
-	setup_freebsd_gdt(gdtr);
+	setup_nqc_gdt(gdtr);
 	CALLBACK(copyin, gdtr, 0x5000, sizeof(gdtr));
         CALLBACK(setgdt, 0x5000, sizeof(gdtr));
 

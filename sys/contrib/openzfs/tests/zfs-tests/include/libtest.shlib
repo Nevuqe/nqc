@@ -98,7 +98,7 @@ function is_illumos
 #
 # Return 0 if platform FreeBSD, 1 if otherwise
 
-function is_freebsd
+function is_nqc
 {
 	[ "$UNAME" = "FreeBSD" ]
 }
@@ -143,7 +143,7 @@ function ismounted
 			fi
 		;;
 		ufs|nfs)
-			if is_freebsd; then
+			if is_nqc; then
 				mount -pt $fstype | while read dev dir _t _flags; do
 					[[ "$1" == "$dev" || "$1" == "$dir" ]] && return 0
 				done
@@ -749,7 +749,7 @@ function zero_partitions #<whole_disk_name>
 	typeset diskname=$1
 	typeset i
 
-	if is_freebsd; then
+	if is_nqc; then
 		gpart destroy -F $diskname
 	elif is_linux; then
 		DSK=$DEV_DSKDIR/$diskname
@@ -918,7 +918,7 @@ function delete_partitions
 				fi
 			done
 		done
-	elif is_freebsd; then
+	elif is_nqc; then
 		for disk in $DISKSARRAY; do
 			if gpart destroy -F $disk; then
 				log_note "Partitions for ${disk} deleted"
@@ -1122,7 +1122,7 @@ function shares_can_have_whitespace
 	is_linux
 }
 
-function is_shared_freebsd
+function is_shared_nqc
 {
 	typeset fs=$1
 
@@ -1179,7 +1179,7 @@ function is_shared
 	fi
 
 	case "$UNAME" in
-	FreeBSD)	is_shared_freebsd "$fs"	;;
+	FreeBSD)	is_shared_nqc "$fs"	;;
 	Linux)		is_shared_linux "$fs"	;;
 	*)		is_shared_illumos "$fs"	;;
 	esac
@@ -1197,7 +1197,7 @@ function is_exported_illumos
 	return 1
 }
 
-function is_exported_freebsd
+function is_exported_nqc
 {
 	typeset fs=$1
 	typeset mtpt _
@@ -1247,7 +1247,7 @@ function is_exported
 	fi
 
 	case "$UNAME" in
-	FreeBSD)	is_exported_freebsd "$fs"	;;
+	FreeBSD)	is_exported_nqc "$fs"	;;
 	Linux)		is_exported_linux "$fs"	;;
 	*)		is_exported_illumos "$fs"	;;
 	esac
@@ -1413,7 +1413,7 @@ function setup_nfs_server
 
 		log_note "NFS server must be started prior to running ZTS."
 		return
-	elif is_freebsd; then
+	elif is_nqc; then
 		log_must kill -s HUP $(</var/run/mountd.pid)
 
 		log_note "NFS server must be started prior to running ZTS."
@@ -1465,7 +1465,7 @@ function setup_nfs_server
 #
 function is_global_zone
 {
-	if is_linux || is_freebsd; then
+	if is_linux || is_nqc; then
 		return 0
 	else
 		typeset cur_zone=$(zonename 2>/dev/null)
@@ -2049,7 +2049,7 @@ function cleanup_devices #vdevs
 function find_disks
 {
 	# Trust provided list, no attempt is made to locate unused devices.
-	if is_linux || is_freebsd; then
+	if is_linux || is_nqc; then
 		echo "$@"
 		return
 	fi
@@ -2113,7 +2113,7 @@ BEGIN { FS="."; }
 	echo $unused
 }
 
-function add_user_freebsd #<group_name> <user_name> <basedir>
+function add_user_nqc #<group_name> <user_name> <basedir>
 {
 	typeset group=$1
 	typeset user=$2
@@ -2150,7 +2150,7 @@ function add_user_freebsd #<group_name> <user_name> <basedir>
 #
 # $1 login name
 #
-function del_user_freebsd #<logname>
+function del_user_nqc #<logname>
 {
 	typeset user=$1
 
@@ -2166,7 +2166,7 @@ function del_user_freebsd #<logname>
 #
 # $1 group name
 #
-function add_group_freebsd #<group_name>
+function add_group_nqc #<group_name>
 {
 	typeset group=$1
 
@@ -2196,7 +2196,7 @@ function add_group_freebsd #<group_name>
 #
 # $1 group name
 #
-function del_group_freebsd #<group_name>
+function del_group_nqc #<group_name>
 {
 	typeset group=$1
 
@@ -2340,7 +2340,7 @@ function add_user #<group_name> <user_name> <basedir>
 
 	case "$UNAME" in
 	FreeBSD)
-		add_user_freebsd "$group" "$user" "$basedir"
+		add_user_nqc "$group" "$user" "$basedir"
 		;;
 	Linux)
 		add_user_linux "$group" "$user" "$basedir"
@@ -2370,7 +2370,7 @@ function del_user #<logname> <basedir>
 
 	case "$UNAME" in
 	FreeBSD)
-		del_user_freebsd "$user"
+		del_user_nqc "$user"
 		;;
 	Linux)
 		del_user_linux "$user"
@@ -2400,7 +2400,7 @@ function add_group #<group_name>
 
 	case "$UNAME" in
 	FreeBSD)
-		add_group_freebsd "$group"
+		add_group_nqc "$group"
 		;;
 	Linux)
 		add_group_linux "$group"
@@ -2428,7 +2428,7 @@ function del_group #<group_name>
 
 	case "$UNAME" in
 	FreeBSD)
-		del_group_freebsd "$group"
+		del_group_nqc "$group"
 		;;
 	Linux)
 		del_group_linux "$group"
@@ -2708,7 +2708,7 @@ function get_rootfs
 {
 	typeset rootfs=""
 
-	if is_freebsd; then
+	if is_nqc; then
 		rootfs=$(mount -p | awk '$2 == "/" && $3 == "zfs" {print $1}')
 	elif ! is_linux; then
 		rootfs=$(awk '$2 == "/" && $3 == "zfs" {print $1}' \
@@ -2775,7 +2775,7 @@ function get_num_cpus
 {
 	if is_linux ; then
 		grep -c '^processor' /proc/cpuinfo
-	elif is_freebsd; then
+	elif is_nqc; then
 		sysctl -n kern.smp.cpus
 	else
 		psrinfo | wc -l
@@ -2792,7 +2792,7 @@ function get_cpu_freq
 {
 	if is_linux; then
 		lscpu | awk '/CPU MHz/ { print $3 }'
-	elif is_freebsd; then
+	elif is_nqc; then
 		sysctl -n hw.clockrate
 	else
 		psrinfo -v 0 | awk '/processor operates at/ {print $6}'
@@ -2919,7 +2919,7 @@ function get_objnum
 	typeset objnum
 
 	[[ -e $pathname ]] || log_fail "No such file or directory: $pathname"
-	if is_freebsd; then
+	if is_nqc; then
 		objnum=$(stat -f "%i" $pathname)
 	else
 		objnum=$(stat -c %i $pathname)
@@ -3241,7 +3241,7 @@ function swap_cleanup
 	if is_swap_inuse $swapdev; then
 		if is_linux; then
 			log_must swapoff $swapdev
-		elif is_freebsd; then
+		elif is_nqc; then
 			log_must swapoff $swapdev
 		else
 			log_must swap -d $swapdev
@@ -3496,7 +3496,7 @@ function stat_generation #<path>
 #
 function faketty
 {
-    if is_freebsd; then
+    if is_nqc; then
         script -q /dev/null env "$@"
     else
         script --return --quiet -c "$*" /dev/null

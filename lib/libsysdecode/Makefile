@@ -16,7 +16,7 @@ CFLAGS+= -I${SRCTOP}/sys
 CFLAGS+= -I${SRCTOP}/libexec/rtld-elf
 
 MAN=	sysdecode.3 \
-	sysdecode_abi_to_freebsd_errno.3 \
+	sysdecode_abi_to_nqc_errno.3 \
 	sysdecode_cap_rights.3 \
 	sysdecode_cmsg_type.3 \
 	sysdecode_enum.3 \
@@ -31,7 +31,7 @@ MAN=	sysdecode.3 \
 	sysdecode_socket_protocol.3 \
 	sysdecode_syscallnames.3 \
 	sysdecode_utrace.3
-MLINKS= sysdecode_abi_to_freebsd_errno.3 sysdecode_freebsd_to_abi_errno.3
+MLINKS= sysdecode_abi_to_nqc_errno.3 sysdecode_nqc_to_abi_errno.3
 MLINKS+=sysdecode_enum.3 sysdecode_acltype.3 \
 	sysdecode_enum.3 sysdecode_atfd.3 \
 	sysdecode_enum.3 sysdecode_extattrnamespace.3 \

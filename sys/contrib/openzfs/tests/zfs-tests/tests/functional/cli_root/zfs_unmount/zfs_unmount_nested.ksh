@@ -53,7 +53,7 @@ log_must zfs create -p $TESTPOOL/$dsA32
 dsB32=$(printf 'b/%.0s' {1..32})"b"
 log_must zfs create -o mountpoint=none -p $TESTPOOL/$dsB32
 # FreeBSD's mount command ignores the mountpoint property.
-if ! is_freebsd; then
+if ! is_nqc; then
 	log_mustnot mount -t zfs $TESTPOOL/$dsB32 /mnt
 fi
 

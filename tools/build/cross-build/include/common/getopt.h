@@ -37,17 +37,17 @@
  */
 #pragma once
 
-#define getopt __freebsd_getopt
-#define getopt_long __freebsd_getopt_long
-#define getopt_long_only __freebsd_getopt_long_only
-#define opterr __freebsd_opterr
-#define optind __freebsd_optind
-#define optopt __freebsd_optopt
-#define optreset __freebsd_optreset
-#define optarg __freebsd_optarg
+#define getopt __nqc_getopt
+#define getopt_long __nqc_getopt_long
+#define getopt_long_only __nqc_getopt_long_only
+#define opterr __nqc_opterr
+#define optind __nqc_optind
+#define optopt __nqc_optopt
+#define optreset __nqc_optreset
+#define optarg __nqc_optarg
 
 /* Since we are building the FreeBSD getopt.c also use the matching header */
 #include_next <getopt.h>
 
 #undef getopt
-#define getopt(argc, argv, optstr) __freebsd_getopt(argc, argv, optstr)
+#define getopt(argc, argv, optstr) __nqc_getopt(argc, argv, optstr)

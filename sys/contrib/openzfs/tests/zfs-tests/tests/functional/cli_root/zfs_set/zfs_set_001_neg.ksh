@@ -46,7 +46,7 @@ verify_runnable "both"
 
 set -A props "" "mountpoint" "checksum" "compression" "atime" "readonly" \
 	"setuid" "canmount"
-if is_freebsd; then
+if is_nqc; then
 	props+=("jailed")
 else
 	props+=("zoned")

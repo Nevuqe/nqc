@@ -50,7 +50,7 @@ function cleanup
 {
 	if id $STAFF_GROUP > /dev/null 2>&1; then
 		log_must del_user $STAFF_GROUP
-		if is_freebsd; then
+		if is_nqc; then
 			# pw userdel also deletes the group with the same name
 			# and has no way to opt out of this behavior (yet).
 			# Recreate the group as a workaround.
@@ -79,7 +79,7 @@ done
 log_must restore_root_datasets
 
 log_must del_user $STAFF_GROUP
-if is_freebsd; then
+if is_nqc; then
 	# pw userdel also deletes the group with the same name
 	# and has no way to opt out of this behavior (yet).
 	# Recreate the group as a workaround.

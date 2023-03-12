@@ -64,7 +64,7 @@ namespace {
 #if defined(__linux__)
 typedef process_linux::NativeProcessLinux::Factory NativeProcessFactory;
 #elif defined(__FreeBSD__)
-typedef process_freebsd::NativeProcessFreeBSD::Factory NativeProcessFactory;
+typedef process_nqc::NativeProcessFreeBSD::Factory NativeProcessFactory;
 #elif defined(__NetBSD__)
 typedef process_netbsd::NativeProcessNetBSD::Factory NativeProcessFactory;
 #elif defined(_WIN32)

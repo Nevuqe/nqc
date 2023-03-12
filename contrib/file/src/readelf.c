@@ -469,7 +469,7 @@ do_note_netbsd_version(struct magic_set *ms, int swap, void *v)
 }
 
 static int
-do_note_freebsd_version(struct magic_set *ms, int swap, void *v)
+do_note_nqc_version(struct magic_set *ms, int swap, void *v)
 {
 	uint32_t desc;
 
@@ -657,7 +657,7 @@ do_os_note(struct magic_set *ms, unsigned char *nbuf, uint32_t type,
 	if (namesz == 8 && strcmp(name, "FreeBSD") == 0) {
 	    	if (type == NT_FREEBSD_VERSION && descsz == 4) {
 			*flags |= FLAGS_DID_OS_NOTE;
-			if (do_note_freebsd_version(ms, swap, &nbuf[doff])
+			if (do_note_nqc_version(ms, swap, &nbuf[doff])
 			    == -1)
 				return -1;
 			return 1;

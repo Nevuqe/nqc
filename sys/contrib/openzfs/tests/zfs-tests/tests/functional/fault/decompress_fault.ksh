@@ -50,7 +50,7 @@ log_must zfs umount $TESTPOOL/fs
 log_must zfs mount $TESTPOOL/fs
 log_must zinject -a -t data -e decompress -f 20 $mntpt/testfile.0
 log_mustnot eval "cat $mntpt/testfile.0 > /dev/null"
-if ! is_freebsd; then
+if ! is_nqc; then
 	# Events are not supported on FreeBSD
 	log_must eval "zpool events $TESTPOOL | grep -q 'data'"
 fi

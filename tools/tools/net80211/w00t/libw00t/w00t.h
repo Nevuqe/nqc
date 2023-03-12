@@ -29,7 +29,7 @@
 #define __W00T_H__
 
 #include <net80211/ieee80211.h>
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 
 int str2mac(char *mac, char *str);
 void mac2str(char *str, char *mac);

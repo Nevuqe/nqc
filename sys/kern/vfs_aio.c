@@ -2977,8 +2977,8 @@ freebsd32_aio_error(struct thread *td, struct freebsd32_aio_error_args *uap)
 
 #ifdef COMPAT_FREEBSD6
 int
-freebsd6_freebsd32_aio_read(struct thread *td,
-    struct freebsd6_freebsd32_aio_read_args *uap)
+freebsd6_nqc32_aio_read(struct thread *td,
+    struct freebsd6_nqc32_aio_read_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_READ,
@@ -3004,8 +3004,8 @@ freebsd32_aio_readv(struct thread *td, struct freebsd32_aio_readv_args *uap)
 
 #ifdef COMPAT_FREEBSD6
 int
-freebsd6_freebsd32_aio_write(struct thread *td,
-    struct freebsd6_freebsd32_aio_write_args *uap)
+freebsd6_nqc32_aio_write(struct thread *td,
+    struct freebsd6_nqc32_aio_write_args *uap)
 {
 
 	return (aio_aqueue(td, (struct aiocb *)uap->aiocbp, NULL, LIO_WRITE,
@@ -3070,8 +3070,8 @@ freebsd32_aio_fsync(struct thread *td, struct freebsd32_aio_fsync_args *uap)
 
 #ifdef COMPAT_FREEBSD6
 int
-freebsd6_freebsd32_lio_listio(struct thread *td,
-    struct freebsd6_freebsd32_lio_listio_args *uap)
+freebsd6_nqc32_lio_listio(struct thread *td,
+    struct freebsd6_nqc32_lio_listio_args *uap)
 {
 	struct aiocb **acb_list;
 	struct sigevent *sigp, sig;

@@ -49,7 +49,7 @@
 
 
 /* Include various freebsd specific HAL methods */
-#include "ar9300/ar9300_freebsd.h"
+#include "ar9300/ar9300_nqc.h"
 
 /* XXX duplicate in ar9300_radio.c ? */
 static HAL_BOOL ar9300_get_chip_power_limits(struct ath_hal *ah,
@@ -2527,7 +2527,7 @@ ar9300_new_state(u_int16_t devid, HAL_SOFTC sc,
     ar9300_set_stub_functions(ah);
 
     /* setup the FreeBSD HAL methods */
-    ar9300_attach_freebsd_ops(ah);
+    ar9300_attach_nqc_ops(ah);
 
     /* These are private to this particular file, so .. */
     ah->ah_disablePCIE = ar9300_disable_pcie_phy;
@@ -2555,7 +2555,7 @@ ar9300_new_state(u_int16_t devid, HAL_SOFTC sc,
     ** Initialize factory defaults in the private space
     */
 //    ath_hal_factory_defaults(AH_PRIVATE(ah), hal_conf_parm);
-    ar9300_config_defaults_freebsd(ah, ah_config);
+    ar9300_config_defaults_nqc(ah, ah_config);
 
     /* XXX FreeBSD: cal is always in EEPROM */
 #if 0

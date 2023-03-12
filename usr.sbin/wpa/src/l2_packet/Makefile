@@ -9,7 +9,7 @@ INTERNALLIB=
 
 .PATH:	${WPA_DISTDIR}/src/l2_packet
 
-SRCS=	l2_packet_freebsd.c
+SRCS=	l2_packet_nqc.c
 
 CFLAGS+=-DIEEE8021X_EAPOL
 

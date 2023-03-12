@@ -109,7 +109,7 @@ function verify_long
 	typeset suffix=""
 	if is_linux; then
 		suffix=":linux"
-	elif is_freebsd; then
+	elif is_nqc; then
 		suffix=":freebsd"
 	fi
 

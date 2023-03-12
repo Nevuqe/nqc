@@ -49,4 +49,4 @@ extern void     yp_error(const char *, ...);
 extern int      yp_access(const char *, const struct svc_req *);
 extern int      yp_validdomain(const char *);
 extern char	*yp_dir;
-extern void	ypxfrd_freebsd_prog_1(struct svc_req *, register SVCXPRT *);
+extern void	ypxfrd_nqc_prog_1(struct svc_req *, register SVCXPRT *);

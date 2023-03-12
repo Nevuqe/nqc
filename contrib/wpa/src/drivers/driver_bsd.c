@@ -41,7 +41,7 @@
 #include <net80211/ieee80211_crypto.h>
 #endif /* __DragonFly__ || __GLIBC__ */
 #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 #endif
 #if __NetBSD__
 #include <net80211/ieee80211_netbsd.h>

@@ -56,7 +56,7 @@ extern const char _binary_elf_vdso_so_1_start[];
 extern const char _binary_elf_vdso_so_1_end[];
 extern char _binary_elf_vdso_so_1_size;
 
-struct sysentvec elf64_freebsd_sysvec_la48 = {
+struct sysentvec elf64_nqc_sysvec_la48 = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
 	.sv_fixup	= __elfN(freebsd_fixup),
@@ -99,7 +99,7 @@ struct sysentvec elf64_freebsd_sysvec_la48 = {
 	.sv_regset_end  = SET_LIMIT(__elfN(regset)),
 };
 
-struct sysentvec elf64_freebsd_sysvec_la57 = {
+struct sysentvec elf64_nqc_sysvec_la57 = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
 	.sv_fixup	= __elfN(freebsd_fixup),
@@ -145,13 +145,13 @@ struct sysentvec elf64_freebsd_sysvec_la57 = {
 static void
 amd64_init_sysvecs(void *arg)
 {
-	amd64_lower_shared_page(&elf64_freebsd_sysvec_la48);
+	amd64_lower_shared_page(&elf64_nqc_sysvec_la48);
 	if (la57) {
-		exec_sysvec_init(&elf64_freebsd_sysvec_la57);
-		exec_sysvec_init_secondary(&elf64_freebsd_sysvec_la57,
-		    &elf64_freebsd_sysvec_la48);
+		exec_sysvec_init(&elf64_nqc_sysvec_la57);
+		exec_sysvec_init_secondary(&elf64_nqc_sysvec_la57,
+		    &elf64_nqc_sysvec_la48);
 	} else {
-		exec_sysvec_init(&elf64_freebsd_sysvec_la48);
+		exec_sysvec_init(&elf64_nqc_sysvec_la48);
 	}
 }
 SYSINIT(elf64_sysvec, SI_SUB_EXEC, SI_ORDER_ANY, amd64_init_sysvecs, NULL);
@@ -186,9 +186,9 @@ static Elf64_Brandinfo freebsd_brand_info_la48 = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf64_freebsd_sysvec_la48,
+	.sysvec		= &elf64_nqc_sysvec_la48,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf64_freebsd_brandnote,
+	.brand_note	= &elf64_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE,
 };
 
@@ -198,9 +198,9 @@ static Elf64_Brandinfo freebsd_brand_info_la57 = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf64_freebsd_sysvec_la57,
+	.sysvec		= &elf64_nqc_sysvec_la57,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf64_freebsd_brandnote,
+	.brand_note	= &elf64_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE,
 	.header_supported = freebsd_brand_info_la57_img_compat,
 };
@@ -225,9 +225,9 @@ static Elf64_Brandinfo freebsd_brand_oinfo = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/usr/libexec/ld-elf.so.1",
-	.sysvec		= &elf64_freebsd_sysvec_la48,
+	.sysvec		= &elf64_nqc_sysvec_la48,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf64_freebsd_brandnote,
+	.brand_note	= &elf64_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
@@ -240,7 +240,7 @@ static Elf64_Brandinfo kfreebsd_brand_info = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld-kfreebsd-x86-64.so.1",
-	.sysvec		= &elf64_freebsd_sysvec_la48,
+	.sysvec		= &elf64_nqc_sysvec_la48,
 	.interp_newpath	= NULL,
 	.brand_note	= &elf64_kfreebsd_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE_MANDATORY

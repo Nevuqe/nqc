@@ -383,12 +383,12 @@ cddl/dev/fbt/fbt.c			optional dtrace_fbt      | dtraceall compile-with "${FBT_C}
 cddl/dev/systrace/systrace.c		optional dtrace_systrace | dtraceall compile-with "${CDDL_C}"
 cddl/dev/prototype.c			optional dtrace_prototype | dtraceall compile-with "${CDDL_C}"
 fs/nfsclient/nfs_clkdtrace.c		optional dtnfscl nfscl   | dtraceall nfscl compile-with "${CDDL_C}"
-compat/freebsd32/freebsd32_abort2.c	optional compat_freebsd32
-compat/freebsd32/freebsd32_capability.c	optional compat_freebsd32
-compat/freebsd32/freebsd32_ioctl.c	optional compat_freebsd32
-compat/freebsd32/freebsd32_misc.c	optional compat_freebsd32
-compat/freebsd32/freebsd32_syscalls.c	optional compat_freebsd32
-compat/freebsd32/freebsd32_sysent.c	optional compat_freebsd32
+compat/freebsd32/freebsd32_abort2.c	optional compat_nqc32
+compat/freebsd32/freebsd32_capability.c	optional compat_nqc32
+compat/freebsd32/freebsd32_ioctl.c	optional compat_nqc32
+compat/freebsd32/freebsd32_misc.c	optional compat_nqc32
+compat/freebsd32/freebsd32_syscalls.c	optional compat_nqc32
+compat/freebsd32/freebsd32_sysent.c	optional compat_nqc32
 contrib/ck/src/ck_array.c				standard compile-with "${NORMAL_C} -I$S/contrib/ck/include"
 contrib/ck/src/ck_barrier_centralized.c			standard compile-with "${NORMAL_C} -I$S/contrib/ck/include"
 contrib/ck/src/ck_barrier_combining.c			standard compile-with "${NORMAL_C} -I$S/contrib/ck/include"
@@ -591,7 +591,7 @@ netpfil/ipfilter/netinet/fil.c	optional ipfilter inet \
 	compile-with "${NORMAL_C} ${NO_WSELF_ASSIGN} -Wno-unused -I$S/netpfil/ipfilter"
 netpfil/ipfilter/netinet/ip_auth.c optional ipfilter inet \
 	compile-with "${NORMAL_C} -Wno-unused -I$S/netpfil/ipfilter"
-netpfil/ipfilter/netinet/ip_fil_freebsd.c optional ipfilter inet \
+netpfil/ipfilter/netinet/ip_fil_nqc.c optional ipfilter inet \
 	compile-with "${NORMAL_C} -Wno-unused -I$S/netpfil/ipfilter"
 netpfil/ipfilter/netinet/ip_frag.c optional ipfilter inet \
 	compile-with "${NORMAL_C} -Wno-unused -I$S/netpfil/ipfilter"
@@ -1182,7 +1182,7 @@ contrib/dev/ath/ath_hal/ar9300/ar9300_beacon.c optional ath_hal | ath_ar9300 \
 	compile-with "${ATH_C} -I$S/dev/ath/ath_hal -I$S/contrib/dev/ath/ath_hal"
 contrib/dev/ath/ath_hal/ar9300/ar9300_eeprom.c optional ath_hal | ath_ar9300 \
 	compile-with "${ATH_C} -I$S/dev/ath/ath_hal -I$S/contrib/dev/ath/ath_hal ${NO_WCONSTANT_CONVERSION}"
-contrib/dev/ath/ath_hal/ar9300/ar9300_freebsd.c optional ath_hal | ath_ar9300 \
+contrib/dev/ath/ath_hal/ar9300/ar9300_nqc.c optional ath_hal | ath_ar9300 \
 	compile-with "${ATH_C} -I$S/dev/ath/ath_hal -I$S/contrib/dev/ath/ath_hal"
 contrib/dev/ath/ath_hal/ar9300/ar9300_gpio.c optional ath_hal | ath_ar9300 \
 	compile-with "${ATH_C} -I$S/dev/ath/ath_hal -I$S/contrib/dev/ath/ath_hal"
@@ -1579,7 +1579,7 @@ dev/drm2/drm_scatter.c		optional drm2
 dev/drm2/drm_stub.c		optional drm2
 dev/drm2/drm_sysctl.c		optional drm2
 dev/drm2/drm_vm.c		optional drm2
-dev/drm2/drm_os_freebsd.c	optional drm2
+dev/drm2/drm_os_nqc.c	optional drm2
 dev/drm2/ttm/ttm_agp_backend.c	optional drm2
 dev/drm2/ttm/ttm_lock.c		optional drm2
 dev/drm2/ttm/ttm_object.c	optional drm2
@@ -1906,7 +1906,7 @@ dev/iscsi/iscsi.c		optional iscsi scbus
 dev/ismt/ismt.c			optional ismt
 dev/isl/isl.c			optional isl iicbus
 dev/isp/isp.c			optional isp
-dev/isp/isp_freebsd.c		optional isp
+dev/isp/isp_nqc.c		optional isp
 dev/isp/isp_library.c		optional isp
 dev/isp/isp_pci.c		optional isp pci
 dev/isp/isp_target.c		optional isp
@@ -2505,7 +2505,7 @@ dev/my/if_my.c			optional my
 dev/netmap/if_ptnet.c		optional netmap inet
 dev/netmap/netmap.c		optional netmap
 dev/netmap/netmap_bdg.c		optional netmap
-dev/netmap/netmap_freebsd.c	optional netmap
+dev/netmap/netmap_nqc.c	optional netmap
 dev/netmap/netmap_generic.c	optional netmap
 dev/netmap/netmap_kloop.c	optional netmap
 dev/netmap/netmap_legacy.c	optional netmap
@@ -3165,7 +3165,7 @@ dev/tcp_log/tcp_log_dev.c	optional tcp_blackbox inet | tcp_blackbox inet6
 dev/tdfx/tdfx_pci.c		optional tdfx pci
 dev/ti/if_ti.c			optional ti pci
 dev/twe/twe.c			optional twe
-dev/twe/twe_freebsd.c		optional twe
+dev/twe/twe_nqc.c		optional twe
 dev/tws/tws.c			optional tws
 dev/tws/tws_cam.c		optional tws
 dev/tws/tws_hdm.c		optional tws
@@ -3735,7 +3735,7 @@ kern/cpufreq_if.m		standard
 kern/device_if.m		standard
 kern/imgact_binmisc.c		optional imgact_binmisc
 kern/imgact_elf.c		standard
-kern/imgact_elf32.c		optional compat_freebsd32
+kern/imgact_elf32.c		optional compat_nqc32
 kern/imgact_shell.c		standard
 kern/init_main.c		standard
 kern/init_sysent.c		standard
@@ -4176,7 +4176,7 @@ net80211/ieee80211_crypto_tkip.c optional wlan wlan_tkip
 net80211/ieee80211_crypto_wep.c	optional wlan wlan_wep
 net80211/ieee80211_ddb.c	optional wlan ddb
 net80211/ieee80211_dfs.c	optional wlan
-net80211/ieee80211_freebsd.c	optional wlan
+net80211/ieee80211_nqc.c	optional wlan
 net80211/ieee80211_hostap.c	optional wlan \
 	compile-with "${NORMAL_C} -Wno-unused-function"
 net80211/ieee80211_ht.c		optional wlan

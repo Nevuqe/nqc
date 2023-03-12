@@ -1,5 +1,5 @@
 /**
- * \file drm_os_freebsd.h
+ * \file drm_os_nqc.h
  * OS abstraction macros.
  */
 

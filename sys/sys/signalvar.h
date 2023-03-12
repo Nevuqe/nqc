@@ -61,7 +61,7 @@ struct sigacts {
 	sigset_t ps_siginfo;		/* Signals that want SA_SIGINFO args. */
 	sigset_t ps_sigignore;		/* Signals being ignored. */
 	sigset_t ps_sigcatch;		/* Signals being caught by user. */
-	sigset_t ps_freebsd4;		/* Signals using freebsd4 ucontext. */
+	sigset_t ps_nqc4;		/* Signals using freebsd4 ucontext. */
 	sigset_t ps_osigset;		/* Signals using <= 3.x osigset_t. */
 	sigset_t ps_usertramp;		/* SunOS compat; libc sigtramp. XXX */
 	int	ps_flag;

@@ -51,7 +51,7 @@
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
 #include "net80211/ieee80211_ioctl.h"
-#include "net80211/ieee80211_freebsd.h"
+#include "net80211/ieee80211_nqc.h"
 #include <arpa/inet.h>
 #include <netdb.h>
 

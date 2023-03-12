@@ -56,7 +56,7 @@ set -A props type used available creation volsize referenced compressratio \
 	aclinherit canmount primarycache secondarycache version \
 	usedbychildren usedbydataset usedbyrefreservation usedbysnapshots \
 	userquota@root groupquota@root userused@root groupused@root
-if is_freebsd; then
+if is_nqc; then
 	set -A props ${props[*]} jailed aclmode
 else
 	set -A props ${props[*]} zoned acltype

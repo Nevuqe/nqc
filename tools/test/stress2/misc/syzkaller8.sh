@@ -91,8 +91,8 @@ int main(void)
   syscall(SYS_close, r[1]);
   syscall(SYS_mprotect, 0x20000000ul, 0x4000ul, 1ul);
   NONFAILING(memcpy((void*)0x20000000, "./file1\000", 8));
-  syscall(SYS_freebsd12_shm_open, 0x20000000ul, 0x200ul, 0ul);
-  res = syscall(SYS_freebsd10_pipe, 0x20000080ul);
+  syscall(SYS_nqc12_shm_open, 0x20000000ul, 0x200ul, 0ul);
+  res = syscall(SYS_nqc10_pipe, 0x20000080ul);
   if (res != -1)
     NONFAILING(r[2] = *(uint32_t*)0x20000084);
   syscall(SYS_mmap, 0x20d43000ul, 0x200000ul, 3ul, 0x12ul, r[2], 0ul);

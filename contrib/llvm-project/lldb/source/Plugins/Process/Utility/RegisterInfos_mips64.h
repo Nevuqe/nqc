@@ -14,19 +14,19 @@
 #ifdef DECLARE_REGISTER_INFOS_MIPS64_STRUCT
 
 // Computes the offset of the given GPR in the user data area.
-#define GPR_OFFSET(regname) (LLVM_EXTENSION offsetof(GPR_freebsd_mips, regname))
+#define GPR_OFFSET(regname) (LLVM_EXTENSION offsetof(GPR_nqc_mips, regname))
 
 // Computes the offset of the given FPR in the extended data area.
 #define FPR_OFFSET(regname)                                                    \
-  (sizeof(GPR_freebsd_mips) +                                                  \
-   LLVM_EXTENSION offsetof(FPR_freebsd_mips, regname))
+  (sizeof(GPR_nqc_mips) +                                                  \
+   LLVM_EXTENSION offsetof(FPR_nqc_mips, regname))
 
 // RegisterKind: EHFrame, DWARF, Generic, Process Plugin, LLDB
 
 // Note that the size and offset will be updated by platform-specific classes.
 #define DEFINE_GPR(reg, alt, kind1, kind2, kind3, kind4)                       \
   {                                                                            \
-    #reg, alt, sizeof(((GPR_freebsd_mips *) 0)->reg),                          \
+    #reg, alt, sizeof(((GPR_nqc_mips *) 0)->reg),                          \
                       GPR_OFFSET(reg), eEncodingUint, eFormatHex,              \
                                  {kind1, kind2, kind3, kind4,                  \
                                   gpr_##reg##_mips64 },                        \
@@ -35,7 +35,7 @@
 
 #define DEFINE_FPR(reg, alt, kind1, kind2, kind3)                              \
   {                                                                            \
-    #reg, alt, sizeof(((FPR_freebsd_mips *) 0)->reg),                          \
+    #reg, alt, sizeof(((FPR_nqc_mips *) 0)->reg),                          \
                       FPR_OFFSET(reg), eEncodingIEEE754, eFormatFloat,         \
                                  {kind1, kind2, kind3, LLDB_INVALID_REGNUM,    \
                                   fpr_##reg##_mips64 },                        \
@@ -44,7 +44,7 @@
 
 #define DEFINE_FPR_INFO(reg, alt, kind1, kind2, kind3)                         \
   {                                                                            \
-    #reg, alt, sizeof(((FPR_freebsd_mips *) 0)->reg),                          \
+    #reg, alt, sizeof(((FPR_nqc_mips *) 0)->reg),                          \
                       FPR_OFFSET(reg), eEncodingUint, eFormatHex,              \
                                  {kind1, kind2, kind3, LLDB_INVALID_REGNUM,    \
                                   fpr_##reg##_mips64 },                        \

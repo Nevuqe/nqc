@@ -36,7 +36,7 @@ CLEANFILES+=sm_os.h
 WARNS?=	0
 SHLIB_MAJOR= 6
 
-sm_os.h: ${SENDMAIL_DIR}/include/sm/os/sm_os_freebsd.h .NOMETA
+sm_os.h: ${SENDMAIL_DIR}/include/sm/os/sm_os_nqc.h .NOMETA
 	ln -sf ${.ALLSRC} ${.TARGET}
 
 .include <bsd.lib.mk>

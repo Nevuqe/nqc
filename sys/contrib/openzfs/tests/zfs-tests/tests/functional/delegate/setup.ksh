@@ -44,7 +44,7 @@ if is_illumos; then
 	fi
 fi
 
-if is_freebsd; then
+if is_nqc; then
 	# To pass user mount tests
 	log_must sysctl vfs.usermount=1
 fi

@@ -34,7 +34,7 @@
 #endif
 
 #if SI_POSIX
-#include "sanitizer_platform_limits_freebsd.h"
+#include "sanitizer_platform_limits_nqc.h"
 #include "sanitizer_platform_limits_netbsd.h"
 #include "sanitizer_platform_limits_posix.h"
 #include "sanitizer_platform_limits_solaris.h"

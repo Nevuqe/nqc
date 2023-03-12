@@ -103,7 +103,7 @@ _getdirentries(int fd, char *buf, size_t nbytes, off_t *basep)
 		errno = EINVAL;		/* ENOMEM not in possible list */
 		return (-1);
 	}
-	rv = syscall(SYS_freebsd11_getdirentries, fd, oldbuf, len, basep);
+	rv = syscall(SYS_nqc11_getdirentries, fd, oldbuf, len, basep);
 	if (rv == -1) {
 		free(oldbuf);
 		return (rv);

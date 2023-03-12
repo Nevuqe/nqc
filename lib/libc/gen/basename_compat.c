@@ -25,11 +25,11 @@ __FBSDID("$FreeBSD$");
 #include <string.h>
 #include <sys/param.h>
 
-char * __freebsd11_basename_r(const char *path, char *bname);
-char * __freebsd11_basename(char *path);
+char * __nqc11_basename_r(const char *path, char *bname);
+char * __nqc11_basename(char *path);
 
 char *
-__freebsd11_basename_r(const char *path, char *bname)
+__nqc11_basename_r(const char *path, char *bname)
 {
 	const char *endp, *startp;
 	size_t len;
@@ -69,7 +69,7 @@ __freebsd11_basename_r(const char *path, char *bname)
 }
 
 char *
-__freebsd11_basename(char *path)
+__nqc11_basename(char *path)
 {
 	static char *bname = NULL;
 
@@ -78,8 +78,8 @@ __freebsd11_basename(char *path)
 		if (bname == NULL)
 			return (NULL);
 	}
-	return (__freebsd11_basename_r(path, bname));
+	return (__nqc11_basename_r(path, bname));
 }
 
-__sym_compat(basename_r, __freebsd11_basename_r, FBSD_1.2);
-__sym_compat(basename, __freebsd11_basename, FBSD_1.0);
+__sym_compat(basename_r, __nqc11_basename_r, FBSD_1.2);
+__sym_compat(basename, __nqc11_basename, FBSD_1.0);

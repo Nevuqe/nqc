@@ -18,7 +18,7 @@
 #include <string>
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
@@ -83,7 +83,7 @@ private:
 };
 
 typedef std::shared_ptr<NativeThreadFreeBSD> NativeThreadFreeBSDSP;
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
 #endif // #ifndef liblldb_NativeThreadFreeBSD_H_

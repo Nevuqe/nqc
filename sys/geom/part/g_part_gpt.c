@@ -189,13 +189,13 @@ static struct uuid gpt_uuid_dfbsd_swap = GPT_ENT_TYPE_DRAGONFLY_SWAP;
 static struct uuid gpt_uuid_dfbsd_ufs1 = GPT_ENT_TYPE_DRAGONFLY_UFS1;
 static struct uuid gpt_uuid_dfbsd_vinum = GPT_ENT_TYPE_DRAGONFLY_VINUM;
 static struct uuid gpt_uuid_efi = GPT_ENT_TYPE_EFI;
-static struct uuid gpt_uuid_freebsd = GPT_ENT_TYPE_FREEBSD;
-static struct uuid gpt_uuid_freebsd_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
-static struct uuid gpt_uuid_freebsd_nandfs = GPT_ENT_TYPE_FREEBSD_NANDFS;
-static struct uuid gpt_uuid_freebsd_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
-static struct uuid gpt_uuid_freebsd_ufs = GPT_ENT_TYPE_FREEBSD_UFS;
-static struct uuid gpt_uuid_freebsd_vinum = GPT_ENT_TYPE_FREEBSD_VINUM;
-static struct uuid gpt_uuid_freebsd_zfs = GPT_ENT_TYPE_FREEBSD_ZFS;
+static struct uuid gpt_uuid_nqc = GPT_ENT_TYPE_FREEBSD;
+static struct uuid gpt_uuid_nqc_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
+static struct uuid gpt_uuid_nqc_nandfs = GPT_ENT_TYPE_FREEBSD_NANDFS;
+static struct uuid gpt_uuid_nqc_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
+static struct uuid gpt_uuid_nqc_ufs = GPT_ENT_TYPE_FREEBSD_UFS;
+static struct uuid gpt_uuid_nqc_vinum = GPT_ENT_TYPE_FREEBSD_VINUM;
+static struct uuid gpt_uuid_nqc_zfs = GPT_ENT_TYPE_FREEBSD_ZFS;
 static struct uuid gpt_uuid_hifive_fsbl = GPT_ENT_TYPE_HIFIVE_FSBL;
 static struct uuid gpt_uuid_hifive_bbl = GPT_ENT_TYPE_HIFIVE_BBL;
 static struct uuid gpt_uuid_linux_data = GPT_ENT_TYPE_LINUX_DATA;
@@ -261,13 +261,13 @@ static struct g_part_uuid_alias {
 	{ &gpt_uuid_dfbsd_ufs1,		G_PART_ALIAS_DFBSD_UFS,		 0 },
 	{ &gpt_uuid_dfbsd_vinum,	G_PART_ALIAS_DFBSD_VINUM,	 0 },
 	{ &gpt_uuid_efi, 		G_PART_ALIAS_EFI,		 0xee },
-	{ &gpt_uuid_freebsd,		G_PART_ALIAS_FREEBSD,		 0xa5 },
-	{ &gpt_uuid_freebsd_boot, 	G_PART_ALIAS_FREEBSD_BOOT,	 0 },
-	{ &gpt_uuid_freebsd_nandfs, 	G_PART_ALIAS_FREEBSD_NANDFS,	 0 },
-	{ &gpt_uuid_freebsd_swap,	G_PART_ALIAS_FREEBSD_SWAP,	 0 },
-	{ &gpt_uuid_freebsd_ufs,	G_PART_ALIAS_FREEBSD_UFS,	 0 },
-	{ &gpt_uuid_freebsd_vinum,	G_PART_ALIAS_FREEBSD_VINUM,	 0 },
-	{ &gpt_uuid_freebsd_zfs,	G_PART_ALIAS_FREEBSD_ZFS,	 0 },
+	{ &gpt_uuid_nqc,		G_PART_ALIAS_FREEBSD,		 0xa5 },
+	{ &gpt_uuid_nqc_boot, 	G_PART_ALIAS_FREEBSD_BOOT,	 0 },
+	{ &gpt_uuid_nqc_nandfs, 	G_PART_ALIAS_FREEBSD_NANDFS,	 0 },
+	{ &gpt_uuid_nqc_swap,	G_PART_ALIAS_FREEBSD_SWAP,	 0 },
+	{ &gpt_uuid_nqc_ufs,	G_PART_ALIAS_FREEBSD_UFS,	 0 },
+	{ &gpt_uuid_nqc_vinum,	G_PART_ALIAS_FREEBSD_VINUM,	 0 },
+	{ &gpt_uuid_nqc_zfs,	G_PART_ALIAS_FREEBSD_ZFS,	 0 },
 	{ &gpt_uuid_hifive_fsbl,	G_PART_ALIAS_HIFIVE_FSBL,	 0 },
 	{ &gpt_uuid_hifive_bbl,		G_PART_ALIAS_HIFIVE_BBL,	 0 },
 	{ &gpt_uuid_linux_data,		G_PART_ALIAS_LINUX_DATA,	 0x0b },
@@ -802,7 +802,7 @@ g_part_gpt_dumpto(struct g_part_table *table, struct g_part_entry *baseentry)
 	struct g_part_gpt_entry *entry;
 
 	entry = (struct g_part_gpt_entry *)baseentry;
-	return ((EQUUID(&entry->ent.ent_type, &gpt_uuid_freebsd_swap) ||
+	return ((EQUUID(&entry->ent.ent_type, &gpt_uuid_nqc_swap) ||
 	    EQUUID(&entry->ent.ent_type, &gpt_uuid_linux_swap) ||
 	    EQUUID(&entry->ent.ent_type, &gpt_uuid_dfbsd_swap)) ? 1 : 0);
 }
@@ -851,7 +851,7 @@ g_part_gpt_name(struct g_part_table *table, struct g_part_entry *baseentry,
 	char c;
 
 	entry = (struct g_part_gpt_entry *)baseentry;
-	c = (EQUUID(&entry->ent.ent_type, &gpt_uuid_freebsd)) ? 's' : 'p';
+	c = (EQUUID(&entry->ent.ent_type, &gpt_uuid_nqc)) ? 's' : 'p';
 	snprintf(buf, bufsz, "%c%d", c, baseentry->gpe_index);
 	return (buf);
 }

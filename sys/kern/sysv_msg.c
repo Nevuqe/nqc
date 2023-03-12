@@ -203,7 +203,7 @@ static struct syscall_helper_data msg32_syscalls[] = {
 	SYSCALL32_INIT_HELPER(freebsd32_msgsys),
 #if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
     defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
-	SYSCALL32_INIT_HELPER(freebsd7_freebsd32_msgctl),
+	SYSCALL32_INIT_HELPER(freebsd7_nqc32_msgctl),
 #endif
 	SYSCALL_INIT_LAST
 };
@@ -1681,8 +1681,8 @@ freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
 	AUDIT_ARG_SVIPC_WHICH(uap->which);
 	switch (uap->which) {
 	case 0:
-		return (freebsd7_freebsd32_msgctl(td,
-		    (struct freebsd7_freebsd32_msgctl_args *)&uap->a2));
+		return (freebsd7_nqc32_msgctl(td,
+		    (struct freebsd7_nqc32_msgctl_args *)&uap->a2));
 	case 2:
 		return (freebsd32_msgsnd(td,
 		    (struct freebsd32_msgsnd_args *)&uap->a2));
@@ -1700,8 +1700,8 @@ freebsd32_msgsys(struct thread *td, struct freebsd32_msgsys_args *uap)
 #if defined(COMPAT_FREEBSD4) || defined(COMPAT_FREEBSD5) || \
     defined(COMPAT_FREEBSD6) || defined(COMPAT_FREEBSD7)
 int
-freebsd7_freebsd32_msgctl(struct thread *td,
-    struct freebsd7_freebsd32_msgctl_args *uap)
+freebsd7_nqc32_msgctl(struct thread *td,
+    struct freebsd7_nqc32_msgctl_args *uap)
 {
 	struct msqid_ds msqbuf;
 	struct msqid_ds_old32 msqbuf32;

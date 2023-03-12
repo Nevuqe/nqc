@@ -91,7 +91,7 @@ TESTS_SRCS= \
 	test_empty_write.c			\
 	test_entry.c				\
 	test_entry_strmode.c			\
-	test_extattr_freebsd.c			\
+	test_extattr_nqc.c			\
 	test_filter_count.c			\
 	test_gnutar_filename_encoding.c		\
 	test_link_resolver.c			\

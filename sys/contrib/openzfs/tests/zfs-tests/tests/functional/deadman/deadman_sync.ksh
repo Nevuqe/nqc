@@ -73,7 +73,7 @@ log_must zinject -c all
 sync_all_pools
 
 # Log txg sync times for reference and the zpool event summary.
-if is_freebsd; then
+if is_nqc; then
 	log_must sysctl -n kstat.zfs.$TESTPOOL.txgs
 else
 	log_must cat /proc/spl/kstat/zfs/$TESTPOOL/txgs

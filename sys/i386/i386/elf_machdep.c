@@ -52,7 +52,7 @@ __FBSDID("$FreeBSD$");
 #include <machine/md_var.h>
 #include <machine/npx.h>
 
-struct sysentvec elf32_freebsd_sysvec = {
+struct sysentvec elf32_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
 	.sv_fixup	= __elfN(freebsd_fixup),
@@ -93,7 +93,7 @@ struct sysentvec elf32_freebsd_sysvec = {
 	.sv_regset_begin = SET_BEGIN(__elfN(regset)),
 	.sv_regset_end  = SET_LIMIT(__elfN(regset)),
 };
-INIT_SYSENTVEC(elf32_sysvec, &elf32_freebsd_sysvec);
+INIT_SYSENTVEC(elf32_sysvec, &elf32_nqc_sysvec);
 
 static Elf32_Brandinfo freebsd_brand_info = {
 	.brand		= ELFOSABI_FREEBSD,
@@ -101,9 +101,9 @@ static Elf32_Brandinfo freebsd_brand_info = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
@@ -117,9 +117,9 @@ static Elf32_Brandinfo freebsd_brand_oinfo = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/usr/libexec/ld-elf.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf32_freebsd_brandnote,
+	.brand_note	= &elf32_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 
@@ -133,7 +133,7 @@ static Elf32_Brandinfo kfreebsd_brand_info = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/lib/ld.so.1",
-	.sysvec		= &elf32_freebsd_sysvec,
+	.sysvec		= &elf32_nqc_sysvec,
 	.interp_newpath	= NULL,
 	.brand_note	= &elf32_kfreebsd_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE_MANDATORY

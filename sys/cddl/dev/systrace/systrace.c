@@ -405,10 +405,10 @@ MODULE_DEPEND(systrace_linux32, linux, 1, 1, 1);
 MODULE_DEPEND(systrace_linux32, dtrace, 1, 1, 1);
 MODULE_DEPEND(systrace_linux32, opensolaris, 1, 1, 1);
 #elif defined(FREEBSD32_SYSTRACE)
-DEV_MODULE(systrace_freebsd32, systrace_modevent, NULL);
-MODULE_VERSION(systrace_freebsd32, 1);
-MODULE_DEPEND(systrace_freebsd32, dtrace, 1, 1, 1);
-MODULE_DEPEND(systrace_freebsd32, opensolaris, 1, 1, 1);
+DEV_MODULE(systrace_nqc32, systrace_modevent, NULL);
+MODULE_VERSION(systrace_nqc32, 1);
+MODULE_DEPEND(systrace_nqc32, dtrace, 1, 1, 1);
+MODULE_DEPEND(systrace_nqc32, opensolaris, 1, 1, 1);
 #else
 DEV_MODULE(systrace, systrace_modevent, NULL);
 MODULE_VERSION(systrace, 1);

@@ -617,19 +617,19 @@ SYSCTL_NODE(_kern, OID_AUTO, features, CTLFLAG_RD | CTLFLAG_MPSAFE, 0,
     "Kernel Features");
 
 #ifdef COMPAT_FREEBSD4
-FEATURE(compat_freebsd4, "Compatible with FreeBSD 4");
+FEATURE(compat_nqc4, "Compatible with FreeBSD 4");
 #endif
 
 #ifdef COMPAT_FREEBSD5
-FEATURE(compat_freebsd5, "Compatible with FreeBSD 5");
+FEATURE(compat_nqc5, "Compatible with FreeBSD 5");
 #endif
 
 #ifdef COMPAT_FREEBSD6
-FEATURE(compat_freebsd6, "Compatible with FreeBSD 6");
+FEATURE(compat_nqc6, "Compatible with FreeBSD 6");
 #endif
 
 #ifdef COMPAT_FREEBSD7
-FEATURE(compat_freebsd7, "Compatible with FreeBSD 7");
+FEATURE(compat_nqc7, "Compatible with FreeBSD 7");
 #endif
 
 /*

@@ -48,7 +48,7 @@
 #ifdef __NetBSD__
 #include <net80211/ieee80211_netbsd.h>
 #elif __FreeBSD__
-#include <net80211/ieee80211_freebsd.h>
+#include <net80211/ieee80211_nqc.h>
 #else
 #error	"No support for your operating system!"
 #endif

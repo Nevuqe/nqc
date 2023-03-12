@@ -61,7 +61,7 @@ u_long __read_frequently elf_hwcap2;
 
 struct arm64_addr_mask elf64_addr_mask;
 
-static struct sysentvec elf64_freebsd_sysvec = {
+static struct sysentvec elf64_nqc_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
 	.sv_fixup	= __elfN(freebsd_fixup),
@@ -103,7 +103,7 @@ static struct sysentvec elf64_freebsd_sysvec = {
 	.sv_regset_begin = SET_BEGIN(__elfN(regset)),
 	.sv_regset_end	= SET_LIMIT(__elfN(regset)),
 };
-INIT_SYSENTVEC(elf64_sysvec, &elf64_freebsd_sysvec);
+INIT_SYSENTVEC(elf64_sysvec, &elf64_nqc_sysvec);
 
 static Elf64_Brandinfo freebsd_brand_info = {
 	.brand		= ELFOSABI_FREEBSD,
@@ -111,9 +111,9 @@ static Elf64_Brandinfo freebsd_brand_info = {
 	.compat_3_brand	= "FreeBSD",
 	.emul_path	= NULL,
 	.interp_path	= "/libexec/ld-elf.so.1",
-	.sysvec		= &elf64_freebsd_sysvec,
+	.sysvec		= &elf64_nqc_sysvec,
 	.interp_newpath	= NULL,
-	.brand_note	= &elf64_freebsd_brandnote,
+	.brand_note	= &elf64_nqc_brandnote,
 	.flags		= BI_CAN_EXEC_DYN | BI_BRAND_NOTE
 };
 

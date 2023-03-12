@@ -25,10 +25,10 @@ __FBSDID("$FreeBSD$");
 #include <string.h>
 #include <sys/param.h>
 
-char * __freebsd11_dirname(char *path);
+char * __nqc11_dirname(char *path);
 
 char *
-__freebsd11_dirname(char *path)
+__nqc11_dirname(char *path)
 {
 	static char *dname = NULL;
 	size_t len;
@@ -78,4 +78,4 @@ __freebsd11_dirname(char *path)
 	return (dname);
 }
 
-__sym_compat(dirname, __freebsd11_dirname, FBSD_1.0);
+__sym_compat(dirname, __nqc11_dirname, FBSD_1.0);

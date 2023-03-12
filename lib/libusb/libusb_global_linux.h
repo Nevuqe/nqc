@@ -57,7 +57,7 @@
 #include <sys/poll.h>
 #include <sys/time.h>
 #include <dev/usb/usb_endian.h>
-#include <dev/usb/usb_freebsd.h>
+#include <dev/usb/usb_nqc.h>
 
 #include <compat/linux/linux_ioctl.h>
 

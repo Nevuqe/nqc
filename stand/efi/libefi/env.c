@@ -472,7 +472,7 @@ efi_print_mem_type(const CHAR16 *varnamearg __unused, uint8_t *data,
  * We have LoaderPath and LoaderDev as CHAR16 strings.
  */
 static int
-efi_print_freebsd(const CHAR16 *varnamearg, uint8_t *data,
+efi_print_nqc(const CHAR16 *varnamearg, uint8_t *data,
     UINTN datasz __unused)
 {
 	int rv = -1;
@@ -711,7 +711,7 @@ efi_print_var(CHAR16 *varnamearg, EFI_GUID *matchguid, int lflag)
 		if (strcmp(str, "global") == 0)
 			rv = efi_print_global(varnamearg, data, datasz);
 		else if (strcmp(str, "freebsd") == 0)
-			rv = efi_print_freebsd(varnamearg, data, datasz);
+			rv = efi_print_nqc(varnamearg, data, datasz);
 		else if (strcmp(str,
 		    EFI_MEMORY_TYPE_INFORMATION_VARIABLE_NAME) == 0)
 			rv = efi_print_mem_type(varnamearg, data, datasz);

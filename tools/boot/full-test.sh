@@ -84,7 +84,7 @@ fetch_one()
     cd ..
 }
 
-update_freebsd_img_cache()
+update_nqc_img_cache()
 {
     local a m ma
 
@@ -97,7 +97,7 @@ update_freebsd_img_cache()
     fetch_one arm armv7 ${FREEBSD_VERSION} GENERICSD.img
 }
 
-make_minimal_freebsd_tree()
+make_minimal_nqc_tree()
 {
     local m=$1
     local ma=$2
@@ -175,18 +175,18 @@ kern.cfg.order="acpi,fdt"
 EOF
 }
 
-make_freebsd_minimal_trees()
+make_nqc_minimal_trees()
 {
     for a in $ARCHES; do
 	m=${a%%:*}
 	ma=${a##*:}
-	make_minimal_freebsd_tree $m $ma ${FREEBSD_VERSION} bootonly.iso
+	make_minimal_nqc_tree $m $ma ${FREEBSD_VERSION} bootonly.iso
     done
     # Note: armv7 isn't done yet as its the odd-man out -- we need to extract things
     # in a special way, so punt for the moment
 }
 
-make_freebsd_test_trees()
+make_nqc_test_trees()
 {
     for a in $ARCHES; do
 	m=${a%%:*}
@@ -403,7 +403,7 @@ EOF
     done
 }
 
-make_freebsd_esps()
+make_nqc_esps()
 {
     # At the moment, we have just three (armv7 could also be here too, but we're not doing that)
     for a in amd64:amd64 arm64:aarch64 riscv:riscv64; do
@@ -424,7 +424,7 @@ make_freebsd_esps()
     done
 }
 
-make_freebsd_images()
+make_nqc_images()
 {
     # ESP variant: In this variant, riscv, amd64 and arm64 are created more or
     # less the same way. UEFI + ACPI implementations
@@ -478,7 +478,7 @@ EOF
     rm -f ${src}/etc/fstab
 }
 
-make_freebsd_scripts()
+make_nqc_scripts()
 {
     # At the moment, we have just two
     for a in amd64:amd64 arm64:aarch64; do
@@ -567,13 +567,13 @@ espsize=33292
 
 set -e
 echo "src/stand test in ${STAND_ROOT}"
-update_freebsd_img_cache
-make_freebsd_minimal_trees
-make_freebsd_test_trees
+update_nqc_img_cache
+make_nqc_minimal_trees
+make_nqc_test_trees
 make_linux_initrds
 make_linux_esps
-make_freebsd_esps
-make_freebsd_images
-make_freebsd_scripts
+make_nqc_esps
+make_nqc_images
+make_nqc_scripts
 make_linuxboot_images
 make_linuxboot_scripts

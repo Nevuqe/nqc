@@ -86,7 +86,7 @@ set -A args "ab" "-?" "-cV" "-Vc" "-c -V" "c" "V" "--c" "-e" "-s" \
     "-o compressratio=1.00x" "-o compressratio=1.00x -V $VOLSIZE" \
     "-o version=0" "-o version=1.234" "-o version=10K" "-o version=-1" \
     "-o version=aaa" "-o version=999"
-if is_freebsd; then
+if is_nqc; then
 	args+=("-o jailed=ON" "-o JaiLed=off" "-o jailed=aaa")
 else
 	args+=("-o zoned=ON" "-o ZoNed=off" "-o zoned=aaa")
@@ -97,7 +97,7 @@ log_assert "'zfs create' should return an error with badly-formed parameters."
 typeset -i i=0
 while [[ $i -lt ${#args[*]} ]]; do
 	typeset arg=${args[i]}
-	if is_freebsd; then
+	if is_nqc; then
 		# FreeBSD does not strictly validate share options (yet).
 		if [[ "$arg" == "-o sharenfs="* ]]; then
 			((i = i + 1))

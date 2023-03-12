@@ -21194,8 +21194,8 @@ fi
 			;;
 			*freebsd*|*FreeBSD)
 				case " $LIBOBJS " in
-  *" getentropy_freebsd.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS getentropy_freebsd.$ac_objext"
+  *" getentropy_nqc.$ac_objext "* ) ;;
+  *) LIBOBJS="$LIBOBJS getentropy_nqc.$ac_objext"
  ;;
 esac
 

@@ -28,7 +28,7 @@
 #define LLDB_INVALID_XSAVE_OFFSET UINT32_MAX
 
 namespace lldb_private {
-namespace process_freebsd {
+namespace process_nqc {
 
 class NativeProcessFreeBSD;
 
@@ -88,7 +88,7 @@ private:
   llvm::Optional<YMMSplitPtr> GetYMMSplitReg(uint32_t reg);
 };
 
-} // namespace process_freebsd
+} // namespace process_nqc
 } // namespace lldb_private
 
 #endif // #ifndef lldb_NativeRegisterContextFreeBSD_x86_64_h

@@ -2790,7 +2790,7 @@ print_syscall_ret(struct trussinfo *trussinfo, int error, syscallarg_t *retval)
 		fprintf(trussinfo->outfile, " EJUSTRETURN\n");
 	else if (error != 0) {
 		fprintf(trussinfo->outfile, " ERR#%d '%s'\n",
-		    sysdecode_freebsd_to_abi_errno(t->proc->abi->abi, error),
+		    sysdecode_nqc_to_abi_errno(t->proc->abi->abi, error),
 		    strerror(error));
 	} else if (sc->decode.ret_type == 2 &&
 	    t->proc->abi->pointer_size == 4) {

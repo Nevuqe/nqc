@@ -42,7 +42,7 @@ sub parse_linux_header ($)
     return %pciids;
 }
 
-sub parse_freebsd_header ($) {
+sub parse_nqc_header ($) {
     my ($header) = @_;
 
     open(my $fh, '<', $header) or die "Can't open FreeBSD header: $!\n";
@@ -123,7 +123,7 @@ my $pciids_db      = $ARGV[2];
 my $only_vendor    = $ARGV[3];
 
 my %linux_pciids   = parse_linux_header($linux_header);
-my %freebsd_pciids = parse_freebsd_header($freebsd_header);
+my %freebsd_pciids = parse_nqc_header($freebsd_header);
 my %pciids_db      = parse_pciids_db($pciids_db);
 
 print STDERR "Update FreeBSD's PCI IDs:\n";

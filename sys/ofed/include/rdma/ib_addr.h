@@ -49,7 +49,7 @@
 #include <net/ip.h>
 #include <rdma/ib_verbs.h>
 #include <rdma/ib_pack.h>
-#include <rdma/ib_addr_freebsd.h>
+#include <rdma/ib_addr_nqc.h>
 
 /* Linux netdevice.h but for working on an ifnet rather than a net_device. */
 #define	dev_hold(d)	if_ref(d)

@@ -38,7 +38,7 @@
 
 using namespace lldb;
 using namespace lldb_private;
-using namespace lldb_private::platform_freebsd;
+using namespace lldb_private::platform_nqc;
 
 LLDB_PLUGIN_DEFINE(PlatformFreeBSD)
 

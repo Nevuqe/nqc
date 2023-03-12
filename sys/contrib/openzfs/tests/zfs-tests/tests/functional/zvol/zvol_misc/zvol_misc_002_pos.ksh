@@ -78,7 +78,7 @@ while file_write -o create -f $TESTDIR/testfile$$.$fn \
 	(( fn = fn + 1 ))
 done
 
-if is_linux || is_freebsd ; then
+if is_linux || is_nqc ; then
 	sync_all_pools
 else
 	log_must lockfs -f $TESTDIR

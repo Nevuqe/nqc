@@ -122,7 +122,7 @@ struct netmap_adapter *netmap_getna(if_t ifp);
 struct nm_selinfo {
 	/* Support for select(2) and poll(2). */
 	struct selinfo si;
-	/* Support for kqueue(9). See comments in netmap_freebsd.c */
+	/* Support for kqueue(9). See comments in netmap_nqc.c */
 	struct taskqueue *ntfytq;
 	struct task ntfytask;
 	struct mtx m;

@@ -75,8 +75,8 @@ unsigned long buf[] = {
 0xffffffe8, 0xe445c7ff, 0x00000000, 0xc76634eb, 0x00200c46, 0xffe845c7
 };
 
-#if !defined(SYS_freebsd4_sigreturn)
-#define SYS_freebsd4_sigreturn 344
+#if !defined(SYS_nqc4_sigreturn)
+#define SYS_nqc4_sigreturn 344
 #endif
 
 static void
@@ -88,7 +88,7 @@ void *
 calls(void *arg __unused)
 {
 	alarm(1);
-	syscall(SYS_freebsd4_sigreturn, buf);
+	syscall(SYS_nqc4_sigreturn, buf);
 
 	return (0);
 }

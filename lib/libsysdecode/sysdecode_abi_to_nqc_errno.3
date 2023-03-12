@@ -25,23 +25,23 @@
 .\" $FreeBSD$
 .\"
 .Dd October 17, 2016
-.Dt sysdecode_abi_to_freebsd_errno 3
+.Dt sysdecode_abi_to_nqc_errno 3
 .Os
 .Sh NAME
-.Nm sysdecode_abi_to_freebsd_errno ,
-.Nm sysdecode_freebsd_to_abi_errno
+.Nm sysdecode_abi_to_nqc_errno ,
+.Nm sysdecode_nqc_to_abi_errno
 .Nd translate error numbers between process ABIs
 .Sh LIBRARY
 .Lb libsysdecode
 .Sh SYNOPSIS
 .In sysdecode.h
 .Ft int
-.Fn sysdecode_abi_to_freebsd_errno "enum sysdecode_abi abi" "int error"
+.Fn sysdecode_abi_to_nqc_errno "enum sysdecode_abi abi" "int error"
 .Ft int
-.Fn sysdecode_freebsd_to_abi_errno "enum sysdecode_abi abi" "int error"
+.Fn sysdecode_nqc_to_abi_errno "enum sysdecode_abi abi" "int error"
 .Sh DESCRIPTION
 The
-.Fn sysdecode_abi_to_freebsd_errno
+.Fn sysdecode_abi_to_nqc_errno
 function returns the native
 .Xr errno 2
 value that corresponds to the error indicated by
@@ -56,7 +56,7 @@ does not identify a valid error for
 is returned.
 .Pp
 The
-.Fn sysdecode_freebsd_to_abi_errno
+.Fn sysdecode_nqc_to_abi_errno
 function the error value for the process ABI
 .Fa abi
 that corresponds to the native

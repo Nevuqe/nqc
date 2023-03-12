@@ -370,8 +370,8 @@ static int loc_at_comparator(const void *la1, const void *la2);
 static const char *mips_abi_fp(uint64_t fp);
 static const char *note_type(const char *note_name, unsigned int et,
     unsigned int nt);
-static const char *note_type_freebsd(unsigned int nt);
-static const char *note_type_freebsd_core(unsigned int nt);
+static const char *note_type_nqc(unsigned int nt);
+static const char *note_type_nqc_core(unsigned int nt);
 static const char *note_type_go(unsigned int nt);
 static const char *note_type_gnu(unsigned int nt);
 static const char *note_type_linux_core(unsigned int nt);
@@ -1135,9 +1135,9 @@ note_type(const char *name, unsigned int et, unsigned int nt)
 		return note_type_linux_core(nt);
 	else if (strcmp(name, "FreeBSD") == 0)
 		if (et == ET_CORE)
-			return note_type_freebsd_core(nt);
+			return note_type_nqc_core(nt);
 		else
-			return note_type_freebsd(nt);
+			return note_type_nqc(nt);
 	else if (strcmp(name, "GNU") == 0 && et != ET_CORE)
 		return note_type_gnu(nt);
 	else if (strcmp(name, "Go") == 0 && et != ET_CORE)
@@ -1152,7 +1152,7 @@ note_type(const char *name, unsigned int et, unsigned int nt)
 }
 
 static const char *
-note_type_freebsd(unsigned int nt)
+note_type_nqc(unsigned int nt)
 {
 	switch (nt) {
 	case 1: return "NT_FREEBSD_ABI_TAG";
@@ -1164,7 +1164,7 @@ note_type_freebsd(unsigned int nt)
 }
 
 static const char *
-note_type_freebsd_core(unsigned int nt)
+note_type_nqc_core(unsigned int nt)
 {
 	switch (nt) {
 	case 1: return "NT_PRSTATUS";

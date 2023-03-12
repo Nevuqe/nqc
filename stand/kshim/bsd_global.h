@@ -32,7 +32,7 @@
 #include <sys/gpio.h>
 
 #define	USB_DEBUG_VAR usb_debug
-#include <dev/usb/usb_freebsd_loader.h>
+#include <dev/usb/usb_nqc_loader.h>
 #include <dev/usb/usb_endian.h>
 #include <dev/usb/usb.h>
 #include <dev/usb/usbdi.h>

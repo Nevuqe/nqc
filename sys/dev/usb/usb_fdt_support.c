@@ -42,7 +42,7 @@ __FBSDID("$FreeBSD$");
 #include <dev/usb/usb_controller.h>
 #include <dev/usb/usb_bus.h>
 #include <dev/usb/usb_device.h>
-#include <dev/usb/usb_freebsd.h>
+#include <dev/usb/usb_nqc.h>
 #include <dev/usb/usb_fdt_support.h>
 #include <dev/usb/net/usb_ethernet.h>
 

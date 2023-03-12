@@ -82,7 +82,7 @@ fail() {
 	exit 1
 }
 
-cleanup_freebsd_loopback() {
+cleanup_nqc_loopback() {
 	for TEST_LOOPBACK in ${LOOPBACKS}; do
 		if [ -c "/dev/${TEST_LOOPBACK}" ]; then
 			sudo "${LOSETUP}" -d -u "${TEST_LOOPBACK}" ||
@@ -122,7 +122,7 @@ cleanup() {
 
 	if [ "$LOOPBACK" = "yes" ]; then
 		if [ "$UNAME" = "FreeBSD" ] ; then
-			cleanup_freebsd_loopback
+			cleanup_nqc_loopback
 		else
 			cleanup_linux_loopback
 		fi

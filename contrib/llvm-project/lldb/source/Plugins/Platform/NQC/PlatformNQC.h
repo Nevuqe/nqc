@@ -13,7 +13,7 @@
 #include "Plugins/TypeSystem/Clang/TypeSystemClang.h"
 
 namespace lldb_private {
-namespace platform_freebsd {
+namespace platform_nqc {
 
 class PlatformFreeBSD : public PlatformPOSIX {
 public:
@@ -63,7 +63,7 @@ private:
   std::unique_ptr<TypeSystemClang> m_type_system_up;
 };
 
-} // namespace platform_freebsd
+} // namespace platform_nqc
 } // namespace lldb_private
 
 #endif // LLDB_SOURCE_PLUGINS_PLATFORM_FREEBSD_PLATFORMFREEBSD_H

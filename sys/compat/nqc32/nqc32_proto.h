@@ -893,24 +893,24 @@ int	ofreebsd32_getdirentries(struct thread *, struct ofreebsd32_getdirentries_ar
 
 #ifdef COMPAT_FREEBSD4
 
-struct freebsd4_freebsd32_getfsstat_args {
+struct freebsd4_nqc32_getfsstat_args {
 	char buf_l_[PADL_(struct ostatfs32 *)]; struct ostatfs32 * buf; char buf_r_[PADR_(struct ostatfs32 *)];
 	char bufsize_l_[PADL_(int32_t)]; int32_t bufsize; char bufsize_r_[PADR_(int32_t)];
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 };
-struct freebsd4_freebsd32_statfs_args {
+struct freebsd4_nqc32_statfs_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char buf_l_[PADL_(struct ostatfs32 *)]; struct ostatfs32 * buf; char buf_r_[PADR_(struct ostatfs32 *)];
 };
-struct freebsd4_freebsd32_fstatfs_args {
+struct freebsd4_nqc32_fstatfs_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(struct ostatfs32 *)]; struct ostatfs32 * buf; char buf_r_[PADR_(struct ostatfs32 *)];
 };
-struct freebsd4_freebsd32_fhstatfs_args {
+struct freebsd4_nqc32_fhstatfs_args {
 	char u_fhp_l_[PADL_(const struct fhandle *)]; const struct fhandle * u_fhp; char u_fhp_r_[PADR_(const struct fhandle *)];
 	char buf_l_[PADL_(struct ostatfs32 *)]; struct ostatfs32 * buf; char buf_r_[PADR_(struct ostatfs32 *)];
 };
-struct freebsd4_freebsd32_sendfile_args {
+struct freebsd4_nqc32_sendfile_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char s_l_[PADL_(int)]; int s; char s_r_[PADR_(int)];
 	char offset1_l_[PADL_(uint32_t)]; uint32_t offset1; char offset1_r_[PADR_(uint32_t)];
@@ -920,28 +920,28 @@ struct freebsd4_freebsd32_sendfile_args {
 	char sbytes_l_[PADL_(off_t *)]; off_t * sbytes; char sbytes_r_[PADR_(off_t *)];
 	char flags_l_[PADL_(int)]; int flags; char flags_r_[PADR_(int)];
 };
-struct freebsd4_freebsd32_sigaction_args {
+struct freebsd4_nqc32_sigaction_args {
 	char sig_l_[PADL_(int)]; int sig; char sig_r_[PADR_(int)];
 	char act_l_[PADL_(const struct sigaction32 *)]; const struct sigaction32 * act; char act_r_[PADR_(const struct sigaction32 *)];
 	char oact_l_[PADL_(struct sigaction32 *)]; struct sigaction32 * oact; char oact_r_[PADR_(struct sigaction32 *)];
 };
-struct freebsd4_freebsd32_sigreturn_args {
+struct freebsd4_nqc32_sigreturn_args {
 	char sigcntxp_l_[PADL_(const struct freebsd4_ucontext32 *)]; const struct freebsd4_ucontext32 * sigcntxp; char sigcntxp_r_[PADR_(const struct freebsd4_ucontext32 *)];
 };
-int	freebsd4_freebsd32_getfsstat(struct thread *, struct freebsd4_freebsd32_getfsstat_args *);
-int	freebsd4_freebsd32_statfs(struct thread *, struct freebsd4_freebsd32_statfs_args *);
-int	freebsd4_freebsd32_fstatfs(struct thread *, struct freebsd4_freebsd32_fstatfs_args *);
-int	freebsd4_freebsd32_fhstatfs(struct thread *, struct freebsd4_freebsd32_fhstatfs_args *);
-int	freebsd4_freebsd32_sendfile(struct thread *, struct freebsd4_freebsd32_sendfile_args *);
-int	freebsd4_freebsd32_sigaction(struct thread *, struct freebsd4_freebsd32_sigaction_args *);
-int	freebsd4_freebsd32_sigreturn(struct thread *, struct freebsd4_freebsd32_sigreturn_args *);
+int	freebsd4_nqc32_getfsstat(struct thread *, struct freebsd4_nqc32_getfsstat_args *);
+int	freebsd4_nqc32_statfs(struct thread *, struct freebsd4_nqc32_statfs_args *);
+int	freebsd4_nqc32_fstatfs(struct thread *, struct freebsd4_nqc32_fstatfs_args *);
+int	freebsd4_nqc32_fhstatfs(struct thread *, struct freebsd4_nqc32_fhstatfs_args *);
+int	freebsd4_nqc32_sendfile(struct thread *, struct freebsd4_nqc32_sendfile_args *);
+int	freebsd4_nqc32_sigaction(struct thread *, struct freebsd4_nqc32_sigaction_args *);
+int	freebsd4_nqc32_sigreturn(struct thread *, struct freebsd4_nqc32_sigreturn_args *);
 
 #endif /* COMPAT_FREEBSD4 */
 
 
 #ifdef COMPAT_FREEBSD6
 
-struct freebsd6_freebsd32_pread_args {
+struct freebsd6_nqc32_pread_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(void *)]; void * buf; char buf_r_[PADR_(void *)];
 	char nbyte_l_[PADL_(size_t)]; size_t nbyte; char nbyte_r_[PADR_(size_t)];
@@ -949,7 +949,7 @@ struct freebsd6_freebsd32_pread_args {
 	char offset1_l_[PADL_(uint32_t)]; uint32_t offset1; char offset1_r_[PADR_(uint32_t)];
 	char offset2_l_[PADL_(uint32_t)]; uint32_t offset2; char offset2_r_[PADR_(uint32_t)];
 };
-struct freebsd6_freebsd32_pwrite_args {
+struct freebsd6_nqc32_pwrite_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(const void *)]; const void * buf; char buf_r_[PADR_(const void *)];
 	char nbyte_l_[PADL_(size_t)]; size_t nbyte; char nbyte_r_[PADR_(size_t)];
@@ -957,7 +957,7 @@ struct freebsd6_freebsd32_pwrite_args {
 	char offset1_l_[PADL_(uint32_t)]; uint32_t offset1; char offset1_r_[PADR_(uint32_t)];
 	char offset2_l_[PADL_(uint32_t)]; uint32_t offset2; char offset2_r_[PADR_(uint32_t)];
 };
-struct freebsd6_freebsd32_mmap_args {
+struct freebsd6_nqc32_mmap_args {
 	char addr_l_[PADL_(void *)]; void * addr; char addr_r_[PADR_(void *)];
 	char len_l_[PADL_(size_t)]; size_t len; char len_r_[PADR_(size_t)];
 	char prot_l_[PADL_(int)]; int prot; char prot_r_[PADR_(int)];
@@ -967,126 +967,126 @@ struct freebsd6_freebsd32_mmap_args {
 	char pos1_l_[PADL_(uint32_t)]; uint32_t pos1; char pos1_r_[PADR_(uint32_t)];
 	char pos2_l_[PADL_(uint32_t)]; uint32_t pos2; char pos2_r_[PADR_(uint32_t)];
 };
-struct freebsd6_freebsd32_lseek_args {
+struct freebsd6_nqc32_lseek_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char offset1_l_[PADL_(uint32_t)]; uint32_t offset1; char offset1_r_[PADR_(uint32_t)];
 	char offset2_l_[PADL_(uint32_t)]; uint32_t offset2; char offset2_r_[PADR_(uint32_t)];
 	char whence_l_[PADL_(int)]; int whence; char whence_r_[PADR_(int)];
 };
-struct freebsd6_freebsd32_truncate_args {
+struct freebsd6_nqc32_truncate_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char length1_l_[PADL_(uint32_t)]; uint32_t length1; char length1_r_[PADR_(uint32_t)];
 	char length2_l_[PADL_(uint32_t)]; uint32_t length2; char length2_r_[PADR_(uint32_t)];
 };
-struct freebsd6_freebsd32_ftruncate_args {
+struct freebsd6_nqc32_ftruncate_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char pad_l_[PADL_(int)]; int pad; char pad_r_[PADR_(int)];
 	char length1_l_[PADL_(uint32_t)]; uint32_t length1; char length1_r_[PADR_(uint32_t)];
 	char length2_l_[PADL_(uint32_t)]; uint32_t length2; char length2_r_[PADR_(uint32_t)];
 };
-struct freebsd6_freebsd32_aio_read_args {
+struct freebsd6_nqc32_aio_read_args {
 	char aiocbp_l_[PADL_(struct oaiocb32 *)]; struct oaiocb32 * aiocbp; char aiocbp_r_[PADR_(struct oaiocb32 *)];
 };
-struct freebsd6_freebsd32_aio_write_args {
+struct freebsd6_nqc32_aio_write_args {
 	char aiocbp_l_[PADL_(struct oaiocb32 *)]; struct oaiocb32 * aiocbp; char aiocbp_r_[PADR_(struct oaiocb32 *)];
 };
-struct freebsd6_freebsd32_lio_listio_args {
+struct freebsd6_nqc32_lio_listio_args {
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 	char acb_list_l_[PADL_(uint32_t *)]; uint32_t * acb_list; char acb_list_r_[PADR_(uint32_t *)];
 	char nent_l_[PADL_(int)]; int nent; char nent_r_[PADR_(int)];
 	char sig_l_[PADL_(struct osigevent32 *)]; struct osigevent32 * sig; char sig_r_[PADR_(struct osigevent32 *)];
 };
-int	freebsd6_freebsd32_pread(struct thread *, struct freebsd6_freebsd32_pread_args *);
-int	freebsd6_freebsd32_pwrite(struct thread *, struct freebsd6_freebsd32_pwrite_args *);
-int	freebsd6_freebsd32_mmap(struct thread *, struct freebsd6_freebsd32_mmap_args *);
-int	freebsd6_freebsd32_lseek(struct thread *, struct freebsd6_freebsd32_lseek_args *);
-int	freebsd6_freebsd32_truncate(struct thread *, struct freebsd6_freebsd32_truncate_args *);
-int	freebsd6_freebsd32_ftruncate(struct thread *, struct freebsd6_freebsd32_ftruncate_args *);
-int	freebsd6_freebsd32_aio_read(struct thread *, struct freebsd6_freebsd32_aio_read_args *);
-int	freebsd6_freebsd32_aio_write(struct thread *, struct freebsd6_freebsd32_aio_write_args *);
-int	freebsd6_freebsd32_lio_listio(struct thread *, struct freebsd6_freebsd32_lio_listio_args *);
+int	freebsd6_nqc32_pread(struct thread *, struct freebsd6_nqc32_pread_args *);
+int	freebsd6_nqc32_pwrite(struct thread *, struct freebsd6_nqc32_pwrite_args *);
+int	freebsd6_nqc32_mmap(struct thread *, struct freebsd6_nqc32_mmap_args *);
+int	freebsd6_nqc32_lseek(struct thread *, struct freebsd6_nqc32_lseek_args *);
+int	freebsd6_nqc32_truncate(struct thread *, struct freebsd6_nqc32_truncate_args *);
+int	freebsd6_nqc32_ftruncate(struct thread *, struct freebsd6_nqc32_ftruncate_args *);
+int	freebsd6_nqc32_aio_read(struct thread *, struct freebsd6_nqc32_aio_read_args *);
+int	freebsd6_nqc32_aio_write(struct thread *, struct freebsd6_nqc32_aio_write_args *);
+int	freebsd6_nqc32_lio_listio(struct thread *, struct freebsd6_nqc32_lio_listio_args *);
 
 #endif /* COMPAT_FREEBSD6 */
 
 
 #ifdef COMPAT_FREEBSD7
 
-struct freebsd7_freebsd32___semctl_args {
+struct freebsd7_nqc32___semctl_args {
 	char semid_l_[PADL_(int)]; int semid; char semid_r_[PADR_(int)];
 	char semnum_l_[PADL_(int)]; int semnum; char semnum_r_[PADR_(int)];
 	char cmd_l_[PADL_(int)]; int cmd; char cmd_r_[PADR_(int)];
 	char arg_l_[PADL_(union semun_old32 *)]; union semun_old32 * arg; char arg_r_[PADR_(union semun_old32 *)];
 };
-struct freebsd7_freebsd32_msgctl_args {
+struct freebsd7_nqc32_msgctl_args {
 	char msqid_l_[PADL_(int)]; int msqid; char msqid_r_[PADR_(int)];
 	char cmd_l_[PADL_(int)]; int cmd; char cmd_r_[PADR_(int)];
 	char buf_l_[PADL_(struct msqid_ds_old32 *)]; struct msqid_ds_old32 * buf; char buf_r_[PADR_(struct msqid_ds_old32 *)];
 };
-struct freebsd7_freebsd32_shmctl_args {
+struct freebsd7_nqc32_shmctl_args {
 	char shmid_l_[PADL_(int)]; int shmid; char shmid_r_[PADR_(int)];
 	char cmd_l_[PADL_(int)]; int cmd; char cmd_r_[PADR_(int)];
 	char buf_l_[PADL_(struct shmid_ds_old32 *)]; struct shmid_ds_old32 * buf; char buf_r_[PADR_(struct shmid_ds_old32 *)];
 };
-int	freebsd7_freebsd32___semctl(struct thread *, struct freebsd7_freebsd32___semctl_args *);
-int	freebsd7_freebsd32_msgctl(struct thread *, struct freebsd7_freebsd32_msgctl_args *);
-int	freebsd7_freebsd32_shmctl(struct thread *, struct freebsd7_freebsd32_shmctl_args *);
+int	freebsd7_nqc32___semctl(struct thread *, struct freebsd7_nqc32___semctl_args *);
+int	freebsd7_nqc32_msgctl(struct thread *, struct freebsd7_nqc32_msgctl_args *);
+int	freebsd7_nqc32_shmctl(struct thread *, struct freebsd7_nqc32_shmctl_args *);
 
 #endif /* COMPAT_FREEBSD7 */
 
 
 #ifdef COMPAT_FREEBSD10
 
-struct freebsd10_freebsd32__umtx_lock_args {
+struct freebsd10_nqc32__umtx_lock_args {
 	char umtx_l_[PADL_(struct umtx *)]; struct umtx * umtx; char umtx_r_[PADR_(struct umtx *)];
 };
-struct freebsd10_freebsd32__umtx_unlock_args {
+struct freebsd10_nqc32__umtx_unlock_args {
 	char umtx_l_[PADL_(struct umtx *)]; struct umtx * umtx; char umtx_r_[PADR_(struct umtx *)];
 };
-int	freebsd10_freebsd32__umtx_lock(struct thread *, struct freebsd10_freebsd32__umtx_lock_args *);
-int	freebsd10_freebsd32__umtx_unlock(struct thread *, struct freebsd10_freebsd32__umtx_unlock_args *);
+int	freebsd10_nqc32__umtx_lock(struct thread *, struct freebsd10_nqc32__umtx_lock_args *);
+int	freebsd10_nqc32__umtx_unlock(struct thread *, struct freebsd10_nqc32__umtx_unlock_args *);
 
 #endif /* COMPAT_FREEBSD10 */
 
 
 #ifdef COMPAT_FREEBSD11
 
-struct freebsd11_freebsd32_stat_args {
+struct freebsd11_nqc32_stat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char ub_l_[PADL_(struct freebsd11_stat32 *)]; struct freebsd11_stat32 * ub; char ub_r_[PADR_(struct freebsd11_stat32 *)];
 };
-struct freebsd11_freebsd32_fstat_args {
+struct freebsd11_nqc32_fstat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char sb_l_[PADL_(struct freebsd11_stat32 *)]; struct freebsd11_stat32 * sb; char sb_r_[PADR_(struct freebsd11_stat32 *)];
 };
-struct freebsd11_freebsd32_lstat_args {
+struct freebsd11_nqc32_lstat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char ub_l_[PADL_(struct freebsd11_stat32 *)]; struct freebsd11_stat32 * ub; char ub_r_[PADR_(struct freebsd11_stat32 *)];
 };
-struct freebsd11_freebsd32_getdirentries_args {
+struct freebsd11_nqc32_getdirentries_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char buf_l_[PADL_(char *)]; char * buf; char buf_r_[PADR_(char *)];
 	char count_l_[PADL_(u_int)]; u_int count; char count_r_[PADR_(u_int)];
 	char basep_l_[PADL_(int32_t *)]; int32_t * basep; char basep_r_[PADR_(int32_t *)];
 };
-struct freebsd11_freebsd32_nstat_args {
+struct freebsd11_nqc32_nstat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char ub_l_[PADL_(struct nstat32 *)]; struct nstat32 * ub; char ub_r_[PADR_(struct nstat32 *)];
 };
-struct freebsd11_freebsd32_nfstat_args {
+struct freebsd11_nqc32_nfstat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char sb_l_[PADL_(struct nstat32 *)]; struct nstat32 * sb; char sb_r_[PADR_(struct nstat32 *)];
 };
-struct freebsd11_freebsd32_nlstat_args {
+struct freebsd11_nqc32_nlstat_args {
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char ub_l_[PADL_(struct nstat32 *)]; struct nstat32 * ub; char ub_r_[PADR_(struct nstat32 *)];
 };
-struct freebsd11_freebsd32_fhstat_args {
+struct freebsd11_nqc32_fhstat_args {
 	char u_fhp_l_[PADL_(const struct fhandle *)]; const struct fhandle * u_fhp; char u_fhp_r_[PADR_(const struct fhandle *)];
 	char sb_l_[PADL_(struct freebsd11_stat32 *)]; struct freebsd11_stat32 * sb; char sb_r_[PADR_(struct freebsd11_stat32 *)];
 };
-struct freebsd11_freebsd32_kevent_args {
+struct freebsd11_nqc32_kevent_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char changelist_l_[PADL_(const struct freebsd11_kevent32 *)]; const struct freebsd11_kevent32 * changelist; char changelist_r_[PADR_(const struct freebsd11_kevent32 *)];
 	char nchanges_l_[PADL_(int)]; int nchanges; char nchanges_r_[PADR_(int)];
@@ -1094,28 +1094,28 @@ struct freebsd11_freebsd32_kevent_args {
 	char nevents_l_[PADL_(int)]; int nevents; char nevents_r_[PADR_(int)];
 	char timeout_l_[PADL_(const struct timespec32 *)]; const struct timespec32 * timeout; char timeout_r_[PADR_(const struct timespec32 *)];
 };
-struct freebsd11_freebsd32_getfsstat_args {
+struct freebsd11_nqc32_getfsstat_args {
 	char buf_l_[PADL_(struct freebsd11_statfs *)]; struct freebsd11_statfs * buf; char buf_r_[PADR_(struct freebsd11_statfs *)];
 	char bufsize_l_[PADL_(int32_t)]; int32_t bufsize; char bufsize_r_[PADR_(int32_t)];
 	char mode_l_[PADL_(int)]; int mode; char mode_r_[PADR_(int)];
 };
-struct freebsd11_freebsd32_fstatat_args {
+struct freebsd11_nqc32_fstatat_args {
 	char fd_l_[PADL_(int)]; int fd; char fd_r_[PADR_(int)];
 	char path_l_[PADL_(const char *)]; const char * path; char path_r_[PADR_(const char *)];
 	char buf_l_[PADL_(struct freebsd11_stat32 *)]; struct freebsd11_stat32 * buf; char buf_r_[PADR_(struct freebsd11_stat32 *)];
 	char flag_l_[PADL_(int)]; int flag; char flag_r_[PADR_(int)];
 };
-int	freebsd11_freebsd32_stat(struct thread *, struct freebsd11_freebsd32_stat_args *);
-int	freebsd11_freebsd32_fstat(struct thread *, struct freebsd11_freebsd32_fstat_args *);
-int	freebsd11_freebsd32_lstat(struct thread *, struct freebsd11_freebsd32_lstat_args *);
-int	freebsd11_freebsd32_getdirentries(struct thread *, struct freebsd11_freebsd32_getdirentries_args *);
-int	freebsd11_freebsd32_nstat(struct thread *, struct freebsd11_freebsd32_nstat_args *);
-int	freebsd11_freebsd32_nfstat(struct thread *, struct freebsd11_freebsd32_nfstat_args *);
-int	freebsd11_freebsd32_nlstat(struct thread *, struct freebsd11_freebsd32_nlstat_args *);
-int	freebsd11_freebsd32_fhstat(struct thread *, struct freebsd11_freebsd32_fhstat_args *);
-int	freebsd11_freebsd32_kevent(struct thread *, struct freebsd11_freebsd32_kevent_args *);
-int	freebsd11_freebsd32_getfsstat(struct thread *, struct freebsd11_freebsd32_getfsstat_args *);
-int	freebsd11_freebsd32_fstatat(struct thread *, struct freebsd11_freebsd32_fstatat_args *);
+int	freebsd11_nqc32_stat(struct thread *, struct freebsd11_nqc32_stat_args *);
+int	freebsd11_nqc32_fstat(struct thread *, struct freebsd11_nqc32_fstat_args *);
+int	freebsd11_nqc32_lstat(struct thread *, struct freebsd11_nqc32_lstat_args *);
+int	freebsd11_nqc32_getdirentries(struct thread *, struct freebsd11_nqc32_getdirentries_args *);
+int	freebsd11_nqc32_nstat(struct thread *, struct freebsd11_nqc32_nstat_args *);
+int	freebsd11_nqc32_nfstat(struct thread *, struct freebsd11_nqc32_nfstat_args *);
+int	freebsd11_nqc32_nlstat(struct thread *, struct freebsd11_nqc32_nlstat_args *);
+int	freebsd11_nqc32_fhstat(struct thread *, struct freebsd11_nqc32_fhstat_args *);
+int	freebsd11_nqc32_kevent(struct thread *, struct freebsd11_nqc32_kevent_args *);
+int	freebsd11_nqc32_getfsstat(struct thread *, struct freebsd11_nqc32_getfsstat_args *);
+int	freebsd11_nqc32_fstatat(struct thread *, struct freebsd11_nqc32_fstatat_args *);
 
 #endif /* COMPAT_FREEBSD11 */
 
@@ -1131,168 +1131,168 @@ int	freebsd11_freebsd32_fstatat(struct thread *, struct freebsd11_freebsd32_fsta
 
 #endif /* COMPAT_FREEBSD13 */
 
-#define	FREEBSD32_SYS_AUE_freebsd32_wait4	AUE_WAIT4
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_getfsstat	AUE_GETFSSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_wait4	AUE_WAIT4
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_getfsstat	AUE_GETFSSTAT
 #define	FREEBSD32_SYS_AUE_ofreebsd32_lseek	AUE_LSEEK
-#define	FREEBSD32_SYS_AUE_freebsd32_ptrace	AUE_PTRACE
-#define	FREEBSD32_SYS_AUE_freebsd32_recvmsg	AUE_RECVMSG
-#define	FREEBSD32_SYS_AUE_freebsd32_sendmsg	AUE_SENDMSG
+#define	FREEBSD32_SYS_AUE_nqc32_ptrace	AUE_PTRACE
+#define	FREEBSD32_SYS_AUE_nqc32_recvmsg	AUE_RECVMSG
+#define	FREEBSD32_SYS_AUE_nqc32_sendmsg	AUE_SENDMSG
 #define	FREEBSD32_SYS_AUE_ofreebsd32_stat	AUE_STAT
 #define	FREEBSD32_SYS_AUE_ofreebsd32_lstat	AUE_LSTAT
 #define	FREEBSD32_SYS_AUE_ofreebsd32_sigaction	AUE_SIGACTION
-#define	FREEBSD32_SYS_AUE_freebsd32_sigaltstack	AUE_SIGALTSTACK
-#define	FREEBSD32_SYS_AUE_freebsd32_ioctl	AUE_IOCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_execve	AUE_EXECVE
+#define	FREEBSD32_SYS_AUE_nqc32_sigaltstack	AUE_SIGALTSTACK
+#define	FREEBSD32_SYS_AUE_nqc32_ioctl	AUE_IOCTL
+#define	FREEBSD32_SYS_AUE_nqc32_execve	AUE_EXECVE
 #define	FREEBSD32_SYS_AUE_ofreebsd32_fstat	AUE_FSTAT
 #define	FREEBSD32_SYS_AUE_ofreebsd32_mmap	AUE_MMAP
-#define	FREEBSD32_SYS_AUE_freebsd32_mprotect	AUE_MPROTECT
-#define	FREEBSD32_SYS_AUE_freebsd32_setitimer	AUE_SETITIMER
-#define	FREEBSD32_SYS_AUE_freebsd32_getitimer	AUE_GETITIMER
-#define	FREEBSD32_SYS_AUE_freebsd32_fcntl	AUE_FCNTL
-#define	FREEBSD32_SYS_AUE_freebsd32_select	AUE_SELECT
+#define	FREEBSD32_SYS_AUE_nqc32_mprotect	AUE_MPROTECT
+#define	FREEBSD32_SYS_AUE_nqc32_setitimer	AUE_SETITIMER
+#define	FREEBSD32_SYS_AUE_nqc32_getitimer	AUE_GETITIMER
+#define	FREEBSD32_SYS_AUE_nqc32_fcntl	AUE_FCNTL
+#define	FREEBSD32_SYS_AUE_nqc32_select	AUE_SELECT
 #define	FREEBSD32_SYS_AUE_ofreebsd32_sigreturn	AUE_SIGRETURN
 #define	FREEBSD32_SYS_AUE_ofreebsd32_sigvec	AUE_NULL
 #define	FREEBSD32_SYS_AUE_ofreebsd32_sigstack	AUE_NULL
 #define	FREEBSD32_SYS_AUE_ofreebsd32_recvmsg	AUE_RECVMSG
 #define	FREEBSD32_SYS_AUE_ofreebsd32_sendmsg	AUE_SENDMSG
-#define	FREEBSD32_SYS_AUE_freebsd32_gettimeofday	AUE_GETTIMEOFDAY
-#define	FREEBSD32_SYS_AUE_freebsd32_getrusage	AUE_GETRUSAGE
-#define	FREEBSD32_SYS_AUE_freebsd32_readv	AUE_READV
-#define	FREEBSD32_SYS_AUE_freebsd32_writev	AUE_WRITEV
-#define	FREEBSD32_SYS_AUE_freebsd32_settimeofday	AUE_SETTIMEOFDAY
+#define	FREEBSD32_SYS_AUE_nqc32_gettimeofday	AUE_GETTIMEOFDAY
+#define	FREEBSD32_SYS_AUE_nqc32_getrusage	AUE_GETRUSAGE
+#define	FREEBSD32_SYS_AUE_nqc32_readv	AUE_READV
+#define	FREEBSD32_SYS_AUE_nqc32_writev	AUE_WRITEV
+#define	FREEBSD32_SYS_AUE_nqc32_settimeofday	AUE_SETTIMEOFDAY
 #define	FREEBSD32_SYS_AUE_ofreebsd32_truncate	AUE_TRUNCATE
 #define	FREEBSD32_SYS_AUE_ofreebsd32_ftruncate	AUE_FTRUNCATE
-#define	FREEBSD32_SYS_AUE_freebsd32_utimes	AUE_UTIMES
-#define	FREEBSD32_SYS_AUE_freebsd32_adjtime	AUE_ADJTIME
+#define	FREEBSD32_SYS_AUE_nqc32_utimes	AUE_UTIMES
+#define	FREEBSD32_SYS_AUE_nqc32_adjtime	AUE_ADJTIME
 #define	FREEBSD32_SYS_AUE_ofreebsd32_sethostid	AUE_SYSCTL
 #define	FREEBSD32_SYS_AUE_ofreebsd32_getdirentries	AUE_GETDIRENTRIES
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_statfs	AUE_STATFS
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_fstatfs	AUE_FSTATFS
-#define	FREEBSD32_SYS_AUE_freebsd32_sysarch	AUE_SYSARCH
-#define	FREEBSD32_SYS_AUE_freebsd32_semsys	AUE_SEMSYS
-#define	FREEBSD32_SYS_AUE_freebsd32_msgsys	AUE_MSGSYS
-#define	FREEBSD32_SYS_AUE_freebsd32_shmsys	AUE_SHMSYS
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_pread	AUE_PREAD
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_pwrite	AUE_PWRITE
-#define	FREEBSD32_SYS_AUE_freebsd32_ntp_adjtime	AUE_NTP_ADJTIME
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_stat	AUE_STAT
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_fstat	AUE_FSTAT
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_lstat	AUE_LSTAT
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_getdirentries	AUE_GETDIRENTRIES
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_mmap	AUE_MMAP
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_lseek	AUE_LSEEK
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_truncate	AUE_TRUNCATE
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_ftruncate	AUE_FTRUNCATE
-#define	FREEBSD32_SYS_AUE_freebsd32___sysctl	AUE_SYSCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_futimes	AUE_FUTIMES
-#define	FREEBSD32_SYS_AUE_freebsd7_freebsd32___semctl	AUE_SEMCTL
-#define	FREEBSD32_SYS_AUE_freebsd7_freebsd32_msgctl	AUE_MSGCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_msgsnd	AUE_MSGSND
-#define	FREEBSD32_SYS_AUE_freebsd32_msgrcv	AUE_MSGRCV
-#define	FREEBSD32_SYS_AUE_freebsd7_freebsd32_shmctl	AUE_SHMCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_clock_gettime	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_clock_settime	AUE_CLOCK_SETTIME
-#define	FREEBSD32_SYS_AUE_freebsd32_clock_getres	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_ktimer_create	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_ktimer_settime	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_ktimer_gettime	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_nanosleep	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_ffclock_setestimate	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_ffclock_getestimate	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_clock_nanosleep	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_clock_getcpuclockid2	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_read	AUE_AIO_READ
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_write	AUE_AIO_WRITE
-#define	FREEBSD32_SYS_AUE_freebsd32_lio_listio	AUE_LIO_LISTIO
-#define	FREEBSD32_SYS_AUE_freebsd32_lutimes	AUE_LUTIMES
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_nstat	AUE_STAT
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_nfstat	AUE_FSTAT
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_nlstat	AUE_LSTAT
-#define	FREEBSD32_SYS_AUE_freebsd32_preadv	AUE_PREADV
-#define	FREEBSD32_SYS_AUE_freebsd32_pwritev	AUE_PWRITEV
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_fhstatfs	AUE_FHSTATFS
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_fhstat	AUE_FHSTAT
-#define	FREEBSD32_SYS_AUE_freebsd32_modstat	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_kldstat	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_return	AUE_AIO_RETURN
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_suspend	AUE_AIO_SUSPEND
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_error	AUE_AIO_ERROR
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_aio_read	AUE_AIO_READ
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_aio_write	AUE_AIO_WRITE
-#define	FREEBSD32_SYS_AUE_freebsd6_freebsd32_lio_listio	AUE_LIO_LISTIO
-#define	FREEBSD32_SYS_AUE_freebsd32_sched_rr_get_interval	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_sendfile	AUE_SENDFILE
-#define	FREEBSD32_SYS_AUE_freebsd32_jail	AUE_JAIL
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_sigaction	AUE_SIGACTION
-#define	FREEBSD32_SYS_AUE_freebsd4_freebsd32_sigreturn	AUE_SIGRETURN
-#define	FREEBSD32_SYS_AUE_freebsd32_sigtimedwait	AUE_SIGWAIT
-#define	FREEBSD32_SYS_AUE_freebsd32_sigwaitinfo	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_waitcomplete	AUE_AIO_WAITCOMPLETE
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_kevent	AUE_KEVENT
-#define	FREEBSD32_SYS_AUE_freebsd32_nmount	AUE_NMOUNT
-#define	FREEBSD32_SYS_AUE_freebsd32_sendfile	AUE_SENDFILE
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_getfsstat	AUE_GETFSSTAT
-#define	FREEBSD32_SYS_AUE_freebsd32_ksem_init	AUE_SEMINIT
-#define	FREEBSD32_SYS_AUE_freebsd32_ksem_open	AUE_SEMOPEN
-#define	FREEBSD32_SYS_AUE_freebsd32_sigaction	AUE_SIGACTION
-#define	FREEBSD32_SYS_AUE_freebsd32_sigreturn	AUE_SIGRETURN
-#define	FREEBSD32_SYS_AUE_freebsd32_getcontext	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_setcontext	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_swapcontext	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd10_freebsd32__umtx_lock	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd10_freebsd32__umtx_unlock	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_ksem_timedwait	AUE_SEMWAIT
-#define	FREEBSD32_SYS_AUE_freebsd32_thr_suspend	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32__umtx_op	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_thr_new	AUE_THR_NEW
-#define	FREEBSD32_SYS_AUE_freebsd32_sigqueue	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_kmq_open	AUE_MQ_OPEN
-#define	FREEBSD32_SYS_AUE_freebsd32_kmq_setattr	AUE_MQ_SETATTR
-#define	FREEBSD32_SYS_AUE_freebsd32_kmq_timedreceive	AUE_MQ_TIMEDRECEIVE
-#define	FREEBSD32_SYS_AUE_freebsd32_kmq_timedsend	AUE_MQ_TIMEDSEND
-#define	FREEBSD32_SYS_AUE_freebsd32_kmq_notify	AUE_MQ_NOTIFY
-#define	FREEBSD32_SYS_AUE_freebsd32_abort2	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_fsync	AUE_AIO_FSYNC
-#define	FREEBSD32_SYS_AUE_freebsd32_pread	AUE_PREAD
-#define	FREEBSD32_SYS_AUE_freebsd32_pwrite	AUE_PWRITE
-#define	FREEBSD32_SYS_AUE_freebsd32_mmap	AUE_MMAP
-#define	FREEBSD32_SYS_AUE_freebsd32_lseek	AUE_LSEEK
-#define	FREEBSD32_SYS_AUE_freebsd32_truncate	AUE_TRUNCATE
-#define	FREEBSD32_SYS_AUE_freebsd32_ftruncate	AUE_FTRUNCATE
-#define	FREEBSD32_SYS_AUE_freebsd32_cpuset_setid	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_cpuset_getid	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_cpuset_getaffinity	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_cpuset_setaffinity	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_fexecve	AUE_FEXECVE
-#define	FREEBSD32_SYS_AUE_freebsd11_freebsd32_fstatat	AUE_FSTATAT
-#define	FREEBSD32_SYS_AUE_freebsd32_futimesat	AUE_FUTIMESAT
-#define	FREEBSD32_SYS_AUE_freebsd32_jail_get	AUE_JAIL_GET
-#define	FREEBSD32_SYS_AUE_freebsd32_jail_set	AUE_JAIL_SET
-#define	FREEBSD32_SYS_AUE_freebsd32___semctl	AUE_SEMCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_msgctl	AUE_MSGCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_shmctl	AUE_SHMCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_pselect	AUE_SELECT
-#define	FREEBSD32_SYS_AUE_freebsd32_posix_fallocate	AUE_POSIX_FALLOCATE
-#define	FREEBSD32_SYS_AUE_freebsd32_posix_fadvise	AUE_POSIX_FADVISE
-#define	FREEBSD32_SYS_AUE_freebsd32_wait6	AUE_WAIT6
-#define	FREEBSD32_SYS_AUE_freebsd32_cap_ioctls_limit	AUE_CAP_IOCTLS_LIMIT
-#define	FREEBSD32_SYS_AUE_freebsd32_cap_ioctls_get	AUE_CAP_IOCTLS_GET
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_mlock	AUE_AIO_MLOCK
-#define	FREEBSD32_SYS_AUE_freebsd32_procctl	AUE_PROCCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_ppoll	AUE_POLL
-#define	FREEBSD32_SYS_AUE_freebsd32_futimens	AUE_FUTIMES
-#define	FREEBSD32_SYS_AUE_freebsd32_utimensat	AUE_FUTIMESAT
-#define	FREEBSD32_SYS_AUE_freebsd32_fstat	AUE_FSTAT
-#define	FREEBSD32_SYS_AUE_freebsd32_fstatat	AUE_FSTATAT
-#define	FREEBSD32_SYS_AUE_freebsd32_fhstat	AUE_FHSTAT
-#define	FREEBSD32_SYS_AUE_freebsd32_getfsstat	AUE_GETFSSTAT
-#define	FREEBSD32_SYS_AUE_freebsd32_mknodat	AUE_MKNODAT
-#define	FREEBSD32_SYS_AUE_freebsd32_kevent	AUE_KEVENT
-#define	FREEBSD32_SYS_AUE_freebsd32_cpuset_getdomain	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32_cpuset_setdomain	AUE_NULL
-#define	FREEBSD32_SYS_AUE_freebsd32___sysctlbyname	AUE_SYSCTL
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_writev	AUE_AIO_WRITEV
-#define	FREEBSD32_SYS_AUE_freebsd32_aio_readv	AUE_AIO_READV
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_statfs	AUE_STATFS
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_fstatfs	AUE_FSTATFS
+#define	FREEBSD32_SYS_AUE_nqc32_sysarch	AUE_SYSARCH
+#define	FREEBSD32_SYS_AUE_nqc32_semsys	AUE_SEMSYS
+#define	FREEBSD32_SYS_AUE_nqc32_msgsys	AUE_MSGSYS
+#define	FREEBSD32_SYS_AUE_nqc32_shmsys	AUE_SHMSYS
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_pread	AUE_PREAD
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_pwrite	AUE_PWRITE
+#define	FREEBSD32_SYS_AUE_nqc32_ntp_adjtime	AUE_NTP_ADJTIME
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_stat	AUE_STAT
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_fstat	AUE_FSTAT
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_lstat	AUE_LSTAT
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_getdirentries	AUE_GETDIRENTRIES
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_mmap	AUE_MMAP
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_lseek	AUE_LSEEK
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_truncate	AUE_TRUNCATE
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_ftruncate	AUE_FTRUNCATE
+#define	FREEBSD32_SYS_AUE_nqc32___sysctl	AUE_SYSCTL
+#define	FREEBSD32_SYS_AUE_nqc32_futimes	AUE_FUTIMES
+#define	FREEBSD32_SYS_AUE_nqc7_nqc32___semctl	AUE_SEMCTL
+#define	FREEBSD32_SYS_AUE_nqc7_nqc32_msgctl	AUE_MSGCTL
+#define	FREEBSD32_SYS_AUE_nqc32_msgsnd	AUE_MSGSND
+#define	FREEBSD32_SYS_AUE_nqc32_msgrcv	AUE_MSGRCV
+#define	FREEBSD32_SYS_AUE_nqc7_nqc32_shmctl	AUE_SHMCTL
+#define	FREEBSD32_SYS_AUE_nqc32_clock_gettime	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_clock_settime	AUE_CLOCK_SETTIME
+#define	FREEBSD32_SYS_AUE_nqc32_clock_getres	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_ktimer_create	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_ktimer_settime	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_ktimer_gettime	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_nanosleep	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_ffclock_setestimate	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_ffclock_getestimate	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_clock_nanosleep	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_clock_getcpuclockid2	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_aio_read	AUE_AIO_READ
+#define	FREEBSD32_SYS_AUE_nqc32_aio_write	AUE_AIO_WRITE
+#define	FREEBSD32_SYS_AUE_nqc32_lio_listio	AUE_LIO_LISTIO
+#define	FREEBSD32_SYS_AUE_nqc32_lutimes	AUE_LUTIMES
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_nstat	AUE_STAT
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_nfstat	AUE_FSTAT
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_nlstat	AUE_LSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_preadv	AUE_PREADV
+#define	FREEBSD32_SYS_AUE_nqc32_pwritev	AUE_PWRITEV
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_fhstatfs	AUE_FHSTATFS
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_fhstat	AUE_FHSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_modstat	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_kldstat	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_aio_return	AUE_AIO_RETURN
+#define	FREEBSD32_SYS_AUE_nqc32_aio_suspend	AUE_AIO_SUSPEND
+#define	FREEBSD32_SYS_AUE_nqc32_aio_error	AUE_AIO_ERROR
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_aio_read	AUE_AIO_READ
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_aio_write	AUE_AIO_WRITE
+#define	FREEBSD32_SYS_AUE_nqc6_nqc32_lio_listio	AUE_LIO_LISTIO
+#define	FREEBSD32_SYS_AUE_nqc32_sched_rr_get_interval	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_sendfile	AUE_SENDFILE
+#define	FREEBSD32_SYS_AUE_nqc32_jail	AUE_JAIL
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_sigaction	AUE_SIGACTION
+#define	FREEBSD32_SYS_AUE_nqc4_nqc32_sigreturn	AUE_SIGRETURN
+#define	FREEBSD32_SYS_AUE_nqc32_sigtimedwait	AUE_SIGWAIT
+#define	FREEBSD32_SYS_AUE_nqc32_sigwaitinfo	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_aio_waitcomplete	AUE_AIO_WAITCOMPLETE
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_kevent	AUE_KEVENT
+#define	FREEBSD32_SYS_AUE_nqc32_nmount	AUE_NMOUNT
+#define	FREEBSD32_SYS_AUE_nqc32_sendfile	AUE_SENDFILE
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_getfsstat	AUE_GETFSSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_ksem_init	AUE_SEMINIT
+#define	FREEBSD32_SYS_AUE_nqc32_ksem_open	AUE_SEMOPEN
+#define	FREEBSD32_SYS_AUE_nqc32_sigaction	AUE_SIGACTION
+#define	FREEBSD32_SYS_AUE_nqc32_sigreturn	AUE_SIGRETURN
+#define	FREEBSD32_SYS_AUE_nqc32_getcontext	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_setcontext	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_swapcontext	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc10_nqc32__umtx_lock	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc10_nqc32__umtx_unlock	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_ksem_timedwait	AUE_SEMWAIT
+#define	FREEBSD32_SYS_AUE_nqc32_thr_suspend	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32__umtx_op	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_thr_new	AUE_THR_NEW
+#define	FREEBSD32_SYS_AUE_nqc32_sigqueue	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_kmq_open	AUE_MQ_OPEN
+#define	FREEBSD32_SYS_AUE_nqc32_kmq_setattr	AUE_MQ_SETATTR
+#define	FREEBSD32_SYS_AUE_nqc32_kmq_timedreceive	AUE_MQ_TIMEDRECEIVE
+#define	FREEBSD32_SYS_AUE_nqc32_kmq_timedsend	AUE_MQ_TIMEDSEND
+#define	FREEBSD32_SYS_AUE_nqc32_kmq_notify	AUE_MQ_NOTIFY
+#define	FREEBSD32_SYS_AUE_nqc32_abort2	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_aio_fsync	AUE_AIO_FSYNC
+#define	FREEBSD32_SYS_AUE_nqc32_pread	AUE_PREAD
+#define	FREEBSD32_SYS_AUE_nqc32_pwrite	AUE_PWRITE
+#define	FREEBSD32_SYS_AUE_nqc32_mmap	AUE_MMAP
+#define	FREEBSD32_SYS_AUE_nqc32_lseek	AUE_LSEEK
+#define	FREEBSD32_SYS_AUE_nqc32_truncate	AUE_TRUNCATE
+#define	FREEBSD32_SYS_AUE_nqc32_ftruncate	AUE_FTRUNCATE
+#define	FREEBSD32_SYS_AUE_nqc32_cpuset_setid	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_cpuset_getid	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_cpuset_getaffinity	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_cpuset_setaffinity	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_fexecve	AUE_FEXECVE
+#define	FREEBSD32_SYS_AUE_nqc11_nqc32_fstatat	AUE_FSTATAT
+#define	FREEBSD32_SYS_AUE_nqc32_futimesat	AUE_FUTIMESAT
+#define	FREEBSD32_SYS_AUE_nqc32_jail_get	AUE_JAIL_GET
+#define	FREEBSD32_SYS_AUE_nqc32_jail_set	AUE_JAIL_SET
+#define	FREEBSD32_SYS_AUE_nqc32___semctl	AUE_SEMCTL
+#define	FREEBSD32_SYS_AUE_nqc32_msgctl	AUE_MSGCTL
+#define	FREEBSD32_SYS_AUE_nqc32_shmctl	AUE_SHMCTL
+#define	FREEBSD32_SYS_AUE_nqc32_pselect	AUE_SELECT
+#define	FREEBSD32_SYS_AUE_nqc32_posix_fallocate	AUE_POSIX_FALLOCATE
+#define	FREEBSD32_SYS_AUE_nqc32_posix_fadvise	AUE_POSIX_FADVISE
+#define	FREEBSD32_SYS_AUE_nqc32_wait6	AUE_WAIT6
+#define	FREEBSD32_SYS_AUE_nqc32_cap_ioctls_limit	AUE_CAP_IOCTLS_LIMIT
+#define	FREEBSD32_SYS_AUE_nqc32_cap_ioctls_get	AUE_CAP_IOCTLS_GET
+#define	FREEBSD32_SYS_AUE_nqc32_aio_mlock	AUE_AIO_MLOCK
+#define	FREEBSD32_SYS_AUE_nqc32_procctl	AUE_PROCCTL
+#define	FREEBSD32_SYS_AUE_nqc32_ppoll	AUE_POLL
+#define	FREEBSD32_SYS_AUE_nqc32_futimens	AUE_FUTIMES
+#define	FREEBSD32_SYS_AUE_nqc32_utimensat	AUE_FUTIMESAT
+#define	FREEBSD32_SYS_AUE_nqc32_fstat	AUE_FSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_fstatat	AUE_FSTATAT
+#define	FREEBSD32_SYS_AUE_nqc32_fhstat	AUE_FHSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_getfsstat	AUE_GETFSSTAT
+#define	FREEBSD32_SYS_AUE_nqc32_mknodat	AUE_MKNODAT
+#define	FREEBSD32_SYS_AUE_nqc32_kevent	AUE_KEVENT
+#define	FREEBSD32_SYS_AUE_nqc32_cpuset_getdomain	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32_cpuset_setdomain	AUE_NULL
+#define	FREEBSD32_SYS_AUE_nqc32___sysctlbyname	AUE_SYSCTL
+#define	FREEBSD32_SYS_AUE_nqc32_aio_writev	AUE_AIO_WRITEV
+#define	FREEBSD32_SYS_AUE_nqc32_aio_readv	AUE_AIO_READV
 
 #undef PAD_
 #undef PADL_

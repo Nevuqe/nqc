@@ -51,7 +51,7 @@ __KERNEL_RCSID(0, "$NetBSD$");
 #ifdef	__FreeBSD__
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");
-#include <dev/isp/isp_freebsd.h>
+#include <dev/isp/isp_nqc.h>
 #endif
 #ifdef	__OpenBSD__
 #include <dev/ic/isp_openbsd.h>

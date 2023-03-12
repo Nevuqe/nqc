@@ -797,7 +797,7 @@ update_unmodified()
 # FreeBSD ID string from the "new" version of the file.
 #
 # $1 - pathname of the file to update (relative to DESTDIR)
-update_freebsdid()
+update_nqcid()
 {
 	local new dest file
 
@@ -1178,7 +1178,7 @@ handle_modified_file()
 	# update the FreeBSD ID string in the local file.
 	if [ -n "$FREEBSD_ID" -a $cmp -eq $COMPARE_DIFFFILES ] && \
 	    fbsdid_only $OLDTREE/$file $NEWTREE/$file; then
-		if update_freebsdid $file; then
+		if update_nqcid $file; then
 			continue
 		fi
 	fi

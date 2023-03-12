@@ -359,7 +359,7 @@ ifdef CONFIG_L2_PACKET
 ifdef CONFIG_DNET_PCAP
 ifdef CONFIG_L2_FREEBSD
 LIBS += -lpcap
-OBJS += ../src/l2_packet/l2_packet_freebsd.o
+OBJS += ../src/l2_packet/l2_packet_nqc.o
 else
 LIBS += -ldnet -lpcap
 OBJS += ../src/l2_packet/l2_packet_pcap.o

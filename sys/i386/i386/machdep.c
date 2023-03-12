@@ -197,7 +197,7 @@ struct mem_range_softc mem_range_softc;
 
 extern char start_exceptions[], end_exceptions[];
 
-extern struct sysentvec elf32_freebsd_sysvec;
+extern struct sysentvec elf32_nqc_sysvec;
 
 /* Default init_ops implementation. */
 struct init_ops init_ops = {
@@ -1704,7 +1704,7 @@ i386_setup_lcall_gate(void)
 	struct user_segment_descriptor desc;
 	u_int lcall_addr;
 
-	sv = &elf32_freebsd_sysvec;
+	sv = &elf32_nqc_sysvec;
 	lcall_addr = (uintptr_t)sv->sv_psstrings - sz_lcall_tramp;
 
 	bzero(&desc, sizeof(desc));

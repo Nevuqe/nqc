@@ -49,7 +49,7 @@ set -A editable_props "quota" "reservation" "reserv" "volsize" "recordsize" "rec
 		"mountpoint" "checksum" "compression" "compress" "atime" \
 		"devices" "exec" "setuid" "readonly" "snapdir" "aclmode" \
 		"aclinherit" "canmount" "xattr" "copies" "version"
-if is_freebsd; then
+if is_nqc; then
 	editable_props+=("jailed")
 else
 	editable_props+=("zoned")

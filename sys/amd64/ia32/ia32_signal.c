@@ -441,7 +441,7 @@ ia32_osendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 static void
 freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 {
-	struct ia32_freebsd4_sigframe sf, *sfp;
+	struct ia32_nqc4_sigframe sf, *sfp;
 	struct siginfo32 siginfo;
 	struct proc *p;
 	struct thread *td;
@@ -497,10 +497,10 @@ freebsd4_ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	/* Allocate space for the signal handler context. */
 	if ((td->td_pflags & TDP_ALTSTACK) != 0 && !oonstack &&
 	    SIGISMEMBER(psp->ps_sigonstack, sig)) {
-		sfp = (struct ia32_freebsd4_sigframe *)((uintptr_t)td->td_sigstk.ss_sp +
+		sfp = (struct ia32_nqc4_sigframe *)((uintptr_t)td->td_sigstk.ss_sp +
 		    td->td_sigstk.ss_size - sizeof(sf));
 	} else
-		sfp = (struct ia32_freebsd4_sigframe *)regs->tf_rsp - 1;
+		sfp = (struct ia32_nqc4_sigframe *)regs->tf_rsp - 1;
 	PROC_UNLOCK(p);
 
 	/* Build the argument list for the signal handler. */
@@ -571,7 +571,7 @@ ia32_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	sig = siginfo.si_signo;
 	psp = p->p_sigacts;
 #ifdef COMPAT_FREEBSD4
-	if (SIGISMEMBER(psp->ps_freebsd4, sig)) {
+	if (SIGISMEMBER(psp->ps_nqc4, sig)) {
 		freebsd4_ia32_sendsig(catcher, ksi, mask);
 		return;
 	}
@@ -751,12 +751,12 @@ ofreebsd32_sigreturn(struct thread *td, struct ofreebsd32_sigreturn_args *uap)
 
 #ifdef COMPAT_FREEBSD4
 int
-freebsd4_freebsd32_sigreturn(struct thread *td,
-    struct freebsd4_freebsd32_sigreturn_args *uap)
+freebsd4_nqc32_sigreturn(struct thread *td,
+    struct freebsd4_nqc32_sigreturn_args *uap)
 {
-	struct ia32_freebsd4_ucontext uc;
+	struct ia32_nqc4_ucontext uc;
 	struct trapframe *regs;
-	struct ia32_freebsd4_ucontext *ucp;
+	struct ia32_nqc4_ucontext *ucp;
 	int cs, eflags, error;
 	ksiginfo_t ksi;
 
@@ -770,7 +770,7 @@ freebsd4_freebsd32_sigreturn(struct thread *td,
 	 * Don't allow users to change privileged or reserved flags.
 	 */
 	if (!EFL_SECURE(eflags, regs->tf_rflags)) {
-		uprintf("pid %d (%s): freebsd4_freebsd32_sigreturn eflags = 0x%x\n",
+		uprintf("pid %d (%s): freebsd4_nqc32_sigreturn eflags = 0x%x\n",
 		    td->td_proc->p_pid, td->td_name, eflags);
 		return (EINVAL);
 	}

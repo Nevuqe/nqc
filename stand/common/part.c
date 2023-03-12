@@ -53,13 +53,13 @@ __FBSDID("$FreeBSD$");
 #define	MAXTBLSZ	64
 static const uuid_t gpt_uuid_unused = GPT_ENT_TYPE_UNUSED;
 static const uuid_t gpt_uuid_ms_basic_data = GPT_ENT_TYPE_MS_BASIC_DATA;
-static const uuid_t gpt_uuid_freebsd_ufs = GPT_ENT_TYPE_FREEBSD_UFS;
+static const uuid_t gpt_uuid_nqc_ufs = GPT_ENT_TYPE_FREEBSD_UFS;
 static const uuid_t gpt_uuid_efi = GPT_ENT_TYPE_EFI;
-static const uuid_t gpt_uuid_freebsd = GPT_ENT_TYPE_FREEBSD;
-static const uuid_t gpt_uuid_freebsd_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
-static const uuid_t gpt_uuid_freebsd_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
-static const uuid_t gpt_uuid_freebsd_zfs = GPT_ENT_TYPE_FREEBSD_ZFS;
-static const uuid_t gpt_uuid_freebsd_vinum = GPT_ENT_TYPE_FREEBSD_VINUM;
+static const uuid_t gpt_uuid_nqc = GPT_ENT_TYPE_FREEBSD;
+static const uuid_t gpt_uuid_nqc_boot = GPT_ENT_TYPE_FREEBSD_BOOT;
+static const uuid_t gpt_uuid_nqc_swap = GPT_ENT_TYPE_FREEBSD_SWAP;
+static const uuid_t gpt_uuid_nqc_zfs = GPT_ENT_TYPE_FREEBSD_ZFS;
+static const uuid_t gpt_uuid_nqc_vinum = GPT_ENT_TYPE_FREEBSD_VINUM;
 static const uuid_t gpt_uuid_apple_apfs = GPT_ENT_TYPE_APPLE_APFS;
 #endif
 
@@ -131,17 +131,17 @@ gpt_parttype(uuid_t type)
 		return (PART_EFI);
 	else if (uuid_equal(&type, &gpt_uuid_ms_basic_data, NULL))
 		return (PART_DOS);
-	else if (uuid_equal(&type, &gpt_uuid_freebsd_boot, NULL))
+	else if (uuid_equal(&type, &gpt_uuid_nqc_boot, NULL))
 		return (PART_FREEBSD_BOOT);
-	else if (uuid_equal(&type, &gpt_uuid_freebsd_ufs, NULL))
+	else if (uuid_equal(&type, &gpt_uuid_nqc_ufs, NULL))
 		return (PART_FREEBSD_UFS);
-	else if (uuid_equal(&type, &gpt_uuid_freebsd_zfs, NULL))
+	else if (uuid_equal(&type, &gpt_uuid_nqc_zfs, NULL))
 		return (PART_FREEBSD_ZFS);
-	else if (uuid_equal(&type, &gpt_uuid_freebsd_swap, NULL))
+	else if (uuid_equal(&type, &gpt_uuid_nqc_swap, NULL))
 		return (PART_FREEBSD_SWAP);
-	else if (uuid_equal(&type, &gpt_uuid_freebsd_vinum, NULL))
+	else if (uuid_equal(&type, &gpt_uuid_nqc_vinum, NULL))
 		return (PART_FREEBSD_VINUM);
-	else if (uuid_equal(&type, &gpt_uuid_freebsd, NULL))
+	else if (uuid_equal(&type, &gpt_uuid_nqc, NULL))
 		return (PART_FREEBSD);
 	else if (uuid_equal(&type, &gpt_uuid_apple_apfs, NULL))
 		return (PART_APFS);

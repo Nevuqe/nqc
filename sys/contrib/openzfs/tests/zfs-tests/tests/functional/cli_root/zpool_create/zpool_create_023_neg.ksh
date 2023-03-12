@@ -71,7 +71,7 @@ set -A args "QuOta=none" "quota=non" "quota=abcd" "quota=0" "quota=" \
     "referenced=10K" "compressratio=1.00x" \
     "version=0" "version=1.234" "version=10K" "version=-1" \
     "version=aaa" "version=999"
-if is_freebsd; then
+if is_nqc; then
 	args+=("jailed=ON" "JaiLed=off" "jailed=aaa")
 else
 	args+=("zoned=ON" "ZoNed=off" "zoned=aaa")
@@ -82,7 +82,7 @@ log_assert "'zpool create -O' should return an error with badly formed parameter
 typeset -i i=0
 while (( $i < ${#args[*]} )); do
 	typeset arg=${args[i]}
-	if is_freebsd; then
+	if is_nqc; then
 		# FreeBSD does not strictly validate share opts (yet).
 		if [[ $arg == "sharenfs="* ]]; then
 			((i = i + 1))

@@ -113,7 +113,7 @@ static void osendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
 static void freebsd4_sendsig(sig_t catcher, ksiginfo_t *, sigset_t *mask);
 #endif
 
-extern struct sysentvec elf32_freebsd_sysvec;
+extern struct sysentvec elf32_nqc_sysvec;
 
 _Static_assert(sizeof(mcontext_t) == 640, "mcontext_t size incorrect");
 _Static_assert(sizeof(ucontext_t) == 704, "ucontext_t size incorrect");
@@ -398,7 +398,7 @@ sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
 	psp = p->p_sigacts;
 	mtx_assert(&psp->ps_mtx, MA_OWNED);
 #ifdef COMPAT_FREEBSD4
-	if (SIGISMEMBER(psp->ps_freebsd4, sig)) {
+	if (SIGISMEMBER(psp->ps_nqc4, sig)) {
 		freebsd4_sendsig(catcher, ksi, mask);
 		return;
 	}
@@ -967,7 +967,7 @@ exec_setregs(struct thread *td, struct image_params *imgp, uintptr_t stack)
 
 #ifdef COMPAT_43
 	if (td->td_proc->p_sysent->sv_psstrings !=
-	    elf32_freebsd_sysvec.sv_psstrings)
+	    elf32_nqc_sysvec.sv_psstrings)
 		setup_priv_lcall_gate(td->td_proc);
 #endif
 

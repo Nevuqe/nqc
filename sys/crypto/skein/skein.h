@@ -328,6 +328,6 @@ enum
 #endif
 
 /* Pull in FreeBSD specific shims */
-#include "skein_freebsd.h"
+#include "skein_nqc.h"
 
 #endif  /* ifndef _SKEIN_H_ */

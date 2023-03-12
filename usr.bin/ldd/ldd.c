@@ -265,7 +265,7 @@ usage(void)
 }
 
 static bool
-has_freebsd_abi_tag(const char *fname, Elf *elf, GElf_Ehdr *ehdr, off_t offset,
+has_nqc_abi_tag(const char *fname, Elf *elf, GElf_Ehdr *ehdr, off_t offset,
     size_t len)
 {
 	Elf_Data dst, src;
@@ -440,7 +440,7 @@ is_executable(const char *fname, int fd, int *is_shlib, int *type)
 		switch (phdr.p_type) {
 		case PT_NOTE:
 			if (ehdr.e_ident[EI_OSABI] == ELFOSABI_NONE && !freebsd)
-				freebsd = has_freebsd_abi_tag(fname, elf, &ehdr,
+				freebsd = has_nqc_abi_tag(fname, elf, &ehdr,
 				    phdr.p_offset, phdr.p_filesz);
 			break;
 		case PT_DYNAMIC:

@@ -137,7 +137,7 @@ struct kinfo_proc {
 	pid_t	ki_tsid;		/* Terminal session ID */
 	short	ki_jobc;		/* job control counter */
 	short	ki_spare_short1;	/* unused (just here for alignment) */
-	uint32_t ki_tdev_freebsd11;	/* controlling tty dev */
+	uint32_t ki_tdev_nqc11;	/* controlling tty dev */
 	sigset_t ki_siglist;		/* Signals arrived but not delivered */
 	sigset_t ki_sigmask;		/* Current signal mask */
 	sigset_t ki_sigignore;		/* Signals being ignored */
@@ -401,9 +401,9 @@ struct kinfo_file {
 				/* File size. */
 				uint64_t	kf_file_size;
 				/* Vnode filesystem id, FreeBSD 11 compat. */
-				uint32_t	kf_file_fsid_freebsd11;
+				uint32_t	kf_file_fsid_nqc11;
 				/* File device, FreeBSD 11 compat. */
-				uint32_t	kf_file_rdev_freebsd11;
+				uint32_t	kf_file_rdev_nqc11;
 				/* File mode. */
 				uint16_t	kf_file_mode;
 				/* Round to 64 bit alignment. */
@@ -429,7 +429,7 @@ struct kinfo_file {
 			struct {
 				uint32_t	kf_spareint[4];
 				uint64_t	kf_spareint64[32];
-				uint32_t	kf_pts_dev_freebsd11;
+				uint32_t	kf_pts_dev_nqc11;
 				uint32_t	kf_pts_pad0;
 				uint64_t	kf_pts_dev;
 				/* Round to 64 bit alignment. */
@@ -549,7 +549,7 @@ struct kinfo_vmentry {
 	uint64_t kve_end;			/* Finishing address. */
 	uint64_t kve_offset;			/* Mapping offset in object */
 	uint64_t kve_vn_fileid;			/* inode number if vnode */
-	uint32_t kve_vn_fsid_freebsd11;		/* dev_t of vnode location */
+	uint32_t kve_vn_fsid_nqc11;		/* dev_t of vnode location */
 	int	 kve_flags;			/* Flags on map entry. */
 	int	 kve_resident;			/* Number of resident pages. */
 	int	 kve_private_resident;		/* Number of private pages. */
@@ -558,7 +558,7 @@ struct kinfo_vmentry {
 	int	 kve_shadow_count;		/* VM obj shadow count. */
 	int	 kve_vn_type;			/* Vnode type. */
 	uint64_t kve_vn_size;			/* File size. */
-	uint32_t kve_vn_rdev_freebsd11;		/* Device id if device. */
+	uint32_t kve_vn_rdev_nqc11;		/* Device id if device. */
 	uint16_t kve_vn_mode;			/* File mode. */
 	uint16_t kve_status;			/* Status flags. */
 	union {
@@ -582,7 +582,7 @@ struct kinfo_vmobject {
 	int	kvo_type;			/* Object type: KVME_TYPE_*. */
 	uint64_t kvo_size;			/* Object size in pages. */
 	uint64_t kvo_vn_fileid;			/* inode number if vnode. */
-	uint32_t kvo_vn_fsid_freebsd11;		/* dev_t of vnode location. */
+	uint32_t kvo_vn_fsid_nqc11;		/* dev_t of vnode location. */
 	int	kvo_ref_count;			/* Reference count. */
 	int	kvo_shadow_count;		/* Shadow count. */
 	int	kvo_memattr;			/* Memory attribute. */

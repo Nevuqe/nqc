@@ -37,7 +37,7 @@ verify_runnable "global"
 
 if is_linux; then
 	log_must swapon -a
-elif is_freebsd; then
+elif is_nqc; then
 	swapon -a || true
 else
 	log_must swapadd

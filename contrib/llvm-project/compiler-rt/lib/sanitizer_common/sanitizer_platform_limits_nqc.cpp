@@ -1,4 +1,4 @@
-//===-- sanitizer_platform_limits_freebsd.cpp -----------------------------===//
+//===-- sanitizer_platform_limits_nqc.cpp -----------------------------===//
 //
 // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
 // See https://llvm.org/LICENSE.txt for license information.
@@ -95,7 +95,7 @@
 // Include these after system headers to avoid name clashes and ambiguities.
 #include "sanitizer_internal_defs.h"
 #include "sanitizer_libc.h"
-#include "sanitizer_platform_limits_freebsd.h"
+#include "sanitizer_platform_limits_nqc.h"
 
 namespace __sanitizer {
 void *__sanitizer_get_link_map_by_dlopen_handle(void *handle) {

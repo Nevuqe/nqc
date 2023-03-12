@@ -48,7 +48,7 @@ verify_runnable "global"
 # file on FreeBSD.  truncate -d support is required to call fspacectl(2) on
 # behalf of the script.
 #
-if is_freebsd; then
+if is_nqc; then
 	if [[ $(uname -K) -lt 1400032 ]]; then
 		log_unsupported "Requires fspacectl(2) support on FreeBSD"
 	fi

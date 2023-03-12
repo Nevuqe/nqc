@@ -2,7 +2,7 @@
 
 PACKAGE=	tests
 
-ATF_TESTS_SH+=	grep_freebsd_test
+ATF_TESTS_SH+=	grep_nqc_test
 NETBSD_ATF_TESTS_SH=	grep_test
 
 ${PACKAGE}FILES+=		d_basic.out

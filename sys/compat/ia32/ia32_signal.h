@@ -88,7 +88,7 @@ struct ia32_ucontext {
 	uint32_t		__spare__[4];
 };
 
-struct ia32_freebsd4_mcontext {
+struct ia32_nqc4_mcontext {
 	uint32_t	mc_onstack;		/* XXX - sigcontext compat. */
 	uint32_t	mc_gs;			/* machine state (struct trapframe) */
 	uint32_t	mc_fs;
@@ -113,9 +113,9 @@ struct ia32_freebsd4_mcontext {
 	uint32_t	__spare__[17];
 };
 
-struct ia32_freebsd4_ucontext {
+struct ia32_nqc4_ucontext {
 	sigset_t		uc_sigmask;
-	struct ia32_freebsd4_mcontext	uc_mcontext;
+	struct ia32_nqc4_mcontext	uc_mcontext;
 	uint32_t		uc_link;
 	struct sigaltstack32	uc_stack;
 	uint32_t		__spare__[8];
@@ -149,13 +149,13 @@ struct ia32_osigcontext {
  * Signal frames, arguments passed to application signal handlers.
  */
 
-struct ia32_freebsd4_sigframe {
+struct ia32_nqc4_sigframe {
 	uint32_t		sf_signum;
 	uint32_t		sf_siginfo;	/* code or pointer to sf_si */
 	uint32_t		sf_ucontext;	/* points to sf_uc */
 	uint32_t		sf_addr;	/* undocumented 4th arg */
 	uint32_t		sf_ah;		/* action/handler pointer */
-	struct ia32_freebsd4_ucontext	sf_uc;		/* = *sf_ucontext */
+	struct ia32_nqc4_ucontext	sf_uc;		/* = *sf_ucontext */
 	struct siginfo32	sf_si;		/* = *sf_siginfo (SA_SIGINFO case) */
 };
 

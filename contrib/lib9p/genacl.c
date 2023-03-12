@@ -705,7 +705,7 @@ l9p_frombsdnfs4(acl_entry_t sysace, struct l9p_ace *ace)
 }
 
 struct l9p_acl *
-l9p_freebsd_nfsv4acl_to_acl(acl_t sysacl)
+l9p_nqc_nfsv4acl_to_acl(acl_t sysacl)
 {
 
 	return (l9p_sysacl_to_acl(L9P_ACLTYPE_NFSv4, sysacl, l9p_frombsdnfs4));

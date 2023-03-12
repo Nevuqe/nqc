@@ -22,7 +22,7 @@
 #define _ATH_AR9300_DESC_H_
 
 #ifdef	_KERNEL
-#include "ar9300_freebsd_inc.h"
+#include "ar9300_nqc_inc.h"
 #endif
 
 /* Osprey Status Descriptor. */

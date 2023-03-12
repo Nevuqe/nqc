@@ -127,7 +127,7 @@ load_module_linux() {
 	return 0
 }
 
-load_modules_freebsd() {
+load_modules_nqc() {
 	kldload "$KMOD_FREEBSD" || return 1
 
 	if [ "$VERBOSE" = "yes" ]; then
@@ -151,7 +151,7 @@ load_modules_linux() {
 	return 0
 }
 
-unload_modules_freebsd() {
+unload_modules_nqc() {
 	kldunload "$KMOD_FREEBSD" || echo "Failed to unload $KMOD_FREEBSD"
 
 	if [ "$VERBOSE" = "yes" ]; then
@@ -211,7 +211,7 @@ if [ "$UNLOAD" = "yes" ]; then
 	umount -t zfs -a
 	case $UNAME in
 		FreeBSD)
-		   unload_modules_freebsd
+		   unload_modules_nqc
 		   ;;
 		Linux)
 		   stack_check_linux
@@ -226,7 +226,7 @@ fi
 if [ "$LOAD" = "yes" ]; then
 	case $UNAME in
 		FreeBSD)
-		   load_modules_freebsd
+		   load_modules_nqc
 		   ;;
 		Linux)
 		   stack_clear_linux

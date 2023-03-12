@@ -1,4 +1,4 @@
-/*	$OpenBSD: getentropy_freebsd.c,v 1.3 2016/08/07 03:27:21 tb Exp $	*/
+/*	$OpenBSD: getentropy_nqc.c,v 1.3 2016/08/07 03:27:21 tb Exp $	*/
 
 /*
  * Copyright (c) 2014 Pawel Jakub Dawidek <pjd@FreeBSD.org>

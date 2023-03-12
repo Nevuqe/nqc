@@ -33,7 +33,7 @@
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");
 
-#include <dev/isp/isp_freebsd.h>
+#include <dev/isp/isp_nqc.h>
 #include <sys/unistd.h>
 #include <sys/kthread.h>
 #include <sys/conf.h>

@@ -908,9 +908,9 @@ kern_sigaction(struct thread *td, int sig, const struct sigaction *act,
 		if (ps->ps_sigact[_SIG_IDX(sig)] == SIG_IGN ||
 		    ps->ps_sigact[_SIG_IDX(sig)] == SIG_DFL ||
 		    (flags & KSA_FREEBSD4) == 0)
-			SIGDELSET(ps->ps_freebsd4, sig);
+			SIGDELSET(ps->ps_nqc4, sig);
 		else
-			SIGADDSET(ps->ps_freebsd4, sig);
+			SIGADDSET(ps->ps_nqc4, sig);
 #endif
 #ifdef COMPAT_43
 		if (ps->ps_sigact[_SIG_IDX(sig)] == SIG_IGN ||

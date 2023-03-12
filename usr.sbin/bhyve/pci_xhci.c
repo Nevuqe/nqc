@@ -52,7 +52,7 @@ __FBSDID("$FreeBSD$");
 
 #include <dev/usb/usbdi.h>
 #include <dev/usb/usb.h>
-#include <dev/usb/usb_freebsd.h>
+#include <dev/usb/usb_nqc.h>
 #include <xhcireg.h>
 
 #include "bhyverun.h"

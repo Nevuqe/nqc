@@ -591,7 +591,7 @@ default:							\
 #define	isp_dev		isp_osinfo.dev
 
 /*
- * prototypes for isp_pci && isp_freebsd to share
+ * prototypes for isp_pci && isp_nqc to share
  */
 extern int isp_attach(ispsoftc_t *);
 extern int isp_detach(ispsoftc_t *);
