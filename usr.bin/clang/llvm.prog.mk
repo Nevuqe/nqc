@@ -22,7 +22,7 @@ LDADD+=		${OBJTOP}/lib/clang/lib${lib}/lib${lib}.a
 
 PACKAGE=	clang
 
-.if ${.MAKE.OS} == "NQC" || !defined(BOOTSTRAPPING)
+.if ${.MAKE.OS} == "NQC" || ${.MAKE.OS} == "FreeBSD" || !defined(BOOTSTRAPPING)
 LIBADD+=	execinfo
 LIBADD+=	tinfow
 .endif

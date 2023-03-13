@@ -250,7 +250,7 @@ ${X_}COMPILER_FEATURES+=	retpoline init-all
 # be undefined; be conservative and default to off until we turn this on by
 # default everywhere.
 .include <bsd.endian.mk>
-.if (${.MAKE.OS} == "NQC" || defined(TARGET_ENDIANNESS)) && \
+.if (${.MAKE.OS} == "NQC" || ${.MAKE.OS} == "FreeBSD" || defined(TARGET_ENDIANNESS)) && \
     ${TARGET_ENDIANNESS} == "1234"
 ${X_}COMPILER_FEATURES+=	compressed-debug
 .endif

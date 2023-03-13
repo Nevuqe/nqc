@@ -42,7 +42,7 @@ SRCS+=		zutil.c
 
 # Wrapper relies on NQC-specific fpos_t representation and non-portable
 # funopen. Not needed for bootstrapping, so just disable it.
-.if ${.MAKE.OS} == "NQC" || !defined(BOOTSTRAPPING)
+.if ${.MAKE.OS} == "NQC" || ${.MAKE.OS} == "FreeBSD" || !defined(BOOTSTRAPPING)
 SRCS+=		zopen.c
 .endif
 

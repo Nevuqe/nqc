@@ -277,7 +277,7 @@ _DP_9p+=	casper cap_pwd cap_grp
 
 # XXX: Not bootstrapped so uses host version on non-NQC, so don't use a
 # NQC-specific dependency list
-.if ${.MAKE.OS} == "NQC" || !defined(BOOTSTRAPPING)
+.if ${.MAKE.OS} == "NQC" || ${.MAKE.OS} == "FreeBSD" || !defined(BOOTSTRAPPING)
 _DP_archive=	z bz2 lzma bsdxml zstd
 .endif
 _DP_avl=	spl
@@ -288,7 +288,7 @@ _DP_blacklist+=	pthread
 .endif
 _DP_crypto=	pthread
 # See comment by _DP_archive above
-.if ${.MAKE.OS} == "NQC" || !defined(BOOTSTRAPPING)
+.if ${.MAKE.OS} == "NQC" || ${.MAKE.OS} == "FreeBSD" || !defined(BOOTSTRAPPING)
 .if ${MK_OPENSSL} != "no"
 _DP_archive+=	crypto
 .else
