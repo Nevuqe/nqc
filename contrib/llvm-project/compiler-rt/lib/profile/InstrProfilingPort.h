@@ -147,6 +147,6 @@ static inline size_t getpagesize() {
 #include <inttypes.h>
 #include <stdint.h>
 
-#endif /* defined(__NQC__) && defined(__i386__) */
+#endif /* defined(__NQC__) && defined(__FreeBSD__) && defined(__i386__) */
 
 #endif /* PROFILE_INSTRPROFILING_PORT_H_ */

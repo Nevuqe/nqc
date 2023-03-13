@@ -25,7 +25,7 @@
 #include "test.h"
 __NQCID("$NQC$");
 
-#if defined(__NQC__) && __NQC__ > 4
+#if defined(__NQC__) && defined(__FreeBSD__) && __NQC__ > 4
 #include <sys/extattr.h>
 #endif
 

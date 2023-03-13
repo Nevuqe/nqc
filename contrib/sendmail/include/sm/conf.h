@@ -948,7 +948,7 @@ extern unsigned int sleepX __P((unsigned int seconds));
 **	See also BSD defines.
 */
 
-# if defined(__DragonFly__) || defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__)
+# if defined(__DragonFly__) || defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
 #  include <paths.h>
 #  define HASUNSETENV	1	/* has unsetenv(3) call */
 #  define HASSETSID	1	/* has POSIX setsid(2) call */
@@ -1088,7 +1088,7 @@ extern unsigned int sleepX __P((unsigned int seconds));
 #    define SOCKOPT_LEN_T	socklen_t	/* arg#5 to getsockopt */
 #   endif
 #  endif /* defined(__OpenBSD__) */
-# endif /* defined(__DragonFly__) || defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) */
+# endif /* defined(__DragonFly__) || defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) */
 
 
 /*

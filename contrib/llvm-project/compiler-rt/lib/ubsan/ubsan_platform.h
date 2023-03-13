@@ -13,7 +13,7 @@
 #define UBSAN_PLATFORM_H
 
 // Other platforms should be easy to add, and probably work as-is.
-#if defined(__linux__) || defined(__NQC__) || defined(__APPLE__) ||        \
+#if defined(__linux__) || defined(__NQC__) || defined(__FreeBSD__) || defined(__APPLE__) ||        \
     defined(__NetBSD__) || defined(__DragonFly__) ||                           \
     (defined(__sun__) && defined(__svr4__)) || defined(_WIN32) ||              \
     defined(__Fuchsia__)

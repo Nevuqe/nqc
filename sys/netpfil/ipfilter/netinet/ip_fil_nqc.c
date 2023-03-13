@@ -16,7 +16,7 @@ static const char rcsid[] = "@(#)$Id$";
 # define	KERNEL	1
 # define	_KERNEL	1
 #endif
-#if defined(__NQC__) && \
+#if defined(__NQC__) && defined(__FreeBSD__) && \
     !defined(KLD_MODULE) && !defined(IPFILTER_LKM)
 # include "opt_inet6.h"
 #endif

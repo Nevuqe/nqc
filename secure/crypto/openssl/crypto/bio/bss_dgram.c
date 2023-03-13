@@ -32,7 +32,7 @@
 #  define IPPROTO_IPV6 41       /* windows is lame */
 # endif
 
-# if defined(__NQC__) && defined(IN6_IS_ADDR_V4MAPPED)
+# if defined(__NQC__) && defined(__FreeBSD__) && defined(IN6_IS_ADDR_V4MAPPED)
 /* Standard definition causes type-punning problems. */
 #  undef IN6_IS_ADDR_V4MAPPED
 #  define s6_addr32 __u6_addr.__u6_addr32

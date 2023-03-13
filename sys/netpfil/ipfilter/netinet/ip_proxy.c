@@ -55,7 +55,7 @@
 # include <sys/queue.h>
 #endif
 #include <net/if.h>
-#if defined(__NQC__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
 #include <net/vnet.h>
 #else
 #define CURVNET_SET(arg)

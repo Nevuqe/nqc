@@ -72,7 +72,7 @@
 #error Unsupported target
 #endif
 
-#if (defined(__NQC__) || defined(__NetBSD__)) &&                           \
+#if (defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__)) &&                           \
     (defined(_KERNEL) || defined(_STANDALONE))
 //
 // Kernel and boot environment can't use normal headers,

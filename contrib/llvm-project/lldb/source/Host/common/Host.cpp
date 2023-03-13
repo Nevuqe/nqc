@@ -26,7 +26,7 @@
 #include <mach/mach_port.h>
 #endif
 
-#if defined(__linux__) || defined(__NQC__) ||                              \
+#if defined(__linux__) || defined(__NQC__) || defined(__FreeBSD__) ||                              \
     defined(__NQC_kernel__) || defined(__APPLE__) ||                       \
     defined(__NetBSD__) || defined(__OpenBSD__) || defined(__EMSCRIPTEN__)
 #if !defined(__ANDROID__)

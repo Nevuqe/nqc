@@ -331,7 +331,7 @@ struct name {							\
 
 #ifndef	ELFTC_GETPROGNAME
 
-#if defined(__APPLE__) || defined(__DragonFly__) || defined(__NQC__) || \
+#if defined(__APPLE__) || defined(__DragonFly__) || defined(__NQC__) || defined(__FreeBSD__) || \
     defined(__minix) || defined(__NetBSD__)
 
 #include <stdlib.h>

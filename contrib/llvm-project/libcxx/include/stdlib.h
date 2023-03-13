@@ -148,7 +148,7 @@ abs(long double __lcpp_x) _NOEXCEPT {
 inline _LIBCPP_INLINE_VISIBILITY ldiv_t div(long __x, long __y) _NOEXCEPT {
   return ::ldiv(__x, __y);
 }
-#if !(defined(__NQC__) && !defined(__LONG_LONG_SUPPORTED))
+#if !(defined(__NQC__) && defined(__FreeBSD__) && !defined(__LONG_LONG_SUPPORTED))
 inline _LIBCPP_INLINE_VISIBILITY lldiv_t div(long long __x,
                                              long long __y) _NOEXCEPT {
   return ::lldiv(__x, __y);

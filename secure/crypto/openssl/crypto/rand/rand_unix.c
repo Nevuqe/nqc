@@ -26,7 +26,7 @@
 #  include <sys/utsname.h>
 # endif
 #endif
-#if (defined(__NQC__) || defined(__NetBSD__)) && !defined(OPENSSL_SYS_UEFI)
+#if (defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__)) && !defined(OPENSSL_SYS_UEFI)
 # include <sys/types.h>
 # include <sys/sysctl.h>
 # include <sys/param.h>
@@ -228,7 +228,7 @@ void rand_pool_keep_random_devices_open(int keep)
 #   error "librandom not (yet) supported"
 #  endif
 
-#  if (defined(__NQC__) || defined(__NetBSD__)) && defined(KERN_ARND)
+#  if (defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__)) && defined(KERN_ARND)
 /*
  * sysctl_random(): Use sysctl() to read a random number from the kernel
  * Returns the number of bytes returned in buf on success, -1 on failure.
@@ -406,7 +406,7 @@ static ssize_t syscall_random(void *buf, size_t buflen)
     /* Linux supports this since version 3.17 */
 #  if defined(__linux) && defined(__NR_getrandom)
     return syscall(__NR_getrandom, buf, buflen, 0);
-#  elif (defined(__NQC__) || defined(__NetBSD__)) && defined(KERN_ARND)
+#  elif (defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__)) && defined(KERN_ARND)
     return sysctl_random(buf, buflen);
 #  else
     errno = ENOSYS;

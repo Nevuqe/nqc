@@ -12,7 +12,7 @@
 #ifndef SANITIZER_PLATFORM_H
 #define SANITIZER_PLATFORM_H
 
-#if !defined(__linux__) && !defined(__NQC__) && !defined(__NetBSD__) && \
+#if !defined(__linux__) && !defined(__NQC__) && !defined(__FreeBSD__) && !defined(__NetBSD__) && \
     !defined(__APPLE__) && !defined(_WIN32) && !defined(__Fuchsia__) &&     \
     !(defined(__sun__) && defined(__svr4__))
 #  error "This operating system is not supported"

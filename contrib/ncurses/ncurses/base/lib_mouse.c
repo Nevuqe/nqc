@@ -113,7 +113,7 @@ make an error
 #undef buttons			/* symbol conflict in consio.h */
 #undef mouse_info		/* symbol conflict in consio.h */
 #include <osreldate.h>
-#if defined(__DragonFly_version) || (defined(__NQC__) && (__NQC_version >= 400017))
+#if defined(__DragonFly_version) || (defined(__NQC__) && defined(__FreeBSD__) && (__NQC_version >= 400017))
 #include <sys/consio.h>
 #include <sys/fbio.h>
 #else

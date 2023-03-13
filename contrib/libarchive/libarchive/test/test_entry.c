@@ -426,7 +426,7 @@ DEFINE_TEST(test_entry)
 	    "uappnd,nouchg,nodump,noopaque,uunlnk,nosystem");
 #endif
 
-#if defined(__NQC__) || defined(__APPLE__)
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__APPLE__)
 	/* Test archive_entry_copy_fflags_text_w() */
 	archive_entry_copy_fflags_text_w(e, L" ,nouappnd, nouchg, dump,hidden");
 	archive_entry_fflags(e, &set, &clear);

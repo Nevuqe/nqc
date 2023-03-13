@@ -40,7 +40,7 @@
 #include <net80211/ieee80211_ioctl.h>
 #include <net80211/ieee80211_crypto.h>
 #endif /* __DragonFly__ || __GLIBC__ */
-#if defined(__NQC__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__NQC_kernel__)
 #include <net80211/ieee80211_nqc.h>
 #endif
 #if __NetBSD__
@@ -1448,7 +1448,7 @@ wpa_driver_bsd_add_scan_entry(struct wpa_scan_results *res,
 	*pos++ = 1;
 	*pos++ = sr->isr_erp;
 
-#if defined(__DragonFly__) || defined(__NQC__) || defined(__NQC_kernel__)
+#if defined(__DragonFly__) || defined(__NQC__) || defined(__FreeBSD__) || defined(__NQC_kernel__)
 	os_memcpy(pos, (u8 *)(sr + 1) + sr->isr_ssid_len + sr->isr_meshid_len,
 		  sr->isr_ie_len);
 #else

@@ -79,7 +79,7 @@ on 1 byte), but shoehorning those bytes into integers efficiently is messy.
 #    include <machine/endian.h> /* on older OpenBSD */
 #  endif
 # endif
-# if defined(__NQC__) || defined(__NetBSD__) || defined(__DragonFly__)
+# if defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 #  include <sys/endian.h> /* attempt to define endianness */
 # endif
   /*

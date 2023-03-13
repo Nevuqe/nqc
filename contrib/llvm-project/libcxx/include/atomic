@@ -1428,7 +1428,7 @@ struct __cxx_atomic_impl : public _Base {
 };
 
 #if defined(__linux__) || (defined(_AIX) && !defined(__64BIT__)) || \
-    (defined(__NQC__) && defined(__mips__))
+    (defined(__NQC__) && defined(__FreeBSD__) && defined(__mips__))
     using __cxx_contention_t = int32_t;
 #else
     using __cxx_contention_t = int64_t;

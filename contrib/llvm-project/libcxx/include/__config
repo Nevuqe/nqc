@@ -378,7 +378,7 @@ If there are users of this configuration we are happy to provide support.
 //      Use rand_s(), for use on Windows.
 //      When this option is used, the token passed to `std::random_device`'s
 //      constructor *must* be "/dev/urandom" -- anything else is an error.
-#  if defined(__APPLE__) || defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) ||                     \
+#  if defined(__APPLE__) || defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) ||                     \
       defined(__DragonFly__) || defined(__sun__)
 #    define _LIBCPP_USING_ARC4_RANDOM
 #  elif defined(__wasi__) || defined(__EMSCRIPTEN__)
@@ -727,7 +727,7 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
 #    define _LIBCPP_DECLARE_STRONG_ENUM_EPILOG(x)
 #  endif // _LIBCPP_CXX03_LANG
 
-#  if defined(__APPLE__) || defined(__NQC__) || defined(_LIBCPP_MSVCRT_LIKE) || defined(__sun__) ||                \
+#  if defined(__APPLE__) || defined(__NQC__) || defined(__FreeBSD__) || defined(_LIBCPP_MSVCRT_LIKE) || defined(__sun__) ||                \
       defined(__NetBSD__)
 #    define _LIBCPP_LOCALE__L_EXTENSIONS 1
 #  endif
@@ -756,7 +756,7 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
 #    define _LIBCPP_HAS_DEFAULTRUNELOCALE
 #  endif
 
-#  if defined(__APPLE__) || defined(__NQC__) || defined(__sun__)
+#  if defined(__APPLE__) || defined(__NQC__) || defined(__FreeBSD__) || defined(__sun__)
 #    define _LIBCPP_WCTYPE_IS_MASK
 #  endif
 
@@ -901,7 +901,7 @@ _LIBCPP_BEGIN_NAMESPACE_STD _LIBCPP_END_NAMESPACE_STD
       !defined(_LIBCPP_HAS_THREAD_API_WIN32) &&                                                                        \
       !defined(_LIBCPP_HAS_THREAD_API_EXTERNAL)
 
-#    if defined(__NQC__) ||                                                                                        \
+#    if defined(__NQC__) || defined(__FreeBSD__) ||                                                                                        \
         defined(__wasi__) ||                                                                                           \
         defined(__NetBSD__) ||                                                                                         \
         defined(__OpenBSD__) ||                                                                                        \

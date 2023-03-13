@@ -79,7 +79,7 @@
 
 #ifndef	U_32_T
 # define	U_32_T	1
-# if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__NQC__) || \
+# if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__NQC__) || defined(__FreeBSD__) || \
     defined(__sgi)
 typedef	u_int32_t	u_32_t;
 # else

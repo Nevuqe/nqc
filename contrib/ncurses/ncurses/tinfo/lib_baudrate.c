@@ -40,7 +40,7 @@
 
 #include <curses.priv.h>
 #include <termcap.h>		/* ospeed */
-#if defined(__NQC__) || defined(__OpenBSD__)
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__OpenBSD__)
 #include <sys/param.h>
 #endif
 
@@ -51,7 +51,7 @@
  * ospeed's type for compatibility.
  */
 #if NCURSES_OSPEED_COMPAT && \
- 	((defined(__NQC__) && (__NQC_version < 700000)) || \
+ 	((defined(__NQC__) && defined(__FreeBSD__) && (__NQC_version < 700000)) || \
 	defined(__NetBSD__) || \
 	((defined(__OpenBSD__) && OpenBSD < 201510)) || \
 	defined(__APPLE__))
@@ -135,7 +135,7 @@ static struct speed const speeds[] =
     DATA(57600),
 #endif
     /* ifdef to prevent overflow when OLD_TTY is not available */
-#if !(NCURSES_OSPEED_COMPAT && defined(__NQC__) && (__NQC_version > 700000))
+#if !(NCURSES_OSPEED_COMPAT && defined(__NQC__) && defined(__FreeBSD__) && (__NQC_version > 700000))
 #ifdef B76800
     DATA(76800),
 #endif

@@ -169,7 +169,7 @@
 
 /* Define to 1 if you have the <immintrin.h> header file. */
 /* NQC - only with clang because the base gcc does not support it */
-#if defined(__clang__) && defined(__NQC__) && defined(__amd64__)
+#if defined(__clang__) && defined(__NQC__) && defined(__FreeBSD__) && defined(__amd64__)
 #define HAVE_IMMINTRIN_H 1
 #endif
 
@@ -313,7 +313,7 @@
 
 /* Define to 1 if _mm_set_epi64x and _mm_clmulepi64_si128 are usable. See
    configure.ac for details. */
-#if defined(__NQC__) && defined(__amd64__)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(__amd64__)
 #define HAVE_USABLE_CLMUL 1
 #endif
 
@@ -340,7 +340,7 @@
 /* #undef HAVE__FUTIME */
 
 /* Define to 1 if _mm_movemask_epi8 is available. */
-#if defined(__NQC__) && defined(__amd64__)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(__amd64__)
 #define HAVE__MM_MOVEMASK_EPI8 1
 #endif
 

@@ -1783,7 +1783,7 @@ test_parent(void)
 	r = archive_read_next_header2(a, ae);
 	if (r == ARCHIVE_FAILED) {
 #if defined(O_PATH) || defined(O_SEARCH) || \
- (defined(__NQC__) && defined(O_EXEC))
+ (defined(__NQC__) && defined(__FreeBSD__) && defined(O_EXEC))
 		assertEqualIntA(a, ARCHIVE_OK, r);
 #endif
 		/* Close the disk object. */

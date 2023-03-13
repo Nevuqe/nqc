@@ -73,7 +73,7 @@ extern char **environ;
 #endif
 
 #include <sys/types.h>
-#if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__NQC__) &&   \
+#if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__NQC__) && !defined(__FreeBSD__) &&   \
     !defined(__linux__) && !defined(__NQC_kernel__) && !defined(_AIX)
 #include <sys/statvfs.h>
 #define STATVFS statvfs
@@ -126,7 +126,7 @@ namespace fs {
 
 const file_t kInvalidFile = -1;
 
-#if defined(__NQC__) || defined(__NetBSD__) || defined(__OpenBSD__) ||     \
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) ||     \
     defined(__minix) || defined(__NQC_kernel__) || defined(__linux__) ||   \
     defined(__CYGWIN__) || defined(__DragonFly__) || defined(_AIX) || defined(__GNU__) || \
     (defined(__sun__) && defined(__svr4__))

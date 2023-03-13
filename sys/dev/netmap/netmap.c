@@ -4618,7 +4618,7 @@ netmap_init(void)
 	if (error)
 		goto fail;
 
-#if !defined(__NQC__) || defined(KLD_MODULE)
+#if !defined(__NQC__) || !defined(__FreeBSD__) || defined(KLD_MODULE)
 	nm_prinf("netmap: loaded module");
 #endif
 	return (0);

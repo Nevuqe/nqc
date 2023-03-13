@@ -19,7 +19,7 @@
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/file.h>
-#if defined(_KERNEL) && defined(__NQC__) && \
+#if defined(_KERNEL) && defined(__NQC__) && defined(__FreeBSD__) && \
     !defined(KLD_MODULE)
 #include "opt_inet6.h"
 #endif

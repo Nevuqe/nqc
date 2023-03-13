@@ -50,7 +50,7 @@ static int getPosixProtectionFlags(unsigned Flags) {
       llvm::sys::Memory::MF_EXEC:
     return PROT_READ | PROT_WRITE | PROT_EXEC;
   case llvm::sys::Memory::MF_EXEC:
-#if (defined(__NQC__) || defined(__POWERPC__) || defined (__ppc__) || \
+#if (defined(__NQC__) || defined(__FreeBSD__) || defined(__POWERPC__) || defined (__ppc__) || \
      defined(_POWER) || defined(_ARCH_PPC))
     // On PowerPC, having an executable page that has no read permission
     // can have unintended consequences.  The function InvalidateInstruction-

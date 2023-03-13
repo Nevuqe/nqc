@@ -255,7 +255,7 @@ ATF_TC_BODY(cbrtf_zero_pos, tc)
 		atf_tc_fail_nonfatal("cbrtf(+0.0) != +0.0");
 }
 
-#if !defined(__NQC__) || LDBL_PREC != 53
+#if !defined(__NQC__) || !defined(__FreeBSD__) || LDBL_PREC != 53
 /*
  * cbrtl(3)
  */
@@ -399,7 +399,7 @@ ATF_TP_ADD_TCS(tp)
 	ATF_TP_ADD_TC(tp, cbrtf_zero_neg);
 	ATF_TP_ADD_TC(tp, cbrtf_zero_pos);
 
-#if !defined(__NQC__) || LDBL_PREC != 53
+#if !defined(__NQC__) || !defined(__FreeBSD__) || LDBL_PREC != 53
 	ATF_TP_ADD_TC(tp, cbrtl_nan);
 	ATF_TP_ADD_TC(tp, cbrtl_powl);
 	ATF_TP_ADD_TC(tp, cbrtl_inf_neg);

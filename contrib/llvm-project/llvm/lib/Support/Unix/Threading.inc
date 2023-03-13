@@ -23,11 +23,11 @@
 
 #include <pthread.h>
 
-#if defined(__NQC__) || defined(__OpenBSD__)
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__OpenBSD__)
 #include <pthread_np.h> // For pthread_getthreadid_np() / pthread_set_name_np()
 #endif
 
-#if defined(__NQC__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__NQC_kernel__)
 #include <errno.h>
 #include <sys/cpuset.h>
 #include <sys/sysctl.h>
@@ -143,7 +143,7 @@ static constexpr uint32_t get_max_thread_name_length_impl() {
 #else
   return 0;
 #endif
-#elif defined(__NQC__) || defined(__NQC_kernel__)
+#elif defined(__NQC__) || defined(__FreeBSD__) || defined(__NQC_kernel__)
   return 16;
 #elif defined(__OpenBSD__)
   return 32;
@@ -176,7 +176,7 @@ void llvm::set_thread_name(const Twine &Name) {
   ::pthread_setname_np(::pthread_self(), NameStr.data());
 #endif
 #endif
-#elif defined(__NQC__) || defined(__OpenBSD__)
+#elif defined(__NQC__) || defined(__FreeBSD__) || defined(__OpenBSD__)
   ::pthread_set_name_np(::pthread_self(), NameStr.data());
 #elif defined(__NetBSD__)
   ::pthread_setname_np(::pthread_self(), "%s",
@@ -189,7 +189,7 @@ void llvm::set_thread_name(const Twine &Name) {
 void llvm::get_thread_name(SmallVectorImpl<char> &Name) {
   Name.clear();
 
-#if defined(__NQC__) || defined(__NQC_kernel__)
+#if defined(__NQC__) || defined(__FreeBSD__) || defined(__NQC_kernel__)
   int pid = ::getpid();
   uint64_t tid = get_threadid();
 

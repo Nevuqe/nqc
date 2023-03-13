@@ -15,7 +15,7 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include <sys/file.h>
-#if defined(__NQC__) && defined(_KERNEL)
+#if defined(__NQC__) && defined(__FreeBSD__) && defined(_KERNEL)
 # include <sys/fcntl.h>
 # include <sys/filio.h>
 #else

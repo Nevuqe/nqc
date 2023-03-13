@@ -196,7 +196,7 @@
 #include <math.h>	/* For pow(3), NAN, and INFINITY. */
 #include <string.h>	/* For strcmp(3). */
 #if defined(__NetBSD__) || \
-    defined(__NQC__) || \
+    defined(__NQC__) || defined(__FreeBSD__) || \
     defined(__OpenBSD__) || \
     defined(__NeXT__) || \
     defined(__bsd__)
@@ -211,7 +211,7 @@
 #define OS_SYSV 1
 #elif defined(__linux__)
 #define OS_LINUX 1
-#endif	/* defined(__NetBSD__) || defined(__NQC__) || [...] */
+#endif	/* defined(__NetBSD__) || defined(__NQC__) || defined(__FreeBSD__) || [...] */
 #if HAVE_CONFIG_H	/* Undefine definitions possibly done in config.h. */
 #ifdef HAVE_SNPRINTF
 #undef HAVE_SNPRINTF
